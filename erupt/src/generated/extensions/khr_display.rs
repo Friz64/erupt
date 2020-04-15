@@ -1,0 +1,1140 @@
+# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_display.html)\n\n## Extends\n- [`ObjectType`](../../vk1_0/struct.ObjectType.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const KHR_DISPLAY_SPEC_VERSION: u32 = 23;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const KHR_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_display");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceDisplayPropertiesKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        p_property_count: *mut u32,
+        p_properties: *mut crate::extensions::khr_display::DisplayPropertiesKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        p_property_count: *mut u32,
+        p_properties: *mut crate::extensions::khr_display::DisplayPlanePropertiesKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetDisplayPlaneSupportedDisplaysKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        plane_index: u32,
+        p_display_count: *mut u32,
+        p_displays: *mut crate::extensions::khr_display::DisplayKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetDisplayModePropertiesKHR = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    display: crate::extensions::khr_display::DisplayKHR,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::extensions::khr_display::DisplayModePropertiesKHR,
+) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkCreateDisplayModeKHR = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    display: crate::extensions::khr_display::DisplayKHR,
+    p_create_info: *const crate::extensions::khr_display::DisplayModeCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_mode: *mut crate::extensions::khr_display::DisplayModeKHR,
+) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetDisplayPlaneCapabilitiesKHR = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    mode: crate::extensions::khr_display::DisplayModeKHR,
+    plane_index: u32,
+    p_capabilities: *mut crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR,
+) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Instance Command"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkCreateDisplayPlaneSurfaceKHR = unsafe extern "system" fn(
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+#[doc = "Provides Instance Commands for [`KhrDisplayInstanceLoaderExt`](trait.KhrDisplayInstanceLoaderExt.html)"]
+pub struct KhrDisplayInstanceCommands {
+    pub get_physical_device_display_properties_khr: PFN_vkGetPhysicalDeviceDisplayPropertiesKHR,
+    pub get_physical_device_display_plane_properties_khr:
+        PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR,
+    pub get_display_plane_supported_displays_khr: PFN_vkGetDisplayPlaneSupportedDisplaysKHR,
+    pub get_display_mode_properties_khr: PFN_vkGetDisplayModePropertiesKHR,
+    pub create_display_mode_khr: PFN_vkCreateDisplayModeKHR,
+    pub get_display_plane_capabilities_khr: PFN_vkGetDisplayPlaneCapabilitiesKHR,
+    pub create_display_plane_surface_khr: PFN_vkCreateDisplayPlaneSurfaceKHR,
+}
+impl KhrDisplayInstanceCommands {
+    #[inline]
+    pub fn load(loader: &crate::InstanceLoader) -> Option<KhrDisplayInstanceCommands> {
+        unsafe {
+            Some(KhrDisplayInstanceCommands {
+                get_physical_device_display_properties_khr: std::mem::transmute(
+                    loader.symbol("vkGetPhysicalDeviceDisplayPropertiesKHR")?,
+                ),
+                get_physical_device_display_plane_properties_khr: std::mem::transmute(
+                    loader.symbol("vkGetPhysicalDeviceDisplayPlanePropertiesKHR")?,
+                ),
+                get_display_plane_supported_displays_khr: std::mem::transmute(
+                    loader.symbol("vkGetDisplayPlaneSupportedDisplaysKHR")?,
+                ),
+                get_display_mode_properties_khr: std::mem::transmute(
+                    loader.symbol("vkGetDisplayModePropertiesKHR")?,
+                ),
+                create_display_mode_khr: std::mem::transmute(
+                    loader.symbol("vkCreateDisplayModeKHR")?,
+                ),
+                get_display_plane_capabilities_khr: std::mem::transmute(
+                    loader.symbol("vkGetDisplayPlaneCapabilitiesKHR")?,
+                ),
+                create_display_plane_surface_khr: std::mem::transmute(
+                    loader.symbol("vkCreateDisplayPlaneSurfaceKHR")?,
+                ),
+            })
+        }
+    }
+}
+#[doc = "Provides high level command wrappers for [`KhrDisplayInstanceCommands`](struct.KhrDisplayInstanceCommands.html)"]
+pub trait KhrDisplayInstanceLoaderExt {
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Instance Command"]
+    unsafe fn get_physical_device_display_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Instance Command"]
+    unsafe fn get_physical_device_display_plane_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Instance Command"]
+    unsafe fn get_display_plane_supported_displays_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        plane_index: u32,
+        display_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Instance Command"]
+    unsafe fn get_display_mode_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        display: crate::extensions::khr_display::DisplayKHR,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayModePropertiesKHR>>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Instance Command"]
+    unsafe fn create_display_mode_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        display: crate::extensions::khr_display::DisplayKHR,
+        create_info: &crate::extensions::khr_display::DisplayModeCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        mode: Option<crate::extensions::khr_display::DisplayModeKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayModeKHR>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Instance Command"]
+    unsafe fn get_display_plane_capabilities_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        mode: crate::extensions::khr_display::DisplayModeKHR,
+        plane_index: u32,
+        capabilities: Option<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>;
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Instance Command"]
+    unsafe fn create_display_plane_surface_khr(
+        &self,
+        create_info: &crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR>;
+}
+impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Instance Command"]
+    unsafe fn get_physical_device_display_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .get_physical_device_display_properties_khr;
+        let mut property_count = property_count.unwrap_or_else(|| {
+            let mut val = Default::default();
+            function(physical_device, &mut val, std::ptr::null_mut());
+            val
+        });
+        let mut properties = vec![Default::default(); property_count as _];
+        let _val = function(
+            physical_device,
+            &mut property_count,
+            properties.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_val, properties)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Instance Command"]
+    unsafe fn get_physical_device_display_plane_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>>
+    {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .get_physical_device_display_plane_properties_khr;
+        let mut property_count = property_count.unwrap_or_else(|| {
+            let mut val = Default::default();
+            function(physical_device, &mut val, std::ptr::null_mut());
+            val
+        });
+        let mut properties = vec![Default::default(); property_count as _];
+        let _val = function(
+            physical_device,
+            &mut property_count,
+            properties.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_val, properties)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Instance Command"]
+    unsafe fn get_display_plane_supported_displays_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        plane_index: u32,
+        display_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .get_display_plane_supported_displays_khr;
+        let mut display_count = display_count.unwrap_or_else(|| {
+            let mut val = Default::default();
+            function(physical_device, plane_index, &mut val, std::ptr::null_mut());
+            val
+        });
+        let mut displays = vec![Default::default(); display_count as _];
+        let _val = function(
+            physical_device,
+            plane_index,
+            &mut display_count,
+            displays.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_val, displays)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Instance Command"]
+    unsafe fn get_display_mode_properties_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        display: crate::extensions::khr_display::DisplayKHR,
+        property_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayModePropertiesKHR>>
+    {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .get_display_mode_properties_khr;
+        let mut property_count = property_count.unwrap_or_else(|| {
+            let mut val = Default::default();
+            function(physical_device, display, &mut val, std::ptr::null_mut());
+            val
+        });
+        let mut properties = vec![Default::default(); property_count as _];
+        let _val = function(
+            physical_device,
+            display,
+            &mut property_count,
+            properties.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_val, properties)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Instance Command"]
+    unsafe fn create_display_mode_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        display: crate::extensions::khr_display::DisplayKHR,
+        create_info: &crate::extensions::khr_display::DisplayModeCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        mode: Option<crate::extensions::khr_display::DisplayModeKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayModeKHR> {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .create_display_mode_khr;
+        let mut mode = mode.unwrap_or_else(|| Default::default());
+        let _val = function(
+            physical_device,
+            display,
+            create_info,
+            if let Some(allocator) = allocator {
+                allocator
+            } else {
+                std::ptr::null()
+            },
+            &mut mode,
+        );
+        crate::utils::VulkanResult::new(_val, mode)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Instance Command"]
+    unsafe fn get_display_plane_capabilities_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        mode: crate::extensions::khr_display::DisplayModeKHR,
+        plane_index: u32,
+        capabilities: Option<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>
+    {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .get_display_plane_capabilities_khr;
+        let mut capabilities = capabilities.unwrap_or_else(|| Default::default());
+        let _val = function(physical_device, mode, plane_index, &mut capabilities);
+        crate::utils::VulkanResult::new(_val, capabilities)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Instance Command"]
+    unsafe fn create_display_plane_surface_khr(
+        &self,
+        create_info: &crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+        let function = self
+            .khr_display
+            .as_ref()
+            .expect("`khr_display` not loaded")
+            .create_display_plane_surface_khr;
+        let mut surface = surface.unwrap_or_else(|| Default::default());
+        let _val = function(
+            self.handle,
+            create_info,
+            if let Some(allocator) = allocator {
+                allocator
+            } else {
+                std::ptr::null()
+            },
+            &mut surface,
+        );
+        crate::utils::VulkanResult::new(_val, surface)
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPropertiesKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayPropertiesKHR {
+    pub display: crate::extensions::khr_display::DisplayKHR,
+    pub display_name: *const std::os::raw::c_char,
+    pub physical_dimensions: crate::vk1_0::Extent2D,
+    pub physical_resolution: crate::vk1_0::Extent2D,
+    pub supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
+    pub plane_reorder_possible: crate::vk1_0::Bool32,
+    pub persistent_content: crate::vk1_0::Bool32,
+}
+impl DisplayPropertiesKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayPropertiesKHRBuilder<'a> {
+        DisplayPropertiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayPropertiesKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayPropertiesKHR")
+            .field("display", &self.display)
+            .field("display_name", &self.display_name)
+            .field("physical_dimensions", &self.physical_dimensions)
+            .field("physical_resolution", &self.physical_resolution)
+            .field("supported_transforms", &self.supported_transforms)
+            .field(
+                "plane_reorder_possible",
+                &(self.plane_reorder_possible != 0),
+            )
+            .field("persistent_content", &(self.persistent_content != 0))
+            .finish()
+    }
+}
+impl Default for DisplayPropertiesKHR {
+    fn default() -> DisplayPropertiesKHR {
+        DisplayPropertiesKHR {
+            display: Default::default(),
+            display_name: std::ptr::null(),
+            physical_dimensions: Default::default(),
+            physical_resolution: Default::default(),
+            supported_transforms: Default::default(),
+            plane_reorder_possible: Default::default(),
+            persistent_content: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayPropertiesKHR`](struct.DisplayPropertiesKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayPropertiesKHRBuilder<'a>(DisplayPropertiesKHR, std::marker::PhantomData<&'a ()>);
+impl<'a> DisplayPropertiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayPropertiesKHRBuilder<'a> {
+        DisplayPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn display(mut self, display: crate::extensions::khr_display::DisplayKHR) -> Self {
+        self.0.display = display;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn display_name(mut self, display_name: &'a std::ffi::CStr) -> Self {
+        self.0.display_name = display_name.as_ptr();
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn physical_dimensions(mut self, physical_dimensions: crate::vk1_0::Extent2D) -> Self {
+        self.0.physical_dimensions = physical_dimensions;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn physical_resolution(mut self, physical_resolution: crate::vk1_0::Extent2D) -> Self {
+        self.0.physical_resolution = physical_resolution;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn supported_transforms(
+        mut self,
+        supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
+    ) -> Self {
+        self.0.supported_transforms = supported_transforms;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn plane_reorder_possible(mut self, plane_reorder_possible: bool) -> Self {
+        self.0.plane_reorder_possible = plane_reorder_possible as u32;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn persistent_content(mut self, persistent_content: bool) -> Self {
+        self.0.persistent_content = persistent_content as u32;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayPropertiesKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayPropertiesKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayPropertiesKHRBuilder<'a> {
+    type Target = DisplayPropertiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayPropertiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+crate :: non_dispatchable_handle ! ( DisplayKHR , DISPLAY_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle" ) ;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayPlanePropertiesKHR {
+    pub current_display: crate::extensions::khr_display::DisplayKHR,
+    pub current_stack_index: u32,
+}
+impl DisplayPlanePropertiesKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayPlanePropertiesKHRBuilder<'a> {
+        DisplayPlanePropertiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayPlanePropertiesKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayPlanePropertiesKHR")
+            .field("current_display", &self.current_display)
+            .field("current_stack_index", &self.current_stack_index)
+            .finish()
+    }
+}
+impl Default for DisplayPlanePropertiesKHR {
+    fn default() -> DisplayPlanePropertiesKHR {
+        DisplayPlanePropertiesKHR {
+            current_display: Default::default(),
+            current_stack_index: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayPlanePropertiesKHR`](struct.DisplayPlanePropertiesKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayPlanePropertiesKHRBuilder<'a>(
+    DisplayPlanePropertiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplayPlanePropertiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayPlanePropertiesKHRBuilder<'a> {
+        DisplayPlanePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn current_display(
+        mut self,
+        current_display: crate::extensions::khr_display::DisplayKHR,
+    ) -> Self {
+        self.0.current_display = current_display;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn current_stack_index(mut self, current_stack_index: u32) -> Self {
+        self.0.current_stack_index = current_stack_index;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayPlanePropertiesKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayPlanePropertiesKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayPlanePropertiesKHRBuilder<'a> {
+    type Target = DisplayPlanePropertiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayPlanePropertiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayModePropertiesKHR {
+    pub display_mode: crate::extensions::khr_display::DisplayModeKHR,
+    pub parameters: crate::extensions::khr_display::DisplayModeParametersKHR,
+}
+impl DisplayModePropertiesKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayModePropertiesKHRBuilder<'a> {
+        DisplayModePropertiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayModePropertiesKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayModePropertiesKHR")
+            .field("display_mode", &self.display_mode)
+            .field("parameters", &self.parameters)
+            .finish()
+    }
+}
+impl Default for DisplayModePropertiesKHR {
+    fn default() -> DisplayModePropertiesKHR {
+        DisplayModePropertiesKHR {
+            display_mode: Default::default(),
+            parameters: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayModePropertiesKHR`](struct.DisplayModePropertiesKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayModePropertiesKHRBuilder<'a>(
+    DisplayModePropertiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplayModePropertiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayModePropertiesKHRBuilder<'a> {
+        DisplayModePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn display_mode(
+        mut self,
+        display_mode: crate::extensions::khr_display::DisplayModeKHR,
+    ) -> Self {
+        self.0.display_mode = display_mode;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn parameters(
+        mut self,
+        parameters: crate::extensions::khr_display::DisplayModeParametersKHR,
+    ) -> Self {
+        self.0.parameters = parameters;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayModePropertiesKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayModePropertiesKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayModePropertiesKHRBuilder<'a> {
+    type Target = DisplayModePropertiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayModePropertiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+crate :: non_dispatchable_handle ! ( DisplayModeKHR , DISPLAY_MODE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeKHR.html) · Non-dispatchable Handle" ) ;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayModeParametersKHR {
+    pub visible_region: crate::vk1_0::Extent2D,
+    pub refresh_rate: u32,
+}
+impl DisplayModeParametersKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayModeParametersKHRBuilder<'a> {
+        DisplayModeParametersKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayModeParametersKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayModeParametersKHR")
+            .field("visible_region", &self.visible_region)
+            .field("refresh_rate", &self.refresh_rate)
+            .finish()
+    }
+}
+impl Default for DisplayModeParametersKHR {
+    fn default() -> DisplayModeParametersKHR {
+        DisplayModeParametersKHR {
+            visible_region: Default::default(),
+            refresh_rate: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayModeParametersKHR`](struct.DisplayModeParametersKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayModeParametersKHRBuilder<'a>(
+    DisplayModeParametersKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplayModeParametersKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayModeParametersKHRBuilder<'a> {
+        DisplayModeParametersKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn visible_region(mut self, visible_region: crate::vk1_0::Extent2D) -> Self {
+        self.0.visible_region = visible_region;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn refresh_rate(mut self, refresh_rate: u32) -> Self {
+        self.0.refresh_rate = refresh_rate;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayModeParametersKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayModeParametersKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayModeParametersKHRBuilder<'a> {
+    type Target = DisplayModeParametersKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayModeParametersKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayModeCreateInfoKHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub flags: crate::extensions::khr_display::DisplayModeCreateFlagsKHR,
+    pub parameters: crate::extensions::khr_display::DisplayModeParametersKHR,
+}
+impl DisplayModeCreateInfoKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayModeCreateInfoKHRBuilder<'a> {
+        DisplayModeCreateInfoKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayModeCreateInfoKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayModeCreateInfoKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("flags", &self.flags)
+            .field("parameters", &self.parameters)
+            .finish()
+    }
+}
+impl Default for DisplayModeCreateInfoKHR {
+    fn default() -> DisplayModeCreateInfoKHR {
+        DisplayModeCreateInfoKHR {
+            s_type: crate::vk1_0::StructureType::DISPLAY_MODE_CREATE_INFO_KHR,
+            p_next: std::ptr::null(),
+            flags: Default::default(),
+            parameters: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayModeCreateInfoKHR`](struct.DisplayModeCreateInfoKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayModeCreateInfoKHRBuilder<'a>(
+    DisplayModeCreateInfoKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplayModeCreateInfoKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayModeCreateInfoKHRBuilder<'a> {
+        DisplayModeCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn flags(
+        mut self,
+        flags: crate::extensions::khr_display::DisplayModeCreateFlagsKHR,
+    ) -> Self {
+        self.0.flags = flags;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn parameters(
+        mut self,
+        parameters: crate::extensions::khr_display::DisplayModeParametersKHR,
+    ) -> Self {
+        self.0.parameters = parameters;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayModeCreateInfoKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayModeCreateInfoKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayModeCreateInfoKHRBuilder<'a> {
+    type Target = DisplayModeCreateInfoKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DisplayModeCreateFlagsKHR`](struct.DisplayModeCreateFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[repr(transparent)]
+pub struct DisplayModeCreateFlagBitsKHR(pub u32);
+impl DisplayModeCreateFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> DisplayModeCreateFlagsKHR {
+        DisplayModeCreateFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for DisplayModeCreateFlagBitsKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.write_str(match self {
+            _ => "Unknown enum variant",
+        })
+    }
+}
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateFlagsKHR.html) · Flags of [`DisplayModeCreateFlagBitsKHR`](struct.DisplayModeCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplayModeCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplayPlaneCapabilitiesKHR {
+    pub supported_alpha: crate::extensions::khr_display::DisplayPlaneAlphaFlagsKHR,
+    pub min_src_position: crate::vk1_0::Offset2D,
+    pub max_src_position: crate::vk1_0::Offset2D,
+    pub min_src_extent: crate::vk1_0::Extent2D,
+    pub max_src_extent: crate::vk1_0::Extent2D,
+    pub min_dst_position: crate::vk1_0::Offset2D,
+    pub max_dst_position: crate::vk1_0::Offset2D,
+    pub min_dst_extent: crate::vk1_0::Extent2D,
+    pub max_dst_extent: crate::vk1_0::Extent2D,
+}
+impl DisplayPlaneCapabilitiesKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplayPlaneCapabilitiesKHRBuilder<'a> {
+        DisplayPlaneCapabilitiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplayPlaneCapabilitiesKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplayPlaneCapabilitiesKHR")
+            .field("supported_alpha", &self.supported_alpha)
+            .field("min_src_position", &self.min_src_position)
+            .field("max_src_position", &self.max_src_position)
+            .field("min_src_extent", &self.min_src_extent)
+            .field("max_src_extent", &self.max_src_extent)
+            .field("min_dst_position", &self.min_dst_position)
+            .field("max_dst_position", &self.max_dst_position)
+            .field("min_dst_extent", &self.min_dst_extent)
+            .field("max_dst_extent", &self.max_dst_extent)
+            .finish()
+    }
+}
+impl Default for DisplayPlaneCapabilitiesKHR {
+    fn default() -> DisplayPlaneCapabilitiesKHR {
+        DisplayPlaneCapabilitiesKHR {
+            supported_alpha: Default::default(),
+            min_src_position: Default::default(),
+            max_src_position: Default::default(),
+            min_src_extent: Default::default(),
+            max_src_extent: Default::default(),
+            min_dst_position: Default::default(),
+            max_dst_position: Default::default(),
+            min_dst_extent: Default::default(),
+            max_dst_extent: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplayPlaneCapabilitiesKHR`](struct.DisplayPlaneCapabilitiesKHR.html)"]
+#[repr(transparent)]
+pub struct DisplayPlaneCapabilitiesKHRBuilder<'a>(
+    DisplayPlaneCapabilitiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplayPlaneCapabilitiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplayPlaneCapabilitiesKHRBuilder<'a> {
+        DisplayPlaneCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn supported_alpha(
+        mut self,
+        supported_alpha: crate::extensions::khr_display::DisplayPlaneAlphaFlagsKHR,
+    ) -> Self {
+        self.0.supported_alpha = supported_alpha;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn min_src_position(mut self, min_src_position: crate::vk1_0::Offset2D) -> Self {
+        self.0.min_src_position = min_src_position;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn max_src_position(mut self, max_src_position: crate::vk1_0::Offset2D) -> Self {
+        self.0.max_src_position = max_src_position;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn min_src_extent(mut self, min_src_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.min_src_extent = min_src_extent;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn max_src_extent(mut self, max_src_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.max_src_extent = max_src_extent;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn min_dst_position(mut self, min_dst_position: crate::vk1_0::Offset2D) -> Self {
+        self.0.min_dst_position = min_dst_position;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn max_dst_position(mut self, max_dst_position: crate::vk1_0::Offset2D) -> Self {
+        self.0.max_dst_position = max_dst_position;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn min_dst_extent(mut self, min_dst_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.min_dst_extent = min_dst_extent;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn max_dst_extent(mut self, max_dst_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.max_dst_extent = max_dst_extent;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplayPlaneCapabilitiesKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplayPlaneCapabilitiesKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplayPlaneCapabilitiesKHRBuilder<'a> {
+    type Target = DisplayPlaneCapabilitiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplayPlaneCapabilitiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Flag Bits of [`DisplayPlaneAlphaFlagsKHR`](struct.DisplayPlaneAlphaFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[repr(transparent)]
+pub struct DisplayPlaneAlphaFlagBitsKHR(pub u32);
+impl DisplayPlaneAlphaFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> DisplayPlaneAlphaFlagsKHR {
+        DisplayPlaneAlphaFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+#[doc = "[Part of `extensions::khr_display`](../../extensions/khr_display/index.html)"]
+impl DisplayPlaneAlphaFlagBitsKHR {
+    pub const OPAQUE_KHR: Self = Self(0x00000001);
+    pub const GLOBAL_KHR: Self = Self(0x00000002);
+    pub const PER_PIXEL_KHR: Self = Self(0x00000004);
+    pub const PER_PIXEL_PREMULTIPLIED_KHR: Self = Self(0x00000008);
+}
+impl std::fmt::Debug for DisplayPlaneAlphaFlagBitsKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.write_str(match self {
+            &Self::OPAQUE_KHR => "OPAQUE_KHR",
+            &Self::GLOBAL_KHR => "GLOBAL_KHR",
+            &Self::PER_PIXEL_KHR => "PER_PIXEL_KHR",
+            &Self::PER_PIXEL_PREMULTIPLIED_KHR => "PER_PIXEL_PREMULTIPLIED_KHR",
+            _ => "Unknown enum variant",
+        })
+    }
+}
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Flags of [`DisplayPlaneAlphaFlagBitsKHR`](struct.DisplayPlaneAlphaFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplayPlaneAlphaFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct DisplaySurfaceCreateInfoKHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub flags: crate::extensions::khr_display::DisplaySurfaceCreateFlagsKHR,
+    pub display_mode: crate::extensions::khr_display::DisplayModeKHR,
+    pub plane_index: u32,
+    pub plane_stack_index: u32,
+    pub transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
+    pub global_alpha: f32,
+    pub alpha_mode: crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR,
+    pub image_extent: crate::vk1_0::Extent2D,
+}
+impl DisplaySurfaceCreateInfoKHR {
+    #[inline]
+    pub fn builder<'a>(self) -> DisplaySurfaceCreateInfoKHRBuilder<'a> {
+        DisplaySurfaceCreateInfoKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for DisplaySurfaceCreateInfoKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("DisplaySurfaceCreateInfoKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("flags", &self.flags)
+            .field("display_mode", &self.display_mode)
+            .field("plane_index", &self.plane_index)
+            .field("plane_stack_index", &self.plane_stack_index)
+            .field("transform", &self.transform)
+            .field("global_alpha", &self.global_alpha)
+            .field("alpha_mode", &self.alpha_mode)
+            .field("image_extent", &self.image_extent)
+            .finish()
+    }
+}
+impl Default for DisplaySurfaceCreateInfoKHR {
+    fn default() -> DisplaySurfaceCreateInfoKHR {
+        DisplaySurfaceCreateInfoKHR {
+            s_type: crate::vk1_0::StructureType::DISPLAY_SURFACE_CREATE_INFO_KHR,
+            p_next: std::ptr::null(),
+            flags: Default::default(),
+            display_mode: Default::default(),
+            plane_index: Default::default(),
+            plane_stack_index: Default::default(),
+            transform: Default::default(),
+            global_alpha: Default::default(),
+            alpha_mode: Default::default(),
+            image_extent: Default::default(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "Builder of [`DisplaySurfaceCreateInfoKHR`](struct.DisplaySurfaceCreateInfoKHR.html)"]
+#[repr(transparent)]
+pub struct DisplaySurfaceCreateInfoKHRBuilder<'a>(
+    DisplaySurfaceCreateInfoKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> DisplaySurfaceCreateInfoKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> DisplaySurfaceCreateInfoKHRBuilder<'a> {
+        DisplaySurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn flags(
+        mut self,
+        flags: crate::extensions::khr_display::DisplaySurfaceCreateFlagsKHR,
+    ) -> Self {
+        self.0.flags = flags;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn display_mode(
+        mut self,
+        display_mode: crate::extensions::khr_display::DisplayModeKHR,
+    ) -> Self {
+        self.0.display_mode = display_mode;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn plane_index(mut self, plane_index: u32) -> Self {
+        self.0.plane_index = plane_index;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn plane_stack_index(mut self, plane_stack_index: u32) -> Self {
+        self.0.plane_stack_index = plane_stack_index;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn transform(
+        mut self,
+        transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
+    ) -> Self {
+        self.0.transform = transform;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn global_alpha(mut self, global_alpha: f32) -> Self {
+        self.0.global_alpha = global_alpha;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn alpha_mode(
+        mut self,
+        alpha_mode: crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR,
+    ) -> Self {
+        self.0.alpha_mode = alpha_mode;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn image_extent(mut self, image_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.image_extent = image_extent;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> DisplaySurfaceCreateInfoKHR {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for DisplaySurfaceCreateInfoKHRBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for DisplaySurfaceCreateInfoKHRBuilder<'a> {
+    type Target = DisplaySurfaceCreateInfoKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for DisplaySurfaceCreateInfoKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DisplaySurfaceCreateFlagsKHR`](struct.DisplaySurfaceCreateFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[repr(transparent)]
+pub struct DisplaySurfaceCreateFlagBitsKHR(pub u32);
+impl DisplaySurfaceCreateFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> DisplaySurfaceCreateFlagsKHR {
+        DisplaySurfaceCreateFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.write_str(match self {
+            _ => "Unknown enum variant",
+        })
+    }
+}
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateFlagsKHR.html) · Flags of [`DisplaySurfaceCreateFlagBitsKHR`](struct.DisplaySurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplaySurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

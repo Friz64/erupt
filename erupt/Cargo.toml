@@ -1,0 +1,22 @@
+[package]
+name = "erupt"
+version = "0.1.0"
+authors = ["Friz64 <friz64mc@gmail.com>"]
+license = "MIT"
+description = "Vulkan API bindings"
+documentation = "https://docs.rs/erupt"
+repository = "https://gitlab.com/Friz64/erupt"
+readme = "../README.md"
+keywords = ["gamedev", "graphics", "vulkan", "bindings"]
+categories = ["api-bindings", "game-development", "graphics", "rendering::graphics-api"]
+edition = "2018"
+
+[dependencies]
+bitflags = "1.2"
+libloading = { version = "0.6", optional = true }
+raw-window-handle = { version = "0.3", optional = true }
+
+[features]
+default = ["loading", "surface"]
+loading = ["libloading"]
+surface = ["raw-window-handle"]

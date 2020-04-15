@@ -2,7 +2,7 @@
 name = "erupt"
 version = "0.1.0"
 authors = ["Friz64 <friz64mc@gmail.com>"]
-license = "MIT"
+license = "Zlib"
 description = "Vulkan API bindings"
 documentation = "https://docs.rs/erupt"
 repository = "https://gitlab.com/Friz64/erupt"

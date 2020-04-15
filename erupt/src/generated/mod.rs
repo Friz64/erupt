@@ -893,3 +893,5 @@ pub mod vk1_0;
 pub mod vk1_1;
 #[doc = r" Provides Vulkan feature items"]
 pub mod vk1_2;
+#[doc = "Generated from `Vulkan 1.2.137`"]
+pub mod info {}

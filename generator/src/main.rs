@@ -9,6 +9,7 @@ use itertools::Itertools;
 use lazy_static::lazy_static;
 use proc_macro2::{Ident, TokenStream};
 use quote::quote;
+use regex::Regex;
 use std::{
     collections::{HashMap, HashSet},
     fs,
@@ -55,7 +56,13 @@ pub enum Origin {
 }
 
 fn main() {
-    eprintln!("=> Setting up");
+    let header_version: u32 = {
+        let regex = Regex::new(r"#define VK_HEADER_VERSION (\d+)").unwrap();
+        let source = include_str!("../Vulkan-Headers/include/vulkan/vulkan_core.h");
+        regex.captures(source).unwrap()[1].parse().unwrap()
+    };
+
+    eprintln!("=> Setting up (Vulkan Header {})", header_version);
     let Registry(registry_children) = vk_parse::parse_stream(Cursor::new(include_str!(
         "../Vulkan-Headers/registry/vk.xml"
     )));
@@ -334,6 +341,10 @@ fn main() {
     let version_patch_doc = const_function_doc("VK_VERSION_PATCH");
     let loaders_root = commands::generate_loaders_root(&loader_map);
     let generated_mod_path = generated_path.join("mod.rs");
+    let info = format!(
+        "Generated from `Vulkan {}.{}`",
+        vulkan_version, header_version
+    );
     fs::write(
         &generated_mod_path,
         quote! {
@@ -369,6 +380,9 @@ fn main() {
                 /// Provides Vulkan feature items
                 pub mod #generated_features;
             )*
+
+            #[doc = #info]
+            pub mod info {}
         }
         .to_string(),
     )

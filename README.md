@@ -1,6 +1,8 @@
 <img src="https://gitlab.com/Friz64/erupt/-/raw/master/logo.png" height=200>
 
 # erupt
+[![docs.rs](https://docs.rs/erupt/badge.svg)](https://docs.rs/erupt)
+[![crates.io](https://img.shields.io/crates/v/erupt.svg)](https://crates.io/crates/erupt)
 
 Vulkan API bindings
 

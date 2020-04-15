@@ -2,7 +2,7 @@
 //!
 //! Enabled using the `loading` cargo feature
 //!
-//! [`SurfaceKHR`]: extensions/khr_surface/struct.SurfaceKHR.html
+//! [`SurfaceKHR`]: ../extensions/khr_surface/struct.SurfaceKHR.html
 //! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
 //! [`ash-window`]: https://crates.io/crates/ash-window
 

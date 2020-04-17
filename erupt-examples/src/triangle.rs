@@ -3,7 +3,7 @@
 use erupt::{
     cstr,
     extensions::{ext_debug_utils::*, khr_surface::*, khr_swapchain::*},
-    utils::surface,
+    utils::{self, surface},
     vk1_0::*,
     CoreLoader, DeviceLoader, InstanceLoader,
 };
@@ -292,10 +292,12 @@ fn main() {
     // https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Shader_modules
     let entry_point = CString::new("main").unwrap();
 
-    let create_info = ShaderModuleCreateInfoBuilder::new().code(SHADER_VERT);
+    let vert_decoded = utils::decode_spv(SHADER_VERT).unwrap();
+    let create_info = ShaderModuleCreateInfoBuilder::new().code(&vert_decoded);
     let shader_vert = unsafe { device.create_shader_module(&create_info, None, None) }.unwrap();
 
-    let create_info = ShaderModuleCreateInfoBuilder::new().code(SHADER_FRAG);
+    let frag_decoded = utils::decode_spv(SHADER_FRAG).unwrap();
+    let create_info = ShaderModuleCreateInfoBuilder::new().code(&frag_decoded);
     let shader_frag = unsafe { device.create_shader_module(&create_info, None, None) }.unwrap();
 
     let shader_stages = vec![

@@ -535,7 +535,7 @@ impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
             &Self::INT64_KHR => "INT64_KHR",
             &Self::UINT64_KHR => "UINT64_KHR",
             &Self::FLOAT64_KHR => "FLOAT64_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

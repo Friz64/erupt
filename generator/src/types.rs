@@ -953,7 +953,7 @@ pub fn generate(
                     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
                         fmt.write_str(match self {
                             #( #debug_arms )*
-                            _ => "Unknown enum variant",
+                            _ => "(Unknown)",
                         })
                     }
                 }
@@ -1074,7 +1074,7 @@ pub fn generate(
                     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
                         fmt.write_str(match self {
                             #( #debug_arms )*
-                            _ => "Unknown enum variant",
+                            _ => "(Unknown)",
                         })
                     }
                 }

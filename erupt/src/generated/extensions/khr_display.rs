@@ -796,7 +796,7 @@ impl DisplayModeCreateFlagBitsKHR {
 impl std::fmt::Debug for DisplayModeCreateFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -967,7 +967,7 @@ impl std::fmt::Debug for DisplayPlaneAlphaFlagBitsKHR {
             &Self::GLOBAL_KHR => "GLOBAL_KHR",
             &Self::PER_PIXEL_KHR => "PER_PIXEL_KHR",
             &Self::PER_PIXEL_PREMULTIPLIED_KHR => "PER_PIXEL_PREMULTIPLIED_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1133,7 +1133,7 @@ impl DisplaySurfaceCreateFlagBitsKHR {
 impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

@@ -211,7 +211,7 @@ impl XlibSurfaceCreateFlagBitsKHR {
 impl std::fmt::Debug for XlibSurfaceCreateFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

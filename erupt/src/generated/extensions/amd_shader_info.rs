@@ -82,7 +82,7 @@ impl std::fmt::Debug for ShaderInfoTypeAMD {
             &Self::STATISTICS_AMD => "STATISTICS_AMD",
             &Self::BINARY_AMD => "BINARY_AMD",
             &Self::DISASSEMBLY_AMD => "DISASSEMBLY_AMD",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

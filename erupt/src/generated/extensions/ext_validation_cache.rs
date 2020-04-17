@@ -282,7 +282,7 @@ impl ValidationCacheCreateFlagBitsEXT {
 impl std::fmt::Debug for ValidationCacheCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -391,7 +391,7 @@ impl std::fmt::Debug for ValidationCacheHeaderVersionEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::ONE_EXT => "ONE_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

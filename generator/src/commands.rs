@@ -62,7 +62,6 @@ pub fn collect(children: &[ExtensionChild], raw_commands: &[&Command]) -> Vec<Co
                             .map(|param| {
                                 let len = utils::len(&param.len, &param.altlen).into_iter().next();
                                 let optional = param.optional.clone();
-                                //== Some(if len.is_some() { "false,true" } else { "true" });
 
                                 (len, optional)
                             })

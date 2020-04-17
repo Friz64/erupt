@@ -329,7 +329,7 @@ impl PipelineRasterizationConservativeStateCreateFlagBitsEXT {
 impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -350,7 +350,7 @@ impl std::fmt::Debug for ConservativeRasterizationModeEXT {
             &Self::DISABLED_EXT => "DISABLED_EXT",
             &Self::OVERESTIMATE_EXT => "OVERESTIMATE_EXT",
             &Self::UNDERESTIMATE_EXT => "UNDERESTIMATE_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

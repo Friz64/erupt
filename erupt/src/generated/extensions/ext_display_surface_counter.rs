@@ -262,7 +262,7 @@ impl std::fmt::Debug for SurfaceCounterFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::VBLANK_EXT => "VBLANK_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

@@ -131,7 +131,7 @@ impl std::fmt::Debug for ViewportCoordinateSwizzleNV {
             &Self::NEGATIVE_Z_NV => "NEGATIVE_Z_NV",
             &Self::POSITIVE_W_NV => "POSITIVE_W_NV",
             &Self::NEGATIVE_W_NV => "NEGATIVE_W_NV",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -259,7 +259,7 @@ impl PipelineViewportSwizzleStateCreateFlagBitsNV {
 impl std::fmt::Debug for PipelineViewportSwizzleStateCreateFlagBitsNV {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

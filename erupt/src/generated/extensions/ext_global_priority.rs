@@ -109,7 +109,7 @@ impl std::fmt::Debug for QueueGlobalPriorityEXT {
             &Self::MEDIUM_EXT => "MEDIUM_EXT",
             &Self::HIGH_EXT => "HIGH_EXT",
             &Self::REALTIME_EXT => "REALTIME_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

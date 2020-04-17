@@ -143,7 +143,7 @@ impl std::fmt::Debug for ValidationFeatureEnableEXT {
             &Self::GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT => "GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT",
             &Self::BEST_PRACTICES_EXT => "BEST_PRACTICES_EXT",
             &Self::DEBUG_PRINTF_EXT => "DEBUG_PRINTF_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -171,7 +171,7 @@ impl std::fmt::Debug for ValidationFeatureDisableEXT {
             &Self::OBJECT_LIFETIMES_EXT => "OBJECT_LIFETIMES_EXT",
             &Self::CORE_CHECKS_EXT => "CORE_CHECKS_EXT",
             &Self::UNIQUE_HANDLES_EXT => "UNIQUE_HANDLES_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

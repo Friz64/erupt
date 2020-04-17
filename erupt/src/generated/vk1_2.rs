@@ -1378,7 +1378,7 @@ impl std::fmt::Debug for SemaphoreWaitFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::ANY => "ANY",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -3678,7 +3678,7 @@ impl std::fmt::Debug for DriverId {
             &Self::GOOGLE_SWIFTSHADER => "GOOGLE_SWIFTSHADER",
             &Self::GGP_PROPRIETARY => "GGP_PROPRIETARY",
             &Self::BROADCOM_PROPRIETARY => "BROADCOM_PROPRIETARY",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -3794,7 +3794,7 @@ impl std::fmt::Debug for ShaderFloatControlsIndependence {
             &Self::_32_ONLY => "32_ONLY",
             &Self::ALL => "ALL",
             &Self::NONE => "NONE",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -3833,7 +3833,7 @@ impl std::fmt::Debug for ResolveModeFlagBits {
             &Self::AVERAGE => "AVERAGE",
             &Self::MIN => "MIN",
             &Self::MAX => "MAX",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -4825,7 +4825,7 @@ impl std::fmt::Debug for DescriptorBindingFlagBits {
             &Self::UPDATE_UNUSED_WHILE_PENDING => "UPDATE_UNUSED_WHILE_PENDING",
             &Self::PARTIALLY_BOUND => "PARTIALLY_BOUND",
             &Self::VARIABLE_DESCRIPTOR_COUNT => "VARIABLE_DESCRIPTOR_COUNT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -6324,7 +6324,7 @@ impl std::fmt::Debug for SamplerReductionMode {
             &Self::WEIGHTED_AVERAGE => "WEIGHTED_AVERAGE",
             &Self::MIN => "MIN",
             &Self::MAX => "MAX",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -7624,7 +7624,7 @@ impl std::fmt::Debug for SemaphoreType {
         fmt.write_str(match self {
             &Self::BINARY => "BINARY",
             &Self::TIMELINE => "TIMELINE",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

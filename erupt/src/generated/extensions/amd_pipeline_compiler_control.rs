@@ -19,7 +19,7 @@ impl PipelineCompilerControlFlagBitsAMD {}
 impl std::fmt::Debug for PipelineCompilerControlFlagBitsAMD {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

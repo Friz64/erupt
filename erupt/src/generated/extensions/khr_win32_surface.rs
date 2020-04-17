@@ -205,7 +205,7 @@ impl Win32SurfaceCreateFlagBitsKHR {
 impl std::fmt::Debug for Win32SurfaceCreateFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

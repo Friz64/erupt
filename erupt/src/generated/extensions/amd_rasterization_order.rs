@@ -17,7 +17,7 @@ impl std::fmt::Debug for RasterizationOrderAMD {
         fmt.write_str(match self {
             &Self::STRICT_AMD => "STRICT_AMD",
             &Self::RELAXED_AMD => "RELAXED_AMD",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

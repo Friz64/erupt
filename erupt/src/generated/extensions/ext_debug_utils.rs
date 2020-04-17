@@ -811,7 +811,7 @@ impl DebugUtilsMessengerCreateFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -841,7 +841,7 @@ impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
             &Self::INFO_EXT => "INFO_EXT",
             &Self::WARNING_EXT => "WARNING_EXT",
             &Self::ERROR_EXT => "ERROR_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -869,7 +869,7 @@ impl std::fmt::Debug for DebugUtilsMessageTypeFlagBitsEXT {
             &Self::GENERAL_EXT => "GENERAL_EXT",
             &Self::VALIDATION_EXT => "VALIDATION_EXT",
             &Self::PERFORMANCE_EXT => "PERFORMANCE_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1047,7 +1047,7 @@ impl DebugUtilsMessengerCallbackDataFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

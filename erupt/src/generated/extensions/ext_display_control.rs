@@ -270,7 +270,7 @@ impl std::fmt::Debug for DisplayPowerStateEXT {
             &Self::OFF_EXT => "OFF_EXT",
             &Self::SUSPEND_EXT => "SUSPEND_EXT",
             &Self::ON_EXT => "ON_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -358,7 +358,7 @@ impl std::fmt::Debug for DeviceEventTypeEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::DISPLAY_HOTPLUG_EXT => "DISPLAY_HOTPLUG_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -446,7 +446,7 @@ impl std::fmt::Debug for DisplayEventTypeEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::FIRST_PIXEL_OUT_EXT => "FIRST_PIXEL_OUT_EXT",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

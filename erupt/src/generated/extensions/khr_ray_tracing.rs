@@ -1006,7 +1006,7 @@ impl std::fmt::Debug for AccelerationStructureTypeKHR {
         fmt.write_str(match self {
             &Self::TOP_LEVEL_KHR => "TOP_LEVEL_KHR",
             &Self::BOTTOM_LEVEL_KHR => "BOTTOM_LEVEL_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1045,7 +1045,7 @@ impl std::fmt::Debug for BuildAccelerationStructureFlagBitsKHR {
             &Self::PREFER_FAST_TRACE_KHR => "PREFER_FAST_TRACE_KHR",
             &Self::PREFER_FAST_BUILD_KHR => "PREFER_FAST_BUILD_KHR",
             &Self::LOW_MEMORY_KHR => "LOW_MEMORY_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1198,7 +1198,7 @@ impl std::fmt::Debug for GeometryTypeKHR {
             &Self::TRIANGLES_KHR => "TRIANGLES_KHR",
             &Self::AABBS_KHR => "AABBS_KHR",
             &Self::INSTANCES_KHR => "INSTANCES_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1328,7 +1328,7 @@ impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeKHR {
             &Self::OBJECT_KHR => "OBJECT_KHR",
             &Self::BUILD_SCRATCH_KHR => "BUILD_SCRATCH_KHR",
             &Self::UPDATE_SCRATCH_KHR => "UPDATE_SCRATCH_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -1341,7 +1341,7 @@ impl AccelerationStructureBuildTypeKHR {}
 impl std::fmt::Debug for AccelerationStructureBuildTypeKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -2089,7 +2089,7 @@ impl std::fmt::Debug for GeometryFlagBitsKHR {
         fmt.write_str(match self {
             &Self::OPAQUE_KHR => "OPAQUE_KHR",
             &Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR => "NO_DUPLICATE_ANY_HIT_INVOCATION_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -2326,7 +2326,7 @@ impl std::fmt::Debug for CopyAccelerationStructureModeKHR {
             &Self::COMPACT_KHR => "COMPACT_KHR",
             &Self::SERIALIZE_KHR => "SERIALIZE_KHR",
             &Self::DESERIALIZE_KHR => "DESERIALIZE_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -2937,7 +2937,7 @@ impl std::fmt::Debug for RayTracingShaderGroupTypeKHR {
             &Self::GENERAL_KHR => "GENERAL_KHR",
             &Self::TRIANGLES_HIT_GROUP_KHR => "TRIANGLES_HIT_GROUP_KHR",
             &Self::PROCEDURAL_HIT_GROUP_KHR => "PROCEDURAL_HIT_GROUP_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -3517,7 +3517,7 @@ impl std::fmt::Debug for GeometryInstanceFlagBitsKHR {
             &Self::TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR => "TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR",
             &Self::FORCE_OPAQUE_KHR => "FORCE_OPAQUE_KHR",
             &Self::FORCE_NO_OPAQUE_KHR => "FORCE_NO_OPAQUE_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

@@ -642,7 +642,7 @@ impl std::fmt::Debug for SwapchainCreateFlagBitsKHR {
             &Self::SPLIT_INSTANCE_BIND_REGIONS_KHR => "SPLIT_INSTANCE_BIND_REGIONS_KHR",
             &Self::PROTECTED_KHR => "PROTECTED_KHR",
             &Self::MUTABLE_FORMAT_KHR => "MUTABLE_FORMAT_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }
@@ -869,7 +869,7 @@ impl std::fmt::Debug for DeviceGroupPresentModeFlagBitsKHR {
             &Self::REMOTE_KHR => "REMOTE_KHR",
             &Self::SUM_KHR => "SUM_KHR",
             &Self::LOCAL_MULTI_DEVICE_KHR => "LOCAL_MULTI_DEVICE_KHR",
-            _ => "Unknown enum variant",
+            _ => "(Unknown)",
         })
     }
 }

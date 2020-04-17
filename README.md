@@ -51,6 +51,21 @@ instance.destroy_instance(None);
 - `surface`: Enables the [`surface`] module, adds [`raw-window-handle`] dependency (Enabled by default)
 - `libloading`: Enables the [`CoreLoader::new`] function, adds [`libloading`] dependency (Enabled by default)
 
+# FAQ
+## Q: What's the difference between this, ash and vulkano?
+A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example it
+has a special hand-written written wrapper around a Vulkan PhysicalDevice. On the other hand ash and erupt
+both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead focusing on having
+good bindings to the *raw* Vulkan API.
+
+The big selling points of erupt is that it has better documentation, high level function support for all
+extensions (which is only really relevant if you use those extensions), being fully generated (which is not
+visible to the end user), having lower compile times ([tested here](https://www.reddit.com/r/rust/comments/g1tqh3/))
+and some more smaller improvements. On the other hand ash has a bigger existing community.
+
+## Q: What does the number at the end of the version mean?
+A: It represents the Vulkan Header version this version of erupt was generated against and is purely informational.
+
 # Thank you
 - [`vk-parse`](https://crates.io/crates/vk-parse) for helping parse `vk.xml` in the [`generator`](https://gitlab.com/Friz64/erupt/-/tree/master/generator)
 - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate

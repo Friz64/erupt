@@ -14,6 +14,8 @@ pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
 impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVertexAttributeDivisorPropertiesEXT,
@@ -175,6 +177,8 @@ pub struct PipelineVertexInputDivisorStateCreateInfoEXT { pub s_type : crate :: 
 impl PipelineVertexInputDivisorStateCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineVertexInputDivisorStateCreateInfoEXT,
@@ -275,6 +279,8 @@ pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
 impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVertexAttributeDivisorFeaturesEXT,

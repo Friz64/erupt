@@ -993,6 +993,8 @@ pub struct ImageSwapchainCreateInfoKHR {
 impl ImageSwapchainCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageSwapchainCreateInfoKHR,
@@ -1077,6 +1079,8 @@ pub struct BindImageMemorySwapchainInfoKHR {
 impl BindImageMemorySwapchainInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBindImageMemorySwapchainInfoKHR,
@@ -1170,6 +1174,8 @@ pub struct DeviceGroupPresentInfoKHR {
 impl DeviceGroupPresentInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupPresentInfoKHR,
@@ -1267,6 +1273,8 @@ pub struct DeviceGroupSwapchainCreateInfoKHR {
 impl DeviceGroupSwapchainCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupSwapchainCreateInfoKHR,

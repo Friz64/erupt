@@ -15,6 +15,8 @@ pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
 impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT,
@@ -119,6 +121,8 @@ pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSubgroupSizeControlPropertiesEXT,
@@ -242,6 +246,8 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT,

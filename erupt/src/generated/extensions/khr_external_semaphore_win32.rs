@@ -282,6 +282,8 @@ pub struct ExportSemaphoreWin32HandleInfoKHR {
 impl ExportSemaphoreWin32HandleInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportSemaphoreWin32HandleInfoKHR,
@@ -384,6 +386,8 @@ pub struct D3D12FenceSubmitInfoKHR {
 impl D3D12FenceSubmitInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByD3D12FenceSubmitInfoKHR,

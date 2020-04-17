@@ -66,6 +66,8 @@ pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXT {
 impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceBufferDeviceAddressFeaturesEXT,
@@ -186,6 +188,8 @@ pub struct BufferDeviceAddressCreateInfoEXT {
 impl BufferDeviceAddressCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBufferDeviceAddressCreateInfoEXT,

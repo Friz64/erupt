@@ -239,6 +239,8 @@ pub struct AndroidHardwareBufferUsageANDROID {
 impl AndroidHardwareBufferUsageANDROID {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByAndroidHardwareBufferUsageANDROID,
@@ -332,6 +334,8 @@ pub struct AndroidHardwareBufferFormatPropertiesANDROID {
 impl AndroidHardwareBufferFormatPropertiesANDROID {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByAndroidHardwareBufferFormatPropertiesANDROID,
@@ -492,6 +496,8 @@ pub struct ImportAndroidHardwareBufferInfoANDROID {
 impl ImportAndroidHardwareBufferInfoANDROID {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImportAndroidHardwareBufferInfoANDROID,
@@ -575,6 +581,8 @@ pub struct ExternalFormatANDROID {
 impl ExternalFormatANDROID {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExternalFormatANDROID,

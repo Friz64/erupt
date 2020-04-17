@@ -529,6 +529,8 @@ pub struct QueryPoolPerformanceCreateInfoKHR {
 impl QueryPoolPerformanceCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByQueryPoolPerformanceCreateInfoKHR,
@@ -729,6 +731,8 @@ pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
 impl PhysicalDevicePerformanceQueryFeaturesKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR,
@@ -840,6 +844,8 @@ pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
 impl PhysicalDevicePerformanceQueryPropertiesKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevicePerformanceQueryPropertiesKHR,
@@ -956,6 +962,8 @@ pub struct PerformanceQuerySubmitInfoKHR {
 impl PerformanceQuerySubmitInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPerformanceQuerySubmitInfoKHR,

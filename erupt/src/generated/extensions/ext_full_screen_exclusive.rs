@@ -198,6 +198,8 @@ pub struct SurfaceFullScreenExclusiveInfoEXT {
 impl SurfaceFullScreenExclusiveInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySurfaceFullScreenExclusiveInfoEXT,
@@ -291,6 +293,8 @@ pub struct SurfaceCapabilitiesFullScreenExclusiveEXT {
 impl SurfaceCapabilitiesFullScreenExclusiveEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySurfaceCapabilitiesFullScreenExclusiveEXT,
@@ -386,6 +390,8 @@ pub struct SurfaceFullScreenExclusiveWin32InfoEXT {
 impl SurfaceFullScreenExclusiveWin32InfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySurfaceFullScreenExclusiveWin32InfoEXT,

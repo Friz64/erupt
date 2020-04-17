@@ -16,6 +16,8 @@ pub struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
 impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT,
@@ -134,6 +136,8 @@ pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
 impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFragmentDensityMapPropertiesEXT,
@@ -255,6 +259,8 @@ pub struct RenderPassFragmentDensityMapCreateInfoEXT {
 impl RenderPassFragmentDensityMapCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassFragmentDensityMapCreateInfoEXT,

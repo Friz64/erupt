@@ -14,6 +14,8 @@ pub struct DedicatedAllocationImageCreateInfoNV {
 impl DedicatedAllocationImageCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationImageCreateInfoNV,
@@ -97,6 +99,8 @@ pub struct DedicatedAllocationBufferCreateInfoNV {
 impl DedicatedAllocationBufferCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationBufferCreateInfoNV,
@@ -181,6 +185,8 @@ pub struct DedicatedAllocationMemoryAllocateInfoNV {
 impl DedicatedAllocationMemoryAllocateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationMemoryAllocateInfoNV,

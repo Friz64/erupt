@@ -142,6 +142,8 @@ pub struct DrmFormatModifierPropertiesListEXT {
 impl DrmFormatModifierPropertiesListEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDrmFormatModifierPropertiesListEXT,
@@ -330,6 +332,8 @@ pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
 impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceImageDrmFormatModifierInfoEXT,
@@ -439,6 +443,8 @@ pub struct ImageDrmFormatModifierListCreateInfoEXT {
 impl ImageDrmFormatModifierListCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageDrmFormatModifierListCreateInfoEXT,
@@ -527,6 +533,8 @@ pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
 impl ImageDrmFormatModifierExplicitCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageDrmFormatModifierExplicitCreateInfoEXT,

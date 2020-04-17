@@ -15,6 +15,8 @@ pub struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
 impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT,
@@ -125,6 +127,8 @@ pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
 impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceInlineUniformBlockPropertiesEXT,
@@ -280,6 +284,8 @@ pub struct WriteDescriptorSetInlineUniformBlockEXT {
 impl WriteDescriptorSetInlineUniformBlockEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByWriteDescriptorSetInlineUniformBlockEXT,
@@ -366,6 +372,8 @@ pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
 impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDescriptorPoolInlineUniformBlockCreateInfoEXT,

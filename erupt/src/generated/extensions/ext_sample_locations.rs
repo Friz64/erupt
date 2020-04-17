@@ -119,6 +119,8 @@ pub struct SampleLocationsInfoEXT {
 impl SampleLocationsInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySampleLocationsInfoEXT,
@@ -544,6 +546,8 @@ pub struct RenderPassSampleLocationsBeginInfoEXT {
 impl RenderPassSampleLocationsBeginInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassSampleLocationsBeginInfoEXT,
@@ -662,6 +666,8 @@ pub struct PipelineSampleLocationsStateCreateInfoEXT {
 impl PipelineSampleLocationsStateCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineSampleLocationsStateCreateInfoEXT,
@@ -769,6 +775,8 @@ pub struct PhysicalDeviceSampleLocationsPropertiesEXT {
 impl PhysicalDeviceSampleLocationsPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSampleLocationsPropertiesEXT,

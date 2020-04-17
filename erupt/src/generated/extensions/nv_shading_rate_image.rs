@@ -460,6 +460,8 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
 impl PipelineViewportShadingRateImageStateCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineViewportShadingRateImageStateCreateInfoNV,
@@ -561,6 +563,8 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNV {
 impl PhysicalDeviceShadingRateImageFeaturesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShadingRateImageFeaturesNV,
@@ -667,6 +671,8 @@ pub struct PhysicalDeviceShadingRateImagePropertiesNV {
 impl PhysicalDeviceShadingRateImagePropertiesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShadingRateImagePropertiesNV,
@@ -781,6 +787,8 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
 impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineViewportCoarseSampleOrderStateCreateInfoNV,

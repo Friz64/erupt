@@ -888,6 +888,8 @@ pub struct QueryPoolPerformanceQueryCreateInfoINTEL {
 impl QueryPoolPerformanceQueryCreateInfoINTEL {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByQueryPoolPerformanceQueryCreateInfoINTEL,

@@ -1795,6 +1795,8 @@ pub struct PhysicalDeviceFeatures2 {
 impl PhysicalDeviceFeatures2 {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFeatures2,
@@ -4093,6 +4095,8 @@ pub struct PhysicalDeviceSubgroupProperties {
 impl PhysicalDeviceSubgroupProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSubgroupProperties,
@@ -4252,6 +4256,8 @@ pub struct PhysicalDevice16BitStorageFeatures {
 impl PhysicalDevice16BitStorageFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevice16BitStorageFeatures,
@@ -4377,6 +4383,8 @@ pub struct MemoryDedicatedRequirements {
 impl MemoryDedicatedRequirements {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByMemoryDedicatedRequirements,
@@ -4475,6 +4483,8 @@ pub struct MemoryDedicatedAllocateInfo {
 impl MemoryDedicatedAllocateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByMemoryDedicatedAllocateInfo,
@@ -4607,6 +4617,8 @@ pub struct MemoryAllocateFlagsInfo {
 impl MemoryAllocateFlagsInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByMemoryAllocateFlagsInfo,
@@ -4700,6 +4712,8 @@ pub struct DeviceGroupRenderPassBeginInfo {
 impl DeviceGroupRenderPassBeginInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupRenderPassBeginInfo,
@@ -4797,6 +4811,8 @@ pub struct DeviceGroupCommandBufferBeginInfo {
 impl DeviceGroupCommandBufferBeginInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupCommandBufferBeginInfo,
@@ -4885,6 +4901,8 @@ pub struct DeviceGroupSubmitInfo {
 impl DeviceGroupSubmitInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupSubmitInfo,
@@ -5009,6 +5027,8 @@ pub struct DeviceGroupBindSparseInfo {
 impl DeviceGroupBindSparseInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupBindSparseInfo,
@@ -5101,6 +5121,8 @@ pub struct BindBufferMemoryDeviceGroupInfo {
 impl BindBufferMemoryDeviceGroupInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBindBufferMemoryDeviceGroupInfo,
@@ -5190,6 +5212,8 @@ pub struct BindImageMemoryDeviceGroupInfo {
 impl BindImageMemoryDeviceGroupInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBindImageMemoryDeviceGroupInfo,
@@ -5297,6 +5321,8 @@ pub struct DeviceGroupDeviceCreateInfo {
 impl DeviceGroupDeviceCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupDeviceCreateInfo,
@@ -5388,6 +5414,8 @@ pub struct PhysicalDevicePointClippingProperties {
 impl PhysicalDevicePointClippingProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevicePointClippingProperties,
@@ -5498,6 +5526,8 @@ pub struct RenderPassInputAttachmentAspectCreateInfo {
 impl RenderPassInputAttachmentAspectCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassInputAttachmentAspectCreateInfo,
@@ -5674,6 +5704,8 @@ pub struct ImageViewUsageCreateInfo {
 impl ImageViewUsageCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageViewUsageCreateInfo,
@@ -5780,6 +5812,8 @@ pub struct PipelineTessellationDomainOriginStateCreateInfo {
 impl PipelineTessellationDomainOriginStateCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineTessellationDomainOriginStateCreateInfo,
@@ -5875,6 +5909,8 @@ pub struct RenderPassMultiviewCreateInfo {
 impl RenderPassMultiviewCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassMultiviewCreateInfo,
@@ -5985,6 +6021,8 @@ pub struct PhysicalDeviceMultiviewFeatures {
 impl PhysicalDeviceMultiviewFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceMultiviewFeatures,
@@ -6092,6 +6130,8 @@ pub struct PhysicalDeviceMultiviewProperties {
 impl PhysicalDeviceMultiviewProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceMultiviewProperties,
@@ -6190,6 +6230,8 @@ pub struct PhysicalDeviceVariablePointersFeatures {
 impl PhysicalDeviceVariablePointersFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVariablePointersFeatures,
@@ -6288,6 +6330,8 @@ pub struct PhysicalDeviceProtectedMemoryFeatures {
 impl PhysicalDeviceProtectedMemoryFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceProtectedMemoryFeatures,
@@ -6372,6 +6416,8 @@ pub struct PhysicalDeviceProtectedMemoryProperties {
 impl PhysicalDeviceProtectedMemoryProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceProtectedMemoryProperties,
@@ -6458,6 +6504,8 @@ pub struct ProtectedSubmitInfo {
 impl ProtectedSubmitInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByProtectedSubmitInfo,
@@ -6538,6 +6586,8 @@ pub struct SamplerYcbcrConversionInfo {
 impl SamplerYcbcrConversionInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySamplerYcbcrConversionInfo,
@@ -6622,6 +6672,8 @@ pub struct BindImagePlaneMemoryInfo {
 impl BindImagePlaneMemoryInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBindImagePlaneMemoryInfo,
@@ -6705,6 +6757,8 @@ pub struct ImagePlaneMemoryRequirementsInfo {
 impl ImagePlaneMemoryRequirementsInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImagePlaneMemoryRequirementsInfo,
@@ -6788,6 +6842,8 @@ pub struct PhysicalDeviceSamplerYcbcrConversionFeatures {
 impl PhysicalDeviceSamplerYcbcrConversionFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSamplerYcbcrConversionFeatures,
@@ -6881,6 +6937,8 @@ pub struct SamplerYcbcrConversionImageFormatProperties {
 impl SamplerYcbcrConversionImageFormatProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySamplerYcbcrConversionImageFormatProperties,
@@ -6976,6 +7034,8 @@ pub struct PhysicalDeviceExternalImageFormatInfo {
 impl PhysicalDeviceExternalImageFormatInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceExternalImageFormatInfo,
@@ -7065,6 +7125,8 @@ pub struct ExternalImageFormatProperties {
 impl ExternalImageFormatProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExternalImageFormatProperties,
@@ -7158,6 +7220,8 @@ pub struct PhysicalDeviceIDProperties {
 impl PhysicalDeviceIDProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceIDProperties,
@@ -7273,6 +7337,8 @@ pub struct ExternalMemoryImageCreateInfo {
 impl ExternalMemoryImageCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExternalMemoryImageCreateInfo,
@@ -7359,6 +7425,8 @@ pub struct ExternalMemoryBufferCreateInfo {
 impl ExternalMemoryBufferCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExternalMemoryBufferCreateInfo,
@@ -7445,6 +7513,8 @@ pub struct ExportMemoryAllocateInfo {
 impl ExportMemoryAllocateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportMemoryAllocateInfo,
@@ -7559,6 +7629,8 @@ pub struct ExportFenceCreateInfo {
 impl ExportFenceCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportFenceCreateInfo,
@@ -7673,6 +7745,8 @@ pub struct ExportSemaphoreCreateInfo {
 impl ExportSemaphoreCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportSemaphoreCreateInfo,
@@ -7760,6 +7834,8 @@ pub struct PhysicalDeviceMaintenance3Properties {
 impl PhysicalDeviceMaintenance3Properties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceMaintenance3Properties,
@@ -7860,6 +7936,8 @@ pub struct PhysicalDeviceShaderDrawParametersFeatures {
 impl PhysicalDeviceShaderDrawParametersFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderDrawParametersFeatures,

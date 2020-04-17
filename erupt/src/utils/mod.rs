@@ -169,7 +169,13 @@ impl<T> VulkanResult<T> {
     }
 }
 
-impl<T> Error for VulkanResult<T> where T: Debug + Display {}
+impl Display for RawResult {
+    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
+        Debug::fmt(self, fmt)
+    }
+}
+
+impl Error for RawResult {}
 
 impl<T> Debug for VulkanResult<T>
 where

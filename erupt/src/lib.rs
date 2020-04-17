@@ -1,7 +1,7 @@
 #![doc(html_logo_url = "https://gitlab.com/Friz64/erupt/-/raw/master/logo.png")]
 //! Vulkan API bindings
 //!
-//! # Features
+//! ## Features
 //! - Full Vulkan API coverage
 //! - First-class support for all extensions
 //! - High quality auto-generated function wrappers
@@ -16,7 +16,7 @@
 //! - `Default` and `Debug` implementation for every type
 //! - Complete auto-generation of everything except [`utils`]
 //!
-//! # Example: Instance Creation
+//! ## Example: Instance Creation
 //! ```rust
 //! use erupt::{vk1_0::*, CoreLoader, InstanceLoader};
 //!
@@ -37,17 +37,17 @@
 //! instance.destroy_instance(None);
 //! ```
 //!
-//! # Additional examples
+//! ## Additional examples
 //! - [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/triangle.rs)
 //! - [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/pointer_chain.rs)
 //! - [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/version.rs)
 //!
-//! # Cargo Features
+//! ## Cargo Features
 //! - `surface`: Enables the [`surface`] module, adds [`raw-window-handle`] dependency (Enabled by default)
 //! - `libloading`: Enables the [`CoreLoader::new`] function, adds [`libloading`] dependency (Enabled by default)
 //!
-//! # FAQ
-//! ## Q: What's the difference between this, ash and vulkano?
+//! ## FAQ
+//! ### Q: What's the difference between this, ash and vulkano?
 //! A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example it
 //! has a special hand-written written wrapper around a Vulkan PhysicalDevice. On the other hand ash and erupt
 //! both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead focusing on having
@@ -58,10 +58,10 @@
 //! visible to the end user), having lower compile times ([tested here](https://www.reddit.com/r/rust/comments/g1tqh3/))
 //! and some more smaller improvements. On the other hand ash has a bigger existing community.
 //!
-//! ## Q: What does the number at the end of the version mean?
+//! ### Q: What does the number at the end of the version mean?
 //! A: It represents the Vulkan Header version this version of erupt was generated against and is purely informational.
 //!
-//! # Thank you
+//! ## Thank you
 //! - [`vk-parse`](https://crates.io/crates/vk-parse) for helping parse `vk.xml` in the [`generator`](https://gitlab.com/Friz64/erupt/-/tree/master/generator)
 //! - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate
 //! - [`libloading`](https://crates.io/crates/libloading) for providing symbol loading
@@ -70,7 +70,7 @@
 //! - The Vulkan Community ❤️
 //! - The Rust Community ❤️
 //!
-//! # Licensing
+//! ## Licensing
 //!
 //! The logo is the Volcano Emoji of [Twemoji](https://twemoji.twitter.com/) ([License](https://creativecommons.org/licenses/by/4.0/)). The name "erupt" was added on top of it.
 //!

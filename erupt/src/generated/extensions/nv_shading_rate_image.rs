@@ -460,13 +460,11 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
 impl PipelineViewportShadingRateImageStateCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineViewportShadingRateImageStateCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
@@ -563,13 +561,11 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNV {
 impl PhysicalDeviceShadingRateImageFeaturesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShadingRateImageFeaturesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
@@ -671,13 +667,11 @@ pub struct PhysicalDeviceShadingRateImagePropertiesNV {
 impl PhysicalDeviceShadingRateImagePropertiesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShadingRateImagePropertiesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
@@ -787,13 +781,11 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
 impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineViewportCoarseSampleOrderStateCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {

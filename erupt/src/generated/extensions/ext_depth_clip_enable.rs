@@ -14,13 +14,11 @@ pub struct PhysicalDeviceDepthClipEnableFeaturesEXT {
 impl PhysicalDeviceDepthClipEnableFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDepthClipEnableFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
@@ -108,13 +106,11 @@ pub struct PipelineRasterizationDepthClipStateCreateInfoEXT {
 impl PipelineRasterizationDepthClipStateCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineRasterizationDepthClipStateCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {

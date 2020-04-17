@@ -282,13 +282,11 @@ pub struct ExportSemaphoreWin32HandleInfoKHR {
 impl ExportSemaphoreWin32HandleInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportSemaphoreWin32HandleInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
@@ -386,13 +384,11 @@ pub struct D3D12FenceSubmitInfoKHR {
 impl D3D12FenceSubmitInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByD3D12FenceSubmitInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> D3D12FenceSubmitInfoKHRBuilder<'a> {

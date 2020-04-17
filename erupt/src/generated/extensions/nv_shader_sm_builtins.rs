@@ -15,13 +15,11 @@ pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
 impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderSMBuiltinsPropertiesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
@@ -114,13 +112,11 @@ pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
 impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderSMBuiltinsFeaturesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {

@@ -16,13 +16,11 @@ pub struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
 impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
@@ -136,13 +134,11 @@ pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
 impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFragmentDensityMapPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
@@ -259,13 +255,11 @@ pub struct RenderPassFragmentDensityMapCreateInfoEXT {
 impl RenderPassFragmentDensityMapCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassFragmentDensityMapCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {

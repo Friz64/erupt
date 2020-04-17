@@ -262,13 +262,11 @@ pub struct ImportMemoryWin32HandleInfoKHR {
 impl ImportMemoryWin32HandleInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImportMemoryWin32HandleInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImportMemoryWin32HandleInfoKHRBuilder<'a> {
@@ -368,13 +366,11 @@ pub struct ExportMemoryWin32HandleInfoKHR {
 impl ExportMemoryWin32HandleInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByExportMemoryWin32HandleInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ExportMemoryWin32HandleInfoKHRBuilder<'a> {

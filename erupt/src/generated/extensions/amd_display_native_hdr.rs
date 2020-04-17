@@ -61,13 +61,11 @@ pub struct DisplayNativeHdrSurfaceCapabilitiesAMD {
 impl DisplayNativeHdrSurfaceCapabilitiesAMD {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDisplayNativeHdrSurfaceCapabilitiesAMD,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
@@ -149,13 +147,11 @@ pub struct SwapchainDisplayNativeHdrCreateInfoAMD {
 impl SwapchainDisplayNativeHdrCreateInfoAMD {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySwapchainDisplayNativeHdrCreateInfoAMD,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {

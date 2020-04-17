@@ -142,13 +142,11 @@ pub struct DrmFormatModifierPropertiesListEXT {
 impl DrmFormatModifierPropertiesListEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDrmFormatModifierPropertiesListEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DrmFormatModifierPropertiesListEXTBuilder<'a> {
@@ -332,13 +330,11 @@ pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
 impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceImageDrmFormatModifierInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
@@ -443,13 +439,11 @@ pub struct ImageDrmFormatModifierListCreateInfoEXT {
 impl ImageDrmFormatModifierListCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageDrmFormatModifierListCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
@@ -533,13 +527,11 @@ pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
 impl ImageDrmFormatModifierExplicitCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageDrmFormatModifierExplicitCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {

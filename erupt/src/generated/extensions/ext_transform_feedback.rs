@@ -302,13 +302,11 @@ pub struct PhysicalDeviceTransformFeedbackFeaturesEXT {
 impl PhysicalDeviceTransformFeedbackFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTransformFeedbackFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
@@ -411,13 +409,11 @@ pub struct PhysicalDeviceTransformFeedbackPropertiesEXT {
 impl PhysicalDeviceTransformFeedbackPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTransformFeedbackPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a> {
@@ -627,13 +623,11 @@ pub struct PipelineRasterizationStateStreamCreateInfoEXT {
 impl PipelineRasterizationStateStreamCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineRasterizationStateStreamCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {

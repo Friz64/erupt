@@ -14,13 +14,11 @@ pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
 impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTexelBufferAlignmentFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
@@ -113,13 +111,11 @@ pub struct PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
 impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTexelBufferAlignmentPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {

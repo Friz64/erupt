@@ -149,13 +149,11 @@ pub struct ImportMemoryHostPointerInfoEXT {
 impl ImportMemoryHostPointerInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImportMemoryHostPointerInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImportMemoryHostPointerInfoEXTBuilder<'a> {
@@ -245,13 +243,11 @@ pub struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
 impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceExternalMemoryHostPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {

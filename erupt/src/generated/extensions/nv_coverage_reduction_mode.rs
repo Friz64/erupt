@@ -202,13 +202,11 @@ pub struct PhysicalDeviceCoverageReductionModeFeaturesNV {
 impl PhysicalDeviceCoverageReductionModeFeaturesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceCoverageReductionModeFeaturesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
@@ -301,13 +299,11 @@ pub struct PipelineCoverageReductionStateCreateInfoNV {
 impl PipelineCoverageReductionStateCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineCoverageReductionStateCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineCoverageReductionStateCreateInfoNVBuilder<'a> {

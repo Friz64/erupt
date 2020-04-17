@@ -14,13 +14,11 @@ pub struct DedicatedAllocationImageCreateInfoNV {
 impl DedicatedAllocationImageCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationImageCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
@@ -99,13 +97,11 @@ pub struct DedicatedAllocationBufferCreateInfoNV {
 impl DedicatedAllocationBufferCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationBufferCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
@@ -185,13 +181,11 @@ pub struct DedicatedAllocationMemoryAllocateInfoNV {
 impl DedicatedAllocationMemoryAllocateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDedicatedAllocationMemoryAllocateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {

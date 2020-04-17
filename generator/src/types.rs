@@ -598,13 +598,11 @@ pub fn generate(
                         quote! {
                             #[inline]
                             #[doc = "Appends `self` to `other` pointer chain"]
-                            pub fn extend<T>(&mut self, other: &mut T) where T: #extendable_by_name {
-                                unsafe {
-                                    crate::append_ptr_chain(
-                                        other as *mut T as _,
-                                        self as *mut Self as _,
-                                    );
-                                }
+                            pub unsafe fn extend<T>(&mut self, other: &mut T) where T: #extendable_by_name {
+                                crate::append_ptr_chain(
+                                    other as *mut T as _,
+                                    self as *mut Self as _,
+                                );
                             }
                         },
                     )

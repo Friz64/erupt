@@ -119,13 +119,11 @@ pub struct SampleLocationsInfoEXT {
 impl SampleLocationsInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySampleLocationsInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> SampleLocationsInfoEXTBuilder<'a> {
@@ -546,13 +544,11 @@ pub struct RenderPassSampleLocationsBeginInfoEXT {
 impl RenderPassSampleLocationsBeginInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassSampleLocationsBeginInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
@@ -666,13 +662,11 @@ pub struct PipelineSampleLocationsStateCreateInfoEXT {
 impl PipelineSampleLocationsStateCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineSampleLocationsStateCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
@@ -775,13 +769,11 @@ pub struct PhysicalDeviceSampleLocationsPropertiesEXT {
 impl PhysicalDeviceSampleLocationsPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSampleLocationsPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {

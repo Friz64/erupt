@@ -14,13 +14,11 @@ pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceBlendOperationAdvancedFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
@@ -121,13 +119,11 @@ pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceBlendOperationAdvancedPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
@@ -290,13 +286,11 @@ pub struct PipelineColorBlendAdvancedStateCreateInfoEXT {
 impl PipelineColorBlendAdvancedStateCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineColorBlendAdvancedStateCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {

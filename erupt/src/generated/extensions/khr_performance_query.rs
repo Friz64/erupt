@@ -529,13 +529,11 @@ pub struct QueryPoolPerformanceCreateInfoKHR {
 impl QueryPoolPerformanceCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByQueryPoolPerformanceCreateInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
@@ -731,13 +729,11 @@ pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
 impl PhysicalDevicePerformanceQueryFeaturesKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
@@ -844,13 +840,11 @@ pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
 impl PhysicalDevicePerformanceQueryPropertiesKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevicePerformanceQueryPropertiesKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a> {
@@ -962,13 +956,11 @@ pub struct PerformanceQuerySubmitInfoKHR {
 impl PerformanceQuerySubmitInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPerformanceQuerySubmitInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PerformanceQuerySubmitInfoKHRBuilder<'a> {

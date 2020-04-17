@@ -15,13 +15,11 @@ pub struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
 impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
@@ -127,13 +125,11 @@ pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
 impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceInlineUniformBlockPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
@@ -284,13 +280,11 @@ pub struct WriteDescriptorSetInlineUniformBlockEXT {
 impl WriteDescriptorSetInlineUniformBlockEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByWriteDescriptorSetInlineUniformBlockEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
@@ -372,13 +366,11 @@ pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
 impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDescriptorPoolInlineUniformBlockCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {

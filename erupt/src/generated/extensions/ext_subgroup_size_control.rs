@@ -15,13 +15,11 @@ pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
 impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
@@ -121,13 +119,11 @@ pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSubgroupSizeControlPropertiesEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
@@ -246,13 +242,11 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {

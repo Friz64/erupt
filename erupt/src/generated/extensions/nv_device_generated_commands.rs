@@ -1022,13 +1022,11 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
 impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDeviceGeneratedCommandsPropertiesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
@@ -1229,13 +1227,11 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
 impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDeviceGeneratedCommandsFeaturesNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
@@ -1435,13 +1431,11 @@ pub struct GraphicsPipelineShaderGroupsCreateInfoNV {
 impl GraphicsPipelineShaderGroupsCreateInfoNV {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByGraphicsPipelineShaderGroupsCreateInfoNV,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {

@@ -993,13 +993,11 @@ pub struct ImageSwapchainCreateInfoKHR {
 impl ImageSwapchainCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageSwapchainCreateInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImageSwapchainCreateInfoKHRBuilder<'a> {
@@ -1079,13 +1077,11 @@ pub struct BindImageMemorySwapchainInfoKHR {
 impl BindImageMemorySwapchainInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBindImageMemorySwapchainInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> BindImageMemorySwapchainInfoKHRBuilder<'a> {
@@ -1174,13 +1170,11 @@ pub struct DeviceGroupPresentInfoKHR {
 impl DeviceGroupPresentInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupPresentInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DeviceGroupPresentInfoKHRBuilder<'a> {
@@ -1273,13 +1267,11 @@ pub struct DeviceGroupSwapchainCreateInfoKHR {
 impl DeviceGroupSwapchainCreateInfoKHR {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDeviceGroupSwapchainCreateInfoKHR,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {

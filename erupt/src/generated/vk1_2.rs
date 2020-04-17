@@ -1629,13 +1629,11 @@ pub struct PhysicalDeviceVulkan11Features {
 impl PhysicalDeviceVulkan11Features {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVulkan11Features,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
@@ -1851,13 +1849,11 @@ pub struct PhysicalDeviceVulkan11Properties {
 impl PhysicalDeviceVulkan11Properties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVulkan11Properties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
@@ -2122,13 +2118,11 @@ pub struct PhysicalDeviceVulkan12Features {
 impl PhysicalDeviceVulkan12Features {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVulkan12Features,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
@@ -2828,13 +2822,11 @@ pub struct PhysicalDeviceVulkan12Properties {
 impl PhysicalDeviceVulkan12Properties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVulkan12Properties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
@@ -3850,13 +3842,11 @@ pub struct ImageFormatListCreateInfo {
 impl ImageFormatListCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageFormatListCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImageFormatListCreateInfoBuilder<'a> {
@@ -3945,13 +3935,11 @@ pub struct PhysicalDevice8BitStorageFeatures {
 impl PhysicalDevice8BitStorageFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDevice8BitStorageFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
@@ -4063,13 +4051,11 @@ pub struct PhysicalDeviceDriverProperties {
 impl PhysicalDeviceDriverProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDriverProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDriverPropertiesBuilder<'a> {
@@ -4186,13 +4172,11 @@ pub struct PhysicalDeviceShaderAtomicInt64Features {
 impl PhysicalDeviceShaderAtomicInt64Features {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderAtomicInt64Features,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
@@ -4287,13 +4271,11 @@ pub struct PhysicalDeviceShaderFloat16Int8Features {
 impl PhysicalDeviceShaderFloat16Int8Features {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderFloat16Int8Features,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
@@ -4397,13 +4379,11 @@ pub struct PhysicalDeviceFloatControlsProperties {
 impl PhysicalDeviceFloatControlsProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceFloatControlsProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
@@ -4707,13 +4687,11 @@ pub struct DescriptorSetLayoutBindingFlagsCreateInfo {
 impl DescriptorSetLayoutBindingFlagsCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDescriptorSetLayoutBindingFlagsCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
@@ -4860,13 +4838,11 @@ pub struct PhysicalDeviceDescriptorIndexingFeatures {
 impl PhysicalDeviceDescriptorIndexingFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDescriptorIndexingFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
@@ -5265,13 +5241,11 @@ pub struct PhysicalDeviceDescriptorIndexingProperties {
 impl PhysicalDeviceDescriptorIndexingProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDescriptorIndexingProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
@@ -5703,13 +5677,11 @@ pub struct DescriptorSetVariableDescriptorCountAllocateInfo {
 impl DescriptorSetVariableDescriptorCountAllocateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDescriptorSetVariableDescriptorCountAllocateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
@@ -5798,13 +5770,11 @@ pub struct DescriptorSetVariableDescriptorCountLayoutSupport {
 impl DescriptorSetVariableDescriptorCountLayoutSupport {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByDescriptorSetVariableDescriptorCountLayoutSupport,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
@@ -5895,13 +5865,11 @@ pub struct SubpassDescriptionDepthStencilResolve {
 impl SubpassDescriptionDepthStencilResolve {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySubpassDescriptionDepthStencilResolve,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> SubpassDescriptionDepthStencilResolveBuilder<'a> {
@@ -6011,13 +5979,11 @@ pub struct PhysicalDeviceDepthStencilResolveProperties {
 impl PhysicalDeviceDepthStencilResolveProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceDepthStencilResolveProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
@@ -6141,13 +6107,11 @@ pub struct PhysicalDeviceScalarBlockLayoutFeatures {
 impl PhysicalDeviceScalarBlockLayoutFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceScalarBlockLayoutFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
@@ -6227,13 +6191,11 @@ pub struct ImageStencilUsageCreateInfo {
 impl ImageStencilUsageCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByImageStencilUsageCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> ImageStencilUsageCreateInfoBuilder<'a> {
@@ -6339,13 +6301,11 @@ pub struct SamplerReductionModeCreateInfo {
 impl SamplerReductionModeCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySamplerReductionModeCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> SamplerReductionModeCreateInfoBuilder<'a> {
@@ -6425,13 +6385,11 @@ pub struct PhysicalDeviceSamplerFilterMinmaxProperties {
 impl PhysicalDeviceSamplerFilterMinmaxProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSamplerFilterMinmaxProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
@@ -6539,13 +6497,11 @@ pub struct PhysicalDeviceVulkanMemoryModelFeatures {
 impl PhysicalDeviceVulkanMemoryModelFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceVulkanMemoryModelFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
@@ -6654,13 +6610,11 @@ pub struct PhysicalDeviceImagelessFramebufferFeatures {
 impl PhysicalDeviceImagelessFramebufferFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceImagelessFramebufferFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
@@ -6747,13 +6701,11 @@ pub struct FramebufferAttachmentsCreateInfo {
 impl FramebufferAttachmentsCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByFramebufferAttachmentsCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> FramebufferAttachmentsCreateInfoBuilder<'a> {
@@ -6963,13 +6915,11 @@ pub struct RenderPassAttachmentBeginInfo {
 impl RenderPassAttachmentBeginInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByRenderPassAttachmentBeginInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> RenderPassAttachmentBeginInfoBuilder<'a> {
@@ -7051,13 +7001,11 @@ pub struct PhysicalDeviceUniformBufferStandardLayoutFeatures {
 impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceUniformBufferStandardLayoutFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
@@ -7150,13 +7098,11 @@ pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
 impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceShaderSubgroupExtendedTypesFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
@@ -7249,13 +7195,11 @@ pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
 impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceSeparateDepthStencilLayoutsFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
@@ -7348,13 +7292,11 @@ pub struct AttachmentReferenceStencilLayout {
 impl AttachmentReferenceStencilLayout {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByAttachmentReferenceStencilLayout,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> AttachmentReferenceStencilLayoutBuilder<'a> {
@@ -7434,13 +7376,11 @@ pub struct AttachmentDescriptionStencilLayout {
 impl AttachmentDescriptionStencilLayout {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByAttachmentDescriptionStencilLayout,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> AttachmentDescriptionStencilLayoutBuilder<'a> {
@@ -7530,13 +7470,11 @@ pub struct PhysicalDeviceHostQueryResetFeatures {
 impl PhysicalDeviceHostQueryResetFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceHostQueryResetFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
@@ -7639,13 +7577,11 @@ pub struct PhysicalDeviceTimelineSemaphoreFeatures {
 impl PhysicalDeviceTimelineSemaphoreFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTimelineSemaphoreFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
@@ -7725,13 +7661,11 @@ pub struct PhysicalDeviceTimelineSemaphoreProperties {
 impl PhysicalDeviceTimelineSemaphoreProperties {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceTimelineSemaphoreProperties,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
@@ -7823,13 +7757,11 @@ pub struct SemaphoreTypeCreateInfo {
 impl SemaphoreTypeCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableBySemaphoreTypeCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> SemaphoreTypeCreateInfoBuilder<'a> {
@@ -7920,13 +7852,11 @@ pub struct TimelineSemaphoreSubmitInfo {
 impl TimelineSemaphoreSubmitInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByTimelineSemaphoreSubmitInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> TimelineSemaphoreSubmitInfoBuilder<'a> {
@@ -8028,13 +7958,11 @@ pub struct PhysicalDeviceBufferDeviceAddressFeatures {
 impl PhysicalDeviceBufferDeviceAddressFeatures {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByPhysicalDeviceBufferDeviceAddressFeatures,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
@@ -8148,13 +8076,11 @@ pub struct BufferOpaqueCaptureAddressCreateInfo {
 impl BufferOpaqueCaptureAddressCreateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByBufferOpaqueCaptureAddressCreateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
@@ -8233,13 +8159,11 @@ pub struct MemoryOpaqueCaptureAddressAllocateInfo {
 impl MemoryOpaqueCaptureAddressAllocateInfo {
     #[inline]
     #[doc = "Appends `self` to `other` pointer chain"]
-    pub fn extend<T>(&mut self, other: &mut T)
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
         T: ExtendableByMemoryOpaqueCaptureAddressAllocateInfo,
     {
-        unsafe {
-            crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-        }
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
     #[inline]
     pub fn builder<'a>(self) -> MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {

@@ -15475,10 +15475,9 @@ impl<'a> ShaderModuleCreateInfoBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn code(mut self, code: &'a [u8]) -> Self {
-        assert_eq!(code.len() % 4, 0);
-        self.0.code_size = code.len();
-        self.0.p_code = code.as_ptr() as _;
+    pub fn code(mut self, code: &'a [u32]) -> Self {
+        self.0.code_size = code.len() * 4;
+        self.0.p_code = code.as_ptr();
         self
     }
     #[inline]

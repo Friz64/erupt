@@ -734,11 +734,10 @@ pub fn generate(
                                     }
                                 }
                                 (_, "code", crate::types::SHADER_MODULE_CREATE_INFO_BUILDER) => {
-                                    field_type = "&'a [u8]".into();
+                                    field_type = "&'a [u32]".into();
                                     quote! {
-                                        assert_eq!(code.len() % 4, 0);
-                                        self.0 .code_size = code.len();
-                                        self.0 .p_code = code.as_ptr() as _;
+                                        self.0 .code_size = code.len() * 4;
+                                        self.0 .p_code = code.as_ptr();
                                     }
                                 }
                                 _ => quote! {

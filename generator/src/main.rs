@@ -341,10 +341,6 @@ fn main() {
     let version_patch_doc = const_function_doc("VK_VERSION_PATCH");
     let loaders_root = commands::generate_loaders_root(&loader_map);
     let generated_mod_path = generated_path.join("mod.rs");
-    let info = format!(
-        "Generated from `Vulkan {}.{}`",
-        vulkan_version, header_version
-    );
     fs::write(
         &generated_mod_path,
         quote! {
@@ -380,9 +376,6 @@ fn main() {
                 /// Provides Vulkan feature items
                 pub mod #generated_features;
             )*
-
-            #[doc = #info]
-            pub mod info {}
         }
         .to_string(),
     )

@@ -1321,7 +1321,7 @@ impl std::fmt::Debug for PeerMemoryFeatureFlagBits {
             &Self::COPY_DST => "COPY_DST",
             &Self::GENERIC_SRC => "GENERIC_SRC",
             &Self::GENERIC_DST => "GENERIC_DST",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -2537,7 +2537,7 @@ impl CommandPoolTrimFlagBits {
 impl std::fmt::Debug for CommandPoolTrimFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -2795,7 +2795,7 @@ impl std::fmt::Debug for SamplerYcbcrModelConversion {
             &Self::YCBCR_709 => "YCBCR_709",
             &Self::YCBCR_601 => "YCBCR_601",
             &Self::YCBCR_2020 => "YCBCR_2020",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -2818,7 +2818,7 @@ impl std::fmt::Debug for SamplerYcbcrRange {
         fmt.write_str(match self {
             &Self::ITU_FULL => "ITU_FULL",
             &Self::ITU_NARROW => "ITU_NARROW",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -2841,7 +2841,7 @@ impl std::fmt::Debug for ChromaLocation {
         fmt.write_str(match self {
             &Self::COSITED_EVEN => "COSITED_EVEN",
             &Self::MIDPOINT => "MIDPOINT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3008,7 +3008,7 @@ impl DescriptorUpdateTemplateCreateFlagBits {
 impl std::fmt::Debug for DescriptorUpdateTemplateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3144,7 +3144,7 @@ impl std::fmt::Debug for DescriptorUpdateTemplateType {
         fmt.write_str(match self {
             &Self::DESCRIPTOR_SET => "DESCRIPTOR_SET",
             &Self::PUSH_DESCRIPTORS_KHR => "PUSH_DESCRIPTORS_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3300,7 +3300,7 @@ impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBits {
             &Self::DMA_BUF_EXT => "DMA_BUF_EXT",
             &Self::HOST_ALLOCATION_EXT => "HOST_ALLOCATION_EXT",
             &Self::HOST_MAPPED_FOREIGN_MEMORY_EXT => "HOST_MAPPED_FOREIGN_MEMORY_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3508,7 +3508,7 @@ impl std::fmt::Debug for ExternalMemoryFeatureFlagBits {
             &Self::DEDICATED_ONLY => "DEDICATED_ONLY",
             &Self::EXPORTABLE => "EXPORTABLE",
             &Self::IMPORTABLE => "IMPORTABLE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3620,7 +3620,7 @@ impl std::fmt::Debug for ExternalFenceHandleTypeFlagBits {
             &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
             &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
             &Self::SYNC_FD => "SYNC_FD",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3753,7 +3753,7 @@ impl std::fmt::Debug for ExternalFenceFeatureFlagBits {
         fmt.write_str(match self {
             &Self::EXPORTABLE => "EXPORTABLE",
             &Self::IMPORTABLE => "IMPORTABLE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -3868,7 +3868,7 @@ impl std::fmt::Debug for ExternalSemaphoreHandleTypeFlagBits {
             &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
             &Self::D3D12_FENCE => "D3D12_FENCE",
             &Self::SYNC_FD => "SYNC_FD",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -4004,7 +4004,7 @@ impl std::fmt::Debug for ExternalSemaphoreFeatureFlagBits {
         fmt.write_str(match self {
             &Self::EXPORTABLE => "EXPORTABLE",
             &Self::IMPORTABLE => "IMPORTABLE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -4237,7 +4237,7 @@ impl std::fmt::Debug for SubgroupFeatureFlagBits {
             &Self::CLUSTERED => "CLUSTERED",
             &Self::QUAD => "QUAD",
             &Self::PARTITIONED_NV => "PARTITIONED_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -4600,7 +4600,7 @@ impl std::fmt::Debug for MemoryAllocateFlagBits {
             &Self::DEVICE_MASK => "DEVICE_MASK",
             &Self::DEVICE_ADDRESS => "DEVICE_ADDRESS",
             &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => "DEVICE_ADDRESS_CAPTURE_REPLAY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -5510,7 +5510,7 @@ impl std::fmt::Debug for PointClippingBehavior {
         fmt.write_str(match self {
             &Self::ALL_CLIP_PLANES => "ALL_CLIP_PLANES",
             &Self::USER_CLIP_PLANES_ONLY => "USER_CLIP_PLANES_ONLY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -5797,7 +5797,7 @@ impl std::fmt::Debug for TessellationDomainOrigin {
         fmt.write_str(match self {
             &Self::UPPER_LEFT => "UPPER_LEFT",
             &Self::LOWER_LEFT => "LOWER_LEFT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7613,7 +7613,7 @@ impl std::fmt::Debug for FenceImportFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::TEMPORARY => "TEMPORARY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7729,7 +7729,7 @@ impl std::fmt::Debug for SemaphoreImportFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::TEMPORARY => "TEMPORARY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

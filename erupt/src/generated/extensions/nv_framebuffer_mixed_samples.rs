@@ -149,7 +149,7 @@ impl PipelineCoverageModulationStateCreateFlagBitsNV {
 impl std::fmt::Debug for PipelineCoverageModulationStateCreateFlagBitsNV {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -172,7 +172,7 @@ impl std::fmt::Debug for CoverageModulationModeNV {
             &Self::RGB_NV => "RGB_NV",
             &Self::ALPHA_NV => "ALPHA_NV",
             &Self::RGBA_NV => "RGBA_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

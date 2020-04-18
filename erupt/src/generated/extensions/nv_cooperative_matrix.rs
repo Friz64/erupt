@@ -247,7 +247,7 @@ impl std::fmt::Debug for ComponentTypeNV {
             &Self::UINT16_NV => "UINT16_NV",
             &Self::UINT32_NV => "UINT32_NV",
             &Self::UINT64_NV => "UINT64_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -269,7 +269,7 @@ impl std::fmt::Debug for ScopeNV {
             &Self::WORKGROUP_NV => "WORKGROUP_NV",
             &Self::SUBGROUP_NV => "SUBGROUP_NV",
             &Self::QUEUE_FAMILY_NV => "QUEUE_FAMILY_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

@@ -627,7 +627,7 @@ pub fn generate(
                     } else if field_type.contains("PFN_") {
                         quote! {
                             unsafe {
-                                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.#name)
+                                std::mem::transmute::<_, *mut ()>(self.#name)
                             }
                         }
                     } else {
@@ -953,7 +953,7 @@ pub fn generate(
                     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
                         fmt.write_str(match self {
                             #( #debug_arms )*
-                            _ => "(Unknown)",
+                            _ => "(unknown)",
                         })
                     }
                 }
@@ -1074,7 +1074,7 @@ pub fn generate(
                     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
                         fmt.write_str(match self {
                             #( #debug_arms )*
-                            _ => "(Unknown)",
+                            _ => "(unknown)",
                         })
                     }
                 }

@@ -107,7 +107,7 @@ impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBitsNV {
             &Self::OPAQUE_WIN32_KMT_NV => "OPAQUE_WIN32_KMT_NV",
             &Self::D3D11_IMAGE_NV => "D3D11_IMAGE_NV",
             &Self::D3D11_IMAGE_KMT_NV => "D3D11_IMAGE_KMT_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -246,7 +246,7 @@ impl std::fmt::Debug for ExternalMemoryFeatureFlagBitsNV {
             &Self::DEDICATED_ONLY_NV => "DEDICATED_ONLY_NV",
             &Self::EXPORTABLE_NV => "EXPORTABLE_NV",
             &Self::IMPORTABLE_NV => "IMPORTABLE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

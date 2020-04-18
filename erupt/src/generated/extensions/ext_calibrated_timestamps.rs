@@ -137,7 +137,7 @@ impl std::fmt::Debug for TimeDomainEXT {
             &Self::CLOCK_MONOTONIC_EXT => "CLOCK_MONOTONIC_EXT",
             &Self::CLOCK_MONOTONIC_RAW_EXT => "CLOCK_MONOTONIC_RAW_EXT",
             &Self::QUERY_PERFORMANCE_COUNTER_EXT => "QUERY_PERFORMANCE_COUNTER_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

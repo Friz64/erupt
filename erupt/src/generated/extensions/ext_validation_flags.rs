@@ -113,7 +113,7 @@ impl std::fmt::Debug for ValidationCheckEXT {
         fmt.write_str(match self {
             &Self::ALL_EXT => "ALL_EXT",
             &Self::SHADERS_EXT => "SHADERS_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

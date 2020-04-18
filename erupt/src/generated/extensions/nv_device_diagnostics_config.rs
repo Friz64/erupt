@@ -206,7 +206,7 @@ impl std::fmt::Debug for DeviceDiagnosticsConfigFlagBitsNV {
             &Self::ENABLE_SHADER_DEBUG_INFO_NV => "ENABLE_SHADER_DEBUG_INFO_NV",
             &Self::ENABLE_RESOURCE_TRACKING_NV => "ENABLE_RESOURCE_TRACKING_NV",
             &Self::ENABLE_AUTOMATIC_CHECKPOINTS_NV => "ENABLE_AUTOMATIC_CHECKPOINTS_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

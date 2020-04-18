@@ -697,7 +697,7 @@ impl std::fmt::Debug for DebugUtilsMessengerCreateInfoEXT {
             .field("message_severity", &self.message_severity)
             .field("message_type", &self.message_type)
             .field("pfn_user_callback", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_user_callback)
+                std::mem::transmute::<_, *mut ()>(self.pfn_user_callback)
             })
             .field("p_user_data", &self.p_user_data)
             .finish()
@@ -811,7 +811,7 @@ impl DebugUtilsMessengerCreateFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -841,7 +841,7 @@ impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
             &Self::INFO_EXT => "INFO_EXT",
             &Self::WARNING_EXT => "WARNING_EXT",
             &Self::ERROR_EXT => "ERROR_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -869,7 +869,7 @@ impl std::fmt::Debug for DebugUtilsMessageTypeFlagBitsEXT {
             &Self::GENERAL_EXT => "GENERAL_EXT",
             &Self::VALIDATION_EXT => "VALIDATION_EXT",
             &Self::PERFORMANCE_EXT => "PERFORMANCE_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -1047,7 +1047,7 @@ impl DebugUtilsMessengerCallbackDataFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

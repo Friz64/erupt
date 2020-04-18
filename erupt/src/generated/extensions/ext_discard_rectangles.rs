@@ -289,7 +289,7 @@ impl PipelineDiscardRectangleStateCreateFlagBitsEXT {
 impl std::fmt::Debug for PipelineDiscardRectangleStateCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -308,7 +308,7 @@ impl std::fmt::Debug for DiscardRectangleModeEXT {
         fmt.write_str(match self {
             &Self::INCLUSIVE_EXT => "INCLUSIVE_EXT",
             &Self::EXCLUSIVE_EXT => "EXCLUSIVE_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

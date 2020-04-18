@@ -431,7 +431,7 @@ impl std::fmt::Debug for LineRasterizationModeEXT {
             &Self::RECTANGULAR_EXT => "RECTANGULAR_EXT",
             &Self::BRESENHAM_EXT => "BRESENHAM_EXT",
             &Self::RECTANGULAR_SMOOTH_EXT => "RECTANGULAR_SMOOTH_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

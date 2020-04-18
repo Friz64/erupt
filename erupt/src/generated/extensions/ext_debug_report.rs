@@ -195,7 +195,7 @@ impl std::fmt::Debug for DebugReportCallbackCreateInfoEXT {
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
             .field("pfn_callback", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_callback)
+                std::mem::transmute::<_, *mut ()>(self.pfn_callback)
             })
             .field("p_user_data", &self.p_user_data)
             .finish()
@@ -300,7 +300,7 @@ impl std::fmt::Debug for DebugReportFlagBitsEXT {
             &Self::PERFORMANCE_WARNING_EXT => "PERFORMANCE_WARNING_EXT",
             &Self::ERROR_EXT => "ERROR_EXT",
             &Self::DEBUG_EXT => "DEBUG_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -417,7 +417,7 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
             &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
             &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => "DESCRIPTOR_UPDATE_TEMPLATE_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

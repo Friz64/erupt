@@ -183,7 +183,7 @@ impl FullScreenExclusiveEXT {}
 impl std::fmt::Debug for FullScreenExclusiveEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

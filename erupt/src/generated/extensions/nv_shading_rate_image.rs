@@ -242,7 +242,7 @@ impl std::fmt::Debug for ShadingRatePaletteEntryNV {
             &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => "1_INVOCATION_PER_4X2_PIXELS_NV",
             &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => "1_INVOCATION_PER_2X4_PIXELS_NV",
             &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => "1_INVOCATION_PER_4X4_PIXELS_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -264,7 +264,7 @@ impl std::fmt::Debug for CoarseSampleOrderTypeNV {
             &Self::CUSTOM_NV => "CUSTOM_NV",
             &Self::PIXEL_MAJOR_NV => "PIXEL_MAJOR_NV",
             &Self::SAMPLE_MAJOR_NV => "SAMPLE_MAJOR_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

@@ -750,7 +750,7 @@ impl std::fmt::Debug for IndirectCommandsLayoutUsageFlagBitsNV {
             &Self::EXPLICIT_PREPROCESS_NV => "EXPLICIT_PREPROCESS_NV",
             &Self::INDEXED_SEQUENCES_NV => "INDEXED_SEQUENCES_NV",
             &Self::UNORDERED_SEQUENCES_NV => "UNORDERED_SEQUENCES_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -975,7 +975,7 @@ impl std::fmt::Debug for IndirectCommandsTokenTypeNV {
             &Self::DRAW_INDEXED_NV => "DRAW_INDEXED_NV",
             &Self::DRAW_NV => "DRAW_NV",
             &Self::DRAW_TASKS_NV => "DRAW_TASKS_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -998,7 +998,7 @@ impl std::fmt::Debug for IndirectStateFlagBitsNV {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::FLAG_FRONTFACE_NV => "FLAG_FRONTFACE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

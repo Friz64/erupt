@@ -187,7 +187,7 @@ impl std::fmt::Debug for ConditionalRenderingFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::INVERTED_EXT => "INVERTED_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

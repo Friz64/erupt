@@ -7337,7 +7337,7 @@ impl std::fmt::Debug for StructureType {
                 "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM"
             }
             &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => "RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7355,7 +7355,7 @@ impl InstanceCreateFlagBits {
 impl std::fmt::Debug for InstanceCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7487,19 +7487,19 @@ impl std::fmt::Debug for AllocationCallbacks {
         fmt.debug_struct("AllocationCallbacks")
             .field("p_user_data", &self.p_user_data)
             .field("pfn_allocation", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_allocation)
+                std::mem::transmute::<_, *mut ()>(self.pfn_allocation)
             })
             .field("pfn_reallocation", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_reallocation)
+                std::mem::transmute::<_, *mut ()>(self.pfn_reallocation)
             })
             .field("pfn_free", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_free)
+                std::mem::transmute::<_, *mut ()>(self.pfn_free)
             })
             .field("pfn_internal_allocation", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_internal_allocation)
+                std::mem::transmute::<_, *mut ()>(self.pfn_internal_allocation)
             })
             .field("pfn_internal_free", &unsafe {
-                std::mem::transmute::<_, std::ptr::NonNull<()>>(self.pfn_internal_free)
+                std::mem::transmute::<_, *mut ()>(self.pfn_internal_free)
             })
             .finish()
     }
@@ -7623,7 +7623,7 @@ impl std::fmt::Debug for SystemAllocationScope {
             &Self::CACHE => "CACHE",
             &Self::DEVICE => "DEVICE",
             &Self::INSTANCE => "INSTANCE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7662,7 +7662,7 @@ impl std::fmt::Debug for InternalAllocationType {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::EXECUTABLE => "EXECUTABLE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -7828,7 +7828,7 @@ impl std::fmt::Debug for Result {
             &Self::SUBOPTIMAL_KHR => "SUBOPTIMAL_KHR",
             &Self::ERROR_OUT_OF_DATE_KHR => "ERROR_OUT_OF_DATE_KHR",
             &Self::ERROR_INVALID_SHADER_NV => "ERROR_INVALID_SHADER_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9096,7 +9096,7 @@ impl std::fmt::Debug for Format {
             &Self::PVRTC1_4BPP_SRGB_BLOCK_IMG => "PVRTC1_4BPP_SRGB_BLOCK_IMG",
             &Self::PVRTC2_2BPP_SRGB_BLOCK_IMG => "PVRTC2_2BPP_SRGB_BLOCK_IMG",
             &Self::PVRTC2_4BPP_SRGB_BLOCK_IMG => "PVRTC2_4BPP_SRGB_BLOCK_IMG",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9311,7 +9311,7 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
             &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => {
                 "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
             }
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9332,7 +9332,7 @@ impl std::fmt::Debug for ImageType {
             &Self::_1D => "1D",
             &Self::_2D => "2D",
             &Self::_3D => "3D",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9355,7 +9355,7 @@ impl std::fmt::Debug for ImageTiling {
             &Self::OPTIMAL => "OPTIMAL",
             &Self::LINEAR => "LINEAR",
             &Self::DRM_FORMAT_MODIFIER_EXT => "DRM_FORMAT_MODIFIER_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9402,7 +9402,7 @@ impl std::fmt::Debug for ImageUsageFlagBits {
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9487,7 +9487,7 @@ impl std::fmt::Debug for ImageCreateFlagBits {
             &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
             &Self::SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT => "SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT",
             &Self::CORNER_SAMPLED_NV => "CORNER_SAMPLED_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9706,7 +9706,7 @@ impl std::fmt::Debug for SampleCountFlagBits {
             &Self::_16 => "_16",
             &Self::_32 => "_32",
             &Self::_64 => "_64",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -9882,7 +9882,7 @@ impl std::fmt::Debug for PhysicalDeviceType {
             &Self::DISCRETE_GPU => "DISCRETE_GPU",
             &Self::VIRTUAL_GPU => "VIRTUAL_GPU",
             &Self::CPU => "CPU",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -11471,7 +11471,7 @@ impl std::fmt::Debug for QueueFlagBits {
             &Self::TRANSFER => "TRANSFER",
             &Self::SPARSE_BINDING => "SPARSE_BINDING",
             &Self::PROTECTED => "PROTECTED",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -11686,7 +11686,7 @@ impl std::fmt::Debug for MemoryPropertyFlagBits {
             &Self::PROTECTED => "PROTECTED",
             &Self::DEVICE_COHERENT_AMD => "DEVICE_COHERENT_AMD",
             &Self::DEVICE_UNCACHED_AMD => "DEVICE_UNCACHED_AMD",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -11791,7 +11791,7 @@ impl std::fmt::Debug for MemoryHeapFlagBits {
         fmt.write_str(match self {
             &Self::DEVICE_LOCAL => "DEVICE_LOCAL",
             &Self::MULTI_INSTANCE => "MULTI_INSTANCE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -11946,7 +11946,7 @@ impl DeviceCreateFlagBits {
 impl std::fmt::Debug for DeviceCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -12066,7 +12066,7 @@ impl std::fmt::Debug for DeviceQueueCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::PROTECTED => "PROTECTED",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -12457,7 +12457,7 @@ impl std::fmt::Debug for PipelineStageFlagBits {
             &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
             &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
             &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -12557,7 +12557,7 @@ impl MemoryMapFlagBits {
 impl std::fmt::Debug for MemoryMapFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -12978,7 +12978,7 @@ impl std::fmt::Debug for ImageAspectFlagBits {
             &Self::MEMORY_PLANE_1_EXT => "MEMORY_PLANE_1_EXT",
             &Self::MEMORY_PLANE_2_EXT => "MEMORY_PLANE_2_EXT",
             &Self::MEMORY_PLANE_3_EXT => "MEMORY_PLANE_3_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -13006,7 +13006,7 @@ impl std::fmt::Debug for SparseImageFormatFlagBits {
             &Self::SINGLE_MIPTAIL => "SINGLE_MIPTAIL",
             &Self::ALIGNED_MIP_SIZE => "ALIGNED_MIP_SIZE",
             &Self::NONSTANDARD_BLOCK_SIZE => "NONSTANDARD_BLOCK_SIZE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -13342,7 +13342,7 @@ impl std::fmt::Debug for SparseMemoryBindFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::METADATA => "METADATA",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -13866,7 +13866,7 @@ impl std::fmt::Debug for FenceCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::SIGNALED => "SIGNALED",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -13954,7 +13954,7 @@ impl SemaphoreCreateFlagBits {
 impl std::fmt::Debug for SemaphoreCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14042,7 +14042,7 @@ impl EventCreateFlagBits {
 impl std::fmt::Debug for EventCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14161,7 +14161,7 @@ impl QueryPoolCreateFlagBits {
 impl std::fmt::Debug for QueryPoolCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14213,7 +14213,7 @@ impl std::fmt::Debug for QueryType {
             &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => {
                 "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR"
             }
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14258,7 +14258,7 @@ impl std::fmt::Debug for QueryPipelineStatisticFlagBits {
                 "TESSELLATION_EVALUATION_SHADER_INVOCATIONS"
             }
             &Self::COMPUTE_SHADER_INVOCATIONS => "COMPUTE_SHADER_INVOCATIONS",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14289,7 +14289,7 @@ impl std::fmt::Debug for QueryResultFlagBits {
             &Self::WAIT => "WAIT",
             &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
             &Self::PARTIAL => "PARTIAL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14444,7 +14444,7 @@ impl std::fmt::Debug for BufferCreateFlagBits {
             &Self::SPARSE_ALIASED => "SPARSE_ALIASED",
             &Self::PROTECTED => "PROTECTED",
             &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => "DEVICE_ADDRESS_CAPTURE_REPLAY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14518,7 +14518,7 @@ impl std::fmt::Debug for BufferUsageFlagBits {
             &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
             &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT",
             &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14537,7 +14537,7 @@ impl std::fmt::Debug for SharingMode {
         fmt.write_str(match self {
             &Self::EXCLUSIVE => "EXCLUSIVE",
             &Self::CONCURRENT => "CONCURRENT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14660,7 +14660,7 @@ impl BufferViewCreateFlagBits {
 impl std::fmt::Debug for BufferViewCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -14922,7 +14922,7 @@ impl std::fmt::Debug for ImageLayout {
             &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
             &Self::PRESENT_SRC_KHR => "PRESENT_SRC_KHR",
             &Self::SHADING_RATE_OPTIMAL_NV => "SHADING_RATE_OPTIMAL_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15163,7 +15163,7 @@ impl std::fmt::Debug for ImageViewCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::FRAGMENT_DENSITY_MAP_DYNAMIC_EXT => "FRAGMENT_DENSITY_MAP_DYNAMIC_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15192,7 +15192,7 @@ impl std::fmt::Debug for ImageViewType {
             &Self::_1D_ARRAY => "1D_ARRAY",
             &Self::_2D_ARRAY => "2D_ARRAY",
             &Self::CUBE_ARRAY => "CUBE_ARRAY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15310,7 +15310,7 @@ impl std::fmt::Debug for ComponentSwizzle {
             &Self::G => "G",
             &Self::B => "B",
             &Self::A => "A",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15518,7 +15518,7 @@ impl ShaderModuleCreateFlagBits {}
 impl std::fmt::Debug for ShaderModuleCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15630,7 +15630,7 @@ impl std::fmt::Debug for PipelineCacheCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::EXTERNALLY_SYNCHRONIZED_EXT => "EXTERNALLY_SYNCHRONIZED_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -15962,7 +15962,7 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
             &Self::RAY_TRACING_SKIP_AABBS_KHR => "RAY_TRACING_SKIP_AABBS_KHR",
             &Self::INDIRECT_BINDABLE_NV => "INDIRECT_BINDABLE_NV",
             &Self::DEFER_COMPILE_NV => "DEFER_COMPILE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16101,7 +16101,7 @@ impl std::fmt::Debug for PipelineShaderStageCreateFlagBits {
         fmt.write_str(match self {
             &Self::ALLOW_VARYING_SUBGROUP_SIZE_EXT => "ALLOW_VARYING_SUBGROUP_SIZE_EXT",
             &Self::REQUIRE_FULL_SUBGROUPS_EXT => "REQUIRE_FULL_SUBGROUPS_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16170,7 +16170,7 @@ impl std::fmt::Debug for ShaderStageFlagBits {
             &Self::CALLABLE_KHR => "CALLABLE_KHR",
             &Self::TASK_NV => "TASK_NV",
             &Self::MESH_NV => "MESH_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16472,7 +16472,7 @@ impl PipelineVertexInputStateCreateFlagBits {
 impl std::fmt::Debug for PipelineVertexInputStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16575,7 +16575,7 @@ impl std::fmt::Debug for VertexInputRate {
         fmt.write_str(match self {
             &Self::VERTEX => "VERTEX",
             &Self::INSTANCE => "INSTANCE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16779,7 +16779,7 @@ impl PipelineInputAssemblyStateCreateFlagBits {
 impl std::fmt::Debug for PipelineInputAssemblyStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16816,7 +16816,7 @@ impl std::fmt::Debug for PrimitiveTopology {
             &Self::TRIANGLE_LIST_WITH_ADJACENCY => "TRIANGLE_LIST_WITH_ADJACENCY",
             &Self::TRIANGLE_STRIP_WITH_ADJACENCY => "TRIANGLE_STRIP_WITH_ADJACENCY",
             &Self::PATCH_LIST => "PATCH_LIST",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -16915,7 +16915,7 @@ impl PipelineTessellationStateCreateFlagBits {
 impl std::fmt::Debug for PipelineTessellationStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17032,7 +17032,7 @@ impl PipelineViewportStateCreateFlagBits {
 impl std::fmt::Debug for PipelineViewportStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17543,7 +17543,7 @@ impl PipelineRasterizationStateCreateFlagBits {
 impl std::fmt::Debug for PipelineRasterizationStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17569,7 +17569,7 @@ impl std::fmt::Debug for PolygonMode {
             &Self::LINE => "LINE",
             &Self::POINT => "POINT",
             &Self::FILL_RECTANGLE_NV => "FILL_RECTANGLE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17598,7 +17598,7 @@ impl std::fmt::Debug for CullModeFlagBits {
             &Self::FRONT => "FRONT",
             &Self::BACK => "BACK",
             &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17617,7 +17617,7 @@ impl std::fmt::Debug for FrontFace {
         fmt.write_str(match self {
             &Self::COUNTER_CLOCKWISE => "COUNTER_CLOCKWISE",
             &Self::CLOCKWISE => "CLOCKWISE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17767,7 +17767,7 @@ impl PipelineMultisampleStateCreateFlagBits {
 impl std::fmt::Debug for PipelineMultisampleStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17944,7 +17944,7 @@ impl PipelineDepthStencilStateCreateFlagBits {
 impl std::fmt::Debug for PipelineDepthStencilStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -17975,7 +17975,7 @@ impl std::fmt::Debug for CompareOp {
             &Self::NOT_EQUAL => "NOT_EQUAL",
             &Self::GREATER_OR_EQUAL => "GREATER_OR_EQUAL",
             &Self::ALWAYS => "ALWAYS",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18122,7 +18122,7 @@ impl std::fmt::Debug for StencilOp {
             &Self::INVERT => "INVERT",
             &Self::INCREMENT_AND_WRAP => "INCREMENT_AND_WRAP",
             &Self::DECREMENT_AND_WRAP => "DECREMENT_AND_WRAP",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18255,7 +18255,7 @@ impl PipelineColorBlendStateCreateFlagBits {
 impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18302,7 +18302,7 @@ impl std::fmt::Debug for LogicOp {
             &Self::OR_INVERTED => "OR_INVERTED",
             &Self::NAND => "NAND",
             &Self::SET => "SET",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18495,7 +18495,7 @@ impl std::fmt::Debug for BlendFactor {
             &Self::ONE_MINUS_SRC1_COLOR => "ONE_MINUS_SRC1_COLOR",
             &Self::SRC1_ALPHA => "SRC1_ALPHA",
             &Self::ONE_MINUS_SRC1_ALPHA => "ONE_MINUS_SRC1_ALPHA",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18614,7 +18614,7 @@ impl std::fmt::Debug for BlendOp {
             &Self::RED_EXT => "RED_EXT",
             &Self::GREEN_EXT => "GREEN_EXT",
             &Self::BLUE_EXT => "BLUE_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18643,7 +18643,7 @@ impl std::fmt::Debug for ColorComponentFlagBits {
             &Self::G => "G",
             &Self::B => "B",
             &Self::A => "A",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18747,7 +18747,7 @@ impl PipelineDynamicStateCreateFlagBits {
 impl std::fmt::Debug for PipelineDynamicStateCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -18812,7 +18812,7 @@ impl std::fmt::Debug for DynamicState {
             &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
             &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => "VIEWPORT_SHADING_RATE_PALETTE_NV",
             &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => "VIEWPORT_COARSE_SAMPLE_ORDER_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19042,7 +19042,7 @@ impl PipelineLayoutCreateFlagBits {
 impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19359,7 +19359,7 @@ impl std::fmt::Debug for SamplerCreateFlagBits {
         fmt.write_str(match self {
             &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
             &Self::SUBSAMPLED_COARSE_RECONSTRUCTION_EXT => "SUBSAMPLED_COARSE_RECONSTRUCTION_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19387,7 +19387,7 @@ impl std::fmt::Debug for Filter {
             &Self::NEAREST => "NEAREST",
             &Self::LINEAR => "LINEAR",
             &Self::CUBIC_IMG => "CUBIC_IMG",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19405,7 +19405,7 @@ impl std::fmt::Debug for SamplerMipmapMode {
         fmt.write_str(match self {
             &Self::NEAREST => "NEAREST",
             &Self::LINEAR => "LINEAR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19436,7 +19436,7 @@ impl std::fmt::Debug for SamplerAddressMode {
             &Self::CLAMP_TO_EDGE => "CLAMP_TO_EDGE",
             &Self::CLAMP_TO_BORDER => "CLAMP_TO_BORDER",
             &Self::MIRROR_CLAMP_TO_EDGE => "MIRROR_CLAMP_TO_EDGE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19462,7 +19462,7 @@ impl std::fmt::Debug for BorderColor {
             &Self::INT_OPAQUE_BLACK => "INT_OPAQUE_BLACK",
             &Self::FLOAT_OPAQUE_WHITE => "FLOAT_OPAQUE_WHITE",
             &Self::INT_OPAQUE_WHITE => "INT_OPAQUE_WHITE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19585,7 +19585,7 @@ impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
         fmt.write_str(match self {
             &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
             &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19733,7 +19733,7 @@ impl std::fmt::Debug for DescriptorType {
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
             &Self::INLINE_UNIFORM_BLOCK_EXT => "INLINE_UNIFORM_BLOCK_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19859,7 +19859,7 @@ impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
         fmt.write_str(match self {
             &Self::FREE_DESCRIPTOR_SET => "FREE_DESCRIPTOR_SET",
             &Self::UPDATE_AFTER_BIND => "UPDATE_AFTER_BIND",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -19951,7 +19951,7 @@ impl DescriptorPoolResetFlagBits {
 impl std::fmt::Debug for DescriptorPoolResetFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -20608,7 +20608,7 @@ impl std::fmt::Debug for FramebufferCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::IMAGELESS => "IMAGELESS",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -20749,7 +20749,7 @@ impl std::fmt::Debug for RenderPassCreateFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::TRANSFORM_QCOM => "TRANSFORM_QCOM",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -20911,7 +20911,7 @@ impl std::fmt::Debug for AttachmentDescriptionFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::MAY_ALIAS => "MAY_ALIAS",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -20932,7 +20932,7 @@ impl std::fmt::Debug for AttachmentLoadOp {
             &Self::LOAD => "LOAD",
             &Self::CLEAR => "CLEAR",
             &Self::DONT_CARE => "DONT_CARE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -20955,7 +20955,7 @@ impl std::fmt::Debug for AttachmentStoreOp {
             &Self::STORE => "STORE",
             &Self::DONT_CARE => "DONT_CARE",
             &Self::NONE_QCOM => "NONE_QCOM",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21130,7 +21130,7 @@ impl std::fmt::Debug for SubpassDescriptionFlagBits {
         fmt.write_str(match self {
             &Self::PER_VIEW_ATTRIBUTES_NVX => "PER_VIEW_ATTRIBUTES_NVX",
             &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21158,7 +21158,7 @@ impl std::fmt::Debug for PipelineBindPoint {
             &Self::GRAPHICS => "GRAPHICS",
             &Self::COMPUTE => "COMPUTE",
             &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21450,7 +21450,7 @@ impl std::fmt::Debug for AccessFlagBits {
             &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
             &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
             &Self::SHADING_RATE_IMAGE_READ_NV => "SHADING_RATE_IMAGE_READ_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21489,7 +21489,7 @@ impl std::fmt::Debug for DependencyFlagBits {
             &Self::BY_REGION => "BY_REGION",
             &Self::DEVICE_GROUP => "DEVICE_GROUP",
             &Self::VIEW_LOCAL => "VIEW_LOCAL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21601,7 +21601,7 @@ impl std::fmt::Debug for CommandPoolCreateFlagBits {
             &Self::TRANSIENT => "TRANSIENT",
             &Self::RESET_COMMAND_BUFFER => "RESET_COMMAND_BUFFER",
             &Self::PROTECTED => "PROTECTED",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21626,7 +21626,7 @@ impl std::fmt::Debug for CommandPoolResetFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21735,7 +21735,7 @@ impl std::fmt::Debug for CommandBufferLevel {
         fmt.write_str(match self {
             &Self::PRIMARY => "PRIMARY",
             &Self::SECONDARY => "SECONDARY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21846,7 +21846,7 @@ impl std::fmt::Debug for CommandBufferUsageFlagBits {
             &Self::ONE_TIME_SUBMIT => "ONE_TIME_SUBMIT",
             &Self::RENDER_PASS_CONTINUE => "RENDER_PASS_CONTINUE",
             &Self::SIMULTANEOUS_USE => "SIMULTANEOUS_USE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -21993,7 +21993,7 @@ impl std::fmt::Debug for QueryControlFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::PRECISE => "PRECISE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -22017,7 +22017,7 @@ impl std::fmt::Debug for CommandBufferResetFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -22046,7 +22046,7 @@ impl std::fmt::Debug for StencilFaceFlagBits {
             &Self::FRONT => "FRONT",
             &Self::BACK => "BACK",
             &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -22079,7 +22079,7 @@ impl std::fmt::Debug for IndexType {
             &Self::UINT32 => "UINT32",
             &Self::UINT8_EXT => "UINT8_EXT",
             &Self::NONE_KHR => "NONE_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -23396,7 +23396,7 @@ impl std::fmt::Debug for SubpassContents {
         fmt.write_str(match self {
             &Self::INLINE => "INLINE",
             &Self::SECONDARY_COMMAND_BUFFERS => "SECONDARY_COMMAND_BUFFERS",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -23412,7 +23412,7 @@ impl std::fmt::Debug for PipelineCacheHeaderVersion {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::ONE => "ONE",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -23825,7 +23825,7 @@ impl std::fmt::Debug for ObjectType {
             &Self::SURFACE_KHR => "SURFACE_KHR",
             &Self::SWAPCHAIN_KHR => "SWAPCHAIN_KHR",
             &Self::INDIRECT_COMMANDS_LAYOUT_NV => "INDIRECT_COMMANDS_LAYOUT_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -23967,7 +23967,7 @@ impl std::fmt::Debug for VendorId {
             &Self::VSI => "VSI",
             &Self::KAZAN => "KAZAN",
             &Self::CODEPLAY => "CODEPLAY",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

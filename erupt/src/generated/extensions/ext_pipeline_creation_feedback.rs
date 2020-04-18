@@ -26,7 +26,7 @@ impl std::fmt::Debug for PipelineCreationFeedbackFlagBitsEXT {
             &Self::VALID_EXT => "VALID_EXT",
             &Self::APPLICATION_PIPELINE_CACHE_HIT_EXT => "APPLICATION_PIPELINE_CACHE_HIT_EXT",
             &Self::BASE_PIPELINE_ACCELERATION_EXT => "BASE_PIPELINE_ACCELERATION_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

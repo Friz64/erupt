@@ -163,7 +163,7 @@ impl MetalSurfaceCreateFlagBitsEXT {
 impl std::fmt::Debug for MetalSurfaceCreateFlagBitsEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

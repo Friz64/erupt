@@ -422,7 +422,7 @@ impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
             &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => "HORIZONTAL_MIRROR_ROTATE_180_KHR",
             &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => "HORIZONTAL_MIRROR_ROTATE_270_KHR",
             &Self::INHERIT_KHR => "INHERIT_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -452,7 +452,7 @@ impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
             &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
             &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
             &Self::INHERIT_KHR => "INHERIT_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -582,7 +582,7 @@ impl std::fmt::Debug for ColorSpaceKHR {
             &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
             &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
             &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -611,7 +611,7 @@ impl std::fmt::Debug for PresentModeKHR {
             &Self::FIFO_RELAXED_KHR => "FIFO_RELAXED_KHR",
             &Self::SHARED_DEMAND_REFRESH_KHR => "SHARED_DEMAND_REFRESH_KHR",
             &Self::SHARED_CONTINUOUS_REFRESH_KHR => "SHARED_CONTINUOUS_REFRESH_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

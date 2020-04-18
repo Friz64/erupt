@@ -613,7 +613,7 @@ impl std::fmt::Debug for PerformanceOverrideTypeINTEL {
         fmt.write_str(match self {
             &Self::NULL_HARDWARE_INTEL => "NULL_HARDWARE_INTEL",
             &Self::FLUSH_GPU_CACHES_INTEL => "FLUSH_GPU_CACHES_INTEL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -709,7 +709,7 @@ impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
             &Self::COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL => {
                 "COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL"
             }
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -728,7 +728,7 @@ impl std::fmt::Debug for PerformanceParameterTypeINTEL {
         fmt.write_str(match self {
             &Self::HW_COUNTERS_SUPPORTED_INTEL => "HW_COUNTERS_SUPPORTED_INTEL",
             &Self::STREAM_MARKER_VALIDS_INTEL => "STREAM_MARKER_VALIDS_INTEL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -833,7 +833,7 @@ impl std::fmt::Debug for PerformanceValueTypeINTEL {
             &Self::FLOAT_INTEL => "FLOAT_INTEL",
             &Self::BOOL_INTEL => "BOOL_INTEL",
             &Self::STRING_INTEL => "STRING_INTEL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -869,7 +869,7 @@ impl std::fmt::Debug for QueryPoolSamplingModeINTEL {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::MANUAL_INTEL => "MANUAL_INTEL",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

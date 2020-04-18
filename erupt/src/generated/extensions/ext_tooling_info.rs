@@ -232,7 +232,7 @@ impl std::fmt::Debug for ToolPurposeFlagBitsEXT {
             &Self::MODIFYING_FEATURES_EXT => "MODIFYING_FEATURES_EXT",
             &Self::DEBUG_REPORTING_EXT => "DEBUG_REPORTING_EXT",
             &Self::DEBUG_MARKERS_EXT => "DEBUG_MARKERS_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

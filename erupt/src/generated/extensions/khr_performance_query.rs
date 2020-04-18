@@ -320,7 +320,7 @@ impl std::fmt::Debug for PerformanceCounterUnitKHR {
             &Self::AMPS_KHR => "AMPS_KHR",
             &Self::HERTZ_KHR => "HERTZ_KHR",
             &Self::CYCLES_KHR => "CYCLES_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -343,7 +343,7 @@ impl std::fmt::Debug for PerformanceCounterScopeKHR {
             &Self::COMMAND_BUFFER_KHR => "COMMAND_BUFFER_KHR",
             &Self::RENDER_PASS_KHR => "RENDER_PASS_KHR",
             &Self::COMMAND_KHR => "COMMAND_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -369,7 +369,7 @@ impl std::fmt::Debug for PerformanceCounterStorageKHR {
             &Self::UINT64_KHR => "UINT64_KHR",
             &Self::FLOAT32_KHR => "FLOAT32_KHR",
             &Self::FLOAT64_KHR => "FLOAT64_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -511,7 +511,7 @@ impl std::fmt::Debug for PerformanceCounterDescriptionFlagBitsKHR {
         fmt.write_str(match self {
             &Self::PERFORMANCE_IMPACTING_KHR => "PERFORMANCE_IMPACTING_KHR",
             &Self::CONCURRENTLY_IMPACTED_KHR => "CONCURRENTLY_IMPACTED_KHR",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -714,7 +714,7 @@ impl AcquireProfilingLockFlagBitsKHR {}
 impl std::fmt::Debug for AcquireProfilingLockFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

@@ -19,7 +19,7 @@ impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
             &Self::DEFAULT_AMD => "DEFAULT_AMD",
             &Self::ALLOWED_AMD => "ALLOWED_AMD",
             &Self::DISALLOWED_AMD => "DISALLOWED_AMD",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

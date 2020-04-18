@@ -187,7 +187,7 @@ impl std::fmt::Debug for CoverageReductionModeNV {
         fmt.write_str(match self {
             &Self::MERGE_NV => "MERGE_NV",
             &Self::TRUNCATE_NV => "TRUNCATE_NV",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }
@@ -409,7 +409,7 @@ impl PipelineCoverageReductionStateCreateFlagBitsNV {
 impl std::fmt::Debug for PipelineCoverageReductionStateCreateFlagBitsNV {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

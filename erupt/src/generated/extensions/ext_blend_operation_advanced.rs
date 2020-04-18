@@ -406,7 +406,7 @@ impl std::fmt::Debug for BlendOverlapEXT {
             &Self::UNCORRELATED_EXT => "UNCORRELATED_EXT",
             &Self::DISJOINT_EXT => "DISJOINT_EXT",
             &Self::CONJOINT_EXT => "CONJOINT_EXT",
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

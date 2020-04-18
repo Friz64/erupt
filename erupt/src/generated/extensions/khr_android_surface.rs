@@ -163,7 +163,7 @@ impl AndroidSurfaceCreateFlagBitsKHR {
 impl std::fmt::Debug for AndroidSurfaceCreateFlagBitsKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
-            _ => "(Unknown)",
+            _ => "(unknown)",
         })
     }
 }

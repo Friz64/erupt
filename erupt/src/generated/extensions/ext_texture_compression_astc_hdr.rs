@@ -18,7 +18,7 @@ impl PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -44,13 +44,11 @@ impl Default for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
         PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT , p_next : std :: ptr :: null_mut ( ) , texture_compression_astc_hdr : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT::extend`](struct.PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {}
-impl ExtendableByPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

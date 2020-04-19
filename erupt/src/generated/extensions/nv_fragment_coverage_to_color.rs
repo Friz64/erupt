@@ -40,7 +40,7 @@ impl PipelineCoverageToColorStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineCoverageToColorStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -77,9 +77,7 @@ impl Default for PipelineCoverageToColorStateCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`PipelineCoverageToColorStateCreateInfoNV::extend`](struct.PipelineCoverageToColorStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineCoverageToColorStateCreateInfoNV {}
-impl ExtendableByPipelineCoverageToColorStateCreateInfoNV
+impl crate::ExtendableBy<PipelineCoverageToColorStateCreateInfoNV>
     for crate::vk1_0::PipelineMultisampleStateCreateInfo
 {
 }

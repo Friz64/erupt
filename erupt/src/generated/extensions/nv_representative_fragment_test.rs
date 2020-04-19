@@ -18,7 +18,7 @@ impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceRepresentativeFragmentTestFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -44,13 +44,11 @@ impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
         PhysicalDeviceRepresentativeFragmentTestFeaturesNV { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , representative_fragment_test : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV::extend`](struct.PhysicalDeviceRepresentativeFragmentTestFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceRepresentativeFragmentTestFeaturesNV {}
-impl ExtendableByPhysicalDeviceRepresentativeFragmentTestFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceRepresentativeFragmentTestFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -112,7 +110,7 @@ impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineRepresentativeFragmentTestStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -138,9 +136,7 @@ impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
         PipelineRepresentativeFragmentTestStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , representative_fragment_test_enable : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PipelineRepresentativeFragmentTestStateCreateInfoNV::extend`](struct.PipelineRepresentativeFragmentTestStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineRepresentativeFragmentTestStateCreateInfoNV {}
-impl ExtendableByPipelineRepresentativeFragmentTestStateCreateInfoNV
+impl crate::ExtendableBy<PipelineRepresentativeFragmentTestStateCreateInfoNV>
     for crate::vk1_0::GraphicsPipelineCreateInfo
 {
 }

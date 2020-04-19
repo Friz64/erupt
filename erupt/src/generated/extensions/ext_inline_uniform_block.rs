@@ -19,7 +19,7 @@ impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -51,13 +51,14 @@ impl Default for PhysicalDeviceInlineUniformBlockFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceInlineUniformBlockFeaturesEXT::extend`](struct.PhysicalDeviceInlineUniformBlockFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT {}
-impl ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceInlineUniformBlockFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceInlineUniformBlockFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceInlineUniformBlockFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceInlineUniformBlockFeaturesEXT`](struct.PhysicalDeviceInlineUniformBlockFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -131,7 +132,7 @@ impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceInlineUniformBlockPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -182,9 +183,7 @@ impl Default for PhysicalDeviceInlineUniformBlockPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceInlineUniformBlockPropertiesEXT::extend`](struct.PhysicalDeviceInlineUniformBlockPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceInlineUniformBlockPropertiesEXT {}
-impl ExtendableByPhysicalDeviceInlineUniformBlockPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceInlineUniformBlockPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -288,7 +287,7 @@ impl WriteDescriptorSetInlineUniformBlockEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByWriteDescriptorSetInlineUniformBlockEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -317,9 +316,10 @@ impl Default for WriteDescriptorSetInlineUniformBlockEXT {
         }
     }
 }
-#[doc = "Used by [`WriteDescriptorSetInlineUniformBlockEXT::extend`](struct.WriteDescriptorSetInlineUniformBlockEXT.html#method.extend)"]
-pub trait ExtendableByWriteDescriptorSetInlineUniformBlockEXT {}
-impl ExtendableByWriteDescriptorSetInlineUniformBlockEXT for crate::vk1_0::WriteDescriptorSet {}
+impl crate::ExtendableBy<WriteDescriptorSetInlineUniformBlockEXT>
+    for crate::vk1_0::WriteDescriptorSet
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`WriteDescriptorSetInlineUniformBlockEXT`](struct.WriteDescriptorSetInlineUniformBlockEXT.html)"]
 #[repr(transparent)]
@@ -376,7 +376,7 @@ impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDescriptorPoolInlineUniformBlockCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -407,9 +407,7 @@ impl Default for DescriptorPoolInlineUniformBlockCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`DescriptorPoolInlineUniformBlockCreateInfoEXT::extend`](struct.DescriptorPoolInlineUniformBlockCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByDescriptorPoolInlineUniformBlockCreateInfoEXT {}
-impl ExtendableByDescriptorPoolInlineUniformBlockCreateInfoEXT
+impl crate::ExtendableBy<DescriptorPoolInlineUniformBlockCreateInfoEXT>
     for crate::vk1_0::DescriptorPoolCreateInfo
 {
 }

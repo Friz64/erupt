@@ -18,7 +18,7 @@ impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTexelBufferAlignmentFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -49,13 +49,14 @@ impl Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTexelBufferAlignmentFeaturesEXT::extend`](struct.PhysicalDeviceTexelBufferAlignmentFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTexelBufferAlignmentFeaturesEXT {}
-impl ExtendableByPhysicalDeviceTexelBufferAlignmentFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceTexelBufferAlignmentFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceTexelBufferAlignmentFeaturesEXT`](struct.PhysicalDeviceTexelBufferAlignmentFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -117,7 +118,7 @@ impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTexelBufferAlignmentPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -163,9 +164,7 @@ impl Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTexelBufferAlignmentPropertiesEXT::extend`](struct.PhysicalDeviceTexelBufferAlignmentPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTexelBufferAlignmentPropertiesEXT {}
-impl ExtendableByPhysicalDeviceTexelBufferAlignmentPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

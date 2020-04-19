@@ -19,7 +19,7 @@ impl PresentRegionsKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPresentRegionsKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -48,9 +48,7 @@ impl Default for PresentRegionsKHR {
         }
     }
 }
-#[doc = "Used by [`PresentRegionsKHR::extend`](struct.PresentRegionsKHR.html#method.extend)"]
-pub trait ExtendableByPresentRegionsKHR {}
-impl ExtendableByPresentRegionsKHR for crate::extensions::khr_swapchain::PresentInfoKHR {}
+impl crate::ExtendableBy<PresentRegionsKHR> for crate::extensions::khr_swapchain::PresentInfoKHR {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PresentRegionsKHR`](struct.PresentRegionsKHR.html)"]
 #[repr(transparent)]

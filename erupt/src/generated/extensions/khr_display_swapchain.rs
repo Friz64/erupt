@@ -83,7 +83,7 @@ impl DisplayPresentInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDisplayPresentInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -114,9 +114,10 @@ impl Default for DisplayPresentInfoKHR {
         }
     }
 }
-#[doc = "Used by [`DisplayPresentInfoKHR::extend`](struct.DisplayPresentInfoKHR.html#method.extend)"]
-pub trait ExtendableByDisplayPresentInfoKHR {}
-impl ExtendableByDisplayPresentInfoKHR for crate::extensions::khr_swapchain::PresentInfoKHR {}
+impl crate::ExtendableBy<DisplayPresentInfoKHR>
+    for crate::extensions::khr_swapchain::PresentInfoKHR
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DisplayPresentInfoKHR`](struct.DisplayPresentInfoKHR.html)"]
 #[repr(transparent)]

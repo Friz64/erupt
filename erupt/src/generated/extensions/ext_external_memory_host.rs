@@ -153,7 +153,7 @@ impl ImportMemoryHostPointerInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImportMemoryHostPointerInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -182,9 +182,7 @@ impl Default for ImportMemoryHostPointerInfoEXT {
         }
     }
 }
-#[doc = "Used by [`ImportMemoryHostPointerInfoEXT::extend`](struct.ImportMemoryHostPointerInfoEXT.html#method.extend)"]
-pub trait ExtendableByImportMemoryHostPointerInfoEXT {}
-impl ExtendableByImportMemoryHostPointerInfoEXT for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ImportMemoryHostPointerInfoEXT> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImportMemoryHostPointerInfoEXT`](struct.ImportMemoryHostPointerInfoEXT.html)"]
 #[repr(transparent)]
@@ -249,7 +247,7 @@ impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceExternalMemoryHostPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -280,9 +278,7 @@ impl Default for PhysicalDeviceExternalMemoryHostPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceExternalMemoryHostPropertiesEXT::extend`](struct.PhysicalDeviceExternalMemoryHostPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceExternalMemoryHostPropertiesEXT {}
-impl ExtendableByPhysicalDeviceExternalMemoryHostPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceExternalMemoryHostPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

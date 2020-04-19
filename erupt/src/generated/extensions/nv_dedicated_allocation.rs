@@ -18,7 +18,7 @@ impl DedicatedAllocationImageCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDedicatedAllocationImageCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,7 @@ impl Default for DedicatedAllocationImageCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`DedicatedAllocationImageCreateInfoNV::extend`](struct.DedicatedAllocationImageCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByDedicatedAllocationImageCreateInfoNV {}
-impl ExtendableByDedicatedAllocationImageCreateInfoNV for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DedicatedAllocationImageCreateInfoNV`](struct.DedicatedAllocationImageCreateInfoNV.html)"]
 #[repr(transparent)]
@@ -103,7 +101,7 @@ impl DedicatedAllocationBufferCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDedicatedAllocationBufferCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -130,9 +128,7 @@ impl Default for DedicatedAllocationBufferCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`DedicatedAllocationBufferCreateInfoNV::extend`](struct.DedicatedAllocationBufferCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByDedicatedAllocationBufferCreateInfoNV {}
-impl ExtendableByDedicatedAllocationBufferCreateInfoNV for crate::vk1_0::BufferCreateInfo {}
+impl crate::ExtendableBy<DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DedicatedAllocationBufferCreateInfoNV`](struct.DedicatedAllocationBufferCreateInfoNV.html)"]
 #[repr(transparent)]
@@ -189,7 +185,7 @@ impl DedicatedAllocationMemoryAllocateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDedicatedAllocationMemoryAllocateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -218,9 +214,10 @@ impl Default for DedicatedAllocationMemoryAllocateInfoNV {
         }
     }
 }
-#[doc = "Used by [`DedicatedAllocationMemoryAllocateInfoNV::extend`](struct.DedicatedAllocationMemoryAllocateInfoNV.html#method.extend)"]
-pub trait ExtendableByDedicatedAllocationMemoryAllocateInfoNV {}
-impl ExtendableByDedicatedAllocationMemoryAllocateInfoNV for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<DedicatedAllocationMemoryAllocateInfoNV>
+    for crate::vk1_0::MemoryAllocateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DedicatedAllocationMemoryAllocateInfoNV`](struct.DedicatedAllocationMemoryAllocateInfoNV.html)"]
 #[repr(transparent)]

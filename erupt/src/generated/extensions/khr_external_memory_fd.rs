@@ -261,7 +261,7 @@ impl ImportMemoryFdInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImportMemoryFdInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -290,9 +290,7 @@ impl Default for ImportMemoryFdInfoKHR {
         }
     }
 }
-#[doc = "Used by [`ImportMemoryFdInfoKHR::extend`](struct.ImportMemoryFdInfoKHR.html#method.extend)"]
-pub trait ExtendableByImportMemoryFdInfoKHR {}
-impl ExtendableByImportMemoryFdInfoKHR for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ImportMemoryFdInfoKHR> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImportMemoryFdInfoKHR`](struct.ImportMemoryFdInfoKHR.html)"]
 #[repr(transparent)]

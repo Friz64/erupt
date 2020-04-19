@@ -18,7 +18,7 @@ impl PresentFrameTokenGGP {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPresentFrameTokenGGP,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,10 @@ impl Default for PresentFrameTokenGGP {
         }
     }
 }
-#[doc = "Used by [`PresentFrameTokenGGP::extend`](struct.PresentFrameTokenGGP.html#method.extend)"]
-pub trait ExtendableByPresentFrameTokenGGP {}
-impl ExtendableByPresentFrameTokenGGP for crate::extensions::khr_swapchain::PresentInfoKHR {}
+impl crate::ExtendableBy<PresentFrameTokenGGP>
+    for crate::extensions::khr_swapchain::PresentInfoKHR
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PresentFrameTokenGGP`](struct.PresentFrameTokenGGP.html)"]
 #[repr(transparent)]

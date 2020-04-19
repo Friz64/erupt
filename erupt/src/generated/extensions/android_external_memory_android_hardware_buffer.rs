@@ -243,7 +243,7 @@ impl AndroidHardwareBufferUsageANDROID {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByAndroidHardwareBufferUsageANDROID,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -273,9 +273,10 @@ impl Default for AndroidHardwareBufferUsageANDROID {
         }
     }
 }
-#[doc = "Used by [`AndroidHardwareBufferUsageANDROID::extend`](struct.AndroidHardwareBufferUsageANDROID.html#method.extend)"]
-pub trait ExtendableByAndroidHardwareBufferUsageANDROID {}
-impl ExtendableByAndroidHardwareBufferUsageANDROID for crate::vk1_1::ImageFormatProperties2 {}
+impl crate::ExtendableBy<AndroidHardwareBufferUsageANDROID>
+    for crate::vk1_1::ImageFormatProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`AndroidHardwareBufferUsageANDROID`](struct.AndroidHardwareBufferUsageANDROID.html)"]
 #[repr(transparent)]
@@ -338,7 +339,7 @@ impl AndroidHardwareBufferFormatPropertiesANDROID {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByAndroidHardwareBufferFormatPropertiesANDROID,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -382,9 +383,7 @@ impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
         }
     }
 }
-#[doc = "Used by [`AndroidHardwareBufferFormatPropertiesANDROID::extend`](struct.AndroidHardwareBufferFormatPropertiesANDROID.html#method.extend)"]
-pub trait ExtendableByAndroidHardwareBufferFormatPropertiesANDROID {}
-impl ExtendableByAndroidHardwareBufferFormatPropertiesANDROID for crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID { }
+impl crate :: ExtendableBy < AndroidHardwareBufferFormatPropertiesANDROID > for crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID { }
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`](struct.AndroidHardwareBufferFormatPropertiesANDROID.html)"]
 #[repr(transparent)]
@@ -500,7 +499,7 @@ impl ImportAndroidHardwareBufferInfoANDROID {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImportAndroidHardwareBufferInfoANDROID,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -527,9 +526,10 @@ impl Default for ImportAndroidHardwareBufferInfoANDROID {
         }
     }
 }
-#[doc = "Used by [`ImportAndroidHardwareBufferInfoANDROID::extend`](struct.ImportAndroidHardwareBufferInfoANDROID.html#method.extend)"]
-pub trait ExtendableByImportAndroidHardwareBufferInfoANDROID {}
-impl ExtendableByImportAndroidHardwareBufferInfoANDROID for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ImportAndroidHardwareBufferInfoANDROID>
+    for crate::vk1_0::MemoryAllocateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImportAndroidHardwareBufferInfoANDROID`](struct.ImportAndroidHardwareBufferInfoANDROID.html)"]
 #[repr(transparent)]
@@ -585,7 +585,7 @@ impl ExternalFormatANDROID {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExternalFormatANDROID,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -612,10 +612,8 @@ impl Default for ExternalFormatANDROID {
         }
     }
 }
-#[doc = "Used by [`ExternalFormatANDROID::extend`](struct.ExternalFormatANDROID.html#method.extend)"]
-pub trait ExtendableByExternalFormatANDROID {}
-impl ExtendableByExternalFormatANDROID for crate::vk1_0::ImageCreateInfo {}
-impl ExtendableByExternalFormatANDROID for crate::vk1_1::SamplerYcbcrConversionCreateInfo {}
+impl crate::ExtendableBy<ExternalFormatANDROID> for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ExternalFormatANDROID> for crate::vk1_1::SamplerYcbcrConversionCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExternalFormatANDROID`](struct.ExternalFormatANDROID.html)"]
 #[repr(transparent)]

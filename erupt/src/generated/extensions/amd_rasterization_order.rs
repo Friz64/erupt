@@ -36,7 +36,7 @@ impl PipelineRasterizationStateRasterizationOrderAMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineRasterizationStateRasterizationOrderAMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -64,9 +64,7 @@ impl Default for PipelineRasterizationStateRasterizationOrderAMD {
         }
     }
 }
-#[doc = "Used by [`PipelineRasterizationStateRasterizationOrderAMD::extend`](struct.PipelineRasterizationStateRasterizationOrderAMD.html#method.extend)"]
-pub trait ExtendableByPipelineRasterizationStateRasterizationOrderAMD {}
-impl ExtendableByPipelineRasterizationStateRasterizationOrderAMD
+impl crate::ExtendableBy<PipelineRasterizationStateRasterizationOrderAMD>
     for crate::vk1_0::PipelineRasterizationStateCreateInfo
 {
 }

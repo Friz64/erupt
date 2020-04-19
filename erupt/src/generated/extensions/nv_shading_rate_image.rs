@@ -464,7 +464,7 @@ impl PipelineViewportShadingRateImageStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineViewportShadingRateImageStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -492,9 +492,7 @@ impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
         PipelineViewportShadingRateImageStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , shading_rate_image_enable : Default :: default ( ) , viewport_count : Default :: default ( ) , p_shading_rate_palettes : std :: ptr :: null ( ) , }
     }
 }
-#[doc = "Used by [`PipelineViewportShadingRateImageStateCreateInfoNV::extend`](struct.PipelineViewportShadingRateImageStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineViewportShadingRateImageStateCreateInfoNV {}
-impl ExtendableByPipelineViewportShadingRateImageStateCreateInfoNV
+impl crate::ExtendableBy<PipelineViewportShadingRateImageStateCreateInfoNV>
     for crate::vk1_0::PipelineViewportStateCreateInfo
 {
 }
@@ -567,7 +565,7 @@ impl PhysicalDeviceShadingRateImageFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShadingRateImageFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -599,13 +597,14 @@ impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShadingRateImageFeaturesNV::extend`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShadingRateImageFeaturesNV {}
-impl ExtendableByPhysicalDeviceShadingRateImageFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceShadingRateImageFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShadingRateImageFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceShadingRateImageFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html)"]
 #[repr(transparent)]
@@ -675,7 +674,7 @@ impl PhysicalDeviceShadingRateImagePropertiesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShadingRateImagePropertiesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -709,9 +708,7 @@ impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShadingRateImagePropertiesNV::extend`](struct.PhysicalDeviceShadingRateImagePropertiesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShadingRateImagePropertiesNV {}
-impl ExtendableByPhysicalDeviceShadingRateImagePropertiesNV
+impl crate::ExtendableBy<PhysicalDeviceShadingRateImagePropertiesNV>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -791,7 +788,7 @@ impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineViewportCoarseSampleOrderStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -816,9 +813,7 @@ impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
         PipelineViewportCoarseSampleOrderStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , sample_order_type : Default :: default ( ) , custom_sample_order_count : Default :: default ( ) , p_custom_sample_orders : std :: ptr :: null ( ) , }
     }
 }
-#[doc = "Used by [`PipelineViewportCoarseSampleOrderStateCreateInfoNV::extend`](struct.PipelineViewportCoarseSampleOrderStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineViewportCoarseSampleOrderStateCreateInfoNV {}
-impl ExtendableByPipelineViewportCoarseSampleOrderStateCreateInfoNV
+impl crate::ExtendableBy<PipelineViewportCoarseSampleOrderStateCreateInfoNV>
     for crate::vk1_0::PipelineViewportStateCreateInfo
 {
 }

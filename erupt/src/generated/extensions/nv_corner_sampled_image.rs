@@ -18,7 +18,7 @@ impl PhysicalDeviceCornerSampledImageFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceCornerSampledImageFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,13 +45,14 @@ impl Default for PhysicalDeviceCornerSampledImageFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceCornerSampledImageFeaturesNV::extend`](struct.PhysicalDeviceCornerSampledImageFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceCornerSampledImageFeaturesNV {}
-impl ExtendableByPhysicalDeviceCornerSampledImageFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceCornerSampledImageFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceCornerSampledImageFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceCornerSampledImageFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`](struct.PhysicalDeviceCornerSampledImageFeaturesNV.html)"]
 #[repr(transparent)]

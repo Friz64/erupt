@@ -212,7 +212,7 @@ impl DeferredOperationInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDeferredOperationInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -239,25 +239,23 @@ impl Default for DeferredOperationInfoKHR {
         }
     }
 }
-#[doc = "Used by [`DeferredOperationInfoKHR::extend`](struct.DeferredOperationInfoKHR.html#method.extend)"]
-pub trait ExtendableByDeferredOperationInfoKHR {}
-impl ExtendableByDeferredOperationInfoKHR
+impl crate::ExtendableBy<DeferredOperationInfoKHR>
     for crate::extensions::khr_ray_tracing::RayTracingPipelineCreateInfoKHR
 {
 }
-impl ExtendableByDeferredOperationInfoKHR
+impl crate::ExtendableBy<DeferredOperationInfoKHR>
     for crate::extensions::khr_ray_tracing::AccelerationStructureBuildGeometryInfoKHR
 {
 }
-impl ExtendableByDeferredOperationInfoKHR
+impl crate::ExtendableBy<DeferredOperationInfoKHR>
     for crate::extensions::khr_ray_tracing::CopyAccelerationStructureInfoKHR
 {
 }
-impl ExtendableByDeferredOperationInfoKHR
+impl crate::ExtendableBy<DeferredOperationInfoKHR>
     for crate::extensions::khr_ray_tracing::CopyMemoryToAccelerationStructureInfoKHR
 {
 }
-impl ExtendableByDeferredOperationInfoKHR
+impl crate::ExtendableBy<DeferredOperationInfoKHR>
     for crate::extensions::khr_ray_tracing::CopyAccelerationStructureToMemoryInfoKHR
 {
 }

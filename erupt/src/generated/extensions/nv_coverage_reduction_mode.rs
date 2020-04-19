@@ -206,7 +206,7 @@ impl PhysicalDeviceCoverageReductionModeFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceCoverageReductionModeFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -237,13 +237,14 @@ impl Default for PhysicalDeviceCoverageReductionModeFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceCoverageReductionModeFeaturesNV::extend`](struct.PhysicalDeviceCoverageReductionModeFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceCoverageReductionModeFeaturesNV {}
-impl ExtendableByPhysicalDeviceCoverageReductionModeFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceCoverageReductionModeFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceCoverageReductionModeFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceCoverageReductionModeFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceCoverageReductionModeFeaturesNV`](struct.PhysicalDeviceCoverageReductionModeFeaturesNV.html)"]
 #[repr(transparent)]
@@ -305,7 +306,7 @@ impl PipelineCoverageReductionStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineCoverageReductionStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -334,9 +335,7 @@ impl Default for PipelineCoverageReductionStateCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`PipelineCoverageReductionStateCreateInfoNV::extend`](struct.PipelineCoverageReductionStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineCoverageReductionStateCreateInfoNV {}
-impl ExtendableByPipelineCoverageReductionStateCreateInfoNV
+impl crate::ExtendableBy<PipelineCoverageReductionStateCreateInfoNV>
     for crate::vk1_0::PipelineMultisampleStateCreateInfo
 {
 }

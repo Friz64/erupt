@@ -18,7 +18,7 @@ impl ImageViewASTCDecodeModeEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageViewASTCDecodeModeEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,7 @@ impl Default for ImageViewASTCDecodeModeEXT {
         }
     }
 }
-#[doc = "Used by [`ImageViewASTCDecodeModeEXT::extend`](struct.ImageViewASTCDecodeModeEXT.html#method.extend)"]
-pub trait ExtendableByImageViewASTCDecodeModeEXT {}
-impl ExtendableByImageViewASTCDecodeModeEXT for crate::vk1_0::ImageViewCreateInfo {}
+impl crate::ExtendableBy<ImageViewASTCDecodeModeEXT> for crate::vk1_0::ImageViewCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageViewASTCDecodeModeEXT`](struct.ImageViewASTCDecodeModeEXT.html)"]
 #[repr(transparent)]
@@ -103,7 +101,7 @@ impl PhysicalDeviceASTCDecodeFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceASTCDecodeFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -133,10 +131,11 @@ impl Default for PhysicalDeviceASTCDecodeFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceASTCDecodeFeaturesEXT::extend`](struct.PhysicalDeviceASTCDecodeFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceASTCDecodeFeaturesEXT {}
-impl ExtendableByPhysicalDeviceASTCDecodeFeaturesEXT for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceASTCDecodeFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceASTCDecodeFeaturesEXT>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceASTCDecodeFeaturesEXT> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`](struct.PhysicalDeviceASTCDecodeFeaturesEXT.html)"]
 #[repr(transparent)]

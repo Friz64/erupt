@@ -202,7 +202,7 @@ impl SurfaceFullScreenExclusiveInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySurfaceFullScreenExclusiveInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -229,13 +229,11 @@ impl Default for SurfaceFullScreenExclusiveInfoEXT {
         }
     }
 }
-#[doc = "Used by [`SurfaceFullScreenExclusiveInfoEXT::extend`](struct.SurfaceFullScreenExclusiveInfoEXT.html#method.extend)"]
-pub trait ExtendableBySurfaceFullScreenExclusiveInfoEXT {}
-impl ExtendableBySurfaceFullScreenExclusiveInfoEXT
+impl crate::ExtendableBy<SurfaceFullScreenExclusiveInfoEXT>
     for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR
 {
 }
-impl ExtendableBySurfaceFullScreenExclusiveInfoEXT
+impl crate::ExtendableBy<SurfaceFullScreenExclusiveInfoEXT>
     for crate::extensions::khr_swapchain::SwapchainCreateInfoKHR
 {
 }
@@ -297,7 +295,7 @@ impl SurfaceCapabilitiesFullScreenExclusiveEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySurfaceCapabilitiesFullScreenExclusiveEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -327,9 +325,7 @@ impl Default for SurfaceCapabilitiesFullScreenExclusiveEXT {
         }
     }
 }
-#[doc = "Used by [`SurfaceCapabilitiesFullScreenExclusiveEXT::extend`](struct.SurfaceCapabilitiesFullScreenExclusiveEXT.html#method.extend)"]
-pub trait ExtendableBySurfaceCapabilitiesFullScreenExclusiveEXT {}
-impl ExtendableBySurfaceCapabilitiesFullScreenExclusiveEXT
+impl crate::ExtendableBy<SurfaceCapabilitiesFullScreenExclusiveEXT>
     for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR
 {
 }
@@ -394,7 +390,7 @@ impl SurfaceFullScreenExclusiveWin32InfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySurfaceFullScreenExclusiveWin32InfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -421,13 +417,11 @@ impl Default for SurfaceFullScreenExclusiveWin32InfoEXT {
         }
     }
 }
-#[doc = "Used by [`SurfaceFullScreenExclusiveWin32InfoEXT::extend`](struct.SurfaceFullScreenExclusiveWin32InfoEXT.html#method.extend)"]
-pub trait ExtendableBySurfaceFullScreenExclusiveWin32InfoEXT {}
-impl ExtendableBySurfaceFullScreenExclusiveWin32InfoEXT
+impl crate::ExtendableBy<SurfaceFullScreenExclusiveWin32InfoEXT>
     for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR
 {
 }
-impl ExtendableBySurfaceFullScreenExclusiveWin32InfoEXT
+impl crate::ExtendableBy<SurfaceFullScreenExclusiveWin32InfoEXT>
     for crate::extensions::khr_swapchain::SwapchainCreateInfoKHR
 {
 }

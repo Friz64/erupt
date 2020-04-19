@@ -18,7 +18,7 @@ impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -44,13 +44,11 @@ impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
         PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL , p_next : std :: ptr :: null_mut ( ) , shader_integer_functions2 : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL::extend`](struct.PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {}
-impl ExtendableByPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
+impl crate::ExtendableBy<PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
+impl crate::ExtendableBy<PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

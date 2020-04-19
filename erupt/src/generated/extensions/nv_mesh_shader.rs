@@ -162,7 +162,7 @@ impl PhysicalDeviceMeshShaderFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceMeshShaderFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -191,10 +191,11 @@ impl Default for PhysicalDeviceMeshShaderFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceMeshShaderFeaturesNV::extend`](struct.PhysicalDeviceMeshShaderFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceMeshShaderFeaturesNV {}
-impl ExtendableByPhysicalDeviceMeshShaderFeaturesNV for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceMeshShaderFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceMeshShaderFeaturesNV`](struct.PhysicalDeviceMeshShaderFeaturesNV.html)"]
 #[repr(transparent)]
@@ -268,7 +269,7 @@ impl PhysicalDeviceMeshShaderPropertiesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceMeshShaderPropertiesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -343,9 +344,10 @@ impl Default for PhysicalDeviceMeshShaderPropertiesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceMeshShaderPropertiesNV::extend`](struct.PhysicalDeviceMeshShaderPropertiesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceMeshShaderPropertiesNV {}
-impl ExtendableByPhysicalDeviceMeshShaderPropertiesNV for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceMeshShaderPropertiesNV>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceMeshShaderPropertiesNV`](struct.PhysicalDeviceMeshShaderPropertiesNV.html)"]
 #[repr(transparent)]

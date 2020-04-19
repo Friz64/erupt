@@ -18,7 +18,7 @@ impl RenderPassTransformBeginInfoQCOM {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByRenderPassTransformBeginInfoQCOM,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,7 @@ impl Default for RenderPassTransformBeginInfoQCOM {
         }
     }
 }
-#[doc = "Used by [`RenderPassTransformBeginInfoQCOM::extend`](struct.RenderPassTransformBeginInfoQCOM.html#method.extend)"]
-pub trait ExtendableByRenderPassTransformBeginInfoQCOM {}
-impl ExtendableByRenderPassTransformBeginInfoQCOM for crate::vk1_0::RenderPassBeginInfo {}
+impl crate::ExtendableBy<RenderPassTransformBeginInfoQCOM> for crate::vk1_0::RenderPassBeginInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`RenderPassTransformBeginInfoQCOM`](struct.RenderPassTransformBeginInfoQCOM.html)"]
 #[repr(transparent)]
@@ -107,7 +105,7 @@ impl CommandBufferInheritanceRenderPassTransformInfoQCOM {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByCommandBufferInheritanceRenderPassTransformInfoQCOM,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -131,9 +129,7 @@ impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
         CommandBufferInheritanceRenderPassTransformInfoQCOM { s_type : crate :: vk1_0 :: StructureType :: COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM , p_next : std :: ptr :: null_mut ( ) , transform : Default :: default ( ) , render_area : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`CommandBufferInheritanceRenderPassTransformInfoQCOM::extend`](struct.CommandBufferInheritanceRenderPassTransformInfoQCOM.html#method.extend)"]
-pub trait ExtendableByCommandBufferInheritanceRenderPassTransformInfoQCOM {}
-impl ExtendableByCommandBufferInheritanceRenderPassTransformInfoQCOM
+impl crate::ExtendableBy<CommandBufferInheritanceRenderPassTransformInfoQCOM>
     for crate::vk1_0::CommandBufferInheritanceInfo
 {
 }

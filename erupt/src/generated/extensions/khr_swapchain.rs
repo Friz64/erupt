@@ -997,7 +997,7 @@ impl ImageSwapchainCreateInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageSwapchainCreateInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1024,9 +1024,7 @@ impl Default for ImageSwapchainCreateInfoKHR {
         }
     }
 }
-#[doc = "Used by [`ImageSwapchainCreateInfoKHR::extend`](struct.ImageSwapchainCreateInfoKHR.html#method.extend)"]
-pub trait ExtendableByImageSwapchainCreateInfoKHR {}
-impl ExtendableByImageSwapchainCreateInfoKHR for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ImageSwapchainCreateInfoKHR> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageSwapchainCreateInfoKHR`](struct.ImageSwapchainCreateInfoKHR.html)"]
 #[repr(transparent)]
@@ -1083,7 +1081,7 @@ impl BindImageMemorySwapchainInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByBindImageMemorySwapchainInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1112,9 +1110,7 @@ impl Default for BindImageMemorySwapchainInfoKHR {
         }
     }
 }
-#[doc = "Used by [`BindImageMemorySwapchainInfoKHR::extend`](struct.BindImageMemorySwapchainInfoKHR.html#method.extend)"]
-pub trait ExtendableByBindImageMemorySwapchainInfoKHR {}
-impl ExtendableByBindImageMemorySwapchainInfoKHR for crate::vk1_1::BindImageMemoryInfo {}
+impl crate::ExtendableBy<BindImageMemorySwapchainInfoKHR> for crate::vk1_1::BindImageMemoryInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`BindImageMemorySwapchainInfoKHR`](struct.BindImageMemorySwapchainInfoKHR.html)"]
 #[repr(transparent)]
@@ -1178,7 +1174,7 @@ impl DeviceGroupPresentInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDeviceGroupPresentInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1209,9 +1205,10 @@ impl Default for DeviceGroupPresentInfoKHR {
         }
     }
 }
-#[doc = "Used by [`DeviceGroupPresentInfoKHR::extend`](struct.DeviceGroupPresentInfoKHR.html#method.extend)"]
-pub trait ExtendableByDeviceGroupPresentInfoKHR {}
-impl ExtendableByDeviceGroupPresentInfoKHR for crate::extensions::khr_swapchain::PresentInfoKHR {}
+impl crate::ExtendableBy<DeviceGroupPresentInfoKHR>
+    for crate::extensions::khr_swapchain::PresentInfoKHR
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DeviceGroupPresentInfoKHR`](struct.DeviceGroupPresentInfoKHR.html)"]
 #[repr(transparent)]
@@ -1277,7 +1274,7 @@ impl DeviceGroupSwapchainCreateInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDeviceGroupSwapchainCreateInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1304,9 +1301,7 @@ impl Default for DeviceGroupSwapchainCreateInfoKHR {
         }
     }
 }
-#[doc = "Used by [`DeviceGroupSwapchainCreateInfoKHR::extend`](struct.DeviceGroupSwapchainCreateInfoKHR.html#method.extend)"]
-pub trait ExtendableByDeviceGroupSwapchainCreateInfoKHR {}
-impl ExtendableByDeviceGroupSwapchainCreateInfoKHR
+impl crate::ExtendableBy<DeviceGroupSwapchainCreateInfoKHR>
     for crate::extensions::khr_swapchain::SwapchainCreateInfoKHR
 {
 }

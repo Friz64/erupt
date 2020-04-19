@@ -19,7 +19,7 @@ impl ExternalMemoryImageCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExternalMemoryImageCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -46,9 +46,7 @@ impl Default for ExternalMemoryImageCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`ExternalMemoryImageCreateInfoNV::extend`](struct.ExternalMemoryImageCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByExternalMemoryImageCreateInfoNV {}
-impl ExtendableByExternalMemoryImageCreateInfoNV for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ExternalMemoryImageCreateInfoNV> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExternalMemoryImageCreateInfoNV`](struct.ExternalMemoryImageCreateInfoNV.html)"]
 #[repr(transparent)]
@@ -108,7 +106,7 @@ impl ExportMemoryAllocateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExportMemoryAllocateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -135,9 +133,7 @@ impl Default for ExportMemoryAllocateInfoNV {
         }
     }
 }
-#[doc = "Used by [`ExportMemoryAllocateInfoNV::extend`](struct.ExportMemoryAllocateInfoNV.html#method.extend)"]
-pub trait ExtendableByExportMemoryAllocateInfoNV {}
-impl ExtendableByExportMemoryAllocateInfoNV for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ExportMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExportMemoryAllocateInfoNV`](struct.ExportMemoryAllocateInfoNV.html)"]
 #[repr(transparent)]

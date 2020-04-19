@@ -40,7 +40,7 @@ impl PipelineCompilerControlCreateInfoAMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineCompilerControlCreateInfoAMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -67,10 +67,14 @@ impl Default for PipelineCompilerControlCreateInfoAMD {
         }
     }
 }
-#[doc = "Used by [`PipelineCompilerControlCreateInfoAMD::extend`](struct.PipelineCompilerControlCreateInfoAMD.html#method.extend)"]
-pub trait ExtendableByPipelineCompilerControlCreateInfoAMD {}
-impl ExtendableByPipelineCompilerControlCreateInfoAMD for crate::vk1_0::GraphicsPipelineCreateInfo {}
-impl ExtendableByPipelineCompilerControlCreateInfoAMD for crate::vk1_0::ComputePipelineCreateInfo {}
+impl crate::ExtendableBy<PipelineCompilerControlCreateInfoAMD>
+    for crate::vk1_0::GraphicsPipelineCreateInfo
+{
+}
+impl crate::ExtendableBy<PipelineCompilerControlCreateInfoAMD>
+    for crate::vk1_0::ComputePipelineCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PipelineCompilerControlCreateInfoAMD`](struct.PipelineCompilerControlCreateInfoAMD.html)"]
 #[repr(transparent)]

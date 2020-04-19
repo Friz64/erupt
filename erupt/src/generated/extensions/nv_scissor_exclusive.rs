@@ -77,7 +77,7 @@ impl PipelineViewportExclusiveScissorStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineViewportExclusiveScissorStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -101,9 +101,7 @@ impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
         PipelineViewportExclusiveScissorStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , exclusive_scissor_count : Default :: default ( ) , p_exclusive_scissors : std :: ptr :: null ( ) , }
     }
 }
-#[doc = "Used by [`PipelineViewportExclusiveScissorStateCreateInfoNV::extend`](struct.PipelineViewportExclusiveScissorStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineViewportExclusiveScissorStateCreateInfoNV {}
-impl ExtendableByPipelineViewportExclusiveScissorStateCreateInfoNV
+impl crate::ExtendableBy<PipelineViewportExclusiveScissorStateCreateInfoNV>
     for crate::vk1_0::PipelineViewportStateCreateInfo
 {
 }
@@ -169,7 +167,7 @@ impl PhysicalDeviceExclusiveScissorFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceExclusiveScissorFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -196,13 +194,14 @@ impl Default for PhysicalDeviceExclusiveScissorFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceExclusiveScissorFeaturesNV::extend`](struct.PhysicalDeviceExclusiveScissorFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceExclusiveScissorFeaturesNV {}
-impl ExtendableByPhysicalDeviceExclusiveScissorFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceExclusiveScissorFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceExclusiveScissorFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceExclusiveScissorFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`](struct.PhysicalDeviceExclusiveScissorFeaturesNV.html)"]
 #[repr(transparent)]

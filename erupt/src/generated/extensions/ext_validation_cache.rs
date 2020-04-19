@@ -303,7 +303,7 @@ impl ShaderModuleValidationCacheCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByShaderModuleValidationCacheCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -330,9 +330,10 @@ impl Default for ShaderModuleValidationCacheCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`ShaderModuleValidationCacheCreateInfoEXT::extend`](struct.ShaderModuleValidationCacheCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByShaderModuleValidationCacheCreateInfoEXT {}
-impl ExtendableByShaderModuleValidationCacheCreateInfoEXT for crate::vk1_0::ShaderModuleCreateInfo {}
+impl crate::ExtendableBy<ShaderModuleValidationCacheCreateInfoEXT>
+    for crate::vk1_0::ShaderModuleCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ShaderModuleValidationCacheCreateInfoEXT`](struct.ShaderModuleValidationCacheCreateInfoEXT.html)"]
 #[repr(transparent)]

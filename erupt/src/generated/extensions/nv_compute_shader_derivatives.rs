@@ -19,7 +19,7 @@ impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceComputeShaderDerivativesFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -55,13 +55,11 @@ impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceComputeShaderDerivativesFeaturesNV::extend`](struct.PhysicalDeviceComputeShaderDerivativesFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceComputeShaderDerivativesFeaturesNV {}
-impl ExtendableByPhysicalDeviceComputeShaderDerivativesFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceComputeShaderDerivativesFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceComputeShaderDerivativesFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceComputeShaderDerivativesFeaturesNV>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

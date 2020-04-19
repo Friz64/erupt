@@ -584,37 +584,30 @@ pub fn generate(
                     },
                 )
             } else {
-                let extendable_by_name = format_ident!("ExtendableBy{}", trimmed_name);
-                let extendable_by_doc = format!(
-                    "Used by [`{name}::extend`](struct.{name}.html#method.extend)",
-                    name = trimmed_name
-                );
-                let (extendable_by_code, extend_function) = if !extends.is_empty() {
-                    (
-                        quote! {
-                            #[doc = #extendable_by_doc]
-                            pub trait #extendable_by_name {}
-                        },
-                        quote! {
-                            #[inline]
-                            #[doc = "Appends `self` to `other` pointer chain"]
-                            #[doc = "# Safety"]
-                            #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-                            pub unsafe fn extend<T>(&mut self, other: &mut T) where T: #extendable_by_name {
-                                crate::append_ptr_chain(
-                                    other as *mut T as _,
-                                    self as *mut Self as _,
-                                );
-                            }
-                        },
-                    )
+                let extend_function = if !extends.is_empty() {
+                    quote! {
+                        #[inline]
+                        #[doc = "Appends `self` to `other` pointer chain"]
+                        #[doc = "# Safety"]
+                        #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
+                        pub unsafe fn extend<T>(&mut self, other: &mut T)
+                        where
+                            T: crate::ExtendableBy<Self>,
+                        {
+                            crate::append_ptr_chain(
+                                other as *mut T as _,
+                                self as *mut Self as _,
+                            );
+                        }
+                    }
                 } else {
-                    (quote! {}, quote! {})
+                    quote! {}
                 };
+
                 let extendable_by_impls = extends.iter().map(|name| {
                     let path: TokenStream =
                         syn::parse_str(&utils::item_path(itemname_origin_map, name)).unwrap();
-                    quote! { impl #extendable_by_name for #path {} }
+                    quote! { impl crate::ExtendableBy<#name_ident> for #path {} }
                 });
 
                 let debug_fields = fields.iter().map(|((_, name, field_type, _, _), _, _)| {
@@ -819,7 +812,6 @@ pub fn generate(
                             }
                         }
 
-                        #extendable_by_code
                         #( #extendable_by_impls )*
 
                         #[derive(Copy, Clone)]

@@ -533,7 +533,7 @@ impl QueryPoolPerformanceCreateInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByQueryPoolPerformanceCreateInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -564,9 +564,7 @@ impl Default for QueryPoolPerformanceCreateInfoKHR {
         }
     }
 }
-#[doc = "Used by [`QueryPoolPerformanceCreateInfoKHR::extend`](struct.QueryPoolPerformanceCreateInfoKHR.html#method.extend)"]
-pub trait ExtendableByQueryPoolPerformanceCreateInfoKHR {}
-impl ExtendableByQueryPoolPerformanceCreateInfoKHR for crate::vk1_0::QueryPoolCreateInfo {}
+impl crate::ExtendableBy<QueryPoolPerformanceCreateInfoKHR> for crate::vk1_0::QueryPoolCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`QueryPoolPerformanceCreateInfoKHR`](struct.QueryPoolPerformanceCreateInfoKHR.html)"]
 #[repr(transparent)]
@@ -735,7 +733,7 @@ impl PhysicalDevicePerformanceQueryFeaturesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -770,13 +768,14 @@ impl Default for PhysicalDevicePerformanceQueryFeaturesKHR {
         }
     }
 }
-#[doc = "Used by [`PhysicalDevicePerformanceQueryFeaturesKHR::extend`](struct.PhysicalDevicePerformanceQueryFeaturesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR {}
-impl ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR
+impl crate::ExtendableBy<PhysicalDevicePerformanceQueryFeaturesKHR>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDevicePerformanceQueryFeaturesKHR for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDevicePerformanceQueryFeaturesKHR>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDevicePerformanceQueryFeaturesKHR`](struct.PhysicalDevicePerformanceQueryFeaturesKHR.html)"]
 #[repr(transparent)]
@@ -848,7 +847,7 @@ impl PhysicalDevicePerformanceQueryPropertiesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePerformanceQueryPropertiesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -878,9 +877,7 @@ impl Default for PhysicalDevicePerformanceQueryPropertiesKHR {
         }
     }
 }
-#[doc = "Used by [`PhysicalDevicePerformanceQueryPropertiesKHR::extend`](struct.PhysicalDevicePerformanceQueryPropertiesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePerformanceQueryPropertiesKHR {}
-impl ExtendableByPhysicalDevicePerformanceQueryPropertiesKHR
+impl crate::ExtendableBy<PhysicalDevicePerformanceQueryPropertiesKHR>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -966,7 +963,7 @@ impl PerformanceQuerySubmitInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPerformanceQuerySubmitInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -993,9 +990,7 @@ impl Default for PerformanceQuerySubmitInfoKHR {
         }
     }
 }
-#[doc = "Used by [`PerformanceQuerySubmitInfoKHR::extend`](struct.PerformanceQuerySubmitInfoKHR.html#method.extend)"]
-pub trait ExtendableByPerformanceQuerySubmitInfoKHR {}
-impl ExtendableByPerformanceQuerySubmitInfoKHR for crate::vk1_0::SubmitInfo {}
+impl crate::ExtendableBy<PerformanceQuerySubmitInfoKHR> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PerformanceQuerySubmitInfoKHR`](struct.PerformanceQuerySubmitInfoKHR.html)"]
 #[repr(transparent)]

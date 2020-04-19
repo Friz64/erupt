@@ -18,7 +18,7 @@ impl DeviceQueueGlobalPriorityCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDeviceQueueGlobalPriorityCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,10 @@ impl Default for DeviceQueueGlobalPriorityCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`DeviceQueueGlobalPriorityCreateInfoEXT::extend`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByDeviceQueueGlobalPriorityCreateInfoEXT {}
-impl ExtendableByDeviceQueueGlobalPriorityCreateInfoEXT for crate::vk1_0::DeviceQueueCreateInfo {}
+impl crate::ExtendableBy<DeviceQueueGlobalPriorityCreateInfoEXT>
+    for crate::vk1_0::DeviceQueueCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html)"]
 #[repr(transparent)]

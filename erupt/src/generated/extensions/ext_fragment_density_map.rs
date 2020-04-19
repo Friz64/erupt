@@ -20,7 +20,7 @@ impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -57,13 +57,14 @@ impl Default for PhysicalDeviceFragmentDensityMapFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceFragmentDensityMapFeaturesEXT::extend`](struct.PhysicalDeviceFragmentDensityMapFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT {}
-impl ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceFragmentDensityMapFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceFragmentDensityMapFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceFragmentDensityMapFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`](struct.PhysicalDeviceFragmentDensityMapFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -140,7 +141,7 @@ impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceFragmentDensityMapPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -181,9 +182,7 @@ impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceFragmentDensityMapPropertiesEXT::extend`](struct.PhysicalDeviceFragmentDensityMapPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceFragmentDensityMapPropertiesEXT {}
-impl ExtendableByPhysicalDeviceFragmentDensityMapPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceFragmentDensityMapPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -263,7 +262,7 @@ impl RenderPassFragmentDensityMapCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByRenderPassFragmentDensityMapCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -293,10 +292,14 @@ impl Default for RenderPassFragmentDensityMapCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`RenderPassFragmentDensityMapCreateInfoEXT::extend`](struct.RenderPassFragmentDensityMapCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByRenderPassFragmentDensityMapCreateInfoEXT {}
-impl ExtendableByRenderPassFragmentDensityMapCreateInfoEXT for crate::vk1_0::RenderPassCreateInfo {}
-impl ExtendableByRenderPassFragmentDensityMapCreateInfoEXT for crate::vk1_2::RenderPassCreateInfo2 {}
+impl crate::ExtendableBy<RenderPassFragmentDensityMapCreateInfoEXT>
+    for crate::vk1_0::RenderPassCreateInfo
+{
+}
+impl crate::ExtendableBy<RenderPassFragmentDensityMapCreateInfoEXT>
+    for crate::vk1_2::RenderPassCreateInfo2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`](struct.RenderPassFragmentDensityMapCreateInfoEXT.html)"]
 #[repr(transparent)]

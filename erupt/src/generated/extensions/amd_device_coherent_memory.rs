@@ -18,7 +18,7 @@ impl PhysicalDeviceCoherentMemoryFeaturesAMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceCoherentMemoryFeaturesAMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -48,10 +48,14 @@ impl Default for PhysicalDeviceCoherentMemoryFeaturesAMD {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceCoherentMemoryFeaturesAMD::extend`](struct.PhysicalDeviceCoherentMemoryFeaturesAMD.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceCoherentMemoryFeaturesAMD {}
-impl ExtendableByPhysicalDeviceCoherentMemoryFeaturesAMD for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceCoherentMemoryFeaturesAMD for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceCoherentMemoryFeaturesAMD>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceCoherentMemoryFeaturesAMD>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceCoherentMemoryFeaturesAMD`](struct.PhysicalDeviceCoherentMemoryFeaturesAMD.html)"]
 #[repr(transparent)]

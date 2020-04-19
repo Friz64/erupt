@@ -70,7 +70,7 @@ impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceBufferDeviceAddressFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -107,13 +107,14 @@ impl Default for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceBufferDeviceAddressFeaturesEXT::extend`](struct.PhysicalDeviceBufferDeviceAddressFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceBufferDeviceAddressFeaturesEXT {}
-impl ExtendableByPhysicalDeviceBufferDeviceAddressFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceBufferDeviceAddressFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceBufferDeviceAddressFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceBufferDeviceAddressFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceBufferDeviceAddressFeaturesEXT`](struct.PhysicalDeviceBufferDeviceAddressFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -192,7 +193,7 @@ impl BufferDeviceAddressCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByBufferDeviceAddressCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -219,9 +220,7 @@ impl Default for BufferDeviceAddressCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`BufferDeviceAddressCreateInfoEXT::extend`](struct.BufferDeviceAddressCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByBufferDeviceAddressCreateInfoEXT {}
-impl ExtendableByBufferDeviceAddressCreateInfoEXT for crate::vk1_0::BufferCreateInfo {}
+impl crate::ExtendableBy<BufferDeviceAddressCreateInfoEXT> for crate::vk1_0::BufferCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`BufferDeviceAddressCreateInfoEXT`](struct.BufferDeviceAddressCreateInfoEXT.html)"]
 #[repr(transparent)]

@@ -18,7 +18,7 @@ impl PhysicalDeviceImageViewImageFormatInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceImageViewImageFormatInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,9 +45,7 @@ impl Default for PhysicalDeviceImageViewImageFormatInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceImageViewImageFormatInfoEXT::extend`](struct.PhysicalDeviceImageViewImageFormatInfoEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceImageViewImageFormatInfoEXT {}
-impl ExtendableByPhysicalDeviceImageViewImageFormatInfoEXT
+impl crate::ExtendableBy<PhysicalDeviceImageViewImageFormatInfoEXT>
     for crate::vk1_1::PhysicalDeviceImageFormatInfo2
 {
 }
@@ -110,7 +108,7 @@ impl FilterCubicImageViewImageFormatPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByFilterCubicImageViewImageFormatPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -140,9 +138,7 @@ impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`FilterCubicImageViewImageFormatPropertiesEXT::extend`](struct.FilterCubicImageViewImageFormatPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByFilterCubicImageViewImageFormatPropertiesEXT {}
-impl ExtendableByFilterCubicImageViewImageFormatPropertiesEXT
+impl crate::ExtendableBy<FilterCubicImageViewImageFormatPropertiesEXT>
     for crate::vk1_1::ImageFormatProperties2
 {
 }

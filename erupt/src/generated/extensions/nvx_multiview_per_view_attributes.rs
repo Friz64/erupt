@@ -18,7 +18,7 @@ impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -44,9 +44,7 @@ impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
         PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX , p_next : std :: ptr :: null_mut ( ) , per_view_position_all_components : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX::extend`](struct.PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {}
-impl ExtendableByPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
+impl crate::ExtendableBy<PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

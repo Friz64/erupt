@@ -18,7 +18,7 @@ impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceBlendOperationAdvancedFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -49,13 +49,11 @@ impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT::extend`](struct.PhysicalDeviceBlendOperationAdvancedFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceBlendOperationAdvancedFeaturesEXT {}
-impl ExtendableByPhysicalDeviceBlendOperationAdvancedFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceBlendOperationAdvancedFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceBlendOperationAdvancedFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceBlendOperationAdvancedFeaturesEXT>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -125,7 +123,7 @@ impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceBlendOperationAdvancedPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -181,9 +179,7 @@ impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT::extend`](struct.PhysicalDeviceBlendOperationAdvancedPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceBlendOperationAdvancedPropertiesEXT {}
-impl ExtendableByPhysicalDeviceBlendOperationAdvancedPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceBlendOperationAdvancedPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -294,7 +290,7 @@ impl PipelineColorBlendAdvancedStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineColorBlendAdvancedStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -326,9 +322,7 @@ impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineColorBlendAdvancedStateCreateInfoEXT::extend`](struct.PipelineColorBlendAdvancedStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineColorBlendAdvancedStateCreateInfoEXT {}
-impl ExtendableByPipelineColorBlendAdvancedStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineColorBlendAdvancedStateCreateInfoEXT>
     for crate::vk1_0::PipelineColorBlendStateCreateInfo
 {
 }

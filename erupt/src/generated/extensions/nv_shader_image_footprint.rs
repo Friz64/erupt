@@ -18,7 +18,7 @@ impl PhysicalDeviceShaderImageFootprintFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderImageFootprintFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,13 +45,14 @@ impl Default for PhysicalDeviceShaderImageFootprintFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderImageFootprintFeaturesNV::extend`](struct.PhysicalDeviceShaderImageFootprintFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderImageFootprintFeaturesNV {}
-impl ExtendableByPhysicalDeviceShaderImageFootprintFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceShaderImageFootprintFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShaderImageFootprintFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceShaderImageFootprintFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`](struct.PhysicalDeviceShaderImageFootprintFeaturesNV.html)"]
 #[repr(transparent)]

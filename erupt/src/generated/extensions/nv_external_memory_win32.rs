@@ -72,7 +72,7 @@ impl ImportMemoryWin32HandleInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImportMemoryWin32HandleInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -101,9 +101,7 @@ impl Default for ImportMemoryWin32HandleInfoNV {
         }
     }
 }
-#[doc = "Used by [`ImportMemoryWin32HandleInfoNV::extend`](struct.ImportMemoryWin32HandleInfoNV.html#method.extend)"]
-pub trait ExtendableByImportMemoryWin32HandleInfoNV {}
-impl ExtendableByImportMemoryWin32HandleInfoNV for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ImportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImportMemoryWin32HandleInfoNV`](struct.ImportMemoryWin32HandleInfoNV.html)"]
 #[repr(transparent)]
@@ -169,7 +167,7 @@ impl ExportMemoryWin32HandleInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExportMemoryWin32HandleInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -198,9 +196,7 @@ impl Default for ExportMemoryWin32HandleInfoNV {
         }
     }
 }
-#[doc = "Used by [`ExportMemoryWin32HandleInfoNV::extend`](struct.ExportMemoryWin32HandleInfoNV.html#method.extend)"]
-pub trait ExtendableByExportMemoryWin32HandleInfoNV {}
-impl ExtendableByExportMemoryWin32HandleInfoNV for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<ExportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExportMemoryWin32HandleInfoNV`](struct.ExportMemoryWin32HandleInfoNV.html)"]
 #[repr(transparent)]

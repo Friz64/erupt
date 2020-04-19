@@ -26,7 +26,7 @@ impl PhysicalDeviceConservativeRasterizationPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceConservativeRasterizationPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -84,9 +84,7 @@ impl Default for PhysicalDeviceConservativeRasterizationPropertiesEXT {
         PhysicalDeviceConservativeRasterizationPropertiesEXT { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT , p_next : std :: ptr :: null_mut ( ) , primitive_overestimation_size : Default :: default ( ) , max_extra_primitive_overestimation_size : Default :: default ( ) , extra_primitive_overestimation_size_granularity : Default :: default ( ) , primitive_underestimation : Default :: default ( ) , conservative_point_and_line_rasterization : Default :: default ( ) , degenerate_triangles_rasterized : Default :: default ( ) , degenerate_lines_rasterized : Default :: default ( ) , fully_covered_fragment_shader_input_variable : Default :: default ( ) , conservative_rasterization_post_depth_coverage : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceConservativeRasterizationPropertiesEXT::extend`](struct.PhysicalDeviceConservativeRasterizationPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceConservativeRasterizationPropertiesEXT {}
-impl ExtendableByPhysicalDeviceConservativeRasterizationPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceConservativeRasterizationPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -214,7 +212,7 @@ impl PipelineRasterizationConservativeStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineRasterizationConservativeStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -245,9 +243,7 @@ impl Default for PipelineRasterizationConservativeStateCreateInfoEXT {
         PipelineRasterizationConservativeStateCreateInfoEXT { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT , p_next : std :: ptr :: null ( ) , flags : Default :: default ( ) , conservative_rasterization_mode : Default :: default ( ) , extra_primitive_overestimation_size : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PipelineRasterizationConservativeStateCreateInfoEXT::extend`](struct.PipelineRasterizationConservativeStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineRasterizationConservativeStateCreateInfoEXT {}
-impl ExtendableByPipelineRasterizationConservativeStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineRasterizationConservativeStateCreateInfoEXT>
     for crate::vk1_0::PipelineRasterizationStateCreateInfo
 {
 }

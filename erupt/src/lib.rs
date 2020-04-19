@@ -191,6 +191,9 @@ macro_rules! handle {
     };
 }
 
+/// Used in `extend` functions for type safe pointer chains
+pub trait ExtendableBy<T> {}
+
 unsafe fn append_ptr_chain(
     mut host: *mut vk1_0::BaseOutStructure,
     tail: *mut vk1_0::BaseOutStructure,

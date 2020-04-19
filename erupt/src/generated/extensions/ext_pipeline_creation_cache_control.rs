@@ -18,7 +18,7 @@ impl PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePipelineCreationCacheControlFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -44,13 +44,11 @@ impl Default for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
         PhysicalDevicePipelineCreationCacheControlFeaturesEXT { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT , p_next : std :: ptr :: null_mut ( ) , pipeline_creation_cache_control : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDevicePipelineCreationCacheControlFeaturesEXT::extend`](struct.PhysicalDevicePipelineCreationCacheControlFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePipelineCreationCacheControlFeaturesEXT {}
-impl ExtendableByPhysicalDevicePipelineCreationCacheControlFeaturesEXT
+impl crate::ExtendableBy<PhysicalDevicePipelineCreationCacheControlFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDevicePipelineCreationCacheControlFeaturesEXT
+impl crate::ExtendableBy<PhysicalDevicePipelineCreationCacheControlFeaturesEXT>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

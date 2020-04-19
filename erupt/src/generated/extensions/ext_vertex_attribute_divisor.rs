@@ -18,7 +18,7 @@ impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVertexAttributeDivisorPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -46,9 +46,7 @@ impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT::extend`](struct.PhysicalDeviceVertexAttributeDivisorPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVertexAttributeDivisorPropertiesEXT {}
-impl ExtendableByPhysicalDeviceVertexAttributeDivisorPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -181,7 +179,7 @@ impl PipelineVertexInputDivisorStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineVertexInputDivisorStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -214,9 +212,7 @@ impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineVertexInputDivisorStateCreateInfoEXT::extend`](struct.PipelineVertexInputDivisorStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineVertexInputDivisorStateCreateInfoEXT {}
-impl ExtendableByPipelineVertexInputDivisorStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineVertexInputDivisorStateCreateInfoEXT>
     for crate::vk1_0::PipelineVertexInputStateCreateInfo
 {
 }
@@ -283,7 +279,7 @@ impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVertexAttributeDivisorFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -319,13 +315,11 @@ impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT::extend`](struct.PhysicalDeviceVertexAttributeDivisorFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVertexAttributeDivisorFeaturesEXT {}
-impl ExtendableByPhysicalDeviceVertexAttributeDivisorFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceVertexAttributeDivisorFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorFeaturesEXT>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

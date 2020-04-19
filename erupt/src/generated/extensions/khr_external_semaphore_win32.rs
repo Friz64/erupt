@@ -286,7 +286,7 @@ impl ExportSemaphoreWin32HandleInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExportSemaphoreWin32HandleInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -317,9 +317,7 @@ impl Default for ExportSemaphoreWin32HandleInfoKHR {
         }
     }
 }
-#[doc = "Used by [`ExportSemaphoreWin32HandleInfoKHR::extend`](struct.ExportSemaphoreWin32HandleInfoKHR.html#method.extend)"]
-pub trait ExtendableByExportSemaphoreWin32HandleInfoKHR {}
-impl ExtendableByExportSemaphoreWin32HandleInfoKHR for crate::vk1_0::SemaphoreCreateInfo {}
+impl crate::ExtendableBy<ExportSemaphoreWin32HandleInfoKHR> for crate::vk1_0::SemaphoreCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExportSemaphoreWin32HandleInfoKHR`](struct.ExportSemaphoreWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
@@ -390,7 +388,7 @@ impl D3D12FenceSubmitInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByD3D12FenceSubmitInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -429,9 +427,7 @@ impl Default for D3D12FenceSubmitInfoKHR {
         }
     }
 }
-#[doc = "Used by [`D3D12FenceSubmitInfoKHR::extend`](struct.D3D12FenceSubmitInfoKHR.html#method.extend)"]
-pub trait ExtendableByD3D12FenceSubmitInfoKHR {}
-impl ExtendableByD3D12FenceSubmitInfoKHR for crate::vk1_0::SubmitInfo {}
+impl crate::ExtendableBy<D3D12FenceSubmitInfoKHR> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`D3D12FenceSubmitInfoKHR`](struct.D3D12FenceSubmitInfoKHR.html)"]
 #[repr(transparent)]

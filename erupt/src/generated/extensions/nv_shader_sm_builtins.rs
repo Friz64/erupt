@@ -19,7 +19,7 @@ impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderSMBuiltinsPropertiesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -48,9 +48,7 @@ impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderSMBuiltinsPropertiesNV::extend`](struct.PhysicalDeviceShaderSMBuiltinsPropertiesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderSMBuiltinsPropertiesNV {}
-impl ExtendableByPhysicalDeviceShaderSMBuiltinsPropertiesNV
+impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsPropertiesNV>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -118,7 +116,7 @@ impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderSMBuiltinsFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -145,13 +143,14 @@ impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderSMBuiltinsFeaturesNV::extend`](struct.PhysicalDeviceShaderSMBuiltinsFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderSMBuiltinsFeaturesNV {}
-impl ExtendableByPhysicalDeviceShaderSMBuiltinsFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShaderSMBuiltinsFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`](struct.PhysicalDeviceShaderSMBuiltinsFeaturesNV.html)"]
 #[repr(transparent)]

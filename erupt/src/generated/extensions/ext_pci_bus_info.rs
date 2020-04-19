@@ -21,7 +21,7 @@ impl PhysicalDevicePCIBusInfoPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePCIBusInfoPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -54,9 +54,10 @@ impl Default for PhysicalDevicePCIBusInfoPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDevicePCIBusInfoPropertiesEXT::extend`](struct.PhysicalDevicePCIBusInfoPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePCIBusInfoPropertiesEXT {}
-impl ExtendableByPhysicalDevicePCIBusInfoPropertiesEXT for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDevicePCIBusInfoPropertiesEXT>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDevicePCIBusInfoPropertiesEXT`](struct.PhysicalDevicePCIBusInfoPropertiesEXT.html)"]
 #[repr(transparent)]

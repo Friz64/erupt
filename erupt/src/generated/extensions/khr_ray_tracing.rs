@@ -3539,7 +3539,7 @@ impl WriteDescriptorSetAccelerationStructureKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByWriteDescriptorSetAccelerationStructureKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3571,9 +3571,10 @@ impl Default for WriteDescriptorSetAccelerationStructureKHR {
         }
     }
 }
-#[doc = "Used by [`WriteDescriptorSetAccelerationStructureKHR::extend`](struct.WriteDescriptorSetAccelerationStructureKHR.html#method.extend)"]
-pub trait ExtendableByWriteDescriptorSetAccelerationStructureKHR {}
-impl ExtendableByWriteDescriptorSetAccelerationStructureKHR for crate::vk1_0::WriteDescriptorSet {}
+impl crate::ExtendableBy<WriteDescriptorSetAccelerationStructureKHR>
+    for crate::vk1_0::WriteDescriptorSet
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`WriteDescriptorSetAccelerationStructureKHR`](struct.WriteDescriptorSetAccelerationStructureKHR.html)"]
 #[repr(transparent)]
@@ -3644,7 +3645,7 @@ impl PhysicalDeviceRayTracingFeaturesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceRayTracingFeaturesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3708,10 +3709,11 @@ impl Default for PhysicalDeviceRayTracingFeaturesKHR {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceRayTracingFeaturesKHR::extend`](struct.PhysicalDeviceRayTracingFeaturesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceRayTracingFeaturesKHR {}
-impl ExtendableByPhysicalDeviceRayTracingFeaturesKHR for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceRayTracingFeaturesKHR for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceRayTracingFeaturesKHR>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceRayTracingFeaturesKHR> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceRayTracingFeaturesKHR`](struct.PhysicalDeviceRayTracingFeaturesKHR.html)"]
 #[repr(transparent)]
@@ -3846,7 +3848,7 @@ impl PhysicalDeviceRayTracingPropertiesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceRayTracingPropertiesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3898,9 +3900,10 @@ impl Default for PhysicalDeviceRayTracingPropertiesKHR {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceRayTracingPropertiesKHR::extend`](struct.PhysicalDeviceRayTracingPropertiesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceRayTracingPropertiesKHR {}
-impl ExtendableByPhysicalDeviceRayTracingPropertiesKHR for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceRayTracingPropertiesKHR>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceRayTracingPropertiesKHR`](struct.PhysicalDeviceRayTracingPropertiesKHR.html)"]
 #[repr(transparent)]

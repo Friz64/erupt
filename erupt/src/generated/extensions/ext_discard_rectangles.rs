@@ -76,7 +76,7 @@ impl PhysicalDeviceDiscardRectanglePropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDiscardRectanglePropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -103,9 +103,7 @@ impl Default for PhysicalDeviceDiscardRectanglePropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDiscardRectanglePropertiesEXT::extend`](struct.PhysicalDeviceDiscardRectanglePropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDiscardRectanglePropertiesEXT {}
-impl ExtendableByPhysicalDeviceDiscardRectanglePropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceDiscardRectanglePropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -171,7 +169,7 @@ impl PipelineDiscardRectangleStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineDiscardRectangleStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -204,9 +202,7 @@ impl Default for PipelineDiscardRectangleStateCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineDiscardRectangleStateCreateInfoEXT::extend`](struct.PipelineDiscardRectangleStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineDiscardRectangleStateCreateInfoEXT {}
-impl ExtendableByPipelineDiscardRectangleStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineDiscardRectangleStateCreateInfoEXT>
     for crate::vk1_0::GraphicsPipelineCreateInfo
 {
 }

@@ -690,7 +690,7 @@ impl PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePipelineExecutablePropertiesFeaturesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -716,13 +716,11 @@ impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
         PhysicalDevicePipelineExecutablePropertiesFeaturesKHR { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR , p_next : std :: ptr :: null_mut ( ) , pipeline_executable_info : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDevicePipelineExecutablePropertiesFeaturesKHR::extend`](struct.PhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePipelineExecutablePropertiesFeaturesKHR {}
-impl ExtendableByPhysicalDevicePipelineExecutablePropertiesFeaturesKHR
+impl crate::ExtendableBy<PhysicalDevicePipelineExecutablePropertiesFeaturesKHR>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDevicePipelineExecutablePropertiesFeaturesKHR
+impl crate::ExtendableBy<PhysicalDevicePipelineExecutablePropertiesFeaturesKHR>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

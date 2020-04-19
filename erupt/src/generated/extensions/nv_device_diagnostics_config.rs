@@ -18,7 +18,7 @@ impl PhysicalDeviceDiagnosticsConfigFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDiagnosticsConfigFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,13 +45,14 @@ impl Default for PhysicalDeviceDiagnosticsConfigFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDiagnosticsConfigFeaturesNV::extend`](struct.PhysicalDeviceDiagnosticsConfigFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDiagnosticsConfigFeaturesNV {}
-impl ExtendableByPhysicalDeviceDiagnosticsConfigFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceDiagnosticsConfigFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceDiagnosticsConfigFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceDiagnosticsConfigFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceDiagnosticsConfigFeaturesNV`](struct.PhysicalDeviceDiagnosticsConfigFeaturesNV.html)"]
 #[repr(transparent)]
@@ -110,7 +111,7 @@ impl DeviceDiagnosticsConfigCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDeviceDiagnosticsConfigCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -137,9 +138,7 @@ impl Default for DeviceDiagnosticsConfigCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`DeviceDiagnosticsConfigCreateInfoNV::extend`](struct.DeviceDiagnosticsConfigCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByDeviceDiagnosticsConfigCreateInfoNV {}
-impl ExtendableByDeviceDiagnosticsConfigCreateInfoNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<DeviceDiagnosticsConfigCreateInfoNV> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DeviceDiagnosticsConfigCreateInfoNV`](struct.DeviceDiagnosticsConfigCreateInfoNV.html)"]
 #[repr(transparent)]

@@ -18,7 +18,7 @@ impl PhysicalDeviceDepthClipEnableFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDepthClipEnableFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,13 +45,14 @@ impl Default for PhysicalDeviceDepthClipEnableFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDepthClipEnableFeaturesEXT::extend`](struct.PhysicalDeviceDepthClipEnableFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDepthClipEnableFeaturesEXT {}
-impl ExtendableByPhysicalDeviceDepthClipEnableFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceDepthClipEnableFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceDepthClipEnableFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceDepthClipEnableFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceDepthClipEnableFeaturesEXT`](struct.PhysicalDeviceDepthClipEnableFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -112,7 +113,7 @@ impl PipelineRasterizationDepthClipStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineRasterizationDepthClipStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -142,9 +143,7 @@ impl Default for PipelineRasterizationDepthClipStateCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineRasterizationDepthClipStateCreateInfoEXT::extend`](struct.PipelineRasterizationDepthClipStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineRasterizationDepthClipStateCreateInfoEXT {}
-impl ExtendableByPipelineRasterizationDepthClipStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineRasterizationDepthClipStateCreateInfoEXT>
     for crate::vk1_0::PipelineRasterizationStateCreateInfo
 {
 }

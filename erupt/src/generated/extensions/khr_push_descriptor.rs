@@ -130,7 +130,7 @@ impl PhysicalDevicePushDescriptorPropertiesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevicePushDescriptorPropertiesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -157,9 +157,7 @@ impl Default for PhysicalDevicePushDescriptorPropertiesKHR {
         }
     }
 }
-#[doc = "Used by [`PhysicalDevicePushDescriptorPropertiesKHR::extend`](struct.PhysicalDevicePushDescriptorPropertiesKHR.html#method.extend)"]
-pub trait ExtendableByPhysicalDevicePushDescriptorPropertiesKHR {}
-impl ExtendableByPhysicalDevicePushDescriptorPropertiesKHR
+impl crate::ExtendableBy<PhysicalDevicePushDescriptorPropertiesKHR>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

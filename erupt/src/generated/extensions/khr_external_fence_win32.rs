@@ -286,7 +286,7 @@ impl ExportFenceWin32HandleInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByExportFenceWin32HandleInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -317,9 +317,7 @@ impl Default for ExportFenceWin32HandleInfoKHR {
         }
     }
 }
-#[doc = "Used by [`ExportFenceWin32HandleInfoKHR::extend`](struct.ExportFenceWin32HandleInfoKHR.html#method.extend)"]
-pub trait ExtendableByExportFenceWin32HandleInfoKHR {}
-impl ExtendableByExportFenceWin32HandleInfoKHR for crate::vk1_0::FenceCreateInfo {}
+impl crate::ExtendableBy<ExportFenceWin32HandleInfoKHR> for crate::vk1_0::FenceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ExportFenceWin32HandleInfoKHR`](struct.ExportFenceWin32HandleInfoKHR.html)"]
 #[repr(transparent)]

@@ -65,7 +65,7 @@ impl DisplayNativeHdrSurfaceCapabilitiesAMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDisplayNativeHdrSurfaceCapabilitiesAMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -92,9 +92,7 @@ impl Default for DisplayNativeHdrSurfaceCapabilitiesAMD {
         }
     }
 }
-#[doc = "Used by [`DisplayNativeHdrSurfaceCapabilitiesAMD::extend`](struct.DisplayNativeHdrSurfaceCapabilitiesAMD.html#method.extend)"]
-pub trait ExtendableByDisplayNativeHdrSurfaceCapabilitiesAMD {}
-impl ExtendableByDisplayNativeHdrSurfaceCapabilitiesAMD
+impl crate::ExtendableBy<DisplayNativeHdrSurfaceCapabilitiesAMD>
     for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR
 {
 }
@@ -153,7 +151,7 @@ impl SwapchainDisplayNativeHdrCreateInfoAMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySwapchainDisplayNativeHdrCreateInfoAMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -180,9 +178,7 @@ impl Default for SwapchainDisplayNativeHdrCreateInfoAMD {
         }
     }
 }
-#[doc = "Used by [`SwapchainDisplayNativeHdrCreateInfoAMD::extend`](struct.SwapchainDisplayNativeHdrCreateInfoAMD.html#method.extend)"]
-pub trait ExtendableBySwapchainDisplayNativeHdrCreateInfoAMD {}
-impl ExtendableBySwapchainDisplayNativeHdrCreateInfoAMD
+impl crate::ExtendableBy<SwapchainDisplayNativeHdrCreateInfoAMD>
     for crate::extensions::khr_swapchain::SwapchainCreateInfoKHR
 {
 }

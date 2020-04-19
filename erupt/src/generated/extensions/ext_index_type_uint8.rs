@@ -18,7 +18,7 @@ impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceIndexTypeUint8FeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -45,10 +45,14 @@ impl Default for PhysicalDeviceIndexTypeUint8FeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceIndexTypeUint8FeaturesEXT::extend`](struct.PhysicalDeviceIndexTypeUint8FeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceIndexTypeUint8FeaturesEXT {}
-impl ExtendableByPhysicalDeviceIndexTypeUint8FeaturesEXT for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceIndexTypeUint8FeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceIndexTypeUint8FeaturesEXT>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceIndexTypeUint8FeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`](struct.PhysicalDeviceIndexTypeUint8FeaturesEXT.html)"]
 #[repr(transparent)]

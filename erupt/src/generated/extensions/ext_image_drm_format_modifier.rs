@@ -146,7 +146,7 @@ impl DrmFormatModifierPropertiesListEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDrmFormatModifierPropertiesListEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -178,9 +178,7 @@ impl Default for DrmFormatModifierPropertiesListEXT {
         }
     }
 }
-#[doc = "Used by [`DrmFormatModifierPropertiesListEXT::extend`](struct.DrmFormatModifierPropertiesListEXT.html#method.extend)"]
-pub trait ExtendableByDrmFormatModifierPropertiesListEXT {}
-impl ExtendableByDrmFormatModifierPropertiesListEXT for crate::vk1_1::FormatProperties2 {}
+impl crate::ExtendableBy<DrmFormatModifierPropertiesListEXT> for crate::vk1_1::FormatProperties2 {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DrmFormatModifierPropertiesListEXT`](struct.DrmFormatModifierPropertiesListEXT.html)"]
 #[repr(transparent)]
@@ -336,7 +334,7 @@ impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceImageDrmFormatModifierInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -369,9 +367,7 @@ impl Default for PhysicalDeviceImageDrmFormatModifierInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceImageDrmFormatModifierInfoEXT::extend`](struct.PhysicalDeviceImageDrmFormatModifierInfoEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceImageDrmFormatModifierInfoEXT {}
-impl ExtendableByPhysicalDeviceImageDrmFormatModifierInfoEXT
+impl crate::ExtendableBy<PhysicalDeviceImageDrmFormatModifierInfoEXT>
     for crate::vk1_1::PhysicalDeviceImageFormatInfo2
 {
 }
@@ -447,7 +443,7 @@ impl ImageDrmFormatModifierListCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageDrmFormatModifierListCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -476,9 +472,10 @@ impl Default for ImageDrmFormatModifierListCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`ImageDrmFormatModifierListCreateInfoEXT::extend`](struct.ImageDrmFormatModifierListCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByImageDrmFormatModifierListCreateInfoEXT {}
-impl ExtendableByImageDrmFormatModifierListCreateInfoEXT for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ImageDrmFormatModifierListCreateInfoEXT>
+    for crate::vk1_0::ImageCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageDrmFormatModifierListCreateInfoEXT`](struct.ImageDrmFormatModifierListCreateInfoEXT.html)"]
 #[repr(transparent)]
@@ -537,7 +534,7 @@ impl ImageDrmFormatModifierExplicitCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageDrmFormatModifierExplicitCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -571,9 +568,10 @@ impl Default for ImageDrmFormatModifierExplicitCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`ImageDrmFormatModifierExplicitCreateInfoEXT::extend`](struct.ImageDrmFormatModifierExplicitCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByImageDrmFormatModifierExplicitCreateInfoEXT {}
-impl ExtendableByImageDrmFormatModifierExplicitCreateInfoEXT for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ImageDrmFormatModifierExplicitCreateInfoEXT>
+    for crate::vk1_0::ImageCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageDrmFormatModifierExplicitCreateInfoEXT`](struct.ImageDrmFormatModifierExplicitCreateInfoEXT.html)"]
 #[repr(transparent)]

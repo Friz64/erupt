@@ -123,7 +123,7 @@ impl SampleLocationsInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySampleLocationsInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -159,9 +159,7 @@ impl Default for SampleLocationsInfoEXT {
         }
     }
 }
-#[doc = "Used by [`SampleLocationsInfoEXT::extend`](struct.SampleLocationsInfoEXT.html#method.extend)"]
-pub trait ExtendableBySampleLocationsInfoEXT {}
-impl ExtendableBySampleLocationsInfoEXT for crate::vk1_0::ImageMemoryBarrier {}
+impl crate::ExtendableBy<SampleLocationsInfoEXT> for crate::vk1_0::ImageMemoryBarrier {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`SampleLocationsInfoEXT`](struct.SampleLocationsInfoEXT.html)"]
 #[repr(transparent)]
@@ -550,7 +548,7 @@ impl RenderPassSampleLocationsBeginInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByRenderPassSampleLocationsBeginInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -595,9 +593,10 @@ impl Default for RenderPassSampleLocationsBeginInfoEXT {
         }
     }
 }
-#[doc = "Used by [`RenderPassSampleLocationsBeginInfoEXT::extend`](struct.RenderPassSampleLocationsBeginInfoEXT.html#method.extend)"]
-pub trait ExtendableByRenderPassSampleLocationsBeginInfoEXT {}
-impl ExtendableByRenderPassSampleLocationsBeginInfoEXT for crate::vk1_0::RenderPassBeginInfo {}
+impl crate::ExtendableBy<RenderPassSampleLocationsBeginInfoEXT>
+    for crate::vk1_0::RenderPassBeginInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`RenderPassSampleLocationsBeginInfoEXT`](struct.RenderPassSampleLocationsBeginInfoEXT.html)"]
 #[repr(transparent)]
@@ -670,7 +669,7 @@ impl PipelineSampleLocationsStateCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineSampleLocationsStateCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -702,9 +701,7 @@ impl Default for PipelineSampleLocationsStateCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineSampleLocationsStateCreateInfoEXT::extend`](struct.PipelineSampleLocationsStateCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineSampleLocationsStateCreateInfoEXT {}
-impl ExtendableByPipelineSampleLocationsStateCreateInfoEXT
+impl crate::ExtendableBy<PipelineSampleLocationsStateCreateInfoEXT>
     for crate::vk1_0::PipelineMultisampleStateCreateInfo
 {
 }
@@ -779,7 +776,7 @@ impl PhysicalDeviceSampleLocationsPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceSampleLocationsPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -829,9 +826,7 @@ impl Default for PhysicalDeviceSampleLocationsPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceSampleLocationsPropertiesEXT::extend`](struct.PhysicalDeviceSampleLocationsPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceSampleLocationsPropertiesEXT {}
-impl ExtendableByPhysicalDeviceSampleLocationsPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceSampleLocationsPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

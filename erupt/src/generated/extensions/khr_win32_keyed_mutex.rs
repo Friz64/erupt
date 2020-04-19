@@ -24,7 +24,7 @@ impl Win32KeyedMutexAcquireReleaseInfoKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByWin32KeyedMutexAcquireReleaseInfoKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -63,9 +63,7 @@ impl Default for Win32KeyedMutexAcquireReleaseInfoKHR {
         }
     }
 }
-#[doc = "Used by [`Win32KeyedMutexAcquireReleaseInfoKHR::extend`](struct.Win32KeyedMutexAcquireReleaseInfoKHR.html#method.extend)"]
-pub trait ExtendableByWin32KeyedMutexAcquireReleaseInfoKHR {}
-impl ExtendableByWin32KeyedMutexAcquireReleaseInfoKHR for crate::vk1_0::SubmitInfo {}
+impl crate::ExtendableBy<Win32KeyedMutexAcquireReleaseInfoKHR> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`Win32KeyedMutexAcquireReleaseInfoKHR`](struct.Win32KeyedMutexAcquireReleaseInfoKHR.html)"]
 #[repr(transparent)]

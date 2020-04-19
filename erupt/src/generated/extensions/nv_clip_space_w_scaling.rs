@@ -151,7 +151,7 @@ impl PipelineViewportWScalingStateCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineViewportWScalingStateCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -185,9 +185,7 @@ impl Default for PipelineViewportWScalingStateCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`PipelineViewportWScalingStateCreateInfoNV::extend`](struct.PipelineViewportWScalingStateCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByPipelineViewportWScalingStateCreateInfoNV {}
-impl ExtendableByPipelineViewportWScalingStateCreateInfoNV
+impl crate::ExtendableBy<PipelineViewportWScalingStateCreateInfoNV>
     for crate::vk1_0::PipelineViewportStateCreateInfo
 {
 }

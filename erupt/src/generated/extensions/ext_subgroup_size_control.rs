@@ -19,7 +19,7 @@ impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -51,13 +51,14 @@ impl Default for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceSubgroupSizeControlFeaturesEXT::extend`](struct.PhysicalDeviceSubgroupSizeControlFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT {}
-impl ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceSubgroupSizeControlFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceSubgroupSizeControlFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceSubgroupSizeControlFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceSubgroupSizeControlFeaturesEXT`](struct.PhysicalDeviceSubgroupSizeControlFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -125,7 +126,7 @@ impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceSubgroupSizeControlPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -165,9 +166,7 @@ impl Default for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceSubgroupSizeControlPropertiesEXT::extend`](struct.PhysicalDeviceSubgroupSizeControlPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceSubgroupSizeControlPropertiesEXT {}
-impl ExtendableByPhysicalDeviceSubgroupSizeControlPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceSubgroupSizeControlPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -250,7 +249,7 @@ impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -273,9 +272,7 @@ impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
         PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT , p_next : std :: ptr :: null_mut ( ) , required_subgroup_size : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT::extend`](struct.PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {}
-impl ExtendableByPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT
+impl crate::ExtendableBy<PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT>
     for crate::vk1_0::PipelineShaderStageCreateInfo
 {
 }

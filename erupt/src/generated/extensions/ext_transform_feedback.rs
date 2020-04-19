@@ -306,7 +306,7 @@ impl PhysicalDeviceTransformFeedbackFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTransformFeedbackFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -335,13 +335,14 @@ impl Default for PhysicalDeviceTransformFeedbackFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTransformFeedbackFeaturesEXT::extend`](struct.PhysicalDeviceTransformFeedbackFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTransformFeedbackFeaturesEXT {}
-impl ExtendableByPhysicalDeviceTransformFeedbackFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceTransformFeedbackFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceTransformFeedbackFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceTransformFeedbackFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`](struct.PhysicalDeviceTransformFeedbackFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -415,7 +416,7 @@ impl PhysicalDeviceTransformFeedbackPropertiesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTransformFeedbackPropertiesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -490,9 +491,7 @@ impl Default for PhysicalDeviceTransformFeedbackPropertiesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTransformFeedbackPropertiesEXT::extend`](struct.PhysicalDeviceTransformFeedbackPropertiesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTransformFeedbackPropertiesEXT {}
-impl ExtendableByPhysicalDeviceTransformFeedbackPropertiesEXT
+impl crate::ExtendableBy<PhysicalDeviceTransformFeedbackPropertiesEXT>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -631,7 +630,7 @@ impl PipelineRasterizationStateStreamCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPipelineRasterizationStateStreamCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -661,9 +660,7 @@ impl Default for PipelineRasterizationStateStreamCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`PipelineRasterizationStateStreamCreateInfoEXT::extend`](struct.PipelineRasterizationStateStreamCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByPipelineRasterizationStateStreamCreateInfoEXT {}
-impl ExtendableByPipelineRasterizationStateStreamCreateInfoEXT
+impl crate::ExtendableBy<PipelineRasterizationStateStreamCreateInfoEXT>
     for crate::vk1_0::PipelineRasterizationStateCreateInfo
 {
 }

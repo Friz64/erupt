@@ -20,7 +20,7 @@ impl PhysicalDeviceShaderCoreProperties2AMD {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderCoreProperties2AMD,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -49,9 +49,7 @@ impl Default for PhysicalDeviceShaderCoreProperties2AMD {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderCoreProperties2AMD::extend`](struct.PhysicalDeviceShaderCoreProperties2AMD.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderCoreProperties2AMD {}
-impl ExtendableByPhysicalDeviceShaderCoreProperties2AMD
+impl crate::ExtendableBy<PhysicalDeviceShaderCoreProperties2AMD>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

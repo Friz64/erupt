@@ -892,7 +892,7 @@ impl QueryPoolPerformanceQueryCreateInfoINTEL {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByQueryPoolPerformanceQueryCreateInfoINTEL,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -922,9 +922,10 @@ impl Default for QueryPoolPerformanceQueryCreateInfoINTEL {
         }
     }
 }
-#[doc = "Used by [`QueryPoolPerformanceQueryCreateInfoINTEL::extend`](struct.QueryPoolPerformanceQueryCreateInfoINTEL.html#method.extend)"]
-pub trait ExtendableByQueryPoolPerformanceQueryCreateInfoINTEL {}
-impl ExtendableByQueryPoolPerformanceQueryCreateInfoINTEL for crate::vk1_0::QueryPoolCreateInfo {}
+impl crate::ExtendableBy<QueryPoolPerformanceQueryCreateInfoINTEL>
+    for crate::vk1_0::QueryPoolCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`QueryPoolPerformanceQueryCreateInfoINTEL`](struct.QueryPoolPerformanceQueryCreateInfoINTEL.html)"]
 #[repr(transparent)]

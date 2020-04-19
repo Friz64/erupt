@@ -1633,7 +1633,7 @@ impl PhysicalDeviceVulkan11Features {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVulkan11Features,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1709,10 +1709,8 @@ impl Default for PhysicalDeviceVulkan11Features {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVulkan11Features::extend`](struct.PhysicalDeviceVulkan11Features.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVulkan11Features {}
-impl ExtendableByPhysicalDeviceVulkan11Features for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceVulkan11Features for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan11Features> for crate::vk1_1::PhysicalDeviceFeatures2 {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan11Features> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceVulkan11Features`](struct.PhysicalDeviceVulkan11Features.html)"]
 #[repr(transparent)]
@@ -1855,7 +1853,7 @@ impl PhysicalDeviceVulkan11Properties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVulkan11Properties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1922,9 +1920,10 @@ impl Default for PhysicalDeviceVulkan11Properties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVulkan11Properties::extend`](struct.PhysicalDeviceVulkan11Properties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVulkan11Properties {}
-impl ExtendableByPhysicalDeviceVulkan11Properties for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan11Properties>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceVulkan11Properties`](struct.PhysicalDeviceVulkan11Properties.html)"]
 #[repr(transparent)]
@@ -2126,7 +2125,7 @@ impl PhysicalDeviceVulkan12Features {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVulkan12Features,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -2350,10 +2349,8 @@ impl Default for PhysicalDeviceVulkan12Features {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVulkan12Features::extend`](struct.PhysicalDeviceVulkan12Features.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVulkan12Features {}
-impl ExtendableByPhysicalDeviceVulkan12Features for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceVulkan12Features for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan12Features> for crate::vk1_1::PhysicalDeviceFeatures2 {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan12Features> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceVulkan12Features`](struct.PhysicalDeviceVulkan12Features.html)"]
 #[repr(transparent)]
@@ -2832,7 +2829,7 @@ impl PhysicalDeviceVulkan12Properties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVulkan12Properties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3106,9 +3103,10 @@ impl Default for PhysicalDeviceVulkan12Properties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVulkan12Properties::extend`](struct.PhysicalDeviceVulkan12Properties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVulkan12Properties {}
-impl ExtendableByPhysicalDeviceVulkan12Properties for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceVulkan12Properties>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceVulkan12Properties`](struct.PhysicalDeviceVulkan12Properties.html)"]
 #[repr(transparent)]
@@ -3854,7 +3852,7 @@ impl ImageFormatListCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageFormatListCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3883,14 +3881,15 @@ impl Default for ImageFormatListCreateInfo {
         }
     }
 }
-#[doc = "Used by [`ImageFormatListCreateInfo::extend`](struct.ImageFormatListCreateInfo.html#method.extend)"]
-pub trait ExtendableByImageFormatListCreateInfo {}
-impl ExtendableByImageFormatListCreateInfo for crate::vk1_0::ImageCreateInfo {}
-impl ExtendableByImageFormatListCreateInfo
+impl crate::ExtendableBy<ImageFormatListCreateInfo> for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ImageFormatListCreateInfo>
     for crate::extensions::khr_swapchain::SwapchainCreateInfoKHR
 {
 }
-impl ExtendableByImageFormatListCreateInfo for crate::vk1_1::PhysicalDeviceImageFormatInfo2 {}
+impl crate::ExtendableBy<ImageFormatListCreateInfo>
+    for crate::vk1_1::PhysicalDeviceImageFormatInfo2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageFormatListCreateInfo`](struct.ImageFormatListCreateInfo.html)"]
 #[repr(transparent)]
@@ -3949,7 +3948,7 @@ impl PhysicalDevice8BitStorageFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDevice8BitStorageFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -3989,10 +3988,11 @@ impl Default for PhysicalDevice8BitStorageFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDevice8BitStorageFeatures::extend`](struct.PhysicalDevice8BitStorageFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDevice8BitStorageFeatures {}
-impl ExtendableByPhysicalDevice8BitStorageFeatures for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDevice8BitStorageFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDevice8BitStorageFeatures>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDevice8BitStorageFeatures> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDevice8BitStorageFeatures`](struct.PhysicalDevice8BitStorageFeatures.html)"]
 #[repr(transparent)]
@@ -4067,7 +4067,7 @@ impl PhysicalDeviceDriverProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDriverProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4104,9 +4104,10 @@ impl Default for PhysicalDeviceDriverProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDriverProperties::extend`](struct.PhysicalDeviceDriverProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDriverProperties {}
-impl ExtendableByPhysicalDeviceDriverProperties for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceDriverProperties>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceDriverProperties`](struct.PhysicalDeviceDriverProperties.html)"]
 #[repr(transparent)]
@@ -4190,7 +4191,7 @@ impl PhysicalDeviceShaderAtomicInt64Features {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderAtomicInt64Features,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4225,10 +4226,14 @@ impl Default for PhysicalDeviceShaderAtomicInt64Features {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderAtomicInt64Features::extend`](struct.PhysicalDeviceShaderAtomicInt64Features.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderAtomicInt64Features {}
-impl ExtendableByPhysicalDeviceShaderAtomicInt64Features for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceShaderAtomicInt64Features for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceShaderAtomicInt64Features>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceShaderAtomicInt64Features>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceShaderAtomicInt64Features`](struct.PhysicalDeviceShaderAtomicInt64Features.html)"]
 #[repr(transparent)]
@@ -4291,7 +4296,7 @@ impl PhysicalDeviceShaderFloat16Int8Features {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderFloat16Int8Features,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4320,10 +4325,14 @@ impl Default for PhysicalDeviceShaderFloat16Int8Features {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderFloat16Int8Features::extend`](struct.PhysicalDeviceShaderFloat16Int8Features.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderFloat16Int8Features {}
-impl ExtendableByPhysicalDeviceShaderFloat16Int8Features for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceShaderFloat16Int8Features for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceShaderFloat16Int8Features>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceShaderFloat16Int8Features>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceShaderFloat16Int8Features`](struct.PhysicalDeviceShaderFloat16Int8Features.html)"]
 #[repr(transparent)]
@@ -4401,7 +4410,7 @@ impl PhysicalDeviceFloatControlsProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceFloatControlsProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4511,9 +4520,10 @@ impl Default for PhysicalDeviceFloatControlsProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceFloatControlsProperties::extend`](struct.PhysicalDeviceFloatControlsProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceFloatControlsProperties {}
-impl ExtendableByPhysicalDeviceFloatControlsProperties for crate::vk1_1::PhysicalDeviceProperties2 {}
+impl crate::ExtendableBy<PhysicalDeviceFloatControlsProperties>
+    for crate::vk1_1::PhysicalDeviceProperties2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceFloatControlsProperties`](struct.PhysicalDeviceFloatControlsProperties.html)"]
 #[repr(transparent)]
@@ -4711,7 +4721,7 @@ impl DescriptorSetLayoutBindingFlagsCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDescriptorSetLayoutBindingFlagsCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4740,9 +4750,7 @@ impl Default for DescriptorSetLayoutBindingFlagsCreateInfo {
         }
     }
 }
-#[doc = "Used by [`DescriptorSetLayoutBindingFlagsCreateInfo::extend`](struct.DescriptorSetLayoutBindingFlagsCreateInfo.html#method.extend)"]
-pub trait ExtendableByDescriptorSetLayoutBindingFlagsCreateInfo {}
-impl ExtendableByDescriptorSetLayoutBindingFlagsCreateInfo
+impl crate::ExtendableBy<DescriptorSetLayoutBindingFlagsCreateInfo>
     for crate::vk1_0::DescriptorSetLayoutCreateInfo
 {
 }
@@ -4864,7 +4872,7 @@ impl PhysicalDeviceDescriptorIndexingFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDescriptorIndexingFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -4989,13 +4997,14 @@ impl Default for PhysicalDeviceDescriptorIndexingFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDescriptorIndexingFeatures::extend`](struct.PhysicalDeviceDescriptorIndexingFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDescriptorIndexingFeatures {}
-impl ExtendableByPhysicalDeviceDescriptorIndexingFeatures
+impl crate::ExtendableBy<PhysicalDeviceDescriptorIndexingFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceDescriptorIndexingFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceDescriptorIndexingFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceDescriptorIndexingFeatures`](struct.PhysicalDeviceDescriptorIndexingFeatures.html)"]
 #[repr(transparent)]
@@ -5269,7 +5278,7 @@ impl PhysicalDeviceDescriptorIndexingProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDescriptorIndexingProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -5409,9 +5418,7 @@ impl Default for PhysicalDeviceDescriptorIndexingProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDescriptorIndexingProperties::extend`](struct.PhysicalDeviceDescriptorIndexingProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDescriptorIndexingProperties {}
-impl ExtendableByPhysicalDeviceDescriptorIndexingProperties
+impl crate::ExtendableBy<PhysicalDeviceDescriptorIndexingProperties>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -5707,7 +5714,7 @@ impl DescriptorSetVariableDescriptorCountAllocateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDescriptorSetVariableDescriptorCountAllocateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -5737,9 +5744,7 @@ impl Default for DescriptorSetVariableDescriptorCountAllocateInfo {
         }
     }
 }
-#[doc = "Used by [`DescriptorSetVariableDescriptorCountAllocateInfo::extend`](struct.DescriptorSetVariableDescriptorCountAllocateInfo.html#method.extend)"]
-pub trait ExtendableByDescriptorSetVariableDescriptorCountAllocateInfo {}
-impl ExtendableByDescriptorSetVariableDescriptorCountAllocateInfo
+impl crate::ExtendableBy<DescriptorSetVariableDescriptorCountAllocateInfo>
     for crate::vk1_0::DescriptorSetAllocateInfo
 {
 }
@@ -5802,7 +5807,7 @@ impl DescriptorSetVariableDescriptorCountLayoutSupport {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDescriptorSetVariableDescriptorCountLayoutSupport,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -5833,9 +5838,7 @@ impl Default for DescriptorSetVariableDescriptorCountLayoutSupport {
         }
     }
 }
-#[doc = "Used by [`DescriptorSetVariableDescriptorCountLayoutSupport::extend`](struct.DescriptorSetVariableDescriptorCountLayoutSupport.html#method.extend)"]
-pub trait ExtendableByDescriptorSetVariableDescriptorCountLayoutSupport {}
-impl ExtendableByDescriptorSetVariableDescriptorCountLayoutSupport
+impl crate::ExtendableBy<DescriptorSetVariableDescriptorCountLayoutSupport>
     for crate::vk1_1::DescriptorSetLayoutSupport
 {
 }
@@ -5899,7 +5902,7 @@ impl SubpassDescriptionDepthStencilResolve {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySubpassDescriptionDepthStencilResolve,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -5933,9 +5936,10 @@ impl Default for SubpassDescriptionDepthStencilResolve {
         }
     }
 }
-#[doc = "Used by [`SubpassDescriptionDepthStencilResolve::extend`](struct.SubpassDescriptionDepthStencilResolve.html#method.extend)"]
-pub trait ExtendableBySubpassDescriptionDepthStencilResolve {}
-impl ExtendableBySubpassDescriptionDepthStencilResolve for crate::vk1_2::SubpassDescription2 {}
+impl crate::ExtendableBy<SubpassDescriptionDepthStencilResolve>
+    for crate::vk1_2::SubpassDescription2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`SubpassDescriptionDepthStencilResolve`](struct.SubpassDescriptionDepthStencilResolve.html)"]
 #[repr(transparent)]
@@ -6015,7 +6019,7 @@ impl PhysicalDeviceDepthStencilResolveProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDepthStencilResolveProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6057,9 +6061,7 @@ impl Default for PhysicalDeviceDepthStencilResolveProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDepthStencilResolveProperties::extend`](struct.PhysicalDeviceDepthStencilResolveProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDepthStencilResolveProperties {}
-impl ExtendableByPhysicalDeviceDepthStencilResolveProperties
+impl crate::ExtendableBy<PhysicalDeviceDepthStencilResolveProperties>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -6145,7 +6147,7 @@ impl PhysicalDeviceScalarBlockLayoutFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceScalarBlockLayoutFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6172,10 +6174,14 @@ impl Default for PhysicalDeviceScalarBlockLayoutFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceScalarBlockLayoutFeatures::extend`](struct.PhysicalDeviceScalarBlockLayoutFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceScalarBlockLayoutFeatures {}
-impl ExtendableByPhysicalDeviceScalarBlockLayoutFeatures for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceScalarBlockLayoutFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceScalarBlockLayoutFeatures>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceScalarBlockLayoutFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceScalarBlockLayoutFeatures`](struct.PhysicalDeviceScalarBlockLayoutFeatures.html)"]
 #[repr(transparent)]
@@ -6231,7 +6237,7 @@ impl ImageStencilUsageCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByImageStencilUsageCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6258,10 +6264,11 @@ impl Default for ImageStencilUsageCreateInfo {
         }
     }
 }
-#[doc = "Used by [`ImageStencilUsageCreateInfo::extend`](struct.ImageStencilUsageCreateInfo.html#method.extend)"]
-pub trait ExtendableByImageStencilUsageCreateInfo {}
-impl ExtendableByImageStencilUsageCreateInfo for crate::vk1_0::ImageCreateInfo {}
-impl ExtendableByImageStencilUsageCreateInfo for crate::vk1_1::PhysicalDeviceImageFormatInfo2 {}
+impl crate::ExtendableBy<ImageStencilUsageCreateInfo> for crate::vk1_0::ImageCreateInfo {}
+impl crate::ExtendableBy<ImageStencilUsageCreateInfo>
+    for crate::vk1_1::PhysicalDeviceImageFormatInfo2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ImageStencilUsageCreateInfo`](struct.ImageStencilUsageCreateInfo.html)"]
 #[repr(transparent)]
@@ -6343,7 +6350,7 @@ impl SamplerReductionModeCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySamplerReductionModeCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6370,9 +6377,7 @@ impl Default for SamplerReductionModeCreateInfo {
         }
     }
 }
-#[doc = "Used by [`SamplerReductionModeCreateInfo::extend`](struct.SamplerReductionModeCreateInfo.html#method.extend)"]
-pub trait ExtendableBySamplerReductionModeCreateInfo {}
-impl ExtendableBySamplerReductionModeCreateInfo for crate::vk1_0::SamplerCreateInfo {}
+impl crate::ExtendableBy<SamplerReductionModeCreateInfo> for crate::vk1_0::SamplerCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`SamplerReductionModeCreateInfo`](struct.SamplerReductionModeCreateInfo.html)"]
 #[repr(transparent)]
@@ -6429,7 +6434,7 @@ impl PhysicalDeviceSamplerFilterMinmaxProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceSamplerFilterMinmaxProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6464,9 +6469,7 @@ impl Default for PhysicalDeviceSamplerFilterMinmaxProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceSamplerFilterMinmaxProperties::extend`](struct.PhysicalDeviceSamplerFilterMinmaxProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceSamplerFilterMinmaxProperties {}
-impl ExtendableByPhysicalDeviceSamplerFilterMinmaxProperties
+impl crate::ExtendableBy<PhysicalDeviceSamplerFilterMinmaxProperties>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -6543,7 +6546,7 @@ impl PhysicalDeviceVulkanMemoryModelFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceVulkanMemoryModelFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6580,10 +6583,14 @@ impl Default for PhysicalDeviceVulkanMemoryModelFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceVulkanMemoryModelFeatures::extend`](struct.PhysicalDeviceVulkanMemoryModelFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceVulkanMemoryModelFeatures {}
-impl ExtendableByPhysicalDeviceVulkanMemoryModelFeatures for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceVulkanMemoryModelFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceVulkanMemoryModelFeatures>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceVulkanMemoryModelFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceVulkanMemoryModelFeatures`](struct.PhysicalDeviceVulkanMemoryModelFeatures.html)"]
 #[repr(transparent)]
@@ -6658,7 +6665,7 @@ impl PhysicalDeviceImagelessFramebufferFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceImagelessFramebufferFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6685,13 +6692,14 @@ impl Default for PhysicalDeviceImagelessFramebufferFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceImagelessFramebufferFeatures::extend`](struct.PhysicalDeviceImagelessFramebufferFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceImagelessFramebufferFeatures {}
-impl ExtendableByPhysicalDeviceImagelessFramebufferFeatures
+impl crate::ExtendableBy<PhysicalDeviceImagelessFramebufferFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceImagelessFramebufferFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceImagelessFramebufferFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceImagelessFramebufferFeatures`](struct.PhysicalDeviceImagelessFramebufferFeatures.html)"]
 #[repr(transparent)]
@@ -6751,7 +6759,7 @@ impl FramebufferAttachmentsCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByFramebufferAttachmentsCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6783,9 +6791,7 @@ impl Default for FramebufferAttachmentsCreateInfo {
         }
     }
 }
-#[doc = "Used by [`FramebufferAttachmentsCreateInfo::extend`](struct.FramebufferAttachmentsCreateInfo.html#method.extend)"]
-pub trait ExtendableByFramebufferAttachmentsCreateInfo {}
-impl ExtendableByFramebufferAttachmentsCreateInfo for crate::vk1_0::FramebufferCreateInfo {}
+impl crate::ExtendableBy<FramebufferAttachmentsCreateInfo> for crate::vk1_0::FramebufferCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`FramebufferAttachmentsCreateInfo`](struct.FramebufferAttachmentsCreateInfo.html)"]
 #[repr(transparent)]
@@ -6967,7 +6973,7 @@ impl RenderPassAttachmentBeginInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByRenderPassAttachmentBeginInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -6996,9 +7002,7 @@ impl Default for RenderPassAttachmentBeginInfo {
         }
     }
 }
-#[doc = "Used by [`RenderPassAttachmentBeginInfo::extend`](struct.RenderPassAttachmentBeginInfo.html#method.extend)"]
-pub trait ExtendableByRenderPassAttachmentBeginInfo {}
-impl ExtendableByRenderPassAttachmentBeginInfo for crate::vk1_0::RenderPassBeginInfo {}
+impl crate::ExtendableBy<RenderPassAttachmentBeginInfo> for crate::vk1_0::RenderPassBeginInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`RenderPassAttachmentBeginInfo`](struct.RenderPassAttachmentBeginInfo.html)"]
 #[repr(transparent)]
@@ -7055,7 +7059,7 @@ impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceUniformBufferStandardLayoutFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7086,13 +7090,11 @@ impl Default for PhysicalDeviceUniformBufferStandardLayoutFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceUniformBufferStandardLayoutFeatures::extend`](struct.PhysicalDeviceUniformBufferStandardLayoutFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceUniformBufferStandardLayoutFeatures {}
-impl ExtendableByPhysicalDeviceUniformBufferStandardLayoutFeatures
+impl crate::ExtendableBy<PhysicalDeviceUniformBufferStandardLayoutFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceUniformBufferStandardLayoutFeatures
+impl crate::ExtendableBy<PhysicalDeviceUniformBufferStandardLayoutFeatures>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -7154,7 +7156,7 @@ impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderSubgroupExtendedTypesFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7185,13 +7187,11 @@ impl Default for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderSubgroupExtendedTypesFeatures::extend`](struct.PhysicalDeviceShaderSubgroupExtendedTypesFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderSubgroupExtendedTypesFeatures {}
-impl ExtendableByPhysicalDeviceShaderSubgroupExtendedTypesFeatures
+impl crate::ExtendableBy<PhysicalDeviceShaderSubgroupExtendedTypesFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShaderSubgroupExtendedTypesFeatures
+impl crate::ExtendableBy<PhysicalDeviceShaderSubgroupExtendedTypesFeatures>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -7253,7 +7253,7 @@ impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceSeparateDepthStencilLayoutsFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7284,13 +7284,11 @@ impl Default for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceSeparateDepthStencilLayoutsFeatures::extend`](struct.PhysicalDeviceSeparateDepthStencilLayoutsFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceSeparateDepthStencilLayoutsFeatures {}
-impl ExtendableByPhysicalDeviceSeparateDepthStencilLayoutsFeatures
+impl crate::ExtendableBy<PhysicalDeviceSeparateDepthStencilLayoutsFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceSeparateDepthStencilLayoutsFeatures
+impl crate::ExtendableBy<PhysicalDeviceSeparateDepthStencilLayoutsFeatures>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -7352,7 +7350,7 @@ impl AttachmentReferenceStencilLayout {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByAttachmentReferenceStencilLayout,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7379,9 +7377,7 @@ impl Default for AttachmentReferenceStencilLayout {
         }
     }
 }
-#[doc = "Used by [`AttachmentReferenceStencilLayout::extend`](struct.AttachmentReferenceStencilLayout.html#method.extend)"]
-pub trait ExtendableByAttachmentReferenceStencilLayout {}
-impl ExtendableByAttachmentReferenceStencilLayout for crate::vk1_2::AttachmentReference2 {}
+impl crate::ExtendableBy<AttachmentReferenceStencilLayout> for crate::vk1_2::AttachmentReference2 {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`AttachmentReferenceStencilLayout`](struct.AttachmentReferenceStencilLayout.html)"]
 #[repr(transparent)]
@@ -7438,7 +7434,7 @@ impl AttachmentDescriptionStencilLayout {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByAttachmentDescriptionStencilLayout,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7467,9 +7463,10 @@ impl Default for AttachmentDescriptionStencilLayout {
         }
     }
 }
-#[doc = "Used by [`AttachmentDescriptionStencilLayout::extend`](struct.AttachmentDescriptionStencilLayout.html#method.extend)"]
-pub trait ExtendableByAttachmentDescriptionStencilLayout {}
-impl ExtendableByAttachmentDescriptionStencilLayout for crate::vk1_2::AttachmentDescription2 {}
+impl crate::ExtendableBy<AttachmentDescriptionStencilLayout>
+    for crate::vk1_2::AttachmentDescription2
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`AttachmentDescriptionStencilLayout`](struct.AttachmentDescriptionStencilLayout.html)"]
 #[repr(transparent)]
@@ -7534,7 +7531,7 @@ impl PhysicalDeviceHostQueryResetFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceHostQueryResetFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7561,10 +7558,11 @@ impl Default for PhysicalDeviceHostQueryResetFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceHostQueryResetFeatures::extend`](struct.PhysicalDeviceHostQueryResetFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceHostQueryResetFeatures {}
-impl ExtendableByPhysicalDeviceHostQueryResetFeatures for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceHostQueryResetFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceHostQueryResetFeatures>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceHostQueryResetFeatures> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceHostQueryResetFeatures`](struct.PhysicalDeviceHostQueryResetFeatures.html)"]
 #[repr(transparent)]
@@ -7643,7 +7641,7 @@ impl PhysicalDeviceTimelineSemaphoreFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTimelineSemaphoreFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7670,10 +7668,14 @@ impl Default for PhysicalDeviceTimelineSemaphoreFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTimelineSemaphoreFeatures::extend`](struct.PhysicalDeviceTimelineSemaphoreFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTimelineSemaphoreFeatures {}
-impl ExtendableByPhysicalDeviceTimelineSemaphoreFeatures for crate::vk1_1::PhysicalDeviceFeatures2 {}
-impl ExtendableByPhysicalDeviceTimelineSemaphoreFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceTimelineSemaphoreFeatures>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDeviceTimelineSemaphoreFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceTimelineSemaphoreFeatures`](struct.PhysicalDeviceTimelineSemaphoreFeatures.html)"]
 #[repr(transparent)]
@@ -7729,7 +7731,7 @@ impl PhysicalDeviceTimelineSemaphoreProperties {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceTimelineSemaphoreProperties,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7759,9 +7761,7 @@ impl Default for PhysicalDeviceTimelineSemaphoreProperties {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceTimelineSemaphoreProperties::extend`](struct.PhysicalDeviceTimelineSemaphoreProperties.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceTimelineSemaphoreProperties {}
-impl ExtendableByPhysicalDeviceTimelineSemaphoreProperties
+impl crate::ExtendableBy<PhysicalDeviceTimelineSemaphoreProperties>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -7827,7 +7827,7 @@ impl SemaphoreTypeCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySemaphoreTypeCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7856,10 +7856,11 @@ impl Default for SemaphoreTypeCreateInfo {
         }
     }
 }
-#[doc = "Used by [`SemaphoreTypeCreateInfo::extend`](struct.SemaphoreTypeCreateInfo.html#method.extend)"]
-pub trait ExtendableBySemaphoreTypeCreateInfo {}
-impl ExtendableBySemaphoreTypeCreateInfo for crate::vk1_0::SemaphoreCreateInfo {}
-impl ExtendableBySemaphoreTypeCreateInfo for crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo {}
+impl crate::ExtendableBy<SemaphoreTypeCreateInfo> for crate::vk1_0::SemaphoreCreateInfo {}
+impl crate::ExtendableBy<SemaphoreTypeCreateInfo>
+    for crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`SemaphoreTypeCreateInfo`](struct.SemaphoreTypeCreateInfo.html)"]
 #[repr(transparent)]
@@ -7924,7 +7925,7 @@ impl TimelineSemaphoreSubmitInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByTimelineSemaphoreSubmitInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -7963,10 +7964,8 @@ impl Default for TimelineSemaphoreSubmitInfo {
         }
     }
 }
-#[doc = "Used by [`TimelineSemaphoreSubmitInfo::extend`](struct.TimelineSemaphoreSubmitInfo.html#method.extend)"]
-pub trait ExtendableByTimelineSemaphoreSubmitInfo {}
-impl ExtendableByTimelineSemaphoreSubmitInfo for crate::vk1_0::SubmitInfo {}
-impl ExtendableByTimelineSemaphoreSubmitInfo for crate::vk1_0::BindSparseInfo {}
+impl crate::ExtendableBy<TimelineSemaphoreSubmitInfo> for crate::vk1_0::SubmitInfo {}
+impl crate::ExtendableBy<TimelineSemaphoreSubmitInfo> for crate::vk1_0::BindSparseInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`TimelineSemaphoreSubmitInfo`](struct.TimelineSemaphoreSubmitInfo.html)"]
 #[repr(transparent)]
@@ -8032,7 +8031,7 @@ impl PhysicalDeviceBufferDeviceAddressFeatures {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceBufferDeviceAddressFeatures,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -8069,13 +8068,14 @@ impl Default for PhysicalDeviceBufferDeviceAddressFeatures {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceBufferDeviceAddressFeatures::extend`](struct.PhysicalDeviceBufferDeviceAddressFeatures.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceBufferDeviceAddressFeatures {}
-impl ExtendableByPhysicalDeviceBufferDeviceAddressFeatures
+impl crate::ExtendableBy<PhysicalDeviceBufferDeviceAddressFeatures>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceBufferDeviceAddressFeatures for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceBufferDeviceAddressFeatures>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceBufferDeviceAddressFeatures`](struct.PhysicalDeviceBufferDeviceAddressFeatures.html)"]
 #[repr(transparent)]
@@ -8152,7 +8152,7 @@ impl BufferOpaqueCaptureAddressCreateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByBufferOpaqueCaptureAddressCreateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -8179,9 +8179,7 @@ impl Default for BufferOpaqueCaptureAddressCreateInfo {
         }
     }
 }
-#[doc = "Used by [`BufferOpaqueCaptureAddressCreateInfo::extend`](struct.BufferOpaqueCaptureAddressCreateInfo.html#method.extend)"]
-pub trait ExtendableByBufferOpaqueCaptureAddressCreateInfo {}
-impl ExtendableByBufferOpaqueCaptureAddressCreateInfo for crate::vk1_0::BufferCreateInfo {}
+impl crate::ExtendableBy<BufferOpaqueCaptureAddressCreateInfo> for crate::vk1_0::BufferCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`BufferOpaqueCaptureAddressCreateInfo`](struct.BufferOpaqueCaptureAddressCreateInfo.html)"]
 #[repr(transparent)]
@@ -8237,7 +8235,7 @@ impl MemoryOpaqueCaptureAddressAllocateInfo {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByMemoryOpaqueCaptureAddressAllocateInfo,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -8264,9 +8262,10 @@ impl Default for MemoryOpaqueCaptureAddressAllocateInfo {
         }
     }
 }
-#[doc = "Used by [`MemoryOpaqueCaptureAddressAllocateInfo::extend`](struct.MemoryOpaqueCaptureAddressAllocateInfo.html#method.extend)"]
-pub trait ExtendableByMemoryOpaqueCaptureAddressAllocateInfo {}
-impl ExtendableByMemoryOpaqueCaptureAddressAllocateInfo for crate::vk1_0::MemoryAllocateInfo {}
+impl crate::ExtendableBy<MemoryOpaqueCaptureAddressAllocateInfo>
+    for crate::vk1_0::MemoryAllocateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`MemoryOpaqueCaptureAddressAllocateInfo`](struct.MemoryOpaqueCaptureAddressAllocateInfo.html)"]
 #[repr(transparent)]

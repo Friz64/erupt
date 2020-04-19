@@ -64,7 +64,7 @@ impl SharedPresentSurfaceCapabilitiesKHR {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableBySharedPresentSurfaceCapabilitiesKHR,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -94,9 +94,7 @@ impl Default for SharedPresentSurfaceCapabilitiesKHR {
         }
     }
 }
-#[doc = "Used by [`SharedPresentSurfaceCapabilitiesKHR::extend`](struct.SharedPresentSurfaceCapabilitiesKHR.html#method.extend)"]
-pub trait ExtendableBySharedPresentSurfaceCapabilitiesKHR {}
-impl ExtendableBySharedPresentSurfaceCapabilitiesKHR
+impl crate::ExtendableBy<SharedPresentSurfaceCapabilitiesKHR>
     for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR
 {
 }

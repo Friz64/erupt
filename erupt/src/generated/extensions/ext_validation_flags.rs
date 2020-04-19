@@ -20,7 +20,7 @@ impl ValidationFlagsEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByValidationFlagsEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -55,9 +55,7 @@ impl Default for ValidationFlagsEXT {
         }
     }
 }
-#[doc = "Used by [`ValidationFlagsEXT::extend`](struct.ValidationFlagsEXT.html#method.extend)"]
-pub trait ExtendableByValidationFlagsEXT {}
-impl ExtendableByValidationFlagsEXT for crate::vk1_0::InstanceCreateInfo {}
+impl crate::ExtendableBy<ValidationFlagsEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`ValidationFlagsEXT`](struct.ValidationFlagsEXT.html)"]
 #[repr(transparent)]

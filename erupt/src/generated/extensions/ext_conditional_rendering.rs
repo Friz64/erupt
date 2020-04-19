@@ -208,7 +208,7 @@ impl PhysicalDeviceConditionalRenderingFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceConditionalRenderingFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -240,13 +240,14 @@ impl Default for PhysicalDeviceConditionalRenderingFeaturesEXT {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceConditionalRenderingFeaturesEXT::extend`](struct.PhysicalDeviceConditionalRenderingFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceConditionalRenderingFeaturesEXT {}
-impl ExtendableByPhysicalDeviceConditionalRenderingFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceConditionalRenderingFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceConditionalRenderingFeaturesEXT for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceConditionalRenderingFeaturesEXT>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceConditionalRenderingFeaturesEXT`](struct.PhysicalDeviceConditionalRenderingFeaturesEXT.html)"]
 #[repr(transparent)]
@@ -314,7 +315,7 @@ impl CommandBufferInheritanceConditionalRenderingInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByCommandBufferInheritanceConditionalRenderingInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -340,9 +341,7 @@ impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
         CommandBufferInheritanceConditionalRenderingInfoEXT { s_type : crate :: vk1_0 :: StructureType :: COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT , p_next : std :: ptr :: null ( ) , conditional_rendering_enable : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`CommandBufferInheritanceConditionalRenderingInfoEXT::extend`](struct.CommandBufferInheritanceConditionalRenderingInfoEXT.html#method.extend)"]
-pub trait ExtendableByCommandBufferInheritanceConditionalRenderingInfoEXT {}
-impl ExtendableByCommandBufferInheritanceConditionalRenderingInfoEXT
+impl crate::ExtendableBy<CommandBufferInheritanceConditionalRenderingInfoEXT>
     for crate::vk1_0::CommandBufferInheritanceInfo
 {
 }

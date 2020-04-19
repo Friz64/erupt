@@ -1026,7 +1026,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDeviceGeneratedCommandsPropertiesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1097,9 +1097,7 @@ impl Default for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDeviceGeneratedCommandsPropertiesNV::extend`](struct.PhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDeviceGeneratedCommandsPropertiesNV {}
-impl ExtendableByPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
+impl crate::ExtendableBy<PhysicalDeviceDeviceGeneratedCommandsPropertiesNV>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }
@@ -1233,7 +1231,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceDeviceGeneratedCommandsFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1264,13 +1262,11 @@ impl Default for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceDeviceGeneratedCommandsFeaturesNV::extend`](struct.PhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceDeviceGeneratedCommandsFeaturesNV {}
-impl ExtendableByPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>
     for crate::vk1_0::DeviceCreateInfo
 {
 }
@@ -1439,7 +1435,7 @@ impl GraphicsPipelineShaderGroupsCreateInfoNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByGraphicsPipelineShaderGroupsCreateInfoNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -1472,9 +1468,7 @@ impl Default for GraphicsPipelineShaderGroupsCreateInfoNV {
         }
     }
 }
-#[doc = "Used by [`GraphicsPipelineShaderGroupsCreateInfoNV::extend`](struct.GraphicsPipelineShaderGroupsCreateInfoNV.html#method.extend)"]
-pub trait ExtendableByGraphicsPipelineShaderGroupsCreateInfoNV {}
-impl ExtendableByGraphicsPipelineShaderGroupsCreateInfoNV
+impl crate::ExtendableBy<GraphicsPipelineShaderGroupsCreateInfoNV>
     for crate::vk1_0::GraphicsPipelineCreateInfo
 {
 }

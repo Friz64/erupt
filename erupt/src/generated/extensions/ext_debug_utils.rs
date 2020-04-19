@@ -679,7 +679,7 @@ impl DebugUtilsMessengerCreateInfoEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByDebugUtilsMessengerCreateInfoEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -716,9 +716,7 @@ impl Default for DebugUtilsMessengerCreateInfoEXT {
         }
     }
 }
-#[doc = "Used by [`DebugUtilsMessengerCreateInfoEXT::extend`](struct.DebugUtilsMessengerCreateInfoEXT.html#method.extend)"]
-pub trait ExtendableByDebugUtilsMessengerCreateInfoEXT {}
-impl ExtendableByDebugUtilsMessengerCreateInfoEXT for crate::vk1_0::InstanceCreateInfo {}
+impl crate::ExtendableBy<DebugUtilsMessengerCreateInfoEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`DebugUtilsMessengerCreateInfoEXT`](struct.DebugUtilsMessengerCreateInfoEXT.html)"]
 #[repr(transparent)]

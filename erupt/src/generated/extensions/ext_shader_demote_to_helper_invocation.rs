@@ -18,7 +18,7 @@ impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -47,13 +47,11 @@ impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
         PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT , p_next : std :: ptr :: null_mut ( ) , shader_demote_to_helper_invocation : Default :: default ( ) , }
     }
 }
-#[doc = "Used by [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT::extend`](struct.PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {}
-impl ExtendableByPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
+impl crate::ExtendableBy<PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>
     for crate::vk1_0::DeviceCreateInfo
 {
 }

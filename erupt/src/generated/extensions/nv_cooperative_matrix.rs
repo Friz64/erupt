@@ -289,7 +289,7 @@ impl PhysicalDeviceCooperativeMatrixFeaturesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceCooperativeMatrixFeaturesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -321,13 +321,14 @@ impl Default for PhysicalDeviceCooperativeMatrixFeaturesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceCooperativeMatrixFeaturesNV::extend`](struct.PhysicalDeviceCooperativeMatrixFeaturesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceCooperativeMatrixFeaturesNV {}
-impl ExtendableByPhysicalDeviceCooperativeMatrixFeaturesNV
+impl crate::ExtendableBy<PhysicalDeviceCooperativeMatrixFeaturesNV>
     for crate::vk1_1::PhysicalDeviceFeatures2
 {
 }
-impl ExtendableByPhysicalDeviceCooperativeMatrixFeaturesNV for crate::vk1_0::DeviceCreateInfo {}
+impl crate::ExtendableBy<PhysicalDeviceCooperativeMatrixFeaturesNV>
+    for crate::vk1_0::DeviceCreateInfo
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "Builder of [`PhysicalDeviceCooperativeMatrixFeaturesNV`](struct.PhysicalDeviceCooperativeMatrixFeaturesNV.html)"]
 #[repr(transparent)]
@@ -396,7 +397,7 @@ impl PhysicalDeviceCooperativeMatrixPropertiesNV {
     #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
     pub unsafe fn extend<T>(&mut self, other: &mut T)
     where
-        T: ExtendableByPhysicalDeviceCooperativeMatrixPropertiesNV,
+        T: crate::ExtendableBy<Self>,
     {
         crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
     }
@@ -426,9 +427,7 @@ impl Default for PhysicalDeviceCooperativeMatrixPropertiesNV {
         }
     }
 }
-#[doc = "Used by [`PhysicalDeviceCooperativeMatrixPropertiesNV::extend`](struct.PhysicalDeviceCooperativeMatrixPropertiesNV.html#method.extend)"]
-pub trait ExtendableByPhysicalDeviceCooperativeMatrixPropertiesNV {}
-impl ExtendableByPhysicalDeviceCooperativeMatrixPropertiesNV
+impl crate::ExtendableBy<PhysicalDeviceCooperativeMatrixPropertiesNV>
     for crate::vk1_1::PhysicalDeviceProperties2
 {
 }

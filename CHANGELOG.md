@@ -5,8 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Add `LibraryError` wrapper type to avoid exposing `libloading` types
+
 ### Changed
 - Change cargo feature representation in the README
+- Move loading to it's own module
+- Move examples to bin dir to avoid manual entries
 
 ## [0.4.0+137] - 2020-04-19
 ### Added

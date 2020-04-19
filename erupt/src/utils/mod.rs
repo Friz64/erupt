@@ -1,3 +1,7 @@
+//! Utilities to aid your usage of this crate
+
+#[cfg(feature = "loading")]
+pub mod loading;
 #[cfg(feature = "surface")]
 pub mod surface;
 
@@ -27,44 +31,6 @@ impl<T> CoreLoader<T> {
         } else {
             crate::make_version(1, 0, 0)
         }
-    }
-}
-
-#[cfg(feature = "loading")]
-impl CoreLoader<libloading::Library> {
-    /// Load functions using [`libloading`](https://crates.io/crates/libloading)
-    ///
-    /// Enabled using the `loading` cargo feature
-    pub fn new() -> std::result::Result<CoreLoader<libloading::Library>, libloading::Error> {
-        // from ash
-        #[cfg(all(
-            unix,
-            not(any(target_os = "macos", target_os = "ios", target_os = "android"))
-        ))]
-        const LIB_PATH: &str = "libvulkan.so.1";
-
-        // from ash
-        #[cfg(target_os = "android")]
-        const LIB_PATH: &str = "libvulkan.so";
-
-        // from ash
-        #[cfg(any(target_os = "macos", target_os = "ios"))]
-        const LIB_PATH: &str = "libvulkan.dylib";
-
-        // from ash
-        #[cfg(windows)]
-        const LIB_PATH: &str = "vulkan-1.dll";
-
-        Ok(CoreLoader::custom(
-            libloading::Library::new(LIB_PATH)?,
-            Box::new(|loader, name| unsafe {
-                let cstring = std::ffi::CString::new(name).unwrap();
-                loader
-                    .get(cstring.as_bytes_with_nul())
-                    .ok()
-                    .map(|symbol| *symbol)
-            }),
-        ))
     }
 }
 

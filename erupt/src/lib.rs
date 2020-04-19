@@ -95,8 +95,6 @@
 //! [`utils`]: https://docs.rs/erupt/*/erupt/utils/index.html
 
 mod generated;
-
-/// Utilities to make working with Vulkan easier
 pub mod utils;
 
 pub use generated::*;

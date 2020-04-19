@@ -43,8 +43,8 @@
 //! - [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/version.rs)
 //!
 //! ## Cargo Features
-//! - `surface`: Enables the [`surface`] module, adds [`raw-window-handle`] dependency (Enabled by default)
-//! - `libloading`: Enables the [`CoreLoader::new`] function, adds [`libloading`] dependency (Enabled by default)
+//! - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency
+//! - `loading` (enabled by default): Enables the [`CoreLoader::new`] function, adds [`libloading`] dependency
 //!
 //! ## FAQ
 //! ### Q: What's the difference between this, ash and vulkano?

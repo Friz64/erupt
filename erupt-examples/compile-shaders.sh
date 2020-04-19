@@ -4,5 +4,5 @@ function compile {
     glslc -O $1 -o $1.spv
 }
 
-compile src/triangle.vert
-compile src/triangle.frag
+compile src/bin/triangle.vert
+compile src/bin/triangle.frag

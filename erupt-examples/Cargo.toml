@@ -8,15 +8,3 @@ edition = "2018"
 erupt = { path = "../erupt" }
 winit = "0.22"
 structopt = "0.3"
-
-[[bin]]
-name = "pointer-chain"
-path = "src/pointer_chain.rs"
-
-[[bin]]
-name = "triangle"
-path = "src/triangle.rs"
-
-[[bin]]
-name = "version"
-path = "src/version.rs"

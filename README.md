@@ -54,14 +54,18 @@ instance.destroy_instance(None);
 ## FAQ
 ### Q: What's the difference between this, ash and vulkano?
 A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example it
-has a special hand-written written wrapper around a Vulkan PhysicalDevice. On the other hand ash and erupt
+has a special hand-written written wrapper around a Vulkan `PhysicalDevice`. On the other hand ash and erupt
 both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead focusing on having
 good bindings to the *raw* Vulkan API.
 
 The big selling points of erupt is that it has better documentation, high level function support for all
 extensions (which is only really relevant if you use those extensions), being fully generated (which is not
-visible to the end user), having lower compile times ([tested here](https://www.reddit.com/r/rust/comments/g1tqh3/))
-and some more smaller improvements. On the other hand ash has a bigger existing community.
+visible to the end user), having faster compile times and some more smaller improvements. On the other hand
+ash has a bigger existing community.
+
+### Q: How do the compile times compare to ash?
+A: erupt `0.4.0+137` compiles in around 72% of the time it takes for ash `0.30.0` to compile, tested on
+Linux with rustc nightly `1.44.0` using `-Ztimings=info`.
 
 ### Q: What does the number at the end of the version mean?
 A: It represents the Vulkan Header version this version of erupt was generated against and is purely informational.

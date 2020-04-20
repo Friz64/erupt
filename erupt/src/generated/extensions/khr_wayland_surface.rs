@@ -140,7 +140,7 @@ impl Default for WaylandSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`WaylandSurfaceCreateInfoKHR`](struct.WaylandSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Builder of [`WaylandSurfaceCreateInfoKHR`](struct.WaylandSurfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct WaylandSurfaceCreateInfoKHRBuilder<'a>(
     WaylandSurfaceCreateInfoKHR,

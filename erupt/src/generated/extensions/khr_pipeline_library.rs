@@ -39,7 +39,7 @@ impl Default for PipelineLibraryCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineLibraryCreateInfoKHR`](struct.PipelineLibraryCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Builder of [`PipelineLibraryCreateInfoKHR`](struct.PipelineLibraryCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct PipelineLibraryCreateInfoKHRBuilder<'a>(
     PipelineLibraryCreateInfoKHR,

@@ -82,7 +82,7 @@ impl crate::ExtendableBy<PipelineCoverageToColorStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCoverageToColorStateCreateInfoNV`](struct.PipelineCoverageToColorStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`](struct.PipelineCoverageToColorStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineCoverageToColorStateCreateInfoNVBuilder<'a>(
     PipelineCoverageToColorStateCreateInfoNV,

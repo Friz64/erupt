@@ -108,7 +108,7 @@ impl crate::ExtendableBy<PhysicalDeviceDiscardRectanglePropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceDiscardRectanglePropertiesEXT`](struct.PhysicalDeviceDiscardRectanglePropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Builder of [`PhysicalDeviceDiscardRectanglePropertiesEXT`](struct.PhysicalDeviceDiscardRectanglePropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a>(
     PhysicalDeviceDiscardRectanglePropertiesEXT,
@@ -207,7 +207,7 @@ impl crate::ExtendableBy<PipelineDiscardRectangleStateCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineDiscardRectangleStateCreateInfoEXT`](struct.PipelineDiscardRectangleStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html) · Builder of [`PipelineDiscardRectangleStateCreateInfoEXT`](struct.PipelineDiscardRectangleStateCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a>(
     PipelineDiscardRectangleStateCreateInfoEXT,

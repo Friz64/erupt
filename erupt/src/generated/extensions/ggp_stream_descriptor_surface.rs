@@ -99,7 +99,7 @@ impl Default for StreamDescriptorSurfaceCreateInfoGGP {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`StreamDescriptorSurfaceCreateInfoGGP`](struct.StreamDescriptorSurfaceCreateInfoGGP.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateInfoGGP.html) · Builder of [`StreamDescriptorSurfaceCreateInfoGGP`](struct.StreamDescriptorSurfaceCreateInfoGGP.html)"]
 #[repr(transparent)]
 pub struct StreamDescriptorSurfaceCreateInfoGGPBuilder<'a>(
     StreamDescriptorSurfaceCreateInfoGGP,

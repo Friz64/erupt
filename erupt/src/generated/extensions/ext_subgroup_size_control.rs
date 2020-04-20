@@ -60,7 +60,7 @@ impl crate::ExtendableBy<PhysicalDeviceSubgroupSizeControlFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceSubgroupSizeControlFeaturesEXT`](struct.PhysicalDeviceSubgroupSizeControlFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Builder of [`PhysicalDeviceSubgroupSizeControlFeaturesEXT`](struct.PhysicalDeviceSubgroupSizeControlFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a>(
     PhysicalDeviceSubgroupSizeControlFeaturesEXT,
@@ -171,7 +171,7 @@ impl crate::ExtendableBy<PhysicalDeviceSubgroupSizeControlPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceSubgroupSizeControlPropertiesEXT`](struct.PhysicalDeviceSubgroupSizeControlPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlPropertiesEXT.html) · Builder of [`PhysicalDeviceSubgroupSizeControlPropertiesEXT`](struct.PhysicalDeviceSubgroupSizeControlPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a>(
     PhysicalDeviceSubgroupSizeControlPropertiesEXT,
@@ -277,7 +277,7 @@ impl crate::ExtendableBy<PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT`](struct.PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html) · Builder of [`PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT`](struct.PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a>(
     PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT,

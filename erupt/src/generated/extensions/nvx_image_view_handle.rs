@@ -125,7 +125,7 @@ impl Default for ImageViewHandleInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageViewHandleInfoNVX`](struct.ImageViewHandleInfoNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`](struct.ImageViewHandleInfoNVX.html)"]
 #[repr(transparent)]
 pub struct ImageViewHandleInfoNVXBuilder<'a>(
     ImageViewHandleInfoNVX,
@@ -212,7 +212,7 @@ impl Default for ImageViewAddressPropertiesNVX {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageViewAddressPropertiesNVX`](struct.ImageViewAddressPropertiesNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`](struct.ImageViewAddressPropertiesNVX.html)"]
 #[repr(transparent)]
 pub struct ImageViewAddressPropertiesNVXBuilder<'a>(
     ImageViewAddressPropertiesNVX,

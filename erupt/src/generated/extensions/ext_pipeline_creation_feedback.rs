@@ -107,7 +107,7 @@ impl crate::ExtendableBy<PipelineCreationFeedbackCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCreationFeedbackCreateInfoEXT`](struct.PipelineCreationFeedbackCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackCreateInfoEXT.html) · Builder of [`PipelineCreationFeedbackCreateInfoEXT`](struct.PipelineCreationFeedbackCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineCreationFeedbackCreateInfoEXTBuilder<'a>(
     PipelineCreationFeedbackCreateInfoEXT,
@@ -191,7 +191,7 @@ impl Default for PipelineCreationFeedbackEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCreationFeedbackEXT`](struct.PipelineCreationFeedbackEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Builder of [`PipelineCreationFeedbackEXT`](struct.PipelineCreationFeedbackEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineCreationFeedbackEXTBuilder<'a>(
     PipelineCreationFeedbackEXT,

@@ -593,7 +593,7 @@ impl Default for AccelerationStructureCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureCreateInfoNV`](struct.AccelerationStructureCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Builder of [`AccelerationStructureCreateInfoNV`](struct.AccelerationStructureCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureCreateInfoNVBuilder<'a>(
     AccelerationStructureCreateInfoNV,
@@ -686,7 +686,7 @@ impl Default for AccelerationStructureInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureInfoNV`](struct.AccelerationStructureInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInfoNV.html) · Builder of [`AccelerationStructureInfoNV`](struct.AccelerationStructureInfoNV.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureInfoNVBuilder<'a>(
     AccelerationStructureInfoNV,
@@ -798,7 +798,7 @@ impl Default for GeometryNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`GeometryNV`](struct.GeometryNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryNV.html) · Builder of [`GeometryNV`](struct.GeometryNV.html)"]
 #[repr(transparent)]
 pub struct GeometryNVBuilder<'a>(GeometryNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryNVBuilder<'a> {
@@ -879,7 +879,7 @@ impl Default for GeometryDataNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`GeometryDataNV`](struct.GeometryDataNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryDataNV.html) · Builder of [`GeometryDataNV`](struct.GeometryDataNV.html)"]
 #[repr(transparent)]
 pub struct GeometryDataNVBuilder<'a>(GeometryDataNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryDataNVBuilder<'a> {
@@ -987,7 +987,7 @@ impl Default for GeometryTrianglesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`GeometryTrianglesNV`](struct.GeometryTrianglesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTrianglesNV.html) · Builder of [`GeometryTrianglesNV`](struct.GeometryTrianglesNV.html)"]
 #[repr(transparent)]
 pub struct GeometryTrianglesNVBuilder<'a>(GeometryTrianglesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryTrianglesNVBuilder<'a> {
@@ -1125,7 +1125,7 @@ impl Default for GeometryAABBNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`GeometryAABBNV`](struct.GeometryAABBNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryAABBNV.html) · Builder of [`GeometryAABBNV`](struct.GeometryAABBNV.html)"]
 #[repr(transparent)]
 pub struct GeometryAABBNVBuilder<'a>(GeometryAABBNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryAABBNVBuilder<'a> {
@@ -1217,7 +1217,7 @@ impl Default for AccelerationStructureMemoryRequirementsInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureMemoryRequirementsInfoNV`](struct.AccelerationStructureMemoryRequirementsInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Builder of [`AccelerationStructureMemoryRequirementsInfoNV`](struct.AccelerationStructureMemoryRequirementsInfoNV.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureMemoryRequirementsInfoNVBuilder<'a>(
     AccelerationStructureMemoryRequirementsInfoNV,
@@ -1331,7 +1331,7 @@ impl Default for RayTracingPipelineCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RayTracingPipelineCreateInfoNV`](struct.RayTracingPipelineCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Builder of [`RayTracingPipelineCreateInfoNV`](struct.RayTracingPipelineCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct RayTracingPipelineCreateInfoNVBuilder<'a>(
     RayTracingPipelineCreateInfoNV,
@@ -1459,7 +1459,7 @@ impl Default for RayTracingShaderGroupCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RayTracingShaderGroupCreateInfoNV`](struct.RayTracingShaderGroupCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Builder of [`RayTracingShaderGroupCreateInfoNV`](struct.RayTracingShaderGroupCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupCreateInfoNVBuilder<'a>(
     RayTracingShaderGroupCreateInfoNV,
@@ -1617,7 +1617,7 @@ impl crate::ExtendableBy<PhysicalDeviceRayTracingPropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceRayTracingPropertiesNV`](struct.PhysicalDeviceRayTracingPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Builder of [`PhysicalDeviceRayTracingPropertiesNV`](struct.PhysicalDeviceRayTracingPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingPropertiesNVBuilder<'a>(
     PhysicalDeviceRayTracingPropertiesNV,

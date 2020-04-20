@@ -99,7 +99,7 @@ impl crate::ExtendableBy<SharedPresentSurfaceCapabilitiesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SharedPresentSurfaceCapabilitiesKHR`](struct.SharedPresentSurfaceCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`](struct.SharedPresentSurfaceCapabilitiesKHR.html)"]
 #[repr(transparent)]
 pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a>(
     SharedPresentSurfaceCapabilitiesKHR,

@@ -222,7 +222,7 @@ impl Default for PerformanceCounterKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceCounterKHR`](struct.PerformanceCounterKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterKHR.html) · Builder of [`PerformanceCounterKHR`](struct.PerformanceCounterKHR.html)"]
 #[repr(transparent)]
 pub struct PerformanceCounterKHRBuilder<'a>(
     PerformanceCounterKHR,
@@ -421,7 +421,7 @@ impl Default for PerformanceCounterDescriptionKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceCounterDescriptionKHR`](struct.PerformanceCounterDescriptionKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionKHR.html) · Builder of [`PerformanceCounterDescriptionKHR`](struct.PerformanceCounterDescriptionKHR.html)"]
 #[repr(transparent)]
 pub struct PerformanceCounterDescriptionKHRBuilder<'a>(
     PerformanceCounterDescriptionKHR,
@@ -566,7 +566,7 @@ impl Default for QueryPoolPerformanceCreateInfoKHR {
 }
 impl crate::ExtendableBy<QueryPoolPerformanceCreateInfoKHR> for crate::vk1_0::QueryPoolCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`QueryPoolPerformanceCreateInfoKHR`](struct.QueryPoolPerformanceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceCreateInfoKHR.html) · Builder of [`QueryPoolPerformanceCreateInfoKHR`](struct.QueryPoolPerformanceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct QueryPoolPerformanceCreateInfoKHRBuilder<'a>(
     QueryPoolPerformanceCreateInfoKHR,
@@ -648,7 +648,7 @@ impl Default for AcquireProfilingLockInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AcquireProfilingLockInfoKHR`](struct.AcquireProfilingLockInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockInfoKHR.html) · Builder of [`AcquireProfilingLockInfoKHR`](struct.AcquireProfilingLockInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AcquireProfilingLockInfoKHRBuilder<'a>(
     AcquireProfilingLockInfoKHR,
@@ -777,7 +777,7 @@ impl crate::ExtendableBy<PhysicalDevicePerformanceQueryFeaturesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDevicePerformanceQueryFeaturesKHR`](struct.PhysicalDevicePerformanceQueryFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryFeaturesKHR.html) · Builder of [`PhysicalDevicePerformanceQueryFeaturesKHR`](struct.PhysicalDevicePerformanceQueryFeaturesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a>(
     PhysicalDevicePerformanceQueryFeaturesKHR,
@@ -882,7 +882,7 @@ impl crate::ExtendableBy<PhysicalDevicePerformanceQueryPropertiesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDevicePerformanceQueryPropertiesKHR`](struct.PhysicalDevicePerformanceQueryPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryPropertiesKHR.html) · Builder of [`PhysicalDevicePerformanceQueryPropertiesKHR`](struct.PhysicalDevicePerformanceQueryPropertiesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a>(
     PhysicalDevicePerformanceQueryPropertiesKHR,
@@ -992,7 +992,7 @@ impl Default for PerformanceQuerySubmitInfoKHR {
 }
 impl crate::ExtendableBy<PerformanceQuerySubmitInfoKHR> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceQuerySubmitInfoKHR`](struct.PerformanceQuerySubmitInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceQuerySubmitInfoKHR.html) · Builder of [`PerformanceQuerySubmitInfoKHR`](struct.PerformanceQuerySubmitInfoKHR.html)"]
 #[repr(transparent)]
 pub struct PerformanceQuerySubmitInfoKHRBuilder<'a>(
     PerformanceQuerySubmitInfoKHR,

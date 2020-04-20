@@ -119,7 +119,7 @@ impl Default for ImportFenceWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportFenceWin32HandleInfoKHR`](struct.ImportFenceWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Builder of [`ImportFenceWin32HandleInfoKHR`](struct.ImportFenceWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImportFenceWin32HandleInfoKHRBuilder<'a>(
     ImportFenceWin32HandleInfoKHR,
@@ -221,7 +221,7 @@ impl Default for FenceGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`FenceGetWin32HandleInfoKHR`](struct.FenceGetWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Builder of [`FenceGetWin32HandleInfoKHR`](struct.FenceGetWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct FenceGetWin32HandleInfoKHRBuilder<'a>(
     FenceGetWin32HandleInfoKHR,
@@ -319,7 +319,7 @@ impl Default for ExportFenceWin32HandleInfoKHR {
 }
 impl crate::ExtendableBy<ExportFenceWin32HandleInfoKHR> for crate::vk1_0::FenceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExportFenceWin32HandleInfoKHR`](struct.ExportFenceWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Builder of [`ExportFenceWin32HandleInfoKHR`](struct.ExportFenceWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ExportFenceWin32HandleInfoKHRBuilder<'a>(
     ExportFenceWin32HandleInfoKHR,

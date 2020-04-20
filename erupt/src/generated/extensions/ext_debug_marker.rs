@@ -206,7 +206,7 @@ impl Default for DebugMarkerObjectTagInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugMarkerObjectTagInfoEXT`](struct.DebugMarkerObjectTagInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`](struct.DebugMarkerObjectTagInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugMarkerObjectTagInfoEXTBuilder<'a>(
     DebugMarkerObjectTagInfoEXT,
@@ -306,7 +306,7 @@ impl Default for DebugMarkerObjectNameInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugMarkerObjectNameInfoEXT`](struct.DebugMarkerObjectNameInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`](struct.DebugMarkerObjectNameInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugMarkerObjectNameInfoEXTBuilder<'a>(
     DebugMarkerObjectNameInfoEXT,
@@ -396,7 +396,7 @@ impl Default for DebugMarkerMarkerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugMarkerMarkerInfoEXT`](struct.DebugMarkerMarkerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`](struct.DebugMarkerMarkerInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugMarkerMarkerInfoEXTBuilder<'a>(
     DebugMarkerMarkerInfoEXT,

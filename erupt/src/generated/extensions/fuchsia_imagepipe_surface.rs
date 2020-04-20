@@ -96,7 +96,7 @@ impl Default for ImagePipeSurfaceCreateInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImagePipeSurfaceCreateInfoFUCHSIA`](struct.ImagePipeSurfaceCreateInfoFUCHSIA.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateInfoFUCHSIA.html) · Builder of [`ImagePipeSurfaceCreateInfoFUCHSIA`](struct.ImagePipeSurfaceCreateInfoFUCHSIA.html)"]
 #[repr(transparent)]
 pub struct ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a>(
     ImagePipeSurfaceCreateInfoFUCHSIA,

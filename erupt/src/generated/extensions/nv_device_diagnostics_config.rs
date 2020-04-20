@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceDiagnosticsConfigFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceDiagnosticsConfigFeaturesNV`](struct.PhysicalDeviceDiagnosticsConfigFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Builder of [`PhysicalDeviceDiagnosticsConfigFeaturesNV`](struct.PhysicalDeviceDiagnosticsConfigFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a>(
     PhysicalDeviceDiagnosticsConfigFeaturesNV,
@@ -140,7 +140,7 @@ impl Default for DeviceDiagnosticsConfigCreateInfoNV {
 }
 impl crate::ExtendableBy<DeviceDiagnosticsConfigCreateInfoNV> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceDiagnosticsConfigCreateInfoNV`](struct.DeviceDiagnosticsConfigCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Builder of [`DeviceDiagnosticsConfigCreateInfoNV`](struct.DeviceDiagnosticsConfigCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct DeviceDiagnosticsConfigCreateInfoNVBuilder<'a>(
     DeviceDiagnosticsConfigCreateInfoNV,

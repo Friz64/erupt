@@ -197,7 +197,7 @@ impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV>
 }
 impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMeshShaderFeaturesNV`](struct.PhysicalDeviceMeshShaderFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Builder of [`PhysicalDeviceMeshShaderFeaturesNV`](struct.PhysicalDeviceMeshShaderFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMeshShaderFeaturesNVBuilder<'a>(
     PhysicalDeviceMeshShaderFeaturesNV,
@@ -349,7 +349,7 @@ impl crate::ExtendableBy<PhysicalDeviceMeshShaderPropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMeshShaderPropertiesNV`](struct.PhysicalDeviceMeshShaderPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Builder of [`PhysicalDeviceMeshShaderPropertiesNV`](struct.PhysicalDeviceMeshShaderPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMeshShaderPropertiesNVBuilder<'a>(
     PhysicalDeviceMeshShaderPropertiesNV,
@@ -496,7 +496,7 @@ impl Default for DrawMeshTasksIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DrawMeshTasksIndirectCommandNV`](struct.DrawMeshTasksIndirectCommandNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Builder of [`DrawMeshTasksIndirectCommandNV`](struct.DrawMeshTasksIndirectCommandNV.html)"]
 #[repr(transparent)]
 pub struct DrawMeshTasksIndirectCommandNVBuilder<'a>(
     DrawMeshTasksIndirectCommandNV,

@@ -162,7 +162,7 @@ impl crate::ExtendableBy<PhysicalDevicePushDescriptorPropertiesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDevicePushDescriptorPropertiesKHR`](struct.PhysicalDevicePushDescriptorPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Builder of [`PhysicalDevicePushDescriptorPropertiesKHR`](struct.PhysicalDevicePushDescriptorPropertiesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a>(
     PhysicalDevicePushDescriptorPropertiesKHR,

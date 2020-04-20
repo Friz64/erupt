@@ -58,7 +58,7 @@ impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceTexelBufferAlignmentFeaturesEXT`](struct.PhysicalDeviceTexelBufferAlignmentFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT.html) · Builder of [`PhysicalDeviceTexelBufferAlignmentFeaturesEXT`](struct.PhysicalDeviceTexelBufferAlignmentFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a>(
     PhysicalDeviceTexelBufferAlignmentFeaturesEXT,
@@ -169,7 +169,7 @@ impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceTexelBufferAlignmentPropertiesEXT`](struct.PhysicalDeviceTexelBufferAlignmentPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT.html) · Builder of [`PhysicalDeviceTexelBufferAlignmentPropertiesEXT`](struct.PhysicalDeviceTexelBufferAlignmentPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a>(
     PhysicalDeviceTexelBufferAlignmentPropertiesEXT,

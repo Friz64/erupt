@@ -215,7 +215,7 @@ impl Default for DisplayPowerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayPowerInfoEXT`](struct.DisplayPowerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Builder of [`DisplayPowerInfoEXT`](struct.DisplayPowerInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DisplayPowerInfoEXTBuilder<'a>(DisplayPowerInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayPowerInfoEXTBuilder<'a> {
@@ -307,7 +307,7 @@ impl Default for DeviceEventInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceEventInfoEXT`](struct.DeviceEventInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventInfoEXT.html) · Builder of [`DeviceEventInfoEXT`](struct.DeviceEventInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DeviceEventInfoEXTBuilder<'a>(DeviceEventInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceEventInfoEXTBuilder<'a> {
@@ -395,7 +395,7 @@ impl Default for DisplayEventInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayEventInfoEXT`](struct.DisplayEventInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventInfoEXT.html) · Builder of [`DisplayEventInfoEXT`](struct.DisplayEventInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DisplayEventInfoEXTBuilder<'a>(DisplayEventInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayEventInfoEXTBuilder<'a> {
@@ -497,7 +497,7 @@ impl crate::ExtendableBy<SwapchainCounterCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SwapchainCounterCreateInfoEXT`](struct.SwapchainCounterCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Builder of [`SwapchainCounterCreateInfoEXT`](struct.SwapchainCounterCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct SwapchainCounterCreateInfoEXTBuilder<'a>(
     SwapchainCounterCreateInfoEXT,

@@ -39,7 +39,7 @@ impl Default for ViewportSwizzleNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ViewportSwizzleNV`](struct.ViewportSwizzleNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportSwizzleNV.html) · Builder of [`ViewportSwizzleNV`](struct.ViewportSwizzleNV.html)"]
 #[repr(transparent)]
 pub struct ViewportSwizzleNVBuilder<'a>(ViewportSwizzleNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ViewportSwizzleNVBuilder<'a> {
@@ -188,7 +188,7 @@ impl crate::ExtendableBy<PipelineViewportSwizzleStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportSwizzleStateCreateInfoNV`](struct.PipelineViewportSwizzleStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html) · Builder of [`PipelineViewportSwizzleStateCreateInfoNV`](struct.PipelineViewportSwizzleStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportSwizzleStateCreateInfoNVBuilder<'a>(
     PipelineViewportSwizzleStateCreateInfoNV,

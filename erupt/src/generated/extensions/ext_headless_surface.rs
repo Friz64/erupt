@@ -98,7 +98,7 @@ impl Default for HeadlessSurfaceCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`HeadlessSurfaceCreateInfoEXT`](struct.HeadlessSurfaceCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateInfoEXT.html) · Builder of [`HeadlessSurfaceCreateInfoEXT`](struct.HeadlessSurfaceCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct HeadlessSurfaceCreateInfoEXTBuilder<'a>(
     HeadlessSurfaceCreateInfoEXT,

@@ -101,7 +101,7 @@ impl Default for MacOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MacOSSurfaceCreateInfoMVK`](struct.MacOSSurfaceCreateInfoMVK.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`](struct.MacOSSurfaceCreateInfoMVK.html)"]
 #[repr(transparent)]
 pub struct MacOSSurfaceCreateInfoMVKBuilder<'a>(
     MacOSSurfaceCreateInfoMVK,

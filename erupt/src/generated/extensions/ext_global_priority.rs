@@ -50,7 +50,7 @@ impl crate::ExtendableBy<DeviceQueueGlobalPriorityCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a>(
     DeviceQueueGlobalPriorityCreateInfoEXT,

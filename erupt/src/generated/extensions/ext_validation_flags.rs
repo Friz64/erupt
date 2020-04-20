@@ -57,7 +57,7 @@ impl Default for ValidationFlagsEXT {
 }
 impl crate::ExtendableBy<ValidationFlagsEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ValidationFlagsEXT`](struct.ValidationFlagsEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Builder of [`ValidationFlagsEXT`](struct.ValidationFlagsEXT.html)"]
 #[repr(transparent)]
 pub struct ValidationFlagsEXTBuilder<'a>(ValidationFlagsEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ValidationFlagsEXTBuilder<'a> {

@@ -129,7 +129,7 @@ impl Default for SurfaceCapabilities2EXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceCapabilities2EXT`](struct.SurfaceCapabilities2EXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Builder of [`SurfaceCapabilities2EXT`](struct.SurfaceCapabilities2EXT.html)"]
 #[repr(transparent)]
 pub struct SurfaceCapabilities2EXTBuilder<'a>(
     SurfaceCapabilities2EXT,

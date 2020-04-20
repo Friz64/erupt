@@ -71,7 +71,7 @@ impl crate::ExtendableBy<DeviceMemoryOverallocationCreateInfoAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceMemoryOverallocationCreateInfoAMD`](struct.DeviceMemoryOverallocationCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`](struct.DeviceMemoryOverallocationCreateInfoAMD.html)"]
 #[repr(transparent)]
 pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a>(
     DeviceMemoryOverallocationCreateInfoAMD,

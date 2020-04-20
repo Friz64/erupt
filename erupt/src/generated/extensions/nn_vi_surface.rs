@@ -99,7 +99,7 @@ impl Default for ViSurfaceCreateInfoNN {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ViSurfaceCreateInfoNN`](struct.ViSurfaceCreateInfoNN.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`](struct.ViSurfaceCreateInfoNN.html)"]
 #[repr(transparent)]
 pub struct ViSurfaceCreateInfoNNBuilder<'a>(
     ViSurfaceCreateInfoNN,

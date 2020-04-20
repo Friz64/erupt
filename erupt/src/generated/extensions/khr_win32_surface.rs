@@ -137,7 +137,7 @@ impl Default for Win32SurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Win32SurfaceCreateInfoKHR`](struct.Win32SurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`](struct.Win32SurfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct Win32SurfaceCreateInfoKHRBuilder<'a>(
     Win32SurfaceCreateInfoKHR,

@@ -116,7 +116,7 @@ impl crate::ExtendableBy<PhysicalDeviceBufferDeviceAddressFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceBufferDeviceAddressFeaturesEXT`](struct.PhysicalDeviceBufferDeviceAddressFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeaturesEXT`](struct.PhysicalDeviceBufferDeviceAddressFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a>(
     PhysicalDeviceBufferDeviceAddressFeaturesEXT,
@@ -222,7 +222,7 @@ impl Default for BufferDeviceAddressCreateInfoEXT {
 }
 impl crate::ExtendableBy<BufferDeviceAddressCreateInfoEXT> for crate::vk1_0::BufferCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferDeviceAddressCreateInfoEXT`](struct.BufferDeviceAddressCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Builder of [`BufferDeviceAddressCreateInfoEXT`](struct.BufferDeviceAddressCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct BufferDeviceAddressCreateInfoEXTBuilder<'a>(
     BufferDeviceAddressCreateInfoEXT,

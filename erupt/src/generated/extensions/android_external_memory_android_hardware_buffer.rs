@@ -108,7 +108,7 @@ impl Default for AndroidHardwareBufferPropertiesANDROID {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AndroidHardwareBufferPropertiesANDROID`](struct.AndroidHardwareBufferPropertiesANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`](struct.AndroidHardwareBufferPropertiesANDROID.html)"]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferPropertiesANDROIDBuilder<'a>(
     AndroidHardwareBufferPropertiesANDROID,
@@ -186,7 +186,7 @@ impl Default for MemoryGetAndroidHardwareBufferInfoANDROID {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryGetAndroidHardwareBufferInfoANDROID`](struct.MemoryGetAndroidHardwareBufferInfoANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Builder of [`MemoryGetAndroidHardwareBufferInfoANDROID`](struct.MemoryGetAndroidHardwareBufferInfoANDROID.html)"]
 #[repr(transparent)]
 pub struct MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a>(
     MemoryGetAndroidHardwareBufferInfoANDROID,
@@ -278,7 +278,7 @@ impl crate::ExtendableBy<AndroidHardwareBufferUsageANDROID>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AndroidHardwareBufferUsageANDROID`](struct.AndroidHardwareBufferUsageANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Builder of [`AndroidHardwareBufferUsageANDROID`](struct.AndroidHardwareBufferUsageANDROID.html)"]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferUsageANDROIDBuilder<'a>(
     AndroidHardwareBufferUsageANDROID,
@@ -385,7 +385,7 @@ impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
 }
 impl crate :: ExtendableBy < AndroidHardwareBufferFormatPropertiesANDROID > for crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID { }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`](struct.AndroidHardwareBufferFormatPropertiesANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`](struct.AndroidHardwareBufferFormatPropertiesANDROID.html)"]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a>(
     AndroidHardwareBufferFormatPropertiesANDROID,
@@ -531,7 +531,7 @@ impl crate::ExtendableBy<ImportAndroidHardwareBufferInfoANDROID>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportAndroidHardwareBufferInfoANDROID`](struct.ImportAndroidHardwareBufferInfoANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Builder of [`ImportAndroidHardwareBufferInfoANDROID`](struct.ImportAndroidHardwareBufferInfoANDROID.html)"]
 #[repr(transparent)]
 pub struct ImportAndroidHardwareBufferInfoANDROIDBuilder<'a>(
     ImportAndroidHardwareBufferInfoANDROID,
@@ -615,7 +615,7 @@ impl Default for ExternalFormatANDROID {
 impl crate::ExtendableBy<ExternalFormatANDROID> for crate::vk1_0::ImageCreateInfo {}
 impl crate::ExtendableBy<ExternalFormatANDROID> for crate::vk1_1::SamplerYcbcrConversionCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExternalFormatANDROID`](struct.ExternalFormatANDROID.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFormatANDROID.html) · Builder of [`ExternalFormatANDROID`](struct.ExternalFormatANDROID.html)"]
 #[repr(transparent)]
 pub struct ExternalFormatANDROIDBuilder<'a>(
     ExternalFormatANDROID,

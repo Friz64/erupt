@@ -53,7 +53,7 @@ impl crate::ExtendableBy<TextureLODGatherFormatPropertiesAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`TextureLODGatherFormatPropertiesAMD`](struct.TextureLODGatherFormatPropertiesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`](struct.TextureLODGatherFormatPropertiesAMD.html)"]
 #[repr(transparent)]
 pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a>(
     TextureLODGatherFormatPropertiesAMD,

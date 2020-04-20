@@ -76,7 +76,7 @@ impl crate::ExtendableBy<PipelineCompilerControlCreateInfoAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCompilerControlCreateInfoAMD`](struct.PipelineCompilerControlCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`](struct.PipelineCompilerControlCreateInfoAMD.html)"]
 #[repr(transparent)]
 pub struct PipelineCompilerControlCreateInfoAMDBuilder<'a>(
     PipelineCompilerControlCreateInfoAMD,

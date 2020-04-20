@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceShaderClockFeaturesKHR>
 }
 impl crate::ExtendableBy<PhysicalDeviceShaderClockFeaturesKHR> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShaderClockFeaturesKHR`](struct.PhysicalDeviceShaderClockFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`](struct.PhysicalDeviceShaderClockFeaturesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a>(
     PhysicalDeviceShaderClockFeaturesKHR,

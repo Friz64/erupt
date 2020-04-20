@@ -914,7 +914,7 @@ impl Default for AccelerationStructureCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureCreateInfoKHR`](struct.AccelerationStructureCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoKHR.html) · Builder of [`AccelerationStructureCreateInfoKHR`](struct.AccelerationStructureCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureCreateInfoKHRBuilder<'a>(
     AccelerationStructureCreateInfoKHR,
@@ -1099,7 +1099,7 @@ impl Default for AccelerationStructureCreateGeometryTypeInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureCreateGeometryTypeInfoKHR`](struct.AccelerationStructureCreateGeometryTypeInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateGeometryTypeInfoKHR.html) · Builder of [`AccelerationStructureCreateGeometryTypeInfoKHR`](struct.AccelerationStructureCreateGeometryTypeInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureCreateGeometryTypeInfoKHRBuilder<'a>(
     AccelerationStructureCreateGeometryTypeInfoKHR,
@@ -1243,7 +1243,7 @@ impl Default for AccelerationStructureMemoryRequirementsInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureMemoryRequirementsInfoKHR`](struct.AccelerationStructureMemoryRequirementsInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoKHR.html) · Builder of [`AccelerationStructureMemoryRequirementsInfoKHR`](struct.AccelerationStructureMemoryRequirementsInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureMemoryRequirementsInfoKHRBuilder<'a>(
     AccelerationStructureMemoryRequirementsInfoKHR,
@@ -1390,7 +1390,7 @@ impl Default for BindAccelerationStructureMemoryInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BindAccelerationStructureMemoryInfoKHR`](struct.BindAccelerationStructureMemoryInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindAccelerationStructureMemoryInfoKHR.html) · Builder of [`BindAccelerationStructureMemoryInfoKHR`](struct.BindAccelerationStructureMemoryInfoKHR.html)"]
 #[repr(transparent)]
 pub struct BindAccelerationStructureMemoryInfoKHRBuilder<'a>(
     BindAccelerationStructureMemoryInfoKHR,
@@ -1518,7 +1518,7 @@ impl Default for AccelerationStructureBuildGeometryInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureBuildGeometryInfoKHR`](struct.AccelerationStructureBuildGeometryInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html) · Builder of [`AccelerationStructureBuildGeometryInfoKHR`](struct.AccelerationStructureBuildGeometryInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureBuildGeometryInfoKHRBuilder<'a>(
     AccelerationStructureBuildGeometryInfoKHR,
@@ -1665,7 +1665,7 @@ impl Default for AccelerationStructureGeometryKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureGeometryKHR`](struct.AccelerationStructureGeometryKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryKHR.html) · Builder of [`AccelerationStructureGeometryKHR`](struct.AccelerationStructureGeometryKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureGeometryKHRBuilder<'a>(
     AccelerationStructureGeometryKHR,
@@ -1791,7 +1791,7 @@ impl Default for AccelerationStructureGeometryTrianglesDataKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureGeometryTrianglesDataKHR`](struct.AccelerationStructureGeometryTrianglesDataKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryTrianglesDataKHR.html) · Builder of [`AccelerationStructureGeometryTrianglesDataKHR`](struct.AccelerationStructureGeometryTrianglesDataKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureGeometryTrianglesDataKHRBuilder<'a>(
     AccelerationStructureGeometryTrianglesDataKHR,
@@ -1925,7 +1925,7 @@ impl Default for AccelerationStructureGeometryAabbsDataKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureGeometryAabbsDataKHR`](struct.AccelerationStructureGeometryAabbsDataKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryAabbsDataKHR.html) · Builder of [`AccelerationStructureGeometryAabbsDataKHR`](struct.AccelerationStructureGeometryAabbsDataKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureGeometryAabbsDataKHRBuilder<'a>(
     AccelerationStructureGeometryAabbsDataKHR,
@@ -2012,7 +2012,7 @@ impl Default for AccelerationStructureGeometryInstancesDataKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureGeometryInstancesDataKHR`](struct.AccelerationStructureGeometryInstancesDataKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryInstancesDataKHR.html) · Builder of [`AccelerationStructureGeometryInstancesDataKHR`](struct.AccelerationStructureGeometryInstancesDataKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureGeometryInstancesDataKHRBuilder<'a>(
     AccelerationStructureGeometryInstancesDataKHR,
@@ -2147,7 +2147,7 @@ impl Default for AccelerationStructureBuildOffsetInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureBuildOffsetInfoKHR`](struct.AccelerationStructureBuildOffsetInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildOffsetInfoKHR.html) · Builder of [`AccelerationStructureBuildOffsetInfoKHR`](struct.AccelerationStructureBuildOffsetInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureBuildOffsetInfoKHRBuilder<'a>(
     AccelerationStructureBuildOffsetInfoKHR,
@@ -2243,7 +2243,7 @@ impl Default for CopyAccelerationStructureInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CopyAccelerationStructureInfoKHR`](struct.CopyAccelerationStructureInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureInfoKHR.html) · Builder of [`CopyAccelerationStructureInfoKHR`](struct.CopyAccelerationStructureInfoKHR.html)"]
 #[repr(transparent)]
 pub struct CopyAccelerationStructureInfoKHRBuilder<'a>(
     CopyAccelerationStructureInfoKHR,
@@ -2369,7 +2369,7 @@ impl Default for CopyAccelerationStructureToMemoryInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CopyAccelerationStructureToMemoryInfoKHR`](struct.CopyAccelerationStructureToMemoryInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureToMemoryInfoKHR.html) · Builder of [`CopyAccelerationStructureToMemoryInfoKHR`](struct.CopyAccelerationStructureToMemoryInfoKHR.html)"]
 #[repr(transparent)]
 pub struct CopyAccelerationStructureToMemoryInfoKHRBuilder<'a>(
     CopyAccelerationStructureToMemoryInfoKHR,
@@ -2468,7 +2468,7 @@ impl Default for CopyMemoryToAccelerationStructureInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CopyMemoryToAccelerationStructureInfoKHR`](struct.CopyMemoryToAccelerationStructureInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyMemoryToAccelerationStructureInfoKHR.html) · Builder of [`CopyMemoryToAccelerationStructureInfoKHR`](struct.CopyMemoryToAccelerationStructureInfoKHR.html)"]
 #[repr(transparent)]
 pub struct CopyMemoryToAccelerationStructureInfoKHRBuilder<'a>(
     CopyMemoryToAccelerationStructureInfoKHR,
@@ -2567,7 +2567,7 @@ impl Default for StridedBufferRegionKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`StridedBufferRegionKHR`](struct.StridedBufferRegionKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedBufferRegionKHR.html) · Builder of [`StridedBufferRegionKHR`](struct.StridedBufferRegionKHR.html)"]
 #[repr(transparent)]
 pub struct StridedBufferRegionKHRBuilder<'a>(
     StridedBufferRegionKHR,
@@ -2688,7 +2688,7 @@ impl Default for RayTracingPipelineCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RayTracingPipelineCreateInfoKHR`](struct.RayTracingPipelineCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Builder of [`RayTracingPipelineCreateInfoKHR`](struct.RayTracingPipelineCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct RayTracingPipelineCreateInfoKHRBuilder<'a>(
     RayTracingPipelineCreateInfoKHR,
@@ -2840,7 +2840,7 @@ impl Default for RayTracingShaderGroupCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RayTracingShaderGroupCreateInfoKHR`](struct.RayTracingShaderGroupCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Builder of [`RayTracingShaderGroupCreateInfoKHR`](struct.RayTracingShaderGroupCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupCreateInfoKHRBuilder<'a>(
     RayTracingShaderGroupCreateInfoKHR,
@@ -2980,7 +2980,7 @@ impl Default for RayTracingPipelineInterfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RayTracingPipelineInterfaceCreateInfoKHR`](struct.RayTracingPipelineInterfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Builder of [`RayTracingPipelineInterfaceCreateInfoKHR`](struct.RayTracingPipelineInterfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct RayTracingPipelineInterfaceCreateInfoKHRBuilder<'a>(
     RayTracingPipelineInterfaceCreateInfoKHR,
@@ -3067,7 +3067,7 @@ impl Default for AccelerationStructureDeviceAddressInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureDeviceAddressInfoKHR`](struct.AccelerationStructureDeviceAddressInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureDeviceAddressInfoKHR.html) · Builder of [`AccelerationStructureDeviceAddressInfoKHR`](struct.AccelerationStructureDeviceAddressInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureDeviceAddressInfoKHRBuilder<'a>(
     AccelerationStructureDeviceAddressInfoKHR,
@@ -3145,7 +3145,7 @@ impl Default for AccelerationStructureVersionKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureVersionKHR`](struct.AccelerationStructureVersionKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureVersionKHR.html) · Builder of [`AccelerationStructureVersionKHR`](struct.AccelerationStructureVersionKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureVersionKHRBuilder<'a>(
     AccelerationStructureVersionKHR,
@@ -3226,7 +3226,7 @@ impl Default for AabbPositionsKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AabbPositionsKHR`](struct.AabbPositionsKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsKHR.html) · Builder of [`AabbPositionsKHR`](struct.AabbPositionsKHR.html)"]
 #[repr(transparent)]
 pub struct AabbPositionsKHRBuilder<'a>(AabbPositionsKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AabbPositionsKHRBuilder<'a> {
@@ -3319,7 +3319,7 @@ impl Default for TransformMatrixKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`TransformMatrixKHR`](struct.TransformMatrixKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixKHR.html) · Builder of [`TransformMatrixKHR`](struct.TransformMatrixKHR.html)"]
 #[repr(transparent)]
 pub struct TransformMatrixKHRBuilder<'a>(TransformMatrixKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> TransformMatrixKHRBuilder<'a> {
@@ -3403,7 +3403,7 @@ impl Default for AccelerationStructureInstanceKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AccelerationStructureInstanceKHR`](struct.AccelerationStructureInstanceKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceKHR.html) · Builder of [`AccelerationStructureInstanceKHR`](struct.AccelerationStructureInstanceKHR.html)"]
 #[repr(transparent)]
 pub struct AccelerationStructureInstanceKHRBuilder<'a>(
     AccelerationStructureInstanceKHR,
@@ -3576,7 +3576,7 @@ impl crate::ExtendableBy<WriteDescriptorSetAccelerationStructureKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`WriteDescriptorSetAccelerationStructureKHR`](struct.WriteDescriptorSetAccelerationStructureKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Builder of [`WriteDescriptorSetAccelerationStructureKHR`](struct.WriteDescriptorSetAccelerationStructureKHR.html)"]
 #[repr(transparent)]
 pub struct WriteDescriptorSetAccelerationStructureKHRBuilder<'a>(
     WriteDescriptorSetAccelerationStructureKHR,
@@ -3715,7 +3715,7 @@ impl crate::ExtendableBy<PhysicalDeviceRayTracingFeaturesKHR>
 }
 impl crate::ExtendableBy<PhysicalDeviceRayTracingFeaturesKHR> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceRayTracingFeaturesKHR`](struct.PhysicalDeviceRayTracingFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingFeaturesKHR.html) · Builder of [`PhysicalDeviceRayTracingFeaturesKHR`](struct.PhysicalDeviceRayTracingFeaturesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingFeaturesKHRBuilder<'a>(
     PhysicalDeviceRayTracingFeaturesKHR,
@@ -3905,7 +3905,7 @@ impl crate::ExtendableBy<PhysicalDeviceRayTracingPropertiesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceRayTracingPropertiesKHR`](struct.PhysicalDeviceRayTracingPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesKHR.html) · Builder of [`PhysicalDeviceRayTracingPropertiesKHR`](struct.PhysicalDeviceRayTracingPropertiesKHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingPropertiesKHRBuilder<'a>(
     PhysicalDeviceRayTracingPropertiesKHR,
@@ -4032,7 +4032,7 @@ impl Default for TraceRaysIndirectCommandKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`TraceRaysIndirectCommandKHR`](struct.TraceRaysIndirectCommandKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Builder of [`TraceRaysIndirectCommandKHR`](struct.TraceRaysIndirectCommandKHR.html)"]
 #[repr(transparent)]
 pub struct TraceRaysIndirectCommandKHRBuilder<'a>(
     TraceRaysIndirectCommandKHR,

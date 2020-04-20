@@ -70,7 +70,7 @@ impl crate::ExtendableBy<PhysicalDeviceFragmentShaderInterlockFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceFragmentShaderInterlockFeaturesEXT`](struct.PhysicalDeviceFragmentShaderInterlockFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentShaderInterlockFeaturesEXT`](struct.PhysicalDeviceFragmentShaderInterlockFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a>(
     PhysicalDeviceFragmentShaderInterlockFeaturesEXT,

@@ -98,7 +98,7 @@ impl Default for MemoryHostPointerPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryHostPointerPropertiesEXT`](struct.MemoryHostPointerPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`](struct.MemoryHostPointerPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct MemoryHostPointerPropertiesEXTBuilder<'a>(
     MemoryHostPointerPropertiesEXT,
@@ -184,7 +184,7 @@ impl Default for ImportMemoryHostPointerInfoEXT {
 }
 impl crate::ExtendableBy<ImportMemoryHostPointerInfoEXT> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportMemoryHostPointerInfoEXT`](struct.ImportMemoryHostPointerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`](struct.ImportMemoryHostPointerInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ImportMemoryHostPointerInfoEXTBuilder<'a>(
     ImportMemoryHostPointerInfoEXT,
@@ -283,7 +283,7 @@ impl crate::ExtendableBy<PhysicalDeviceExternalMemoryHostPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`](struct.PhysicalDeviceExternalMemoryHostPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`](struct.PhysicalDeviceExternalMemoryHostPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a>(
     PhysicalDeviceExternalMemoryHostPropertiesEXT,

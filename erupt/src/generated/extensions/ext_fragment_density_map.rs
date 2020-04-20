@@ -66,7 +66,7 @@ impl crate::ExtendableBy<PhysicalDeviceFragmentDensityMapFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`](struct.PhysicalDeviceFragmentDensityMapFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`](struct.PhysicalDeviceFragmentDensityMapFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMapFeaturesEXT,
@@ -187,7 +187,7 @@ impl crate::ExtendableBy<PhysicalDeviceFragmentDensityMapPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceFragmentDensityMapPropertiesEXT`](struct.PhysicalDeviceFragmentDensityMapPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapPropertiesEXT`](struct.PhysicalDeviceFragmentDensityMapPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMapPropertiesEXT,
@@ -301,7 +301,7 @@ impl crate::ExtendableBy<RenderPassFragmentDensityMapCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`](struct.RenderPassFragmentDensityMapCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`](struct.RenderPassFragmentDensityMapCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a>(
     RenderPassFragmentDensityMapCreateInfoEXT,

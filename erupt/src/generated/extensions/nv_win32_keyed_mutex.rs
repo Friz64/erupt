@@ -68,7 +68,7 @@ impl Default for Win32KeyedMutexAcquireReleaseInfoNV {
 }
 impl crate::ExtendableBy<Win32KeyedMutexAcquireReleaseInfoNV> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Win32KeyedMutexAcquireReleaseInfoNV`](struct.Win32KeyedMutexAcquireReleaseInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoNV`](struct.Win32KeyedMutexAcquireReleaseInfoNV.html)"]
 #[repr(transparent)]
 pub struct Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a>(
     Win32KeyedMutexAcquireReleaseInfoNV,

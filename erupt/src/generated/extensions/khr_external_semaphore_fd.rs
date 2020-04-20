@@ -119,7 +119,7 @@ impl Default for ImportSemaphoreFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportSemaphoreFdInfoKHR`](struct.ImportSemaphoreFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Builder of [`ImportSemaphoreFdInfoKHR`](struct.ImportSemaphoreFdInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImportSemaphoreFdInfoKHRBuilder<'a>(
     ImportSemaphoreFdInfoKHR,
@@ -215,7 +215,7 @@ impl Default for SemaphoreGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SemaphoreGetFdInfoKHR`](struct.SemaphoreGetFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Builder of [`SemaphoreGetFdInfoKHR`](struct.SemaphoreGetFdInfoKHR.html)"]
 #[repr(transparent)]
 pub struct SemaphoreGetFdInfoKHRBuilder<'a>(
     SemaphoreGetFdInfoKHR,

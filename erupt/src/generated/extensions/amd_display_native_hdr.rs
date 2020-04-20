@@ -97,7 +97,7 @@ impl crate::ExtendableBy<DisplayNativeHdrSurfaceCapabilitiesAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`](struct.DisplayNativeHdrSurfaceCapabilitiesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`](struct.DisplayNativeHdrSurfaceCapabilitiesAMD.html)"]
 #[repr(transparent)]
 pub struct DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a>(
     DisplayNativeHdrSurfaceCapabilitiesAMD,
@@ -183,7 +183,7 @@ impl crate::ExtendableBy<SwapchainDisplayNativeHdrCreateInfoAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`](struct.SwapchainDisplayNativeHdrCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`](struct.SwapchainDisplayNativeHdrCreateInfoAMD.html)"]
 #[repr(transparent)]
 pub struct SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a>(
     SwapchainDisplayNativeHdrCreateInfoAMD,

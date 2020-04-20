@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceCornerSampledImageFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`](struct.PhysicalDeviceCornerSampledImageFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`](struct.PhysicalDeviceCornerSampledImageFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a>(
     PhysicalDeviceCornerSampledImageFeaturesNV,

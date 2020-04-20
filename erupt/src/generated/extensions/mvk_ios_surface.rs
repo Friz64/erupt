@@ -101,7 +101,7 @@ impl Default for IOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`IOSSurfaceCreateInfoMVK`](struct.IOSSurfaceCreateInfoMVK.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`](struct.IOSSurfaceCreateInfoMVK.html)"]
 #[repr(transparent)]
 pub struct IOSSurfaceCreateInfoMVKBuilder<'a>(
     IOSSurfaceCreateInfoMVK,

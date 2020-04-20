@@ -126,7 +126,7 @@ impl crate::ExtendableBy<PhysicalDeviceLineRasterizationFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`](struct.PhysicalDeviceLineRasterizationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`](struct.PhysicalDeviceLineRasterizationFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationFeaturesEXT,
@@ -248,7 +248,7 @@ impl crate::ExtendableBy<PhysicalDeviceLineRasterizationPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`](struct.PhysicalDeviceLineRasterizationPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`](struct.PhysicalDeviceLineRasterizationPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationPropertiesEXT,
@@ -347,7 +347,7 @@ impl crate::ExtendableBy<PipelineRasterizationLineStateCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRasterizationLineStateCreateInfoEXT`](struct.PipelineRasterizationLineStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`](struct.PipelineRasterizationLineStateCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineRasterizationLineStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationLineStateCreateInfoEXT,

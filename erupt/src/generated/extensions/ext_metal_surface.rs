@@ -101,7 +101,7 @@ impl Default for MetalSurfaceCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MetalSurfaceCreateInfoEXT`](struct.MetalSurfaceCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Builder of [`MetalSurfaceCreateInfoEXT`](struct.MetalSurfaceCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct MetalSurfaceCreateInfoEXTBuilder<'a>(
     MetalSurfaceCreateInfoEXT,

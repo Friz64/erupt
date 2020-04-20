@@ -70,7 +70,7 @@ impl Default for ValidationFeaturesEXT {
 }
 impl crate::ExtendableBy<ValidationFeaturesEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ValidationFeaturesEXT`](struct.ValidationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`](struct.ValidationFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct ValidationFeaturesEXTBuilder<'a>(
     ValidationFeaturesEXT,

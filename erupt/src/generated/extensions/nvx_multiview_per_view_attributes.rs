@@ -49,7 +49,7 @@ impl crate::ExtendableBy<PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX`](struct.PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Builder of [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX`](struct.PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a>(
     PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX,

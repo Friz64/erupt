@@ -234,7 +234,7 @@ impl Default for DisplayProperties2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayProperties2KHR`](struct.DisplayProperties2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayProperties2KHR.html) · Builder of [`DisplayProperties2KHR`](struct.DisplayProperties2KHR.html)"]
 #[repr(transparent)]
 pub struct DisplayProperties2KHRBuilder<'a>(
     DisplayProperties2KHR,
@@ -309,7 +309,7 @@ impl Default for DisplayPlaneProperties2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayPlaneProperties2KHR`](struct.DisplayPlaneProperties2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneProperties2KHR.html) · Builder of [`DisplayPlaneProperties2KHR`](struct.DisplayPlaneProperties2KHR.html)"]
 #[repr(transparent)]
 pub struct DisplayPlaneProperties2KHRBuilder<'a>(
     DisplayPlaneProperties2KHR,
@@ -384,7 +384,7 @@ impl Default for DisplayModeProperties2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayModeProperties2KHR`](struct.DisplayModeProperties2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeProperties2KHR.html) · Builder of [`DisplayModeProperties2KHR`](struct.DisplayModeProperties2KHR.html)"]
 #[repr(transparent)]
 pub struct DisplayModeProperties2KHRBuilder<'a>(
     DisplayModeProperties2KHR,
@@ -462,7 +462,7 @@ impl Default for DisplayPlaneInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayPlaneInfo2KHR`](struct.DisplayPlaneInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneInfo2KHR.html) · Builder of [`DisplayPlaneInfo2KHR`](struct.DisplayPlaneInfo2KHR.html)"]
 #[repr(transparent)]
 pub struct DisplayPlaneInfo2KHRBuilder<'a>(DisplayPlaneInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayPlaneInfo2KHRBuilder<'a> {
@@ -537,7 +537,7 @@ impl Default for DisplayPlaneCapabilities2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayPlaneCapabilities2KHR`](struct.DisplayPlaneCapabilities2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilities2KHR.html) · Builder of [`DisplayPlaneCapabilities2KHR`](struct.DisplayPlaneCapabilities2KHR.html)"]
 #[repr(transparent)]
 pub struct DisplayPlaneCapabilities2KHRBuilder<'a>(
     DisplayPlaneCapabilities2KHR,

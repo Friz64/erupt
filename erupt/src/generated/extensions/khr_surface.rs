@@ -282,7 +282,7 @@ impl Default for SurfaceCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceCapabilitiesKHR`](struct.SurfaceCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`](struct.SurfaceCapabilitiesKHR.html)"]
 #[repr(transparent)]
 pub struct SurfaceCapabilitiesKHRBuilder<'a>(
     SurfaceCapabilitiesKHR,
@@ -487,7 +487,7 @@ impl Default for SurfaceFormatKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceFormatKHR`](struct.SurfaceFormatKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`](struct.SurfaceFormatKHR.html)"]
 #[repr(transparent)]
 pub struct SurfaceFormatKHRBuilder<'a>(SurfaceFormatKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFormatKHRBuilder<'a> {

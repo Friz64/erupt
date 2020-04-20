@@ -154,7 +154,7 @@ impl Default for ExternalImageFormatPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExternalImageFormatPropertiesNV`](struct.ExternalImageFormatPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Builder of [`ExternalImageFormatPropertiesNV`](struct.ExternalImageFormatPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct ExternalImageFormatPropertiesNVBuilder<'a>(
     ExternalImageFormatPropertiesNV,

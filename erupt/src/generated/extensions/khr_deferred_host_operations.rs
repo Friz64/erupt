@@ -260,7 +260,7 @@ impl crate::ExtendableBy<DeferredOperationInfoKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeferredOperationInfoKHR`](struct.DeferredOperationInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationInfoKHR.html) · Builder of [`DeferredOperationInfoKHR`](struct.DeferredOperationInfoKHR.html)"]
 #[repr(transparent)]
 pub struct DeferredOperationInfoKHRBuilder<'a>(
     DeferredOperationInfoKHR,

@@ -50,7 +50,7 @@ impl crate::ExtendableBy<SurfaceProtectedCapabilitiesKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceProtectedCapabilitiesKHR`](struct.SurfaceProtectedCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Builder of [`SurfaceProtectedCapabilitiesKHR`](struct.SurfaceProtectedCapabilitiesKHR.html)"]
 #[repr(transparent)]
 pub struct SurfaceProtectedCapabilitiesKHRBuilder<'a>(
     SurfaceProtectedCapabilitiesKHR,

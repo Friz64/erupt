@@ -344,7 +344,7 @@ impl crate::ExtendableBy<PhysicalDeviceTransformFeedbackFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`](struct.PhysicalDeviceTransformFeedbackFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`](struct.PhysicalDeviceTransformFeedbackFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackFeaturesEXT,
@@ -496,7 +496,7 @@ impl crate::ExtendableBy<PhysicalDeviceTransformFeedbackPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`](struct.PhysicalDeviceTransformFeedbackPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`](struct.PhysicalDeviceTransformFeedbackPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackPropertiesEXT,
@@ -665,7 +665,7 @@ impl crate::ExtendableBy<PipelineRasterizationStateStreamCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`](struct.PipelineRasterizationStateStreamCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`](struct.PipelineRasterizationStateStreamCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a>(
     PipelineRasterizationStateStreamCreateInfoEXT,

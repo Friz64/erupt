@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceMemoryPriorityFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`](struct.PhysicalDeviceMemoryPriorityFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`](struct.PhysicalDeviceMemoryPriorityFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a>(
     PhysicalDeviceMemoryPriorityFeaturesEXT,
@@ -137,7 +137,7 @@ impl Default for MemoryPriorityAllocateInfoEXT {
 }
 impl crate::ExtendableBy<MemoryPriorityAllocateInfoEXT> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryPriorityAllocateInfoEXT`](struct.MemoryPriorityAllocateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Builder of [`MemoryPriorityAllocateInfoEXT`](struct.MemoryPriorityAllocateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct MemoryPriorityAllocateInfoEXTBuilder<'a>(
     MemoryPriorityAllocateInfoEXT,

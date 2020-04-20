@@ -323,7 +323,7 @@ impl Default for InitializePerformanceApiInfoINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`InitializePerformanceApiInfoINTEL`](struct.InitializePerformanceApiInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInitializePerformanceApiInfoINTEL.html) · Builder of [`InitializePerformanceApiInfoINTEL`](struct.InitializePerformanceApiInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct InitializePerformanceApiInfoINTELBuilder<'a>(
     InitializePerformanceApiInfoINTEL,
@@ -395,7 +395,7 @@ impl Default for PerformanceMarkerInfoINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceMarkerInfoINTEL`](struct.PerformanceMarkerInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceMarkerInfoINTEL.html) · Builder of [`PerformanceMarkerInfoINTEL`](struct.PerformanceMarkerInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct PerformanceMarkerInfoINTELBuilder<'a>(
     PerformanceMarkerInfoINTEL,
@@ -467,7 +467,7 @@ impl Default for PerformanceStreamMarkerInfoINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceStreamMarkerInfoINTEL`](struct.PerformanceStreamMarkerInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceStreamMarkerInfoINTEL.html) · Builder of [`PerformanceStreamMarkerInfoINTEL`](struct.PerformanceStreamMarkerInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct PerformanceStreamMarkerInfoINTELBuilder<'a>(
     PerformanceStreamMarkerInfoINTEL,
@@ -545,7 +545,7 @@ impl Default for PerformanceOverrideInfoINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceOverrideInfoINTEL`](struct.PerformanceOverrideInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideInfoINTEL.html) · Builder of [`PerformanceOverrideInfoINTEL`](struct.PerformanceOverrideInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct PerformanceOverrideInfoINTELBuilder<'a>(
     PerformanceOverrideInfoINTEL,
@@ -650,7 +650,7 @@ impl Default for PerformanceConfigurationAcquireInfoINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceConfigurationAcquireInfoINTEL`](struct.PerformanceConfigurationAcquireInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationAcquireInfoINTEL.html) · Builder of [`PerformanceConfigurationAcquireInfoINTEL`](struct.PerformanceConfigurationAcquireInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct PerformanceConfigurationAcquireInfoINTELBuilder<'a>(
     PerformanceConfigurationAcquireInfoINTEL,
@@ -762,7 +762,7 @@ impl Default for PerformanceValueINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PerformanceValueINTEL`](struct.PerformanceValueINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueINTEL.html) · Builder of [`PerformanceValueINTEL`](struct.PerformanceValueINTEL.html)"]
 #[repr(transparent)]
 pub struct PerformanceValueINTELBuilder<'a>(
     PerformanceValueINTEL,
@@ -927,7 +927,7 @@ impl crate::ExtendableBy<QueryPoolPerformanceQueryCreateInfoINTEL>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`QueryPoolPerformanceQueryCreateInfoINTEL`](struct.QueryPoolPerformanceQueryCreateInfoINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceQueryCreateInfoINTEL.html) · Builder of [`QueryPoolPerformanceQueryCreateInfoINTEL`](struct.QueryPoolPerformanceQueryCreateInfoINTEL.html)"]
 #[repr(transparent)]
 pub struct QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a>(
     QueryPoolPerformanceQueryCreateInfoINTEL,

@@ -47,7 +47,7 @@ impl Default for DedicatedAllocationImageCreateInfoNV {
 }
 impl crate::ExtendableBy<DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DedicatedAllocationImageCreateInfoNV`](struct.DedicatedAllocationImageCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`](struct.DedicatedAllocationImageCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a>(
     DedicatedAllocationImageCreateInfoNV,
@@ -130,7 +130,7 @@ impl Default for DedicatedAllocationBufferCreateInfoNV {
 }
 impl crate::ExtendableBy<DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DedicatedAllocationBufferCreateInfoNV`](struct.DedicatedAllocationBufferCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`](struct.DedicatedAllocationBufferCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a>(
     DedicatedAllocationBufferCreateInfoNV,
@@ -219,7 +219,7 @@ impl crate::ExtendableBy<DedicatedAllocationMemoryAllocateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DedicatedAllocationMemoryAllocateInfoNV`](struct.DedicatedAllocationMemoryAllocateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`](struct.DedicatedAllocationMemoryAllocateInfoNV.html)"]
 #[repr(transparent)]
 pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a>(
     DedicatedAllocationMemoryAllocateInfoNV,

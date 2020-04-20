@@ -53,7 +53,7 @@ impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsPropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`](struct.PhysicalDeviceShaderSMBuiltinsPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`](struct.PhysicalDeviceShaderSMBuiltinsPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a>(
     PhysicalDeviceShaderSMBuiltinsPropertiesNV,
@@ -152,7 +152,7 @@ impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`](struct.PhysicalDeviceShaderSMBuiltinsFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`](struct.PhysicalDeviceShaderSMBuiltinsFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a>(
     PhysicalDeviceShaderSMBuiltinsFeaturesNV,

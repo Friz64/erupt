@@ -638,10 +638,14 @@ pub fn generate(
                     })
                     .collect();
                 let builder_name = format_ident!("{}Builder", name_ident);
-                let builder_doc = format!(
-                    "Builder of [`{name}`](struct.{name}.html)",
-                    name = trimmed_name
+                let builder_doc = utils::doc(
+                    &format!(
+                        "Builder of [`{name}`](struct.{name}.html)",
+                        name = trimmed_name
+                    ),
+                    Some(&man_doc),
                 );
+
                 let builder_functions: Vec<_> = fields
                     .iter()
                     .filter(|((_, name, field_type, _, _), _, _)| {

@@ -174,7 +174,7 @@ impl Default for CalibratedTimestampInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CalibratedTimestampInfoEXT`](struct.CalibratedTimestampInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCalibratedTimestampInfoEXT.html) · Builder of [`CalibratedTimestampInfoEXT`](struct.CalibratedTimestampInfoEXT.html)"]
 #[repr(transparent)]
 pub struct CalibratedTimestampInfoEXTBuilder<'a>(
     CalibratedTimestampInfoEXT,

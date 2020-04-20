@@ -69,7 +69,7 @@ impl crate::ExtendableBy<PipelineRasterizationStateRasterizationOrderAMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRasterizationStateRasterizationOrderAMD`](struct.PipelineRasterizationStateRasterizationOrderAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Builder of [`PipelineRasterizationStateRasterizationOrderAMD`](struct.PipelineRasterizationStateRasterizationOrderAMD.html)"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateRasterizationOrderAMDBuilder<'a>(
     PipelineRasterizationStateRasterizationOrderAMD,

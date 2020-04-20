@@ -5367,7 +5367,7 @@ impl Default for InstanceCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`InstanceCreateInfo`](struct.InstanceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html) · Builder of [`InstanceCreateInfo`](struct.InstanceCreateInfo.html)"]
 #[repr(transparent)]
 pub struct InstanceCreateInfoBuilder<'a>(InstanceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> InstanceCreateInfoBuilder<'a> {
@@ -7405,7 +7405,7 @@ impl Default for ApplicationInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ApplicationInfo`](struct.ApplicationInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkApplicationInfo.html) · Builder of [`ApplicationInfo`](struct.ApplicationInfo.html)"]
 #[repr(transparent)]
 pub struct ApplicationInfoBuilder<'a>(ApplicationInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ApplicationInfoBuilder<'a> {
@@ -7517,7 +7517,7 @@ impl Default for AllocationCallbacks {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AllocationCallbacks`](struct.AllocationCallbacks.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAllocationCallbacks.html) · Builder of [`AllocationCallbacks`](struct.AllocationCallbacks.html)"]
 #[repr(transparent)]
 pub struct AllocationCallbacksBuilder<'a>(AllocationCallbacks, std::marker::PhantomData<&'a ()>);
 impl<'a> AllocationCallbacksBuilder<'a> {
@@ -8112,7 +8112,7 @@ impl Default for PhysicalDeviceFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceFeatures`](struct.PhysicalDeviceFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures.html) · Builder of [`PhysicalDeviceFeatures`](struct.PhysicalDeviceFeatures.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFeaturesBuilder<'a>(
     PhysicalDeviceFeatures,
@@ -9133,7 +9133,7 @@ impl Default for FormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`FormatProperties`](struct.FormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties.html) · Builder of [`FormatProperties`](struct.FormatProperties.html)"]
 #[repr(transparent)]
 pub struct FormatPropertiesBuilder<'a>(FormatProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> FormatPropertiesBuilder<'a> {
@@ -9531,7 +9531,7 @@ impl Default for ImageFormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageFormatProperties`](struct.ImageFormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties.html) · Builder of [`ImageFormatProperties`](struct.ImageFormatProperties.html)"]
 #[repr(transparent)]
 pub struct ImageFormatPropertiesBuilder<'a>(
     ImageFormatProperties,
@@ -9627,7 +9627,7 @@ impl Default for Extent3D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Extent3D`](struct.Extent3D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent3D.html) · Builder of [`Extent3D`](struct.Extent3D.html)"]
 #[repr(transparent)]
 pub struct Extent3DBuilder<'a>(Extent3D, std::marker::PhantomData<&'a ()>);
 impl<'a> Extent3DBuilder<'a> {
@@ -9766,7 +9766,7 @@ impl Default for PhysicalDeviceProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceProperties`](struct.PhysicalDeviceProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties.html) · Builder of [`PhysicalDeviceProperties`](struct.PhysicalDeviceProperties.html)"]
 #[repr(transparent)]
 pub struct PhysicalDevicePropertiesBuilder<'a>(
     PhysicalDeviceProperties,
@@ -10408,7 +10408,7 @@ impl Default for PhysicalDeviceLimits {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceLimits`](struct.PhysicalDeviceLimits.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLimits.html) · Builder of [`PhysicalDeviceLimits`](struct.PhysicalDeviceLimits.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLimitsBuilder<'a>(PhysicalDeviceLimits, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceLimitsBuilder<'a> {
@@ -11269,7 +11269,7 @@ impl Default for PhysicalDeviceSparseProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceSparseProperties`](struct.PhysicalDeviceSparseProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseProperties.html) · Builder of [`PhysicalDeviceSparseProperties`](struct.PhysicalDeviceSparseProperties.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSparsePropertiesBuilder<'a>(
     PhysicalDeviceSparseProperties,
@@ -11381,7 +11381,7 @@ impl Default for QueueFamilyProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`QueueFamilyProperties`](struct.QueueFamilyProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties.html) · Builder of [`QueueFamilyProperties`](struct.QueueFamilyProperties.html)"]
 #[repr(transparent)]
 pub struct QueueFamilyPropertiesBuilder<'a>(
     QueueFamilyProperties,
@@ -11512,7 +11512,7 @@ impl Default for PhysicalDeviceMemoryProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMemoryProperties`](struct.PhysicalDeviceMemoryProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties.html) · Builder of [`PhysicalDeviceMemoryProperties`](struct.PhysicalDeviceMemoryProperties.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryPropertiesBuilder<'a>(
     PhysicalDeviceMemoryProperties,
@@ -11605,7 +11605,7 @@ impl Default for MemoryType {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryType`](struct.MemoryType.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryType.html) · Builder of [`MemoryType`](struct.MemoryType.html)"]
 #[repr(transparent)]
 pub struct MemoryTypeBuilder<'a>(MemoryType, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryTypeBuilder<'a> {
@@ -11721,7 +11721,7 @@ impl Default for MemoryHeap {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryHeap`](struct.MemoryHeap.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeap.html) · Builder of [`MemoryHeap`](struct.MemoryHeap.html)"]
 #[repr(transparent)]
 pub struct MemoryHeapBuilder<'a>(MemoryHeap, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryHeapBuilder<'a> {
@@ -11857,7 +11857,7 @@ impl Default for DeviceCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
 #[repr(transparent)]
 pub struct DeviceCreateInfoBuilder<'a>(DeviceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceCreateInfoBuilder<'a> {
@@ -11993,7 +11993,7 @@ impl Default for DeviceQueueCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceQueueCreateInfo`](struct.DeviceQueueCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateInfo.html) · Builder of [`DeviceQueueCreateInfo`](struct.DeviceQueueCreateInfo.html)"]
 #[repr(transparent)]
 pub struct DeviceQueueCreateInfoBuilder<'a>(
     DeviceQueueCreateInfo,
@@ -12103,7 +12103,7 @@ impl Default for ExtensionProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExtensionProperties`](struct.ExtensionProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtensionProperties.html) · Builder of [`ExtensionProperties`](struct.ExtensionProperties.html)"]
 #[repr(transparent)]
 pub struct ExtensionPropertiesBuilder<'a>(ExtensionProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExtensionPropertiesBuilder<'a> {
@@ -12188,7 +12188,7 @@ impl Default for LayerProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`LayerProperties`](struct.LayerProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLayerProperties.html) · Builder of [`LayerProperties`](struct.LayerProperties.html)"]
 #[repr(transparent)]
 pub struct LayerPropertiesBuilder<'a>(LayerProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> LayerPropertiesBuilder<'a> {
@@ -12300,7 +12300,7 @@ impl Default for SubmitInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SubmitInfo`](struct.SubmitInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo.html) · Builder of [`SubmitInfo`](struct.SubmitInfo.html)"]
 #[repr(transparent)]
 pub struct SubmitInfoBuilder<'a>(SubmitInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SubmitInfoBuilder<'a> {
@@ -12500,7 +12500,7 @@ impl Default for MemoryAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryAllocateInfo`](struct.MemoryAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateInfo.html) · Builder of [`MemoryAllocateInfo`](struct.MemoryAllocateInfo.html)"]
 #[repr(transparent)]
 pub struct MemoryAllocateInfoBuilder<'a>(MemoryAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryAllocateInfoBuilder<'a> {
@@ -12601,7 +12601,7 @@ impl Default for MappedMemoryRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MappedMemoryRange`](struct.MappedMemoryRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMappedMemoryRange.html) · Builder of [`MappedMemoryRange`](struct.MappedMemoryRange.html)"]
 #[repr(transparent)]
 pub struct MappedMemoryRangeBuilder<'a>(MappedMemoryRange, std::marker::PhantomData<&'a ()>);
 impl<'a> MappedMemoryRangeBuilder<'a> {
@@ -12684,7 +12684,7 @@ impl Default for MemoryRequirements {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryRequirements`](struct.MemoryRequirements.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements.html) · Builder of [`MemoryRequirements`](struct.MemoryRequirements.html)"]
 #[repr(transparent)]
 pub struct MemoryRequirementsBuilder<'a>(MemoryRequirements, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryRequirementsBuilder<'a> {
@@ -12771,7 +12771,7 @@ impl Default for SparseImageMemoryRequirements {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseImageMemoryRequirements`](struct.SparseImageMemoryRequirements.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements.html) · Builder of [`SparseImageMemoryRequirements`](struct.SparseImageMemoryRequirements.html)"]
 #[repr(transparent)]
 pub struct SparseImageMemoryRequirementsBuilder<'a>(
     SparseImageMemoryRequirements,
@@ -12876,7 +12876,7 @@ impl Default for SparseImageFormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseImageFormatProperties`](struct.SparseImageFormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties.html) · Builder of [`SparseImageFormatProperties`](struct.SparseImageFormatProperties.html)"]
 #[repr(transparent)]
 pub struct SparseImageFormatPropertiesBuilder<'a>(
     SparseImageFormatProperties,
@@ -13071,7 +13071,7 @@ impl Default for BindSparseInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BindSparseInfo`](struct.BindSparseInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindSparseInfo.html) · Builder of [`BindSparseInfo`](struct.BindSparseInfo.html)"]
 #[repr(transparent)]
 pub struct BindSparseInfoBuilder<'a>(BindSparseInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BindSparseInfoBuilder<'a> {
@@ -13178,7 +13178,7 @@ impl Default for SparseBufferMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseBufferMemoryBindInfo`](struct.SparseBufferMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseBufferMemoryBindInfo.html) · Builder of [`SparseBufferMemoryBindInfo`](struct.SparseBufferMemoryBindInfo.html)"]
 #[repr(transparent)]
 pub struct SparseBufferMemoryBindInfoBuilder<'a>(
     SparseBufferMemoryBindInfo,
@@ -13263,7 +13263,7 @@ impl Default for SparseMemoryBind {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseMemoryBind`](struct.SparseMemoryBind.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBind.html) · Builder of [`SparseMemoryBind`](struct.SparseMemoryBind.html)"]
 #[repr(transparent)]
 pub struct SparseMemoryBindBuilder<'a>(SparseMemoryBind, std::marker::PhantomData<&'a ()>);
 impl<'a> SparseMemoryBindBuilder<'a> {
@@ -13380,7 +13380,7 @@ impl Default for SparseImageOpaqueMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseImageOpaqueMemoryBindInfo`](struct.SparseImageOpaqueMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageOpaqueMemoryBindInfo.html) · Builder of [`SparseImageOpaqueMemoryBindInfo`](struct.SparseImageOpaqueMemoryBindInfo.html)"]
 #[repr(transparent)]
 pub struct SparseImageOpaqueMemoryBindInfoBuilder<'a>(
     SparseImageOpaqueMemoryBindInfo,
@@ -13459,7 +13459,7 @@ impl Default for SparseImageMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseImageMemoryBindInfo`](struct.SparseImageMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBindInfo.html) · Builder of [`SparseImageMemoryBindInfo`](struct.SparseImageMemoryBindInfo.html)"]
 #[repr(transparent)]
 pub struct SparseImageMemoryBindInfoBuilder<'a>(
     SparseImageMemoryBindInfo,
@@ -13547,7 +13547,7 @@ impl Default for SparseImageMemoryBind {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SparseImageMemoryBind`](struct.SparseImageMemoryBind.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBind.html) · Builder of [`SparseImageMemoryBind`](struct.SparseImageMemoryBind.html)"]
 #[repr(transparent)]
 pub struct SparseImageMemoryBindBuilder<'a>(
     SparseImageMemoryBind,
@@ -13649,7 +13649,7 @@ impl Default for ImageSubresource {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageSubresource`](struct.ImageSubresource.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresource.html) · Builder of [`ImageSubresource`](struct.ImageSubresource.html)"]
 #[repr(transparent)]
 pub struct ImageSubresourceBuilder<'a>(ImageSubresource, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageSubresourceBuilder<'a> {
@@ -13730,7 +13730,7 @@ impl Default for Offset3D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Offset3D`](struct.Offset3D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset3D.html) · Builder of [`Offset3D`](struct.Offset3D.html)"]
 #[repr(transparent)]
 pub struct Offset3DBuilder<'a>(Offset3D, std::marker::PhantomData<&'a ()>);
 impl<'a> Offset3DBuilder<'a> {
@@ -13811,7 +13811,7 @@ impl Default for FenceCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`FenceCreateInfo`](struct.FenceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateInfo.html) · Builder of [`FenceCreateInfo`](struct.FenceCreateInfo.html)"]
 #[repr(transparent)]
 pub struct FenceCreateInfoBuilder<'a>(FenceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> FenceCreateInfoBuilder<'a> {
@@ -13904,7 +13904,7 @@ impl Default for SemaphoreCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SemaphoreCreateInfo`](struct.SemaphoreCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateInfo.html) · Builder of [`SemaphoreCreateInfo`](struct.SemaphoreCreateInfo.html)"]
 #[repr(transparent)]
 pub struct SemaphoreCreateInfoBuilder<'a>(SemaphoreCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreCreateInfoBuilder<'a> {
@@ -13992,7 +13992,7 @@ impl Default for EventCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`EventCreateInfo`](struct.EventCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateInfo.html) · Builder of [`EventCreateInfo`](struct.EventCreateInfo.html)"]
 #[repr(transparent)]
 pub struct EventCreateInfoBuilder<'a>(EventCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> EventCreateInfoBuilder<'a> {
@@ -14090,7 +14090,7 @@ impl Default for QueryPoolCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`QueryPoolCreateInfo`](struct.QueryPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfo.html) · Builder of [`QueryPoolCreateInfo`](struct.QueryPoolCreateInfo.html)"]
 #[repr(transparent)]
 pub struct QueryPoolCreateInfoBuilder<'a>(QueryPoolCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> QueryPoolCreateInfoBuilder<'a> {
@@ -14342,7 +14342,7 @@ impl Default for BufferCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferCreateInfo`](struct.BufferCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html) · Builder of [`BufferCreateInfo`](struct.BufferCreateInfo.html)"]
 #[repr(transparent)]
 pub struct BufferCreateInfoBuilder<'a>(BufferCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferCreateInfoBuilder<'a> {
@@ -14586,7 +14586,7 @@ impl Default for BufferViewCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferViewCreateInfo`](struct.BufferViewCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferViewCreateInfo.html) · Builder of [`BufferViewCreateInfo`](struct.BufferViewCreateInfo.html)"]
 #[repr(transparent)]
 pub struct BufferViewCreateInfoBuilder<'a>(BufferViewCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferViewCreateInfoBuilder<'a> {
@@ -14735,7 +14735,7 @@ impl Default for ImageCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageCreateInfo`](struct.ImageCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateInfo.html) · Builder of [`ImageCreateInfo`](struct.ImageCreateInfo.html)"]
 #[repr(transparent)]
 pub struct ImageCreateInfoBuilder<'a>(ImageCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageCreateInfoBuilder<'a> {
@@ -14965,7 +14965,7 @@ impl Default for SubresourceLayout {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SubresourceLayout`](struct.SubresourceLayout.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubresourceLayout.html) · Builder of [`SubresourceLayout`](struct.SubresourceLayout.html)"]
 #[repr(transparent)]
 pub struct SubresourceLayoutBuilder<'a>(SubresourceLayout, std::marker::PhantomData<&'a ()>);
 impl<'a> SubresourceLayoutBuilder<'a> {
@@ -15073,7 +15073,7 @@ impl Default for ImageViewCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageViewCreateInfo`](struct.ImageViewCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateInfo.html) · Builder of [`ImageViewCreateInfo`](struct.ImageViewCreateInfo.html)"]
 #[repr(transparent)]
 pub struct ImageViewCreateInfoBuilder<'a>(ImageViewCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageViewCreateInfoBuilder<'a> {
@@ -15232,7 +15232,7 @@ impl Default for ComponentMapping {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ComponentMapping`](struct.ComponentMapping.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentMapping.html) · Builder of [`ComponentMapping`](struct.ComponentMapping.html)"]
 #[repr(transparent)]
 pub struct ComponentMappingBuilder<'a>(ComponentMapping, std::marker::PhantomData<&'a ()>);
 impl<'a> ComponentMappingBuilder<'a> {
@@ -15353,7 +15353,7 @@ impl Default for ImageSubresourceRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageSubresourceRange`](struct.ImageSubresourceRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceRange.html) · Builder of [`ImageSubresourceRange`](struct.ImageSubresourceRange.html)"]
 #[repr(transparent)]
 pub struct ImageSubresourceRangeBuilder<'a>(
     ImageSubresourceRange,
@@ -15456,7 +15456,7 @@ impl Default for ShaderModuleCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ShaderModuleCreateInfo`](struct.ShaderModuleCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateInfo.html) · Builder of [`ShaderModuleCreateInfo`](struct.ShaderModuleCreateInfo.html)"]
 #[repr(transparent)]
 pub struct ShaderModuleCreateInfoBuilder<'a>(
     ShaderModuleCreateInfo,
@@ -15563,7 +15563,7 @@ impl Default for PipelineCacheCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCacheCreateInfo`](struct.PipelineCacheCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateInfo.html) · Builder of [`PipelineCacheCreateInfo`](struct.PipelineCacheCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineCacheCreateInfoBuilder<'a>(
     PipelineCacheCreateInfo,
@@ -15717,7 +15717,7 @@ impl Default for GraphicsPipelineCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`GraphicsPipelineCreateInfo`](struct.GraphicsPipelineCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`](struct.GraphicsPipelineCreateInfo.html)"]
 #[repr(transparent)]
 pub struct GraphicsPipelineCreateInfoBuilder<'a>(
     GraphicsPipelineCreateInfo,
@@ -16012,7 +16012,7 @@ impl Default for PipelineShaderStageCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineShaderStageCreateInfo`](struct.PipelineShaderStageCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Builder of [`PipelineShaderStageCreateInfo`](struct.PipelineShaderStageCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineShaderStageCreateInfoBuilder<'a>(
     PipelineShaderStageCreateInfo,
@@ -16211,7 +16211,7 @@ impl Default for SpecializationInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SpecializationInfo`](struct.SpecializationInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationInfo.html) · Builder of [`SpecializationInfo`](struct.SpecializationInfo.html)"]
 #[repr(transparent)]
 pub struct SpecializationInfoBuilder<'a>(SpecializationInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SpecializationInfoBuilder<'a> {
@@ -16291,7 +16291,7 @@ impl Default for SpecializationMapEntry {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SpecializationMapEntry`](struct.SpecializationMapEntry.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationMapEntry.html) · Builder of [`SpecializationMapEntry`](struct.SpecializationMapEntry.html)"]
 #[repr(transparent)]
 pub struct SpecializationMapEntryBuilder<'a>(
     SpecializationMapEntry,
@@ -16399,7 +16399,7 @@ impl Default for PipelineVertexInputStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineVertexInputStateCreateInfo`](struct.PipelineVertexInputStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateInfo.html) · Builder of [`PipelineVertexInputStateCreateInfo`](struct.PipelineVertexInputStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineVertexInputStateCreateInfoBuilder<'a>(
     PipelineVertexInputStateCreateInfo,
@@ -16510,7 +16510,7 @@ impl Default for VertexInputBindingDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`VertexInputBindingDescription`](struct.VertexInputBindingDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDescription.html) · Builder of [`VertexInputBindingDescription`](struct.VertexInputBindingDescription.html)"]
 #[repr(transparent)]
 pub struct VertexInputBindingDescriptionBuilder<'a>(
     VertexInputBindingDescription,
@@ -16615,7 +16615,7 @@ impl Default for VertexInputAttributeDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`VertexInputAttributeDescription`](struct.VertexInputAttributeDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputAttributeDescription.html) · Builder of [`VertexInputAttributeDescription`](struct.VertexInputAttributeDescription.html)"]
 #[repr(transparent)]
 pub struct VertexInputAttributeDescriptionBuilder<'a>(
     VertexInputAttributeDescription,
@@ -16714,7 +16714,7 @@ impl Default for PipelineInputAssemblyStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineInputAssemblyStateCreateInfo`](struct.PipelineInputAssemblyStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInputAssemblyStateCreateInfo.html) · Builder of [`PipelineInputAssemblyStateCreateInfo`](struct.PipelineInputAssemblyStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineInputAssemblyStateCreateInfoBuilder<'a>(
     PipelineInputAssemblyStateCreateInfo,
@@ -16856,7 +16856,7 @@ impl Default for PipelineTessellationStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineTessellationStateCreateInfo`](struct.PipelineTessellationStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateInfo.html) · Builder of [`PipelineTessellationStateCreateInfo`](struct.PipelineTessellationStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineTessellationStateCreateInfoBuilder<'a>(
     PipelineTessellationStateCreateInfo,
@@ -16965,7 +16965,7 @@ impl Default for PipelineViewportStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportStateCreateInfo`](struct.PipelineViewportStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateInfo.html) · Builder of [`PipelineViewportStateCreateInfo`](struct.PipelineViewportStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportStateCreateInfoBuilder<'a>(
     PipelineViewportStateCreateInfo,
@@ -17079,7 +17079,7 @@ impl Default for Viewport {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Viewport`](struct.Viewport.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewport.html) · Builder of [`Viewport`](struct.Viewport.html)"]
 #[repr(transparent)]
 pub struct ViewportBuilder<'a>(Viewport, std::marker::PhantomData<&'a ()>);
 impl<'a> ViewportBuilder<'a> {
@@ -17175,7 +17175,7 @@ impl Default for Rect2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Rect2D`](struct.Rect2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRect2D.html) · Builder of [`Rect2D`](struct.Rect2D.html)"]
 #[repr(transparent)]
 pub struct Rect2DBuilder<'a>(Rect2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Rect2DBuilder<'a> {
@@ -17247,7 +17247,7 @@ impl Default for Offset2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Offset2D`](struct.Offset2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset2D.html) · Builder of [`Offset2D`](struct.Offset2D.html)"]
 #[repr(transparent)]
 pub struct Offset2DBuilder<'a>(Offset2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Offset2DBuilder<'a> {
@@ -17319,7 +17319,7 @@ impl Default for Extent2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`Extent2D`](struct.Extent2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent2D.html) · Builder of [`Extent2D`](struct.Extent2D.html)"]
 #[repr(transparent)]
 pub struct Extent2DBuilder<'a>(Extent2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Extent2DBuilder<'a> {
@@ -17430,7 +17430,7 @@ impl Default for PipelineRasterizationStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRasterizationStateCreateInfo`](struct.PipelineRasterizationStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Builder of [`PipelineRasterizationStateCreateInfo`](struct.PipelineRasterizationStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateCreateInfoBuilder<'a>(
     PipelineRasterizationStateCreateInfo,
@@ -17675,7 +17675,7 @@ impl Default for PipelineMultisampleStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineMultisampleStateCreateInfo`](struct.PipelineMultisampleStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html) · Builder of [`PipelineMultisampleStateCreateInfo`](struct.PipelineMultisampleStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineMultisampleStateCreateInfoBuilder<'a>(
     PipelineMultisampleStateCreateInfo,
@@ -17837,7 +17837,7 @@ impl Default for PipelineDepthStencilStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineDepthStencilStateCreateInfo`](struct.PipelineDepthStencilStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html) · Builder of [`PipelineDepthStencilStateCreateInfo`](struct.PipelineDepthStencilStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineDepthStencilStateCreateInfoBuilder<'a>(
     PipelineDepthStencilStateCreateInfo,
@@ -18024,7 +18024,7 @@ impl Default for StencilOpState {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`StencilOpState`](struct.StencilOpState.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilOpState.html) · Builder of [`StencilOpState`](struct.StencilOpState.html)"]
 #[repr(transparent)]
 pub struct StencilOpStateBuilder<'a>(StencilOpState, std::marker::PhantomData<&'a ()>);
 impl<'a> StencilOpStateBuilder<'a> {
@@ -18174,7 +18174,7 @@ impl Default for PipelineColorBlendStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineColorBlendStateCreateInfo`](struct.PipelineColorBlendStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Builder of [`PipelineColorBlendStateCreateInfo`](struct.PipelineColorBlendStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineColorBlendStateCreateInfoBuilder<'a>(
     PipelineColorBlendStateCreateInfo,
@@ -18354,7 +18354,7 @@ impl Default for PipelineColorBlendAttachmentState {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineColorBlendAttachmentState`](struct.PipelineColorBlendAttachmentState.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAttachmentState.html) · Builder of [`PipelineColorBlendAttachmentState`](struct.PipelineColorBlendAttachmentState.html)"]
 #[repr(transparent)]
 pub struct PipelineColorBlendAttachmentStateBuilder<'a>(
     PipelineColorBlendAttachmentState,
@@ -18687,7 +18687,7 @@ impl Default for PipelineDynamicStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineDynamicStateCreateInfo`](struct.PipelineDynamicStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateInfo.html) · Builder of [`PipelineDynamicStateCreateInfo`](struct.PipelineDynamicStateCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineDynamicStateCreateInfoBuilder<'a>(
     PipelineDynamicStateCreateInfo,
@@ -18864,7 +18864,7 @@ impl Default for ComputePipelineCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ComputePipelineCreateInfo`](struct.ComputePipelineCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComputePipelineCreateInfo.html) · Builder of [`ComputePipelineCreateInfo`](struct.ComputePipelineCreateInfo.html)"]
 #[repr(transparent)]
 pub struct ComputePipelineCreateInfoBuilder<'a>(
     ComputePipelineCreateInfo,
@@ -18972,7 +18972,7 @@ impl Default for PipelineLayoutCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineLayoutCreateInfo`](struct.PipelineLayoutCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateInfo.html) · Builder of [`PipelineLayoutCreateInfo`](struct.PipelineLayoutCreateInfo.html)"]
 #[repr(transparent)]
 pub struct PipelineLayoutCreateInfoBuilder<'a>(
     PipelineLayoutCreateInfo,
@@ -19081,7 +19081,7 @@ impl Default for PushConstantRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PushConstantRange`](struct.PushConstantRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPushConstantRange.html) · Builder of [`PushConstantRange`](struct.PushConstantRange.html)"]
 #[repr(transparent)]
 pub struct PushConstantRangeBuilder<'a>(PushConstantRange, std::marker::PhantomData<&'a ()>);
 impl<'a> PushConstantRangeBuilder<'a> {
@@ -19210,7 +19210,7 @@ impl Default for SamplerCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SamplerCreateInfo`](struct.SamplerCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateInfo.html) · Builder of [`SamplerCreateInfo`](struct.SamplerCreateInfo.html)"]
 #[repr(transparent)]
 pub struct SamplerCreateInfoBuilder<'a>(SamplerCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerCreateInfoBuilder<'a> {
@@ -19506,7 +19506,7 @@ impl Default for DescriptorSetLayoutCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorSetLayoutCreateInfo`](struct.DescriptorSetLayoutCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Builder of [`DescriptorSetLayoutCreateInfo`](struct.DescriptorSetLayoutCreateInfo.html)"]
 #[repr(transparent)]
 pub struct DescriptorSetLayoutCreateInfoBuilder<'a>(
     DescriptorSetLayoutCreateInfo,
@@ -19629,7 +19629,7 @@ impl Default for DescriptorSetLayoutBinding {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorSetLayoutBinding`](struct.DescriptorSetLayoutBinding.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBinding.html) · Builder of [`DescriptorSetLayoutBinding`](struct.DescriptorSetLayoutBinding.html)"]
 #[repr(transparent)]
 pub struct DescriptorSetLayoutBindingBuilder<'a>(
     DescriptorSetLayoutBinding,
@@ -19779,7 +19779,7 @@ impl Default for DescriptorPoolCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorPoolCreateInfo`](struct.DescriptorPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Builder of [`DescriptorPoolCreateInfo`](struct.DescriptorPoolCreateInfo.html)"]
 #[repr(transparent)]
 pub struct DescriptorPoolCreateInfoBuilder<'a>(
     DescriptorPoolCreateInfo,
@@ -19894,7 +19894,7 @@ impl Default for DescriptorPoolSize {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorPoolSize`](struct.DescriptorPoolSize.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html) · Builder of [`DescriptorPoolSize`](struct.DescriptorPoolSize.html)"]
 #[repr(transparent)]
 pub struct DescriptorPoolSizeBuilder<'a>(DescriptorPoolSize, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorPoolSizeBuilder<'a> {
@@ -19995,7 +19995,7 @@ impl Default for DescriptorSetAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorSetAllocateInfo`](struct.DescriptorSetAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetAllocateInfo.html) · Builder of [`DescriptorSetAllocateInfo`](struct.DescriptorSetAllocateInfo.html)"]
 #[repr(transparent)]
 pub struct DescriptorSetAllocateInfoBuilder<'a>(
     DescriptorSetAllocateInfo,
@@ -20096,7 +20096,7 @@ impl Default for WriteDescriptorSet {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`WriteDescriptorSet`](struct.WriteDescriptorSet.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSet.html) · Builder of [`WriteDescriptorSet`](struct.WriteDescriptorSet.html)"]
 #[repr(transparent)]
 pub struct WriteDescriptorSetBuilder<'a>(WriteDescriptorSet, std::marker::PhantomData<&'a ()>);
 impl<'a> WriteDescriptorSetBuilder<'a> {
@@ -20210,7 +20210,7 @@ impl Default for DescriptorImageInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorImageInfo`](struct.DescriptorImageInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorImageInfo.html) · Builder of [`DescriptorImageInfo`](struct.DescriptorImageInfo.html)"]
 #[repr(transparent)]
 pub struct DescriptorImageInfoBuilder<'a>(DescriptorImageInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorImageInfoBuilder<'a> {
@@ -20291,7 +20291,7 @@ impl Default for DescriptorBufferInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DescriptorBufferInfo`](struct.DescriptorBufferInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html) · Builder of [`DescriptorBufferInfo`](struct.DescriptorBufferInfo.html)"]
 #[repr(transparent)]
 pub struct DescriptorBufferInfoBuilder<'a>(DescriptorBufferInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorBufferInfoBuilder<'a> {
@@ -20390,7 +20390,7 @@ impl Default for CopyDescriptorSet {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CopyDescriptorSet`](struct.CopyDescriptorSet.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyDescriptorSet.html) · Builder of [`CopyDescriptorSet`](struct.CopyDescriptorSet.html)"]
 #[repr(transparent)]
 pub struct CopyDescriptorSetBuilder<'a>(CopyDescriptorSet, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyDescriptorSetBuilder<'a> {
@@ -20513,7 +20513,7 @@ impl Default for FramebufferCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`FramebufferCreateInfo`](struct.FramebufferCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateInfo.html) · Builder of [`FramebufferCreateInfo`](struct.FramebufferCreateInfo.html)"]
 #[repr(transparent)]
 pub struct FramebufferCreateInfoBuilder<'a>(
     FramebufferCreateInfo,
@@ -20665,7 +20665,7 @@ impl Default for RenderPassCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RenderPassCreateInfo`](struct.RenderPassCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo.html) · Builder of [`RenderPassCreateInfo`](struct.RenderPassCreateInfo.html)"]
 #[repr(transparent)]
 pub struct RenderPassCreateInfoBuilder<'a>(RenderPassCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassCreateInfoBuilder<'a> {
@@ -20805,7 +20805,7 @@ impl Default for AttachmentDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AttachmentDescription`](struct.AttachmentDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription.html) · Builder of [`AttachmentDescription`](struct.AttachmentDescription.html)"]
 #[repr(transparent)]
 pub struct AttachmentDescriptionBuilder<'a>(
     AttachmentDescription,
@@ -21016,7 +21016,7 @@ impl Default for SubpassDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SubpassDescription`](struct.SubpassDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription.html) · Builder of [`SubpassDescription`](struct.SubpassDescription.html)"]
 #[repr(transparent)]
 pub struct SubpassDescriptionBuilder<'a>(SubpassDescription, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDescriptionBuilder<'a> {
@@ -21192,7 +21192,7 @@ impl Default for AttachmentReference {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AttachmentReference`](struct.AttachmentReference.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference.html) · Builder of [`AttachmentReference`](struct.AttachmentReference.html)"]
 #[repr(transparent)]
 pub struct AttachmentReferenceBuilder<'a>(AttachmentReference, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentReferenceBuilder<'a> {
@@ -21279,7 +21279,7 @@ impl Default for SubpassDependency {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SubpassDependency`](struct.SubpassDependency.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency.html) · Builder of [`SubpassDependency`](struct.SubpassDependency.html)"]
 #[repr(transparent)]
 pub struct SubpassDependencyBuilder<'a>(SubpassDependency, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDependencyBuilder<'a> {
@@ -21530,7 +21530,7 @@ impl Default for CommandPoolCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandPoolCreateInfo`](struct.CommandPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateInfo.html) · Builder of [`CommandPoolCreateInfo`](struct.CommandPoolCreateInfo.html)"]
 #[repr(transparent)]
 pub struct CommandPoolCreateInfoBuilder<'a>(
     CommandPoolCreateInfo,
@@ -21670,7 +21670,7 @@ impl Default for CommandBufferAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandBufferAllocateInfo`](struct.CommandBufferAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferAllocateInfo.html) · Builder of [`CommandBufferAllocateInfo`](struct.CommandBufferAllocateInfo.html)"]
 #[repr(transparent)]
 pub struct CommandBufferAllocateInfoBuilder<'a>(
     CommandBufferAllocateInfo,
@@ -21775,7 +21775,7 @@ impl Default for CommandBufferBeginInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandBufferBeginInfo`](struct.CommandBufferBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferBeginInfo.html) · Builder of [`CommandBufferBeginInfo`](struct.CommandBufferBeginInfo.html)"]
 #[repr(transparent)]
 pub struct CommandBufferBeginInfoBuilder<'a>(
     CommandBufferBeginInfo,
@@ -21902,7 +21902,7 @@ impl Default for CommandBufferInheritanceInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandBufferInheritanceInfo`](struct.CommandBufferInheritanceInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Builder of [`CommandBufferInheritanceInfo`](struct.CommandBufferInheritanceInfo.html)"]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceInfoBuilder<'a>(
     CommandBufferInheritanceInfo,
@@ -22116,7 +22116,7 @@ impl Default for BufferCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferCopy`](struct.BufferCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy.html) · Builder of [`BufferCopy`](struct.BufferCopy.html)"]
 #[repr(transparent)]
 pub struct BufferCopyBuilder<'a>(BufferCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferCopyBuilder<'a> {
@@ -22203,7 +22203,7 @@ impl Default for ImageCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageCopy`](struct.ImageCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy.html) · Builder of [`ImageCopy`](struct.ImageCopy.html)"]
 #[repr(transparent)]
 pub struct ImageCopyBuilder<'a>(ImageCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageCopyBuilder<'a> {
@@ -22305,7 +22305,7 @@ impl Default for ImageSubresourceLayers {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageSubresourceLayers`](struct.ImageSubresourceLayers.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceLayers.html) · Builder of [`ImageSubresourceLayers`](struct.ImageSubresourceLayers.html)"]
 #[repr(transparent)]
 pub struct ImageSubresourceLayersBuilder<'a>(
     ImageSubresourceLayers,
@@ -22398,7 +22398,7 @@ impl Default for ImageBlit {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageBlit`](struct.ImageBlit.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit.html) · Builder of [`ImageBlit`](struct.ImageBlit.html)"]
 #[repr(transparent)]
 pub struct ImageBlitBuilder<'a>(ImageBlit, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageBlitBuilder<'a> {
@@ -22500,7 +22500,7 @@ impl Default for BufferImageCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferImageCopy`](struct.BufferImageCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy.html) · Builder of [`BufferImageCopy`](struct.BufferImageCopy.html)"]
 #[repr(transparent)]
 pub struct BufferImageCopyBuilder<'a>(BufferImageCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferImageCopyBuilder<'a> {
@@ -22617,7 +22617,7 @@ impl Default for ClearDepthStencilValue {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ClearDepthStencilValue`](struct.ClearDepthStencilValue.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearDepthStencilValue.html) · Builder of [`ClearDepthStencilValue`](struct.ClearDepthStencilValue.html)"]
 #[repr(transparent)]
 pub struct ClearDepthStencilValueBuilder<'a>(
     ClearDepthStencilValue,
@@ -22695,7 +22695,7 @@ impl Default for ClearAttachment {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ClearAttachment`](struct.ClearAttachment.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearAttachment.html) · Builder of [`ClearAttachment`](struct.ClearAttachment.html)"]
 #[repr(transparent)]
 pub struct ClearAttachmentBuilder<'a>(ClearAttachment, std::marker::PhantomData<&'a ()>);
 impl<'a> ClearAttachmentBuilder<'a> {
@@ -22793,7 +22793,7 @@ impl Default for ClearRect {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ClearRect`](struct.ClearRect.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearRect.html) · Builder of [`ClearRect`](struct.ClearRect.html)"]
 #[repr(transparent)]
 pub struct ClearRectBuilder<'a>(ClearRect, std::marker::PhantomData<&'a ()>);
 impl<'a> ClearRectBuilder<'a> {
@@ -22880,7 +22880,7 @@ impl Default for ImageResolve {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageResolve`](struct.ImageResolve.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve.html) · Builder of [`ImageResolve`](struct.ImageResolve.html)"]
 #[repr(transparent)]
 pub struct ImageResolveBuilder<'a>(ImageResolve, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageResolveBuilder<'a> {
@@ -22982,7 +22982,7 @@ impl Default for MemoryBarrier {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryBarrier`](struct.MemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier.html) · Builder of [`MemoryBarrier`](struct.MemoryBarrier.html)"]
 #[repr(transparent)]
 pub struct MemoryBarrierBuilder<'a>(MemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryBarrierBuilder<'a> {
@@ -23075,7 +23075,7 @@ impl Default for BufferMemoryBarrier {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BufferMemoryBarrier`](struct.BufferMemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryBarrier.html) · Builder of [`BufferMemoryBarrier`](struct.BufferMemoryBarrier.html)"]
 #[repr(transparent)]
 pub struct BufferMemoryBarrierBuilder<'a>(BufferMemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferMemoryBarrierBuilder<'a> {
@@ -23201,7 +23201,7 @@ impl Default for ImageMemoryBarrier {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageMemoryBarrier`](struct.ImageMemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier.html) · Builder of [`ImageMemoryBarrier`](struct.ImageMemoryBarrier.html)"]
 #[repr(transparent)]
 pub struct ImageMemoryBarrierBuilder<'a>(ImageMemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageMemoryBarrierBuilder<'a> {
@@ -23327,7 +23327,7 @@ impl Default for RenderPassBeginInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RenderPassBeginInfo`](struct.RenderPassBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassBeginInfo.html) · Builder of [`RenderPassBeginInfo`](struct.RenderPassBeginInfo.html)"]
 #[repr(transparent)]
 pub struct RenderPassBeginInfoBuilder<'a>(RenderPassBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassBeginInfoBuilder<'a> {
@@ -23449,7 +23449,7 @@ impl Default for DispatchIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DispatchIndirectCommand`](struct.DispatchIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDispatchIndirectCommand.html) · Builder of [`DispatchIndirectCommand`](struct.DispatchIndirectCommand.html)"]
 #[repr(transparent)]
 pub struct DispatchIndirectCommandBuilder<'a>(
     DispatchIndirectCommand,
@@ -23539,7 +23539,7 @@ impl Default for DrawIndexedIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DrawIndexedIndirectCommand`](struct.DrawIndexedIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndexedIndirectCommand.html) · Builder of [`DrawIndexedIndirectCommand`](struct.DrawIndexedIndirectCommand.html)"]
 #[repr(transparent)]
 pub struct DrawIndexedIndirectCommandBuilder<'a>(
     DrawIndexedIndirectCommand,
@@ -23638,7 +23638,7 @@ impl Default for DrawIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DrawIndirectCommand`](struct.DrawIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndirectCommand.html) · Builder of [`DrawIndirectCommand`](struct.DrawIndirectCommand.html)"]
 #[repr(transparent)]
 pub struct DrawIndirectCommandBuilder<'a>(DrawIndirectCommand, std::marker::PhantomData<&'a ()>);
 impl<'a> DrawIndirectCommandBuilder<'a> {
@@ -23859,7 +23859,7 @@ impl Default for BaseOutStructure {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BaseOutStructure`](struct.BaseOutStructure.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Builder of [`BaseOutStructure`](struct.BaseOutStructure.html)"]
 #[repr(transparent)]
 pub struct BaseOutStructureBuilder<'a>(BaseOutStructure, std::marker::PhantomData<&'a ()>);
 impl<'a> BaseOutStructureBuilder<'a> {
@@ -23919,7 +23919,7 @@ impl Default for BaseInStructure {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BaseInStructure`](struct.BaseInStructure.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Builder of [`BaseInStructure`](struct.BaseInStructure.html)"]
 #[repr(transparent)]
 pub struct BaseInStructureBuilder<'a>(BaseInStructure, std::marker::PhantomData<&'a ()>);
 impl<'a> BaseInStructureBuilder<'a> {

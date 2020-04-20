@@ -107,7 +107,7 @@ impl Default for FramebufferMixedSamplesCombinationNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`FramebufferMixedSamplesCombinationNV`](struct.FramebufferMixedSamplesCombinationNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferMixedSamplesCombinationNV.html) · Builder of [`FramebufferMixedSamplesCombinationNV`](struct.FramebufferMixedSamplesCombinationNV.html)"]
 #[repr(transparent)]
 pub struct FramebufferMixedSamplesCombinationNVBuilder<'a>(
     FramebufferMixedSamplesCombinationNV,
@@ -246,7 +246,7 @@ impl crate::ExtendableBy<PhysicalDeviceCoverageReductionModeFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceCoverageReductionModeFeaturesNV`](struct.PhysicalDeviceCoverageReductionModeFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Builder of [`PhysicalDeviceCoverageReductionModeFeaturesNV`](struct.PhysicalDeviceCoverageReductionModeFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a>(
     PhysicalDeviceCoverageReductionModeFeaturesNV,
@@ -340,7 +340,7 @@ impl crate::ExtendableBy<PipelineCoverageReductionStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineCoverageReductionStateCreateInfoNV`](struct.PipelineCoverageReductionStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html) · Builder of [`PipelineCoverageReductionStateCreateInfoNV`](struct.PipelineCoverageReductionStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineCoverageReductionStateCreateInfoNVBuilder<'a>(
     PipelineCoverageReductionStateCreateInfoNV,

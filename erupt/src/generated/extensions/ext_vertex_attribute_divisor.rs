@@ -51,7 +51,7 @@ impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`](struct.PhysicalDeviceVertexAttributeDivisorPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`](struct.PhysicalDeviceVertexAttributeDivisorPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a>(
     PhysicalDeviceVertexAttributeDivisorPropertiesEXT,
@@ -123,7 +123,7 @@ impl Default for VertexInputBindingDivisorDescriptionEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`VertexInputBindingDivisorDescriptionEXT`](struct.VertexInputBindingDivisorDescriptionEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Builder of [`VertexInputBindingDivisorDescriptionEXT`](struct.VertexInputBindingDivisorDescriptionEXT.html)"]
 #[repr(transparent)]
 pub struct VertexInputBindingDivisorDescriptionEXTBuilder<'a>(
     VertexInputBindingDivisorDescriptionEXT,
@@ -217,7 +217,7 @@ impl crate::ExtendableBy<PipelineVertexInputDivisorStateCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineVertexInputDivisorStateCreateInfoEXT`](struct.PipelineVertexInputDivisorStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Builder of [`PipelineVertexInputDivisorStateCreateInfoEXT`](struct.PipelineVertexInputDivisorStateCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a>(
     PipelineVertexInputDivisorStateCreateInfoEXT,
@@ -324,7 +324,7 @@ impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT`](struct.PhysicalDeviceVertexAttributeDivisorFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT`](struct.PhysicalDeviceVertexAttributeDivisorFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a>(
     PhysicalDeviceVertexAttributeDivisorFeaturesEXT,

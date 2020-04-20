@@ -469,7 +469,7 @@ impl Default for SwapchainCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SwapchainCreateInfoKHR`](struct.SwapchainCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`](struct.SwapchainCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct SwapchainCreateInfoKHRBuilder<'a>(
     SwapchainCreateInfoKHR,
@@ -696,7 +696,7 @@ impl Default for PresentInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PresentInfoKHR`](struct.PresentInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`](struct.PresentInfoKHR.html)"]
 #[repr(transparent)]
 pub struct PresentInfoKHRBuilder<'a>(PresentInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentInfoKHRBuilder<'a> {
@@ -793,7 +793,7 @@ impl Default for DeviceGroupPresentCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceGroupPresentCapabilitiesKHR`](struct.DeviceGroupPresentCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Builder of [`DeviceGroupPresentCapabilitiesKHR`](struct.DeviceGroupPresentCapabilitiesKHR.html)"]
 #[repr(transparent)]
 pub struct DeviceGroupPresentCapabilitiesKHRBuilder<'a>(
     DeviceGroupPresentCapabilitiesKHR,
@@ -919,7 +919,7 @@ impl Default for AcquireNextImageInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AcquireNextImageInfoKHR`](struct.AcquireNextImageInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Builder of [`AcquireNextImageInfoKHR`](struct.AcquireNextImageInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AcquireNextImageInfoKHRBuilder<'a>(
     AcquireNextImageInfoKHR,
@@ -1026,7 +1026,7 @@ impl Default for ImageSwapchainCreateInfoKHR {
 }
 impl crate::ExtendableBy<ImageSwapchainCreateInfoKHR> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageSwapchainCreateInfoKHR`](struct.ImageSwapchainCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Builder of [`ImageSwapchainCreateInfoKHR`](struct.ImageSwapchainCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImageSwapchainCreateInfoKHRBuilder<'a>(
     ImageSwapchainCreateInfoKHR,
@@ -1112,7 +1112,7 @@ impl Default for BindImageMemorySwapchainInfoKHR {
 }
 impl crate::ExtendableBy<BindImageMemorySwapchainInfoKHR> for crate::vk1_1::BindImageMemoryInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`BindImageMemorySwapchainInfoKHR`](struct.BindImageMemorySwapchainInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Builder of [`BindImageMemorySwapchainInfoKHR`](struct.BindImageMemorySwapchainInfoKHR.html)"]
 #[repr(transparent)]
 pub struct BindImageMemorySwapchainInfoKHRBuilder<'a>(
     BindImageMemorySwapchainInfoKHR,
@@ -1210,7 +1210,7 @@ impl crate::ExtendableBy<DeviceGroupPresentInfoKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceGroupPresentInfoKHR`](struct.DeviceGroupPresentInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Builder of [`DeviceGroupPresentInfoKHR`](struct.DeviceGroupPresentInfoKHR.html)"]
 #[repr(transparent)]
 pub struct DeviceGroupPresentInfoKHRBuilder<'a>(
     DeviceGroupPresentInfoKHR,
@@ -1306,7 +1306,7 @@ impl crate::ExtendableBy<DeviceGroupSwapchainCreateInfoKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DeviceGroupSwapchainCreateInfoKHR`](struct.DeviceGroupSwapchainCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Builder of [`DeviceGroupSwapchainCreateInfoKHR`](struct.DeviceGroupSwapchainCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct DeviceGroupSwapchainCreateInfoKHRBuilder<'a>(
     DeviceGroupSwapchainCreateInfoKHR,

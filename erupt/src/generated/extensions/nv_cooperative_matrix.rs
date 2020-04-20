@@ -122,7 +122,7 @@ impl Default for CooperativeMatrixPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CooperativeMatrixPropertiesNV`](struct.CooperativeMatrixPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCooperativeMatrixPropertiesNV.html) · Builder of [`CooperativeMatrixPropertiesNV`](struct.CooperativeMatrixPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct CooperativeMatrixPropertiesNVBuilder<'a>(
     CooperativeMatrixPropertiesNV,
@@ -330,7 +330,7 @@ impl crate::ExtendableBy<PhysicalDeviceCooperativeMatrixFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceCooperativeMatrixFeaturesNV`](struct.PhysicalDeviceCooperativeMatrixFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Builder of [`PhysicalDeviceCooperativeMatrixFeaturesNV`](struct.PhysicalDeviceCooperativeMatrixFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a>(
     PhysicalDeviceCooperativeMatrixFeaturesNV,
@@ -432,7 +432,7 @@ impl crate::ExtendableBy<PhysicalDeviceCooperativeMatrixPropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceCooperativeMatrixPropertiesNV`](struct.PhysicalDeviceCooperativeMatrixPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Builder of [`PhysicalDeviceCooperativeMatrixPropertiesNV`](struct.PhysicalDeviceCooperativeMatrixPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'a>(
     PhysicalDeviceCooperativeMatrixPropertiesNV,

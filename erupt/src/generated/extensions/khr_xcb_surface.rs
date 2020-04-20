@@ -143,7 +143,7 @@ impl Default for XcbSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`XcbSurfaceCreateInfoKHR`](struct.XcbSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`](struct.XcbSurfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct XcbSurfaceCreateInfoKHRBuilder<'a>(
     XcbSurfaceCreateInfoKHR,

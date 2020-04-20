@@ -101,7 +101,7 @@ impl Default for AndroidSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`AndroidSurfaceCreateInfoKHR`](struct.AndroidSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateInfoKHR.html) · Builder of [`AndroidSurfaceCreateInfoKHR`](struct.AndroidSurfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct AndroidSurfaceCreateInfoKHRBuilder<'a>(
     AndroidSurfaceCreateInfoKHR,

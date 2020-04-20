@@ -48,7 +48,7 @@ impl Default for ExternalMemoryImageCreateInfoNV {
 }
 impl crate::ExtendableBy<ExternalMemoryImageCreateInfoNV> for crate::vk1_0::ImageCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExternalMemoryImageCreateInfoNV`](struct.ExternalMemoryImageCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`](struct.ExternalMemoryImageCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct ExternalMemoryImageCreateInfoNVBuilder<'a>(
     ExternalMemoryImageCreateInfoNV,
@@ -135,7 +135,7 @@ impl Default for ExportMemoryAllocateInfoNV {
 }
 impl crate::ExtendableBy<ExportMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExportMemoryAllocateInfoNV`](struct.ExportMemoryAllocateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`](struct.ExportMemoryAllocateInfoNV.html)"]
 #[repr(transparent)]
 pub struct ExportMemoryAllocateInfoNVBuilder<'a>(
     ExportMemoryAllocateInfoNV,

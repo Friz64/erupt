@@ -219,7 +219,7 @@ impl Default for ValidationCacheCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ValidationCacheCreateInfoEXT`](struct.ValidationCacheCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Builder of [`ValidationCacheCreateInfoEXT`](struct.ValidationCacheCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ValidationCacheCreateInfoEXTBuilder<'a>(
     ValidationCacheCreateInfoEXT,
@@ -335,7 +335,7 @@ impl crate::ExtendableBy<ShaderModuleValidationCacheCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ShaderModuleValidationCacheCreateInfoEXT`](struct.ShaderModuleValidationCacheCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Builder of [`ShaderModuleValidationCacheCreateInfoEXT`](struct.ShaderModuleValidationCacheCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ShaderModuleValidationCacheCreateInfoEXTBuilder<'a>(
     ShaderModuleValidationCacheCreateInfoEXT,

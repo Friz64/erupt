@@ -53,7 +53,7 @@ impl crate::ExtendableBy<PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`](struct.PhysicalDeviceRepresentativeFragmentTestFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`](struct.PhysicalDeviceRepresentativeFragmentTestFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a>(
     PhysicalDeviceRepresentativeFragmentTestFeaturesNV,
@@ -141,7 +141,7 @@ impl crate::ExtendableBy<PipelineRepresentativeFragmentTestStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`](struct.PipelineRepresentativeFragmentTestStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`](struct.PipelineRepresentativeFragmentTestStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a>(
     PipelineRepresentativeFragmentTestStateCreateInfoNV,

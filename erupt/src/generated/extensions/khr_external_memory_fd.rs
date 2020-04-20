@@ -128,7 +128,7 @@ impl Default for MemoryGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryGetFdInfoKHR`](struct.MemoryGetFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Builder of [`MemoryGetFdInfoKHR`](struct.MemoryGetFdInfoKHR.html)"]
 #[repr(transparent)]
 pub struct MemoryGetFdInfoKHRBuilder<'a>(MemoryGetFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
@@ -206,7 +206,7 @@ impl Default for MemoryFdPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryFdPropertiesKHR`](struct.MemoryFdPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`](struct.MemoryFdPropertiesKHR.html)"]
 #[repr(transparent)]
 pub struct MemoryFdPropertiesKHRBuilder<'a>(
     MemoryFdPropertiesKHR,
@@ -292,7 +292,7 @@ impl Default for ImportMemoryFdInfoKHR {
 }
 impl crate::ExtendableBy<ImportMemoryFdInfoKHR> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportMemoryFdInfoKHR`](struct.ImportMemoryFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`](struct.ImportMemoryFdInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImportMemoryFdInfoKHRBuilder<'a>(
     ImportMemoryFdInfoKHR,

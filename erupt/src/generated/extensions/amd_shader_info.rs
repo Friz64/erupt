@@ -131,7 +131,7 @@ impl Default for ShaderResourceUsageAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ShaderResourceUsageAMD`](struct.ShaderResourceUsageAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`](struct.ShaderResourceUsageAMD.html)"]
 #[repr(transparent)]
 pub struct ShaderResourceUsageAMDBuilder<'a>(
     ShaderResourceUsageAMD,
@@ -239,7 +239,7 @@ impl Default for ShaderStatisticsInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ShaderStatisticsInfoAMD`](struct.ShaderStatisticsInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`](struct.ShaderStatisticsInfoAMD.html)"]
 #[repr(transparent)]
 pub struct ShaderStatisticsInfoAMDBuilder<'a>(
     ShaderStatisticsInfoAMD,

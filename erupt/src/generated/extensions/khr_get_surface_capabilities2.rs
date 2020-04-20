@@ -145,7 +145,7 @@ impl Default for PhysicalDeviceSurfaceInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceSurfaceInfo2KHR`](struct.PhysicalDeviceSurfaceInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`](struct.PhysicalDeviceSurfaceInfo2KHR.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSurfaceInfo2KHRBuilder<'a>(
     PhysicalDeviceSurfaceInfo2KHR,
@@ -217,7 +217,7 @@ impl Default for SurfaceCapabilities2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceCapabilities2KHR`](struct.SurfaceCapabilities2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`](struct.SurfaceCapabilities2KHR.html)"]
 #[repr(transparent)]
 pub struct SurfaceCapabilities2KHRBuilder<'a>(
     SurfaceCapabilities2KHR,
@@ -292,7 +292,7 @@ impl Default for SurfaceFormat2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceFormat2KHR`](struct.SurfaceFormat2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Builder of [`SurfaceFormat2KHR`](struct.SurfaceFormat2KHR.html)"]
 #[repr(transparent)]
 pub struct SurfaceFormat2KHRBuilder<'a>(SurfaceFormat2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFormat2KHRBuilder<'a> {

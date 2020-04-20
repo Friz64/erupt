@@ -47,7 +47,7 @@ impl Default for RenderPassTransformBeginInfoQCOM {
 }
 impl crate::ExtendableBy<RenderPassTransformBeginInfoQCOM> for crate::vk1_0::RenderPassBeginInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RenderPassTransformBeginInfoQCOM`](struct.RenderPassTransformBeginInfoQCOM.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Builder of [`RenderPassTransformBeginInfoQCOM`](struct.RenderPassTransformBeginInfoQCOM.html)"]
 #[repr(transparent)]
 pub struct RenderPassTransformBeginInfoQCOMBuilder<'a>(
     RenderPassTransformBeginInfoQCOM,
@@ -134,7 +134,7 @@ impl crate::ExtendableBy<CommandBufferInheritanceRenderPassTransformInfoQCOM>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandBufferInheritanceRenderPassTransformInfoQCOM`](struct.CommandBufferInheritanceRenderPassTransformInfoQCOM.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Builder of [`CommandBufferInheritanceRenderPassTransformInfoQCOM`](struct.CommandBufferInheritanceRenderPassTransformInfoQCOM.html)"]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a>(
     CommandBufferInheritanceRenderPassTransformInfoQCOM,

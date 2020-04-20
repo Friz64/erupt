@@ -53,7 +53,7 @@ impl crate::ExtendableBy<PhysicalDevicePipelineCreationCacheControlFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDevicePipelineCreationCacheControlFeaturesEXT`](struct.PhysicalDevicePipelineCreationCacheControlFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT.html) · Builder of [`PhysicalDevicePipelineCreationCacheControlFeaturesEXT`](struct.PhysicalDevicePipelineCreationCacheControlFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'a>(
     PhysicalDevicePipelineCreationCacheControlFeaturesEXT,

@@ -47,7 +47,7 @@ impl Default for ImageViewASTCDecodeModeEXT {
 }
 impl crate::ExtendableBy<ImageViewASTCDecodeModeEXT> for crate::vk1_0::ImageViewCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageViewASTCDecodeModeEXT`](struct.ImageViewASTCDecodeModeEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Builder of [`ImageViewASTCDecodeModeEXT`](struct.ImageViewASTCDecodeModeEXT.html)"]
 #[repr(transparent)]
 pub struct ImageViewASTCDecodeModeEXTBuilder<'a>(
     ImageViewASTCDecodeModeEXT,
@@ -137,7 +137,7 @@ impl crate::ExtendableBy<PhysicalDeviceASTCDecodeFeaturesEXT>
 }
 impl crate::ExtendableBy<PhysicalDeviceASTCDecodeFeaturesEXT> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`](struct.PhysicalDeviceASTCDecodeFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`](struct.PhysicalDeviceASTCDecodeFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a>(
     PhysicalDeviceASTCDecodeFeaturesEXT,

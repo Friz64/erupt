@@ -238,7 +238,7 @@ impl crate::ExtendableBy<SurfaceFullScreenExclusiveInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceFullScreenExclusiveInfoEXT`](struct.SurfaceFullScreenExclusiveInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveInfoEXT`](struct.SurfaceFullScreenExclusiveInfoEXT.html)"]
 #[repr(transparent)]
 pub struct SurfaceFullScreenExclusiveInfoEXTBuilder<'a>(
     SurfaceFullScreenExclusiveInfoEXT,
@@ -330,7 +330,7 @@ impl crate::ExtendableBy<SurfaceCapabilitiesFullScreenExclusiveEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceCapabilitiesFullScreenExclusiveEXT`](struct.SurfaceCapabilitiesFullScreenExclusiveEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Builder of [`SurfaceCapabilitiesFullScreenExclusiveEXT`](struct.SurfaceCapabilitiesFullScreenExclusiveEXT.html)"]
 #[repr(transparent)]
 pub struct SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a>(
     SurfaceCapabilitiesFullScreenExclusiveEXT,
@@ -426,7 +426,7 @@ impl crate::ExtendableBy<SurfaceFullScreenExclusiveWin32InfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SurfaceFullScreenExclusiveWin32InfoEXT`](struct.SurfaceFullScreenExclusiveWin32InfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveWin32InfoEXT`](struct.SurfaceFullScreenExclusiveWin32InfoEXT.html)"]
 #[repr(transparent)]
 pub struct SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a>(
     SurfaceFullScreenExclusiveWin32InfoEXT,

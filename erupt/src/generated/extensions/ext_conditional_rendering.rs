@@ -114,7 +114,7 @@ impl Default for ConditionalRenderingBeginInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ConditionalRenderingBeginInfoEXT`](struct.ConditionalRenderingBeginInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingBeginInfoEXT.html) · Builder of [`ConditionalRenderingBeginInfoEXT`](struct.ConditionalRenderingBeginInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ConditionalRenderingBeginInfoEXTBuilder<'a>(
     ConditionalRenderingBeginInfoEXT,
@@ -249,7 +249,7 @@ impl crate::ExtendableBy<PhysicalDeviceConditionalRenderingFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceConditionalRenderingFeaturesEXT`](struct.PhysicalDeviceConditionalRenderingFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConditionalRenderingFeaturesEXT.html) · Builder of [`PhysicalDeviceConditionalRenderingFeaturesEXT`](struct.PhysicalDeviceConditionalRenderingFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a>(
     PhysicalDeviceConditionalRenderingFeaturesEXT,
@@ -346,7 +346,7 @@ impl crate::ExtendableBy<CommandBufferInheritanceConditionalRenderingInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CommandBufferInheritanceConditionalRenderingInfoEXT`](struct.CommandBufferInheritanceConditionalRenderingInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceConditionalRenderingInfoEXT.html) · Builder of [`CommandBufferInheritanceConditionalRenderingInfoEXT`](struct.CommandBufferInheritanceConditionalRenderingInfoEXT.html)"]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a>(
     CommandBufferInheritanceConditionalRenderingInfoEXT,

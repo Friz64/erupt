@@ -103,7 +103,7 @@ impl Default for ImportMemoryWin32HandleInfoNV {
 }
 impl crate::ExtendableBy<ImportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportMemoryWin32HandleInfoNV`](struct.ImportMemoryWin32HandleInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Builder of [`ImportMemoryWin32HandleInfoNV`](struct.ImportMemoryWin32HandleInfoNV.html)"]
 #[repr(transparent)]
 pub struct ImportMemoryWin32HandleInfoNVBuilder<'a>(
     ImportMemoryWin32HandleInfoNV,
@@ -198,7 +198,7 @@ impl Default for ExportMemoryWin32HandleInfoNV {
 }
 impl crate::ExtendableBy<ExportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExportMemoryWin32HandleInfoNV`](struct.ExportMemoryWin32HandleInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Builder of [`ExportMemoryWin32HandleInfoNV`](struct.ExportMemoryWin32HandleInfoNV.html)"]
 #[repr(transparent)]
 pub struct ExportMemoryWin32HandleInfoNVBuilder<'a>(
     ExportMemoryWin32HandleInfoNV,

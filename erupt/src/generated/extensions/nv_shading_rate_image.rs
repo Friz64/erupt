@@ -168,7 +168,7 @@ impl Default for ShadingRatePaletteNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ShadingRatePaletteNV`](struct.ShadingRatePaletteNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Builder of [`ShadingRatePaletteNV`](struct.ShadingRatePaletteNV.html)"]
 #[repr(transparent)]
 pub struct ShadingRatePaletteNVBuilder<'a>(ShadingRatePaletteNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ShadingRatePaletteNVBuilder<'a> {
@@ -304,7 +304,7 @@ impl Default for CoarseSampleOrderCustomNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CoarseSampleOrderCustomNV`](struct.CoarseSampleOrderCustomNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Builder of [`CoarseSampleOrderCustomNV`](struct.CoarseSampleOrderCustomNV.html)"]
 #[repr(transparent)]
 pub struct CoarseSampleOrderCustomNVBuilder<'a>(
     CoarseSampleOrderCustomNV,
@@ -395,7 +395,7 @@ impl Default for CoarseSampleLocationNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CoarseSampleLocationNV`](struct.CoarseSampleLocationNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Builder of [`CoarseSampleLocationNV`](struct.CoarseSampleLocationNV.html)"]
 #[repr(transparent)]
 pub struct CoarseSampleLocationNVBuilder<'a>(
     CoarseSampleLocationNV,
@@ -497,7 +497,7 @@ impl crate::ExtendableBy<PipelineViewportShadingRateImageStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportShadingRateImageStateCreateInfoNV`](struct.PipelineViewportShadingRateImageStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html) · Builder of [`PipelineViewportShadingRateImageStateCreateInfoNV`](struct.PipelineViewportShadingRateImageStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a>(
     PipelineViewportShadingRateImageStateCreateInfoNV,
@@ -606,7 +606,7 @@ impl crate::ExtendableBy<PhysicalDeviceShadingRateImageFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImageFeaturesNV.html) · Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a>(
     PhysicalDeviceShadingRateImageFeaturesNV,
@@ -713,7 +713,7 @@ impl crate::ExtendableBy<PhysicalDeviceShadingRateImagePropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShadingRateImagePropertiesNV`](struct.PhysicalDeviceShadingRateImagePropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImagePropertiesNV.html) · Builder of [`PhysicalDeviceShadingRateImagePropertiesNV`](struct.PhysicalDeviceShadingRateImagePropertiesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a>(
     PhysicalDeviceShadingRateImagePropertiesNV,
@@ -818,7 +818,7 @@ impl crate::ExtendableBy<PipelineViewportCoarseSampleOrderStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportCoarseSampleOrderStateCreateInfoNV`](struct.PipelineViewportCoarseSampleOrderStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportCoarseSampleOrderStateCreateInfoNV.html) · Builder of [`PipelineViewportCoarseSampleOrderStateCreateInfoNV`](struct.PipelineViewportCoarseSampleOrderStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a>(
     PipelineViewportCoarseSampleOrderStateCreateInfoNV,

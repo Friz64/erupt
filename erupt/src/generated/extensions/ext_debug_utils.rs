@@ -427,7 +427,7 @@ impl Default for DebugUtilsObjectNameInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugUtilsObjectNameInfoEXT`](struct.DebugUtilsObjectNameInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Builder of [`DebugUtilsObjectNameInfoEXT`](struct.DebugUtilsObjectNameInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugUtilsObjectNameInfoEXTBuilder<'a>(
     DebugUtilsObjectNameInfoEXT,
@@ -523,7 +523,7 @@ impl Default for DebugUtilsObjectTagInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugUtilsObjectTagInfoEXT`](struct.DebugUtilsObjectTagInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectTagInfoEXT.html) · Builder of [`DebugUtilsObjectTagInfoEXT`](struct.DebugUtilsObjectTagInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugUtilsObjectTagInfoEXTBuilder<'a>(
     DebugUtilsObjectTagInfoEXT,
@@ -617,7 +617,7 @@ impl Default for DebugUtilsLabelEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugUtilsLabelEXT`](struct.DebugUtilsLabelEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) · Builder of [`DebugUtilsLabelEXT`](struct.DebugUtilsLabelEXT.html)"]
 #[repr(transparent)]
 pub struct DebugUtilsLabelEXTBuilder<'a>(DebugUtilsLabelEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugUtilsLabelEXTBuilder<'a> {
@@ -718,7 +718,7 @@ impl Default for DebugUtilsMessengerCreateInfoEXT {
 }
 impl crate::ExtendableBy<DebugUtilsMessengerCreateInfoEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugUtilsMessengerCreateInfoEXT`](struct.DebugUtilsMessengerCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateInfoEXT.html) · Builder of [`DebugUtilsMessengerCreateInfoEXT`](struct.DebugUtilsMessengerCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCreateInfoEXTBuilder<'a>(
     DebugUtilsMessengerCreateInfoEXT,
@@ -940,7 +940,7 @@ impl Default for DebugUtilsMessengerCallbackDataEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugUtilsMessengerCallbackDataEXT`](struct.DebugUtilsMessengerCallbackDataEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataEXT.html) · Builder of [`DebugUtilsMessengerCallbackDataEXT`](struct.DebugUtilsMessengerCallbackDataEXT.html)"]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCallbackDataEXTBuilder<'a>(
     DebugUtilsMessengerCallbackDataEXT,

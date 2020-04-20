@@ -106,7 +106,7 @@ impl crate::ExtendableBy<PipelineViewportExclusiveScissorStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportExclusiveScissorStateCreateInfoNV`](struct.PipelineViewportExclusiveScissorStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Builder of [`PipelineViewportExclusiveScissorStateCreateInfoNV`](struct.PipelineViewportExclusiveScissorStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a>(
     PipelineViewportExclusiveScissorStateCreateInfoNV,
@@ -203,7 +203,7 @@ impl crate::ExtendableBy<PhysicalDeviceExclusiveScissorFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`](struct.PhysicalDeviceExclusiveScissorFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`](struct.PhysicalDeviceExclusiveScissorFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a>(
     PhysicalDeviceExclusiveScissorFeaturesNV,

@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceShaderCoreProperties2AMD>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShaderCoreProperties2AMD`](struct.PhysicalDeviceShaderCoreProperties2AMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`](struct.PhysicalDeviceShaderCoreProperties2AMD.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a>(
     PhysicalDeviceShaderCoreProperties2AMD,

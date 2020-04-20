@@ -114,7 +114,7 @@ impl Default for HdrMetadataEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`HdrMetadataEXT`](struct.HdrMetadataEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHdrMetadataEXT.html) · Builder of [`HdrMetadataEXT`](struct.HdrMetadataEXT.html)"]
 #[repr(transparent)]
 pub struct HdrMetadataEXTBuilder<'a>(HdrMetadataEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> HdrMetadataEXTBuilder<'a> {
@@ -234,7 +234,7 @@ impl Default for XYColorEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`XYColorEXT`](struct.XYColorEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Builder of [`XYColorEXT`](struct.XYColorEXT.html)"]
 #[repr(transparent)]
 pub struct XYColorEXTBuilder<'a>(XYColorEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> XYColorEXTBuilder<'a> {

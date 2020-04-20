@@ -128,7 +128,7 @@ impl Default for RefreshCycleDurationGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RefreshCycleDurationGOOGLE`](struct.RefreshCycleDurationGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`](struct.RefreshCycleDurationGOOGLE.html)"]
 #[repr(transparent)]
 pub struct RefreshCycleDurationGOOGLEBuilder<'a>(
     RefreshCycleDurationGOOGLE,
@@ -206,7 +206,7 @@ impl Default for PastPresentationTimingGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PastPresentationTimingGOOGLE`](struct.PastPresentationTimingGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`](struct.PastPresentationTimingGOOGLE.html)"]
 #[repr(transparent)]
 pub struct PastPresentationTimingGOOGLEBuilder<'a>(
     PastPresentationTimingGOOGLE,
@@ -319,7 +319,7 @@ impl crate::ExtendableBy<PresentTimesInfoGOOGLE>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PresentTimesInfoGOOGLE`](struct.PresentTimesInfoGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`](struct.PresentTimesInfoGOOGLE.html)"]
 #[repr(transparent)]
 pub struct PresentTimesInfoGOOGLEBuilder<'a>(
     PresentTimesInfoGOOGLE,
@@ -392,7 +392,7 @@ impl Default for PresentTimeGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PresentTimeGOOGLE`](struct.PresentTimeGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Builder of [`PresentTimeGOOGLE`](struct.PresentTimeGOOGLE.html)"]
 #[repr(transparent)]
 pub struct PresentTimeGOOGLEBuilder<'a>(PresentTimeGOOGLE, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentTimeGOOGLEBuilder<'a> {

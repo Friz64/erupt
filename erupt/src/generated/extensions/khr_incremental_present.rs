@@ -50,7 +50,7 @@ impl Default for PresentRegionsKHR {
 }
 impl crate::ExtendableBy<PresentRegionsKHR> for crate::extensions::khr_swapchain::PresentInfoKHR {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PresentRegionsKHR`](struct.PresentRegionsKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Builder of [`PresentRegionsKHR`](struct.PresentRegionsKHR.html)"]
 #[repr(transparent)]
 pub struct PresentRegionsKHRBuilder<'a>(PresentRegionsKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentRegionsKHRBuilder<'a> {
@@ -120,7 +120,7 @@ impl Default for PresentRegionKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PresentRegionKHR`](struct.PresentRegionKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionKHR.html) · Builder of [`PresentRegionKHR`](struct.PresentRegionKHR.html)"]
 #[repr(transparent)]
 pub struct PresentRegionKHRBuilder<'a>(PresentRegionKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentRegionKHRBuilder<'a> {
@@ -193,7 +193,7 @@ impl Default for RectLayerKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`RectLayerKHR`](struct.RectLayerKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Builder of [`RectLayerKHR`](struct.RectLayerKHR.html)"]
 #[repr(transparent)]
 pub struct RectLayerKHRBuilder<'a>(RectLayerKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> RectLayerKHRBuilder<'a> {

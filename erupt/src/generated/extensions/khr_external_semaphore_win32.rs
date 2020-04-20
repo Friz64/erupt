@@ -119,7 +119,7 @@ impl Default for ImportSemaphoreWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportSemaphoreWin32HandleInfoKHR`](struct.ImportSemaphoreWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ImportSemaphoreWin32HandleInfoKHR`](struct.ImportSemaphoreWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImportSemaphoreWin32HandleInfoKHRBuilder<'a>(
     ImportSemaphoreWin32HandleInfoKHR,
@@ -221,7 +221,7 @@ impl Default for SemaphoreGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`SemaphoreGetWin32HandleInfoKHR`](struct.SemaphoreGetWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Builder of [`SemaphoreGetWin32HandleInfoKHR`](struct.SemaphoreGetWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct SemaphoreGetWin32HandleInfoKHRBuilder<'a>(
     SemaphoreGetWin32HandleInfoKHR,
@@ -319,7 +319,7 @@ impl Default for ExportSemaphoreWin32HandleInfoKHR {
 }
 impl crate::ExtendableBy<ExportSemaphoreWin32HandleInfoKHR> for crate::vk1_0::SemaphoreCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExportSemaphoreWin32HandleInfoKHR`](struct.ExportSemaphoreWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ExportSemaphoreWin32HandleInfoKHR`](struct.ExportSemaphoreWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ExportSemaphoreWin32HandleInfoKHRBuilder<'a>(
     ExportSemaphoreWin32HandleInfoKHR,
@@ -429,7 +429,7 @@ impl Default for D3D12FenceSubmitInfoKHR {
 }
 impl crate::ExtendableBy<D3D12FenceSubmitInfoKHR> for crate::vk1_0::SubmitInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`D3D12FenceSubmitInfoKHR`](struct.D3D12FenceSubmitInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Builder of [`D3D12FenceSubmitInfoKHR`](struct.D3D12FenceSubmitInfoKHR.html)"]
 #[repr(transparent)]
 pub struct D3D12FenceSubmitInfoKHRBuilder<'a>(
     D3D12FenceSubmitInfoKHR,

@@ -119,7 +119,7 @@ impl crate::ExtendableBy<DisplayPresentInfoKHR>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DisplayPresentInfoKHR`](struct.DisplayPresentInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`](struct.DisplayPresentInfoKHR.html)"]
 #[repr(transparent)]
 pub struct DisplayPresentInfoKHRBuilder<'a>(
     DisplayPresentInfoKHR,

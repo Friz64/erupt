@@ -129,7 +129,7 @@ impl Default for MemoryGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryGetWin32HandleInfoKHR`](struct.MemoryGetWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html) · Builder of [`MemoryGetWin32HandleInfoKHR`](struct.MemoryGetWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct MemoryGetWin32HandleInfoKHRBuilder<'a>(
     MemoryGetWin32HandleInfoKHR,
@@ -210,7 +210,7 @@ impl Default for MemoryWin32HandlePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`MemoryWin32HandlePropertiesKHR`](struct.MemoryWin32HandlePropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryWin32HandlePropertiesKHR.html) · Builder of [`MemoryWin32HandlePropertiesKHR`](struct.MemoryWin32HandlePropertiesKHR.html)"]
 #[repr(transparent)]
 pub struct MemoryWin32HandlePropertiesKHRBuilder<'a>(
     MemoryWin32HandlePropertiesKHR,
@@ -299,7 +299,7 @@ impl Default for ImportMemoryWin32HandleInfoKHR {
 }
 impl crate::ExtendableBy<ImportMemoryWin32HandleInfoKHR> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImportMemoryWin32HandleInfoKHR`](struct.ImportMemoryWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Builder of [`ImportMemoryWin32HandleInfoKHR`](struct.ImportMemoryWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ImportMemoryWin32HandleInfoKHRBuilder<'a>(
     ImportMemoryWin32HandleInfoKHR,
@@ -403,7 +403,7 @@ impl Default for ExportMemoryWin32HandleInfoKHR {
 }
 impl crate::ExtendableBy<ExportMemoryWin32HandleInfoKHR> for crate::vk1_0::MemoryAllocateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ExportMemoryWin32HandleInfoKHR`](struct.ExportMemoryWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoKHR.html) · Builder of [`ExportMemoryWin32HandleInfoKHR`](struct.ExportMemoryWin32HandleInfoKHR.html)"]
 #[repr(transparent)]
 pub struct ExportMemoryWin32HandleInfoKHRBuilder<'a>(
     ExportMemoryWin32HandleInfoKHR,

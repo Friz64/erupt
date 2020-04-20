@@ -129,7 +129,7 @@ impl Default for CheckpointDataNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`CheckpointDataNV`](struct.CheckpointDataNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Builder of [`CheckpointDataNV`](struct.CheckpointDataNV.html)"]
 #[repr(transparent)]
 pub struct CheckpointDataNVBuilder<'a>(CheckpointDataNV, std::marker::PhantomData<&'a ()>);
 impl<'a> CheckpointDataNVBuilder<'a> {
@@ -221,7 +221,7 @@ impl crate::ExtendableBy<QueueFamilyCheckpointPropertiesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`QueueFamilyCheckpointPropertiesNV`](struct.QueueFamilyCheckpointPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`](struct.QueueFamilyCheckpointPropertiesNV.html)"]
 #[repr(transparent)]
 pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a>(
     QueueFamilyCheckpointPropertiesNV,

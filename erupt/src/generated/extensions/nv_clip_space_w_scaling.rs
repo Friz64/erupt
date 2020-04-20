@@ -91,7 +91,7 @@ impl Default for ViewportWScalingNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ViewportWScalingNV`](struct.ViewportWScalingNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Builder of [`ViewportWScalingNV`](struct.ViewportWScalingNV.html)"]
 #[repr(transparent)]
 pub struct ViewportWScalingNVBuilder<'a>(ViewportWScalingNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ViewportWScalingNVBuilder<'a> {
@@ -190,7 +190,7 @@ impl crate::ExtendableBy<PipelineViewportWScalingStateCreateInfoNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineViewportWScalingStateCreateInfoNV`](struct.PipelineViewportWScalingStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Builder of [`PipelineViewportWScalingStateCreateInfoNV`](struct.PipelineViewportWScalingStateCreateInfoNV.html)"]
 #[repr(transparent)]
 pub struct PipelineViewportWScalingStateCreateInfoNVBuilder<'a>(
     PipelineViewportWScalingStateCreateInfoNV,

@@ -214,7 +214,7 @@ impl Default for DebugReportCallbackCreateInfoEXT {
 }
 impl crate::ExtendableBy<DebugReportCallbackCreateInfoEXT> for crate::vk1_0::InstanceCreateInfo {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DebugReportCallbackCreateInfoEXT`](struct.DebugReportCallbackCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Builder of [`DebugReportCallbackCreateInfoEXT`](struct.DebugReportCallbackCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct DebugReportCallbackCreateInfoEXTBuilder<'a>(
     DebugReportCallbackCreateInfoEXT,

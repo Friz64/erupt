@@ -56,7 +56,7 @@ impl crate::ExtendableBy<PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT`](struct.PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT`](struct.PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a>(
     PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT,

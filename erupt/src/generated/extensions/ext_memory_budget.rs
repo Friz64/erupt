@@ -53,7 +53,7 @@ impl crate::ExtendableBy<PhysicalDeviceMemoryBudgetPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceMemoryBudgetPropertiesEXT`](struct.PhysicalDeviceMemoryBudgetPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Builder of [`PhysicalDeviceMemoryBudgetPropertiesEXT`](struct.PhysicalDeviceMemoryBudgetPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a>(
     PhysicalDeviceMemoryBudgetPropertiesEXT,

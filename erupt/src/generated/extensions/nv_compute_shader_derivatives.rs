@@ -64,7 +64,7 @@ impl crate::ExtendableBy<PhysicalDeviceComputeShaderDerivativesFeaturesNV>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`](struct.PhysicalDeviceComputeShaderDerivativesFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`](struct.PhysicalDeviceComputeShaderDerivativesFeaturesNV.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a>(
     PhysicalDeviceComputeShaderDerivativesFeaturesNV,

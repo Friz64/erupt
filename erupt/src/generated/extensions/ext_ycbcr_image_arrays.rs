@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceYcbcrImageArraysFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`](struct.PhysicalDeviceYcbcrImageArraysFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`](struct.PhysicalDeviceYcbcrImageArraysFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a>(
     PhysicalDeviceYcbcrImageArraysFeaturesEXT,

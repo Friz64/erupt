@@ -58,7 +58,7 @@ impl crate::ExtendableBy<PhysicalDeviceBlendOperationAdvancedFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT`](struct.PhysicalDeviceBlendOperationAdvancedFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT`](struct.PhysicalDeviceBlendOperationAdvancedFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a>(
     PhysicalDeviceBlendOperationAdvancedFeaturesEXT,
@@ -184,7 +184,7 @@ impl crate::ExtendableBy<PhysicalDeviceBlendOperationAdvancedPropertiesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT`](struct.PhysicalDeviceBlendOperationAdvancedPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT`](struct.PhysicalDeviceBlendOperationAdvancedPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a>(
     PhysicalDeviceBlendOperationAdvancedPropertiesEXT,
@@ -327,7 +327,7 @@ impl crate::ExtendableBy<PipelineColorBlendAdvancedStateCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineColorBlendAdvancedStateCreateInfoEXT`](struct.PipelineColorBlendAdvancedStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Builder of [`PipelineColorBlendAdvancedStateCreateInfoEXT`](struct.PipelineColorBlendAdvancedStateCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a>(
     PipelineColorBlendAdvancedStateCreateInfoEXT,

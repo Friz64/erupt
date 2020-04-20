@@ -120,7 +120,7 @@ impl Default for PhysicalDeviceToolPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceToolPropertiesEXT`](struct.PhysicalDeviceToolPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Builder of [`PhysicalDeviceToolPropertiesEXT`](struct.PhysicalDeviceToolPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceToolPropertiesEXTBuilder<'a>(
     PhysicalDeviceToolPropertiesEXT,

@@ -90,7 +90,7 @@ impl Default for ImageDrmFormatModifierPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageDrmFormatModifierPropertiesEXT`](struct.ImageDrmFormatModifierPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierPropertiesEXT.html) · Builder of [`ImageDrmFormatModifierPropertiesEXT`](struct.ImageDrmFormatModifierPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct ImageDrmFormatModifierPropertiesEXTBuilder<'a>(
     ImageDrmFormatModifierPropertiesEXT,
@@ -180,7 +180,7 @@ impl Default for DrmFormatModifierPropertiesListEXT {
 }
 impl crate::ExtendableBy<DrmFormatModifierPropertiesListEXT> for crate::vk1_1::FormatProperties2 {}
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DrmFormatModifierPropertiesListEXT`](struct.DrmFormatModifierPropertiesListEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Builder of [`DrmFormatModifierPropertiesListEXT`](struct.DrmFormatModifierPropertiesListEXT.html)"]
 #[repr(transparent)]
 pub struct DrmFormatModifierPropertiesListEXTBuilder<'a>(
     DrmFormatModifierPropertiesListEXT,
@@ -262,7 +262,7 @@ impl Default for DrmFormatModifierPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`DrmFormatModifierPropertiesEXT`](struct.DrmFormatModifierPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Builder of [`DrmFormatModifierPropertiesEXT`](struct.DrmFormatModifierPropertiesEXT.html)"]
 #[repr(transparent)]
 pub struct DrmFormatModifierPropertiesEXTBuilder<'a>(
     DrmFormatModifierPropertiesEXT,
@@ -372,7 +372,7 @@ impl crate::ExtendableBy<PhysicalDeviceImageDrmFormatModifierInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceImageDrmFormatModifierInfoEXT`](struct.PhysicalDeviceImageDrmFormatModifierInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html) · Builder of [`PhysicalDeviceImageDrmFormatModifierInfoEXT`](struct.PhysicalDeviceImageDrmFormatModifierInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a>(
     PhysicalDeviceImageDrmFormatModifierInfoEXT,
@@ -477,7 +477,7 @@ impl crate::ExtendableBy<ImageDrmFormatModifierListCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageDrmFormatModifierListCreateInfoEXT`](struct.ImageDrmFormatModifierListCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html) · Builder of [`ImageDrmFormatModifierListCreateInfoEXT`](struct.ImageDrmFormatModifierListCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ImageDrmFormatModifierListCreateInfoEXTBuilder<'a>(
     ImageDrmFormatModifierListCreateInfoEXT,
@@ -573,7 +573,7 @@ impl crate::ExtendableBy<ImageDrmFormatModifierExplicitCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`ImageDrmFormatModifierExplicitCreateInfoEXT`](struct.ImageDrmFormatModifierExplicitCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierExplicitCreateInfoEXT.html) · Builder of [`ImageDrmFormatModifierExplicitCreateInfoEXT`](struct.ImageDrmFormatModifierExplicitCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a>(
     ImageDrmFormatModifierExplicitCreateInfoEXT,

@@ -143,7 +143,7 @@ impl Default for XlibSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`XlibSurfaceCreateInfoKHR`](struct.XlibSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Builder of [`XlibSurfaceCreateInfoKHR`](struct.XlibSurfaceCreateInfoKHR.html)"]
 #[repr(transparent)]
 pub struct XlibSurfaceCreateInfoKHRBuilder<'a>(
     XlibSurfaceCreateInfoKHR,

@@ -54,7 +54,7 @@ impl crate::ExtendableBy<PhysicalDeviceDepthClipEnableFeaturesEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PhysicalDeviceDepthClipEnableFeaturesEXT`](struct.PhysicalDeviceDepthClipEnableFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDepthClipEnableFeaturesEXT.html) · Builder of [`PhysicalDeviceDepthClipEnableFeaturesEXT`](struct.PhysicalDeviceDepthClipEnableFeaturesEXT.html)"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a>(
     PhysicalDeviceDepthClipEnableFeaturesEXT,
@@ -148,7 +148,7 @@ impl crate::ExtendableBy<PipelineRasterizationDepthClipStateCreateInfoEXT>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "Builder of [`PipelineRasterizationDepthClipStateCreateInfoEXT`](struct.PipelineRasterizationDepthClipStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationDepthClipStateCreateInfoEXT`](struct.PipelineRasterizationDepthClipStateCreateInfoEXT.html)"]
 #[repr(transparent)]
 pub struct PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationDepthClipStateCreateInfoEXT,

@@ -112,6 +112,27 @@ macro_rules! cstr {
     };
 }
 
+/// Like `try!`, but for [`utils::VulkanResult`](utils/struct.VulkanResult.html)
+///
+/// ```
+/// unsafe fn example(device: &DeviceLoader) -> VulkanResult<(Semaphore, Semaphore)> {
+///     let create_info = SemaphoreCreateInfoBuilder::new();
+///
+///     let semaphore1 = try_vk!(device.create_semaphore(&create_info, None, None));
+///     let semaphore2 = try_vk!(device.create_semaphore(&create_info, None, None));
+///     VulkanResult::new_ok((semaphore1, semaphore2))
+/// }
+/// ```
+#[macro_export]
+macro_rules! try_vk {
+    ($expr:expr) => {
+        match $expr.result() {
+            Ok(value) => value,
+            Err(raw) => return VulkanResult::new_err(raw),
+        }
+    };
+}
+
 // adapted from ash
 #[doc(hidden)]
 #[macro_export]

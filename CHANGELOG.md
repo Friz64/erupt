@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add `LibraryError` wrapper type to avoid exposing `libloading` types
+- Add `try_vk` macro, like `try`, but for `VulkanResult`
 
 ### Changed
 - Change cargo feature representation in the README

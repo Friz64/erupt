@@ -46,6 +46,7 @@ impl<T> VulkanResult<T> {
     /// Construct a new `VulkanResult` from `raw` and `value`
     ///
     /// This will not populate `self.value` if the raw result is negative (Error)
+    #[inline]
     pub fn new(raw: RawResult, value: T) -> VulkanResult<T> {
         let value = if raw.0.is_negative() {
             None
@@ -59,6 +60,7 @@ impl<T> VulkanResult<T> {
     /// Returns the contained value, consuming `self`
     ///
     /// Panics with the name of `self.raw` if `self.value` is `None`
+    #[inline]
     pub fn unwrap(self) -> T {
         match self.value {
             Some(value) => value,
@@ -69,6 +71,7 @@ impl<T> VulkanResult<T> {
     /// Returns the contained value, consuming `self`
     ///
     /// Panics with `msg` and the name of `self.raw` if `self.value` is `None`
+    #[inline]
     pub fn expect(self, msg: impl Display) -> T {
         match self.value {
             Some(value) => value,
@@ -79,6 +82,7 @@ impl<T> VulkanResult<T> {
     /// Converts from `&VulkanResult<T>` to `VulkanResult<&T>`
     ///
     /// Clones `self.raw`
+    #[inline]
     pub fn as_ref(&self) -> VulkanResult<&T> {
         VulkanResult {
             raw: self.raw.clone(),
@@ -89,6 +93,7 @@ impl<T> VulkanResult<T> {
     /// Converts from `&mut VulkanResult<T>` to `VulkanResult<&mut T>`
     ///
     /// Clones `self.raw`
+    #[inline]
     pub fn as_mut(&mut self) -> VulkanResult<&mut T> {
         VulkanResult {
             raw: self.raw.clone(),
@@ -99,6 +104,7 @@ impl<T> VulkanResult<T> {
     /// Constructs a new `VulkanResult` from `value`
     ///
     /// This will always set `self.raw` to `RawResult::SUCCESS`
+    #[inline]
     pub fn new_ok(value: T) -> VulkanResult<T> {
         VulkanResult::new(RawResult::SUCCESS, value)
     }
@@ -106,42 +112,50 @@ impl<T> VulkanResult<T> {
     /// Constructs a new `VulkanResult` from `raw`
     ///
     /// This will always set `self.value` to `None`
+    #[inline]
     pub fn new_err(raw: RawResult) -> VulkanResult<T> {
         VulkanResult { raw, value: None }
     }
 
     /// Returns `self.value`, consuming `self` and dropping `self.raw`
+    #[inline]
     pub fn ok(self) -> Option<T> {
         self.value
     }
 
     /// Maps `Some(v)` of `self.value` to `Ok(v)` and `None` of `self.value` to `Err(self.raw)`
+    #[inline]
     pub fn result(self) -> Result<T, RawResult> {
         self.value.ok_or(self.raw)
     }
 
     /// Returns `true` if `self.value` is `Some`
+    #[inline]
     pub fn is_ok(&self) -> bool {
         self.value.is_some()
     }
 
     /// Returns `true` if `self.raw` is positive
+    #[inline]
     pub fn raw_is_ok(&self) -> bool {
         self.raw.0.is_positive()
     }
 
     /// Returns `true` if `self.value` is `None`
+    #[inline]
     pub fn is_err(&self) -> bool {
         self.value.is_none()
     }
 
     /// Returns `true` if `self.raw` is negative
+    #[inline]
     pub fn raw_is_err(&self) -> bool {
         self.raw.0.is_negative()
     }
 }
 
 impl Display for RawResult {
+    #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         Debug::fmt(self, fmt)
     }
@@ -153,6 +167,7 @@ impl<T> Debug for VulkanResult<T>
 where
     T: Debug,
 {
+    #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         match &self.value {
             Some(value) => writeln!(fmt, "{:?}: {:?}", self.raw, value),
@@ -165,6 +180,7 @@ impl<T> Display for VulkanResult<T>
 where
     T: Display,
 {
+    #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         match &self.value {
             Some(value) => writeln!(fmt, "{:?}: {}", self.raw, value),

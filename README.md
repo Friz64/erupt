@@ -43,9 +43,9 @@ instance.destroy_instance(None);
 ```
 
 ## Additional examples
-- [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/triangle.rs)
-- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/pointer_chain.rs)
-- [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/version.rs)
+- [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/bin/triangle.rs)
+- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/bin/pointer_chain.rs)
+- [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt-examples/src/bin/version.rs)
 
 ## Cargo Features
 - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency

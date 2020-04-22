@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Change cargo feature representation in the README
+- Make use of `try_vk` in Instance Creation Example
 - Move loading to it's own module
 - Move examples to bin dir to avoid manual entries
 

@@ -5,7 +5,7 @@
 //! - Full Vulkan API coverage
 //! - First-class support for all extensions
 //! - High quality auto-generated function wrappers
-//! - A [utility module] aiding your use of the Vulkan API
+//! - A [utility module] aiding your use of this crate
 //!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
 //! - Generated code distributed into multiple modules
@@ -25,9 +25,7 @@
 //!
 //! let app_info = ApplicationInfoBuilder::new().api_version(erupt::make_version(1, 0, 0));
 //! let instance_info = InstanceCreateInfoBuilder::new().application_info(&app_info);
-//! let instance_handle = core
-//!     .create_instance(&instance_info, None, None)
-//!     .expect("Failed to create instance");
+//! let instance_handle = try_vk!(core.create_instance(&instance_info, None, None));
 //!
 //! let mut instance = InstanceLoader::new(&core, instance_handle)?;
 //! instance.load_vk1_0()?;
@@ -128,7 +126,7 @@ macro_rules! try_vk {
     ($expr:expr) => {
         match $expr.result() {
             Ok(value) => value,
-            Err(raw) => return VulkanResult::new_err(raw),
+            Err(raw) => return erupt::utils::VulkanResult::new_err(raw),
         }
     };
 }

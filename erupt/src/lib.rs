@@ -124,7 +124,7 @@ macro_rules! cstr {
 #[macro_export]
 macro_rules! try_vk {
     ($expr:expr) => {
-        match $expr.result() {
+        match $crate::utils::VulkanResult::result($expr) {
             Ok(value) => value,
             Err(raw) => return $crate::utils::VulkanResult::new_err(raw),
         }

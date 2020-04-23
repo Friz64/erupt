@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make use of `try_vk` in Instance Creation Example
 - Move loading to it's own module
 - Move examples to bin dir to avoid manual entries
+- Switch to Rust 1.43 associated constants in triangle example
 
 ## [0.4.0+137] - 2020-04-19
 ### Added

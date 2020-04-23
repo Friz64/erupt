@@ -505,14 +505,14 @@ fn main() {
         Event::MainEventsCleared => {
             unsafe {
                 device
-                    .wait_for_fences(&[in_flight_fences[frame]], true, u64::max_value())
+                    .wait_for_fences(&[in_flight_fences[frame]], true, u64::MAX)
                     .unwrap();
             }
 
             let image_index = unsafe {
                 device.acquire_next_image_khr(
                     swapchain,
-                    u64::max_value(),
+                    u64::MAX,
                     image_available_semaphores[frame],
                     Fence::null(),
                     None,
@@ -522,8 +522,7 @@ fn main() {
 
             let image_in_flight = images_in_flight[image_index as usize];
             if !image_in_flight.is_null() {
-                unsafe { device.wait_for_fences(&[image_in_flight], true, u64::max_value()) }
-                    .unwrap();
+                unsafe { device.wait_for_fences(&[image_in_flight], true, u64::MAX) }.unwrap();
             }
             images_in_flight[image_index as usize] = in_flight_fences[frame];
 

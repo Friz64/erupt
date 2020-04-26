@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move examples to bin dir to avoid manual entries
 - Switch to Rust 1.43 associated constants in triangle example
 
+### Fixed
+- Add special cases for some builders
+
 ## [0.4.0+137] - 2020-04-19
 ### Added
 - Add compile time comparison to the FAQ

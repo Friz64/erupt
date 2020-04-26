@@ -16984,9 +16984,21 @@ impl<'a> PipelineViewportStateCreateInfoBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
+    pub fn viewport_count(mut self, viewport_count: u32) -> Self {
+        self.0.viewport_count = viewport_count;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
     pub fn viewports(mut self, viewports: &'a [crate::vk1_0::ViewportBuilder]) -> Self {
         self.0.viewport_count = viewports.len() as _;
         self.0.p_viewports = viewports.as_ptr() as _;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn scissor_count(mut self, scissor_count: u32) -> Self {
+        self.0.scissor_count = scissor_count;
         self
     }
     #[allow(unused_mut)]
@@ -19650,6 +19662,12 @@ impl<'a> DescriptorSetLayoutBindingBuilder<'a> {
     #[inline]
     pub fn descriptor_type(mut self, descriptor_type: crate::vk1_0::DescriptorType) -> Self {
         self.0.descriptor_type = descriptor_type;
+        self
+    }
+    #[allow(unused_mut)]
+    #[inline]
+    pub fn descriptor_count(mut self, descriptor_count: u32) -> Self {
+        self.0.descriptor_count = descriptor_count;
         self
     }
     #[allow(unused_mut)]

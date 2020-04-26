@@ -47,7 +47,6 @@ const BLACKLIST: &[&str] = &[
     "VK_API_VERSION_1_2",
 ];
 const STRUCTURE_TYPE: &str = "crate::vk1_0::StructureType";
-const SHADER_MODULE_CREATE_INFO_BUILDER: &str = "ShaderModuleCreateInfoBuilder";
 
 #[derive(Debug, PartialEq, Eq, Clone)]
 pub enum TypeItem {
@@ -646,14 +645,26 @@ pub fn generate(
                     Some(&man_doc),
                 );
 
+                let builder_allow = vec![
+                    ("PipelineViewportStateCreateInfoBuilder", "viewport_count"),
+                    ("PipelineViewportStateCreateInfoBuilder", "scissor_count"),
+                    ("DescriptorSetLayoutBindingBuilder", "descriptor_count"),
+                ];
+
+                let builder_deny = vec![("ShaderModuleCreateInfoBuilder", "code_size")];
+
                 let builder_functions: Vec<_> = fields
                     .iter()
                     .filter(|((_, name, field_type, _, _), _, _)| {
+                        let builder_name = builder_name.to_string();
+                        let field_name = name.to_string();
+                        let identifier = (builder_name.as_str(), field_name.as_str());
+
                         !field_len_map.values().any(|v| v == &name)
                             && field_type != STRUCTURE_TYPE
                             && name != "p_next"
-                            && !(builder_name == SHADER_MODULE_CREATE_INFO_BUILDER
-                                && name == "code_size")
+                            && !builder_deny.contains(&identifier)
+                            || builder_allow.contains(&identifier)
                     })
                     .map(|((_, name_ident, field_type, _, _), _, c_type)| {
                         let mut field_type = field_type.clone();
@@ -730,7 +741,7 @@ pub fn generate(
                                         self.0 .#name_ident = #adjusted_name.as_ptr();
                                     }
                                 }
-                                (_, "code", crate::types::SHADER_MODULE_CREATE_INFO_BUILDER) => {
+                                (_, "code", "ShaderModuleCreateInfoBuilder") => {
                                     field_type = "&'a [u32]".into();
                                     quote! {
                                         self.0 .code_size = code.len() * 4;

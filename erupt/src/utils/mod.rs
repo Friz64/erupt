@@ -1,5 +1,6 @@
 //! Utilities to aid your usage of this crate
 
+pub mod allocator;
 #[cfg(feature = "loading")]
 pub mod loading;
 #[cfg(feature = "surface")]

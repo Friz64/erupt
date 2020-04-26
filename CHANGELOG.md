@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Check for supported Vulkan version in `pointer-chain` example
 - Convert `Bool32` to `bool` in function wrapper return type
 
+### Added
+- Add basic Vulkan memory allocator to `utils`
+
 ## [0.5.1+139] - 2020-04-28
 ### Changed
 - Updated Vulkan Headers to version 139

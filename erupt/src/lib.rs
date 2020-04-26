@@ -8,6 +8,7 @@
 //! - A [utility module] aiding your use of this crate
 //!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
+//!   - [`allocator`]: Provides a basic Vulkan memory allocator
 //! - Generated code distributed into multiple modules
 //! - Function loading ([`CoreLoader`], [`InstanceLoader`], [`DeviceLoader`])
 //! - Seperate `Flags` and `FlagBits` types
@@ -82,6 +83,7 @@
 //! [`VulkanResult`]: https://docs.rs/erupt/*/erupt/utils/struct.VulkanResult.html
 //! [`surface`]: https://docs.rs/erupt/*/erupt/utils/surface/index.html
 //! [`SurfaceKHR`]: https://docs.rs/erupt/*/erupt/extensions/khr_surface/struct.SurfaceKHR.html
+//! [`allocator`]: https://docs.rs/erupt/*/erupt/utils/allocator/index.html
 //! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
 //! [`libloading`]: https://crates.io/crates/libloading
 //! [`raw-window-handle`]: https://crates.io/crates/raw-window-handle

@@ -179,7 +179,7 @@ pub fn len(len: &Option<String>, altlen: &Option<String>) -> Vec<String> {
         .unwrap_or_default()
         .split(',')
         .chain(altlen.clone().unwrap_or_default().split(','))
-        .filter(|s| !s.is_empty() && !s.contains("-"))
+        .filter(|s| !s.is_empty() && s != &"null-terminated")
         .map(|s| s.to_string())
         .collect()
 }

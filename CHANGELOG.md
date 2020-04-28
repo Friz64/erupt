@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.1+139] - 2020-04-28
+### Changed
+- Updated Vulkan Headers to version 139
+
 ## [0.5.0+137] - 2020-04-26
 ### Added
 - Add `LibraryError` wrapper type to avoid exposing `libloading` types

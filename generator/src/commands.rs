@@ -493,7 +493,7 @@ fn generate_loader_generic(
                                         syn::parse_str(&trimmed).unwrap();
                                     if let Some(length) = &arg.length {
                                         let rust_len = length
-                                            .split("::")
+                                            .split("->")
                                             .enumerate()
                                             .map(|(i, field)| {
                                                 let field = field.to_snake_case();

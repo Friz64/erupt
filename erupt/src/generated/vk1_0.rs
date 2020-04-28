@@ -5835,6 +5835,11 @@ impl StructureType {
 impl StructureType {
     pub const PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT: Self = Self(1000192000);
 }
+#[doc = "[Part of `extensions::ext_robustness2`](../extensions/ext_robustness2/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT: Self = Self(1000286000);
+    pub const PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT: Self = Self(1000286001);
+}
 #[doc = "[Part of `extensions::ext_sample_locations`](../extensions/ext_sample_locations/index.html)"]
 impl StructureType {
     pub const SAMPLE_LOCATIONS_INFO_EXT: Self = Self(1000143000);
@@ -6970,6 +6975,12 @@ impl std::fmt::Debug for StructureType {
             }
             &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT => {
                 "PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT => {
+                "PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT"
             }
             &Self::SAMPLE_LOCATIONS_INFO_EXT => "SAMPLE_LOCATIONS_INFO_EXT",
             &Self::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT => {
@@ -21143,16 +21154,23 @@ impl SubpassDescriptionFlagBits {
     pub const PER_VIEW_ATTRIBUTES_NVX: Self = Self(0x00000001);
     pub const PER_VIEW_POSITION_X_ONLY_NVX: Self = Self(0x00000002);
 }
+#[doc = "[Part of `extensions::qcom_render_pass_shader_resolve`](../extensions/qcom_render_pass_shader_resolve/index.html)"]
+impl SubpassDescriptionFlagBits {
+    pub const FRAGMENT_REGION_QCOM: Self = Self(0x00000004);
+    pub const SHADER_RESOLVE_QCOM: Self = Self(0x00000008);
+}
 impl std::fmt::Debug for SubpassDescriptionFlagBits {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
             &Self::PER_VIEW_ATTRIBUTES_NVX => "PER_VIEW_ATTRIBUTES_NVX",
             &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
+            &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
+            &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
             _ => "(unknown)",
         })
     }
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Flags of [`SubpassDescriptionFlagBits`](struct.SubpassDescriptionFlagBits.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct SubpassDescriptionFlags : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; } }
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Flags of [`SubpassDescriptionFlagBits`](struct.SubpassDescriptionFlagBits.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct SubpassDescriptionFlags : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineBindPoint.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
 #[repr(transparent)]

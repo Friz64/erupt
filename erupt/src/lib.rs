@@ -57,7 +57,7 @@
 //! ash has a bigger existing community.
 //!
 //! ### Q: How do the compile times compare to ash?
-//! A: erupt `0.4.0+137` compiles in around 72% of the time it takes for ash `0.30.0` to compile, tested on
+//! A: erupt `0.5.1+139` compiles in around 72% of the time it takes for ash `0.30.0` to compile, tested on
 //! Linux with rustc nightly `1.44.0` using `-Ztimings=info`.
 //!
 //! ### Q: What does the number at the end of the version mean?

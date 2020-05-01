@@ -1,4 +1,4 @@
-//! Provides a basic Vulkan memory allocator
+//! Provides a basic Vulkan memory allocator (+parts), aiming to be *correct*
 use crate::{
     try_vk,
     utils::VulkanResult,
@@ -104,11 +104,14 @@ pub fn align_up(addr: DeviceSize, align: DeviceSize) -> DeviceSize {
 /// A region of memory
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct Region {
+    /// Region start, inclusive
     pub start: DeviceSize,
+    /// Region end, exclusive
     pub end: DeviceSize,
 }
 
 impl Region {
+    /// Calculates the size of the region
     #[inline]
     pub fn size(&self) -> DeviceSize {
         self.end - self.start
@@ -127,20 +130,11 @@ impl Region {
     }
 }
 
-/// A planned allocation
-#[derive(Debug)]
-pub struct AllocationPlan {
-    free_region: Region,
-    free_region_idx: usize,
-    mem_requirements: MemoryRequirements,
-}
-
 /// Simple suballocator
 #[derive(Debug)]
 pub struct Suballocator {
     free_regions: Vec<Region>,
     align: Option<DeviceSize>,
-    planning: bool,
 }
 
 impl Suballocator {
@@ -156,60 +150,40 @@ impl Suballocator {
                 end: size,
             }],
             align,
-            planning: false,
         }
     }
 
-    /// Plans an allocation based on the provided `mem_requirements`
-    ///
-    /// Panics if there is already a valid `AllocationPlan` present
-    pub fn plan(&mut self, mut mem_requirements: MemoryRequirements) -> Option<AllocationPlan> {
-        assert!(!self.planning);
-
+    /// Makes a new allocation, returning the region of the new allocation if it was successful
+    pub fn allocate(&mut self, mut mem_requirements: MemoryRequirements) -> Option<Region> {
         if let Some(align) = self.align {
             assert!(mem_requirements.alignment.is_power_of_two());
-            mem_requirements.alignment = mem_requirements.alignment.max(align)
+            mem_requirements.size = align_up(mem_requirements.size, align);
+            mem_requirements.alignment = mem_requirements.alignment.max(align);
         }
 
-        let plan = self
+        let (free_region_idx, free_region) = self
             .free_regions
             .iter()
             .enumerate()
-            .find(|(_, region)| region.fits(mem_requirements))
-            .map(|(free_region_idx, &free_region)| AllocationPlan {
-                free_region,
-                free_region_idx,
-                mem_requirements,
-            });
+            .find(|(_, region)| region.fits(mem_requirements))?;
 
-        if plan.is_some() {
-            self.planning = true;
-        }
-
-        plan
-    }
-
-    /// Makes a new allocation, returning the region of the new allocation
-    pub fn allocate(&mut self, plan: AllocationPlan) -> Region {
-        self.planning = false;
-
-        let allocation_start = align_up(plan.free_region.start, plan.mem_requirements.alignment);
+        let allocation_start = align_up(free_region.start, mem_requirements.alignment);
         let allocation = Region {
             start: allocation_start,
-            end: allocation_start + plan.mem_requirements.size,
+            end: allocation_start + mem_requirements.size,
         };
 
         let left = Region {
-            start: plan.free_region.start,
+            start: free_region.start,
             end: allocation.start,
         };
 
         let right = Region {
             start: allocation.end,
-            end: plan.free_region.end,
+            end: free_region.end,
         };
 
-        self.free_regions.remove(plan.free_region_idx);
+        self.free_regions.swap_remove(free_region_idx);
         if !left.is_empty() {
             self.free_regions.push(left);
         }
@@ -218,7 +192,7 @@ impl Suballocator {
             self.free_regions.push(right);
         }
 
-        allocation
+        Some(allocation)
     }
 
     #[inline]
@@ -258,7 +232,7 @@ impl Suballocator {
 /// A block of Vulkan memory
 #[derive(Debug)]
 pub struct Block {
-    mem_type: u32,
+    mem_type_idx: u32,
     memory: DeviceMemory,
     suballocator: Suballocator,
     host_coherent: bool,
@@ -269,16 +243,16 @@ impl Block {
     pub fn new(
         device: &DeviceLoader,
         size: DeviceSize,
-        mem_type: u32,
-        mem_types: &[MemoryType],
-        limits: PhysicalDeviceLimits,
+        mem_type_idx: u32,
+        mem_properties: &PhysicalDeviceMemoryProperties,
+        limits: &PhysicalDeviceLimits,
     ) -> VulkanResult<Block> {
         let allocate_info = MemoryAllocateInfoBuilder::new()
             .allocation_size(size)
-            .memory_type_index(mem_type);
+            .memory_type_index(mem_type_idx);
         let memory = try_vk!(unsafe { device.allocate_memory(&allocate_info, None, None) });
 
-        let host_coherent = mem_types[mem_type as usize]
+        let host_coherent = mem_properties.memory_types[mem_type_idx as usize]
             .property_flags
             .contains(MemoryPropertyFlagBits::HOST_COHERENT.bitmask());
 
@@ -292,7 +266,7 @@ impl Block {
         );
 
         VulkanResult::new_ok(Block {
-            mem_type,
+            mem_type_idx,
             memory,
             suballocator,
             host_coherent,
@@ -305,16 +279,10 @@ impl Block {
         self.memory
     }
 
-    /// Plans an allocation based on the provided `mem_requirements`
+    /// Makes a new allocation, returning the region of the new allocation if it was successful
     #[inline]
-    pub fn plan(&mut self, mem_requirements: MemoryRequirements) -> Option<AllocationPlan> {
-        self.suballocator.plan(mem_requirements)
-    }
-
-    /// Makes a new allocation, returning the region of the new allocation
-    #[inline]
-    pub fn allocate(&mut self, plan: AllocationPlan) -> Region {
-        self.suballocator.allocate(plan)
+    pub fn allocate(&mut self, mem_requirements: MemoryRequirements) -> Option<Region> {
+        self.suballocator.allocate(mem_requirements)
     }
 
     /// Frees an allocation, destroying this block if it's now empty
@@ -392,6 +360,7 @@ impl AllocationObject for Image {
     }
 }
 
+/// A region of mapped memory
 #[derive(Debug)]
 pub struct MappedMemory {
     buf: Vec<u8>,
@@ -480,7 +449,8 @@ where
         range: impl RangeBounds<DeviceSize>,
     ) -> VulkanResult<MappedMemory> {
         let offset = match range.start_bound() {
-            Bound::Included(start) | Bound::Excluded(start) => *start,
+            Bound::Excluded(start) => start + 1,
+            Bound::Included(start) => *start,
             Bound::Unbounded => 0,
         } + self.region.start;
 
@@ -578,18 +548,18 @@ impl Allocator {
         T: AllocationObject,
     {
         let mem_requirements = unsafe { object.memory_requirements(device) };
-        let mem_type = match finder.find(&self.mem_properties, &mem_requirements) {
-            Some(mem_type) => mem_type,
+        let mem_type_idx = match finder.find(&self.mem_properties, &mem_requirements) {
+            Some(mem_type_idx) => mem_type_idx,
             None => return VulkanResult::new_err(vk1_0::Result::ERROR_UNKNOWN),
         };
 
-        let (block_idx, block, plan) = match self
+        let (block_idx, block, region) = match self
             .blocks
             .iter_mut()
             .enumerate()
             .filter_map(|(i, block)| block.as_mut().map(|block| (i, block)))
-            .filter(|(_, block)| block.mem_type == mem_type)
-            .find_map(|(i, block)| block.plan(mem_requirements).map(|plan| (i, block, plan)))
+            .filter(|(_, block)| block.mem_type_idx == mem_type_idx)
+            .find_map(|(i, block)| block.allocate(mem_requirements).map(|r| (i, block, r)))
         {
             Some(block) => block,
             None => {
@@ -597,13 +567,13 @@ impl Allocator {
                 self.blocks.push(Some(try_vk!(Block::new(
                     device,
                     self.info.block_size,
-                    mem_type,
-                    &self.mem_properties.memory_types,
-                    self.dev_properties.limits
+                    mem_type_idx,
+                    &self.mem_properties,
+                    &self.dev_properties.limits
                 ))));
 
                 let block = self.blocks[idx].as_mut().unwrap();
-                if let Some(plan) = block.plan(mem_requirements) {
+                if let Some(plan) = block.allocate(mem_requirements) {
                     (idx, block, plan)
                 } else {
                     return VulkanResult::new_err(vk1_0::Result::ERROR_OUT_OF_DEVICE_MEMORY);
@@ -611,7 +581,6 @@ impl Allocator {
             }
         };
 
-        let region = block.allocate(plan);
         try_vk!(unsafe { object.bind_memory(device, block.memory, region.start) });
 
         VulkanResult::new_ok(Allocation {

@@ -8,7 +8,7 @@
 //! - A [utility module] aiding your use of this crate
 //!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
-//!   - [`allocator`]: Provides a basic Vulkan memory allocator
+//!   - [`allocator`]: Provides a basic Vulkan memory allocator (+parts), aiming to be *correct*
 //! - Generated code distributed into multiple modules
 //! - Function loading ([`CoreLoader`], [`InstanceLoader`], [`DeviceLoader`])
 //! - Seperate `Flags` and `FlagBits` types

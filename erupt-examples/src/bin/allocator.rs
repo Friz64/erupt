@@ -152,7 +152,7 @@ fn main() {
     let create_info = BufferCreateInfoBuilder::new()
         .sharing_mode(SharingMode::EXCLUSIVE)
         .usage(BufferUsageFlags::UNIFORM_BUFFER)
-        .size(16);
+        .size(17);
 
     let buffer = allocator
         .allocate(

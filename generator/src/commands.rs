@@ -765,7 +765,7 @@ fn generate_loader_root_generic(
     match level {
         CommandLevel::Core => {
             quote! {
-                /// Loader for Core Commands
+                #[doc = "Loader for Core Commands"]
                 pub struct #struct_name<T> {
                     pub loader: T,
                     pub symbol_loader: Box<dyn Fn(&T, &str) -> Option<std::num::NonZeroUsize> + Send + Sync>,
@@ -796,7 +796,9 @@ fn generate_loader_root_generic(
         }
         CommandLevel::Instance => {
             quote! {
-                /// Loader for Instance Commands. **Must** outlive [`CoreLoader`](struct.CoreLoader.html)
+                #[doc = "Loader for Instance Commands"]
+                #[doc = "# Safety"]
+                #[doc = "[See here](#safety-1)"]
                 pub struct #struct_name {
                     pub loader: crate::vk1_0::PFN_vkGetInstanceProcAddr,
                     pub handle: crate::vk1_0::Instance,
@@ -804,6 +806,8 @@ fn generate_loader_root_generic(
                 }
 
                 impl #struct_name {
+                    #[doc = "# Safety"]
+                    #[doc = "Using this loader after dropping `core_loader` results in undefined behaviour"]
                     pub fn new<T>(core_loader: &CoreLoader<T>, instance: crate::vk1_0::Instance) -> Option<#struct_name> {
                         Some(#struct_name {
                             loader: unsafe {
@@ -827,7 +831,9 @@ fn generate_loader_root_generic(
         }
         CommandLevel::Device => {
             quote! {
-                /// Loader for Device Commands. **Must** outlive [`InstanceLoader`](struct.InstanceLoader.html)
+                #[doc = "Loader for Device Commands"]
+                #[doc = "# Safety"]
+                #[doc = "[See here](#safety-1)"]
                 pub struct #struct_name {
                     pub loader: crate::vk1_0::PFN_vkGetDeviceProcAddr,
                     pub handle: crate::vk1_0::Device,
@@ -835,6 +841,8 @@ fn generate_loader_root_generic(
                 }
 
                 impl #struct_name {
+                    #[doc = "# Safety"]
+                    #[doc = "Using this loader after dropping `instance_loader` results in undefined behaviour"]
                     pub fn new(instance_loader: &InstanceLoader, device: crate::vk1_0::Device) -> Option<#struct_name> {
                         Some(#struct_name {
                             loader: unsafe {

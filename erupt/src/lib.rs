@@ -18,7 +18,7 @@
 //! - Complete auto-generation of everything except [`utils`]
 //!
 //! ## Example: Instance Creation
-//! ```rust
+//! ```rust ignore
 //! use erupt::{vk1_0::*, CoreLoader, InstanceLoader};
 //!
 //! let mut core = CoreLoader::new()?;
@@ -102,7 +102,7 @@ pub use generated::*;
 /// Construct a `*const std::os::raw::c_char` from a string
 ///
 /// # Example
-/// ```
+/// ```ignore
 /// const LAYER_KHRONOS_VALIDATION: *const c_char = cstr!("VK_LAYER_KHRONOS_validation");
 /// ```
 #[macro_export]
@@ -114,7 +114,7 @@ macro_rules! cstr {
 
 /// Like `try!`, but for [`utils::VulkanResult`](utils/struct.VulkanResult.html)
 ///
-/// ```
+/// ```ignore
 /// unsafe fn example(device: &DeviceLoader) -> VulkanResult<(Semaphore, Semaphore)> {
 ///     let create_info = SemaphoreCreateInfoBuilder::new();
 ///

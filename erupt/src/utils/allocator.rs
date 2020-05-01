@@ -134,6 +134,7 @@ impl Region {
 #[derive(Debug)]
 pub struct Suballocator {
     free_regions: Vec<Region>,
+    size: DeviceSize,
     align: Option<DeviceSize>,
 }
 
@@ -149,6 +150,7 @@ impl Suballocator {
                 start: 0,
                 end: size,
             }],
+            size,
             align,
         }
     }
@@ -198,7 +200,10 @@ impl Suballocator {
     #[inline]
     /// Returns `true` if there are no active allocations
     pub fn is_empty(&self) -> bool {
-        self.free_regions.len() == 1
+        self.free_regions.len() == 1 && {
+            let region = &self.free_regions[0];
+            region.start == 0 && region.end == self.size
+        }
     }
 
     /// Frees an allocation
@@ -604,5 +609,70 @@ impl Allocator {
         );
 
         unsafe { allocation.object.destroy(device) };
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn suballoc() {
+        let mut suballoc = Suballocator::new(128, None);
+        assert!(suballoc.is_empty());
+
+        let r1 = suballoc
+            .allocate(MemoryRequirements {
+                size: 16,
+                alignment: 1,
+                memory_type_bits: u32::MAX,
+            })
+            .unwrap();
+        dbg!(&suballoc.free_regions);
+        let r2 = suballoc
+            .allocate(MemoryRequirements {
+                size: 4,
+                alignment: 16,
+                memory_type_bits: u32::MAX,
+            })
+            .unwrap();
+        dbg!(&suballoc.free_regions);
+
+        assert!(!suballoc.is_empty());
+
+        suballoc.free(r1);
+        suballoc.free(r2);
+
+        assert!(suballoc.is_empty());
+    }
+
+    #[test]
+    fn suballoc_align() {
+        let mut suballoc = Suballocator::new(128, Some(64));
+        assert!(suballoc.is_empty());
+
+        let r1 = suballoc
+            .allocate(MemoryRequirements {
+                size: 16,
+                alignment: 1,
+                memory_type_bits: u32::MAX,
+            })
+            .unwrap();
+        dbg!(&suballoc.free_regions);
+        let r2 = suballoc
+            .allocate(MemoryRequirements {
+                size: 4,
+                alignment: 16,
+                memory_type_bits: u32::MAX,
+            })
+            .unwrap();
+        dbg!(&suballoc.free_regions);
+
+        assert!(!suballoc.is_empty());
+
+        suballoc.free(r1);
+        suballoc.free(r2);
+
+        assert!(suballoc.is_empty());
     }
 }

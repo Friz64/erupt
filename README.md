@@ -23,7 +23,7 @@ Vulkan API bindings
 - Complete auto-generation of everything except [`utils`]
 
 ## Example: Instance Creation
-```rust
+```rust ignore
 use erupt::{vk1_0::*, CoreLoader, InstanceLoader};
 
 let mut core = CoreLoader::new()?;

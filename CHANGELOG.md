@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add basic Vulkan memory allocator to `utils`
+- Add compute example, making use of the new allocator
 
 ## [0.5.1+139] - 2020-04-28
 ### Changed

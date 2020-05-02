@@ -1,3 +1,5 @@
+#![deny(missing_docs)]
+
 //! Utilities to aid your usage of this crate
 
 pub mod allocator;
@@ -39,7 +41,9 @@ impl<T> CoreLoader<T> {
 #[must_use = "this `VulkanResult` may be an error, which should be handled"]
 #[derive(Copy, Clone, Default)]
 pub struct VulkanResult<T> {
+    /// The raw result from Vulkan
     pub raw: RawResult,
+    /// The value this wrapper type may be holding
     pub value: Option<T>,
 }
 

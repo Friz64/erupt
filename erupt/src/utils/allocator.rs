@@ -248,7 +248,7 @@ pub struct Block {
 }
 
 impl Block {
-    /// Create a new block, allocating `size` bytes on `mem_type`
+    /// Create a new block, allocating `size` bytes on `mem_type_idx`
     pub fn new(
         device: &DeviceLoader,
         size: DeviceSize,
@@ -403,13 +403,13 @@ impl MappedMemory {
         unsafe { ptr::copy_nonoverlapping(slice.as_ptr(), self.ptr as _, slice_len) }
     }
 
-    /// Returns the size of the mapped memory
+    /// Returns the raw pointer to the mapped memory
     #[inline]
     pub fn raw(&mut self) -> *mut c_void {
         self.ptr
     }
 
-    /// Returns the raw pointer to the mapped memory
+    /// Returns the size of the mapped memory
     #[inline]
     pub fn size(&self) -> usize {
         self.memory_range.size as usize
@@ -476,6 +476,7 @@ where
         self.region
     }
 
+    /// Maps the specified range of memory
     pub fn map(
         &self,
         device: &DeviceLoader,
@@ -623,7 +624,7 @@ impl Allocator {
         })
     }
 
-    /// Free an allocation handle
+    /// Free an allocation handle, destroying it's inner object
     pub fn free<T>(&mut self, device: &DeviceLoader, allocation: Allocation<T>)
     where
         T: AllocationObject,

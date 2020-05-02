@@ -5,7 +5,11 @@ use crate::{
     vk1_0::{self, *},
     DeviceLoader, InstanceLoader,
 };
-use std::ops::{Bound, RangeBounds};
+use std::{
+    ffi::c_void,
+    ops::{Bound, RangeBounds},
+    ptr, slice,
+};
 
 /// Finds the wanted memory type
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
@@ -368,7 +372,7 @@ impl AllocationObject for Image {
 /// A region of mapped memory
 #[derive(Debug)]
 pub struct MappedMemory {
-    buf: Vec<u8>,
+    ptr: *mut c_void,
     memory: DeviceMemory,
     host_coherent: bool,
     memory_range: MappedMemoryRange,
@@ -378,13 +382,37 @@ impl MappedMemory {
     /// Read the mapped memory
     #[inline]
     pub fn read(&self) -> &[u8] {
-        &self.buf
+        unsafe { slice::from_raw_parts(self.ptr as _, self.size()) }
     }
 
     /// Write to the mapped memory
     #[inline]
     pub fn write(&mut self) -> &mut [u8] {
-        &mut self.buf
+        unsafe { slice::from_raw_parts_mut(self.ptr as _, self.size()) }
+    }
+
+    /// Copies data from a slice to the mapped memory
+    ///
+    /// # Panics
+    /// This function will panic if `slice.len() > self.size()`
+    #[inline]
+    pub fn import(&mut self, slice: &[u8]) {
+        let slice_len = slice.len();
+        assert!(slice_len <= self.size());
+
+        unsafe { ptr::copy_nonoverlapping(slice.as_ptr(), self.ptr as _, slice_len) }
+    }
+
+    /// Returns the size of the mapped memory
+    #[inline]
+    pub fn raw(&mut self) -> *mut c_void {
+        self.ptr
+    }
+
+    /// Returns the raw pointer to the mapped memory
+    #[inline]
+    pub fn size(&self) -> usize {
+        self.memory_range.size as usize
     }
 
     /// Invalidates host caches of this memory if necessary
@@ -471,15 +499,9 @@ where
             panic!("Bounded mapping on non host coherent memory is not supported");
         }
 
-        let mut buf = vec![0; size as usize];
+        let mut ptr = std::ptr::null_mut();
         try_vk!(unsafe {
-            device.map_memory(
-                self.memory,
-                start,
-                size,
-                MemoryMapFlags::empty(),
-                &mut (buf.as_mut_ptr() as _),
-            )
+            device.map_memory(self.memory, start, size, MemoryMapFlags::empty(), &mut ptr)
         });
 
         let memory_range = MappedMemoryRange {
@@ -490,7 +512,7 @@ where
         };
 
         let mapped = MappedMemory {
-            buf,
+            ptr,
             memory: self.memory,
             host_coherent: self.host_coherent,
             memory_range,

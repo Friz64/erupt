@@ -1,0 +1,15 @@
+#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+#define SIZE 32 / 4
+
+layout(local_size_x = SIZE, local_size_y = 1, local_size_z = 1) in;
+
+layout(std140, set = 0, binding = 0) restrict buffer Buffer {
+    vec4 data[SIZE];
+}
+buf;
+
+void main() {
+    buf.data[gl_LocalInvocationIndex] = sqrt(buf.data[gl_LocalInvocationIndex]);
+}

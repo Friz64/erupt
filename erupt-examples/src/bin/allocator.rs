@@ -161,7 +161,7 @@ fn main() {
             MemoryTypeFinder::dynamic(),
         )
         .unwrap();
-    let map = buffer.map(&device, ..);
+    let map = buffer.map(&device, 2..5);
     println!("{:?}", map);
 
     // Destruction

@@ -453,7 +453,7 @@ where
         device: &DeviceLoader,
         range: impl RangeBounds<DeviceSize>,
     ) -> VulkanResult<MappedMemory> {
-        let offset = match range.start_bound() {
+        let start = match range.start_bound() {
             Bound::Excluded(start) => start + 1,
             Bound::Included(start) => *start,
             Bound::Unbounded => 0,
@@ -463,15 +463,19 @@ where
             Bound::Included(end) => end + 1,
             Bound::Excluded(end) => *end,
             Bound::Unbounded => self.region.size(),
-        };
+        } - start;
 
         assert!(size > 0);
+
+        if !self.host_coherent && start != self.region.start && size != self.region.size() {
+            panic!("Bounded mapping on non host coherent memory is not supported");
+        }
 
         let mut buf = vec![0; size as usize];
         try_vk!(unsafe {
             device.map_memory(
                 self.memory,
-                offset,
+                start,
                 size,
                 MemoryMapFlags::empty(),
                 &mut (buf.as_mut_ptr() as _),
@@ -480,7 +484,7 @@ where
 
         let memory_range = MappedMemoryRange {
             memory: self.memory,
-            offset,
+            offset: start,
             size,
             ..Default::default()
         };
@@ -623,7 +627,7 @@ mod tests {
 
         let r1 = suballoc
             .allocate(MemoryRequirements {
-                size: 16,
+                size: 13,
                 alignment: 1,
                 memory_type_bits: u32::MAX,
             })
@@ -653,7 +657,7 @@ mod tests {
 
         let r1 = suballoc
             .allocate(MemoryRequirements {
-                size: 16,
+                size: 13,
                 alignment: 1,
                 memory_type_bits: u32::MAX,
             })

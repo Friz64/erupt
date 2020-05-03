@@ -6,6 +6,7 @@ use crate::{
     DeviceLoader, InstanceLoader,
 };
 use std::{
+    any::{Any, TypeId},
     ffi::c_void,
     ops::{Bound, RangeBounds},
     ptr, slice,
@@ -245,17 +246,21 @@ pub struct Block {
     memory: DeviceMemory,
     suballocator: Suballocator,
     host_coherent: bool,
+    object_type: TypeId,
 }
 
 impl Block {
-    /// Create a new block, allocating `size` bytes on `mem_type_idx`
-    pub fn new(
+    /// Create a new block, allocating `size` bytes on `mem_type_idx` for object `T`
+    pub fn new<T>(
         device: &DeviceLoader,
         size: DeviceSize,
         mem_type_idx: u32,
         mem_properties: &PhysicalDeviceMemoryProperties,
         limits: &PhysicalDeviceLimits,
-    ) -> VulkanResult<Block> {
+    ) -> VulkanResult<Block>
+    where
+        T: AllocationObject + Any,
+    {
         let allocate_info = MemoryAllocateInfoBuilder::new()
             .allocation_size(size)
             .memory_type_index(mem_type_idx);
@@ -279,6 +284,7 @@ impl Block {
             memory,
             suballocator,
             host_coherent,
+            object_type: TypeId::of::<T>(),
         })
     }
 
@@ -527,7 +533,7 @@ where
 /// Information used to create an `Allocator`
 #[derive(Debug)]
 pub struct AllocatorCreateInfo {
-    /// Size of every allocation block (Default: 64 MiB)
+    /// Size of every allocation block (Default: 32 MiB)
     pub block_size: DeviceSize,
 }
 
@@ -535,7 +541,7 @@ impl Default for AllocatorCreateInfo {
     #[inline]
     fn default() -> Self {
         AllocatorCreateInfo {
-            block_size: 64 * 1024u64.pow(2),
+            block_size: 32 * 1024u64.pow(2),
         }
     }
 }
@@ -577,7 +583,7 @@ impl Allocator {
         finder: MemoryTypeFinder,
     ) -> VulkanResult<Allocation<T>>
     where
-        T: AllocationObject,
+        T: AllocationObject + Any,
     {
         let mem_requirements = unsafe { object.memory_requirements(device) };
         let mem_type_idx = match finder.find(&self.mem_properties, &mem_requirements) {
@@ -590,13 +596,16 @@ impl Allocator {
             .iter_mut()
             .enumerate()
             .filter_map(|(i, block)| block.as_mut().map(|block| (i, block)))
-            .filter(|(_, block)| block.mem_type_idx == mem_type_idx)
+            .filter(|(_, block)| {
+                // *corresponding* block
+                block.mem_type_idx == mem_type_idx && block.object_type == TypeId::of::<T>()
+            })
             .find_map(|(i, block)| block.allocate(mem_requirements).map(|r| (i, block, r)))
         {
             Some(block) => block,
             None => {
                 let idx = self.blocks.len();
-                self.blocks.push(Some(try_vk!(Block::new(
+                self.blocks.push(Some(try_vk!(Block::new::<T>(
                     device,
                     self.info.block_size,
                     mem_type_idx,

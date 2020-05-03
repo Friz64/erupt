@@ -294,6 +294,15 @@ impl Block {
         self.memory
     }
 
+    /// Returns true if this block corresponds to the provided parameters
+    #[inline]
+    pub fn corresponds<T>(&self, mem_type_idx: u32) -> bool
+    where
+        T: AllocationObject + Any,
+    {
+        self.mem_type_idx == mem_type_idx && self.object_type == TypeId::of::<T>()
+    }
+
     /// Makes a new allocation, returning the region of the new allocation if it was successful
     #[inline]
     pub fn allocate(&mut self, mem_requirements: MemoryRequirements) -> Option<Region> {
@@ -596,10 +605,7 @@ impl Allocator {
             .iter_mut()
             .enumerate()
             .filter_map(|(i, block)| block.as_mut().map(|block| (i, block)))
-            .filter(|(_, block)| {
-                // *corresponding* block
-                block.mem_type_idx == mem_type_idx && block.object_type == TypeId::of::<T>()
-            })
+            .filter(|(_, block)| block.corresponds::<T>(mem_type_idx))
             .find_map(|(i, block)| block.allocate(mem_requirements).map(|r| (i, block, r)))
         {
             Some(block) => block,

@@ -524,18 +524,21 @@ fn generate_loader_generic(
                                         exposed = false;
                                         setter = quote! { #arg_name.as_mut_ptr() };
                                     } else {
-                                        arg_type = format!(
-                                            "Option<{}>",
-                                            arg_type.trim_start_matches(utils::MUT_REF)
-                                        );
-
                                         return_init.extend(quote! {
                                             let mut #arg_name = #arg_name
                                                 .unwrap_or_else(|| Default::default());
                                         });
 
-                                        returns
-                                            .push((quote! { #arg_name }, quote! { #trimmed_code }));
+                                        let trimmed_type =
+                                            arg_type.trim_start_matches(utils::MUT_REF).trim();
+                                        returns.push(match trimmed_type {
+                                            utils::BOOL32 => {
+                                                (quote! { #arg_name != 0 }, quote! { bool })
+                                            }
+                                            _ => (quote! { #arg_name }, quote! { #trimmed_code }),
+                                        });
+
+                                        arg_type = format!("Option<{}>", trimmed_type);
 
                                         setter = quote! { &mut #arg_name };
                                     }

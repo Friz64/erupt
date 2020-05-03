@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Check for supported Vulkan version in `pointer-chain` example
+- Convert `Bool32` to `bool` in function wrapper return type
 
 ## [0.5.1+139] - 2020-04-28
 ### Changed

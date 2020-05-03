@@ -90,7 +90,7 @@ pub trait KhrSurfaceInstanceLoaderExt {
         queue_family_index: u32,
         surface: crate::extensions::khr_surface::SurfaceKHR,
         supported: Option<crate::vk1_0::Bool32>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Bool32>;
+    ) -> crate::utils::VulkanResult<bool>;
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Instance Command"]
     unsafe fn get_physical_device_surface_capabilities_khr(
         &self,
@@ -145,7 +145,7 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         queue_family_index: u32,
         surface: crate::extensions::khr_surface::SurfaceKHR,
         supported: Option<crate::vk1_0::Bool32>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Bool32> {
+    ) -> crate::utils::VulkanResult<bool> {
         let function = self
             .khr_surface
             .as_ref()
@@ -153,7 +153,7 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
             .get_physical_device_surface_support_khr;
         let mut supported = supported.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, queue_family_index, surface, &mut supported);
-        crate::utils::VulkanResult::new(_val, supported)
+        crate::utils::VulkanResult::new(_val, supported != 0)
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Instance Command"]

@@ -1,5 +1,22 @@
 //! Provides a basic Vulkan memory allocator, aiming to be *correct*
 //!
+//! ```rust ignore
+//! let mut allocator = try_vk!(Allocator::new(
+//!     &instance,
+//!     physical_device,
+//!     AllocatorCreateInfo::default()
+//! ));
+//!
+//! let buffer = try_vk!(device.create_buffer(...));
+//! let allocation = try_vk!(allocator.allocate(&device, buffer, MemoryTypeFinder::dynamic()));
+//!
+//! let mut map = try_vk!(buffer.map(&device, ..));
+//! map.import(&[1, 2, 3]);
+//! try_vk!(map.unmap(&device));
+//!
+//! allocator.free(&device, allocation);
+//! ```
+//!
 //! # Note
 //! This allocator has not been tested on a larger scale yet, there may be some bugs.
 //!

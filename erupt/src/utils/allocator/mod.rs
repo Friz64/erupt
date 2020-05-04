@@ -1,4 +1,9 @@
-//! Provides a basic Vulkan memory allocator (+parts), aiming to be *correct*
+//! Provides a basic Vulkan memory allocator, aiming to be *correct*
+//!
+//! # Note
+//! This allocator has not been tested on a larger scale yet, there may be some bugs.
+//!
+//! If you encounter a bug, please report it on the [bug tracker](https://gitlab.com/Friz64/erupt/-/issues).
 mod allocation;
 mod block;
 mod memory_type;

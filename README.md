@@ -63,8 +63,8 @@ visible to the end user), having faster compile times and some more smaller impr
 ash has a bigger existing community.
 
 ### Q: How do the compile times compare to ash?
-A: erupt `0.5.1+139` compiles in around 72% of the time it takes for ash `0.30.0` to compile, tested on
-Linux with rustc nightly `1.44.0` using `-Ztimings=info`.
+A: erupt `0.6.0+140` compiles in around 73% of the time it takes for ash `0.30.0` to compile, tested on
+Linux with `rustc 1.45.0-nightly (65b448273 2020-05-03)` using `-Ztimings=info`.
 
 ### Q: What does the number at the end of the version mean?
 A: It represents the Vulkan Header version this version of erupt was generated against and is purely informational.

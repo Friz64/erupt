@@ -5,17 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Changed
-- Check for supported Vulkan version in `pointer-chain` example
-- Convert `Bool32` to `bool` in function wrapper return type
 
+## [0.6.0+140] - 2020-05-04
 ### Added
 - Add basic Vulkan memory allocator to `utils`
 - Add compute example, making use of the new allocator
 
+### Changed
+- Update Vulkan Headers to version 140
+- Check for supported Vulkan version in `pointer-chain` example
+- Convert `Bool32` to `bool` in function wrapper return type
+
 ## [0.5.1+139] - 2020-04-28
 ### Changed
-- Updated Vulkan Headers to version 139
+- Update Vulkan Headers to version 139
 
 ## [0.5.0+137] - 2020-04-26
 ### Added

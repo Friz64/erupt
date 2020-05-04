@@ -65,7 +65,9 @@ fn main() {
     eprintln!("=> Setting up (Vulkan Header {})", header_version);
     let Registry(registry_children) = vk_parse::parse_stream(Cursor::new(include_str!(
         "../Vulkan-Headers/registry/vk.xml"
-    )));
+    )))
+    .expect("Failed to parse Vulkan Headers, `vk-parse` needs a fix")
+    .0;
 
     let features: Vec<_> = registry_children
         .iter()
@@ -166,8 +168,14 @@ fn main() {
                         ..
                     } = child
                     {
-                        topo.add_dependency(requirement.as_str(), extension.name.as_str())
-                            .unwrap();
+                        // Avoid dependency cycles
+                        if topo.contains_transitive_dependency(
+                            extension.name.as_str(),
+                            requirement.as_str(),
+                        ) {
+                            topo.add_dependency(requirement.as_str(), extension.name.as_str())
+                                .unwrap();
+                        }
                     }
                 }
             }

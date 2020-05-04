@@ -5686,6 +5686,12 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000101000);
     pub const PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT: Self = Self(1000101001);
 }
+#[doc = "[Part of `extensions::ext_custom_border_color`](../extensions/ext_custom_border_color/index.html)"]
+impl StructureType {
+    pub const SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT: Self = Self(1000287000);
+    pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT: Self = Self(1000287001);
+    pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT: Self = Self(1000287002);
+}
 #[doc = "[Part of `extensions::ext_debug_marker`](../extensions/ext_debug_marker/index.html)"]
 impl StructureType {
     pub const DEBUG_MARKER_OBJECT_NAME_INFO_EXT: Self = Self(1000022000);
@@ -5834,6 +5840,12 @@ impl StructureType {
 #[doc = "[Part of `extensions::ext_pipeline_creation_feedback`](../extensions/ext_pipeline_creation_feedback/index.html)"]
 impl StructureType {
     pub const PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT: Self = Self(1000192000);
+}
+#[doc = "[Part of `extensions::ext_private_data`](../extensions/ext_private_data/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT: Self = Self(1000295000);
+    pub const DEVICE_PRIVATE_DATA_CREATE_INFO_EXT: Self = Self(1000295001);
+    pub const PRIVATE_DATA_SLOT_CREATE_INFO_EXT: Self = Self(1000295002);
 }
 #[doc = "[Part of `extensions::ext_robustness2`](../extensions/ext_robustness2/index.html)"]
 impl StructureType {
@@ -6057,6 +6069,7 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO_KHR: Self =
         Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
     pub const EXTERNAL_FENCE_PROPERTIES_KHR: Self = Self::EXTERNAL_FENCE_PROPERTIES;
+    pub const PHYSICAL_DEVICE_ID_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_ID_PROPERTIES;
 }
 #[doc = "[Part of `extensions::khr_external_fence_fd`](../extensions/khr_external_fence_fd/index.html)"]
 impl StructureType {
@@ -6084,7 +6097,6 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO_KHR: Self =
         Self::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
     pub const EXTERNAL_BUFFER_PROPERTIES_KHR: Self = Self::EXTERNAL_BUFFER_PROPERTIES;
-    pub const PHYSICAL_DEVICE_ID_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_ID_PROPERTIES;
 }
 #[doc = "[Part of `extensions::khr_external_memory_fd`](../extensions/khr_external_memory_fd/index.html)"]
 impl StructureType {
@@ -6330,10 +6342,10 @@ impl StructureType {
 }
 #[doc = "[Part of `extensions::khr_variable_pointers`](../extensions/khr_variable_pointers/index.html)"]
 impl StructureType {
-    pub const PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES_KHR: Self =
-        Self::PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES;
     pub const PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES_KHR: Self =
-        Self::PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES;
+        Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES;
+    pub const PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES_KHR: Self =
+        Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES_KHR;
 }
 #[doc = "[Part of `extensions::khr_vulkan_memory_model`](../extensions/khr_vulkan_memory_model/index.html)"]
 impl StructureType {
@@ -6854,6 +6866,15 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT => {
                 "PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT"
             }
+            &Self::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT => {
+                "SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => {
+                "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT"
+            }
             &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => "DEBUG_MARKER_OBJECT_NAME_INFO_EXT",
             &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => "DEBUG_MARKER_OBJECT_TAG_INFO_EXT",
             &Self::DEBUG_MARKER_MARKER_INFO_EXT => "DEBUG_MARKER_MARKER_INFO_EXT",
@@ -6976,6 +6997,11 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT => {
                 "PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT"
             }
+            &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT"
+            }
+            &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => "DEVICE_PRIVATE_DATA_CREATE_INFO_EXT",
+            &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => "PRIVATE_DATA_SLOT_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT"
             }
@@ -19476,6 +19502,11 @@ impl BorderColor {
     pub const FLOAT_OPAQUE_WHITE: Self = Self(4);
     pub const INT_OPAQUE_WHITE: Self = Self(5);
 }
+#[doc = "[Part of `extensions::ext_custom_border_color`](../extensions/ext_custom_border_color/index.html)"]
+impl BorderColor {
+    pub const FLOAT_CUSTOM_EXT: Self = Self(1000287003);
+    pub const INT_CUSTOM_EXT: Self = Self(1000287004);
+}
 impl std::fmt::Debug for BorderColor {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
@@ -19485,6 +19516,8 @@ impl std::fmt::Debug for BorderColor {
             &Self::INT_OPAQUE_BLACK => "INT_OPAQUE_BLACK",
             &Self::FLOAT_OPAQUE_WHITE => "FLOAT_OPAQUE_WHITE",
             &Self::INT_OPAQUE_WHITE => "INT_OPAQUE_WHITE",
+            &Self::FLOAT_CUSTOM_EXT => "FLOAT_CUSTOM_EXT",
+            &Self::INT_CUSTOM_EXT => "INT_CUSTOM_EXT",
             _ => "(unknown)",
         })
     }
@@ -23774,6 +23807,10 @@ impl ObjectType {
 impl ObjectType {
     pub const DEBUG_UTILS_MESSENGER_EXT: Self = Self(1000128000);
 }
+#[doc = "[Part of `extensions::ext_private_data`](../extensions/ext_private_data/index.html)"]
+impl ObjectType {
+    pub const PRIVATE_DATA_SLOT_EXT: Self = Self(1000295000);
+}
 #[doc = "[Part of `extensions::ext_validation_cache`](../extensions/ext_validation_cache/index.html)"]
 impl ObjectType {
     pub const VALIDATION_CACHE_EXT: Self = Self(1000160000);
@@ -23852,6 +23889,7 @@ impl std::fmt::Debug for ObjectType {
             &Self::DESCRIPTOR_UPDATE_TEMPLATE => "DESCRIPTOR_UPDATE_TEMPLATE",
             &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
             &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
+            &Self::PRIVATE_DATA_SLOT_EXT => "PRIVATE_DATA_SLOT_EXT",
             &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
             &Self::PERFORMANCE_CONFIGURATION_INTEL => "PERFORMANCE_CONFIGURATION_INTEL",
             &Self::DEFERRED_OPERATION_KHR => "DEFERRED_OPERATION_KHR",

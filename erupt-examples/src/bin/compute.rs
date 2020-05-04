@@ -236,7 +236,7 @@ fn main() {
                 .dst_binding(0)
                 .descriptor_type(DescriptorType::STORAGE_BUFFER)
                 .buffer_info(&[DescriptorBufferInfoBuilder::new()
-                    .buffer(buffer.object())
+                    .buffer(*buffer.object())
                     .offset(buffer.region().start)
                     .range(data_size)])],
             &[],

@@ -8,6 +8,7 @@
 //! - A [utility module] aiding your use of this crate
 //!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
+//!   - [`allocator`]: Provides a basic Vulkan memory allocator, aiming to be *correct*
 //! - Generated code distributed into multiple modules
 //! - Function loading ([`CoreLoader`], [`InstanceLoader`], [`DeviceLoader`])
 //! - Seperate `Flags` and `FlagBits` types
@@ -17,7 +18,7 @@
 //! - Complete auto-generation of everything except [`utils`]
 //!
 //! ## Example: Instance Creation
-//! ```rust
+//! ```rust ignore
 //! use erupt::{vk1_0::*, CoreLoader, InstanceLoader};
 //!
 //! let mut core = CoreLoader::new()?;
@@ -82,6 +83,7 @@
 //! [`VulkanResult`]: https://docs.rs/erupt/*/erupt/utils/struct.VulkanResult.html
 //! [`surface`]: https://docs.rs/erupt/*/erupt/utils/surface/index.html
 //! [`SurfaceKHR`]: https://docs.rs/erupt/*/erupt/extensions/khr_surface/struct.SurfaceKHR.html
+//! [`allocator`]: https://docs.rs/erupt/*/erupt/utils/allocator/index.html
 //! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
 //! [`libloading`]: https://crates.io/crates/libloading
 //! [`raw-window-handle`]: https://crates.io/crates/raw-window-handle
@@ -100,7 +102,7 @@ pub use generated::*;
 /// Construct a `*const std::os::raw::c_char` from a string
 ///
 /// # Example
-/// ```
+/// ```ignore
 /// const LAYER_KHRONOS_VALIDATION: *const c_char = cstr!("VK_LAYER_KHRONOS_validation");
 /// ```
 #[macro_export]
@@ -112,7 +114,7 @@ macro_rules! cstr {
 
 /// Like `try!`, but for [`utils::VulkanResult`](utils/struct.VulkanResult.html)
 ///
-/// ```
+/// ```ignore
 /// unsafe fn example(device: &DeviceLoader) -> VulkanResult<(Semaphore, Semaphore)> {
 ///     let create_info = SemaphoreCreateInfoBuilder::new();
 ///

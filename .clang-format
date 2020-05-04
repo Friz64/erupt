@@ -1,0 +1,8 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 0
+UseTab: Never
+BinPackArguments: false
+BinPackParameters: false

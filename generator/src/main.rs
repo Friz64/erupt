@@ -169,7 +169,7 @@ fn main() {
                     } = child
                     {
                         // Avoid dependency cycles
-                        if topo.contains_transitive_dependency(
+                        if !topo.contains_transitive_dependency(
                             extension.name.as_str(),
                             requirement.as_str(),
                         ) {

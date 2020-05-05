@@ -7,3 +7,4 @@ function compile {
 compile src/bin/triangle.vert
 compile src/bin/triangle.frag
 compile src/bin/compute.comp
+

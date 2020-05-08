@@ -5,8 +5,7 @@ authors = ["Friz64 <friz64mc@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-#vk-parse = "0.4"
-vk-parse = { git = "https://github.com/Friz64/vk-parse.git", rev = "7cae732f40d8cb35d663df4c97b36216a55b2341" }
+vk-parse = "0.5"
 proc-macro2 = "1.0"
 quote = "1.0"
 heck = "0.3"

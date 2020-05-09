@@ -1,5 +1,5 @@
 [package]
-name = "erupt-examples"
+name = "erupt_examples"
 version = "0.0.0"
 authors = ["Friz64 <friz64mc@gmail.com>"]
 edition = "2018"

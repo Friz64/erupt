@@ -1,6 +1,6 @@
 [workspace]
 members = [
     "erupt",
-    "erupt-examples",
+    "erupt_examples",
     "generator",
 ]

@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add documentation example for the allocator
 
+### Changed
+- Rename `erupt-examples` to `erupt_examples`
+- Make `compile-shaders.sh` directory independent
+
 ### Fixed
 - Fix extension ordering
 

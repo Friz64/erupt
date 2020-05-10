@@ -1,13 +1,16 @@
 use erupt::{vk1_0::*, vk1_1::*, vk1_2::*, CoreLoader, InstanceLoader};
 use std::ffi::CStr;
 
+const TITLE: &str = "erupt_examples: pointer_chain";
+
 fn main() {
     let mut core = CoreLoader::new().unwrap();
     core.load_vk1_0().unwrap();
 
     let api_version = core.instance_version();
     println!(
-        "erupt-examples: pointer-chain - Vulkan {}.{}.{}",
+        "{} - Vulkan {}.{}.{}",
+        TITLE,
         erupt::version_major(api_version),
         erupt::version_minor(api_version),
         erupt::version_patch(api_version)

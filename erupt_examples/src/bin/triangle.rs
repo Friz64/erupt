@@ -20,6 +20,7 @@ use winit::{
     window::WindowBuilder,
 };
 
+const TITLE: &str = "erupt_examples: triangle";
 const FRAMES_IN_FLIGHT: usize = 2;
 const LAYER_KHRONOS_VALIDATION: *const c_char = cstr!("VK_LAYER_KHRONOS_validation");
 const SHADER_VERT: &[u8] = include_bytes!("triangle.vert.spv");
@@ -51,7 +52,7 @@ fn main() {
 
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()
-        .with_title("erupt-examples: triangle")
+        .with_title(TITLE)
         .with_resizable(false)
         .build(&event_loop)
         .unwrap();
@@ -61,7 +62,8 @@ fn main() {
 
     let api_version = core.instance_version();
     println!(
-        "erupt-examples: triangle - Vulkan {}.{}.{}",
+        "{} - Vulkan {}.{}.{}",
+        TITLE,
         erupt::version_major(api_version),
         erupt::version_minor(api_version),
         erupt::version_patch(api_version)

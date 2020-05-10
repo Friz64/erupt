@@ -17,6 +17,7 @@ use std::{
 };
 use structopt::StructOpt;
 
+const TITLE: &str = "erupt_examples: compute";
 const LAYER_KHRONOS_VALIDATION: *const c_char = cstr!("VK_LAYER_KHRONOS_validation");
 const SHADER: &[u8] = include_bytes!("compute.comp.spv");
 
@@ -72,7 +73,8 @@ fn main() {
 
     let api_version = core.instance_version();
     println!(
-        "erupt-examples: compute - Vulkan {}.{}.{}",
+        "{} - Vulkan {}.{}.{}",
+        TITLE,
         erupt::version_major(api_version),
         erupt::version_minor(api_version),
         erupt::version_patch(api_version)

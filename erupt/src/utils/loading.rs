@@ -7,6 +7,9 @@ use std::{
     fmt::{self, Display},
 };
 
+/// The default `CoreLoader`, providing `CoreLoader::new`
+pub type DefaultCoreLoader = CoreLoader<libloading::Library>;
+
 // from ash
 #[cfg(all(
     unix,
@@ -42,11 +45,11 @@ impl Error for LibraryError {
     }
 }
 
-impl CoreLoader<libloading::Library> {
+impl DefaultCoreLoader {
     /// Load functions using [`libloading`](https://crates.io/crates/libloading)
     ///
     /// Enabled using the `loading` cargo feature
-    pub fn new() -> Result<CoreLoader<libloading::Library>, LibraryError> {
+    pub fn new() -> Result<DefaultCoreLoader, LibraryError> {
         Ok(CoreLoader::custom(
             libloading::Library::new(LIB_PATH).map_err(LibraryError)?,
             Box::new(|loader, name| unsafe {

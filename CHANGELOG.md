@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add documentation example for the allocator
+- Add `DefaultCoreLoader` alias
 
 ### Changed
 - Rename `erupt-examples` to `erupt_examples`

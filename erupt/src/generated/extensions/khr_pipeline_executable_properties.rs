@@ -648,7 +648,7 @@ impl<'a> PipelineExecutableInternalRepresentationKHRBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn data(mut self, data: &'a mut [std::ffi::c_void]) -> Self {
+    pub fn data(mut self, data: &'a mut [u8]) -> Self {
         self.0.data_size = data.len() as _;
         self.0.p_data = data.as_mut_ptr() as _;
         self

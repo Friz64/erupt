@@ -15619,7 +15619,7 @@ impl<'a> PipelineCacheCreateInfoBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn initial_data(mut self, initial_data: &'a [std::ffi::c_void]) -> Self {
+    pub fn initial_data(mut self, initial_data: &'a [u8]) -> Self {
         self.0.initial_data_size = initial_data.len() as _;
         self.0.p_initial_data = initial_data.as_ptr() as _;
         self
@@ -16268,7 +16268,7 @@ impl<'a> SpecializationInfoBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn data(mut self, data: &'a [std::ffi::c_void]) -> Self {
+    pub fn data(mut self, data: &'a [u8]) -> Self {
         self.0.data_size = data.len() as _;
         self.0.p_data = data.as_ptr() as _;
         self

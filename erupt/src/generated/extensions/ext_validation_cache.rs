@@ -241,7 +241,7 @@ impl<'a> ValidationCacheCreateInfoEXTBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn initial_data(mut self, initial_data: &'a [std::ffi::c_void]) -> Self {
+    pub fn initial_data(mut self, initial_data: &'a [u8]) -> Self {
         self.0.initial_data_size = initial_data.len() as _;
         self.0.p_initial_data = initial_data.as_ptr() as _;
         self

@@ -705,10 +705,15 @@ pub fn generate(
                                 utils::CONST_REF_A
                             };
 
+                            let inner_field_type = match field_type.trim_start_matches(ref_str) {
+                                "  std::ffi::c_void" => "u8",
+                                other => other,
+                            };
+
                             field_type = format!(
                                 "{}[{}{}]",
                                 ref_str,
-                                field_type.trim_start_matches(ref_str),
+                                inner_field_type,
                                 if is_struct { "Builder" } else { "" }
                             );
 

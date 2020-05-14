@@ -240,7 +240,7 @@ impl<'a> DebugMarkerObjectTagInfoEXTBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn tag(mut self, tag: &'a [std::ffi::c_void]) -> Self {
+    pub fn tag(mut self, tag: &'a [u8]) -> Self {
         self.0.tag_size = tag.len() as _;
         self.0.p_tag = tag.as_ptr() as _;
         self

@@ -54,9 +54,9 @@ instance.destroy_instance(None);
 ## FAQ
 ### Q: What's the difference between this, ash and vulkano?
 A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example
-it has a special hand-written written wrapper around a Vulkan `PhysicalDevice`. On the other hand
-ash and erupt both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and
-instead focusing on having good bindings to the *raw* Vulkan API.
+it has a special hand-written wrapper around a Vulkan `PhysicalDevice`. On the other hand ash and
+erupt both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead
+focusing on having good bindings to the *raw* Vulkan API.
 
 The big selling points of erupt is that it has better documentation, high level function support for
 all extensions (which is only really relevant if you use those extensions), being fully generated,

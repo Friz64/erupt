@@ -1,6 +1,6 @@
 [package]
 name = "erupt"
-version = "0.6.0+140"
+version = "0.7.0+141"
 authors = ["Friz64 <friz64mc@gmail.com>"]
 license = "Zlib"
 description = "Vulkan API bindings"

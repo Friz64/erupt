@@ -24033,6 +24033,7 @@ impl VendorId {
     pub const VSI: Self = Self(0x10002);
     pub const KAZAN: Self = Self(0x10003);
     pub const CODEPLAY: Self = Self(0x10004);
+    pub const MESA: Self = Self(0x10005);
 }
 impl std::fmt::Debug for VendorId {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -24041,6 +24042,7 @@ impl std::fmt::Debug for VendorId {
             &Self::VSI => "VSI",
             &Self::KAZAN => "KAZAN",
             &Self::CODEPLAY => "CODEPLAY",
+            &Self::MESA => "MESA",
             _ => "(unknown)",
         })
     }

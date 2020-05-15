@@ -3645,6 +3645,7 @@ impl DriverId {
     pub const GOOGLE_SWIFTSHADER: Self = Self(10);
     pub const GGP_PROPRIETARY: Self = Self(11);
     pub const BROADCOM_PROPRIETARY: Self = Self(12);
+    pub const MESA_LLVMPIPE: Self = Self(13);
 }
 #[doc = "[Part of `extensions::khr_driver_properties`](../extensions/khr_driver_properties/index.html)"]
 impl DriverId {
@@ -3676,6 +3677,7 @@ impl std::fmt::Debug for DriverId {
             &Self::GOOGLE_SWIFTSHADER => "GOOGLE_SWIFTSHADER",
             &Self::GGP_PROPRIETARY => "GGP_PROPRIETARY",
             &Self::BROADCOM_PROPRIETARY => "BROADCOM_PROPRIETARY",
+            &Self::MESA_LLVMPIPE => "MESA_LLVMPIPE",
             _ => "(unknown)",
         })
     }

@@ -5,12 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.7.0+141] - 2020-05-15
 ### Added
 - Add documentation example for the allocator
 - Add `DefaultCoreLoader` alias
 - Better builder support for void pointers
 
 ### Changed
+- Update Vulkan Headers to version 141
 - Rename `erupt-examples` to `erupt_examples`
 - Make `compile-shaders.sh` directory independent
 

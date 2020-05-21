@@ -1590,9 +1590,9 @@ impl<'a> AccelerationStructureBuildGeometryInfoKHRBuilder<'a> {
     #[inline]
     pub fn geometries(
         mut self,
-        geometries: &'a *const crate::extensions::khr_ray_tracing::AccelerationStructureGeometryKHR,
+        geometries: &'a &'a crate::extensions::khr_ray_tracing::AccelerationStructureGeometryKHR,
     ) -> Self {
-        self.0.pp_geometries = geometries;
+        self.0.pp_geometries = geometries as *const &_ as *const *const _;
         self
     }
     #[allow(unused_mut)]

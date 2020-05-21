@@ -753,6 +753,49 @@ pub fn generate(
                                         self.0 .p_code = code.as_ptr();
                                     }
                                 }
+                                // resolve one extra layer of nested pointers
+                                _ if starts_ref
+                                    && field_type.contains("crate::")
+                                    && (field_type.contains(utils::CONST_PTR)
+                                        || field_type.contains(utils::MUT_PTR)) =>
+                                {
+                                    let nested_mut = if field_type.contains(utils::MUT_PTR) {
+                                        field_type = field_type.replacen(
+                                            utils::MUT_PTR,
+                                            utils::MUT_REF_A,
+                                            1,
+                                        );
+
+                                        true
+                                    } else {
+                                        field_type = field_type.replacen(
+                                            utils::CONST_PTR,
+                                            utils::CONST_REF_A,
+                                            1,
+                                        );
+
+                                        false
+                                    };
+
+                                    let convert = match (mut_ref, nested_mut) {
+                                        (false, false) => {
+                                            quote! { as *const &_ as *const *const _ }
+                                        }
+                                        (false, true) => {
+                                            quote! { as *const &mut _ as *const *mut _ }
+                                        }
+                                        (true, false) => {
+                                            quote! { as *mut &_ as *mut *const _ }
+                                        }
+                                        (true, true) => {
+                                            quote! { as *mut &mut _ as *mut *mut _ }
+                                        }
+                                    };
+
+                                    quote! {
+                                        self.0 .#name_ident = #adjusted_name #convert;
+                                    }
+                                }
                                 _ => quote! {
                                     self.0 .#name_ident = #adjusted_name;
                                 },

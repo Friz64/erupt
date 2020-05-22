@@ -16,6 +16,9 @@ bitflags = "1.2"
 libloading = { version = "0.6", optional = true }
 raw-window-handle = { version = "0.3", optional = true }
 
+[target.'cfg(all(surface, any(target_os = "macos", target_os = "ios")))'.dependencies]
+raw-window-metal = "0.1"
+
 [features]
 default = ["loading", "surface"]
 loading = ["libloading"]

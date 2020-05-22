@@ -37,6 +37,7 @@ pub unsafe fn create_surface(
         ))]
         RawWindowHandle::Wayland(handle) => {
             use crate::extensions::khr_wayland_surface::*;
+
             if instance.load_khr_wayland_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
@@ -59,6 +60,7 @@ pub unsafe fn create_surface(
         ))]
         RawWindowHandle::Xlib(handle) => {
             use crate::extensions::khr_xlib_surface::*;
+
             if instance.load_khr_xlib_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
@@ -81,6 +83,7 @@ pub unsafe fn create_surface(
         ))]
         RawWindowHandle::Xcb(handle) => {
             use crate::extensions::khr_xcb_surface::*;
+
             if instance.load_khr_xcb_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
@@ -97,6 +100,7 @@ pub unsafe fn create_surface(
         #[cfg(any(target_os = "android"))]
         RawWindowHandle::Android(handle) => {
             use crate::extensions::khr_android_surface::*;
+
             if instance.load_khr_android_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
@@ -111,37 +115,56 @@ pub unsafe fn create_surface(
 
         #[cfg(any(target_os = "macos"))]
         RawWindowHandle::MacOS(handle) => {
-            use crate::extensions::mvk_macos_surface::*;
-            if instance.load_mvk_macos_surface().is_none() {
+            use crate::extensions::ext_metal_surface::*;
+            use raw_window_metal::{macos, Layer};
+
+            let layer = match macos::metal_layer_from_handle(handle) {
+                Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
+                Layer::None => {
+                    return VulkanResult::new_err(RawResult::ERROR_INITIALIZATION_FAILED)
+                }
+            };
+
+            if instance.load_ext_metal_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
 
-            let create_info = MacOSSurfaceCreateInfoMVK {
-                p_view: &*handle.ns_view,
+            let create_info = MetalSurfaceCreateInfoEXT {
+                p_layer: layer,
                 ..Default::default()
             };
 
-            instance.create_mac_os_surface_mvk(&create_info, allocation_callbacks, None)
+            instance.create_metal_surface_ext(&create_info, allocation_callbacks, None)
         }
 
         #[cfg(any(target_os = "ios"))]
         RawWindowHandle::IOS(handle) => {
-            use crate::extensions::mvk_ios_surface::*;
-            if instance.load_mvk_ios_surface().is_none() {
+            use crate::extensions::ext_metal_surface::*;
+            use raw_window_metal::{ios, Layer};
+
+            let layer = match ios::metal_layer_from_handle(handle) {
+                Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
+                Layer::None => {
+                    return VulkanResult::new_err(RawResult::ERROR_INITIALIZATION_FAILED)
+                }
+            };
+
+            if instance.load_ext_metal_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
 
-            let create_info = IOSSurfaceCreateInfoMVK {
-                p_view: &*handle.ui_view,
+            let create_info = MetalSurfaceCreateInfoEXT {
+                p_layer: layer,
                 ..Default::default()
             };
 
-            instance.create_ios_surface_mvk(&create_info, allocation_callbacks, None)
+            instance.create_metal_surface_ext(&create_info, allocation_callbacks, None)
         }
 
         #[cfg(target_os = "windows")]
         RawWindowHandle::Windows(handle) => {
             use crate::extensions::khr_win32_surface::*;
+
             if instance.load_khr_win32_surface().is_none() {
                 return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
             }
@@ -211,13 +234,13 @@ pub fn enumerate_required_extensions(
         #[cfg(any(target_os = "macos"))]
         RawWindowHandle::MacOS(_) => vec![
             KHR_SURFACE_EXTENSION_NAME,
-            crate::extensions::mvk_macos_surface::MVK_MACOS_SURFACE_EXTENSION_NAME,
+            crate::extensions::ext_metal_surface::EXT_METAL_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(any(target_os = "ios"))]
         RawWindowHandle::IOS(_) => vec![
             KHR_SURFACE_EXTENSION_NAME,
-            crate::extensions::mvk_ios_surface::MVK_IOS_SURFACE_EXTENSION_NAME,
+            crate::extensions::ext_metal_surface::EXT_METAL_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(target_os = "windows")]

@@ -1,3 +1,4 @@
+use bytemuck::{Pod, Zeroable};
 use erupt::{
     cstr,
     extensions::ext_debug_utils::*,
@@ -11,9 +12,8 @@ use erupt::{
 use std::{
     convert::TryInto,
     ffi::{c_void, CStr, CString},
-    mem::{self, MaybeUninit},
+    mem,
     os::raw::c_char,
-    ptr, slice,
 };
 use structopt::StructOpt;
 
@@ -42,28 +42,14 @@ struct Opt {
     validation_layers: bool,
 }
 
-#[derive(Debug)]
+#[derive(Copy, Clone, Debug)]
 #[repr(C)]
 struct Buffer {
-    data: [f32; 32],
+    data: [f32; 21],
 }
 
-impl Buffer {
-    const SIZE: usize = mem::size_of::<Self>();
-
-    fn from_bytes(bytes: &[u8]) -> Buffer {
-        assert_eq!(bytes.len(), Self::SIZE);
-        let mut buf = MaybeUninit::<Buffer>::uninit();
-        unsafe {
-            ptr::copy_nonoverlapping(bytes.as_ptr(), buf.as_mut_ptr() as *mut u8, Self::SIZE);
-            buf.assume_init()
-        }
-    }
-
-    fn as_bytes(&self) -> &[u8] {
-        unsafe { slice::from_raw_parts(self as *const Self as *const u8, Self::SIZE) }
-    }
-}
+unsafe impl Zeroable for Buffer {}
+unsafe impl Pod for Buffer {}
 
 fn main() {
     let opt = Opt::from_args();
@@ -182,7 +168,7 @@ fn main() {
         Allocator::new(&instance, physical_device, AllocatorCreateInfo::default()).unwrap();
 
     let data = Buffer {
-        data: (0..32)
+        data: (0..21)
             .map(|i| i as f32)
             .collect::<Vec<_>>()
             .as_slice()
@@ -204,7 +190,7 @@ fn main() {
         )
         .unwrap();
     let mut map = buffer.map(&device, ..data_size).unwrap();
-    map.import(data.as_bytes());
+    map.import(bytemuck::bytes_of(&data));
     map.unmap(&device).unwrap();
 
     let desc_pool_sizes = &[DescriptorPoolSizeBuilder::new()
@@ -306,7 +292,7 @@ fn main() {
 
     let map = buffer.map(&device, ..data_size).unwrap();
     println!("input: {:?}", data);
-    println!("output: {:?}", Buffer::from_bytes(map.read()));
+    println!("output: {:?}", bytemuck::from_bytes::<Buffer>(map.read()));
     map.unmap(&device).unwrap();
 
     // Destruction

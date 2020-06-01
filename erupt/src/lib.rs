@@ -15,6 +15,7 @@
 //! - A high level `Builder` for every struct
 //! - Type-safe pointer chain support
 //! - `Default` and `Debug` implementation for every type
+//! - Confirmed support for Linux, Windows, macOS and Android
 //! - Complete auto-generation of everything except [`utils`]
 //!
 //! ## Example: Instance Creation

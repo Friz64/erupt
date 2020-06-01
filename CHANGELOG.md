@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Add confirmed platform support in the README
+
 ### Changed
 - Support an extra layer of nested pointers
 - Update surface util based on latest `ash-window` changes
+
+### Fixed
 - Fix surface format selection fallback in triangle example
 
 ## [0.7.0+141] - 2020-05-15

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Support an extra layer of nested pointers
 - Update surface util based on latest `ash-window` changes
+- Fix surface format selection fallback in triangle example
 
 ## [0.7.0+141] - 2020-05-15
 ### Added

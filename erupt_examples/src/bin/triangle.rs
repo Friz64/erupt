@@ -168,7 +168,7 @@ fn main() {
                         surface_format.format == Format::B8G8R8A8_SRGB
                             && surface_format.color_space == ColorSpaceKHR::SRGB_NONLINEAR_KHR
                     })
-                    .and_then(|_| formats.get(0))
+                    .or_else(|| formats.get(0))
                 {
                     Some(surface_format) => surface_format.clone(),
                     None => return None,

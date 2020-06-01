@@ -9,7 +9,7 @@ pub type PFN_vkGetBufferDeviceAddressEXT = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_info: *const crate::vk1_2::BufferDeviceAddressInfo,
 )
-    -> crate::vk1_2::DeviceAddress;
+    -> crate::vk1_0::DeviceAddress;
 #[doc = "Provides Device Commands for [`ExtBufferDeviceAddressDeviceLoaderExt`](trait.ExtBufferDeviceAddressDeviceLoaderExt.html)"]
 pub struct ExtBufferDeviceAddressDeviceCommands {
     pub get_buffer_device_address_ext: PFN_vkGetBufferDeviceAddressEXT,
@@ -32,7 +32,7 @@ pub trait ExtBufferDeviceAddressDeviceLoaderExt {
     unsafe fn get_buffer_device_address_ext(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress;
+    ) -> crate::vk1_0::DeviceAddress;
 }
 impl ExtBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
     #[inline]
@@ -40,7 +40,7 @@ impl ExtBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
     unsafe fn get_buffer_device_address_ext(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress {
+    ) -> crate::vk1_0::DeviceAddress {
         let function = self
             .ext_buffer_device_address
             .as_ref()
@@ -184,7 +184,7 @@ pub type BufferDeviceAddressInfoEXT = crate::vk1_2::BufferDeviceAddressInfo;
 pub struct BufferDeviceAddressCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub device_address: crate::vk1_2::DeviceAddress,
+    pub device_address: crate::vk1_0::DeviceAddress,
 }
 impl BufferDeviceAddressCreateInfoEXT {
     #[inline]
@@ -235,7 +235,7 @@ impl<'a> BufferDeviceAddressCreateInfoEXTBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn device_address(mut self, device_address: crate::vk1_2::DeviceAddress) -> Self {
+    pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address;
         self
     }

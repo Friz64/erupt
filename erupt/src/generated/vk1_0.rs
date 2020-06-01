@@ -1,21 +1,21 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const LOD_CLAMP_NONE: f32 = 1000.0f32;
-#[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const REMAINING_MIP_LEVELS: u32 = !0u32;
-#[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const REMAINING_ARRAY_LAYERS: u32 = !0u32;
-#[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const WHOLE_SIZE: u64 = !0u64;
-#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const ATTACHMENT_UNUSED: u32 = !0u32;
-#[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const TRUE: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FALSE: u32 = 0;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const LOD_CLAMP_NONE: f32 = 1000.0f32;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const QUEUE_FAMILY_IGNORED: u32 = !0u32;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const REMAINING_ARRAY_LAYERS: u32 = !0u32;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const REMAINING_MIP_LEVELS: u32 = !0u32;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const SUBPASS_EXTERNAL: u32 = !0u32;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const TRUE: u32 = 1;
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const WHOLE_SIZE: u64 = !0u64;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const MAX_PHYSICAL_DEVICE_NAME_SIZE: u32 = 256;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
@@ -23469,20 +23469,128 @@ impl std::fmt::Debug for SubpassContents {
         })
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheHeaderVersion.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
-#[repr(transparent)]
-pub struct PipelineCacheHeaderVersion(pub i32);
-#[doc = "[Part of `vk1_0`](../vk1_0/index.html)"]
-impl PipelineCacheHeaderVersion {
-    pub const ONE: Self = Self(1);
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceAddress.html) · Base Type"]
+pub type DeviceAddress = u64;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFlags.html) · Base Type"]
+pub type Flags = u32;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct BaseInStructure {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const crate::vk1_0::BaseInStructure,
 }
-impl std::fmt::Debug for PipelineCacheHeaderVersion {
+impl BaseInStructure {
+    #[inline]
+    pub fn builder<'a>(self) -> BaseInStructureBuilder<'a> {
+        BaseInStructureBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for BaseInStructure {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::ONE => "ONE",
-            _ => "(unknown)",
-        })
+        fmt.debug_struct("BaseInStructure")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .finish()
+    }
+}
+impl Default for BaseInStructure {
+    fn default() -> BaseInStructure {
+        BaseInStructure {
+            s_type: Default::default(),
+            p_next: std::ptr::null(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Builder of [`BaseInStructure`](struct.BaseInStructure.html)"]
+#[repr(transparent)]
+pub struct BaseInStructureBuilder<'a>(BaseInStructure, std::marker::PhantomData<&'a ()>);
+impl<'a> BaseInStructureBuilder<'a> {
+    #[inline]
+    pub fn new() -> BaseInStructureBuilder<'a> {
+        BaseInStructureBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> BaseInStructure {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for BaseInStructureBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for BaseInStructureBuilder<'a> {
+    type Target = BaseInStructure;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for BaseInStructureBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct BaseOutStructure {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *mut crate::vk1_0::BaseOutStructure,
+}
+impl BaseOutStructure {
+    #[inline]
+    pub fn builder<'a>(self) -> BaseOutStructureBuilder<'a> {
+        BaseOutStructureBuilder(self, std::marker::PhantomData)
+    }
+}
+impl std::fmt::Debug for BaseOutStructure {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.debug_struct("BaseOutStructure")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .finish()
+    }
+}
+impl Default for BaseOutStructure {
+    fn default() -> BaseOutStructure {
+        BaseOutStructure {
+            s_type: Default::default(),
+            p_next: std::ptr::null_mut(),
+        }
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Builder of [`BaseOutStructure`](struct.BaseOutStructure.html)"]
+#[repr(transparent)]
+pub struct BaseOutStructureBuilder<'a>(BaseOutStructure, std::marker::PhantomData<&'a ()>);
+impl<'a> BaseOutStructureBuilder<'a> {
+    #[inline]
+    pub fn new() -> BaseOutStructureBuilder<'a> {
+        BaseOutStructureBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub unsafe fn discard(self) -> BaseOutStructure {
+        self.0
+    }
+}
+impl<'a> std::fmt::Debug for BaseOutStructureBuilder<'a> {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, fmt)
+    }
+}
+impl<'a> std::ops::Deref for BaseOutStructureBuilder<'a> {
+    type Target = BaseOutStructure;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for BaseOutStructureBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDispatchIndirectCommand.html) · Structure"]
@@ -23903,126 +24011,6 @@ impl std::fmt::Debug for ObjectType {
         })
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct BaseOutStructure {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *mut crate::vk1_0::BaseOutStructure,
-}
-impl BaseOutStructure {
-    #[inline]
-    pub fn builder<'a>(self) -> BaseOutStructureBuilder<'a> {
-        BaseOutStructureBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for BaseOutStructure {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("BaseOutStructure")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .finish()
-    }
-}
-impl Default for BaseOutStructure {
-    fn default() -> BaseOutStructure {
-        BaseOutStructure {
-            s_type: Default::default(),
-            p_next: std::ptr::null_mut(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Builder of [`BaseOutStructure`](struct.BaseOutStructure.html)"]
-#[repr(transparent)]
-pub struct BaseOutStructureBuilder<'a>(BaseOutStructure, std::marker::PhantomData<&'a ()>);
-impl<'a> BaseOutStructureBuilder<'a> {
-    #[inline]
-    pub fn new() -> BaseOutStructureBuilder<'a> {
-        BaseOutStructureBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> BaseOutStructure {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for BaseOutStructureBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for BaseOutStructureBuilder<'a> {
-    type Target = BaseOutStructure;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for BaseOutStructureBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct BaseInStructure {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const crate::vk1_0::BaseInStructure,
-}
-impl BaseInStructure {
-    #[inline]
-    pub fn builder<'a>(self) -> BaseInStructureBuilder<'a> {
-        BaseInStructureBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for BaseInStructure {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("BaseInStructure")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .finish()
-    }
-}
-impl Default for BaseInStructure {
-    fn default() -> BaseInStructure {
-        BaseInStructure {
-            s_type: Default::default(),
-            p_next: std::ptr::null(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Builder of [`BaseInStructure`](struct.BaseInStructure.html)"]
-#[repr(transparent)]
-pub struct BaseInStructureBuilder<'a>(BaseInStructure, std::marker::PhantomData<&'a ()>);
-impl<'a> BaseInStructureBuilder<'a> {
-    #[inline]
-    pub fn new() -> BaseInStructureBuilder<'a> {
-        BaseInStructureBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> BaseInStructure {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for BaseInStructureBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for BaseInStructureBuilder<'a> {
-    type Target = BaseInStructure;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for BaseInStructureBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVendorId.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
 #[repr(transparent)]
@@ -24043,6 +24031,22 @@ impl std::fmt::Debug for VendorId {
             &Self::KAZAN => "KAZAN",
             &Self::CODEPLAY => "CODEPLAY",
             &Self::MESA => "MESA",
+            _ => "(unknown)",
+        })
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheHeaderVersion.html) · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[repr(transparent)]
+pub struct PipelineCacheHeaderVersion(pub i32);
+#[doc = "[Part of `vk1_0`](../vk1_0/index.html)"]
+impl PipelineCacheHeaderVersion {
+    pub const ONE: Self = Self(1);
+}
+impl std::fmt::Debug for PipelineCacheHeaderVersion {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
+        fmt.write_str(match self {
+            &Self::ONE => "ONE",
             _ => "(unknown)",
         })
     }

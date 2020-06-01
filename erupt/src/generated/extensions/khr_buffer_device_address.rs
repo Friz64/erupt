@@ -9,7 +9,7 @@ pub type PFN_vkGetBufferDeviceAddressKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_info: *const crate::vk1_2::BufferDeviceAddressInfo,
 )
-    -> crate::vk1_2::DeviceAddress;
+    -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Device Command"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferOpaqueCaptureAddressKHR = unsafe extern "system" fn(
@@ -52,7 +52,7 @@ pub trait KhrBufferDeviceAddressDeviceLoaderExt {
     unsafe fn get_buffer_device_address_khr(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress;
+    ) -> crate::vk1_0::DeviceAddress;
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Device Command"]
     unsafe fn get_buffer_opaque_capture_address_khr(
         &self,
@@ -70,7 +70,7 @@ impl KhrBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
     unsafe fn get_buffer_device_address_khr(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress {
+    ) -> crate::vk1_0::DeviceAddress {
         let function = self
             .khr_buffer_device_address
             .as_ref()

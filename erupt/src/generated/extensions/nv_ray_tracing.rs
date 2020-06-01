@@ -22,7 +22,7 @@ pub type PFN_vkDestroyAccelerationStructureNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Device Command"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_ray_tracing :: AccelerationStructureMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: vk1_1 :: MemoryRequirements2KHR , ) -> std :: ffi :: c_void ;
+pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_ray_tracing :: AccelerationStructureMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: extensions :: khr_get_memory_requirements2 :: MemoryRequirements2KHR , ) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Device Command"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindAccelerationStructureMemoryNV = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , bind_info_count : u32 , p_bind_infos : * const crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHR , ) -> crate :: vk1_0 :: Result ;
@@ -183,8 +183,10 @@ pub trait NvRayTracingDeviceLoaderExt {
     unsafe fn get_acceleration_structure_memory_requirements_nv(
         &self,
         info: &crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2KHR>,
-    ) -> crate::vk1_1::MemoryRequirements2KHR;
+        memory_requirements: Option<
+            crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
+        >,
+    ) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR;
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Device Command"]
     unsafe fn bind_acceleration_structure_memory_nv(
         &self,
@@ -326,8 +328,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
     unsafe fn get_acceleration_structure_memory_requirements_nv(
         &self,
         info: &crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2KHR>,
-    ) -> crate::vk1_1::MemoryRequirements2KHR {
+        memory_requirements: Option<
+            crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
+        >,
+    ) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR {
         let function = self
             .nv_ray_tracing
             .as_ref()

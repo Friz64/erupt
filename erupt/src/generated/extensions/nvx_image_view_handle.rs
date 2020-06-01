@@ -182,7 +182,7 @@ impl<'a> std::ops::DerefMut for ImageViewHandleInfoNVXBuilder<'a> {
 pub struct ImageViewAddressPropertiesNVX {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
-    pub device_address: crate::vk1_2::DeviceAddress,
+    pub device_address: crate::vk1_0::DeviceAddress,
     pub size: crate::vk1_0::DeviceSize,
 }
 impl ImageViewAddressPropertiesNVX {
@@ -225,7 +225,7 @@ impl<'a> ImageViewAddressPropertiesNVXBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn device_address(mut self, device_address: crate::vk1_2::DeviceAddress) -> Self {
+    pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address;
         self
     }

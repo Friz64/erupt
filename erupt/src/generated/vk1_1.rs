@@ -5384,8 +5384,6 @@ impl<'a> std::ops::DerefMut for DeviceGroupDeviceCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements2KHR.html) · Alias"]
-pub type MemoryRequirements2KHR = crate::vk1_1::MemoryRequirements2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePointClippingProperties.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

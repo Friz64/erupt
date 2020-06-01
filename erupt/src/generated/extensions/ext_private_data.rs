@@ -369,6 +369,16 @@ pub struct DevicePrivateDataCreateInfoEXT {
 }
 impl DevicePrivateDataCreateInfoEXT {
     #[inline]
+    #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
+    where
+        T: crate::ExtendableBy<Self>,
+    {
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
+    }
+    #[inline]
     pub fn builder<'a>(self) -> DevicePrivateDataCreateInfoEXTBuilder<'a> {
         DevicePrivateDataCreateInfoEXTBuilder(self, std::marker::PhantomData)
     }
@@ -394,6 +404,7 @@ impl Default for DevicePrivateDataCreateInfoEXT {
         }
     }
 }
+impl crate::ExtendableBy<DevicePrivateDataCreateInfoEXT> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Builder of [`DevicePrivateDataCreateInfoEXT`](struct.DevicePrivateDataCreateInfoEXT.html)"]
 #[repr(transparent)]

@@ -1596,7 +1596,7 @@ impl<'a> std::ops::DerefMut for BindShaderGroupIndirectCommandNVBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindIndexBufferIndirectCommandNV {
-    pub buffer_address: crate::vk1_2::DeviceAddress,
+    pub buffer_address: crate::vk1_0::DeviceAddress,
     pub size: u32,
     pub index_type: crate::vk1_0::IndexType,
 }
@@ -1638,7 +1638,7 @@ impl<'a> BindIndexBufferIndirectCommandNVBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn buffer_address(mut self, buffer_address: crate::vk1_2::DeviceAddress) -> Self {
+    pub fn buffer_address(mut self, buffer_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.buffer_address = buffer_address;
         self
     }
@@ -1680,7 +1680,7 @@ impl<'a> std::ops::DerefMut for BindIndexBufferIndirectCommandNVBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindVertexBufferIndirectCommandNV {
-    pub buffer_address: crate::vk1_2::DeviceAddress,
+    pub buffer_address: crate::vk1_0::DeviceAddress,
     pub size: u32,
     pub stride: u32,
 }
@@ -1722,7 +1722,7 @@ impl<'a> BindVertexBufferIndirectCommandNVBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn buffer_address(mut self, buffer_address: crate::vk1_2::DeviceAddress) -> Self {
+    pub fn buffer_address(mut self, buffer_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.buffer_address = buffer_address;
         self
     }

@@ -139,5 +139,7 @@ pub type BufferMemoryRequirementsInfo2KHR = crate::vk1_1::BufferMemoryRequiremen
 pub type ImageMemoryRequirementsInfo2KHR = crate::vk1_1::ImageMemoryRequirementsInfo2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSparseMemoryRequirementsInfo2KHR.html) · Alias"]
 pub type ImageSparseMemoryRequirementsInfo2KHR = crate::vk1_1::ImageSparseMemoryRequirementsInfo2;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements2KHR.html) · Alias"]
+pub type MemoryRequirements2KHR = crate::vk1_1::MemoryRequirements2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements2KHR.html) · Alias"]
 pub type SparseImageMemoryRequirements2KHR = crate::vk1_1::SparseImageMemoryRequirements2;

@@ -85,7 +85,7 @@ pub type PFN_vkSignalSemaphore = unsafe extern "system" fn(
 pub type PFN_vkGetBufferDeviceAddress = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_info: *const crate::vk1_2::BufferDeviceAddressInfo,
-) -> crate::vk1_2::DeviceAddress;
+) -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Device Command"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferOpaqueCaptureAddress = unsafe extern "system" fn(
@@ -229,7 +229,7 @@ pub trait Vk12DeviceLoaderExt {
     unsafe fn get_buffer_device_address(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress;
+    ) -> crate::vk1_0::DeviceAddress;
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Device Command"]
     unsafe fn get_buffer_opaque_capture_address(
         &self,
@@ -437,7 +437,7 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
     unsafe fn get_buffer_device_address(
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_2::DeviceAddress {
+    ) -> crate::vk1_0::DeviceAddress {
         let function = self
             .vk1_2
             .as_ref()
@@ -1533,8 +1533,6 @@ impl<'a> std::ops::DerefMut for BufferDeviceAddressInfoBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceAddress.html) · Base Type"]
-pub type DeviceAddress = u64;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfo.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

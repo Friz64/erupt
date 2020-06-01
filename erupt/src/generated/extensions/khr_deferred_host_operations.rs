@@ -1,5 +1,5 @@
 # ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_deferred_host_operations.html)\n\n## Extends\n- [`ObjectType`](../../vk1_0/struct.ObjectType.html)\n- [`Result`](../../vk1_0/struct.Result.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 2;
+pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_deferred_host_operations");

@@ -115,7 +115,7 @@ pub type PFN_vkGetAccelerationStructureDeviceAddressKHR =
     unsafe extern "system" fn(
         device: crate::vk1_0::Device,
         p_info: *const crate::extensions::khr_ray_tracing::AccelerationStructureDeviceAddressInfoKHR,
-    ) -> crate::vk1_2::DeviceAddress;
+    ) -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Device Command"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR =
@@ -371,7 +371,7 @@ pub trait KhrRayTracingDeviceLoaderExt {
     unsafe fn get_acceleration_structure_device_address_khr(
         &self,
         info: &crate::extensions::khr_ray_tracing::AccelerationStructureDeviceAddressInfoKHR,
-    ) -> crate::vk1_2::DeviceAddress;
+    ) -> crate::vk1_0::DeviceAddress;
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Device Command"]
     unsafe fn get_ray_tracing_capture_replay_shader_group_handles_khr(
         &self,
@@ -762,7 +762,7 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
     unsafe fn get_acceleration_structure_device_address_khr(
         &self,
         info: &crate::extensions::khr_ray_tracing::AccelerationStructureDeviceAddressInfoKHR,
-    ) -> crate::vk1_2::DeviceAddress {
+    ) -> crate::vk1_0::DeviceAddress {
         let function = self
             .khr_ray_tracing
             .as_ref()
@@ -877,7 +877,7 @@ pub struct AccelerationStructureCreateInfoKHR {
     pub max_geometry_count: u32,
     pub p_geometry_infos:
         *const crate::extensions::khr_ray_tracing::AccelerationStructureCreateGeometryTypeInfoKHR,
-    pub device_address: crate::vk1_2::DeviceAddress,
+    pub device_address: crate::vk1_0::DeviceAddress,
 }
 impl AccelerationStructureCreateInfoKHR {
     #[inline]
@@ -961,7 +961,7 @@ impl<'a> AccelerationStructureCreateInfoKHRBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn device_address(mut self, device_address: crate::vk1_2::DeviceAddress) -> Self {
+    pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address;
         self
     }
@@ -1876,7 +1876,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryTrianglesDataKHRBui
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union DeviceOrHostAddressConstKHR {
-    pub device_address: crate::vk1_2::DeviceAddress,
+    pub device_address: crate::vk1_0::DeviceAddress,
     pub host_address: *const std::ffi::c_void,
 }
 impl std::fmt::Debug for DeviceOrHostAddressConstKHR {
@@ -2098,7 +2098,7 @@ bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/re
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union DeviceOrHostAddressKHR {
-    pub device_address: crate::vk1_2::DeviceAddress,
+    pub device_address: crate::vk1_0::DeviceAddress,
     pub host_address: *mut std::ffi::c_void,
 }
 impl std::fmt::Debug for DeviceOrHostAddressKHR {

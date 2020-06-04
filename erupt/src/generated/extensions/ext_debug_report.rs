@@ -32,27 +32,45 @@ pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Instance Commands for [`ExtDebugReportInstanceLoaderExt`](trait.ExtDebugReportInstanceLoaderExt.html)"]
 pub struct ExtDebugReportInstanceCommands {
-    pub create_debug_report_callback_ext: PFN_vkCreateDebugReportCallbackEXT,
-    pub destroy_debug_report_callback_ext: PFN_vkDestroyDebugReportCallbackEXT,
-    pub debug_report_message_ext: PFN_vkDebugReportMessageEXT,
+    pub create_debug_report_callback_ext: Option<PFN_vkCreateDebugReportCallbackEXT>,
+    pub destroy_debug_report_callback_ext: Option<PFN_vkDestroyDebugReportCallbackEXT>,
+    pub debug_report_message_ext: Option<PFN_vkDebugReportMessageEXT>,
 }
 impl ExtDebugReportInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtDebugReportInstanceCommands> {
         unsafe {
-            Some(ExtDebugReportInstanceCommands {
-                create_debug_report_callback_ext: std::mem::transmute(
-                    loader.symbol("vkCreateDebugReportCallbackEXT")?,
-                ),
-                destroy_debug_report_callback_ext: std::mem::transmute(
-                    loader.symbol("vkDestroyDebugReportCallbackEXT")?,
-                ),
-                debug_report_message_ext: std::mem::transmute(
-                    loader.symbol("vkDebugReportMessageEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDebugReportInstanceCommands {
+                create_debug_report_callback_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDebugReportCallbackEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_debug_report_callback_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDebugReportCallbackEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                debug_report_message_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDebugReportMessageEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDebugReportInstanceCommands {
+    loader
+        .ext_debug_report
+        .as_ref()
+        .expect("`ext_debug_report` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDebugReportInstanceCommands`](struct.ExtDebugReportInstanceCommands.html)"]
 pub trait ExtDebugReportInstanceLoaderExt {
@@ -91,11 +109,10 @@ impl ExtDebugReportInstanceLoaderExt for crate::InstanceLoader {
         callback: Option<crate::extensions::ext_debug_report::DebugReportCallbackEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_report::DebugReportCallbackEXT>
     {
-        let function = self
-            .ext_debug_report
+        let function = instance_commands(self)
+            .create_debug_report_callback_ext
             .as_ref()
-            .expect("`ext_debug_report` not loaded")
-            .create_debug_report_callback_ext;
+            .expect("`create_debug_report_callback_ext` not available");
         let mut callback = callback.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -116,11 +133,10 @@ impl ExtDebugReportInstanceLoaderExt for crate::InstanceLoader {
         callback: crate::extensions::ext_debug_report::DebugReportCallbackEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .ext_debug_report
+        let function = instance_commands(self)
+            .destroy_debug_report_callback_ext
             .as_ref()
-            .expect("`ext_debug_report` not loaded")
-            .destroy_debug_report_callback_ext;
+            .expect("`destroy_debug_report_callback_ext` not available");
         let _val = function(
             self.handle,
             callback,
@@ -144,11 +160,10 @@ impl ExtDebugReportInstanceLoaderExt for crate::InstanceLoader {
         layer_prefix: Option<&std::ffi::CStr>,
         message: Option<&std::ffi::CStr>,
     ) -> () {
-        let function = self
-            .ext_debug_report
+        let function = instance_commands(self)
+            .debug_report_message_ext
             .as_ref()
-            .expect("`ext_debug_report` not loaded")
-            .debug_report_message_ext;
+            .expect("`debug_report_message_ext` not available");
         let _val = function(
             self.handle,
             flags,

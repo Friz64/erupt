@@ -26,19 +26,33 @@ pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn
 #[doc = "Provides Instance Commands for [`ExtFullScreenExclusiveInstanceLoaderExt`](trait.ExtFullScreenExclusiveInstanceLoaderExt.html)"]
 pub struct ExtFullScreenExclusiveInstanceCommands {
     pub get_physical_device_surface_present_modes2_ext:
-        PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT,
+        Option<PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT>,
 }
 impl ExtFullScreenExclusiveInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtFullScreenExclusiveInstanceCommands> {
         unsafe {
-            Some(ExtFullScreenExclusiveInstanceCommands {
-                get_physical_device_surface_present_modes2_ext: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfacePresentModes2EXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtFullScreenExclusiveInstanceCommands {
+                get_physical_device_surface_present_modes2_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfacePresentModes2EXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtFullScreenExclusiveInstanceCommands {
+    loader
+        .ext_full_screen_exclusive
+        .as_ref()
+        .expect("`ext_full_screen_exclusive` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtFullScreenExclusiveInstanceCommands`](struct.ExtFullScreenExclusiveInstanceCommands.html)"]
 pub trait ExtFullScreenExclusiveInstanceLoaderExt {
@@ -59,11 +73,10 @@ impl ExtFullScreenExclusiveInstanceLoaderExt for crate::InstanceLoader {
         surface_info : & crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR,
         present_mode_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let function = self
-            .ext_full_screen_exclusive
+        let function = instance_commands(self)
+            .get_physical_device_surface_present_modes2_ext
             .as_ref()
-            .expect("`ext_full_screen_exclusive` not loaded")
-            .get_physical_device_surface_present_modes2_ext;
+            .expect("`get_physical_device_surface_present_modes2_ext` not available");
         let mut present_mode_count = present_mode_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(
@@ -86,27 +99,46 @@ impl ExtFullScreenExclusiveInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`ExtFullScreenExclusiveDeviceLoaderExt`](trait.ExtFullScreenExclusiveDeviceLoaderExt.html)"]
 pub struct ExtFullScreenExclusiveDeviceCommands {
-    pub acquire_full_screen_exclusive_mode_ext: PFN_vkAcquireFullScreenExclusiveModeEXT,
-    pub release_full_screen_exclusive_mode_ext: PFN_vkReleaseFullScreenExclusiveModeEXT,
-    pub get_device_group_surface_present_modes2_ext: PFN_vkGetDeviceGroupSurfacePresentModes2EXT,
+    pub acquire_full_screen_exclusive_mode_ext: Option<PFN_vkAcquireFullScreenExclusiveModeEXT>,
+    pub release_full_screen_exclusive_mode_ext: Option<PFN_vkReleaseFullScreenExclusiveModeEXT>,
+    pub get_device_group_surface_present_modes2_ext:
+        Option<PFN_vkGetDeviceGroupSurfacePresentModes2EXT>,
 }
 impl ExtFullScreenExclusiveDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtFullScreenExclusiveDeviceCommands> {
         unsafe {
-            Some(ExtFullScreenExclusiveDeviceCommands {
-                acquire_full_screen_exclusive_mode_ext: std::mem::transmute(
-                    loader.symbol("vkAcquireFullScreenExclusiveModeEXT")?,
-                ),
-                release_full_screen_exclusive_mode_ext: std::mem::transmute(
-                    loader.symbol("vkReleaseFullScreenExclusiveModeEXT")?,
-                ),
-                get_device_group_surface_present_modes2_ext: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupSurfacePresentModes2EXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtFullScreenExclusiveDeviceCommands {
+                acquire_full_screen_exclusive_mode_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireFullScreenExclusiveModeEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                release_full_screen_exclusive_mode_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkReleaseFullScreenExclusiveModeEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_surface_present_modes2_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupSurfacePresentModes2EXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtFullScreenExclusiveDeviceCommands {
+    loader
+        .ext_full_screen_exclusive
+        .as_ref()
+        .expect("`ext_full_screen_exclusive` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtFullScreenExclusiveDeviceCommands`](struct.ExtFullScreenExclusiveDeviceCommands.html)"]
 pub trait ExtFullScreenExclusiveDeviceLoaderExt {
@@ -134,11 +166,10 @@ impl ExtFullScreenExclusiveDeviceLoaderExt for crate::DeviceLoader {
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_full_screen_exclusive
+        let function = device_commands(self)
+            .acquire_full_screen_exclusive_mode_ext
             .as_ref()
-            .expect("`ext_full_screen_exclusive` not loaded")
-            .acquire_full_screen_exclusive_mode_ext;
+            .expect("`acquire_full_screen_exclusive_mode_ext` not available");
         let _val = function(self.handle, swapchain);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -148,11 +179,10 @@ impl ExtFullScreenExclusiveDeviceLoaderExt for crate::DeviceLoader {
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_full_screen_exclusive
+        let function = device_commands(self)
+            .release_full_screen_exclusive_mode_ext
             .as_ref()
-            .expect("`ext_full_screen_exclusive` not loaded")
-            .release_full_screen_exclusive_mode_ext;
+            .expect("`release_full_screen_exclusive_mode_ext` not available");
         let _val = function(self.handle, swapchain);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -164,11 +194,10 @@ impl ExtFullScreenExclusiveDeviceLoaderExt for crate::DeviceLoader {
         modes: Option<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>
     {
-        let function = self
-            .ext_full_screen_exclusive
+        let function = device_commands(self)
+            .get_device_group_surface_present_modes2_ext
             .as_ref()
-            .expect("`ext_full_screen_exclusive` not loaded")
-            .get_device_group_surface_present_modes2_ext;
+            .expect("`get_device_group_surface_present_modes2_ext` not available");
         let mut modes = modes.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, surface_info, &mut modes);
         crate::utils::VulkanResult::new(_val, modes)

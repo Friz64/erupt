@@ -33,35 +33,57 @@ pub type PFN_vkCmdDebugMarkerInsertEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtDebugMarkerDeviceLoaderExt`](trait.ExtDebugMarkerDeviceLoaderExt.html)"]
 pub struct ExtDebugMarkerDeviceCommands {
-    pub debug_marker_set_object_tag_ext: PFN_vkDebugMarkerSetObjectTagEXT,
-    pub debug_marker_set_object_name_ext: PFN_vkDebugMarkerSetObjectNameEXT,
-    pub cmd_debug_marker_begin_ext: PFN_vkCmdDebugMarkerBeginEXT,
-    pub cmd_debug_marker_end_ext: PFN_vkCmdDebugMarkerEndEXT,
-    pub cmd_debug_marker_insert_ext: PFN_vkCmdDebugMarkerInsertEXT,
+    pub debug_marker_set_object_tag_ext: Option<PFN_vkDebugMarkerSetObjectTagEXT>,
+    pub debug_marker_set_object_name_ext: Option<PFN_vkDebugMarkerSetObjectNameEXT>,
+    pub cmd_debug_marker_begin_ext: Option<PFN_vkCmdDebugMarkerBeginEXT>,
+    pub cmd_debug_marker_end_ext: Option<PFN_vkCmdDebugMarkerEndEXT>,
+    pub cmd_debug_marker_insert_ext: Option<PFN_vkCmdDebugMarkerInsertEXT>,
 }
 impl ExtDebugMarkerDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtDebugMarkerDeviceCommands> {
         unsafe {
-            Some(ExtDebugMarkerDeviceCommands {
-                debug_marker_set_object_tag_ext: std::mem::transmute(
-                    loader.symbol("vkDebugMarkerSetObjectTagEXT")?,
-                ),
-                debug_marker_set_object_name_ext: std::mem::transmute(
-                    loader.symbol("vkDebugMarkerSetObjectNameEXT")?,
-                ),
-                cmd_debug_marker_begin_ext: std::mem::transmute(
-                    loader.symbol("vkCmdDebugMarkerBeginEXT")?,
-                ),
-                cmd_debug_marker_end_ext: std::mem::transmute(
-                    loader.symbol("vkCmdDebugMarkerEndEXT")?,
-                ),
-                cmd_debug_marker_insert_ext: std::mem::transmute(
-                    loader.symbol("vkCmdDebugMarkerInsertEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDebugMarkerDeviceCommands {
+                debug_marker_set_object_tag_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDebugMarkerSetObjectTagEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                debug_marker_set_object_name_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDebugMarkerSetObjectNameEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_debug_marker_begin_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDebugMarkerBeginEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_debug_marker_end_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDebugMarkerEndEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_debug_marker_insert_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDebugMarkerInsertEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtDebugMarkerDeviceCommands {
+    loader
+        .ext_debug_marker
+        .as_ref()
+        .expect("`ext_debug_marker` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDebugMarkerDeviceCommands`](struct.ExtDebugMarkerDeviceCommands.html)"]
 pub trait ExtDebugMarkerDeviceLoaderExt {
@@ -97,11 +119,10 @@ impl ExtDebugMarkerDeviceLoaderExt for crate::DeviceLoader {
         &self,
         tag_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_debug_marker
+        let function = device_commands(self)
+            .debug_marker_set_object_tag_ext
             .as_ref()
-            .expect("`ext_debug_marker` not loaded")
-            .debug_marker_set_object_tag_ext;
+            .expect("`debug_marker_set_object_tag_ext` not available");
         let _val = function(self.handle, tag_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -111,11 +132,10 @@ impl ExtDebugMarkerDeviceLoaderExt for crate::DeviceLoader {
         &self,
         name_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_debug_marker
+        let function = device_commands(self)
+            .debug_marker_set_object_name_ext
             .as_ref()
-            .expect("`ext_debug_marker` not loaded")
-            .debug_marker_set_object_name_ext;
+            .expect("`debug_marker_set_object_name_ext` not available");
         let _val = function(self.handle, name_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -126,22 +146,20 @@ impl ExtDebugMarkerDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
     ) -> () {
-        let function = self
-            .ext_debug_marker
+        let function = device_commands(self)
+            .cmd_debug_marker_begin_ext
             .as_ref()
-            .expect("`ext_debug_marker` not loaded")
-            .cmd_debug_marker_begin_ext;
+            .expect("`cmd_debug_marker_begin_ext` not available");
         let _val = function(command_buffer, marker_info);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Device Command"]
     unsafe fn cmd_debug_marker_end_ext(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
-        let function = self
-            .ext_debug_marker
+        let function = device_commands(self)
+            .cmd_debug_marker_end_ext
             .as_ref()
-            .expect("`ext_debug_marker` not loaded")
-            .cmd_debug_marker_end_ext;
+            .expect("`cmd_debug_marker_end_ext` not available");
         let _val = function(command_buffer);
         ()
     }
@@ -152,11 +170,10 @@ impl ExtDebugMarkerDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
     ) -> () {
-        let function = self
-            .ext_debug_marker
+        let function = device_commands(self)
+            .cmd_debug_marker_insert_ext
             .as_ref()
-            .expect("`ext_debug_marker` not loaded")
-            .cmd_debug_marker_insert_ext;
+            .expect("`cmd_debug_marker_insert_ext` not available");
         let _val = function(command_buffer, marker_info);
         ()
     }

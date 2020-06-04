@@ -62,44 +62,71 @@ pub type PFN_vkCreateDisplayPlaneSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrDisplayInstanceLoaderExt`](trait.KhrDisplayInstanceLoaderExt.html)"]
 pub struct KhrDisplayInstanceCommands {
-    pub get_physical_device_display_properties_khr: PFN_vkGetPhysicalDeviceDisplayPropertiesKHR,
+    pub get_physical_device_display_properties_khr:
+        Option<PFN_vkGetPhysicalDeviceDisplayPropertiesKHR>,
     pub get_physical_device_display_plane_properties_khr:
-        PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR,
-    pub get_display_plane_supported_displays_khr: PFN_vkGetDisplayPlaneSupportedDisplaysKHR,
-    pub get_display_mode_properties_khr: PFN_vkGetDisplayModePropertiesKHR,
-    pub create_display_mode_khr: PFN_vkCreateDisplayModeKHR,
-    pub get_display_plane_capabilities_khr: PFN_vkGetDisplayPlaneCapabilitiesKHR,
-    pub create_display_plane_surface_khr: PFN_vkCreateDisplayPlaneSurfaceKHR,
+        Option<PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR>,
+    pub get_display_plane_supported_displays_khr: Option<PFN_vkGetDisplayPlaneSupportedDisplaysKHR>,
+    pub get_display_mode_properties_khr: Option<PFN_vkGetDisplayModePropertiesKHR>,
+    pub create_display_mode_khr: Option<PFN_vkCreateDisplayModeKHR>,
+    pub get_display_plane_capabilities_khr: Option<PFN_vkGetDisplayPlaneCapabilitiesKHR>,
+    pub create_display_plane_surface_khr: Option<PFN_vkCreateDisplayPlaneSurfaceKHR>,
 }
 impl KhrDisplayInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrDisplayInstanceCommands> {
         unsafe {
-            Some(KhrDisplayInstanceCommands {
-                get_physical_device_display_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceDisplayPropertiesKHR")?,
-                ),
-                get_physical_device_display_plane_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceDisplayPlanePropertiesKHR")?,
-                ),
-                get_display_plane_supported_displays_khr: std::mem::transmute(
-                    loader.symbol("vkGetDisplayPlaneSupportedDisplaysKHR")?,
-                ),
-                get_display_mode_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetDisplayModePropertiesKHR")?,
-                ),
-                create_display_mode_khr: std::mem::transmute(
-                    loader.symbol("vkCreateDisplayModeKHR")?,
-                ),
-                get_display_plane_capabilities_khr: std::mem::transmute(
-                    loader.symbol("vkGetDisplayPlaneCapabilitiesKHR")?,
-                ),
-                create_display_plane_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateDisplayPlaneSurfaceKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDisplayInstanceCommands {
+                get_physical_device_display_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceDisplayPropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_display_plane_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceDisplayPlanePropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_display_plane_supported_displays_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDisplayPlaneSupportedDisplaysKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_display_mode_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDisplayModePropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_display_mode_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDisplayModeKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_display_plane_capabilities_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDisplayPlaneCapabilitiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_display_plane_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDisplayPlaneSurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDisplayInstanceCommands {
+    loader
+        .khr_display
+        .as_ref()
+        .expect("`khr_display` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDisplayInstanceCommands`](struct.KhrDisplayInstanceCommands.html)"]
 pub trait KhrDisplayInstanceLoaderExt {
@@ -162,11 +189,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .get_physical_device_display_properties_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .get_physical_device_display_properties_khr;
+            .expect("`get_physical_device_display_properties_khr` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -188,11 +214,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>>
     {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .get_physical_device_display_plane_properties_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .get_physical_device_display_plane_properties_khr;
+            .expect("`get_physical_device_display_plane_properties_khr` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -214,11 +239,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         plane_index: u32,
         display_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .get_display_plane_supported_displays_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .get_display_plane_supported_displays_khr;
+            .expect("`get_display_plane_supported_displays_khr` not available");
         let mut display_count = display_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, plane_index, &mut val, std::ptr::null_mut());
@@ -242,11 +266,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayModePropertiesKHR>>
     {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .get_display_mode_properties_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .get_display_mode_properties_khr;
+            .expect("`get_display_mode_properties_khr` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, display, &mut val, std::ptr::null_mut());
@@ -271,11 +294,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         mode: Option<crate::extensions::khr_display::DisplayModeKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayModeKHR> {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .create_display_mode_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .create_display_mode_khr;
+            .expect("`create_display_mode_khr` not available");
         let mut mode = mode.unwrap_or_else(|| Default::default());
         let _val = function(
             physical_device,
@@ -300,11 +322,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         capabilities: Option<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>
     {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .get_display_plane_capabilities_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .get_display_plane_capabilities_khr;
+            .expect("`get_display_plane_capabilities_khr` not available");
         let mut capabilities = capabilities.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, mode, plane_index, &mut capabilities);
         crate::utils::VulkanResult::new(_val, capabilities)
@@ -317,11 +338,10 @@ impl KhrDisplayInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_display
+        let function = instance_commands(self)
+            .create_display_plane_surface_khr
             .as_ref()
-            .expect("`khr_display` not loaded")
-            .create_display_plane_surface_khr;
+            .expect("`create_display_plane_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

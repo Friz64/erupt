@@ -13,19 +13,33 @@ pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`ExtHeadlessSurfaceInstanceLoaderExt`](trait.ExtHeadlessSurfaceInstanceLoaderExt.html)"]
 pub struct ExtHeadlessSurfaceInstanceCommands {
-    pub create_headless_surface_ext: PFN_vkCreateHeadlessSurfaceEXT,
+    pub create_headless_surface_ext: Option<PFN_vkCreateHeadlessSurfaceEXT>,
 }
 impl ExtHeadlessSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtHeadlessSurfaceInstanceCommands> {
         unsafe {
-            Some(ExtHeadlessSurfaceInstanceCommands {
-                create_headless_surface_ext: std::mem::transmute(
-                    loader.symbol("vkCreateHeadlessSurfaceEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtHeadlessSurfaceInstanceCommands {
+                create_headless_surface_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateHeadlessSurfaceEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtHeadlessSurfaceInstanceCommands {
+    loader
+        .ext_headless_surface
+        .as_ref()
+        .expect("`ext_headless_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtHeadlessSurfaceInstanceCommands`](struct.ExtHeadlessSurfaceInstanceCommands.html)"]
 pub trait ExtHeadlessSurfaceInstanceLoaderExt {
@@ -46,11 +60,10 @@ impl ExtHeadlessSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .ext_headless_surface
+        let function = instance_commands(self)
+            .create_headless_surface_ext
             .as_ref()
-            .expect("`ext_headless_surface` not loaded")
-            .create_headless_surface_ext;
+            .expect("`create_headless_surface_ext` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

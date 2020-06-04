@@ -13,19 +13,33 @@ pub type PFN_vkCreateMacOSSurfaceMVK = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`MvkMacosSurfaceInstanceLoaderExt`](trait.MvkMacosSurfaceInstanceLoaderExt.html)"]
 pub struct MvkMacosSurfaceInstanceCommands {
-    pub create_mac_os_surface_mvk: PFN_vkCreateMacOSSurfaceMVK,
+    pub create_mac_os_surface_mvk: Option<PFN_vkCreateMacOSSurfaceMVK>,
 }
 impl MvkMacosSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<MvkMacosSurfaceInstanceCommands> {
         unsafe {
-            Some(MvkMacosSurfaceInstanceCommands {
-                create_mac_os_surface_mvk: std::mem::transmute(
-                    loader.symbol("vkCreateMacOSSurfaceMVK")?,
-                ),
-            })
+            let mut success = false;
+            let table = MvkMacosSurfaceInstanceCommands {
+                create_mac_os_surface_mvk: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateMacOSSurfaceMVK");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &MvkMacosSurfaceInstanceCommands {
+    loader
+        .mvk_macos_surface
+        .as_ref()
+        .expect("`mvk_macos_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`MvkMacosSurfaceInstanceCommands`](struct.MvkMacosSurfaceInstanceCommands.html)"]
 pub trait MvkMacosSurfaceInstanceLoaderExt {
@@ -46,11 +60,10 @@ impl MvkMacosSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .mvk_macos_surface
+        let function = instance_commands(self)
+            .create_mac_os_surface_mvk
             .as_ref()
-            .expect("`mvk_macos_surface` not loaded")
-            .create_mac_os_surface_mvk;
+            .expect("`create_mac_os_surface_mvk` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

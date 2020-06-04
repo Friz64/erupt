@@ -14,19 +14,33 @@ pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV =
 #[doc = "Provides Instance Commands for [`NvCooperativeMatrixInstanceLoaderExt`](trait.NvCooperativeMatrixInstanceLoaderExt.html)"]
 pub struct NvCooperativeMatrixInstanceCommands {
     pub get_physical_device_cooperative_matrix_properties_nv:
-        PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV,
+        Option<PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV>,
 }
 impl NvCooperativeMatrixInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<NvCooperativeMatrixInstanceCommands> {
         unsafe {
-            Some(NvCooperativeMatrixInstanceCommands {
-                get_physical_device_cooperative_matrix_properties_nv: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceCooperativeMatrixPropertiesNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvCooperativeMatrixInstanceCommands {
+                get_physical_device_cooperative_matrix_properties_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceCooperativeMatrixPropertiesNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &NvCooperativeMatrixInstanceCommands {
+    loader
+        .nv_cooperative_matrix
+        .as_ref()
+        .expect("`nv_cooperative_matrix` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvCooperativeMatrixInstanceCommands`](struct.NvCooperativeMatrixInstanceCommands.html)"]
 pub trait NvCooperativeMatrixInstanceLoaderExt {
@@ -49,11 +63,10 @@ impl NvCooperativeMatrixInstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>,
     > {
-        let function = self
-            .nv_cooperative_matrix
+        let function = instance_commands(self)
+            .get_physical_device_cooperative_matrix_properties_nv
             .as_ref()
-            .expect("`nv_cooperative_matrix` not loaded")
-            .get_physical_device_cooperative_matrix_properties_nv;
+            .expect("`get_physical_device_cooperative_matrix_properties_nv` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());

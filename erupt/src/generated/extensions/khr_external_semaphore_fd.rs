@@ -15,21 +15,39 @@ pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrExternalSemaphoreFdDeviceLoaderExt`](trait.KhrExternalSemaphoreFdDeviceLoaderExt.html)"]
 pub struct KhrExternalSemaphoreFdDeviceCommands {
-    pub import_semaphore_fd_khr: PFN_vkImportSemaphoreFdKHR,
-    pub get_semaphore_fd_khr: PFN_vkGetSemaphoreFdKHR,
+    pub import_semaphore_fd_khr: Option<PFN_vkImportSemaphoreFdKHR>,
+    pub get_semaphore_fd_khr: Option<PFN_vkGetSemaphoreFdKHR>,
 }
 impl KhrExternalSemaphoreFdDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalSemaphoreFdDeviceCommands> {
         unsafe {
-            Some(KhrExternalSemaphoreFdDeviceCommands {
-                import_semaphore_fd_khr: std::mem::transmute(
-                    loader.symbol("vkImportSemaphoreFdKHR")?,
-                ),
-                get_semaphore_fd_khr: std::mem::transmute(loader.symbol("vkGetSemaphoreFdKHR")?),
-            })
+            let mut success = false;
+            let table = KhrExternalSemaphoreFdDeviceCommands {
+                import_semaphore_fd_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkImportSemaphoreFdKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_semaphore_fd_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSemaphoreFdKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalSemaphoreFdDeviceCommands {
+    loader
+        .khr_external_semaphore_fd
+        .as_ref()
+        .expect("`khr_external_semaphore_fd` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalSemaphoreFdDeviceCommands`](struct.KhrExternalSemaphoreFdDeviceCommands.html)"]
 pub trait KhrExternalSemaphoreFdDeviceLoaderExt {
@@ -52,11 +70,10 @@ impl KhrExternalSemaphoreFdDeviceLoaderExt for crate::DeviceLoader {
         &self,
         import_semaphore_fd_info : & crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_semaphore_fd
+        let function = device_commands(self)
+            .import_semaphore_fd_khr
             .as_ref()
-            .expect("`khr_external_semaphore_fd` not loaded")
-            .import_semaphore_fd_khr;
+            .expect("`import_semaphore_fd_khr` not available");
         let _val = function(self.handle, import_semaphore_fd_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -67,11 +84,10 @@ impl KhrExternalSemaphoreFdDeviceLoaderExt for crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let function = self
-            .khr_external_semaphore_fd
+        let function = device_commands(self)
+            .get_semaphore_fd_khr
             .as_ref()
-            .expect("`khr_external_semaphore_fd` not loaded")
-            .get_semaphore_fd_khr;
+            .expect("`get_semaphore_fd_khr` not available");
         let mut fd = fd.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, get_fd_info, &mut fd);
         crate::utils::VulkanResult::new(_val, fd)

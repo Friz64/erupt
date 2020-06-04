@@ -108,61 +108,101 @@ pub type PFN_vkCompileDeferredNV = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`NvRayTracingDeviceLoaderExt`](trait.NvRayTracingDeviceLoaderExt.html)"]
 pub struct NvRayTracingDeviceCommands {
-    pub create_acceleration_structure_nv: PFN_vkCreateAccelerationStructureNV,
-    pub destroy_acceleration_structure_nv: PFN_vkDestroyAccelerationStructureNV,
+    pub create_acceleration_structure_nv: Option<PFN_vkCreateAccelerationStructureNV>,
+    pub destroy_acceleration_structure_nv: Option<PFN_vkDestroyAccelerationStructureNV>,
     pub get_acceleration_structure_memory_requirements_nv:
-        PFN_vkGetAccelerationStructureMemoryRequirementsNV,
-    pub bind_acceleration_structure_memory_nv: PFN_vkBindAccelerationStructureMemoryNV,
-    pub cmd_build_acceleration_structure_nv: PFN_vkCmdBuildAccelerationStructureNV,
-    pub cmd_copy_acceleration_structure_nv: PFN_vkCmdCopyAccelerationStructureNV,
-    pub cmd_trace_rays_nv: PFN_vkCmdTraceRaysNV,
-    pub create_ray_tracing_pipelines_nv: PFN_vkCreateRayTracingPipelinesNV,
-    pub get_ray_tracing_shader_group_handles_nv: PFN_vkGetRayTracingShaderGroupHandlesNV,
-    pub get_acceleration_structure_handle_nv: PFN_vkGetAccelerationStructureHandleNV,
+        Option<PFN_vkGetAccelerationStructureMemoryRequirementsNV>,
+    pub bind_acceleration_structure_memory_nv: Option<PFN_vkBindAccelerationStructureMemoryNV>,
+    pub cmd_build_acceleration_structure_nv: Option<PFN_vkCmdBuildAccelerationStructureNV>,
+    pub cmd_copy_acceleration_structure_nv: Option<PFN_vkCmdCopyAccelerationStructureNV>,
+    pub cmd_trace_rays_nv: Option<PFN_vkCmdTraceRaysNV>,
+    pub create_ray_tracing_pipelines_nv: Option<PFN_vkCreateRayTracingPipelinesNV>,
+    pub get_ray_tracing_shader_group_handles_nv: Option<PFN_vkGetRayTracingShaderGroupHandlesNV>,
+    pub get_acceleration_structure_handle_nv: Option<PFN_vkGetAccelerationStructureHandleNV>,
     pub cmd_write_acceleration_structures_properties_nv:
-        PFN_vkCmdWriteAccelerationStructuresPropertiesNV,
-    pub compile_deferred_nv: PFN_vkCompileDeferredNV,
+        Option<PFN_vkCmdWriteAccelerationStructuresPropertiesNV>,
+    pub compile_deferred_nv: Option<PFN_vkCompileDeferredNV>,
 }
 impl NvRayTracingDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvRayTracingDeviceCommands> {
         unsafe {
-            Some(NvRayTracingDeviceCommands {
-                create_acceleration_structure_nv: std::mem::transmute(
-                    loader.symbol("vkCreateAccelerationStructureNV")?,
-                ),
-                destroy_acceleration_structure_nv: std::mem::transmute(
-                    loader.symbol("vkDestroyAccelerationStructureNV")?,
-                ),
-                get_acceleration_structure_memory_requirements_nv: std::mem::transmute(
-                    loader.symbol("vkGetAccelerationStructureMemoryRequirementsNV")?,
-                ),
-                bind_acceleration_structure_memory_nv: std::mem::transmute(
-                    loader.symbol("vkBindAccelerationStructureMemoryNV")?,
-                ),
-                cmd_build_acceleration_structure_nv: std::mem::transmute(
-                    loader.symbol("vkCmdBuildAccelerationStructureNV")?,
-                ),
-                cmd_copy_acceleration_structure_nv: std::mem::transmute(
-                    loader.symbol("vkCmdCopyAccelerationStructureNV")?,
-                ),
-                cmd_trace_rays_nv: std::mem::transmute(loader.symbol("vkCmdTraceRaysNV")?),
-                create_ray_tracing_pipelines_nv: std::mem::transmute(
-                    loader.symbol("vkCreateRayTracingPipelinesNV")?,
-                ),
-                get_ray_tracing_shader_group_handles_nv: std::mem::transmute(
-                    loader.symbol("vkGetRayTracingShaderGroupHandlesNV")?,
-                ),
-                get_acceleration_structure_handle_nv: std::mem::transmute(
-                    loader.symbol("vkGetAccelerationStructureHandleNV")?,
-                ),
-                cmd_write_acceleration_structures_properties_nv: std::mem::transmute(
-                    loader.symbol("vkCmdWriteAccelerationStructuresPropertiesNV")?,
-                ),
-                compile_deferred_nv: std::mem::transmute(loader.symbol("vkCompileDeferredNV")?),
-            })
+            let mut success = false;
+            let table = NvRayTracingDeviceCommands {
+                create_acceleration_structure_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateAccelerationStructureNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_acceleration_structure_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyAccelerationStructureNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_acceleration_structure_memory_requirements_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetAccelerationStructureMemoryRequirementsNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                bind_acceleration_structure_memory_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindAccelerationStructureMemoryNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_build_acceleration_structure_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBuildAccelerationStructureNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_acceleration_structure_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyAccelerationStructureNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_trace_rays_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdTraceRaysNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_ray_tracing_pipelines_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateRayTracingPipelinesNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_ray_tracing_shader_group_handles_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRayTracingShaderGroupHandlesNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_acceleration_structure_handle_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetAccelerationStructureHandleNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_write_acceleration_structures_properties_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdWriteAccelerationStructuresPropertiesNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                compile_deferred_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCompileDeferredNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvRayTracingDeviceCommands {
+    loader
+        .nv_ray_tracing
+        .as_ref()
+        .expect("`nv_ray_tracing` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvRayTracingDeviceCommands`](struct.NvRayTracingDeviceCommands.html)"]
 pub trait NvRayTracingDeviceLoaderExt {
@@ -281,11 +321,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>,
     ) -> crate::utils::VulkanResult<crate::extensions::nv_ray_tracing::AccelerationStructureNV>
     {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .create_acceleration_structure_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .create_acceleration_structure_nv;
+            .expect("`create_acceleration_structure_nv` not available");
         let mut acceleration_structure =
             acceleration_structure.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -307,11 +346,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         acceleration_structure: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .destroy_acceleration_structure_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .destroy_acceleration_structure_nv;
+            .expect("`destroy_acceleration_structure_nv` not available");
         let _val = function(
             self.handle,
             acceleration_structure,
@@ -332,11 +370,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
             crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
         >,
     ) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .get_acceleration_structure_memory_requirements_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .get_acceleration_structure_memory_requirements_nv;
+            .expect("`get_acceleration_structure_memory_requirements_nv` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -347,11 +384,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         bind_infos : & [ crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHRBuilder ],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .bind_acceleration_structure_memory_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .bind_acceleration_structure_memory_nv;
+            .expect("`bind_acceleration_structure_memory_nv` not available");
         let bind_info_count = bind_infos.len() as _;
         let _val = function(self.handle, bind_info_count, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -370,11 +406,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         scratch: crate::vk1_0::Buffer,
         scratch_offset: crate::vk1_0::DeviceSize,
     ) -> () {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .cmd_build_acceleration_structure_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .cmd_build_acceleration_structure_nv;
+            .expect("`cmd_build_acceleration_structure_nv` not available");
         let _val = function(
             command_buffer,
             info,
@@ -397,11 +432,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         src: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
         mode: crate::extensions::khr_ray_tracing::CopyAccelerationStructureModeKHR,
     ) -> () {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .cmd_copy_acceleration_structure_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .cmd_copy_acceleration_structure_nv;
+            .expect("`cmd_copy_acceleration_structure_nv` not available");
         let _val = function(command_buffer, dst, src, mode);
         ()
     }
@@ -425,11 +459,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         height: u32,
         depth: u32,
     ) -> () {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .cmd_trace_rays_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .cmd_trace_rays_nv;
+            .expect("`cmd_trace_rays_nv` not available");
         let _val = function(
             command_buffer,
             raygen_shader_binding_table_buffer,
@@ -457,11 +490,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .create_ray_tracing_pipelines_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .create_ray_tracing_pipelines_nv;
+            .expect("`create_ray_tracing_pipelines_nv` not available");
         let create_info_count = create_infos.len() as _;
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _val = function(
@@ -488,11 +520,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .get_ray_tracing_shader_group_handles_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .get_ray_tracing_shader_group_handles_nv;
+            .expect("`get_ray_tracing_shader_group_handles_nv` not available");
         let _val = function(
             self.handle,
             pipeline,
@@ -511,11 +542,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .get_acceleration_structure_handle_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .get_acceleration_structure_handle_nv;
+            .expect("`get_acceleration_structure_handle_nv` not available");
         let _val = function(self.handle, acceleration_structure, data_size, data);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -529,11 +559,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         first_query: u32,
     ) -> () {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .cmd_write_acceleration_structures_properties_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .cmd_write_acceleration_structures_properties_nv;
+            .expect("`cmd_write_acceleration_structures_properties_nv` not available");
         let acceleration_structure_count = acceleration_structures.len() as _;
         let _val = function(
             command_buffer,
@@ -552,11 +581,10 @@ impl NvRayTracingDeviceLoaderExt for crate::DeviceLoader {
         pipeline: crate::vk1_0::Pipeline,
         shader: u32,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .nv_ray_tracing
+        let function = device_commands(self)
+            .compile_deferred_nv
             .as_ref()
-            .expect("`nv_ray_tracing` not loaded")
-            .compile_deferred_nv;
+            .expect("`compile_deferred_nv` not available");
         let _val = function(self.handle, pipeline, shader);
         crate::utils::VulkanResult::new(_val, ())
     }

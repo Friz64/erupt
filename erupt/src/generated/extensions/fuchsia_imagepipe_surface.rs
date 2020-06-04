@@ -8,19 +8,33 @@ pub const FUCHSIA_IMAGEPIPE_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char 
 pub type PFN_vkCreateImagePipeSurfaceFUCHSIA = unsafe extern "system" fn ( instance : crate :: vk1_0 :: Instance , p_create_info : * const crate :: extensions :: fuchsia_imagepipe_surface :: ImagePipeSurfaceCreateInfoFUCHSIA , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_surface : * mut crate :: extensions :: khr_surface :: SurfaceKHR , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Instance Commands for [`FuchsiaImagepipeSurfaceInstanceLoaderExt`](trait.FuchsiaImagepipeSurfaceInstanceLoaderExt.html)"]
 pub struct FuchsiaImagepipeSurfaceInstanceCommands {
-    pub create_image_pipe_surface_fuchsia: PFN_vkCreateImagePipeSurfaceFUCHSIA,
+    pub create_image_pipe_surface_fuchsia: Option<PFN_vkCreateImagePipeSurfaceFUCHSIA>,
 }
 impl FuchsiaImagepipeSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<FuchsiaImagepipeSurfaceInstanceCommands> {
         unsafe {
-            Some(FuchsiaImagepipeSurfaceInstanceCommands {
-                create_image_pipe_surface_fuchsia: std::mem::transmute(
-                    loader.symbol("vkCreateImagePipeSurfaceFUCHSIA")?,
-                ),
-            })
+            let mut success = false;
+            let table = FuchsiaImagepipeSurfaceInstanceCommands {
+                create_image_pipe_surface_fuchsia: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateImagePipeSurfaceFUCHSIA");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &FuchsiaImagepipeSurfaceInstanceCommands {
+    loader
+        .fuchsia_imagepipe_surface
+        .as_ref()
+        .expect("`fuchsia_imagepipe_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`FuchsiaImagepipeSurfaceInstanceCommands`](struct.FuchsiaImagepipeSurfaceInstanceCommands.html)"]
 pub trait FuchsiaImagepipeSurfaceInstanceLoaderExt {
@@ -41,11 +55,10 @@ impl FuchsiaImagepipeSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .fuchsia_imagepipe_surface
+        let function = instance_commands(self)
+            .create_image_pipe_surface_fuchsia
             .as_ref()
-            .expect("`fuchsia_imagepipe_surface` not loaded")
-            .create_image_pipe_surface_fuchsia;
+            .expect("`create_image_pipe_surface_fuchsia` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

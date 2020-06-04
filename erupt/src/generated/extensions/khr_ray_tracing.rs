@@ -142,110 +142,170 @@ pub type PFN_vkGetDeviceAccelerationStructureCompatibilityKHR =
     ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrRayTracingDeviceLoaderExt`](trait.KhrRayTracingDeviceLoaderExt.html)"]
 pub struct KhrRayTracingDeviceCommands {
-    pub create_acceleration_structure_khr: PFN_vkCreateAccelerationStructureKHR,
-    pub destroy_acceleration_structure_khr: PFN_vkDestroyAccelerationStructureKHR,
+    pub create_acceleration_structure_khr: Option<PFN_vkCreateAccelerationStructureKHR>,
+    pub destroy_acceleration_structure_khr: Option<PFN_vkDestroyAccelerationStructureKHR>,
     pub get_acceleration_structure_memory_requirements_khr:
-        PFN_vkGetAccelerationStructureMemoryRequirementsKHR,
-    pub bind_acceleration_structure_memory_khr: PFN_vkBindAccelerationStructureMemoryKHR,
-    pub cmd_build_acceleration_structure_khr: PFN_vkCmdBuildAccelerationStructureKHR,
+        Option<PFN_vkGetAccelerationStructureMemoryRequirementsKHR>,
+    pub bind_acceleration_structure_memory_khr: Option<PFN_vkBindAccelerationStructureMemoryKHR>,
+    pub cmd_build_acceleration_structure_khr: Option<PFN_vkCmdBuildAccelerationStructureKHR>,
     pub cmd_build_acceleration_structure_indirect_khr:
-        PFN_vkCmdBuildAccelerationStructureIndirectKHR,
-    pub build_acceleration_structure_khr: PFN_vkBuildAccelerationStructureKHR,
-    pub copy_acceleration_structure_khr: PFN_vkCopyAccelerationStructureKHR,
-    pub copy_acceleration_structure_to_memory_khr: PFN_vkCopyAccelerationStructureToMemoryKHR,
-    pub copy_memory_to_acceleration_structure_khr: PFN_vkCopyMemoryToAccelerationStructureKHR,
+        Option<PFN_vkCmdBuildAccelerationStructureIndirectKHR>,
+    pub build_acceleration_structure_khr: Option<PFN_vkBuildAccelerationStructureKHR>,
+    pub copy_acceleration_structure_khr: Option<PFN_vkCopyAccelerationStructureKHR>,
+    pub copy_acceleration_structure_to_memory_khr:
+        Option<PFN_vkCopyAccelerationStructureToMemoryKHR>,
+    pub copy_memory_to_acceleration_structure_khr:
+        Option<PFN_vkCopyMemoryToAccelerationStructureKHR>,
     pub write_acceleration_structures_properties_khr:
-        PFN_vkWriteAccelerationStructuresPropertiesKHR,
-    pub cmd_copy_acceleration_structure_khr: PFN_vkCmdCopyAccelerationStructureKHR,
+        Option<PFN_vkWriteAccelerationStructuresPropertiesKHR>,
+    pub cmd_copy_acceleration_structure_khr: Option<PFN_vkCmdCopyAccelerationStructureKHR>,
     pub cmd_copy_acceleration_structure_to_memory_khr:
-        PFN_vkCmdCopyAccelerationStructureToMemoryKHR,
+        Option<PFN_vkCmdCopyAccelerationStructureToMemoryKHR>,
     pub cmd_copy_memory_to_acceleration_structure_khr:
-        PFN_vkCmdCopyMemoryToAccelerationStructureKHR,
-    pub cmd_trace_rays_khr: PFN_vkCmdTraceRaysKHR,
-    pub create_ray_tracing_pipelines_khr: PFN_vkCreateRayTracingPipelinesKHR,
-    pub get_ray_tracing_shader_group_handles_khr: PFN_vkGetRayTracingShaderGroupHandlesKHR,
+        Option<PFN_vkCmdCopyMemoryToAccelerationStructureKHR>,
+    pub cmd_trace_rays_khr: Option<PFN_vkCmdTraceRaysKHR>,
+    pub create_ray_tracing_pipelines_khr: Option<PFN_vkCreateRayTracingPipelinesKHR>,
+    pub get_ray_tracing_shader_group_handles_khr: Option<PFN_vkGetRayTracingShaderGroupHandlesKHR>,
     pub get_acceleration_structure_device_address_khr:
-        PFN_vkGetAccelerationStructureDeviceAddressKHR,
+        Option<PFN_vkGetAccelerationStructureDeviceAddressKHR>,
     pub get_ray_tracing_capture_replay_shader_group_handles_khr:
-        PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR,
+        Option<PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR>,
     pub cmd_write_acceleration_structures_properties_khr:
-        PFN_vkCmdWriteAccelerationStructuresPropertiesKHR,
-    pub cmd_trace_rays_indirect_khr: PFN_vkCmdTraceRaysIndirectKHR,
+        Option<PFN_vkCmdWriteAccelerationStructuresPropertiesKHR>,
+    pub cmd_trace_rays_indirect_khr: Option<PFN_vkCmdTraceRaysIndirectKHR>,
     pub get_device_acceleration_structure_compatibility_khr:
-        PFN_vkGetDeviceAccelerationStructureCompatibilityKHR,
+        Option<PFN_vkGetDeviceAccelerationStructureCompatibilityKHR>,
 }
 impl KhrRayTracingDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrRayTracingDeviceCommands> {
         unsafe {
-            Some(KhrRayTracingDeviceCommands {
-                create_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCreateAccelerationStructureKHR")?,
-                ),
-                destroy_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkDestroyAccelerationStructureKHR")?,
-                ),
-                get_acceleration_structure_memory_requirements_khr: std::mem::transmute(
-                    loader.symbol("vkGetAccelerationStructureMemoryRequirementsKHR")?,
-                ),
-                bind_acceleration_structure_memory_khr: std::mem::transmute(
-                    loader.symbol("vkBindAccelerationStructureMemoryKHR")?,
-                ),
-                cmd_build_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCmdBuildAccelerationStructureKHR")?,
-                ),
-                cmd_build_acceleration_structure_indirect_khr: std::mem::transmute(
-                    loader.symbol("vkCmdBuildAccelerationStructureIndirectKHR")?,
-                ),
-                build_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkBuildAccelerationStructureKHR")?,
-                ),
-                copy_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCopyAccelerationStructureKHR")?,
-                ),
-                copy_acceleration_structure_to_memory_khr: std::mem::transmute(
-                    loader.symbol("vkCopyAccelerationStructureToMemoryKHR")?,
-                ),
-                copy_memory_to_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCopyMemoryToAccelerationStructureKHR")?,
-                ),
-                write_acceleration_structures_properties_khr: std::mem::transmute(
-                    loader.symbol("vkWriteAccelerationStructuresPropertiesKHR")?,
-                ),
-                cmd_copy_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCmdCopyAccelerationStructureKHR")?,
-                ),
-                cmd_copy_acceleration_structure_to_memory_khr: std::mem::transmute(
-                    loader.symbol("vkCmdCopyAccelerationStructureToMemoryKHR")?,
-                ),
-                cmd_copy_memory_to_acceleration_structure_khr: std::mem::transmute(
-                    loader.symbol("vkCmdCopyMemoryToAccelerationStructureKHR")?,
-                ),
-                cmd_trace_rays_khr: std::mem::transmute(loader.symbol("vkCmdTraceRaysKHR")?),
-                create_ray_tracing_pipelines_khr: std::mem::transmute(
-                    loader.symbol("vkCreateRayTracingPipelinesKHR")?,
-                ),
-                get_ray_tracing_shader_group_handles_khr: std::mem::transmute(
-                    loader.symbol("vkGetRayTracingShaderGroupHandlesKHR")?,
-                ),
-                get_acceleration_structure_device_address_khr: std::mem::transmute(
-                    loader.symbol("vkGetAccelerationStructureDeviceAddressKHR")?,
-                ),
-                get_ray_tracing_capture_replay_shader_group_handles_khr: std::mem::transmute(
-                    loader.symbol("vkGetRayTracingCaptureReplayShaderGroupHandlesKHR")?,
-                ),
-                cmd_write_acceleration_structures_properties_khr: std::mem::transmute(
-                    loader.symbol("vkCmdWriteAccelerationStructuresPropertiesKHR")?,
-                ),
-                cmd_trace_rays_indirect_khr: std::mem::transmute(
-                    loader.symbol("vkCmdTraceRaysIndirectKHR")?,
-                ),
-                get_device_acceleration_structure_compatibility_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceAccelerationStructureCompatibilityKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrRayTracingDeviceCommands {
+                create_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_acceleration_structure_memory_requirements_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetAccelerationStructureMemoryRequirementsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                bind_acceleration_structure_memory_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindAccelerationStructureMemoryKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_build_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBuildAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_build_acceleration_structure_indirect_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBuildAccelerationStructureIndirectKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                build_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkBuildAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                copy_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCopyAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                copy_acceleration_structure_to_memory_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCopyAccelerationStructureToMemoryKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                copy_memory_to_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCopyMemoryToAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                write_acceleration_structures_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkWriteAccelerationStructuresPropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_acceleration_structure_to_memory_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyAccelerationStructureToMemoryKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_memory_to_acceleration_structure_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyMemoryToAccelerationStructureKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_trace_rays_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdTraceRaysKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_ray_tracing_pipelines_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateRayTracingPipelinesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_ray_tracing_shader_group_handles_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRayTracingShaderGroupHandlesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_acceleration_structure_device_address_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetAccelerationStructureDeviceAddressKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_ray_tracing_capture_replay_shader_group_handles_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRayTracingCaptureReplayShaderGroupHandlesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_write_acceleration_structures_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdWriteAccelerationStructuresPropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_trace_rays_indirect_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdTraceRaysIndirectKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_acceleration_structure_compatibility_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceAccelerationStructureCompatibilityKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrRayTracingDeviceCommands {
+    loader
+        .khr_ray_tracing
+        .as_ref()
+        .expect("`khr_ray_tracing` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrRayTracingDeviceCommands`](struct.KhrRayTracingDeviceCommands.html)"]
 pub trait KhrRayTracingDeviceLoaderExt {
@@ -419,11 +479,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         >,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_ray_tracing::AccelerationStructureKHR>
     {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .create_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .create_acceleration_structure_khr;
+            .expect("`create_acceleration_structure_khr` not available");
         let mut acceleration_structure =
             acceleration_structure.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -445,11 +504,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         acceleration_structure: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .destroy_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .destroy_acceleration_structure_khr;
+            .expect("`destroy_acceleration_structure_khr` not available");
         let _val = function(
             self.handle,
             acceleration_structure,
@@ -468,11 +526,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         info: &crate::extensions::khr_ray_tracing::AccelerationStructureMemoryRequirementsInfoKHR,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .get_acceleration_structure_memory_requirements_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .get_acceleration_structure_memory_requirements_khr;
+            .expect("`get_acceleration_structure_memory_requirements_khr` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -483,11 +540,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         bind_infos : & [ crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHRBuilder ],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .bind_acceleration_structure_memory_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .bind_acceleration_structure_memory_khr;
+            .expect("`bind_acceleration_structure_memory_khr` not available");
         let bind_info_count = bind_infos.len() as _;
         let _val = function(self.handle, bind_info_count, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -500,11 +556,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         infos : & [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder ],
         offset_infos : & [ * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHRBuilder ],
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_build_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_build_acceleration_structure_khr;
+            .expect("`cmd_build_acceleration_structure_khr` not available");
         let info_count = infos.len().min(offset_infos.len()) as _;
         let _val = function(
             command_buffer,
@@ -524,11 +579,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         indirect_offset: crate::vk1_0::DeviceSize,
         indirect_stride: u32,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_build_acceleration_structure_indirect_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_build_acceleration_structure_indirect_khr;
+            .expect("`cmd_build_acceleration_structure_indirect_khr` not available");
         let _val = function(
             command_buffer,
             info,
@@ -545,11 +599,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         infos : & [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder ],
         offset_infos : & [ * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHRBuilder ],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .build_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .build_acceleration_structure_khr;
+            .expect("`build_acceleration_structure_khr` not available");
         let info_count = infos.len().min(offset_infos.len()) as _;
         let _val = function(
             self.handle,
@@ -565,11 +618,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::khr_ray_tracing::CopyAccelerationStructureInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .copy_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .copy_acceleration_structure_khr;
+            .expect("`copy_acceleration_structure_khr` not available");
         let _val = function(self.handle, info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -579,11 +631,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::khr_ray_tracing::CopyAccelerationStructureToMemoryInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .copy_acceleration_structure_to_memory_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .copy_acceleration_structure_to_memory_khr;
+            .expect("`copy_acceleration_structure_to_memory_khr` not available");
         let _val = function(self.handle, info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -593,11 +644,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::khr_ray_tracing::CopyMemoryToAccelerationStructureInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .copy_memory_to_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .copy_memory_to_acceleration_structure_khr;
+            .expect("`copy_memory_to_acceleration_structure_khr` not available");
         let _val = function(self.handle, info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -611,11 +661,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         data: *mut std::ffi::c_void,
         stride: usize,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .write_acceleration_structures_properties_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .write_acceleration_structures_properties_khr;
+            .expect("`write_acceleration_structures_properties_khr` not available");
         let acceleration_structure_count = acceleration_structures.len() as _;
         let _val = function(
             self.handle,
@@ -635,11 +684,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         info: &crate::extensions::khr_ray_tracing::CopyAccelerationStructureInfoKHR,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_copy_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_copy_acceleration_structure_khr;
+            .expect("`cmd_copy_acceleration_structure_khr` not available");
         let _val = function(command_buffer, info);
         ()
     }
@@ -650,11 +698,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         info: &crate::extensions::khr_ray_tracing::CopyAccelerationStructureToMemoryInfoKHR,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_copy_acceleration_structure_to_memory_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_copy_acceleration_structure_to_memory_khr;
+            .expect("`cmd_copy_acceleration_structure_to_memory_khr` not available");
         let _val = function(command_buffer, info);
         ()
     }
@@ -665,11 +712,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         info: &crate::extensions::khr_ray_tracing::CopyMemoryToAccelerationStructureInfoKHR,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_copy_memory_to_acceleration_structure_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_copy_memory_to_acceleration_structure_khr;
+            .expect("`cmd_copy_memory_to_acceleration_structure_khr` not available");
         let _val = function(command_buffer, info);
         ()
     }
@@ -686,11 +732,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         height: u32,
         depth: u32,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_trace_rays_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_trace_rays_khr;
+            .expect("`cmd_trace_rays_khr` not available");
         let _val = function(
             command_buffer,
             raygen_shader_binding_table,
@@ -711,11 +756,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         create_infos : & [ crate :: extensions :: khr_ray_tracing :: RayTracingPipelineCreateInfoKHRBuilder ],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .create_ray_tracing_pipelines_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .create_ray_tracing_pipelines_khr;
+            .expect("`create_ray_tracing_pipelines_khr` not available");
         let create_info_count = create_infos.len() as _;
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _val = function(
@@ -742,11 +786,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .get_ray_tracing_shader_group_handles_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .get_ray_tracing_shader_group_handles_khr;
+            .expect("`get_ray_tracing_shader_group_handles_khr` not available");
         let _val = function(
             self.handle,
             pipeline,
@@ -763,11 +806,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::khr_ray_tracing::AccelerationStructureDeviceAddressInfoKHR,
     ) -> crate::vk1_0::DeviceAddress {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .get_acceleration_structure_device_address_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .get_acceleration_structure_device_address_khr;
+            .expect("`get_acceleration_structure_device_address_khr` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -781,11 +823,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .get_ray_tracing_capture_replay_shader_group_handles_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .get_ray_tracing_capture_replay_shader_group_handles_khr;
+            .expect("`get_ray_tracing_capture_replay_shader_group_handles_khr` not available");
         let _val = function(
             self.handle,
             pipeline,
@@ -806,11 +847,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         first_query: u32,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_write_acceleration_structures_properties_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_write_acceleration_structures_properties_khr;
+            .expect("`cmd_write_acceleration_structures_properties_khr` not available");
         let acceleration_structure_count = acceleration_structures.len() as _;
         let _val = function(
             command_buffer,
@@ -834,11 +874,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         buffer: crate::vk1_0::Buffer,
         offset: crate::vk1_0::DeviceSize,
     ) -> () {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .cmd_trace_rays_indirect_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .cmd_trace_rays_indirect_khr;
+            .expect("`cmd_trace_rays_indirect_khr` not available");
         let _val = function(
             command_buffer,
             raygen_shader_binding_table,
@@ -856,11 +895,10 @@ impl KhrRayTracingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         version: &crate::extensions::khr_ray_tracing::AccelerationStructureVersionKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_ray_tracing
+        let function = device_commands(self)
+            .get_device_acceleration_structure_compatibility_khr
             .as_ref()
-            .expect("`khr_ray_tracing` not loaded")
-            .get_device_acceleration_structure_compatibility_khr;
+            .expect("`get_device_acceleration_structure_compatibility_khr` not available");
         let _val = function(self.handle, version);
         crate::utils::VulkanResult::new(_val, ())
     }

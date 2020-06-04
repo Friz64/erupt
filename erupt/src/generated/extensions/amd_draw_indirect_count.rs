@@ -27,23 +27,39 @@ pub type PFN_vkCmdDrawIndexedIndirectCountAMD = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`AmdDrawIndirectCountDeviceLoaderExt`](trait.AmdDrawIndirectCountDeviceLoaderExt.html)"]
 pub struct AmdDrawIndirectCountDeviceCommands {
-    pub cmd_draw_indirect_count_amd: PFN_vkCmdDrawIndirectCountAMD,
-    pub cmd_draw_indexed_indirect_count_amd: PFN_vkCmdDrawIndexedIndirectCountAMD,
+    pub cmd_draw_indirect_count_amd: Option<PFN_vkCmdDrawIndirectCountAMD>,
+    pub cmd_draw_indexed_indirect_count_amd: Option<PFN_vkCmdDrawIndexedIndirectCountAMD>,
 }
 impl AmdDrawIndirectCountDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<AmdDrawIndirectCountDeviceCommands> {
         unsafe {
-            Some(AmdDrawIndirectCountDeviceCommands {
-                cmd_draw_indirect_count_amd: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndirectCountAMD")?,
-                ),
-                cmd_draw_indexed_indirect_count_amd: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndexedIndirectCountAMD")?,
-                ),
-            })
+            let mut success = false;
+            let table = AmdDrawIndirectCountDeviceCommands {
+                cmd_draw_indirect_count_amd: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndirectCountAMD");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indexed_indirect_count_amd: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndexedIndirectCountAMD");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &AmdDrawIndirectCountDeviceCommands {
+    loader
+        .amd_draw_indirect_count
+        .as_ref()
+        .expect("`amd_draw_indirect_count` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`AmdDrawIndirectCountDeviceCommands`](struct.AmdDrawIndirectCountDeviceCommands.html)"]
 pub trait AmdDrawIndirectCountDeviceLoaderExt {
@@ -83,11 +99,10 @@ impl AmdDrawIndirectCountDeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .amd_draw_indirect_count
+        let function = device_commands(self)
+            .cmd_draw_indirect_count_amd
             .as_ref()
-            .expect("`amd_draw_indirect_count` not loaded")
-            .cmd_draw_indirect_count_amd;
+            .expect("`cmd_draw_indirect_count_amd` not available");
         let _val = function(
             command_buffer,
             buffer,
@@ -111,11 +126,10 @@ impl AmdDrawIndirectCountDeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .amd_draw_indirect_count
+        let function = device_commands(self)
+            .cmd_draw_indexed_indirect_count_amd
             .as_ref()
-            .expect("`amd_draw_indirect_count` not loaded")
-            .cmd_draw_indexed_indirect_count_amd;
+            .expect("`cmd_draw_indexed_indirect_count_amd` not available");
         let _val = function(
             command_buffer,
             buffer,

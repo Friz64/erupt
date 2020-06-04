@@ -8,7 +8,7 @@ pub const GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_c
 pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn ( instance : crate :: vk1_0 :: Instance , p_create_info : * const crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateInfoGGP , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_surface : * mut crate :: extensions :: khr_surface :: SurfaceKHR , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Instance Commands for [`GgpStreamDescriptorSurfaceInstanceLoaderExt`](trait.GgpStreamDescriptorSurfaceInstanceLoaderExt.html)"]
 pub struct GgpStreamDescriptorSurfaceInstanceCommands {
-    pub create_stream_descriptor_surface_ggp: PFN_vkCreateStreamDescriptorSurfaceGGP,
+    pub create_stream_descriptor_surface_ggp: Option<PFN_vkCreateStreamDescriptorSurfaceGGP>,
 }
 impl GgpStreamDescriptorSurfaceInstanceCommands {
     #[inline]
@@ -16,13 +16,29 @@ impl GgpStreamDescriptorSurfaceInstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<GgpStreamDescriptorSurfaceInstanceCommands> {
         unsafe {
-            Some(GgpStreamDescriptorSurfaceInstanceCommands {
-                create_stream_descriptor_surface_ggp: std::mem::transmute(
-                    loader.symbol("vkCreateStreamDescriptorSurfaceGGP")?,
-                ),
-            })
+            let mut success = false;
+            let table = GgpStreamDescriptorSurfaceInstanceCommands {
+                create_stream_descriptor_surface_ggp: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateStreamDescriptorSurfaceGGP");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(
+    loader: &crate::InstanceLoader,
+) -> &GgpStreamDescriptorSurfaceInstanceCommands {
+    loader
+        .ggp_stream_descriptor_surface
+        .as_ref()
+        .expect("`ggp_stream_descriptor_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`GgpStreamDescriptorSurfaceInstanceCommands`](struct.GgpStreamDescriptorSurfaceInstanceCommands.html)"]
 pub trait GgpStreamDescriptorSurfaceInstanceLoaderExt {
@@ -43,11 +59,10 @@ impl GgpStreamDescriptorSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .ggp_stream_descriptor_surface
+        let function = instance_commands(self)
+            .create_stream_descriptor_surface_ggp
             .as_ref()
-            .expect("`ggp_stream_descriptor_surface` not loaded")
-            .create_stream_descriptor_surface_ggp;
+            .expect("`create_stream_descriptor_surface_ggp` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

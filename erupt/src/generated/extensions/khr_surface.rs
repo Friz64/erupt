@@ -46,34 +46,59 @@ pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR =
     ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrSurfaceInstanceLoaderExt`](trait.KhrSurfaceInstanceLoaderExt.html)"]
 pub struct KhrSurfaceInstanceCommands {
-    pub destroy_surface_khr: PFN_vkDestroySurfaceKHR,
-    pub get_physical_device_surface_support_khr: PFN_vkGetPhysicalDeviceSurfaceSupportKHR,
-    pub get_physical_device_surface_capabilities_khr: PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR,
-    pub get_physical_device_surface_formats_khr: PFN_vkGetPhysicalDeviceSurfaceFormatsKHR,
+    pub destroy_surface_khr: Option<PFN_vkDestroySurfaceKHR>,
+    pub get_physical_device_surface_support_khr: Option<PFN_vkGetPhysicalDeviceSurfaceSupportKHR>,
+    pub get_physical_device_surface_capabilities_khr:
+        Option<PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR>,
+    pub get_physical_device_surface_formats_khr: Option<PFN_vkGetPhysicalDeviceSurfaceFormatsKHR>,
     pub get_physical_device_surface_present_modes_khr:
-        PFN_vkGetPhysicalDeviceSurfacePresentModesKHR,
+        Option<PFN_vkGetPhysicalDeviceSurfacePresentModesKHR>,
 }
 impl KhrSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrSurfaceInstanceCommands> {
         unsafe {
-            Some(KhrSurfaceInstanceCommands {
-                destroy_surface_khr: std::mem::transmute(loader.symbol("vkDestroySurfaceKHR")?),
-                get_physical_device_surface_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceSupportKHR")?,
-                ),
-                get_physical_device_surface_capabilities_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceCapabilitiesKHR")?,
-                ),
-                get_physical_device_surface_formats_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceFormatsKHR")?,
-                ),
-                get_physical_device_surface_present_modes_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfacePresentModesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrSurfaceInstanceCommands {
+                destroy_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_surface_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_surface_capabilities_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_surface_formats_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceFormatsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_surface_present_modes_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfacePresentModesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrSurfaceInstanceCommands {
+    loader
+        .khr_surface
+        .as_ref()
+        .expect("`khr_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrSurfaceInstanceCommands`](struct.KhrSurfaceInstanceCommands.html)"]
 pub trait KhrSurfaceInstanceLoaderExt {
@@ -121,11 +146,10 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_surface
+        let function = instance_commands(self)
+            .destroy_surface_khr
             .as_ref()
-            .expect("`khr_surface` not loaded")
-            .destroy_surface_khr;
+            .expect("`destroy_surface_khr` not available");
         let _val = function(
             self.handle,
             surface,
@@ -146,11 +170,10 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         supported: Option<crate::vk1_0::Bool32>,
     ) -> crate::utils::VulkanResult<bool> {
-        let function = self
-            .khr_surface
+        let function = instance_commands(self)
+            .get_physical_device_surface_support_khr
             .as_ref()
-            .expect("`khr_surface` not loaded")
-            .get_physical_device_surface_support_khr;
+            .expect("`get_physical_device_surface_support_khr` not available");
         let mut supported = supported.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, queue_family_index, surface, &mut supported);
         crate::utils::VulkanResult::new(_val, supported != 0)
@@ -163,11 +186,10 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         surface_capabilities: Option<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
-        let function = self
-            .khr_surface
+        let function = instance_commands(self)
+            .get_physical_device_surface_capabilities_khr
             .as_ref()
-            .expect("`khr_surface` not loaded")
-            .get_physical_device_surface_capabilities_khr;
+            .expect("`get_physical_device_surface_capabilities_khr` not available");
         let mut surface_capabilities = surface_capabilities.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, surface, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_val, surface_capabilities)
@@ -180,11 +202,10 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         surface_format_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
-        let function = self
-            .khr_surface
+        let function = instance_commands(self)
+            .get_physical_device_surface_formats_khr
             .as_ref()
-            .expect("`khr_surface` not loaded")
-            .get_physical_device_surface_formats_khr;
+            .expect("`get_physical_device_surface_formats_khr` not available");
         let mut surface_format_count = surface_format_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, surface, &mut val, std::ptr::null_mut());
@@ -207,11 +228,10 @@ impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         present_mode_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let function = self
-            .khr_surface
+        let function = instance_commands(self)
+            .get_physical_device_surface_present_modes_khr
             .as_ref()
-            .expect("`khr_surface` not loaded")
-            .get_physical_device_surface_present_modes_khr;
+            .expect("`get_physical_device_surface_present_modes_khr` not available");
         let mut present_mode_count = present_mode_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, surface, &mut val, std::ptr::null_mut());

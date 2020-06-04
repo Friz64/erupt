@@ -13,19 +13,33 @@ pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrAndroidSurfaceInstanceLoaderExt`](trait.KhrAndroidSurfaceInstanceLoaderExt.html)"]
 pub struct KhrAndroidSurfaceInstanceCommands {
-    pub create_android_surface_khr: PFN_vkCreateAndroidSurfaceKHR,
+    pub create_android_surface_khr: Option<PFN_vkCreateAndroidSurfaceKHR>,
 }
 impl KhrAndroidSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrAndroidSurfaceInstanceCommands> {
         unsafe {
-            Some(KhrAndroidSurfaceInstanceCommands {
-                create_android_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateAndroidSurfaceKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrAndroidSurfaceInstanceCommands {
+                create_android_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateAndroidSurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrAndroidSurfaceInstanceCommands {
+    loader
+        .khr_android_surface
+        .as_ref()
+        .expect("`khr_android_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrAndroidSurfaceInstanceCommands`](struct.KhrAndroidSurfaceInstanceCommands.html)"]
 pub trait KhrAndroidSurfaceInstanceLoaderExt {
@@ -46,11 +60,10 @@ impl KhrAndroidSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_android_surface
+        let function = instance_commands(self)
+            .create_android_surface_khr
             .as_ref()
-            .expect("`khr_android_surface` not loaded")
-            .create_android_surface_khr;
+            .expect("`create_android_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

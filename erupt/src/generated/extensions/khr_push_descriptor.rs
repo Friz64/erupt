@@ -24,23 +24,40 @@ pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrPushDescriptorDeviceLoaderExt`](trait.KhrPushDescriptorDeviceLoaderExt.html)"]
 pub struct KhrPushDescriptorDeviceCommands {
-    pub cmd_push_descriptor_set_khr: PFN_vkCmdPushDescriptorSetKHR,
-    pub cmd_push_descriptor_set_with_template_khr: PFN_vkCmdPushDescriptorSetWithTemplateKHR,
+    pub cmd_push_descriptor_set_khr: Option<PFN_vkCmdPushDescriptorSetKHR>,
+    pub cmd_push_descriptor_set_with_template_khr:
+        Option<PFN_vkCmdPushDescriptorSetWithTemplateKHR>,
 }
 impl KhrPushDescriptorDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrPushDescriptorDeviceCommands> {
         unsafe {
-            Some(KhrPushDescriptorDeviceCommands {
-                cmd_push_descriptor_set_khr: std::mem::transmute(
-                    loader.symbol("vkCmdPushDescriptorSetKHR")?,
-                ),
-                cmd_push_descriptor_set_with_template_khr: std::mem::transmute(
-                    loader.symbol("vkCmdPushDescriptorSetWithTemplateKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrPushDescriptorDeviceCommands {
+                cmd_push_descriptor_set_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPushDescriptorSetKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_push_descriptor_set_with_template_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPushDescriptorSetWithTemplateKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrPushDescriptorDeviceCommands {
+    loader
+        .khr_push_descriptor
+        .as_ref()
+        .expect("`khr_push_descriptor` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrPushDescriptorDeviceCommands`](struct.KhrPushDescriptorDeviceCommands.html)"]
 pub trait KhrPushDescriptorDeviceLoaderExt {
@@ -74,11 +91,10 @@ impl KhrPushDescriptorDeviceLoaderExt for crate::DeviceLoader {
         set: u32,
         descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
     ) -> () {
-        let function = self
-            .khr_push_descriptor
+        let function = device_commands(self)
+            .cmd_push_descriptor_set_khr
             .as_ref()
-            .expect("`khr_push_descriptor` not loaded")
-            .cmd_push_descriptor_set_khr;
+            .expect("`cmd_push_descriptor_set_khr` not available");
         let descriptor_write_count = descriptor_writes.len() as _;
         let _val = function(
             command_buffer,
@@ -100,11 +116,10 @@ impl KhrPushDescriptorDeviceLoaderExt for crate::DeviceLoader {
         set: u32,
         data: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .khr_push_descriptor
+        let function = device_commands(self)
+            .cmd_push_descriptor_set_with_template_khr
             .as_ref()
-            .expect("`khr_push_descriptor` not loaded")
-            .cmd_push_descriptor_set_with_template_khr;
+            .expect("`cmd_push_descriptor_set_with_template_khr` not available");
         let _val = function(
             command_buffer,
             descriptor_update_template,

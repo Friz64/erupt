@@ -72,27 +72,45 @@ pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Instance Commands for [`ExtDebugUtilsInstanceLoaderExt`](trait.ExtDebugUtilsInstanceLoaderExt.html)"]
 pub struct ExtDebugUtilsInstanceCommands {
-    pub create_debug_utils_messenger_ext: PFN_vkCreateDebugUtilsMessengerEXT,
-    pub destroy_debug_utils_messenger_ext: PFN_vkDestroyDebugUtilsMessengerEXT,
-    pub submit_debug_utils_message_ext: PFN_vkSubmitDebugUtilsMessageEXT,
+    pub create_debug_utils_messenger_ext: Option<PFN_vkCreateDebugUtilsMessengerEXT>,
+    pub destroy_debug_utils_messenger_ext: Option<PFN_vkDestroyDebugUtilsMessengerEXT>,
+    pub submit_debug_utils_message_ext: Option<PFN_vkSubmitDebugUtilsMessageEXT>,
 }
 impl ExtDebugUtilsInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtDebugUtilsInstanceCommands> {
         unsafe {
-            Some(ExtDebugUtilsInstanceCommands {
-                create_debug_utils_messenger_ext: std::mem::transmute(
-                    loader.symbol("vkCreateDebugUtilsMessengerEXT")?,
-                ),
-                destroy_debug_utils_messenger_ext: std::mem::transmute(
-                    loader.symbol("vkDestroyDebugUtilsMessengerEXT")?,
-                ),
-                submit_debug_utils_message_ext: std::mem::transmute(
-                    loader.symbol("vkSubmitDebugUtilsMessageEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDebugUtilsInstanceCommands {
+                create_debug_utils_messenger_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDebugUtilsMessengerEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_debug_utils_messenger_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDebugUtilsMessengerEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                submit_debug_utils_message_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkSubmitDebugUtilsMessageEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDebugUtilsInstanceCommands {
+    loader
+        .ext_debug_utils
+        .as_ref()
+        .expect("`ext_debug_utils` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDebugUtilsInstanceCommands`](struct.ExtDebugUtilsInstanceCommands.html)"]
 pub trait ExtDebugUtilsInstanceLoaderExt {
@@ -127,11 +145,10 @@ impl ExtDebugUtilsInstanceLoaderExt for crate::InstanceLoader {
         messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>
     {
-        let function = self
-            .ext_debug_utils
+        let function = instance_commands(self)
+            .create_debug_utils_messenger_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .create_debug_utils_messenger_ext;
+            .expect("`create_debug_utils_messenger_ext` not available");
         let mut messenger = messenger.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -152,11 +169,10 @@ impl ExtDebugUtilsInstanceLoaderExt for crate::InstanceLoader {
         messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = instance_commands(self)
+            .destroy_debug_utils_messenger_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .destroy_debug_utils_messenger_ext;
+            .expect("`destroy_debug_utils_messenger_ext` not available");
         let _val = function(
             self.handle,
             messenger,
@@ -176,58 +192,85 @@ impl ExtDebugUtilsInstanceLoaderExt for crate::InstanceLoader {
         message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
         callback_data: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = instance_commands(self)
+            .submit_debug_utils_message_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .submit_debug_utils_message_ext;
+            .expect("`submit_debug_utils_message_ext` not available");
         let _val = function(self.handle, message_severity, message_types, callback_data);
         ()
     }
 }
 #[doc = "Provides Device Commands for [`ExtDebugUtilsDeviceLoaderExt`](trait.ExtDebugUtilsDeviceLoaderExt.html)"]
 pub struct ExtDebugUtilsDeviceCommands {
-    pub set_debug_utils_object_name_ext: PFN_vkSetDebugUtilsObjectNameEXT,
-    pub set_debug_utils_object_tag_ext: PFN_vkSetDebugUtilsObjectTagEXT,
-    pub queue_begin_debug_utils_label_ext: PFN_vkQueueBeginDebugUtilsLabelEXT,
-    pub queue_end_debug_utils_label_ext: PFN_vkQueueEndDebugUtilsLabelEXT,
-    pub queue_insert_debug_utils_label_ext: PFN_vkQueueInsertDebugUtilsLabelEXT,
-    pub cmd_begin_debug_utils_label_ext: PFN_vkCmdBeginDebugUtilsLabelEXT,
-    pub cmd_end_debug_utils_label_ext: PFN_vkCmdEndDebugUtilsLabelEXT,
-    pub cmd_insert_debug_utils_label_ext: PFN_vkCmdInsertDebugUtilsLabelEXT,
+    pub set_debug_utils_object_name_ext: Option<PFN_vkSetDebugUtilsObjectNameEXT>,
+    pub set_debug_utils_object_tag_ext: Option<PFN_vkSetDebugUtilsObjectTagEXT>,
+    pub queue_begin_debug_utils_label_ext: Option<PFN_vkQueueBeginDebugUtilsLabelEXT>,
+    pub queue_end_debug_utils_label_ext: Option<PFN_vkQueueEndDebugUtilsLabelEXT>,
+    pub queue_insert_debug_utils_label_ext: Option<PFN_vkQueueInsertDebugUtilsLabelEXT>,
+    pub cmd_begin_debug_utils_label_ext: Option<PFN_vkCmdBeginDebugUtilsLabelEXT>,
+    pub cmd_end_debug_utils_label_ext: Option<PFN_vkCmdEndDebugUtilsLabelEXT>,
+    pub cmd_insert_debug_utils_label_ext: Option<PFN_vkCmdInsertDebugUtilsLabelEXT>,
 }
 impl ExtDebugUtilsDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtDebugUtilsDeviceCommands> {
         unsafe {
-            Some(ExtDebugUtilsDeviceCommands {
-                set_debug_utils_object_name_ext: std::mem::transmute(
-                    loader.symbol("vkSetDebugUtilsObjectNameEXT")?,
-                ),
-                set_debug_utils_object_tag_ext: std::mem::transmute(
-                    loader.symbol("vkSetDebugUtilsObjectTagEXT")?,
-                ),
-                queue_begin_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkQueueBeginDebugUtilsLabelEXT")?,
-                ),
-                queue_end_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkQueueEndDebugUtilsLabelEXT")?,
-                ),
-                queue_insert_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkQueueInsertDebugUtilsLabelEXT")?,
-                ),
-                cmd_begin_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkCmdBeginDebugUtilsLabelEXT")?,
-                ),
-                cmd_end_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkCmdEndDebugUtilsLabelEXT")?,
-                ),
-                cmd_insert_debug_utils_label_ext: std::mem::transmute(
-                    loader.symbol("vkCmdInsertDebugUtilsLabelEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDebugUtilsDeviceCommands {
+                set_debug_utils_object_name_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetDebugUtilsObjectNameEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                set_debug_utils_object_tag_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetDebugUtilsObjectTagEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_begin_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueBeginDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_end_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueEndDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_insert_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueInsertDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_insert_debug_utils_label_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdInsertDebugUtilsLabelEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtDebugUtilsDeviceCommands {
+    loader
+        .ext_debug_utils
+        .as_ref()
+        .expect("`ext_debug_utils` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDebugUtilsDeviceCommands`](struct.ExtDebugUtilsDeviceCommands.html)"]
 pub trait ExtDebugUtilsDeviceLoaderExt {
@@ -280,11 +323,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         name_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .set_debug_utils_object_name_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .set_debug_utils_object_name_ext;
+            .expect("`set_debug_utils_object_name_ext` not available");
         let _val = function(self.handle, name_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -294,11 +336,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         tag_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .set_debug_utils_object_tag_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .set_debug_utils_object_tag_ext;
+            .expect("`set_debug_utils_object_tag_ext` not available");
         let _val = function(self.handle, tag_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -309,22 +350,20 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         queue: crate::vk1_0::Queue,
         label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .queue_begin_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .queue_begin_debug_utils_label_ext;
+            .expect("`queue_begin_debug_utils_label_ext` not available");
         let _val = function(queue, label_info);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Device Command"]
     unsafe fn queue_end_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .queue_end_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .queue_end_debug_utils_label_ext;
+            .expect("`queue_end_debug_utils_label_ext` not available");
         let _val = function(queue);
         ()
     }
@@ -335,11 +374,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         queue: crate::vk1_0::Queue,
         label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .queue_insert_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .queue_insert_debug_utils_label_ext;
+            .expect("`queue_insert_debug_utils_label_ext` not available");
         let _val = function(queue, label_info);
         ()
     }
@@ -350,11 +388,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .cmd_begin_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .cmd_begin_debug_utils_label_ext;
+            .expect("`cmd_begin_debug_utils_label_ext` not available");
         let _val = function(command_buffer, label_info);
         ()
     }
@@ -364,11 +401,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .cmd_end_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .cmd_end_debug_utils_label_ext;
+            .expect("`cmd_end_debug_utils_label_ext` not available");
         let _val = function(command_buffer);
         ()
     }
@@ -379,11 +415,10 @@ impl ExtDebugUtilsDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
     ) -> () {
-        let function = self
-            .ext_debug_utils
+        let function = device_commands(self)
+            .cmd_insert_debug_utils_label_ext
             .as_ref()
-            .expect("`ext_debug_utils` not loaded")
-            .cmd_insert_debug_utils_label_ext;
+            .expect("`cmd_insert_debug_utils_label_ext` not available");
         let _val = function(command_buffer, label_info);
         ()
     }

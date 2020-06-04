@@ -8,19 +8,34 @@ pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_c
 pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , image : crate :: vk1_0 :: Image , p_properties : * mut crate :: extensions :: ext_image_drm_format_modifier :: ImageDrmFormatModifierPropertiesEXT , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`ExtImageDrmFormatModifierDeviceLoaderExt`](trait.ExtImageDrmFormatModifierDeviceLoaderExt.html)"]
 pub struct ExtImageDrmFormatModifierDeviceCommands {
-    pub get_image_drm_format_modifier_properties_ext: PFN_vkGetImageDrmFormatModifierPropertiesEXT,
+    pub get_image_drm_format_modifier_properties_ext:
+        Option<PFN_vkGetImageDrmFormatModifierPropertiesEXT>,
 }
 impl ExtImageDrmFormatModifierDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtImageDrmFormatModifierDeviceCommands> {
         unsafe {
-            Some(ExtImageDrmFormatModifierDeviceCommands {
-                get_image_drm_format_modifier_properties_ext: std::mem::transmute(
-                    loader.symbol("vkGetImageDrmFormatModifierPropertiesEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtImageDrmFormatModifierDeviceCommands {
+                get_image_drm_format_modifier_properties_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageDrmFormatModifierPropertiesEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtImageDrmFormatModifierDeviceCommands {
+    loader
+        .ext_image_drm_format_modifier
+        .as_ref()
+        .expect("`ext_image_drm_format_modifier` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtImageDrmFormatModifierDeviceCommands`](struct.ExtImageDrmFormatModifierDeviceCommands.html)"]
 pub trait ExtImageDrmFormatModifierDeviceLoaderExt {
@@ -47,11 +62,10 @@ impl ExtImageDrmFormatModifierDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
     > {
-        let function = self
-            .ext_image_drm_format_modifier
+        let function = device_commands(self)
+            .get_image_drm_format_modifier_properties_ext
             .as_ref()
-            .expect("`ext_image_drm_format_modifier` not loaded")
-            .get_image_drm_format_modifier_properties_ext;
+            .expect("`get_image_drm_format_modifier_properties_ext` not available");
         let mut properties = properties.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, image, &mut properties);
         crate::utils::VulkanResult::new(_val, properties)

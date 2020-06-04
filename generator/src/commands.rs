@@ -335,9 +335,9 @@ fn generate_loader_generic(
             (&command.raw_name, field_name, field_type)
         })
         .collect();
-    let struct_fields_code = struct_fields
-        .iter()
-        .map(|(_raw_name, field_name, field_type)| quote! { pub #field_name: #field_type, });
+    let struct_fields_code = struct_fields.iter().map(
+        |(_raw_name, field_name, field_type)| quote! { pub #field_name: Option<#field_type>, },
+    );
 
     let loader: TokenStream = syn::parse_str(&format!(
         "crate::{}Loader{}",
@@ -350,7 +350,11 @@ fn generate_loader_generic(
         .iter()
         .map(|(raw_name, field_name, _field_type)| {
             quote! {
-                #field_name: std::mem::transmute(loader.symbol(#raw_name)?),
+                #field_name: std::mem::transmute({
+                    let symbol = loader.symbol(#raw_name);
+                    success |= symbol.is_some();
+                    symbol
+                }),
             }
         });
 
@@ -610,6 +614,18 @@ fn generate_loader_generic(
         });
 
     let loading_error = format!("`{}` not loaded", field_name);
+    let commands_function_name = match level {
+        CommandLevel::Core => quote! { core_commands },
+        CommandLevel::Instance => quote! { instance_commands },
+        CommandLevel::Device => quote! { device_commands },
+    };
+
+    let commands_function = quote! {
+        fn #commands_function_name#generics(loader: &#loader) -> &#struct_name {
+            loader.#field_name.as_ref().expect(#loading_error)
+        }
+    };
+
     let trait_impl_functions = functions.iter().map(
         |(name, args, value_call, lengths, return_init, returner, return_type, doc)| {
             let arguments = args
@@ -641,11 +657,17 @@ fn generate_loader_generic(
                 quote! {}
             };
 
+            let function_loading_error = format!("`{}` not available", name);
+
             quote! {
                 #[inline]
                 #[doc = #doc]
                 unsafe fn #name(&self, #( #arguments )*) -> #return_type {
-                    let function = self.#field_name.as_ref().expect(#loading_error).#name;
+                    let function = #commands_function_name(self)
+                        .#name
+                        .as_ref()
+                        .expect(#function_loading_error);
+
                     #value_call
                     #lengths
                     #return_init
@@ -660,6 +682,7 @@ fn generate_loader_generic(
         "Provides high level command wrappers for [`{name}`](struct.{name}.html)",
         name = struct_name_raw
     );
+
     Some(quote! {
         #[doc = #struct_doc]
         pub struct #struct_name {
@@ -670,12 +693,21 @@ fn generate_loader_generic(
             #[inline]
             pub fn load#generics(loader: &#loader) -> Option<#struct_name> {
                 unsafe {
-                    Some(#struct_name {
+                    let mut success = false;
+                    let table = #struct_name {
                         #( #load_fields )*
-                    })
+                    };
+
+                    if success {
+                        Some(table)
+                    } else {
+                        None
+                    }
                 }
             }
         }
+
+        #commands_function
 
         #[doc = #trait_doc]
         pub trait #trait_name {

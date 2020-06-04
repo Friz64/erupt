@@ -14,19 +14,33 @@ pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`AmdBufferMarkerDeviceLoaderExt`](trait.AmdBufferMarkerDeviceLoaderExt.html)"]
 pub struct AmdBufferMarkerDeviceCommands {
-    pub cmd_write_buffer_marker_amd: PFN_vkCmdWriteBufferMarkerAMD,
+    pub cmd_write_buffer_marker_amd: Option<PFN_vkCmdWriteBufferMarkerAMD>,
 }
 impl AmdBufferMarkerDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<AmdBufferMarkerDeviceCommands> {
         unsafe {
-            Some(AmdBufferMarkerDeviceCommands {
-                cmd_write_buffer_marker_amd: std::mem::transmute(
-                    loader.symbol("vkCmdWriteBufferMarkerAMD")?,
-                ),
-            })
+            let mut success = false;
+            let table = AmdBufferMarkerDeviceCommands {
+                cmd_write_buffer_marker_amd: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdWriteBufferMarkerAMD");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &AmdBufferMarkerDeviceCommands {
+    loader
+        .amd_buffer_marker
+        .as_ref()
+        .expect("`amd_buffer_marker` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`AmdBufferMarkerDeviceCommands`](struct.AmdBufferMarkerDeviceCommands.html)"]
 pub trait AmdBufferMarkerDeviceLoaderExt {
@@ -51,11 +65,10 @@ impl AmdBufferMarkerDeviceLoaderExt for crate::DeviceLoader {
         dst_offset: crate::vk1_0::DeviceSize,
         marker: u32,
     ) -> () {
-        let function = self
-            .amd_buffer_marker
+        let function = device_commands(self)
+            .cmd_write_buffer_marker_amd
             .as_ref()
-            .expect("`amd_buffer_marker` not loaded")
-            .cmd_write_buffer_marker_amd;
+            .expect("`cmd_write_buffer_marker_amd` not available");
         let _val = function(
             command_buffer,
             pipeline_stage,

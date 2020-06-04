@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fix reversed array order
+- Fix loaders failing on partial command availability
 
 ## [0.8.0+142] - 2020-06-01
 ### Added

@@ -11,23 +11,39 @@ pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn ( devic
 pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_presentation_timing_count : * mut u32 , p_presentation_timings : * mut crate :: extensions :: google_display_timing :: PastPresentationTimingGOOGLE , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`GoogleDisplayTimingDeviceLoaderExt`](trait.GoogleDisplayTimingDeviceLoaderExt.html)"]
 pub struct GoogleDisplayTimingDeviceCommands {
-    pub get_refresh_cycle_duration_google: PFN_vkGetRefreshCycleDurationGOOGLE,
-    pub get_past_presentation_timing_google: PFN_vkGetPastPresentationTimingGOOGLE,
+    pub get_refresh_cycle_duration_google: Option<PFN_vkGetRefreshCycleDurationGOOGLE>,
+    pub get_past_presentation_timing_google: Option<PFN_vkGetPastPresentationTimingGOOGLE>,
 }
 impl GoogleDisplayTimingDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<GoogleDisplayTimingDeviceCommands> {
         unsafe {
-            Some(GoogleDisplayTimingDeviceCommands {
-                get_refresh_cycle_duration_google: std::mem::transmute(
-                    loader.symbol("vkGetRefreshCycleDurationGOOGLE")?,
-                ),
-                get_past_presentation_timing_google: std::mem::transmute(
-                    loader.symbol("vkGetPastPresentationTimingGOOGLE")?,
-                ),
-            })
+            let mut success = false;
+            let table = GoogleDisplayTimingDeviceCommands {
+                get_refresh_cycle_duration_google: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRefreshCycleDurationGOOGLE");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_past_presentation_timing_google: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPastPresentationTimingGOOGLE");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &GoogleDisplayTimingDeviceCommands {
+    loader
+        .google_display_timing
+        .as_ref()
+        .expect("`google_display_timing` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`GoogleDisplayTimingDeviceCommands`](struct.GoogleDisplayTimingDeviceCommands.html)"]
 pub trait GoogleDisplayTimingDeviceLoaderExt {
@@ -62,11 +78,10 @@ impl GoogleDisplayTimingDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
     > {
-        let function = self
-            .google_display_timing
+        let function = device_commands(self)
+            .get_refresh_cycle_duration_google
             .as_ref()
-            .expect("`google_display_timing` not loaded")
-            .get_refresh_cycle_duration_google;
+            .expect("`get_refresh_cycle_duration_google` not available");
         let mut display_timing_properties =
             display_timing_properties.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, swapchain, &mut display_timing_properties);
@@ -81,11 +96,10 @@ impl GoogleDisplayTimingDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>,
     > {
-        let function = self
-            .google_display_timing
+        let function = device_commands(self)
+            .get_past_presentation_timing_google
             .as_ref()
-            .expect("`google_display_timing` not loaded")
-            .get_past_presentation_timing_google;
+            .expect("`get_past_presentation_timing_google` not available");
         let mut presentation_timing_count = presentation_timing_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, swapchain, &mut val, std::ptr::null_mut());

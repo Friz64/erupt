@@ -11,23 +11,39 @@ pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn ( device : 
 pub type PFN_vkGetFenceWin32HandleKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_fence_win32 :: FenceGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`KhrExternalFenceWin32DeviceLoaderExt`](trait.KhrExternalFenceWin32DeviceLoaderExt.html)"]
 pub struct KhrExternalFenceWin32DeviceCommands {
-    pub import_fence_win32_handle_khr: PFN_vkImportFenceWin32HandleKHR,
-    pub get_fence_win32_handle_khr: PFN_vkGetFenceWin32HandleKHR,
+    pub import_fence_win32_handle_khr: Option<PFN_vkImportFenceWin32HandleKHR>,
+    pub get_fence_win32_handle_khr: Option<PFN_vkGetFenceWin32HandleKHR>,
 }
 impl KhrExternalFenceWin32DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalFenceWin32DeviceCommands> {
         unsafe {
-            Some(KhrExternalFenceWin32DeviceCommands {
-                import_fence_win32_handle_khr: std::mem::transmute(
-                    loader.symbol("vkImportFenceWin32HandleKHR")?,
-                ),
-                get_fence_win32_handle_khr: std::mem::transmute(
-                    loader.symbol("vkGetFenceWin32HandleKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalFenceWin32DeviceCommands {
+                import_fence_win32_handle_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkImportFenceWin32HandleKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_fence_win32_handle_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetFenceWin32HandleKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalFenceWin32DeviceCommands {
+    loader
+        .khr_external_fence_win32
+        .as_ref()
+        .expect("`khr_external_fence_win32` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalFenceWin32DeviceCommands`](struct.KhrExternalFenceWin32DeviceCommands.html)"]
 pub trait KhrExternalFenceWin32DeviceLoaderExt {
@@ -50,11 +66,10 @@ impl KhrExternalFenceWin32DeviceLoaderExt for crate::DeviceLoader {
         &self,
         import_fence_win32_handle_info : & crate :: extensions :: khr_external_fence_win32 :: ImportFenceWin32HandleInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_fence_win32
+        let function = device_commands(self)
+            .import_fence_win32_handle_khr
             .as_ref()
-            .expect("`khr_external_fence_win32` not loaded")
-            .import_fence_win32_handle_khr;
+            .expect("`import_fence_win32_handle_khr` not available");
         let _val = function(self.handle, import_fence_win32_handle_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -65,11 +80,10 @@ impl KhrExternalFenceWin32DeviceLoaderExt for crate::DeviceLoader {
         get_win32_handle_info : & crate :: extensions :: khr_external_fence_win32 :: FenceGetWin32HandleInfoKHR,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_fence_win32
+        let function = device_commands(self)
+            .get_fence_win32_handle_khr
             .as_ref()
-            .expect("`khr_external_fence_win32` not loaded")
-            .get_fence_win32_handle_khr;
+            .expect("`get_fence_win32_handle_khr` not available");
         let _val = function(self.handle, get_win32_handle_info, handle);
         crate::utils::VulkanResult::new(_val, ())
     }

@@ -13,19 +13,33 @@ pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT =
     ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`ExtToolingInfoInstanceLoaderExt`](trait.ExtToolingInfoInstanceLoaderExt.html)"]
 pub struct ExtToolingInfoInstanceCommands {
-    pub get_physical_device_tool_properties_ext: PFN_vkGetPhysicalDeviceToolPropertiesEXT,
+    pub get_physical_device_tool_properties_ext: Option<PFN_vkGetPhysicalDeviceToolPropertiesEXT>,
 }
 impl ExtToolingInfoInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtToolingInfoInstanceCommands> {
         unsafe {
-            Some(ExtToolingInfoInstanceCommands {
-                get_physical_device_tool_properties_ext: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceToolPropertiesEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtToolingInfoInstanceCommands {
+                get_physical_device_tool_properties_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceToolPropertiesEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtToolingInfoInstanceCommands {
+    loader
+        .ext_tooling_info
+        .as_ref()
+        .expect("`ext_tooling_info` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtToolingInfoInstanceCommands`](struct.ExtToolingInfoInstanceCommands.html)"]
 pub trait ExtToolingInfoInstanceLoaderExt {
@@ -48,11 +62,10 @@ impl ExtToolingInfoInstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>,
     > {
-        let function = self
-            .ext_tooling_info
+        let function = instance_commands(self)
+            .get_physical_device_tool_properties_ext
             .as_ref()
-            .expect("`ext_tooling_info` not loaded")
-            .get_physical_device_tool_properties_ext;
+            .expect("`get_physical_device_tool_properties_ext` not available");
         let mut tool_count = tool_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());

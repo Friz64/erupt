@@ -27,23 +27,39 @@ pub type PFN_vkCmdDrawIndexedIndirectCountKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrDrawIndirectCountDeviceLoaderExt`](trait.KhrDrawIndirectCountDeviceLoaderExt.html)"]
 pub struct KhrDrawIndirectCountDeviceCommands {
-    pub cmd_draw_indirect_count_khr: PFN_vkCmdDrawIndirectCountKHR,
-    pub cmd_draw_indexed_indirect_count_khr: PFN_vkCmdDrawIndexedIndirectCountKHR,
+    pub cmd_draw_indirect_count_khr: Option<PFN_vkCmdDrawIndirectCountKHR>,
+    pub cmd_draw_indexed_indirect_count_khr: Option<PFN_vkCmdDrawIndexedIndirectCountKHR>,
 }
 impl KhrDrawIndirectCountDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDrawIndirectCountDeviceCommands> {
         unsafe {
-            Some(KhrDrawIndirectCountDeviceCommands {
-                cmd_draw_indirect_count_khr: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndirectCountKHR")?,
-                ),
-                cmd_draw_indexed_indirect_count_khr: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndexedIndirectCountKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDrawIndirectCountDeviceCommands {
+                cmd_draw_indirect_count_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndirectCountKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indexed_indirect_count_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndexedIndirectCountKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrDrawIndirectCountDeviceCommands {
+    loader
+        .khr_draw_indirect_count
+        .as_ref()
+        .expect("`khr_draw_indirect_count` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDrawIndirectCountDeviceCommands`](struct.KhrDrawIndirectCountDeviceCommands.html)"]
 pub trait KhrDrawIndirectCountDeviceLoaderExt {
@@ -83,11 +99,10 @@ impl KhrDrawIndirectCountDeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .khr_draw_indirect_count
+        let function = device_commands(self)
+            .cmd_draw_indirect_count_khr
             .as_ref()
-            .expect("`khr_draw_indirect_count` not loaded")
-            .cmd_draw_indirect_count_khr;
+            .expect("`cmd_draw_indirect_count_khr` not available");
         let _val = function(
             command_buffer,
             buffer,
@@ -111,11 +126,10 @@ impl KhrDrawIndirectCountDeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .khr_draw_indirect_count
+        let function = device_commands(self)
+            .cmd_draw_indexed_indirect_count_khr
             .as_ref()
-            .expect("`khr_draw_indirect_count` not loaded")
-            .cmd_draw_indexed_indirect_count_khr;
+            .expect("`cmd_draw_indexed_indirect_count_khr` not available");
         let _val = function(
             command_buffer,
             buffer,

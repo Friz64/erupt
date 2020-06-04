@@ -13,19 +13,33 @@ pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtDiscardRectanglesDeviceLoaderExt`](trait.ExtDiscardRectanglesDeviceLoaderExt.html)"]
 pub struct ExtDiscardRectanglesDeviceCommands {
-    pub cmd_set_discard_rectangle_ext: PFN_vkCmdSetDiscardRectangleEXT,
+    pub cmd_set_discard_rectangle_ext: Option<PFN_vkCmdSetDiscardRectangleEXT>,
 }
 impl ExtDiscardRectanglesDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtDiscardRectanglesDeviceCommands> {
         unsafe {
-            Some(ExtDiscardRectanglesDeviceCommands {
-                cmd_set_discard_rectangle_ext: std::mem::transmute(
-                    loader.symbol("vkCmdSetDiscardRectangleEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDiscardRectanglesDeviceCommands {
+                cmd_set_discard_rectangle_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetDiscardRectangleEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtDiscardRectanglesDeviceCommands {
+    loader
+        .ext_discard_rectangles
+        .as_ref()
+        .expect("`ext_discard_rectangles` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDiscardRectanglesDeviceCommands`](struct.ExtDiscardRectanglesDeviceCommands.html)"]
 pub trait ExtDiscardRectanglesDeviceLoaderExt {
@@ -46,11 +60,10 @@ impl ExtDiscardRectanglesDeviceLoaderExt for crate::DeviceLoader {
         first_discard_rectangle: u32,
         discard_rectangles: &[crate::vk1_0::Rect2DBuilder],
     ) -> () {
-        let function = self
-            .ext_discard_rectangles
+        let function = device_commands(self)
+            .cmd_set_discard_rectangle_ext
             .as_ref()
-            .expect("`ext_discard_rectangles` not loaded")
-            .cmd_set_discard_rectangle_ext;
+            .expect("`cmd_set_discard_rectangle_ext` not available");
         let discard_rectangle_count = discard_rectangles.len() as _;
         let _val = function(
             command_buffer,

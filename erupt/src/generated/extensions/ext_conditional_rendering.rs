@@ -12,23 +12,39 @@ pub type PFN_vkCmdEndConditionalRenderingEXT =
     unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtConditionalRenderingDeviceLoaderExt`](trait.ExtConditionalRenderingDeviceLoaderExt.html)"]
 pub struct ExtConditionalRenderingDeviceCommands {
-    pub cmd_begin_conditional_rendering_ext: PFN_vkCmdBeginConditionalRenderingEXT,
-    pub cmd_end_conditional_rendering_ext: PFN_vkCmdEndConditionalRenderingEXT,
+    pub cmd_begin_conditional_rendering_ext: Option<PFN_vkCmdBeginConditionalRenderingEXT>,
+    pub cmd_end_conditional_rendering_ext: Option<PFN_vkCmdEndConditionalRenderingEXT>,
 }
 impl ExtConditionalRenderingDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtConditionalRenderingDeviceCommands> {
         unsafe {
-            Some(ExtConditionalRenderingDeviceCommands {
-                cmd_begin_conditional_rendering_ext: std::mem::transmute(
-                    loader.symbol("vkCmdBeginConditionalRenderingEXT")?,
-                ),
-                cmd_end_conditional_rendering_ext: std::mem::transmute(
-                    loader.symbol("vkCmdEndConditionalRenderingEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtConditionalRenderingDeviceCommands {
+                cmd_begin_conditional_rendering_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginConditionalRenderingEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_conditional_rendering_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndConditionalRenderingEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtConditionalRenderingDeviceCommands {
+    loader
+        .ext_conditional_rendering
+        .as_ref()
+        .expect("`ext_conditional_rendering` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtConditionalRenderingDeviceCommands`](struct.ExtConditionalRenderingDeviceCommands.html)"]
 pub trait ExtConditionalRenderingDeviceLoaderExt {
@@ -52,11 +68,10 @@ impl ExtConditionalRenderingDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         conditional_rendering_begin : & crate :: extensions :: ext_conditional_rendering :: ConditionalRenderingBeginInfoEXT,
     ) -> () {
-        let function = self
-            .ext_conditional_rendering
+        let function = device_commands(self)
+            .cmd_begin_conditional_rendering_ext
             .as_ref()
-            .expect("`ext_conditional_rendering` not loaded")
-            .cmd_begin_conditional_rendering_ext;
+            .expect("`cmd_begin_conditional_rendering_ext` not available");
         let _val = function(command_buffer, conditional_rendering_begin);
         ()
     }
@@ -66,11 +81,10 @@ impl ExtConditionalRenderingDeviceLoaderExt for crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
     ) -> () {
-        let function = self
-            .ext_conditional_rendering
+        let function = device_commands(self)
+            .cmd_end_conditional_rendering_ext
             .as_ref()
-            .expect("`ext_conditional_rendering` not loaded")
-            .cmd_end_conditional_rendering_ext;
+            .expect("`cmd_end_conditional_rendering_ext` not available");
         let _val = function(command_buffer);
         ()
     }

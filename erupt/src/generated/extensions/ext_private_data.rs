@@ -38,27 +38,51 @@ pub type PFN_vkGetPrivateDataEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtPrivateDataDeviceLoaderExt`](trait.ExtPrivateDataDeviceLoaderExt.html)"]
 pub struct ExtPrivateDataDeviceCommands {
-    pub create_private_data_slot_ext: PFN_vkCreatePrivateDataSlotEXT,
-    pub destroy_private_data_slot_ext: PFN_vkDestroyPrivateDataSlotEXT,
-    pub set_private_data_ext: PFN_vkSetPrivateDataEXT,
-    pub get_private_data_ext: PFN_vkGetPrivateDataEXT,
+    pub create_private_data_slot_ext: Option<PFN_vkCreatePrivateDataSlotEXT>,
+    pub destroy_private_data_slot_ext: Option<PFN_vkDestroyPrivateDataSlotEXT>,
+    pub set_private_data_ext: Option<PFN_vkSetPrivateDataEXT>,
+    pub get_private_data_ext: Option<PFN_vkGetPrivateDataEXT>,
 }
 impl ExtPrivateDataDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtPrivateDataDeviceCommands> {
         unsafe {
-            Some(ExtPrivateDataDeviceCommands {
-                create_private_data_slot_ext: std::mem::transmute(
-                    loader.symbol("vkCreatePrivateDataSlotEXT")?,
-                ),
-                destroy_private_data_slot_ext: std::mem::transmute(
-                    loader.symbol("vkDestroyPrivateDataSlotEXT")?,
-                ),
-                set_private_data_ext: std::mem::transmute(loader.symbol("vkSetPrivateDataEXT")?),
-                get_private_data_ext: std::mem::transmute(loader.symbol("vkGetPrivateDataEXT")?),
-            })
+            let mut success = false;
+            let table = ExtPrivateDataDeviceCommands {
+                create_private_data_slot_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreatePrivateDataSlotEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_private_data_slot_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyPrivateDataSlotEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                set_private_data_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetPrivateDataEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_private_data_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPrivateDataEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtPrivateDataDeviceCommands {
+    loader
+        .ext_private_data
+        .as_ref()
+        .expect("`ext_private_data` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtPrivateDataDeviceCommands`](struct.ExtPrivateDataDeviceCommands.html)"]
 pub trait ExtPrivateDataDeviceLoaderExt {
@@ -101,11 +125,10 @@ impl ExtPrivateDataDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_private_data::PrivateDataSlotEXT> {
-        let function = self
-            .ext_private_data
+        let function = device_commands(self)
+            .create_private_data_slot_ext
             .as_ref()
-            .expect("`ext_private_data` not loaded")
-            .create_private_data_slot_ext;
+            .expect("`create_private_data_slot_ext` not available");
         let mut private_data_slot = private_data_slot.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -126,11 +149,10 @@ impl ExtPrivateDataDeviceLoaderExt for crate::DeviceLoader {
         private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .ext_private_data
+        let function = device_commands(self)
+            .destroy_private_data_slot_ext
             .as_ref()
-            .expect("`ext_private_data` not loaded")
-            .destroy_private_data_slot_ext;
+            .expect("`destroy_private_data_slot_ext` not available");
         let _val = function(
             self.handle,
             private_data_slot,
@@ -151,11 +173,10 @@ impl ExtPrivateDataDeviceLoaderExt for crate::DeviceLoader {
         private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
         data: u64,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_private_data
+        let function = device_commands(self)
+            .set_private_data_ext
             .as_ref()
-            .expect("`ext_private_data` not loaded")
-            .set_private_data_ext;
+            .expect("`set_private_data_ext` not available");
         let _val = function(
             self.handle,
             object_type,
@@ -174,11 +195,10 @@ impl ExtPrivateDataDeviceLoaderExt for crate::DeviceLoader {
         private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
         data: Option<u64>,
     ) -> u64 {
-        let function = self
-            .ext_private_data
+        let function = device_commands(self)
+            .get_private_data_ext
             .as_ref()
-            .expect("`ext_private_data` not loaded")
-            .get_private_data_ext;
+            .expect("`get_private_data_ext` not available");
         let mut data = data.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

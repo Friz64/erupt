@@ -32,25 +32,45 @@ pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`NvMeshShaderDeviceLoaderExt`](trait.NvMeshShaderDeviceLoaderExt.html)"]
 pub struct NvMeshShaderDeviceCommands {
-    pub cmd_draw_mesh_tasks_nv: PFN_vkCmdDrawMeshTasksNV,
-    pub cmd_draw_mesh_tasks_indirect_nv: PFN_vkCmdDrawMeshTasksIndirectNV,
-    pub cmd_draw_mesh_tasks_indirect_count_nv: PFN_vkCmdDrawMeshTasksIndirectCountNV,
+    pub cmd_draw_mesh_tasks_nv: Option<PFN_vkCmdDrawMeshTasksNV>,
+    pub cmd_draw_mesh_tasks_indirect_nv: Option<PFN_vkCmdDrawMeshTasksIndirectNV>,
+    pub cmd_draw_mesh_tasks_indirect_count_nv: Option<PFN_vkCmdDrawMeshTasksIndirectCountNV>,
 }
 impl NvMeshShaderDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvMeshShaderDeviceCommands> {
         unsafe {
-            Some(NvMeshShaderDeviceCommands {
-                cmd_draw_mesh_tasks_nv: std::mem::transmute(loader.symbol("vkCmdDrawMeshTasksNV")?),
-                cmd_draw_mesh_tasks_indirect_nv: std::mem::transmute(
-                    loader.symbol("vkCmdDrawMeshTasksIndirectNV")?,
-                ),
-                cmd_draw_mesh_tasks_indirect_count_nv: std::mem::transmute(
-                    loader.symbol("vkCmdDrawMeshTasksIndirectCountNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvMeshShaderDeviceCommands {
+                cmd_draw_mesh_tasks_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawMeshTasksNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_mesh_tasks_indirect_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawMeshTasksIndirectNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_mesh_tasks_indirect_count_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawMeshTasksIndirectCountNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvMeshShaderDeviceCommands {
+    loader
+        .nv_mesh_shader
+        .as_ref()
+        .expect("`nv_mesh_shader` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvMeshShaderDeviceCommands`](struct.NvMeshShaderDeviceCommands.html)"]
 pub trait NvMeshShaderDeviceLoaderExt {
@@ -91,11 +111,10 @@ impl NvMeshShaderDeviceLoaderExt for crate::DeviceLoader {
         task_count: u32,
         first_task: u32,
     ) -> () {
-        let function = self
-            .nv_mesh_shader
+        let function = device_commands(self)
+            .cmd_draw_mesh_tasks_nv
             .as_ref()
-            .expect("`nv_mesh_shader` not loaded")
-            .cmd_draw_mesh_tasks_nv;
+            .expect("`cmd_draw_mesh_tasks_nv` not available");
         let _val = function(command_buffer, task_count, first_task);
         ()
     }
@@ -109,11 +128,10 @@ impl NvMeshShaderDeviceLoaderExt for crate::DeviceLoader {
         draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .nv_mesh_shader
+        let function = device_commands(self)
+            .cmd_draw_mesh_tasks_indirect_nv
             .as_ref()
-            .expect("`nv_mesh_shader` not loaded")
-            .cmd_draw_mesh_tasks_indirect_nv;
+            .expect("`cmd_draw_mesh_tasks_indirect_nv` not available");
         let _val = function(command_buffer, buffer, offset, draw_count, stride);
         ()
     }
@@ -129,11 +147,10 @@ impl NvMeshShaderDeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .nv_mesh_shader
+        let function = device_commands(self)
+            .cmd_draw_mesh_tasks_indirect_count_nv
             .as_ref()
-            .expect("`nv_mesh_shader` not loaded")
-            .cmd_draw_mesh_tasks_indirect_count_nv;
+            .expect("`cmd_draw_mesh_tasks_indirect_count_nv` not available");
         let _val = function(
             command_buffer,
             buffer,

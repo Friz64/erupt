@@ -58,19 +58,34 @@ pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrDeviceGroupInstanceLoaderExt`](trait.KhrDeviceGroupInstanceLoaderExt.html)"]
 pub struct KhrDeviceGroupInstanceCommands {
-    pub get_physical_device_present_rectangles_khr: PFN_vkGetPhysicalDevicePresentRectanglesKHR,
+    pub get_physical_device_present_rectangles_khr:
+        Option<PFN_vkGetPhysicalDevicePresentRectanglesKHR>,
 }
 impl KhrDeviceGroupInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrDeviceGroupInstanceCommands> {
         unsafe {
-            Some(KhrDeviceGroupInstanceCommands {
-                get_physical_device_present_rectangles_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDevicePresentRectanglesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDeviceGroupInstanceCommands {
+                get_physical_device_present_rectangles_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDevicePresentRectanglesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDeviceGroupInstanceCommands {
+    loader
+        .khr_device_group
+        .as_ref()
+        .expect("`khr_device_group` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDeviceGroupInstanceCommands`](struct.KhrDeviceGroupInstanceCommands.html)"]
 pub trait KhrDeviceGroupInstanceLoaderExt {
@@ -91,11 +106,10 @@ impl KhrDeviceGroupInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         rect_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
-        let function = self
-            .khr_device_group
+        let function = instance_commands(self)
+            .get_physical_device_present_rectangles_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .get_physical_device_present_rectangles_khr;
+            .expect("`get_physical_device_present_rectangles_khr` not available");
         let mut rect_count = rect_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, surface, &mut val, std::ptr::null_mut());
@@ -113,37 +127,66 @@ impl KhrDeviceGroupInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`KhrDeviceGroupDeviceLoaderExt`](trait.KhrDeviceGroupDeviceLoaderExt.html)"]
 pub struct KhrDeviceGroupDeviceCommands {
-    pub get_device_group_peer_memory_features_khr: PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR,
-    pub cmd_set_device_mask_khr: PFN_vkCmdSetDeviceMaskKHR,
-    pub cmd_dispatch_base_khr: PFN_vkCmdDispatchBaseKHR,
-    pub get_device_group_present_capabilities_khr: PFN_vkGetDeviceGroupPresentCapabilitiesKHR,
-    pub get_device_group_surface_present_modes_khr: PFN_vkGetDeviceGroupSurfacePresentModesKHR,
-    pub acquire_next_image2_khr: PFN_vkAcquireNextImage2KHR,
+    pub get_device_group_peer_memory_features_khr:
+        Option<PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR>,
+    pub cmd_set_device_mask_khr: Option<PFN_vkCmdSetDeviceMaskKHR>,
+    pub cmd_dispatch_base_khr: Option<PFN_vkCmdDispatchBaseKHR>,
+    pub get_device_group_present_capabilities_khr:
+        Option<PFN_vkGetDeviceGroupPresentCapabilitiesKHR>,
+    pub get_device_group_surface_present_modes_khr:
+        Option<PFN_vkGetDeviceGroupSurfacePresentModesKHR>,
+    pub acquire_next_image2_khr: Option<PFN_vkAcquireNextImage2KHR>,
 }
 impl KhrDeviceGroupDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDeviceGroupDeviceCommands> {
         unsafe {
-            Some(KhrDeviceGroupDeviceCommands {
-                get_device_group_peer_memory_features_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupPeerMemoryFeaturesKHR")?,
-                ),
-                cmd_set_device_mask_khr: std::mem::transmute(
-                    loader.symbol("vkCmdSetDeviceMaskKHR")?,
-                ),
-                cmd_dispatch_base_khr: std::mem::transmute(loader.symbol("vkCmdDispatchBaseKHR")?),
-                get_device_group_present_capabilities_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupPresentCapabilitiesKHR")?,
-                ),
-                get_device_group_surface_present_modes_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupSurfacePresentModesKHR")?,
-                ),
-                acquire_next_image2_khr: std::mem::transmute(
-                    loader.symbol("vkAcquireNextImage2KHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDeviceGroupDeviceCommands {
+                get_device_group_peer_memory_features_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupPeerMemoryFeaturesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_device_mask_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetDeviceMaskKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_dispatch_base_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDispatchBaseKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_present_capabilities_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupPresentCapabilitiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_surface_present_modes_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupSurfacePresentModesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                acquire_next_image2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireNextImage2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrDeviceGroupDeviceCommands {
+    loader
+        .khr_device_group
+        .as_ref()
+        .expect("`khr_device_group` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDeviceGroupDeviceCommands`](struct.KhrDeviceGroupDeviceCommands.html)"]
 pub trait KhrDeviceGroupDeviceLoaderExt {
@@ -204,11 +247,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
         remote_device_index: u32,
         peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
     ) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .get_device_group_peer_memory_features_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .get_device_group_peer_memory_features_khr;
+            .expect("`get_device_group_peer_memory_features_khr` not available");
         let mut peer_memory_features = peer_memory_features.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -226,11 +268,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         device_mask: u32,
     ) -> () {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .cmd_set_device_mask_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .cmd_set_device_mask_khr;
+            .expect("`cmd_set_device_mask_khr` not available");
         let _val = function(command_buffer, device_mask);
         ()
     }
@@ -246,11 +287,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
         group_count_y: u32,
         group_count_z: u32,
     ) -> () {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .cmd_dispatch_base_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .cmd_dispatch_base_khr;
+            .expect("`cmd_dispatch_base_khr` not available");
         let _val = function(
             command_buffer,
             base_group_x,
@@ -272,11 +312,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
     > {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .get_device_group_present_capabilities_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .get_device_group_present_capabilities_khr;
+            .expect("`get_device_group_present_capabilities_khr` not available");
         let mut device_group_present_capabilities =
             device_group_present_capabilities.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, &mut device_group_present_capabilities);
@@ -290,11 +329,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
         modes: Option<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>
     {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .get_device_group_surface_present_modes_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .get_device_group_surface_present_modes_khr;
+            .expect("`get_device_group_surface_present_modes_khr` not available");
         let mut modes = modes.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, surface, &mut modes);
         crate::utils::VulkanResult::new(_val, modes)
@@ -306,11 +344,10 @@ impl KhrDeviceGroupDeviceLoaderExt for crate::DeviceLoader {
         acquire_info: &crate::extensions::khr_swapchain::AcquireNextImageInfoKHR,
         image_index: Option<u32>,
     ) -> crate::utils::VulkanResult<u32> {
-        let function = self
-            .khr_device_group
+        let function = device_commands(self)
+            .acquire_next_image2_khr
             .as_ref()
-            .expect("`khr_device_group` not loaded")
-            .acquire_next_image2_khr;
+            .expect("`acquire_next_image2_khr` not available");
         let mut image_index = image_index.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, acquire_info, &mut image_index);
         crate::utils::VulkanResult::new(_val, image_index)

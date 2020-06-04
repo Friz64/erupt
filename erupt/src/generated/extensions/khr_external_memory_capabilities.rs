@@ -16,7 +16,7 @@ pub type PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR =
 #[doc = "Provides Instance Commands for [`KhrExternalMemoryCapabilitiesInstanceLoaderExt`](trait.KhrExternalMemoryCapabilitiesInstanceLoaderExt.html)"]
 pub struct KhrExternalMemoryCapabilitiesInstanceCommands {
     pub get_physical_device_external_buffer_properties_khr:
-        PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR,
+        Option<PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR>,
 }
 impl KhrExternalMemoryCapabilitiesInstanceCommands {
     #[inline]
@@ -24,13 +24,29 @@ impl KhrExternalMemoryCapabilitiesInstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<KhrExternalMemoryCapabilitiesInstanceCommands> {
         unsafe {
-            Some(KhrExternalMemoryCapabilitiesInstanceCommands {
-                get_physical_device_external_buffer_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalBufferPropertiesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalMemoryCapabilitiesInstanceCommands {
+                get_physical_device_external_buffer_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalBufferPropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(
+    loader: &crate::InstanceLoader,
+) -> &KhrExternalMemoryCapabilitiesInstanceCommands {
+    loader
+        .khr_external_memory_capabilities
+        .as_ref()
+        .expect("`khr_external_memory_capabilities` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalMemoryCapabilitiesInstanceCommands`](struct.KhrExternalMemoryCapabilitiesInstanceCommands.html)"]
 pub trait KhrExternalMemoryCapabilitiesInstanceLoaderExt {
@@ -51,11 +67,10 @@ impl KhrExternalMemoryCapabilitiesInstanceLoaderExt for crate::InstanceLoader {
         external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo,
         external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>,
     ) -> crate::vk1_1::ExternalBufferProperties {
-        let function = self
-            .khr_external_memory_capabilities
+        let function = instance_commands(self)
+            .get_physical_device_external_buffer_properties_khr
             .as_ref()
-            .expect("`khr_external_memory_capabilities` not loaded")
-            .get_physical_device_external_buffer_properties_khr;
+            .expect("`get_physical_device_external_buffer_properties_khr` not available");
         let mut external_buffer_properties =
             external_buffer_properties.unwrap_or_else(|| Default::default());
         let _val = function(

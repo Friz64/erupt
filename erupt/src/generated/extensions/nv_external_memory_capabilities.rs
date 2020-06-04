@@ -9,7 +9,7 @@ pub type PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV = unsafe extern 
 #[doc = "Provides Instance Commands for [`NvExternalMemoryCapabilitiesInstanceLoaderExt`](trait.NvExternalMemoryCapabilitiesInstanceLoaderExt.html)"]
 pub struct NvExternalMemoryCapabilitiesInstanceCommands {
     pub get_physical_device_external_image_format_properties_nv:
-        PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV,
+        Option<PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV>,
 }
 impl NvExternalMemoryCapabilitiesInstanceCommands {
     #[inline]
@@ -17,13 +17,30 @@ impl NvExternalMemoryCapabilitiesInstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<NvExternalMemoryCapabilitiesInstanceCommands> {
         unsafe {
-            Some(NvExternalMemoryCapabilitiesInstanceCommands {
-                get_physical_device_external_image_format_properties_nv: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalImageFormatPropertiesNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvExternalMemoryCapabilitiesInstanceCommands {
+                get_physical_device_external_image_format_properties_nv: std::mem::transmute({
+                    let symbol =
+                        loader.symbol("vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(
+    loader: &crate::InstanceLoader,
+) -> &NvExternalMemoryCapabilitiesInstanceCommands {
+    loader
+        .nv_external_memory_capabilities
+        .as_ref()
+        .expect("`nv_external_memory_capabilities` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvExternalMemoryCapabilitiesInstanceCommands`](struct.NvExternalMemoryCapabilitiesInstanceCommands.html)"]
 pub trait NvExternalMemoryCapabilitiesInstanceLoaderExt {
@@ -62,11 +79,10 @@ impl NvExternalMemoryCapabilitiesInstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV,
     > {
-        let function = self
-            .nv_external_memory_capabilities
+        let function = instance_commands(self)
+            .get_physical_device_external_image_format_properties_nv
             .as_ref()
-            .expect("`nv_external_memory_capabilities` not loaded")
-            .get_physical_device_external_image_format_properties_nv;
+            .expect("`get_physical_device_external_image_format_properties_nv` not available");
         let mut external_image_format_properties =
             external_image_format_properties.unwrap_or_else(|| Default::default());
         let _val = function(

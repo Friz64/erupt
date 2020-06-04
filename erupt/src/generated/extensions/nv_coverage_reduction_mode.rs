@@ -9,20 +9,36 @@ pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV =
 #[doc = "Provides Instance Commands for [`NvCoverageReductionModeInstanceLoaderExt`](trait.NvCoverageReductionModeInstanceLoaderExt.html)"]
 pub struct NvCoverageReductionModeInstanceCommands {
     pub get_physical_device_supported_framebuffer_mixed_samples_combinations_nv:
-        PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV,
+        Option<PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV>,
 }
 impl NvCoverageReductionModeInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<NvCoverageReductionModeInstanceCommands> {
         unsafe {
-            Some(NvCoverageReductionModeInstanceCommands {
+            let mut success = false;
+            let table = NvCoverageReductionModeInstanceCommands {
                 get_physical_device_supported_framebuffer_mixed_samples_combinations_nv:
-                    std::mem::transmute(loader.symbol(
-                        "vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV",
-                    )?),
-            })
+                    std::mem::transmute({
+                        let symbol = loader.symbol(
+                            "vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV",
+                        );
+                        success |= symbol.is_some();
+                        symbol
+                    }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &NvCoverageReductionModeInstanceCommands {
+    loader
+        .nv_coverage_reduction_mode
+        .as_ref()
+        .expect("`nv_coverage_reduction_mode` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvCoverageReductionModeInstanceCommands`](struct.NvCoverageReductionModeInstanceCommands.html)"]
 pub trait NvCoverageReductionModeInstanceLoaderExt {
@@ -45,11 +61,7 @@ impl NvCoverageReductionModeInstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>,
     > {
-        let function = self
-            .nv_coverage_reduction_mode
-            .as_ref()
-            .expect("`nv_coverage_reduction_mode` not loaded")
-            .get_physical_device_supported_framebuffer_mixed_samples_combinations_nv;
+        let function = instance_commands ( self ) . get_physical_device_supported_framebuffer_mixed_samples_combinations_nv . as_ref ( ) . expect ( "`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` not available" ) ;
         let mut combination_count = combination_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());

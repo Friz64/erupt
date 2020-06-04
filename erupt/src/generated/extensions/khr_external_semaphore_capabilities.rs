@@ -14,7 +14,7 @@ pub type PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
 #[doc = "Provides Instance Commands for [`KhrExternalSemaphoreCapabilitiesInstanceLoaderExt`](trait.KhrExternalSemaphoreCapabilitiesInstanceLoaderExt.html)"]
 pub struct KhrExternalSemaphoreCapabilitiesInstanceCommands {
     pub get_physical_device_external_semaphore_properties_khr:
-        PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR,
+        Option<PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR>,
 }
 impl KhrExternalSemaphoreCapabilitiesInstanceCommands {
     #[inline]
@@ -22,13 +22,29 @@ impl KhrExternalSemaphoreCapabilitiesInstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<KhrExternalSemaphoreCapabilitiesInstanceCommands> {
         unsafe {
-            Some(KhrExternalSemaphoreCapabilitiesInstanceCommands {
-                get_physical_device_external_semaphore_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalSemaphoreCapabilitiesInstanceCommands {
+                get_physical_device_external_semaphore_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(
+    loader: &crate::InstanceLoader,
+) -> &KhrExternalSemaphoreCapabilitiesInstanceCommands {
+    loader
+        .khr_external_semaphore_capabilities
+        .as_ref()
+        .expect("`khr_external_semaphore_capabilities` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalSemaphoreCapabilitiesInstanceCommands`](struct.KhrExternalSemaphoreCapabilitiesInstanceCommands.html)"]
 pub trait KhrExternalSemaphoreCapabilitiesInstanceLoaderExt {
@@ -49,11 +65,10 @@ impl KhrExternalSemaphoreCapabilitiesInstanceLoaderExt for crate::InstanceLoader
         external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
         external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
     ) -> crate::vk1_1::ExternalSemaphoreProperties {
-        let function = self
-            .khr_external_semaphore_capabilities
+        let function = instance_commands(self)
+            .get_physical_device_external_semaphore_properties_khr
             .as_ref()
-            .expect("`khr_external_semaphore_capabilities` not loaded")
-            .get_physical_device_external_semaphore_properties_khr;
+            .expect("`get_physical_device_external_semaphore_properties_khr` not available");
         let mut external_semaphore_properties =
             external_semaphore_properties.unwrap_or_else(|| Default::default());
         let _val = function(

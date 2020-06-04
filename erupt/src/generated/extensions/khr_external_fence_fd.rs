@@ -18,19 +18,39 @@ pub type PFN_vkGetFenceFdKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrExternalFenceFdDeviceLoaderExt`](trait.KhrExternalFenceFdDeviceLoaderExt.html)"]
 pub struct KhrExternalFenceFdDeviceCommands {
-    pub import_fence_fd_khr: PFN_vkImportFenceFdKHR,
-    pub get_fence_fd_khr: PFN_vkGetFenceFdKHR,
+    pub import_fence_fd_khr: Option<PFN_vkImportFenceFdKHR>,
+    pub get_fence_fd_khr: Option<PFN_vkGetFenceFdKHR>,
 }
 impl KhrExternalFenceFdDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalFenceFdDeviceCommands> {
         unsafe {
-            Some(KhrExternalFenceFdDeviceCommands {
-                import_fence_fd_khr: std::mem::transmute(loader.symbol("vkImportFenceFdKHR")?),
-                get_fence_fd_khr: std::mem::transmute(loader.symbol("vkGetFenceFdKHR")?),
-            })
+            let mut success = false;
+            let table = KhrExternalFenceFdDeviceCommands {
+                import_fence_fd_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkImportFenceFdKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_fence_fd_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetFenceFdKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalFenceFdDeviceCommands {
+    loader
+        .khr_external_fence_fd
+        .as_ref()
+        .expect("`khr_external_fence_fd` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalFenceFdDeviceCommands`](struct.KhrExternalFenceFdDeviceCommands.html)"]
 pub trait KhrExternalFenceFdDeviceLoaderExt {
@@ -53,11 +73,10 @@ impl KhrExternalFenceFdDeviceLoaderExt for crate::DeviceLoader {
         &self,
         import_fence_fd_info: &crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_fence_fd
+        let function = device_commands(self)
+            .import_fence_fd_khr
             .as_ref()
-            .expect("`khr_external_fence_fd` not loaded")
-            .import_fence_fd_khr;
+            .expect("`import_fence_fd_khr` not available");
         let _val = function(self.handle, import_fence_fd_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -68,11 +87,10 @@ impl KhrExternalFenceFdDeviceLoaderExt for crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let function = self
-            .khr_external_fence_fd
+        let function = device_commands(self)
+            .get_fence_fd_khr
             .as_ref()
-            .expect("`khr_external_fence_fd` not loaded")
-            .get_fence_fd_khr;
+            .expect("`get_fence_fd_khr` not available");
         let mut fd = fd.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, get_fd_info, &mut fd);
         crate::utils::VulkanResult::new(_val, fd)

@@ -22,25 +22,46 @@ pub type PFN_vkReleaseProfilingLockKHR =
 #[doc = "Provides Instance Commands for [`KhrPerformanceQueryInstanceLoaderExt`](trait.KhrPerformanceQueryInstanceLoaderExt.html)"]
 pub struct KhrPerformanceQueryInstanceCommands {
     pub enumerate_physical_device_queue_family_performance_query_counters_khr:
-        PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR,
+        Option<PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR>,
     pub get_physical_device_queue_family_performance_query_passes_khr:
-        PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR,
+        Option<PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR>,
 }
 impl KhrPerformanceQueryInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrPerformanceQueryInstanceCommands> {
         unsafe {
-            Some(KhrPerformanceQueryInstanceCommands {
+            let mut success = false;
+            let table = KhrPerformanceQueryInstanceCommands {
                 enumerate_physical_device_queue_family_performance_query_counters_khr:
-                    std::mem::transmute(loader.symbol(
-                        "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR",
-                    )?),
+                    std::mem::transmute({
+                        let symbol = loader.symbol(
+                            "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR",
+                        );
+                        success |= symbol.is_some();
+                        symbol
+                    }),
                 get_physical_device_queue_family_performance_query_passes_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR")?,
+                    {
+                        let symbol = loader
+                            .symbol("vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR");
+                        success |= symbol.is_some();
+                        symbol
+                    },
                 ),
-            })
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrPerformanceQueryInstanceCommands {
+    loader
+        .khr_performance_query
+        .as_ref()
+        .expect("`khr_performance_query` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrPerformanceQueryInstanceCommands`](struct.KhrPerformanceQueryInstanceCommands.html)"]
 pub trait KhrPerformanceQueryInstanceLoaderExt {
@@ -74,11 +95,7 @@ impl KhrPerformanceQueryInstanceLoaderExt for crate::InstanceLoader {
         Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>,
         Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>,
     )> {
-        let function = self
-            .khr_performance_query
-            .as_ref()
-            .expect("`khr_performance_query` not loaded")
-            .enumerate_physical_device_queue_family_performance_query_counters_khr;
+        let function = instance_commands ( self ) . enumerate_physical_device_queue_family_performance_query_counters_khr . as_ref ( ) . expect ( "`enumerate_physical_device_queue_family_performance_query_counters_khr` not available" ) ;
         let mut counter_count = counter_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(
@@ -109,11 +126,12 @@ impl KhrPerformanceQueryInstanceLoaderExt for crate::InstanceLoader {
         performance_query_create_info : & crate :: extensions :: khr_performance_query :: QueryPoolPerformanceCreateInfoKHR,
         num_passes: Option<u32>,
     ) -> u32 {
-        let function = self
-            .khr_performance_query
+        let function = instance_commands(self)
+            .get_physical_device_queue_family_performance_query_passes_khr
             .as_ref()
-            .expect("`khr_performance_query` not loaded")
-            .get_physical_device_queue_family_performance_query_passes_khr;
+            .expect(
+                "`get_physical_device_queue_family_performance_query_passes_khr` not available",
+            );
         let mut num_passes = num_passes.unwrap_or_else(|| Default::default());
         let _val = function(
             physical_device,
@@ -125,23 +143,39 @@ impl KhrPerformanceQueryInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`KhrPerformanceQueryDeviceLoaderExt`](trait.KhrPerformanceQueryDeviceLoaderExt.html)"]
 pub struct KhrPerformanceQueryDeviceCommands {
-    pub acquire_profiling_lock_khr: PFN_vkAcquireProfilingLockKHR,
-    pub release_profiling_lock_khr: PFN_vkReleaseProfilingLockKHR,
+    pub acquire_profiling_lock_khr: Option<PFN_vkAcquireProfilingLockKHR>,
+    pub release_profiling_lock_khr: Option<PFN_vkReleaseProfilingLockKHR>,
 }
 impl KhrPerformanceQueryDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrPerformanceQueryDeviceCommands> {
         unsafe {
-            Some(KhrPerformanceQueryDeviceCommands {
-                acquire_profiling_lock_khr: std::mem::transmute(
-                    loader.symbol("vkAcquireProfilingLockKHR")?,
-                ),
-                release_profiling_lock_khr: std::mem::transmute(
-                    loader.symbol("vkReleaseProfilingLockKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrPerformanceQueryDeviceCommands {
+                acquire_profiling_lock_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireProfilingLockKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                release_profiling_lock_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkReleaseProfilingLockKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrPerformanceQueryDeviceCommands {
+    loader
+        .khr_performance_query
+        .as_ref()
+        .expect("`khr_performance_query` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrPerformanceQueryDeviceCommands`](struct.KhrPerformanceQueryDeviceCommands.html)"]
 pub trait KhrPerformanceQueryDeviceLoaderExt {
@@ -160,22 +194,20 @@ impl KhrPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_performance_query
+        let function = device_commands(self)
+            .acquire_profiling_lock_khr
             .as_ref()
-            .expect("`khr_performance_query` not loaded")
-            .acquire_profiling_lock_khr;
+            .expect("`acquire_profiling_lock_khr` not available");
         let _val = function(self.handle, info);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Device Command"]
     unsafe fn release_profiling_lock_khr(&self) -> () {
-        let function = self
-            .khr_performance_query
+        let function = device_commands(self)
+            .release_profiling_lock_khr
             .as_ref()
-            .expect("`khr_performance_query` not loaded")
-            .release_profiling_lock_khr;
+            .expect("`release_profiling_lock_khr` not available");
         let _val = function(self.handle);
         ()
     }

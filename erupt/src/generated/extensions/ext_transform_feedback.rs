@@ -61,39 +61,63 @@ pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtTransformFeedbackDeviceLoaderExt`](trait.ExtTransformFeedbackDeviceLoaderExt.html)"]
 pub struct ExtTransformFeedbackDeviceCommands {
-    pub cmd_bind_transform_feedback_buffers_ext: PFN_vkCmdBindTransformFeedbackBuffersEXT,
-    pub cmd_begin_transform_feedback_ext: PFN_vkCmdBeginTransformFeedbackEXT,
-    pub cmd_end_transform_feedback_ext: PFN_vkCmdEndTransformFeedbackEXT,
-    pub cmd_begin_query_indexed_ext: PFN_vkCmdBeginQueryIndexedEXT,
-    pub cmd_end_query_indexed_ext: PFN_vkCmdEndQueryIndexedEXT,
-    pub cmd_draw_indirect_byte_count_ext: PFN_vkCmdDrawIndirectByteCountEXT,
+    pub cmd_bind_transform_feedback_buffers_ext: Option<PFN_vkCmdBindTransformFeedbackBuffersEXT>,
+    pub cmd_begin_transform_feedback_ext: Option<PFN_vkCmdBeginTransformFeedbackEXT>,
+    pub cmd_end_transform_feedback_ext: Option<PFN_vkCmdEndTransformFeedbackEXT>,
+    pub cmd_begin_query_indexed_ext: Option<PFN_vkCmdBeginQueryIndexedEXT>,
+    pub cmd_end_query_indexed_ext: Option<PFN_vkCmdEndQueryIndexedEXT>,
+    pub cmd_draw_indirect_byte_count_ext: Option<PFN_vkCmdDrawIndirectByteCountEXT>,
 }
 impl ExtTransformFeedbackDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtTransformFeedbackDeviceCommands> {
         unsafe {
-            Some(ExtTransformFeedbackDeviceCommands {
-                cmd_bind_transform_feedback_buffers_ext: std::mem::transmute(
-                    loader.symbol("vkCmdBindTransformFeedbackBuffersEXT")?,
-                ),
-                cmd_begin_transform_feedback_ext: std::mem::transmute(
-                    loader.symbol("vkCmdBeginTransformFeedbackEXT")?,
-                ),
-                cmd_end_transform_feedback_ext: std::mem::transmute(
-                    loader.symbol("vkCmdEndTransformFeedbackEXT")?,
-                ),
-                cmd_begin_query_indexed_ext: std::mem::transmute(
-                    loader.symbol("vkCmdBeginQueryIndexedEXT")?,
-                ),
-                cmd_end_query_indexed_ext: std::mem::transmute(
-                    loader.symbol("vkCmdEndQueryIndexedEXT")?,
-                ),
-                cmd_draw_indirect_byte_count_ext: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndirectByteCountEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtTransformFeedbackDeviceCommands {
+                cmd_bind_transform_feedback_buffers_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindTransformFeedbackBuffersEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_transform_feedback_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginTransformFeedbackEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_transform_feedback_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndTransformFeedbackEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_query_indexed_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginQueryIndexedEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_query_indexed_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndQueryIndexedEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indirect_byte_count_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndirectByteCountEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtTransformFeedbackDeviceCommands {
+    loader
+        .ext_transform_feedback
+        .as_ref()
+        .expect("`ext_transform_feedback` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtTransformFeedbackDeviceCommands`](struct.ExtTransformFeedbackDeviceCommands.html)"]
 pub trait ExtTransformFeedbackDeviceLoaderExt {
@@ -162,11 +186,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         offsets: &[crate::vk1_0::DeviceSize],
         sizes: &[crate::vk1_0::DeviceSize],
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_bind_transform_feedback_buffers_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_bind_transform_feedback_buffers_ext;
+            .expect("`cmd_bind_transform_feedback_buffers_ext` not available");
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len()) as _;
         let _val = function(
             command_buffer,
@@ -187,11 +210,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         counter_buffers: &[crate::vk1_0::Buffer],
         counter_buffer_offsets: &[crate::vk1_0::DeviceSize],
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_begin_transform_feedback_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_begin_transform_feedback_ext;
+            .expect("`cmd_begin_transform_feedback_ext` not available");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len()) as _;
         let _val = function(
             command_buffer,
@@ -211,11 +233,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         counter_buffers: &[crate::vk1_0::Buffer],
         counter_buffer_offsets: &[crate::vk1_0::DeviceSize],
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_end_transform_feedback_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_end_transform_feedback_ext;
+            .expect("`cmd_end_transform_feedback_ext` not available");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len()) as _;
         let _val = function(
             command_buffer,
@@ -236,11 +257,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         flags: crate::vk1_0::QueryControlFlags,
         index: u32,
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_begin_query_indexed_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_begin_query_indexed_ext;
+            .expect("`cmd_begin_query_indexed_ext` not available");
         let _val = function(command_buffer, query_pool, query, flags, index);
         ()
     }
@@ -253,11 +273,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         query: u32,
         index: u32,
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_end_query_indexed_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_end_query_indexed_ext;
+            .expect("`cmd_end_query_indexed_ext` not available");
         let _val = function(command_buffer, query_pool, query, index);
         ()
     }
@@ -273,11 +292,10 @@ impl ExtTransformFeedbackDeviceLoaderExt for crate::DeviceLoader {
         counter_offset: u32,
         vertex_stride: u32,
     ) -> () {
-        let function = self
-            .ext_transform_feedback
+        let function = device_commands(self)
+            .cmd_draw_indirect_byte_count_ext
             .as_ref()
-            .expect("`ext_transform_feedback` not loaded")
-            .cmd_draw_indirect_byte_count_ext;
+            .expect("`cmd_draw_indirect_byte_count_ext` not available");
         let _val = function(
             command_buffer,
             instance_count,

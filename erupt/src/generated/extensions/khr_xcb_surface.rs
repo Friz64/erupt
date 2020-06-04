@@ -22,24 +22,40 @@ pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR =
     ) -> crate::vk1_0::Bool32;
 #[doc = "Provides Instance Commands for [`KhrXcbSurfaceInstanceLoaderExt`](trait.KhrXcbSurfaceInstanceLoaderExt.html)"]
 pub struct KhrXcbSurfaceInstanceCommands {
-    pub create_xcb_surface_khr: PFN_vkCreateXcbSurfaceKHR,
+    pub create_xcb_surface_khr: Option<PFN_vkCreateXcbSurfaceKHR>,
     pub get_physical_device_xcb_presentation_support_khr:
-        PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR,
+        Option<PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR>,
 }
 impl KhrXcbSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrXcbSurfaceInstanceCommands> {
         unsafe {
-            Some(KhrXcbSurfaceInstanceCommands {
-                create_xcb_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateXcbSurfaceKHR")?,
-                ),
-                get_physical_device_xcb_presentation_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceXcbPresentationSupportKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrXcbSurfaceInstanceCommands {
+                create_xcb_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateXcbSurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_xcb_presentation_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceXcbPresentationSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrXcbSurfaceInstanceCommands {
+    loader
+        .khr_xcb_surface
+        .as_ref()
+        .expect("`khr_xcb_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrXcbSurfaceInstanceCommands`](struct.KhrXcbSurfaceInstanceCommands.html)"]
 pub trait KhrXcbSurfaceInstanceLoaderExt {
@@ -68,11 +84,10 @@ impl KhrXcbSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_xcb_surface
+        let function = instance_commands(self)
+            .create_xcb_surface_khr
             .as_ref()
-            .expect("`khr_xcb_surface` not loaded")
-            .create_xcb_surface_khr;
+            .expect("`create_xcb_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -95,11 +110,10 @@ impl KhrXcbSurfaceInstanceLoaderExt for crate::InstanceLoader {
         connection: *mut *const std::ffi::c_void,
         visual_id: *const std::ffi::c_void,
     ) -> crate::vk1_0::Bool32 {
-        let function = self
-            .khr_xcb_surface
+        let function = instance_commands(self)
+            .get_physical_device_xcb_presentation_support_khr
             .as_ref()
-            .expect("`khr_xcb_surface` not loaded")
-            .get_physical_device_xcb_presentation_support_khr;
+            .expect("`get_physical_device_xcb_presentation_support_khr` not available");
         let _val = function(physical_device, queue_family_index, connection, visual_id);
         _val
     }

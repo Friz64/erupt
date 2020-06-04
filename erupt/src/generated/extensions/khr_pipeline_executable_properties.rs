@@ -14,10 +14,10 @@ pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn ( 
 pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_executable_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , p_internal_representation_count : * mut u32 , p_internal_representations : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`KhrPipelineExecutablePropertiesDeviceLoaderExt`](trait.KhrPipelineExecutablePropertiesDeviceLoaderExt.html)"]
 pub struct KhrPipelineExecutablePropertiesDeviceCommands {
-    pub get_pipeline_executable_properties_khr: PFN_vkGetPipelineExecutablePropertiesKHR,
-    pub get_pipeline_executable_statistics_khr: PFN_vkGetPipelineExecutableStatisticsKHR,
+    pub get_pipeline_executable_properties_khr: Option<PFN_vkGetPipelineExecutablePropertiesKHR>,
+    pub get_pipeline_executable_statistics_khr: Option<PFN_vkGetPipelineExecutableStatisticsKHR>,
     pub get_pipeline_executable_internal_representations_khr:
-        PFN_vkGetPipelineExecutableInternalRepresentationsKHR,
+        Option<PFN_vkGetPipelineExecutableInternalRepresentationsKHR>,
 }
 impl KhrPipelineExecutablePropertiesDeviceCommands {
     #[inline]
@@ -25,19 +25,37 @@ impl KhrPipelineExecutablePropertiesDeviceCommands {
         loader: &crate::DeviceLoader,
     ) -> Option<KhrPipelineExecutablePropertiesDeviceCommands> {
         unsafe {
-            Some(KhrPipelineExecutablePropertiesDeviceCommands {
-                get_pipeline_executable_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetPipelineExecutablePropertiesKHR")?,
-                ),
-                get_pipeline_executable_statistics_khr: std::mem::transmute(
-                    loader.symbol("vkGetPipelineExecutableStatisticsKHR")?,
-                ),
-                get_pipeline_executable_internal_representations_khr: std::mem::transmute(
-                    loader.symbol("vkGetPipelineExecutableInternalRepresentationsKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrPipelineExecutablePropertiesDeviceCommands {
+                get_pipeline_executable_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPipelineExecutablePropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_pipeline_executable_statistics_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPipelineExecutableStatisticsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_pipeline_executable_internal_representations_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPipelineExecutableInternalRepresentationsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrPipelineExecutablePropertiesDeviceCommands {
+    loader
+        .khr_pipeline_executable_properties
+        .as_ref()
+        .expect("`khr_pipeline_executable_properties` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrPipelineExecutablePropertiesDeviceCommands`](struct.KhrPipelineExecutablePropertiesDeviceCommands.html)"]
 pub trait KhrPipelineExecutablePropertiesDeviceLoaderExt {
@@ -70,11 +88,10 @@ impl KhrPipelineExecutablePropertiesDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>,
     > {
-        let function = self
-            .khr_pipeline_executable_properties
+        let function = device_commands(self)
+            .get_pipeline_executable_properties_khr
             .as_ref()
-            .expect("`khr_pipeline_executable_properties` not loaded")
-            .get_pipeline_executable_properties_khr;
+            .expect("`get_pipeline_executable_properties_khr` not available");
         let mut executable_count = executable_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, pipeline_info, &mut val, std::ptr::null_mut());
@@ -98,11 +115,10 @@ impl KhrPipelineExecutablePropertiesDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>,
     > {
-        let function = self
-            .khr_pipeline_executable_properties
+        let function = device_commands(self)
+            .get_pipeline_executable_statistics_khr
             .as_ref()
-            .expect("`khr_pipeline_executable_properties` not loaded")
-            .get_pipeline_executable_statistics_khr;
+            .expect("`get_pipeline_executable_statistics_khr` not available");
         let mut statistic_count = statistic_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, executable_info, &mut val, std::ptr::null_mut());
@@ -119,11 +135,10 @@ impl KhrPipelineExecutablePropertiesDeviceLoaderExt for crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Device Command"]unsafe fn get_pipeline_executable_internal_representations_khr ( & self , executable_info : & crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , internal_representation_count : Option < u32 > , ) -> crate :: utils :: VulkanResult < Vec < crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR > >{
-        let function = self
-            .khr_pipeline_executable_properties
+        let function = device_commands(self)
+            .get_pipeline_executable_internal_representations_khr
             .as_ref()
-            .expect("`khr_pipeline_executable_properties` not loaded")
-            .get_pipeline_executable_internal_representations_khr;
+            .expect("`get_pipeline_executable_internal_representations_khr` not available");
         let mut internal_representation_count =
             internal_representation_count.unwrap_or_else(|| {
                 let mut val = Default::default();

@@ -12,8 +12,8 @@ pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn (
 #[doc = "Provides Instance Commands for [`KhrGetSurfaceCapabilities2InstanceLoaderExt`](trait.KhrGetSurfaceCapabilities2InstanceLoaderExt.html)"]
 pub struct KhrGetSurfaceCapabilities2InstanceCommands {
     pub get_physical_device_surface_capabilities2_khr:
-        PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR,
-    pub get_physical_device_surface_formats2_khr: PFN_vkGetPhysicalDeviceSurfaceFormats2KHR,
+        Option<PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR>,
+    pub get_physical_device_surface_formats2_khr: Option<PFN_vkGetPhysicalDeviceSurfaceFormats2KHR>,
 }
 impl KhrGetSurfaceCapabilities2InstanceCommands {
     #[inline]
@@ -21,16 +21,34 @@ impl KhrGetSurfaceCapabilities2InstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<KhrGetSurfaceCapabilities2InstanceCommands> {
         unsafe {
-            Some(KhrGetSurfaceCapabilities2InstanceCommands {
-                get_physical_device_surface_capabilities2_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceCapabilities2KHR")?,
-                ),
-                get_physical_device_surface_formats2_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceFormats2KHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrGetSurfaceCapabilities2InstanceCommands {
+                get_physical_device_surface_capabilities2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceCapabilities2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_surface_formats2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceFormats2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(
+    loader: &crate::InstanceLoader,
+) -> &KhrGetSurfaceCapabilities2InstanceCommands {
+    loader
+        .khr_get_surface_capabilities2
+        .as_ref()
+        .expect("`khr_get_surface_capabilities2` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrGetSurfaceCapabilities2InstanceCommands`](struct.KhrGetSurfaceCapabilities2InstanceCommands.html)"]
 pub trait KhrGetSurfaceCapabilities2InstanceLoaderExt {
@@ -68,11 +86,10 @@ impl KhrGetSurfaceCapabilities2InstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
     > {
-        let function = self
-            .khr_get_surface_capabilities2
+        let function = instance_commands(self)
+            .get_physical_device_surface_capabilities2_khr
             .as_ref()
-            .expect("`khr_get_surface_capabilities2` not loaded")
-            .get_physical_device_surface_capabilities2_khr;
+            .expect("`get_physical_device_surface_capabilities2_khr` not available");
         let mut surface_capabilities = surface_capabilities.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, surface_info, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_val, surface_capabilities)
@@ -87,11 +104,10 @@ impl KhrGetSurfaceCapabilities2InstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>,
     > {
-        let function = self
-            .khr_get_surface_capabilities2
+        let function = instance_commands(self)
+            .get_physical_device_surface_formats2_khr
             .as_ref()
-            .expect("`khr_get_surface_capabilities2` not loaded")
-            .get_physical_device_surface_formats2_khr;
+            .expect("`get_physical_device_surface_formats2_khr` not available");
         let mut surface_format_count = surface_format_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(

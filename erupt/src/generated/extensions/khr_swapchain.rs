@@ -71,19 +71,34 @@ pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrSwapchainInstanceLoaderExt`](trait.KhrSwapchainInstanceLoaderExt.html)"]
 pub struct KhrSwapchainInstanceCommands {
-    pub get_physical_device_present_rectangles_khr: PFN_vkGetPhysicalDevicePresentRectanglesKHR,
+    pub get_physical_device_present_rectangles_khr:
+        Option<PFN_vkGetPhysicalDevicePresentRectanglesKHR>,
 }
 impl KhrSwapchainInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrSwapchainInstanceCommands> {
         unsafe {
-            Some(KhrSwapchainInstanceCommands {
-                get_physical_device_present_rectangles_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDevicePresentRectanglesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrSwapchainInstanceCommands {
+                get_physical_device_present_rectangles_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDevicePresentRectanglesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrSwapchainInstanceCommands {
+    loader
+        .khr_swapchain
+        .as_ref()
+        .expect("`khr_swapchain` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrSwapchainInstanceCommands`](struct.KhrSwapchainInstanceCommands.html)"]
 pub trait KhrSwapchainInstanceLoaderExt {
@@ -104,11 +119,10 @@ impl KhrSwapchainInstanceLoaderExt for crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         rect_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
-        let function = self
-            .khr_swapchain
+        let function = instance_commands(self)
+            .get_physical_device_present_rectangles_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .get_physical_device_present_rectangles_khr;
+            .expect("`get_physical_device_present_rectangles_khr` not available");
         let mut rect_count = rect_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, surface, &mut val, std::ptr::null_mut());
@@ -126,41 +140,77 @@ impl KhrSwapchainInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`KhrSwapchainDeviceLoaderExt`](trait.KhrSwapchainDeviceLoaderExt.html)"]
 pub struct KhrSwapchainDeviceCommands {
-    pub create_swapchain_khr: PFN_vkCreateSwapchainKHR,
-    pub destroy_swapchain_khr: PFN_vkDestroySwapchainKHR,
-    pub get_swapchain_images_khr: PFN_vkGetSwapchainImagesKHR,
-    pub acquire_next_image_khr: PFN_vkAcquireNextImageKHR,
-    pub queue_present_khr: PFN_vkQueuePresentKHR,
-    pub get_device_group_present_capabilities_khr: PFN_vkGetDeviceGroupPresentCapabilitiesKHR,
-    pub get_device_group_surface_present_modes_khr: PFN_vkGetDeviceGroupSurfacePresentModesKHR,
-    pub acquire_next_image2_khr: PFN_vkAcquireNextImage2KHR,
+    pub create_swapchain_khr: Option<PFN_vkCreateSwapchainKHR>,
+    pub destroy_swapchain_khr: Option<PFN_vkDestroySwapchainKHR>,
+    pub get_swapchain_images_khr: Option<PFN_vkGetSwapchainImagesKHR>,
+    pub acquire_next_image_khr: Option<PFN_vkAcquireNextImageKHR>,
+    pub queue_present_khr: Option<PFN_vkQueuePresentKHR>,
+    pub get_device_group_present_capabilities_khr:
+        Option<PFN_vkGetDeviceGroupPresentCapabilitiesKHR>,
+    pub get_device_group_surface_present_modes_khr:
+        Option<PFN_vkGetDeviceGroupSurfacePresentModesKHR>,
+    pub acquire_next_image2_khr: Option<PFN_vkAcquireNextImage2KHR>,
 }
 impl KhrSwapchainDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrSwapchainDeviceCommands> {
         unsafe {
-            Some(KhrSwapchainDeviceCommands {
-                create_swapchain_khr: std::mem::transmute(loader.symbol("vkCreateSwapchainKHR")?),
-                destroy_swapchain_khr: std::mem::transmute(loader.symbol("vkDestroySwapchainKHR")?),
-                get_swapchain_images_khr: std::mem::transmute(
-                    loader.symbol("vkGetSwapchainImagesKHR")?,
-                ),
-                acquire_next_image_khr: std::mem::transmute(
-                    loader.symbol("vkAcquireNextImageKHR")?,
-                ),
-                queue_present_khr: std::mem::transmute(loader.symbol("vkQueuePresentKHR")?),
-                get_device_group_present_capabilities_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupPresentCapabilitiesKHR")?,
-                ),
-                get_device_group_surface_present_modes_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupSurfacePresentModesKHR")?,
-                ),
-                acquire_next_image2_khr: std::mem::transmute(
-                    loader.symbol("vkAcquireNextImage2KHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrSwapchainDeviceCommands {
+                create_swapchain_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSwapchainKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_swapchain_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySwapchainKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_swapchain_images_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSwapchainImagesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                acquire_next_image_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireNextImageKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_present_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueuePresentKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_present_capabilities_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupPresentCapabilitiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_surface_present_modes_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupSurfacePresentModesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                acquire_next_image2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireNextImage2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrSwapchainDeviceCommands {
+    loader
+        .khr_swapchain
+        .as_ref()
+        .expect("`khr_swapchain` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrSwapchainDeviceCommands`](struct.KhrSwapchainDeviceCommands.html)"]
 pub trait KhrSwapchainDeviceLoaderExt {
@@ -229,11 +279,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         swapchain: Option<crate::extensions::khr_swapchain::SwapchainKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::SwapchainKHR> {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .create_swapchain_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .create_swapchain_khr;
+            .expect("`create_swapchain_khr` not available");
         let mut swapchain = swapchain.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -254,11 +303,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .destroy_swapchain_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .destroy_swapchain_khr;
+            .expect("`destroy_swapchain_khr` not available");
         let _val = function(
             self.handle,
             swapchain,
@@ -277,11 +325,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
         swapchain_image_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Image>> {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .get_swapchain_images_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .get_swapchain_images_khr;
+            .expect("`get_swapchain_images_khr` not available");
         let mut swapchain_image_count = swapchain_image_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, swapchain, &mut val, std::ptr::null_mut());
@@ -306,11 +353,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         fence: crate::vk1_0::Fence,
         image_index: Option<u32>,
     ) -> crate::utils::VulkanResult<u32> {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .acquire_next_image_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .acquire_next_image_khr;
+            .expect("`acquire_next_image_khr` not available");
         let mut image_index = image_index.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -329,11 +375,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         queue: crate::vk1_0::Queue,
         present_info: &crate::extensions::khr_swapchain::PresentInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .queue_present_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .queue_present_khr;
+            .expect("`queue_present_khr` not available");
         let _val = function(queue, present_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -347,11 +392,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
     > {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .get_device_group_present_capabilities_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .get_device_group_present_capabilities_khr;
+            .expect("`get_device_group_present_capabilities_khr` not available");
         let mut device_group_present_capabilities =
             device_group_present_capabilities.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, &mut device_group_present_capabilities);
@@ -365,11 +409,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         modes: Option<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR>
     {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .get_device_group_surface_present_modes_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .get_device_group_surface_present_modes_khr;
+            .expect("`get_device_group_surface_present_modes_khr` not available");
         let mut modes = modes.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, surface, &mut modes);
         crate::utils::VulkanResult::new(_val, modes)
@@ -381,11 +424,10 @@ impl KhrSwapchainDeviceLoaderExt for crate::DeviceLoader {
         acquire_info: &crate::extensions::khr_swapchain::AcquireNextImageInfoKHR,
         image_index: Option<u32>,
     ) -> crate::utils::VulkanResult<u32> {
-        let function = self
-            .khr_swapchain
+        let function = device_commands(self)
+            .acquire_next_image2_khr
             .as_ref()
-            .expect("`khr_swapchain` not loaded")
-            .acquire_next_image2_khr;
+            .expect("`acquire_next_image2_khr` not available");
         let mut image_index = image_index.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, acquire_info, &mut image_index);
         crate::utils::VulkanResult::new(_val, image_index)

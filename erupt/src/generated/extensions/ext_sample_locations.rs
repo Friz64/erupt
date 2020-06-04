@@ -15,19 +15,33 @@ pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system
 #[doc = "Provides Instance Commands for [`ExtSampleLocationsInstanceLoaderExt`](trait.ExtSampleLocationsInstanceLoaderExt.html)"]
 pub struct ExtSampleLocationsInstanceCommands {
     pub get_physical_device_multisample_properties_ext:
-        PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT,
+        Option<PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT>,
 }
 impl ExtSampleLocationsInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtSampleLocationsInstanceCommands> {
         unsafe {
-            Some(ExtSampleLocationsInstanceCommands {
-                get_physical_device_multisample_properties_ext: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceMultisamplePropertiesEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtSampleLocationsInstanceCommands {
+                get_physical_device_multisample_properties_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceMultisamplePropertiesEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtSampleLocationsInstanceCommands {
+    loader
+        .ext_sample_locations
+        .as_ref()
+        .expect("`ext_sample_locations` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtSampleLocationsInstanceCommands`](struct.ExtSampleLocationsInstanceCommands.html)"]
 pub trait ExtSampleLocationsInstanceLoaderExt {
@@ -52,11 +66,10 @@ impl ExtSampleLocationsInstanceLoaderExt for crate::InstanceLoader {
             crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
         >,
     ) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
-        let function = self
-            .ext_sample_locations
+        let function = instance_commands(self)
+            .get_physical_device_multisample_properties_ext
             .as_ref()
-            .expect("`ext_sample_locations` not loaded")
-            .get_physical_device_multisample_properties_ext;
+            .expect("`get_physical_device_multisample_properties_ext` not available");
         let mut multisample_properties =
             multisample_properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, samples, &mut multisample_properties);
@@ -65,19 +78,33 @@ impl ExtSampleLocationsInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`ExtSampleLocationsDeviceLoaderExt`](trait.ExtSampleLocationsDeviceLoaderExt.html)"]
 pub struct ExtSampleLocationsDeviceCommands {
-    pub cmd_set_sample_locations_ext: PFN_vkCmdSetSampleLocationsEXT,
+    pub cmd_set_sample_locations_ext: Option<PFN_vkCmdSetSampleLocationsEXT>,
 }
 impl ExtSampleLocationsDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtSampleLocationsDeviceCommands> {
         unsafe {
-            Some(ExtSampleLocationsDeviceCommands {
-                cmd_set_sample_locations_ext: std::mem::transmute(
-                    loader.symbol("vkCmdSetSampleLocationsEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtSampleLocationsDeviceCommands {
+                cmd_set_sample_locations_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetSampleLocationsEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtSampleLocationsDeviceCommands {
+    loader
+        .ext_sample_locations
+        .as_ref()
+        .expect("`ext_sample_locations` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtSampleLocationsDeviceCommands`](struct.ExtSampleLocationsDeviceCommands.html)"]
 pub trait ExtSampleLocationsDeviceLoaderExt {
@@ -96,11 +123,10 @@ impl ExtSampleLocationsDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         sample_locations_info: &crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
     ) -> () {
-        let function = self
-            .ext_sample_locations
+        let function = device_commands(self)
+            .cmd_set_sample_locations_ext
             .as_ref()
-            .expect("`ext_sample_locations` not loaded")
-            .cmd_set_sample_locations_ext;
+            .expect("`cmd_set_sample_locations_ext` not available");
         let _val = function(command_buffer, sample_locations_info);
         ()
     }

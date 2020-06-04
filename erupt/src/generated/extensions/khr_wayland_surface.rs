@@ -21,24 +21,40 @@ pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR =
     ) -> crate::vk1_0::Bool32;
 #[doc = "Provides Instance Commands for [`KhrWaylandSurfaceInstanceLoaderExt`](trait.KhrWaylandSurfaceInstanceLoaderExt.html)"]
 pub struct KhrWaylandSurfaceInstanceCommands {
-    pub create_wayland_surface_khr: PFN_vkCreateWaylandSurfaceKHR,
+    pub create_wayland_surface_khr: Option<PFN_vkCreateWaylandSurfaceKHR>,
     pub get_physical_device_wayland_presentation_support_khr:
-        PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR,
+        Option<PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR>,
 }
 impl KhrWaylandSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrWaylandSurfaceInstanceCommands> {
         unsafe {
-            Some(KhrWaylandSurfaceInstanceCommands {
-                create_wayland_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateWaylandSurfaceKHR")?,
-                ),
-                get_physical_device_wayland_presentation_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceWaylandPresentationSupportKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrWaylandSurfaceInstanceCommands {
+                create_wayland_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateWaylandSurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_wayland_presentation_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceWaylandPresentationSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrWaylandSurfaceInstanceCommands {
+    loader
+        .khr_wayland_surface
+        .as_ref()
+        .expect("`khr_wayland_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrWaylandSurfaceInstanceCommands`](struct.KhrWaylandSurfaceInstanceCommands.html)"]
 pub trait KhrWaylandSurfaceInstanceLoaderExt {
@@ -66,11 +82,10 @@ impl KhrWaylandSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_wayland_surface
+        let function = instance_commands(self)
+            .create_wayland_surface_khr
             .as_ref()
-            .expect("`khr_wayland_surface` not loaded")
-            .create_wayland_surface_khr;
+            .expect("`create_wayland_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -92,11 +107,10 @@ impl KhrWaylandSurfaceInstanceLoaderExt for crate::InstanceLoader {
         queue_family_index: u32,
         display: *mut std::ffi::c_void,
     ) -> crate::vk1_0::Bool32 {
-        let function = self
-            .khr_wayland_surface
+        let function = instance_commands(self)
+            .get_physical_device_wayland_presentation_support_khr
             .as_ref()
-            .expect("`khr_wayland_surface` not loaded")
-            .get_physical_device_wayland_presentation_support_khr;
+            .expect("`get_physical_device_wayland_presentation_support_khr` not available");
         let _val = function(physical_device, queue_family_index, display);
         _val
     }

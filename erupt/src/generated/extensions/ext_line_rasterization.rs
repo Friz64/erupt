@@ -12,19 +12,33 @@ pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtLineRasterizationDeviceLoaderExt`](trait.ExtLineRasterizationDeviceLoaderExt.html)"]
 pub struct ExtLineRasterizationDeviceCommands {
-    pub cmd_set_line_stipple_ext: PFN_vkCmdSetLineStippleEXT,
+    pub cmd_set_line_stipple_ext: Option<PFN_vkCmdSetLineStippleEXT>,
 }
 impl ExtLineRasterizationDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtLineRasterizationDeviceCommands> {
         unsafe {
-            Some(ExtLineRasterizationDeviceCommands {
-                cmd_set_line_stipple_ext: std::mem::transmute(
-                    loader.symbol("vkCmdSetLineStippleEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtLineRasterizationDeviceCommands {
+                cmd_set_line_stipple_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetLineStippleEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtLineRasterizationDeviceCommands {
+    loader
+        .ext_line_rasterization
+        .as_ref()
+        .expect("`ext_line_rasterization` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtLineRasterizationDeviceCommands`](struct.ExtLineRasterizationDeviceCommands.html)"]
 pub trait ExtLineRasterizationDeviceLoaderExt {
@@ -45,11 +59,10 @@ impl ExtLineRasterizationDeviceLoaderExt for crate::DeviceLoader {
         line_stipple_factor: u32,
         line_stipple_pattern: u16,
     ) -> () {
-        let function = self
-            .ext_line_rasterization
+        let function = device_commands(self)
+            .cmd_set_line_stipple_ext
             .as_ref()
-            .expect("`ext_line_rasterization` not loaded")
-            .cmd_set_line_stipple_ext;
+            .expect("`cmd_set_line_stipple_ext` not available");
         let _val = function(command_buffer, line_stipple_factor, line_stipple_pattern);
         ()
     }

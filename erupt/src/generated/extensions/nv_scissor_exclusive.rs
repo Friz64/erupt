@@ -13,19 +13,33 @@ pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`NvScissorExclusiveDeviceLoaderExt`](trait.NvScissorExclusiveDeviceLoaderExt.html)"]
 pub struct NvScissorExclusiveDeviceCommands {
-    pub cmd_set_exclusive_scissor_nv: PFN_vkCmdSetExclusiveScissorNV,
+    pub cmd_set_exclusive_scissor_nv: Option<PFN_vkCmdSetExclusiveScissorNV>,
 }
 impl NvScissorExclusiveDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvScissorExclusiveDeviceCommands> {
         unsafe {
-            Some(NvScissorExclusiveDeviceCommands {
-                cmd_set_exclusive_scissor_nv: std::mem::transmute(
-                    loader.symbol("vkCmdSetExclusiveScissorNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvScissorExclusiveDeviceCommands {
+                cmd_set_exclusive_scissor_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetExclusiveScissorNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvScissorExclusiveDeviceCommands {
+    loader
+        .nv_scissor_exclusive
+        .as_ref()
+        .expect("`nv_scissor_exclusive` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvScissorExclusiveDeviceCommands`](struct.NvScissorExclusiveDeviceCommands.html)"]
 pub trait NvScissorExclusiveDeviceLoaderExt {
@@ -46,11 +60,10 @@ impl NvScissorExclusiveDeviceLoaderExt for crate::DeviceLoader {
         first_exclusive_scissor: u32,
         exclusive_scissors: &[crate::vk1_0::Rect2DBuilder],
     ) -> () {
-        let function = self
-            .nv_scissor_exclusive
+        let function = device_commands(self)
+            .cmd_set_exclusive_scissor_nv
             .as_ref()
-            .expect("`nv_scissor_exclusive` not loaded")
-            .cmd_set_exclusive_scissor_nv;
+            .expect("`cmd_set_exclusive_scissor_nv` not available");
         let exclusive_scissor_count = exclusive_scissors.len() as _;
         let _val = function(
             command_buffer,

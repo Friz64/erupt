@@ -28,27 +28,46 @@ pub type PFN_vkGetImageSparseMemoryRequirements2KHR = unsafe extern "system" fn(
     -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrGetMemoryRequirements2DeviceLoaderExt`](trait.KhrGetMemoryRequirements2DeviceLoaderExt.html)"]
 pub struct KhrGetMemoryRequirements2DeviceCommands {
-    pub get_image_memory_requirements2_khr: PFN_vkGetImageMemoryRequirements2KHR,
-    pub get_buffer_memory_requirements2_khr: PFN_vkGetBufferMemoryRequirements2KHR,
-    pub get_image_sparse_memory_requirements2_khr: PFN_vkGetImageSparseMemoryRequirements2KHR,
+    pub get_image_memory_requirements2_khr: Option<PFN_vkGetImageMemoryRequirements2KHR>,
+    pub get_buffer_memory_requirements2_khr: Option<PFN_vkGetBufferMemoryRequirements2KHR>,
+    pub get_image_sparse_memory_requirements2_khr:
+        Option<PFN_vkGetImageSparseMemoryRequirements2KHR>,
 }
 impl KhrGetMemoryRequirements2DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrGetMemoryRequirements2DeviceCommands> {
         unsafe {
-            Some(KhrGetMemoryRequirements2DeviceCommands {
-                get_image_memory_requirements2_khr: std::mem::transmute(
-                    loader.symbol("vkGetImageMemoryRequirements2KHR")?,
-                ),
-                get_buffer_memory_requirements2_khr: std::mem::transmute(
-                    loader.symbol("vkGetBufferMemoryRequirements2KHR")?,
-                ),
-                get_image_sparse_memory_requirements2_khr: std::mem::transmute(
-                    loader.symbol("vkGetImageSparseMemoryRequirements2KHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrGetMemoryRequirements2DeviceCommands {
+                get_image_memory_requirements2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageMemoryRequirements2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_memory_requirements2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferMemoryRequirements2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_sparse_memory_requirements2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageSparseMemoryRequirements2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrGetMemoryRequirements2DeviceCommands {
+    loader
+        .khr_get_memory_requirements2
+        .as_ref()
+        .expect("`khr_get_memory_requirements2` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrGetMemoryRequirements2DeviceCommands`](struct.KhrGetMemoryRequirements2DeviceCommands.html)"]
 pub trait KhrGetMemoryRequirements2DeviceLoaderExt {
@@ -79,11 +98,10 @@ impl KhrGetMemoryRequirements2DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::ImageMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .khr_get_memory_requirements2
+        let function = device_commands(self)
+            .get_image_memory_requirements2_khr
             .as_ref()
-            .expect("`khr_get_memory_requirements2` not loaded")
-            .get_image_memory_requirements2_khr;
+            .expect("`get_image_memory_requirements2_khr` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -95,11 +113,10 @@ impl KhrGetMemoryRequirements2DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::BufferMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .khr_get_memory_requirements2
+        let function = device_commands(self)
+            .get_buffer_memory_requirements2_khr
             .as_ref()
-            .expect("`khr_get_memory_requirements2` not loaded")
-            .get_buffer_memory_requirements2_khr;
+            .expect("`get_buffer_memory_requirements2_khr` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -111,11 +128,10 @@ impl KhrGetMemoryRequirements2DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
         sparse_memory_requirement_count: Option<u32>,
     ) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
-        let function = self
-            .khr_get_memory_requirements2
+        let function = device_commands(self)
+            .get_image_sparse_memory_requirements2_khr
             .as_ref()
-            .expect("`khr_get_memory_requirements2` not loaded")
-            .get_image_sparse_memory_requirements2_khr;
+            .expect("`get_image_sparse_memory_requirements2_khr` not available");
         let mut sparse_memory_requirement_count =
             sparse_memory_requirement_count.unwrap_or_else(|| {
                 let mut val = Default::default();

@@ -14,19 +14,33 @@ pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrDisplaySwapchainDeviceLoaderExt`](trait.KhrDisplaySwapchainDeviceLoaderExt.html)"]
 pub struct KhrDisplaySwapchainDeviceCommands {
-    pub create_shared_swapchains_khr: PFN_vkCreateSharedSwapchainsKHR,
+    pub create_shared_swapchains_khr: Option<PFN_vkCreateSharedSwapchainsKHR>,
 }
 impl KhrDisplaySwapchainDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDisplaySwapchainDeviceCommands> {
         unsafe {
-            Some(KhrDisplaySwapchainDeviceCommands {
-                create_shared_swapchains_khr: std::mem::transmute(
-                    loader.symbol("vkCreateSharedSwapchainsKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDisplaySwapchainDeviceCommands {
+                create_shared_swapchains_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSharedSwapchainsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrDisplaySwapchainDeviceCommands {
+    loader
+        .khr_display_swapchain
+        .as_ref()
+        .expect("`khr_display_swapchain` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDisplaySwapchainDeviceCommands`](struct.KhrDisplaySwapchainDeviceCommands.html)"]
 pub trait KhrDisplaySwapchainDeviceLoaderExt {
@@ -45,11 +59,10 @@ impl KhrDisplaySwapchainDeviceLoaderExt for crate::DeviceLoader {
         create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
-        let function = self
-            .khr_display_swapchain
+        let function = device_commands(self)
+            .create_shared_swapchains_khr
             .as_ref()
-            .expect("`khr_display_swapchain` not loaded")
-            .create_shared_swapchains_khr;
+            .expect("`create_shared_swapchains_khr` not available");
         let swapchain_count = create_infos.len() as _;
         let mut swapchains = vec![Default::default(); swapchain_count as _];
         let _val = function(

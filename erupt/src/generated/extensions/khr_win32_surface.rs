@@ -20,24 +20,40 @@ pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR =
     ) -> crate::vk1_0::Bool32;
 #[doc = "Provides Instance Commands for [`KhrWin32SurfaceInstanceLoaderExt`](trait.KhrWin32SurfaceInstanceLoaderExt.html)"]
 pub struct KhrWin32SurfaceInstanceCommands {
-    pub create_win32_surface_khr: PFN_vkCreateWin32SurfaceKHR,
+    pub create_win32_surface_khr: Option<PFN_vkCreateWin32SurfaceKHR>,
     pub get_physical_device_win32_presentation_support_khr:
-        PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR,
+        Option<PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR>,
 }
 impl KhrWin32SurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrWin32SurfaceInstanceCommands> {
         unsafe {
-            Some(KhrWin32SurfaceInstanceCommands {
-                create_win32_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateWin32SurfaceKHR")?,
-                ),
-                get_physical_device_win32_presentation_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceWin32PresentationSupportKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrWin32SurfaceInstanceCommands {
+                create_win32_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateWin32SurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_win32_presentation_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceWin32PresentationSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrWin32SurfaceInstanceCommands {
+    loader
+        .khr_win32_surface
+        .as_ref()
+        .expect("`khr_win32_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrWin32SurfaceInstanceCommands`](struct.KhrWin32SurfaceInstanceCommands.html)"]
 pub trait KhrWin32SurfaceInstanceLoaderExt {
@@ -64,11 +80,10 @@ impl KhrWin32SurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_win32_surface
+        let function = instance_commands(self)
+            .create_win32_surface_khr
             .as_ref()
-            .expect("`khr_win32_surface` not loaded")
-            .create_win32_surface_khr;
+            .expect("`create_win32_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -89,11 +104,10 @@ impl KhrWin32SurfaceInstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_index: u32,
     ) -> crate::vk1_0::Bool32 {
-        let function = self
-            .khr_win32_surface
+        let function = instance_commands(self)
+            .get_physical_device_win32_presentation_support_khr
             .as_ref()
-            .expect("`khr_win32_surface` not loaded")
-            .get_physical_device_win32_presentation_support_khr;
+            .expect("`get_physical_device_win32_presentation_support_khr` not available");
         let _val = function(physical_device, queue_family_index);
         _val
     }

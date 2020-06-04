@@ -13,17 +13,33 @@ pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtHdrMetadataDeviceLoaderExt`](trait.ExtHdrMetadataDeviceLoaderExt.html)"]
 pub struct ExtHdrMetadataDeviceCommands {
-    pub set_hdr_metadata_ext: PFN_vkSetHdrMetadataEXT,
+    pub set_hdr_metadata_ext: Option<PFN_vkSetHdrMetadataEXT>,
 }
 impl ExtHdrMetadataDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtHdrMetadataDeviceCommands> {
         unsafe {
-            Some(ExtHdrMetadataDeviceCommands {
-                set_hdr_metadata_ext: std::mem::transmute(loader.symbol("vkSetHdrMetadataEXT")?),
-            })
+            let mut success = false;
+            let table = ExtHdrMetadataDeviceCommands {
+                set_hdr_metadata_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetHdrMetadataEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtHdrMetadataDeviceCommands {
+    loader
+        .ext_hdr_metadata
+        .as_ref()
+        .expect("`ext_hdr_metadata` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtHdrMetadataDeviceCommands`](struct.ExtHdrMetadataDeviceCommands.html)"]
 pub trait ExtHdrMetadataDeviceLoaderExt {
@@ -42,11 +58,10 @@ impl ExtHdrMetadataDeviceLoaderExt for crate::DeviceLoader {
         swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR],
         metadata: &[crate::extensions::ext_hdr_metadata::HdrMetadataEXTBuilder],
     ) -> () {
-        let function = self
-            .ext_hdr_metadata
+        let function = device_commands(self)
+            .set_hdr_metadata_ext
             .as_ref()
-            .expect("`ext_hdr_metadata` not loaded")
-            .set_hdr_metadata_ext;
+            .expect("`set_hdr_metadata_ext` not available");
         let swapchain_count = swapchains.len().min(metadata.len()) as _;
         let _val = function(
             self.handle,

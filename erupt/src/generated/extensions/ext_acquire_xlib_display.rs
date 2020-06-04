@@ -20,23 +20,39 @@ pub type PFN_vkGetRandROutputDisplayEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`ExtAcquireXlibDisplayInstanceLoaderExt`](trait.ExtAcquireXlibDisplayInstanceLoaderExt.html)"]
 pub struct ExtAcquireXlibDisplayInstanceCommands {
-    pub acquire_xlib_display_ext: PFN_vkAcquireXlibDisplayEXT,
-    pub get_rand_r_output_display_ext: PFN_vkGetRandROutputDisplayEXT,
+    pub acquire_xlib_display_ext: Option<PFN_vkAcquireXlibDisplayEXT>,
+    pub get_rand_r_output_display_ext: Option<PFN_vkGetRandROutputDisplayEXT>,
 }
 impl ExtAcquireXlibDisplayInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtAcquireXlibDisplayInstanceCommands> {
         unsafe {
-            Some(ExtAcquireXlibDisplayInstanceCommands {
-                acquire_xlib_display_ext: std::mem::transmute(
-                    loader.symbol("vkAcquireXlibDisplayEXT")?,
-                ),
-                get_rand_r_output_display_ext: std::mem::transmute(
-                    loader.symbol("vkGetRandROutputDisplayEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtAcquireXlibDisplayInstanceCommands {
+                acquire_xlib_display_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquireXlibDisplayEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_rand_r_output_display_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRandROutputDisplayEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtAcquireXlibDisplayInstanceCommands {
+    loader
+        .ext_acquire_xlib_display
+        .as_ref()
+        .expect("`ext_acquire_xlib_display` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtAcquireXlibDisplayInstanceCommands`](struct.ExtAcquireXlibDisplayInstanceCommands.html)"]
 pub trait ExtAcquireXlibDisplayInstanceLoaderExt {
@@ -65,11 +81,10 @@ impl ExtAcquireXlibDisplayInstanceLoaderExt for crate::InstanceLoader {
         dpy: *mut *const std::ffi::c_void,
         display: crate::extensions::khr_display::DisplayKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_acquire_xlib_display
+        let function = instance_commands(self)
+            .acquire_xlib_display_ext
             .as_ref()
-            .expect("`ext_acquire_xlib_display` not loaded")
-            .acquire_xlib_display_ext;
+            .expect("`acquire_xlib_display_ext` not available");
         let _val = function(physical_device, dpy, display);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -82,11 +97,10 @@ impl ExtAcquireXlibDisplayInstanceLoaderExt for crate::InstanceLoader {
         rr_output: std::os::raw::c_ulong,
         display: Option<crate::extensions::khr_display::DisplayKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
-        let function = self
-            .ext_acquire_xlib_display
+        let function = instance_commands(self)
+            .get_rand_r_output_display_ext
             .as_ref()
-            .expect("`ext_acquire_xlib_display` not loaded")
-            .get_rand_r_output_display_ext;
+            .expect("`get_rand_r_output_display_ext` not available");
         let mut display = display.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, dpy, rr_output, &mut display);
         crate::utils::VulkanResult::new(_val, display)

@@ -13,19 +13,33 @@ pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`NvClipSpaceWScalingDeviceLoaderExt`](trait.NvClipSpaceWScalingDeviceLoaderExt.html)"]
 pub struct NvClipSpaceWScalingDeviceCommands {
-    pub cmd_set_viewport_w_scaling_nv: PFN_vkCmdSetViewportWScalingNV,
+    pub cmd_set_viewport_w_scaling_nv: Option<PFN_vkCmdSetViewportWScalingNV>,
 }
 impl NvClipSpaceWScalingDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvClipSpaceWScalingDeviceCommands> {
         unsafe {
-            Some(NvClipSpaceWScalingDeviceCommands {
-                cmd_set_viewport_w_scaling_nv: std::mem::transmute(
-                    loader.symbol("vkCmdSetViewportWScalingNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvClipSpaceWScalingDeviceCommands {
+                cmd_set_viewport_w_scaling_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetViewportWScalingNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvClipSpaceWScalingDeviceCommands {
+    loader
+        .nv_clip_space_w_scaling
+        .as_ref()
+        .expect("`nv_clip_space_w_scaling` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvClipSpaceWScalingDeviceCommands`](struct.NvClipSpaceWScalingDeviceCommands.html)"]
 pub trait NvClipSpaceWScalingDeviceLoaderExt {
@@ -46,11 +60,10 @@ impl NvClipSpaceWScalingDeviceLoaderExt for crate::DeviceLoader {
         first_viewport: u32,
         viewport_w_scalings : & [ crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder ],
     ) -> () {
-        let function = self
-            .nv_clip_space_w_scaling
+        let function = device_commands(self)
+            .cmd_set_viewport_w_scaling_nv
             .as_ref()
-            .expect("`nv_clip_space_w_scaling` not loaded")
-            .cmd_set_viewport_w_scaling_nv;
+            .expect("`cmd_set_viewport_w_scaling_nv` not available");
         let viewport_count = viewport_w_scalings.len() as _;
         let _val = function(
             command_buffer,

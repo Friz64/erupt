@@ -37,31 +37,51 @@ pub type PFN_vkGetSwapchainCounterEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`ExtDisplayControlDeviceLoaderExt`](trait.ExtDisplayControlDeviceLoaderExt.html)"]
 pub struct ExtDisplayControlDeviceCommands {
-    pub display_power_control_ext: PFN_vkDisplayPowerControlEXT,
-    pub register_device_event_ext: PFN_vkRegisterDeviceEventEXT,
-    pub register_display_event_ext: PFN_vkRegisterDisplayEventEXT,
-    pub get_swapchain_counter_ext: PFN_vkGetSwapchainCounterEXT,
+    pub display_power_control_ext: Option<PFN_vkDisplayPowerControlEXT>,
+    pub register_device_event_ext: Option<PFN_vkRegisterDeviceEventEXT>,
+    pub register_display_event_ext: Option<PFN_vkRegisterDisplayEventEXT>,
+    pub get_swapchain_counter_ext: Option<PFN_vkGetSwapchainCounterEXT>,
 }
 impl ExtDisplayControlDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtDisplayControlDeviceCommands> {
         unsafe {
-            Some(ExtDisplayControlDeviceCommands {
-                display_power_control_ext: std::mem::transmute(
-                    loader.symbol("vkDisplayPowerControlEXT")?,
-                ),
-                register_device_event_ext: std::mem::transmute(
-                    loader.symbol("vkRegisterDeviceEventEXT")?,
-                ),
-                register_display_event_ext: std::mem::transmute(
-                    loader.symbol("vkRegisterDisplayEventEXT")?,
-                ),
-                get_swapchain_counter_ext: std::mem::transmute(
-                    loader.symbol("vkGetSwapchainCounterEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDisplayControlDeviceCommands {
+                display_power_control_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDisplayPowerControlEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                register_device_event_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkRegisterDeviceEventEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                register_display_event_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkRegisterDisplayEventEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_swapchain_counter_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSwapchainCounterEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtDisplayControlDeviceCommands {
+    loader
+        .ext_display_control
+        .as_ref()
+        .expect("`ext_display_control` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDisplayControlDeviceCommands`](struct.ExtDisplayControlDeviceCommands.html)"]
 pub trait ExtDisplayControlDeviceLoaderExt {
@@ -102,11 +122,10 @@ impl ExtDisplayControlDeviceLoaderExt for crate::DeviceLoader {
         display: crate::extensions::khr_display::DisplayKHR,
         display_power_info: &crate::extensions::ext_display_control::DisplayPowerInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_display_control
+        let function = device_commands(self)
+            .display_power_control_ext
             .as_ref()
-            .expect("`ext_display_control` not loaded")
-            .display_power_control_ext;
+            .expect("`display_power_control_ext` not available");
         let _val = function(self.handle, display, display_power_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -118,11 +137,10 @@ impl ExtDisplayControlDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let function = self
-            .ext_display_control
+        let function = device_commands(self)
+            .register_device_event_ext
             .as_ref()
-            .expect("`ext_display_control` not loaded")
-            .register_device_event_ext;
+            .expect("`register_device_event_ext` not available");
         let mut fence = fence.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -145,11 +163,10 @@ impl ExtDisplayControlDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let function = self
-            .ext_display_control
+        let function = device_commands(self)
+            .register_display_event_ext
             .as_ref()
-            .expect("`ext_display_control` not loaded")
-            .register_display_event_ext;
+            .expect("`register_display_event_ext` not available");
         let mut fence = fence.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -172,11 +189,10 @@ impl ExtDisplayControlDeviceLoaderExt for crate::DeviceLoader {
         counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT,
         counter_value: Option<u64>,
     ) -> crate::utils::VulkanResult<u64> {
-        let function = self
-            .ext_display_control
+        let function = device_commands(self)
+            .get_swapchain_counter_ext
             .as_ref()
-            .expect("`ext_display_control` not loaded")
-            .get_swapchain_counter_ext;
+            .expect("`get_swapchain_counter_ext` not available");
         let mut counter_value = counter_value.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, swapchain, counter, &mut counter_value);
         crate::utils::VulkanResult::new(_val, counter_value)

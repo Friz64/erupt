@@ -13,19 +13,33 @@ pub type PFN_vkGetMemoryWin32HandleNV = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`NvExternalMemoryWin32DeviceLoaderExt`](trait.NvExternalMemoryWin32DeviceLoaderExt.html)"]
 pub struct NvExternalMemoryWin32DeviceCommands {
-    pub get_memory_win32_handle_nv: PFN_vkGetMemoryWin32HandleNV,
+    pub get_memory_win32_handle_nv: Option<PFN_vkGetMemoryWin32HandleNV>,
 }
 impl NvExternalMemoryWin32DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvExternalMemoryWin32DeviceCommands> {
         unsafe {
-            Some(NvExternalMemoryWin32DeviceCommands {
-                get_memory_win32_handle_nv: std::mem::transmute(
-                    loader.symbol("vkGetMemoryWin32HandleNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvExternalMemoryWin32DeviceCommands {
+                get_memory_win32_handle_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryWin32HandleNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvExternalMemoryWin32DeviceCommands {
+    loader
+        .nv_external_memory_win32
+        .as_ref()
+        .expect("`nv_external_memory_win32` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvExternalMemoryWin32DeviceCommands`](struct.NvExternalMemoryWin32DeviceCommands.html)"]
 pub trait NvExternalMemoryWin32DeviceLoaderExt {
@@ -46,11 +60,10 @@ impl NvExternalMemoryWin32DeviceLoaderExt for crate::DeviceLoader {
         handle_type : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .nv_external_memory_win32
+        let function = device_commands(self)
+            .get_memory_win32_handle_nv
             .as_ref()
-            .expect("`nv_external_memory_win32` not loaded")
-            .get_memory_win32_handle_nv;
+            .expect("`get_memory_win32_handle_nv` not available");
         let _val = function(self.handle, memory, handle_type, handle);
         crate::utils::VulkanResult::new(_val, ())
     }

@@ -17,19 +17,33 @@ pub type PFN_vkGetCalibratedTimestampsEXT = unsafe extern "system" fn ( device :
 #[doc = "Provides Instance Commands for [`ExtCalibratedTimestampsInstanceLoaderExt`](trait.ExtCalibratedTimestampsInstanceLoaderExt.html)"]
 pub struct ExtCalibratedTimestampsInstanceCommands {
     pub get_physical_device_calibrateable_time_domains_ext:
-        PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsEXT,
+        Option<PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsEXT>,
 }
 impl ExtCalibratedTimestampsInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtCalibratedTimestampsInstanceCommands> {
         unsafe {
-            Some(ExtCalibratedTimestampsInstanceCommands {
-                get_physical_device_calibrateable_time_domains_ext: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceCalibrateableTimeDomainsEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtCalibratedTimestampsInstanceCommands {
+                get_physical_device_calibrateable_time_domains_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceCalibrateableTimeDomainsEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtCalibratedTimestampsInstanceCommands {
+    loader
+        .ext_calibrated_timestamps
+        .as_ref()
+        .expect("`ext_calibrated_timestamps` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtCalibratedTimestampsInstanceCommands`](struct.ExtCalibratedTimestampsInstanceCommands.html)"]
 pub trait ExtCalibratedTimestampsInstanceLoaderExt {
@@ -49,11 +63,10 @@ impl ExtCalibratedTimestampsInstanceLoaderExt for crate::InstanceLoader {
         time_domain_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_calibrated_timestamps::TimeDomainEXT>>
     {
-        let function = self
-            .ext_calibrated_timestamps
+        let function = instance_commands(self)
+            .get_physical_device_calibrateable_time_domains_ext
             .as_ref()
-            .expect("`ext_calibrated_timestamps` not loaded")
-            .get_physical_device_calibrateable_time_domains_ext;
+            .expect("`get_physical_device_calibrateable_time_domains_ext` not available");
         let mut time_domain_count = time_domain_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -70,19 +83,33 @@ impl ExtCalibratedTimestampsInstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`ExtCalibratedTimestampsDeviceLoaderExt`](trait.ExtCalibratedTimestampsDeviceLoaderExt.html)"]
 pub struct ExtCalibratedTimestampsDeviceCommands {
-    pub get_calibrated_timestamps_ext: PFN_vkGetCalibratedTimestampsEXT,
+    pub get_calibrated_timestamps_ext: Option<PFN_vkGetCalibratedTimestampsEXT>,
 }
 impl ExtCalibratedTimestampsDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtCalibratedTimestampsDeviceCommands> {
         unsafe {
-            Some(ExtCalibratedTimestampsDeviceCommands {
-                get_calibrated_timestamps_ext: std::mem::transmute(
-                    loader.symbol("vkGetCalibratedTimestampsEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtCalibratedTimestampsDeviceCommands {
+                get_calibrated_timestamps_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetCalibratedTimestampsEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtCalibratedTimestampsDeviceCommands {
+    loader
+        .ext_calibrated_timestamps
+        .as_ref()
+        .expect("`ext_calibrated_timestamps` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtCalibratedTimestampsDeviceCommands`](struct.ExtCalibratedTimestampsDeviceCommands.html)"]
 pub trait ExtCalibratedTimestampsDeviceLoaderExt {
@@ -101,11 +128,10 @@ impl ExtCalibratedTimestampsDeviceLoaderExt for crate::DeviceLoader {
         timestamp_infos : & [ crate :: extensions :: ext_calibrated_timestamps :: CalibratedTimestampInfoEXTBuilder ],
         max_deviation: Option<u64>,
     ) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
-        let function = self
-            .ext_calibrated_timestamps
+        let function = device_commands(self)
+            .get_calibrated_timestamps_ext
             .as_ref()
-            .expect("`ext_calibrated_timestamps` not loaded")
-            .get_calibrated_timestamps_ext;
+            .expect("`get_calibrated_timestamps_ext` not available");
         let timestamp_count = timestamp_infos.len() as _;
         let mut timestamps = vec![Default::default(); timestamp_count as _];
         let mut max_deviation = max_deviation.unwrap_or_else(|| Default::default());

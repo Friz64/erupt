@@ -11,19 +11,33 @@ pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrSharedPresentableImageDeviceLoaderExt`](trait.KhrSharedPresentableImageDeviceLoaderExt.html)"]
 pub struct KhrSharedPresentableImageDeviceCommands {
-    pub get_swapchain_status_khr: PFN_vkGetSwapchainStatusKHR,
+    pub get_swapchain_status_khr: Option<PFN_vkGetSwapchainStatusKHR>,
 }
 impl KhrSharedPresentableImageDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrSharedPresentableImageDeviceCommands> {
         unsafe {
-            Some(KhrSharedPresentableImageDeviceCommands {
-                get_swapchain_status_khr: std::mem::transmute(
-                    loader.symbol("vkGetSwapchainStatusKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrSharedPresentableImageDeviceCommands {
+                get_swapchain_status_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSwapchainStatusKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrSharedPresentableImageDeviceCommands {
+    loader
+        .khr_shared_presentable_image
+        .as_ref()
+        .expect("`khr_shared_presentable_image` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrSharedPresentableImageDeviceCommands`](struct.KhrSharedPresentableImageDeviceCommands.html)"]
 pub trait KhrSharedPresentableImageDeviceLoaderExt {
@@ -40,11 +54,10 @@ impl KhrSharedPresentableImageDeviceLoaderExt for crate::DeviceLoader {
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_shared_presentable_image
+        let function = device_commands(self)
+            .get_swapchain_status_khr
             .as_ref()
-            .expect("`khr_shared_presentable_image` not loaded")
-            .get_swapchain_status_khr;
+            .expect("`get_swapchain_status_khr` not available");
         let _val = function(self.handle, swapchain);
         crate::utils::VulkanResult::new(_val, ())
     }

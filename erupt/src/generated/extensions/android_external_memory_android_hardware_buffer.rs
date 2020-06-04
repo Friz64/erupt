@@ -13,8 +13,9 @@ pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn
 #[doc = "Provides Device Commands for [`AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt`](trait.AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt.html)"]
 pub struct AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
     pub get_android_hardware_buffer_properties_android:
-        PFN_vkGetAndroidHardwareBufferPropertiesANDROID,
-    pub get_memory_android_hardware_buffer_android: PFN_vkGetMemoryAndroidHardwareBufferANDROID,
+        Option<PFN_vkGetAndroidHardwareBufferPropertiesANDROID>,
+    pub get_memory_android_hardware_buffer_android:
+        Option<PFN_vkGetMemoryAndroidHardwareBufferANDROID>,
 }
 impl AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
     #[inline]
@@ -22,16 +23,34 @@ impl AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
         loader: &crate::DeviceLoader,
     ) -> Option<AndroidExternalMemoryAndroidHardwareBufferDeviceCommands> {
         unsafe {
-            Some(AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
-                get_android_hardware_buffer_properties_android: std::mem::transmute(
-                    loader.symbol("vkGetAndroidHardwareBufferPropertiesANDROID")?,
-                ),
-                get_memory_android_hardware_buffer_android: std::mem::transmute(
-                    loader.symbol("vkGetMemoryAndroidHardwareBufferANDROID")?,
-                ),
-            })
+            let mut success = false;
+            let table = AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
+                get_android_hardware_buffer_properties_android: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetAndroidHardwareBufferPropertiesANDROID");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_memory_android_hardware_buffer_android: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryAndroidHardwareBufferANDROID");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(
+    loader: &crate::DeviceLoader,
+) -> &AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
+    loader
+        .android_external_memory_android_hardware_buffer
+        .as_ref()
+        .expect("`android_external_memory_android_hardware_buffer` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`AndroidExternalMemoryAndroidHardwareBufferDeviceCommands`](struct.AndroidExternalMemoryAndroidHardwareBufferDeviceCommands.html)"]
 pub trait AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt {
@@ -47,11 +66,10 @@ pub trait AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt {
 impl AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt for crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Device Command"]unsafe fn get_android_hardware_buffer_properties_android ( & self , buffer : * const std :: ffi :: c_void , properties : Option < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID > , ) -> crate :: utils :: VulkanResult < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >{
-        let function = self
-            .android_external_memory_android_hardware_buffer
+        let function = device_commands(self)
+            .get_android_hardware_buffer_properties_android
             .as_ref()
-            .expect("`android_external_memory_android_hardware_buffer` not loaded")
-            .get_android_hardware_buffer_properties_android;
+            .expect("`get_android_hardware_buffer_properties_android` not available");
         let mut properties = properties.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, buffer, &mut properties);
         crate::utils::VulkanResult::new(_val, properties)
@@ -63,11 +81,10 @@ impl AndroidExternalMemoryAndroidHardwareBufferDeviceLoaderExt for crate::Device
         info : & crate :: extensions :: android_external_memory_android_hardware_buffer :: MemoryGetAndroidHardwareBufferInfoANDROID,
         buffer: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .android_external_memory_android_hardware_buffer
+        let function = device_commands(self)
+            .get_memory_android_hardware_buffer_android
             .as_ref()
-            .expect("`android_external_memory_android_hardware_buffer` not loaded")
-            .get_memory_android_hardware_buffer_android;
+            .expect("`get_memory_android_hardware_buffer_android` not available");
         let _val = function(self.handle, info, buffer);
         crate::utils::VulkanResult::new(_val, ())
     }

@@ -8,19 +8,33 @@ pub const EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME: *const std::os::raw::c_char =
 pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , p_host_pointer : * const std :: ffi :: c_void , p_memory_host_pointer_properties : * mut crate :: extensions :: ext_external_memory_host :: MemoryHostPointerPropertiesEXT , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`ExtExternalMemoryHostDeviceLoaderExt`](trait.ExtExternalMemoryHostDeviceLoaderExt.html)"]
 pub struct ExtExternalMemoryHostDeviceCommands {
-    pub get_memory_host_pointer_properties_ext: PFN_vkGetMemoryHostPointerPropertiesEXT,
+    pub get_memory_host_pointer_properties_ext: Option<PFN_vkGetMemoryHostPointerPropertiesEXT>,
 }
 impl ExtExternalMemoryHostDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtExternalMemoryHostDeviceCommands> {
         unsafe {
-            Some(ExtExternalMemoryHostDeviceCommands {
-                get_memory_host_pointer_properties_ext: std::mem::transmute(
-                    loader.symbol("vkGetMemoryHostPointerPropertiesEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtExternalMemoryHostDeviceCommands {
+                get_memory_host_pointer_properties_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryHostPointerPropertiesEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtExternalMemoryHostDeviceCommands {
+    loader
+        .ext_external_memory_host
+        .as_ref()
+        .expect("`ext_external_memory_host` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtExternalMemoryHostDeviceCommands`](struct.ExtExternalMemoryHostDeviceCommands.html)"]
 pub trait ExtExternalMemoryHostDeviceLoaderExt {
@@ -49,11 +63,10 @@ impl ExtExternalMemoryHostDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
     > {
-        let function = self
-            .ext_external_memory_host
+        let function = device_commands(self)
+            .get_memory_host_pointer_properties_ext
             .as_ref()
-            .expect("`ext_external_memory_host` not loaded")
-            .get_memory_host_pointer_properties_ext;
+            .expect("`get_memory_host_pointer_properties_ext` not available");
         let mut memory_host_pointer_properties =
             memory_host_pointer_properties.unwrap_or_else(|| Default::default());
         let _val = function(

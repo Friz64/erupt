@@ -20,21 +20,39 @@ pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrExternalMemoryFdDeviceLoaderExt`](trait.KhrExternalMemoryFdDeviceLoaderExt.html)"]
 pub struct KhrExternalMemoryFdDeviceCommands {
-    pub get_memory_fd_khr: PFN_vkGetMemoryFdKHR,
-    pub get_memory_fd_properties_khr: PFN_vkGetMemoryFdPropertiesKHR,
+    pub get_memory_fd_khr: Option<PFN_vkGetMemoryFdKHR>,
+    pub get_memory_fd_properties_khr: Option<PFN_vkGetMemoryFdPropertiesKHR>,
 }
 impl KhrExternalMemoryFdDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalMemoryFdDeviceCommands> {
         unsafe {
-            Some(KhrExternalMemoryFdDeviceCommands {
-                get_memory_fd_khr: std::mem::transmute(loader.symbol("vkGetMemoryFdKHR")?),
-                get_memory_fd_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetMemoryFdPropertiesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalMemoryFdDeviceCommands {
+                get_memory_fd_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryFdKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_memory_fd_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryFdPropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalMemoryFdDeviceCommands {
+    loader
+        .khr_external_memory_fd
+        .as_ref()
+        .expect("`khr_external_memory_fd` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalMemoryFdDeviceCommands`](struct.KhrExternalMemoryFdDeviceCommands.html)"]
 pub trait KhrExternalMemoryFdDeviceLoaderExt {
@@ -62,11 +80,10 @@ impl KhrExternalMemoryFdDeviceLoaderExt for crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let function = self
-            .khr_external_memory_fd
+        let function = device_commands(self)
+            .get_memory_fd_khr
             .as_ref()
-            .expect("`khr_external_memory_fd` not loaded")
-            .get_memory_fd_khr;
+            .expect("`get_memory_fd_khr` not available");
         let mut fd = fd.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, get_fd_info, &mut fd);
         crate::utils::VulkanResult::new(_val, fd)
@@ -82,11 +99,10 @@ impl KhrExternalMemoryFdDeviceLoaderExt for crate::DeviceLoader {
         >,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>
     {
-        let function = self
-            .khr_external_memory_fd
+        let function = device_commands(self)
+            .get_memory_fd_properties_khr
             .as_ref()
-            .expect("`khr_external_memory_fd` not loaded")
-            .get_memory_fd_properties_khr;
+            .expect("`get_memory_fd_properties_khr` not available");
         let mut memory_fd_properties = memory_fd_properties.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, handle_type, fd, &mut memory_fd_properties);
         crate::utils::VulkanResult::new(_val, memory_fd_properties)

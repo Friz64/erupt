@@ -38,31 +38,52 @@ pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrDescriptorUpdateTemplateDeviceLoaderExt`](trait.KhrDescriptorUpdateTemplateDeviceLoaderExt.html)"]
 pub struct KhrDescriptorUpdateTemplateDeviceCommands {
-    pub create_descriptor_update_template_khr: PFN_vkCreateDescriptorUpdateTemplateKHR,
-    pub destroy_descriptor_update_template_khr: PFN_vkDestroyDescriptorUpdateTemplateKHR,
-    pub update_descriptor_set_with_template_khr: PFN_vkUpdateDescriptorSetWithTemplateKHR,
-    pub cmd_push_descriptor_set_with_template_khr: PFN_vkCmdPushDescriptorSetWithTemplateKHR,
+    pub create_descriptor_update_template_khr: Option<PFN_vkCreateDescriptorUpdateTemplateKHR>,
+    pub destroy_descriptor_update_template_khr: Option<PFN_vkDestroyDescriptorUpdateTemplateKHR>,
+    pub update_descriptor_set_with_template_khr: Option<PFN_vkUpdateDescriptorSetWithTemplateKHR>,
+    pub cmd_push_descriptor_set_with_template_khr:
+        Option<PFN_vkCmdPushDescriptorSetWithTemplateKHR>,
 }
 impl KhrDescriptorUpdateTemplateDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDescriptorUpdateTemplateDeviceCommands> {
         unsafe {
-            Some(KhrDescriptorUpdateTemplateDeviceCommands {
-                create_descriptor_update_template_khr: std::mem::transmute(
-                    loader.symbol("vkCreateDescriptorUpdateTemplateKHR")?,
-                ),
-                destroy_descriptor_update_template_khr: std::mem::transmute(
-                    loader.symbol("vkDestroyDescriptorUpdateTemplateKHR")?,
-                ),
-                update_descriptor_set_with_template_khr: std::mem::transmute(
-                    loader.symbol("vkUpdateDescriptorSetWithTemplateKHR")?,
-                ),
-                cmd_push_descriptor_set_with_template_khr: std::mem::transmute(
-                    loader.symbol("vkCmdPushDescriptorSetWithTemplateKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDescriptorUpdateTemplateDeviceCommands {
+                create_descriptor_update_template_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDescriptorUpdateTemplateKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_descriptor_update_template_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDescriptorUpdateTemplateKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                update_descriptor_set_with_template_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkUpdateDescriptorSetWithTemplateKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_push_descriptor_set_with_template_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPushDescriptorSetWithTemplateKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrDescriptorUpdateTemplateDeviceCommands {
+    loader
+        .khr_descriptor_update_template
+        .as_ref()
+        .expect("`khr_descriptor_update_template` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDescriptorUpdateTemplateDeviceCommands`](struct.KhrDescriptorUpdateTemplateDeviceCommands.html)"]
 pub trait KhrDescriptorUpdateTemplateDeviceLoaderExt {
@@ -105,11 +126,10 @@ impl KhrDescriptorUpdateTemplateDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let function = self
-            .khr_descriptor_update_template
+        let function = device_commands(self)
+            .create_descriptor_update_template_khr
             .as_ref()
-            .expect("`khr_descriptor_update_template` not loaded")
-            .create_descriptor_update_template_khr;
+            .expect("`create_descriptor_update_template_khr` not available");
         let mut descriptor_update_template =
             descriptor_update_template.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -131,11 +151,10 @@ impl KhrDescriptorUpdateTemplateDeviceLoaderExt for crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_descriptor_update_template
+        let function = device_commands(self)
+            .destroy_descriptor_update_template_khr
             .as_ref()
-            .expect("`khr_descriptor_update_template` not loaded")
-            .destroy_descriptor_update_template_khr;
+            .expect("`destroy_descriptor_update_template_khr` not available");
         let _val = function(
             self.handle,
             descriptor_update_template,
@@ -155,11 +174,10 @@ impl KhrDescriptorUpdateTemplateDeviceLoaderExt for crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         data: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .khr_descriptor_update_template
+        let function = device_commands(self)
+            .update_descriptor_set_with_template_khr
             .as_ref()
-            .expect("`khr_descriptor_update_template` not loaded")
-            .update_descriptor_set_with_template_khr;
+            .expect("`update_descriptor_set_with_template_khr` not available");
         let _val = function(
             self.handle,
             descriptor_set,
@@ -178,11 +196,10 @@ impl KhrDescriptorUpdateTemplateDeviceLoaderExt for crate::DeviceLoader {
         set: u32,
         data: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .khr_descriptor_update_template
+        let function = device_commands(self)
+            .cmd_push_descriptor_set_with_template_khr
             .as_ref()
-            .expect("`khr_descriptor_update_template` not loaded")
-            .cmd_push_descriptor_set_with_template_khr;
+            .expect("`cmd_push_descriptor_set_with_template_khr` not available");
         let _val = function(
             command_buffer,
             descriptor_update_template,

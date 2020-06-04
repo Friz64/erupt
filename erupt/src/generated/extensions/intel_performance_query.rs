@@ -51,51 +51,82 @@ pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`IntelPerformanceQueryDeviceLoaderExt`](trait.IntelPerformanceQueryDeviceLoaderExt.html)"]
 pub struct IntelPerformanceQueryDeviceCommands {
-    pub initialize_performance_api_intel: PFN_vkInitializePerformanceApiINTEL,
-    pub uninitialize_performance_api_intel: PFN_vkUninitializePerformanceApiINTEL,
-    pub cmd_set_performance_marker_intel: PFN_vkCmdSetPerformanceMarkerINTEL,
-    pub cmd_set_performance_stream_marker_intel: PFN_vkCmdSetPerformanceStreamMarkerINTEL,
-    pub cmd_set_performance_override_intel: PFN_vkCmdSetPerformanceOverrideINTEL,
-    pub acquire_performance_configuration_intel: PFN_vkAcquirePerformanceConfigurationINTEL,
-    pub release_performance_configuration_intel: PFN_vkReleasePerformanceConfigurationINTEL,
-    pub queue_set_performance_configuration_intel: PFN_vkQueueSetPerformanceConfigurationINTEL,
-    pub get_performance_parameter_intel: PFN_vkGetPerformanceParameterINTEL,
+    pub initialize_performance_api_intel: Option<PFN_vkInitializePerformanceApiINTEL>,
+    pub uninitialize_performance_api_intel: Option<PFN_vkUninitializePerformanceApiINTEL>,
+    pub cmd_set_performance_marker_intel: Option<PFN_vkCmdSetPerformanceMarkerINTEL>,
+    pub cmd_set_performance_stream_marker_intel: Option<PFN_vkCmdSetPerformanceStreamMarkerINTEL>,
+    pub cmd_set_performance_override_intel: Option<PFN_vkCmdSetPerformanceOverrideINTEL>,
+    pub acquire_performance_configuration_intel: Option<PFN_vkAcquirePerformanceConfigurationINTEL>,
+    pub release_performance_configuration_intel: Option<PFN_vkReleasePerformanceConfigurationINTEL>,
+    pub queue_set_performance_configuration_intel:
+        Option<PFN_vkQueueSetPerformanceConfigurationINTEL>,
+    pub get_performance_parameter_intel: Option<PFN_vkGetPerformanceParameterINTEL>,
 }
 impl IntelPerformanceQueryDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<IntelPerformanceQueryDeviceCommands> {
         unsafe {
-            Some(IntelPerformanceQueryDeviceCommands {
-                initialize_performance_api_intel: std::mem::transmute(
-                    loader.symbol("vkInitializePerformanceApiINTEL")?,
-                ),
-                uninitialize_performance_api_intel: std::mem::transmute(
-                    loader.symbol("vkUninitializePerformanceApiINTEL")?,
-                ),
-                cmd_set_performance_marker_intel: std::mem::transmute(
-                    loader.symbol("vkCmdSetPerformanceMarkerINTEL")?,
-                ),
-                cmd_set_performance_stream_marker_intel: std::mem::transmute(
-                    loader.symbol("vkCmdSetPerformanceStreamMarkerINTEL")?,
-                ),
-                cmd_set_performance_override_intel: std::mem::transmute(
-                    loader.symbol("vkCmdSetPerformanceOverrideINTEL")?,
-                ),
-                acquire_performance_configuration_intel: std::mem::transmute(
-                    loader.symbol("vkAcquirePerformanceConfigurationINTEL")?,
-                ),
-                release_performance_configuration_intel: std::mem::transmute(
-                    loader.symbol("vkReleasePerformanceConfigurationINTEL")?,
-                ),
-                queue_set_performance_configuration_intel: std::mem::transmute(
-                    loader.symbol("vkQueueSetPerformanceConfigurationINTEL")?,
-                ),
-                get_performance_parameter_intel: std::mem::transmute(
-                    loader.symbol("vkGetPerformanceParameterINTEL")?,
-                ),
-            })
+            let mut success = false;
+            let table = IntelPerformanceQueryDeviceCommands {
+                initialize_performance_api_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkInitializePerformanceApiINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                uninitialize_performance_api_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkUninitializePerformanceApiINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_performance_marker_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetPerformanceMarkerINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_performance_stream_marker_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetPerformanceStreamMarkerINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_performance_override_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetPerformanceOverrideINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                acquire_performance_configuration_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkAcquirePerformanceConfigurationINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                release_performance_configuration_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkReleasePerformanceConfigurationINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_set_performance_configuration_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueSetPerformanceConfigurationINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_performance_parameter_intel: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPerformanceParameterINTEL");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &IntelPerformanceQueryDeviceCommands {
+    loader
+        .intel_performance_query
+        .as_ref()
+        .expect("`intel_performance_query` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`IntelPerformanceQueryDeviceCommands`](struct.IntelPerformanceQueryDeviceCommands.html)"]
 pub trait IntelPerformanceQueryDeviceLoaderExt {
@@ -159,22 +190,20 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         &self,
         initialize_info : & crate :: extensions :: intel_performance_query :: InitializePerformanceApiInfoINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .initialize_performance_api_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .initialize_performance_api_intel;
+            .expect("`initialize_performance_api_intel` not available");
         let _val = function(self.handle, initialize_info);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUninitializePerformanceApiINTEL.html) · Device Command"]
     unsafe fn uninitialize_performance_api_intel(&self) -> () {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .uninitialize_performance_api_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .uninitialize_performance_api_intel;
+            .expect("`uninitialize_performance_api_intel` not available");
         let _val = function(self.handle);
         ()
     }
@@ -185,11 +214,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         marker_info: &crate::extensions::intel_performance_query::PerformanceMarkerInfoINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .cmd_set_performance_marker_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .cmd_set_performance_marker_intel;
+            .expect("`cmd_set_performance_marker_intel` not available");
         let _val = function(command_buffer, marker_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -200,11 +228,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         marker_info: &crate::extensions::intel_performance_query::PerformanceStreamMarkerInfoINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .cmd_set_performance_stream_marker_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .cmd_set_performance_stream_marker_intel;
+            .expect("`cmd_set_performance_stream_marker_intel` not available");
         let _val = function(command_buffer, marker_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -215,11 +242,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         override_info: &crate::extensions::intel_performance_query::PerformanceOverrideInfoINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .cmd_set_performance_override_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .cmd_set_performance_override_intel;
+            .expect("`cmd_set_performance_override_intel` not available");
         let _val = function(command_buffer, override_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -234,11 +260,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
     > {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .acquire_performance_configuration_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .acquire_performance_configuration_intel;
+            .expect("`acquire_performance_configuration_intel` not available");
         let mut configuration = configuration.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, acquire_info, &mut configuration);
         crate::utils::VulkanResult::new(_val, configuration)
@@ -249,11 +274,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         &self,
         configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .release_performance_configuration_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .release_performance_configuration_intel;
+            .expect("`release_performance_configuration_intel` not available");
         let _val = function(self.handle, configuration);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -264,11 +288,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         queue: crate::vk1_0::Queue,
         configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .queue_set_performance_configuration_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .queue_set_performance_configuration_intel;
+            .expect("`queue_set_performance_configuration_intel` not available");
         let _val = function(queue, configuration);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -280,11 +303,10 @@ impl IntelPerformanceQueryDeviceLoaderExt for crate::DeviceLoader {
         value: Option<crate::extensions::intel_performance_query::PerformanceValueINTEL>,
     ) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceValueINTEL>
     {
-        let function = self
-            .intel_performance_query
+        let function = device_commands(self)
+            .get_performance_parameter_intel
             .as_ref()
-            .expect("`intel_performance_query` not loaded")
-            .get_performance_parameter_intel;
+            .expect("`get_performance_parameter_intel` not available");
         let mut value = value.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, parameter, &mut value);
         crate::utils::VulkanResult::new(_val, value)

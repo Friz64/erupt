@@ -13,19 +13,33 @@ pub type PFN_vkCreateIOSSurfaceMVK = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`MvkIosSurfaceInstanceLoaderExt`](trait.MvkIosSurfaceInstanceLoaderExt.html)"]
 pub struct MvkIosSurfaceInstanceCommands {
-    pub create_ios_surface_mvk: PFN_vkCreateIOSSurfaceMVK,
+    pub create_ios_surface_mvk: Option<PFN_vkCreateIOSSurfaceMVK>,
 }
 impl MvkIosSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<MvkIosSurfaceInstanceCommands> {
         unsafe {
-            Some(MvkIosSurfaceInstanceCommands {
-                create_ios_surface_mvk: std::mem::transmute(
-                    loader.symbol("vkCreateIOSSurfaceMVK")?,
-                ),
-            })
+            let mut success = false;
+            let table = MvkIosSurfaceInstanceCommands {
+                create_ios_surface_mvk: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateIOSSurfaceMVK");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &MvkIosSurfaceInstanceCommands {
+    loader
+        .mvk_ios_surface
+        .as_ref()
+        .expect("`mvk_ios_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`MvkIosSurfaceInstanceCommands`](struct.MvkIosSurfaceInstanceCommands.html)"]
 pub trait MvkIosSurfaceInstanceLoaderExt {
@@ -46,11 +60,10 @@ impl MvkIosSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .mvk_ios_surface
+        let function = instance_commands(self)
+            .create_ios_surface_mvk
             .as_ref()
-            .expect("`mvk_ios_surface` not loaded")
-            .create_ios_surface_mvk;
+            .expect("`create_ios_surface_mvk` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

@@ -13,17 +13,33 @@ pub type PFN_vkCreateViSurfaceNN = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`NnViSurfaceInstanceLoaderExt`](trait.NnViSurfaceInstanceLoaderExt.html)"]
 pub struct NnViSurfaceInstanceCommands {
-    pub create_vi_surface_nn: PFN_vkCreateViSurfaceNN,
+    pub create_vi_surface_nn: Option<PFN_vkCreateViSurfaceNN>,
 }
 impl NnViSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<NnViSurfaceInstanceCommands> {
         unsafe {
-            Some(NnViSurfaceInstanceCommands {
-                create_vi_surface_nn: std::mem::transmute(loader.symbol("vkCreateViSurfaceNN")?),
-            })
+            let mut success = false;
+            let table = NnViSurfaceInstanceCommands {
+                create_vi_surface_nn: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateViSurfaceNN");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &NnViSurfaceInstanceCommands {
+    loader
+        .nn_vi_surface
+        .as_ref()
+        .expect("`nn_vi_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NnViSurfaceInstanceCommands`](struct.NnViSurfaceInstanceCommands.html)"]
 pub trait NnViSurfaceInstanceLoaderExt {
@@ -44,11 +60,10 @@ impl NnViSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .nn_vi_surface
+        let function = instance_commands(self)
+            .create_vi_surface_nn
             .as_ref()
-            .expect("`nn_vi_surface` not loaded")
-            .create_vi_surface_nn;
+            .expect("`create_vi_surface_nn` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

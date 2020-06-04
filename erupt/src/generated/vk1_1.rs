@@ -212,19 +212,30 @@ pub type PFN_vkGetDescriptorSetLayoutSupport = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Core Commands for [`Vk11CoreLoaderExt`](trait.Vk11CoreLoaderExt.html)"]
 pub struct Vk11CoreCommands {
-    pub enumerate_instance_version: PFN_vkEnumerateInstanceVersion,
+    pub enumerate_instance_version: Option<PFN_vkEnumerateInstanceVersion>,
 }
 impl Vk11CoreCommands {
     #[inline]
     pub fn load<T>(loader: &crate::CoreLoader<T>) -> Option<Vk11CoreCommands> {
         unsafe {
-            Some(Vk11CoreCommands {
-                enumerate_instance_version: std::mem::transmute(
-                    loader.symbol("vkEnumerateInstanceVersion")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk11CoreCommands {
+                enumerate_instance_version: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumerateInstanceVersion");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn core_commands<T>(loader: &crate::CoreLoader<T>) -> &Vk11CoreCommands {
+    loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk11CoreCommands`](struct.Vk11CoreCommands.html)"]
 pub trait Vk11CoreLoaderExt {
@@ -241,11 +252,10 @@ impl<T> Vk11CoreLoaderExt for crate::CoreLoader<T> {
         &self,
         api_version: Option<u32>,
     ) -> crate::utils::VulkanResult<u32> {
-        let function = self
-            .vk1_1
+        let function = core_commands(self)
+            .enumerate_instance_version
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .enumerate_instance_version;
+            .expect("`enumerate_instance_version` not available");
         let mut api_version = api_version.unwrap_or_else(|| Default::default());
         let _val = function(&mut api_version);
         crate::utils::VulkanResult::new(_val, api_version)
@@ -253,63 +263,96 @@ impl<T> Vk11CoreLoaderExt for crate::CoreLoader<T> {
 }
 #[doc = "Provides Instance Commands for [`Vk11InstanceLoaderExt`](trait.Vk11InstanceLoaderExt.html)"]
 pub struct Vk11InstanceCommands {
-    pub enumerate_physical_device_groups: PFN_vkEnumeratePhysicalDeviceGroups,
-    pub get_physical_device_features2: PFN_vkGetPhysicalDeviceFeatures2,
-    pub get_physical_device_properties2: PFN_vkGetPhysicalDeviceProperties2,
-    pub get_physical_device_format_properties2: PFN_vkGetPhysicalDeviceFormatProperties2,
-    pub get_physical_device_image_format_properties2: PFN_vkGetPhysicalDeviceImageFormatProperties2,
-    pub get_physical_device_queue_family_properties2: PFN_vkGetPhysicalDeviceQueueFamilyProperties2,
-    pub get_physical_device_memory_properties2: PFN_vkGetPhysicalDeviceMemoryProperties2,
+    pub enumerate_physical_device_groups: Option<PFN_vkEnumeratePhysicalDeviceGroups>,
+    pub get_physical_device_features2: Option<PFN_vkGetPhysicalDeviceFeatures2>,
+    pub get_physical_device_properties2: Option<PFN_vkGetPhysicalDeviceProperties2>,
+    pub get_physical_device_format_properties2: Option<PFN_vkGetPhysicalDeviceFormatProperties2>,
+    pub get_physical_device_image_format_properties2:
+        Option<PFN_vkGetPhysicalDeviceImageFormatProperties2>,
+    pub get_physical_device_queue_family_properties2:
+        Option<PFN_vkGetPhysicalDeviceQueueFamilyProperties2>,
+    pub get_physical_device_memory_properties2: Option<PFN_vkGetPhysicalDeviceMemoryProperties2>,
     pub get_physical_device_sparse_image_format_properties2:
-        PFN_vkGetPhysicalDeviceSparseImageFormatProperties2,
+        Option<PFN_vkGetPhysicalDeviceSparseImageFormatProperties2>,
     pub get_physical_device_external_buffer_properties:
-        PFN_vkGetPhysicalDeviceExternalBufferProperties,
+        Option<PFN_vkGetPhysicalDeviceExternalBufferProperties>,
     pub get_physical_device_external_fence_properties:
-        PFN_vkGetPhysicalDeviceExternalFenceProperties,
+        Option<PFN_vkGetPhysicalDeviceExternalFenceProperties>,
     pub get_physical_device_external_semaphore_properties:
-        PFN_vkGetPhysicalDeviceExternalSemaphoreProperties,
+        Option<PFN_vkGetPhysicalDeviceExternalSemaphoreProperties>,
 }
 impl Vk11InstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<Vk11InstanceCommands> {
         unsafe {
-            Some(Vk11InstanceCommands {
-                enumerate_physical_device_groups: std::mem::transmute(
-                    loader.symbol("vkEnumeratePhysicalDeviceGroups")?,
-                ),
-                get_physical_device_features2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceFeatures2")?,
-                ),
-                get_physical_device_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceProperties2")?,
-                ),
-                get_physical_device_format_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceFormatProperties2")?,
-                ),
-                get_physical_device_image_format_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceImageFormatProperties2")?,
-                ),
-                get_physical_device_queue_family_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceQueueFamilyProperties2")?,
-                ),
-                get_physical_device_memory_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceMemoryProperties2")?,
-                ),
-                get_physical_device_sparse_image_format_properties2: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSparseImageFormatProperties2")?,
-                ),
-                get_physical_device_external_buffer_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalBufferProperties")?,
-                ),
-                get_physical_device_external_fence_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalFenceProperties")?,
-                ),
-                get_physical_device_external_semaphore_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceExternalSemaphoreProperties")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk11InstanceCommands {
+                enumerate_physical_device_groups: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumeratePhysicalDeviceGroups");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_features2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceFeatures2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_format_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceFormatProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_image_format_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceImageFormatProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_queue_family_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceQueueFamilyProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_memory_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceMemoryProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_sparse_image_format_properties2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSparseImageFormatProperties2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_external_buffer_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalBufferProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_external_fence_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalFenceProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_external_semaphore_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalSemaphoreProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &Vk11InstanceCommands {
+    loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk11InstanceCommands`](struct.Vk11InstanceCommands.html)"]
 pub trait Vk11InstanceLoaderExt {
@@ -392,11 +435,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         &self,
         physical_device_group_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .enumerate_physical_device_groups
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .enumerate_physical_device_groups;
+            .expect("`enumerate_physical_device_groups` not available");
         let mut physical_device_group_count = physical_device_group_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, &mut val, std::ptr::null_mut());
@@ -418,11 +460,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         features: Option<crate::vk1_1::PhysicalDeviceFeatures2>,
     ) -> crate::vk1_1::PhysicalDeviceFeatures2 {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_features2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_features2;
+            .expect("`get_physical_device_features2` not available");
         let mut features = features.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut features);
         features
@@ -434,11 +475,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         properties: Option<crate::vk1_1::PhysicalDeviceProperties2>,
     ) -> crate::vk1_1::PhysicalDeviceProperties2 {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_properties2;
+            .expect("`get_physical_device_properties2` not available");
         let mut properties = properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut properties);
         properties
@@ -451,11 +491,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         format: crate::vk1_0::Format,
         format_properties: Option<crate::vk1_1::FormatProperties2>,
     ) -> crate::vk1_1::FormatProperties2 {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_format_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_format_properties2;
+            .expect("`get_physical_device_format_properties2` not available");
         let mut format_properties = format_properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, format, &mut format_properties);
         format_properties
@@ -468,11 +507,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2,
         image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_image_format_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_image_format_properties2;
+            .expect("`get_physical_device_image_format_properties2` not available");
         let mut image_format_properties =
             image_format_properties.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -489,11 +527,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_property_count: Option<u32>,
     ) -> Vec<crate::vk1_1::QueueFamilyProperties2> {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_queue_family_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_queue_family_properties2;
+            .expect("`get_physical_device_queue_family_properties2` not available");
         let mut queue_family_property_count = queue_family_property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -515,11 +552,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         memory_properties: Option<crate::vk1_1::PhysicalDeviceMemoryProperties2>,
     ) -> crate::vk1_1::PhysicalDeviceMemoryProperties2 {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_memory_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_memory_properties2;
+            .expect("`get_physical_device_memory_properties2` not available");
         let mut memory_properties = memory_properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut memory_properties);
         memory_properties
@@ -532,11 +568,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2,
         property_count: Option<u32>,
     ) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_sparse_image_format_properties2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_sparse_image_format_properties2;
+            .expect("`get_physical_device_sparse_image_format_properties2` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, format_info, &mut val, std::ptr::null_mut());
@@ -559,11 +594,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo,
         external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>,
     ) -> crate::vk1_1::ExternalBufferProperties {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_external_buffer_properties
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_external_buffer_properties;
+            .expect("`get_physical_device_external_buffer_properties` not available");
         let mut external_buffer_properties =
             external_buffer_properties.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -581,11 +615,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo,
         external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>,
     ) -> crate::vk1_1::ExternalFenceProperties {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_external_fence_properties
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_external_fence_properties;
+            .expect("`get_physical_device_external_fence_properties` not available");
         let mut external_fence_properties =
             external_fence_properties.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -603,11 +636,10 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
         external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
         external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
     ) -> crate::vk1_1::ExternalSemaphoreProperties {
-        let function = self
-            .vk1_1
+        let function = instance_commands(self)
+            .get_physical_device_external_semaphore_properties
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_physical_device_external_semaphore_properties;
+            .expect("`get_physical_device_external_semaphore_properties` not available");
         let mut external_semaphore_properties =
             external_semaphore_properties.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -620,67 +652,120 @@ impl Vk11InstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`Vk11DeviceLoaderExt`](trait.Vk11DeviceLoaderExt.html)"]
 pub struct Vk11DeviceCommands {
-    pub bind_buffer_memory2: PFN_vkBindBufferMemory2,
-    pub bind_image_memory2: PFN_vkBindImageMemory2,
-    pub get_device_group_peer_memory_features: PFN_vkGetDeviceGroupPeerMemoryFeatures,
-    pub cmd_set_device_mask: PFN_vkCmdSetDeviceMask,
-    pub cmd_dispatch_base: PFN_vkCmdDispatchBase,
-    pub get_image_memory_requirements2: PFN_vkGetImageMemoryRequirements2,
-    pub get_buffer_memory_requirements2: PFN_vkGetBufferMemoryRequirements2,
-    pub get_image_sparse_memory_requirements2: PFN_vkGetImageSparseMemoryRequirements2,
-    pub trim_command_pool: PFN_vkTrimCommandPool,
-    pub get_device_queue2: PFN_vkGetDeviceQueue2,
-    pub create_sampler_ycbcr_conversion: PFN_vkCreateSamplerYcbcrConversion,
-    pub destroy_sampler_ycbcr_conversion: PFN_vkDestroySamplerYcbcrConversion,
-    pub create_descriptor_update_template: PFN_vkCreateDescriptorUpdateTemplate,
-    pub destroy_descriptor_update_template: PFN_vkDestroyDescriptorUpdateTemplate,
-    pub update_descriptor_set_with_template: PFN_vkUpdateDescriptorSetWithTemplate,
-    pub get_descriptor_set_layout_support: PFN_vkGetDescriptorSetLayoutSupport,
+    pub bind_buffer_memory2: Option<PFN_vkBindBufferMemory2>,
+    pub bind_image_memory2: Option<PFN_vkBindImageMemory2>,
+    pub get_device_group_peer_memory_features: Option<PFN_vkGetDeviceGroupPeerMemoryFeatures>,
+    pub cmd_set_device_mask: Option<PFN_vkCmdSetDeviceMask>,
+    pub cmd_dispatch_base: Option<PFN_vkCmdDispatchBase>,
+    pub get_image_memory_requirements2: Option<PFN_vkGetImageMemoryRequirements2>,
+    pub get_buffer_memory_requirements2: Option<PFN_vkGetBufferMemoryRequirements2>,
+    pub get_image_sparse_memory_requirements2: Option<PFN_vkGetImageSparseMemoryRequirements2>,
+    pub trim_command_pool: Option<PFN_vkTrimCommandPool>,
+    pub get_device_queue2: Option<PFN_vkGetDeviceQueue2>,
+    pub create_sampler_ycbcr_conversion: Option<PFN_vkCreateSamplerYcbcrConversion>,
+    pub destroy_sampler_ycbcr_conversion: Option<PFN_vkDestroySamplerYcbcrConversion>,
+    pub create_descriptor_update_template: Option<PFN_vkCreateDescriptorUpdateTemplate>,
+    pub destroy_descriptor_update_template: Option<PFN_vkDestroyDescriptorUpdateTemplate>,
+    pub update_descriptor_set_with_template: Option<PFN_vkUpdateDescriptorSetWithTemplate>,
+    pub get_descriptor_set_layout_support: Option<PFN_vkGetDescriptorSetLayoutSupport>,
 }
 impl Vk11DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<Vk11DeviceCommands> {
         unsafe {
-            Some(Vk11DeviceCommands {
-                bind_buffer_memory2: std::mem::transmute(loader.symbol("vkBindBufferMemory2")?),
-                bind_image_memory2: std::mem::transmute(loader.symbol("vkBindImageMemory2")?),
-                get_device_group_peer_memory_features: std::mem::transmute(
-                    loader.symbol("vkGetDeviceGroupPeerMemoryFeatures")?,
-                ),
-                cmd_set_device_mask: std::mem::transmute(loader.symbol("vkCmdSetDeviceMask")?),
-                cmd_dispatch_base: std::mem::transmute(loader.symbol("vkCmdDispatchBase")?),
-                get_image_memory_requirements2: std::mem::transmute(
-                    loader.symbol("vkGetImageMemoryRequirements2")?,
-                ),
-                get_buffer_memory_requirements2: std::mem::transmute(
-                    loader.symbol("vkGetBufferMemoryRequirements2")?,
-                ),
-                get_image_sparse_memory_requirements2: std::mem::transmute(
-                    loader.symbol("vkGetImageSparseMemoryRequirements2")?,
-                ),
-                trim_command_pool: std::mem::transmute(loader.symbol("vkTrimCommandPool")?),
-                get_device_queue2: std::mem::transmute(loader.symbol("vkGetDeviceQueue2")?),
-                create_sampler_ycbcr_conversion: std::mem::transmute(
-                    loader.symbol("vkCreateSamplerYcbcrConversion")?,
-                ),
-                destroy_sampler_ycbcr_conversion: std::mem::transmute(
-                    loader.symbol("vkDestroySamplerYcbcrConversion")?,
-                ),
-                create_descriptor_update_template: std::mem::transmute(
-                    loader.symbol("vkCreateDescriptorUpdateTemplate")?,
-                ),
-                destroy_descriptor_update_template: std::mem::transmute(
-                    loader.symbol("vkDestroyDescriptorUpdateTemplate")?,
-                ),
-                update_descriptor_set_with_template: std::mem::transmute(
-                    loader.symbol("vkUpdateDescriptorSetWithTemplate")?,
-                ),
-                get_descriptor_set_layout_support: std::mem::transmute(
-                    loader.symbol("vkGetDescriptorSetLayoutSupport")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk11DeviceCommands {
+                bind_buffer_memory2: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindBufferMemory2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                bind_image_memory2: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindImageMemory2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_group_peer_memory_features: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceGroupPeerMemoryFeatures");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_device_mask: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetDeviceMask");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_dispatch_base: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDispatchBase");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_memory_requirements2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageMemoryRequirements2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_memory_requirements2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferMemoryRequirements2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_sparse_memory_requirements2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageSparseMemoryRequirements2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                trim_command_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkTrimCommandPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_queue2: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceQueue2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_sampler_ycbcr_conversion: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSamplerYcbcrConversion");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_sampler_ycbcr_conversion: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySamplerYcbcrConversion");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_descriptor_update_template: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDescriptorUpdateTemplate");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_descriptor_update_template: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDescriptorUpdateTemplate");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                update_descriptor_set_with_template: std::mem::transmute({
+                    let symbol = loader.symbol("vkUpdateDescriptorSetWithTemplate");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_descriptor_set_layout_support: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDescriptorSetLayoutSupport");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &Vk11DeviceCommands {
+    loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk11DeviceCommands`](struct.Vk11DeviceCommands.html)"]
 pub trait Vk11DeviceLoaderExt {
@@ -796,11 +881,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         &self,
         bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .bind_buffer_memory2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .bind_buffer_memory2;
+            .expect("`bind_buffer_memory2` not available");
         let bind_info_count = bind_infos.len() as _;
         let _val = function(self.handle, bind_info_count, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -811,11 +895,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         &self,
         bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .bind_image_memory2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .bind_image_memory2;
+            .expect("`bind_image_memory2` not available");
         let bind_info_count = bind_infos.len() as _;
         let _val = function(self.handle, bind_info_count, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -829,11 +912,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         remote_device_index: u32,
         peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
     ) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_device_group_peer_memory_features
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_device_group_peer_memory_features;
+            .expect("`get_device_group_peer_memory_features` not available");
         let mut peer_memory_features = peer_memory_features.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -851,11 +933,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         device_mask: u32,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .cmd_set_device_mask
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .cmd_set_device_mask;
+            .expect("`cmd_set_device_mask` not available");
         let _val = function(command_buffer, device_mask);
         ()
     }
@@ -871,11 +952,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         group_count_y: u32,
         group_count_z: u32,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .cmd_dispatch_base
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .cmd_dispatch_base;
+            .expect("`cmd_dispatch_base` not available");
         let _val = function(
             command_buffer,
             base_group_x,
@@ -894,11 +974,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::ImageMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_image_memory_requirements2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_image_memory_requirements2;
+            .expect("`get_image_memory_requirements2` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -910,11 +989,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::BufferMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_buffer_memory_requirements2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_buffer_memory_requirements2;
+            .expect("`get_buffer_memory_requirements2` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -926,11 +1004,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
         sparse_memory_requirement_count: Option<u32>,
     ) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_image_sparse_memory_requirements2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_image_sparse_memory_requirements2;
+            .expect("`get_image_sparse_memory_requirements2` not available");
         let mut sparse_memory_requirement_count =
             sparse_memory_requirement_count.unwrap_or_else(|| {
                 let mut val = Default::default();
@@ -954,11 +1031,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         command_pool: crate::vk1_0::CommandPool,
         flags: crate::vk1_1::CommandPoolTrimFlags,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .trim_command_pool
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .trim_command_pool;
+            .expect("`trim_command_pool` not available");
         let _val = function(self.handle, command_pool, flags);
         ()
     }
@@ -969,11 +1045,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         queue_info: &crate::vk1_1::DeviceQueueInfo2,
         queue: Option<crate::vk1_0::Queue>,
     ) -> crate::vk1_0::Queue {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_device_queue2
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_device_queue2;
+            .expect("`get_device_queue2` not available");
         let mut queue = queue.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, queue_info, &mut queue);
         queue
@@ -986,11 +1061,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .create_sampler_ycbcr_conversion
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .create_sampler_ycbcr_conversion;
+            .expect("`create_sampler_ycbcr_conversion` not available");
         let mut ycbcr_conversion = ycbcr_conversion.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -1011,11 +1085,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .destroy_sampler_ycbcr_conversion
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .destroy_sampler_ycbcr_conversion;
+            .expect("`destroy_sampler_ycbcr_conversion` not available");
         let _val = function(
             self.handle,
             ycbcr_conversion,
@@ -1035,11 +1108,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .create_descriptor_update_template
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .create_descriptor_update_template;
+            .expect("`create_descriptor_update_template` not available");
         let mut descriptor_update_template =
             descriptor_update_template.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -1061,11 +1133,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .destroy_descriptor_update_template
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .destroy_descriptor_update_template;
+            .expect("`destroy_descriptor_update_template` not available");
         let _val = function(
             self.handle,
             descriptor_update_template,
@@ -1085,11 +1156,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         data: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .update_descriptor_set_with_template
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .update_descriptor_set_with_template;
+            .expect("`update_descriptor_set_with_template` not available");
         let _val = function(
             self.handle,
             descriptor_set,
@@ -1105,11 +1175,10 @@ impl Vk11DeviceLoaderExt for crate::DeviceLoader {
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
         support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
     ) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let function = self
-            .vk1_1
+        let function = device_commands(self)
+            .get_descriptor_set_layout_support
             .as_ref()
-            .expect("`vk1_1` not loaded")
-            .get_descriptor_set_layout_support;
+            .expect("`get_descriptor_set_layout_support` not available");
         let mut support = support.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, create_info, &mut support);
         support

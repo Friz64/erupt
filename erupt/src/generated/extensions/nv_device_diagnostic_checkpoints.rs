@@ -18,8 +18,8 @@ pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`NvDeviceDiagnosticCheckpointsDeviceLoaderExt`](trait.NvDeviceDiagnosticCheckpointsDeviceLoaderExt.html)"]
 pub struct NvDeviceDiagnosticCheckpointsDeviceCommands {
-    pub cmd_set_checkpoint_nv: PFN_vkCmdSetCheckpointNV,
-    pub get_queue_checkpoint_data_nv: PFN_vkGetQueueCheckpointDataNV,
+    pub cmd_set_checkpoint_nv: Option<PFN_vkCmdSetCheckpointNV>,
+    pub get_queue_checkpoint_data_nv: Option<PFN_vkGetQueueCheckpointDataNV>,
 }
 impl NvDeviceDiagnosticCheckpointsDeviceCommands {
     #[inline]
@@ -27,14 +27,32 @@ impl NvDeviceDiagnosticCheckpointsDeviceCommands {
         loader: &crate::DeviceLoader,
     ) -> Option<NvDeviceDiagnosticCheckpointsDeviceCommands> {
         unsafe {
-            Some(NvDeviceDiagnosticCheckpointsDeviceCommands {
-                cmd_set_checkpoint_nv: std::mem::transmute(loader.symbol("vkCmdSetCheckpointNV")?),
-                get_queue_checkpoint_data_nv: std::mem::transmute(
-                    loader.symbol("vkGetQueueCheckpointDataNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvDeviceDiagnosticCheckpointsDeviceCommands {
+                cmd_set_checkpoint_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetCheckpointNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_queue_checkpoint_data_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetQueueCheckpointDataNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvDeviceDiagnosticCheckpointsDeviceCommands {
+    loader
+        .nv_device_diagnostic_checkpoints
+        .as_ref()
+        .expect("`nv_device_diagnostic_checkpoints` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvDeviceDiagnosticCheckpointsDeviceCommands`](struct.NvDeviceDiagnosticCheckpointsDeviceCommands.html)"]
 pub trait NvDeviceDiagnosticCheckpointsDeviceLoaderExt {
@@ -59,11 +77,10 @@ impl NvDeviceDiagnosticCheckpointsDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         checkpoint_marker: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .nv_device_diagnostic_checkpoints
+        let function = device_commands(self)
+            .cmd_set_checkpoint_nv
             .as_ref()
-            .expect("`nv_device_diagnostic_checkpoints` not loaded")
-            .cmd_set_checkpoint_nv;
+            .expect("`cmd_set_checkpoint_nv` not available");
         let _val = function(command_buffer, checkpoint_marker);
         ()
     }
@@ -74,11 +91,10 @@ impl NvDeviceDiagnosticCheckpointsDeviceLoaderExt for crate::DeviceLoader {
         queue: crate::vk1_0::Queue,
         checkpoint_data_count: Option<u32>,
     ) -> Vec<crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV> {
-        let function = self
-            .nv_device_diagnostic_checkpoints
+        let function = device_commands(self)
+            .get_queue_checkpoint_data_nv
             .as_ref()
-            .expect("`nv_device_diagnostic_checkpoints` not loaded")
-            .get_queue_checkpoint_data_nv;
+            .expect("`get_queue_checkpoint_data_nv` not available");
         let mut checkpoint_data_count = checkpoint_data_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(queue, &mut val, std::ptr::null_mut());

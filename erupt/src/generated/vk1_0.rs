@@ -1103,25 +1103,42 @@ pub type PFN_vkCmdExecuteCommands = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Core Commands for [`Vk10CoreLoaderExt`](trait.Vk10CoreLoaderExt.html)"]
 pub struct Vk10CoreCommands {
-    pub create_instance: PFN_vkCreateInstance,
-    pub enumerate_instance_extension_properties: PFN_vkEnumerateInstanceExtensionProperties,
-    pub enumerate_instance_layer_properties: PFN_vkEnumerateInstanceLayerProperties,
+    pub create_instance: Option<PFN_vkCreateInstance>,
+    pub enumerate_instance_extension_properties: Option<PFN_vkEnumerateInstanceExtensionProperties>,
+    pub enumerate_instance_layer_properties: Option<PFN_vkEnumerateInstanceLayerProperties>,
 }
 impl Vk10CoreCommands {
     #[inline]
     pub fn load<T>(loader: &crate::CoreLoader<T>) -> Option<Vk10CoreCommands> {
         unsafe {
-            Some(Vk10CoreCommands {
-                create_instance: std::mem::transmute(loader.symbol("vkCreateInstance")?),
-                enumerate_instance_extension_properties: std::mem::transmute(
-                    loader.symbol("vkEnumerateInstanceExtensionProperties")?,
-                ),
-                enumerate_instance_layer_properties: std::mem::transmute(
-                    loader.symbol("vkEnumerateInstanceLayerProperties")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk10CoreCommands {
+                create_instance: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateInstance");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                enumerate_instance_extension_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumerateInstanceExtensionProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                enumerate_instance_layer_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumerateInstanceLayerProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn core_commands<T>(loader: &crate::CoreLoader<T>) -> &Vk10CoreCommands {
+    loader.vk1_0.as_ref().expect("`vk1_0` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk10CoreCommands`](struct.Vk10CoreCommands.html)"]
 pub trait Vk10CoreLoaderExt {
@@ -1153,11 +1170,10 @@ impl<T> Vk10CoreLoaderExt for crate::CoreLoader<T> {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         instance: Option<crate::vk1_0::Instance>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Instance> {
-        let function = self
-            .vk1_0
+        let function = core_commands(self)
+            .create_instance
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_instance;
+            .expect("`create_instance` not available");
         let mut instance = instance.unwrap_or_else(|| Default::default());
         let _val = function(
             create_info,
@@ -1177,11 +1193,10 @@ impl<T> Vk10CoreLoaderExt for crate::CoreLoader<T> {
         layer_name: Option<&std::ffi::CStr>,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
-        let function = self
-            .vk1_0
+        let function = core_commands(self)
+            .enumerate_instance_extension_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .enumerate_instance_extension_properties;
+            .expect("`enumerate_instance_extension_properties` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(
@@ -1205,11 +1220,10 @@ impl<T> Vk10CoreLoaderExt for crate::CoreLoader<T> {
         &self,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
-        let function = self
-            .vk1_0
+        let function = core_commands(self)
+            .enumerate_instance_layer_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .enumerate_instance_layer_properties;
+            .expect("`enumerate_instance_layer_properties` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(&mut val, std::ptr::null_mut());
@@ -1222,64 +1236,105 @@ impl<T> Vk10CoreLoaderExt for crate::CoreLoader<T> {
 }
 #[doc = "Provides Instance Commands for [`Vk10InstanceLoaderExt`](trait.Vk10InstanceLoaderExt.html)"]
 pub struct Vk10InstanceCommands {
-    pub destroy_instance: PFN_vkDestroyInstance,
-    pub enumerate_physical_devices: PFN_vkEnumeratePhysicalDevices,
-    pub get_physical_device_features: PFN_vkGetPhysicalDeviceFeatures,
-    pub get_physical_device_format_properties: PFN_vkGetPhysicalDeviceFormatProperties,
-    pub get_physical_device_image_format_properties: PFN_vkGetPhysicalDeviceImageFormatProperties,
-    pub get_physical_device_properties: PFN_vkGetPhysicalDeviceProperties,
-    pub get_physical_device_queue_family_properties: PFN_vkGetPhysicalDeviceQueueFamilyProperties,
-    pub get_physical_device_memory_properties: PFN_vkGetPhysicalDeviceMemoryProperties,
-    pub get_instance_proc_addr: PFN_vkGetInstanceProcAddr,
-    pub create_device: PFN_vkCreateDevice,
-    pub enumerate_device_extension_properties: PFN_vkEnumerateDeviceExtensionProperties,
-    pub enumerate_device_layer_properties: PFN_vkEnumerateDeviceLayerProperties,
+    pub destroy_instance: Option<PFN_vkDestroyInstance>,
+    pub enumerate_physical_devices: Option<PFN_vkEnumeratePhysicalDevices>,
+    pub get_physical_device_features: Option<PFN_vkGetPhysicalDeviceFeatures>,
+    pub get_physical_device_format_properties: Option<PFN_vkGetPhysicalDeviceFormatProperties>,
+    pub get_physical_device_image_format_properties:
+        Option<PFN_vkGetPhysicalDeviceImageFormatProperties>,
+    pub get_physical_device_properties: Option<PFN_vkGetPhysicalDeviceProperties>,
+    pub get_physical_device_queue_family_properties:
+        Option<PFN_vkGetPhysicalDeviceQueueFamilyProperties>,
+    pub get_physical_device_memory_properties: Option<PFN_vkGetPhysicalDeviceMemoryProperties>,
+    pub get_instance_proc_addr: Option<PFN_vkGetInstanceProcAddr>,
+    pub create_device: Option<PFN_vkCreateDevice>,
+    pub enumerate_device_extension_properties: Option<PFN_vkEnumerateDeviceExtensionProperties>,
+    pub enumerate_device_layer_properties: Option<PFN_vkEnumerateDeviceLayerProperties>,
     pub get_physical_device_sparse_image_format_properties:
-        PFN_vkGetPhysicalDeviceSparseImageFormatProperties,
+        Option<PFN_vkGetPhysicalDeviceSparseImageFormatProperties>,
 }
 impl Vk10InstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<Vk10InstanceCommands> {
         unsafe {
-            Some(Vk10InstanceCommands {
-                destroy_instance: std::mem::transmute(loader.symbol("vkDestroyInstance")?),
-                enumerate_physical_devices: std::mem::transmute(
-                    loader.symbol("vkEnumeratePhysicalDevices")?,
-                ),
-                get_physical_device_features: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceFeatures")?,
-                ),
-                get_physical_device_format_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceFormatProperties")?,
-                ),
-                get_physical_device_image_format_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceImageFormatProperties")?,
-                ),
-                get_physical_device_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceProperties")?,
-                ),
-                get_physical_device_queue_family_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceQueueFamilyProperties")?,
-                ),
-                get_physical_device_memory_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceMemoryProperties")?,
-                ),
-                get_instance_proc_addr: std::mem::transmute(
-                    loader.symbol("vkGetInstanceProcAddr")?,
-                ),
-                create_device: std::mem::transmute(loader.symbol("vkCreateDevice")?),
-                enumerate_device_extension_properties: std::mem::transmute(
-                    loader.symbol("vkEnumerateDeviceExtensionProperties")?,
-                ),
-                enumerate_device_layer_properties: std::mem::transmute(
-                    loader.symbol("vkEnumerateDeviceLayerProperties")?,
-                ),
-                get_physical_device_sparse_image_format_properties: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSparseImageFormatProperties")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk10InstanceCommands {
+                destroy_instance: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyInstance");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                enumerate_physical_devices: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumeratePhysicalDevices");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_features: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceFeatures");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_format_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceFormatProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_image_format_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceImageFormatProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_queue_family_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceQueueFamilyProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_memory_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceMemoryProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_instance_proc_addr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetInstanceProcAddr");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_device: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDevice");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                enumerate_device_extension_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumerateDeviceExtensionProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                enumerate_device_layer_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumerateDeviceLayerProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_sparse_image_format_properties: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSparseImageFormatProperties");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &Vk10InstanceCommands {
+    loader.vk1_0.as_ref().expect("`vk1_0` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk10InstanceCommands`](struct.Vk10InstanceCommands.html)"]
 pub trait Vk10InstanceLoaderExt {
@@ -1374,11 +1429,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyInstance.html) · Instance Command"]
     unsafe fn destroy_instance(&self, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .destroy_instance
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_instance;
+            .expect("`destroy_instance` not available");
         let _val = function(
             self.handle,
             if let Some(allocator) = allocator {
@@ -1395,11 +1449,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         &self,
         physical_device_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::PhysicalDevice>> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .enumerate_physical_devices
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .enumerate_physical_devices;
+            .expect("`enumerate_physical_devices` not available");
         let mut physical_device_count = physical_device_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, &mut val, std::ptr::null_mut());
@@ -1420,11 +1473,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         features: Option<crate::vk1_0::PhysicalDeviceFeatures>,
     ) -> crate::vk1_0::PhysicalDeviceFeatures {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_features
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_features;
+            .expect("`get_physical_device_features` not available");
         let mut features = features.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut features);
         features
@@ -1437,11 +1489,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         format: crate::vk1_0::Format,
         format_properties: Option<crate::vk1_0::FormatProperties>,
     ) -> crate::vk1_0::FormatProperties {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_format_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_format_properties;
+            .expect("`get_physical_device_format_properties` not available");
         let mut format_properties = format_properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, format, &mut format_properties);
         format_properties
@@ -1458,11 +1509,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         flags: crate::vk1_0::ImageCreateFlags,
         image_format_properties: Option<crate::vk1_0::ImageFormatProperties>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_image_format_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_image_format_properties;
+            .expect("`get_physical_device_image_format_properties` not available");
         let mut image_format_properties =
             image_format_properties.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -1483,11 +1533,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         properties: Option<crate::vk1_0::PhysicalDeviceProperties>,
     ) -> crate::vk1_0::PhysicalDeviceProperties {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_properties;
+            .expect("`get_physical_device_properties` not available");
         let mut properties = properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut properties);
         properties
@@ -1499,11 +1548,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_property_count: Option<u32>,
     ) -> Vec<crate::vk1_0::QueueFamilyProperties> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_queue_family_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_queue_family_properties;
+            .expect("`get_physical_device_queue_family_properties` not available");
         let mut queue_family_property_count = queue_family_property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -1525,11 +1573,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         memory_properties: Option<crate::vk1_0::PhysicalDeviceMemoryProperties>,
     ) -> crate::vk1_0::PhysicalDeviceMemoryProperties {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_memory_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_memory_properties;
+            .expect("`get_physical_device_memory_properties` not available");
         let mut memory_properties = memory_properties.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, &mut memory_properties);
         memory_properties
@@ -1540,11 +1587,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         &self,
         name: Option<&std::ffi::CStr>,
     ) -> crate::vk1_0::PFN_vkVoidFunction {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_instance_proc_addr
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_instance_proc_addr;
+            .expect("`get_instance_proc_addr` not available");
         let _val = function(
             self.handle,
             name.map(|s| s.as_ptr()).unwrap_or(std::ptr::null()),
@@ -1560,11 +1606,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         device: Option<crate::vk1_0::Device>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Device> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .create_device
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_device;
+            .expect("`create_device` not available");
         let mut device = device.unwrap_or_else(|| Default::default());
         let _val = function(
             physical_device,
@@ -1586,11 +1631,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         layer_name: Option<&std::ffi::CStr>,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .enumerate_device_extension_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .enumerate_device_extension_properties;
+            .expect("`enumerate_device_extension_properties` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(
@@ -1617,11 +1661,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .enumerate_device_layer_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .enumerate_device_layer_properties;
+            .expect("`enumerate_device_layer_properties` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(physical_device, &mut val, std::ptr::null_mut());
@@ -1647,11 +1690,10 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
         tiling: crate::vk1_0::ImageTiling,
         property_count: Option<u32>,
     ) -> Vec<crate::vk1_0::SparseImageFormatProperties> {
-        let function = self
-            .vk1_0
+        let function = instance_commands(self)
+            .get_physical_device_sparse_image_format_properties
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_physical_device_sparse_image_format_properties;
+            .expect("`get_physical_device_sparse_image_format_properties` not available");
         let mut property_count = property_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(
@@ -1682,323 +1724,750 @@ impl Vk10InstanceLoaderExt for crate::InstanceLoader {
 }
 #[doc = "Provides Device Commands for [`Vk10DeviceLoaderExt`](trait.Vk10DeviceLoaderExt.html)"]
 pub struct Vk10DeviceCommands {
-    pub get_device_proc_addr: PFN_vkGetDeviceProcAddr,
-    pub destroy_device: PFN_vkDestroyDevice,
-    pub get_device_queue: PFN_vkGetDeviceQueue,
-    pub queue_submit: PFN_vkQueueSubmit,
-    pub queue_wait_idle: PFN_vkQueueWaitIdle,
-    pub device_wait_idle: PFN_vkDeviceWaitIdle,
-    pub allocate_memory: PFN_vkAllocateMemory,
-    pub free_memory: PFN_vkFreeMemory,
-    pub map_memory: PFN_vkMapMemory,
-    pub unmap_memory: PFN_vkUnmapMemory,
-    pub flush_mapped_memory_ranges: PFN_vkFlushMappedMemoryRanges,
-    pub invalidate_mapped_memory_ranges: PFN_vkInvalidateMappedMemoryRanges,
-    pub get_device_memory_commitment: PFN_vkGetDeviceMemoryCommitment,
-    pub bind_buffer_memory: PFN_vkBindBufferMemory,
-    pub bind_image_memory: PFN_vkBindImageMemory,
-    pub get_buffer_memory_requirements: PFN_vkGetBufferMemoryRequirements,
-    pub get_image_memory_requirements: PFN_vkGetImageMemoryRequirements,
-    pub get_image_sparse_memory_requirements: PFN_vkGetImageSparseMemoryRequirements,
-    pub queue_bind_sparse: PFN_vkQueueBindSparse,
-    pub create_fence: PFN_vkCreateFence,
-    pub destroy_fence: PFN_vkDestroyFence,
-    pub reset_fences: PFN_vkResetFences,
-    pub get_fence_status: PFN_vkGetFenceStatus,
-    pub wait_for_fences: PFN_vkWaitForFences,
-    pub create_semaphore: PFN_vkCreateSemaphore,
-    pub destroy_semaphore: PFN_vkDestroySemaphore,
-    pub create_event: PFN_vkCreateEvent,
-    pub destroy_event: PFN_vkDestroyEvent,
-    pub get_event_status: PFN_vkGetEventStatus,
-    pub set_event: PFN_vkSetEvent,
-    pub reset_event: PFN_vkResetEvent,
-    pub create_query_pool: PFN_vkCreateQueryPool,
-    pub destroy_query_pool: PFN_vkDestroyQueryPool,
-    pub get_query_pool_results: PFN_vkGetQueryPoolResults,
-    pub create_buffer: PFN_vkCreateBuffer,
-    pub destroy_buffer: PFN_vkDestroyBuffer,
-    pub create_buffer_view: PFN_vkCreateBufferView,
-    pub destroy_buffer_view: PFN_vkDestroyBufferView,
-    pub create_image: PFN_vkCreateImage,
-    pub destroy_image: PFN_vkDestroyImage,
-    pub get_image_subresource_layout: PFN_vkGetImageSubresourceLayout,
-    pub create_image_view: PFN_vkCreateImageView,
-    pub destroy_image_view: PFN_vkDestroyImageView,
-    pub create_shader_module: PFN_vkCreateShaderModule,
-    pub destroy_shader_module: PFN_vkDestroyShaderModule,
-    pub create_pipeline_cache: PFN_vkCreatePipelineCache,
-    pub destroy_pipeline_cache: PFN_vkDestroyPipelineCache,
-    pub get_pipeline_cache_data: PFN_vkGetPipelineCacheData,
-    pub merge_pipeline_caches: PFN_vkMergePipelineCaches,
-    pub create_graphics_pipelines: PFN_vkCreateGraphicsPipelines,
-    pub create_compute_pipelines: PFN_vkCreateComputePipelines,
-    pub destroy_pipeline: PFN_vkDestroyPipeline,
-    pub create_pipeline_layout: PFN_vkCreatePipelineLayout,
-    pub destroy_pipeline_layout: PFN_vkDestroyPipelineLayout,
-    pub create_sampler: PFN_vkCreateSampler,
-    pub destroy_sampler: PFN_vkDestroySampler,
-    pub create_descriptor_set_layout: PFN_vkCreateDescriptorSetLayout,
-    pub destroy_descriptor_set_layout: PFN_vkDestroyDescriptorSetLayout,
-    pub create_descriptor_pool: PFN_vkCreateDescriptorPool,
-    pub destroy_descriptor_pool: PFN_vkDestroyDescriptorPool,
-    pub reset_descriptor_pool: PFN_vkResetDescriptorPool,
-    pub allocate_descriptor_sets: PFN_vkAllocateDescriptorSets,
-    pub free_descriptor_sets: PFN_vkFreeDescriptorSets,
-    pub update_descriptor_sets: PFN_vkUpdateDescriptorSets,
-    pub create_framebuffer: PFN_vkCreateFramebuffer,
-    pub destroy_framebuffer: PFN_vkDestroyFramebuffer,
-    pub create_render_pass: PFN_vkCreateRenderPass,
-    pub destroy_render_pass: PFN_vkDestroyRenderPass,
-    pub get_render_area_granularity: PFN_vkGetRenderAreaGranularity,
-    pub create_command_pool: PFN_vkCreateCommandPool,
-    pub destroy_command_pool: PFN_vkDestroyCommandPool,
-    pub reset_command_pool: PFN_vkResetCommandPool,
-    pub allocate_command_buffers: PFN_vkAllocateCommandBuffers,
-    pub free_command_buffers: PFN_vkFreeCommandBuffers,
-    pub begin_command_buffer: PFN_vkBeginCommandBuffer,
-    pub end_command_buffer: PFN_vkEndCommandBuffer,
-    pub reset_command_buffer: PFN_vkResetCommandBuffer,
-    pub cmd_bind_pipeline: PFN_vkCmdBindPipeline,
-    pub cmd_set_viewport: PFN_vkCmdSetViewport,
-    pub cmd_set_scissor: PFN_vkCmdSetScissor,
-    pub cmd_set_line_width: PFN_vkCmdSetLineWidth,
-    pub cmd_set_depth_bias: PFN_vkCmdSetDepthBias,
-    pub cmd_set_blend_constants: PFN_vkCmdSetBlendConstants,
-    pub cmd_set_depth_bounds: PFN_vkCmdSetDepthBounds,
-    pub cmd_set_stencil_compare_mask: PFN_vkCmdSetStencilCompareMask,
-    pub cmd_set_stencil_write_mask: PFN_vkCmdSetStencilWriteMask,
-    pub cmd_set_stencil_reference: PFN_vkCmdSetStencilReference,
-    pub cmd_bind_descriptor_sets: PFN_vkCmdBindDescriptorSets,
-    pub cmd_bind_index_buffer: PFN_vkCmdBindIndexBuffer,
-    pub cmd_bind_vertex_buffers: PFN_vkCmdBindVertexBuffers,
-    pub cmd_draw: PFN_vkCmdDraw,
-    pub cmd_draw_indexed: PFN_vkCmdDrawIndexed,
-    pub cmd_draw_indirect: PFN_vkCmdDrawIndirect,
-    pub cmd_draw_indexed_indirect: PFN_vkCmdDrawIndexedIndirect,
-    pub cmd_dispatch: PFN_vkCmdDispatch,
-    pub cmd_dispatch_indirect: PFN_vkCmdDispatchIndirect,
-    pub cmd_copy_buffer: PFN_vkCmdCopyBuffer,
-    pub cmd_copy_image: PFN_vkCmdCopyImage,
-    pub cmd_blit_image: PFN_vkCmdBlitImage,
-    pub cmd_copy_buffer_to_image: PFN_vkCmdCopyBufferToImage,
-    pub cmd_copy_image_to_buffer: PFN_vkCmdCopyImageToBuffer,
-    pub cmd_update_buffer: PFN_vkCmdUpdateBuffer,
-    pub cmd_fill_buffer: PFN_vkCmdFillBuffer,
-    pub cmd_clear_color_image: PFN_vkCmdClearColorImage,
-    pub cmd_clear_depth_stencil_image: PFN_vkCmdClearDepthStencilImage,
-    pub cmd_clear_attachments: PFN_vkCmdClearAttachments,
-    pub cmd_resolve_image: PFN_vkCmdResolveImage,
-    pub cmd_set_event: PFN_vkCmdSetEvent,
-    pub cmd_reset_event: PFN_vkCmdResetEvent,
-    pub cmd_wait_events: PFN_vkCmdWaitEvents,
-    pub cmd_pipeline_barrier: PFN_vkCmdPipelineBarrier,
-    pub cmd_begin_query: PFN_vkCmdBeginQuery,
-    pub cmd_end_query: PFN_vkCmdEndQuery,
-    pub cmd_reset_query_pool: PFN_vkCmdResetQueryPool,
-    pub cmd_write_timestamp: PFN_vkCmdWriteTimestamp,
-    pub cmd_copy_query_pool_results: PFN_vkCmdCopyQueryPoolResults,
-    pub cmd_push_constants: PFN_vkCmdPushConstants,
-    pub cmd_begin_render_pass: PFN_vkCmdBeginRenderPass,
-    pub cmd_next_subpass: PFN_vkCmdNextSubpass,
-    pub cmd_end_render_pass: PFN_vkCmdEndRenderPass,
-    pub cmd_execute_commands: PFN_vkCmdExecuteCommands,
+    pub get_device_proc_addr: Option<PFN_vkGetDeviceProcAddr>,
+    pub destroy_device: Option<PFN_vkDestroyDevice>,
+    pub get_device_queue: Option<PFN_vkGetDeviceQueue>,
+    pub queue_submit: Option<PFN_vkQueueSubmit>,
+    pub queue_wait_idle: Option<PFN_vkQueueWaitIdle>,
+    pub device_wait_idle: Option<PFN_vkDeviceWaitIdle>,
+    pub allocate_memory: Option<PFN_vkAllocateMemory>,
+    pub free_memory: Option<PFN_vkFreeMemory>,
+    pub map_memory: Option<PFN_vkMapMemory>,
+    pub unmap_memory: Option<PFN_vkUnmapMemory>,
+    pub flush_mapped_memory_ranges: Option<PFN_vkFlushMappedMemoryRanges>,
+    pub invalidate_mapped_memory_ranges: Option<PFN_vkInvalidateMappedMemoryRanges>,
+    pub get_device_memory_commitment: Option<PFN_vkGetDeviceMemoryCommitment>,
+    pub bind_buffer_memory: Option<PFN_vkBindBufferMemory>,
+    pub bind_image_memory: Option<PFN_vkBindImageMemory>,
+    pub get_buffer_memory_requirements: Option<PFN_vkGetBufferMemoryRequirements>,
+    pub get_image_memory_requirements: Option<PFN_vkGetImageMemoryRequirements>,
+    pub get_image_sparse_memory_requirements: Option<PFN_vkGetImageSparseMemoryRequirements>,
+    pub queue_bind_sparse: Option<PFN_vkQueueBindSparse>,
+    pub create_fence: Option<PFN_vkCreateFence>,
+    pub destroy_fence: Option<PFN_vkDestroyFence>,
+    pub reset_fences: Option<PFN_vkResetFences>,
+    pub get_fence_status: Option<PFN_vkGetFenceStatus>,
+    pub wait_for_fences: Option<PFN_vkWaitForFences>,
+    pub create_semaphore: Option<PFN_vkCreateSemaphore>,
+    pub destroy_semaphore: Option<PFN_vkDestroySemaphore>,
+    pub create_event: Option<PFN_vkCreateEvent>,
+    pub destroy_event: Option<PFN_vkDestroyEvent>,
+    pub get_event_status: Option<PFN_vkGetEventStatus>,
+    pub set_event: Option<PFN_vkSetEvent>,
+    pub reset_event: Option<PFN_vkResetEvent>,
+    pub create_query_pool: Option<PFN_vkCreateQueryPool>,
+    pub destroy_query_pool: Option<PFN_vkDestroyQueryPool>,
+    pub get_query_pool_results: Option<PFN_vkGetQueryPoolResults>,
+    pub create_buffer: Option<PFN_vkCreateBuffer>,
+    pub destroy_buffer: Option<PFN_vkDestroyBuffer>,
+    pub create_buffer_view: Option<PFN_vkCreateBufferView>,
+    pub destroy_buffer_view: Option<PFN_vkDestroyBufferView>,
+    pub create_image: Option<PFN_vkCreateImage>,
+    pub destroy_image: Option<PFN_vkDestroyImage>,
+    pub get_image_subresource_layout: Option<PFN_vkGetImageSubresourceLayout>,
+    pub create_image_view: Option<PFN_vkCreateImageView>,
+    pub destroy_image_view: Option<PFN_vkDestroyImageView>,
+    pub create_shader_module: Option<PFN_vkCreateShaderModule>,
+    pub destroy_shader_module: Option<PFN_vkDestroyShaderModule>,
+    pub create_pipeline_cache: Option<PFN_vkCreatePipelineCache>,
+    pub destroy_pipeline_cache: Option<PFN_vkDestroyPipelineCache>,
+    pub get_pipeline_cache_data: Option<PFN_vkGetPipelineCacheData>,
+    pub merge_pipeline_caches: Option<PFN_vkMergePipelineCaches>,
+    pub create_graphics_pipelines: Option<PFN_vkCreateGraphicsPipelines>,
+    pub create_compute_pipelines: Option<PFN_vkCreateComputePipelines>,
+    pub destroy_pipeline: Option<PFN_vkDestroyPipeline>,
+    pub create_pipeline_layout: Option<PFN_vkCreatePipelineLayout>,
+    pub destroy_pipeline_layout: Option<PFN_vkDestroyPipelineLayout>,
+    pub create_sampler: Option<PFN_vkCreateSampler>,
+    pub destroy_sampler: Option<PFN_vkDestroySampler>,
+    pub create_descriptor_set_layout: Option<PFN_vkCreateDescriptorSetLayout>,
+    pub destroy_descriptor_set_layout: Option<PFN_vkDestroyDescriptorSetLayout>,
+    pub create_descriptor_pool: Option<PFN_vkCreateDescriptorPool>,
+    pub destroy_descriptor_pool: Option<PFN_vkDestroyDescriptorPool>,
+    pub reset_descriptor_pool: Option<PFN_vkResetDescriptorPool>,
+    pub allocate_descriptor_sets: Option<PFN_vkAllocateDescriptorSets>,
+    pub free_descriptor_sets: Option<PFN_vkFreeDescriptorSets>,
+    pub update_descriptor_sets: Option<PFN_vkUpdateDescriptorSets>,
+    pub create_framebuffer: Option<PFN_vkCreateFramebuffer>,
+    pub destroy_framebuffer: Option<PFN_vkDestroyFramebuffer>,
+    pub create_render_pass: Option<PFN_vkCreateRenderPass>,
+    pub destroy_render_pass: Option<PFN_vkDestroyRenderPass>,
+    pub get_render_area_granularity: Option<PFN_vkGetRenderAreaGranularity>,
+    pub create_command_pool: Option<PFN_vkCreateCommandPool>,
+    pub destroy_command_pool: Option<PFN_vkDestroyCommandPool>,
+    pub reset_command_pool: Option<PFN_vkResetCommandPool>,
+    pub allocate_command_buffers: Option<PFN_vkAllocateCommandBuffers>,
+    pub free_command_buffers: Option<PFN_vkFreeCommandBuffers>,
+    pub begin_command_buffer: Option<PFN_vkBeginCommandBuffer>,
+    pub end_command_buffer: Option<PFN_vkEndCommandBuffer>,
+    pub reset_command_buffer: Option<PFN_vkResetCommandBuffer>,
+    pub cmd_bind_pipeline: Option<PFN_vkCmdBindPipeline>,
+    pub cmd_set_viewport: Option<PFN_vkCmdSetViewport>,
+    pub cmd_set_scissor: Option<PFN_vkCmdSetScissor>,
+    pub cmd_set_line_width: Option<PFN_vkCmdSetLineWidth>,
+    pub cmd_set_depth_bias: Option<PFN_vkCmdSetDepthBias>,
+    pub cmd_set_blend_constants: Option<PFN_vkCmdSetBlendConstants>,
+    pub cmd_set_depth_bounds: Option<PFN_vkCmdSetDepthBounds>,
+    pub cmd_set_stencil_compare_mask: Option<PFN_vkCmdSetStencilCompareMask>,
+    pub cmd_set_stencil_write_mask: Option<PFN_vkCmdSetStencilWriteMask>,
+    pub cmd_set_stencil_reference: Option<PFN_vkCmdSetStencilReference>,
+    pub cmd_bind_descriptor_sets: Option<PFN_vkCmdBindDescriptorSets>,
+    pub cmd_bind_index_buffer: Option<PFN_vkCmdBindIndexBuffer>,
+    pub cmd_bind_vertex_buffers: Option<PFN_vkCmdBindVertexBuffers>,
+    pub cmd_draw: Option<PFN_vkCmdDraw>,
+    pub cmd_draw_indexed: Option<PFN_vkCmdDrawIndexed>,
+    pub cmd_draw_indirect: Option<PFN_vkCmdDrawIndirect>,
+    pub cmd_draw_indexed_indirect: Option<PFN_vkCmdDrawIndexedIndirect>,
+    pub cmd_dispatch: Option<PFN_vkCmdDispatch>,
+    pub cmd_dispatch_indirect: Option<PFN_vkCmdDispatchIndirect>,
+    pub cmd_copy_buffer: Option<PFN_vkCmdCopyBuffer>,
+    pub cmd_copy_image: Option<PFN_vkCmdCopyImage>,
+    pub cmd_blit_image: Option<PFN_vkCmdBlitImage>,
+    pub cmd_copy_buffer_to_image: Option<PFN_vkCmdCopyBufferToImage>,
+    pub cmd_copy_image_to_buffer: Option<PFN_vkCmdCopyImageToBuffer>,
+    pub cmd_update_buffer: Option<PFN_vkCmdUpdateBuffer>,
+    pub cmd_fill_buffer: Option<PFN_vkCmdFillBuffer>,
+    pub cmd_clear_color_image: Option<PFN_vkCmdClearColorImage>,
+    pub cmd_clear_depth_stencil_image: Option<PFN_vkCmdClearDepthStencilImage>,
+    pub cmd_clear_attachments: Option<PFN_vkCmdClearAttachments>,
+    pub cmd_resolve_image: Option<PFN_vkCmdResolveImage>,
+    pub cmd_set_event: Option<PFN_vkCmdSetEvent>,
+    pub cmd_reset_event: Option<PFN_vkCmdResetEvent>,
+    pub cmd_wait_events: Option<PFN_vkCmdWaitEvents>,
+    pub cmd_pipeline_barrier: Option<PFN_vkCmdPipelineBarrier>,
+    pub cmd_begin_query: Option<PFN_vkCmdBeginQuery>,
+    pub cmd_end_query: Option<PFN_vkCmdEndQuery>,
+    pub cmd_reset_query_pool: Option<PFN_vkCmdResetQueryPool>,
+    pub cmd_write_timestamp: Option<PFN_vkCmdWriteTimestamp>,
+    pub cmd_copy_query_pool_results: Option<PFN_vkCmdCopyQueryPoolResults>,
+    pub cmd_push_constants: Option<PFN_vkCmdPushConstants>,
+    pub cmd_begin_render_pass: Option<PFN_vkCmdBeginRenderPass>,
+    pub cmd_next_subpass: Option<PFN_vkCmdNextSubpass>,
+    pub cmd_end_render_pass: Option<PFN_vkCmdEndRenderPass>,
+    pub cmd_execute_commands: Option<PFN_vkCmdExecuteCommands>,
 }
 impl Vk10DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<Vk10DeviceCommands> {
         unsafe {
-            Some(Vk10DeviceCommands {
-                get_device_proc_addr: std::mem::transmute(loader.symbol("vkGetDeviceProcAddr")?),
-                destroy_device: std::mem::transmute(loader.symbol("vkDestroyDevice")?),
-                get_device_queue: std::mem::transmute(loader.symbol("vkGetDeviceQueue")?),
-                queue_submit: std::mem::transmute(loader.symbol("vkQueueSubmit")?),
-                queue_wait_idle: std::mem::transmute(loader.symbol("vkQueueWaitIdle")?),
-                device_wait_idle: std::mem::transmute(loader.symbol("vkDeviceWaitIdle")?),
-                allocate_memory: std::mem::transmute(loader.symbol("vkAllocateMemory")?),
-                free_memory: std::mem::transmute(loader.symbol("vkFreeMemory")?),
-                map_memory: std::mem::transmute(loader.symbol("vkMapMemory")?),
-                unmap_memory: std::mem::transmute(loader.symbol("vkUnmapMemory")?),
-                flush_mapped_memory_ranges: std::mem::transmute(
-                    loader.symbol("vkFlushMappedMemoryRanges")?,
-                ),
-                invalidate_mapped_memory_ranges: std::mem::transmute(
-                    loader.symbol("vkInvalidateMappedMemoryRanges")?,
-                ),
-                get_device_memory_commitment: std::mem::transmute(
-                    loader.symbol("vkGetDeviceMemoryCommitment")?,
-                ),
-                bind_buffer_memory: std::mem::transmute(loader.symbol("vkBindBufferMemory")?),
-                bind_image_memory: std::mem::transmute(loader.symbol("vkBindImageMemory")?),
-                get_buffer_memory_requirements: std::mem::transmute(
-                    loader.symbol("vkGetBufferMemoryRequirements")?,
-                ),
-                get_image_memory_requirements: std::mem::transmute(
-                    loader.symbol("vkGetImageMemoryRequirements")?,
-                ),
-                get_image_sparse_memory_requirements: std::mem::transmute(
-                    loader.symbol("vkGetImageSparseMemoryRequirements")?,
-                ),
-                queue_bind_sparse: std::mem::transmute(loader.symbol("vkQueueBindSparse")?),
-                create_fence: std::mem::transmute(loader.symbol("vkCreateFence")?),
-                destroy_fence: std::mem::transmute(loader.symbol("vkDestroyFence")?),
-                reset_fences: std::mem::transmute(loader.symbol("vkResetFences")?),
-                get_fence_status: std::mem::transmute(loader.symbol("vkGetFenceStatus")?),
-                wait_for_fences: std::mem::transmute(loader.symbol("vkWaitForFences")?),
-                create_semaphore: std::mem::transmute(loader.symbol("vkCreateSemaphore")?),
-                destroy_semaphore: std::mem::transmute(loader.symbol("vkDestroySemaphore")?),
-                create_event: std::mem::transmute(loader.symbol("vkCreateEvent")?),
-                destroy_event: std::mem::transmute(loader.symbol("vkDestroyEvent")?),
-                get_event_status: std::mem::transmute(loader.symbol("vkGetEventStatus")?),
-                set_event: std::mem::transmute(loader.symbol("vkSetEvent")?),
-                reset_event: std::mem::transmute(loader.symbol("vkResetEvent")?),
-                create_query_pool: std::mem::transmute(loader.symbol("vkCreateQueryPool")?),
-                destroy_query_pool: std::mem::transmute(loader.symbol("vkDestroyQueryPool")?),
-                get_query_pool_results: std::mem::transmute(
-                    loader.symbol("vkGetQueryPoolResults")?,
-                ),
-                create_buffer: std::mem::transmute(loader.symbol("vkCreateBuffer")?),
-                destroy_buffer: std::mem::transmute(loader.symbol("vkDestroyBuffer")?),
-                create_buffer_view: std::mem::transmute(loader.symbol("vkCreateBufferView")?),
-                destroy_buffer_view: std::mem::transmute(loader.symbol("vkDestroyBufferView")?),
-                create_image: std::mem::transmute(loader.symbol("vkCreateImage")?),
-                destroy_image: std::mem::transmute(loader.symbol("vkDestroyImage")?),
-                get_image_subresource_layout: std::mem::transmute(
-                    loader.symbol("vkGetImageSubresourceLayout")?,
-                ),
-                create_image_view: std::mem::transmute(loader.symbol("vkCreateImageView")?),
-                destroy_image_view: std::mem::transmute(loader.symbol("vkDestroyImageView")?),
-                create_shader_module: std::mem::transmute(loader.symbol("vkCreateShaderModule")?),
-                destroy_shader_module: std::mem::transmute(loader.symbol("vkDestroyShaderModule")?),
-                create_pipeline_cache: std::mem::transmute(loader.symbol("vkCreatePipelineCache")?),
-                destroy_pipeline_cache: std::mem::transmute(
-                    loader.symbol("vkDestroyPipelineCache")?,
-                ),
-                get_pipeline_cache_data: std::mem::transmute(
-                    loader.symbol("vkGetPipelineCacheData")?,
-                ),
-                merge_pipeline_caches: std::mem::transmute(loader.symbol("vkMergePipelineCaches")?),
-                create_graphics_pipelines: std::mem::transmute(
-                    loader.symbol("vkCreateGraphicsPipelines")?,
-                ),
-                create_compute_pipelines: std::mem::transmute(
-                    loader.symbol("vkCreateComputePipelines")?,
-                ),
-                destroy_pipeline: std::mem::transmute(loader.symbol("vkDestroyPipeline")?),
-                create_pipeline_layout: std::mem::transmute(
-                    loader.symbol("vkCreatePipelineLayout")?,
-                ),
-                destroy_pipeline_layout: std::mem::transmute(
-                    loader.symbol("vkDestroyPipelineLayout")?,
-                ),
-                create_sampler: std::mem::transmute(loader.symbol("vkCreateSampler")?),
-                destroy_sampler: std::mem::transmute(loader.symbol("vkDestroySampler")?),
-                create_descriptor_set_layout: std::mem::transmute(
-                    loader.symbol("vkCreateDescriptorSetLayout")?,
-                ),
-                destroy_descriptor_set_layout: std::mem::transmute(
-                    loader.symbol("vkDestroyDescriptorSetLayout")?,
-                ),
-                create_descriptor_pool: std::mem::transmute(
-                    loader.symbol("vkCreateDescriptorPool")?,
-                ),
-                destroy_descriptor_pool: std::mem::transmute(
-                    loader.symbol("vkDestroyDescriptorPool")?,
-                ),
-                reset_descriptor_pool: std::mem::transmute(loader.symbol("vkResetDescriptorPool")?),
-                allocate_descriptor_sets: std::mem::transmute(
-                    loader.symbol("vkAllocateDescriptorSets")?,
-                ),
-                free_descriptor_sets: std::mem::transmute(loader.symbol("vkFreeDescriptorSets")?),
-                update_descriptor_sets: std::mem::transmute(
-                    loader.symbol("vkUpdateDescriptorSets")?,
-                ),
-                create_framebuffer: std::mem::transmute(loader.symbol("vkCreateFramebuffer")?),
-                destroy_framebuffer: std::mem::transmute(loader.symbol("vkDestroyFramebuffer")?),
-                create_render_pass: std::mem::transmute(loader.symbol("vkCreateRenderPass")?),
-                destroy_render_pass: std::mem::transmute(loader.symbol("vkDestroyRenderPass")?),
-                get_render_area_granularity: std::mem::transmute(
-                    loader.symbol("vkGetRenderAreaGranularity")?,
-                ),
-                create_command_pool: std::mem::transmute(loader.symbol("vkCreateCommandPool")?),
-                destroy_command_pool: std::mem::transmute(loader.symbol("vkDestroyCommandPool")?),
-                reset_command_pool: std::mem::transmute(loader.symbol("vkResetCommandPool")?),
-                allocate_command_buffers: std::mem::transmute(
-                    loader.symbol("vkAllocateCommandBuffers")?,
-                ),
-                free_command_buffers: std::mem::transmute(loader.symbol("vkFreeCommandBuffers")?),
-                begin_command_buffer: std::mem::transmute(loader.symbol("vkBeginCommandBuffer")?),
-                end_command_buffer: std::mem::transmute(loader.symbol("vkEndCommandBuffer")?),
-                reset_command_buffer: std::mem::transmute(loader.symbol("vkResetCommandBuffer")?),
-                cmd_bind_pipeline: std::mem::transmute(loader.symbol("vkCmdBindPipeline")?),
-                cmd_set_viewport: std::mem::transmute(loader.symbol("vkCmdSetViewport")?),
-                cmd_set_scissor: std::mem::transmute(loader.symbol("vkCmdSetScissor")?),
-                cmd_set_line_width: std::mem::transmute(loader.symbol("vkCmdSetLineWidth")?),
-                cmd_set_depth_bias: std::mem::transmute(loader.symbol("vkCmdSetDepthBias")?),
-                cmd_set_blend_constants: std::mem::transmute(
-                    loader.symbol("vkCmdSetBlendConstants")?,
-                ),
-                cmd_set_depth_bounds: std::mem::transmute(loader.symbol("vkCmdSetDepthBounds")?),
-                cmd_set_stencil_compare_mask: std::mem::transmute(
-                    loader.symbol("vkCmdSetStencilCompareMask")?,
-                ),
-                cmd_set_stencil_write_mask: std::mem::transmute(
-                    loader.symbol("vkCmdSetStencilWriteMask")?,
-                ),
-                cmd_set_stencil_reference: std::mem::transmute(
-                    loader.symbol("vkCmdSetStencilReference")?,
-                ),
-                cmd_bind_descriptor_sets: std::mem::transmute(
-                    loader.symbol("vkCmdBindDescriptorSets")?,
-                ),
-                cmd_bind_index_buffer: std::mem::transmute(loader.symbol("vkCmdBindIndexBuffer")?),
-                cmd_bind_vertex_buffers: std::mem::transmute(
-                    loader.symbol("vkCmdBindVertexBuffers")?,
-                ),
-                cmd_draw: std::mem::transmute(loader.symbol("vkCmdDraw")?),
-                cmd_draw_indexed: std::mem::transmute(loader.symbol("vkCmdDrawIndexed")?),
-                cmd_draw_indirect: std::mem::transmute(loader.symbol("vkCmdDrawIndirect")?),
-                cmd_draw_indexed_indirect: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndexedIndirect")?,
-                ),
-                cmd_dispatch: std::mem::transmute(loader.symbol("vkCmdDispatch")?),
-                cmd_dispatch_indirect: std::mem::transmute(loader.symbol("vkCmdDispatchIndirect")?),
-                cmd_copy_buffer: std::mem::transmute(loader.symbol("vkCmdCopyBuffer")?),
-                cmd_copy_image: std::mem::transmute(loader.symbol("vkCmdCopyImage")?),
-                cmd_blit_image: std::mem::transmute(loader.symbol("vkCmdBlitImage")?),
-                cmd_copy_buffer_to_image: std::mem::transmute(
-                    loader.symbol("vkCmdCopyBufferToImage")?,
-                ),
-                cmd_copy_image_to_buffer: std::mem::transmute(
-                    loader.symbol("vkCmdCopyImageToBuffer")?,
-                ),
-                cmd_update_buffer: std::mem::transmute(loader.symbol("vkCmdUpdateBuffer")?),
-                cmd_fill_buffer: std::mem::transmute(loader.symbol("vkCmdFillBuffer")?),
-                cmd_clear_color_image: std::mem::transmute(loader.symbol("vkCmdClearColorImage")?),
-                cmd_clear_depth_stencil_image: std::mem::transmute(
-                    loader.symbol("vkCmdClearDepthStencilImage")?,
-                ),
-                cmd_clear_attachments: std::mem::transmute(loader.symbol("vkCmdClearAttachments")?),
-                cmd_resolve_image: std::mem::transmute(loader.symbol("vkCmdResolveImage")?),
-                cmd_set_event: std::mem::transmute(loader.symbol("vkCmdSetEvent")?),
-                cmd_reset_event: std::mem::transmute(loader.symbol("vkCmdResetEvent")?),
-                cmd_wait_events: std::mem::transmute(loader.symbol("vkCmdWaitEvents")?),
-                cmd_pipeline_barrier: std::mem::transmute(loader.symbol("vkCmdPipelineBarrier")?),
-                cmd_begin_query: std::mem::transmute(loader.symbol("vkCmdBeginQuery")?),
-                cmd_end_query: std::mem::transmute(loader.symbol("vkCmdEndQuery")?),
-                cmd_reset_query_pool: std::mem::transmute(loader.symbol("vkCmdResetQueryPool")?),
-                cmd_write_timestamp: std::mem::transmute(loader.symbol("vkCmdWriteTimestamp")?),
-                cmd_copy_query_pool_results: std::mem::transmute(
-                    loader.symbol("vkCmdCopyQueryPoolResults")?,
-                ),
-                cmd_push_constants: std::mem::transmute(loader.symbol("vkCmdPushConstants")?),
-                cmd_begin_render_pass: std::mem::transmute(loader.symbol("vkCmdBeginRenderPass")?),
-                cmd_next_subpass: std::mem::transmute(loader.symbol("vkCmdNextSubpass")?),
-                cmd_end_render_pass: std::mem::transmute(loader.symbol("vkCmdEndRenderPass")?),
-                cmd_execute_commands: std::mem::transmute(loader.symbol("vkCmdExecuteCommands")?),
-            })
+            let mut success = false;
+            let table = Vk10DeviceCommands {
+                get_device_proc_addr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceProcAddr");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_device: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDevice");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_queue: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceQueue");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_submit: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueSubmit");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_wait_idle: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueWaitIdle");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                device_wait_idle: std::mem::transmute({
+                    let symbol = loader.symbol("vkDeviceWaitIdle");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                allocate_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkAllocateMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                free_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkFreeMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                map_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkMapMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                unmap_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkUnmapMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                flush_mapped_memory_ranges: std::mem::transmute({
+                    let symbol = loader.symbol("vkFlushMappedMemoryRanges");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                invalidate_mapped_memory_ranges: std::mem::transmute({
+                    let symbol = loader.symbol("vkInvalidateMappedMemoryRanges");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_memory_commitment: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceMemoryCommitment");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                bind_buffer_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindBufferMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                bind_image_memory: std::mem::transmute({
+                    let symbol = loader.symbol("vkBindImageMemory");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_memory_requirements: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferMemoryRequirements");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_memory_requirements: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageMemoryRequirements");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_sparse_memory_requirements: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageSparseMemoryRequirements");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                queue_bind_sparse: std::mem::transmute({
+                    let symbol = loader.symbol("vkQueueBindSparse");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_fence: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateFence");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_fence: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyFence");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_fences: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetFences");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_fence_status: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetFenceStatus");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                wait_for_fences: std::mem::transmute({
+                    let symbol = loader.symbol("vkWaitForFences");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_semaphore: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSemaphore");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_semaphore: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySemaphore");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_event_status: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetEventStatus");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                set_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_query_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateQueryPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_query_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyQueryPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_query_pool_results: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetQueryPoolResults");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_buffer_view: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateBufferView");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_buffer_view: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyBufferView");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_subresource_layout: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageSubresourceLayout");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_image_view: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateImageView");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_image_view: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyImageView");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_shader_module: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateShaderModule");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_shader_module: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyShaderModule");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_pipeline_cache: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreatePipelineCache");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_pipeline_cache: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyPipelineCache");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_pipeline_cache_data: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPipelineCacheData");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                merge_pipeline_caches: std::mem::transmute({
+                    let symbol = loader.symbol("vkMergePipelineCaches");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_graphics_pipelines: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateGraphicsPipelines");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_compute_pipelines: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateComputePipelines");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_pipeline: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyPipeline");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_pipeline_layout: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreatePipelineLayout");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_pipeline_layout: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyPipelineLayout");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_sampler: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSampler");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_sampler: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySampler");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_descriptor_set_layout: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDescriptorSetLayout");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_descriptor_set_layout: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDescriptorSetLayout");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_descriptor_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDescriptorPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_descriptor_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDescriptorPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_descriptor_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetDescriptorPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                allocate_descriptor_sets: std::mem::transmute({
+                    let symbol = loader.symbol("vkAllocateDescriptorSets");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                free_descriptor_sets: std::mem::transmute({
+                    let symbol = loader.symbol("vkFreeDescriptorSets");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                update_descriptor_sets: std::mem::transmute({
+                    let symbol = loader.symbol("vkUpdateDescriptorSets");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_framebuffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateFramebuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_framebuffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyFramebuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_render_pass: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateRenderPass");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_render_pass: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyRenderPass");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_render_area_granularity: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetRenderAreaGranularity");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_command_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateCommandPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_command_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyCommandPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_command_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetCommandPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                allocate_command_buffers: std::mem::transmute({
+                    let symbol = loader.symbol("vkAllocateCommandBuffers");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                free_command_buffers: std::mem::transmute({
+                    let symbol = loader.symbol("vkFreeCommandBuffers");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                begin_command_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkBeginCommandBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                end_command_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkEndCommandBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_command_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetCommandBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_bind_pipeline: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindPipeline");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_viewport: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetViewport");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_scissor: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetScissor");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_line_width: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetLineWidth");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_depth_bias: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetDepthBias");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_blend_constants: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetBlendConstants");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_depth_bounds: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetDepthBounds");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_stencil_compare_mask: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetStencilCompareMask");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_stencil_write_mask: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetStencilWriteMask");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_stencil_reference: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetStencilReference");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_bind_descriptor_sets: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindDescriptorSets");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_bind_index_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindIndexBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_bind_vertex_buffers: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindVertexBuffers");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDraw");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indexed: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndexed");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indirect: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndirect");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indexed_indirect: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndexedIndirect");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_dispatch: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDispatch");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_dispatch_indirect: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDispatchIndirect");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_blit_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBlitImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_buffer_to_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyBufferToImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_image_to_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyImageToBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_update_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdUpdateBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_fill_buffer: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdFillBuffer");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_clear_color_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdClearColorImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_clear_depth_stencil_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdClearDepthStencilImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_clear_attachments: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdClearAttachments");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_resolve_image: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdResolveImage");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_reset_event: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdResetEvent");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_wait_events: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdWaitEvents");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_pipeline_barrier: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPipelineBarrier");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_query: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginQuery");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_query: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndQuery");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_reset_query_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdResetQueryPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_write_timestamp: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdWriteTimestamp");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_copy_query_pool_results: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdCopyQueryPoolResults");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_push_constants: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPushConstants");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_render_pass: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginRenderPass");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_next_subpass: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdNextSubpass");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_render_pass: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndRenderPass");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_execute_commands: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdExecuteCommands");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &Vk10DeviceCommands {
+    loader.vk1_0.as_ref().expect("`vk1_0` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk10DeviceCommands`](struct.Vk10DeviceCommands.html)"]
 pub trait Vk10DeviceLoaderExt {
@@ -2826,11 +3295,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         name: Option<&std::ffi::CStr>,
     ) -> crate::vk1_0::PFN_vkVoidFunction {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_device_proc_addr
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_device_proc_addr;
+            .expect("`get_device_proc_addr` not available");
         let _val = function(
             self.handle,
             name.map(|s| s.as_ptr()).unwrap_or(std::ptr::null()),
@@ -2840,11 +3308,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDevice.html) · Device Command"]
     unsafe fn destroy_device(&self, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_device
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_device;
+            .expect("`destroy_device` not available");
         let _val = function(
             self.handle,
             if let Some(allocator) = allocator {
@@ -2863,11 +3330,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         queue_index: u32,
         queue: Option<crate::vk1_0::Queue>,
     ) -> crate::vk1_0::Queue {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_device_queue
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_device_queue;
+            .expect("`get_device_queue` not available");
         let mut queue = queue.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, queue_family_index, queue_index, &mut queue);
         queue
@@ -2880,11 +3346,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         submits: &[crate::vk1_0::SubmitInfoBuilder],
         fence: crate::vk1_0::Fence,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .queue_submit
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .queue_submit;
+            .expect("`queue_submit` not available");
         let submit_count = submits.len() as _;
         let _val = function(queue, submit_count, submits.as_ptr() as _, fence);
         crate::utils::VulkanResult::new(_val, ())
@@ -2892,22 +3357,20 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueWaitIdle.html) · Device Command"]
     unsafe fn queue_wait_idle(&self, queue: crate::vk1_0::Queue) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .queue_wait_idle
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .queue_wait_idle;
+            .expect("`queue_wait_idle` not available");
         let _val = function(queue);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDeviceWaitIdle.html) · Device Command"]
     unsafe fn device_wait_idle(&self) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .device_wait_idle
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .device_wait_idle;
+            .expect("`device_wait_idle` not available");
         let _val = function(self.handle);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -2919,11 +3382,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         memory: Option<crate::vk1_0::DeviceMemory>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DeviceMemory> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .allocate_memory
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .allocate_memory;
+            .expect("`allocate_memory` not available");
         let mut memory = memory.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -2944,7 +3406,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         memory: crate::vk1_0::DeviceMemory,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self.vk1_0.as_ref().expect("`vk1_0` not loaded").free_memory;
+        let function = device_commands(self)
+            .free_memory
+            .as_ref()
+            .expect("`free_memory` not available");
         let _val = function(
             self.handle,
             memory,
@@ -2966,18 +3431,20 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         flags: crate::vk1_0::MemoryMapFlags,
         data: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self.vk1_0.as_ref().expect("`vk1_0` not loaded").map_memory;
+        let function = device_commands(self)
+            .map_memory
+            .as_ref()
+            .expect("`map_memory` not available");
         let _val = function(self.handle, memory, offset, size, flags, data);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUnmapMemory.html) · Device Command"]
     unsafe fn unmap_memory(&self, memory: crate::vk1_0::DeviceMemory) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .unmap_memory
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .unmap_memory;
+            .expect("`unmap_memory` not available");
         let _val = function(self.handle, memory);
         ()
     }
@@ -2987,11 +3454,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         memory_ranges: &[crate::vk1_0::MappedMemoryRangeBuilder],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .flush_mapped_memory_ranges
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .flush_mapped_memory_ranges;
+            .expect("`flush_mapped_memory_ranges` not available");
         let memory_range_count = memory_ranges.len() as _;
         let _val = function(self.handle, memory_range_count, memory_ranges.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -3002,11 +3468,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         memory_ranges: &[crate::vk1_0::MappedMemoryRangeBuilder],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .invalidate_mapped_memory_ranges
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .invalidate_mapped_memory_ranges;
+            .expect("`invalidate_mapped_memory_ranges` not available");
         let memory_range_count = memory_ranges.len() as _;
         let _val = function(self.handle, memory_range_count, memory_ranges.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -3018,11 +3483,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         memory: crate::vk1_0::DeviceMemory,
         committed_memory_in_bytes: Option<crate::vk1_0::DeviceSize>,
     ) -> crate::vk1_0::DeviceSize {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_device_memory_commitment
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_device_memory_commitment;
+            .expect("`get_device_memory_commitment` not available");
         let mut committed_memory_in_bytes =
             committed_memory_in_bytes.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, memory, &mut committed_memory_in_bytes);
@@ -3036,11 +3500,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         memory: crate::vk1_0::DeviceMemory,
         memory_offset: crate::vk1_0::DeviceSize,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .bind_buffer_memory
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .bind_buffer_memory;
+            .expect("`bind_buffer_memory` not available");
         let _val = function(self.handle, buffer, memory, memory_offset);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -3052,11 +3515,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         memory: crate::vk1_0::DeviceMemory,
         memory_offset: crate::vk1_0::DeviceSize,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .bind_image_memory
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .bind_image_memory;
+            .expect("`bind_image_memory` not available");
         let _val = function(self.handle, image, memory, memory_offset);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -3067,11 +3529,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer: crate::vk1_0::Buffer,
         memory_requirements: Option<crate::vk1_0::MemoryRequirements>,
     ) -> crate::vk1_0::MemoryRequirements {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_buffer_memory_requirements
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_buffer_memory_requirements;
+            .expect("`get_buffer_memory_requirements` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, buffer, &mut memory_requirements);
         memory_requirements
@@ -3083,11 +3544,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         image: crate::vk1_0::Image,
         memory_requirements: Option<crate::vk1_0::MemoryRequirements>,
     ) -> crate::vk1_0::MemoryRequirements {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_image_memory_requirements
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_image_memory_requirements;
+            .expect("`get_image_memory_requirements` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, image, &mut memory_requirements);
         memory_requirements
@@ -3099,11 +3559,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         image: crate::vk1_0::Image,
         sparse_memory_requirement_count: Option<u32>,
     ) -> Vec<crate::vk1_0::SparseImageMemoryRequirements> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_image_sparse_memory_requirements
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_image_sparse_memory_requirements;
+            .expect("`get_image_sparse_memory_requirements` not available");
         let mut sparse_memory_requirement_count =
             sparse_memory_requirement_count.unwrap_or_else(|| {
                 let mut val = Default::default();
@@ -3128,11 +3587,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         bind_info: &[crate::vk1_0::BindSparseInfoBuilder],
         fence: crate::vk1_0::Fence,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .queue_bind_sparse
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .queue_bind_sparse;
+            .expect("`queue_bind_sparse` not available");
         let bind_info_count = bind_info.len() as _;
         let _val = function(queue, bind_info_count, bind_info.as_ptr() as _, fence);
         crate::utils::VulkanResult::new(_val, ())
@@ -3145,11 +3603,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_fence
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_fence;
+            .expect("`create_fence` not available");
         let mut fence = fence.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3170,11 +3627,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         fence: crate::vk1_0::Fence,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_fence
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_fence;
+            .expect("`destroy_fence` not available");
         let _val = function(
             self.handle,
             fence,
@@ -3192,11 +3648,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         fences: &[crate::vk1_0::Fence],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .reset_fences
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .reset_fences;
+            .expect("`reset_fences` not available");
         let fence_count = fences.len() as _;
         let _val = function(self.handle, fence_count, fences.as_ptr() as _);
         crate::utils::VulkanResult::new(_val, ())
@@ -3207,11 +3662,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         fence: crate::vk1_0::Fence,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_fence_status
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_fence_status;
+            .expect("`get_fence_status` not available");
         let _val = function(self.handle, fence);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -3223,11 +3677,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         wait_all: bool,
         timeout: u64,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .wait_for_fences
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .wait_for_fences;
+            .expect("`wait_for_fences` not available");
         let fence_count = fences.len() as _;
         let _val = function(
             self.handle,
@@ -3246,11 +3699,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         semaphore: Option<crate::vk1_0::Semaphore>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Semaphore> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_semaphore
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_semaphore;
+            .expect("`create_semaphore` not available");
         let mut semaphore = semaphore.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3271,11 +3723,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         semaphore: crate::vk1_0::Semaphore,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_semaphore
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_semaphore;
+            .expect("`destroy_semaphore` not available");
         let _val = function(
             self.handle,
             semaphore,
@@ -3295,11 +3746,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         event: Option<crate::vk1_0::Event>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Event> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_event
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_event;
+            .expect("`create_event` not available");
         let mut event = event.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3320,11 +3770,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         event: crate::vk1_0::Event,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_event
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_event;
+            .expect("`destroy_event` not available");
         let _val = function(
             self.handle,
             event,
@@ -3342,25 +3791,30 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         event: crate::vk1_0::Event,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_event_status
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_event_status;
+            .expect("`get_event_status` not available");
         let _val = function(self.handle, event);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetEvent.html) · Device Command"]
     unsafe fn set_event(&self, event: crate::vk1_0::Event) -> crate::utils::VulkanResult<()> {
-        let function = self.vk1_0.as_ref().expect("`vk1_0` not loaded").set_event;
+        let function = device_commands(self)
+            .set_event
+            .as_ref()
+            .expect("`set_event` not available");
         let _val = function(self.handle, event);
         crate::utils::VulkanResult::new(_val, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetEvent.html) · Device Command"]
     unsafe fn reset_event(&self, event: crate::vk1_0::Event) -> crate::utils::VulkanResult<()> {
-        let function = self.vk1_0.as_ref().expect("`vk1_0` not loaded").reset_event;
+        let function = device_commands(self)
+            .reset_event
+            .as_ref()
+            .expect("`reset_event` not available");
         let _val = function(self.handle, event);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -3372,11 +3826,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         query_pool: Option<crate::vk1_0::QueryPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::QueryPool> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_query_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_query_pool;
+            .expect("`create_query_pool` not available");
         let mut query_pool = query_pool.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3397,11 +3850,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_query_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_query_pool;
+            .expect("`destroy_query_pool` not available");
         let _val = function(
             self.handle,
             query_pool,
@@ -3425,11 +3877,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         stride: crate::vk1_0::DeviceSize,
         flags: crate::vk1_0::QueryResultFlags,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_query_pool_results
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_query_pool_results;
+            .expect("`get_query_pool_results` not available");
         let _val = function(
             self.handle,
             query_pool,
@@ -3450,11 +3901,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         buffer: Option<crate::vk1_0::Buffer>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Buffer> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_buffer;
+            .expect("`create_buffer` not available");
         let mut buffer = buffer.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3475,11 +3925,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer: crate::vk1_0::Buffer,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_buffer;
+            .expect("`destroy_buffer` not available");
         let _val = function(
             self.handle,
             buffer,
@@ -3499,11 +3948,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         view: Option<crate::vk1_0::BufferView>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::BufferView> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_buffer_view
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_buffer_view;
+            .expect("`create_buffer_view` not available");
         let mut view = view.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3524,11 +3972,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer_view: crate::vk1_0::BufferView,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_buffer_view
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_buffer_view;
+            .expect("`destroy_buffer_view` not available");
         let _val = function(
             self.handle,
             buffer_view,
@@ -3548,11 +3995,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         image: Option<crate::vk1_0::Image>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Image> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_image;
+            .expect("`create_image` not available");
         let mut image = image.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3573,11 +4019,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         image: crate::vk1_0::Image,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_image;
+            .expect("`destroy_image` not available");
         let _val = function(
             self.handle,
             image,
@@ -3597,11 +4042,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         subresource: &crate::vk1_0::ImageSubresource,
         layout: Option<crate::vk1_0::SubresourceLayout>,
     ) -> crate::vk1_0::SubresourceLayout {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_image_subresource_layout
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_image_subresource_layout;
+            .expect("`get_image_subresource_layout` not available");
         let mut layout = layout.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, image, subresource, &mut layout);
         layout
@@ -3614,11 +4058,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         view: Option<crate::vk1_0::ImageView>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ImageView> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_image_view
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_image_view;
+            .expect("`create_image_view` not available");
         let mut view = view.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3639,11 +4082,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         image_view: crate::vk1_0::ImageView,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_image_view
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_image_view;
+            .expect("`destroy_image_view` not available");
         let _val = function(
             self.handle,
             image_view,
@@ -3663,11 +4105,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         shader_module: Option<crate::vk1_0::ShaderModule>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ShaderModule> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_shader_module
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_shader_module;
+            .expect("`create_shader_module` not available");
         let mut shader_module = shader_module.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3688,11 +4129,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         shader_module: crate::vk1_0::ShaderModule,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_shader_module
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_shader_module;
+            .expect("`destroy_shader_module` not available");
         let _val = function(
             self.handle,
             shader_module,
@@ -3712,11 +4152,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         pipeline_cache: Option<crate::vk1_0::PipelineCache>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineCache> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_pipeline_cache
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_pipeline_cache;
+            .expect("`create_pipeline_cache` not available");
         let mut pipeline_cache = pipeline_cache.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3737,11 +4176,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         pipeline_cache: crate::vk1_0::PipelineCache,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_pipeline_cache
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_pipeline_cache;
+            .expect("`destroy_pipeline_cache` not available");
         let _val = function(
             self.handle,
             pipeline_cache,
@@ -3761,11 +4199,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         data_size: *mut usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_pipeline_cache_data
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_pipeline_cache_data;
+            .expect("`get_pipeline_cache_data` not available");
         let _val = function(self.handle, pipeline_cache, data_size, data);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -3776,11 +4213,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_cache: crate::vk1_0::PipelineCache,
         src_caches: &[crate::vk1_0::PipelineCache],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .merge_pipeline_caches
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .merge_pipeline_caches;
+            .expect("`merge_pipeline_caches` not available");
         let src_cache_count = src_caches.len() as _;
         let _val = function(
             self.handle,
@@ -3798,11 +4234,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_graphics_pipelines
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_graphics_pipelines;
+            .expect("`create_graphics_pipelines` not available");
         let create_info_count = create_infos.len() as _;
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _val = function(
@@ -3827,11 +4262,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_compute_pipelines
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_compute_pipelines;
+            .expect("`create_compute_pipelines` not available");
         let create_info_count = create_infos.len() as _;
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _val = function(
@@ -3855,11 +4289,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         pipeline: crate::vk1_0::Pipeline,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_pipeline
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_pipeline;
+            .expect("`destroy_pipeline` not available");
         let _val = function(
             self.handle,
             pipeline,
@@ -3879,11 +4312,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         pipeline_layout: Option<crate::vk1_0::PipelineLayout>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineLayout> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_pipeline_layout
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_pipeline_layout;
+            .expect("`create_pipeline_layout` not available");
         let mut pipeline_layout = pipeline_layout.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3904,11 +4336,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         pipeline_layout: crate::vk1_0::PipelineLayout,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_pipeline_layout
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_pipeline_layout;
+            .expect("`destroy_pipeline_layout` not available");
         let _val = function(
             self.handle,
             pipeline_layout,
@@ -3928,11 +4359,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         sampler: Option<crate::vk1_0::Sampler>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Sampler> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_sampler
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_sampler;
+            .expect("`create_sampler` not available");
         let mut sampler = sampler.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -3953,11 +4383,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         sampler: crate::vk1_0::Sampler,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_sampler
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_sampler;
+            .expect("`destroy_sampler` not available");
         let _val = function(
             self.handle,
             sampler,
@@ -3977,11 +4406,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         set_layout: Option<crate::vk1_0::DescriptorSetLayout>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorSetLayout> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_descriptor_set_layout
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_descriptor_set_layout;
+            .expect("`create_descriptor_set_layout` not available");
         let mut set_layout = set_layout.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -4002,11 +4430,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_set_layout: crate::vk1_0::DescriptorSetLayout,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_descriptor_set_layout
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_descriptor_set_layout;
+            .expect("`destroy_descriptor_set_layout` not available");
         let _val = function(
             self.handle,
             descriptor_set_layout,
@@ -4026,11 +4453,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         descriptor_pool: Option<crate::vk1_0::DescriptorPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorPool> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_descriptor_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_descriptor_pool;
+            .expect("`create_descriptor_pool` not available");
         let mut descriptor_pool = descriptor_pool.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -4051,11 +4477,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_pool: crate::vk1_0::DescriptorPool,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_descriptor_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_descriptor_pool;
+            .expect("`destroy_descriptor_pool` not available");
         let _val = function(
             self.handle,
             descriptor_pool,
@@ -4074,11 +4499,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_pool: crate::vk1_0::DescriptorPool,
         flags: crate::vk1_0::DescriptorPoolResetFlags,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .reset_descriptor_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .reset_descriptor_pool;
+            .expect("`reset_descriptor_pool` not available");
         let _val = function(self.handle, descriptor_pool, flags);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -4088,11 +4512,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         allocate_info: &crate::vk1_0::DescriptorSetAllocateInfo,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::DescriptorSet>> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .allocate_descriptor_sets
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .allocate_descriptor_sets;
+            .expect("`allocate_descriptor_sets` not available");
         let mut descriptor_sets = vec![Default::default(); allocate_info.descriptor_set_count as _];
         let _val = function(self.handle, allocate_info, descriptor_sets.as_mut_ptr());
         crate::utils::VulkanResult::new(_val, descriptor_sets)
@@ -4104,11 +4527,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_pool: crate::vk1_0::DescriptorPool,
         descriptor_sets: &[crate::vk1_0::DescriptorSet],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .free_descriptor_sets
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .free_descriptor_sets;
+            .expect("`free_descriptor_sets` not available");
         let descriptor_set_count = descriptor_sets.len() as _;
         let _val = function(
             self.handle,
@@ -4125,11 +4547,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
         descriptor_copies: &[crate::vk1_0::CopyDescriptorSetBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .update_descriptor_sets
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .update_descriptor_sets;
+            .expect("`update_descriptor_sets` not available");
         let descriptor_write_count = descriptor_writes.len() as _;
         let descriptor_copy_count = descriptor_copies.len() as _;
         let _val = function(
@@ -4149,11 +4570,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         framebuffer: Option<crate::vk1_0::Framebuffer>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Framebuffer> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_framebuffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_framebuffer;
+            .expect("`create_framebuffer` not available");
         let mut framebuffer = framebuffer.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -4174,11 +4594,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         framebuffer: crate::vk1_0::Framebuffer,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_framebuffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_framebuffer;
+            .expect("`destroy_framebuffer` not available");
         let _val = function(
             self.handle,
             framebuffer,
@@ -4198,11 +4617,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_render_pass
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_render_pass;
+            .expect("`create_render_pass` not available");
         let mut render_pass = render_pass.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -4223,11 +4641,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         render_pass: crate::vk1_0::RenderPass,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_render_pass
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_render_pass;
+            .expect("`destroy_render_pass` not available");
         let _val = function(
             self.handle,
             render_pass,
@@ -4246,11 +4663,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         render_pass: crate::vk1_0::RenderPass,
         granularity: Option<crate::vk1_0::Extent2D>,
     ) -> crate::vk1_0::Extent2D {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .get_render_area_granularity
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .get_render_area_granularity;
+            .expect("`get_render_area_granularity` not available");
         let mut granularity = granularity.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, render_pass, &mut granularity);
         granularity
@@ -4263,11 +4679,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         command_pool: Option<crate::vk1_0::CommandPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::CommandPool> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .create_command_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .create_command_pool;
+            .expect("`create_command_pool` not available");
         let mut command_pool = command_pool.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -4288,11 +4703,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_pool: crate::vk1_0::CommandPool,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .destroy_command_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .destroy_command_pool;
+            .expect("`destroy_command_pool` not available");
         let _val = function(
             self.handle,
             command_pool,
@@ -4311,11 +4725,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_pool: crate::vk1_0::CommandPool,
         flags: crate::vk1_0::CommandPoolResetFlags,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .reset_command_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .reset_command_pool;
+            .expect("`reset_command_pool` not available");
         let _val = function(self.handle, command_pool, flags);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -4325,11 +4738,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         allocate_info: &crate::vk1_0::CommandBufferAllocateInfo,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::CommandBuffer>> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .allocate_command_buffers
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .allocate_command_buffers;
+            .expect("`allocate_command_buffers` not available");
         let mut command_buffers = vec![Default::default(); allocate_info.command_buffer_count as _];
         let _val = function(self.handle, allocate_info, command_buffers.as_mut_ptr());
         crate::utils::VulkanResult::new(_val, command_buffers)
@@ -4341,11 +4753,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_pool: crate::vk1_0::CommandPool,
         command_buffers: &[crate::vk1_0::CommandBuffer],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .free_command_buffers
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .free_command_buffers;
+            .expect("`free_command_buffers` not available");
         let command_buffer_count = command_buffers.len() as _;
         let _val = function(
             self.handle,
@@ -4362,11 +4773,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         begin_info: &crate::vk1_0::CommandBufferBeginInfo,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .begin_command_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .begin_command_buffer;
+            .expect("`begin_command_buffer` not available");
         let _val = function(command_buffer, begin_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -4376,11 +4786,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .end_command_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .end_command_buffer;
+            .expect("`end_command_buffer` not available");
         let _val = function(command_buffer);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -4391,11 +4800,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         flags: crate::vk1_0::CommandBufferResetFlags,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .reset_command_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .reset_command_buffer;
+            .expect("`reset_command_buffer` not available");
         let _val = function(command_buffer, flags);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -4407,11 +4815,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
         pipeline: crate::vk1_0::Pipeline,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_bind_pipeline
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_bind_pipeline;
+            .expect("`cmd_bind_pipeline` not available");
         let _val = function(command_buffer, pipeline_bind_point, pipeline);
         ()
     }
@@ -4423,11 +4830,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         first_viewport: u32,
         viewports: &[crate::vk1_0::ViewportBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_viewport
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_viewport;
+            .expect("`cmd_set_viewport` not available");
         let viewport_count = viewports.len() as _;
         let _val = function(
             command_buffer,
@@ -4445,11 +4851,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         first_scissor: u32,
         scissors: &[crate::vk1_0::Rect2DBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_scissor
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_scissor;
+            .expect("`cmd_set_scissor` not available");
         let scissor_count = scissors.len() as _;
         let _val = function(
             command_buffer,
@@ -4466,11 +4871,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         line_width: f32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_line_width
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_line_width;
+            .expect("`cmd_set_line_width` not available");
         let _val = function(command_buffer, line_width);
         ()
     }
@@ -4483,11 +4887,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         depth_bias_clamp: f32,
         depth_bias_slope_factor: f32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_depth_bias
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_depth_bias;
+            .expect("`cmd_set_depth_bias` not available");
         let _val = function(
             command_buffer,
             depth_bias_constant_factor,
@@ -4503,11 +4906,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         blend_constants: [f32; 4],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_blend_constants
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_blend_constants;
+            .expect("`cmd_set_blend_constants` not available");
         let _val = function(command_buffer, blend_constants);
         ()
     }
@@ -4519,11 +4921,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         min_depth_bounds: f32,
         max_depth_bounds: f32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_depth_bounds
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_depth_bounds;
+            .expect("`cmd_set_depth_bounds` not available");
         let _val = function(command_buffer, min_depth_bounds, max_depth_bounds);
         ()
     }
@@ -4535,11 +4936,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         face_mask: crate::vk1_0::StencilFaceFlags,
         compare_mask: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_stencil_compare_mask
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_stencil_compare_mask;
+            .expect("`cmd_set_stencil_compare_mask` not available");
         let _val = function(command_buffer, face_mask, compare_mask);
         ()
     }
@@ -4551,11 +4951,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         face_mask: crate::vk1_0::StencilFaceFlags,
         write_mask: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_stencil_write_mask
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_stencil_write_mask;
+            .expect("`cmd_set_stencil_write_mask` not available");
         let _val = function(command_buffer, face_mask, write_mask);
         ()
     }
@@ -4567,11 +4966,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         face_mask: crate::vk1_0::StencilFaceFlags,
         reference: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_stencil_reference
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_stencil_reference;
+            .expect("`cmd_set_stencil_reference` not available");
         let _val = function(command_buffer, face_mask, reference);
         ()
     }
@@ -4586,11 +4984,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         descriptor_sets: &[crate::vk1_0::DescriptorSet],
         dynamic_offsets: &[u32],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_bind_descriptor_sets
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_bind_descriptor_sets;
+            .expect("`cmd_bind_descriptor_sets` not available");
         let descriptor_set_count = descriptor_sets.len() as _;
         let dynamic_offset_count = dynamic_offsets.len() as _;
         let _val = function(
@@ -4614,11 +5011,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         offset: crate::vk1_0::DeviceSize,
         index_type: crate::vk1_0::IndexType,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_bind_index_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_bind_index_buffer;
+            .expect("`cmd_bind_index_buffer` not available");
         let _val = function(command_buffer, buffer, offset, index_type);
         ()
     }
@@ -4631,11 +5027,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffers: &[crate::vk1_0::Buffer],
         offsets: &[crate::vk1_0::DeviceSize],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_bind_vertex_buffers
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_bind_vertex_buffers;
+            .expect("`cmd_bind_vertex_buffers` not available");
         let binding_count = buffers.len().min(offsets.len()) as _;
         let _val = function(
             command_buffer,
@@ -4656,7 +5051,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         first_vertex: u32,
         first_instance: u32,
     ) -> () {
-        let function = self.vk1_0.as_ref().expect("`vk1_0` not loaded").cmd_draw;
+        let function = device_commands(self)
+            .cmd_draw
+            .as_ref()
+            .expect("`cmd_draw` not available");
         let _val = function(
             command_buffer,
             vertex_count,
@@ -4677,11 +5075,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         vertex_offset: i32,
         first_instance: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_draw_indexed
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_draw_indexed;
+            .expect("`cmd_draw_indexed` not available");
         let _val = function(
             command_buffer,
             index_count,
@@ -4702,11 +5099,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_draw_indirect
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_draw_indirect;
+            .expect("`cmd_draw_indirect` not available");
         let _val = function(command_buffer, buffer, offset, draw_count, stride);
         ()
     }
@@ -4720,11 +5116,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_draw_indexed_indirect
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_draw_indexed_indirect;
+            .expect("`cmd_draw_indexed_indirect` not available");
         let _val = function(command_buffer, buffer, offset, draw_count, stride);
         ()
     }
@@ -4737,11 +5132,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         group_count_y: u32,
         group_count_z: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_dispatch
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_dispatch;
+            .expect("`cmd_dispatch` not available");
         let _val = function(command_buffer, group_count_x, group_count_y, group_count_z);
         ()
     }
@@ -4753,11 +5147,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer: crate::vk1_0::Buffer,
         offset: crate::vk1_0::DeviceSize,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_dispatch_indirect
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_dispatch_indirect;
+            .expect("`cmd_dispatch_indirect` not available");
         let _val = function(command_buffer, buffer, offset);
         ()
     }
@@ -4770,11 +5163,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_buffer: crate::vk1_0::Buffer,
         regions: &[crate::vk1_0::BufferCopyBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_copy_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_copy_buffer;
+            .expect("`cmd_copy_buffer` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -4796,11 +5188,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_image_layout: crate::vk1_0::ImageLayout,
         regions: &[crate::vk1_0::ImageCopyBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_copy_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_copy_image;
+            .expect("`cmd_copy_image` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -4825,11 +5216,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         regions: &[crate::vk1_0::ImageBlitBuilder],
         filter: crate::vk1_0::Filter,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_blit_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_blit_image;
+            .expect("`cmd_blit_image` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -4853,11 +5243,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_image_layout: crate::vk1_0::ImageLayout,
         regions: &[crate::vk1_0::BufferImageCopyBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_copy_buffer_to_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_copy_buffer_to_image;
+            .expect("`cmd_copy_buffer_to_image` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -4879,11 +5268,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_buffer: crate::vk1_0::Buffer,
         regions: &[crate::vk1_0::BufferImageCopyBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_copy_image_to_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_copy_image_to_buffer;
+            .expect("`cmd_copy_image_to_buffer` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -4905,11 +5293,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         data_size: crate::vk1_0::DeviceSize,
         data: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_update_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_update_buffer;
+            .expect("`cmd_update_buffer` not available");
         let _val = function(command_buffer, dst_buffer, dst_offset, data_size, data);
         ()
     }
@@ -4923,11 +5310,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         size: crate::vk1_0::DeviceSize,
         data: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_fill_buffer
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_fill_buffer;
+            .expect("`cmd_fill_buffer` not available");
         let _val = function(command_buffer, dst_buffer, dst_offset, size, data);
         ()
     }
@@ -4941,11 +5327,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         color: &crate::vk1_0::ClearColorValue,
         ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_clear_color_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_clear_color_image;
+            .expect("`cmd_clear_color_image` not available");
         let range_count = ranges.len() as _;
         let _val = function(
             command_buffer,
@@ -4967,11 +5352,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         depth_stencil: &crate::vk1_0::ClearDepthStencilValue,
         ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_clear_depth_stencil_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_clear_depth_stencil_image;
+            .expect("`cmd_clear_depth_stencil_image` not available");
         let range_count = ranges.len() as _;
         let _val = function(
             command_buffer,
@@ -4991,11 +5375,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         attachments: &[crate::vk1_0::ClearAttachmentBuilder],
         rects: &[crate::vk1_0::ClearRectBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_clear_attachments
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_clear_attachments;
+            .expect("`cmd_clear_attachments` not available");
         let attachment_count = attachments.len() as _;
         let rect_count = rects.len() as _;
         let _val = function(
@@ -5018,11 +5401,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         dst_image_layout: crate::vk1_0::ImageLayout,
         regions: &[crate::vk1_0::ImageResolveBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_resolve_image
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_resolve_image;
+            .expect("`cmd_resolve_image` not available");
         let region_count = regions.len() as _;
         let _val = function(
             command_buffer,
@@ -5043,11 +5425,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         event: crate::vk1_0::Event,
         stage_mask: crate::vk1_0::PipelineStageFlags,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_set_event
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_set_event;
+            .expect("`cmd_set_event` not available");
         let _val = function(command_buffer, event, stage_mask);
         ()
     }
@@ -5059,11 +5440,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         event: crate::vk1_0::Event,
         stage_mask: crate::vk1_0::PipelineStageFlags,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_reset_event
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_reset_event;
+            .expect("`cmd_reset_event` not available");
         let _val = function(command_buffer, event, stage_mask);
         ()
     }
@@ -5079,11 +5459,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder],
         image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_wait_events
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_wait_events;
+            .expect("`cmd_wait_events` not available");
         let event_count = events.len() as _;
         let memory_barrier_count = memory_barriers.len() as _;
         let buffer_memory_barrier_count = buffer_memory_barriers.len() as _;
@@ -5115,11 +5494,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder],
         image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_pipeline_barrier
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_pipeline_barrier;
+            .expect("`cmd_pipeline_barrier` not available");
         let memory_barrier_count = memory_barriers.len() as _;
         let buffer_memory_barrier_count = buffer_memory_barriers.len() as _;
         let image_memory_barrier_count = image_memory_barriers.len() as _;
@@ -5146,11 +5524,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         query: u32,
         flags: crate::vk1_0::QueryControlFlags,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_begin_query
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_begin_query;
+            .expect("`cmd_begin_query` not available");
         let _val = function(command_buffer, query_pool, query, flags);
         ()
     }
@@ -5162,11 +5539,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         query: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_end_query
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_end_query;
+            .expect("`cmd_end_query` not available");
         let _val = function(command_buffer, query_pool, query);
         ()
     }
@@ -5179,11 +5555,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         first_query: u32,
         query_count: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_reset_query_pool
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_reset_query_pool;
+            .expect("`cmd_reset_query_pool` not available");
         let _val = function(command_buffer, query_pool, first_query, query_count);
         ()
     }
@@ -5196,11 +5571,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         query: u32,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_write_timestamp
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_write_timestamp;
+            .expect("`cmd_write_timestamp` not available");
         let _val = function(command_buffer, pipeline_stage, query_pool, query);
         ()
     }
@@ -5217,11 +5591,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         stride: crate::vk1_0::DeviceSize,
         flags: crate::vk1_0::QueryResultFlags,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_copy_query_pool_results
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_copy_query_pool_results;
+            .expect("`cmd_copy_query_pool_results` not available");
         let _val = function(
             command_buffer,
             query_pool,
@@ -5245,11 +5618,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         size: u32,
         values: *const std::ffi::c_void,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_push_constants
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_push_constants;
+            .expect("`cmd_push_constants` not available");
         let _val = function(command_buffer, layout, stage_flags, offset, size, values);
         ()
     }
@@ -5261,11 +5633,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
         contents: crate::vk1_0::SubpassContents,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_begin_render_pass
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_begin_render_pass;
+            .expect("`cmd_begin_render_pass` not available");
         let _val = function(command_buffer, render_pass_begin, contents);
         ()
     }
@@ -5276,22 +5647,20 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         contents: crate::vk1_0::SubpassContents,
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_next_subpass
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_next_subpass;
+            .expect("`cmd_next_subpass` not available");
         let _val = function(command_buffer, contents);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass.html) · Device Command"]
     unsafe fn cmd_end_render_pass(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_end_render_pass
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_end_render_pass;
+            .expect("`cmd_end_render_pass` not available");
         let _val = function(command_buffer);
         ()
     }
@@ -5302,11 +5671,10 @@ impl Vk10DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         command_buffers: &[crate::vk1_0::CommandBuffer],
     ) -> () {
-        let function = self
-            .vk1_0
+        let function = device_commands(self)
+            .cmd_execute_commands
             .as_ref()
-            .expect("`vk1_0` not loaded")
-            .cmd_execute_commands;
+            .expect("`cmd_execute_commands` not available");
         let command_buffer_count = command_buffers.len() as _;
         let _val = function(
             command_buffer,

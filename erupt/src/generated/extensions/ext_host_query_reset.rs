@@ -13,17 +13,33 @@ pub type PFN_vkResetQueryPoolEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`ExtHostQueryResetDeviceLoaderExt`](trait.ExtHostQueryResetDeviceLoaderExt.html)"]
 pub struct ExtHostQueryResetDeviceCommands {
-    pub reset_query_pool_ext: PFN_vkResetQueryPoolEXT,
+    pub reset_query_pool_ext: Option<PFN_vkResetQueryPoolEXT>,
 }
 impl ExtHostQueryResetDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtHostQueryResetDeviceCommands> {
         unsafe {
-            Some(ExtHostQueryResetDeviceCommands {
-                reset_query_pool_ext: std::mem::transmute(loader.symbol("vkResetQueryPoolEXT")?),
-            })
+            let mut success = false;
+            let table = ExtHostQueryResetDeviceCommands {
+                reset_query_pool_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetQueryPoolEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtHostQueryResetDeviceCommands {
+    loader
+        .ext_host_query_reset
+        .as_ref()
+        .expect("`ext_host_query_reset` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtHostQueryResetDeviceCommands`](struct.ExtHostQueryResetDeviceCommands.html)"]
 pub trait ExtHostQueryResetDeviceLoaderExt {
@@ -44,11 +60,10 @@ impl ExtHostQueryResetDeviceLoaderExt for crate::DeviceLoader {
         first_query: u32,
         query_count: u32,
     ) -> () {
-        let function = self
-            .ext_host_query_reset
+        let function = device_commands(self)
+            .reset_query_pool_ext
             .as_ref()
-            .expect("`ext_host_query_reset` not loaded")
-            .reset_query_pool_ext;
+            .expect("`reset_query_pool_ext` not available");
         let _val = function(self.handle, query_pool, first_query, query_count);
         ()
     }

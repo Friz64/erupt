@@ -9,7 +9,7 @@ pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system"
 #[doc = "Provides Instance Commands for [`ExtDisplaySurfaceCounterInstanceLoaderExt`](trait.ExtDisplaySurfaceCounterInstanceLoaderExt.html)"]
 pub struct ExtDisplaySurfaceCounterInstanceCommands {
     pub get_physical_device_surface_capabilities2_ext:
-        PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT,
+        Option<PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT>,
 }
 impl ExtDisplaySurfaceCounterInstanceCommands {
     #[inline]
@@ -17,13 +17,27 @@ impl ExtDisplaySurfaceCounterInstanceCommands {
         loader: &crate::InstanceLoader,
     ) -> Option<ExtDisplaySurfaceCounterInstanceCommands> {
         unsafe {
-            Some(ExtDisplaySurfaceCounterInstanceCommands {
-                get_physical_device_surface_capabilities2_ext: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceSurfaceCapabilities2EXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtDisplaySurfaceCounterInstanceCommands {
+                get_physical_device_surface_capabilities2_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDisplaySurfaceCounterInstanceCommands {
+    loader
+        .ext_display_surface_counter
+        .as_ref()
+        .expect("`ext_display_surface_counter` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtDisplaySurfaceCounterInstanceCommands`](struct.ExtDisplaySurfaceCounterInstanceCommands.html)"]
 pub trait ExtDisplaySurfaceCounterInstanceLoaderExt {
@@ -52,11 +66,10 @@ impl ExtDisplaySurfaceCounterInstanceLoaderExt for crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
     > {
-        let function = self
-            .ext_display_surface_counter
+        let function = instance_commands(self)
+            .get_physical_device_surface_capabilities2_ext
             .as_ref()
-            .expect("`ext_display_surface_counter` not loaded")
-            .get_physical_device_surface_capabilities2_ext;
+            .expect("`get_physical_device_surface_capabilities2_ext` not available");
         let mut surface_capabilities = surface_capabilities.unwrap_or_else(|| Default::default());
         let _val = function(physical_device, surface, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_val, surface_capabilities)

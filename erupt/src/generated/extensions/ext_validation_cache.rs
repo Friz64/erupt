@@ -36,31 +36,51 @@ pub type PFN_vkGetValidationCacheDataEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`ExtValidationCacheDeviceLoaderExt`](trait.ExtValidationCacheDeviceLoaderExt.html)"]
 pub struct ExtValidationCacheDeviceCommands {
-    pub create_validation_cache_ext: PFN_vkCreateValidationCacheEXT,
-    pub destroy_validation_cache_ext: PFN_vkDestroyValidationCacheEXT,
-    pub merge_validation_caches_ext: PFN_vkMergeValidationCachesEXT,
-    pub get_validation_cache_data_ext: PFN_vkGetValidationCacheDataEXT,
+    pub create_validation_cache_ext: Option<PFN_vkCreateValidationCacheEXT>,
+    pub destroy_validation_cache_ext: Option<PFN_vkDestroyValidationCacheEXT>,
+    pub merge_validation_caches_ext: Option<PFN_vkMergeValidationCachesEXT>,
+    pub get_validation_cache_data_ext: Option<PFN_vkGetValidationCacheDataEXT>,
 }
 impl ExtValidationCacheDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtValidationCacheDeviceCommands> {
         unsafe {
-            Some(ExtValidationCacheDeviceCommands {
-                create_validation_cache_ext: std::mem::transmute(
-                    loader.symbol("vkCreateValidationCacheEXT")?,
-                ),
-                destroy_validation_cache_ext: std::mem::transmute(
-                    loader.symbol("vkDestroyValidationCacheEXT")?,
-                ),
-                merge_validation_caches_ext: std::mem::transmute(
-                    loader.symbol("vkMergeValidationCachesEXT")?,
-                ),
-                get_validation_cache_data_ext: std::mem::transmute(
-                    loader.symbol("vkGetValidationCacheDataEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtValidationCacheDeviceCommands {
+                create_validation_cache_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateValidationCacheEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_validation_cache_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyValidationCacheEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                merge_validation_caches_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkMergeValidationCachesEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_validation_cache_data_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetValidationCacheDataEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtValidationCacheDeviceCommands {
+    loader
+        .ext_validation_cache
+        .as_ref()
+        .expect("`ext_validation_cache` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtValidationCacheDeviceCommands`](struct.ExtValidationCacheDeviceCommands.html)"]
 pub trait ExtValidationCacheDeviceLoaderExt {
@@ -101,11 +121,10 @@ impl ExtValidationCacheDeviceLoaderExt for crate::DeviceLoader {
         validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_validation_cache::ValidationCacheEXT>
     {
-        let function = self
-            .ext_validation_cache
+        let function = device_commands(self)
+            .create_validation_cache_ext
             .as_ref()
-            .expect("`ext_validation_cache` not loaded")
-            .create_validation_cache_ext;
+            .expect("`create_validation_cache_ext` not available");
         let mut validation_cache = validation_cache.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -126,11 +145,10 @@ impl ExtValidationCacheDeviceLoaderExt for crate::DeviceLoader {
         validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .ext_validation_cache
+        let function = device_commands(self)
+            .destroy_validation_cache_ext
             .as_ref()
-            .expect("`ext_validation_cache` not loaded")
-            .destroy_validation_cache_ext;
+            .expect("`destroy_validation_cache_ext` not available");
         let _val = function(
             self.handle,
             validation_cache,
@@ -149,11 +167,10 @@ impl ExtValidationCacheDeviceLoaderExt for crate::DeviceLoader {
         dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
         src_caches: &[crate::extensions::ext_validation_cache::ValidationCacheEXT],
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_validation_cache
+        let function = device_commands(self)
+            .merge_validation_caches_ext
             .as_ref()
-            .expect("`ext_validation_cache` not loaded")
-            .merge_validation_caches_ext;
+            .expect("`merge_validation_caches_ext` not available");
         let src_cache_count = src_caches.len() as _;
         let _val = function(
             self.handle,
@@ -171,11 +188,10 @@ impl ExtValidationCacheDeviceLoaderExt for crate::DeviceLoader {
         data_size: *mut usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .ext_validation_cache
+        let function = device_commands(self)
+            .get_validation_cache_data_ext
             .as_ref()
-            .expect("`ext_validation_cache` not loaded")
-            .get_validation_cache_data_ext;
+            .expect("`get_validation_cache_data_ext` not available");
         let _val = function(self.handle, validation_cache, data_size, data);
         crate::utils::VulkanResult::new(_val, ())
     }

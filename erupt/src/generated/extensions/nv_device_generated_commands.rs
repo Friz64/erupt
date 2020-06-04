@@ -29,39 +29,63 @@ pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn ( dev
 #[doc = "Provides Device Commands for [`NvDeviceGeneratedCommandsDeviceLoaderExt`](trait.NvDeviceGeneratedCommandsDeviceLoaderExt.html)"]
 pub struct NvDeviceGeneratedCommandsDeviceCommands {
     pub get_generated_commands_memory_requirements_nv:
-        PFN_vkGetGeneratedCommandsMemoryRequirementsNV,
-    pub cmd_preprocess_generated_commands_nv: PFN_vkCmdPreprocessGeneratedCommandsNV,
-    pub cmd_execute_generated_commands_nv: PFN_vkCmdExecuteGeneratedCommandsNV,
-    pub cmd_bind_pipeline_shader_group_nv: PFN_vkCmdBindPipelineShaderGroupNV,
-    pub create_indirect_commands_layout_nv: PFN_vkCreateIndirectCommandsLayoutNV,
-    pub destroy_indirect_commands_layout_nv: PFN_vkDestroyIndirectCommandsLayoutNV,
+        Option<PFN_vkGetGeneratedCommandsMemoryRequirementsNV>,
+    pub cmd_preprocess_generated_commands_nv: Option<PFN_vkCmdPreprocessGeneratedCommandsNV>,
+    pub cmd_execute_generated_commands_nv: Option<PFN_vkCmdExecuteGeneratedCommandsNV>,
+    pub cmd_bind_pipeline_shader_group_nv: Option<PFN_vkCmdBindPipelineShaderGroupNV>,
+    pub create_indirect_commands_layout_nv: Option<PFN_vkCreateIndirectCommandsLayoutNV>,
+    pub destroy_indirect_commands_layout_nv: Option<PFN_vkDestroyIndirectCommandsLayoutNV>,
 }
 impl NvDeviceGeneratedCommandsDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvDeviceGeneratedCommandsDeviceCommands> {
         unsafe {
-            Some(NvDeviceGeneratedCommandsDeviceCommands {
-                get_generated_commands_memory_requirements_nv: std::mem::transmute(
-                    loader.symbol("vkGetGeneratedCommandsMemoryRequirementsNV")?,
-                ),
-                cmd_preprocess_generated_commands_nv: std::mem::transmute(
-                    loader.symbol("vkCmdPreprocessGeneratedCommandsNV")?,
-                ),
-                cmd_execute_generated_commands_nv: std::mem::transmute(
-                    loader.symbol("vkCmdExecuteGeneratedCommandsNV")?,
-                ),
-                cmd_bind_pipeline_shader_group_nv: std::mem::transmute(
-                    loader.symbol("vkCmdBindPipelineShaderGroupNV")?,
-                ),
-                create_indirect_commands_layout_nv: std::mem::transmute(
-                    loader.symbol("vkCreateIndirectCommandsLayoutNV")?,
-                ),
-                destroy_indirect_commands_layout_nv: std::mem::transmute(
-                    loader.symbol("vkDestroyIndirectCommandsLayoutNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvDeviceGeneratedCommandsDeviceCommands {
+                get_generated_commands_memory_requirements_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetGeneratedCommandsMemoryRequirementsNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_preprocess_generated_commands_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdPreprocessGeneratedCommandsNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_execute_generated_commands_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdExecuteGeneratedCommandsNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_bind_pipeline_shader_group_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindPipelineShaderGroupNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_indirect_commands_layout_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateIndirectCommandsLayoutNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_indirect_commands_layout_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyIndirectCommandsLayoutNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvDeviceGeneratedCommandsDeviceCommands {
+    loader
+        .nv_device_generated_commands
+        .as_ref()
+        .expect("`nv_device_generated_commands` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvDeviceGeneratedCommandsDeviceCommands`](struct.NvDeviceGeneratedCommandsDeviceCommands.html)"]
 pub trait NvDeviceGeneratedCommandsDeviceLoaderExt {
@@ -118,11 +142,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
         info : & crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsMemoryRequirementsInfoNV,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .get_generated_commands_memory_requirements_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .get_generated_commands_memory_requirements_nv;
+            .expect("`get_generated_commands_memory_requirements_nv` not available");
         let mut memory_requirements = memory_requirements.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, info, &mut memory_requirements);
         memory_requirements
@@ -134,11 +157,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         generated_commands_info : & crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV,
     ) -> () {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .cmd_preprocess_generated_commands_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .cmd_preprocess_generated_commands_nv;
+            .expect("`cmd_preprocess_generated_commands_nv` not available");
         let _val = function(command_buffer, generated_commands_info);
         ()
     }
@@ -150,11 +172,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
         is_preprocessed: bool,
         generated_commands_info : & crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV,
     ) -> () {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .cmd_execute_generated_commands_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .cmd_execute_generated_commands_nv;
+            .expect("`cmd_execute_generated_commands_nv` not available");
         let _val = function(
             command_buffer,
             is_preprocessed as _,
@@ -171,11 +192,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
         pipeline: crate::vk1_0::Pipeline,
         group_index: u32,
     ) -> () {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .cmd_bind_pipeline_shader_group_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .cmd_bind_pipeline_shader_group_nv;
+            .expect("`cmd_bind_pipeline_shader_group_nv` not available");
         let _val = function(command_buffer, pipeline_bind_point, pipeline, group_index);
         ()
     }
@@ -191,11 +211,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
     > {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .create_indirect_commands_layout_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .create_indirect_commands_layout_nv;
+            .expect("`create_indirect_commands_layout_nv` not available");
         let mut indirect_commands_layout =
             indirect_commands_layout.unwrap_or_else(|| Default::default());
         let _val = function(
@@ -217,11 +236,10 @@ impl NvDeviceGeneratedCommandsDeviceLoaderExt for crate::DeviceLoader {
         indirect_commands_layout : crate :: extensions :: nv_device_generated_commands :: IndirectCommandsLayoutNV,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .nv_device_generated_commands
+        let function = device_commands(self)
+            .destroy_indirect_commands_layout_nv
             .as_ref()
-            .expect("`nv_device_generated_commands` not loaded")
-            .destroy_indirect_commands_layout_nv;
+            .expect("`destroy_indirect_commands_layout_nv` not available");
         let _val = function(
             self.handle,
             indirect_commands_layout,

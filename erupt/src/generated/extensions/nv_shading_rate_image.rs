@@ -23,27 +23,45 @@ pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
 pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV , ) -> std :: ffi :: c_void ;
 #[doc = "Provides Device Commands for [`NvShadingRateImageDeviceLoaderExt`](trait.NvShadingRateImageDeviceLoaderExt.html)"]
 pub struct NvShadingRateImageDeviceCommands {
-    pub cmd_bind_shading_rate_image_nv: PFN_vkCmdBindShadingRateImageNV,
-    pub cmd_set_viewport_shading_rate_palette_nv: PFN_vkCmdSetViewportShadingRatePaletteNV,
-    pub cmd_set_coarse_sample_order_nv: PFN_vkCmdSetCoarseSampleOrderNV,
+    pub cmd_bind_shading_rate_image_nv: Option<PFN_vkCmdBindShadingRateImageNV>,
+    pub cmd_set_viewport_shading_rate_palette_nv: Option<PFN_vkCmdSetViewportShadingRatePaletteNV>,
+    pub cmd_set_coarse_sample_order_nv: Option<PFN_vkCmdSetCoarseSampleOrderNV>,
 }
 impl NvShadingRateImageDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvShadingRateImageDeviceCommands> {
         unsafe {
-            Some(NvShadingRateImageDeviceCommands {
-                cmd_bind_shading_rate_image_nv: std::mem::transmute(
-                    loader.symbol("vkCmdBindShadingRateImageNV")?,
-                ),
-                cmd_set_viewport_shading_rate_palette_nv: std::mem::transmute(
-                    loader.symbol("vkCmdSetViewportShadingRatePaletteNV")?,
-                ),
-                cmd_set_coarse_sample_order_nv: std::mem::transmute(
-                    loader.symbol("vkCmdSetCoarseSampleOrderNV")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvShadingRateImageDeviceCommands {
+                cmd_bind_shading_rate_image_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBindShadingRateImageNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_viewport_shading_rate_palette_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetViewportShadingRatePaletteNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_set_coarse_sample_order_nv: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdSetCoarseSampleOrderNV");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvShadingRateImageDeviceCommands {
+    loader
+        .nv_shading_rate_image
+        .as_ref()
+        .expect("`nv_shading_rate_image` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvShadingRateImageDeviceCommands`](struct.NvShadingRateImageDeviceCommands.html)"]
 pub trait NvShadingRateImageDeviceLoaderExt {
@@ -78,11 +96,10 @@ impl NvShadingRateImageDeviceLoaderExt for crate::DeviceLoader {
         image_view: crate::vk1_0::ImageView,
         image_layout: crate::vk1_0::ImageLayout,
     ) -> () {
-        let function = self
-            .nv_shading_rate_image
+        let function = device_commands(self)
+            .cmd_bind_shading_rate_image_nv
             .as_ref()
-            .expect("`nv_shading_rate_image` not loaded")
-            .cmd_bind_shading_rate_image_nv;
+            .expect("`cmd_bind_shading_rate_image_nv` not available");
         let _val = function(command_buffer, image_view, image_layout);
         ()
     }
@@ -94,11 +111,10 @@ impl NvShadingRateImageDeviceLoaderExt for crate::DeviceLoader {
         first_viewport: u32,
         shading_rate_palettes : & [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
     ) -> () {
-        let function = self
-            .nv_shading_rate_image
+        let function = device_commands(self)
+            .cmd_set_viewport_shading_rate_palette_nv
             .as_ref()
-            .expect("`nv_shading_rate_image` not loaded")
-            .cmd_set_viewport_shading_rate_palette_nv;
+            .expect("`cmd_set_viewport_shading_rate_palette_nv` not available");
         let viewport_count = shading_rate_palettes.len() as _;
         let _val = function(
             command_buffer,
@@ -116,11 +132,10 @@ impl NvShadingRateImageDeviceLoaderExt for crate::DeviceLoader {
         sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
         custom_sample_orders : & [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
     ) -> () {
-        let function = self
-            .nv_shading_rate_image
+        let function = device_commands(self)
+            .cmd_set_coarse_sample_order_nv
             .as_ref()
-            .expect("`nv_shading_rate_image` not loaded")
-            .cmd_set_coarse_sample_order_nv;
+            .expect("`cmd_set_coarse_sample_order_nv` not available");
         let custom_sample_order_count = custom_sample_orders.len() as _;
         let _val = function(
             command_buffer,

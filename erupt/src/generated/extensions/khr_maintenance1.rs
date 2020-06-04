@@ -12,17 +12,33 @@ pub type PFN_vkTrimCommandPoolKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrMaintenance1DeviceLoaderExt`](trait.KhrMaintenance1DeviceLoaderExt.html)"]
 pub struct KhrMaintenance1DeviceCommands {
-    pub trim_command_pool_khr: PFN_vkTrimCommandPoolKHR,
+    pub trim_command_pool_khr: Option<PFN_vkTrimCommandPoolKHR>,
 }
 impl KhrMaintenance1DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrMaintenance1DeviceCommands> {
         unsafe {
-            Some(KhrMaintenance1DeviceCommands {
-                trim_command_pool_khr: std::mem::transmute(loader.symbol("vkTrimCommandPoolKHR")?),
-            })
+            let mut success = false;
+            let table = KhrMaintenance1DeviceCommands {
+                trim_command_pool_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkTrimCommandPoolKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrMaintenance1DeviceCommands {
+    loader
+        .khr_maintenance1
+        .as_ref()
+        .expect("`khr_maintenance1` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrMaintenance1DeviceCommands`](struct.KhrMaintenance1DeviceCommands.html)"]
 pub trait KhrMaintenance1DeviceLoaderExt {
@@ -41,11 +57,10 @@ impl KhrMaintenance1DeviceLoaderExt for crate::DeviceLoader {
         command_pool: crate::vk1_0::CommandPool,
         flags: crate::vk1_1::CommandPoolTrimFlags,
     ) -> () {
-        let function = self
-            .khr_maintenance1
+        let function = device_commands(self)
+            .trim_command_pool_khr
             .as_ref()
-            .expect("`khr_maintenance1` not loaded")
-            .trim_command_pool_khr;
+            .expect("`trim_command_pool_khr` not available");
         let _val = function(self.handle, command_pool, flags);
         ()
     }

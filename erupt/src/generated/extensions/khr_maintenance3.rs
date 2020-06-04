@@ -12,19 +12,33 @@ pub type PFN_vkGetDescriptorSetLayoutSupportKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrMaintenance3DeviceLoaderExt`](trait.KhrMaintenance3DeviceLoaderExt.html)"]
 pub struct KhrMaintenance3DeviceCommands {
-    pub get_descriptor_set_layout_support_khr: PFN_vkGetDescriptorSetLayoutSupportKHR,
+    pub get_descriptor_set_layout_support_khr: Option<PFN_vkGetDescriptorSetLayoutSupportKHR>,
 }
 impl KhrMaintenance3DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrMaintenance3DeviceCommands> {
         unsafe {
-            Some(KhrMaintenance3DeviceCommands {
-                get_descriptor_set_layout_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetDescriptorSetLayoutSupportKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrMaintenance3DeviceCommands {
+                get_descriptor_set_layout_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDescriptorSetLayoutSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrMaintenance3DeviceCommands {
+    loader
+        .khr_maintenance3
+        .as_ref()
+        .expect("`khr_maintenance3` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrMaintenance3DeviceCommands`](struct.KhrMaintenance3DeviceCommands.html)"]
 pub trait KhrMaintenance3DeviceLoaderExt {
@@ -43,11 +57,10 @@ impl KhrMaintenance3DeviceLoaderExt for crate::DeviceLoader {
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
         support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
     ) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let function = self
-            .khr_maintenance3
+        let function = device_commands(self)
+            .get_descriptor_set_layout_support_khr
             .as_ref()
-            .expect("`khr_maintenance3` not loaded")
-            .get_descriptor_set_layout_support_khr;
+            .expect("`get_descriptor_set_layout_support_khr` not available");
         let mut support = support.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, create_info, &mut support);
         support

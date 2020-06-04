@@ -24,27 +24,46 @@ pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR = unsafe extern "system" f
 ) -> u64;
 #[doc = "Provides Device Commands for [`KhrBufferDeviceAddressDeviceLoaderExt`](trait.KhrBufferDeviceAddressDeviceLoaderExt.html)"]
 pub struct KhrBufferDeviceAddressDeviceCommands {
-    pub get_buffer_device_address_khr: PFN_vkGetBufferDeviceAddressKHR,
-    pub get_buffer_opaque_capture_address_khr: PFN_vkGetBufferOpaqueCaptureAddressKHR,
-    pub get_device_memory_opaque_capture_address_khr: PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR,
+    pub get_buffer_device_address_khr: Option<PFN_vkGetBufferDeviceAddressKHR>,
+    pub get_buffer_opaque_capture_address_khr: Option<PFN_vkGetBufferOpaqueCaptureAddressKHR>,
+    pub get_device_memory_opaque_capture_address_khr:
+        Option<PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR>,
 }
 impl KhrBufferDeviceAddressDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrBufferDeviceAddressDeviceCommands> {
         unsafe {
-            Some(KhrBufferDeviceAddressDeviceCommands {
-                get_buffer_device_address_khr: std::mem::transmute(
-                    loader.symbol("vkGetBufferDeviceAddressKHR")?,
-                ),
-                get_buffer_opaque_capture_address_khr: std::mem::transmute(
-                    loader.symbol("vkGetBufferOpaqueCaptureAddressKHR")?,
-                ),
-                get_device_memory_opaque_capture_address_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeviceMemoryOpaqueCaptureAddressKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrBufferDeviceAddressDeviceCommands {
+                get_buffer_device_address_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferDeviceAddressKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_opaque_capture_address_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferOpaqueCaptureAddressKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_memory_opaque_capture_address_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceMemoryOpaqueCaptureAddressKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrBufferDeviceAddressDeviceCommands {
+    loader
+        .khr_buffer_device_address
+        .as_ref()
+        .expect("`khr_buffer_device_address` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrBufferDeviceAddressDeviceCommands`](struct.KhrBufferDeviceAddressDeviceCommands.html)"]
 pub trait KhrBufferDeviceAddressDeviceLoaderExt {
@@ -71,11 +90,10 @@ impl KhrBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
     ) -> crate::vk1_0::DeviceAddress {
-        let function = self
-            .khr_buffer_device_address
+        let function = device_commands(self)
+            .get_buffer_device_address_khr
             .as_ref()
-            .expect("`khr_buffer_device_address` not loaded")
-            .get_buffer_device_address_khr;
+            .expect("`get_buffer_device_address_khr` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -85,11 +103,10 @@ impl KhrBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
     ) -> u64 {
-        let function = self
-            .khr_buffer_device_address
+        let function = device_commands(self)
+            .get_buffer_opaque_capture_address_khr
             .as_ref()
-            .expect("`khr_buffer_device_address` not loaded")
-            .get_buffer_opaque_capture_address_khr;
+            .expect("`get_buffer_opaque_capture_address_khr` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -99,11 +116,10 @@ impl KhrBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo,
     ) -> u64 {
-        let function = self
-            .khr_buffer_device_address
+        let function = device_commands(self)
+            .get_device_memory_opaque_capture_address_khr
             .as_ref()
-            .expect("`khr_buffer_device_address` not loaded")
-            .get_device_memory_opaque_capture_address_khr;
+            .expect("`get_device_memory_opaque_capture_address_khr` not available");
         let _val = function(self.handle, info);
         _val
     }

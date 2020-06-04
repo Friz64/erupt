@@ -11,23 +11,39 @@ pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn ( devic
 pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`KhrExternalSemaphoreWin32DeviceLoaderExt`](trait.KhrExternalSemaphoreWin32DeviceLoaderExt.html)"]
 pub struct KhrExternalSemaphoreWin32DeviceCommands {
-    pub import_semaphore_win32_handle_khr: PFN_vkImportSemaphoreWin32HandleKHR,
-    pub get_semaphore_win32_handle_khr: PFN_vkGetSemaphoreWin32HandleKHR,
+    pub import_semaphore_win32_handle_khr: Option<PFN_vkImportSemaphoreWin32HandleKHR>,
+    pub get_semaphore_win32_handle_khr: Option<PFN_vkGetSemaphoreWin32HandleKHR>,
 }
 impl KhrExternalSemaphoreWin32DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalSemaphoreWin32DeviceCommands> {
         unsafe {
-            Some(KhrExternalSemaphoreWin32DeviceCommands {
-                import_semaphore_win32_handle_khr: std::mem::transmute(
-                    loader.symbol("vkImportSemaphoreWin32HandleKHR")?,
-                ),
-                get_semaphore_win32_handle_khr: std::mem::transmute(
-                    loader.symbol("vkGetSemaphoreWin32HandleKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalSemaphoreWin32DeviceCommands {
+                import_semaphore_win32_handle_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkImportSemaphoreWin32HandleKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_semaphore_win32_handle_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSemaphoreWin32HandleKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalSemaphoreWin32DeviceCommands {
+    loader
+        .khr_external_semaphore_win32
+        .as_ref()
+        .expect("`khr_external_semaphore_win32` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalSemaphoreWin32DeviceCommands`](struct.KhrExternalSemaphoreWin32DeviceCommands.html)"]
 pub trait KhrExternalSemaphoreWin32DeviceLoaderExt {
@@ -50,11 +66,10 @@ impl KhrExternalSemaphoreWin32DeviceLoaderExt for crate::DeviceLoader {
         &self,
         import_semaphore_win32_handle_info : & crate :: extensions :: khr_external_semaphore_win32 :: ImportSemaphoreWin32HandleInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_semaphore_win32
+        let function = device_commands(self)
+            .import_semaphore_win32_handle_khr
             .as_ref()
-            .expect("`khr_external_semaphore_win32` not loaded")
-            .import_semaphore_win32_handle_khr;
+            .expect("`import_semaphore_win32_handle_khr` not available");
         let _val = function(self.handle, import_semaphore_win32_handle_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -65,11 +80,10 @@ impl KhrExternalSemaphoreWin32DeviceLoaderExt for crate::DeviceLoader {
         get_win32_handle_info : & crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_semaphore_win32
+        let function = device_commands(self)
+            .get_semaphore_win32_handle_khr
             .as_ref()
-            .expect("`khr_external_semaphore_win32` not loaded")
-            .get_semaphore_win32_handle_khr;
+            .expect("`get_semaphore_win32_handle_khr` not available");
         let _val = function(self.handle, get_win32_handle_info, handle);
         crate::utils::VulkanResult::new(_val, ())
     }

@@ -33,29 +33,51 @@ pub type PFN_vkCmdEndRenderPass2KHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrCreateRenderpass2DeviceLoaderExt`](trait.KhrCreateRenderpass2DeviceLoaderExt.html)"]
 pub struct KhrCreateRenderpass2DeviceCommands {
-    pub create_render_pass2_khr: PFN_vkCreateRenderPass2KHR,
-    pub cmd_begin_render_pass2_khr: PFN_vkCmdBeginRenderPass2KHR,
-    pub cmd_next_subpass2_khr: PFN_vkCmdNextSubpass2KHR,
-    pub cmd_end_render_pass2_khr: PFN_vkCmdEndRenderPass2KHR,
+    pub create_render_pass2_khr: Option<PFN_vkCreateRenderPass2KHR>,
+    pub cmd_begin_render_pass2_khr: Option<PFN_vkCmdBeginRenderPass2KHR>,
+    pub cmd_next_subpass2_khr: Option<PFN_vkCmdNextSubpass2KHR>,
+    pub cmd_end_render_pass2_khr: Option<PFN_vkCmdEndRenderPass2KHR>,
 }
 impl KhrCreateRenderpass2DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrCreateRenderpass2DeviceCommands> {
         unsafe {
-            Some(KhrCreateRenderpass2DeviceCommands {
-                create_render_pass2_khr: std::mem::transmute(
-                    loader.symbol("vkCreateRenderPass2KHR")?,
-                ),
-                cmd_begin_render_pass2_khr: std::mem::transmute(
-                    loader.symbol("vkCmdBeginRenderPass2KHR")?,
-                ),
-                cmd_next_subpass2_khr: std::mem::transmute(loader.symbol("vkCmdNextSubpass2KHR")?),
-                cmd_end_render_pass2_khr: std::mem::transmute(
-                    loader.symbol("vkCmdEndRenderPass2KHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrCreateRenderpass2DeviceCommands {
+                create_render_pass2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateRenderPass2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_render_pass2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginRenderPass2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_next_subpass2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdNextSubpass2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_render_pass2_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndRenderPass2KHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrCreateRenderpass2DeviceCommands {
+    loader
+        .khr_create_renderpass2
+        .as_ref()
+        .expect("`khr_create_renderpass2` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrCreateRenderpass2DeviceCommands`](struct.KhrCreateRenderpass2DeviceCommands.html)"]
 pub trait KhrCreateRenderpass2DeviceLoaderExt {
@@ -96,11 +118,10 @@ impl KhrCreateRenderpass2DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let function = self
-            .khr_create_renderpass2
+        let function = device_commands(self)
+            .create_render_pass2_khr
             .as_ref()
-            .expect("`khr_create_renderpass2` not loaded")
-            .create_render_pass2_khr;
+            .expect("`create_render_pass2_khr` not available");
         let mut render_pass = render_pass.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -122,11 +143,10 @@ impl KhrCreateRenderpass2DeviceLoaderExt for crate::DeviceLoader {
         render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
     ) -> () {
-        let function = self
-            .khr_create_renderpass2
+        let function = device_commands(self)
+            .cmd_begin_render_pass2_khr
             .as_ref()
-            .expect("`khr_create_renderpass2` not loaded")
-            .cmd_begin_render_pass2_khr;
+            .expect("`cmd_begin_render_pass2_khr` not available");
         let _val = function(command_buffer, render_pass_begin, subpass_begin_info);
         ()
     }
@@ -138,11 +158,10 @@ impl KhrCreateRenderpass2DeviceLoaderExt for crate::DeviceLoader {
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
         subpass_end_info: &crate::vk1_2::SubpassEndInfo,
     ) -> () {
-        let function = self
-            .khr_create_renderpass2
+        let function = device_commands(self)
+            .cmd_next_subpass2_khr
             .as_ref()
-            .expect("`khr_create_renderpass2` not loaded")
-            .cmd_next_subpass2_khr;
+            .expect("`cmd_next_subpass2_khr` not available");
         let _val = function(command_buffer, subpass_begin_info, subpass_end_info);
         ()
     }
@@ -153,11 +172,10 @@ impl KhrCreateRenderpass2DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         subpass_end_info: &crate::vk1_2::SubpassEndInfo,
     ) -> () {
-        let function = self
-            .khr_create_renderpass2
+        let function = device_commands(self)
+            .cmd_end_render_pass2_khr
             .as_ref()
-            .expect("`khr_create_renderpass2` not loaded")
-            .cmd_end_render_pass2_khr;
+            .expect("`cmd_end_render_pass2_khr` not available");
         let _val = function(command_buffer, subpass_end_info);
         ()
     }

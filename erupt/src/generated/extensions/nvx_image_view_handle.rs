@@ -18,23 +18,39 @@ pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`NvxImageViewHandleDeviceLoaderExt`](trait.NvxImageViewHandleDeviceLoaderExt.html)"]
 pub struct NvxImageViewHandleDeviceCommands {
-    pub get_image_view_handle_nvx: PFN_vkGetImageViewHandleNVX,
-    pub get_image_view_address_nvx: PFN_vkGetImageViewAddressNVX,
+    pub get_image_view_handle_nvx: Option<PFN_vkGetImageViewHandleNVX>,
+    pub get_image_view_address_nvx: Option<PFN_vkGetImageViewAddressNVX>,
 }
 impl NvxImageViewHandleDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<NvxImageViewHandleDeviceCommands> {
         unsafe {
-            Some(NvxImageViewHandleDeviceCommands {
-                get_image_view_handle_nvx: std::mem::transmute(
-                    loader.symbol("vkGetImageViewHandleNVX")?,
-                ),
-                get_image_view_address_nvx: std::mem::transmute(
-                    loader.symbol("vkGetImageViewAddressNVX")?,
-                ),
-            })
+            let mut success = false;
+            let table = NvxImageViewHandleDeviceCommands {
+                get_image_view_handle_nvx: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageViewHandleNVX");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_image_view_address_nvx: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetImageViewAddressNVX");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &NvxImageViewHandleDeviceCommands {
+    loader
+        .nvx_image_view_handle
+        .as_ref()
+        .expect("`nvx_image_view_handle` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`NvxImageViewHandleDeviceCommands`](struct.NvxImageViewHandleDeviceCommands.html)"]
 pub trait NvxImageViewHandleDeviceLoaderExt {
@@ -59,11 +75,10 @@ impl NvxImageViewHandleDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
     ) -> u32 {
-        let function = self
-            .nvx_image_view_handle
+        let function = device_commands(self)
+            .get_image_view_handle_nvx
             .as_ref()
-            .expect("`nvx_image_view_handle` not loaded")
-            .get_image_view_handle_nvx;
+            .expect("`get_image_view_handle_nvx` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -76,11 +91,10 @@ impl NvxImageViewHandleDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
     > {
-        let function = self
-            .nvx_image_view_handle
+        let function = device_commands(self)
+            .get_image_view_address_nvx
             .as_ref()
-            .expect("`nvx_image_view_handle` not loaded")
-            .get_image_view_address_nvx;
+            .expect("`get_image_view_address_nvx` not available");
         let mut properties = properties.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, image_view, &mut properties);
         crate::utils::VulkanResult::new(_val, properties)

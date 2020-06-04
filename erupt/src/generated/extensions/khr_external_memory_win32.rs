@@ -11,23 +11,39 @@ pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn ( device : cr
 pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , handle : * mut std :: ffi :: c_void , p_memory_win32_handle_properties : * mut crate :: extensions :: khr_external_memory_win32 :: MemoryWin32HandlePropertiesKHR , ) -> crate :: vk1_0 :: Result ;
 #[doc = "Provides Device Commands for [`KhrExternalMemoryWin32DeviceLoaderExt`](trait.KhrExternalMemoryWin32DeviceLoaderExt.html)"]
 pub struct KhrExternalMemoryWin32DeviceCommands {
-    pub get_memory_win32_handle_khr: PFN_vkGetMemoryWin32HandleKHR,
-    pub get_memory_win32_handle_properties_khr: PFN_vkGetMemoryWin32HandlePropertiesKHR,
+    pub get_memory_win32_handle_khr: Option<PFN_vkGetMemoryWin32HandleKHR>,
+    pub get_memory_win32_handle_properties_khr: Option<PFN_vkGetMemoryWin32HandlePropertiesKHR>,
 }
 impl KhrExternalMemoryWin32DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrExternalMemoryWin32DeviceCommands> {
         unsafe {
-            Some(KhrExternalMemoryWin32DeviceCommands {
-                get_memory_win32_handle_khr: std::mem::transmute(
-                    loader.symbol("vkGetMemoryWin32HandleKHR")?,
-                ),
-                get_memory_win32_handle_properties_khr: std::mem::transmute(
-                    loader.symbol("vkGetMemoryWin32HandlePropertiesKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrExternalMemoryWin32DeviceCommands {
+                get_memory_win32_handle_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryWin32HandleKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_memory_win32_handle_properties_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetMemoryWin32HandlePropertiesKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalMemoryWin32DeviceCommands {
+    loader
+        .khr_external_memory_win32
+        .as_ref()
+        .expect("`khr_external_memory_win32` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrExternalMemoryWin32DeviceCommands`](struct.KhrExternalMemoryWin32DeviceCommands.html)"]
 pub trait KhrExternalMemoryWin32DeviceLoaderExt {
@@ -57,11 +73,10 @@ impl KhrExternalMemoryWin32DeviceLoaderExt for crate::DeviceLoader {
         get_win32_handle_info : & crate :: extensions :: khr_external_memory_win32 :: MemoryGetWin32HandleInfoKHR,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_external_memory_win32
+        let function = device_commands(self)
+            .get_memory_win32_handle_khr
             .as_ref()
-            .expect("`khr_external_memory_win32` not loaded")
-            .get_memory_win32_handle_khr;
+            .expect("`get_memory_win32_handle_khr` not available");
         let _val = function(self.handle, get_win32_handle_info, handle);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -77,11 +92,10 @@ impl KhrExternalMemoryWin32DeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
     > {
-        let function = self
-            .khr_external_memory_win32
+        let function = device_commands(self)
+            .get_memory_win32_handle_properties_khr
             .as_ref()
-            .expect("`khr_external_memory_win32` not loaded")
-            .get_memory_win32_handle_properties_khr;
+            .expect("`get_memory_win32_handle_properties_khr` not available");
         let mut memory_win32_handle_properties =
             memory_win32_handle_properties.unwrap_or_else(|| Default::default());
         let _val = function(

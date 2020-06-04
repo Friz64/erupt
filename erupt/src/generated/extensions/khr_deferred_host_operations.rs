@@ -37,35 +37,58 @@ pub type PFN_vkDeferredOperationJoinKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`KhrDeferredHostOperationsDeviceLoaderExt`](trait.KhrDeferredHostOperationsDeviceLoaderExt.html)"]
 pub struct KhrDeferredHostOperationsDeviceCommands {
-    pub create_deferred_operation_khr: PFN_vkCreateDeferredOperationKHR,
-    pub destroy_deferred_operation_khr: PFN_vkDestroyDeferredOperationKHR,
-    pub get_deferred_operation_max_concurrency_khr: PFN_vkGetDeferredOperationMaxConcurrencyKHR,
-    pub get_deferred_operation_result_khr: PFN_vkGetDeferredOperationResultKHR,
-    pub deferred_operation_join_khr: PFN_vkDeferredOperationJoinKHR,
+    pub create_deferred_operation_khr: Option<PFN_vkCreateDeferredOperationKHR>,
+    pub destroy_deferred_operation_khr: Option<PFN_vkDestroyDeferredOperationKHR>,
+    pub get_deferred_operation_max_concurrency_khr:
+        Option<PFN_vkGetDeferredOperationMaxConcurrencyKHR>,
+    pub get_deferred_operation_result_khr: Option<PFN_vkGetDeferredOperationResultKHR>,
+    pub deferred_operation_join_khr: Option<PFN_vkDeferredOperationJoinKHR>,
 }
 impl KhrDeferredHostOperationsDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDeferredHostOperationsDeviceCommands> {
         unsafe {
-            Some(KhrDeferredHostOperationsDeviceCommands {
-                create_deferred_operation_khr: std::mem::transmute(
-                    loader.symbol("vkCreateDeferredOperationKHR")?,
-                ),
-                destroy_deferred_operation_khr: std::mem::transmute(
-                    loader.symbol("vkDestroyDeferredOperationKHR")?,
-                ),
-                get_deferred_operation_max_concurrency_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeferredOperationMaxConcurrencyKHR")?,
-                ),
-                get_deferred_operation_result_khr: std::mem::transmute(
-                    loader.symbol("vkGetDeferredOperationResultKHR")?,
-                ),
-                deferred_operation_join_khr: std::mem::transmute(
-                    loader.symbol("vkDeferredOperationJoinKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDeferredHostOperationsDeviceCommands {
+                create_deferred_operation_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateDeferredOperationKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_deferred_operation_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroyDeferredOperationKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_deferred_operation_max_concurrency_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeferredOperationMaxConcurrencyKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_deferred_operation_result_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeferredOperationResultKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                deferred_operation_join_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDeferredOperationJoinKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrDeferredHostOperationsDeviceCommands {
+    loader
+        .khr_deferred_host_operations
+        .as_ref()
+        .expect("`khr_deferred_host_operations` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDeferredHostOperationsDeviceCommands`](struct.KhrDeferredHostOperationsDeviceCommands.html)"]
 pub trait KhrDeferredHostOperationsDeviceLoaderExt {
@@ -113,11 +136,10 @@ impl KhrDeferredHostOperationsDeviceLoaderExt for crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<
         crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
     > {
-        let function = self
-            .khr_deferred_host_operations
+        let function = device_commands(self)
+            .create_deferred_operation_khr
             .as_ref()
-            .expect("`khr_deferred_host_operations` not loaded")
-            .create_deferred_operation_khr;
+            .expect("`create_deferred_operation_khr` not available");
         let mut deferred_operation = deferred_operation.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -137,11 +159,10 @@ impl KhrDeferredHostOperationsDeviceLoaderExt for crate::DeviceLoader {
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_deferred_host_operations
+        let function = device_commands(self)
+            .destroy_deferred_operation_khr
             .as_ref()
-            .expect("`khr_deferred_host_operations` not loaded")
-            .destroy_deferred_operation_khr;
+            .expect("`destroy_deferred_operation_khr` not available");
         let _val = function(
             self.handle,
             operation,
@@ -159,11 +180,10 @@ impl KhrDeferredHostOperationsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
     ) -> u32 {
-        let function = self
-            .khr_deferred_host_operations
+        let function = device_commands(self)
+            .get_deferred_operation_max_concurrency_khr
             .as_ref()
-            .expect("`khr_deferred_host_operations` not loaded")
-            .get_deferred_operation_max_concurrency_khr;
+            .expect("`get_deferred_operation_max_concurrency_khr` not available");
         let _val = function(self.handle, operation);
         _val
     }
@@ -173,11 +193,10 @@ impl KhrDeferredHostOperationsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_deferred_host_operations
+        let function = device_commands(self)
+            .get_deferred_operation_result_khr
             .as_ref()
-            .expect("`khr_deferred_host_operations` not loaded")
-            .get_deferred_operation_result_khr;
+            .expect("`get_deferred_operation_result_khr` not available");
         let _val = function(self.handle, operation);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -187,11 +206,10 @@ impl KhrDeferredHostOperationsDeviceLoaderExt for crate::DeviceLoader {
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .khr_deferred_host_operations
+        let function = device_commands(self)
+            .deferred_operation_join_khr
             .as_ref()
-            .expect("`khr_deferred_host_operations` not loaded")
-            .deferred_operation_join_khr;
+            .expect("`deferred_operation_join_khr` not available");
         let _val = function(self.handle, operation);
         crate::utils::VulkanResult::new(_val, ())
     }

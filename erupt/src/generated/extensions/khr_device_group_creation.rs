@@ -15,19 +15,33 @@ pub type PFN_vkEnumeratePhysicalDeviceGroupsKHR = unsafe extern "system" fn(
     -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`KhrDeviceGroupCreationInstanceLoaderExt`](trait.KhrDeviceGroupCreationInstanceLoaderExt.html)"]
 pub struct KhrDeviceGroupCreationInstanceCommands {
-    pub enumerate_physical_device_groups_khr: PFN_vkEnumeratePhysicalDeviceGroupsKHR,
+    pub enumerate_physical_device_groups_khr: Option<PFN_vkEnumeratePhysicalDeviceGroupsKHR>,
 }
 impl KhrDeviceGroupCreationInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrDeviceGroupCreationInstanceCommands> {
         unsafe {
-            Some(KhrDeviceGroupCreationInstanceCommands {
-                enumerate_physical_device_groups_khr: std::mem::transmute(
-                    loader.symbol("vkEnumeratePhysicalDeviceGroupsKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrDeviceGroupCreationInstanceCommands {
+                enumerate_physical_device_groups_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkEnumeratePhysicalDeviceGroupsKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDeviceGroupCreationInstanceCommands {
+    loader
+        .khr_device_group_creation
+        .as_ref()
+        .expect("`khr_device_group_creation` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrDeviceGroupCreationInstanceCommands`](struct.KhrDeviceGroupCreationInstanceCommands.html)"]
 pub trait KhrDeviceGroupCreationInstanceLoaderExt {
@@ -44,11 +58,10 @@ impl KhrDeviceGroupCreationInstanceLoaderExt for crate::InstanceLoader {
         &self,
         physical_device_group_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
-        let function = self
-            .khr_device_group_creation
+        let function = instance_commands(self)
+            .enumerate_physical_device_groups_khr
             .as_ref()
-            .expect("`khr_device_group_creation` not loaded")
-            .enumerate_physical_device_groups_khr;
+            .expect("`enumerate_physical_device_groups_khr` not available");
         let mut physical_device_group_count = physical_device_group_count.unwrap_or_else(|| {
             let mut val = Default::default();
             function(self.handle, &mut val, std::ptr::null_mut());

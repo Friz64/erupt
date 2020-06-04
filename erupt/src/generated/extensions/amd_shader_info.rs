@@ -15,17 +15,33 @@ pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Device Commands for [`AmdShaderInfoDeviceLoaderExt`](trait.AmdShaderInfoDeviceLoaderExt.html)"]
 pub struct AmdShaderInfoDeviceCommands {
-    pub get_shader_info_amd: PFN_vkGetShaderInfoAMD,
+    pub get_shader_info_amd: Option<PFN_vkGetShaderInfoAMD>,
 }
 impl AmdShaderInfoDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<AmdShaderInfoDeviceCommands> {
         unsafe {
-            Some(AmdShaderInfoDeviceCommands {
-                get_shader_info_amd: std::mem::transmute(loader.symbol("vkGetShaderInfoAMD")?),
-            })
+            let mut success = false;
+            let table = AmdShaderInfoDeviceCommands {
+                get_shader_info_amd: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetShaderInfoAMD");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &AmdShaderInfoDeviceCommands {
+    loader
+        .amd_shader_info
+        .as_ref()
+        .expect("`amd_shader_info` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`AmdShaderInfoDeviceCommands`](struct.AmdShaderInfoDeviceCommands.html)"]
 pub trait AmdShaderInfoDeviceLoaderExt {
@@ -50,11 +66,10 @@ impl AmdShaderInfoDeviceLoaderExt for crate::DeviceLoader {
         info_size: *mut usize,
         info: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .amd_shader_info
+        let function = device_commands(self)
+            .get_shader_info_amd
             .as_ref()
-            .expect("`amd_shader_info` not loaded")
-            .get_shader_info_amd;
+            .expect("`get_shader_info_amd` not available");
         let _val = function(
             self.handle,
             pipeline,

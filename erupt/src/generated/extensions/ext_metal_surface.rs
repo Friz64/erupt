@@ -13,19 +13,33 @@ pub type PFN_vkCreateMetalSurfaceEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "Provides Instance Commands for [`ExtMetalSurfaceInstanceLoaderExt`](trait.ExtMetalSurfaceInstanceLoaderExt.html)"]
 pub struct ExtMetalSurfaceInstanceCommands {
-    pub create_metal_surface_ext: PFN_vkCreateMetalSurfaceEXT,
+    pub create_metal_surface_ext: Option<PFN_vkCreateMetalSurfaceEXT>,
 }
 impl ExtMetalSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<ExtMetalSurfaceInstanceCommands> {
         unsafe {
-            Some(ExtMetalSurfaceInstanceCommands {
-                create_metal_surface_ext: std::mem::transmute(
-                    loader.symbol("vkCreateMetalSurfaceEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtMetalSurfaceInstanceCommands {
+                create_metal_surface_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateMetalSurfaceEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &ExtMetalSurfaceInstanceCommands {
+    loader
+        .ext_metal_surface
+        .as_ref()
+        .expect("`ext_metal_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtMetalSurfaceInstanceCommands`](struct.ExtMetalSurfaceInstanceCommands.html)"]
 pub trait ExtMetalSurfaceInstanceLoaderExt {
@@ -46,11 +60,10 @@ impl ExtMetalSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .ext_metal_surface
+        let function = instance_commands(self)
+            .create_metal_surface_ext
             .as_ref()
-            .expect("`ext_metal_surface` not loaded")
-            .create_metal_surface_ext;
+            .expect("`create_metal_surface_ext` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,

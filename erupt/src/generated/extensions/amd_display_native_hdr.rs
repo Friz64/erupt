@@ -12,17 +12,33 @@ pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`AmdDisplayNativeHdrDeviceLoaderExt`](trait.AmdDisplayNativeHdrDeviceLoaderExt.html)"]
 pub struct AmdDisplayNativeHdrDeviceCommands {
-    pub set_local_dimming_amd: PFN_vkSetLocalDimmingAMD,
+    pub set_local_dimming_amd: Option<PFN_vkSetLocalDimmingAMD>,
 }
 impl AmdDisplayNativeHdrDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<AmdDisplayNativeHdrDeviceCommands> {
         unsafe {
-            Some(AmdDisplayNativeHdrDeviceCommands {
-                set_local_dimming_amd: std::mem::transmute(loader.symbol("vkSetLocalDimmingAMD")?),
-            })
+            let mut success = false;
+            let table = AmdDisplayNativeHdrDeviceCommands {
+                set_local_dimming_amd: std::mem::transmute({
+                    let symbol = loader.symbol("vkSetLocalDimmingAMD");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &AmdDisplayNativeHdrDeviceCommands {
+    loader
+        .amd_display_native_hdr
+        .as_ref()
+        .expect("`amd_display_native_hdr` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`AmdDisplayNativeHdrDeviceCommands`](struct.AmdDisplayNativeHdrDeviceCommands.html)"]
 pub trait AmdDisplayNativeHdrDeviceLoaderExt {
@@ -41,11 +57,10 @@ impl AmdDisplayNativeHdrDeviceLoaderExt for crate::DeviceLoader {
         swap_chain: crate::extensions::khr_swapchain::SwapchainKHR,
         local_dimming_enable: bool,
     ) -> () {
-        let function = self
-            .amd_display_native_hdr
+        let function = device_commands(self)
+            .set_local_dimming_amd
             .as_ref()
-            .expect("`amd_display_native_hdr` not loaded")
-            .set_local_dimming_amd;
+            .expect("`set_local_dimming_amd` not available");
         let _val = function(self.handle, swap_chain, local_dimming_enable as _);
         ()
     }

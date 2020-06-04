@@ -20,23 +20,39 @@ pub type PFN_vkDestroySamplerYcbcrConversionKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "Provides Device Commands for [`KhrSamplerYcbcrConversionDeviceLoaderExt`](trait.KhrSamplerYcbcrConversionDeviceLoaderExt.html)"]
 pub struct KhrSamplerYcbcrConversionDeviceCommands {
-    pub create_sampler_ycbcr_conversion_khr: PFN_vkCreateSamplerYcbcrConversionKHR,
-    pub destroy_sampler_ycbcr_conversion_khr: PFN_vkDestroySamplerYcbcrConversionKHR,
+    pub create_sampler_ycbcr_conversion_khr: Option<PFN_vkCreateSamplerYcbcrConversionKHR>,
+    pub destroy_sampler_ycbcr_conversion_khr: Option<PFN_vkDestroySamplerYcbcrConversionKHR>,
 }
 impl KhrSamplerYcbcrConversionDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<KhrSamplerYcbcrConversionDeviceCommands> {
         unsafe {
-            Some(KhrSamplerYcbcrConversionDeviceCommands {
-                create_sampler_ycbcr_conversion_khr: std::mem::transmute(
-                    loader.symbol("vkCreateSamplerYcbcrConversionKHR")?,
-                ),
-                destroy_sampler_ycbcr_conversion_khr: std::mem::transmute(
-                    loader.symbol("vkDestroySamplerYcbcrConversionKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrSamplerYcbcrConversionDeviceCommands {
+                create_sampler_ycbcr_conversion_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateSamplerYcbcrConversionKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                destroy_sampler_ycbcr_conversion_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkDestroySamplerYcbcrConversionKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &KhrSamplerYcbcrConversionDeviceCommands {
+    loader
+        .khr_sampler_ycbcr_conversion
+        .as_ref()
+        .expect("`khr_sampler_ycbcr_conversion` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrSamplerYcbcrConversionDeviceCommands`](struct.KhrSamplerYcbcrConversionDeviceCommands.html)"]
 pub trait KhrSamplerYcbcrConversionDeviceLoaderExt {
@@ -63,11 +79,10 @@ impl KhrSamplerYcbcrConversionDeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
-        let function = self
-            .khr_sampler_ycbcr_conversion
+        let function = device_commands(self)
+            .create_sampler_ycbcr_conversion_khr
             .as_ref()
-            .expect("`khr_sampler_ycbcr_conversion` not loaded")
-            .create_sampler_ycbcr_conversion_khr;
+            .expect("`create_sampler_ycbcr_conversion_khr` not available");
         let mut ycbcr_conversion = ycbcr_conversion.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -88,11 +103,10 @@ impl KhrSamplerYcbcrConversionDeviceLoaderExt for crate::DeviceLoader {
         ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let function = self
-            .khr_sampler_ycbcr_conversion
+        let function = device_commands(self)
+            .destroy_sampler_ycbcr_conversion_khr
             .as_ref()
-            .expect("`khr_sampler_ycbcr_conversion` not loaded")
-            .destroy_sampler_ycbcr_conversion_khr;
+            .expect("`destroy_sampler_ycbcr_conversion_khr` not available");
         let _val = function(
             self.handle,
             ycbcr_conversion,

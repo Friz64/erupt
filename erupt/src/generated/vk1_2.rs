@@ -100,55 +100,102 @@ pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddress = unsafe extern "system" fn(
 ) -> u64;
 #[doc = "Provides Device Commands for [`Vk12DeviceLoaderExt`](trait.Vk12DeviceLoaderExt.html)"]
 pub struct Vk12DeviceCommands {
-    pub cmd_draw_indirect_count: PFN_vkCmdDrawIndirectCount,
-    pub cmd_draw_indexed_indirect_count: PFN_vkCmdDrawIndexedIndirectCount,
-    pub create_render_pass2: PFN_vkCreateRenderPass2,
-    pub cmd_begin_render_pass2: PFN_vkCmdBeginRenderPass2,
-    pub cmd_next_subpass2: PFN_vkCmdNextSubpass2,
-    pub cmd_end_render_pass2: PFN_vkCmdEndRenderPass2,
-    pub reset_query_pool: PFN_vkResetQueryPool,
-    pub get_semaphore_counter_value: PFN_vkGetSemaphoreCounterValue,
-    pub wait_semaphores: PFN_vkWaitSemaphores,
-    pub signal_semaphore: PFN_vkSignalSemaphore,
-    pub get_buffer_device_address: PFN_vkGetBufferDeviceAddress,
-    pub get_buffer_opaque_capture_address: PFN_vkGetBufferOpaqueCaptureAddress,
-    pub get_device_memory_opaque_capture_address: PFN_vkGetDeviceMemoryOpaqueCaptureAddress,
+    pub cmd_draw_indirect_count: Option<PFN_vkCmdDrawIndirectCount>,
+    pub cmd_draw_indexed_indirect_count: Option<PFN_vkCmdDrawIndexedIndirectCount>,
+    pub create_render_pass2: Option<PFN_vkCreateRenderPass2>,
+    pub cmd_begin_render_pass2: Option<PFN_vkCmdBeginRenderPass2>,
+    pub cmd_next_subpass2: Option<PFN_vkCmdNextSubpass2>,
+    pub cmd_end_render_pass2: Option<PFN_vkCmdEndRenderPass2>,
+    pub reset_query_pool: Option<PFN_vkResetQueryPool>,
+    pub get_semaphore_counter_value: Option<PFN_vkGetSemaphoreCounterValue>,
+    pub wait_semaphores: Option<PFN_vkWaitSemaphores>,
+    pub signal_semaphore: Option<PFN_vkSignalSemaphore>,
+    pub get_buffer_device_address: Option<PFN_vkGetBufferDeviceAddress>,
+    pub get_buffer_opaque_capture_address: Option<PFN_vkGetBufferOpaqueCaptureAddress>,
+    pub get_device_memory_opaque_capture_address: Option<PFN_vkGetDeviceMemoryOpaqueCaptureAddress>,
 }
 impl Vk12DeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<Vk12DeviceCommands> {
         unsafe {
-            Some(Vk12DeviceCommands {
-                cmd_draw_indirect_count: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndirectCount")?,
-                ),
-                cmd_draw_indexed_indirect_count: std::mem::transmute(
-                    loader.symbol("vkCmdDrawIndexedIndirectCount")?,
-                ),
-                create_render_pass2: std::mem::transmute(loader.symbol("vkCreateRenderPass2")?),
-                cmd_begin_render_pass2: std::mem::transmute(
-                    loader.symbol("vkCmdBeginRenderPass2")?,
-                ),
-                cmd_next_subpass2: std::mem::transmute(loader.symbol("vkCmdNextSubpass2")?),
-                cmd_end_render_pass2: std::mem::transmute(loader.symbol("vkCmdEndRenderPass2")?),
-                reset_query_pool: std::mem::transmute(loader.symbol("vkResetQueryPool")?),
-                get_semaphore_counter_value: std::mem::transmute(
-                    loader.symbol("vkGetSemaphoreCounterValue")?,
-                ),
-                wait_semaphores: std::mem::transmute(loader.symbol("vkWaitSemaphores")?),
-                signal_semaphore: std::mem::transmute(loader.symbol("vkSignalSemaphore")?),
-                get_buffer_device_address: std::mem::transmute(
-                    loader.symbol("vkGetBufferDeviceAddress")?,
-                ),
-                get_buffer_opaque_capture_address: std::mem::transmute(
-                    loader.symbol("vkGetBufferOpaqueCaptureAddress")?,
-                ),
-                get_device_memory_opaque_capture_address: std::mem::transmute(
-                    loader.symbol("vkGetDeviceMemoryOpaqueCaptureAddress")?,
-                ),
-            })
+            let mut success = false;
+            let table = Vk12DeviceCommands {
+                cmd_draw_indirect_count: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndirectCount");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_draw_indexed_indirect_count: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdDrawIndexedIndirectCount");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                create_render_pass2: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateRenderPass2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_begin_render_pass2: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdBeginRenderPass2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_next_subpass2: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdNextSubpass2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                cmd_end_render_pass2: std::mem::transmute({
+                    let symbol = loader.symbol("vkCmdEndRenderPass2");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                reset_query_pool: std::mem::transmute({
+                    let symbol = loader.symbol("vkResetQueryPool");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_semaphore_counter_value: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetSemaphoreCounterValue");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                wait_semaphores: std::mem::transmute({
+                    let symbol = loader.symbol("vkWaitSemaphores");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                signal_semaphore: std::mem::transmute({
+                    let symbol = loader.symbol("vkSignalSemaphore");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_device_address: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferDeviceAddress");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_buffer_opaque_capture_address: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferOpaqueCaptureAddress");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_device_memory_opaque_capture_address: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetDeviceMemoryOpaqueCaptureAddress");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &Vk12DeviceCommands {
+    loader.vk1_2.as_ref().expect("`vk1_2` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`Vk12DeviceCommands`](struct.Vk12DeviceCommands.html)"]
 pub trait Vk12DeviceLoaderExt {
@@ -254,11 +301,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .cmd_draw_indirect_count
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .cmd_draw_indirect_count;
+            .expect("`cmd_draw_indirect_count` not available");
         let _val = function(
             command_buffer,
             buffer,
@@ -282,11 +328,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .cmd_draw_indexed_indirect_count
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .cmd_draw_indexed_indirect_count;
+            .expect("`cmd_draw_indexed_indirect_count` not available");
         let _val = function(
             command_buffer,
             buffer,
@@ -306,11 +351,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .create_render_pass2
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .create_render_pass2;
+            .expect("`create_render_pass2` not available");
         let mut render_pass = render_pass.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -332,11 +376,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .cmd_begin_render_pass2
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .cmd_begin_render_pass2;
+            .expect("`cmd_begin_render_pass2` not available");
         let _val = function(command_buffer, render_pass_begin, subpass_begin_info);
         ()
     }
@@ -348,11 +391,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
         subpass_end_info: &crate::vk1_2::SubpassEndInfo,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .cmd_next_subpass2
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .cmd_next_subpass2;
+            .expect("`cmd_next_subpass2` not available");
         let _val = function(command_buffer, subpass_begin_info, subpass_end_info);
         ()
     }
@@ -363,11 +405,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         subpass_end_info: &crate::vk1_2::SubpassEndInfo,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .cmd_end_render_pass2
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .cmd_end_render_pass2;
+            .expect("`cmd_end_render_pass2` not available");
         let _val = function(command_buffer, subpass_end_info);
         ()
     }
@@ -379,11 +420,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         first_query: u32,
         query_count: u32,
     ) -> () {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .reset_query_pool
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .reset_query_pool;
+            .expect("`reset_query_pool` not available");
         let _val = function(self.handle, query_pool, first_query, query_count);
         ()
     }
@@ -394,11 +434,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         semaphore: crate::vk1_0::Semaphore,
         value: Option<u64>,
     ) -> crate::utils::VulkanResult<u64> {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .get_semaphore_counter_value
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .get_semaphore_counter_value;
+            .expect("`get_semaphore_counter_value` not available");
         let mut value = value.unwrap_or_else(|| Default::default());
         let _val = function(self.handle, semaphore, &mut value);
         crate::utils::VulkanResult::new(_val, value)
@@ -410,11 +449,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         wait_info: &crate::vk1_2::SemaphoreWaitInfo,
         timeout: u64,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .wait_semaphores
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .wait_semaphores;
+            .expect("`wait_semaphores` not available");
         let _val = function(self.handle, wait_info, timeout);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -424,11 +462,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         &self,
         signal_info: &crate::vk1_2::SemaphoreSignalInfo,
     ) -> crate::utils::VulkanResult<()> {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .signal_semaphore
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .signal_semaphore;
+            .expect("`signal_semaphore` not available");
         let _val = function(self.handle, signal_info);
         crate::utils::VulkanResult::new(_val, ())
     }
@@ -438,11 +475,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
     ) -> crate::vk1_0::DeviceAddress {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .get_buffer_device_address
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .get_buffer_device_address;
+            .expect("`get_buffer_device_address` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -452,11 +488,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
     ) -> u64 {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .get_buffer_opaque_capture_address
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .get_buffer_opaque_capture_address;
+            .expect("`get_buffer_opaque_capture_address` not available");
         let _val = function(self.handle, info);
         _val
     }
@@ -466,11 +501,10 @@ impl Vk12DeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo,
     ) -> u64 {
-        let function = self
-            .vk1_2
+        let function = device_commands(self)
+            .get_device_memory_opaque_capture_address
             .as_ref()
-            .expect("`vk1_2` not loaded")
-            .get_device_memory_opaque_capture_address;
+            .expect("`get_device_memory_opaque_capture_address` not available");
         let _val = function(self.handle, info);
         _val
     }

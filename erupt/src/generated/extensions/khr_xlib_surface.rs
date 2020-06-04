@@ -22,24 +22,40 @@ pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR =
     ) -> crate::vk1_0::Bool32;
 #[doc = "Provides Instance Commands for [`KhrXlibSurfaceInstanceLoaderExt`](trait.KhrXlibSurfaceInstanceLoaderExt.html)"]
 pub struct KhrXlibSurfaceInstanceCommands {
-    pub create_xlib_surface_khr: PFN_vkCreateXlibSurfaceKHR,
+    pub create_xlib_surface_khr: Option<PFN_vkCreateXlibSurfaceKHR>,
     pub get_physical_device_xlib_presentation_support_khr:
-        PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR,
+        Option<PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR>,
 }
 impl KhrXlibSurfaceInstanceCommands {
     #[inline]
     pub fn load(loader: &crate::InstanceLoader) -> Option<KhrXlibSurfaceInstanceCommands> {
         unsafe {
-            Some(KhrXlibSurfaceInstanceCommands {
-                create_xlib_surface_khr: std::mem::transmute(
-                    loader.symbol("vkCreateXlibSurfaceKHR")?,
-                ),
-                get_physical_device_xlib_presentation_support_khr: std::mem::transmute(
-                    loader.symbol("vkGetPhysicalDeviceXlibPresentationSupportKHR")?,
-                ),
-            })
+            let mut success = false;
+            let table = KhrXlibSurfaceInstanceCommands {
+                create_xlib_surface_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkCreateXlibSurfaceKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+                get_physical_device_xlib_presentation_support_khr: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetPhysicalDeviceXlibPresentationSupportKHR");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn instance_commands(loader: &crate::InstanceLoader) -> &KhrXlibSurfaceInstanceCommands {
+    loader
+        .khr_xlib_surface
+        .as_ref()
+        .expect("`khr_xlib_surface` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`KhrXlibSurfaceInstanceCommands`](struct.KhrXlibSurfaceInstanceCommands.html)"]
 pub trait KhrXlibSurfaceInstanceLoaderExt {
@@ -68,11 +84,10 @@ impl KhrXlibSurfaceInstanceLoaderExt for crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = self
-            .khr_xlib_surface
+        let function = instance_commands(self)
+            .create_xlib_surface_khr
             .as_ref()
-            .expect("`khr_xlib_surface` not loaded")
-            .create_xlib_surface_khr;
+            .expect("`create_xlib_surface_khr` not available");
         let mut surface = surface.unwrap_or_else(|| Default::default());
         let _val = function(
             self.handle,
@@ -95,11 +110,10 @@ impl KhrXlibSurfaceInstanceLoaderExt for crate::InstanceLoader {
         dpy: *mut *const std::ffi::c_void,
         visual_id: std::os::raw::c_uint,
     ) -> crate::vk1_0::Bool32 {
-        let function = self
-            .khr_xlib_surface
+        let function = instance_commands(self)
+            .get_physical_device_xlib_presentation_support_khr
             .as_ref()
-            .expect("`khr_xlib_surface` not loaded")
-            .get_physical_device_xlib_presentation_support_khr;
+            .expect("`get_physical_device_xlib_presentation_support_khr` not available");
         let _val = function(physical_device, queue_family_index, dpy, visual_id);
         _val
     }

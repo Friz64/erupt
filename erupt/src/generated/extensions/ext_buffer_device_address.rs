@@ -12,19 +12,33 @@ pub type PFN_vkGetBufferDeviceAddressEXT = unsafe extern "system" fn(
     -> crate::vk1_0::DeviceAddress;
 #[doc = "Provides Device Commands for [`ExtBufferDeviceAddressDeviceLoaderExt`](trait.ExtBufferDeviceAddressDeviceLoaderExt.html)"]
 pub struct ExtBufferDeviceAddressDeviceCommands {
-    pub get_buffer_device_address_ext: PFN_vkGetBufferDeviceAddressEXT,
+    pub get_buffer_device_address_ext: Option<PFN_vkGetBufferDeviceAddressEXT>,
 }
 impl ExtBufferDeviceAddressDeviceCommands {
     #[inline]
     pub fn load(loader: &crate::DeviceLoader) -> Option<ExtBufferDeviceAddressDeviceCommands> {
         unsafe {
-            Some(ExtBufferDeviceAddressDeviceCommands {
-                get_buffer_device_address_ext: std::mem::transmute(
-                    loader.symbol("vkGetBufferDeviceAddressEXT")?,
-                ),
-            })
+            let mut success = false;
+            let table = ExtBufferDeviceAddressDeviceCommands {
+                get_buffer_device_address_ext: std::mem::transmute({
+                    let symbol = loader.symbol("vkGetBufferDeviceAddressEXT");
+                    success |= symbol.is_some();
+                    symbol
+                }),
+            };
+            if success {
+                Some(table)
+            } else {
+                None
+            }
         }
     }
+}
+fn device_commands(loader: &crate::DeviceLoader) -> &ExtBufferDeviceAddressDeviceCommands {
+    loader
+        .ext_buffer_device_address
+        .as_ref()
+        .expect("`ext_buffer_device_address` not loaded")
 }
 #[doc = "Provides high level command wrappers for [`ExtBufferDeviceAddressDeviceCommands`](struct.ExtBufferDeviceAddressDeviceCommands.html)"]
 pub trait ExtBufferDeviceAddressDeviceLoaderExt {
@@ -41,11 +55,10 @@ impl ExtBufferDeviceAddressDeviceLoaderExt for crate::DeviceLoader {
         &self,
         info: &crate::vk1_2::BufferDeviceAddressInfo,
     ) -> crate::vk1_0::DeviceAddress {
-        let function = self
-            .ext_buffer_device_address
+        let function = device_commands(self)
+            .get_buffer_device_address_ext
             .as_ref()
-            .expect("`ext_buffer_device_address` not loaded")
-            .get_buffer_device_address_ext;
+            .expect("`get_buffer_device_address_ext` not available");
         let _val = function(self.handle, info);
         _val
     }

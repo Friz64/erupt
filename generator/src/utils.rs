@@ -116,10 +116,11 @@ pub fn parse_c_decl(declaration: &str) -> Option<ParsedDeclaration> {
     let second_mut_pointer = captures.get(5).is_some();
     let second_const_pointer = captures.get(6).is_some();
     let name = &captures[7];
-    let array: Vec<String> = ARRAY_REGEX
+    let mut array: Vec<String> = ARRAY_REGEX
         .captures_iter(&declaration)
         .map(|captures| captures[1].to_string())
         .collect();
+    array.reverse();
 
     Some((
         is_const,

@@ -3296,7 +3296,7 @@ impl<'a> std::ops::DerefMut for AabbPositionsKHRBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct TransformMatrixKHR {
-    pub matrix: [[f32; 3]; 4],
+    pub matrix: [[f32; 4]; 3],
 }
 impl TransformMatrixKHR {
     #[inline]
@@ -3329,7 +3329,7 @@ impl<'a> TransformMatrixKHRBuilder<'a> {
     }
     #[allow(unused_mut)]
     #[inline]
-    pub fn matrix(mut self, matrix: [[f32; 3]; 4]) -> Self {
+    pub fn matrix(mut self, matrix: [[f32; 4]; 3]) -> Self {
         self.0.matrix = matrix;
         self
     }

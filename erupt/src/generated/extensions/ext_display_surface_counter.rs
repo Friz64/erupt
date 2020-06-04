@@ -33,6 +33,7 @@ impl ExtDisplaySurfaceCounterInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDisplaySurfaceCounterInstanceCommands {
     loader
         .ext_display_surface_counter

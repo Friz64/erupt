@@ -194,6 +194,7 @@ impl Vk12DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &Vk12DeviceCommands {
     loader.vk1_2.as_ref().expect("`vk1_2` not loaded")
 }

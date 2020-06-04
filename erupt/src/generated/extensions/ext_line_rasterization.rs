@@ -34,6 +34,7 @@ impl ExtLineRasterizationDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtLineRasterizationDeviceCommands {
     loader
         .ext_line_rasterization

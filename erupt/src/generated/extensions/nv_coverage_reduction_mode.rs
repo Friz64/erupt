@@ -34,6 +34,7 @@ impl NvCoverageReductionModeInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &NvCoverageReductionModeInstanceCommands {
     loader
         .nv_coverage_reduction_mode

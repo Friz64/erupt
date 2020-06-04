@@ -48,6 +48,7 @@ impl KhrSamplerYcbcrConversionDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrSamplerYcbcrConversionDeviceCommands {
     loader
         .khr_sampler_ycbcr_conversion

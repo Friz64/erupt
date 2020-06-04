@@ -84,6 +84,7 @@ impl KhrDeferredHostOperationsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrDeferredHostOperationsDeviceCommands {
     loader
         .khr_deferred_host_operations

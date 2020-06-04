@@ -47,6 +47,7 @@ impl KhrBindMemory2DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrBindMemory2DeviceCommands {
     loader
         .khr_bind_memory2

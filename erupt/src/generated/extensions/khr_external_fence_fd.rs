@@ -46,6 +46,7 @@ impl KhrExternalFenceFdDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalFenceFdDeviceCommands {
     loader
         .khr_external_fence_fd

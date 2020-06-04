@@ -34,6 +34,7 @@ impl NvExternalMemoryCapabilitiesInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &NvExternalMemoryCapabilitiesInstanceCommands {

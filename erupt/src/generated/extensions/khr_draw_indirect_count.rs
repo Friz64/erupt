@@ -55,6 +55,7 @@ impl KhrDrawIndirectCountDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrDrawIndirectCountDeviceCommands {
     loader
         .khr_draw_indirect_count

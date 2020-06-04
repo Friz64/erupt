@@ -71,6 +71,7 @@ impl KhrGetDisplayProperties2InstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrGetDisplayProperties2InstanceCommands {
     loader
         .khr_get_display_properties2

@@ -36,6 +36,7 @@ impl NvCooperativeMatrixInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &NvCooperativeMatrixInstanceCommands {
     loader
         .nv_cooperative_matrix

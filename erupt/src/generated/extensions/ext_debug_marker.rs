@@ -79,6 +79,7 @@ impl ExtDebugMarkerDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtDebugMarkerDeviceCommands {
     loader
         .ext_debug_marker

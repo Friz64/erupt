@@ -35,6 +35,7 @@ impl ExtHdrMetadataDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtHdrMetadataDeviceCommands {
     loader
         .ext_hdr_metadata

@@ -59,6 +59,7 @@ impl KhrTimelineSemaphoreDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrTimelineSemaphoreDeviceCommands {
     loader
         .khr_timeline_semaphore

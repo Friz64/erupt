@@ -37,6 +37,7 @@ impl ExtSampleLocationsInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtSampleLocationsInstanceCommands {
     loader
         .ext_sample_locations
@@ -100,6 +101,7 @@ impl ExtSampleLocationsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtSampleLocationsDeviceCommands {
     loader
         .ext_sample_locations

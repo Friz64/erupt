@@ -40,6 +40,7 @@ impl KhrExternalMemoryCapabilitiesInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &KhrExternalMemoryCapabilitiesInstanceCommands {

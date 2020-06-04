@@ -33,6 +33,7 @@ impl KhrSharedPresentableImageDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrSharedPresentableImageDeviceCommands {
     loader
         .khr_shared_presentable_image

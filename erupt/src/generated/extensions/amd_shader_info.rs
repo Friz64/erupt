@@ -37,6 +37,7 @@ impl AmdShaderInfoDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &AmdShaderInfoDeviceCommands {
     loader
         .amd_shader_info

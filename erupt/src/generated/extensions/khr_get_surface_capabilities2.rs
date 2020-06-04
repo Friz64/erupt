@@ -42,6 +42,7 @@ impl KhrGetSurfaceCapabilities2InstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &KhrGetSurfaceCapabilities2InstanceCommands {

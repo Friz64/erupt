@@ -50,6 +50,7 @@ impl KhrWaylandSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrWaylandSurfaceInstanceCommands {
     loader
         .khr_wayland_surface

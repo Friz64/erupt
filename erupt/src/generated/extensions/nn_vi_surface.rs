@@ -35,6 +35,7 @@ impl NnViSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &NnViSurfaceInstanceCommands {
     loader
         .nn_vi_surface

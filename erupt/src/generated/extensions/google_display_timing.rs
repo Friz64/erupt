@@ -39,6 +39,7 @@ impl GoogleDisplayTimingDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &GoogleDisplayTimingDeviceCommands {
     loader
         .google_display_timing

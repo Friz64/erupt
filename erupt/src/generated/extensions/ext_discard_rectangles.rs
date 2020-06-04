@@ -35,6 +35,7 @@ impl ExtDiscardRectanglesDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtDiscardRectanglesDeviceCommands {
     loader
         .ext_discard_rectangles

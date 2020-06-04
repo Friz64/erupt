@@ -35,6 +35,7 @@ impl ExtToolingInfoInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtToolingInfoInstanceCommands {
     loader
         .ext_tooling_info

@@ -66,6 +66,7 @@ impl NvMeshShaderDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvMeshShaderDeviceCommands {
     loader
         .nv_mesh_shader

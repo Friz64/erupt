@@ -55,6 +55,7 @@ impl AmdDrawIndirectCountDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &AmdDrawIndirectCountDeviceCommands {
     loader
         .amd_draw_indirect_count

@@ -34,6 +34,7 @@ impl ExtBufferDeviceAddressDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtBufferDeviceAddressDeviceCommands {
     loader
         .ext_buffer_device_address

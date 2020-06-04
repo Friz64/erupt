@@ -39,6 +39,7 @@ impl KhrExternalMemoryWin32DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalMemoryWin32DeviceCommands {
     loader
         .khr_external_memory_win32

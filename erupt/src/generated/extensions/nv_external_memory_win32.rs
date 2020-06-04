@@ -35,6 +35,7 @@ impl NvExternalMemoryWin32DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvExternalMemoryWin32DeviceCommands {
     loader
         .nv_external_memory_win32

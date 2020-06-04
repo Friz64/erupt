@@ -51,6 +51,7 @@ impl KhrPipelineExecutablePropertiesDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrPipelineExecutablePropertiesDeviceCommands {
     loader
         .khr_pipeline_executable_properties

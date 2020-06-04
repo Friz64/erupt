@@ -40,6 +40,7 @@ impl ExtConditionalRenderingDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtConditionalRenderingDeviceCommands {
     loader
         .ext_conditional_rendering

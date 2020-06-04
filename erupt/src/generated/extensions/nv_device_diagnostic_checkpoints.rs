@@ -48,6 +48,7 @@ impl NvDeviceDiagnosticCheckpointsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvDeviceDiagnosticCheckpointsDeviceCommands {
     loader
         .nv_device_diagnostic_checkpoints

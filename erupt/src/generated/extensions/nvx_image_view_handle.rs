@@ -46,6 +46,7 @@ impl NvxImageViewHandleDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvxImageViewHandleDeviceCommands {
     loader
         .nvx_image_view_handle

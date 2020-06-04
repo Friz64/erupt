@@ -44,6 +44,7 @@ impl AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(
     loader: &crate::DeviceLoader,
 ) -> &AndroidExternalMemoryAndroidHardwareBufferDeviceCommands {

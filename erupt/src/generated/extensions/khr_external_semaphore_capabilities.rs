@@ -38,6 +38,7 @@ impl KhrExternalSemaphoreCapabilitiesInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &KhrExternalSemaphoreCapabilitiesInstanceCommands {

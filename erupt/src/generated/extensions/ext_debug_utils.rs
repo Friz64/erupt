@@ -106,6 +106,7 @@ impl ExtDebugUtilsInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDebugUtilsInstanceCommands {
     loader
         .ext_debug_utils
@@ -266,6 +267,7 @@ impl ExtDebugUtilsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtDebugUtilsDeviceCommands {
     loader
         .ext_debug_utils

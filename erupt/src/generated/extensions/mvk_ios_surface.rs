@@ -35,6 +35,7 @@ impl MvkIosSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &MvkIosSurfaceInstanceCommands {
     loader
         .mvk_ios_surface

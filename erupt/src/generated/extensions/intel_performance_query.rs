@@ -122,6 +122,7 @@ impl IntelPerformanceQueryDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &IntelPerformanceQueryDeviceCommands {
     loader
         .intel_performance_query

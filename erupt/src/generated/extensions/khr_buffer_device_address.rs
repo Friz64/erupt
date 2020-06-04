@@ -59,6 +59,7 @@ impl KhrBufferDeviceAddressDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrBufferDeviceAddressDeviceCommands {
     loader
         .khr_buffer_device_address

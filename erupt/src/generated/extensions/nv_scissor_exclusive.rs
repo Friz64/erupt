@@ -35,6 +35,7 @@ impl NvScissorExclusiveDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvScissorExclusiveDeviceCommands {
     loader
         .nv_scissor_exclusive

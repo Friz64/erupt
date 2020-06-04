@@ -36,6 +36,7 @@ impl AmdBufferMarkerDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &AmdBufferMarkerDeviceCommands {
     loader
         .amd_buffer_marker

@@ -49,6 +49,7 @@ impl KhrWin32SurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrWin32SurfaceInstanceCommands {
     loader
         .khr_win32_surface

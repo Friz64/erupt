@@ -31,6 +31,7 @@ impl ExtImageDrmFormatModifierDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtImageDrmFormatModifierDeviceCommands {
     loader
         .ext_image_drm_format_modifier

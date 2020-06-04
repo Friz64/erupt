@@ -113,6 +113,7 @@ impl ExtTransformFeedbackDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtTransformFeedbackDeviceCommands {
     loader
         .ext_transform_feedback

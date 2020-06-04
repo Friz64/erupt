@@ -51,6 +51,7 @@ impl KhrXcbSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrXcbSurfaceInstanceCommands {
     loader
         .khr_xcb_surface

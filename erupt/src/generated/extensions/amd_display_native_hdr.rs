@@ -34,6 +34,7 @@ impl AmdDisplayNativeHdrDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &AmdDisplayNativeHdrDeviceCommands {
     loader
         .amd_display_native_hdr

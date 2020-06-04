@@ -57,6 +57,7 @@ impl NvShadingRateImageDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvShadingRateImageDeviceCommands {
     loader
         .nv_shading_rate_image

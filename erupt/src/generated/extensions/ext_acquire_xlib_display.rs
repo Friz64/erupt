@@ -48,6 +48,7 @@ impl ExtAcquireXlibDisplayInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtAcquireXlibDisplayInstanceCommands {
     loader
         .ext_acquire_xlib_display

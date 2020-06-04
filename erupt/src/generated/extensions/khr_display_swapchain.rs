@@ -36,6 +36,7 @@ impl KhrDisplaySwapchainDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrDisplaySwapchainDeviceCommands {
     loader
         .khr_display_swapchain

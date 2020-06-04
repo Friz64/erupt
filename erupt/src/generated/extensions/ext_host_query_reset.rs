@@ -35,6 +35,7 @@ impl ExtHostQueryResetDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtHostQueryResetDeviceCommands {
     loader
         .ext_host_query_reset

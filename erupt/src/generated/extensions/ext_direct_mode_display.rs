@@ -33,6 +33,7 @@ impl ExtDirectModeDisplayInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDirectModeDisplayInstanceCommands {
     loader
         .ext_direct_mode_display

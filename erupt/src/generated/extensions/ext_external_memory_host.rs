@@ -30,6 +30,7 @@ impl ExtExternalMemoryHostDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtExternalMemoryHostDeviceCommands {
     loader
         .ext_external_memory_host

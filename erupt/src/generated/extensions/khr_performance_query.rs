@@ -57,6 +57,7 @@ impl KhrPerformanceQueryInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrPerformanceQueryInstanceCommands {
     loader
         .khr_performance_query
@@ -171,6 +172,7 @@ impl KhrPerformanceQueryDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrPerformanceQueryDeviceCommands {
     loader
         .khr_performance_query

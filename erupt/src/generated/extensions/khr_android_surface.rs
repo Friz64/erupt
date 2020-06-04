@@ -35,6 +35,7 @@ impl KhrAndroidSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrAndroidSurfaceInstanceCommands {
     loader
         .khr_android_surface

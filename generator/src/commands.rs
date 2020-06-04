@@ -621,6 +621,7 @@ fn generate_loader_generic(
     };
 
     let commands_function = quote! {
+        #[inline]
         fn #commands_function_name#generics(loader: &#loader) -> &#struct_name {
             loader.#field_name.as_ref().expect(#loading_error)
         }

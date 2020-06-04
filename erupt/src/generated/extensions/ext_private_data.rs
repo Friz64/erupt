@@ -78,6 +78,7 @@ impl ExtPrivateDataDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtPrivateDataDeviceCommands {
     loader
         .ext_private_data

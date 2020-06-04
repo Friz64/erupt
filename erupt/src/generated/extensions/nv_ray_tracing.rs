@@ -198,6 +198,7 @@ impl NvRayTracingDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvRayTracingDeviceCommands {
     loader
         .nv_ray_tracing

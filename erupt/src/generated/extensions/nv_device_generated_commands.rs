@@ -81,6 +81,7 @@ impl NvDeviceGeneratedCommandsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvDeviceGeneratedCommandsDeviceCommands {
     loader
         .nv_device_generated_commands

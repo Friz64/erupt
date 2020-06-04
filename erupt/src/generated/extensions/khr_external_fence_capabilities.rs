@@ -38,6 +38,7 @@ impl KhrExternalFenceCapabilitiesInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &KhrExternalFenceCapabilitiesInstanceCommands {

@@ -234,6 +234,7 @@ impl Vk11CoreCommands {
         }
     }
 }
+#[inline]
 fn core_commands<T>(loader: &crate::CoreLoader<T>) -> &Vk11CoreCommands {
     loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }
@@ -351,6 +352,7 @@ impl Vk11InstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &Vk11InstanceCommands {
     loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }
@@ -764,6 +766,7 @@ impl Vk11DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &Vk11DeviceCommands {
     loader.vk1_1.as_ref().expect("`vk1_1` not loaded")
 }

@@ -73,6 +73,7 @@ impl KhrCreateRenderpass2DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrCreateRenderpass2DeviceCommands {
     loader
         .khr_create_renderpass2

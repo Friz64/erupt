@@ -39,6 +39,7 @@ impl ExtCalibratedTimestampsInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtCalibratedTimestampsInstanceCommands {
     loader
         .ext_calibrated_timestamps
@@ -105,6 +106,7 @@ impl ExtCalibratedTimestampsDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtCalibratedTimestampsDeviceCommands {
     loader
         .ext_calibrated_timestamps

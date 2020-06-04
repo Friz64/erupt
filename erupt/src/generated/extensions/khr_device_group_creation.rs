@@ -37,6 +37,7 @@ impl KhrDeviceGroupCreationInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDeviceGroupCreationInstanceCommands {
     loader
         .khr_device_group_creation

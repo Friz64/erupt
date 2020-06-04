@@ -123,6 +123,7 @@ impl KhrGetPhysicalDeviceProperties2InstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &KhrGetPhysicalDeviceProperties2InstanceCommands {

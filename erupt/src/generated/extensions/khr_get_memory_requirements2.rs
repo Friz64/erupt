@@ -63,6 +63,7 @@ impl KhrGetMemoryRequirements2DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrGetMemoryRequirements2DeviceCommands {
     loader
         .khr_get_memory_requirements2

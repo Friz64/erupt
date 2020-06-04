@@ -48,6 +48,7 @@ impl KhrExternalMemoryFdDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalMemoryFdDeviceCommands {
     loader
         .khr_external_memory_fd

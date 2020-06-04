@@ -122,6 +122,7 @@ impl KhrDisplayInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDisplayInstanceCommands {
     loader
         .khr_display

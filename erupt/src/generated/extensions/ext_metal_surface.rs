@@ -35,6 +35,7 @@ impl ExtMetalSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtMetalSurfaceInstanceCommands {
     loader
         .ext_metal_surface

@@ -79,6 +79,7 @@ impl KhrDescriptorUpdateTemplateDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrDescriptorUpdateTemplateDeviceCommands {
     loader
         .khr_descriptor_update_template

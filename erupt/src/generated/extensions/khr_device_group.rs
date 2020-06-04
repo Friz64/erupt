@@ -81,6 +81,7 @@ impl KhrDeviceGroupInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrDeviceGroupInstanceCommands {
     loader
         .khr_device_group
@@ -182,6 +183,7 @@ impl KhrDeviceGroupDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrDeviceGroupDeviceCommands {
     loader
         .khr_device_group

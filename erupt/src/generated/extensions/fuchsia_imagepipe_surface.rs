@@ -30,6 +30,7 @@ impl FuchsiaImagepipeSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &FuchsiaImagepipeSurfaceInstanceCommands {
     loader
         .fuchsia_imagepipe_surface

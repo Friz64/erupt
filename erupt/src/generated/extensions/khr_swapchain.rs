@@ -94,6 +94,7 @@ impl KhrSwapchainInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &KhrSwapchainInstanceCommands {
     loader
         .khr_swapchain
@@ -206,6 +207,7 @@ impl KhrSwapchainDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrSwapchainDeviceCommands {
     loader
         .khr_swapchain

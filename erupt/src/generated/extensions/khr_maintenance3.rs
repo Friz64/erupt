@@ -34,6 +34,7 @@ impl KhrMaintenance3DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrMaintenance3DeviceCommands {
     loader
         .khr_maintenance3

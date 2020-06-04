@@ -48,6 +48,7 @@ impl ExtFullScreenExclusiveInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtFullScreenExclusiveInstanceCommands {
     loader
         .ext_full_screen_exclusive
@@ -134,6 +135,7 @@ impl ExtFullScreenExclusiveDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtFullScreenExclusiveDeviceCommands {
     loader
         .ext_full_screen_exclusive

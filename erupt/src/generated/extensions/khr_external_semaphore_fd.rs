@@ -43,6 +43,7 @@ impl KhrExternalSemaphoreFdDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalSemaphoreFdDeviceCommands {
     loader
         .khr_external_semaphore_fd

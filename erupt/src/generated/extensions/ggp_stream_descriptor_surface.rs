@@ -32,6 +32,7 @@ impl GgpStreamDescriptorSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(
     loader: &crate::InstanceLoader,
 ) -> &GgpStreamDescriptorSurfaceInstanceCommands {

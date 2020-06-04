@@ -66,6 +66,7 @@ impl ExtDebugReportInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtDebugReportInstanceCommands {
     loader
         .ext_debug_report

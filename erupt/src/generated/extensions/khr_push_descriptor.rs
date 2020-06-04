@@ -53,6 +53,7 @@ impl KhrPushDescriptorDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrPushDescriptorDeviceCommands {
     loader
         .khr_push_descriptor

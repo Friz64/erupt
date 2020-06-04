@@ -35,6 +35,7 @@ impl ExtHeadlessSurfaceInstanceCommands {
         }
     }
 }
+#[inline]
 fn instance_commands(loader: &crate::InstanceLoader) -> &ExtHeadlessSurfaceInstanceCommands {
     loader
         .ext_headless_surface

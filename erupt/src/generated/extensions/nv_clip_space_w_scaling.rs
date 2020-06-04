@@ -35,6 +35,7 @@ impl NvClipSpaceWScalingDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &NvClipSpaceWScalingDeviceCommands {
     loader
         .nv_clip_space_w_scaling

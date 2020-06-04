@@ -76,6 +76,7 @@ impl ExtValidationCacheDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtValidationCacheDeviceCommands {
     loader
         .ext_validation_cache

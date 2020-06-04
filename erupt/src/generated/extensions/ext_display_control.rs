@@ -77,6 +77,7 @@ impl ExtDisplayControlDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &ExtDisplayControlDeviceCommands {
     loader
         .ext_display_control

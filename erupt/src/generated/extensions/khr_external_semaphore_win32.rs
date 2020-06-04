@@ -39,6 +39,7 @@ impl KhrExternalSemaphoreWin32DeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrExternalSemaphoreWin32DeviceCommands {
     loader
         .khr_external_semaphore_win32

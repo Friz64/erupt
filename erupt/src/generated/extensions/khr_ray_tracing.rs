@@ -301,6 +301,7 @@ impl KhrRayTracingDeviceCommands {
         }
     }
 }
+#[inline]
 fn device_commands(loader: &crate::DeviceLoader) -> &KhrRayTracingDeviceCommands {
     loader
         .khr_ray_tracing

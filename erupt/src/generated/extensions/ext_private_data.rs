@@ -318,6 +318,16 @@ pub struct PhysicalDevicePrivateDataFeaturesEXT {
 }
 impl PhysicalDevicePrivateDataFeaturesEXT {
     #[inline]
+    #[doc = "Appends `self` to `other` pointer chain"]
+    #[doc = "# Safety"]
+    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
+    pub unsafe fn extend<T>(&mut self, other: &mut T)
+    where
+        T: crate::ExtendableBy<Self>,
+    {
+        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
+    }
+    #[inline]
     pub fn builder<'a>(self) -> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
         PhysicalDevicePrivateDataFeaturesEXTBuilder(self, std::marker::PhantomData)
     }
@@ -340,6 +350,11 @@ impl Default for PhysicalDevicePrivateDataFeaturesEXT {
         }
     }
 }
+impl crate::ExtendableBy<PhysicalDevicePrivateDataFeaturesEXT>
+    for crate::vk1_1::PhysicalDeviceFeatures2
+{
+}
+impl crate::ExtendableBy<PhysicalDevicePrivateDataFeaturesEXT> for crate::vk1_0::DeviceCreateInfo {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Builder of [`PhysicalDevicePrivateDataFeaturesEXT`](struct.PhysicalDevicePrivateDataFeaturesEXT.html)"]
 #[repr(transparent)]

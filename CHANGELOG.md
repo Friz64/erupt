@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.9.0+143] - 2020-06-08
 ### Fixed
 - Fix reversed array order
 - Fix loaders failing on partial command availability
+
+### Changed
+- Update Vulkan Headers to version 143
 
 ## [0.8.0+142] - 2020-06-01
 ### Added

@@ -425,7 +425,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct LineRasterizationModeEXT(pub i32);
 #[doc = "[Part of `extensions::ext_line_rasterization`](../../extensions/ext_line_rasterization/index.html)"]

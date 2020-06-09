@@ -323,7 +323,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterUnitKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterUnitKHR(pub i32);
 #[doc = "[Part of `extensions::khr_performance_query`](../../extensions/khr_performance_query/index.html)"]
@@ -359,7 +359,7 @@ impl std::fmt::Debug for PerformanceCounterUnitKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterScopeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterScopeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_performance_query`](../../extensions/khr_performance_query/index.html)"]
@@ -382,7 +382,7 @@ impl std::fmt::Debug for PerformanceCounterScopeKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterStorageKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterStorageKHR(pub i32);
 #[doc = "[Part of `extensions::khr_performance_query`](../../extensions/khr_performance_query/index.html)"]
@@ -525,7 +525,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterDescriptionKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Flag Bits of [`PerformanceCounterDescriptionFlagsKHR`](struct.PerformanceCounterDescriptionFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterDescriptionFlagBitsKHR(pub u32);
 impl PerformanceCounterDescriptionFlagBitsKHR {
@@ -731,7 +731,7 @@ impl<'a> std::ops::DerefMut for AcquireProfilingLockInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`AcquireProfilingLockFlagsKHR`](struct.AcquireProfilingLockFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AcquireProfilingLockFlagBitsKHR(pub u32);
 impl AcquireProfilingLockFlagBitsKHR {

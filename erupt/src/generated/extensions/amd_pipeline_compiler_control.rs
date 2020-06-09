@@ -4,7 +4,7 @@ pub const AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION: u32 = 1;
 pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_pipeline_compiler_control");
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineCompilerControlFlagsAMD`](struct.PipelineCompilerControlFlagsAMD.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineCompilerControlFlagBitsAMD(pub u32);
 impl PipelineCompilerControlFlagBitsAMD {

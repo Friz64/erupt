@@ -213,7 +213,7 @@ impl<'a> std::ops::DerefMut for XcbSurfaceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`XcbSurfaceCreateFlagsKHR`](struct.XcbSurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct XcbSurfaceCreateFlagBitsKHR(pub u32);
 impl XcbSurfaceCreateFlagBitsKHR {

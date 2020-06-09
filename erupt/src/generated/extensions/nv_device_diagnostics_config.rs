@@ -183,7 +183,7 @@ impl<'a> std::ops::DerefMut for DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagBitsNV.html) · Flag Bits of [`DeviceDiagnosticsConfigFlagsNV`](struct.DeviceDiagnosticsConfigFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DeviceDiagnosticsConfigFlagBitsNV(pub u32);
 impl DeviceDiagnosticsConfigFlagBitsNV {

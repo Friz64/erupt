@@ -207,7 +207,7 @@ impl<'a> std::ops::DerefMut for Win32SurfaceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`Win32SurfaceCreateFlagsKHR`](struct.Win32SurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct Win32SurfaceCreateFlagBitsKHR(pub u32);
 impl Win32SurfaceCreateFlagBitsKHR {

@@ -312,7 +312,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationConservativeStateCreateInfo
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineRasterizationConservativeStateCreateFlagsEXT`](struct.PipelineRasterizationConservativeStateCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineRasterizationConservativeStateCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationConservativeStateCreateFlagBitsEXT {
@@ -331,7 +331,7 @@ impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateFlagBitsEXT
 }
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Flags of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`](struct.PipelineRasterizationConservativeStateCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineRasterizationConservativeStateCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConservativeRasterizationModeEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ConservativeRasterizationModeEXT(pub i32);
 #[doc = "[Part of `extensions::ext_conservative_rasterization`](../../extensions/ext_conservative_rasterization/index.html)"]

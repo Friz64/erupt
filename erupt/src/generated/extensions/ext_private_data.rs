@@ -287,7 +287,7 @@ impl<'a> std::ops::DerefMut for PrivateDataSlotCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PrivateDataSlotCreateFlagsEXT`](struct.PrivateDataSlotCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PrivateDataSlotCreateFlagBitsEXT(pub u32);
 impl PrivateDataSlotCreateFlagBitsEXT {

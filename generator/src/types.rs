@@ -1001,7 +1001,7 @@ pub fn generate(
 
             quote! {
                 #[doc = #doc]
-                #[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+                #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                 #[repr(transparent)]
                 pub struct #name_ident(pub i32);
 
@@ -1114,7 +1114,7 @@ pub fn generate(
 
             quote! {
                 #[doc = #flag_bits_doc]
-                #[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+                #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                 #[repr(transparent)]
                 pub struct #flag_bits_name_ident(pub u32);
 

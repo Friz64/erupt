@@ -134,7 +134,7 @@ impl<'a> std::ops::DerefMut for PipelineCoverageModulationStateCreateInfoNVBuild
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineCoverageModulationStateCreateFlagsNV`](struct.PipelineCoverageModulationStateCreateFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineCoverageModulationStateCreateFlagBitsNV(pub u32);
 impl PipelineCoverageModulationStateCreateFlagBitsNV {
@@ -153,7 +153,7 @@ impl std::fmt::Debug for PipelineCoverageModulationStateCreateFlagBitsNV {
 }
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateFlagsNV.html) · Flags of [`PipelineCoverageModulationStateCreateFlagBitsNV`](struct.PipelineCoverageModulationStateCreateFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineCoverageModulationStateCreateFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoverageModulationModeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CoverageModulationModeNV(pub i32);
 #[doc = "[Part of `extensions::nv_framebuffer_mixed_samples`](../../extensions/nv_framebuffer_mixed_samples/index.html)"]

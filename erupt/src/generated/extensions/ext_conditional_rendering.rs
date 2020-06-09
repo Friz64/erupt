@@ -184,7 +184,7 @@ impl<'a> std::ops::DerefMut for ConditionalRenderingBeginInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagBitsEXT.html) · Flag Bits of [`ConditionalRenderingFlagsEXT`](struct.ConditionalRenderingFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ConditionalRenderingFlagBitsEXT(pub u32);
 impl ConditionalRenderingFlagBitsEXT {

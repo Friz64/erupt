@@ -833,7 +833,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DebugUtilsMessengerCreateFlagsEXT`](struct.DebugUtilsMessengerCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCreateFlagBitsEXT(pub u32);
 impl DebugUtilsMessengerCreateFlagBitsEXT {
@@ -852,7 +852,7 @@ impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
 }
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Flags of [`DebugUtilsMessengerCreateFlagBitsEXT`](struct.DebugUtilsMessengerCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html) · Flag Bits of [`DebugUtilsMessageSeverityFlagsEXT`](struct.DebugUtilsMessageSeverityFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessageSeverityFlagBitsEXT(pub u32);
 impl DebugUtilsMessageSeverityFlagBitsEXT {
@@ -882,7 +882,7 @@ impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
 }
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Flags of [`DebugUtilsMessageSeverityFlagBitsEXT`](struct.DebugUtilsMessageSeverityFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagBitsEXT.html) · Flag Bits of [`DebugUtilsMessageTypeFlagsEXT`](struct.DebugUtilsMessageTypeFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessageTypeFlagBitsEXT(pub u32);
 impl DebugUtilsMessageTypeFlagBitsEXT {
@@ -1069,7 +1069,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
 }
 crate :: non_dispatchable_handle ! ( DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle" ) ;
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DebugUtilsMessengerCallbackDataFlagsEXT`](struct.DebugUtilsMessengerCallbackDataFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCallbackDataFlagBitsEXT(pub u32);
 impl DebugUtilsMessengerCallbackDataFlagBitsEXT {

@@ -187,7 +187,7 @@ impl<'a> std::ops::DerefMut for FramebufferMixedSamplesCombinationNVBuilder<'a> 
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoverageReductionModeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CoverageReductionModeNV(pub i32);
 #[doc = "[Part of `extensions::nv_coverage_reduction_mode`](../../extensions/nv_coverage_reduction_mode/index.html)"]
@@ -408,7 +408,7 @@ impl<'a> std::ops::DerefMut for PipelineCoverageReductionStateCreateInfoNVBuilde
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineCoverageReductionStateCreateFlagsNV`](struct.PipelineCoverageReductionStateCreateFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineCoverageReductionStateCreateFlagBitsNV(pub u32);
 impl PipelineCoverageReductionStateCreateFlagBitsNV {

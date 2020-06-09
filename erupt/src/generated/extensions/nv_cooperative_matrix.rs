@@ -230,7 +230,7 @@ impl<'a> std::ops::DerefMut for CooperativeMatrixPropertiesNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentTypeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ComponentTypeNV(pub i32);
 #[doc = "[Part of `extensions::nv_cooperative_matrix`](../../extensions/nv_cooperative_matrix/index.html)"]
@@ -266,7 +266,7 @@ impl std::fmt::Debug for ComponentTypeNV {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScopeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ScopeNV(pub i32);
 #[doc = "[Part of `extensions::nv_cooperative_matrix`](../../extensions/nv_cooperative_matrix/index.html)"]

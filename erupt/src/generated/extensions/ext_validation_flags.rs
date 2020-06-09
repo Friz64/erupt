@@ -98,7 +98,7 @@ impl<'a> std::ops::DerefMut for ValidationFlagsEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCheckEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCheckEXT(pub i32);
 #[doc = "[Part of `extensions::ext_validation_flags`](../../extensions/ext_validation_flags/index.html)"]

@@ -124,7 +124,7 @@ impl<'a> std::ops::DerefMut for ValidationFeaturesEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationFeatureEnableEXT(pub i32);
 #[doc = "[Part of `extensions::ext_validation_features`](../../extensions/ext_validation_features/index.html)"]
@@ -146,7 +146,7 @@ impl std::fmt::Debug for ValidationFeatureEnableEXT {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureDisableEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationFeatureDisableEXT(pub i32);
 #[doc = "[Part of `extensions::ext_validation_features`](../../extensions/ext_validation_features/index.html)"]

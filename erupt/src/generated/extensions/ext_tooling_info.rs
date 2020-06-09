@@ -213,7 +213,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceToolPropertiesEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Flag Bits of [`ToolPurposeFlagsEXT`](struct.ToolPurposeFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ToolPurposeFlagBitsEXT(pub u32);
 impl ToolPurposeFlagBitsEXT {

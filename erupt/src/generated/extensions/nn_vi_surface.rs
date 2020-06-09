@@ -164,7 +164,7 @@ impl<'a> std::ops::DerefMut for ViSurfaceCreateInfoNNBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`ViSurfaceCreateFlagsNN`](struct.ViSurfaceCreateFlagsNN.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ViSurfaceCreateFlagBitsNN(pub u32);
 impl ViSurfaceCreateFlagBitsNN {

@@ -225,7 +225,7 @@ impl<'a> std::ops::DerefMut for ShadingRatePaletteNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteEntryNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShadingRatePaletteEntryNV(pub i32);
 #[doc = "[Part of `extensions::nv_shading_rate_image`](../../extensions/nv_shading_rate_image/index.html)"]
@@ -263,7 +263,7 @@ impl std::fmt::Debug for ShadingRatePaletteEntryNV {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderTypeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CoarseSampleOrderTypeNV(pub i32);
 #[doc = "[Part of `extensions::nv_shading_rate_image`](../../extensions/nv_shading_rate_image/index.html)"]

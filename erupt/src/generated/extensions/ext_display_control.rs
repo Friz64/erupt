@@ -272,7 +272,7 @@ impl<'a> std::ops::DerefMut for DisplayPowerInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayPowerStateEXT(pub i32);
 #[doc = "[Part of `extensions::ext_display_control`](../../extensions/ext_display_control/index.html)"]
@@ -364,7 +364,7 @@ impl<'a> std::ops::DerefMut for DeviceEventInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventTypeEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DeviceEventTypeEXT(pub i32);
 #[doc = "[Part of `extensions::ext_display_control`](../../extensions/ext_display_control/index.html)"]
@@ -452,7 +452,7 @@ impl<'a> std::ops::DerefMut for DisplayEventInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventTypeEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayEventTypeEXT(pub i32);
 #[doc = "[Part of `extensions::ext_display_control`](../../extensions/ext_display_control/index.html)"]

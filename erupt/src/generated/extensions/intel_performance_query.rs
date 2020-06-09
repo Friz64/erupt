@@ -623,7 +623,7 @@ impl<'a> std::ops::DerefMut for PerformanceOverrideInfoINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideTypeINTEL.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceOverrideTypeINTEL(pub i32);
 #[doc = "[Part of `extensions::intel_performance_query`](../../extensions/intel_performance_query/index.html)"]
@@ -719,7 +719,7 @@ impl<'a> std::ops::DerefMut for PerformanceConfigurationAcquireInfoINTELBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceConfigurationTypeINTEL(pub i32);
 #[doc = "[Part of `extensions::intel_performance_query`](../../extensions/intel_performance_query/index.html)"]
@@ -738,7 +738,7 @@ impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
 }
 crate :: non_dispatchable_handle ! ( PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle" ) ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceParameterTypeINTEL.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceParameterTypeINTEL(pub i32);
 #[doc = "[Part of `extensions::intel_performance_query`](../../extensions/intel_performance_query/index.html)"]
@@ -837,7 +837,7 @@ impl<'a> std::ops::DerefMut for PerformanceValueINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueTypeINTEL.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceValueTypeINTEL(pub i32);
 #[doc = "[Part of `extensions::intel_performance_query`](../../extensions/intel_performance_query/index.html)"]
@@ -881,7 +881,7 @@ impl Default for PerformanceValueDataINTEL {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolSamplingModeINTEL.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct QueryPoolSamplingModeINTEL(pub i32);
 #[doc = "[Part of `extensions::intel_performance_query`](../../extensions/intel_performance_query/index.html)"]

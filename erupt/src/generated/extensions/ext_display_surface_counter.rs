@@ -258,7 +258,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2EXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Flag Bits of [`SurfaceCounterFlagsEXT`](struct.SurfaceCounterFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SurfaceCounterFlagBitsEXT(pub u32);
 impl SurfaceCounterFlagBitsEXT {

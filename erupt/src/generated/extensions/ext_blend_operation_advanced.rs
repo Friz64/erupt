@@ -385,7 +385,7 @@ impl<'a> std::ops::DerefMut for PipelineColorBlendAdvancedStateCreateInfoEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlendOverlapEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct BlendOverlapEXT(pub i32);
 #[doc = "[Part of `extensions::ext_blend_operation_advanced`](../../extensions/ext_blend_operation_advanced/index.html)"]

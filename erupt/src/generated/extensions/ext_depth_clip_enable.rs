@@ -200,7 +200,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationDepthClipStateCreateInfoEXT
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineRasterizationDepthClipStateCreateFlagsEXT`](struct.PipelineRasterizationDepthClipStateCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineRasterizationDepthClipStateCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationDepthClipStateCreateFlagBitsEXT {

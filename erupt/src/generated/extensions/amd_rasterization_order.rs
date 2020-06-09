@@ -4,7 +4,7 @@ pub const AMD_RASTERIZATION_ORDER_SPEC_VERSION: u32 = 1;
 pub const AMD_RASTERIZATION_ORDER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_rasterization_order");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRasterizationOrderAMD.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct RasterizationOrderAMD(pub i32);
 #[doc = "[Part of `extensions::amd_rasterization_order`](../../extensions/amd_rasterization_order/index.html)"]

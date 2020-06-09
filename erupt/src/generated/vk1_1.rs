@@ -1362,7 +1362,7 @@ impl<'a> std::ops::DerefMut for BindImageMemoryInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagBits.html) · Flag Bits of [`PeerMemoryFeatureFlags`](struct.PeerMemoryFeatureFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PeerMemoryFeatureFlagBits(pub u32);
 impl PeerMemoryFeatureFlagBits {
@@ -2594,7 +2594,7 @@ impl<'a> std::ops::DerefMut for SparseImageFormatProperties2Builder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`CommandPoolTrimFlags`](struct.CommandPoolTrimFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CommandPoolTrimFlagBits(pub u32);
 impl CommandPoolTrimFlagBits {
@@ -2838,7 +2838,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionCreateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrModelConversion.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SamplerYcbcrModelConversion(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -2870,7 +2870,7 @@ impl std::fmt::Debug for SamplerYcbcrModelConversion {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrRange.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SamplerYcbcrRange(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -2893,7 +2893,7 @@ impl std::fmt::Debug for SamplerYcbcrRange {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkChromaLocation.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ChromaLocation(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -3065,7 +3065,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateCreateInfoBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DescriptorUpdateTemplateCreateFlags`](struct.DescriptorUpdateTemplateCreateFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DescriptorUpdateTemplateCreateFlagBits(pub u32);
 impl DescriptorUpdateTemplateCreateFlagBits {
@@ -3195,7 +3195,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateEntryBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateType.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DescriptorUpdateTemplateType(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -3313,7 +3313,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalBufferInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBits.html) · Flag Bits of [`ExternalMemoryHandleTypeFlags`](struct.ExternalMemoryHandleTypeFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalMemoryHandleTypeFlagBits(pub u32);
 impl ExternalMemoryHandleTypeFlagBits {
@@ -3550,7 +3550,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryPropertiesBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBits.html) · Flag Bits of [`ExternalMemoryFeatureFlags`](struct.ExternalMemoryFeatureFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalMemoryFeatureFlagBits(pub u32);
 impl ExternalMemoryFeatureFlagBits {
@@ -3659,7 +3659,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalFenceInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagBits.html) · Flag Bits of [`ExternalFenceHandleTypeFlags`](struct.ExternalFenceHandleTypeFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalFenceHandleTypeFlagBits(pub u32);
 impl ExternalFenceHandleTypeFlagBits {
@@ -3798,7 +3798,7 @@ impl<'a> std::ops::DerefMut for ExternalFencePropertiesBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlagBits.html) · Flag Bits of [`ExternalFenceFeatureFlags`](struct.ExternalFenceFeatureFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalFenceFeatureFlagBits(pub u32);
 impl ExternalFenceFeatureFlagBits {
@@ -3904,7 +3904,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagBits.html) · Flag Bits of [`ExternalSemaphoreHandleTypeFlags`](struct.ExternalSemaphoreHandleTypeFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalSemaphoreHandleTypeFlagBits(pub u32);
 impl ExternalSemaphoreHandleTypeFlagBits {
@@ -4049,7 +4049,7 @@ impl<'a> std::ops::DerefMut for ExternalSemaphorePropertiesBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagBits.html) · Flag Bits of [`ExternalSemaphoreFeatureFlags`](struct.ExternalSemaphoreFeatureFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalSemaphoreFeatureFlagBits(pub u32);
 impl ExternalSemaphoreFeatureFlagBits {
@@ -4271,7 +4271,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupPropertiesBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlagBits.html) · Flag Bits of [`SubgroupFeatureFlags`](struct.SubgroupFeatureFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SubgroupFeatureFlagBits(pub u32);
 impl SubgroupFeatureFlagBits {
@@ -4634,7 +4634,7 @@ impl<'a> std::ops::DerefMut for MemoryDedicatedAllocateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagBits.html) · Flag Bits of [`MemoryAllocateFlags`](struct.MemoryAllocateFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct MemoryAllocateFlagBits(pub u32);
 impl MemoryAllocateFlagBits {
@@ -5546,7 +5546,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePointClippingPropertiesBuilder<'a>
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPointClippingBehavior.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PointClippingBehavior(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -5832,7 +5832,7 @@ impl<'a> std::ops::DerefMut for ImageViewUsageCreateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTessellationDomainOrigin.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct TessellationDomainOrigin(pub i32);
 #[doc = "[Part of `vk1_1`](../vk1_1/index.html)"]
@@ -7627,7 +7627,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryAllocateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlagBits.html) · Flag Bits of [`FenceImportFlags`](struct.FenceImportFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct FenceImportFlagBits(pub u32);
 impl FenceImportFlagBits {
@@ -7741,7 +7741,7 @@ impl<'a> std::ops::DerefMut for ExportFenceCreateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlagBits.html) · Flag Bits of [`SemaphoreImportFlags`](struct.SemaphoreImportFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SemaphoreImportFlagBits(pub u32);
 impl SemaphoreImportFlagBits {

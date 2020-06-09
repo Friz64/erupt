@@ -4,7 +4,7 @@ pub const NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION: u32 = 1;
 pub const NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_fragment_coverage_to_color");
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineCoverageToColorStateCreateFlagsNV`](struct.PipelineCoverageToColorStateCreateFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineCoverageToColorStateCreateFlagBitsNV(pub u32);
 impl PipelineCoverageToColorStateCreateFlagBitsNV {

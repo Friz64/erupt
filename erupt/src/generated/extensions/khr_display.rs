@@ -804,7 +804,7 @@ impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DisplayModeCreateFlagsKHR`](struct.DisplayModeCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayModeCreateFlagBitsKHR(pub u32);
 impl DisplayModeCreateFlagBitsKHR {
@@ -964,7 +964,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneCapabilitiesKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Flag Bits of [`DisplayPlaneAlphaFlagsKHR`](struct.DisplayPlaneAlphaFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayPlaneAlphaFlagBitsKHR(pub u32);
 impl DisplayPlaneAlphaFlagBitsKHR {
@@ -1141,7 +1141,7 @@ impl<'a> std::ops::DerefMut for DisplaySurfaceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`DisplaySurfaceCreateFlagsKHR`](struct.DisplaySurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplaySurfaceCreateFlagBitsKHR(pub u32);
 impl DisplaySurfaceCreateFlagBitsKHR {

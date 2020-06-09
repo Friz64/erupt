@@ -148,7 +148,7 @@ impl ExtCalibratedTimestampsDeviceLoaderExt for crate::DeviceLoader {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimeDomainEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct TimeDomainEXT(pub i32);
 #[doc = "[Part of `extensions::ext_calibrated_timestamps`](../../extensions/ext_calibrated_timestamps/index.html)"]

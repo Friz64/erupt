@@ -164,7 +164,7 @@ impl<'a> std::ops::DerefMut for IOSSurfaceCreateInfoMVKBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`IOSSurfaceCreateFlagsMVK`](struct.IOSSurfaceCreateFlagsMVK.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct IOSSurfaceCreateFlagBitsMVK(pub u32);
 impl IOSSurfaceCreateFlagBitsMVK {

@@ -4,7 +4,7 @@ pub const EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION: u32 = 1;
 pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_pipeline_creation_feedback");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Flag Bits of [`PipelineCreationFeedbackFlagsEXT`](struct.PipelineCreationFeedbackFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineCreationFeedbackFlagBitsEXT(pub u32);
 impl PipelineCreationFeedbackFlagBitsEXT {

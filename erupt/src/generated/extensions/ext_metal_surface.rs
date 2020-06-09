@@ -164,7 +164,7 @@ impl<'a> std::ops::DerefMut for MetalSurfaceCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`MetalSurfaceCreateFlagsEXT`](struct.MetalSurfaceCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct MetalSurfaceCreateFlagBitsEXT(pub u32);
 impl MetalSurfaceCreateFlagBitsEXT {

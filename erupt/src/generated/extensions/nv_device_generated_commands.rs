@@ -747,7 +747,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Flag Bits of [`IndirectCommandsLayoutUsageFlagsNV`](struct.IndirectCommandsLayoutUsageFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct IndirectCommandsLayoutUsageFlagBitsNV(pub u32);
 impl IndirectCommandsLayoutUsageFlagBitsNV {
@@ -969,7 +969,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutTokenNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsTokenTypeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct IndirectCommandsTokenTypeNV(pub i32);
 #[doc = "[Part of `extensions::nv_device_generated_commands`](../../extensions/nv_device_generated_commands/index.html)"]
@@ -999,7 +999,7 @@ impl std::fmt::Debug for IndirectCommandsTokenTypeNV {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagBitsNV.html) · Flag Bits of [`IndirectStateFlagsNV`](struct.IndirectStateFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct IndirectStateFlagBitsNV(pub u32);
 impl IndirectStateFlagBitsNV {

@@ -83,7 +83,7 @@ impl AmdShaderInfoDeviceLoaderExt for crate::DeviceLoader {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderInfoTypeAMD(pub i32);
 #[doc = "[Part of `extensions::amd_shader_info`](../../extensions/amd_shader_info/index.html)"]

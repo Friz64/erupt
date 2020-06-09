@@ -210,7 +210,7 @@ impl<'a> std::ops::DerefMut for WaylandSurfaceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`WaylandSurfaceCreateFlagsKHR`](struct.WaylandSurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct WaylandSurfaceCreateFlagBitsKHR(pub u32);
 impl WaylandSurfaceCreateFlagBitsKHR {

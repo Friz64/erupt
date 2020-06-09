@@ -1391,7 +1391,7 @@ impl<'a> std::ops::DerefMut for SemaphoreWaitInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagBits.html) · Flag Bits of [`SemaphoreWaitFlags`](struct.SemaphoreWaitFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SemaphoreWaitFlagBits(pub u32);
 impl SemaphoreWaitFlagBits {
@@ -3661,7 +3661,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVulkan12PropertiesBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDriverId.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DriverId(pub i32);
 #[doc = "[Part of `vk1_2`](../vk1_2/index.html)"]
@@ -3806,7 +3806,7 @@ impl<'a> std::ops::DerefMut for ConformanceVersionBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderFloatControlsIndependence.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderFloatControlsIndependence(pub i32);
 #[doc = "[Part of `vk1_2`](../vk1_2/index.html)"]
@@ -3832,7 +3832,7 @@ impl std::fmt::Debug for ShaderFloatControlsIndependence {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlagBits.html) · Flag Bits of [`ResolveModeFlags`](struct.ResolveModeFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ResolveModeFlagBits(pub u32);
 impl ResolveModeFlagBits {
@@ -4837,7 +4837,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutBindingFlagsCreateInfoBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlagBits.html) · Flag Bits of [`DescriptorBindingFlags`](struct.DescriptorBindingFlags.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DescriptorBindingFlagBits(pub u32);
 impl DescriptorBindingFlagBits {
@@ -6345,7 +6345,7 @@ impl<'a> std::ops::DerefMut for ImageStencilUsageCreateInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionMode.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SamplerReductionMode(pub i32);
 #[doc = "[Part of `vk1_2`](../vk1_2/index.html)"]
@@ -7639,7 +7639,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceHostQueryResetFeaturesBuilder<'a> 
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreType.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SemaphoreType(pub i32);
 #[doc = "[Part of `vk1_2`](../vk1_2/index.html)"]

@@ -1027,7 +1027,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureTypeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -1050,7 +1050,7 @@ impl std::fmt::Debug for AccelerationStructureTypeKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Flag Bits of [`BuildAccelerationStructureFlagsKHR`](struct.BuildAccelerationStructureFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct BuildAccelerationStructureFlagBitsKHR(pub u32);
 impl BuildAccelerationStructureFlagBitsKHR {
@@ -1214,7 +1214,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateGeometryTypeInfoKHRBu
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTypeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -1346,7 +1346,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMemoryRequirementsInfoKHRBu
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsTypeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureMemoryRequirementsTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -1372,7 +1372,7 @@ impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildTypeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureBuildTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -2103,7 +2103,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryInstancesDataKHRBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Flag Bits of [`GeometryFlagsKHR`](struct.GeometryFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryFlagBitsKHR(pub u32);
 impl GeometryFlagBitsKHR {
@@ -2343,7 +2343,7 @@ impl<'a> std::ops::DerefMut for CopyAccelerationStructureInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureModeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CopyAccelerationStructureModeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -2955,7 +2955,7 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeKHR.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
@@ -3525,7 +3525,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInstanceKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Flag Bits of [`GeometryInstanceFlagsKHR`](struct.GeometryInstanceFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryInstanceFlagBitsKHR(pub u32);
 impl GeometryInstanceFlagBitsKHR {

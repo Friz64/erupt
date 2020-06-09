@@ -103,7 +103,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderCoreProperties2AMDBuilder<'a
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`ShaderCorePropertiesFlagsAMD`](struct.ShaderCorePropertiesFlagsAMD.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderCorePropertiesFlagBitsAMD(pub u32);
 impl ShaderCorePropertiesFlagBitsAMD {

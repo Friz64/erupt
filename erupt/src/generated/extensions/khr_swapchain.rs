@@ -656,7 +656,7 @@ impl<'a> std::ops::DerefMut for SwapchainCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateFlagBitsKHR.html) · Flag Bits of [`SwapchainCreateFlagsKHR`](struct.SwapchainCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct SwapchainCreateFlagBitsKHR(pub u32);
 impl SwapchainCreateFlagBitsKHR {
@@ -889,7 +889,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagBitsKHR.html) · Flag Bits of [`DeviceGroupPresentModeFlagsKHR`](struct.DeviceGroupPresentModeFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DeviceGroupPresentModeFlagBitsKHR(pub u32);
 impl DeviceGroupPresentModeFlagBitsKHR {

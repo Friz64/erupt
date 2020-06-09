@@ -736,7 +736,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateStreamCreateInfoEXTBui
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineRasterizationStateStreamCreateFlagsEXT`](struct.PipelineRasterizationStateStreamCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationStateStreamCreateFlagBitsEXT {

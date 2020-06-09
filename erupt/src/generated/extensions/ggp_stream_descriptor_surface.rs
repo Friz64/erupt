@@ -164,7 +164,7 @@ impl<'a> std::ops::DerefMut for StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> 
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`StreamDescriptorSurfaceCreateFlagsGGP`](struct.StreamDescriptorSurfaceCreateFlagsGGP.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct StreamDescriptorSurfaceCreateFlagBitsGGP(pub u32);
 impl StreamDescriptorSurfaceCreateFlagBitsGGP {

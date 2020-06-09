@@ -106,7 +106,7 @@ impl<'a> std::ops::DerefMut for ViewportSwizzleNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportCoordinateSwizzleNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ViewportCoordinateSwizzleNV(pub i32);
 #[doc = "[Part of `extensions::nv_viewport_swizzle`](../../extensions/nv_viewport_swizzle/index.html)"]
@@ -244,7 +244,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportSwizzleStateCreateInfoNVBuilder<
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`PipelineViewportSwizzleStateCreateFlagsNV`](struct.PipelineViewportSwizzleStateCreateFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineViewportSwizzleStateCreateFlagBitsNV(pub u32);
 impl PipelineViewportSwizzleStateCreateFlagBitsNV {

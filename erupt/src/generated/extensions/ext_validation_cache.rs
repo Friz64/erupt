@@ -286,7 +286,7 @@ impl<'a> std::ops::DerefMut for ValidationCacheCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`ValidationCacheCreateFlagsEXT`](struct.ValidationCacheCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCacheCreateFlagBitsEXT(pub u32);
 impl ValidationCacheCreateFlagBitsEXT {
@@ -398,7 +398,7 @@ impl<'a> std::ops::DerefMut for ShaderModuleValidationCacheCreateInfoEXTBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheHeaderVersionEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCacheHeaderVersionEXT(pub i32);
 #[doc = "[Part of `extensions::ext_validation_cache`](../../extensions/ext_validation_cache/index.html)"]

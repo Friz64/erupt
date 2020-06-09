@@ -100,7 +100,7 @@ impl NvExternalMemoryCapabilitiesInstanceLoaderExt for crate::InstanceLoader {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsNV.html) · Flag Bits of [`ExternalMemoryHandleTypeFlagsNV`](struct.ExternalMemoryHandleTypeFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalMemoryHandleTypeFlagBitsNV(pub u32);
 impl ExternalMemoryHandleTypeFlagBitsNV {
@@ -241,7 +241,7 @@ impl<'a> std::ops::DerefMut for ExternalImageFormatPropertiesNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBitsNV.html) · Flag Bits of [`ExternalMemoryFeatureFlagsNV`](struct.ExternalMemoryFeatureFlagsNV.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ExternalMemoryFeatureFlagBitsNV(pub u32);
 impl ExternalMemoryFeatureFlagBitsNV {

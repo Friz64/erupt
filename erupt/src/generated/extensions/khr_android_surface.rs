@@ -164,7 +164,7 @@ impl<'a> std::ops::DerefMut for AndroidSurfaceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`AndroidSurfaceCreateFlagsKHR`](struct.AndroidSurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AndroidSurfaceCreateFlagBitsKHR(pub u32);
 impl AndroidSurfaceCreateFlagBitsKHR {

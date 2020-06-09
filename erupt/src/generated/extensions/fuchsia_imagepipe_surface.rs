@@ -159,7 +159,7 @@ impl<'a> std::ops::DerefMut for ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`ImagePipeSurfaceCreateFlagsFUCHSIA`](struct.ImagePipeSurfaceCreateFlagsFUCHSIA.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ImagePipeSurfaceCreateFlagBitsFUCHSIA(pub u32);
 impl ImagePipeSurfaceCreateFlagBitsFUCHSIA {

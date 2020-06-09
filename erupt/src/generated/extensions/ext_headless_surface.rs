@@ -155,7 +155,7 @@ impl<'a> std::ops::DerefMut for HeadlessSurfaceCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`HeadlessSurfaceCreateFlagsEXT`](struct.HeadlessSurfaceCreateFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct HeadlessSurfaceCreateFlagBitsEXT(pub u32);
 impl HeadlessSurfaceCreateFlagBitsEXT {

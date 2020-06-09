@@ -288,7 +288,7 @@ impl<'a> std::ops::DerefMut for DebugReportCallbackCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Flag Bits of [`DebugReportFlagsEXT`](struct.DebugReportFlagsEXT.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugReportFlagBitsEXT(pub u32);
 impl DebugReportFlagBitsEXT {
@@ -332,7 +332,7 @@ pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(
     p_user_data: *mut std::ffi::c_void,
 ) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportObjectTypeEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default)]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugReportObjectTypeEXT(pub i32);
 #[doc = "[Part of `extensions::ext_debug_report`](../../extensions/ext_debug_report/index.html)"]

@@ -24,21 +24,9 @@ lazy_static! {
         // this helps us avoid a bunch of ugly code
         let preprocessed = ProcessCommand::new("gcc")
         .args(&[
-            "-DVK_USE_PLATFORM_ANDROID_KHR",
-            "-DVK_USE_PLATFORM_FUCHSIA",
-            "-DVK_USE_PLATFORM_IOS_MVK",
-            "-DVK_USE_PLATFORM_MACOS_MVK",
-            "-DVK_USE_PLATFORM_METAL_EXT",
-            "-DVK_USE_PLATFORM_VI_NN",
-            "-DVK_USE_PLATFORM_WAYLAND_KHR",
-            "-DVK_USE_PLATFORM_WIN32_KHR",
-            "-DVK_USE_PLATFORM_XCB_KHR",
-            "-DVK_USE_PLATFORM_XLIB_KHR",
-            "-DVK_USE_PLATFORM_XLIB_XRANDR_EXT",
-            "-DVK_USE_PLATFORM_GGP",
-            "-DVK_ENABLE_BETA_EXTENSIONS",
+            "-Igenerator/Vulkan-Headers/include/vulkan",
             "-E",
-            "generator/Vulkan-Headers/include/vulkan/vulkan.h",
+            "generator/root.h",
         ])
         .output()
         .unwrap();

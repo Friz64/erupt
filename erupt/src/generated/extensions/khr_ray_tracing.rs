@@ -1376,10 +1376,17 @@ impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeKHR {
 #[repr(transparent)]
 pub struct AccelerationStructureBuildTypeKHR(pub i32);
 #[doc = "[Part of `extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
-impl AccelerationStructureBuildTypeKHR {}
+impl AccelerationStructureBuildTypeKHR {
+    pub const HOST_KHR: Self = Self(0);
+    pub const DEVICE_KHR: Self = Self(1);
+    pub const HOST_OR_DEVICE_KHR: Self = Self(2);
+}
 impl std::fmt::Debug for AccelerationStructureBuildTypeKHR {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
+            &Self::HOST_KHR => "HOST_KHR",
+            &Self::DEVICE_KHR => "DEVICE_KHR",
+            &Self::HOST_OR_DEVICE_KHR => "HOST_OR_DEVICE_KHR",
             _ => "(unknown)",
         })
     }

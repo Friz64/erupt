@@ -210,10 +210,19 @@ impl ExtFullScreenExclusiveDeviceLoaderExt for crate::DeviceLoader {
 #[repr(transparent)]
 pub struct FullScreenExclusiveEXT(pub i32);
 #[doc = "[Part of `extensions::ext_full_screen_exclusive`](../../extensions/ext_full_screen_exclusive/index.html)"]
-impl FullScreenExclusiveEXT {}
+impl FullScreenExclusiveEXT {
+    pub const DEFAULT_EXT: Self = Self(0);
+    pub const ALLOWED_EXT: Self = Self(1);
+    pub const DISALLOWED_EXT: Self = Self(2);
+    pub const APPLICATION_CONTROLLED_EXT: Self = Self(3);
+}
 impl std::fmt::Debug for FullScreenExclusiveEXT {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         fmt.write_str(match self {
+            &Self::DEFAULT_EXT => "DEFAULT_EXT",
+            &Self::ALLOWED_EXT => "ALLOWED_EXT",
+            &Self::DISALLOWED_EXT => "DISALLOWED_EXT",
+            &Self::APPLICATION_CONTROLLED_EXT => "APPLICATION_CONTROLLED_EXT",
             _ => "(unknown)",
         })
     }

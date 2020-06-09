@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Derive `Ord` and `PartialOrd` for enums
 
+### Fixed
+- Fix some enum variants missing
+
 ## [0.9.0+143] - 2020-06-08
 ### Fixed
 - Fix reversed array order

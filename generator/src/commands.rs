@@ -828,6 +828,12 @@ fn generate_loader_root_generic(
 
                     #( #struct_fields_get )*
                 }
+
+                impl<T> std::fmt::Debug for #struct_name<T> where T: std::fmt::Debug {
+                    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+                        std::fmt::Debug::fmt(&self.loader, f)
+                    }
+                }
             }
         }
         CommandLevel::Instance => {
@@ -863,6 +869,12 @@ fn generate_loader_root_generic(
 
                     #( #struct_fields_get )*
                 }
+
+                impl std::fmt::Debug for #struct_name {
+                    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+                        std::fmt::Debug::fmt(&self.handle, f)
+                    }
+                }
             }
         }
         CommandLevel::Device => {
@@ -897,6 +909,12 @@ fn generate_loader_root_generic(
                     }
 
                     #( #struct_fields_get )*
+                }
+
+                impl std::fmt::Debug for #struct_name {
+                    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+                        std::fmt::Debug::fmt(&self.handle, f)
+                    }
                 }
             }
         }

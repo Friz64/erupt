@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Derive `Ord` and `PartialOrd` for enums
+- Implement `Debug` for loaders
 
 ### Fixed
 - Fix some enum variants missing

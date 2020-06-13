@@ -37,6 +37,14 @@ impl<T> CoreLoader<T> {
         self.vk1_1.as_ref().map(|_| ())
     }
 }
+impl<T> std::fmt::Debug for CoreLoader<T>
+where
+    T: std::fmt::Debug,
+{
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.loader, f)
+    }
+}
 #[doc = "Loader for Instance Commands"]
 #[doc = "# Safety"]
 #[doc = "[See here](#safety-1)"]
@@ -357,6 +365,11 @@ impl InstanceLoader {
                 &self,
             );
         self.ext_headless_surface.as_ref().map(|_| ())
+    }
+}
+impl std::fmt::Debug for InstanceLoader {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.handle, f)
     }
 }
 #[doc = "Loader for Device Commands"]
@@ -883,6 +896,11 @@ impl DeviceLoader {
                 &self,
             );
         self.khr_display_swapchain.as_ref().map(|_| ())
+    }
+}
+impl std::fmt::Debug for DeviceLoader {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.handle, f)
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_MAKE_VERSION.html) · Const Function"]

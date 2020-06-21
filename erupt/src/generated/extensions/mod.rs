@@ -38,6 +38,7 @@ pub mod ext_direct_mode_display;
 pub mod ext_discard_rectangles;
 pub mod ext_display_control;
 pub mod ext_display_surface_counter;
+pub mod ext_extended_dynamic_state;
 pub mod ext_external_memory_dma_buf;
 pub mod ext_external_memory_host;
 pub mod ext_filter_cubic;

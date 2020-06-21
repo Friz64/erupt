@@ -6117,6 +6117,10 @@ impl StructureType {
     pub const SURFACE_CAPABILITIES_2_EXT: Self = Self(1000090000);
     pub const SURFACE_CAPABILITIES2_EXT: Self = Self::SURFACE_CAPABILITIES_2_EXT;
 }
+#[doc = "[Part of `extensions::ext_extended_dynamic_state`](../extensions/ext_extended_dynamic_state/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000267000);
+}
 #[doc = "[Part of `extensions::ext_external_memory_host`](../extensions/ext_external_memory_host/index.html)"]
 impl StructureType {
     pub const IMPORT_MEMORY_HOST_POINTER_INFO_EXT: Self = Self(1000178000);
@@ -7274,6 +7278,9 @@ impl std::fmt::Debug for StructureType {
             &Self::DISPLAY_EVENT_INFO_EXT => "DISPLAY_EVENT_INFO_EXT",
             &Self::SWAPCHAIN_COUNTER_CREATE_INFO_EXT => "SWAPCHAIN_COUNTER_CREATE_INFO_EXT",
             &Self::SURFACE_CAPABILITIES_2_EXT => "SURFACE_CAPABILITIES_2_EXT",
+            &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT"
+            }
             &Self::IMPORT_MEMORY_HOST_POINTER_INFO_EXT => "IMPORT_MEMORY_HOST_POINTER_INFO_EXT",
             &Self::MEMORY_HOST_POINTER_PROPERTIES_EXT => "MEMORY_HOST_POINTER_PROPERTIES_EXT",
             &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT => {
@@ -19192,6 +19199,21 @@ impl DynamicState {
 impl DynamicState {
     pub const DISCARD_RECTANGLE_EXT: Self = Self(1000099000);
 }
+#[doc = "[Part of `extensions::ext_extended_dynamic_state`](../extensions/ext_extended_dynamic_state/index.html)"]
+impl DynamicState {
+    pub const CULL_MODE_EXT: Self = Self(1000267000);
+    pub const FRONT_FACE_EXT: Self = Self(1000267001);
+    pub const PRIMITIVE_TOPOLOGY_EXT: Self = Self(1000267002);
+    pub const VIEWPORT_WITH_COUNT_EXT: Self = Self(1000267003);
+    pub const SCISSOR_WITH_COUNT_EXT: Self = Self(1000267004);
+    pub const VERTEX_INPUT_BINDING_STRIDE_EXT: Self = Self(1000267005);
+    pub const DEPTH_TEST_ENABLE_EXT: Self = Self(1000267006);
+    pub const DEPTH_WRITE_ENABLE_EXT: Self = Self(1000267007);
+    pub const DEPTH_COMPARE_OP_EXT: Self = Self(1000267008);
+    pub const DEPTH_BOUNDS_TEST_ENABLE_EXT: Self = Self(1000267009);
+    pub const STENCIL_TEST_ENABLE_EXT: Self = Self(1000267010);
+    pub const STENCIL_OP_EXT: Self = Self(1000267011);
+}
 #[doc = "[Part of `extensions::ext_line_rasterization`](../extensions/ext_line_rasterization/index.html)"]
 impl DynamicState {
     pub const LINE_STIPPLE_EXT: Self = Self(1000259000);
@@ -19226,6 +19248,18 @@ impl std::fmt::Debug for DynamicState {
             &Self::STENCIL_WRITE_MASK => "STENCIL_WRITE_MASK",
             &Self::STENCIL_REFERENCE => "STENCIL_REFERENCE",
             &Self::DISCARD_RECTANGLE_EXT => "DISCARD_RECTANGLE_EXT",
+            &Self::CULL_MODE_EXT => "CULL_MODE_EXT",
+            &Self::FRONT_FACE_EXT => "FRONT_FACE_EXT",
+            &Self::PRIMITIVE_TOPOLOGY_EXT => "PRIMITIVE_TOPOLOGY_EXT",
+            &Self::VIEWPORT_WITH_COUNT_EXT => "VIEWPORT_WITH_COUNT_EXT",
+            &Self::SCISSOR_WITH_COUNT_EXT => "SCISSOR_WITH_COUNT_EXT",
+            &Self::VERTEX_INPUT_BINDING_STRIDE_EXT => "VERTEX_INPUT_BINDING_STRIDE_EXT",
+            &Self::DEPTH_TEST_ENABLE_EXT => "DEPTH_TEST_ENABLE_EXT",
+            &Self::DEPTH_WRITE_ENABLE_EXT => "DEPTH_WRITE_ENABLE_EXT",
+            &Self::DEPTH_COMPARE_OP_EXT => "DEPTH_COMPARE_OP_EXT",
+            &Self::DEPTH_BOUNDS_TEST_ENABLE_EXT => "DEPTH_BOUNDS_TEST_ENABLE_EXT",
+            &Self::STENCIL_TEST_ENABLE_EXT => "STENCIL_TEST_ENABLE_EXT",
+            &Self::STENCIL_OP_EXT => "STENCIL_OP_EXT",
             &Self::LINE_STIPPLE_EXT => "LINE_STIPPLE_EXT",
             &Self::SAMPLE_LOCATIONS_EXT => "SAMPLE_LOCATIONS_EXT",
             &Self::VIEWPORT_W_SCALING_NV => "VIEWPORT_W_SCALING_NV",

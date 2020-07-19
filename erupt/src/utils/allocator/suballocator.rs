@@ -1,17 +1,17 @@
 use super::Region;
-use crate::vk1_0::*;
+use crate::vk1_0;
 
 /// Simple suballocator
 #[derive(Debug)]
 pub struct Suballocator {
     free_regions: Vec<Region>,
-    size: DeviceSize,
-    align: Option<DeviceSize>,
+    size: vk1_0::DeviceSize,
+    align: Option<vk1_0::DeviceSize>,
 }
 
 impl Suballocator {
     /// Creates a new Suballocator with the maximum size of `size` and optional alignment of `align`
-    pub fn new(size: DeviceSize, align: Option<DeviceSize>) -> Suballocator {
+    pub fn new(size: vk1_0::DeviceSize, align: Option<vk1_0::DeviceSize>) -> Suballocator {
         if let Some(align) = align {
             assert!(align.is_power_of_two());
         }
@@ -29,7 +29,7 @@ impl Suballocator {
     /// Makes a new allocation, returning the region of the new allocation if it was successful
     ///
     /// The `memory_type_bits` of `mem_requirements` is ignored
-    pub fn allocate(&mut self, mut mem_requirements: MemoryRequirements) -> Option<Region> {
+    pub fn allocate(&mut self, mut mem_requirements: vk1_0::MemoryRequirements) -> Option<Region> {
         if let Some(align) = self.align {
             assert!(mem_requirements.alignment.is_power_of_two());
             mem_requirements.size = super::align_up(mem_requirements.size, align);
@@ -117,7 +117,7 @@ mod tests {
         assert!(suballoc.is_empty());
 
         let r1 = suballoc
-            .allocate(MemoryRequirements {
+            .allocate(vk1_0::MemoryRequirements {
                 size: 13,
                 alignment: 1,
                 memory_type_bits: u32::MAX,
@@ -125,7 +125,7 @@ mod tests {
             .unwrap();
         dbg!(&suballoc.free_regions);
         let r2 = suballoc
-            .allocate(MemoryRequirements {
+            .allocate(vk1_0::MemoryRequirements {
                 size: 4,
                 alignment: 16,
                 memory_type_bits: u32::MAX,
@@ -147,7 +147,7 @@ mod tests {
         assert!(suballoc.is_empty());
 
         let r1 = suballoc
-            .allocate(MemoryRequirements {
+            .allocate(vk1_0::MemoryRequirements {
                 size: 13,
                 alignment: 1,
                 memory_type_bits: u32::MAX,
@@ -155,7 +155,7 @@ mod tests {
             .unwrap();
         dbg!(&suballoc.free_regions);
         let r2 = suballoc
-            .allocate(MemoryRequirements {
+            .allocate(vk1_0::MemoryRequirements {
                 size: 4,
                 alignment: 16,
                 memory_type_bits: u32::MAX,

@@ -1,5 +1,5 @@
 use super::Region;
-use crate::{try_vk, utils::VulkanResult, vk1_0::*, DeviceLoader};
+use crate::{try_vk, utils::VulkanResult, vk1_0, DeviceLoader};
 use std::{
     ffi::c_void,
     ops::{Bound, RangeBounds},
@@ -11,7 +11,7 @@ use std::{
 pub struct MappedMemory {
     ptr: *mut c_void,
     host_coherent: bool,
-    memory_range: MappedMemoryRange,
+    memory_range: vk1_0::MappedMemoryRange,
 }
 
 impl MappedMemory {
@@ -20,10 +20,10 @@ impl MappedMemory {
     /// Note: This function is usually called by `Allocation::map`
     pub fn map(
         device: &DeviceLoader,
-        memory: DeviceMemory,
+        memory: vk1_0::DeviceMemory,
         region: &Region,
         host_coherent: bool,
-        range: impl RangeBounds<DeviceSize>,
+        range: impl RangeBounds<vk1_0::DeviceSize>,
     ) -> VulkanResult<MappedMemory> {
         let start = match range.start_bound() {
             Bound::Excluded(start) => start + 1,
@@ -46,7 +46,7 @@ impl MappedMemory {
         let mut ptr = std::ptr::null_mut();
         try_vk!(unsafe { device.map_memory(memory, start, size, None, &mut ptr) });
 
-        let memory_range = MappedMemoryRange {
+        let memory_range = vk1_0::MappedMemoryRange {
             memory,
             offset: start,
             size,

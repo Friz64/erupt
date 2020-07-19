@@ -33,12 +33,7 @@ pub use memory_type::*;
 pub use object::*;
 pub use suballocator::*;
 
-use crate::{
-    try_vk,
-    utils::VulkanResult,
-    vk1_0::{self, *},
-    DeviceLoader, InstanceLoader,
-};
+use crate::{try_vk, utils::VulkanResult, vk1_0, DeviceLoader, InstanceLoader};
 use std::{any::Any, ops::RangeBounds};
 
 /// Align `addr` to `align` upwards
@@ -51,7 +46,7 @@ use std::{any::Any, ops::RangeBounds};
 /// addr: 21, align: 16 -> 32
 /// ```
 #[inline]
-pub fn align_up(addr: DeviceSize, align: DeviceSize) -> DeviceSize {
+pub fn align_up(addr: vk1_0::DeviceSize, align: vk1_0::DeviceSize) -> vk1_0::DeviceSize {
     (addr + align - 1) / align * align
 }
 
@@ -59,15 +54,15 @@ pub fn align_up(addr: DeviceSize, align: DeviceSize) -> DeviceSize {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct Region {
     /// Region start, inclusive
-    pub start: DeviceSize,
+    pub start: vk1_0::DeviceSize,
     /// Region end, exclusive
-    pub end: DeviceSize,
+    pub end: vk1_0::DeviceSize,
 }
 
 impl Region {
     /// Calculates the size of the region
     #[inline]
-    pub fn size(&self) -> DeviceSize {
+    pub fn size(&self) -> vk1_0::DeviceSize {
         self.end - self.start
     }
 
@@ -79,7 +74,7 @@ impl Region {
 
     /// Returns `true` if this region fits `mem_requirements`
     #[inline]
-    pub fn fits(&self, mem_requirements: MemoryRequirements) -> bool {
+    pub fn fits(&self, mem_requirements: vk1_0::MemoryRequirements) -> bool {
         self.end - align_up(self.start, mem_requirements.alignment) >= mem_requirements.size
     }
 }
@@ -90,7 +85,7 @@ pub struct Allocation<T> {
     object: T,
     block_idx: usize,
     region: Region,
-    memory: DeviceMemory,
+    memory: vk1_0::DeviceMemory,
     host_coherent: bool,
 }
 
@@ -115,7 +110,7 @@ where
     pub fn map(
         &self,
         device: &DeviceLoader,
-        range: impl RangeBounds<DeviceSize>,
+        range: impl RangeBounds<vk1_0::DeviceSize>,
     ) -> VulkanResult<MappedMemory> {
         MappedMemory::map(device, self.memory, &self.region, self.host_coherent, range)
     }
@@ -125,7 +120,7 @@ where
 #[derive(Debug)]
 pub struct AllocatorCreateInfo {
     /// Size of every allocation block (Default: 32 MiB)
-    pub block_size: DeviceSize,
+    pub block_size: vk1_0::DeviceSize,
 }
 
 impl Default for AllocatorCreateInfo {
@@ -141,8 +136,8 @@ impl Default for AllocatorCreateInfo {
 #[derive(Debug)]
 pub struct Allocator {
     info: AllocatorCreateInfo,
-    dev_properties: PhysicalDeviceProperties,
-    mem_properties: PhysicalDeviceMemoryProperties,
+    dev_properties: vk1_0::PhysicalDeviceProperties,
+    mem_properties: vk1_0::PhysicalDeviceMemoryProperties,
     blocks: Vec<Option<Block>>,
 }
 
@@ -150,7 +145,7 @@ impl Allocator {
     /// Create a new memory allocator
     pub fn new(
         instance: &InstanceLoader,
-        physical_device: PhysicalDevice,
+        physical_device: vk1_0::PhysicalDevice,
         info: AllocatorCreateInfo,
     ) -> VulkanResult<Allocator> {
         let dev_properties =

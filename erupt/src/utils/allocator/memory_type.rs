@@ -1,10 +1,10 @@
-use crate::vk1_0::*;
+use crate::vk1_0;
 
 /// Finds the wanted memory type
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct MemoryTypeFinder<'a> {
     /// A list of memory properties and their associated impact
-    pub impacts: &'a [(MemoryPropertyFlagBits, i32)],
+    pub impacts: &'a [(vk1_0::MemoryPropertyFlagBits, i32)],
 }
 
 impl<'a> MemoryTypeFinder<'a> {
@@ -13,8 +13,8 @@ impl<'a> MemoryTypeFinder<'a> {
     pub fn gpu_only() -> Self {
         MemoryTypeFinder {
             impacts: &[
-                (MemoryPropertyFlagBits::DEVICE_LOCAL, 10),
-                (MemoryPropertyFlagBits::HOST_VISIBLE, -10),
+                (vk1_0::MemoryPropertyFlagBits::DEVICE_LOCAL, 10),
+                (vk1_0::MemoryPropertyFlagBits::HOST_VISIBLE, -10),
             ],
         }
     }
@@ -24,10 +24,10 @@ impl<'a> MemoryTypeFinder<'a> {
     pub fn upload() -> Self {
         MemoryTypeFinder {
             impacts: &[
-                (MemoryPropertyFlagBits::HOST_VISIBLE, 10),
-                (MemoryPropertyFlagBits::HOST_COHERENT, 7),
-                (MemoryPropertyFlagBits::HOST_CACHED, -5),
-                (MemoryPropertyFlagBits::DEVICE_LOCAL, -1),
+                (vk1_0::MemoryPropertyFlagBits::HOST_VISIBLE, 10),
+                (vk1_0::MemoryPropertyFlagBits::HOST_COHERENT, 7),
+                (vk1_0::MemoryPropertyFlagBits::HOST_CACHED, -5),
+                (vk1_0::MemoryPropertyFlagBits::DEVICE_LOCAL, -1),
             ],
         }
     }
@@ -37,9 +37,9 @@ impl<'a> MemoryTypeFinder<'a> {
     pub fn download() -> Self {
         MemoryTypeFinder {
             impacts: &[
-                (MemoryPropertyFlagBits::HOST_VISIBLE, 10),
-                (MemoryPropertyFlagBits::HOST_COHERENT, 7),
-                (MemoryPropertyFlagBits::HOST_CACHED, 5),
+                (vk1_0::MemoryPropertyFlagBits::HOST_VISIBLE, 10),
+                (vk1_0::MemoryPropertyFlagBits::HOST_COHERENT, 7),
+                (vk1_0::MemoryPropertyFlagBits::HOST_CACHED, 5),
             ],
         }
     }
@@ -49,10 +49,10 @@ impl<'a> MemoryTypeFinder<'a> {
     pub fn dynamic() -> Self {
         MemoryTypeFinder {
             impacts: &[
-                (MemoryPropertyFlagBits::HOST_VISIBLE, 10),
-                (MemoryPropertyFlagBits::DEVICE_LOCAL, 7),
-                (MemoryPropertyFlagBits::HOST_COHERENT, 5),
-                (MemoryPropertyFlagBits::HOST_CACHED, 1),
+                (vk1_0::MemoryPropertyFlagBits::HOST_VISIBLE, 10),
+                (vk1_0::MemoryPropertyFlagBits::DEVICE_LOCAL, 7),
+                (vk1_0::MemoryPropertyFlagBits::HOST_COHERENT, 5),
+                (vk1_0::MemoryPropertyFlagBits::HOST_CACHED, 1),
             ],
         }
     }
@@ -60,8 +60,8 @@ impl<'a> MemoryTypeFinder<'a> {
     /// Finds the memory type with the biggest impact sum
     pub fn find(
         self,
-        mem_properties: &PhysicalDeviceMemoryProperties,
-        mem_requirements: &MemoryRequirements,
+        mem_properties: &vk1_0::PhysicalDeviceMemoryProperties,
+        mem_requirements: &vk1_0::MemoryRequirements,
     ) -> Option<u32> {
         mem_properties
             .memory_types

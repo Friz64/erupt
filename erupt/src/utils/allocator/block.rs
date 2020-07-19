@@ -1,12 +1,12 @@
 use super::{object::AllocationObject, suballocator::Suballocator, Region};
-use crate::{try_vk, utils::VulkanResult, vk1_0::*, DeviceLoader};
+use crate::{try_vk, utils::VulkanResult, vk1_0, DeviceLoader};
 use std::any::{Any, TypeId};
 
 /// A block of Vulkan memory
 #[derive(Debug)]
 pub struct Block {
     mem_type_idx: u32,
-    memory: DeviceMemory,
+    memory: vk1_0::DeviceMemory,
     suballocator: Suballocator,
     host_coherent: bool,
     object_type: TypeId,
@@ -16,22 +16,22 @@ impl Block {
     /// Create a new block, allocating `size` bytes on `mem_type_idx` for object `T`
     pub fn new<T>(
         device: &DeviceLoader,
-        size: DeviceSize,
+        size: vk1_0::DeviceSize,
         mem_type_idx: u32,
-        mem_properties: &PhysicalDeviceMemoryProperties,
-        limits: &PhysicalDeviceLimits,
+        mem_properties: &vk1_0::PhysicalDeviceMemoryProperties,
+        limits: &vk1_0::PhysicalDeviceLimits,
     ) -> VulkanResult<Block>
     where
         T: AllocationObject + Any,
     {
-        let allocate_info = MemoryAllocateInfoBuilder::new()
+        let allocate_info = vk1_0::MemoryAllocateInfoBuilder::new()
             .allocation_size(size)
             .memory_type_index(mem_type_idx);
         let memory = try_vk!(unsafe { device.allocate_memory(&allocate_info, None, None) });
 
         let host_coherent = mem_properties.memory_types[mem_type_idx as usize]
             .property_flags
-            .contains(MemoryPropertyFlagBits::HOST_COHERENT.bitmask());
+            .contains(vk1_0::MemoryPropertyFlagBits::HOST_COHERENT.bitmask());
 
         let suballocator = Suballocator::new(
             size,
@@ -53,7 +53,7 @@ impl Block {
 
     /// Makes a new allocation, returning the region of the new allocation if it was successful
     #[inline]
-    pub fn allocate(&mut self, mem_requirements: MemoryRequirements) -> Option<Region> {
+    pub fn allocate(&mut self, mem_requirements: vk1_0::MemoryRequirements) -> Option<Region> {
         self.suballocator.allocate(mem_requirements)
     }
 
@@ -72,7 +72,7 @@ impl Block {
 
     /// Returns the inner `DeviceMemory` handle
     #[inline]
-    pub fn memory(&self) -> DeviceMemory {
+    pub fn memory(&self) -> vk1_0::DeviceMemory {
         self.memory
     }
 

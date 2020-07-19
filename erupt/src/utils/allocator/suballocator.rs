@@ -27,6 +27,8 @@ impl Suballocator {
     }
 
     /// Makes a new allocation, returning the region of the new allocation if it was successful
+    ///
+    /// The `memory_type_bits` of `mem_requirements` is ignored
     pub fn allocate(&mut self, mut mem_requirements: MemoryRequirements) -> Option<Region> {
         if let Some(align) = self.align {
             assert!(mem_requirements.alignment.is_power_of_two());

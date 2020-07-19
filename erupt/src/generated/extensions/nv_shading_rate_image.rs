@@ -1,234 +1,40 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_shading_rate_image.html)\n\n## Extends\n- [`AccessFlagBits`](../../vk1_0/struct.AccessFlagBits.html)\n- [`DynamicState`](../../vk1_0/struct.DynamicState.html)\n- [`ImageLayout`](../../vk1_0/struct.ImageLayout.html)\n- [`ImageUsageFlagBits`](../../vk1_0/struct.ImageUsageFlagBits.html)\n- [`PipelineStageFlagBits`](../../vk1_0/struct.PipelineStageFlagBits.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADING_RATE_IMAGE_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADING_RATE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_shading_rate_image");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Device Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindShadingRateImageNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    image_view: crate::vk1_0::ImageView,
-    image_layout: crate::vk1_0::ImageLayout,
-) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Device Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_viewport: u32,
-    viewport_count: u32,
-    p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
-) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Device Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV , ) -> std :: ffi :: c_void ;
-#[doc = "Provides Device Commands for [`NvShadingRateImageDeviceLoaderExt`](trait.NvShadingRateImageDeviceLoaderExt.html)"]
-pub struct NvShadingRateImageDeviceCommands {
-    pub cmd_bind_shading_rate_image_nv: Option<PFN_vkCmdBindShadingRateImageNV>,
-    pub cmd_set_viewport_shading_rate_palette_nv: Option<PFN_vkCmdSetViewportShadingRatePaletteNV>,
-    pub cmd_set_coarse_sample_order_nv: Option<PFN_vkCmdSetCoarseSampleOrderNV>,
-}
-impl NvShadingRateImageDeviceCommands {
-    #[inline]
-    pub fn load(loader: &crate::DeviceLoader) -> Option<NvShadingRateImageDeviceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = NvShadingRateImageDeviceCommands {
-                cmd_bind_shading_rate_image_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdBindShadingRateImageNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                cmd_set_viewport_shading_rate_palette_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdSetViewportShadingRatePaletteNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                cmd_set_coarse_sample_order_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdSetCoarseSampleOrderNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn device_commands(loader: &crate::DeviceLoader) -> &NvShadingRateImageDeviceCommands {
-    loader
-        .nv_shading_rate_image
-        .as_ref()
-        .expect("`nv_shading_rate_image` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`NvShadingRateImageDeviceCommands`](struct.NvShadingRateImageDeviceCommands.html)"]
-pub trait NvShadingRateImageDeviceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Device Command"]
-    unsafe fn cmd_bind_shading_rate_image_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        image_view: crate::vk1_0::ImageView,
-        image_layout: crate::vk1_0::ImageLayout,
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Device Command"]
-    unsafe fn cmd_set_viewport_shading_rate_palette_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_viewport: u32,
-        shading_rate_palettes : & [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Device Command"]
-    unsafe fn cmd_set_coarse_sample_order_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-        custom_sample_orders : & [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
-    ) -> ();
-}
-impl NvShadingRateImageDeviceLoaderExt for crate::DeviceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Device Command"]
-    unsafe fn cmd_bind_shading_rate_image_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        image_view: crate::vk1_0::ImageView,
-        image_layout: crate::vk1_0::ImageLayout,
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_bind_shading_rate_image_nv
-            .as_ref()
-            .expect("`cmd_bind_shading_rate_image_nv` not available");
-        let _val = function(command_buffer, image_view, image_layout);
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Device Command"]
-    unsafe fn cmd_set_viewport_shading_rate_palette_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_viewport: u32,
-        shading_rate_palettes : & [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_set_viewport_shading_rate_palette_nv
-            .as_ref()
-            .expect("`cmd_set_viewport_shading_rate_palette_nv` not available");
-        let viewport_count = shading_rate_palettes.len() as _;
-        let _val = function(
-            command_buffer,
-            first_viewport,
-            viewport_count,
-            shading_rate_palettes.as_ptr() as _,
-        );
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Device Command"]
-    unsafe fn cmd_set_coarse_sample_order_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-        custom_sample_orders : & [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_set_coarse_sample_order_nv
-            .as_ref()
-            .expect("`cmd_set_coarse_sample_order_nv` not available");
-        let custom_sample_order_count = custom_sample_orders.len() as _;
-        let _val = function(
-            command_buffer,
-            sample_order_type,
-            custom_sample_order_count,
-            custom_sample_orders.as_ptr() as _,
-        );
-        ()
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct ShadingRatePaletteNV {
-    pub shading_rate_palette_entry_count: u32,
-    pub p_shading_rate_palette_entries:
-        *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
-}
-impl ShadingRatePaletteNV {
-    #[inline]
-    pub fn builder<'a>(self) -> ShadingRatePaletteNVBuilder<'a> {
-        ShadingRatePaletteNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for ShadingRatePaletteNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("ShadingRatePaletteNV")
-            .field(
-                "shading_rate_palette_entry_count",
-                &self.shading_rate_palette_entry_count,
-            )
-            .field(
-                "p_shading_rate_palette_entries",
-                &self.p_shading_rate_palette_entries,
-            )
-            .finish()
-    }
-}
-impl Default for ShadingRatePaletteNV {
-    fn default() -> ShadingRatePaletteNV {
-        ShadingRatePaletteNV {
-            shading_rate_palette_entry_count: Default::default(),
-            p_shading_rate_palette_entries: std::ptr::null(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Builder of [`ShadingRatePaletteNV`](struct.ShadingRatePaletteNV.html)"]
-#[repr(transparent)]
-pub struct ShadingRatePaletteNVBuilder<'a>(ShadingRatePaletteNV, std::marker::PhantomData<&'a ()>);
-impl<'a> ShadingRatePaletteNVBuilder<'a> {
-    #[inline]
-    pub fn new() -> ShadingRatePaletteNVBuilder<'a> {
-        ShadingRatePaletteNVBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn shading_rate_palette_entries(
-        mut self,
-        shading_rate_palette_entries : &'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteEntryNV ],
-    ) -> Self {
-        self.0.shading_rate_palette_entry_count = shading_rate_palette_entries.len() as _;
-        self.0.p_shading_rate_palette_entries = shading_rate_palette_entries.as_ptr() as _;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> ShadingRatePaletteNV {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for ShadingRatePaletteNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for ShadingRatePaletteNVBuilder<'a> {
-    type Target = ShadingRatePaletteNV;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for ShadingRatePaletteNVBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_BIND_SHADING_RATE_IMAGE_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdBindShadingRateImageNV");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdSetViewportShadingRatePaletteNV");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_SET_COARSE_SAMPLE_ORDER_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdSetCoarseSampleOrderNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteEntryNV.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
 pub struct ShadingRatePaletteEntryNV(pub i32);
-#[doc = "[Part of `extensions::nv_shading_rate_image`](../../extensions/nv_shading_rate_image/index.html)"]
+impl std::fmt::Debug for ShadingRatePaletteEntryNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
+            &Self::_16_INVOCATIONS_PER_PIXEL_NV => "_16_INVOCATIONS_PER_PIXEL_NV",
+            &Self::_8_INVOCATIONS_PER_PIXEL_NV => "_8_INVOCATIONS_PER_PIXEL_NV",
+            &Self::_4_INVOCATIONS_PER_PIXEL_NV => "_4_INVOCATIONS_PER_PIXEL_NV",
+            &Self::_2_INVOCATIONS_PER_PIXEL_NV => "_2_INVOCATIONS_PER_PIXEL_NV",
+            &Self::_1_INVOCATION_PER_PIXEL_NV => "_1_INVOCATION_PER_PIXEL_NV",
+            &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => "_1_INVOCATION_PER_2X1_PIXELS_NV",
+            &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => "_1_INVOCATION_PER_1X2_PIXELS_NV",
+            &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => "_1_INVOCATION_PER_2X2_PIXELS_NV",
+            &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => "_1_INVOCATION_PER_4X2_PIXELS_NV",
+            &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => "_1_INVOCATION_PER_2X4_PIXELS_NV",
+            &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => "_1_INVOCATION_PER_4X4_PIXELS_NV",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`extensions::nv_shading_rate_image`](./index.html)"]
 impl ShadingRatePaletteEntryNV {
     pub const NO_INVOCATIONS_NV: Self = Self(0);
     pub const _16_INVOCATIONS_PER_PIXEL_NV: Self = Self(1);
@@ -243,221 +49,122 @@ impl ShadingRatePaletteEntryNV {
     pub const _1_INVOCATION_PER_2X4_PIXELS_NV: Self = Self(10);
     pub const _1_INVOCATION_PER_4X4_PIXELS_NV: Self = Self(11);
 }
-impl std::fmt::Debug for ShadingRatePaletteEntryNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
-            &Self::_16_INVOCATIONS_PER_PIXEL_NV => "16_INVOCATIONS_PER_PIXEL_NV",
-            &Self::_8_INVOCATIONS_PER_PIXEL_NV => "8_INVOCATIONS_PER_PIXEL_NV",
-            &Self::_4_INVOCATIONS_PER_PIXEL_NV => "4_INVOCATIONS_PER_PIXEL_NV",
-            &Self::_2_INVOCATIONS_PER_PIXEL_NV => "2_INVOCATIONS_PER_PIXEL_NV",
-            &Self::_1_INVOCATION_PER_PIXEL_NV => "1_INVOCATION_PER_PIXEL_NV",
-            &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => "1_INVOCATION_PER_2X1_PIXELS_NV",
-            &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => "1_INVOCATION_PER_1X2_PIXELS_NV",
-            &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => "1_INVOCATION_PER_2X2_PIXELS_NV",
-            &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => "1_INVOCATION_PER_4X2_PIXELS_NV",
-            &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => "1_INVOCATION_PER_2X4_PIXELS_NV",
-            &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => "1_INVOCATION_PER_4X4_PIXELS_NV",
-            _ => "(unknown)",
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderTypeNV.html) · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct CoarseSampleOrderTypeNV(pub i32);
+impl std::fmt::Debug for CoarseSampleOrderTypeNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::DEFAULT_NV => "DEFAULT_NV",
+            &Self::CUSTOM_NV => "CUSTOM_NV",
+            &Self::PIXEL_MAJOR_NV => "PIXEL_MAJOR_NV",
+            &Self::SAMPLE_MAJOR_NV => "SAMPLE_MAJOR_NV",
+            _ => "(unknown variant)",
         })
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderTypeNV.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct CoarseSampleOrderTypeNV(pub i32);
-#[doc = "[Part of `extensions::nv_shading_rate_image`](../../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`extensions::nv_shading_rate_image`](./index.html)"]
 impl CoarseSampleOrderTypeNV {
     pub const DEFAULT_NV: Self = Self(0);
     pub const CUSTOM_NV: Self = Self(1);
     pub const PIXEL_MAJOR_NV: Self = Self(2);
     pub const SAMPLE_MAJOR_NV: Self = Self(3);
 }
-impl std::fmt::Debug for CoarseSampleOrderTypeNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::DEFAULT_NV => "DEFAULT_NV",
-            &Self::CUSTOM_NV => "CUSTOM_NV",
-            &Self::PIXEL_MAJOR_NV => "PIXEL_MAJOR_NV",
-            &Self::SAMPLE_MAJOR_NV => "SAMPLE_MAJOR_NV",
-            _ => "(unknown)",
-        })
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Structure"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdBindShadingRateImageNV = unsafe extern "system" fn(
+    command_buffer: crate::vk1_0::CommandBuffer,
+    image_view: crate::vk1_0::ImageView,
+    image_layout: crate::vk1_0::ImageLayout,
+) -> std::ffi::c_void;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
+    command_buffer: crate::vk1_0::CommandBuffer,
+    first_viewport: u32,
+    viewport_count: u32,
+    p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
+) -> std::ffi::c_void;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV ) -> std :: ffi :: c_void ;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
-pub struct CoarseSampleOrderCustomNV {
-    pub shading_rate: crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
-    pub sample_count: u32,
-    pub sample_location_count: u32,
-    pub p_sample_locations: *const crate::extensions::nv_shading_rate_image::CoarseSampleLocationNV,
+pub struct ShadingRatePaletteNV {
+    pub shading_rate_palette_entry_count: u32,
+    pub p_shading_rate_palette_entries:
+        *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
 }
-impl CoarseSampleOrderCustomNV {
-    #[inline]
-    pub fn builder<'a>(self) -> CoarseSampleOrderCustomNVBuilder<'a> {
-        CoarseSampleOrderCustomNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for CoarseSampleOrderCustomNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("CoarseSampleOrderCustomNV")
-            .field("shading_rate", &self.shading_rate)
-            .field("sample_count", &self.sample_count)
-            .field("sample_location_count", &self.sample_location_count)
-            .field("p_sample_locations", &self.p_sample_locations)
-            .finish()
-    }
-}
-impl Default for CoarseSampleOrderCustomNV {
-    fn default() -> CoarseSampleOrderCustomNV {
-        CoarseSampleOrderCustomNV {
-            shading_rate: Default::default(),
-            sample_count: Default::default(),
-            sample_location_count: Default::default(),
-            p_sample_locations: std::ptr::null(),
+impl Default for ShadingRatePaletteNV {
+    fn default() -> Self {
+        Self {
+            shading_rate_palette_entry_count: Default::default(),
+            p_shading_rate_palette_entries: std::ptr::null(),
         }
     }
 }
+impl std::fmt::Debug for ShadingRatePaletteNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("ShadingRatePaletteNV")
+            .field(
+                "shading_rate_palette_entry_count",
+                &self.shading_rate_palette_entry_count,
+            )
+            .field(
+                "p_shading_rate_palette_entries",
+                &self.p_shading_rate_palette_entries,
+            )
+            .finish()
+    }
+}
+impl ShadingRatePaletteNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> ShadingRatePaletteNVBuilder<'a> {
+        ShadingRatePaletteNVBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Builder of [`CoarseSampleOrderCustomNV`](struct.CoarseSampleOrderCustomNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Builder of [`ShadingRatePaletteNV`](struct.ShadingRatePaletteNV.html)"]
 #[repr(transparent)]
-pub struct CoarseSampleOrderCustomNVBuilder<'a>(
-    CoarseSampleOrderCustomNV,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
+pub struct ShadingRatePaletteNVBuilder<'a>(ShadingRatePaletteNV, std::marker::PhantomData<&'a ()>);
+impl<'a> ShadingRatePaletteNVBuilder<'a> {
     #[inline]
-    pub fn new() -> CoarseSampleOrderCustomNVBuilder<'a> {
-        CoarseSampleOrderCustomNVBuilder(Default::default(), std::marker::PhantomData)
+    pub fn new() -> ShadingRatePaletteNVBuilder<'a> {
+        ShadingRatePaletteNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
-    pub fn shading_rate(
+    pub fn shading_rate_palette_entries(
         mut self,
-        shading_rate: crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
+        shading_rate_palette_entries : & 'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteEntryNV ],
     ) -> Self {
-        self.0.shading_rate = shading_rate;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn sample_count(mut self, sample_count: u32) -> Self {
-        self.0.sample_count = sample_count;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn sample_locations(
-        mut self,
-        sample_locations : &'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleLocationNVBuilder ],
-    ) -> Self {
-        self.0.sample_location_count = sample_locations.len() as _;
-        self.0.p_sample_locations = sample_locations.as_ptr() as _;
+        self.0.p_shading_rate_palette_entries = shading_rate_palette_entries.as_ptr() as _;
+        self.0.shading_rate_palette_entry_count = shading_rate_palette_entries.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> CoarseSampleOrderCustomNV {
+    pub fn build(self) -> ShadingRatePaletteNV {
         self.0
     }
 }
-impl<'a> std::fmt::Debug for CoarseSampleOrderCustomNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+impl<'a> std::default::Default for ShadingRatePaletteNVBuilder<'a> {
+    fn default() -> ShadingRatePaletteNVBuilder<'a> {
+        Self::new()
     }
 }
-impl<'a> std::ops::Deref for CoarseSampleOrderCustomNVBuilder<'a> {
-    type Target = CoarseSampleOrderCustomNV;
+impl<'a> std::fmt::Debug for ShadingRatePaletteNVBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for ShadingRatePaletteNVBuilder<'a> {
+    type Target = ShadingRatePaletteNV;
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl<'a> std::ops::DerefMut for CoarseSampleOrderCustomNVBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct CoarseSampleLocationNV {
-    pub pixel_x: u32,
-    pub pixel_y: u32,
-    pub sample: u32,
-}
-impl CoarseSampleLocationNV {
-    #[inline]
-    pub fn builder<'a>(self) -> CoarseSampleLocationNVBuilder<'a> {
-        CoarseSampleLocationNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for CoarseSampleLocationNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("CoarseSampleLocationNV")
-            .field("pixel_x", &self.pixel_x)
-            .field("pixel_y", &self.pixel_y)
-            .field("sample", &self.sample)
-            .finish()
-    }
-}
-impl Default for CoarseSampleLocationNV {
-    fn default() -> CoarseSampleLocationNV {
-        CoarseSampleLocationNV {
-            pixel_x: Default::default(),
-            pixel_y: Default::default(),
-            sample: Default::default(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Builder of [`CoarseSampleLocationNV`](struct.CoarseSampleLocationNV.html)"]
-#[repr(transparent)]
-pub struct CoarseSampleLocationNVBuilder<'a>(
-    CoarseSampleLocationNV,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> CoarseSampleLocationNVBuilder<'a> {
-    #[inline]
-    pub fn new() -> CoarseSampleLocationNVBuilder<'a> {
-        CoarseSampleLocationNVBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn pixel_x(mut self, pixel_x: u32) -> Self {
-        self.0.pixel_x = pixel_x;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn pixel_y(mut self, pixel_y: u32) -> Self {
-        self.0.pixel_y = pixel_y;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn sample(mut self, sample: u32) -> Self {
-        self.0.sample = sample;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> CoarseSampleLocationNV {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for CoarseSampleLocationNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for CoarseSampleLocationNVBuilder<'a> {
-    type Target = CoarseSampleLocationNV;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for CoarseSampleLocationNVBuilder<'a> {
+impl<'a> std::ops::DerefMut for ShadingRatePaletteNVBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }
@@ -473,25 +180,14 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
     pub p_shading_rate_palettes:
         *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
 }
-impl PipelineViewportShadingRateImageStateCreateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
-        PipelineViewportShadingRateImageStateCreateInfoNVBuilder(self, std::marker::PhantomData)
+impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , shading_rate_image_enable : Default :: default ( ) , viewport_count : Default :: default ( ) , p_shading_rate_palettes : std :: ptr :: null ( ) }
     }
 }
 impl std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PipelineViewportShadingRateImageStateCreateInfoNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PipelineViewportShadingRateImageStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -503,14 +199,11 @@ impl std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNV {
             .finish()
     }
 }
-impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
-    fn default() -> PipelineViewportShadingRateImageStateCreateInfoNV {
-        PipelineViewportShadingRateImageStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , shading_rate_image_enable : Default :: default ( ) , viewport_count : Default :: default ( ) , p_shading_rate_palettes : std :: ptr :: null ( ) , }
+impl PipelineViewportShadingRateImageStateCreateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
+        PipelineViewportShadingRateImageStateCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PipelineViewportShadingRateImageStateCreateInfoNV>
-    for crate::vk1_0::PipelineViewportStateCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html) · Builder of [`PipelineViewportShadingRateImageStateCreateInfoNV`](struct.PipelineViewportShadingRateImageStateCreateInfoNV.html)"]
@@ -527,31 +220,34 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_image_enable(mut self, shading_rate_image_enable: bool) -> Self {
-        self.0.shading_rate_image_enable = shading_rate_image_enable as u32;
+        self.0.shading_rate_image_enable = shading_rate_image_enable as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_palettes(
         mut self,
-        shading_rate_palettes : &'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
+        shading_rate_palettes : & 'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
     ) -> Self {
-        self.0.viewport_count = shading_rate_palettes.len() as _;
         self.0.p_shading_rate_palettes = shading_rate_palettes.as_ptr() as _;
+        self.0.viewport_count = shading_rate_palettes.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PipelineViewportShadingRateImageStateCreateInfoNV {
+    pub fn build(self) -> PipelineViewportShadingRateImageStateCreateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
+    fn default() -> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
@@ -574,25 +270,19 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNV {
     pub shading_rate_image: crate::vk1_0::Bool32,
     pub shading_rate_coarse_sample_order: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceShadingRateImageFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
-        PhysicalDeviceShadingRateImageFeaturesNVBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV,
+            p_next: std::ptr::null_mut(),
+            shading_rate_image: Default::default(),
+            shading_rate_coarse_sample_order: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImageFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceShadingRateImageFeaturesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceShadingRateImageFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shading_rate_image", &(self.shading_rate_image != 0))
@@ -603,23 +293,11 @@ impl std::fmt::Debug for PhysicalDeviceShadingRateImageFeaturesNV {
             .finish()
     }
 }
-impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
-    fn default() -> PhysicalDeviceShadingRateImageFeaturesNV {
-        PhysicalDeviceShadingRateImageFeaturesNV {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            shading_rate_image: Default::default(),
-            shading_rate_coarse_sample_order: Default::default(),
-        }
+impl PhysicalDeviceShadingRateImageFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
+        PhysicalDeviceShadingRateImageFeaturesNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceShadingRateImageFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceShadingRateImageFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImageFeaturesNV.html) · Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html)"]
@@ -636,30 +314,33 @@ impl<'a> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_image(mut self, shading_rate_image: bool) -> Self {
-        self.0.shading_rate_image = shading_rate_image as u32;
+        self.0.shading_rate_image = shading_rate_image as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_coarse_sample_order(
         mut self,
         shading_rate_coarse_sample_order: bool,
     ) -> Self {
-        self.0.shading_rate_coarse_sample_order = shading_rate_coarse_sample_order as u32;
+        self.0.shading_rate_coarse_sample_order = shading_rate_coarse_sample_order as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceShadingRateImageFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceShadingRateImageFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
@@ -683,25 +364,20 @@ pub struct PhysicalDeviceShadingRateImagePropertiesNV {
     pub shading_rate_palette_size: u32,
     pub shading_rate_max_coarse_samples: u32,
 }
-impl PhysicalDeviceShadingRateImagePropertiesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
-        PhysicalDeviceShadingRateImagePropertiesNVBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV,
+            p_next: std::ptr::null_mut(),
+            shading_rate_texel_size: Default::default(),
+            shading_rate_palette_size: Default::default(),
+            shading_rate_max_coarse_samples: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImagePropertiesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceShadingRateImagePropertiesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceShadingRateImagePropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shading_rate_texel_size", &self.shading_rate_texel_size)
@@ -713,20 +389,11 @@ impl std::fmt::Debug for PhysicalDeviceShadingRateImagePropertiesNV {
             .finish()
     }
 }
-impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
-    fn default() -> PhysicalDeviceShadingRateImagePropertiesNV {
-        PhysicalDeviceShadingRateImagePropertiesNV {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            shading_rate_texel_size: Default::default(),
-            shading_rate_palette_size: Default::default(),
-            shading_rate_max_coarse_samples: Default::default(),
-        }
+impl PhysicalDeviceShadingRateImagePropertiesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
+        PhysicalDeviceShadingRateImagePropertiesNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceShadingRateImagePropertiesNV>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImagePropertiesNV.html) · Builder of [`PhysicalDeviceShadingRateImagePropertiesNV`](struct.PhysicalDeviceShadingRateImagePropertiesNV.html)"]
@@ -743,36 +410,38 @@ impl<'a> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_texel_size(
         mut self,
         shading_rate_texel_size: crate::vk1_0::Extent2D,
     ) -> Self {
-        self.0.shading_rate_texel_size = shading_rate_texel_size;
+        self.0.shading_rate_texel_size = shading_rate_texel_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_palette_size(mut self, shading_rate_palette_size: u32) -> Self {
-        self.0.shading_rate_palette_size = shading_rate_palette_size;
+        self.0.shading_rate_palette_size = shading_rate_palette_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shading_rate_max_coarse_samples(mut self, shading_rate_max_coarse_samples: u32) -> Self {
-        self.0.shading_rate_max_coarse_samples = shading_rate_max_coarse_samples;
+        self.0.shading_rate_max_coarse_samples = shading_rate_max_coarse_samples as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceShadingRateImagePropertiesNV {
+    pub fn build(self) -> PhysicalDeviceShadingRateImagePropertiesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
@@ -782,6 +451,188 @@ impl<'a> std::ops::Deref for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'
     }
 }
 impl<'a> std::ops::DerefMut for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct CoarseSampleLocationNV {
+    pub pixel_x: u32,
+    pub pixel_y: u32,
+    pub sample: u32,
+}
+impl Default for CoarseSampleLocationNV {
+    fn default() -> Self {
+        Self {
+            pixel_x: Default::default(),
+            pixel_y: Default::default(),
+            sample: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for CoarseSampleLocationNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("CoarseSampleLocationNV")
+            .field("pixel_x", &self.pixel_x)
+            .field("pixel_y", &self.pixel_y)
+            .field("sample", &self.sample)
+            .finish()
+    }
+}
+impl CoarseSampleLocationNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> CoarseSampleLocationNVBuilder<'a> {
+        CoarseSampleLocationNVBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Builder of [`CoarseSampleLocationNV`](struct.CoarseSampleLocationNV.html)"]
+#[repr(transparent)]
+pub struct CoarseSampleLocationNVBuilder<'a>(
+    CoarseSampleLocationNV,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> CoarseSampleLocationNVBuilder<'a> {
+    #[inline]
+    pub fn new() -> CoarseSampleLocationNVBuilder<'a> {
+        CoarseSampleLocationNVBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn pixel_x(mut self, pixel_x: u32) -> Self {
+        self.0.pixel_x = pixel_x as _;
+        self
+    }
+    #[inline]
+    pub fn pixel_y(mut self, pixel_y: u32) -> Self {
+        self.0.pixel_y = pixel_y as _;
+        self
+    }
+    #[inline]
+    pub fn sample(mut self, sample: u32) -> Self {
+        self.0.sample = sample as _;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> CoarseSampleLocationNV {
+        self.0
+    }
+}
+impl<'a> std::default::Default for CoarseSampleLocationNVBuilder<'a> {
+    fn default() -> CoarseSampleLocationNVBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for CoarseSampleLocationNVBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for CoarseSampleLocationNVBuilder<'a> {
+    type Target = CoarseSampleLocationNV;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for CoarseSampleLocationNVBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct CoarseSampleOrderCustomNV {
+    pub shading_rate: crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
+    pub sample_count: u32,
+    pub sample_location_count: u32,
+    pub p_sample_locations: *const crate::extensions::nv_shading_rate_image::CoarseSampleLocationNV,
+}
+impl Default for CoarseSampleOrderCustomNV {
+    fn default() -> Self {
+        Self {
+            shading_rate: Default::default(),
+            sample_count: Default::default(),
+            sample_location_count: Default::default(),
+            p_sample_locations: std::ptr::null(),
+        }
+    }
+}
+impl std::fmt::Debug for CoarseSampleOrderCustomNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("CoarseSampleOrderCustomNV")
+            .field("shading_rate", &self.shading_rate)
+            .field("sample_count", &self.sample_count)
+            .field("sample_location_count", &self.sample_location_count)
+            .field("p_sample_locations", &self.p_sample_locations)
+            .finish()
+    }
+}
+impl CoarseSampleOrderCustomNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> CoarseSampleOrderCustomNVBuilder<'a> {
+        CoarseSampleOrderCustomNVBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Builder of [`CoarseSampleOrderCustomNV`](struct.CoarseSampleOrderCustomNV.html)"]
+#[repr(transparent)]
+pub struct CoarseSampleOrderCustomNVBuilder<'a>(
+    CoarseSampleOrderCustomNV,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
+    #[inline]
+    pub fn new() -> CoarseSampleOrderCustomNVBuilder<'a> {
+        CoarseSampleOrderCustomNVBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn shading_rate(
+        mut self,
+        shading_rate: crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV,
+    ) -> Self {
+        self.0.shading_rate = shading_rate as _;
+        self
+    }
+    #[inline]
+    pub fn sample_count(mut self, sample_count: u32) -> Self {
+        self.0.sample_count = sample_count as _;
+        self
+    }
+    #[inline]
+    pub fn sample_locations(
+        mut self,
+        sample_locations : & 'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleLocationNVBuilder ],
+    ) -> Self {
+        self.0.p_sample_locations = sample_locations.as_ptr() as _;
+        self.0.sample_location_count = sample_locations.len() as _;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> CoarseSampleOrderCustomNV {
+        self.0
+    }
+}
+impl<'a> std::default::Default for CoarseSampleOrderCustomNVBuilder<'a> {
+    fn default() -> CoarseSampleOrderCustomNVBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for CoarseSampleOrderCustomNVBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for CoarseSampleOrderCustomNVBuilder<'a> {
+    type Target = CoarseSampleOrderCustomNV;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for CoarseSampleOrderCustomNVBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }
@@ -797,25 +648,14 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     pub p_custom_sample_orders:
         *const crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV,
 }
-impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
-        PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder(self, std::marker::PhantomData)
+impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , sample_order_type : Default :: default ( ) , custom_sample_order_count : Default :: default ( ) , p_custom_sample_orders : std :: ptr :: null ( ) }
     }
 }
 impl std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PipelineViewportCoarseSampleOrderStateCreateInfoNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PipelineViewportCoarseSampleOrderStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sample_order_type", &self.sample_order_type)
@@ -824,14 +664,11 @@ impl std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
             .finish()
     }
 }
-impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
-    fn default() -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
-        PipelineViewportCoarseSampleOrderStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , sample_order_type : Default :: default ( ) , custom_sample_order_count : Default :: default ( ) , p_custom_sample_orders : std :: ptr :: null ( ) , }
+impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
+        PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PipelineViewportCoarseSampleOrderStateCreateInfoNV>
-    for crate::vk1_0::PipelineViewportStateCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportCoarseSampleOrderStateCreateInfoNV.html) · Builder of [`PipelineViewportCoarseSampleOrderStateCreateInfoNV`](struct.PipelineViewportCoarseSampleOrderStateCreateInfoNV.html)"]
@@ -848,34 +685,37 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn sample_order_type(
         mut self,
         sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
     ) -> Self {
-        self.0.sample_order_type = sample_order_type;
+        self.0.sample_order_type = sample_order_type as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn custom_sample_orders(
         mut self,
-        custom_sample_orders : &'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
+        custom_sample_orders : & 'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
     ) -> Self {
-        self.0.custom_sample_order_count = custom_sample_orders.len() as _;
         self.0.p_custom_sample_orders = custom_sample_orders.as_ptr() as _;
+        self.0.custom_sample_order_count = custom_sample_orders.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
+    pub fn build(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
+    fn default() -> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
@@ -887,5 +727,69 @@ impl<'a> std::ops::Deref for PipelineViewportCoarseSampleOrderStateCreateInfoNVB
 impl<'a> std::ops::DerefMut for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
+    }
+}
+#[doc = "Provided by [`extensions::nv_shading_rate_image`](extensions/nv_shading_rate_image/index.html)"]
+impl crate::DeviceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Function"]
+    pub unsafe fn cmd_bind_shading_rate_image_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        image_view: Option<crate::vk1_0::ImageView>,
+        image_layout: crate::vk1_0::ImageLayout,
+    ) -> () {
+        let _function = self
+            .cmd_bind_shading_rate_image_nv
+            .expect("`cmd_bind_shading_rate_image_nv` is not loaded");
+        let _return = _function(
+            command_buffer as _,
+            match image_view {
+                Some(v) => v,
+                None => Default::default(),
+            },
+            image_layout as _,
+        );
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
+    pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        first_viewport: u32,
+        shading_rate_palettes : & [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
+    ) -> () {
+        let _function = self
+            .cmd_set_viewport_shading_rate_palette_nv
+            .expect("`cmd_set_viewport_shading_rate_palette_nv` is not loaded");
+        let viewport_count = shading_rate_palettes.len();
+        let _return = _function(
+            command_buffer as _,
+            first_viewport as _,
+            viewport_count as _,
+            shading_rate_palettes.as_ptr() as _,
+        );
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
+    pub unsafe fn cmd_set_coarse_sample_order_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
+        custom_sample_orders : & [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
+    ) -> () {
+        let _function = self
+            .cmd_set_coarse_sample_order_nv
+            .expect("`cmd_set_coarse_sample_order_nv` is not loaded");
+        let custom_sample_order_count = custom_sample_orders.len();
+        let _return = _function(
+            command_buffer as _,
+            sample_order_type as _,
+            custom_sample_order_count as _,
+            custom_sample_orders.as_ptr() as _,
+        );
+        ()
     }
 }

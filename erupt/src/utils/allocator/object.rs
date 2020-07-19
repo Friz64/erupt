@@ -35,7 +35,7 @@ impl AllocationObject for Buffer {
 
     #[inline]
     unsafe fn destroy(&self, device: &DeviceLoader) {
-        device.destroy_buffer(*self, None)
+        device.destroy_buffer(Some(*self), None)
     }
 }
 
@@ -57,6 +57,6 @@ impl AllocationObject for Image {
 
     #[inline]
     unsafe fn destroy(&self, device: &DeviceLoader) {
-        device.destroy_image(*self, None)
+        device.destroy_image(Some(*self), None)
     }
 }

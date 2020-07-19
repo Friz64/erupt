@@ -1,90 +1,63 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_external_semaphore_capabilities.html)\n\n## Extends\n- [`ExternalSemaphoreFeatureFlagBits`](../../vk1_1/struct.ExternalSemaphoreFeatureFlagBits.html)\n- [`ExternalSemaphoreHandleTypeFlagBits`](../../vk1_1/struct.ExternalSemaphoreHandleTypeFlagBits.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_semaphore_capabilities");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Instance Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagsKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphoreHandleTypeFlagsKHR = crate::vk1_1::ExternalSemaphoreHandleTypeFlags;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagsKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphoreFeatureFlagsKHR = crate::vk1_1::ExternalSemaphoreFeatureFlags;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagBitsKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphoreHandleTypeFlagBitsKHR = crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagBitsKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphoreFeatureFlagBitsKHR = crate::vk1_1::ExternalSemaphoreFeatureFlagBits;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfoKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type PhysicalDeviceExternalSemaphoreInfoKHR = crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfoKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type PhysicalDeviceExternalSemaphoreInfoKHRBuilder<'a> =
+    crate::vk1_1::PhysicalDeviceExternalSemaphoreInfoBuilder<'a>;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphorePropertiesKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphorePropertiesKHR = crate::vk1_1::ExternalSemaphoreProperties;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphorePropertiesKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type ExternalSemaphorePropertiesKHRBuilder<'a> =
+    crate::vk1_1::ExternalSemaphorePropertiesBuilder<'a>;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_external_semaphore_info: *const crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
-        p_external_semaphore_properties: *mut crate::vk1_1::ExternalSemaphoreProperties,
-    ) -> std::ffi::c_void;
-#[doc = "Provides Instance Commands for [`KhrExternalSemaphoreCapabilitiesInstanceLoaderExt`](trait.KhrExternalSemaphoreCapabilitiesInstanceLoaderExt.html)"]
-pub struct KhrExternalSemaphoreCapabilitiesInstanceCommands {
-    pub get_physical_device_external_semaphore_properties_khr:
-        Option<PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR>,
-}
-impl KhrExternalSemaphoreCapabilitiesInstanceCommands {
+    crate::vk1_1::PFN_vkGetPhysicalDeviceExternalSemaphoreProperties;
+#[doc = "Provided by [`extensions::khr_external_semaphore_capabilities`](extensions/khr_external_semaphore_capabilities/index.html)"]
+impl crate::InstanceLoader {
     #[inline]
-    pub fn load(
-        loader: &crate::InstanceLoader,
-    ) -> Option<KhrExternalSemaphoreCapabilitiesInstanceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrExternalSemaphoreCapabilitiesInstanceCommands {
-                get_physical_device_external_semaphore_properties_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn instance_commands(
-    loader: &crate::InstanceLoader,
-) -> &KhrExternalSemaphoreCapabilitiesInstanceCommands {
-    loader
-        .khr_external_semaphore_capabilities
-        .as_ref()
-        .expect("`khr_external_semaphore_capabilities` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrExternalSemaphoreCapabilitiesInstanceCommands`](struct.KhrExternalSemaphoreCapabilitiesInstanceCommands.html)"]
-pub trait KhrExternalSemaphoreCapabilitiesInstanceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_external_semaphore_properties_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
-        external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
-    ) -> crate::vk1_1::ExternalSemaphoreProperties;
-}
-impl KhrExternalSemaphoreCapabilitiesInstanceLoaderExt for crate::InstanceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_external_semaphore_properties_khr(
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Function"]
+    pub unsafe fn get_physical_device_external_semaphore_properties_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
         external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
     ) -> crate::vk1_1::ExternalSemaphoreProperties {
-        let function = instance_commands(self)
+        let _function = self
             .get_physical_device_external_semaphore_properties_khr
-            .as_ref()
-            .expect("`get_physical_device_external_semaphore_properties_khr` not available");
-        let mut external_semaphore_properties =
-            external_semaphore_properties.unwrap_or_else(|| Default::default());
-        let _val = function(
-            physical_device,
-            external_semaphore_info,
+            .expect("`get_physical_device_external_semaphore_properties_khr` is not loaded");
+        let mut external_semaphore_properties = match external_semaphore_properties {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(
+            physical_device as _,
+            external_semaphore_info as _,
             &mut external_semaphore_properties,
         );
         external_semaphore_properties
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagsKHR.html) · Alias"]
-pub type ExternalSemaphoreHandleTypeFlagsKHR = crate::vk1_1::ExternalSemaphoreHandleTypeFlags;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagsKHR.html) · Alias"]
-pub type ExternalSemaphoreFeatureFlagsKHR = crate::vk1_1::ExternalSemaphoreFeatureFlags;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfoKHR.html) · Alias"]
-pub type PhysicalDeviceExternalSemaphoreInfoKHR = crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphorePropertiesKHR.html) · Alias"]
-pub type ExternalSemaphorePropertiesKHR = crate::vk1_1::ExternalSemaphoreProperties;

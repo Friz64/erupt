@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_shader_sm_builtins.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADER_SM_BUILTINS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADER_SM_BUILTINS_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -12,35 +12,9 @@ pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     pub shader_sm_count: u32,
     pub shader_warps_per_sm: u32,
 }
-impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
-        PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_sm_count", &self.shader_sm_count)
-            .field("shader_warps_per_sm", &self.shader_warps_per_sm)
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
-    fn default() -> PhysicalDeviceShaderSMBuiltinsPropertiesNV {
-        PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV,
             p_next: std::ptr::null_mut(),
             shader_sm_count: Default::default(),
@@ -48,9 +22,21 @@ impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsPropertiesNV>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
+impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("shader_sm_count", &self.shader_sm_count)
+            .field("shader_warps_per_sm", &self.shader_warps_per_sm)
+            .finish()
+    }
+}
+impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
+        PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`](struct.PhysicalDeviceShaderSMBuiltinsPropertiesNV.html)"]
@@ -67,27 +53,30 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shader_sm_count(mut self, shader_sm_count: u32) -> Self {
-        self.0.shader_sm_count = shader_sm_count;
+        self.0.shader_sm_count = shader_sm_count as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shader_warps_per_sm(mut self, shader_warps_per_sm: u32) -> Self {
-        self.0.shader_warps_per_sm = shader_warps_per_sm;
+        self.0.shader_warps_per_sm = shader_warps_per_sm as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    pub fn build(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
@@ -109,47 +98,29 @@ pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub shader_sm_builtins: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
-        PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_sm_builtins", &(self.shader_sm_builtins != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
-    fn default() -> PhysicalDeviceShaderSMBuiltinsFeaturesNV {
-        PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV,
             p_next: std::ptr::null_mut(),
             shader_sm_builtins: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("shader_sm_builtins", &(self.shader_sm_builtins != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceShaderSMBuiltinsFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
+impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
+        PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`](struct.PhysicalDeviceShaderSMBuiltinsFeaturesNV.html)"]
@@ -166,21 +137,25 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn shader_sm_builtins(mut self, shader_sm_builtins: bool) -> Self {
-        self.0.shader_sm_builtins = shader_sm_builtins as u32;
+        self.0.shader_sm_builtins = shader_sm_builtins as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {

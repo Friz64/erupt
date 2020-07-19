@@ -97,6 +97,7 @@ mod generated;
 pub mod utils;
 
 pub use generated::*;
+use std::ffi::CStr;
 
 /// Construct a `*const std::os::raw::c_char` from a string
 ///
@@ -107,7 +108,7 @@ pub use generated::*;
 #[macro_export]
 macro_rules! cstr {
     ($s:expr) => {
-        concat!($s, "\0") as *const str as *const std::os::raw::c_char
+        concat!($s, "\0") as *const str as *const ::std::os::raw::c_char
     };
 }
 
@@ -136,10 +137,10 @@ macro_rules! try_vk {
 #[doc(hidden)]
 #[macro_export]
 macro_rules! non_dispatchable_handle {
-    ($name:ident, $ty:ident, $doc_link: meta) => {
+    ($name:ident, $ty:ident, $doc:meta) => {
+        #[$doc]
         #[repr(transparent)]
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash, Default)]
-        #[$doc_link]
         pub struct $name(pub u64);
 
         impl $name {
@@ -171,12 +172,12 @@ macro_rules! non_dispatchable_handle {
 // adapted from ash
 #[doc(hidden)]
 #[macro_export]
-macro_rules! handle {
-    ($name:ident, $ty:ident, $doc_link:meta) => {
+macro_rules! dispatchable_handle {
+    ($name:ident, $ty:ident, $doc:meta) => {
+        #[$doc]
         #[repr(transparent)]
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash)]
-        #[$doc_link]
-        pub struct $name(pub *mut u8);
+        pub struct $name(pub *mut ());
 
         impl $name {
             pub const TYPE: crate::vk1_0::ObjectType = crate::vk1_0::ObjectType::$ty;
@@ -213,9 +214,95 @@ macro_rules! handle {
     };
 }
 
-/// Used in `extend` functions for type safe pointer chains
-pub trait ExtendableBy<T> {}
+impl InstanceLoader {
+    #[inline]
+    pub fn new<T>(
+        entry_loader: &EntryLoader<T>,
+        create_info: &crate::vk1_0::InstanceCreateInfo,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+    ) -> Option<InstanceLoader> {
+        let instance = unsafe {
+            entry_loader
+                .create_instance(create_info, allocator, None)
+                .ok()?
+        };
 
+        let mut version = crate::vk1_0::make_version(1, 0, 0);
+        if !create_info.p_application_info.is_null() {
+            let user_version = unsafe { *create_info.p_application_info }.api_version;
+            if user_version != 0 {
+                version = user_version;
+            }
+        }
+
+        InstanceLoader::custom(
+            entry_loader,
+            instance,
+            version,
+            create_info.enabled_extension_count as usize,
+            create_info.pp_enabled_extension_names,
+            |name| unsafe { (entry_loader.get_instance_proc_addr)(instance, name) },
+        )
+    }
+}
+
+impl DeviceLoader {
+    #[inline]
+    pub fn new(
+        instance_loader: &InstanceLoader,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        create_info: &crate::vk1_0::DeviceCreateInfo,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+    ) -> Option<DeviceLoader> {
+        let device = unsafe {
+            instance_loader
+                .create_device(physical_device, create_info, allocator, None)
+                .ok()?
+        };
+
+        DeviceLoader::custom(
+            instance_loader,
+            device,
+            create_info.enabled_extension_count as usize,
+            create_info.pp_enabled_extension_names,
+            |name| unsafe { (instance_loader.get_device_proc_addr)(device, name) },
+        )
+    }
+}
+
+// Used by loaders to check for extensions
+#[inline]
+unsafe fn c_str_array_contains(
+    array: *const *const std::os::raw::c_char,
+    array_length: usize,
+    contains: *const std::os::raw::c_char,
+) -> bool {
+    let contains = CStr::from_ptr(contains);
+    for i in 0..array_length {
+        if CStr::from_ptr(*array.add(i)) == contains {
+            return true;
+        }
+    }
+
+    false
+}
+
+/// Provides type-safe pointer chain support
+pub trait ExtendableFrom<'a, T> {
+    /// Appends `other`'s pointer chain to the end of this pointer chain
+    fn extend_from(mut self, other: &'a mut T) -> Self
+    where
+        Self: Sized,
+    {
+        unsafe {
+            crate::append_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
+        }
+
+        self
+    }
+}
+
+#[inline]
 unsafe fn append_ptr_chain(
     mut host: *mut vk1_0::BaseOutStructure,
     tail: *mut vk1_0::BaseOutStructure,
@@ -230,13 +317,4 @@ unsafe fn append_ptr_chain(
             host = *p_next;
         }
     }
-}
-
-// from winapi
-#[doc(hidden)]
-#[allow(non_camel_case_types, non_snake_case)]
-pub struct SECURITY_ATTRIBUTES {
-    pub nLength: u32,
-    pub lpSecurityDescriptor: *mut std::ffi::c_void,
-    pub bInheritHandle: i32,
 }

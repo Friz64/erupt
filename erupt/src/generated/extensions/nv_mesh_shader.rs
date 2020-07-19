@@ -1,16 +1,25 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_mesh_shader.html)\n\n## Extends\n- [`PipelineStageFlagBits`](../../vk1_0/struct.PipelineStageFlagBits.html)\n- [`ShaderStageFlagBits`](../../vk1_0/struct.ShaderStageFlagBits.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_MESH_SHADER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_MESH_SHADER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_mesh_shader");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Device Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdDrawMeshTasksNV");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     task_count: u32,
     first_task: u32,
 ) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Device Command"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
@@ -19,7 +28,7 @@ pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(
     draw_count: u32,
     stride: u32,
 ) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Device Command"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
@@ -30,140 +39,6 @@ pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
     max_draw_count: u32,
     stride: u32,
 ) -> std::ffi::c_void;
-#[doc = "Provides Device Commands for [`NvMeshShaderDeviceLoaderExt`](trait.NvMeshShaderDeviceLoaderExt.html)"]
-pub struct NvMeshShaderDeviceCommands {
-    pub cmd_draw_mesh_tasks_nv: Option<PFN_vkCmdDrawMeshTasksNV>,
-    pub cmd_draw_mesh_tasks_indirect_nv: Option<PFN_vkCmdDrawMeshTasksIndirectNV>,
-    pub cmd_draw_mesh_tasks_indirect_count_nv: Option<PFN_vkCmdDrawMeshTasksIndirectCountNV>,
-}
-impl NvMeshShaderDeviceCommands {
-    #[inline]
-    pub fn load(loader: &crate::DeviceLoader) -> Option<NvMeshShaderDeviceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = NvMeshShaderDeviceCommands {
-                cmd_draw_mesh_tasks_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdDrawMeshTasksNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                cmd_draw_mesh_tasks_indirect_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdDrawMeshTasksIndirectNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                cmd_draw_mesh_tasks_indirect_count_nv: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdDrawMeshTasksIndirectCountNV");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn device_commands(loader: &crate::DeviceLoader) -> &NvMeshShaderDeviceCommands {
-    loader
-        .nv_mesh_shader
-        .as_ref()
-        .expect("`nv_mesh_shader` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`NvMeshShaderDeviceCommands`](struct.NvMeshShaderDeviceCommands.html)"]
-pub trait NvMeshShaderDeviceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        task_count: u32,
-        first_task: u32,
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_indirect_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        draw_count: u32,
-        stride: u32,
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        count_buffer: crate::vk1_0::Buffer,
-        count_buffer_offset: crate::vk1_0::DeviceSize,
-        max_draw_count: u32,
-        stride: u32,
-    ) -> ();
-}
-impl NvMeshShaderDeviceLoaderExt for crate::DeviceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        task_count: u32,
-        first_task: u32,
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_draw_mesh_tasks_nv
-            .as_ref()
-            .expect("`cmd_draw_mesh_tasks_nv` not available");
-        let _val = function(command_buffer, task_count, first_task);
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_indirect_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        draw_count: u32,
-        stride: u32,
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_draw_mesh_tasks_indirect_nv
-            .as_ref()
-            .expect("`cmd_draw_mesh_tasks_indirect_nv` not available");
-        let _val = function(command_buffer, buffer, offset, draw_count, stride);
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Device Command"]
-    unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        count_buffer: crate::vk1_0::Buffer,
-        count_buffer_offset: crate::vk1_0::DeviceSize,
-        max_draw_count: u32,
-        stride: u32,
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_draw_mesh_tasks_indirect_count_nv
-            .as_ref()
-            .expect("`cmd_draw_mesh_tasks_indirect_count_nv` not available");
-        let _val = function(
-            command_buffer,
-            buffer,
-            offset,
-            count_buffer,
-            count_buffer_offset,
-            max_draw_count,
-            stride,
-        );
-        ()
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -173,35 +48,9 @@ pub struct PhysicalDeviceMeshShaderFeaturesNV {
     pub task_shader: crate::vk1_0::Bool32,
     pub mesh_shader: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceMeshShaderFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
-        PhysicalDeviceMeshShaderFeaturesNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceMeshShaderFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("task_shader", &(self.task_shader != 0))
-            .field("mesh_shader", &(self.mesh_shader != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceMeshShaderFeaturesNV {
-    fn default() -> PhysicalDeviceMeshShaderFeaturesNV {
-        PhysicalDeviceMeshShaderFeaturesNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV,
             p_next: std::ptr::null_mut(),
             task_shader: Default::default(),
@@ -209,11 +58,22 @@ impl Default for PhysicalDeviceMeshShaderFeaturesNV {
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceMeshShaderFeaturesNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("task_shader", &(self.task_shader != 0))
+            .field("mesh_shader", &(self.mesh_shader != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceMeshShaderFeaturesNV> for crate::vk1_0::DeviceCreateInfo {}
+impl PhysicalDeviceMeshShaderFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
+        PhysicalDeviceMeshShaderFeaturesNVBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Builder of [`PhysicalDeviceMeshShaderFeaturesNV`](struct.PhysicalDeviceMeshShaderFeaturesNV.html)"]
 #[repr(transparent)]
@@ -226,27 +86,30 @@ impl<'a> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
     pub fn new() -> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
         PhysicalDeviceMeshShaderFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn task_shader(mut self, task_shader: bool) -> Self {
-        self.0.task_shader = task_shader as u32;
+        self.0.task_shader = task_shader as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn mesh_shader(mut self, mesh_shader: bool) -> Self {
-        self.0.mesh_shader = mesh_shader as u32;
+        self.0.mesh_shader = mesh_shader as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceMeshShaderFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceMeshShaderFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
@@ -280,25 +143,30 @@ pub struct PhysicalDeviceMeshShaderPropertiesNV {
     pub mesh_output_per_vertex_granularity: u32,
     pub mesh_output_per_primitive_granularity: u32,
 }
-impl PhysicalDeviceMeshShaderPropertiesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
-        PhysicalDeviceMeshShaderPropertiesNVBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceMeshShaderPropertiesNV {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV,
+            p_next: std::ptr::null_mut(),
+            max_draw_mesh_tasks_count: Default::default(),
+            max_task_work_group_invocations: Default::default(),
+            max_task_work_group_size: unsafe { std::mem::zeroed() },
+            max_task_total_memory_size: Default::default(),
+            max_task_output_count: Default::default(),
+            max_mesh_work_group_invocations: Default::default(),
+            max_mesh_work_group_size: unsafe { std::mem::zeroed() },
+            max_mesh_total_memory_size: Default::default(),
+            max_mesh_output_vertices: Default::default(),
+            max_mesh_output_primitives: Default::default(),
+            max_mesh_multiview_view_count: Default::default(),
+            mesh_output_per_vertex_granularity: Default::default(),
+            mesh_output_per_primitive_granularity: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceMeshShaderPropertiesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceMeshShaderPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_draw_mesh_tasks_count", &self.max_draw_mesh_tasks_count)
@@ -341,30 +209,11 @@ impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {
             .finish()
     }
 }
-impl Default for PhysicalDeviceMeshShaderPropertiesNV {
-    fn default() -> PhysicalDeviceMeshShaderPropertiesNV {
-        PhysicalDeviceMeshShaderPropertiesNV {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            max_draw_mesh_tasks_count: Default::default(),
-            max_task_work_group_invocations: Default::default(),
-            max_task_work_group_size: Default::default(),
-            max_task_total_memory_size: Default::default(),
-            max_task_output_count: Default::default(),
-            max_mesh_work_group_invocations: Default::default(),
-            max_mesh_work_group_size: Default::default(),
-            max_mesh_total_memory_size: Default::default(),
-            max_mesh_output_vertices: Default::default(),
-            max_mesh_output_primitives: Default::default(),
-            max_mesh_multiview_view_count: Default::default(),
-            mesh_output_per_vertex_granularity: Default::default(),
-            mesh_output_per_primitive_granularity: Default::default(),
-        }
+impl PhysicalDeviceMeshShaderPropertiesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
+        PhysicalDeviceMeshShaderPropertiesNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceMeshShaderPropertiesNV>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Builder of [`PhysicalDeviceMeshShaderPropertiesNV`](struct.PhysicalDeviceMeshShaderPropertiesNV.html)"]
@@ -378,99 +227,91 @@ impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
     pub fn new() -> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
         PhysicalDeviceMeshShaderPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_draw_mesh_tasks_count(mut self, max_draw_mesh_tasks_count: u32) -> Self {
-        self.0.max_draw_mesh_tasks_count = max_draw_mesh_tasks_count;
+        self.0.max_draw_mesh_tasks_count = max_draw_mesh_tasks_count as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_task_work_group_invocations(mut self, max_task_work_group_invocations: u32) -> Self {
-        self.0.max_task_work_group_invocations = max_task_work_group_invocations;
+        self.0.max_task_work_group_invocations = max_task_work_group_invocations as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_task_work_group_size(mut self, max_task_work_group_size: [u32; 3]) -> Self {
-        self.0.max_task_work_group_size = max_task_work_group_size;
+        self.0.max_task_work_group_size = max_task_work_group_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_task_total_memory_size(mut self, max_task_total_memory_size: u32) -> Self {
-        self.0.max_task_total_memory_size = max_task_total_memory_size;
+        self.0.max_task_total_memory_size = max_task_total_memory_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_task_output_count(mut self, max_task_output_count: u32) -> Self {
-        self.0.max_task_output_count = max_task_output_count;
+        self.0.max_task_output_count = max_task_output_count as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_work_group_invocations(mut self, max_mesh_work_group_invocations: u32) -> Self {
-        self.0.max_mesh_work_group_invocations = max_mesh_work_group_invocations;
+        self.0.max_mesh_work_group_invocations = max_mesh_work_group_invocations as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_work_group_size(mut self, max_mesh_work_group_size: [u32; 3]) -> Self {
-        self.0.max_mesh_work_group_size = max_mesh_work_group_size;
+        self.0.max_mesh_work_group_size = max_mesh_work_group_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_total_memory_size(mut self, max_mesh_total_memory_size: u32) -> Self {
-        self.0.max_mesh_total_memory_size = max_mesh_total_memory_size;
+        self.0.max_mesh_total_memory_size = max_mesh_total_memory_size as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_output_vertices(mut self, max_mesh_output_vertices: u32) -> Self {
-        self.0.max_mesh_output_vertices = max_mesh_output_vertices;
+        self.0.max_mesh_output_vertices = max_mesh_output_vertices as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_output_primitives(mut self, max_mesh_output_primitives: u32) -> Self {
-        self.0.max_mesh_output_primitives = max_mesh_output_primitives;
+        self.0.max_mesh_output_primitives = max_mesh_output_primitives as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_mesh_multiview_view_count(mut self, max_mesh_multiview_view_count: u32) -> Self {
-        self.0.max_mesh_multiview_view_count = max_mesh_multiview_view_count;
+        self.0.max_mesh_multiview_view_count = max_mesh_multiview_view_count as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn mesh_output_per_vertex_granularity(
         mut self,
         mesh_output_per_vertex_granularity: u32,
     ) -> Self {
-        self.0.mesh_output_per_vertex_granularity = mesh_output_per_vertex_granularity;
+        self.0.mesh_output_per_vertex_granularity = mesh_output_per_vertex_granularity as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn mesh_output_per_primitive_granularity(
         mut self,
         mesh_output_per_primitive_granularity: u32,
     ) -> Self {
-        self.0.mesh_output_per_primitive_granularity = mesh_output_per_primitive_granularity;
+        self.0.mesh_output_per_primitive_granularity = mesh_output_per_primitive_granularity as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceMeshShaderPropertiesNV {
+    pub fn build(self) -> PhysicalDeviceMeshShaderPropertiesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
@@ -491,26 +332,26 @@ pub struct DrawMeshTasksIndirectCommandNV {
     pub task_count: u32,
     pub first_task: u32,
 }
-impl DrawMeshTasksIndirectCommandNV {
-    #[inline]
-    pub fn builder<'a>(self) -> DrawMeshTasksIndirectCommandNVBuilder<'a> {
-        DrawMeshTasksIndirectCommandNVBuilder(self, std::marker::PhantomData)
+impl Default for DrawMeshTasksIndirectCommandNV {
+    fn default() -> Self {
+        Self {
+            task_count: Default::default(),
+            first_task: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for DrawMeshTasksIndirectCommandNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DrawMeshTasksIndirectCommandNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DrawMeshTasksIndirectCommandNV")
             .field("task_count", &self.task_count)
             .field("first_task", &self.first_task)
             .finish()
     }
 }
-impl Default for DrawMeshTasksIndirectCommandNV {
-    fn default() -> DrawMeshTasksIndirectCommandNV {
-        DrawMeshTasksIndirectCommandNV {
-            task_count: Default::default(),
-            first_task: Default::default(),
-        }
+impl DrawMeshTasksIndirectCommandNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DrawMeshTasksIndirectCommandNVBuilder<'a> {
+        DrawMeshTasksIndirectCommandNVBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -525,27 +366,30 @@ impl<'a> DrawMeshTasksIndirectCommandNVBuilder<'a> {
     pub fn new() -> DrawMeshTasksIndirectCommandNVBuilder<'a> {
         DrawMeshTasksIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn task_count(mut self, task_count: u32) -> Self {
-        self.0.task_count = task_count;
+        self.0.task_count = task_count as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn first_task(mut self, first_task: u32) -> Self {
-        self.0.first_task = first_task;
+        self.0.first_task = first_task as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DrawMeshTasksIndirectCommandNV {
+    pub fn build(self) -> DrawMeshTasksIndirectCommandNV {
         self.0
     }
 }
+impl<'a> std::default::Default for DrawMeshTasksIndirectCommandNVBuilder<'a> {
+    fn default() -> DrawMeshTasksIndirectCommandNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DrawMeshTasksIndirectCommandNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DrawMeshTasksIndirectCommandNVBuilder<'a> {
@@ -557,5 +401,70 @@ impl<'a> std::ops::Deref for DrawMeshTasksIndirectCommandNVBuilder<'a> {
 impl<'a> std::ops::DerefMut for DrawMeshTasksIndirectCommandNVBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
+    }
+}
+#[doc = "Provided by [`extensions::nv_mesh_shader`](extensions/nv_mesh_shader/index.html)"]
+impl crate::DeviceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
+    pub unsafe fn cmd_draw_mesh_tasks_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        task_count: u32,
+        first_task: u32,
+    ) -> () {
+        let _function = self
+            .cmd_draw_mesh_tasks_nv
+            .expect("`cmd_draw_mesh_tasks_nv` is not loaded");
+        let _return = _function(command_buffer as _, task_count as _, first_task as _);
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
+    pub unsafe fn cmd_draw_mesh_tasks_indirect_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        buffer: crate::vk1_0::Buffer,
+        offset: crate::vk1_0::DeviceSize,
+        draw_count: u32,
+        stride: u32,
+    ) -> () {
+        let _function = self
+            .cmd_draw_mesh_tasks_indirect_nv
+            .expect("`cmd_draw_mesh_tasks_indirect_nv` is not loaded");
+        let _return = _function(
+            command_buffer as _,
+            buffer as _,
+            offset as _,
+            draw_count as _,
+            stride as _,
+        );
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
+    pub unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        buffer: crate::vk1_0::Buffer,
+        offset: crate::vk1_0::DeviceSize,
+        count_buffer: crate::vk1_0::Buffer,
+        count_buffer_offset: crate::vk1_0::DeviceSize,
+        max_draw_count: u32,
+        stride: u32,
+    ) -> () {
+        let _function = self
+            .cmd_draw_mesh_tasks_indirect_count_nv
+            .expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
+        let _return = _function(
+            command_buffer as _,
+            buffer as _,
+            offset as _,
+            count_buffer as _,
+            count_buffer_offset as _,
+            max_draw_count as _,
+            stride as _,
+        );
+        ()
     }
 }

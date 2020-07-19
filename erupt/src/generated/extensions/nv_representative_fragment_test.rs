@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_representative_fragment_test.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,25 +11,14 @@ pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub representative_fragment_test: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
-        PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , representative_fragment_test : Default :: default ( ) }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceRepresentativeFragmentTestFeaturesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceRepresentativeFragmentTestFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -39,18 +28,11 @@ impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
             .finish()
     }
 }
-impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
-    fn default() -> PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
-        PhysicalDeviceRepresentativeFragmentTestFeaturesNV { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , representative_fragment_test : Default :: default ( ) , }
+impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
+        PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`](struct.PhysicalDeviceRepresentativeFragmentTestFeaturesNV.html)"]
@@ -67,21 +49,25 @@ impl<'a> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn representative_fragment_test(mut self, representative_fragment_test: bool) -> Self {
-        self.0.representative_fragment_test = representative_fragment_test as u32;
+        self.0.representative_fragment_test = representative_fragment_test as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
@@ -103,25 +89,14 @@ pub struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub representative_fragment_test_enable: crate::vk1_0::Bool32,
 }
-impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
-        PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(self, std::marker::PhantomData)
+impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , representative_fragment_test_enable : Default :: default ( ) }
     }
 }
 impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PipelineRepresentativeFragmentTestStateCreateInfoNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PipelineRepresentativeFragmentTestStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -131,14 +106,13 @@ impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {
             .finish()
     }
 }
-impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
-    fn default() -> PipelineRepresentativeFragmentTestStateCreateInfoNV {
-        PipelineRepresentativeFragmentTestStateCreateInfoNV { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , representative_fragment_test_enable : Default :: default ( ) , }
+impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(
+        self,
+    ) -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
+        PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PipelineRepresentativeFragmentTestStateCreateInfoNV>
-    for crate::vk1_0::GraphicsPipelineCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`](struct.PipelineRepresentativeFragmentTestStateCreateInfoNV.html)"]
@@ -155,24 +129,28 @@ impl<'a> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn representative_fragment_test_enable(
         mut self,
         representative_fragment_test_enable: bool,
     ) -> Self {
-        self.0.representative_fragment_test_enable = representative_fragment_test_enable as u32;
+        self.0.representative_fragment_test_enable = representative_fragment_test_enable as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNV {
+    pub fn build(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
+    fn default() -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {

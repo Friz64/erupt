@@ -1,9 +1,32 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_android_surface.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_ANDROID_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_ANDROID_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_android_surface");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Instance Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CREATE_ANDROID_SURFACE_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkCreateAndroidSurfaceKHR");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/ANativeWindow.html) · Basetype"]
+pub type ANativeWindow = std::ffi::c_void;
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`](./struct.AndroidSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AndroidSurfaceCreateFlagsKHR`](./struct.AndroidSurfaceCreateFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct AndroidSurfaceCreateFlagBitsKHR(pub u32);
+impl AndroidSurfaceCreateFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> AndroidSurfaceCreateFlagsKHR {
+        AndroidSurfaceCreateFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for AndroidSurfaceCreateFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
@@ -11,74 +34,6 @@ pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
     p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provides Instance Commands for [`KhrAndroidSurfaceInstanceLoaderExt`](trait.KhrAndroidSurfaceInstanceLoaderExt.html)"]
-pub struct KhrAndroidSurfaceInstanceCommands {
-    pub create_android_surface_khr: Option<PFN_vkCreateAndroidSurfaceKHR>,
-}
-impl KhrAndroidSurfaceInstanceCommands {
-    #[inline]
-    pub fn load(loader: &crate::InstanceLoader) -> Option<KhrAndroidSurfaceInstanceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrAndroidSurfaceInstanceCommands {
-                create_android_surface_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkCreateAndroidSurfaceKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn instance_commands(loader: &crate::InstanceLoader) -> &KhrAndroidSurfaceInstanceCommands {
-    loader
-        .khr_android_surface
-        .as_ref()
-        .expect("`khr_android_surface` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrAndroidSurfaceInstanceCommands`](struct.KhrAndroidSurfaceInstanceCommands.html)"]
-pub trait KhrAndroidSurfaceInstanceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Instance Command"]
-    unsafe fn create_android_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR>;
-}
-impl KhrAndroidSurfaceInstanceLoaderExt for crate::InstanceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Instance Command"]
-    unsafe fn create_android_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = instance_commands(self)
-            .create_android_surface_khr
-            .as_ref()
-            .expect("`create_android_surface_khr` not available");
-        let mut surface = surface.unwrap_or_else(|| Default::default());
-        let _val = function(
-            self.handle,
-            create_info,
-            if let Some(allocator) = allocator {
-                allocator
-            } else {
-                std::ptr::null()
-            },
-            &mut surface,
-        );
-        crate::utils::VulkanResult::new(_val, surface)
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateInfoKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -86,17 +41,21 @@ pub struct AndroidSurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_android_surface::AndroidSurfaceCreateFlagsKHR,
-    pub window: *mut std::ffi::c_void,
+    pub window: *mut crate::extensions::khr_android_surface::ANativeWindow,
 }
-impl AndroidSurfaceCreateInfoKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> AndroidSurfaceCreateInfoKHRBuilder<'a> {
-        AndroidSurfaceCreateInfoKHRBuilder(self, std::marker::PhantomData)
+impl Default for AndroidSurfaceCreateInfoKHR {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR,
+            p_next: std::ptr::null(),
+            flags: Default::default(),
+            window: std::ptr::null_mut(),
+        }
     }
 }
 impl std::fmt::Debug for AndroidSurfaceCreateInfoKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("AndroidSurfaceCreateInfoKHR")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("AndroidSurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -104,14 +63,10 @@ impl std::fmt::Debug for AndroidSurfaceCreateInfoKHR {
             .finish()
     }
 }
-impl Default for AndroidSurfaceCreateInfoKHR {
-    fn default() -> AndroidSurfaceCreateInfoKHR {
-        AndroidSurfaceCreateInfoKHR {
-            s_type: crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            window: std::ptr::null_mut(),
-        }
+impl AndroidSurfaceCreateInfoKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> AndroidSurfaceCreateInfoKHRBuilder<'a> {
+        AndroidSurfaceCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -126,30 +81,36 @@ impl<'a> AndroidSurfaceCreateInfoKHRBuilder<'a> {
     pub fn new() -> AndroidSurfaceCreateInfoKHRBuilder<'a> {
         AndroidSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn flags(
         mut self,
         flags: crate::extensions::khr_android_surface::AndroidSurfaceCreateFlagsKHR,
     ) -> Self {
-        self.0.flags = flags;
+        self.0.flags = flags as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
-    pub fn window(mut self, window: &'a mut std::ffi::c_void) -> Self {
-        self.0.window = window;
+    pub fn window(
+        mut self,
+        window: &'a mut crate::extensions::khr_android_surface::ANativeWindow,
+    ) -> Self {
+        self.0.window = window as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> AndroidSurfaceCreateInfoKHR {
+    pub fn build(self) -> AndroidSurfaceCreateInfoKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for AndroidSurfaceCreateInfoKHRBuilder<'a> {
+    fn default() -> AndroidSurfaceCreateInfoKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for AndroidSurfaceCreateInfoKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for AndroidSurfaceCreateInfoKHRBuilder<'a> {
@@ -163,22 +124,32 @@ impl<'a> std::ops::DerefMut for AndroidSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`AndroidSurfaceCreateFlagsKHR`](struct.AndroidSurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct AndroidSurfaceCreateFlagBitsKHR(pub u32);
-impl AndroidSurfaceCreateFlagBitsKHR {
+#[doc = "Provided by [`extensions::khr_android_surface`](extensions/khr_android_surface/index.html)"]
+impl crate::InstanceLoader {
     #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> AndroidSurfaceCreateFlagsKHR {
-        AndroidSurfaceCreateFlagsKHR::from_bits_truncate(self.0)
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
+    pub unsafe fn create_android_surface_khr(
+        &self,
+        create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+        let _function = self
+            .create_android_surface_khr
+            .expect("`create_android_surface_khr` is not loaded");
+        let mut surface = match surface {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(
+            self.handle,
+            create_info as _,
+            match allocator {
+                Some(v) => v,
+                None => std::ptr::null(),
+            },
+            &mut surface,
+        );
+        crate::utils::VulkanResult::new(_return, surface)
     }
 }
-impl std::fmt::Debug for AndroidSurfaceCreateFlagBitsKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            _ => "(unknown)",
-        })
-    }
-}
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Flags of [`AndroidSurfaceCreateFlagBitsKHR`](struct.AndroidSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

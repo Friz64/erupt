@@ -19,14 +19,10 @@ use std::os::raw::c_char;
 ///
 /// `instance` must have created with platform specific surface extensions enabled.
 pub unsafe fn create_surface(
-    instance: &mut InstanceLoader,
+    instance: &InstanceLoader,
     window_handle: &impl HasRawWindowHandle,
     allocation_callbacks: Option<&AllocationCallbacks>,
 ) -> VulkanResult<SurfaceKHR> {
-    if instance.load_khr_surface().is_none() {
-        return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-    }
-
     match window_handle.raw_window_handle() {
         #[cfg(any(
             target_os = "linux",
@@ -37,10 +33,6 @@ pub unsafe fn create_surface(
         ))]
         RawWindowHandle::Wayland(handle) => {
             use crate::extensions::khr_wayland_surface::*;
-
-            if instance.load_khr_wayland_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
 
             let create_info = WaylandSurfaceCreateInfoKHR {
                 display: handle.display,
@@ -61,10 +53,6 @@ pub unsafe fn create_surface(
         RawWindowHandle::Xlib(handle) => {
             use crate::extensions::khr_xlib_surface::*;
 
-            if instance.load_khr_xlib_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
-
             let create_info = XlibSurfaceCreateInfoKHR {
                 dpy: handle.display as *mut _,
                 window: handle.window,
@@ -84,10 +72,6 @@ pub unsafe fn create_surface(
         RawWindowHandle::Xcb(handle) => {
             use crate::extensions::khr_xcb_surface::*;
 
-            if instance.load_khr_xcb_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
-
             let create_info = XcbSurfaceCreateInfoKHR {
                 connection: handle.connection as *mut _,
                 window: handle.window,
@@ -100,10 +84,6 @@ pub unsafe fn create_surface(
         #[cfg(any(target_os = "android"))]
         RawWindowHandle::Android(handle) => {
             use crate::extensions::khr_android_surface::*;
-
-            if instance.load_khr_android_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
 
             let create_info = AndroidSurfaceCreateInfoKHR {
                 window: handle.a_native_window as _,
@@ -125,10 +105,6 @@ pub unsafe fn create_surface(
                 }
             };
 
-            if instance.load_ext_metal_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
-
             let create_info = MetalSurfaceCreateInfoEXT {
                 p_layer: layer,
                 ..Default::default()
@@ -149,10 +125,6 @@ pub unsafe fn create_surface(
                 }
             };
 
-            if instance.load_ext_metal_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
-
             let create_info = MetalSurfaceCreateInfoEXT {
                 p_layer: layer,
                 ..Default::default()
@@ -164,10 +136,6 @@ pub unsafe fn create_surface(
         #[cfg(target_os = "windows")]
         RawWindowHandle::Windows(handle) => {
             use crate::extensions::khr_win32_surface::*;
-
-            if instance.load_khr_win32_surface().is_none() {
-                return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT);
-            }
 
             let create_info = Win32SurfaceCreateInfoKHR {
                 hinstance: handle.hinstance,

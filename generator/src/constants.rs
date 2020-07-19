@@ -1,165 +1,183 @@
-use crate::utils;
-use heck::ShoutySnakeCase;
-use proc_macro2::TokenStream;
-use quote::quote;
-use std::collections::HashSet;
-use vk_parse::{
-    Enum, EnumSpec, Enums, EnumsChild, ExtensionChild, InterfaceItem, TypeMemberMarkup,
+use crate::{
+    comment_gen::DocCommentGen,
+    eval::{Expression, Literal},
+    origin::Origin,
+    source::{NotApplicable, Source},
 };
+use lang_c::ast::{
+    Declaration as CDeclaration, DeclaratorKind, Expression as CExpression, Initializer,
+};
+use proc_macro2::{Ident, TokenStream};
+use quote::{format_ident, quote};
+use std::convert::TryFrom;
+use treexml::Element;
 
-fn guess_type(value: &str) -> (String, &str) {
-    if let Ok(_) = value.parse::<u32>() {
-        (value.to_string(), "u32")
-    } else if let Ok(_) = value.parse::<i32>() {
-        (value.to_string(), "i32")
-    } else if let Ok(_) = value.parse::<f32>() {
-        (value.to_string(), "f32")
-    } else {
-        assert!(value.starts_with('"') && value.ends_with('"'));
+const PREFIX: &str = "__ERUPT_CONSTANT_";
 
-        let value = format!("crate::cstr!({})", value);
-        (value, "*const std::os::raw::c_char")
+#[derive(Clone, Debug)]
+pub enum ConstantValue {
+    Number(Literal),
+    String(String),
+}
+
+impl ConstantValue {
+    fn value(&self) -> TokenStream {
+        match self {
+            ConstantValue::Number(literal) => {
+                let val = literal.value();
+                quote! { #val }
+            }
+            ConstantValue::String(string) => quote! { crate::cstr!(#string) },
+        }
+    }
+
+    fn ty(&self) -> TokenStream {
+        match self {
+            ConstantValue::Number(literal) => {
+                let ty = literal.ty();
+                quote! { #ty }
+            }
+            ConstantValue::String(_) => quote! { *const std::os::raw::c_char },
+        }
     }
 }
 
-pub struct ConstantItem {
-    pub name: String,
-    pub rust_type: String,
-    pub value: String,
+#[derive(Clone, Debug)]
+pub struct Constant {
+    pub origin: Option<Origin>,
+    pub original_name: Box<str>,
+    pub trimmed_name: Box<str>,
+    pub value: ConstantValue,
 }
 
-pub fn collect(
-    children: &[ExtensionChild],
-    raw_enums: &[&Enums],
-    used_items: &mut HashSet<String>,
-) -> Vec<ConstantItem> {
-    children
-        .iter()
-        .filter_map(|child| {
-            if let ExtensionChild::Require { items, .. } = child {
-                let types: Vec<_> = items
-                    .iter()
-                    .filter_map(|item| match item {
-                        InterfaceItem::Enum(Enum { name, spec, .. })
-                            if used_items.insert(name.to_string()) =>
-                        {
-                            match spec {
-                                EnumSpec::None => {
-                                    let mut search = name.clone();
-                                    let value = 'outer: loop {
-                                        for raw_enum in raw_enums {
-                                            for child in &raw_enum.children {
-                                                match child {
-                                                    EnumsChild::Enum(Enum {
-                                                        name, spec, ..
-                                                    }) if name == &search => match spec {
-                                                        EnumSpec::Alias { alias, .. } => {
-                                                            search = alias.clone();
-                                                            continue 'outer;
-                                                        }
-                                                        EnumSpec::Value { value, .. } => {
-                                                            break 'outer Some(value);
-                                                        }
-                                                        _ => (),
-                                                    },
-                                                    _ => (),
-                                                }
-                                            }
-                                        }
+impl Constant {
+    pub fn ident(&self) -> Ident {
+        format_ident!("{}", *self.trimmed_name)
+    }
 
-                                        break None;
-                                    }
-                                    .unwrap();
+    pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
+        let ident = self.ident();
+        let value = self.value.value();
+        let ty = self.value.ty();
+        let doc = comment_gen.def(None, "Constant", None);
 
-                                    let rust_value = value
-                                        .trim_start_matches('(')
-                                        .trim_end_matches(')')
-                                        .replace("~", "!")
-                                        .replace("ULL", "u64")
-                                        .replace("U", "u32")
-                                        .replace("f", "f32");
+        quote! {
+            #[doc = #doc]
+            pub const #ident: #ty = #value;
+        }
+    }
+}
 
-                                    let rust_type = if rust_value.contains("f32") {
-                                        "f32"
-                                    } else if rust_value.contains("u64") {
-                                        "u64"
-                                    } else {
-                                        "u32"
-                                    };
+impl TryFrom<&CDeclaration> for Constant {
+    type Error = NotApplicable;
 
-                                    Some(ConstantItem {
-                                        name: name.into(),
-                                        rust_type: rust_type.into(),
-                                        value: rust_value,
-                                    })
-                                }
-                                EnumSpec::Value { value, extends } if extends.is_none() => {
-                                    let (value, rust_type) = guess_type(&value);
+    fn try_from(declaration: &CDeclaration) -> Result<Self, Self::Error> {
+        match declaration.declarators.as_slice() {
+            [init_declarator] => {
+                let name = match &init_declarator.node.declarator.node.kind.node {
+                    DeclaratorKind::Identifier(identifier) => match &identifier.node.name {
+                        name if name.starts_with(PREFIX) => &name[PREFIX.len()..],
+                        _ => return Err(NotApplicable),
+                    },
+                    _ => return Err(NotApplicable),
+                };
 
-                                    Some(ConstantItem {
-                                        name: name.into(),
-                                        rust_type: rust_type.into(),
-                                        value,
-                                    })
-                                }
-                                _ => None,
+                let value = match &init_declarator.node.initializer {
+                    Some(initializer) => match &initializer.node {
+                        Initializer::Expression(expression) => match &expression.node {
+                            CExpression::StringLiteral(strings) => ConstantValue::String(
+                                strings.node.iter().map(|s| s.trim_matches('"')).collect(),
+                            ),
+                            other => {
+                                ConstantValue::Number(Expression::from(other).eval_to_literal())
                             }
-                        }
-                        _ => None,
-                    })
-                    .collect();
+                        },
+                        invalid => panic!("Invalid constant initializer: {:?}", invalid),
+                    },
+                    None => panic!("Constant has no initializer: {:?}", declaration),
+                };
 
-                Some(types)
-            } else {
-                None
+                Ok(Constant {
+                    origin: Default::default(),
+                    original_name: name.clone().into(),
+                    trimmed_name: name.to_uppercase().trim_start_matches("VK_").into(),
+                    value,
+                })
             }
-        })
-        .flatten()
-        .collect()
+            _ => Err(NotApplicable),
+        }
+    }
 }
 
-pub fn extend(
-    constants: &mut Vec<ConstantItem>,
-    markups: &[TypeMemberMarkup],
-    used_items: &mut HashSet<String>,
-    raw_enums: &[&Enums],
-) {
-    for markup in markups {
-        if let TypeMemberMarkup::Enum(target_name) = markup {
-            if used_items.insert(target_name.into()) {
-                for raw_enum in raw_enums {
-                    for child in &raw_enum.children {
-                        match child {
-                            EnumsChild::Enum(Enum {
-                                name,
-                                spec: EnumSpec::Value { value, .. },
-                                ..
-                            }) if name == target_name => {
-                                let (value, rust_type) = guess_type(&value);
+pub fn header_ext(buf: &mut String, registry: &Element) {
+    let mut constants = Vec::new();
 
-                                constants.push(ConstantItem {
-                                    name: name.into(),
-                                    rust_type: rust_type.into(),
-                                    value,
-                                });
+    let constants_enum = registry.find_child(|child| {
+        child.name == "enums"
+            && child.attributes.get("name").map(|s| s.as_str()) == Some("API Constants")
+    });
+
+    match constants_enum {
+        Some(constants_enum) => {
+            for constant in &constants_enum.children {
+                let name = match constant.attributes.get("name") {
+                    Some(name) => name,
+                    None => panic!("Constant has no name: {:?}", constant),
+                };
+
+                constants.push(name);
+            }
+        }
+        None => panic!("No `API Constants` in registry"),
+    }
+
+    match registry.find("extensions") {
+        Ok(extensions) => {
+            for extension in &extensions.children {
+                // Skip disabled extensions
+                let supported = extension.attributes.get("supported").map(|s| s.as_str());
+                if supported == Some("disabled") {
+                    continue;
+                }
+
+                for require in &extension.children {
+                    for element in &require.children {
+                        if element.name == "enum"
+                            && element.attributes.get("value").is_some()
+                            && element.attributes.get("extends").is_none()
+                        {
+                            if let Some(name) = element.attributes.get("name") {
+                                constants.push(name);
                             }
-                            _ => (),
                         }
                     }
                 }
             }
         }
+        Err(_) => panic!("No `extensions` in registry"),
+    }
+
+    for constant in constants {
+        buf.push_str(&format!(
+            "void {}{name} = {name};\n",
+            PREFIX,
+            name = constant
+        ));
     }
 }
 
-pub fn generate(constant: &ConstantItem) -> TokenStream {
-    let doc = utils::doc("Constant", None);
-    let name = utils::safe_ident(utils::trim_vk_prefix(&constant.name.to_shouty_snake_case()));
-    let rust_type: TokenStream = syn::parse_str(&constant.rust_type).unwrap();
-    let value: TokenStream = syn::parse_str(&constant.value).unwrap();
+impl Source {
+    pub fn function_constants(&mut self) {
+        for function in self.all_functions_emulated() {
+            let name: Box<str> = function.name.constant_name().into();
+            let value = function.name.no_pfn.clone();
 
-    quote! {
-        #[doc = #doc]
-        pub const #name: #rust_type = #value;
+            self.constants.push(Constant {
+                origin: function.origin.clone(),
+                original_name: name.clone(),
+                trimmed_name: name.clone(),
+                value: ConstantValue::String(value.into()),
+            });
+        }
     }
 }

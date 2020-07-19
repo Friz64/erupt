@@ -1,9 +1,15 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_push_descriptor.html)\n\n## Extends\n- [`DescriptorSetLayoutCreateFlagBits`](../../vk1_0/struct.DescriptorSetLayoutCreateFlagBits.html)\n- [`DescriptorUpdateTemplateType`](../../vk1_1/struct.DescriptorUpdateTemplateType.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_PUSH_DESCRIPTOR_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_PUSH_DESCRIPTOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_push_descriptor");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Device Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_PUSH_DESCRIPTOR_SET_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdPushDescriptorSetKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkCmdPushDescriptorSetWithTemplateKHR");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetKHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
@@ -13,7 +19,7 @@ pub type PFN_vkCmdPushDescriptorSetKHR = unsafe extern "system" fn(
     descriptor_write_count: u32,
     p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet,
 ) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Device Command"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
@@ -22,115 +28,6 @@ pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
     set: u32,
     p_data: *const std::ffi::c_void,
 ) -> std::ffi::c_void;
-#[doc = "Provides Device Commands for [`KhrPushDescriptorDeviceLoaderExt`](trait.KhrPushDescriptorDeviceLoaderExt.html)"]
-pub struct KhrPushDescriptorDeviceCommands {
-    pub cmd_push_descriptor_set_khr: Option<PFN_vkCmdPushDescriptorSetKHR>,
-    pub cmd_push_descriptor_set_with_template_khr:
-        Option<PFN_vkCmdPushDescriptorSetWithTemplateKHR>,
-}
-impl KhrPushDescriptorDeviceCommands {
-    #[inline]
-    pub fn load(loader: &crate::DeviceLoader) -> Option<KhrPushDescriptorDeviceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrPushDescriptorDeviceCommands {
-                cmd_push_descriptor_set_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdPushDescriptorSetKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                cmd_push_descriptor_set_with_template_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkCmdPushDescriptorSetWithTemplateKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn device_commands(loader: &crate::DeviceLoader) -> &KhrPushDescriptorDeviceCommands {
-    loader
-        .khr_push_descriptor
-        .as_ref()
-        .expect("`khr_push_descriptor` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrPushDescriptorDeviceCommands`](struct.KhrPushDescriptorDeviceCommands.html)"]
-pub trait KhrPushDescriptorDeviceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Device Command"]
-    unsafe fn cmd_push_descriptor_set_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-        layout: crate::vk1_0::PipelineLayout,
-        set: u32,
-        descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Device Command"]
-    unsafe fn cmd_push_descriptor_set_with_template_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
-        layout: crate::vk1_0::PipelineLayout,
-        set: u32,
-        data: *const std::ffi::c_void,
-    ) -> ();
-}
-impl KhrPushDescriptorDeviceLoaderExt for crate::DeviceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Device Command"]
-    unsafe fn cmd_push_descriptor_set_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-        layout: crate::vk1_0::PipelineLayout,
-        set: u32,
-        descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_push_descriptor_set_khr
-            .as_ref()
-            .expect("`cmd_push_descriptor_set_khr` not available");
-        let descriptor_write_count = descriptor_writes.len() as _;
-        let _val = function(
-            command_buffer,
-            pipeline_bind_point,
-            layout,
-            set,
-            descriptor_write_count,
-            descriptor_writes.as_ptr() as _,
-        );
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Device Command"]
-    unsafe fn cmd_push_descriptor_set_with_template_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
-        layout: crate::vk1_0::PipelineLayout,
-        set: u32,
-        data: *const std::ffi::c_void,
-    ) -> () {
-        let function = device_commands(self)
-            .cmd_push_descriptor_set_with_template_khr
-            .as_ref()
-            .expect("`cmd_push_descriptor_set_with_template_khr` not available");
-        let _val = function(
-            command_buffer,
-            descriptor_update_template,
-            layout,
-            set,
-            data,
-        );
-        ()
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -139,43 +36,29 @@ pub struct PhysicalDevicePushDescriptorPropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub max_push_descriptors: u32,
 }
-impl PhysicalDevicePushDescriptorPropertiesKHR {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
-        PhysicalDevicePushDescriptorPropertiesKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDevicePushDescriptorPropertiesKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDevicePushDescriptorPropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_push_descriptors", &self.max_push_descriptors)
-            .finish()
-    }
-}
 impl Default for PhysicalDevicePushDescriptorPropertiesKHR {
-    fn default() -> PhysicalDevicePushDescriptorPropertiesKHR {
-        PhysicalDevicePushDescriptorPropertiesKHR {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR,
             p_next: std::ptr::null_mut(),
             max_push_descriptors: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDevicePushDescriptorPropertiesKHR>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
+impl std::fmt::Debug for PhysicalDevicePushDescriptorPropertiesKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDevicePushDescriptorPropertiesKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("max_push_descriptors", &self.max_push_descriptors)
+            .finish()
+    }
+}
+impl PhysicalDevicePushDescriptorPropertiesKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
+        PhysicalDevicePushDescriptorPropertiesKHRBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Builder of [`PhysicalDevicePushDescriptorPropertiesKHR`](struct.PhysicalDevicePushDescriptorPropertiesKHR.html)"]
@@ -192,21 +75,25 @@ impl<'a> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn max_push_descriptors(mut self, max_push_descriptors: u32) -> Self {
-        self.0.max_push_descriptors = max_push_descriptors;
+        self.0.max_push_descriptors = max_push_descriptors as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDevicePushDescriptorPropertiesKHR {
+    pub fn build(self) -> PhysicalDevicePushDescriptorPropertiesKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
+    fn default() -> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
@@ -218,5 +105,54 @@ impl<'a> std::ops::Deref for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a
 impl<'a> std::ops::DerefMut for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
+    }
+}
+#[doc = "Provided by [`extensions::khr_push_descriptor`](extensions/khr_push_descriptor/index.html)"]
+impl crate::DeviceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
+    pub unsafe fn cmd_push_descriptor_set_khr(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
+        layout: crate::vk1_0::PipelineLayout,
+        set: u32,
+        descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
+    ) -> () {
+        let _function = self
+            .cmd_push_descriptor_set_khr
+            .expect("`cmd_push_descriptor_set_khr` is not loaded");
+        let descriptor_write_count = descriptor_writes.len();
+        let _return = _function(
+            command_buffer as _,
+            pipeline_bind_point as _,
+            layout as _,
+            set as _,
+            descriptor_write_count as _,
+            descriptor_writes.as_ptr() as _,
+        );
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
+    pub unsafe fn cmd_push_descriptor_set_with_template_khr(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
+        layout: crate::vk1_0::PipelineLayout,
+        set: u32,
+        data: *const std::ffi::c_void,
+    ) -> () {
+        let _function = self
+            .cmd_push_descriptor_set_with_template_khr
+            .expect("`cmd_push_descriptor_set_with_template_khr` is not loaded");
+        let _return = _function(
+            command_buffer as _,
+            descriptor_update_template as _,
+            layout as _,
+            set as _,
+            data,
+        );
+        ()
     }
 }

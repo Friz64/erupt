@@ -64,7 +64,7 @@ impl Block {
             inner.suballocator.free(allocation);
 
             if inner.suballocator.is_empty() {
-                unsafe { device.free_memory(inner.memory, None) };
+                unsafe { device.free_memory(Some(inner.memory), None) };
                 this.take();
             }
         }

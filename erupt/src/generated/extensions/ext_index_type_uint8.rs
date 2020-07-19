@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_index_type_uint8.html)\n\n## Extends\n- [`IndexType`](../../vk1_0/struct.IndexType.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_INDEX_TYPE_UINT8_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_INDEX_TYPE_UINT8_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,47 +11,29 @@ pub struct PhysicalDeviceIndexTypeUint8FeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub index_type_uint8: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
-        PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceIndexTypeUint8FeaturesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceIndexTypeUint8FeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("index_type_uint8", &(self.index_type_uint8 != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceIndexTypeUint8FeaturesEXT {
-    fn default() -> PhysicalDeviceIndexTypeUint8FeaturesEXT {
-        PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             index_type_uint8: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceIndexTypeUint8FeaturesEXT>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceIndexTypeUint8FeaturesEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("index_type_uint8", &(self.index_type_uint8 != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceIndexTypeUint8FeaturesEXT>
-    for crate::vk1_0::DeviceCreateInfo
-{
+impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
+        PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`](struct.PhysicalDeviceIndexTypeUint8FeaturesEXT.html)"]
@@ -65,21 +47,25 @@ impl<'a> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
     pub fn new() -> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
         PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn index_type_uint8(mut self, index_type_uint8: bool) -> Self {
-        self.0.index_type_uint8 = index_type_uint8 as u32;
+        self.0.index_type_uint8 = index_type_uint8 as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    pub fn build(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {

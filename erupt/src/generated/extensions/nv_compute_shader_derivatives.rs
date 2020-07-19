@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_compute_shader_derivatives.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_COMPUTE_SHADER_DERIVATIVES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -12,25 +12,20 @@ pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     pub compute_derivative_group_quads: crate::vk1_0::Bool32,
     pub compute_derivative_group_linear: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
-        PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV,
+            p_next: std::ptr::null_mut(),
+            compute_derivative_group_quads: Default::default(),
+            compute_derivative_group_linear: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceComputeShaderDerivativesFeaturesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceComputeShaderDerivativesFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -44,24 +39,11 @@ impl std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
             .finish()
     }
 }
-impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-    fn default() -> PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-        PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            compute_derivative_group_quads: Default::default(),
-            compute_derivative_group_linear: Default::default(),
-        }
+impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
+        PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceComputeShaderDerivativesFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceComputeShaderDerivativesFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`](struct.PhysicalDeviceComputeShaderDerivativesFeaturesNV.html)"]
@@ -78,30 +60,33 @@ impl<'a> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn compute_derivative_group_quads(mut self, compute_derivative_group_quads: bool) -> Self {
-        self.0.compute_derivative_group_quads = compute_derivative_group_quads as u32;
+        self.0.compute_derivative_group_quads = compute_derivative_group_quads as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn compute_derivative_group_linear(
         mut self,
         compute_derivative_group_linear: bool,
     ) -> Self {
-        self.0.compute_derivative_group_linear = compute_derivative_group_linear as u32;
+        self.0.compute_derivative_group_linear = compute_derivative_group_linear as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceComputeShaderDerivativesFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceComputeShaderDerivativesFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {

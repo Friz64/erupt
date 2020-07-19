@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_memory_priority.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_MEMORY_PRIORITY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_MEMORY_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,47 +11,29 @@ pub struct PhysicalDeviceMemoryPriorityFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub memory_priority: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceMemoryPriorityFeaturesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
-        PhysicalDeviceMemoryPriorityFeaturesEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceMemoryPriorityFeaturesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_priority", &(self.memory_priority != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceMemoryPriorityFeaturesEXT {
-    fn default() -> PhysicalDeviceMemoryPriorityFeaturesEXT {
-        PhysicalDeviceMemoryPriorityFeaturesEXT {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             memory_priority: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceMemoryPriorityFeaturesEXT>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceMemoryPriorityFeaturesEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("memory_priority", &(self.memory_priority != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceMemoryPriorityFeaturesEXT>
-    for crate::vk1_0::DeviceCreateInfo
-{
+impl PhysicalDeviceMemoryPriorityFeaturesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
+        PhysicalDeviceMemoryPriorityFeaturesEXTBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`](struct.PhysicalDeviceMemoryPriorityFeaturesEXT.html)"]
@@ -65,21 +47,25 @@ impl<'a> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
     pub fn new() -> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
         PhysicalDeviceMemoryPriorityFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn memory_priority(mut self, memory_priority: bool) -> Self {
-        self.0.memory_priority = memory_priority as u32;
+        self.0.memory_priority = memory_priority as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceMemoryPriorityFeaturesEXT {
+    pub fn build(self) -> PhysicalDeviceMemoryPriorityFeaturesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
@@ -99,43 +85,32 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'
 pub struct MemoryPriorityAllocateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub priority: f32,
-}
-impl MemoryPriorityAllocateInfoEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> MemoryPriorityAllocateInfoEXTBuilder<'a> {
-        MemoryPriorityAllocateInfoEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for MemoryPriorityAllocateInfoEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("MemoryPriorityAllocateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("priority", &self.priority)
-            .finish()
-    }
+    pub priority: std::os::raw::c_float,
 }
 impl Default for MemoryPriorityAllocateInfoEXT {
-    fn default() -> MemoryPriorityAllocateInfoEXT {
-        MemoryPriorityAllocateInfoEXT {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::MEMORY_PRIORITY_ALLOCATE_INFO_EXT,
             p_next: std::ptr::null(),
             priority: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<MemoryPriorityAllocateInfoEXT> for crate::vk1_0::MemoryAllocateInfo {}
+impl std::fmt::Debug for MemoryPriorityAllocateInfoEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("MemoryPriorityAllocateInfoEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("priority", &self.priority)
+            .finish()
+    }
+}
+impl MemoryPriorityAllocateInfoEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> MemoryPriorityAllocateInfoEXTBuilder<'a> {
+        MemoryPriorityAllocateInfoEXTBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Builder of [`MemoryPriorityAllocateInfoEXT`](struct.MemoryPriorityAllocateInfoEXT.html)"]
 #[repr(transparent)]
@@ -148,21 +123,25 @@ impl<'a> MemoryPriorityAllocateInfoEXTBuilder<'a> {
     pub fn new() -> MemoryPriorityAllocateInfoEXTBuilder<'a> {
         MemoryPriorityAllocateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
-    pub fn priority(mut self, priority: f32) -> Self {
-        self.0.priority = priority;
+    pub fn priority(mut self, priority: std::os::raw::c_float) -> Self {
+        self.0.priority = priority as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> MemoryPriorityAllocateInfoEXT {
+    pub fn build(self) -> MemoryPriorityAllocateInfoEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for MemoryPriorityAllocateInfoEXTBuilder<'a> {
+    fn default() -> MemoryPriorityAllocateInfoEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for MemoryPriorityAllocateInfoEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for MemoryPriorityAllocateInfoEXTBuilder<'a> {

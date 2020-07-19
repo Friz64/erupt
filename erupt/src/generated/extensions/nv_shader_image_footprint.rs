@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_shader_image_footprint.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADER_IMAGE_FOOTPRINT_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,47 +11,29 @@ pub struct PhysicalDeviceShaderImageFootprintFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub image_footprint: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceShaderImageFootprintFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
-        PhysicalDeviceShaderImageFootprintFeaturesNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceShaderImageFootprintFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceShaderImageFootprintFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image_footprint", &(self.image_footprint != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceShaderImageFootprintFeaturesNV {
-    fn default() -> PhysicalDeviceShaderImageFootprintFeaturesNV {
-        PhysicalDeviceShaderImageFootprintFeaturesNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV,
             p_next: std::ptr::null_mut(),
             image_footprint: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceShaderImageFootprintFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceShaderImageFootprintFeaturesNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceShaderImageFootprintFeaturesNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("image_footprint", &(self.image_footprint != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceShaderImageFootprintFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
+impl PhysicalDeviceShaderImageFootprintFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
+        PhysicalDeviceShaderImageFootprintFeaturesNVBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`](struct.PhysicalDeviceShaderImageFootprintFeaturesNV.html)"]
@@ -68,21 +50,25 @@ impl<'a> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn image_footprint(mut self, image_footprint: bool) -> Self {
-        self.0.image_footprint = image_footprint as u32;
+        self.0.image_footprint = image_footprint as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceShaderImageFootprintFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceShaderImageFootprintFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
+    fn default() -> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {

@@ -1,8 +1,29 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_global_priority.html)\n\n## Extends\n- [`Result`](../../vk1_0/struct.Result.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_GLOBAL_PRIORITY_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_global_priority");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct QueueGlobalPriorityEXT(pub i32);
+impl std::fmt::Debug for QueueGlobalPriorityEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::LOW_EXT => "LOW_EXT",
+            &Self::MEDIUM_EXT => "MEDIUM_EXT",
+            &Self::HIGH_EXT => "HIGH_EXT",
+            &Self::REALTIME_EXT => "REALTIME_EXT",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`extensions::ext_global_priority`](./index.html)"]
+impl QueueGlobalPriorityEXT {
+    pub const LOW_EXT: Self = Self(128);
+    pub const MEDIUM_EXT: Self = Self(256);
+    pub const HIGH_EXT: Self = Self(512);
+    pub const REALTIME_EXT: Self = Self(1024);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -11,43 +32,29 @@ pub struct DeviceQueueGlobalPriorityCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT,
 }
-impl DeviceQueueGlobalPriorityCreateInfoEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
-        DeviceQueueGlobalPriorityCreateInfoEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DeviceQueueGlobalPriorityCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("global_priority", &self.global_priority)
-            .finish()
-    }
-}
 impl Default for DeviceQueueGlobalPriorityCreateInfoEXT {
-    fn default() -> DeviceQueueGlobalPriorityCreateInfoEXT {
-        DeviceQueueGlobalPriorityCreateInfoEXT {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT,
             p_next: std::ptr::null(),
             global_priority: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<DeviceQueueGlobalPriorityCreateInfoEXT>
-    for crate::vk1_0::DeviceQueueCreateInfo
-{
+impl std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DeviceQueueGlobalPriorityCreateInfoEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("global_priority", &self.global_priority)
+            .finish()
+    }
+}
+impl DeviceQueueGlobalPriorityCreateInfoEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
+        DeviceQueueGlobalPriorityCreateInfoEXTBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html)"]
@@ -61,24 +68,28 @@ impl<'a> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
     pub fn new() -> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
         DeviceQueueGlobalPriorityCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn global_priority(
         mut self,
         global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT,
     ) -> Self {
-        self.0.global_priority = global_priority;
+        self.0.global_priority = global_priority as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DeviceQueueGlobalPriorityCreateInfoEXT {
+    pub fn build(self) -> DeviceQueueGlobalPriorityCreateInfoEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
+    fn default() -> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
@@ -90,27 +101,5 @@ impl<'a> std::ops::Deref for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
 impl<'a> std::ops::DerefMut for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct QueueGlobalPriorityEXT(pub i32);
-#[doc = "[Part of `extensions::ext_global_priority`](../../extensions/ext_global_priority/index.html)"]
-impl QueueGlobalPriorityEXT {
-    pub const LOW_EXT: Self = Self(128);
-    pub const MEDIUM_EXT: Self = Self(256);
-    pub const HIGH_EXT: Self = Self(512);
-    pub const REALTIME_EXT: Self = Self(1024);
-}
-impl std::fmt::Debug for QueueGlobalPriorityEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::LOW_EXT => "LOW_EXT",
-            &Self::MEDIUM_EXT => "MEDIUM_EXT",
-            &Self::HIGH_EXT => "HIGH_EXT",
-            &Self::REALTIME_EXT => "REALTIME_EXT",
-            _ => "(unknown)",
-        })
     }
 }

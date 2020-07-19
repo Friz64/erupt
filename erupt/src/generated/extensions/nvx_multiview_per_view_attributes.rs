@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NVX_multiview_per_view_attributes.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)\n- [`SubpassDescriptionFlagBits`](../../vk1_0/struct.SubpassDescriptionFlagBits.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,25 +11,14 @@ pub struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     pub p_next: *mut std::ffi::c_void,
     pub per_view_position_all_components: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
-        PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX , p_next : std :: ptr :: null_mut ( ) , per_view_position_all_components : Default :: default ( ) }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -39,14 +28,13 @@ impl std::fmt::Debug for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
             .finish()
     }
 }
-impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
-    fn default() -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
-        PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX , p_next : std :: ptr :: null_mut ( ) , per_view_position_all_components : Default :: default ( ) , }
+impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
+    #[inline]
+    pub fn into_builder<'a>(
+        self,
+    ) -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
+        PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Builder of [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX`](struct.PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html)"]
@@ -63,24 +51,30 @@ impl<'a> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn per_view_position_all_components(
         mut self,
         per_view_position_all_components: bool,
     ) -> Self {
-        self.0.per_view_position_all_components = per_view_position_all_components as u32;
+        self.0.per_view_position_all_components = per_view_position_all_components as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
+    pub fn build(self) -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
         self.0
     }
 }
+impl<'a> std::default::Default
+    for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a>
+{
+    fn default() -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {

@@ -44,9 +44,7 @@ impl MappedMemory {
         }
 
         let mut ptr = std::ptr::null_mut();
-        try_vk!(unsafe {
-            device.map_memory(memory, start, size, MemoryMapFlags::empty(), &mut ptr)
-        });
+        try_vk!(unsafe { device.map_memory(memory, start, size, None, &mut ptr) });
 
         let memory_range = MappedMemoryRange {
             memory,
@@ -108,7 +106,7 @@ impl MappedMemory {
     pub fn invalidate(&self, device: &DeviceLoader) -> VulkanResult<()> {
         if !self.host_coherent {
             try_vk!(unsafe {
-                device.invalidate_mapped_memory_ranges(&[self.memory_range.builder()])
+                device.invalidate_mapped_memory_ranges(&[self.memory_range.into_builder()])
             });
         }
 
@@ -121,7 +119,9 @@ impl MappedMemory {
     #[inline]
     pub fn flush(&self, device: &DeviceLoader) -> VulkanResult<()> {
         if !self.host_coherent {
-            try_vk!(unsafe { device.flush_mapped_memory_ranges(&[self.memory_range.builder()]) });
+            try_vk!(unsafe {
+                device.flush_mapped_memory_ranges(&[self.memory_range.into_builder()])
+            });
         }
 
         VulkanResult::new_ok(())

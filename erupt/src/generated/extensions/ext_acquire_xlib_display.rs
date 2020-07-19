@@ -1,109 +1,62 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_acquire_xlib_display.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_acquire_xlib_display");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Instance Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_ACQUIRE_XLIB_DISPLAY_EXT: *const std::os::raw::c_char =
+    crate::cstr!("vkAcquireXlibDisplayEXT");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_RAND_R_OUTPUT_DISPLAY_EXT: *const std::os::raw::c_char =
+    crate::cstr!("vkGetRandROutputDisplayEXT");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireXlibDisplayEXT = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
-    dpy: *mut *const std::ffi::c_void,
+    dpy: *mut std::ffi::c_void,
     display: crate::extensions::khr_display::DisplayKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Instance Command"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRandROutputDisplayEXT = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
-    dpy: *mut *const std::ffi::c_void,
-    rr_output: std::os::raw::c_ulong,
+    dpy: *mut std::ffi::c_void,
+    rr_output: u64,
     p_display: *mut crate::extensions::khr_display::DisplayKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provides Instance Commands for [`ExtAcquireXlibDisplayInstanceLoaderExt`](trait.ExtAcquireXlibDisplayInstanceLoaderExt.html)"]
-pub struct ExtAcquireXlibDisplayInstanceCommands {
-    pub acquire_xlib_display_ext: Option<PFN_vkAcquireXlibDisplayEXT>,
-    pub get_rand_r_output_display_ext: Option<PFN_vkGetRandROutputDisplayEXT>,
-}
-impl ExtAcquireXlibDisplayInstanceCommands {
+#[doc = "Provided by [`extensions::ext_acquire_xlib_display`](extensions/ext_acquire_xlib_display/index.html)"]
+impl crate::InstanceLoader {
     #[inline]
-    pub fn load(loader: &crate::InstanceLoader) -> Option<ExtAcquireXlibDisplayInstanceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = ExtAcquireXlibDisplayInstanceCommands {
-                acquire_xlib_display_ext: std::mem::transmute({
-                    let symbol = loader.symbol("vkAcquireXlibDisplayEXT");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_rand_r_output_display_ext: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetRandROutputDisplayEXT");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn instance_commands(loader: &crate::InstanceLoader) -> &ExtAcquireXlibDisplayInstanceCommands {
-    loader
-        .ext_acquire_xlib_display
-        .as_ref()
-        .expect("`ext_acquire_xlib_display` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`ExtAcquireXlibDisplayInstanceCommands`](struct.ExtAcquireXlibDisplayInstanceCommands.html)"]
-pub trait ExtAcquireXlibDisplayInstanceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Instance Command"]
-    unsafe fn acquire_xlib_display_ext(
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function"]
+    pub unsafe fn acquire_xlib_display_ext(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut *const std::ffi::c_void,
-        display: crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::utils::VulkanResult<()>;
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Instance Command"]
-    unsafe fn get_rand_r_output_display_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut *const std::ffi::c_void,
-        rr_output: std::os::raw::c_ulong,
-        display: Option<crate::extensions::khr_display::DisplayKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR>;
-}
-impl ExtAcquireXlibDisplayInstanceLoaderExt for crate::InstanceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Instance Command"]
-    unsafe fn acquire_xlib_display_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut *const std::ffi::c_void,
+        dpy: *mut std::ffi::c_void,
         display: crate::extensions::khr_display::DisplayKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let function = instance_commands(self)
+        let _function = self
             .acquire_xlib_display_ext
-            .as_ref()
-            .expect("`acquire_xlib_display_ext` not available");
-        let _val = function(physical_device, dpy, display);
-        crate::utils::VulkanResult::new(_val, ())
+            .expect("`acquire_xlib_display_ext` is not loaded");
+        let _return = _function(physical_device as _, dpy, display as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Instance Command"]
-    unsafe fn get_rand_r_output_display_ext(
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function"]
+    pub unsafe fn get_rand_r_output_display_ext(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut *const std::ffi::c_void,
-        rr_output: std::os::raw::c_ulong,
+        dpy: *mut std::ffi::c_void,
+        rr_output: u64,
         display: Option<crate::extensions::khr_display::DisplayKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
-        let function = instance_commands(self)
+        let _function = self
             .get_rand_r_output_display_ext
-            .as_ref()
-            .expect("`get_rand_r_output_display_ext` not available");
-        let mut display = display.unwrap_or_else(|| Default::default());
-        let _val = function(physical_device, dpy, rr_output, &mut display);
-        crate::utils::VulkanResult::new(_val, display)
+            .expect("`get_rand_r_output_display_ext` is not loaded");
+        let mut display = match display {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(physical_device as _, dpy, rr_output as _, &mut display);
+        crate::utils::VulkanResult::new(_return, display)
     }
 }

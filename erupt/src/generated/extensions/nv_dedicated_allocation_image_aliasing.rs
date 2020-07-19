@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_dedicated_allocation_image_aliasing.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,30 +11,14 @@ pub struct PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub dedicated_allocation_image_aliasing: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(
-        self,
-    ) -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
-        PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder(
-            self,
-            std::marker::PhantomData,
-        )
+impl Default for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
+    fn default() -> Self {
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , dedicated_allocation_image_aliasing : Default :: default ( ) }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -44,18 +28,16 @@ impl std::fmt::Debug for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesN
             .finish()
     }
 }
-impl Default for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
-    fn default() -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
-        PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , dedicated_allocation_image_aliasing : Default :: default ( ) , }
+impl PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
+    #[inline]
+    pub fn into_builder<'a>(
+        self,
+    ) -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
+        PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder(
+            self,
+            std::marker::PhantomData,
+        )
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV.html) · Builder of [`PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV`](struct.PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV.html)"]
@@ -72,24 +54,30 @@ impl<'a> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn dedicated_allocation_image_aliasing(
         mut self,
         dedicated_allocation_image_aliasing: bool,
     ) -> Self {
-        self.0.dedicated_allocation_image_aliasing = dedicated_allocation_image_aliasing as u32;
+        self.0.dedicated_allocation_image_aliasing = dedicated_allocation_image_aliasing as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
+    pub fn build(self) -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
         self.0
     }
 }
+impl<'a> std::default::Default
+    for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a>
+{
+    fn default() -> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {

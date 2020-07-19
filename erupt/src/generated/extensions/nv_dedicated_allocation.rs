@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_dedicated_allocation.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_DEDICATED_ALLOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_DEDICATED_ALLOCATION_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,41 +11,30 @@ pub struct DedicatedAllocationImageCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub dedicated_allocation: crate::vk1_0::Bool32,
 }
-impl DedicatedAllocationImageCreateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
-        DedicatedAllocationImageCreateInfoNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for DedicatedAllocationImageCreateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DedicatedAllocationImageCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
-            .finish()
-    }
-}
 impl Default for DedicatedAllocationImageCreateInfoNV {
-    fn default() -> DedicatedAllocationImageCreateInfoNV {
-        DedicatedAllocationImageCreateInfoNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV,
             p_next: std::ptr::null(),
             dedicated_allocation: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfo {}
+impl std::fmt::Debug for DedicatedAllocationImageCreateInfoNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DedicatedAllocationImageCreateInfoNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
+            .finish()
+    }
+}
+impl DedicatedAllocationImageCreateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
+        DedicatedAllocationImageCreateInfoNVBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`](struct.DedicatedAllocationImageCreateInfoNV.html)"]
 #[repr(transparent)]
@@ -58,21 +47,25 @@ impl<'a> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
     pub fn new() -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
         DedicatedAllocationImageCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn dedicated_allocation(mut self, dedicated_allocation: bool) -> Self {
-        self.0.dedicated_allocation = dedicated_allocation as u32;
+        self.0.dedicated_allocation = dedicated_allocation as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DedicatedAllocationImageCreateInfoNV {
+    pub fn build(self) -> DedicatedAllocationImageCreateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for DedicatedAllocationImageCreateInfoNVBuilder<'a> {
+    fn default() -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DedicatedAllocationImageCreateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DedicatedAllocationImageCreateInfoNVBuilder<'a> {
@@ -94,41 +87,30 @@ pub struct DedicatedAllocationBufferCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub dedicated_allocation: crate::vk1_0::Bool32,
 }
-impl DedicatedAllocationBufferCreateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
-        DedicatedAllocationBufferCreateInfoNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for DedicatedAllocationBufferCreateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DedicatedAllocationBufferCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
-            .finish()
-    }
-}
 impl Default for DedicatedAllocationBufferCreateInfoNV {
-    fn default() -> DedicatedAllocationBufferCreateInfoNV {
-        DedicatedAllocationBufferCreateInfoNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV,
             p_next: std::ptr::null(),
             dedicated_allocation: Default::default(),
         }
     }
 }
-impl crate::ExtendableBy<DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfo {}
+impl std::fmt::Debug for DedicatedAllocationBufferCreateInfoNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DedicatedAllocationBufferCreateInfoNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
+            .finish()
+    }
+}
+impl DedicatedAllocationBufferCreateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
+        DedicatedAllocationBufferCreateInfoNVBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`](struct.DedicatedAllocationBufferCreateInfoNV.html)"]
 #[repr(transparent)]
@@ -141,21 +123,25 @@ impl<'a> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
     pub fn new() -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
         DedicatedAllocationBufferCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn dedicated_allocation(mut self, dedicated_allocation: bool) -> Self {
-        self.0.dedicated_allocation = dedicated_allocation as u32;
+        self.0.dedicated_allocation = dedicated_allocation as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DedicatedAllocationBufferCreateInfoNV {
+    pub fn build(self) -> DedicatedAllocationBufferCreateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
+    fn default() -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
@@ -178,35 +164,9 @@ pub struct DedicatedAllocationMemoryAllocateInfoNV {
     pub image: crate::vk1_0::Image,
     pub buffer: crate::vk1_0::Buffer,
 }
-impl DedicatedAllocationMemoryAllocateInfoNV {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
-        DedicatedAllocationMemoryAllocateInfoNVBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNV {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DedicatedAllocationMemoryAllocateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image", &self.image)
-            .field("buffer", &self.buffer)
-            .finish()
-    }
-}
 impl Default for DedicatedAllocationMemoryAllocateInfoNV {
-    fn default() -> DedicatedAllocationMemoryAllocateInfoNV {
-        DedicatedAllocationMemoryAllocateInfoNV {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV,
             p_next: std::ptr::null(),
             image: Default::default(),
@@ -214,9 +174,21 @@ impl Default for DedicatedAllocationMemoryAllocateInfoNV {
         }
     }
 }
-impl crate::ExtendableBy<DedicatedAllocationMemoryAllocateInfoNV>
-    for crate::vk1_0::MemoryAllocateInfo
-{
+impl std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNV {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DedicatedAllocationMemoryAllocateInfoNV")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("image", &self.image)
+            .field("buffer", &self.buffer)
+            .finish()
+    }
+}
+impl DedicatedAllocationMemoryAllocateInfoNV {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
+        DedicatedAllocationMemoryAllocateInfoNVBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`](struct.DedicatedAllocationMemoryAllocateInfoNV.html)"]
@@ -230,27 +202,30 @@ impl<'a> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
     pub fn new() -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
         DedicatedAllocationMemoryAllocateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
-        self.0.image = image;
+        self.0.image = image as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
-        self.0.buffer = buffer;
+        self.0.buffer = buffer as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DedicatedAllocationMemoryAllocateInfoNV {
+    pub fn build(self) -> DedicatedAllocationMemoryAllocateInfoNV {
         self.0
     }
 }
+impl<'a> std::default::Default for DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
+    fn default() -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {

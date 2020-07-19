@@ -8,34 +8,13 @@ pub mod loading;
 #[cfg(feature = "surface")]
 pub mod surface;
 
-use crate::{vk1_0::Result as RawResult, vk1_1::*, CoreLoader};
+use crate::vk1_0::Result as RawResult;
 use std::{
     convert::TryInto,
     error::Error,
     fmt::{self, Debug, Display},
     io,
 };
-
-// https://www.khronos.org/registry/spir-v/specs/unified1/SPIRV.html#_a_id_magic_a_magic_number
-const SPV_MAGIC_NUMBER_LE: u32 = 0x07230203;
-const SPV_MAGIC_NUMBER_BE: u32 = SPV_MAGIC_NUMBER_LE.swap_bytes();
-
-impl<T> CoreLoader<T> {
-    /// # Important notice
-    /// `enumerate_instance_version` is only available on Vulkan 1.1+, this calls that function
-    /// if it is available, otherwise it returns `erupt::make_version(1, 0, 0)`
-    pub fn instance_version(&mut self) -> u32 {
-        if self.vk1_1.is_none() {
-            let _ = self.load_vk1_1();
-        }
-
-        if self.vk1_1.is_some() {
-            unsafe { self.enumerate_instance_version(None) }.unwrap()
-        } else {
-            crate::make_version(1, 0, 0)
-        }
-    }
-}
 
 /// Idiomatic wrapper around a Vulkan Result
 #[must_use = "this `VulkanResult` may be an error, which should be handled"]
@@ -193,6 +172,10 @@ where
         }
     }
 }
+
+// https://www.khronos.org/registry/spir-v/specs/unified1/SPIRV.html#_a_id_magic_a_magic_number
+const SPV_MAGIC_NUMBER_LE: u32 = 0x07230203;
+const SPV_MAGIC_NUMBER_BE: u32 = SPV_MAGIC_NUMBER_LE.swap_bytes();
 
 // inspired by https://docs.rs/ash/0.30.0/ash/util/fn.read_spv.html
 /// Safely decode arbitrary SPIR-V data to it's correct word representation.

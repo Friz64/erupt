@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_robustness2.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_ROBUSTNESS_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_ROBUSTNESS_2_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -13,36 +13,9 @@ pub struct PhysicalDeviceRobustness2FeaturesEXT {
     pub robust_image_access2: crate::vk1_0::Bool32,
     pub null_descriptor: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceRobustness2FeaturesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
-        PhysicalDeviceRobustness2FeaturesEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceRobustness2FeaturesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceRobustness2FeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("robust_buffer_access2", &(self.robust_buffer_access2 != 0))
-            .field("robust_image_access2", &(self.robust_image_access2 != 0))
-            .field("null_descriptor", &(self.null_descriptor != 0))
-            .finish()
-    }
-}
 impl Default for PhysicalDeviceRobustness2FeaturesEXT {
-    fn default() -> PhysicalDeviceRobustness2FeaturesEXT {
-        PhysicalDeviceRobustness2FeaturesEXT {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             robust_buffer_access2: Default::default(),
@@ -51,11 +24,23 @@ impl Default for PhysicalDeviceRobustness2FeaturesEXT {
         }
     }
 }
-impl crate::ExtendableBy<PhysicalDeviceRobustness2FeaturesEXT>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
+impl std::fmt::Debug for PhysicalDeviceRobustness2FeaturesEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceRobustness2FeaturesEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("robust_buffer_access2", &(self.robust_buffer_access2 != 0))
+            .field("robust_image_access2", &(self.robust_image_access2 != 0))
+            .field("null_descriptor", &(self.null_descriptor != 0))
+            .finish()
+    }
 }
-impl crate::ExtendableBy<PhysicalDeviceRobustness2FeaturesEXT> for crate::vk1_0::DeviceCreateInfo {}
+impl PhysicalDeviceRobustness2FeaturesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
+        PhysicalDeviceRobustness2FeaturesEXTBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Builder of [`PhysicalDeviceRobustness2FeaturesEXT`](struct.PhysicalDeviceRobustness2FeaturesEXT.html)"]
 #[repr(transparent)]
@@ -68,33 +53,35 @@ impl<'a> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
     pub fn new() -> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
         PhysicalDeviceRobustness2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn robust_buffer_access2(mut self, robust_buffer_access2: bool) -> Self {
-        self.0.robust_buffer_access2 = robust_buffer_access2 as u32;
+        self.0.robust_buffer_access2 = robust_buffer_access2 as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn robust_image_access2(mut self, robust_image_access2: bool) -> Self {
-        self.0.robust_image_access2 = robust_image_access2 as u32;
+        self.0.robust_image_access2 = robust_image_access2 as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn null_descriptor(mut self, null_descriptor: bool) -> Self {
-        self.0.null_descriptor = null_descriptor as u32;
+        self.0.null_descriptor = null_descriptor as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceRobustness2FeaturesEXT {
+    pub fn build(self) -> PhysicalDeviceRobustness2FeaturesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
@@ -117,25 +104,19 @@ pub struct PhysicalDeviceRobustness2PropertiesEXT {
     pub robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
     pub robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
 }
-impl PhysicalDeviceRobustness2PropertiesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
-        PhysicalDeviceRobustness2PropertiesEXTBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceRobustness2PropertiesEXT {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT,
+            p_next: std::ptr::null_mut(),
+            robust_storage_buffer_access_size_alignment: Default::default(),
+            robust_uniform_buffer_access_size_alignment: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceRobustness2PropertiesEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceRobustness2PropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -149,19 +130,11 @@ impl std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXT {
             .finish()
     }
 }
-impl Default for PhysicalDeviceRobustness2PropertiesEXT {
-    fn default() -> PhysicalDeviceRobustness2PropertiesEXT {
-        PhysicalDeviceRobustness2PropertiesEXT {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            robust_storage_buffer_access_size_alignment: Default::default(),
-            robust_uniform_buffer_access_size_alignment: Default::default(),
-        }
+impl PhysicalDeviceRobustness2PropertiesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
+        PhysicalDeviceRobustness2PropertiesEXTBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceRobustness2PropertiesEXT>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Builder of [`PhysicalDeviceRobustness2PropertiesEXT`](struct.PhysicalDeviceRobustness2PropertiesEXT.html)"]
@@ -175,35 +148,38 @@ impl<'a> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
     pub fn new() -> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
         PhysicalDeviceRobustness2PropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn robust_storage_buffer_access_size_alignment(
         mut self,
         robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
     ) -> Self {
         self.0.robust_storage_buffer_access_size_alignment =
-            robust_storage_buffer_access_size_alignment;
+            robust_storage_buffer_access_size_alignment as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn robust_uniform_buffer_access_size_alignment(
         mut self,
         robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
     ) -> Self {
         self.0.robust_uniform_buffer_access_size_alignment =
-            robust_uniform_buffer_access_size_alignment;
+            robust_uniform_buffer_access_size_alignment as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceRobustness2PropertiesEXT {
+    pub fn build(self) -> PhysicalDeviceRobustness2PropertiesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {

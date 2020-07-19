@@ -1,98 +1,8 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_vertex_attribute_divisor.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_vertex_attribute_divisor");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *mut std::ffi::c_void,
-    pub max_vertex_attrib_divisor: u32,
-}
-impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-        PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_vertex_attrib_divisor", &self.max_vertex_attrib_divisor)
-            .finish()
-    }
-}
-impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-    fn default() -> PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-        PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_vertex_attrib_divisor: Default::default(),
-        }
-    }
-}
-impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorPropertiesEXT>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`](struct.PhysicalDeviceVertexAttributeDivisorPropertiesEXT.html)"]
-#[repr(transparent)]
-pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a>(
-    PhysicalDeviceVertexAttributeDivisorPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-    #[inline]
-    pub fn new() -> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-        PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn max_vertex_attrib_divisor(mut self, max_vertex_attrib_divisor: u32) -> Self {
-        self.0.max_vertex_attrib_divisor = max_vertex_attrib_divisor;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-    type Target = PhysicalDeviceVertexAttributeDivisorPropertiesEXT;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -100,26 +10,26 @@ pub struct VertexInputBindingDivisorDescriptionEXT {
     pub binding: u32,
     pub divisor: u32,
 }
-impl VertexInputBindingDivisorDescriptionEXT {
-    #[inline]
-    pub fn builder<'a>(self) -> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
-        VertexInputBindingDivisorDescriptionEXTBuilder(self, std::marker::PhantomData)
+impl Default for VertexInputBindingDivisorDescriptionEXT {
+    fn default() -> Self {
+        Self {
+            binding: Default::default(),
+            divisor: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for VertexInputBindingDivisorDescriptionEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("VertexInputBindingDivisorDescriptionEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VertexInputBindingDivisorDescriptionEXT")
             .field("binding", &self.binding)
             .field("divisor", &self.divisor)
             .finish()
     }
 }
-impl Default for VertexInputBindingDivisorDescriptionEXT {
-    fn default() -> VertexInputBindingDivisorDescriptionEXT {
-        VertexInputBindingDivisorDescriptionEXT {
-            binding: Default::default(),
-            divisor: Default::default(),
-        }
+impl VertexInputBindingDivisorDescriptionEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
+        VertexInputBindingDivisorDescriptionEXTBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -134,27 +44,30 @@ impl<'a> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
     pub fn new() -> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
         VertexInputBindingDivisorDescriptionEXTBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn binding(mut self, binding: u32) -> Self {
-        self.0.binding = binding;
+        self.0.binding = binding as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn divisor(mut self, divisor: u32) -> Self {
-        self.0.divisor = divisor;
+        self.0.divisor = divisor as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> VertexInputBindingDivisorDescriptionEXT {
+    pub fn build(self) -> VertexInputBindingDivisorDescriptionEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
+    fn default() -> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
@@ -171,26 +84,21 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDivisorDescriptionEXTBuilder<'
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
-pub struct PipelineVertexInputDivisorStateCreateInfoEXT { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub vertex_binding_divisor_count : u32 , pub p_vertex_binding_divisors : * const crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXT , }
-impl PipelineVertexInputDivisorStateCreateInfoEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
-        PipelineVertexInputDivisorStateCreateInfoEXTBuilder(self, std::marker::PhantomData)
+pub struct PipelineVertexInputDivisorStateCreateInfoEXT { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub vertex_binding_divisor_count : u32 , pub p_vertex_binding_divisors : * const crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXT }
+impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT,
+            p_next: std::ptr::null(),
+            vertex_binding_divisor_count: Default::default(),
+            p_vertex_binding_divisors: std::ptr::null(),
+        }
     }
 }
 impl std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -201,20 +109,11 @@ impl std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXT {
             .finish()
     }
 }
-impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
-    fn default() -> PipelineVertexInputDivisorStateCreateInfoEXT {
-        PipelineVertexInputDivisorStateCreateInfoEXT {
-            s_type:
-                crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            vertex_binding_divisor_count: Default::default(),
-            p_vertex_binding_divisors: std::ptr::null(),
-        }
+impl PipelineVertexInputDivisorStateCreateInfoEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
+        PipelineVertexInputDivisorStateCreateInfoEXTBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PipelineVertexInputDivisorStateCreateInfoEXT>
-    for crate::vk1_0::PipelineVertexInputStateCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Builder of [`PipelineVertexInputDivisorStateCreateInfoEXT`](struct.PipelineVertexInputDivisorStateCreateInfoEXT.html)"]
@@ -231,25 +130,29 @@ impl<'a> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn vertex_binding_divisors(
         mut self,
-        vertex_binding_divisors : &'a [ crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXTBuilder ],
+        vertex_binding_divisors : & 'a [ crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXTBuilder ],
     ) -> Self {
-        self.0.vertex_binding_divisor_count = vertex_binding_divisors.len() as _;
         self.0.p_vertex_binding_divisors = vertex_binding_divisors.as_ptr() as _;
+        self.0.vertex_binding_divisor_count = vertex_binding_divisors.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PipelineVertexInputDivisorStateCreateInfoEXT {
+    pub fn build(self) -> PipelineVertexInputDivisorStateCreateInfoEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
+    fn default() -> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
@@ -263,6 +166,86 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputDivisorStateCreateInfoEXTBuil
         &mut self.0
     }
 }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *mut std::ffi::c_void,
+    pub max_vertex_attrib_divisor: u32,
+}
+impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT,
+            p_next: std::ptr::null_mut(),
+            max_vertex_attrib_divisor: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("max_vertex_attrib_divisor", &self.max_vertex_attrib_divisor)
+            .finish()
+    }
+}
+impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+        PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`](struct.PhysicalDeviceVertexAttributeDivisorPropertiesEXT.html)"]
+#[repr(transparent)]
+pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a>(
+    PhysicalDeviceVertexAttributeDivisorPropertiesEXT,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+        PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder(
+            Default::default(),
+            std::marker::PhantomData,
+        )
+    }
+    #[inline]
+    pub fn max_vertex_attrib_divisor(mut self, max_vertex_attrib_divisor: u32) -> Self {
+        self.0.max_vertex_attrib_divisor = max_vertex_attrib_divisor as _;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+    type Target = PhysicalDeviceVertexAttributeDivisorPropertiesEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -272,25 +255,20 @@ pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     pub vertex_attribute_instance_rate_divisor: crate::vk1_0::Bool32,
     pub vertex_attribute_instance_rate_zero_divisor: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
-        PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT,
+            p_next: std::ptr::null_mut(),
+            vertex_attribute_instance_rate_divisor: Default::default(),
+            vertex_attribute_instance_rate_zero_divisor: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -304,24 +282,11 @@ impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
             .finish()
     }
 }
-impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-    fn default() -> PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-        PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            vertex_attribute_instance_rate_divisor: Default::default(),
-            vertex_attribute_instance_rate_zero_divisor: Default::default(),
-        }
+impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
+        PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorFeaturesEXT>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceVertexAttributeDivisorFeaturesEXT>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT`](struct.PhysicalDeviceVertexAttributeDivisorFeaturesEXT.html)"]
@@ -338,35 +303,37 @@ impl<'a> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn vertex_attribute_instance_rate_divisor(
         mut self,
         vertex_attribute_instance_rate_divisor: bool,
     ) -> Self {
-        self.0.vertex_attribute_instance_rate_divisor =
-            vertex_attribute_instance_rate_divisor as u32;
+        self.0.vertex_attribute_instance_rate_divisor = vertex_attribute_instance_rate_divisor as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn vertex_attribute_instance_rate_zero_divisor(
         mut self,
         vertex_attribute_instance_rate_zero_divisor: bool,
     ) -> Self {
         self.0.vertex_attribute_instance_rate_zero_divisor =
-            vertex_attribute_instance_rate_zero_divisor as u32;
+            vertex_attribute_instance_rate_zero_divisor as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
+    pub fn build(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {

@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_texel_buffer_alignment.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -11,25 +11,19 @@ pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub texel_buffer_alignment: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
-        PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT,
+            p_next: std::ptr::null_mut(),
+            texel_buffer_alignment: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceTexelBufferAlignmentFeaturesEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceTexelBufferAlignmentFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -39,23 +33,11 @@ impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
             .finish()
     }
 }
-impl Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-    fn default() -> PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-        PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            texel_buffer_alignment: Default::default(),
-        }
+impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
+        PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
-    for crate::vk1_1::PhysicalDeviceFeatures2
-{
-}
-impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
-    for crate::vk1_0::DeviceCreateInfo
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT.html) · Builder of [`PhysicalDeviceTexelBufferAlignmentFeaturesEXT`](struct.PhysicalDeviceTexelBufferAlignmentFeaturesEXT.html)"]
@@ -72,21 +54,25 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn texel_buffer_alignment(mut self, texel_buffer_alignment: bool) -> Self {
-        self.0.texel_buffer_alignment = texel_buffer_alignment as u32;
+        self.0.texel_buffer_alignment = texel_buffer_alignment as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
+    pub fn build(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
@@ -111,25 +97,22 @@ pub struct PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     pub uniform_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize,
     pub uniform_texel_buffer_offset_single_texel_alignment: crate::vk1_0::Bool32,
 }
-impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
-        PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder(self, std::marker::PhantomData)
+impl Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
+    fn default() -> Self {
+        Self {
+            s_type:
+                crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT,
+            p_next: std::ptr::null_mut(),
+            storage_texel_buffer_offset_alignment_bytes: Default::default(),
+            storage_texel_buffer_offset_single_texel_alignment: Default::default(),
+            uniform_texel_buffer_offset_alignment_bytes: Default::default(),
+            uniform_texel_buffer_offset_single_texel_alignment: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PhysicalDeviceTexelBufferAlignmentPropertiesEXT")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PhysicalDeviceTexelBufferAlignmentPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -151,22 +134,11 @@ impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
             .finish()
     }
 }
-impl Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-    fn default() -> PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-        PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            storage_texel_buffer_offset_alignment_bytes: Default::default(),
-            storage_texel_buffer_offset_single_texel_alignment: Default::default(),
-            uniform_texel_buffer_offset_alignment_bytes: Default::default(),
-            uniform_texel_buffer_offset_single_texel_alignment: Default::default(),
-        }
+impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
+        PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder(self, std::marker::PhantomData)
     }
-}
-impl crate::ExtendableBy<PhysicalDeviceTexelBufferAlignmentPropertiesEXT>
-    for crate::vk1_1::PhysicalDeviceProperties2
-{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT.html) · Builder of [`PhysicalDeviceTexelBufferAlignmentPropertiesEXT`](struct.PhysicalDeviceTexelBufferAlignmentPropertiesEXT.html)"]
@@ -183,55 +155,56 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
             std::marker::PhantomData,
         )
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn storage_texel_buffer_offset_alignment_bytes(
         mut self,
         storage_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize,
     ) -> Self {
         self.0.storage_texel_buffer_offset_alignment_bytes =
-            storage_texel_buffer_offset_alignment_bytes;
+            storage_texel_buffer_offset_alignment_bytes as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn storage_texel_buffer_offset_single_texel_alignment(
         mut self,
         storage_texel_buffer_offset_single_texel_alignment: bool,
     ) -> Self {
         self.0.storage_texel_buffer_offset_single_texel_alignment =
-            storage_texel_buffer_offset_single_texel_alignment as u32;
+            storage_texel_buffer_offset_single_texel_alignment as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn uniform_texel_buffer_offset_alignment_bytes(
         mut self,
         uniform_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize,
     ) -> Self {
         self.0.uniform_texel_buffer_offset_alignment_bytes =
-            uniform_texel_buffer_offset_alignment_bytes;
+            uniform_texel_buffer_offset_alignment_bytes as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn uniform_texel_buffer_offset_single_texel_alignment(
         mut self,
         uniform_texel_buffer_offset_single_texel_alignment: bool,
     ) -> Self {
         self.0.uniform_texel_buffer_offset_single_texel_alignment =
-            uniform_texel_buffer_offset_single_texel_alignment as u32;
+            uniform_texel_buffer_offset_single_texel_alignment as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
+    pub fn build(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
         self.0
     }
 }
+impl<'a> std::default::Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
+    fn default() -> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {

@@ -1,9 +1,12 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_display_swapchain.html)\n\n## Extends\n- [`Result`](../../vk1_0/struct.Result.html)\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION: u32 = 10;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_display_swapchain");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Device Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkCreateSharedSwapchainsKHR");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
@@ -12,74 +15,6 @@ pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
     p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provides Device Commands for [`KhrDisplaySwapchainDeviceLoaderExt`](trait.KhrDisplaySwapchainDeviceLoaderExt.html)"]
-pub struct KhrDisplaySwapchainDeviceCommands {
-    pub create_shared_swapchains_khr: Option<PFN_vkCreateSharedSwapchainsKHR>,
-}
-impl KhrDisplaySwapchainDeviceCommands {
-    #[inline]
-    pub fn load(loader: &crate::DeviceLoader) -> Option<KhrDisplaySwapchainDeviceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrDisplaySwapchainDeviceCommands {
-                create_shared_swapchains_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkCreateSharedSwapchainsKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn device_commands(loader: &crate::DeviceLoader) -> &KhrDisplaySwapchainDeviceCommands {
-    loader
-        .khr_display_swapchain
-        .as_ref()
-        .expect("`khr_display_swapchain` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrDisplaySwapchainDeviceCommands`](struct.KhrDisplaySwapchainDeviceCommands.html)"]
-pub trait KhrDisplaySwapchainDeviceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Device Command"]
-    unsafe fn create_shared_swapchains_khr(
-        &self,
-        create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>>;
-}
-impl KhrDisplaySwapchainDeviceLoaderExt for crate::DeviceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Device Command"]
-    unsafe fn create_shared_swapchains_khr(
-        &self,
-        create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
-        let function = device_commands(self)
-            .create_shared_swapchains_khr
-            .as_ref()
-            .expect("`create_shared_swapchains_khr` not available");
-        let swapchain_count = create_infos.len() as _;
-        let mut swapchains = vec![Default::default(); swapchain_count as _];
-        let _val = function(
-            self.handle,
-            swapchain_count,
-            create_infos.as_ptr() as _,
-            if let Some(allocator) = allocator {
-                allocator
-            } else {
-                std::ptr::null()
-            },
-            swapchains.as_mut_ptr(),
-        );
-        crate::utils::VulkanResult::new(_val, swapchains)
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -90,36 +25,9 @@ pub struct DisplayPresentInfoKHR {
     pub dst_rect: crate::vk1_0::Rect2D,
     pub persistent: crate::vk1_0::Bool32,
 }
-impl DisplayPresentInfoKHR {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> DisplayPresentInfoKHRBuilder<'a> {
-        DisplayPresentInfoKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for DisplayPresentInfoKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("DisplayPresentInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_rect", &self.src_rect)
-            .field("dst_rect", &self.dst_rect)
-            .field("persistent", &(self.persistent != 0))
-            .finish()
-    }
-}
 impl Default for DisplayPresentInfoKHR {
-    fn default() -> DisplayPresentInfoKHR {
-        DisplayPresentInfoKHR {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR,
             p_next: std::ptr::null(),
             src_rect: Default::default(),
@@ -128,9 +36,22 @@ impl Default for DisplayPresentInfoKHR {
         }
     }
 }
-impl crate::ExtendableBy<DisplayPresentInfoKHR>
-    for crate::extensions::khr_swapchain::PresentInfoKHR
-{
+impl std::fmt::Debug for DisplayPresentInfoKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("DisplayPresentInfoKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("src_rect", &self.src_rect)
+            .field("dst_rect", &self.dst_rect)
+            .field("persistent", &(self.persistent != 0))
+            .finish()
+    }
+}
+impl DisplayPresentInfoKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> DisplayPresentInfoKHRBuilder<'a> {
+        DisplayPresentInfoKHRBuilder(self, std::marker::PhantomData)
+    }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`](struct.DisplayPresentInfoKHR.html)"]
@@ -144,33 +65,35 @@ impl<'a> DisplayPresentInfoKHRBuilder<'a> {
     pub fn new() -> DisplayPresentInfoKHRBuilder<'a> {
         DisplayPresentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn src_rect(mut self, src_rect: crate::vk1_0::Rect2D) -> Self {
-        self.0.src_rect = src_rect;
+        self.0.src_rect = src_rect as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn dst_rect(mut self, dst_rect: crate::vk1_0::Rect2D) -> Self {
-        self.0.dst_rect = dst_rect;
+        self.0.dst_rect = dst_rect as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn persistent(mut self, persistent: bool) -> Self {
-        self.0.persistent = persistent as u32;
+        self.0.persistent = persistent as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> DisplayPresentInfoKHR {
+    pub fn build(self) -> DisplayPresentInfoKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for DisplayPresentInfoKHRBuilder<'a> {
+    fn default() -> DisplayPresentInfoKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for DisplayPresentInfoKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for DisplayPresentInfoKHRBuilder<'a> {
@@ -182,5 +105,32 @@ impl<'a> std::ops::Deref for DisplayPresentInfoKHRBuilder<'a> {
 impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
+    }
+}
+#[doc = "Provided by [`extensions::khr_display_swapchain`](extensions/khr_display_swapchain/index.html)"]
+impl crate::DeviceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
+    pub unsafe fn create_shared_swapchains_khr(
+        &self,
+        create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
+        let _function = self
+            .create_shared_swapchains_khr
+            .expect("`create_shared_swapchains_khr` is not loaded");
+        let swapchain_count = create_infos.len();
+        let mut swapchains = vec![Default::default(); swapchain_count as _];
+        let _return = _function(
+            self.handle,
+            swapchain_count as _,
+            create_infos.as_ptr() as _,
+            match allocator {
+                Some(v) => v,
+                None => std::ptr::null(),
+            },
+            swapchains.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_return, swapchains)
     }
 }

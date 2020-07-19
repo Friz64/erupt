@@ -1,572 +1,54 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_surface.html)\n\n## Extends\n- [`ObjectType`](../../vk1_0/struct.ObjectType.html)\n- [`Result`](../../vk1_0/struct.Result.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_SURFACE_SPEC_VERSION: u32 = 25;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_surface");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Instance Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Instance Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_supported: *mut crate::vk1_0::Bool32,
-    ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Instance Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
-    ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Instance Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_surface_format_count: *mut u32,
-        p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR,
-    ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Instance Command"]
-#[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_present_mode_count: *mut u32,
-        p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
-    ) -> crate::vk1_0::Result;
-#[doc = "Provides Instance Commands for [`KhrSurfaceInstanceLoaderExt`](trait.KhrSurfaceInstanceLoaderExt.html)"]
-pub struct KhrSurfaceInstanceCommands {
-    pub destroy_surface_khr: Option<PFN_vkDestroySurfaceKHR>,
-    pub get_physical_device_surface_support_khr: Option<PFN_vkGetPhysicalDeviceSurfaceSupportKHR>,
-    pub get_physical_device_surface_capabilities_khr:
-        Option<PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR>,
-    pub get_physical_device_surface_formats_khr: Option<PFN_vkGetPhysicalDeviceSurfaceFormatsKHR>,
-    pub get_physical_device_surface_present_modes_khr:
-        Option<PFN_vkGetPhysicalDeviceSurfacePresentModesKHR>,
-}
-impl KhrSurfaceInstanceCommands {
-    #[inline]
-    pub fn load(loader: &crate::InstanceLoader) -> Option<KhrSurfaceInstanceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrSurfaceInstanceCommands {
-                destroy_surface_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkDestroySurfaceKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_physical_device_surface_support_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceSupportKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_physical_device_surface_capabilities_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_physical_device_surface_formats_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfaceFormatsKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_physical_device_surface_present_modes_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceSurfacePresentModesKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn instance_commands(loader: &crate::InstanceLoader) -> &KhrSurfaceInstanceCommands {
-    loader
-        .khr_surface
-        .as_ref()
-        .expect("`khr_surface` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrSurfaceInstanceCommands`](struct.KhrSurfaceInstanceCommands.html)"]
-pub trait KhrSurfaceInstanceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Instance Command"]
-    unsafe fn destroy_surface_khr(
-        &self,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> ();
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        supported: Option<crate::vk1_0::Bool32>,
-    ) -> crate::utils::VulkanResult<bool>;
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_capabilities_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>;
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_formats_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_format_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>>;
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_present_modes_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        present_mode_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>>;
-}
-impl KhrSurfaceInstanceLoaderExt for crate::InstanceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Instance Command"]
-    unsafe fn destroy_surface_khr(
-        &self,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
-        let function = instance_commands(self)
-            .destroy_surface_khr
-            .as_ref()
-            .expect("`destroy_surface_khr` not available");
-        let _val = function(
-            self.handle,
-            surface,
-            if let Some(allocator) = allocator {
-                allocator
-            } else {
-                std::ptr::null()
-            },
-        );
-        ()
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        supported: Option<crate::vk1_0::Bool32>,
-    ) -> crate::utils::VulkanResult<bool> {
-        let function = instance_commands(self)
-            .get_physical_device_surface_support_khr
-            .as_ref()
-            .expect("`get_physical_device_surface_support_khr` not available");
-        let mut supported = supported.unwrap_or_else(|| Default::default());
-        let _val = function(physical_device, queue_family_index, surface, &mut supported);
-        crate::utils::VulkanResult::new(_val, supported != 0)
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_capabilities_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
-        let function = instance_commands(self)
-            .get_physical_device_surface_capabilities_khr
-            .as_ref()
-            .expect("`get_physical_device_surface_capabilities_khr` not available");
-        let mut surface_capabilities = surface_capabilities.unwrap_or_else(|| Default::default());
-        let _val = function(physical_device, surface, &mut surface_capabilities);
-        crate::utils::VulkanResult::new(_val, surface_capabilities)
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_formats_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_format_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
-        let function = instance_commands(self)
-            .get_physical_device_surface_formats_khr
-            .as_ref()
-            .expect("`get_physical_device_surface_formats_khr` not available");
-        let mut surface_format_count = surface_format_count.unwrap_or_else(|| {
-            let mut val = Default::default();
-            function(physical_device, surface, &mut val, std::ptr::null_mut());
-            val
-        });
-        let mut surface_formats = vec![Default::default(); surface_format_count as _];
-        let _val = function(
-            physical_device,
-            surface,
-            &mut surface_format_count,
-            surface_formats.as_mut_ptr(),
-        );
-        crate::utils::VulkanResult::new(_val, surface_formats)
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_surface_present_modes_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        present_mode_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let function = instance_commands(self)
-            .get_physical_device_surface_present_modes_khr
-            .as_ref()
-            .expect("`get_physical_device_surface_present_modes_khr` not available");
-        let mut present_mode_count = present_mode_count.unwrap_or_else(|| {
-            let mut val = Default::default();
-            function(physical_device, surface, &mut val, std::ptr::null_mut());
-            val
-        });
-        let mut present_modes = vec![Default::default(); present_mode_count as _];
-        let _val = function(
-            physical_device,
-            surface,
-            &mut present_mode_count,
-            present_modes.as_mut_ptr(),
-        );
-        crate::utils::VulkanResult::new(_val, present_modes)
-    }
-}
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_DESTROY_SURFACE_KHR: *const std::os::raw::c_char = crate::cstr!("vkDestroySurfaceKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceSurfaceSupportKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceSurfaceFormatsKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceSurfacePresentModesKHR");
 crate :: non_dispatchable_handle ! ( SurfaceKHR , SURFACE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle" ) ;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct SurfaceCapabilitiesKHR {
-    pub min_image_count: u32,
-    pub max_image_count: u32,
-    pub current_extent: crate::vk1_0::Extent2D,
-    pub min_image_extent: crate::vk1_0::Extent2D,
-    pub max_image_extent: crate::vk1_0::Extent2D,
-    pub max_image_array_layers: u32,
-    pub supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
-    pub current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    pub supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
-    pub supported_usage_flags: crate::vk1_0::ImageUsageFlags,
-}
-impl SurfaceCapabilitiesKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> SurfaceCapabilitiesKHRBuilder<'a> {
-        SurfaceCapabilitiesKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for SurfaceCapabilitiesKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("SurfaceCapabilitiesKHR")
-            .field("min_image_count", &self.min_image_count)
-            .field("max_image_count", &self.max_image_count)
-            .field("current_extent", &self.current_extent)
-            .field("min_image_extent", &self.min_image_extent)
-            .field("max_image_extent", &self.max_image_extent)
-            .field("max_image_array_layers", &self.max_image_array_layers)
-            .field("supported_transforms", &self.supported_transforms)
-            .field("current_transform", &self.current_transform)
-            .field("supported_composite_alpha", &self.supported_composite_alpha)
-            .field("supported_usage_flags", &self.supported_usage_flags)
-            .finish()
-    }
-}
-impl Default for SurfaceCapabilitiesKHR {
-    fn default() -> SurfaceCapabilitiesKHR {
-        SurfaceCapabilitiesKHR {
-            min_image_count: Default::default(),
-            max_image_count: Default::default(),
-            current_extent: Default::default(),
-            min_image_extent: Default::default(),
-            max_image_extent: Default::default(),
-            max_image_array_layers: Default::default(),
-            supported_transforms: Default::default(),
-            current_transform: Default::default(),
-            supported_composite_alpha: Default::default(),
-            supported_usage_flags: Default::default(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`](struct.SurfaceCapabilitiesKHR.html)"]
-#[repr(transparent)]
-pub struct SurfaceCapabilitiesKHRBuilder<'a>(
-    SurfaceCapabilitiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> SurfaceCapabilitiesKHRBuilder<'a> {
-    #[inline]
-    pub fn new() -> SurfaceCapabilitiesKHRBuilder<'a> {
-        SurfaceCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn min_image_count(mut self, min_image_count: u32) -> Self {
-        self.0.min_image_count = min_image_count;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn max_image_count(mut self, max_image_count: u32) -> Self {
-        self.0.max_image_count = max_image_count;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn current_extent(mut self, current_extent: crate::vk1_0::Extent2D) -> Self {
-        self.0.current_extent = current_extent;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn min_image_extent(mut self, min_image_extent: crate::vk1_0::Extent2D) -> Self {
-        self.0.min_image_extent = min_image_extent;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn max_image_extent(mut self, max_image_extent: crate::vk1_0::Extent2D) -> Self {
-        self.0.max_image_extent = max_image_extent;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn max_image_array_layers(mut self, max_image_array_layers: u32) -> Self {
-        self.0.max_image_array_layers = max_image_array_layers;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn supported_transforms(
-        mut self,
-        supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
-    ) -> Self {
-        self.0.supported_transforms = supported_transforms;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn current_transform(
-        mut self,
-        current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    ) -> Self {
-        self.0.current_transform = current_transform;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn supported_composite_alpha(
-        mut self,
-        supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
-    ) -> Self {
-        self.0.supported_composite_alpha = supported_composite_alpha;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn supported_usage_flags(
-        mut self,
-        supported_usage_flags: crate::vk1_0::ImageUsageFlags,
-    ) -> Self {
-        self.0.supported_usage_flags = supported_usage_flags;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> SurfaceCapabilitiesKHR {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for SurfaceCapabilitiesKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for SurfaceCapabilitiesKHRBuilder<'a> {
-    type Target = SurfaceCapabilitiesKHR;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Flag Bits of [`SurfaceTransformFlagsKHR`](struct.SurfaceTransformFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct SurfaceTransformFlagBitsKHR(pub u32);
-impl SurfaceTransformFlagBitsKHR {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> SurfaceTransformFlagsKHR {
-        SurfaceTransformFlagsKHR::from_bits_truncate(self.0)
-    }
-}
-#[doc = "[Part of `extensions::khr_surface`](../../extensions/khr_surface/index.html)"]
-impl SurfaceTransformFlagBitsKHR {
-    pub const IDENTITY_KHR: Self = Self(0x00000001);
-    pub const ROTATE_90_KHR: Self = Self(0x00000002);
-    pub const ROTATE_180_KHR: Self = Self(0x00000004);
-    pub const ROTATE_270_KHR: Self = Self(0x00000008);
-    pub const HORIZONTAL_MIRROR_KHR: Self = Self(0x00000010);
-    pub const HORIZONTAL_MIRROR_ROTATE_90_KHR: Self = Self(0x00000020);
-    pub const HORIZONTAL_MIRROR_ROTATE_180_KHR: Self = Self(0x00000040);
-    pub const HORIZONTAL_MIRROR_ROTATE_270_KHR: Self = Self(0x00000080);
-    pub const INHERIT_KHR: Self = Self(0x00000100);
-}
-impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::IDENTITY_KHR => "IDENTITY_KHR",
-            &Self::ROTATE_90_KHR => "ROTATE_90_KHR",
-            &Self::ROTATE_180_KHR => "ROTATE_180_KHR",
-            &Self::ROTATE_270_KHR => "ROTATE_270_KHR",
-            &Self::HORIZONTAL_MIRROR_KHR => "HORIZONTAL_MIRROR_KHR",
-            &Self::HORIZONTAL_MIRROR_ROTATE_90_KHR => "HORIZONTAL_MIRROR_ROTATE_90_KHR",
-            &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => "HORIZONTAL_MIRROR_ROTATE_180_KHR",
-            &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => "HORIZONTAL_MIRROR_ROTATE_270_KHR",
-            &Self::INHERIT_KHR => "INHERIT_KHR",
-            _ => "(unknown)",
-        })
-    }
-}
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Flags of [`SurfaceTransformFlagBitsKHR`](struct.SurfaceTransformFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct SurfaceTransformFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Flag Bits of [`CompositeAlphaFlagsKHR`](struct.CompositeAlphaFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct CompositeAlphaFlagBitsKHR(pub u32);
-impl CompositeAlphaFlagBitsKHR {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> CompositeAlphaFlagsKHR {
-        CompositeAlphaFlagsKHR::from_bits_truncate(self.0)
-    }
-}
-#[doc = "[Part of `extensions::khr_surface`](../../extensions/khr_surface/index.html)"]
-impl CompositeAlphaFlagBitsKHR {
-    pub const OPAQUE_KHR: Self = Self(0x00000001);
-    pub const PRE_MULTIPLIED_KHR: Self = Self(0x00000002);
-    pub const POST_MULTIPLIED_KHR: Self = Self(0x00000004);
-    pub const INHERIT_KHR: Self = Self(0x00000008);
-}
-impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::OPAQUE_KHR => "OPAQUE_KHR",
-            &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
-            &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
-            &Self::INHERIT_KHR => "INHERIT_KHR",
-            _ => "(unknown)",
-        })
-    }
-}
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Flags of [`CompositeAlphaFlagBitsKHR`](struct.CompositeAlphaFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct CompositeAlphaFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct SurfaceFormatKHR {
-    pub format: crate::vk1_0::Format,
-    pub color_space: crate::extensions::khr_surface::ColorSpaceKHR,
-}
-impl SurfaceFormatKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> SurfaceFormatKHRBuilder<'a> {
-        SurfaceFormatKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for SurfaceFormatKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("SurfaceFormatKHR")
-            .field("format", &self.format)
-            .field("color_space", &self.color_space)
-            .finish()
-    }
-}
-impl Default for SurfaceFormatKHR {
-    fn default() -> SurfaceFormatKHR {
-        SurfaceFormatKHR {
-            format: Default::default(),
-            color_space: Default::default(),
-        }
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`](struct.SurfaceFormatKHR.html)"]
-#[repr(transparent)]
-pub struct SurfaceFormatKHRBuilder<'a>(SurfaceFormatKHR, std::marker::PhantomData<&'a ()>);
-impl<'a> SurfaceFormatKHRBuilder<'a> {
-    #[inline]
-    pub fn new() -> SurfaceFormatKHRBuilder<'a> {
-        SurfaceFormatKHRBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
-        self.0.format = format;
-        self
-    }
-    #[allow(unused_mut)]
-    #[inline]
-    pub fn color_space(
-        mut self,
-        color_space: crate::extensions::khr_surface::ColorSpaceKHR,
-    ) -> Self {
-        self.0.color_space = color_space;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> SurfaceFormatKHR {
-        self.0
-    }
-}
-impl<'a> std::fmt::Debug for SurfaceFormatKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
-    }
-}
-impl<'a> std::ops::Deref for SurfaceFormatKHRBuilder<'a> {
-    type Target = SurfaceFormatKHR;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for SurfaceFormatKHRBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorSpaceKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
 pub struct ColorSpaceKHR(pub i32);
-#[doc = "[Part of `extensions::khr_surface`](../../extensions/khr_surface/index.html)"]
+impl std::fmt::Debug for ColorSpaceKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::SRGB_NONLINEAR_KHR => "SRGB_NONLINEAR_KHR",
+            &Self::DISPLAY_P3_NONLINEAR_EXT => "DISPLAY_P3_NONLINEAR_EXT",
+            &Self::EXTENDED_SRGB_LINEAR_EXT => "EXTENDED_SRGB_LINEAR_EXT",
+            &Self::DISPLAY_P3_LINEAR_EXT => "DISPLAY_P3_LINEAR_EXT",
+            &Self::DCI_P3_NONLINEAR_EXT => "DCI_P3_NONLINEAR_EXT",
+            &Self::BT709_LINEAR_EXT => "BT709_LINEAR_EXT",
+            &Self::BT709_NONLINEAR_EXT => "BT709_NONLINEAR_EXT",
+            &Self::BT2020_LINEAR_EXT => "BT2020_LINEAR_EXT",
+            &Self::HDR10_ST2084_EXT => "HDR10_ST2084_EXT",
+            &Self::DOLBYVISION_EXT => "DOLBYVISION_EXT",
+            &Self::HDR10_HLG_EXT => "HDR10_HLG_EXT",
+            &Self::ADOBERGB_LINEAR_EXT => "ADOBERGB_LINEAR_EXT",
+            &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
+            &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
+            &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
+            &Self::DISPLAY_NATIVE_AMD => "DISPLAY_NATIVE_AMD",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
 impl ColorSpaceKHR {
     pub const SRGB_NONLINEAR_KHR: Self = Self(0);
     pub const COLORSPACE_SRGB_NONLINEAR_KHR: Self = Self::SRGB_NONLINEAR_KHR;
 }
-#[doc = "[Part of `extensions::amd_display_native_hdr`](../../extensions/amd_display_native_hdr/index.html)"]
-impl ColorSpaceKHR {
-    pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
-}
-#[doc = "[Part of `extensions::ext_swapchain_colorspace`](../../extensions/ext_swapchain_colorspace/index.html)"]
+#[doc = "Provided by [`extensions::ext_swapchain_colorspace`](../../extensions/ext_swapchain_colorspace/index.html)"]
 impl ColorSpaceKHR {
     pub const DISPLAY_P3_NONLINEAR_EXT: Self = Self(1000104001);
     pub const EXTENDED_SRGB_LINEAR_EXT: Self = Self(1000104002);
@@ -584,55 +66,515 @@ impl ColorSpaceKHR {
     pub const EXTENDED_SRGB_NONLINEAR_EXT: Self = Self(1000104014);
     pub const DCI_P3_LINEAR_EXT: Self = Self::DISPLAY_P3_LINEAR_EXT;
 }
-impl std::fmt::Debug for ColorSpaceKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            &Self::SRGB_NONLINEAR_KHR => "SRGB_NONLINEAR_KHR",
-            &Self::DISPLAY_NATIVE_AMD => "DISPLAY_NATIVE_AMD",
-            &Self::DISPLAY_P3_NONLINEAR_EXT => "DISPLAY_P3_NONLINEAR_EXT",
-            &Self::EXTENDED_SRGB_LINEAR_EXT => "EXTENDED_SRGB_LINEAR_EXT",
-            &Self::DISPLAY_P3_LINEAR_EXT => "DISPLAY_P3_LINEAR_EXT",
-            &Self::DCI_P3_NONLINEAR_EXT => "DCI_P3_NONLINEAR_EXT",
-            &Self::BT709_LINEAR_EXT => "BT709_LINEAR_EXT",
-            &Self::BT709_NONLINEAR_EXT => "BT709_NONLINEAR_EXT",
-            &Self::BT2020_LINEAR_EXT => "BT2020_LINEAR_EXT",
-            &Self::HDR10_ST2084_EXT => "HDR10_ST2084_EXT",
-            &Self::DOLBYVISION_EXT => "DOLBYVISION_EXT",
-            &Self::HDR10_HLG_EXT => "HDR10_HLG_EXT",
-            &Self::ADOBERGB_LINEAR_EXT => "ADOBERGB_LINEAR_EXT",
-            &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
-            &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
-            &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
-            _ => "(unknown)",
+#[doc = "Provided by [`extensions::amd_display_native_hdr`](../../extensions/amd_display_native_hdr/index.html)"]
+impl ColorSpaceKHR {
+    pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
+}
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`](./struct.CompositeAlphaFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct CompositeAlphaFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`](./struct.CompositeAlphaFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct CompositeAlphaFlagBitsKHR(pub u32);
+impl CompositeAlphaFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> CompositeAlphaFlagsKHR {
+        CompositeAlphaFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::OPAQUE_KHR => "OPAQUE_KHR",
+            &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
+            &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
+            &Self::INHERIT_KHR => "INHERIT_KHR",
+            _ => "(unknown variant)",
         })
     }
 }
+#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+impl CompositeAlphaFlagBitsKHR {
+    pub const OPAQUE_KHR: Self = Self(1);
+    pub const PRE_MULTIPLIED_KHR: Self = Self(2);
+    pub const POST_MULTIPLIED_KHR: Self = Self(4);
+    pub const INHERIT_KHR: Self = Self(8);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentModeKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
 pub struct PresentModeKHR(pub i32);
-#[doc = "[Part of `extensions::khr_surface`](../../extensions/khr_surface/index.html)"]
-impl PresentModeKHR {
-    pub const IMMEDIATE_KHR: Self = Self(0);
-    pub const MAILBOX_KHR: Self = Self(1);
-    pub const FIFO_KHR: Self = Self(2);
-    pub const FIFO_RELAXED_KHR: Self = Self(3);
-}
-#[doc = "[Part of `extensions::khr_shared_presentable_image`](../../extensions/khr_shared_presentable_image/index.html)"]
-impl PresentModeKHR {
-    pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
-    pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
-}
 impl std::fmt::Debug for PresentModeKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
             &Self::IMMEDIATE_KHR => "IMMEDIATE_KHR",
             &Self::MAILBOX_KHR => "MAILBOX_KHR",
             &Self::FIFO_KHR => "FIFO_KHR",
             &Self::FIFO_RELAXED_KHR => "FIFO_RELAXED_KHR",
             &Self::SHARED_DEMAND_REFRESH_KHR => "SHARED_DEMAND_REFRESH_KHR",
             &Self::SHARED_CONTINUOUS_REFRESH_KHR => "SHARED_CONTINUOUS_REFRESH_KHR",
-            _ => "(unknown)",
+            _ => "(unknown variant)",
         })
+    }
+}
+#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+impl PresentModeKHR {
+    pub const IMMEDIATE_KHR: Self = Self(0);
+    pub const MAILBOX_KHR: Self = Self(1);
+    pub const FIFO_KHR: Self = Self(2);
+    pub const FIFO_RELAXED_KHR: Self = Self(3);
+}
+#[doc = "Provided by [`extensions::khr_shared_presentable_image`](../../extensions/khr_shared_presentable_image/index.html)"]
+impl PresentModeKHR {
+    pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
+    pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
+}
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`](./struct.SurfaceTransformFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct SurfaceTransformFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`](./struct.SurfaceTransformFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct SurfaceTransformFlagBitsKHR(pub u32);
+impl SurfaceTransformFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> SurfaceTransformFlagsKHR {
+        SurfaceTransformFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::IDENTITY_KHR => "IDENTITY_KHR",
+            &Self::ROTATE_90_KHR => "ROTATE_90_KHR",
+            &Self::ROTATE_180_KHR => "ROTATE_180_KHR",
+            &Self::ROTATE_270_KHR => "ROTATE_270_KHR",
+            &Self::HORIZONTAL_MIRROR_KHR => "HORIZONTAL_MIRROR_KHR",
+            &Self::HORIZONTAL_MIRROR_ROTATE_90_KHR => "HORIZONTAL_MIRROR_ROTATE_90_KHR",
+            &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => "HORIZONTAL_MIRROR_ROTATE_180_KHR",
+            &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => "HORIZONTAL_MIRROR_ROTATE_270_KHR",
+            &Self::INHERIT_KHR => "INHERIT_KHR",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+impl SurfaceTransformFlagBitsKHR {
+    pub const IDENTITY_KHR: Self = Self(1);
+    pub const ROTATE_90_KHR: Self = Self(2);
+    pub const ROTATE_180_KHR: Self = Self(4);
+    pub const ROTATE_270_KHR: Self = Self(8);
+    pub const HORIZONTAL_MIRROR_KHR: Self = Self(16);
+    pub const HORIZONTAL_MIRROR_ROTATE_90_KHR: Self = Self(32);
+    pub const HORIZONTAL_MIRROR_ROTATE_180_KHR: Self = Self(64);
+    pub const HORIZONTAL_MIRROR_ROTATE_270_KHR: Self = Self(128);
+    pub const INHERIT_KHR: Self = Self(256);
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(
+    instance: crate::vk1_0::Instance,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> std::ffi::c_void;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        queue_family_index: u32,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        p_supported: *mut crate::vk1_0::Bool32,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        p_surface_format_count: *mut u32,
+        p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR =
+    unsafe extern "system" fn(
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        p_present_mode_count: *mut u32,
+        p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
+    ) -> crate::vk1_0::Result;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct SurfaceCapabilitiesKHR {
+    pub min_image_count: u32,
+    pub max_image_count: u32,
+    pub current_extent: crate::vk1_0::Extent2D,
+    pub min_image_extent: crate::vk1_0::Extent2D,
+    pub max_image_extent: crate::vk1_0::Extent2D,
+    pub max_image_array_layers: u32,
+    pub supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
+    pub current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
+    pub supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
+    pub supported_usage_flags: crate::vk1_0::ImageUsageFlags,
+}
+impl Default for SurfaceCapabilitiesKHR {
+    fn default() -> Self {
+        Self {
+            min_image_count: Default::default(),
+            max_image_count: Default::default(),
+            current_extent: Default::default(),
+            min_image_extent: Default::default(),
+            max_image_extent: Default::default(),
+            max_image_array_layers: Default::default(),
+            supported_transforms: Default::default(),
+            current_transform: Default::default(),
+            supported_composite_alpha: Default::default(),
+            supported_usage_flags: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for SurfaceCapabilitiesKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("SurfaceCapabilitiesKHR")
+            .field("min_image_count", &self.min_image_count)
+            .field("max_image_count", &self.max_image_count)
+            .field("current_extent", &self.current_extent)
+            .field("min_image_extent", &self.min_image_extent)
+            .field("max_image_extent", &self.max_image_extent)
+            .field("max_image_array_layers", &self.max_image_array_layers)
+            .field("supported_transforms", &self.supported_transforms)
+            .field("current_transform", &self.current_transform)
+            .field("supported_composite_alpha", &self.supported_composite_alpha)
+            .field("supported_usage_flags", &self.supported_usage_flags)
+            .finish()
+    }
+}
+impl SurfaceCapabilitiesKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> SurfaceCapabilitiesKHRBuilder<'a> {
+        SurfaceCapabilitiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`](struct.SurfaceCapabilitiesKHR.html)"]
+#[repr(transparent)]
+pub struct SurfaceCapabilitiesKHRBuilder<'a>(
+    SurfaceCapabilitiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> SurfaceCapabilitiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> SurfaceCapabilitiesKHRBuilder<'a> {
+        SurfaceCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn min_image_count(mut self, min_image_count: u32) -> Self {
+        self.0.min_image_count = min_image_count as _;
+        self
+    }
+    #[inline]
+    pub fn max_image_count(mut self, max_image_count: u32) -> Self {
+        self.0.max_image_count = max_image_count as _;
+        self
+    }
+    #[inline]
+    pub fn current_extent(mut self, current_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.current_extent = current_extent as _;
+        self
+    }
+    #[inline]
+    pub fn min_image_extent(mut self, min_image_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.min_image_extent = min_image_extent as _;
+        self
+    }
+    #[inline]
+    pub fn max_image_extent(mut self, max_image_extent: crate::vk1_0::Extent2D) -> Self {
+        self.0.max_image_extent = max_image_extent as _;
+        self
+    }
+    #[inline]
+    pub fn max_image_array_layers(mut self, max_image_array_layers: u32) -> Self {
+        self.0.max_image_array_layers = max_image_array_layers as _;
+        self
+    }
+    #[inline]
+    pub fn supported_transforms(
+        mut self,
+        supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
+    ) -> Self {
+        self.0.supported_transforms = supported_transforms as _;
+        self
+    }
+    #[inline]
+    pub fn current_transform(
+        mut self,
+        current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
+    ) -> Self {
+        self.0.current_transform = current_transform as _;
+        self
+    }
+    #[inline]
+    pub fn supported_composite_alpha(
+        mut self,
+        supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
+    ) -> Self {
+        self.0.supported_composite_alpha = supported_composite_alpha as _;
+        self
+    }
+    #[inline]
+    pub fn supported_usage_flags(
+        mut self,
+        supported_usage_flags: crate::vk1_0::ImageUsageFlags,
+    ) -> Self {
+        self.0.supported_usage_flags = supported_usage_flags as _;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> SurfaceCapabilitiesKHR {
+        self.0
+    }
+}
+impl<'a> std::default::Default for SurfaceCapabilitiesKHRBuilder<'a> {
+    fn default() -> SurfaceCapabilitiesKHRBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for SurfaceCapabilitiesKHRBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for SurfaceCapabilitiesKHRBuilder<'a> {
+    type Target = SurfaceCapabilitiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct SurfaceFormatKHR {
+    pub format: crate::vk1_0::Format,
+    pub color_space: crate::extensions::khr_surface::ColorSpaceKHR,
+}
+impl Default for SurfaceFormatKHR {
+    fn default() -> Self {
+        Self {
+            format: Default::default(),
+            color_space: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for SurfaceFormatKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("SurfaceFormatKHR")
+            .field("format", &self.format)
+            .field("color_space", &self.color_space)
+            .finish()
+    }
+}
+impl SurfaceFormatKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> SurfaceFormatKHRBuilder<'a> {
+        SurfaceFormatKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`](struct.SurfaceFormatKHR.html)"]
+#[repr(transparent)]
+pub struct SurfaceFormatKHRBuilder<'a>(SurfaceFormatKHR, std::marker::PhantomData<&'a ()>);
+impl<'a> SurfaceFormatKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> SurfaceFormatKHRBuilder<'a> {
+        SurfaceFormatKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
+        self.0.format = format as _;
+        self
+    }
+    #[inline]
+    pub fn color_space(
+        mut self,
+        color_space: crate::extensions::khr_surface::ColorSpaceKHR,
+    ) -> Self {
+        self.0.color_space = color_space as _;
+        self
+    }
+    #[inline]
+    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> SurfaceFormatKHR {
+        self.0
+    }
+}
+impl<'a> std::default::Default for SurfaceFormatKHRBuilder<'a> {
+    fn default() -> SurfaceFormatKHRBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for SurfaceFormatKHRBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for SurfaceFormatKHRBuilder<'a> {
+    type Target = SurfaceFormatKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for SurfaceFormatKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "Provided by [`extensions::khr_surface`](extensions/khr_surface/index.html)"]
+impl crate::InstanceLoader {
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]
+    pub unsafe fn destroy_surface_khr(
+        &self,
+        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+    ) -> () {
+        let _function = self
+            .destroy_surface_khr
+            .expect("`destroy_surface_khr` is not loaded");
+        let _return = _function(
+            self.handle,
+            match surface {
+                Some(v) => v,
+                None => Default::default(),
+            },
+            match allocator {
+                Some(v) => v,
+                None => std::ptr::null(),
+            },
+        );
+        ()
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
+    pub unsafe fn get_physical_device_surface_support_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        queue_family_index: u32,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        supported: Option<crate::vk1_0::Bool32>,
+    ) -> crate::utils::VulkanResult<bool> {
+        let _function = self
+            .get_physical_device_surface_support_khr
+            .expect("`get_physical_device_surface_support_khr` is not loaded");
+        let mut supported = match supported {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(
+            physical_device as _,
+            queue_family_index as _,
+            surface as _,
+            &mut supported,
+        );
+        crate::utils::VulkanResult::new(_return, supported != 0)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
+    pub unsafe fn get_physical_device_surface_capabilities_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        surface_capabilities: Option<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
+        let _function = self
+            .get_physical_device_surface_capabilities_khr
+            .expect("`get_physical_device_surface_capabilities_khr` is not loaded");
+        let mut surface_capabilities = match surface_capabilities {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(
+            physical_device as _,
+            surface as _,
+            &mut surface_capabilities,
+        );
+        crate::utils::VulkanResult::new(_return, surface_capabilities)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
+    pub unsafe fn get_physical_device_surface_formats_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        surface_format_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
+        let _function = self
+            .get_physical_device_surface_formats_khr
+            .expect("`get_physical_device_surface_formats_khr` is not loaded");
+        let mut surface_format_count = match surface_format_count {
+            Some(v) => v,
+            None => {
+                let mut v = Default::default();
+                _function(
+                    physical_device as _,
+                    surface as _,
+                    &mut v,
+                    std::ptr::null_mut(),
+                );
+                v
+            }
+        };
+        let mut surface_formats = vec![Default::default(); surface_format_count as _];
+        let _return = _function(
+            physical_device as _,
+            surface as _,
+            &mut surface_format_count,
+            surface_formats.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_return, surface_formats)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
+    pub unsafe fn get_physical_device_surface_present_modes_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        surface: crate::extensions::khr_surface::SurfaceKHR,
+        present_mode_count: Option<u32>,
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
+        let _function = self
+            .get_physical_device_surface_present_modes_khr
+            .expect("`get_physical_device_surface_present_modes_khr` is not loaded");
+        let mut present_mode_count = match present_mode_count {
+            Some(v) => v,
+            None => {
+                let mut v = Default::default();
+                _function(
+                    physical_device as _,
+                    surface as _,
+                    &mut v,
+                    std::ptr::null_mut(),
+                );
+                v
+            }
+        };
+        let mut present_modes = vec![Default::default(); present_mode_count as _];
+        let _return = _function(
+            physical_device as _,
+            surface as _,
+            &mut present_mode_count,
+            present_modes.as_mut_ptr(),
+        );
+        crate::utils::VulkanResult::new(_return, present_modes)
     }
 }

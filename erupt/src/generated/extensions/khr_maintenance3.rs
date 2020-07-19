@@ -1,74 +1,46 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_maintenance3.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_MAINTENANCE3_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_MAINTENANCE3_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_maintenance3");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Device Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetDescriptorSetLayoutSupportKHR");
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDescriptorSetLayoutSupportKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo,
-    p_support: *mut crate::vk1_1::DescriptorSetLayoutSupport,
-) -> std::ffi::c_void;
-#[doc = "Provides Device Commands for [`KhrMaintenance3DeviceLoaderExt`](trait.KhrMaintenance3DeviceLoaderExt.html)"]
-pub struct KhrMaintenance3DeviceCommands {
-    pub get_descriptor_set_layout_support_khr: Option<PFN_vkGetDescriptorSetLayoutSupportKHR>,
-}
-impl KhrMaintenance3DeviceCommands {
+pub type PhysicalDeviceMaintenance3PropertiesKHR =
+    crate::vk1_1::PhysicalDeviceMaintenance3Properties;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type PhysicalDeviceMaintenance3PropertiesKHRBuilder<'a> =
+    crate::vk1_1::PhysicalDeviceMaintenance3PropertiesBuilder<'a>;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type DescriptorSetLayoutSupportKHR = crate::vk1_1::DescriptorSetLayoutSupport;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type DescriptorSetLayoutSupportKHRBuilder<'a> =
+    crate::vk1_1::DescriptorSetLayoutSupportBuilder<'a>;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Alias"]
+#[allow(non_camel_case_types)]
+pub type PFN_vkGetDescriptorSetLayoutSupportKHR = crate::vk1_1::PFN_vkGetDescriptorSetLayoutSupport;
+#[doc = "Provided by [`extensions::khr_maintenance3`](extensions/khr_maintenance3/index.html)"]
+impl crate::DeviceLoader {
     #[inline]
-    pub fn load(loader: &crate::DeviceLoader) -> Option<KhrMaintenance3DeviceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrMaintenance3DeviceCommands {
-                get_descriptor_set_layout_support_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetDescriptorSetLayoutSupportKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn device_commands(loader: &crate::DeviceLoader) -> &KhrMaintenance3DeviceCommands {
-    loader
-        .khr_maintenance3
-        .as_ref()
-        .expect("`khr_maintenance3` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrMaintenance3DeviceCommands`](struct.KhrMaintenance3DeviceCommands.html)"]
-pub trait KhrMaintenance3DeviceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Device Command"]
-    unsafe fn get_descriptor_set_layout_support_khr(
-        &self,
-        create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
-        support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
-    ) -> crate::vk1_1::DescriptorSetLayoutSupport;
-}
-impl KhrMaintenance3DeviceLoaderExt for crate::DeviceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Device Command"]
-    unsafe fn get_descriptor_set_layout_support_khr(
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Function"]
+    pub unsafe fn get_descriptor_set_layout_support_khr(
         &self,
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
         support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
     ) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let function = device_commands(self)
+        let _function = self
             .get_descriptor_set_layout_support_khr
-            .as_ref()
-            .expect("`get_descriptor_set_layout_support_khr` not available");
-        let mut support = support.unwrap_or_else(|| Default::default());
-        let _val = function(self.handle, create_info, &mut support);
+            .expect("`get_descriptor_set_layout_support_khr` is not loaded");
+        let mut support = match support {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(self.handle, create_info as _, &mut support);
         support
     }
 }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias"]
-pub type PhysicalDeviceMaintenance3PropertiesKHR =
-    crate::vk1_1::PhysicalDeviceMaintenance3Properties;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias"]
-pub type DescriptorSetLayoutSupportKHR = crate::vk1_1::DescriptorSetLayoutSupport;

@@ -1,4 +1,4 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_incremental_present.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_INCREMENTAL_PRESENT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_INCREMENTAL_PRESENT_EXTENSION_NAME: *const std::os::raw::c_char =
@@ -12,35 +12,9 @@ pub struct PresentRegionsKHR {
     pub swapchain_count: u32,
     pub p_regions: *const crate::extensions::khr_incremental_present::PresentRegionKHR,
 }
-impl PresentRegionsKHR {
-    #[inline]
-    #[doc = "Appends `self` to `other` pointer chain"]
-    #[doc = "# Safety"]
-    #[doc = "Make sure you don't drop `self` before it is used by the pointer chain"]
-    pub unsafe fn extend<T>(&mut self, other: &mut T)
-    where
-        T: crate::ExtendableBy<Self>,
-    {
-        crate::append_ptr_chain(other as *mut T as _, self as *mut Self as _);
-    }
-    #[inline]
-    pub fn builder<'a>(self) -> PresentRegionsKHRBuilder<'a> {
-        PresentRegionsKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-impl std::fmt::Debug for PresentRegionsKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PresentRegionsKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain_count", &self.swapchain_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
-    }
-}
 impl Default for PresentRegionsKHR {
-    fn default() -> PresentRegionsKHR {
-        PresentRegionsKHR {
+    fn default() -> Self {
+        Self {
             s_type: crate::vk1_0::StructureType::PRESENT_REGIONS_KHR,
             p_next: std::ptr::null(),
             swapchain_count: Default::default(),
@@ -48,7 +22,22 @@ impl Default for PresentRegionsKHR {
         }
     }
 }
-impl crate::ExtendableBy<PresentRegionsKHR> for crate::extensions::khr_swapchain::PresentInfoKHR {}
+impl std::fmt::Debug for PresentRegionsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PresentRegionsKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("swapchain_count", &self.swapchain_count)
+            .field("p_regions", &self.p_regions)
+            .finish()
+    }
+}
+impl PresentRegionsKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PresentRegionsKHRBuilder<'a> {
+        PresentRegionsKHRBuilder(self, std::marker::PhantomData)
+    }
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Builder of [`PresentRegionsKHR`](struct.PresentRegionsKHR.html)"]
 #[repr(transparent)]
@@ -58,25 +47,29 @@ impl<'a> PresentRegionsKHRBuilder<'a> {
     pub fn new() -> PresentRegionsKHRBuilder<'a> {
         PresentRegionsKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn regions(
         mut self,
         regions: &'a [crate::extensions::khr_incremental_present::PresentRegionKHRBuilder],
     ) -> Self {
-        self.0.swapchain_count = regions.len() as _;
         self.0.p_regions = regions.as_ptr() as _;
+        self.0.swapchain_count = regions.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PresentRegionsKHR {
+    pub fn build(self) -> PresentRegionsKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for PresentRegionsKHRBuilder<'a> {
+    fn default() -> PresentRegionsKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PresentRegionsKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PresentRegionsKHRBuilder<'a> {
@@ -97,26 +90,26 @@ pub struct PresentRegionKHR {
     pub rectangle_count: u32,
     pub p_rectangles: *const crate::extensions::khr_incremental_present::RectLayerKHR,
 }
-impl PresentRegionKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> PresentRegionKHRBuilder<'a> {
-        PresentRegionKHRBuilder(self, std::marker::PhantomData)
+impl Default for PresentRegionKHR {
+    fn default() -> Self {
+        Self {
+            rectangle_count: Default::default(),
+            p_rectangles: std::ptr::null(),
+        }
     }
 }
 impl std::fmt::Debug for PresentRegionKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("PresentRegionKHR")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PresentRegionKHR")
             .field("rectangle_count", &self.rectangle_count)
             .field("p_rectangles", &self.p_rectangles)
             .finish()
     }
 }
-impl Default for PresentRegionKHR {
-    fn default() -> PresentRegionKHR {
-        PresentRegionKHR {
-            rectangle_count: Default::default(),
-            p_rectangles: std::ptr::null(),
-        }
+impl PresentRegionKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PresentRegionKHRBuilder<'a> {
+        PresentRegionKHRBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -128,25 +121,29 @@ impl<'a> PresentRegionKHRBuilder<'a> {
     pub fn new() -> PresentRegionKHRBuilder<'a> {
         PresentRegionKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn rectangles(
         mut self,
         rectangles: &'a [crate::extensions::khr_incremental_present::RectLayerKHRBuilder],
     ) -> Self {
-        self.0.rectangle_count = rectangles.len() as _;
         self.0.p_rectangles = rectangles.as_ptr() as _;
+        self.0.rectangle_count = rectangles.len() as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> PresentRegionKHR {
+    pub fn build(self) -> PresentRegionKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for PresentRegionKHRBuilder<'a> {
+    fn default() -> PresentRegionKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for PresentRegionKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for PresentRegionKHRBuilder<'a> {
@@ -168,28 +165,28 @@ pub struct RectLayerKHR {
     pub extent: crate::vk1_0::Extent2D,
     pub layer: u32,
 }
-impl RectLayerKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> RectLayerKHRBuilder<'a> {
-        RectLayerKHRBuilder(self, std::marker::PhantomData)
+impl Default for RectLayerKHR {
+    fn default() -> Self {
+        Self {
+            offset: Default::default(),
+            extent: Default::default(),
+            layer: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for RectLayerKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("RectLayerKHR")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("RectLayerKHR")
             .field("offset", &self.offset)
             .field("extent", &self.extent)
             .field("layer", &self.layer)
             .finish()
     }
 }
-impl Default for RectLayerKHR {
-    fn default() -> RectLayerKHR {
-        RectLayerKHR {
-            offset: Default::default(),
-            extent: Default::default(),
-            layer: Default::default(),
-        }
+impl RectLayerKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> RectLayerKHRBuilder<'a> {
+        RectLayerKHRBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -201,33 +198,35 @@ impl<'a> RectLayerKHRBuilder<'a> {
     pub fn new() -> RectLayerKHRBuilder<'a> {
         RectLayerKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn offset(mut self, offset: crate::vk1_0::Offset2D) -> Self {
-        self.0.offset = offset;
+        self.0.offset = offset as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn extent(mut self, extent: crate::vk1_0::Extent2D) -> Self {
-        self.0.extent = extent;
+        self.0.extent = extent as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn layer(mut self, layer: u32) -> Self {
-        self.0.layer = layer;
+        self.0.layer = layer as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> RectLayerKHR {
+    pub fn build(self) -> RectLayerKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for RectLayerKHRBuilder<'a> {
+    fn default() -> RectLayerKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for RectLayerKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for RectLayerKHRBuilder<'a> {

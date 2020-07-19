@@ -1,9 +1,33 @@
-# ! [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_xlib_surface.html)\n\n## Extends\n- [`StructureType`](../../vk1_0/struct.StructureType.html)" ]#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_XLIB_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_XLIB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_xlib_surface");
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Instance Command"]
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_CREATE_XLIB_SURFACE_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkCreateXlibSurfaceKHR");
+#[doc = "<s>Vulkan Manual Page</s> · Constant"]
+pub const FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
+    crate::cstr!("vkGetPhysicalDeviceXlibPresentationSupportKHR");
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Bitmask of [`XlibSurfaceCreateFlagBitsKHR`](./struct.XlibSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct XlibSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XlibSurfaceCreateFlagsKHR`](./struct.XlibSurfaceCreateFlagsKHR.html)"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+pub struct XlibSurfaceCreateFlagBitsKHR(pub u32);
+impl XlibSurfaceCreateFlagBitsKHR {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> XlibSurfaceCreateFlagsKHR {
+        XlibSurfaceCreateFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for XlibSurfaceCreateFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
@@ -11,114 +35,15 @@ pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
     p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Instance Command"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR =
     unsafe extern "system" fn(
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_index: u32,
-        dpy: *mut *const std::ffi::c_void,
-        visual_id: std::os::raw::c_uint,
+        dpy: *mut std::ffi::c_void,
+        visual_id: u64,
     ) -> crate::vk1_0::Bool32;
-#[doc = "Provides Instance Commands for [`KhrXlibSurfaceInstanceLoaderExt`](trait.KhrXlibSurfaceInstanceLoaderExt.html)"]
-pub struct KhrXlibSurfaceInstanceCommands {
-    pub create_xlib_surface_khr: Option<PFN_vkCreateXlibSurfaceKHR>,
-    pub get_physical_device_xlib_presentation_support_khr:
-        Option<PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR>,
-}
-impl KhrXlibSurfaceInstanceCommands {
-    #[inline]
-    pub fn load(loader: &crate::InstanceLoader) -> Option<KhrXlibSurfaceInstanceCommands> {
-        unsafe {
-            let mut success = false;
-            let table = KhrXlibSurfaceInstanceCommands {
-                create_xlib_surface_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkCreateXlibSurfaceKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-                get_physical_device_xlib_presentation_support_khr: std::mem::transmute({
-                    let symbol = loader.symbol("vkGetPhysicalDeviceXlibPresentationSupportKHR");
-                    success |= symbol.is_some();
-                    symbol
-                }),
-            };
-            if success {
-                Some(table)
-            } else {
-                None
-            }
-        }
-    }
-}
-#[inline]
-fn instance_commands(loader: &crate::InstanceLoader) -> &KhrXlibSurfaceInstanceCommands {
-    loader
-        .khr_xlib_surface
-        .as_ref()
-        .expect("`khr_xlib_surface` not loaded")
-}
-#[doc = "Provides high level command wrappers for [`KhrXlibSurfaceInstanceCommands`](struct.KhrXlibSurfaceInstanceCommands.html)"]
-pub trait KhrXlibSurfaceInstanceLoaderExt {
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Instance Command"]
-    unsafe fn create_xlib_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR>;
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_xlib_presentation_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        dpy: *mut *const std::ffi::c_void,
-        visual_id: std::os::raw::c_uint,
-    ) -> crate::vk1_0::Bool32;
-}
-impl KhrXlibSurfaceInstanceLoaderExt for crate::InstanceLoader {
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Instance Command"]
-    unsafe fn create_xlib_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let function = instance_commands(self)
-            .create_xlib_surface_khr
-            .as_ref()
-            .expect("`create_xlib_surface_khr` not available");
-        let mut surface = surface.unwrap_or_else(|| Default::default());
-        let _val = function(
-            self.handle,
-            create_info,
-            if let Some(allocator) = allocator {
-                allocator
-            } else {
-                std::ptr::null()
-            },
-            &mut surface,
-        );
-        crate::utils::VulkanResult::new(_val, surface)
-    }
-    #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Instance Command"]
-    unsafe fn get_physical_device_xlib_presentation_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        dpy: *mut *const std::ffi::c_void,
-        visual_id: std::os::raw::c_uint,
-    ) -> crate::vk1_0::Bool32 {
-        let function = instance_commands(self)
-            .get_physical_device_xlib_presentation_support_khr
-            .as_ref()
-            .expect("`get_physical_device_xlib_presentation_support_khr` not available");
-        let _val = function(physical_device, queue_family_index, dpy, visual_id);
-        _val
-    }
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -126,18 +51,23 @@ pub struct XlibSurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_xlib_surface::XlibSurfaceCreateFlagsKHR,
-    pub dpy: *mut *const std::ffi::c_void,
-    pub window: std::os::raw::c_ulong,
+    pub dpy: *mut std::ffi::c_void,
+    pub window: u64,
 }
-impl XlibSurfaceCreateInfoKHR {
-    #[inline]
-    pub fn builder<'a>(self) -> XlibSurfaceCreateInfoKHRBuilder<'a> {
-        XlibSurfaceCreateInfoKHRBuilder(self, std::marker::PhantomData)
+impl Default for XlibSurfaceCreateInfoKHR {
+    fn default() -> Self {
+        Self {
+            s_type: crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR,
+            p_next: std::ptr::null(),
+            flags: Default::default(),
+            dpy: std::ptr::null_mut(),
+            window: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for XlibSurfaceCreateInfoKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.debug_struct("XlibSurfaceCreateInfoKHR")
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("XlibSurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -146,15 +76,10 @@ impl std::fmt::Debug for XlibSurfaceCreateInfoKHR {
             .finish()
     }
 }
-impl Default for XlibSurfaceCreateInfoKHR {
-    fn default() -> XlibSurfaceCreateInfoKHR {
-        XlibSurfaceCreateInfoKHR {
-            s_type: crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            dpy: std::ptr::null_mut(),
-            window: Default::default(),
-        }
+impl XlibSurfaceCreateInfoKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> XlibSurfaceCreateInfoKHRBuilder<'a> {
+        XlibSurfaceCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
@@ -169,36 +94,38 @@ impl<'a> XlibSurfaceCreateInfoKHRBuilder<'a> {
     pub fn new() -> XlibSurfaceCreateInfoKHRBuilder<'a> {
         XlibSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
-    #[allow(unused_mut)]
     #[inline]
     pub fn flags(
         mut self,
         flags: crate::extensions::khr_xlib_surface::XlibSurfaceCreateFlagsKHR,
     ) -> Self {
-        self.0.flags = flags;
+        self.0.flags = flags as _;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
-    pub fn dpy(mut self, dpy: &'a mut *const std::ffi::c_void) -> Self {
+    pub fn dpy(mut self, dpy: *mut std::ffi::c_void) -> Self {
         self.0.dpy = dpy;
         self
     }
-    #[allow(unused_mut)]
     #[inline]
-    pub fn window(mut self, window: std::os::raw::c_ulong) -> Self {
-        self.0.window = window;
+    pub fn window(mut self, window: u64) -> Self {
+        self.0.window = window as _;
         self
     }
     #[inline]
     #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub unsafe fn discard(self) -> XlibSurfaceCreateInfoKHR {
+    pub fn build(self) -> XlibSurfaceCreateInfoKHR {
         self.0
     }
 }
+impl<'a> std::default::Default for XlibSurfaceCreateInfoKHRBuilder<'a> {
+    fn default() -> XlibSurfaceCreateInfoKHRBuilder<'a> {
+        Self::new()
+    }
+}
 impl<'a> std::fmt::Debug for XlibSurfaceCreateInfoKHRBuilder<'a> {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, fmt)
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
     }
 }
 impl<'a> std::ops::Deref for XlibSurfaceCreateInfoKHRBuilder<'a> {
@@ -212,22 +139,52 @@ impl<'a> std::ops::DerefMut for XlibSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "<s>Vulkan Manual Page</s> · Flag Bits of [`XlibSurfaceCreateFlagsKHR`](struct.XlibSurfaceCreateFlagsKHR.html)"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct XlibSurfaceCreateFlagBitsKHR(pub u32);
-impl XlibSurfaceCreateFlagBitsKHR {
+#[doc = "Provided by [`extensions::khr_xlib_surface`](extensions/khr_xlib_surface/index.html)"]
+impl crate::InstanceLoader {
     #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> XlibSurfaceCreateFlagsKHR {
-        XlibSurfaceCreateFlagsKHR::from_bits_truncate(self.0)
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
+    pub unsafe fn create_xlib_surface_khr(
+        &self,
+        create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
+        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
+        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+        let _function = self
+            .create_xlib_surface_khr
+            .expect("`create_xlib_surface_khr` is not loaded");
+        let mut surface = match surface {
+            Some(v) => v,
+            None => Default::default(),
+        };
+        let _return = _function(
+            self.handle,
+            create_info as _,
+            match allocator {
+                Some(v) => v,
+                None => std::ptr::null(),
+            },
+            &mut surface,
+        );
+        crate::utils::VulkanResult::new(_return, surface)
+    }
+    #[inline]
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
+    pub unsafe fn get_physical_device_xlib_presentation_support_khr(
+        &self,
+        physical_device: crate::vk1_0::PhysicalDevice,
+        queue_family_index: u32,
+        dpy: *mut std::ffi::c_void,
+        visual_id: u64,
+    ) -> bool {
+        let _function = self
+            .get_physical_device_xlib_presentation_support_khr
+            .expect("`get_physical_device_xlib_presentation_support_khr` is not loaded");
+        let _return = _function(
+            physical_device as _,
+            queue_family_index as _,
+            dpy,
+            visual_id as _,
+        );
+        _return != 0
     }
 }
-impl std::fmt::Debug for XlibSurfaceCreateFlagBitsKHR {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        fmt.write_str(match self {
-            _ => "(unknown)",
-        })
-    }
-}
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Flags of [`XlibSurfaceCreateFlagBitsKHR`](struct.XlibSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct XlibSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

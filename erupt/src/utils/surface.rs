@@ -6,12 +6,7 @@
 //! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
 //! [`ash-window`]: https://crates.io/crates/ash-window
 
-use crate::{
-    extensions::khr_surface::*,
-    utils::VulkanResult,
-    vk1_0::{Result as RawResult, *},
-    InstanceLoader,
-};
+use crate::{extensions::khr_surface, utils::VulkanResult, vk1_0, InstanceLoader};
 use raw_window_handle::{HasRawWindowHandle, RawWindowHandle};
 use std::os::raw::c_char;
 
@@ -21,8 +16,8 @@ use std::os::raw::c_char;
 pub unsafe fn create_surface(
     instance: &InstanceLoader,
     window_handle: &impl HasRawWindowHandle,
-    allocation_callbacks: Option<&AllocationCallbacks>,
-) -> VulkanResult<SurfaceKHR> {
+    allocation_callbacks: Option<&vk1_0::AllocationCallbacks>,
+) -> VulkanResult<khr_surface::SurfaceKHR> {
     match window_handle.raw_window_handle() {
         #[cfg(any(
             target_os = "linux",
@@ -32,9 +27,9 @@ pub unsafe fn create_surface(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Wayland(handle) => {
-            use crate::extensions::khr_wayland_surface::*;
+            use crate::extensions::khr_wayland_surface;
 
-            let create_info = WaylandSurfaceCreateInfoKHR {
+            let create_info = khr_wayland_surface::WaylandSurfaceCreateInfoKHR {
                 display: handle.display,
                 surface: handle.surface,
                 ..Default::default()
@@ -51,9 +46,9 @@ pub unsafe fn create_surface(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Xlib(handle) => {
-            use crate::extensions::khr_xlib_surface::*;
+            use crate::extensions::khr_xlib_surface;
 
-            let create_info = XlibSurfaceCreateInfoKHR {
+            let create_info = khr_xlib_surface::XlibSurfaceCreateInfoKHR {
                 dpy: handle.display as *mut _,
                 window: handle.window,
                 ..Default::default()
@@ -70,9 +65,9 @@ pub unsafe fn create_surface(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Xcb(handle) => {
-            use crate::extensions::khr_xcb_surface::*;
+            use crate::extensions::khr_xcb_surface;
 
-            let create_info = XcbSurfaceCreateInfoKHR {
+            let create_info = khr_xcb_surface::XcbSurfaceCreateInfoKHR {
                 connection: handle.connection as *mut _,
                 window: handle.window,
                 ..Default::default()
@@ -83,9 +78,9 @@ pub unsafe fn create_surface(
 
         #[cfg(any(target_os = "android"))]
         RawWindowHandle::Android(handle) => {
-            use crate::extensions::khr_android_surface::*;
+            use crate::extensions::khr_android_surface;
 
-            let create_info = AndroidSurfaceCreateInfoKHR {
+            let create_info = khr_android_surface::AndroidSurfaceCreateInfoKHR {
                 window: handle.a_native_window as _,
                 ..Default::default()
             };
@@ -95,7 +90,7 @@ pub unsafe fn create_surface(
 
         #[cfg(any(target_os = "macos"))]
         RawWindowHandle::MacOS(handle) => {
-            use crate::extensions::ext_metal_surface::*;
+            use crate::extensions::ext_metal_surface;
             use raw_window_metal::{macos, Layer};
 
             let layer = match macos::metal_layer_from_handle(handle) {
@@ -105,7 +100,7 @@ pub unsafe fn create_surface(
                 }
             };
 
-            let create_info = MetalSurfaceCreateInfoEXT {
+            let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT {
                 p_layer: layer,
                 ..Default::default()
             };
@@ -115,7 +110,7 @@ pub unsafe fn create_surface(
 
         #[cfg(any(target_os = "ios"))]
         RawWindowHandle::IOS(handle) => {
-            use crate::extensions::ext_metal_surface::*;
+            use crate::extensions::ext_metal_surface;
             use raw_window_metal::{ios, Layer};
 
             let layer = match ios::metal_layer_from_handle(handle) {
@@ -125,7 +120,7 @@ pub unsafe fn create_surface(
                 }
             };
 
-            let create_info = MetalSurfaceCreateInfoEXT {
+            let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT {
                 p_layer: layer,
                 ..Default::default()
             };
@@ -135,9 +130,9 @@ pub unsafe fn create_surface(
 
         #[cfg(target_os = "windows")]
         RawWindowHandle::Windows(handle) => {
-            use crate::extensions::khr_win32_surface::*;
+            use crate::extensions::khr_win32_surface;
 
-            let create_info = Win32SurfaceCreateInfoKHR {
+            let create_info = khr_win32_surface::Win32SurfaceCreateInfoKHR {
                 hinstance: handle.hinstance,
                 hwnd: handle.hwnd,
                 ..Default::default()
@@ -146,7 +141,7 @@ pub unsafe fn create_surface(
             instance.create_win32_surface_khr(&create_info, allocation_callbacks, None)
         }
 
-        _ => VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT), // not supported
+        _ => VulkanResult::new_err(vk1_0::Result::ERROR_EXTENSION_NOT_PRESENT), // not supported
     }
 }
 
@@ -165,7 +160,7 @@ pub fn enumerate_required_extensions(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Wayland(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::khr_wayland_surface::KHR_WAYLAND_SURFACE_EXTENSION_NAME,
         ],
 
@@ -177,7 +172,7 @@ pub fn enumerate_required_extensions(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Xlib(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::khr_xlib_surface::KHR_XLIB_SURFACE_EXTENSION_NAME,
         ],
 
@@ -189,35 +184,35 @@ pub fn enumerate_required_extensions(
             target_os = "openbsd"
         ))]
         RawWindowHandle::Xcb(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::khr_xcb_surface::KHR_XCB_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(any(target_os = "android"))]
         RawWindowHandle::Android(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::khr_android_surface::KHR_ANDROID_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(any(target_os = "macos"))]
         RawWindowHandle::MacOS(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::ext_metal_surface::EXT_METAL_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(any(target_os = "ios"))]
         RawWindowHandle::IOS(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::ext_metal_surface::EXT_METAL_SURFACE_EXTENSION_NAME,
         ],
 
         #[cfg(target_os = "windows")]
         RawWindowHandle::Windows(_) => vec![
-            KHR_SURFACE_EXTENSION_NAME,
+            khr_surface::KHR_SURFACE_EXTENSION_NAME,
             crate::extensions::khr_win32_surface::KHR_WIN32_SURFACE_EXTENSION_NAME,
         ],
 
-        _ => return VulkanResult::new_err(RawResult::ERROR_EXTENSION_NOT_PRESENT), // not supported
+        _ => return VulkanResult::new_err(vk1_0::Result::ERROR_EXTENSION_NOT_PRESENT), // not supported
     };
 
     VulkanResult::new_ok(extensions)

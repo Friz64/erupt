@@ -8,7 +8,7 @@ pub mod loading;
 #[cfg(feature = "surface")]
 pub mod surface;
 
-use crate::vk1_0::Result as RawResult;
+use crate::vk1_0;
 use std::{
     convert::TryInto,
     error::Error,
@@ -21,7 +21,7 @@ use std::{
 #[derive(Copy, Clone, Default)]
 pub struct VulkanResult<T> {
     /// The raw result from Vulkan
-    pub raw: RawResult,
+    pub raw: vk1_0::Result,
     /// The value this wrapper type may be holding
     pub value: Option<T>,
 }
@@ -31,7 +31,7 @@ impl<T> VulkanResult<T> {
     ///
     /// This will not populate `self.value` if the raw result is negative (Error)
     #[inline]
-    pub fn new(raw: RawResult, value: T) -> VulkanResult<T> {
+    pub fn new(raw: vk1_0::Result, value: T) -> VulkanResult<T> {
         let value = if raw.0.is_negative() {
             None
         } else {
@@ -90,14 +90,14 @@ impl<T> VulkanResult<T> {
     /// This will always set `self.raw` to `RawResult::SUCCESS`
     #[inline]
     pub fn new_ok(value: T) -> VulkanResult<T> {
-        VulkanResult::new(RawResult::SUCCESS, value)
+        VulkanResult::new(vk1_0::Result::SUCCESS, value)
     }
 
     /// Constructs a new `VulkanResult` from `raw`
     ///
     /// This will always set `self.value` to `None`
     #[inline]
-    pub fn new_err(raw: RawResult) -> VulkanResult<T> {
+    pub fn new_err(raw: vk1_0::Result) -> VulkanResult<T> {
         VulkanResult { raw, value: None }
     }
 
@@ -109,7 +109,7 @@ impl<T> VulkanResult<T> {
 
     /// Maps `Some(v)` of `self.value` to `Ok(v)` and `None` of `self.value` to `Err(self.raw)`
     #[inline]
-    pub fn result(self) -> Result<T, RawResult> {
+    pub fn result(self) -> Result<T, vk1_0::Result> {
         self.value.ok_or(self.raw)
     }
 
@@ -138,14 +138,14 @@ impl<T> VulkanResult<T> {
     }
 }
 
-impl Display for RawResult {
+impl Display for vk1_0::Result {
     #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         Debug::fmt(self, fmt)
     }
 }
 
-impl Error for RawResult {}
+impl Error for vk1_0::Result {}
 
 impl<T> Debug for VulkanResult<T>
 where

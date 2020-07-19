@@ -97,7 +97,11 @@ mod generated;
 pub mod utils;
 
 pub use generated::*;
-use std::ffi::CStr;
+use std::{
+    error::Error,
+    ffi::CStr,
+    fmt::{self, Display},
+};
 
 /// Construct a `*const std::os::raw::c_char` from a string
 ///
@@ -214,18 +218,42 @@ macro_rules! dispatchable_handle {
     };
 }
 
+/// An error which can occur while initializing a loader
+#[derive(Debug)]
+pub enum LoaderError {
+    /// A Vulkan function returned a negative `Result` value
+    VulkanError(vk1_0::Result),
+    /// A symbol was not available while it should have been
+    SymbolNotAvailable,
+}
+
+impl Display for LoaderError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            LoaderError::VulkanError(err) => write!(
+                f,
+                "A Vulkan function returned a negative `Result` value: {}",
+                err
+            ),
+            LoaderError::SymbolNotAvailable => {
+                write!(f, "A symbol was not available while it should have been")
+            }
+        }
+    }
+}
+
+impl Error for LoaderError {}
+
 impl InstanceLoader {
     #[inline]
     pub fn new<T>(
         entry_loader: &EntryLoader<T>,
         create_info: &crate::vk1_0::InstanceCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> Option<InstanceLoader> {
-        let instance = unsafe {
-            entry_loader
-                .create_instance(create_info, allocator, None)
-                .ok()?
-        };
+    ) -> Result<InstanceLoader, LoaderError> {
+        let instance = unsafe { entry_loader.create_instance(create_info, allocator, None) }
+            .result()
+            .map_err(LoaderError::VulkanError)?;
 
         let mut version = crate::vk1_0::make_version(1, 0, 0);
         if !create_info.p_application_info.is_null() {
@@ -253,12 +281,11 @@ impl DeviceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         create_info: &crate::vk1_0::DeviceCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> Option<DeviceLoader> {
-        let device = unsafe {
-            instance_loader
-                .create_device(physical_device, create_info, allocator, None)
-                .ok()?
-        };
+    ) -> Result<DeviceLoader, LoaderError> {
+        let device =
+            unsafe { instance_loader.create_device(physical_device, create_info, allocator, None) }
+                .result()
+                .map_err(LoaderError::VulkanError)?;
 
         DeviceLoader::custom(
             instance_loader,

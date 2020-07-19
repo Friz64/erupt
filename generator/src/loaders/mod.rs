@@ -104,7 +104,7 @@ impl LoaderData {
                 unsafe {
                     match symbol(crate::#module_path#constant_ident) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             };
@@ -263,23 +263,25 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                 mut loader: T,
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-            ) -> Option<EntryLoader<T>> {
+            ) -> Result<EntryLoader<T>, crate::LoaderError> {
                 let mut symbol = |name| symbol(&mut loader, name);
-                let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR)?;
 
                 let mut version = crate::vk1_0::make_version(1, 0, 0);
                 if let Some(function) = symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION) {
                     let function: crate::vk1_1::PFN_vkEnumerateInstanceVersion =
                         unsafe { std::mem::transmute(function) };
 
-                    if unsafe { function(&mut version) }.0 < 0 {
-                        return None;
+                    let result = unsafe { function(&mut version) };
+                    if result.0 < 0 {
+                        return Err(crate::LoaderError::VulkanError(result));
                     }
                 }
 
                 #entry_booleans
 
-                Some(EntryLoader {
+                let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR)
+                    .ok_or(crate::LoaderError::SymbolNotAvailable)?;
+                Ok(EntryLoader {
                     arc: std::sync::Arc::new(()),
                     get_instance_proc_addr: unsafe { std::mem::transmute(get_instance_proc_addr) },
                     instance_version: version,
@@ -326,11 +328,12 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                 extensions: *const *const std::os::raw::c_char,
                 mut symbol: impl FnMut(*const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-            ) -> Option<InstanceLoader> {
+            ) -> Result<InstanceLoader, crate::LoaderError> {
                 #instance_booleans
 
-                let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR)?;
-                Some(InstanceLoader {
+                let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR)
+                    .ok_or(crate::LoaderError::SymbolNotAvailable)?;
+                Ok(InstanceLoader {
                     parent: std::sync::Arc::downgrade(&entry_loader.arc),
                     arc: std::sync::Arc::new(()),
                     selected_instance_version: version,
@@ -374,11 +377,11 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                 extensions: *const *const std::os::raw::c_char,
                 mut symbol: impl FnMut(*const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-            ) -> Option<DeviceLoader> {
+            ) -> Result<DeviceLoader, crate::LoaderError> {
                 let version = instance_loader.selected_instance_version;
                 #device_booleans
 
-                Some(DeviceLoader {
+                Ok(DeviceLoader {
                     parent: std::sync::Arc::downgrade(&instance_loader.arc),
                     handle: device,
                     #(#device_idents: #device_loading,)*

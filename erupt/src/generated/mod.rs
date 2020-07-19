@@ -22,33 +22,35 @@ impl<T> EntryLoader<T> {
             &mut T,
             *const std::os::raw::c_char,
         ) -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-    ) -> Option<EntryLoader<T>> {
+    ) -> Result<EntryLoader<T>, crate::LoaderError> {
         let mut symbol = |name| symbol(&mut loader, name);
-        let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR)?;
         let mut version = crate::vk1_0::make_version(1, 0, 0);
         if let Some(function) = symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION) {
             let function: crate::vk1_1::PFN_vkEnumerateInstanceVersion =
                 unsafe { std::mem::transmute(function) };
-            if unsafe { function(&mut version) }.0 < 0 {
-                return None;
+            let result = unsafe { function(&mut version) };
+            if result.0 < 0 {
+                return Err(crate::LoaderError::VulkanError(result));
             }
         }
         let vk1_1 = version >= crate::vk1_0::make_version(1, 1, 0);
-        Some(EntryLoader {
+        let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR)
+            .ok_or(crate::LoaderError::SymbolNotAvailable)?;
+        Ok(EntryLoader {
             arc: std::sync::Arc::new(()),
             get_instance_proc_addr: unsafe { std::mem::transmute(get_instance_proc_addr) },
             instance_version: version,
             create_instance: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_INSTANCE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             enumerate_instance_version: if vk1_1 {
                 unsafe {
                     match symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -57,13 +59,13 @@ impl<T> EntryLoader<T> {
             enumerate_instance_layer_properties: unsafe {
                 match symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             enumerate_instance_extension_properties: unsafe {
                 match symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             loader,
@@ -95,7 +97,7 @@ impl InstanceLoader {
         extensions_len: usize,
         extensions: *const *const std::os::raw::c_char,
         mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-    ) -> Option<InstanceLoader> {
+    ) -> Result<InstanceLoader, crate::LoaderError> {
         let khr_android_surface = unsafe {
             crate::c_str_array_contains(
                 extensions,
@@ -296,8 +298,9 @@ impl InstanceLoader {
         let khr_device_group_creation = unsafe {
             crate :: c_str_array_contains ( extensions , extensions_len , crate :: extensions :: khr_device_group_creation :: KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME )
         };
-        let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR)?;
-        Some(InstanceLoader {
+        let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR)
+            .ok_or(crate::LoaderError::SymbolNotAvailable)?;
+        Ok(InstanceLoader {
             parent: std::sync::Arc::downgrade(&entry_loader.arc),
             arc: std::sync::Arc::new(()),
             selected_instance_version: version,
@@ -306,79 +309,79 @@ impl InstanceLoader {
             destroy_instance: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_INSTANCE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             enumerate_physical_devices: unsafe {
                 match symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_instance_proc_addr: unsafe {
                 match symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_queue_family_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_memory_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_features: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_FEATURES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_format_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_image_format_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_device: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_DEVICE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             enumerate_device_layer_properties: unsafe {
                 match symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_LAYER_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             enumerate_device_extension_properties: unsafe {
                 match symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_physical_device_sparse_image_format_properties: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_android_surface_khr: if khr_android_surface {
@@ -387,7 +390,7 @@ impl InstanceLoader {
                         crate::extensions::khr_android_surface::FN_CREATE_ANDROID_SURFACE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -395,14 +398,14 @@ impl InstanceLoader {
             },
             get_physical_device_display_properties_khr: if khr_display {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_display :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_display :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_display_plane_properties_khr: if khr_display {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_display :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_display :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -413,7 +416,7 @@ impl InstanceLoader {
                         crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_SUPPORTED_DISPLAYS_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -424,7 +427,7 @@ impl InstanceLoader {
                     match symbol(crate::extensions::khr_display::FN_GET_DISPLAY_MODE_PROPERTIES_KHR)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -434,7 +437,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_display::FN_CREATE_DISPLAY_MODE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -446,7 +449,7 @@ impl InstanceLoader {
                         crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -458,7 +461,7 @@ impl InstanceLoader {
                         crate::extensions::khr_display::FN_CREATE_DISPLAY_PLANE_SURFACE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -468,7 +471,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_surface::FN_DESTROY_SURFACE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -480,7 +483,7 @@ impl InstanceLoader {
                         crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -488,7 +491,7 @@ impl InstanceLoader {
             },
             get_physical_device_surface_capabilities_khr: if khr_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_surface :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_surface :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -499,7 +502,7 @@ impl InstanceLoader {
                         crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -507,7 +510,7 @@ impl InstanceLoader {
             },
             get_physical_device_surface_present_modes_khr: if khr_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_surface :: FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_surface :: FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -516,7 +519,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::nn_vi_surface::FN_CREATE_VI_SURFACE_NN) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -528,7 +531,7 @@ impl InstanceLoader {
                         crate::extensions::khr_wayland_surface::FN_CREATE_WAYLAND_SURFACE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -536,7 +539,7 @@ impl InstanceLoader {
             },
             get_physical_device_wayland_presentation_support_khr: if khr_wayland_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_wayland_surface :: FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_wayland_surface :: FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -546,7 +549,7 @@ impl InstanceLoader {
                     match symbol(crate::extensions::khr_win32_surface::FN_CREATE_WIN32_SURFACE_KHR)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -554,7 +557,7 @@ impl InstanceLoader {
             },
             get_physical_device_win32_presentation_support_khr: if khr_win32_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_win32_surface :: FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_win32_surface :: FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -563,7 +566,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_xlib_surface::FN_CREATE_XLIB_SURFACE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -571,7 +574,7 @@ impl InstanceLoader {
             },
             get_physical_device_xlib_presentation_support_khr: if khr_xlib_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_xlib_surface :: FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_xlib_surface :: FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -580,7 +583,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_xcb_surface::FN_CREATE_XCB_SURFACE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -588,7 +591,7 @@ impl InstanceLoader {
             },
             get_physical_device_xcb_presentation_support_khr: if khr_xcb_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_xcb_surface :: FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_xcb_surface :: FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -599,7 +602,7 @@ impl InstanceLoader {
                         crate::extensions::ext_directfb_surface::FN_CREATE_DIRECT_FB_SURFACE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -607,21 +610,21 @@ impl InstanceLoader {
             },
             get_physical_device_direct_fb_presentation_support_ext: if ext_directfb_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_directfb_surface :: FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_directfb_surface :: FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             create_image_pipe_surface_fuchsia: if fuchsia_imagepipe_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: fuchsia_imagepipe_surface :: FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: fuchsia_imagepipe_surface :: FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             create_stream_descriptor_surface_ggp: if ggp_stream_descriptor_surface {
                 unsafe {
-                    match symbol ( crate :: extensions :: ggp_stream_descriptor_surface :: FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ggp_stream_descriptor_surface :: FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -632,7 +635,7 @@ impl InstanceLoader {
                         crate::extensions::ext_debug_report::FN_CREATE_DEBUG_REPORT_CALLBACK_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -644,7 +647,7 @@ impl InstanceLoader {
                         crate::extensions::ext_debug_report::FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -654,7 +657,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_debug_report::FN_DEBUG_REPORT_MESSAGE_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -663,7 +666,7 @@ impl InstanceLoader {
             get_physical_device_external_image_format_properties_nv:
                 if nv_external_memory_capabilities {
                     unsafe {
-                        match symbol ( crate :: extensions :: nv_external_memory_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: nv_external_memory_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -672,7 +675,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FEATURES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -682,7 +685,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_PROPERTIES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -692,7 +695,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -702,7 +705,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -712,7 +715,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -722,7 +725,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -734,7 +737,7 @@ impl InstanceLoader {
                         crate::vk1_1::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -744,7 +747,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -755,7 +758,7 @@ impl InstanceLoader {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -765,7 +768,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -776,7 +779,7 @@ impl InstanceLoader {
                     match symbol(crate::extensions::ext_direct_mode_display::FN_RELEASE_DISPLAY_EXT)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -788,7 +791,7 @@ impl InstanceLoader {
                         crate::extensions::ext_acquire_xlib_display::FN_ACQUIRE_XLIB_DISPLAY_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -796,14 +799,14 @@ impl InstanceLoader {
             },
             get_rand_r_output_display_ext: if ext_acquire_xlib_display {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_acquire_xlib_display :: FN_GET_RAND_R_OUTPUT_DISPLAY_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_acquire_xlib_display :: FN_GET_RAND_R_OUTPUT_DISPLAY_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_surface_capabilities2_ext: if ext_display_surface_counter {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_display_surface_counter :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_display_surface_counter :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -812,7 +815,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -822,7 +825,7 @@ impl InstanceLoader {
                 || (khr_device_group && khr_surface)
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -831,7 +834,7 @@ impl InstanceLoader {
                 unsafe {
                     match symbol(crate::extensions::mvk_ios_surface::FN_CREATE_IOS_SURFACE_MVK) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -842,7 +845,7 @@ impl InstanceLoader {
                     match symbol(crate::extensions::mvk_macos_surface::FN_CREATE_MAC_OS_SURFACE_MVK)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -853,7 +856,7 @@ impl InstanceLoader {
                     match symbol(crate::extensions::ext_metal_surface::FN_CREATE_METAL_SURFACE_EXT)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -861,56 +864,56 @@ impl InstanceLoader {
             },
             get_physical_device_multisample_properties_ext: if ext_sample_locations {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_sample_locations :: FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_sample_locations :: FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_surface_capabilities2_khr: if khr_get_surface_capabilities2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_surface_capabilities2 :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_surface_capabilities2 :: FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_surface_formats2_khr: if khr_get_surface_capabilities2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_surface_capabilities2 :: FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_surface_capabilities2 :: FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_display_properties2_khr: if khr_get_display_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_display_plane_properties2_khr: if khr_get_display_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_display_mode_properties2_khr: if khr_get_display_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_DISPLAY_MODE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_DISPLAY_MODE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_display_plane_capabilities2_khr: if khr_get_display_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_display_properties2 :: FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_calibrateable_time_domains_ext: if ext_calibrated_timestamps {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_calibrated_timestamps :: FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_calibrated_timestamps :: FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -921,7 +924,7 @@ impl InstanceLoader {
                         crate::extensions::ext_debug_utils::FN_CREATE_DEBUG_UTILS_MESSENGER_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -933,7 +936,7 @@ impl InstanceLoader {
                         crate::extensions::ext_debug_utils::FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -945,7 +948,7 @@ impl InstanceLoader {
                         crate::extensions::ext_debug_utils::FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -953,14 +956,14 @@ impl InstanceLoader {
             },
             get_physical_device_cooperative_matrix_properties_nv: if nv_cooperative_matrix {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_cooperative_matrix :: FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_cooperative_matrix :: FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_surface_present_modes2_ext: if ext_full_screen_exclusive {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -968,7 +971,7 @@ impl InstanceLoader {
             enumerate_physical_device_queue_family_performance_query_counters_khr:
                 if khr_performance_query {
                     unsafe {
-                        match symbol ( crate :: extensions :: khr_performance_query :: FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: khr_performance_query :: FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -976,7 +979,7 @@ impl InstanceLoader {
             get_physical_device_queue_family_performance_query_passes_khr: if khr_performance_query
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_performance_query :: FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_performance_query :: FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -987,7 +990,7 @@ impl InstanceLoader {
                         crate::extensions::ext_headless_surface::FN_CREATE_HEADLESS_SURFACE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -996,35 +999,35 @@ impl InstanceLoader {
             get_physical_device_supported_framebuffer_mixed_samples_combinations_nv:
                 if nv_coverage_reduction_mode {
                     unsafe {
-                        match symbol ( crate :: extensions :: nv_coverage_reduction_mode :: FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: nv_coverage_reduction_mode :: FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
                 },
             get_physical_device_tool_properties_ext: if ext_tooling_info {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_tooling_info :: FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_tooling_info :: FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_features2_khr: if khr_get_physical_device_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_properties2_khr: if khr_get_physical_device_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_format_properties2_khr: if khr_get_physical_device_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -1032,7 +1035,7 @@ impl InstanceLoader {
             get_physical_device_image_format_properties2_khr: if khr_get_physical_device_properties2
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -1040,14 +1043,14 @@ impl InstanceLoader {
             get_physical_device_queue_family_properties2_khr: if khr_get_physical_device_properties2
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_physical_device_memory_properties2_khr: if khr_get_physical_device_properties2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -1055,7 +1058,7 @@ impl InstanceLoader {
             get_physical_device_sparse_image_format_properties2_khr:
                 if khr_get_physical_device_properties2 {
                     unsafe {
-                        match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: khr_get_physical_device_properties2 :: FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -1063,7 +1066,7 @@ impl InstanceLoader {
             get_physical_device_external_buffer_properties_khr: if khr_external_memory_capabilities
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_memory_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_memory_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -1071,21 +1074,21 @@ impl InstanceLoader {
             get_physical_device_external_semaphore_properties_khr:
                 if khr_external_semaphore_capabilities {
                     unsafe {
-                        match symbol ( crate :: extensions :: khr_external_semaphore_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: khr_external_semaphore_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
                 },
             get_physical_device_external_fence_properties_khr: if khr_external_fence_capabilities {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_fence_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_fence_capabilities :: FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             enumerate_physical_device_groups_khr: if khr_device_group_creation {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_device_group_creation :: FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_device_group_creation :: FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -1117,7 +1120,7 @@ impl DeviceLoader {
         extensions_len: usize,
         extensions: *const *const std::os::raw::c_char,
         mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-    ) -> Option<DeviceLoader> {
+    ) -> Result<DeviceLoader, crate::LoaderError> {
         let version = instance_loader.selected_instance_version;
         let vk1_2 = version >= crate::vk1_0::make_version(1, 2, 0);
         let ext_conditional_rendering = unsafe {
@@ -1453,218 +1456,218 @@ impl DeviceLoader {
         let ext_buffer_device_address = unsafe {
             crate :: c_str_array_contains ( extensions , extensions_len , crate :: extensions :: ext_buffer_device_address :: EXT_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME )
         };
-        Some(DeviceLoader {
+        Ok(DeviceLoader {
             parent: std::sync::Arc::downgrade(&instance_loader.arc),
             handle: device,
             get_device_proc_addr: unsafe {
                 match symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_device: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_DEVICE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_device_queue: unsafe {
                 match symbol(crate::vk1_0::FN_GET_DEVICE_QUEUE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             queue_submit: unsafe {
                 match symbol(crate::vk1_0::FN_QUEUE_SUBMIT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             queue_wait_idle: unsafe {
                 match symbol(crate::vk1_0::FN_QUEUE_WAIT_IDLE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             device_wait_idle: unsafe {
                 match symbol(crate::vk1_0::FN_DEVICE_WAIT_IDLE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             allocate_memory: unsafe {
                 match symbol(crate::vk1_0::FN_ALLOCATE_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             free_memory: unsafe {
                 match symbol(crate::vk1_0::FN_FREE_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             map_memory: unsafe {
                 match symbol(crate::vk1_0::FN_MAP_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             unmap_memory: unsafe {
                 match symbol(crate::vk1_0::FN_UNMAP_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             flush_mapped_memory_ranges: unsafe {
                 match symbol(crate::vk1_0::FN_FLUSH_MAPPED_MEMORY_RANGES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             invalidate_mapped_memory_ranges: unsafe {
                 match symbol(crate::vk1_0::FN_INVALIDATE_MAPPED_MEMORY_RANGES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_device_memory_commitment: unsafe {
                 match symbol(crate::vk1_0::FN_GET_DEVICE_MEMORY_COMMITMENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_buffer_memory_requirements: unsafe {
                 match symbol(crate::vk1_0::FN_GET_BUFFER_MEMORY_REQUIREMENTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             bind_buffer_memory: unsafe {
                 match symbol(crate::vk1_0::FN_BIND_BUFFER_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_image_memory_requirements: unsafe {
                 match symbol(crate::vk1_0::FN_GET_IMAGE_MEMORY_REQUIREMENTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             bind_image_memory: unsafe {
                 match symbol(crate::vk1_0::FN_BIND_IMAGE_MEMORY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_image_sparse_memory_requirements: unsafe {
                 match symbol(crate::vk1_0::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             queue_bind_sparse: unsafe {
                 match symbol(crate::vk1_0::FN_QUEUE_BIND_SPARSE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_fence: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_FENCE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_fence: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_FENCE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_fences: unsafe {
                 match symbol(crate::vk1_0::FN_RESET_FENCES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_fence_status: unsafe {
                 match symbol(crate::vk1_0::FN_GET_FENCE_STATUS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             wait_for_fences: unsafe {
                 match symbol(crate::vk1_0::FN_WAIT_FOR_FENCES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_semaphore: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_SEMAPHORE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_semaphore: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_SEMAPHORE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_event: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_event: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_event_status: unsafe {
                 match symbol(crate::vk1_0::FN_GET_EVENT_STATUS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             set_event: unsafe {
                 match symbol(crate::vk1_0::FN_SET_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_event: unsafe {
                 match symbol(crate::vk1_0::FN_RESET_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_query_pool: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_QUERY_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_query_pool: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_QUERY_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_query_pool_results: unsafe {
                 match symbol(crate::vk1_0::FN_GET_QUERY_POOL_RESULTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_query_pool: if vk1_2 {
                 unsafe {
                     match symbol(crate::vk1_2::FN_RESET_QUERY_POOL) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -1673,487 +1676,487 @@ impl DeviceLoader {
             create_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_buffer_view: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_BUFFER_VIEW) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_buffer_view: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_BUFFER_VIEW) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_image: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_image: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_image_subresource_layout: unsafe {
                 match symbol(crate::vk1_0::FN_GET_IMAGE_SUBRESOURCE_LAYOUT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_image_view: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_IMAGE_VIEW) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_image_view: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_IMAGE_VIEW) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_shader_module: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_SHADER_MODULE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_shader_module: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_SHADER_MODULE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_pipeline_cache: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_PIPELINE_CACHE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_pipeline_cache: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_PIPELINE_CACHE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_pipeline_cache_data: unsafe {
                 match symbol(crate::vk1_0::FN_GET_PIPELINE_CACHE_DATA) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             merge_pipeline_caches: unsafe {
                 match symbol(crate::vk1_0::FN_MERGE_PIPELINE_CACHES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_graphics_pipelines: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_GRAPHICS_PIPELINES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_compute_pipelines: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_COMPUTE_PIPELINES) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_pipeline: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_PIPELINE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_pipeline_layout: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_PIPELINE_LAYOUT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_pipeline_layout: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_PIPELINE_LAYOUT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_sampler: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_SAMPLER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_sampler: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_SAMPLER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_descriptor_set_layout: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_DESCRIPTOR_SET_LAYOUT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_descriptor_set_layout: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_DESCRIPTOR_SET_LAYOUT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_descriptor_pool: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_DESCRIPTOR_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_descriptor_pool: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_DESCRIPTOR_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_descriptor_pool: unsafe {
                 match symbol(crate::vk1_0::FN_RESET_DESCRIPTOR_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             allocate_descriptor_sets: unsafe {
                 match symbol(crate::vk1_0::FN_ALLOCATE_DESCRIPTOR_SETS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             free_descriptor_sets: unsafe {
                 match symbol(crate::vk1_0::FN_FREE_DESCRIPTOR_SETS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             update_descriptor_sets: unsafe {
                 match symbol(crate::vk1_0::FN_UPDATE_DESCRIPTOR_SETS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_framebuffer: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_FRAMEBUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_framebuffer: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_FRAMEBUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_render_pass: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_RENDER_PASS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_render_pass: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_RENDER_PASS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             get_render_area_granularity: unsafe {
                 match symbol(crate::vk1_0::FN_GET_RENDER_AREA_GRANULARITY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_command_pool: unsafe {
                 match symbol(crate::vk1_0::FN_CREATE_COMMAND_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             destroy_command_pool: unsafe {
                 match symbol(crate::vk1_0::FN_DESTROY_COMMAND_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_command_pool: unsafe {
                 match symbol(crate::vk1_0::FN_RESET_COMMAND_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             allocate_command_buffers: unsafe {
                 match symbol(crate::vk1_0::FN_ALLOCATE_COMMAND_BUFFERS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             free_command_buffers: unsafe {
                 match symbol(crate::vk1_0::FN_FREE_COMMAND_BUFFERS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             begin_command_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_BEGIN_COMMAND_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             end_command_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_END_COMMAND_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             reset_command_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_RESET_COMMAND_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_bind_pipeline: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BIND_PIPELINE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_viewport: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_VIEWPORT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_scissor: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_SCISSOR) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_line_width: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_LINE_WIDTH) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_depth_bias: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_DEPTH_BIAS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_blend_constants: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_BLEND_CONSTANTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_depth_bounds: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_DEPTH_BOUNDS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_stencil_compare_mask: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_STENCIL_COMPARE_MASK) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_stencil_write_mask: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_STENCIL_WRITE_MASK) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_stencil_reference: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_STENCIL_REFERENCE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_bind_descriptor_sets: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BIND_DESCRIPTOR_SETS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_bind_index_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BIND_INDEX_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_bind_vertex_buffers: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BIND_VERTEX_BUFFERS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_draw: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DRAW) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_draw_indexed: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DRAW_INDEXED) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_draw_indirect: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DRAW_INDIRECT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_draw_indexed_indirect: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DRAW_INDEXED_INDIRECT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_dispatch: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DISPATCH) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_dispatch_indirect: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_DISPATCH_INDIRECT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_copy_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_COPY_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_copy_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_COPY_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_blit_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BLIT_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_copy_buffer_to_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_COPY_BUFFER_TO_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_copy_image_to_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_COPY_IMAGE_TO_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_update_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_UPDATE_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_fill_buffer: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_FILL_BUFFER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_clear_color_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_CLEAR_COLOR_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_clear_depth_stencil_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_CLEAR_DEPTH_STENCIL_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_clear_attachments: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_CLEAR_ATTACHMENTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_resolve_image: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_RESOLVE_IMAGE) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_set_event: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_SET_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_reset_event: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_RESET_EVENT) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_wait_events: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_WAIT_EVENTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_pipeline_barrier: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_PIPELINE_BARRIER) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_begin_query: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BEGIN_QUERY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_end_query: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_END_QUERY) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_begin_conditional_rendering_ext: if ext_conditional_rendering {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_conditional_rendering :: FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_conditional_rendering :: FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_end_conditional_rendering_ext: if ext_conditional_rendering {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_conditional_rendering :: FN_CMD_END_CONDITIONAL_RENDERING_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_conditional_rendering :: FN_CMD_END_CONDITIONAL_RENDERING_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2161,49 +2164,49 @@ impl DeviceLoader {
             cmd_reset_query_pool: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_RESET_QUERY_POOL) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_write_timestamp: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_WRITE_TIMESTAMP) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_copy_query_pool_results: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_COPY_QUERY_POOL_RESULTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_push_constants: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_PUSH_CONSTANTS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_begin_render_pass: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_BEGIN_RENDER_PASS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_next_subpass: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_NEXT_SUBPASS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_end_render_pass: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_END_RENDER_PASS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             cmd_execute_commands: unsafe {
                 match symbol(crate::vk1_0::FN_CMD_EXECUTE_COMMANDS) {
                     Some(ptr) => Some(std::mem::transmute(ptr)),
-                    None => return None,
+                    None => return Err(crate::LoaderError::SymbolNotAvailable),
                 }
             },
             create_shared_swapchains_khr: if khr_display_swapchain {
@@ -2212,7 +2215,7 @@ impl DeviceLoader {
                         crate::extensions::khr_display_swapchain::FN_CREATE_SHARED_SWAPCHAINS_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2222,7 +2225,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_CREATE_SWAPCHAIN_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2232,7 +2235,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_DESTROY_SWAPCHAIN_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2242,7 +2245,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_GET_SWAPCHAIN_IMAGES_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2252,7 +2255,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2262,7 +2265,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_QUEUE_PRESENT_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2274,7 +2277,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2286,7 +2289,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2297,7 +2300,7 @@ impl DeviceLoader {
                     match symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_BEGIN_EXT)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2307,7 +2310,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_END_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2319,7 +2322,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_INSERT_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2331,7 +2334,7 @@ impl DeviceLoader {
                         crate::extensions::nv_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2339,42 +2342,42 @@ impl DeviceLoader {
             },
             cmd_execute_generated_commands_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_EXECUTE_GENERATED_COMMANDS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_EXECUTE_GENERATED_COMMANDS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_preprocess_generated_commands_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_bind_pipeline_shader_group_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_generated_commands_memory_requirements_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             create_indirect_commands_layout_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             destroy_indirect_commands_layout_nv: if nv_device_generated_commands {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_generated_commands :: FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2385,7 +2388,7 @@ impl DeviceLoader {
                         crate::extensions::khr_push_descriptor::FN_CMD_PUSH_DESCRIPTOR_SET_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2395,7 +2398,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_TRIM_COMMAND_POOL) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2403,14 +2406,14 @@ impl DeviceLoader {
             },
             get_memory_win32_handle_khr: if khr_external_memory_win32 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_memory_win32 :: FN_GET_MEMORY_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_memory_win32 :: FN_GET_MEMORY_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_memory_win32_handle_properties_khr: if khr_external_memory_win32 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_memory_win32 :: FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_memory_win32 :: FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2419,7 +2422,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2431,7 +2434,7 @@ impl DeviceLoader {
                         crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_PROPERTIES_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2439,14 +2442,14 @@ impl DeviceLoader {
             },
             get_semaphore_win32_handle_khr: if khr_external_semaphore_win32 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_semaphore_win32 :: FN_GET_SEMAPHORE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_semaphore_win32 :: FN_GET_SEMAPHORE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             import_semaphore_win32_handle_khr: if khr_external_semaphore_win32 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_semaphore_win32 :: FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_semaphore_win32 :: FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2457,7 +2460,7 @@ impl DeviceLoader {
                         crate::extensions::khr_external_semaphore_fd::FN_GET_SEMAPHORE_FD_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2469,7 +2472,7 @@ impl DeviceLoader {
                         crate::extensions::khr_external_semaphore_fd::FN_IMPORT_SEMAPHORE_FD_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2481,7 +2484,7 @@ impl DeviceLoader {
                         crate::extensions::khr_external_fence_win32::FN_GET_FENCE_WIN32_HANDLE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2489,7 +2492,7 @@ impl DeviceLoader {
             },
             import_fence_win32_handle_khr: if khr_external_fence_win32 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_external_fence_win32 :: FN_IMPORT_FENCE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_external_fence_win32 :: FN_IMPORT_FENCE_WIN32_HANDLE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2498,7 +2501,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_external_fence_fd::FN_GET_FENCE_FD_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2508,7 +2511,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_external_fence_fd::FN_IMPORT_FENCE_FD_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2520,7 +2523,7 @@ impl DeviceLoader {
                         crate::extensions::ext_display_control::FN_DISPLAY_POWER_CONTROL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2532,7 +2535,7 @@ impl DeviceLoader {
                         crate::extensions::ext_display_control::FN_REGISTER_DEVICE_EVENT_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2544,7 +2547,7 @@ impl DeviceLoader {
                         crate::extensions::ext_display_control::FN_REGISTER_DISPLAY_EVENT_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2556,7 +2559,7 @@ impl DeviceLoader {
                         crate::extensions::ext_display_control::FN_GET_SWAPCHAIN_COUNTER_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2566,7 +2569,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2576,7 +2579,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_BIND_BUFFER_MEMORY2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2586,7 +2589,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_BIND_IMAGE_MEMORY2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2596,7 +2599,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_CMD_SET_DEVICE_MASK) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2606,7 +2609,7 @@ impl DeviceLoader {
                 || (khr_device_group && khr_surface)
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2615,7 +2618,7 @@ impl DeviceLoader {
                 || (khr_device_group && khr_surface)
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_swapchain :: FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2626,7 +2629,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE2_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2636,7 +2639,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_CMD_DISPATCH_BASE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2646,7 +2649,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2656,7 +2659,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2666,7 +2669,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2677,7 +2680,7 @@ impl DeviceLoader {
                 || (khr_descriptor_update_template && khr_push_descriptor)
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_push_descriptor :: FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_push_descriptor :: FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2686,7 +2689,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_hdr_metadata::FN_SET_HDR_METADATA_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2694,28 +2697,28 @@ impl DeviceLoader {
             },
             get_swapchain_status_khr: if khr_shared_presentable_image {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_shared_presentable_image :: FN_GET_SWAPCHAIN_STATUS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_shared_presentable_image :: FN_GET_SWAPCHAIN_STATUS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_refresh_cycle_duration_google: if google_display_timing {
                 unsafe {
-                    match symbol ( crate :: extensions :: google_display_timing :: FN_GET_REFRESH_CYCLE_DURATION_GOOGLE ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: google_display_timing :: FN_GET_REFRESH_CYCLE_DURATION_GOOGLE ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_past_presentation_timing_google: if google_display_timing {
                 unsafe {
-                    match symbol ( crate :: extensions :: google_display_timing :: FN_GET_PAST_PRESENTATION_TIMING_GOOGLE ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: google_display_timing :: FN_GET_PAST_PRESENTATION_TIMING_GOOGLE ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_viewport_w_scaling_nv: if nv_clip_space_w_scaling {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_clip_space_w_scaling :: FN_CMD_SET_VIEWPORT_W_SCALING_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_clip_space_w_scaling :: FN_CMD_SET_VIEWPORT_W_SCALING_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2726,7 +2729,7 @@ impl DeviceLoader {
                         crate::extensions::ext_discard_rectangles::FN_CMD_SET_DISCARD_RECTANGLE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2738,7 +2741,7 @@ impl DeviceLoader {
                         crate::extensions::ext_sample_locations::FN_CMD_SET_SAMPLE_LOCATIONS_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2748,7 +2751,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_BUFFER_MEMORY_REQUIREMENTS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2758,7 +2761,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_IMAGE_MEMORY_REQUIREMENTS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2768,7 +2771,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2778,7 +2781,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_CREATE_SAMPLER_YCBCR_CONVERSION) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2788,7 +2791,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_DESTROY_SAMPLER_YCBCR_CONVERSION) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2798,7 +2801,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_DEVICE_QUEUE2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2810,7 +2813,7 @@ impl DeviceLoader {
                         crate::extensions::ext_validation_cache::FN_CREATE_VALIDATION_CACHE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2822,7 +2825,7 @@ impl DeviceLoader {
                         crate::extensions::ext_validation_cache::FN_DESTROY_VALIDATION_CACHE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2834,7 +2837,7 @@ impl DeviceLoader {
                         crate::extensions::ext_validation_cache::FN_GET_VALIDATION_CACHE_DATA_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2846,7 +2849,7 @@ impl DeviceLoader {
                         crate::extensions::ext_validation_cache::FN_MERGE_VALIDATION_CACHES_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2856,7 +2859,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_1::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2866,7 +2869,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::amd_shader_info::FN_GET_SHADER_INFO_AMD) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2878,7 +2881,7 @@ impl DeviceLoader {
                         crate::extensions::amd_display_native_hdr::FN_SET_LOCAL_DIMMING_AMD,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2886,7 +2889,7 @@ impl DeviceLoader {
             },
             get_calibrated_timestamps_ext: if ext_calibrated_timestamps {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_calibrated_timestamps :: FN_GET_CALIBRATED_TIMESTAMPS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_calibrated_timestamps :: FN_GET_CALIBRATED_TIMESTAMPS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -2897,7 +2900,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2909,7 +2912,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2921,7 +2924,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2933,7 +2936,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2945,7 +2948,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2957,7 +2960,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2969,7 +2972,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_CMD_END_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2981,7 +2984,7 @@ impl DeviceLoader {
                         crate::extensions::ext_debug_utils::FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -2989,7 +2992,7 @@ impl DeviceLoader {
             },
             get_memory_host_pointer_properties_ext: if ext_external_memory_host {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_external_memory_host :: FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_external_memory_host :: FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3000,7 +3003,7 @@ impl DeviceLoader {
                         crate::extensions::amd_buffer_marker::FN_CMD_WRITE_BUFFER_MARKER_AMD,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3010,7 +3013,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CREATE_RENDER_PASS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3020,7 +3023,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CMD_BEGIN_RENDER_PASS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3030,7 +3033,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CMD_NEXT_SUBPASS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3040,7 +3043,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CMD_END_RENDER_PASS2) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3050,7 +3053,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_GET_SEMAPHORE_COUNTER_VALUE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3060,7 +3063,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_WAIT_SEMAPHORES) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3070,7 +3073,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_SIGNAL_SEMAPHORE) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3079,7 +3082,7 @@ impl DeviceLoader {
             get_android_hardware_buffer_properties_android:
                 if android_external_memory_android_hardware_buffer {
                     unsafe {
-                        match symbol ( crate :: extensions :: android_external_memory_android_hardware_buffer :: FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: android_external_memory_android_hardware_buffer :: FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -3087,7 +3090,7 @@ impl DeviceLoader {
             get_memory_android_hardware_buffer_android:
                 if android_external_memory_android_hardware_buffer {
                     unsafe {
-                        match symbol ( crate :: extensions :: android_external_memory_android_hardware_buffer :: FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: android_external_memory_android_hardware_buffer :: FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -3096,7 +3099,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CMD_DRAW_INDIRECT_COUNT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3106,7 +3109,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3114,35 +3117,35 @@ impl DeviceLoader {
             },
             cmd_set_checkpoint_nv: if nv_device_diagnostic_checkpoints {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_diagnostic_checkpoints :: FN_CMD_SET_CHECKPOINT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_diagnostic_checkpoints :: FN_CMD_SET_CHECKPOINT_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_queue_checkpoint_data_nv: if nv_device_diagnostic_checkpoints {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_device_diagnostic_checkpoints :: FN_GET_QUEUE_CHECKPOINT_DATA_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_device_diagnostic_checkpoints :: FN_GET_QUEUE_CHECKPOINT_DATA_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_bind_transform_feedback_buffers_ext: if ext_transform_feedback {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_begin_transform_feedback_ext: if ext_transform_feedback {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_end_transform_feedback_ext: if ext_transform_feedback {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_END_TRANSFORM_FEEDBACK_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_END_TRANSFORM_FEEDBACK_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3153,7 +3156,7 @@ impl DeviceLoader {
                         crate::extensions::ext_transform_feedback::FN_CMD_BEGIN_QUERY_INDEXED_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3165,7 +3168,7 @@ impl DeviceLoader {
                         crate::extensions::ext_transform_feedback::FN_CMD_END_QUERY_INDEXED_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3173,7 +3176,7 @@ impl DeviceLoader {
             },
             cmd_draw_indirect_byte_count_ext: if ext_transform_feedback {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_transform_feedback :: FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3184,7 +3187,7 @@ impl DeviceLoader {
                         crate::extensions::nv_scissor_exclusive::FN_CMD_SET_EXCLUSIVE_SCISSOR_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3196,7 +3199,7 @@ impl DeviceLoader {
                         crate::extensions::nv_shading_rate_image::FN_CMD_BIND_SHADING_RATE_IMAGE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3204,7 +3207,7 @@ impl DeviceLoader {
             },
             cmd_set_viewport_shading_rate_palette_nv: if nv_shading_rate_image {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_shading_rate_image :: FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_shading_rate_image :: FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3215,7 +3218,7 @@ impl DeviceLoader {
                         crate::extensions::nv_shading_rate_image::FN_CMD_SET_COARSE_SAMPLE_ORDER_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3225,7 +3228,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_NV) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3237,7 +3240,7 @@ impl DeviceLoader {
                         crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3249,7 +3252,7 @@ impl DeviceLoader {
                         crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3259,7 +3262,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::nv_ray_tracing::FN_COMPILE_DEFERRED_NV) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3271,7 +3274,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_CREATE_ACCELERATION_STRUCTURE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3283,7 +3286,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_DESTROY_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3291,21 +3294,21 @@ impl DeviceLoader {
             },
             get_acceleration_structure_memory_requirements_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_acceleration_structure_memory_requirements_nv: if nv_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             bind_acceleration_structure_memory_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_BIND_ACCELERATION_STRUCTURE_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_BIND_ACCELERATION_STRUCTURE_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3316,7 +3319,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_CMD_COPY_ACCELERATION_STRUCTURE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3328,7 +3331,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3340,7 +3343,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_COPY_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3348,35 +3351,35 @@ impl DeviceLoader {
             },
             cmd_copy_acceleration_structure_to_memory_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             copy_acceleration_structure_to_memory_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_copy_memory_to_acceleration_structure_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             copy_memory_to_acceleration_structure_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_write_acceleration_structures_properties_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3387,7 +3390,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3395,7 +3398,7 @@ impl DeviceLoader {
             },
             write_acceleration_structures_properties_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3404,7 +3407,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_ray_tracing::FN_CMD_TRACE_RAYS_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3414,7 +3417,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::nv_ray_tracing::FN_CMD_TRACE_RAYS_NV) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3422,14 +3425,14 @@ impl DeviceLoader {
             },
             get_ray_tracing_shader_group_handles_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_ray_tracing_capture_replay_shader_group_handles_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3440,7 +3443,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3452,7 +3455,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_CREATE_RAY_TRACING_PIPELINES_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3464,7 +3467,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_CREATE_RAY_TRACING_PIPELINES_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3475,7 +3478,7 @@ impl DeviceLoader {
                     match symbol(crate::extensions::khr_ray_tracing::FN_CMD_TRACE_RAYS_INDIRECT_KHR)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3483,7 +3486,7 @@ impl DeviceLoader {
             },
             get_device_acceleration_structure_compatibility_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3494,7 +3497,7 @@ impl DeviceLoader {
                         crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_HANDLE_NVX,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3506,7 +3509,7 @@ impl DeviceLoader {
                         crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_ADDRESS_NVX,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3517,21 +3520,21 @@ impl DeviceLoader {
                 || (ext_full_screen_exclusive && vk1_1)
             {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             acquire_full_screen_exclusive_mode_ext: if ext_full_screen_exclusive {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             release_full_screen_exclusive_mode_ext: if ext_full_screen_exclusive {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_full_screen_exclusive :: FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3542,7 +3545,7 @@ impl DeviceLoader {
                         crate::extensions::khr_performance_query::FN_ACQUIRE_PROFILING_LOCK_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3554,7 +3557,7 @@ impl DeviceLoader {
                         crate::extensions::khr_performance_query::FN_RELEASE_PROFILING_LOCK_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3562,7 +3565,7 @@ impl DeviceLoader {
             },
             get_image_drm_format_modifier_properties_ext: if ext_image_drm_format_modifier {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_image_drm_format_modifier :: FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_image_drm_format_modifier :: FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3571,7 +3574,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3581,7 +3584,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_GET_BUFFER_DEVICE_ADDRESS) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3589,63 +3592,63 @@ impl DeviceLoader {
             },
             initialize_performance_api_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_INITIALIZE_PERFORMANCE_API_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_INITIALIZE_PERFORMANCE_API_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             uninitialize_performance_api_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_UNINITIALIZE_PERFORMANCE_API_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_UNINITIALIZE_PERFORMANCE_API_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_performance_marker_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_MARKER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_MARKER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_performance_stream_marker_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_performance_override_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             acquire_performance_configuration_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             release_performance_configuration_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             queue_set_performance_configuration_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_performance_parameter_intel: if intel_performance_query {
                 unsafe {
-                    match symbol ( crate :: extensions :: intel_performance_query :: FN_GET_PERFORMANCE_PARAMETER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: intel_performance_query :: FN_GET_PERFORMANCE_PARAMETER_INTEL ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3654,7 +3657,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::vk1_2::FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3662,14 +3665,14 @@ impl DeviceLoader {
             },
             get_pipeline_executable_properties_khr: if khr_pipeline_executable_properties {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_pipeline_executable_statistics_khr: if khr_pipeline_executable_properties {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3677,7 +3680,7 @@ impl DeviceLoader {
             get_pipeline_executable_internal_representations_khr:
                 if khr_pipeline_executable_properties {
                     unsafe {
-                        match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                        match symbol ( crate :: extensions :: khr_pipeline_executable_properties :: FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                     }
                 } else {
                     None
@@ -3688,7 +3691,7 @@ impl DeviceLoader {
                         crate::extensions::ext_line_rasterization::FN_CMD_SET_LINE_STIPPLE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3700,7 +3703,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_CREATE_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3712,7 +3715,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_CMD_BUILD_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3720,7 +3723,7 @@ impl DeviceLoader {
             },
             cmd_build_acceleration_structure_indirect_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_BUILD_ACCELERATION_STRUCTURE_INDIRECT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_CMD_BUILD_ACCELERATION_STRUCTURE_INDIRECT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3731,7 +3734,7 @@ impl DeviceLoader {
                         crate::extensions::khr_ray_tracing::FN_BUILD_ACCELERATION_STRUCTURE_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3739,42 +3742,42 @@ impl DeviceLoader {
             },
             get_acceleration_structure_device_address_khr: if khr_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_ray_tracing :: FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             create_deferred_operation_khr: if khr_deferred_host_operations {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_CREATE_DEFERRED_OPERATION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_CREATE_DEFERRED_OPERATION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             destroy_deferred_operation_khr: if khr_deferred_host_operations {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_DESTROY_DEFERRED_OPERATION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_DESTROY_DEFERRED_OPERATION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_deferred_operation_max_concurrency_khr: if khr_deferred_host_operations {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_deferred_operation_result_khr: if khr_deferred_host_operations {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_GET_DEFERRED_OPERATION_RESULT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_GET_DEFERRED_OPERATION_RESULT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             deferred_operation_join_khr: if khr_deferred_host_operations {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_DEFERRED_OPERATION_JOIN_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_deferred_host_operations :: FN_DEFERRED_OPERATION_JOIN_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3785,7 +3788,7 @@ impl DeviceLoader {
                         crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_CULL_MODE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3797,7 +3800,7 @@ impl DeviceLoader {
                         crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_FRONT_FACE_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3805,63 +3808,63 @@ impl DeviceLoader {
             },
             cmd_set_primitive_topology_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_viewport_with_count_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_scissor_with_count_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_SCISSOR_WITH_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_SCISSOR_WITH_COUNT_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_bind_vertex_buffers2_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_BIND_VERTEX_BUFFERS2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_BIND_VERTEX_BUFFERS2_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_depth_test_enable_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_depth_write_enable_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_depth_compare_op_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_COMPARE_OP_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_COMPARE_OP_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_depth_bounds_test_enable_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_set_stencil_test_enable_ext: if ext_extended_dynamic_state {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_STENCIL_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_extended_dynamic_state :: FN_CMD_SET_STENCIL_TEST_ENABLE_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3872,7 +3875,7 @@ impl DeviceLoader {
                         crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_OP_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3884,7 +3887,7 @@ impl DeviceLoader {
                         crate::extensions::ext_private_data::FN_CREATE_PRIVATE_DATA_SLOT_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3896,7 +3899,7 @@ impl DeviceLoader {
                         crate::extensions::ext_private_data::FN_DESTROY_PRIVATE_DATA_SLOT_EXT,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3906,7 +3909,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_private_data::FN_SET_PRIVATE_DATA_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3916,7 +3919,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_private_data::FN_GET_PRIVATE_DATA_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3926,7 +3929,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::ext_host_query_reset::FN_RESET_QUERY_POOL_EXT) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3936,7 +3939,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_maintenance1::FN_TRIM_COMMAND_POOL_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3944,7 +3947,7 @@ impl DeviceLoader {
             },
             get_device_group_peer_memory_features_khr: if khr_device_group {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_device_group :: FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_device_group :: FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -3953,7 +3956,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_bind_memory2::FN_BIND_BUFFER_MEMORY2_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3963,7 +3966,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_bind_memory2::FN_BIND_IMAGE_MEMORY2_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3973,7 +3976,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_device_group::FN_CMD_SET_DEVICE_MASK_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3983,7 +3986,7 @@ impl DeviceLoader {
                 unsafe {
                     match symbol(crate::extensions::khr_device_group::FN_CMD_DISPATCH_BASE_KHR) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -3991,63 +3994,63 @@ impl DeviceLoader {
             },
             create_descriptor_update_template_khr: if khr_descriptor_update_template {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             destroy_descriptor_update_template_khr: if khr_descriptor_update_template {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             update_descriptor_set_with_template_khr: if khr_descriptor_update_template {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_descriptor_update_template :: FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_buffer_memory_requirements2_khr: if khr_get_memory_requirements2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_image_memory_requirements2_khr: if khr_get_memory_requirements2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_image_sparse_memory_requirements2_khr: if khr_get_memory_requirements2 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_get_memory_requirements2 :: FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             create_sampler_ycbcr_conversion_khr: if khr_sampler_ycbcr_conversion {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_sampler_ycbcr_conversion :: FN_CREATE_SAMPLER_YCBCR_CONVERSION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_sampler_ycbcr_conversion :: FN_CREATE_SAMPLER_YCBCR_CONVERSION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             destroy_sampler_ycbcr_conversion_khr: if khr_sampler_ycbcr_conversion {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_sampler_ycbcr_conversion :: FN_DESTROY_SAMPLER_YCBCR_CONVERSION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_sampler_ycbcr_conversion :: FN_DESTROY_SAMPLER_YCBCR_CONVERSION_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_descriptor_set_layout_support_khr: if khr_maintenance3 {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_maintenance3 :: FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_maintenance3 :: FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -4058,7 +4061,7 @@ impl DeviceLoader {
                         crate::extensions::khr_create_renderpass2::FN_CREATE_RENDER_PASS2_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4070,7 +4073,7 @@ impl DeviceLoader {
                         crate::extensions::khr_create_renderpass2::FN_CMD_BEGIN_RENDER_PASS2_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4082,7 +4085,7 @@ impl DeviceLoader {
                         crate::extensions::khr_create_renderpass2::FN_CMD_NEXT_SUBPASS2_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4094,7 +4097,7 @@ impl DeviceLoader {
                         crate::extensions::khr_create_renderpass2::FN_CMD_END_RENDER_PASS2_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4102,7 +4105,7 @@ impl DeviceLoader {
             },
             get_semaphore_counter_value_khr: if khr_timeline_semaphore {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_timeline_semaphore :: FN_GET_SEMAPHORE_COUNTER_VALUE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_timeline_semaphore :: FN_GET_SEMAPHORE_COUNTER_VALUE_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -4112,7 +4115,7 @@ impl DeviceLoader {
                     match symbol(crate::extensions::khr_timeline_semaphore::FN_WAIT_SEMAPHORES_KHR)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4123,7 +4126,7 @@ impl DeviceLoader {
                     match symbol(crate::extensions::khr_timeline_semaphore::FN_SIGNAL_SEMAPHORE_KHR)
                     {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4135,7 +4138,7 @@ impl DeviceLoader {
                         crate::extensions::khr_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_KHR,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4147,7 +4150,7 @@ impl DeviceLoader {
                         crate::extensions::amd_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_AMD,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4155,14 +4158,14 @@ impl DeviceLoader {
             },
             cmd_draw_indexed_indirect_count_khr: if khr_draw_indirect_count {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_draw_indirect_count :: FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_draw_indirect_count :: FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             cmd_draw_indexed_indirect_count_amd: if amd_draw_indirect_count {
                 unsafe {
-                    match symbol ( crate :: extensions :: amd_draw_indirect_count :: FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: amd_draw_indirect_count :: FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
@@ -4173,7 +4176,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_DESTROY_ACCELERATION_STRUCTURE_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4185,7 +4188,7 @@ impl DeviceLoader {
                         crate::extensions::nv_ray_tracing::FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV,
                     ) {
                         Some(ptr) => Some(std::mem::transmute(ptr)),
-                        None => return None,
+                        None => return Err(crate::LoaderError::SymbolNotAvailable),
                     }
                 }
             } else {
@@ -4193,42 +4196,42 @@ impl DeviceLoader {
             },
             cmd_write_acceleration_structures_properties_nv: if nv_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_ray_tracing_shader_group_handles_nv: if nv_ray_tracing {
                 unsafe {
-                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: nv_ray_tracing :: FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_buffer_opaque_capture_address_khr: if khr_buffer_device_address {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_buffer_device_address_khr: if khr_buffer_device_address {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_BUFFER_DEVICE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_BUFFER_DEVICE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_buffer_device_address_ext: if ext_buffer_device_address {
                 unsafe {
-                    match symbol ( crate :: extensions :: ext_buffer_device_address :: FN_GET_BUFFER_DEVICE_ADDRESS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: ext_buffer_device_address :: FN_GET_BUFFER_DEVICE_ADDRESS_EXT ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None
             },
             get_device_memory_opaque_capture_address_khr: if khr_buffer_device_address {
                 unsafe {
-                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return None , }
+                    match symbol ( crate :: extensions :: khr_buffer_device_address :: FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR ) { Some ( ptr ) => Some ( std :: mem :: transmute ( ptr ) ) , None => return Err ( crate :: LoaderError :: SymbolNotAvailable ) , }
                 }
             } else {
                 None

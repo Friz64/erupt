@@ -1,7 +1,7 @@
 //! Load functions using [`libloading`](https://crates.io/crates/libloading)
 //!
 //! Enabled using the `loading` cargo feature
-use crate::EntryLoader;
+use crate::{EntryLoader, LoaderError};
 use libloading::Library;
 use std::{
     error::Error,
@@ -10,7 +10,7 @@ use std::{
 };
 
 /// The default `EntryLoader`, providing `EntryLoader::new`
-pub type DefaultCoreLoader = EntryLoader<Library>;
+pub type DefaultEntryLoader = EntryLoader<Library>;
 
 #[cfg(all(
     unix,
@@ -27,33 +27,9 @@ const LIB_PATH: &str = "libvulkan.dylib";
 #[cfg(windows)]
 const LIB_PATH: &str = "vulkan-1.dll";
 
-#[derive(Debug)]
-enum LibraryErrorInner {
-    LibLoading(libloading::Error),
-    EntryLoader,
-}
-
-impl Display for LibraryErrorInner {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            LibraryErrorInner::LibLoading(err) => Display::fmt(err, f),
-            LibraryErrorInner::EntryLoader => write!(f, "Entry failed to load"),
-        }
-    }
-}
-
-impl Error for LibraryErrorInner {
-    fn source(&self) -> Option<&(dyn Error + 'static)> {
-        match self {
-            LibraryErrorInner::LibLoading(err) => Error::source(err),
-            LibraryErrorInner::EntryLoader => None,
-        }
-    }
-}
-
 /// An error that can occur while loading a `Library`
 #[derive(Debug)]
-pub struct LibraryError(LibraryErrorInner);
+pub struct LibraryError(libloading::Error);
 
 impl Display for LibraryError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -67,19 +43,48 @@ impl Error for LibraryError {
     }
 }
 
-impl DefaultCoreLoader {
+/// An error that can occur while initializing a `EntryLoader`
+#[derive(Debug)]
+pub enum EntryLoaderError {
+    /// The library failed to load
+    Library(LibraryError),
+    /// The entry loader failed to initialize
+    EntryLoad(LoaderError),
+}
+
+impl Display for EntryLoaderError {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            EntryLoaderError::Library(err) => write!(f, "The library failed to load: {}", err),
+            EntryLoaderError::EntryLoad(err) => {
+                write!(f, "The entry loader failed to initialize: {}", err)
+            }
+        }
+    }
+}
+
+impl Error for EntryLoaderError {
+    fn source(&self) -> Option<&(dyn Error + 'static)> {
+        match self {
+            EntryLoaderError::Library(err) => Error::source(err),
+            EntryLoaderError::EntryLoad(err) => Error::source(err),
+        }
+    }
+}
+
+impl DefaultEntryLoader {
     /// Load functions using [`libloading`](https://crates.io/crates/libloading)
     ///
     /// Enabled using the `loading` cargo feature
-    pub fn new() -> Result<DefaultCoreLoader, LibraryError> {
-        let library = Library::new(LIB_PATH)
-            .map_err(|err| LibraryError(LibraryErrorInner::LibLoading(err)))?;
+    pub fn new() -> Result<DefaultEntryLoader, EntryLoaderError> {
+        let library =
+            Library::new(LIB_PATH).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?;
 
         EntryLoader::custom(library, |library, name| unsafe {
             let cstr = CStr::from_ptr(name);
             let bytes = cstr.to_bytes_with_nul();
             library.get(bytes).ok().map(|symbol| *symbol)
         })
-        .ok_or(LibraryError(LibraryErrorInner::EntryLoader))
+        .map_err(EntryLoaderError::EntryLoad)
     }
 }

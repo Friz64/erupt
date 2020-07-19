@@ -10,7 +10,7 @@
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
 //!   - [`allocator`]: Provides a basic Vulkan memory allocator, aiming to be *correct*
 //! - Generated code distributed into multiple modules
-//! - Function loading ([`CoreLoader`], [`InstanceLoader`], [`DeviceLoader`])
+//! - Function loading ([`EntryLoader`], [`InstanceLoader`], [`DeviceLoader`])
 //! - Seperate `Flags` and `FlagBits` types
 //! - A high level `Builder` for every struct
 //! - Type-safe pointer chain support
@@ -20,17 +20,14 @@
 //!
 //! ## Example: Instance Creation
 //! ```rust ignore
-//! use erupt::{vk1_0::*, CoreLoader, InstanceLoader};
+//! use erupt::{vk1_0, EntryLoader, InstanceLoader};
 //!
-//! let mut core = CoreLoader::new()?;
-//! core.load_vk1_0()?;
+//! let entry = EntryLoader::new()?;
 //!
-//! let app_info = ApplicationInfoBuilder::new().api_version(erupt::make_version(1, 0, 0));
-//! let instance_info = InstanceCreateInfoBuilder::new().application_info(&app_info);
-//! let instance_handle = try_vk!(core.create_instance(&instance_info, None, None));
+//! let app_info = vk1_0::ApplicationInfoBuilder::new().api_version(vk1_0::make_version(1, 0, 0));
+//! let instance_info = vk1_0::InstanceCreateInfoBuilder::new().application_info(&app_info);
 //!
-//! let mut instance = InstanceLoader::new(&core, instance_handle)?;
-//! instance.load_vk1_0()?;
+//! let instance = InstanceLoader::new(&entry, &instance_info, None)?;
 //!
 //! // ...
 //!
@@ -45,7 +42,7 @@
 //!
 //! ## Cargo Features
 //! - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency
-//! - `loading` (enabled by default): Enables the [`CoreLoader::new`] function, adds [`libloading`] dependency
+//! - `loading` (enabled by default): Enables the [`EntryLoader::new`] function, adds [`libloading`] dependency
 //!
 //! ## FAQ
 //! ### Q: What's the difference between this, ash and vulkano?
@@ -64,7 +61,6 @@
 //! informational.
 //!
 //! ## Thank you
-//! - [`vk-parse`](https://crates.io/crates/vk-parse) for helping parse `vk.xml` in the [`generator`](https://gitlab.com/Friz64/erupt/-/tree/master/generator)
 //! - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate
 //! - [`libloading`](https://crates.io/crates/libloading) for providing symbol loading
 //! - [`ash-window`](https://crates.io/crates/ash-window) for providing a base for the [`surface`] module
@@ -87,10 +83,10 @@
 //! [`libloading`]: https://crates.io/crates/libloading
 //! [`raw-window-handle`]: https://crates.io/crates/raw-window-handle
 //! [`ash-window`]: https://crates.io/crates/ash-window
-//! [`CoreLoader`]: https://docs.rs/erupt/*/erupt/struct.CoreLoader.html
-//! [`CoreLoader::new`]: https://docs.rs/erupt/*/erupt/struct.CoreLoader.html#method.new
-//! [`InstanceLoader`]: https://docs.rs/erupt/*/erupt/struct.CoreLoader.html
-//! [`DeviceLoader`]: https://docs.rs/erupt/*/erupt/struct.CoreLoader.html
+//! [`EntryLoader`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html
+//! [`EntryLoader::new`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html#method.new
+//! [`InstanceLoader`]: https://docs.rs/erupt/*/erupt/struct.InstanceLoader.html
+//! [`DeviceLoader`]: https://docs.rs/erupt/*/erupt/struct.DeviceLoader.html
 //! [`utils`]: https://docs.rs/erupt/*/erupt/utils/index.html
 
 mod generated;

@@ -229,6 +229,7 @@ impl std::fmt::Debug for DriverId {
             &Self::GGP_PROPRIETARY => "GGP_PROPRIETARY",
             &Self::BROADCOM_PROPRIETARY => "BROADCOM_PROPRIETARY",
             &Self::MESA_LLVMPIPE => "MESA_LLVMPIPE",
+            &Self::MOLTENVK => "MOLTENVK",
             _ => "(unknown variant)",
         })
     }
@@ -248,6 +249,7 @@ impl DriverId {
     pub const GGP_PROPRIETARY: Self = Self(11);
     pub const BROADCOM_PROPRIETARY: Self = Self(12);
     pub const MESA_LLVMPIPE: Self = Self(13);
+    pub const MOLTENVK: Self = Self(14);
 }
 #[doc = "Provided by [`extensions::khr_driver_properties`](../extensions/khr_driver_properties/index.html)"]
 impl DriverId {

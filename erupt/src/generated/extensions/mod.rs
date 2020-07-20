@@ -106,6 +106,8 @@ pub mod ext_headless_surface;
 pub mod ext_host_query_reset;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_image_drm_format_modifier.html) · Vulkan extension"]
 pub mod ext_image_drm_format_modifier;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_image_robustness.html) · Vulkan extension"]
+pub mod ext_image_robustness;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_index_type_uint8.html) · Vulkan extension"]
 pub mod ext_index_type_uint8;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_inline_uniform_block.html) · Vulkan extension"]
@@ -140,6 +142,8 @@ pub mod ext_sampler_filter_minmax;
 pub mod ext_scalar_block_layout;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_separate_stencil_usage.html) · Vulkan extension"]
 pub mod ext_separate_stencil_usage;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_atomic_float.html) · Vulkan extension"]
+pub mod ext_shader_atomic_float;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html) · Vulkan extension"]
 pub mod ext_shader_demote_to_helper_invocation;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_stencil_export.html) · Vulkan extension"]

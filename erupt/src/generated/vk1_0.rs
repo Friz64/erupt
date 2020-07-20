@@ -4515,6 +4515,9 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT => {
                 "PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT"
             }
+            &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT"
+            }
             &Self::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT"
             }
@@ -4598,6 +4601,9 @@ impl std::fmt::Debug for StructureType {
             }
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => {
                 "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT"
             }
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             _ => "(unknown variant)",
@@ -5347,6 +5353,10 @@ impl StructureType {
     pub const PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT: Self = Self(1000259001);
     pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000259002);
 }
+#[doc = "Provided by [`extensions::ext_shader_atomic_float`](../extensions/ext_shader_atomic_float/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT: Self = Self(1000260000);
+}
 #[doc = "Provided by [`extensions::ext_index_type_uint8`](../extensions/ext_index_type_uint8/index.html)"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT: Self = Self(1000265000);
@@ -5428,6 +5438,10 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT: Self = Self(1000332000);
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT: Self = Self(1000332001);
+}
+#[doc = "Provided by [`extensions::ext_image_robustness`](../extensions/ext_image_robustness/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT: Self = Self(1000335000);
 }
 #[doc = "Provided by [`extensions::ext_directfb_surface`](../extensions/ext_directfb_surface/index.html)"]
 impl StructureType {
@@ -9132,6 +9146,14 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64
     for DeviceCreateInfoBuilder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_atomic_float :: PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXT > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl<'a>
@@ -9535,6 +9557,22 @@ impl<'a>
     crate::ExtendableFrom<
         'a,
         crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<
+            '_,
+        >,
     > for DeviceCreateInfoBuilder<'a>
 {
 }

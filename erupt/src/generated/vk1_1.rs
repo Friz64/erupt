@@ -277,7 +277,7 @@ impl ExternalMemoryFeatureFlagBits {
     pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
     pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlags.html) · Bitmask of [`ExternalSemaphoreHandleTypeFlagBits`](./struct.ExternalSemaphoreHandleTypeFlagBits.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ExternalSemaphoreHandleTypeFlags : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_FD = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D12_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE . 0 ; const SYNC_FD = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD . 0 ; const OPAQUE_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D12_FENCE_KHR = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE_KHR . 0 ; const SYNC_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
+bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlags.html) · Bitmask of [`ExternalSemaphoreHandleTypeFlagBits`](./struct.ExternalSemaphoreHandleTypeFlagBits.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ExternalSemaphoreHandleTypeFlags : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_FD = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D12_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE . 0 ; const SYNC_FD = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD . 0 ; const D3D11_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D11_FENCE . 0 ; const OPAQUE_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D12_FENCE_KHR = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE_KHR . 0 ; const SYNC_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagBits.html) · Bits enum of [`ExternalSemaphoreHandleTypeFlags`](./struct.ExternalSemaphoreHandleTypeFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 pub struct ExternalSemaphoreHandleTypeFlagBits(pub u32);
@@ -307,6 +307,7 @@ impl ExternalSemaphoreHandleTypeFlagBits {
     pub const OPAQUE_WIN32_KMT: Self = Self(4);
     pub const D3D12_FENCE: Self = Self(8);
     pub const SYNC_FD: Self = Self(16);
+    pub const D3D11_FENCE: Self = Self::D3D12_FENCE;
 }
 #[doc = "Provided by [`extensions::khr_external_semaphore_capabilities`](../extensions/khr_external_semaphore_capabilities/index.html)"]
 impl ExternalSemaphoreHandleTypeFlagBits {
@@ -1070,6 +1071,14 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64
     for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_atomic_float :: PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl<'a>
@@ -1455,6 +1464,22 @@ impl<'a>
     crate::ExtendableFrom<
         'a,
         crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<
+            '_,
+        >,
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }

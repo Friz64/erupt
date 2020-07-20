@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Rewrite generator from scratch
 - Rework loader functionality
+- Update Vulkan Headers to version 148
 
 ## [0.10.0+145] - 2020-06-21
 ### Added

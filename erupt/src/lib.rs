@@ -52,9 +52,8 @@
 //! focusing on having good bindings to the *raw* Vulkan API.
 //!
 //! The big selling points of erupt is that it has better documentation, high level function support for
-//! all extensions (which is only really relevant if you use those extensions), being fully generated,
-//! having slightly faster compile times and some more smaller improvements. On the other hand ash has a
-//! bigger existing community.
+//! all extensions (which is only really relevant if you use those extensions), being fully generated
+//! and some more smaller improvements. On the other hand ash has a bigger existing community.
 //!
 //! ### Q: What does the number at the end of the version mean?
 //! A: It represents the Vulkan Header version this version of erupt was generated against and is purely
@@ -98,6 +97,7 @@ use std::{
     ffi::CStr,
     fmt::{self, Display},
 };
+pub use utils::loading::DefaultEntryLoader;
 
 /// Construct a `*const std::os::raw::c_char` from a string
 ///

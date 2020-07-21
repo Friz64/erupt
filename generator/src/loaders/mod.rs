@@ -9,11 +9,13 @@ use crate::{
     origin::Origin,
     source::Source,
 };
-use core::fmt;
 use indexmap::{IndexMap, IndexSet};
 use proc_macro2::{Ident, Literal, TokenStream};
 use quote::{format_ident, quote};
-use std::{collections::HashMap, fmt::Display};
+use std::{
+    collections::HashMap,
+    fmt::{self, Display},
+};
 
 #[derive(Clone, PartialEq, Eq, Hash)]
 enum CommandLevel {

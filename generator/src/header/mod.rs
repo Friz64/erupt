@@ -1,12 +1,14 @@
 mod root_gen;
 
 use crate::{
-    basetypes::Basetype,
-    constants::Constant,
     declaration::{Declaration, DeclarationMetadata, Mutability, Optional, Type},
-    enums::{EnumKind, EnumVariant},
     eval::{Expression, Literal},
-    functions::Function,
+    items::{
+        basetypes::Basetype,
+        constants::Constant,
+        enums::{EnumKind, EnumVariant},
+        functions::Function,
+    },
     name::{FunctionName, Name, TypeName},
     source::NotApplicable,
     structures::Structure,

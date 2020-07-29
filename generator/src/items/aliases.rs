@@ -1,6 +1,6 @@
 use crate::{
     comment_gen::DocCommentGen,
-    functions::{Function, Requirement},
+    items::functions::{ExtensionType, Function, Requirement},
     name::Name,
     origin::Origin,
     source::Source,
@@ -12,6 +12,7 @@ use quote::quote;
 #[derive(Clone, Debug)]
 pub struct Alias {
     pub origin: Option<Origin>,
+    pub extension_type: Option<ExtensionType>,
     pub requirements: Vec<Requirement>,
     pub name: Name,
     pub alias: Name,
@@ -21,6 +22,7 @@ impl Alias {
     pub fn new(name: Name, alias: Name) -> Alias {
         Alias {
             origin: None,
+            extension_type: None,
             requirements: Vec::new(),
             name,
             alias,
@@ -47,6 +49,7 @@ impl Alias {
     pub fn emulate_function(&self, source: &Source) -> Option<Function> {
         if let Alias {
             origin,
+            extension_type,
             requirements,
             name: Name::Function(name),
             ..
@@ -59,6 +62,7 @@ impl Alias {
                 Some(function) => {
                     let mut function = function.clone();
                     function.origin = origin.clone();
+                    function.extension_type = extension_type.clone();
                     function.requirements = requirements.clone();
                     function.name = name.clone();
                     Some(function)

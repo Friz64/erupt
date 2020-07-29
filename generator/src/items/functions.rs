@@ -1,8 +1,8 @@
 use crate::{
-    aliases::Alias,
     comment_gen::DocCommentGen,
     declaration::{Declaration, Mutability, Type},
     header::DeclarationInfo,
+    items::aliases::Alias,
     name::{FunctionName, Name},
     origin::Origin,
     source::{NotApplicable, Source},
@@ -47,9 +47,11 @@ pub struct Requirement {
 impl Requirement {
     pub fn new(base_origin: Origin, require_element: &Element) -> Requirement {
         let require_origin = if let Some(feature) = require_element.attributes.get("feature") {
-            Some(Origin::from_feature_name(feature))
+            Some(Origin::feature_from_name(feature))
         } else if let Some(extension) = require_element.attributes.get("extension") {
-            Some(Origin::from_extension_name(extension))
+            Some(Origin::Extension {
+                full: extension.into(),
+            })
         } else {
             None
         };
@@ -62,8 +64,19 @@ impl Requirement {
 }
 
 impl Source {
-    pub fn assign_requirements(&mut self, element: &Element) {
+    pub fn assign_function_metadata(&mut self, element: &Element) {
         let base_origin = Origin::from_registry_item(element);
+        let extension_type = if base_origin.is_extension() {
+            let attribute = element
+                .attributes
+                .get("type")
+                .expect("No type attribute on extension");
+
+            Some(ExtensionType::from_attribute_name(attribute))
+        } else {
+            None
+        };
+
         for element_child in &element.children {
             if element_child.name == "require" {
                 let requirement = Requirement::new(base_origin.clone(), element_child);
@@ -74,10 +87,19 @@ impl Source {
                             command.attributes.get("name").expect("Command has no name"),
                         );
 
+                        let extension_type = extension_type.clone();
                         if let Some(alias) = self.find_function_alias_mut(&function_name) {
                             alias.requirements.push(requirement.clone());
+
+                            if let Some(extension_type) = extension_type {
+                                alias.extension_type.get_or_insert(extension_type);
+                            }
                         } else if let Some(function) = self.find_function_mut(&function_name) {
                             function.requirements.push(requirement.clone());
+
+                            if let Some(extension_type) = extension_type {
+                                function.extension_type.get_or_insert(extension_type);
+                            }
                         } else {
                             panic!("Did not find function with name {:?}", function_name);
                         }
@@ -89,8 +111,25 @@ impl Source {
 }
 
 #[derive(Debug, Clone)]
+pub enum ExtensionType {
+    Instance,
+    Device,
+}
+
+impl ExtensionType {
+    fn from_attribute_name(name: &str) -> ExtensionType {
+        match name {
+            "instance" => ExtensionType::Instance,
+            "device" => ExtensionType::Device,
+            invalid => panic!("Invalid extension type attribute: {:?}", invalid),
+        }
+    }
+}
+
+#[derive(Debug, Clone)]
 pub struct Function {
     pub origin: Option<Origin>,
+    pub extension_type: Option<ExtensionType>,
     pub requirements: Vec<Requirement>,
     pub pfn: bool,
     pub name: FunctionName,
@@ -171,6 +210,7 @@ impl TryFrom<&CDeclaration> for Function {
 
                             return Ok(Function {
                                 origin: Default::default(),
+                                extension_type: Default::default(),
                                 requirements: Vec::new(),
                                 pfn: false,
                                 name,

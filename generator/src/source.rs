@@ -1,11 +1,13 @@
 use crate::{
-    aliases::Alias,
-    basetypes::Basetype,
-    constants::Constant,
-    enums::{Enum, EnumKind, EnumVariant},
-    functions::Function,
-    handles::Handle,
     header::HeaderSource,
+    items::{
+        aliases::Alias,
+        basetypes::Basetype,
+        constants::Constant,
+        enums::{Enum, EnumKind, EnumVariant},
+        functions::Function,
+        handles::Handle,
+    },
     name::{FunctionName, Name, TypeName},
     origin::Origin,
     structures::Structure,
@@ -119,7 +121,7 @@ impl Source {
                 }
                 "feature" => {
                     source.assign_origins(registry_child);
-                    source.assign_requirements(registry_child);
+                    source.assign_function_metadata(registry_child);
                 }
                 "extensions" => {
                     for extension in &registry_child.children {
@@ -130,7 +132,7 @@ impl Source {
                         }
 
                         source.assign_origins(extension);
-                        source.assign_requirements(extension);
+                        source.assign_function_metadata(extension);
                     }
                 }
                 _ => (),

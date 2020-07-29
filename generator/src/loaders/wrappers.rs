@@ -2,7 +2,7 @@ use super::{value::Value, CommandLevel};
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{self, Declaration, Mutability, Optional, Type},
-    functions::Function,
+    items::functions::Function,
     name::{Name, TypeName},
     source::Source,
 };

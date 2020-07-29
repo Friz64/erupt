@@ -1,7 +1,7 @@
 //! Load functions using [`libloading`](https://crates.io/crates/libloading)
 //!
 //! Enabled using the `loading` cargo feature
-use crate::{EntryLoader, LoaderError};
+use crate::{EntryEnabled, EntryLoader, LoaderError};
 use libloading::Library;
 use std::{
     error::Error,
@@ -77,14 +77,19 @@ impl DefaultEntryLoader {
     ///
     /// Enabled using the `loading` cargo feature
     pub fn new() -> Result<DefaultEntryLoader, EntryLoaderError> {
-        let library =
+        let mut library =
             Library::new(LIB_PATH).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?;
 
-        EntryLoader::custom(library, |library, name| unsafe {
+        let symbol = |library: &mut Library, name| unsafe {
             let cstr = CStr::from_ptr(name);
             let bytes = cstr.to_bytes_with_nul();
             library.get(bytes).ok().map(|symbol| *symbol)
+        };
+
+        Ok(unsafe {
+            EntryEnabled::new(&mut library, symbol)
+                .and_then(|entry_enabled| EntryLoader::custom(library, symbol, entry_enabled))
+                .map_err(EntryLoaderError::EntryLoad)?
         })
-        .map_err(EntryLoaderError::EntryLoad)
     }
 }

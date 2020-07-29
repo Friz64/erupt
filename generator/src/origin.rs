@@ -9,6 +9,7 @@ use quote::{format_ident, quote};
 use regex::Regex;
 use std::{
     fmt::{self, Debug},
+    hash::Hash,
     iter,
     path::PathBuf,
 };
@@ -36,7 +37,7 @@ const BLACKLIST: &[&str] = &[
     "VK_PIPELINE_CREATE_DISPATCH_BASE",
 ];
 
-#[derive(Clone, PartialEq, Eq, Hash)]
+#[derive(Clone, PartialEq, Hash, Eq)]
 pub enum Origin {
     Root,
     Feature { major: u32, minor: u32 },
@@ -44,7 +45,7 @@ pub enum Origin {
 }
 
 impl Origin {
-    pub fn from_feature_name(name: &str) -> Origin {
+    pub fn feature_from_name(name: &str) -> Origin {
         match FEATURE_NAME_REGEX.captures(name) {
             Some(captures) => Origin::Feature {
                 major: captures[1].parse().expect("Invalid major version"),
@@ -54,15 +55,25 @@ impl Origin {
         }
     }
 
-    pub fn from_extension_name(name: &str) -> Origin {
-        Origin::Extension { full: name.into() }
-    }
-
     pub fn from_registry_item(element: &Element) -> Origin {
         match (element.name.as_str(), element.attributes.get("name")) {
-            ("feature", Some(name)) => Origin::from_feature_name(name),
-            ("extension", Some(name)) => Origin::from_extension_name(name),
+            ("feature", Some(name)) => Origin::feature_from_name(name),
+            ("extension", Some(name)) => Origin::Extension { full: name.into() },
             invalid => panic!("Failed to create origin from registry item: {:?} ", invalid),
+        }
+    }
+
+    pub fn is_extension(&self) -> bool {
+        match self {
+            Origin::Extension { .. } => true,
+            _ => false,
+        }
+    }
+
+    pub fn is_vk1_0(&self) -> bool {
+        match self {
+            Origin::Feature { major: 1, minor: 0 } => true,
+            _ => false,
         }
     }
 

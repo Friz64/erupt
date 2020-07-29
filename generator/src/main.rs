@@ -1,15 +1,10 @@
-mod aliases;
-mod basetypes;
 mod codegen;
 mod comment_gen;
-mod constants;
 mod declaration;
 mod defines;
-mod enums;
 mod eval;
-mod functions;
-mod handles;
 mod header;
+mod items;
 mod loaders;
 mod name;
 mod origin;

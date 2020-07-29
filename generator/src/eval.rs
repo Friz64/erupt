@@ -21,13 +21,13 @@ pub enum Literal {
 
 impl Literal {
     pub fn value(&self) -> RustLiteral {
-        match self {
-            &Literal::Int32(val) => RustLiteral::i32_unsuffixed(val),
-            &Literal::Int64(val) => RustLiteral::i64_unsuffixed(val),
-            &Literal::UnsignedInt32(val) => RustLiteral::u32_unsuffixed(val),
-            &Literal::UnsignedInt64(val) => RustLiteral::u64_unsuffixed(val),
-            &Literal::Float32(val) => RustLiteral::f32_unsuffixed(val),
-            &Literal::Float64(val) => RustLiteral::f64_unsuffixed(val),
+        match *self {
+            Literal::Int32(val) => RustLiteral::i32_unsuffixed(val),
+            Literal::Int64(val) => RustLiteral::i64_unsuffixed(val),
+            Literal::UnsignedInt32(val) => RustLiteral::u32_unsuffixed(val),
+            Literal::UnsignedInt64(val) => RustLiteral::u64_unsuffixed(val),
+            Literal::Float32(val) => RustLiteral::f32_unsuffixed(val),
+            Literal::Float64(val) => RustLiteral::f64_unsuffixed(val),
         }
     }
 

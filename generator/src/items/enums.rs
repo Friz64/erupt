@@ -1,7 +1,7 @@
 use crate::{
-    aliases::Alias,
     comment_gen::DocCommentGen,
     eval::{self, Literal},
+    items::aliases::Alias,
     name::{EnumVariantName, Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},

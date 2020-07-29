@@ -1,6 +1,6 @@
 use crate::{
-    aliases::Alias,
     comment_gen::DocCommentGen,
+    items::aliases::Alias,
     name::{Name, TypeName},
     origin::Origin,
     source::Source,

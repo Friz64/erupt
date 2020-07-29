@@ -99,7 +99,7 @@ impl TryFrom<&CDeclaration> for Constant {
 
                 Ok(Constant {
                     origin: Default::default(),
-                    original_name: name.clone().into(),
+                    original_name: name.to_string().into(),
                     trimmed_name: name.to_uppercase().trim_start_matches("VK_").into(),
                     value,
                 })

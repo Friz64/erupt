@@ -8,9 +8,9 @@ fn main() {
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
-        vk1_0::version_major(entry.instance_version),
-        vk1_0::version_minor(entry.instance_version),
-        vk1_0::version_patch(entry.instance_version)
+        vk1_0::version_major(entry.instance_version()),
+        vk1_0::version_minor(entry.instance_version()),
+        vk1_0::version_patch(entry.instance_version())
     );
 
     let info = vk1_0::ApplicationInfoBuilder::new().api_version(vk1_0::make_version(1, 1, 0));

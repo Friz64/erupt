@@ -1,10 +1,10 @@
 mod builders;
 
 use crate::{
-    aliases::Alias,
     comment_gen::DocCommentGen,
     declaration::Declaration,
     header::DeclarationInfo,
+    items::aliases::Alias,
     name::{Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},

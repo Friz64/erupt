@@ -1,4 +1,4 @@
-use crate::{constants, declaration::Type};
+use crate::{declaration::Type, items::constants};
 use log::error;
 use regex::Regex;
 use std::{fs, path::Path};

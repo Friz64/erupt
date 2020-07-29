@@ -91,11 +91,13 @@
 mod generated;
 pub mod utils;
 
+use fmt::Debug;
 pub use generated::*;
 use std::{
     error::Error,
     ffi::CStr,
     fmt::{self, Display},
+    mem, ptr,
 };
 pub use utils::loading::DefaultEntryLoader;
 
@@ -240,6 +242,12 @@ impl Display for LoaderError {
 
 impl Error for LoaderError {}
 
+impl<T> Debug for EntryLoader<T> {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "Entry")
+    }
+}
+
 impl InstanceLoader {
     #[inline]
     pub fn new<T>(
@@ -259,14 +267,86 @@ impl InstanceLoader {
             }
         }
 
-        InstanceLoader::custom(
-            entry_loader,
-            instance,
-            version,
-            create_info.enabled_extension_count as usize,
-            create_info.pp_enabled_extension_names,
-            |name| unsafe { (entry_loader.get_instance_proc_addr)(instance, name) },
-        )
+        unsafe {
+            let symbol = |name| (entry_loader.get_instance_proc_addr)(instance, name);
+
+            let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(
+                symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES)
+                    .ok_or(crate::LoaderError::SymbolNotAvailable)?,
+            );
+
+            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties =
+            mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)
+                .ok_or(crate::LoaderError::SymbolNotAvailable)?);
+
+            let mut physical_device_count = 0;
+            let result =
+                enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
+
+            if result.0 < 0 {
+                return Err(LoaderError::VulkanError(result));
+            }
+
+            let mut physical_devices = vec![Default::default(); physical_device_count as usize];
+            let result = enumerate_physical_devices(
+                instance,
+                &mut physical_device_count,
+                physical_devices.as_mut_ptr(),
+            );
+
+            if result.0 < 0 {
+                return Err(LoaderError::VulkanError(result));
+            }
+
+            let mut all_device_extension_properties = Vec::new();
+            for physical_device in physical_devices {
+                let mut property_count = 0;
+                let result = enumerate_device_extension_properties(
+                    physical_device,
+                    ptr::null(),
+                    &mut property_count,
+                    ptr::null_mut(),
+                );
+
+                if result.0 < 0 {
+                    return Err(LoaderError::VulkanError(result));
+                }
+
+                let mut properties = vec![Default::default(); property_count as usize];
+                let result = enumerate_device_extension_properties(
+                    physical_device,
+                    ptr::null(),
+                    &mut property_count,
+                    properties.as_mut_ptr(),
+                );
+
+                if result.0 < 0 {
+                    return Err(LoaderError::VulkanError(result));
+                }
+
+                all_device_extension_properties.extend(properties.into_iter());
+            }
+
+            let available_device_extensions: Vec<_> = all_device_extension_properties
+                .iter()
+                .map(|properties| CStr::from_ptr(properties.extension_name.as_ptr()))
+                .collect();
+
+            let instance_enabled = InstanceEnabled::new(
+                version,
+                create_info.enabled_extension_count as usize,
+                create_info.pp_enabled_extension_names,
+                &available_device_extensions,
+            )?;
+
+            InstanceLoader::custom(entry_loader, instance, instance_enabled, symbol)
+        }
+    }
+}
+
+impl Debug for InstanceLoader {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        Debug::fmt(&self.handle, f)
     }
 }
 
@@ -283,21 +363,32 @@ impl DeviceLoader {
                 .result()
                 .map_err(LoaderError::VulkanError)?;
 
-        DeviceLoader::custom(
-            instance_loader,
-            device,
-            create_info.enabled_extension_count as usize,
-            create_info.pp_enabled_extension_names,
-            |name| unsafe { (instance_loader.get_device_proc_addr)(device, name) },
-        )
+        let device_enabled = unsafe {
+            DeviceEnabled::new(
+                create_info.enabled_extension_count as usize,
+                create_info.pp_enabled_extension_names,
+            )
+        };
+
+        unsafe {
+            DeviceLoader::custom(instance_loader, device, device_enabled, |name| {
+                (instance_loader.get_device_proc_addr)(device, name)
+            })
+        }
+    }
+}
+
+impl Debug for DeviceLoader {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        Debug::fmt(&self.handle, f)
     }
 }
 
 // Used by loaders to check for extensions
 #[inline]
 unsafe fn c_str_array_contains(
-    array: *const *const std::os::raw::c_char,
     array_length: usize,
+    array: *const *const std::os::raw::c_char,
     contains: *const std::os::raw::c_char,
 ) -> bool {
     let contains = CStr::from_ptr(contains);

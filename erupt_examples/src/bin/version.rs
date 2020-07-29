@@ -7,8 +7,8 @@ fn main() {
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
-        vk1_0::version_major(entry.instance_version),
-        vk1_0::version_minor(entry.instance_version),
-        vk1_0::version_patch(entry.instance_version)
+        vk1_0::version_major(entry.instance_version()),
+        vk1_0::version_minor(entry.instance_version()),
+        vk1_0::version_patch(entry.instance_version())
     );
 }

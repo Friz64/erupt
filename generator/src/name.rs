@@ -1,11 +1,14 @@
 use crate::{
-    enums::EnumKind,
+    items::enums::EnumKind,
     source::{NotApplicable, Source},
 };
 use heck::{ShoutySnakeCase, SnakeCase};
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::fmt::{self, Debug};
+use std::{
+    fmt::{self, Debug},
+    hash::{Hash, Hasher},
+};
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum Name {
@@ -100,7 +103,7 @@ impl Debug for FunctionName {
     }
 }
 
-#[derive(Clone, Eq, Hash)]
+#[derive(Clone, Eq)]
 pub struct TypeName {
     /// Original type name
     pub original: Box<str>,
@@ -183,6 +186,12 @@ impl TypeName {
 impl PartialEq for TypeName {
     fn eq(&self, other: &Self) -> bool {
         self.trimmed.eq(&other.trimmed)
+    }
+}
+
+impl Hash for TypeName {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        state.write(self.trimmed.as_bytes());
     }
 }
 

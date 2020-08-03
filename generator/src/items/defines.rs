@@ -1,10 +1,9 @@
-use super::comment_gen::DocCommentGen;
-use crate::origin::Origin;
+use crate::{comment_gen::DocCommentGen, origin::Origin};
 use proc_macro2::TokenStream;
 use quote::quote;
 use std::collections::HashMap;
 
-pub(super) fn tokens(comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+pub fn tokens(comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
     let define_doc = |full| comment_gen.def(Some(full), "Define", None);
     let mut code = HashMap::new();
 

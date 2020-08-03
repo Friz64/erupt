@@ -5,7 +5,7 @@ use crate::{EntryEnabled, EntryLoader, LoaderError};
 use libloading::Library;
 use std::{
     error::Error,
-    ffi::CStr,
+    ffi::{CStr, OsStr},
     fmt::{self, Display},
 };
 
@@ -77,8 +77,18 @@ impl DefaultEntryLoader {
     ///
     /// Enabled using the `loading` cargo feature
     pub fn new() -> Result<DefaultEntryLoader, EntryLoaderError> {
+        DefaultEntryLoader::with_lib_path(LIB_PATH)
+    }
+
+    /// Load functions using [`libloading`](https://crates.io/crates/libloading)
+    /// providing a custom library path
+    ///
+    /// Enabled using the `loading` cargo feature
+    pub fn with_lib_path<P: AsRef<OsStr>>(
+        lib_path: P,
+    ) -> Result<DefaultEntryLoader, EntryLoaderError> {
         let mut library =
-            Library::new(LIB_PATH).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?;
+            Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?;
 
         let symbol = |library: &mut Library, name| unsafe {
             let cstr = CStr::from_ptr(name);

@@ -1976,6 +1976,8 @@ impl std::fmt::Debug for Format {
             &Self::ASTC_10X10_SFLOAT_BLOCK_EXT => "ASTC_10X10_SFLOAT_BLOCK_EXT",
             &Self::ASTC_12X10_SFLOAT_BLOCK_EXT => "ASTC_12X10_SFLOAT_BLOCK_EXT",
             &Self::ASTC_12X12_SFLOAT_BLOCK_EXT => "ASTC_12X12_SFLOAT_BLOCK_EXT",
+            &Self::A4R4G4B4_UNORM_PACK16_EXT => "A4R4G4B4_UNORM_PACK16_EXT",
+            &Self::A4B4G4R4_UNORM_PACK16_EXT => "A4B4G4R4_UNORM_PACK16_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -2232,6 +2234,11 @@ impl Format {
     pub const ASTC_10X10_SFLOAT_BLOCK_EXT: Self = Self(1000066011);
     pub const ASTC_12X10_SFLOAT_BLOCK_EXT: Self = Self(1000066012);
     pub const ASTC_12X12_SFLOAT_BLOCK_EXT: Self = Self(1000066013);
+}
+#[doc = "Provided by [`extensions::ext_4444_formats`](../extensions/ext_4444_formats/index.html)"]
+impl Format {
+    pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self(1000340000);
+    pub const A4B4G4R4_UNORM_PACK16_EXT: Self = Self(1000340001);
 }
 #[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
 impl Format {
@@ -4605,6 +4612,9 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT"
             }
+            &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT"
+            }
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             _ => "(unknown variant)",
         })
@@ -5442,6 +5452,10 @@ impl StructureType {
 #[doc = "Provided by [`extensions::ext_image_robustness`](../extensions/ext_image_robustness/index.html)"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT: Self = Self(1000335000);
+}
+#[doc = "Provided by [`extensions::ext_4444_formats`](../extensions/ext_4444_formats/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT: Self = Self(1000340000);
 }
 #[doc = "Provided by [`extensions::ext_directfb_surface`](../extensions/ext_directfb_surface/index.html)"]
 impl StructureType {
@@ -9573,6 +9587,20 @@ impl<'a>
         crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<
             '_,
         >,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>,
     > for DeviceCreateInfoBuilder<'a>
 {
 }

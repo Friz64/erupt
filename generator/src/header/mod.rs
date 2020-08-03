@@ -8,10 +8,10 @@ use crate::{
         constants::Constant,
         enums::{EnumKind, EnumVariant},
         functions::Function,
+        structures::Structure,
     },
     name::{FunctionName, Name, TypeName},
     source::NotApplicable,
-    structures::Structure,
 };
 use lang_c::{
     ast::{

@@ -1,10 +1,12 @@
 use crate::{
     comment_gen::DocCommentGen,
-    items::functions::{ExtensionType, Function, Requirement},
+    items::{
+        functions::{ExtensionType, Function, Requirement},
+        structures::Structure,
+    },
     name::Name,
     origin::Origin,
     source::Source,
-    structures::Structure,
 };
 use proc_macro2::TokenStream;
 use quote::quote;

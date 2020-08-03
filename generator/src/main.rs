@@ -1,7 +1,6 @@
 mod codegen;
 mod comment_gen;
 mod declaration;
-mod defines;
 mod eval;
 mod header;
 mod items;
@@ -9,7 +8,6 @@ mod loaders;
 mod name;
 mod origin;
 mod source;
-mod structures;
 
 use source::Source;
 use std::{env, process::Command, time::Instant};

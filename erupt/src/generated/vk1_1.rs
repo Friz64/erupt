@@ -1483,6 +1483,20 @@ impl<'a>
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`](struct.PhysicalDeviceFeatures2.html)"]
 #[repr(transparent)]

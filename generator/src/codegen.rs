@@ -1,4 +1,4 @@
-use crate::{comment_gen::DocCommentGen, defines, loaders, origin::Origin, source::Source};
+use crate::{comment_gen::DocCommentGen, items::defines, loaders, origin::Origin, source::Source};
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use std::{collections::HashMap, fs, path::Path};

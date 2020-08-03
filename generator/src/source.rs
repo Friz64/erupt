@@ -7,10 +7,10 @@ use crate::{
         enums::{Enum, EnumKind, EnumVariant},
         functions::Function,
         handles::Handle,
+        structures::Structure,
     },
     name::{FunctionName, Name, TypeName},
     origin::Origin,
-    structures::Structure,
 };
 use std::{
     error::Error,

@@ -28,13 +28,14 @@ fn main() {
         let vk1_2 = properties.api_version >= vk1_0::make_version(1, 2, 0);
 
         if vk1_1 {
-            let mut features2 = vk1_1::PhysicalDeviceFeatures2Builder::new();
             let mut vk1_1features = vk1_2::PhysicalDeviceVulkan11FeaturesBuilder::new();
             let mut vk1_2features = vk1_2::PhysicalDeviceVulkan12FeaturesBuilder::new();
-            features2 = features2.extend_from(&mut vk1_1features);
+
+            let mut features2 =
+                vk1_1::PhysicalDeviceFeatures2Builder::new().extend_from(&mut vk1_1features);
 
             if vk1_2 {
-                features2.extend_from(&mut vk1_2features);
+                features2 = features2.extend_from(&mut vk1_2features);
             }
 
             let features2 = unsafe {

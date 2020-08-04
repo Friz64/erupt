@@ -404,6 +404,7 @@ unsafe fn c_str_array_contains(
 /// Provides type-safe pointer chain support
 pub trait ExtendableFrom<'a, T> {
     /// Appends `other`'s pointer chain to the end of this pointer chain
+    #[must_use]
     fn extend_from(mut self, other: &'a mut T) -> Self
     where
         Self: Sized,

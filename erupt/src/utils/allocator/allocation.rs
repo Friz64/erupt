@@ -29,13 +29,15 @@ impl MappedMemory {
             Bound::Excluded(start) => start + 1,
             Bound::Included(start) => *start,
             Bound::Unbounded => 0,
-        } + region.start;
+        };
 
-        let size = match range.end_bound() {
+        let end = match range.end_bound() {
             Bound::Included(end) => end + 1,
             Bound::Excluded(end) => *end,
             Bound::Unbounded => region.size(),
-        } - start;
+        };
+
+        let size = end - start;
 
         assert!(size > 0);
 
@@ -44,7 +46,7 @@ impl MappedMemory {
         }
 
         let mut ptr = std::ptr::null_mut();
-        try_vk!(unsafe { device.map_memory(memory, start, size, None, &mut ptr) });
+        try_vk!(unsafe { device.map_memory(memory, start + region.start, size, None, &mut ptr) });
 
         let memory_range = vk1_0::MappedMemoryRange {
             memory,

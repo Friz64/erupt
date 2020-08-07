@@ -37,20 +37,20 @@ impl MappedMemory {
             Bound::Unbounded => region.size(),
         };
 
-        let size = end - start;
-
-        assert!(size > 0);
-
-        if !host_coherent && start != region.start && size != region.size() {
+        if !host_coherent && (start != 0 || end != region.size()) {
             panic!("Partial mapping on non host coherent memory is not supported");
         }
 
-        let mut ptr = std::ptr::null_mut();
-        try_vk!(unsafe { device.map_memory(memory, start + region.start, size, None, &mut ptr) });
+        let size = end - start;
+        assert!(size > 0);
+
+        let offset = start + region.start;
+        let mut ptr = ptr::null_mut();
+        try_vk!(unsafe { device.map_memory(memory, offset, size, None, &mut ptr) });
 
         let memory_range = vk1_0::MappedMemoryRange {
             memory,
-            offset: start,
+            offset,
             size,
             ..Default::default()
         };

@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add `#[must_use]` to `ExtendableFrom::extend_from`
 
+### Changed
+- Accept null return values in the loaders
+
 ### Fixed
 - Fix memory mapper calculations (https://gitlab.com/Friz64/erupt/-/merge_requests/5)
 

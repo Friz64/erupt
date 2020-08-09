@@ -222,10 +222,7 @@ impl LoaderData {
         let module_path = origin.module_path();
         let constant_ident = format_ident!("{}", function.name.constant_name());
         self.loads.push(quote! {
-            match symbol(crate::#module_path#constant_ident) {
-                Some(ptr) => Some(std::mem::transmute(ptr)),
-                None => return Err(crate::LoaderError::SymbolNotAvailable),
-            }
+            std::mem::transmute(symbol(crate::#module_path#constant_ident))
         });
 
         self.requirements.push(function.requirements.clone());

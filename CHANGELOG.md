@@ -5,11 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.13.0+150] - 2020-08-10
 ### Added
 - Add `#[must_use]` to `ExtendableFrom::extend_from`
 
 ### Changed
 - Accept null return values in the loaders
+- Update Vulkan Headers to version 150
 
 ### Fixed
 - Fix memory mapper calculations (https://gitlab.com/Friz64/erupt/-/merge_requests/5)

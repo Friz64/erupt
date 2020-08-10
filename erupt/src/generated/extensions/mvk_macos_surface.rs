@@ -1,5 +1,5 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const MVK_MACOS_SURFACE_SPEC_VERSION: u32 = 2;
+pub const MVK_MACOS_SURFACE_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const MVK_MACOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_MVK_macos_surface");

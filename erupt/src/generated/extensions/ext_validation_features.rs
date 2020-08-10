@@ -1,5 +1,5 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 3;
+pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_validation_features");
@@ -13,6 +13,7 @@ impl std::fmt::Debug for ValidationFeatureEnableEXT {
             &Self::GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT => "GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT",
             &Self::BEST_PRACTICES_EXT => "BEST_PRACTICES_EXT",
             &Self::DEBUG_PRINTF_EXT => "DEBUG_PRINTF_EXT",
+            &Self::SYNCHRONIZATION_VALIDATION_EXT => "SYNCHRONIZATION_VALIDATION_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -23,6 +24,7 @@ impl ValidationFeatureEnableEXT {
     pub const GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT: Self = Self(1);
     pub const BEST_PRACTICES_EXT: Self = Self(2);
     pub const DEBUG_PRINTF_EXT: Self = Self(3);
+    pub const SYNCHRONIZATION_VALIDATION_EXT: Self = Self(4);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureDisableEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

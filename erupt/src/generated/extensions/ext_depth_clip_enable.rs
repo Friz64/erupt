@@ -6,6 +6,7 @@ pub const EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME: *const std::os::raw::c_char =
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationDepthClipStateCreateFlagBitsEXT`](./struct.PipelineRasterizationDepthClipStateCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineRasterizationDepthClipStateCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationDepthClipStateCreateFlagsEXT`](./struct.PipelineRasterizationDepthClipStateCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineRasterizationDepthClipStateCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationDepthClipStateCreateFlagBitsEXT {
     #[inline]

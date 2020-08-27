@@ -6,6 +6,7 @@ pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_c
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`](./struct.PipelineCompilerControlFlagBitsAMD.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineCompilerControlFlagsAMD : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCompilerControlFlagsAMD`](./struct.PipelineCompilerControlFlagsAMD.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineCompilerControlFlagBitsAMD(pub u32);
 impl PipelineCompilerControlFlagBitsAMD {
     #[inline]

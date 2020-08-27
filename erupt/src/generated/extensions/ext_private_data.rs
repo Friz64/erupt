@@ -19,6 +19,7 @@ crate :: non_dispatchable_handle ! ( PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT 
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`](./struct.PrivateDataSlotCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PrivateDataSlotCreateFlagBitsEXT(pub u32);
 impl PrivateDataSlotCreateFlagBitsEXT {
     #[inline]

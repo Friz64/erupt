@@ -8,6 +8,7 @@ pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetLineStippleEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct LineRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for LineRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

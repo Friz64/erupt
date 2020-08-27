@@ -12,6 +12,7 @@ pub const FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR: *const std::os:
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`](./struct.Win32SurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct Win32SurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`Win32SurfaceCreateFlagsKHR`](./struct.Win32SurfaceCreateFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct Win32SurfaceCreateFlagBitsKHR(pub u32);
 impl Win32SurfaceCreateFlagBitsKHR {
     #[inline]

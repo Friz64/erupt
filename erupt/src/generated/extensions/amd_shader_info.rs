@@ -7,6 +7,7 @@ pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
 pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!("vkGetShaderInfoAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ShaderInfoTypeAMD(pub i32);
 impl std::fmt::Debug for ShaderInfoTypeAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

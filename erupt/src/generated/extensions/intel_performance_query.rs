@@ -41,6 +41,7 @@ pub type QueryPoolCreateInfoINTELBuilder<'a> =
 crate :: non_dispatchable_handle ! ( PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle" ) ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceConfigurationTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -58,6 +59,7 @@ impl PerformanceConfigurationTypeINTEL {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolSamplingModeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct QueryPoolSamplingModeINTEL(pub i32);
 impl std::fmt::Debug for QueryPoolSamplingModeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -73,6 +75,7 @@ impl QueryPoolSamplingModeINTEL {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideTypeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceOverrideTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceOverrideTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -90,6 +93,7 @@ impl PerformanceOverrideTypeINTEL {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceParameterTypeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceParameterTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceParameterTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -107,6 +111,7 @@ impl PerformanceParameterTypeINTEL {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueTypeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceValueTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceValueTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

@@ -19,6 +19,7 @@ pub const FN_RELEASE_PROFILING_LOCK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkReleaseProfilingLockKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterScopeKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceCounterScopeKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterScopeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -41,6 +42,7 @@ impl PerformanceCounterScopeKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterUnitKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceCounterUnitKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterUnitKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -76,6 +78,7 @@ impl PerformanceCounterUnitKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterStorageKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceCounterStorageKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterStorageKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -102,6 +105,7 @@ impl PerformanceCounterStorageKHR {
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`](./struct.PerformanceCounterDescriptionFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Bits enum of [`PerformanceCounterDescriptionFlagsKHR`](./struct.PerformanceCounterDescriptionFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PerformanceCounterDescriptionFlagBitsKHR(pub u32);
 impl PerformanceCounterDescriptionFlagBitsKHR {
     #[inline]
@@ -127,6 +131,7 @@ impl PerformanceCounterDescriptionFlagBitsKHR {
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockFlagsKHR.html) · Bitmask of [`AcquireProfilingLockFlagBitsKHR`](./struct.AcquireProfilingLockFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct AcquireProfilingLockFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AcquireProfilingLockFlagsKHR`](./struct.AcquireProfilingLockFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct AcquireProfilingLockFlagBitsKHR(pub u32);
 impl AcquireProfilingLockFlagBitsKHR {
     #[inline]

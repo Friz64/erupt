@@ -9,6 +9,7 @@ pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char =
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`](./struct.ViSurfaceCreateFlagBitsNN.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ViSurfaceCreateFlagsNN : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ViSurfaceCreateFlagsNN`](./struct.ViSurfaceCreateFlagsNN.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ViSurfaceCreateFlagBitsNN(pub u32);
 impl ViSurfaceCreateFlagBitsNN {
     #[inline]

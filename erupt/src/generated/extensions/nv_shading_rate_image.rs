@@ -14,6 +14,7 @@ pub const FN_CMD_SET_COARSE_SAMPLE_ORDER_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCoarseSampleOrderNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteEntryNV.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ShadingRatePaletteEntryNV(pub i32);
 impl std::fmt::Debug for ShadingRatePaletteEntryNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -51,6 +52,7 @@ impl ShadingRatePaletteEntryNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderTypeNV.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct CoarseSampleOrderTypeNV(pub i32);
 impl std::fmt::Debug for CoarseSampleOrderTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

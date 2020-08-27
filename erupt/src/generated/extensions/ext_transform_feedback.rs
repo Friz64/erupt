@@ -24,6 +24,7 @@ pub const FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT: *const std::os::raw::c_char =
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateStreamCreateFlagsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationStateStreamCreateFlagBitsEXT {
     #[inline]

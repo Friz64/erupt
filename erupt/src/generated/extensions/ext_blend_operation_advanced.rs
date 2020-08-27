@@ -5,6 +5,7 @@ pub const EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME: *const std::os::raw::c_ch
     crate::cstr!("VK_EXT_blend_operation_advanced");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlendOverlapEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct BlendOverlapEXT(pub i32);
 impl std::fmt::Debug for BlendOverlapEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

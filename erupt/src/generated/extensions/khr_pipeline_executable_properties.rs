@@ -14,6 +14,7 @@ pub const FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR: *const std::o
     crate::cstr!("vkGetPipelineExecutableInternalRepresentationsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableStatisticFormatKHR.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineExecutableStatisticFormatKHR(pub i32);
 impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

@@ -183,6 +183,7 @@ impl Enum {
                 quote! {
                     #[doc = #doc]
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+                    #[repr(transparent)]
                     pub struct #ident(pub i32);
                 }
             }
@@ -240,6 +241,7 @@ impl Enum {
 
                     #[doc = #flagbits_doc]
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+                    #[repr(transparent)]
                     pub struct #flagbits_ident(pub u32);
 
                     impl #flagbits_ident {

@@ -6,6 +6,7 @@ pub const NV_VIEWPORT_SWIZZLE_EXTENSION_NAME: *const std::os::raw::c_char =
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateFlagsNV.html) · Bitmask of [`PipelineViewportSwizzleStateCreateFlagBitsNV`](./struct.PipelineViewportSwizzleStateCreateFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineViewportSwizzleStateCreateFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineViewportSwizzleStateCreateFlagsNV`](./struct.PipelineViewportSwizzleStateCreateFlagsNV.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineViewportSwizzleStateCreateFlagBitsNV(pub u32);
 impl PipelineViewportSwizzleStateCreateFlagBitsNV {
     #[inline]
@@ -23,6 +24,7 @@ impl std::fmt::Debug for PipelineViewportSwizzleStateCreateFlagBitsNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportCoordinateSwizzleNV.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ViewportCoordinateSwizzleNV(pub i32);
 impl std::fmt::Debug for ViewportCoordinateSwizzleNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

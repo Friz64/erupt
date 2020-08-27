@@ -9,6 +9,7 @@ pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV: *const std
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsNV.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBitsNV`](./struct.ExternalMemoryHandleTypeFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ExternalMemoryHandleTypeFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_WIN32_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_NV . 0 ; const OPAQUE_WIN32_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_KMT_NV . 0 ; const D3D11_IMAGE_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_NV . 0 ; const D3D11_IMAGE_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_KMT_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsNV.html) · Bits enum of [`ExternalMemoryHandleTypeFlagsNV`](./struct.ExternalMemoryHandleTypeFlagsNV.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ExternalMemoryHandleTypeFlagBitsNV(pub u32);
 impl ExternalMemoryHandleTypeFlagBitsNV {
     #[inline]
@@ -38,6 +39,7 @@ impl ExternalMemoryHandleTypeFlagBitsNV {
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagsNV.html) · Bitmask of [`ExternalMemoryFeatureFlagBitsNV`](./struct.ExternalMemoryFeatureFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ExternalMemoryFeatureFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEDICATED_ONLY_NV = ExternalMemoryFeatureFlagBitsNV :: DEDICATED_ONLY_NV . 0 ; const EXPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: EXPORTABLE_NV . 0 ; const IMPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: IMPORTABLE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBitsNV.html) · Bits enum of [`ExternalMemoryFeatureFlagsNV`](./struct.ExternalMemoryFeatureFlagsNV.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ExternalMemoryFeatureFlagBitsNV(pub u32);
 impl ExternalMemoryFeatureFlagBitsNV {
     #[inline]

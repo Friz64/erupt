@@ -19,6 +19,7 @@ crate :: non_dispatchable_handle ! ( ValidationCacheEXT , VALIDATION_CACHE_EXT ,
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ValidationCacheCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`](./struct.ValidationCacheCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ValidationCacheCreateFlagBitsEXT(pub u32);
 impl ValidationCacheCreateFlagBitsEXT {
     #[inline]
@@ -36,6 +37,7 @@ impl std::fmt::Debug for ValidationCacheCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheHeaderVersionEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ValidationCacheHeaderVersionEXT(pub i32);
 impl std::fmt::Debug for ValidationCacheHeaderVersionEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

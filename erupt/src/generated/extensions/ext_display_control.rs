@@ -17,6 +17,7 @@ pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainCounterEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct DisplayPowerStateEXT(pub i32);
 impl std::fmt::Debug for DisplayPowerStateEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -36,6 +37,7 @@ impl DisplayPowerStateEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventTypeEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct DeviceEventTypeEXT(pub i32);
 impl std::fmt::Debug for DeviceEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -51,6 +53,7 @@ impl DeviceEventTypeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventTypeEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct DisplayEventTypeEXT(pub i32);
 impl std::fmt::Debug for DisplayEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

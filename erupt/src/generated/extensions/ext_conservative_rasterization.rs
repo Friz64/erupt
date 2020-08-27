@@ -6,6 +6,7 @@ pub const EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`](./struct.PipelineRasterizationConservativeStateCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineRasterizationConservativeStateCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationConservativeStateCreateFlagsEXT`](./struct.PipelineRasterizationConservativeStateCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct PipelineRasterizationConservativeStateCreateFlagBitsEXT(pub u32);
 impl PipelineRasterizationConservativeStateCreateFlagBitsEXT {
     #[inline]
@@ -23,6 +24,7 @@ impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateFlagBitsEXT
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConservativeRasterizationModeEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ConservativeRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for ConservativeRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

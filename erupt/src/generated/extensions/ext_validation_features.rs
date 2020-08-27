@@ -5,6 +5,7 @@ pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_validation_features");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ValidationFeatureEnableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureEnableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -28,6 +29,7 @@ impl ValidationFeatureEnableEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureDisableEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ValidationFeatureDisableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureDisableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

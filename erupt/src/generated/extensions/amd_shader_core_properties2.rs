@@ -6,6 +6,7 @@ pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_ch
 bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`](./struct.ShaderCorePropertiesFlagBitsAMD.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`](./struct.ShaderCorePropertiesFlagsAMD.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct ShaderCorePropertiesFlagBitsAMD(pub u32);
 impl ShaderCorePropertiesFlagBitsAMD {
     #[inline]

@@ -17,6 +17,7 @@ pub const FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char
     crate::cstr!("vkReleaseFullScreenExclusiveModeEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFullScreenExclusiveEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct FullScreenExclusiveEXT(pub i32);
 impl std::fmt::Debug for FullScreenExclusiveEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

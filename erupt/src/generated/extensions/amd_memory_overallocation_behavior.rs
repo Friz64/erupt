@@ -5,6 +5,7 @@ pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw
     crate::cstr!("VK_AMD_memory_overallocation_behavior");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct MemoryOverallocationBehaviorAMD(pub i32);
 impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

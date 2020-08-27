@@ -5,6 +5,7 @@ pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_global_priority");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct QueueGlobalPriorityEXT(pub i32);
 impl std::fmt::Debug for QueueGlobalPriorityEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

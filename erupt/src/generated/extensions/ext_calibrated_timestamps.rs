@@ -11,6 +11,7 @@ pub const FN_GET_CALIBRATED_TIMESTAMPS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetCalibratedTimestampsEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimeDomainEXT.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
 pub struct TimeDomainEXT(pub i32);
 impl std::fmt::Debug for TimeDomainEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {

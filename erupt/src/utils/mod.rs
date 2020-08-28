@@ -45,6 +45,7 @@ impl<T> VulkanResult<T> {
     ///
     /// Panics with the name of `self.raw` if `self.value` is `None`
     #[inline]
+    #[track_caller]
     pub fn unwrap(self) -> T {
         match self.value {
             Some(value) => value,
@@ -56,6 +57,7 @@ impl<T> VulkanResult<T> {
     ///
     /// Panics with `msg` and the name of `self.raw` if `self.value` is `None`
     #[inline]
+    #[track_caller]
     pub fn expect(self, msg: impl Display) -> T {
         match self.value {
             Some(value) => value,

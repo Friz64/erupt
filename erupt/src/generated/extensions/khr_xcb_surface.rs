@@ -9,7 +9,7 @@ pub const FN_CREATE_XCB_SURFACE_KHR: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceXcbPresentationSupportKHR");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`](./struct.XcbSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`](./struct.XcbSurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XcbSurfaceCreateFlagsKHR`](./struct.XcbSurfaceCreateFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

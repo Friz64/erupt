@@ -38,7 +38,7 @@ pub type QueryPoolCreateInfoINTEL =
 #[allow(non_camel_case_types)]
 pub type QueryPoolCreateInfoINTELBuilder<'a> =
     crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a>;
-crate :: non_dispatchable_handle ! ( PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle" ) ;
+crate :: non_dispatchable_handle ! (PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle") ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -135,7 +135,7 @@ impl PerformanceValueTypeINTEL {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkInitializePerformanceApiINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkInitializePerformanceApiINTEL = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_initialize_info : * const crate :: extensions :: intel_performance_query :: InitializePerformanceApiInfoINTEL ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkInitializePerformanceApiINTEL = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_initialize_info : * const crate :: extensions :: intel_performance_query :: InitializePerformanceApiInfoINTEL) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUninitializePerformanceApiINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUninitializePerformanceApiINTEL =
@@ -148,7 +148,7 @@ pub type PFN_vkCmdSetPerformanceMarkerINTEL = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceStreamMarkerINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetPerformanceStreamMarkerINTEL = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , p_marker_info : * const crate :: extensions :: intel_performance_query :: PerformanceStreamMarkerInfoINTEL ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkCmdSetPerformanceStreamMarkerINTEL = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_marker_info : * const crate :: extensions :: intel_performance_query :: PerformanceStreamMarkerInfoINTEL) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceOverrideINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPerformanceOverrideINTEL = unsafe extern "system" fn(
@@ -157,7 +157,7 @@ pub type PFN_vkCmdSetPerformanceOverrideINTEL = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquirePerformanceConfigurationINTEL = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_acquire_info : * const crate :: extensions :: intel_performance_query :: PerformanceConfigurationAcquireInfoINTEL , p_configuration : * mut crate :: extensions :: intel_performance_query :: PerformanceConfigurationINTEL ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkAcquirePerformanceConfigurationINTEL = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_acquire_info : * const crate :: extensions :: intel_performance_query :: PerformanceConfigurationAcquireInfoINTEL , p_configuration : * mut crate :: extensions :: intel_performance_query :: PerformanceConfigurationINTEL) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleasePerformanceConfigurationINTEL =
@@ -861,12 +861,20 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
     pub unsafe fn release_performance_configuration_intel(
         &self,
-        configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
+        configuration: Option<
+            crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
+        >,
     ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .release_performance_configuration_intel
             .expect("`release_performance_configuration_intel` is not loaded");
-        let _return = _function(self.handle, configuration as _);
+        let _return = _function(
+            self.handle,
+            match configuration {
+                Some(v) => v,
+                None => Default::default(),
+            },
+        );
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]

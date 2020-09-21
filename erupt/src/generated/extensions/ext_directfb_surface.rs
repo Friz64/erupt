@@ -9,7 +9,7 @@ pub const FN_CREATE_DIRECT_FB_SURFACE_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDirectFBPresentationSupportEXT");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateFlagsEXT.html) · Bitmask of [`DirectFBSurfaceCreateFlagBitsEXT`](./struct.DirectFBSurfaceCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DirectFBSurfaceCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateFlagsEXT.html) · Bitmask of [`DirectFBSurfaceCreateFlagBitsEXT`](./struct.DirectFBSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DirectFBSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DirectFBSurfaceCreateFlagsEXT`](./struct.DirectFBSurfaceCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

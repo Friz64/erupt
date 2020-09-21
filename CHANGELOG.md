@@ -5,8 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.14.0+154] - 2020-09-21
 ### Added
 - Add `#[track_caller]` to `VulkanResult`
+- Add `Allocation::memory`, allowing access to the inner `DeviceMemory` handle
+
+### Changed
+- Update Vulkan Headers to version 150
 
 ### Fixed
 - Add `#[repr(transparent)]` to enums/flagbits

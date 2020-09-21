@@ -154,7 +154,7 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn viewport_w_scalings(
         mut self,
-        viewport_w_scalings : & 'a [ crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder ],
+        viewport_w_scalings : & 'a [crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder],
     ) -> Self {
         self.0.p_viewport_w_scalings = viewport_w_scalings.as_ptr() as _;
         self.0.viewport_count = viewport_w_scalings.len() as _;
@@ -195,7 +195,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         first_viewport: u32,
-        viewport_w_scalings : & [ crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder ],
+        viewport_w_scalings : & [crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder],
     ) -> () {
         let _function = self
             .cmd_set_viewport_w_scaling_nv

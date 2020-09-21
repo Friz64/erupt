@@ -11,10 +11,10 @@ pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR: *const std::os::raw::c_ch
     crate::cstr!("vkGetPhysicalDeviceSurfaceFormats2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_capabilities : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceCapabilities2KHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_capabilities : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceCapabilities2KHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_format_count : * mut u32 , p_surface_formats : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceFormat2KHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_format_count : * mut u32 , p_surface_formats : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceFormat2KHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

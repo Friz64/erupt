@@ -7,7 +7,7 @@ pub const NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME: *const std::os::raw::c_char
 pub const FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV:
     *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageReductionStateCreateFlagBitsNV`](./struct.PipelineCoverageReductionStateCreateFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineCoverageReductionStateCreateFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageReductionStateCreateFlagBitsNV`](./struct.PipelineCoverageReductionStateCreateFlagBitsNV.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageReductionStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageReductionStateCreateFlagsNV`](./struct.PipelineCoverageReductionStateCreateFlagsNV.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -46,7 +46,7 @@ impl CoverageReductionModeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_combination_count : * mut u32 , p_combinations : * mut crate :: extensions :: nv_coverage_reduction_mode :: FramebufferMixedSamplesCombinationNV ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_combination_count : * mut u32 , p_combinations : * mut crate :: extensions :: nv_coverage_reduction_mode :: FramebufferMixedSamplesCombinationNV) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -346,7 +346,7 @@ impl crate::InstanceLoader {
     ) -> crate::utils::VulkanResult<
         Vec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>,
     > {
-        let _function = self . get_physical_device_supported_framebuffer_mixed_samples_combinations_nv . expect ( "`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` is not loaded" ) ;
+        let _function = self . get_physical_device_supported_framebuffer_mixed_samples_combinations_nv . expect ("`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` is not loaded") ;
         let mut combination_count = match combination_count {
             Some(v) => v,
             None => {

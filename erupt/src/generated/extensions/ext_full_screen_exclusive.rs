@@ -39,10 +39,10 @@ impl FullScreenExclusiveEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_present_mode_count : * mut u32 , p_present_modes : * mut crate :: extensions :: khr_surface :: PresentModeKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_present_mode_count : * mut u32 , p_present_modes : * mut crate :: extensions :: khr_surface :: PresentModeKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_modes : * mut crate :: extensions :: khr_swapchain :: DeviceGroupPresentModeFlagsKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_modes : * mut crate :: extensions :: khr_swapchain :: DeviceGroupPresentModeFlagsKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireFullScreenExclusiveModeEXT =

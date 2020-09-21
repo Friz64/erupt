@@ -3,7 +3,7 @@ pub const NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_framebuffer_mixed_samples");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageModulationStateCreateFlagBitsNV`](./struct.PipelineCoverageModulationStateCreateFlagBitsNV.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineCoverageModulationStateCreateFlagsNV : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageModulationStateCreateFlagBitsNV`](./struct.PipelineCoverageModulationStateCreateFlagBitsNV.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageModulationStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageModulationStateCreateFlagsNV`](./struct.PipelineCoverageModulationStateCreateFlagsNV.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

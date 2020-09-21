@@ -11,10 +11,10 @@ pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkImportSemaphoreWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_import_semaphore_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: ImportSemaphoreWin32HandleInfoKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_semaphore_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: ImportSemaphoreWin32HandleInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

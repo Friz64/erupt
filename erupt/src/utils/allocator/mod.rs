@@ -21,14 +21,14 @@
 //! This allocator has not been tested on a larger scale yet, there may be some bugs.
 //!
 //! If you encounter a bug, please report it on the [bug tracker](https://gitlab.com/Friz64/erupt/-/issues).
-mod allocation;
 mod block;
+mod mapped_memory;
 mod memory_type;
 mod object;
 mod suballocator;
 
-pub use allocation::*;
 pub use block::*;
+pub use mapped_memory::*;
 pub use memory_type::*;
 pub use object::*;
 pub use suballocator::*;
@@ -97,6 +97,12 @@ where
     #[inline]
     pub fn object(&self) -> &T {
         &self.object
+    }
+
+    /// Returns the inner `DeviceMemory` handle where this is allocated
+    #[inline]
+    pub fn memory(&self) -> vk1_0::DeviceMemory {
+        self.memory
     }
 
     /// Returns the allocated region of memory

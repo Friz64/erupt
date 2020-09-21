@@ -25,7 +25,7 @@ pub type PFN_vkGetPhysicalDeviceDisplayProperties2KHR =
     ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlaneProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_property_count : * mut u32 , p_properties : * mut crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneProperties2KHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_property_count : * mut u32 , p_properties : * mut crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneProperties2KHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModeProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDisplayModeProperties2KHR = unsafe extern "system" fn(
@@ -36,7 +36,7 @@ pub type PFN_vkGetDisplayModeProperties2KHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilities2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDisplayPlaneCapabilities2KHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_display_plane_info : * const crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneInfo2KHR , p_capabilities : * mut crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneCapabilities2KHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetDisplayPlaneCapabilities2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_display_plane_info : * const crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneInfo2KHR , p_capabilities : * mut crate :: extensions :: khr_get_display_properties2 :: DisplayPlaneCapabilities2KHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayProperties2KHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

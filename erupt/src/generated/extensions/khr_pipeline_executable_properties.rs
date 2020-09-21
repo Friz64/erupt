@@ -36,13 +36,13 @@ impl PipelineExecutableStatisticFormatKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutablePropertiesKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_pipeline_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineInfoKHR , p_executable_count : * mut u32 , p_properties : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutablePropertiesKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPipelineExecutablePropertiesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_pipeline_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineInfoKHR , p_executable_count : * mut u32 , p_properties : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutablePropertiesKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_executable_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , p_statistic_count : * mut u32 , p_statistics : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableStatisticKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_executable_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , p_statistic_count : * mut u32 , p_statistics : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableStatisticKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_executable_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , p_internal_representation_count : * mut u32 , p_internal_representations : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_executable_info : * const crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , p_internal_representation_count : * mut u32 , p_internal_representations : * mut crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -53,7 +53,7 @@ pub struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
 }
 impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR , p_next : std :: ptr :: null_mut ( ) , pipeline_executable_info : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR , p_next : std :: ptr :: null_mut () , pipeline_executable_info : Default :: default () }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
@@ -704,7 +704,7 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, statistics)
     }
     #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]pub unsafe fn get_pipeline_executable_internal_representations_khr ( & self , executable_info : & crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , internal_representation_count : Option < u32 > ) -> crate :: utils :: VulkanResult < Vec < crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR > >{
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]pub unsafe fn get_pipeline_executable_internal_representations_khr (& self , executable_info : & crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , internal_representation_count : Option < u32 >) -> crate :: utils :: VulkanResult < Vec < crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR > >{
         let _function = self
             .get_pipeline_executable_internal_representations_khr
             .expect("`get_pipeline_executable_internal_representations_khr` is not loaded");

@@ -11,10 +11,10 @@ pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char =
     crate::cstr!("vkGetPastPresentationTimingGOOGLE");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_display_timing_properties : * mut crate :: extensions :: google_display_timing :: RefreshCycleDurationGOOGLE ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_display_timing_properties : * mut crate :: extensions :: google_display_timing :: RefreshCycleDurationGOOGLE) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_presentation_timing_count : * mut u32 , p_presentation_timings : * mut crate :: extensions :: google_display_timing :: PastPresentationTimingGOOGLE ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_presentation_timing_count : * mut u32 , p_presentation_timings : * mut crate :: extensions :: google_display_timing :: PastPresentationTimingGOOGLE) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

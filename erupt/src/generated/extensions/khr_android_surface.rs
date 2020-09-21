@@ -8,7 +8,7 @@ pub const FN_CREATE_ANDROID_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAndroidSurfaceKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/ANativeWindow.html) · Basetype"]
 pub type ANativeWindow = std::ffi::c_void;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`](./struct.AndroidSurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`](./struct.AndroidSurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AndroidSurfaceCreateFlagsKHR`](./struct.AndroidSurfaceCreateFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

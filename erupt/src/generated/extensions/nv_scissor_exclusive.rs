@@ -104,7 +104,7 @@ pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
 }
 impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , exclusive_scissor_count : Default :: default ( ) , p_exclusive_scissors : std :: ptr :: null ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , exclusive_scissor_count : Default :: default () , p_exclusive_scissors : std :: ptr :: null () }
     }
 }
 impl std::fmt::Debug for PipelineViewportExclusiveScissorStateCreateInfoNV {

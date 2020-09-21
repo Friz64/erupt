@@ -6,7 +6,7 @@ pub const EXT_DISCARD_RECTANGLES_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_DISCARD_RECTANGLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDiscardRectangleEXT");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateFlagsEXT.html) · Bitmask of [`PipelineDiscardRectangleStateCreateFlagBitsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineDiscardRectangleStateCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateFlagsEXT.html) · Bitmask of [`PipelineDiscardRectangleStateCreateFlagBitsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineDiscardRectangleStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDiscardRectangleStateCreateFlagsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

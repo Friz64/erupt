@@ -3,7 +3,7 @@ pub const EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_conservative_rasterization");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`](./struct.PipelineRasterizationConservativeStateCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineRasterizationConservativeStateCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`](./struct.PipelineRasterizationConservativeStateCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationConservativeStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationConservativeStateCreateFlagsEXT`](./struct.PipelineRasterizationConservativeStateCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -60,7 +60,7 @@ pub struct PhysicalDeviceConservativeRasterizationPropertiesEXT {
 }
 impl Default for PhysicalDeviceConservativeRasterizationPropertiesEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT , p_next : std :: ptr :: null_mut ( ) , primitive_overestimation_size : Default :: default ( ) , max_extra_primitive_overestimation_size : Default :: default ( ) , extra_primitive_overestimation_size_granularity : Default :: default ( ) , primitive_underestimation : Default :: default ( ) , conservative_point_and_line_rasterization : Default :: default ( ) , degenerate_triangles_rasterized : Default :: default ( ) , degenerate_lines_rasterized : Default :: default ( ) , fully_covered_fragment_shader_input_variable : Default :: default ( ) , conservative_rasterization_post_depth_coverage : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT , p_next : std :: ptr :: null_mut () , primitive_overestimation_size : Default :: default () , max_extra_primitive_overestimation_size : Default :: default () , extra_primitive_overestimation_size_granularity : Default :: default () , primitive_underestimation : Default :: default () , conservative_point_and_line_rasterization : Default :: default () , degenerate_triangles_rasterized : Default :: default () , degenerate_lines_rasterized : Default :: default () , fully_covered_fragment_shader_input_variable : Default :: default () , conservative_rasterization_post_depth_coverage : Default :: default () }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceConservativeRasterizationPropertiesEXT {
@@ -234,7 +234,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceConservativeRasterizationPropertie
 pub struct PipelineRasterizationConservativeStateCreateInfoEXT { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub flags : crate :: extensions :: ext_conservative_rasterization :: PipelineRasterizationConservativeStateCreateFlagsEXT , pub conservative_rasterization_mode : crate :: extensions :: ext_conservative_rasterization :: ConservativeRasterizationModeEXT , pub extra_primitive_overestimation_size : std :: os :: raw :: c_float }
 impl Default for PipelineRasterizationConservativeStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT , p_next : std :: ptr :: null ( ) , flags : Default :: default ( ) , conservative_rasterization_mode : Default :: default ( ) , extra_primitive_overestimation_size : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT , p_next : std :: ptr :: null () , flags : Default :: default () , conservative_rasterization_mode : Default :: default () , extra_primitive_overestimation_size : Default :: default () }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateInfoEXT {

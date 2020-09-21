@@ -13,7 +13,7 @@ pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 }
 impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut ( ) , representative_fragment_test : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut () , representative_fragment_test : Default :: default () }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
@@ -91,7 +91,7 @@ pub struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
 }
 impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , representative_fragment_test_enable : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , representative_fragment_test_enable : Default :: default () }
     }
 }
 impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {

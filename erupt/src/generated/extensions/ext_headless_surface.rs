@@ -6,7 +6,7 @@ pub const EXT_HEADLESS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CREATE_HEADLESS_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateHeadlessSurfaceEXT");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`](./struct.HeadlessSurfaceCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`](./struct.HeadlessSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`HeadlessSurfaceCreateFlagsEXT`](./struct.HeadlessSurfaceCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

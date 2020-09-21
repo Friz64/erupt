@@ -23,9 +23,9 @@ pub const FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CREATE_DISPLAY_PLANE_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDisplayPlaneSurfaceKHR");
-crate :: non_dispatchable_handle ! ( DisplayKHR , DISPLAY_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle" ) ;
-crate :: non_dispatchable_handle ! ( DisplayModeKHR , DISPLAY_MODE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeKHR.html) · Non-dispatchable Handle" ) ;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateFlagsKHR.html) · Bitmask of [`DisplayModeCreateFlagBitsKHR`](./struct.DisplayModeCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplayModeCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (DisplayKHR , DISPLAY_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle") ;
+crate :: non_dispatchable_handle ! (DisplayModeKHR , DISPLAY_MODE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeKHR.html) · Non-dispatchable Handle") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateFlagsKHR.html) · Bitmask of [`DisplayModeCreateFlagBitsKHR`](./struct.DisplayModeCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct DisplayModeCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DisplayModeCreateFlagsKHR`](./struct.DisplayModeCreateFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -44,7 +44,7 @@ impl std::fmt::Debug for DisplayModeCreateFlagBitsKHR {
         })
     }
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateFlagsKHR.html) · Bitmask of [`DisplaySurfaceCreateFlagBitsKHR`](./struct.DisplaySurfaceCreateFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplaySurfaceCreateFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateFlagsKHR.html) · Bitmask of [`DisplaySurfaceCreateFlagBitsKHR`](./struct.DisplaySurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct DisplaySurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DisplaySurfaceCreateFlagsKHR`](./struct.DisplaySurfaceCreateFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -63,7 +63,7 @@ impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
         })
     }
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`](./struct.DisplayPlaneAlphaFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DisplayPlaneAlphaFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`](./struct.DisplayPlaneAlphaFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`](./struct.DisplayPlaneAlphaFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

@@ -41,7 +41,7 @@ pub type PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsEXT =
     ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetCalibratedTimestampsEXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , timestamp_count : u32 , p_timestamp_infos : * const crate :: extensions :: ext_calibrated_timestamps :: CalibratedTimestampInfoEXT , p_timestamps : * mut u64 , p_max_deviation : * mut u64 ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetCalibratedTimestampsEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , timestamp_count : u32 , p_timestamp_infos : * const crate :: extensions :: ext_calibrated_timestamps :: CalibratedTimestampInfoEXT , p_timestamps : * mut u64 , p_max_deviation : * mut u64) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCalibratedTimestampInfoEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -157,7 +157,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
     pub unsafe fn get_calibrated_timestamps_ext(
         &self,
-        timestamp_infos : & [ crate :: extensions :: ext_calibrated_timestamps :: CalibratedTimestampInfoEXTBuilder ],
+        timestamp_infos : & [crate :: extensions :: ext_calibrated_timestamps :: CalibratedTimestampInfoEXTBuilder],
         max_deviation: Option<u64>,
     ) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
         let _function = self

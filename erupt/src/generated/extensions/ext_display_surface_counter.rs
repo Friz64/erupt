@@ -6,7 +6,7 @@ pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_cha
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`](./struct.SurfaceCounterFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct SurfaceCounterFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`](./struct.SurfaceCounterFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`](./struct.SurfaceCounterFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -32,7 +32,7 @@ impl SurfaceCounterFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , surface : crate :: extensions :: khr_surface :: SurfaceKHR , p_surface_capabilities : * mut crate :: extensions :: ext_display_surface_counter :: SurfaceCapabilities2EXT ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , surface : crate :: extensions :: khr_surface :: SurfaceKHR , p_surface_capabilities : * mut crate :: extensions :: ext_display_surface_counter :: SurfaceCapabilities2EXT) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

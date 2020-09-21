@@ -210,6 +210,8 @@ pub mod khr_android_surface;
 pub mod khr_bind_memory2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_buffer_device_address.html) · Vulkan extension"]
 pub mod khr_buffer_device_address;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_copy_commands2.html) · Vulkan extension"]
+pub mod khr_copy_commands2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_create_renderpass2.html) · Vulkan extension"]
 pub mod khr_create_renderpass2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_dedicated_allocation.html) · Vulkan extension"]
@@ -284,6 +286,8 @@ pub mod khr_performance_query;
 pub mod khr_pipeline_executable_properties;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_pipeline_library.html) · Vulkan extension"]
 pub mod khr_pipeline_library;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_portability_subset.html) · Vulkan extension"]
+pub mod khr_portability_subset;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_push_descriptor.html) · Vulkan extension"]
 pub mod khr_push_descriptor;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_ray_tracing.html) · Vulkan extension"]

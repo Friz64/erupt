@@ -9,7 +9,7 @@ pub const FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_END_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndConditionalRenderingEXT");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`](./struct.ConditionalRenderingFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ConditionalRenderingFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`](./struct.ConditionalRenderingFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagBitsEXT.html) · Bits enum of [`ConditionalRenderingFlagsEXT`](./struct.ConditionalRenderingFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -35,7 +35,7 @@ impl ConditionalRenderingFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginConditionalRenderingEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginConditionalRenderingEXT = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , p_conditional_rendering_begin : * const crate :: extensions :: ext_conditional_rendering :: ConditionalRenderingBeginInfoEXT ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdBeginConditionalRenderingEXT = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_conditional_rendering_begin : * const crate :: extensions :: ext_conditional_rendering :: ConditionalRenderingBeginInfoEXT) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndConditionalRenderingEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndConditionalRenderingEXT =
@@ -145,7 +145,7 @@ pub struct CommandBufferInheritanceConditionalRenderingInfoEXT {
 }
 impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT , p_next : std :: ptr :: null ( ) , conditional_rendering_enable : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT , p_next : std :: ptr :: null () , conditional_rendering_enable : Default :: default () }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceConditionalRenderingInfoEXT {

@@ -15,8 +15,8 @@ pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkMergeValidationCachesEXT");
-crate :: non_dispatchable_handle ! ( ValidationCacheEXT , VALIDATION_CACHE_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle" ) ;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct ValidationCacheCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`](./struct.ValidationCacheCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

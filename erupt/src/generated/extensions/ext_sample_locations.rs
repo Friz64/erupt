@@ -17,7 +17,7 @@ pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , samples : crate :: vk1_0 :: SampleCountFlagBits , p_multisample_properties : * mut crate :: extensions :: ext_sample_locations :: MultisamplePropertiesEXT ) -> std :: ffi :: c_void ;
+pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , samples : crate :: vk1_0 :: SampleCountFlagBits , p_multisample_properties : * mut crate :: extensions :: ext_sample_locations :: MultisamplePropertiesEXT) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -433,7 +433,7 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
     #[inline]
     pub fn attachment_initial_sample_locations(
         mut self,
-        attachment_initial_sample_locations : & 'a [ crate :: extensions :: ext_sample_locations :: AttachmentSampleLocationsEXTBuilder ],
+        attachment_initial_sample_locations : & 'a [crate :: extensions :: ext_sample_locations :: AttachmentSampleLocationsEXTBuilder],
     ) -> Self {
         self.0.p_attachment_initial_sample_locations =
             attachment_initial_sample_locations.as_ptr() as _;
@@ -444,7 +444,7 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
     #[inline]
     pub fn post_subpass_sample_locations(
         mut self,
-        post_subpass_sample_locations : & 'a [ crate :: extensions :: ext_sample_locations :: SubpassSampleLocationsEXTBuilder ],
+        post_subpass_sample_locations : & 'a [crate :: extensions :: ext_sample_locations :: SubpassSampleLocationsEXTBuilder],
     ) -> Self {
         self.0.p_post_subpass_sample_locations = post_subpass_sample_locations.as_ptr() as _;
         self.0.post_subpass_sample_locations_count = post_subpass_sample_locations.len() as _;

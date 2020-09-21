@@ -18,7 +18,7 @@ pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_import_semaphore_fd_info : * const crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_semaphore_fd_info : * const crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

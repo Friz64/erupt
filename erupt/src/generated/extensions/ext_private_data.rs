@@ -15,8 +15,8 @@ pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPrivateDataEXT");
-crate :: non_dispatchable_handle ! ( PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle" ) ;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`](./struct.PrivateDataSlotCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

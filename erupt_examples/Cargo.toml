@@ -8,4 +8,4 @@ edition = "2018"
 erupt = { path = "../erupt" }
 winit = "0.22"
 structopt = "0.3"
-bytemuck = "1.2"
+bytemuck = "1.4"

@@ -133,7 +133,7 @@ impl<'a> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn vertex_binding_divisors(
         mut self,
-        vertex_binding_divisors : & 'a [ crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXTBuilder ],
+        vertex_binding_divisors : & 'a [crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXTBuilder],
     ) -> Self {
         self.0.p_vertex_binding_divisors = vertex_binding_divisors.as_ptr() as _;
         self.0.vertex_binding_divisor_count = vertex_binding_divisors.len() as _;

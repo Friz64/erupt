@@ -3,7 +3,7 @@ pub const EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_pipeline_creation_feedback");
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`](./struct.PipelineCreationFeedbackFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PipelineCreationFeedbackFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`](./struct.PipelineCreationFeedbackFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`](./struct.PipelineCreationFeedbackFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -184,7 +184,7 @@ impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn pipeline_stage_creation_feedbacks(
         mut self,
-        pipeline_stage_creation_feedbacks : & 'a mut [ crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackEXTBuilder ],
+        pipeline_stage_creation_feedbacks : & 'a mut [crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackEXTBuilder],
     ) -> Self {
         self.0.p_pipeline_stage_creation_feedbacks =
             pipeline_stage_creation_feedbacks.as_ptr() as _;

@@ -8,7 +8,7 @@ pub const FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT: *const std::os::raw::c_char
     crate::cstr!("vkGetMemoryHostPointerPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , p_host_pointer : * const std :: ffi :: c_void , p_memory_host_pointer_properties : * mut crate :: extensions :: ext_external_memory_host :: MemoryHostPointerPropertiesEXT ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , p_host_pointer : * const std :: ffi :: c_void , p_memory_host_pointer_properties : * mut crate :: extensions :: ext_external_memory_host :: MemoryHostPointerPropertiesEXT) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

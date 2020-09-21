@@ -8,7 +8,7 @@ pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::
     crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , image : crate :: vk1_0 :: Image , p_properties : * mut crate :: extensions :: ext_image_drm_format_modifier :: ImageDrmFormatModifierPropertiesEXT ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , image : crate :: vk1_0 :: Image , p_properties : * mut crate :: extensions :: ext_image_drm_format_modifier :: ImageDrmFormatModifierPropertiesEXT) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -63,7 +63,7 @@ impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
     #[inline]
     pub fn drm_format_modifier_properties(
         mut self,
-        drm_format_modifier_properties : & 'a mut [ crate :: extensions :: ext_image_drm_format_modifier :: DrmFormatModifierPropertiesEXTBuilder ],
+        drm_format_modifier_properties : & 'a mut [crate :: extensions :: ext_image_drm_format_modifier :: DrmFormatModifierPropertiesEXTBuilder],
     ) -> Self {
         self.0.p_drm_format_modifier_properties = drm_format_modifier_properties.as_ptr() as _;
         self.0.drm_format_modifier_count = drm_format_modifier_properties.len() as _;

@@ -216,7 +216,7 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 }
 impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT , p_next : std :: ptr :: null_mut ( ) , required_subgroup_size : Default :: default ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT , p_next : std :: ptr :: null_mut () , required_subgroup_size : Default :: default () }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {

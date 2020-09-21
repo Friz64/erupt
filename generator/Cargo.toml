@@ -13,7 +13,7 @@ treexml = { git = "https://github.com/Friz64/treexml-rs.git", rev = "e2d7794e244
 heck = "0.3"
 pretty_env_logger = "0.4"
 log = "0.4"
-indexmap = "1.4"
+indexmap = "1.6"
 itertools = "0.9"
 syn = { version = "1.0", features = ["extra-traits"] }
 lazy_static = "1.4"

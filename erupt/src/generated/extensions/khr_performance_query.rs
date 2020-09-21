@@ -102,7 +102,7 @@ impl PerformanceCounterStorageKHR {
     pub const FLOAT32_KHR: Self = Self(4);
     pub const FLOAT64_KHR: Self = Self(5);
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`](./struct.PerformanceCounterDescriptionFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`](./struct.PerformanceCounterDescriptionFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Bits enum of [`PerformanceCounterDescriptionFlagsKHR`](./struct.PerformanceCounterDescriptionFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -128,7 +128,7 @@ impl PerformanceCounterDescriptionFlagBitsKHR {
     pub const PERFORMANCE_IMPACTING_KHR: Self = Self(1);
     pub const CONCURRENTLY_IMPACTED_KHR: Self = Self(2);
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockFlagsKHR.html) · Bitmask of [`AcquireProfilingLockFlagBitsKHR`](./struct.AcquireProfilingLockFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct AcquireProfilingLockFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockFlagsKHR.html) · Bitmask of [`AcquireProfilingLockFlagBitsKHR`](./struct.AcquireProfilingLockFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct AcquireProfilingLockFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AcquireProfilingLockFlagsKHR`](./struct.AcquireProfilingLockFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -149,10 +149,10 @@ impl std::fmt::Debug for AcquireProfilingLockFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , queue_family_index : u32 , p_counter_count : * mut u32 , p_counters : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterKHR , p_counter_descriptions : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterDescriptionKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , queue_family_index : u32 , p_counter_count : * mut u32 , p_counters : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterKHR , p_counter_descriptions : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterDescriptionKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn ( physical_device : crate :: vk1_0 :: PhysicalDevice , p_performance_query_create_info : * const crate :: extensions :: khr_performance_query :: QueryPoolPerformanceCreateInfoKHR , p_num_passes : * mut u32 ) -> std :: ffi :: c_void ;
+pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_performance_query_create_info : * const crate :: extensions :: khr_performance_query :: QueryPoolPerformanceCreateInfoKHR , p_num_passes : * mut u32) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(
@@ -851,7 +851,7 @@ impl crate::InstanceLoader {
         Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>,
         Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>,
     )> {
-        let _function = self . enumerate_physical_device_queue_family_performance_query_counters_khr . expect ( "`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded" ) ;
+        let _function = self . enumerate_physical_device_queue_family_performance_query_counters_khr . expect ("`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded") ;
         let mut counter_count = match counter_count {
             Some(v) => v,
             None => {

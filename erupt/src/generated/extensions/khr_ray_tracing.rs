@@ -70,8 +70,8 @@ pub const FN_BUILD_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureDeviceAddressKHR");
-crate :: non_dispatchable_handle ! ( AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle" ) ;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`](./struct.GeometryFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct GeometryFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
+crate :: non_dispatchable_handle ! (AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`](./struct.GeometryFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Bits enum of [`GeometryFlagsKHR`](./struct.GeometryFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -102,7 +102,7 @@ impl GeometryFlagBitsKHR {
     pub const OPAQUE_NV: Self = Self::OPAQUE_KHR;
     pub const NO_DUPLICATE_ANY_HIT_INVOCATION_NV: Self = Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR;
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`](./struct.GeometryInstanceFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct GeometryInstanceFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`](./struct.GeometryInstanceFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Bits enum of [`GeometryInstanceFlagsKHR`](./struct.GeometryInstanceFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -139,7 +139,7 @@ impl GeometryInstanceFlagBitsKHR {
     pub const FORCE_OPAQUE_NV: Self = Self::FORCE_OPAQUE_KHR;
     pub const FORCE_NO_OPAQUE_NV: Self = Self::FORCE_NO_OPAQUE_KHR;
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`](./struct.BuildAccelerationStructureFlagBitsKHR.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct BuildAccelerationStructureFlagsKHR : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`](./struct.BuildAccelerationStructureFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Bits enum of [`BuildAccelerationStructureFlagsKHR`](./struct.BuildAccelerationStructureFlagsKHR.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -335,10 +335,10 @@ pub type PFN_vkDestroyAccelerationStructureKHR = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureMemoryRequirementsKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureMemoryRequirementsInfoKHR , p_memory_requirements : * mut crate :: vk1_1 :: MemoryRequirements2 ) -> std :: ffi :: c_void ;
+pub type PFN_vkGetAccelerationStructureMemoryRequirementsKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureMemoryRequirementsInfoKHR , p_memory_requirements : * mut crate :: vk1_1 :: MemoryRequirements2) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindAccelerationStructureMemoryKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , bind_info_count : u32 , p_bind_infos : * const crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkBindAccelerationStructureMemoryKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , bind_info_count : u32 , p_bind_infos : * const crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyAccelerationStructureKHR = unsafe extern "system" fn(
@@ -381,13 +381,13 @@ pub type PFN_vkCopyMemoryToAccelerationStructureKHR =
     ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , query_pool : crate :: vk1_0 :: QueryPool , first_query : u32 ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , query_pool : crate :: vk1_0 :: QueryPool , first_query : u32) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , data_size : usize , p_data : * mut std :: ffi :: c_void , stride : usize ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , data_size : usize , p_data : * mut std :: ffi :: c_void , stride : usize) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdTraceRaysKHR = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , p_raygen_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_miss_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_hit_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_callable_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , width : u32 , height : u32 , depth : u32 ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdTraceRaysKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_raygen_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_miss_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_hit_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_callable_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , width : u32 , height : u32 , depth : u32) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRayTracingShaderGroupHandlesKHR =
@@ -422,7 +422,7 @@ pub type PFN_vkCreateRayTracingPipelinesKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysIndirectKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdTraceRaysIndirectKHR = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , p_raygen_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_miss_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_hit_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_callable_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , buffer : crate :: vk1_0 :: Buffer , offset : crate :: vk1_0 :: DeviceSize ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdTraceRaysIndirectKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_raygen_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_miss_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_hit_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , p_callable_shader_binding_table : * const crate :: extensions :: khr_ray_tracing :: StridedBufferRegionKHR , buffer : crate :: vk1_0 :: Buffer , offset : crate :: vk1_0 :: DeviceSize) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceAccelerationStructureCompatibilityKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceAccelerationStructureCompatibilityKHR =
@@ -440,7 +440,7 @@ pub type PFN_vkCreateAccelerationStructureKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBuildAccelerationStructureKHR = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , info_count : u32 , p_infos : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHR , pp_offset_infos : * const * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdBuildAccelerationStructureKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , info_count : u32 , p_infos : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHR , pp_offset_infos : * const * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureIndirectKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBuildAccelerationStructureIndirectKHR =
@@ -453,7 +453,7 @@ pub type PFN_vkCmdBuildAccelerationStructureIndirectKHR =
     ) -> std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBuildAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBuildAccelerationStructureKHR = unsafe extern "system" fn ( device : crate :: vk1_0 :: Device , info_count : u32 , p_infos : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHR , pp_offset_infos : * const * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR ) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkBuildAccelerationStructureKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , info_count : u32 , p_infos : * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHR , pp_offset_infos : * const * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureDeviceAddressKHR =
@@ -700,7 +700,7 @@ impl<'a> RayTracingPipelineCreateInfoKHRBuilder<'a> {
     #[inline]
     pub fn groups(
         mut self,
-        groups : & 'a [ crate :: extensions :: khr_ray_tracing :: RayTracingShaderGroupCreateInfoKHRBuilder ],
+        groups : & 'a [crate :: extensions :: khr_ray_tracing :: RayTracingShaderGroupCreateInfoKHRBuilder],
     ) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
@@ -933,7 +933,7 @@ impl<'a> WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
     #[inline]
     pub fn acceleration_structures(
         mut self,
-        acceleration_structures : & 'a [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR ],
+        acceleration_structures : & 'a [crate :: extensions :: khr_ray_tracing :: AccelerationStructureKHR],
     ) -> Self {
         self.0.p_acceleration_structures = acceleration_structures.as_ptr() as _;
         self.0.acceleration_structure_count = acceleration_structures.len() as _;
@@ -2188,7 +2188,7 @@ impl<'a> AccelerationStructureBuildGeometryInfoKHRBuilder<'a> {
     #[inline]
     pub fn geometries(
         mut self,
-        geometries : & 'a [ & 'a crate :: extensions :: khr_ray_tracing :: AccelerationStructureGeometryKHRBuilder ],
+        geometries : & 'a [& 'a crate :: extensions :: khr_ray_tracing :: AccelerationStructureGeometryKHRBuilder],
     ) -> Self {
         self.0.geometry_array_of_pointers = crate::vk1_0::TRUE;
         self.0.geometry_count = geometries.len() as _;
@@ -2531,7 +2531,7 @@ impl<'a> AccelerationStructureCreateInfoKHRBuilder<'a> {
     #[inline]
     pub fn geometry_infos(
         mut self,
-        geometry_infos : & 'a [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureCreateGeometryTypeInfoKHRBuilder ],
+        geometry_infos : & 'a [crate :: extensions :: khr_ray_tracing :: AccelerationStructureCreateGeometryTypeInfoKHRBuilder],
     ) -> Self {
         self.0.p_geometry_infos = geometry_infos.as_ptr() as _;
         self.0.max_geometry_count = geometry_infos.len() as _;
@@ -3522,7 +3522,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryKHR.html) · Function"]
     pub unsafe fn bind_acceleration_structure_memory_khr(
         &self,
-        bind_infos : & [ crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHRBuilder ],
+        bind_infos : & [crate :: extensions :: khr_ray_tracing :: BindAccelerationStructureMemoryInfoKHRBuilder],
     ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .bind_acceleration_structure_memory_khr
@@ -3734,7 +3734,7 @@ impl crate::DeviceLoader {
     pub unsafe fn create_ray_tracing_pipelines_khr(
         &self,
         pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos : & [ crate :: extensions :: khr_ray_tracing :: RayTracingPipelineCreateInfoKHRBuilder ],
+        create_infos : & [crate :: extensions :: khr_ray_tracing :: RayTracingPipelineCreateInfoKHRBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self
@@ -3830,8 +3830,8 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_build_acceleration_structure_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        infos : & [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder ],
-        offset_infos : & [ * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR ],
+        infos : & [crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder],
+        offset_infos : & [* const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR],
     ) -> () {
         let _function = self
             .cmd_build_acceleration_structure_khr
@@ -3871,8 +3871,8 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBuildAccelerationStructureKHR.html) · Function"]
     pub unsafe fn build_acceleration_structure_khr(
         &self,
-        infos : & [ crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder ],
-        offset_infos : & [ * const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR ],
+        infos : & [crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildGeometryInfoKHRBuilder],
+        offset_infos : & [* const crate :: extensions :: khr_ray_tracing :: AccelerationStructureBuildOffsetInfoKHR],
     ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .build_acceleration_structure_khr

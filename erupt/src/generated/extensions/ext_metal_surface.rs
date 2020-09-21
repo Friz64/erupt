@@ -8,7 +8,7 @@ pub const FN_CREATE_METAL_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateMetalSurfaceEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/CAMetalLayer.html) · Basetype"]
 pub type CAMetalLayer = std::ffi::c_void;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`](./struct.MetalSurfaceCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct MetalSurfaceCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`](./struct.MetalSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct MetalSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MetalSurfaceCreateFlagsEXT`](./struct.MetalSurfaceCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

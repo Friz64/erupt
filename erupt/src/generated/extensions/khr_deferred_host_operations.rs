@@ -18,7 +18,7 @@ pub const FN_GET_DEFERRED_OPERATION_RESULT_KHR: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DEFERRED_OPERATION_JOIN_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDeferredOperationJoinKHR");
-crate :: non_dispatchable_handle ! ( DeferredOperationKHR , DEFERRED_OPERATION_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle" ) ;
+crate :: non_dispatchable_handle ! (DeferredOperationKHR , DEFERRED_OPERATION_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle") ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDeferredOperationKHR = unsafe extern "system" fn(

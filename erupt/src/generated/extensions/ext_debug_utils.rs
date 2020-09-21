@@ -36,8 +36,8 @@ pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSubmitDebugUtilsMessageEXT");
-crate :: non_dispatchable_handle ! ( DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle" ) ;
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`](./struct.DebugUtilsMessengerCreateFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`](./struct.DebugUtilsMessengerCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCreateFlagsEXT`](./struct.DebugUtilsMessengerCreateFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -56,7 +56,7 @@ impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
         })
     }
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCallbackDataFlagBitsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessengerCallbackDataFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCallbackDataFlagBitsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCallbackDataFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCallbackDataFlagsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -75,7 +75,7 @@ impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
         })
     }
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`](./struct.DebugUtilsMessageSeverityFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`](./struct.DebugUtilsMessageSeverityFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageSeverityFlagsEXT`](./struct.DebugUtilsMessageSeverityFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -105,7 +105,7 @@ impl DebugUtilsMessageSeverityFlagBitsEXT {
     pub const WARNING_EXT: Self = Self(256);
     pub const ERROR_EXT: Self = Self(4096);
 }
-bitflags::bitflags! { # [ doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`](./struct.DebugUtilsMessageTypeFlagBitsEXT.html)" ] # [ derive ( Default ) ] # [ repr ( transparent ) ] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { # [ cfg ( empty_bitflag_workaround ) ] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`](./struct.DebugUtilsMessageTypeFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageTypeFlagsEXT`](./struct.DebugUtilsMessageTypeFlagsEXT.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]

@@ -75,7 +75,7 @@ impl<'a> ValidationFlagsEXTBuilder<'a> {
     #[inline]
     pub fn disabled_validation_checks(
         mut self,
-        disabled_validation_checks : & 'a [ crate :: extensions :: ext_validation_flags :: ValidationCheckEXT ],
+        disabled_validation_checks : & 'a [crate :: extensions :: ext_validation_flags :: ValidationCheckEXT],
     ) -> Self {
         self.0.p_disabled_validation_checks = disabled_validation_checks.as_ptr() as _;
         self.0.disabled_validation_check_count = disabled_validation_checks.len() as _;

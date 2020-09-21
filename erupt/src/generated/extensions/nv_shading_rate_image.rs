@@ -89,7 +89,7 @@ pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
 ) -> std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn ( command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV ) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV) -> std :: ffi :: c_void ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -138,7 +138,7 @@ impl<'a> ShadingRatePaletteNVBuilder<'a> {
     #[inline]
     pub fn shading_rate_palette_entries(
         mut self,
-        shading_rate_palette_entries : & 'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteEntryNV ],
+        shading_rate_palette_entries : & 'a [crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteEntryNV],
     ) -> Self {
         self.0.p_shading_rate_palette_entries = shading_rate_palette_entries.as_ptr() as _;
         self.0.shading_rate_palette_entry_count = shading_rate_palette_entries.len() as _;
@@ -184,7 +184,7 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
 }
 impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , shading_rate_image_enable : Default :: default ( ) , viewport_count : Default :: default ( ) , p_shading_rate_palettes : std :: ptr :: null ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , shading_rate_image_enable : Default :: default () , viewport_count : Default :: default () , p_shading_rate_palettes : std :: ptr :: null () }
     }
 }
 impl std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNV {
@@ -230,7 +230,7 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn shading_rate_palettes(
         mut self,
-        shading_rate_palettes : & 'a [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
+        shading_rate_palettes : & 'a [crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder],
     ) -> Self {
         self.0.p_shading_rate_palettes = shading_rate_palettes.as_ptr() as _;
         self.0.viewport_count = shading_rate_palettes.len() as _;
@@ -606,7 +606,7 @@ impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
     #[inline]
     pub fn sample_locations(
         mut self,
-        sample_locations : & 'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleLocationNVBuilder ],
+        sample_locations : & 'a [crate :: extensions :: nv_shading_rate_image :: CoarseSampleLocationNVBuilder],
     ) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_location_count = sample_locations.len() as _;
@@ -652,7 +652,7 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
 }
 impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null ( ) , sample_order_type : Default :: default ( ) , custom_sample_order_count : Default :: default ( ) , p_custom_sample_orders : std :: ptr :: null ( ) }
+        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , sample_order_type : Default :: default () , custom_sample_order_count : Default :: default () , p_custom_sample_orders : std :: ptr :: null () }
     }
 }
 impl std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
@@ -698,7 +698,7 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn custom_sample_orders(
         mut self,
-        custom_sample_orders : & 'a [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
+        custom_sample_orders : & 'a [crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder],
     ) -> Self {
         self.0.p_custom_sample_orders = custom_sample_orders.as_ptr() as _;
         self.0.custom_sample_order_count = custom_sample_orders.len() as _;
@@ -760,7 +760,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         first_viewport: u32,
-        shading_rate_palettes : & [ crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder ],
+        shading_rate_palettes : & [crate :: extensions :: nv_shading_rate_image :: ShadingRatePaletteNVBuilder],
     ) -> () {
         let _function = self
             .cmd_set_viewport_shading_rate_palette_nv
@@ -780,7 +780,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-        custom_sample_orders : & [ crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder ],
+        custom_sample_orders : & [crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNVBuilder],
     ) -> () {
         let _function = self
             .cmd_set_coarse_sample_order_nv

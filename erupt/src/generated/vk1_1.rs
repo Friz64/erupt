@@ -1041,6 +1041,14 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFea
     for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_device_memory_report :: PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures>
     for PhysicalDeviceFeatures2Builder<'a>
 {
@@ -1524,6 +1532,8 @@ impl<'a>
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`](struct.PhysicalDeviceFeatures2.html)"]
 #[repr(transparent)]

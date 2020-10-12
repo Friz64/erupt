@@ -72,6 +72,8 @@ pub mod ext_depth_clip_enable;
 pub mod ext_depth_range_unrestricted;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_descriptor_indexing.html) · Vulkan extension"]
 pub mod ext_descriptor_indexing;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_device_memory_report.html) · Vulkan extension"]
+pub mod ext_device_memory_report;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_direct_mode_display.html) · Vulkan extension"]
 pub mod ext_direct_mode_display;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_directfb_surface.html) · Vulkan extension"]
@@ -148,6 +150,8 @@ pub mod ext_separate_stencil_usage;
 pub mod ext_shader_atomic_float;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html) · Vulkan extension"]
 pub mod ext_shader_demote_to_helper_invocation;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_image_atomic_int64.html) · Vulkan extension"]
+pub mod ext_shader_image_atomic_int64;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_stencil_export.html) · Vulkan extension"]
 pub mod ext_shader_stencil_export;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_subgroup_ballot.html) · Vulkan extension"]

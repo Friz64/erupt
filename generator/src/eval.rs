@@ -54,6 +54,7 @@ impl From<&Constant> for Literal {
                     IntegerBase::Decimal => 10,
                     IntegerBase::Hexadecimal => 16,
                     IntegerBase::Octal => 8,
+                    IntegerBase::Binary => 2,
                 };
 
                 let value = || -> Result<_, ParseIntError> {

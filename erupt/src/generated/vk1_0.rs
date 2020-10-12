@@ -4382,7 +4382,6 @@ impl std::fmt::Debug for StructureType {
             &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT => {
                 "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT"
             }
-            &Self::DRM_FORMAT_MODIFIER_PROPERTIES_EXT => "DRM_FORMAT_MODIFIER_PROPERTIES_EXT",
             &Self::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT => {
                 "PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT"
             }
@@ -4549,6 +4548,9 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => {
                 "PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD"
             }
+            &Self::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT"
+            }
             &Self::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT => {
                 "PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT"
             }
@@ -4658,6 +4660,15 @@ impl std::fmt::Debug for StructureType {
                 "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM"
             }
             &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => "RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM",
+            &Self::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => {
+                "PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT"
+            }
+            &Self::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT => {
+                "DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT"
+            }
+            &Self::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT => {
+                "DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT"
+            }
             &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT"
             }
@@ -5222,7 +5233,6 @@ impl StructureType {
 #[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
 impl StructureType {
     pub const DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT: Self = Self(1000158000);
-    pub const DRM_FORMAT_MODIFIER_PROPERTIES_EXT: Self = Self(1000158001);
     pub const PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT: Self = Self(1000158002);
     pub const IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT: Self = Self(1000158003);
     pub const IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT: Self = Self(1000158004);
@@ -5394,6 +5404,10 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD: Self = Self(1000229000);
 }
+#[doc = "Provided by [`extensions::ext_shader_image_atomic_int64`](../extensions/ext_shader_image_atomic_int64/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT: Self = Self(1000234000);
+}
 #[doc = "Provided by [`extensions::ext_memory_budget`](../extensions/ext_memory_budget/index.html)"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT: Self = Self(1000237000);
@@ -5514,6 +5528,12 @@ impl StructureType {
 impl StructureType {
     pub const COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM: Self = Self(1000282000);
     pub const RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM: Self = Self(1000282001);
+}
+#[doc = "Provided by [`extensions::ext_device_memory_report`](../extensions/ext_device_memory_report/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT: Self = Self(1000284000);
+    pub const DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT: Self = Self(1000284001);
+    pub const DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT: Self = Self(1000284002);
 }
 #[doc = "Provided by [`extensions::ext_robustness2`](../extensions/ext_robustness2/index.html)"]
 impl StructureType {
@@ -9242,6 +9262,30 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFea
     for DeviceCreateInfoBuilder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_device_memory_report :: PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXT,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXTBuilder<
+            '_,
+        >,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
 impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures>
     for DeviceCreateInfoBuilder<'a>
 {
@@ -9743,6 +9787,8 @@ impl<'a>
     > for DeviceCreateInfoBuilder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXT > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
 #[repr(transparent)]

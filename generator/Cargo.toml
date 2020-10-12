@@ -6,7 +6,7 @@ authors = ["Friz64 <friz64mc@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-lang-c = "0.8"
+lang-c = "0.9"
 proc-macro2 = "1.0"
 quote = "1.0"
 treexml = { git = "https://github.com/Friz64/treexml-rs.git", rev = "e2d7794e244414dba9665c53107d31fb0ec48140" }

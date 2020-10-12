@@ -6,13 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.0+154] - 2020-10-12
+### Changed
+- Update Vulkan Headers to version 157
+
 ## [0.14.0+154] - 2020-09-21
 ### Added
 - Add `#[track_caller]` to `VulkanResult`
 - Add `Allocation::memory`, allowing access to the inner `DeviceMemory` handle
 
 ### Changed
-- Update Vulkan Headers to version 150
+- Update Vulkan Headers to version 154
 
 ### Fixed
 - Add `#[repr(transparent)]` to enums/flagbits

@@ -14,14 +14,14 @@ pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char =
 pub type PFN_vkCmdSetCheckpointNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_checkpoint_marker: *const std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(
     queue: crate::vk1_0::Queue,
     p_checkpoint_data_count: *mut u32,
     p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

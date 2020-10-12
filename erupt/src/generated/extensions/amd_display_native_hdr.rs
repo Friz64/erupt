@@ -12,7 +12,7 @@ pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     swap_chain: crate::extensions::khr_swapchain::SwapchainKHR,
     local_dimming_enable: crate::vk1_0::Bool32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

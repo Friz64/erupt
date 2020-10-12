@@ -57,6 +57,7 @@ pub enum Type {
     UnsignedSize,
     Bool,
     CStr,
+    Unit,
     Named(Name),
     Pointer {
         to: Box<Type>,
@@ -177,6 +178,7 @@ impl Type {
             Type::UnsignedSize => quote! { usize },
             Type::Bool => quote! { bool },
             Type::CStr => quote! { std::ffi::CStr },
+            Type::Unit => quote! { () },
             Type::Named(name) => name.path(source),
             Type::Pointer { to, kind } => {
                 let to = to.rust_type(source);

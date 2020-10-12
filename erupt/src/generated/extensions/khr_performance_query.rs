@@ -152,7 +152,7 @@ impl std::fmt::Debug for AcquireProfilingLockFlagBitsKHR {
 pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , queue_family_index : u32 , p_counter_count : * mut u32 , p_counters : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterKHR , p_counter_descriptions : * mut crate :: extensions :: khr_performance_query :: PerformanceCounterDescriptionKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_performance_query_create_info : * const crate :: extensions :: khr_performance_query :: QueryPoolPerformanceCreateInfoKHR , p_num_passes : * mut u32) -> std :: ffi :: c_void ;
+pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_performance_query_create_info : * const crate :: extensions :: khr_performance_query :: QueryPoolPerformanceCreateInfoKHR , p_num_passes : * mut u32) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(
@@ -162,7 +162,7 @@ pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleaseProfilingLockKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device) -> std::ffi::c_void;
+    unsafe extern "system" fn(device: crate::vk1_0::Device) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryFeaturesKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

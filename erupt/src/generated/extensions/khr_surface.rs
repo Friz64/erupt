@@ -176,7 +176,7 @@ pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
     surface: crate::extensions::khr_surface::SurfaceKHR,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR =

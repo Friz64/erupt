@@ -280,7 +280,7 @@ pub type PFN_vkResetQueryPool = unsafe extern "system" fn(
     query_pool: crate::vk1_0::QueryPool,
     first_query: u32,
     query_count: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRenderPass2 = unsafe extern "system" fn(
@@ -295,20 +295,20 @@ pub type PFN_vkCmdBeginRenderPass2 = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo,
     p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdNextSubpass2 = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo,
     p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass2 = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValue.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreCounterValue = unsafe extern "system" fn(
@@ -339,7 +339,7 @@ pub type PFN_vkCmdDrawIndirectCount = unsafe extern "system" fn(
     count_buffer_offset: crate::vk1_0::DeviceSize,
     max_draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCount.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCount = unsafe extern "system" fn(
@@ -350,7 +350,7 @@ pub type PFN_vkCmdDrawIndexedIndirectCount = unsafe extern "system" fn(
     count_buffer_offset: crate::vk1_0::DeviceSize,
     max_draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferOpaqueCaptureAddress = unsafe extern "system" fn(

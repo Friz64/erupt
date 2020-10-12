@@ -709,20 +709,20 @@ pub type PFN_vkEnumerateInstanceVersion =
 pub type PFN_vkGetPhysicalDeviceFeatures2 = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_features: *mut crate::vk1_1::PhysicalDeviceFeatures2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceProperties2 = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_properties: *mut crate::vk1_1::PhysicalDeviceProperties2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFormatProperties2 = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     format: crate::vk1_0::Format,
     p_format_properties: *mut crate::vk1_1::FormatProperties2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 =
@@ -733,58 +733,53 @@ pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 =
     ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_queue_family_property_count: *mut u32,
-        p_queue_family_properties: *mut crate::vk1_1::QueueFamilyProperties2,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_queue_family_property_count: *mut u32,
+    p_queue_family_properties: *mut crate::vk1_1::QueueFamilyProperties2,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMemoryProperties2 = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_memory_properties: *mut crate::vk1_1::PhysicalDeviceMemoryProperties2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_format_info: *const crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2,
-        p_property_count: *mut u32,
-        p_properties: *mut crate::vk1_1::SparseImageFormatProperties2,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_format_info: *const crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::vk1_1::SparseImageFormatProperties2,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPool = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     command_pool: crate::vk1_0::CommandPool,
     flags: crate::vk1_1::CommandPoolTrimFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalBufferProperties =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_external_buffer_info: *const crate::vk1_1::PhysicalDeviceExternalBufferInfo,
-        p_external_buffer_properties: *mut crate::vk1_1::ExternalBufferProperties,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceExternalBufferProperties = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_external_buffer_info: *const crate::vk1_1::PhysicalDeviceExternalBufferInfo,
+    p_external_buffer_properties: *mut crate::vk1_1::ExternalBufferProperties,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphoreProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalSemaphoreProperties =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_external_semaphore_info: *const crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
-        p_external_semaphore_properties: *mut crate::vk1_1::ExternalSemaphoreProperties,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceExternalSemaphoreProperties = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_external_semaphore_info: *const crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
+    p_external_semaphore_properties: *mut crate::vk1_1::ExternalSemaphoreProperties,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFenceProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalFenceProperties =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_external_fence_info: *const crate::vk1_1::PhysicalDeviceExternalFenceInfo,
-        p_external_fence_properties: *mut crate::vk1_1::ExternalFenceProperties,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceExternalFenceProperties = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_external_fence_info: *const crate::vk1_1::PhysicalDeviceExternalFenceInfo,
+    p_external_fence_properties: *mut crate::vk1_1::ExternalFenceProperties,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroups.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumeratePhysicalDeviceGroups = unsafe extern "system" fn(
@@ -800,7 +795,7 @@ pub type PFN_vkGetDeviceGroupPeerMemoryFeatures = unsafe extern "system" fn(
     local_device_index: u32,
     remote_device_index: u32,
     p_peer_memory_features: *mut crate::vk1_1::PeerMemoryFeatureFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindBufferMemory2 = unsafe extern "system" fn(
@@ -817,10 +812,8 @@ pub type PFN_vkBindImageMemory2 = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMask.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDeviceMask = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    device_mask: u32,
-) -> std::ffi::c_void;
+pub type PFN_vkCmdSetDeviceMask =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBase.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchBase = unsafe extern "system" fn(
@@ -831,7 +824,7 @@ pub type PFN_vkCmdDispatchBase = unsafe extern "system" fn(
     group_count_x: u32,
     group_count_y: u32,
     group_count_z: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorUpdateTemplate = unsafe extern "system" fn(
@@ -846,7 +839,7 @@ pub type PFN_vkDestroyDescriptorUpdateTemplate = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplate = unsafe extern "system" fn(
@@ -854,21 +847,21 @@ pub type PFN_vkUpdateDescriptorSetWithTemplate = unsafe extern "system" fn(
     descriptor_set: crate::vk1_0::DescriptorSet,
     descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
     p_data: *const std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferMemoryRequirements2 = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_info: *const crate::vk1_1::BufferMemoryRequirementsInfo2,
     p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageMemoryRequirements2 = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_info: *const crate::vk1_1::ImageMemoryRequirementsInfo2,
     p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSparseMemoryRequirements2 = unsafe extern "system" fn(
@@ -876,7 +869,7 @@ pub type PFN_vkGetImageSparseMemoryRequirements2 = unsafe extern "system" fn(
     p_info: *const crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
     p_sparse_memory_requirement_count: *mut u32,
     p_sparse_memory_requirements: *mut crate::vk1_1::SparseImageMemoryRequirements2,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversion.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSamplerYcbcrConversion = unsafe extern "system" fn(
@@ -891,21 +884,21 @@ pub type PFN_vkDestroySamplerYcbcrConversion = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceQueue2 = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_queue_info: *const crate::vk1_1::DeviceQueueInfo2,
     p_queue: *mut crate::vk1_0::Queue,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupport.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupport = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo,
     p_support: *mut crate::vk1_1::DescriptorSetLayoutSupport,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

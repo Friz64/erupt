@@ -78,7 +78,7 @@ pub type PFN_vkCmdBindShadingRateImageNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     image_view: crate::vk1_0::ImageView,
     image_layout: crate::vk1_0::ImageLayout,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
@@ -86,10 +86,10 @@ pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
     first_viewport: u32,
     viewport_count: u32,
     p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , sample_order_type : crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderTypeNV , custom_sample_order_count : u32 , p_custom_sample_orders : * const crate :: extensions :: nv_shading_rate_image :: CoarseSampleOrderCustomNV) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

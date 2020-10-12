@@ -139,7 +139,7 @@ pub type PFN_vkInitializePerformanceApiINTEL = unsafe extern "system" fn (device
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUninitializePerformanceApiINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUninitializePerformanceApiINTEL =
-    unsafe extern "system" fn(device: crate::vk1_0::Device) -> std::ffi::c_void;
+    unsafe extern "system" fn(device: crate::vk1_0::Device) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPerformanceMarkerINTEL = unsafe extern "system" fn(

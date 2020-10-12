@@ -344,7 +344,7 @@ impl Function {
         let param_idents = user_params.iter().map(|param| param.cleaned_ident());
         let param_types = user_params.iter().map(|param| param.ty.rust_type(source));
         let (return_expr, return_type) = match &self.return_type {
-            Type::Void => Value::tuple(&return_values).expr_type(source),
+            Type::Unit => Value::tuple(&return_values).expr_type(source),
             result if result == &Type::Named(Name::Type(TypeName::result())) => {
                 let (expr, ty) = Value::tuple(&return_values).expr_type(source);
                 let expr = quote! { crate::utils::VulkanResult::new(_return, #expr) };

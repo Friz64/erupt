@@ -50,7 +50,7 @@ pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(
     first_discard_rectangle: u32,
     discard_rectangle_count: u32,
     p_discard_rectangles: *const crate::vk1_0::Rect2D,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

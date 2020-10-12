@@ -18,7 +18,7 @@ pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     task_count: u32,
     first_task: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(
@@ -27,7 +27,7 @@ pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(
     offset: crate::vk1_0::DeviceSize,
     draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
@@ -38,7 +38,7 @@ pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
     count_buffer_offset: crate::vk1_0::DeviceSize,
     max_draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

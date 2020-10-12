@@ -13,7 +13,7 @@ pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
     swapchain_count: u32,
     p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR,
     p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

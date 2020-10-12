@@ -150,33 +150,33 @@ pub type PFN_vkSetDebugUtilsObjectTagEXT = unsafe extern "system" fn(
 pub type PFN_vkQueueBeginDebugUtilsLabelEXT = unsafe extern "system" fn(
     queue: crate::vk1_0::Queue,
     p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueEndDebugUtilsLabelEXT =
-    unsafe extern "system" fn(queue: crate::vk1_0::Queue) -> std::ffi::c_void;
+    unsafe extern "system" fn(queue: crate::vk1_0::Queue) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueInsertDebugUtilsLabelEXT = unsafe extern "system" fn(
     queue: crate::vk1_0::Queue,
     p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginDebugUtilsLabelEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndDebugUtilsLabelEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> std::ffi::c_void;
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdInsertDebugUtilsLabelEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(
@@ -191,7 +191,7 @@ pub type PFN_vkDestroyDebugUtilsMessengerEXT = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
     messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(
@@ -199,7 +199,7 @@ pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(
     message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT,
     message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
     p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugUtilsMessengerCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(

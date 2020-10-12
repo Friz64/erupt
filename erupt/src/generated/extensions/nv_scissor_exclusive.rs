@@ -13,7 +13,7 @@ pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(
     first_exclusive_scissor: u32,
     exclusive_scissor_count: u32,
     p_exclusive_scissors: *const crate::vk1_0::Rect2D,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

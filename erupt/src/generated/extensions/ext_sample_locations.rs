@@ -14,10 +14,14 @@ pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw
 pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , samples : crate :: vk1_0 :: SampleCountFlagBits , p_multisample_properties : * mut crate :: extensions :: ext_sample_locations :: MultisamplePropertiesEXT) -> std :: ffi :: c_void ;
+pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    samples: crate::vk1_0::SampleCountFlagBits,
+    p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

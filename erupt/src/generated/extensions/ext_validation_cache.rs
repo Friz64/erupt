@@ -65,7 +65,7 @@ pub type PFN_vkDestroyValidationCacheEXT = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetValidationCacheDataEXT = unsafe extern "system" fn(

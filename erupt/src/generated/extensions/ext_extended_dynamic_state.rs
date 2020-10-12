@@ -44,33 +44,33 @@ pub const FN_CMD_SET_STENCIL_OP_EXT: *const std::os::raw::c_char =
 pub type PFN_vkCmdSetCullModeEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     cull_mode: crate::vk1_0::CullModeFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFrontFaceEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetFrontFaceEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     front_face: crate::vk1_0::FrontFace,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPrimitiveTopologyEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     primitive_topology: crate::vk1_0::PrimitiveTopology,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWithCountEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetViewportWithCountEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     viewport_count: u32,
     p_viewports: *const crate::vk1_0::Viewport,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetScissorWithCountEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetScissorWithCountEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     scissor_count: u32,
     p_scissors: *const crate::vk1_0::Rect2D,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindVertexBuffers2EXT = unsafe extern "system" fn(
@@ -81,37 +81,37 @@ pub type PFN_vkCmdBindVertexBuffers2EXT = unsafe extern "system" fn(
     p_offsets: *const crate::vk1_0::DeviceSize,
     p_sizes: *const crate::vk1_0::DeviceSize,
     p_strides: *const crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthTestEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthTestEnableEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     depth_test_enable: crate::vk1_0::Bool32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthWriteEnableEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     depth_write_enable: crate::vk1_0::Bool32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthCompareOpEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthCompareOpEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     depth_compare_op: crate::vk1_0::CompareOp,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBoundsTestEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthBoundsTestEnableEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     depth_bounds_test_enable: crate::vk1_0::Bool32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilTestEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilTestEnableEXT = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     stencil_test_enable: crate::vk1_0::Bool32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(
@@ -121,7 +121,7 @@ pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(
     pass_op: crate::vk1_0::StencilOp,
     depth_fail_op: crate::vk1_0::StencilOp,
     compare_op: crate::vk1_0::CompareOp,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

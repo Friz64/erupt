@@ -49,7 +49,7 @@ pub type PFN_vkDestroyPrivateDataSlotEXT = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetPrivateDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetPrivateDataEXT = unsafe extern "system" fn(
@@ -67,7 +67,7 @@ pub type PFN_vkGetPrivateDataEXT = unsafe extern "system" fn(
     object_handle: u64,
     private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
     p_data: *mut u64,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

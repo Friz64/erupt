@@ -153,7 +153,7 @@ pub type PFN_vkCreateAccelerationStructureNV = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_ray_tracing :: AccelerationStructureMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: extensions :: khr_get_memory_requirements2 :: MemoryRequirements2KHR) -> std :: ffi :: c_void ;
+pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_ray_tracing :: AccelerationStructureMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: extensions :: khr_get_memory_requirements2 :: MemoryRequirements2KHR) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyAccelerationStructureNV = unsafe extern "system" fn(
@@ -161,7 +161,7 @@ pub type PFN_vkCmdCopyAccelerationStructureNV = unsafe extern "system" fn(
     dst: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
     src: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
     mode: crate::extensions::khr_ray_tracing::CopyAccelerationStructureModeKHR,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBuildAccelerationStructureNV = unsafe extern "system" fn(
@@ -174,7 +174,7 @@ pub type PFN_vkCmdBuildAccelerationStructureNV = unsafe extern "system" fn(
     src: crate::extensions::khr_ray_tracing::AccelerationStructureKHR,
     scratch: crate::vk1_0::Buffer,
     scratch_offset: crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdTraceRaysNV = unsafe extern "system" fn(
@@ -193,7 +193,7 @@ pub type PFN_vkCmdTraceRaysNV = unsafe extern "system" fn(
     width: u32,
     height: u32,
     depth: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureHandleNV = unsafe extern "system" fn(

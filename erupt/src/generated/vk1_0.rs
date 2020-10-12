@@ -6502,7 +6502,7 @@ pub type PFN_vkCreateInstance = unsafe extern "system" fn(
 pub type PFN_vkDestroyInstance = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDevices.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumeratePhysicalDevices = unsafe extern "system" fn(
@@ -6529,34 +6529,33 @@ pub type PFN_vkGetInstanceProcAddr =
 pub type PFN_vkGetPhysicalDeviceProperties = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_properties: *mut crate::vk1_0::PhysicalDeviceProperties,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_queue_family_property_count: *mut u32,
-        p_queue_family_properties: *mut crate::vk1_0::QueueFamilyProperties,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_queue_family_property_count: *mut u32,
+    p_queue_family_properties: *mut crate::vk1_0::QueueFamilyProperties,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMemoryProperties = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_memory_properties: *mut crate::vk1_0::PhysicalDeviceMemoryProperties,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFeatures = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     p_features: *mut crate::vk1_0::PhysicalDeviceFeatures,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFormatProperties = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     format: crate::vk1_0::Format,
     p_format_properties: *mut crate::vk1_0::FormatProperties,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceImageFormatProperties =
@@ -6582,7 +6581,7 @@ pub type PFN_vkCreateDevice = unsafe extern "system" fn(
 pub type PFN_vkDestroyDevice = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceLayerProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumerateInstanceLayerProperties = unsafe extern "system" fn(
@@ -6621,7 +6620,7 @@ pub type PFN_vkGetDeviceQueue = unsafe extern "system" fn(
     queue_family_index: u32,
     queue_index: u32,
     p_queue: *mut crate::vk1_0::Queue,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueSubmit = unsafe extern "system" fn(
@@ -6652,7 +6651,7 @@ pub type PFN_vkFreeMemory = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     memory: crate::vk1_0::DeviceMemory,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkMapMemory = unsafe extern "system" fn(
@@ -6668,7 +6667,7 @@ pub type PFN_vkMapMemory = unsafe extern "system" fn(
 pub type PFN_vkUnmapMemory = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     memory: crate::vk1_0::DeviceMemory,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFlushMappedMemoryRanges.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkFlushMappedMemoryRanges = unsafe extern "system" fn(
@@ -6689,14 +6688,14 @@ pub type PFN_vkGetDeviceMemoryCommitment = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     memory: crate::vk1_0::DeviceMemory,
     p_committed_memory_in_bytes: *mut crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferMemoryRequirements = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     buffer: crate::vk1_0::Buffer,
     p_memory_requirements: *mut crate::vk1_0::MemoryRequirements,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindBufferMemory = unsafe extern "system" fn(
@@ -6711,7 +6710,7 @@ pub type PFN_vkGetImageMemoryRequirements = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     image: crate::vk1_0::Image,
     p_memory_requirements: *mut crate::vk1_0::MemoryRequirements,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindImageMemory = unsafe extern "system" fn(
@@ -6727,20 +6726,19 @@ pub type PFN_vkGetImageSparseMemoryRequirements = unsafe extern "system" fn(
     image: crate::vk1_0::Image,
     p_sparse_memory_requirement_count: *mut u32,
     p_sparse_memory_requirements: *mut crate::vk1_0::SparseImageMemoryRequirements,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format: crate::vk1_0::Format,
-        _type: crate::vk1_0::ImageType,
-        samples: crate::vk1_0::SampleCountFlagBits,
-        usage: crate::vk1_0::ImageUsageFlags,
-        tiling: crate::vk1_0::ImageTiling,
-        p_property_count: *mut u32,
-        p_properties: *mut crate::vk1_0::SparseImageFormatProperties,
-    ) -> std::ffi::c_void;
+pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    format: crate::vk1_0::Format,
+    _type: crate::vk1_0::ImageType,
+    samples: crate::vk1_0::SampleCountFlagBits,
+    usage: crate::vk1_0::ImageUsageFlags,
+    tiling: crate::vk1_0::ImageTiling,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::vk1_0::SparseImageFormatProperties,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBindSparse.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueBindSparse = unsafe extern "system" fn(
@@ -6763,7 +6761,7 @@ pub type PFN_vkDestroyFence = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     fence: crate::vk1_0::Fence,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetFences.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetFences = unsafe extern "system" fn(
@@ -6800,7 +6798,7 @@ pub type PFN_vkDestroySemaphore = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     semaphore: crate::vk1_0::Semaphore,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateEvent = unsafe extern "system" fn(
@@ -6815,7 +6813,7 @@ pub type PFN_vkDestroyEvent = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     event: crate::vk1_0::Event,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetEventStatus.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetEventStatus = unsafe extern "system" fn(
@@ -6848,7 +6846,7 @@ pub type PFN_vkDestroyQueryPool = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     query_pool: crate::vk1_0::QueryPool,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueryPoolResults.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueryPoolResults = unsafe extern "system" fn(
@@ -6875,7 +6873,7 @@ pub type PFN_vkDestroyBuffer = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     buffer: crate::vk1_0::Buffer,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateBufferView = unsafe extern "system" fn(
@@ -6890,7 +6888,7 @@ pub type PFN_vkDestroyBufferView = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     buffer_view: crate::vk1_0::BufferView,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateImage = unsafe extern "system" fn(
@@ -6905,7 +6903,7 @@ pub type PFN_vkDestroyImage = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     image: crate::vk1_0::Image,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSubresourceLayout.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSubresourceLayout = unsafe extern "system" fn(
@@ -6913,7 +6911,7 @@ pub type PFN_vkGetImageSubresourceLayout = unsafe extern "system" fn(
     image: crate::vk1_0::Image,
     p_subresource: *const crate::vk1_0::ImageSubresource,
     p_layout: *mut crate::vk1_0::SubresourceLayout,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImageView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateImageView = unsafe extern "system" fn(
@@ -6928,7 +6926,7 @@ pub type PFN_vkDestroyImageView = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     image_view: crate::vk1_0::ImageView,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateShaderModule.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateShaderModule = unsafe extern "system" fn(
@@ -6943,7 +6941,7 @@ pub type PFN_vkDestroyShaderModule = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     shader_module: crate::vk1_0::ShaderModule,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineCache.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreatePipelineCache = unsafe extern "system" fn(
@@ -6958,7 +6956,7 @@ pub type PFN_vkDestroyPipelineCache = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     pipeline_cache: crate::vk1_0::PipelineCache,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineCacheData.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPipelineCacheData = unsafe extern "system" fn(
@@ -7001,7 +6999,7 @@ pub type PFN_vkDestroyPipeline = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     pipeline: crate::vk1_0::Pipeline,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineLayout.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreatePipelineLayout = unsafe extern "system" fn(
@@ -7016,7 +7014,7 @@ pub type PFN_vkDestroyPipelineLayout = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     pipeline_layout: crate::vk1_0::PipelineLayout,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSampler.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSampler = unsafe extern "system" fn(
@@ -7031,7 +7029,7 @@ pub type PFN_vkDestroySampler = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     sampler: crate::vk1_0::Sampler,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorSetLayout.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorSetLayout = unsafe extern "system" fn(
@@ -7046,7 +7044,7 @@ pub type PFN_vkDestroyDescriptorSetLayout = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     descriptor_set_layout: crate::vk1_0::DescriptorSetLayout,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorPool = unsafe extern "system" fn(
@@ -7061,7 +7059,7 @@ pub type PFN_vkDestroyDescriptorPool = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     descriptor_pool: crate::vk1_0::DescriptorPool,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetDescriptorPool = unsafe extern "system" fn(
@@ -7092,7 +7090,7 @@ pub type PFN_vkUpdateDescriptorSets = unsafe extern "system" fn(
     p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet,
     descriptor_copy_count: u32,
     p_descriptor_copies: *const crate::vk1_0::CopyDescriptorSet,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFramebuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateFramebuffer = unsafe extern "system" fn(
@@ -7107,7 +7105,7 @@ pub type PFN_vkDestroyFramebuffer = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     framebuffer: crate::vk1_0::Framebuffer,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRenderPass = unsafe extern "system" fn(
@@ -7122,14 +7120,14 @@ pub type PFN_vkDestroyRenderPass = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     render_pass: crate::vk1_0::RenderPass,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRenderAreaGranularity.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRenderAreaGranularity = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     render_pass: crate::vk1_0::RenderPass,
     p_granularity: *mut crate::vk1_0::Extent2D,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateCommandPool = unsafe extern "system" fn(
@@ -7144,7 +7142,7 @@ pub type PFN_vkDestroyCommandPool = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     command_pool: crate::vk1_0::CommandPool,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetCommandPool = unsafe extern "system" fn(
@@ -7166,7 +7164,7 @@ pub type PFN_vkFreeCommandBuffers = unsafe extern "system" fn(
     command_pool: crate::vk1_0::CommandPool,
     command_buffer_count: u32,
     p_command_buffers: *const crate::vk1_0::CommandBuffer,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBeginCommandBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBeginCommandBuffer = unsafe extern "system" fn(
@@ -7189,7 +7187,7 @@ pub type PFN_vkCmdBindPipeline = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
     pipeline: crate::vk1_0::Pipeline,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewport.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetViewport = unsafe extern "system" fn(
@@ -7197,7 +7195,7 @@ pub type PFN_vkCmdSetViewport = unsafe extern "system" fn(
     first_viewport: u32,
     viewport_count: u32,
     p_viewports: *const crate::vk1_0::Viewport,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetScissor.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetScissor = unsafe extern "system" fn(
@@ -7205,13 +7203,13 @@ pub type PFN_vkCmdSetScissor = unsafe extern "system" fn(
     first_scissor: u32,
     scissor_count: u32,
     p_scissors: *const crate::vk1_0::Rect2D,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineWidth.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetLineWidth = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     line_width: std::os::raw::c_float,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBias.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthBias = unsafe extern "system" fn(
@@ -7219,41 +7217,41 @@ pub type PFN_vkCmdSetDepthBias = unsafe extern "system" fn(
     depth_bias_constant_factor: std::os::raw::c_float,
     depth_bias_clamp: std::os::raw::c_float,
     depth_bias_slope_factor: std::os::raw::c_float,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetBlendConstants.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetBlendConstants = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     blend_constants: [std::os::raw::c_float; 4],
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBounds.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthBounds = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     min_depth_bounds: std::os::raw::c_float,
     max_depth_bounds: std::os::raw::c_float,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilCompareMask.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilCompareMask = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     face_mask: crate::vk1_0::StencilFaceFlags,
     compare_mask: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilWriteMask.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilWriteMask = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     face_mask: crate::vk1_0::StencilFaceFlags,
     write_mask: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilReference.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilReference = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     face_mask: crate::vk1_0::StencilFaceFlags,
     reference: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindDescriptorSets = unsafe extern "system" fn(
@@ -7265,7 +7263,7 @@ pub type PFN_vkCmdBindDescriptorSets = unsafe extern "system" fn(
     p_descriptor_sets: *const crate::vk1_0::DescriptorSet,
     dynamic_offset_count: u32,
     p_dynamic_offsets: *const u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindIndexBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindIndexBuffer = unsafe extern "system" fn(
@@ -7273,7 +7271,7 @@ pub type PFN_vkCmdBindIndexBuffer = unsafe extern "system" fn(
     buffer: crate::vk1_0::Buffer,
     offset: crate::vk1_0::DeviceSize,
     index_type: crate::vk1_0::IndexType,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindVertexBuffers = unsafe extern "system" fn(
@@ -7282,7 +7280,7 @@ pub type PFN_vkCmdBindVertexBuffers = unsafe extern "system" fn(
     binding_count: u32,
     p_buffers: *const crate::vk1_0::Buffer,
     p_offsets: *const crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDraw.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDraw = unsafe extern "system" fn(
@@ -7291,7 +7289,7 @@ pub type PFN_vkCmdDraw = unsafe extern "system" fn(
     instance_count: u32,
     first_vertex: u32,
     first_instance: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexed.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexed = unsafe extern "system" fn(
@@ -7301,7 +7299,7 @@ pub type PFN_vkCmdDrawIndexed = unsafe extern "system" fn(
     first_index: u32,
     vertex_offset: i32,
     first_instance: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirect.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirect = unsafe extern "system" fn(
@@ -7310,7 +7308,7 @@ pub type PFN_vkCmdDrawIndirect = unsafe extern "system" fn(
     offset: crate::vk1_0::DeviceSize,
     draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirect.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirect = unsafe extern "system" fn(
@@ -7319,7 +7317,7 @@ pub type PFN_vkCmdDrawIndexedIndirect = unsafe extern "system" fn(
     offset: crate::vk1_0::DeviceSize,
     draw_count: u32,
     stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatch.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatch = unsafe extern "system" fn(
@@ -7327,14 +7325,14 @@ pub type PFN_vkCmdDispatch = unsafe extern "system" fn(
     group_count_x: u32,
     group_count_y: u32,
     group_count_z: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchIndirect.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchIndirect = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     buffer: crate::vk1_0::Buffer,
     offset: crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyBuffer = unsafe extern "system" fn(
@@ -7343,7 +7341,7 @@ pub type PFN_vkCmdCopyBuffer = unsafe extern "system" fn(
     dst_buffer: crate::vk1_0::Buffer,
     region_count: u32,
     p_regions: *const crate::vk1_0::BufferCopy,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyImage = unsafe extern "system" fn(
@@ -7354,7 +7352,7 @@ pub type PFN_vkCmdCopyImage = unsafe extern "system" fn(
     dst_image_layout: crate::vk1_0::ImageLayout,
     region_count: u32,
     p_regions: *const crate::vk1_0::ImageCopy,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBlitImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBlitImage = unsafe extern "system" fn(
@@ -7366,7 +7364,7 @@ pub type PFN_vkCmdBlitImage = unsafe extern "system" fn(
     region_count: u32,
     p_regions: *const crate::vk1_0::ImageBlit,
     filter: crate::vk1_0::Filter,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyBufferToImage = unsafe extern "system" fn(
@@ -7376,7 +7374,7 @@ pub type PFN_vkCmdCopyBufferToImage = unsafe extern "system" fn(
     dst_image_layout: crate::vk1_0::ImageLayout,
     region_count: u32,
     p_regions: *const crate::vk1_0::BufferImageCopy,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyImageToBuffer = unsafe extern "system" fn(
@@ -7386,7 +7384,7 @@ pub type PFN_vkCmdCopyImageToBuffer = unsafe extern "system" fn(
     dst_buffer: crate::vk1_0::Buffer,
     region_count: u32,
     p_regions: *const crate::vk1_0::BufferImageCopy,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdUpdateBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdUpdateBuffer = unsafe extern "system" fn(
@@ -7395,7 +7393,7 @@ pub type PFN_vkCmdUpdateBuffer = unsafe extern "system" fn(
     dst_offset: crate::vk1_0::DeviceSize,
     data_size: crate::vk1_0::DeviceSize,
     p_data: *const std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdFillBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdFillBuffer = unsafe extern "system" fn(
@@ -7404,7 +7402,7 @@ pub type PFN_vkCmdFillBuffer = unsafe extern "system" fn(
     dst_offset: crate::vk1_0::DeviceSize,
     size: crate::vk1_0::DeviceSize,
     data: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearColorImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdClearColorImage = unsafe extern "system" fn(
@@ -7414,7 +7412,7 @@ pub type PFN_vkCmdClearColorImage = unsafe extern "system" fn(
     p_color: *const crate::vk1_0::ClearColorValue,
     range_count: u32,
     p_ranges: *const crate::vk1_0::ImageSubresourceRange,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearDepthStencilImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdClearDepthStencilImage = unsafe extern "system" fn(
@@ -7424,7 +7422,7 @@ pub type PFN_vkCmdClearDepthStencilImage = unsafe extern "system" fn(
     p_depth_stencil: *const crate::vk1_0::ClearDepthStencilValue,
     range_count: u32,
     p_ranges: *const crate::vk1_0::ImageSubresourceRange,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearAttachments.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdClearAttachments = unsafe extern "system" fn(
@@ -7433,7 +7431,7 @@ pub type PFN_vkCmdClearAttachments = unsafe extern "system" fn(
     p_attachments: *const crate::vk1_0::ClearAttachment,
     rect_count: u32,
     p_rects: *const crate::vk1_0::ClearRect,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdResolveImage = unsafe extern "system" fn(
@@ -7444,21 +7442,21 @@ pub type PFN_vkCmdResolveImage = unsafe extern "system" fn(
     dst_image_layout: crate::vk1_0::ImageLayout,
     region_count: u32,
     p_regions: *const crate::vk1_0::ImageResolve,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetEvent = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     event: crate::vk1_0::Event,
     stage_mask: crate::vk1_0::PipelineStageFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdResetEvent = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     event: crate::vk1_0::Event,
     stage_mask: crate::vk1_0::PipelineStageFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdWaitEvents = unsafe extern "system" fn(
@@ -7473,7 +7471,7 @@ pub type PFN_vkCmdWaitEvents = unsafe extern "system" fn(
     p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier,
     image_memory_barrier_count: u32,
     p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPipelineBarrier = unsafe extern "system" fn(
@@ -7487,7 +7485,7 @@ pub type PFN_vkCmdPipelineBarrier = unsafe extern "system" fn(
     p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier,
     image_memory_barrier_count: u32,
     p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQuery.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginQuery = unsafe extern "system" fn(
@@ -7495,14 +7493,14 @@ pub type PFN_vkCmdBeginQuery = unsafe extern "system" fn(
     query_pool: crate::vk1_0::QueryPool,
     query: u32,
     flags: crate::vk1_0::QueryControlFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQuery.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndQuery = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     query_pool: crate::vk1_0::QueryPool,
     query: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdResetQueryPool = unsafe extern "system" fn(
@@ -7510,7 +7508,7 @@ pub type PFN_vkCmdResetQueryPool = unsafe extern "system" fn(
     query_pool: crate::vk1_0::QueryPool,
     first_query: u32,
     query_count: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdWriteTimestamp = unsafe extern "system" fn(
@@ -7518,7 +7516,7 @@ pub type PFN_vkCmdWriteTimestamp = unsafe extern "system" fn(
     pipeline_stage: crate::vk1_0::PipelineStageFlagBits,
     query_pool: crate::vk1_0::QueryPool,
     query: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyQueryPoolResults.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(
@@ -7530,7 +7528,7 @@ pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(
     dst_offset: crate::vk1_0::DeviceSize,
     stride: crate::vk1_0::DeviceSize,
     flags: crate::vk1_0::QueryResultFlags,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushConstants.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushConstants = unsafe extern "system" fn(
@@ -7540,31 +7538,31 @@ pub type PFN_vkCmdPushConstants = unsafe extern "system" fn(
     offset: u32,
     size: u32,
     p_values: *const std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginRenderPass = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo,
     contents: crate::vk1_0::SubpassContents,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdNextSubpass = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     contents: crate::vk1_0::SubpassContents,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> std::ffi::c_void;
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteCommands.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdExecuteCommands = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     command_buffer_count: u32,
     p_command_buffers: *const crate::vk1_0::CommandBuffer,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkInternalAllocationNotification.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkInternalAllocationNotification = unsafe extern "system" fn(
@@ -7572,7 +7570,7 @@ pub type PFN_vkInternalAllocationNotification = unsafe extern "system" fn(
     size: usize,
     allocation_type: crate::vk1_0::InternalAllocationType,
     allocation_scope: crate::vk1_0::SystemAllocationScope,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkInternalFreeNotification.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkInternalFreeNotification = unsafe extern "system" fn(
@@ -7580,7 +7578,7 @@ pub type PFN_vkInternalFreeNotification = unsafe extern "system" fn(
     size: usize,
     allocation_type: crate::vk1_0::InternalAllocationType,
     allocation_scope: crate::vk1_0::SystemAllocationScope,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkReallocationFunction.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReallocationFunction = unsafe extern "system" fn(
@@ -7603,11 +7601,10 @@ pub type PFN_vkAllocationFunction = unsafe extern "system" fn(
 pub type PFN_vkFreeFunction = unsafe extern "system" fn(
     p_user_data: *mut std::ffi::c_void,
     p_memory: *mut std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkVoidFunction.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkVoidFunction =
-    unsafe extern "system" fn(unnamed: std::ffi::c_void) -> std::ffi::c_void;
+pub type PFN_vkVoidFunction = unsafe extern "system" fn(unnamed: std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

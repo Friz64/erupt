@@ -105,7 +105,7 @@ pub type PFN_vkDestroySwapchainKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainImagesKHR = unsafe extern "system" fn(

@@ -204,7 +204,10 @@ impl TryFrom<&CDeclaration> for Function {
                                 Type::Pointer {
                                     to,
                                     kind: Mutability::Mut,
-                                } => (*to).clone(),
+                                } => match *to {
+                                    Type::Void => Type::Unit,
+                                    other => other,
+                                },
                                 _ => panic!("Can't unwrap function return type"),
                             };
 

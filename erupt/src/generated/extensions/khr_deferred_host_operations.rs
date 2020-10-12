@@ -32,7 +32,7 @@ pub type PFN_vkDestroyDeferredOperationKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationMaxConcurrencyKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeferredOperationMaxConcurrencyKHR = unsafe extern "system" fn(

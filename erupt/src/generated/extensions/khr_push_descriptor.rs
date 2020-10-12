@@ -18,7 +18,7 @@ pub type PFN_vkCmdPushDescriptorSetKHR = unsafe extern "system" fn(
     set: u32,
     descriptor_write_count: u32,
     p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
@@ -27,7 +27,7 @@ pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
     layout: crate::vk1_0::PipelineLayout,
     set: u32,
     p_data: *const std::ffi::c_void,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

@@ -24,31 +24,31 @@ pub const FN_CMD_RESOLVE_IMAGE2_KHR: *const std::os::raw::c_char =
 pub type PFN_vkCmdCopyBuffer2KHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_copy_buffer_info: *const crate::extensions::khr_copy_commands2::CopyBufferInfo2KHR,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyImage2KHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_copy_image_info: *const crate::extensions::khr_copy_commands2::CopyImageInfo2KHR,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBlitImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBlitImage2KHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_blit_image_info: *const crate::extensions::khr_copy_commands2::BlitImageInfo2KHR,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyBufferToImage2KHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_copy_buffer_to_image_info : * const crate :: extensions :: khr_copy_commands2 :: CopyBufferToImageInfo2KHR) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdCopyBufferToImage2KHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_copy_buffer_to_image_info : * const crate :: extensions :: khr_copy_commands2 :: CopyBufferToImageInfo2KHR) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyImageToBuffer2KHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_copy_image_to_buffer_info : * const crate :: extensions :: khr_copy_commands2 :: CopyImageToBufferInfo2KHR) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdCopyImageToBuffer2KHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_copy_image_to_buffer_info : * const crate :: extensions :: khr_copy_commands2 :: CopyImageToBufferInfo2KHR) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdResolveImage2KHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_resolve_image_info: *const crate::extensions::khr_copy_commands2::ResolveImageInfo2KHR,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy2KHR.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

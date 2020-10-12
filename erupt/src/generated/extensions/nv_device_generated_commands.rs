@@ -106,10 +106,10 @@ impl IndirectStateFlagBitsNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdExecuteGeneratedCommandsNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , is_preprocessed : crate :: vk1_0 :: Bool32 , p_generated_commands_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdExecuteGeneratedCommandsNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , is_preprocessed : crate :: vk1_0 :: Bool32 , p_generated_commands_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_generated_commands_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV) -> std :: ffi :: c_void ;
+pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_generated_commands_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsInfoNV) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindPipelineShaderGroupNV = unsafe extern "system" fn(
@@ -117,16 +117,16 @@ pub type PFN_vkCmdBindPipelineShaderGroupNV = unsafe extern "system" fn(
     pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
     pipeline: crate::vk1_0::Pipeline,
     group_index: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: vk1_1 :: MemoryRequirements2) -> std :: ffi :: c_void ;
+pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_device_generated_commands :: GeneratedCommandsMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: vk1_1 :: MemoryRequirements2) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_create_info : * const crate :: extensions :: nv_device_generated_commands :: IndirectCommandsLayoutCreateInfoNV , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_indirect_commands_layout : * mut crate :: extensions :: nv_device_generated_commands :: IndirectCommandsLayoutNV) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , indirect_commands_layout : crate :: extensions :: nv_device_generated_commands :: IndirectCommandsLayoutNV , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks) -> std :: ffi :: c_void ;
+pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , indirect_commands_layout : crate :: extensions :: nv_device_generated_commands :: IndirectCommandsLayoutNV , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Don't use `std::ffi::c_void` for the return type of functions
 
 ## [0.14.0+154] - 2020-10-12
 ### Changed

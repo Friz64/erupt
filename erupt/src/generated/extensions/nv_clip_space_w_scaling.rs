@@ -13,7 +13,7 @@ pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(
     first_viewport: u32,
     viewport_count: u32,
     p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

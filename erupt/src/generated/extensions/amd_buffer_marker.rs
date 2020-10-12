@@ -14,7 +14,7 @@ pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(
     dst_buffer: crate::vk1_0::Buffer,
     dst_offset: crate::vk1_0::DeviceSize,
     marker: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "Provided by [`extensions::amd_buffer_marker`](extensions/amd_buffer_marker/index.html)"]
 impl crate::DeviceLoader {
     #[inline]

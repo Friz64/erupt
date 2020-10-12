@@ -160,7 +160,7 @@ pub type PFN_vkDestroyDebugReportCallbackEXT = unsafe extern "system" fn(
     instance: crate::vk1_0::Instance,
     callback: crate::extensions::ext_debug_report::DebugReportCallbackEXT,
     p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugReportMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(
@@ -172,7 +172,7 @@ pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(
     message_code: i32,
     p_layer_prefix: *const std::os::raw::c_char,
     p_message: *const std::os::raw::c_char,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(

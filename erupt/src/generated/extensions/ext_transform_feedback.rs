@@ -49,7 +49,7 @@ pub type PFN_vkCmdBindTransformFeedbackBuffersEXT = unsafe extern "system" fn(
     p_buffers: *const crate::vk1_0::Buffer,
     p_offsets: *const crate::vk1_0::DeviceSize,
     p_sizes: *const crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginTransformFeedbackEXT = unsafe extern "system" fn(
@@ -58,7 +58,7 @@ pub type PFN_vkCmdBeginTransformFeedbackEXT = unsafe extern "system" fn(
     counter_buffer_count: u32,
     p_counter_buffers: *const crate::vk1_0::Buffer,
     p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndTransformFeedbackEXT = unsafe extern "system" fn(
@@ -67,7 +67,7 @@ pub type PFN_vkCmdEndTransformFeedbackEXT = unsafe extern "system" fn(
     counter_buffer_count: u32,
     p_counter_buffers: *const crate::vk1_0::Buffer,
     p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(
@@ -76,7 +76,7 @@ pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(
     query: u32,
     flags: crate::vk1_0::QueryControlFlags,
     index: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(
@@ -84,7 +84,7 @@ pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(
     query_pool: crate::vk1_0::QueryPool,
     query: u32,
     index: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
@@ -95,7 +95,7 @@ pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
     counter_buffer_offset: crate::vk1_0::DeviceSize,
     counter_offset: u32,
     vertex_stride: u32,
-) -> std::ffi::c_void;
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure"]
 #[derive(Copy, Clone)]
 #[repr(C)]

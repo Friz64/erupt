@@ -9,14 +9,14 @@ pub const GGP_FRAME_TOKEN_EXTENSION_NAME: *const std::os::raw::c_char =
 pub struct PresentFrameTokenGGP {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub frame_token: *mut std::ffi::c_void,
+    pub frame_token: u64,
 }
 impl Default for PresentFrameTokenGGP {
     fn default() -> Self {
         Self {
             s_type: crate::vk1_0::StructureType::PRESENT_FRAME_TOKEN_GGP,
             p_next: std::ptr::null(),
-            frame_token: std::ptr::null_mut(),
+            frame_token: Default::default(),
         }
     }
 }
@@ -45,8 +45,8 @@ impl<'a> PresentFrameTokenGGPBuilder<'a> {
         PresentFrameTokenGGPBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn frame_token(mut self, frame_token: *mut std::ffi::c_void) -> Self {
-        self.0.frame_token = frame_token;
+    pub fn frame_token(mut self, frame_token: u64) -> Self {
+        self.0.frame_token = frame_token as _;
         self
     }
     #[inline]

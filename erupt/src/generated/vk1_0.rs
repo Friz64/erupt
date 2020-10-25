@@ -1629,6 +1629,7 @@ impl std::fmt::Debug for DynamicState {
             &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => "VIEWPORT_SHADING_RATE_PALETTE_NV",
             &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => "VIEWPORT_COARSE_SAMPLE_ORDER_NV",
             &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
+            &Self::FRAGMENT_SHADING_RATE_KHR => "FRAGMENT_SHADING_RATE_KHR",
             &Self::LINE_STIPPLE_EXT => "LINE_STIPPLE_EXT",
             &Self::CULL_MODE_EXT => "CULL_MODE_EXT",
             &Self::FRONT_FACE_EXT => "FRONT_FACE_EXT",
@@ -1678,6 +1679,10 @@ impl DynamicState {
 #[doc = "Provided by [`extensions::nv_scissor_exclusive`](../extensions/nv_scissor_exclusive/index.html)"]
 impl DynamicState {
     pub const EXCLUSIVE_SCISSOR_NV: Self = Self(1000205001);
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl DynamicState {
+    pub const FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226000);
 }
 #[doc = "Provided by [`extensions::ext_line_rasterization`](../extensions/ext_line_rasterization/index.html)"]
 impl DynamicState {
@@ -2340,7 +2345,7 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
     pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`](./struct.FormatFeatureFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`](./struct.FormatFeatureFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`](./struct.FormatFeatureFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -2391,6 +2396,7 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
                 "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
             }
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+            &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -2439,6 +2445,10 @@ impl FormatFeatureFlagBits {
 #[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
 impl FormatFeatureFlagBits {
     pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(16777216);
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl FormatFeatureFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(1073741824);
 }
 #[doc = "Provided by [`extensions::khr_maintenance1`](../extensions/khr_maintenance1/index.html)"]
 impl FormatFeatureFlagBits {
@@ -2707,6 +2717,10 @@ impl ImageLayout {
     pub const DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR: Self =
         Self::DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL;
 }
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl ImageLayout {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR: Self = Self::SHADING_RATE_OPTIMAL_NV;
+}
 #[doc = "Provided by [`extensions::khr_separate_depth_stencil_layouts`](../extensions/khr_separate_depth_stencil_layouts/index.html)"]
 impl ImageLayout {
     pub const DEPTH_ATTACHMENT_OPTIMAL_KHR: Self = Self::DEPTH_ATTACHMENT_OPTIMAL;
@@ -2757,7 +2771,7 @@ impl ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`](./struct.ImageUsageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`](./struct.ImageUsageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`](./struct.ImageUsageFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -2804,6 +2818,10 @@ impl ImageUsageFlagBits {
 #[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
 impl ImageUsageFlagBits {
     pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(512);
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl ImageUsageFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`](./struct.ImageViewCreateFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlagBits.html) · Bits enum of [`ImageViewCreateFlags`](./struct.ImageViewCreateFlags.html)"]
@@ -2991,7 +3009,7 @@ impl MemoryHeapFlagBits {
 impl MemoryHeapFlagBits {
     pub const MULTI_INSTANCE_KHR: Self = Self::MULTI_INSTANCE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`](./struct.AccessFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`](./struct.AccessFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits.html) · Bits enum of [`AccessFlags`](./struct.AccessFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3094,6 +3112,10 @@ impl AccessFlagBits {
 impl AccessFlagBits {
     pub const ACCELERATION_STRUCTURE_READ_NV: Self = Self::ACCELERATION_STRUCTURE_READ_KHR;
     pub const ACCELERATION_STRUCTURE_WRITE_NV: Self = Self::ACCELERATION_STRUCTURE_WRITE_KHR;
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl AccessFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR: Self = Self::SHADING_RATE_IMAGE_READ_NV;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`](./struct.MemoryPropertyFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`](./struct.MemoryPropertyFlags.html)"]
@@ -4523,6 +4545,9 @@ impl std::fmt::Debug for StructureType {
                 "SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD"
             }
             &Self::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA => "IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA",
+            &Self::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR"
+            }
             &Self::METAL_SURFACE_CREATE_INFO_EXT => "METAL_SURFACE_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT"
@@ -4541,6 +4566,21 @@ impl std::fmt::Debug for StructureType {
             }
             &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT"
+            }
+            &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => {
+                "FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR"
+            }
+            &Self::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR => {
+                "PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR => {
+                "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR => {
+                "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR"
             }
             &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD => {
                 "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD"
@@ -5380,6 +5420,10 @@ impl StructureType {
 impl StructureType {
     pub const IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA: Self = Self(1000214000);
 }
+#[doc = "Provided by [`extensions::khr_shader_terminate_invocation`](../extensions/khr_shader_terminate_invocation/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR: Self = Self(1000215000);
+}
 #[doc = "Provided by [`extensions::ext_metal_surface`](../extensions/ext_metal_surface/index.html)"]
 impl StructureType {
     pub const METAL_SURFACE_CREATE_INFO_EXT: Self = Self(1000217000);
@@ -5395,6 +5439,14 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT: Self = Self(1000225000);
     pub const PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT: Self = Self(1000225001);
     pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT: Self = Self(1000225002);
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl StructureType {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR: Self = Self(1000226000);
+    pub const PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR: Self = Self(1000226001);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR: Self = Self(1000226002);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR: Self = Self(1000226003);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226004);
 }
 #[doc = "Provided by [`extensions::amd_shader_core_properties2`](../extensions/amd_shader_core_properties2/index.html)"]
 impl StructureType {
@@ -6012,7 +6064,7 @@ impl VertexInputRate {
     pub const VERTEX: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`](./struct.PipelineStageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`](./struct.PipelineStageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`](./struct.PipelineStageFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6111,6 +6163,10 @@ impl PipelineStageFlagBits {
 impl PipelineStageFlagBits {
     pub const RAY_TRACING_SHADER_NV: Self = Self::RAY_TRACING_SHADER_KHR;
     pub const ACCELERATION_STRUCTURE_BUILD_NV: Self = Self::ACCELERATION_STRUCTURE_BUILD_KHR;
+}
+#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+impl PipelineStageFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlags.html) · Bitmask of [`SparseImageFormatFlagBits`](./struct.SparseImageFormatFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct SparseImageFormatFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SINGLE_MIPTAIL = SparseImageFormatFlagBits :: SINGLE_MIPTAIL . 0 ; const ALIGNED_MIP_SIZE = SparseImageFormatFlagBits :: ALIGNED_MIP_SIZE . 0 ; const NONSTANDARD_BLOCK_SIZE = SparseImageFormatFlagBits :: NONSTANDARD_BLOCK_SIZE . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlagBits.html) · Bits enum of [`SparseImageFormatFlags`](./struct.SparseImageFormatFlags.html)"]
@@ -9786,6 +9842,16 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXT > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHR > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
 #[repr(transparent)]
@@ -16818,6 +16884,14 @@ impl<'a>
 {
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: amd_pipeline_compiler_control :: PipelineCompilerControlCreateInfoAMDBuilder < '_ >> for GraphicsPipelineCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHR,
+    > for GraphicsPipelineCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PipelineFragmentShadingRateStateCreateInfoKHRBuilder < '_ >> for GraphicsPipelineCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`](struct.GraphicsPipelineCreateInfo.html)"]
 #[repr(transparent)]

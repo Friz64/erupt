@@ -2730,6 +2730,22 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilR
     for SubpassDescription2Builder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR,
+    > for SubpassDescription2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<
+            '_,
+        >,
+    > for SubpassDescription2Builder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`](struct.SubpassDescription2.html)"]
 #[repr(transparent)]

@@ -129,14 +129,8 @@ impl Type {
                 to: Box::new(Type::Void),
                 kind: Mutability::Mut,
             }),
-            "GgpStreamDescriptor" => Some(Type::Pointer {
-                to: Box::new(Type::Void),
-                kind: Mutability::Mut,
-            }),
-            "GgpFrameToken" => Some(Type::Pointer {
-                to: Box::new(Type::Void),
-                kind: Mutability::Mut,
-            }),
+            "GgpStreamDescriptor" => Some(Type::UnsignedInt32),
+            "GgpFrameToken" => Some(Type::UnsignedInt64),
             "IDirectFB" => Some(Type::Void),
             "IDirectFBSurface" => Some(Type::Void),
             _ => None,

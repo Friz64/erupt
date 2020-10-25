@@ -36,7 +36,7 @@ pub struct StreamDescriptorSurfaceCreateInfoGGP {
     pub p_next: *const std::ffi::c_void,
     pub flags:
         crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateFlagsGGP,
-    pub stream_descriptor: *mut std::ffi::c_void,
+    pub stream_descriptor: u32,
 }
 impl Default for StreamDescriptorSurfaceCreateInfoGGP {
     fn default() -> Self {
@@ -44,7 +44,7 @@ impl Default for StreamDescriptorSurfaceCreateInfoGGP {
             s_type: crate::vk1_0::StructureType::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP,
             p_next: std::ptr::null(),
             flags: Default::default(),
-            stream_descriptor: std::ptr::null_mut(),
+            stream_descriptor: Default::default(),
         }
     }
 }
@@ -85,8 +85,8 @@ impl<'a> StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> {
         self
     }
     #[inline]
-    pub fn stream_descriptor(mut self, stream_descriptor: *mut std::ffi::c_void) -> Self {
-        self.0.stream_descriptor = stream_descriptor;
+    pub fn stream_descriptor(mut self, stream_descriptor: u32) -> Self {
+        self.0.stream_descriptor = stream_descriptor as _;
         self
     }
     #[inline]

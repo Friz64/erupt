@@ -262,6 +262,8 @@ pub mod khr_external_semaphore_capabilities;
 pub mod khr_external_semaphore_fd;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_external_semaphore_win32.html) · Vulkan extension"]
 pub mod khr_external_semaphore_win32;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_fragment_shading_rate.html) · Vulkan extension"]
+pub mod khr_fragment_shading_rate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_get_display_properties2.html) · Vulkan extension"]
 pub mod khr_get_display_properties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_get_memory_requirements2.html) · Vulkan extension"]
@@ -318,6 +320,8 @@ pub mod khr_shader_float_controls;
 pub mod khr_shader_non_semantic_info;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_subgroup_extended_types.html) · Vulkan extension"]
 pub mod khr_shader_subgroup_extended_types;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_terminate_invocation.html) · Vulkan extension"]
+pub mod khr_shader_terminate_invocation;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shared_presentable_image.html) · Vulkan extension"]
 pub mod khr_shared_presentable_image;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_spirv_1_4.html) · Vulkan extension"]

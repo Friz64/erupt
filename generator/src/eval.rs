@@ -97,6 +97,7 @@ impl Add for Literal {
     type Output = Literal;
 
     fn add(self, rhs: Self) -> Self::Output {
+        #[allow(clippy::match_single_binding)]
         match (self, rhs) {
             unsupported => panic!("Unsupported Add: {:?}", unsupported),
         }
@@ -120,6 +121,7 @@ impl Mul for Literal {
     type Output = Literal;
 
     fn mul(self, rhs: Self) -> Self::Output {
+        #[allow(clippy::match_single_binding)]
         match (self, rhs) {
             unsupported => panic!("Unsupported Mul: {:?}", unsupported),
         }
@@ -130,6 +132,7 @@ impl Div for Literal {
     type Output = Literal;
 
     fn div(self, rhs: Self) -> Self::Output {
+        #[allow(clippy::match_single_binding)]
         match (self, rhs) {
             unsupported => panic!("Unsupported Div: {:?}", unsupported),
         }

@@ -125,25 +125,21 @@ impl EnumVariant {
         let mut vec = Vec::new();
 
         for specifier in &declaration.specifiers {
-            match &specifier.node {
-                DeclarationSpecifier::TypeSpecifier(ty) => match &ty.node {
-                    TypeSpecifier::Enum(enum_type) => {
-                        let enum_type_name = match &enum_type.node.identifier {
-                            Some(identifier) => TypeName::new(&identifier.node.name),
-                            None => panic!("Enum type has no identifier: {:?}", enum_type),
-                        };
+            if let DeclarationSpecifier::TypeSpecifier(ty) = &specifier.node {
+                if let TypeSpecifier::Enum(enum_type) = &ty.node {
+                    let enum_type_name = match &enum_type.node.identifier {
+                        Some(identifier) => TypeName::new(&identifier.node.name),
+                        None => panic!("Enum type has no identifier: {:?}", enum_type),
+                    };
 
-                        for enumerator in &enum_type.node.enumerators {
-                            if let Ok(v) = EnumVariant::new(&enumerator.node, &enum_type_name) {
-                                if !vec.contains(&v) {
-                                    vec.push(v);
-                                }
+                    for enumerator in &enum_type.node.enumerators {
+                        if let Ok(v) = EnumVariant::new(&enumerator.node, &enum_type_name) {
+                            if !vec.contains(&v) {
+                                vec.push(v);
                             }
                         }
                     }
-                    _ => (),
-                },
-                _ => (),
+                }
             }
         }
 
@@ -261,7 +257,7 @@ impl Enum {
         for variant in &self.variants {
             variant_map
                 .entry(variant.origin.as_ref().or(Some(&enum_origin)).unwrap())
-                .or_insert_with(|| Vec::new())
+                .or_insert_with(Vec::new)
                 .push(variant);
         }
 
@@ -290,9 +286,7 @@ impl Enum {
             .filter(|variant| matches!(variant.kind, EnumVariantKind::Value(_)))
             .collect();
         let variant_idents = variants.iter().map(|variant| variant.name.ident());
-        let variant_names = variants
-            .iter()
-            .map(|variant| variant.name.ident().to_string());
+        let variant_names = variants.iter().map(|variant| &variant.name.variant);
 
         quote! {
             impl std::fmt::Debug for #enum_ident {
@@ -323,7 +317,7 @@ impl Source {
                         .find_value::<String>("name")
                         .ok()
                         .flatten()
-                        .or(name_attribute.cloned());
+                        .or_else(|| name_attribute.cloned());
 
                     let kind = match name {
                         Some(name) => {
@@ -345,7 +339,7 @@ impl Source {
                         _ => panic!("Enum type has no name: {:?}", element),
                     };
 
-                    if self.enums.iter_mut().find(|en| &en.kind == &kind).is_none() {
+                    if self.enums.iter_mut().find(|en| en.kind == kind).is_none() {
                         self.enums.push(Enum {
                             origin: Default::default(),
                             kind,
@@ -370,7 +364,7 @@ impl Source {
             unknown => panic!("Unknown enum type: {:?} from {:?}", unknown, element),
         };
 
-        let existing_enum = self.enums.iter_mut().find(|en| &en.kind == &kind);
+        let existing_enum = self.enums.iter_mut().find(|en| en.kind == kind);
 
         let variants = self.header.take_enum_variants(&kind);
         let new_enum = Enum {

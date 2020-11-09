@@ -1537,6 +1537,8 @@ impl<'a>
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`](struct.PhysicalDeviceFeatures2.html)"]
 #[repr(transparent)]
@@ -1985,6 +1987,8 @@ impl<'a>
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_portability_subset :: PhysicalDevicePortabilitySubsetPropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRatePropertiesKHR > for PhysicalDeviceProperties2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsPropertiesNV > for PhysicalDeviceProperties2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties2.html) · Builder of [`PhysicalDeviceProperties2`](struct.PhysicalDeviceProperties2.html)"]
 #[repr(transparent)]

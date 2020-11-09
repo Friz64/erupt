@@ -179,49 +179,44 @@ impl TryFrom<&CDeclaration> for Function {
             [init_declarator] => {
                 let declarator = &init_declarator.node.declarator.node;
                 for derived in declarator.derived.as_slice() {
-                    match &derived.node {
-                        DerivedDeclarator::Function(function_declarator) => {
-                            let ty = Declaration::from(DeclarationInfo {
-                                type_info: declaration.specifiers.as_slice().try_into()?,
-                                declarator: Some(&declarator),
-                            });
+                    if let DerivedDeclarator::Function(function_declarator) = &derived.node {
+                        let ty = Declaration::from(DeclarationInfo {
+                            type_info: declaration.specifiers.as_slice().try_into()?,
+                            declarator: Some(&declarator),
+                        });
 
-                            let parameters = function_declarator
-                                .node
-                                .parameters
-                                .iter()
-                                .map(|parameter| Declaration::from(&parameter.node))
-                                .collect();
+                        let parameters = function_declarator
+                            .node
+                            .parameters
+                            .iter()
+                            .map(|parameter| Declaration::from(&parameter.node))
+                            .collect();
 
-                            let name = match ty.name {
-                                Some(name) => FunctionName::new(&name),
-                                None => {
-                                    panic!("Function declaration has no name: {:?}", declaration)
-                                }
-                            };
+                        let name = match ty.name {
+                            Some(name) => FunctionName::new(&name),
+                            None => panic!("Function declaration has no name: {:?}", declaration),
+                        };
 
-                            let return_type = match ty.ty {
-                                Type::Pointer {
-                                    to,
-                                    kind: Mutability::Mut,
-                                } => match *to {
-                                    Type::Void => Type::Unit,
-                                    other => other,
-                                },
-                                _ => panic!("Can't unwrap function return type"),
-                            };
+                        let return_type = match ty.ty {
+                            Type::Pointer {
+                                to,
+                                kind: Mutability::Mut,
+                            } => match *to {
+                                Type::Void => Type::Unit,
+                                other => other,
+                            },
+                            _ => panic!("Can't unwrap function return type"),
+                        };
 
-                            return Ok(Function {
-                                origin: Default::default(),
-                                extension_type: Default::default(),
-                                requirements: Vec::new(),
-                                pfn: false,
-                                name,
-                                return_type,
-                                parameters,
-                            });
-                        }
-                        _ => (),
+                        return Ok(Function {
+                            origin: Default::default(),
+                            extension_type: Default::default(),
+                            requirements: Vec::new(),
+                            pfn: false,
+                            name,
+                            return_type,
+                            parameters,
+                        });
                     }
                 }
 

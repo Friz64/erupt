@@ -392,6 +392,8 @@ pub mod nv_fill_rectangle;
 pub mod nv_fragment_coverage_to_color;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_fragment_shader_barycentric.html) · Vulkan extension"]
 pub mod nv_fragment_shader_barycentric;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_fragment_shading_rate_enums.html) · Vulkan extension"]
+pub mod nv_fragment_shading_rate_enums;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_framebuffer_mixed_samples.html) · Vulkan extension"]
 pub mod nv_framebuffer_mixed_samples;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_geometry_shader_passthrough.html) · Vulkan extension"]
@@ -432,3 +434,5 @@ pub mod qcom_render_pass_shader_resolve;
 pub mod qcom_render_pass_store_ops;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_render_pass_transform.html) · Vulkan extension"]
 pub mod qcom_render_pass_transform;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_rotated_copy_commands.html) · Vulkan extension"]
+pub mod qcom_rotated_copy_commands;

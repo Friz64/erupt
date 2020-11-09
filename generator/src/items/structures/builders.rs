@@ -11,135 +11,135 @@ use quote::quote;
 use std::collections::HashMap;
 use syn::Lifetime;
 
+thread_local!(static OVERRIDE_LIST: HashMap<TypeName, Vec<Override>> = override_list());
+#[allow(clippy::redundant_clone)]
+fn override_list() -> HashMap<TypeName, Vec<Override>> {
+    let lifetime_a = Lifetime::new("'a", Span::call_site());
+
+    let mut map = HashMap::new();
+    map.insert(
+        TypeName::new("VkAccelerationStructureVersionKHR"),
+        vec![Override {
+            index: 2,
+            kind: FieldKind::Overridden {
+                ty: Type::Slice {
+                    of: Box::new(Type::UnsignedInt8),
+                    kind: Mutability::Const,
+                    lifetime: Some(lifetime_a.clone()),
+                },
+                body: quote! {
+                    assert_eq!(version_data.len() as u32, 2 * crate::vk1_0::UUID_SIZE);
+                    self.0 .version_data = version_data.as_ptr() as _;
+                },
+            },
+        }],
+    );
+
+    map.insert(
+        TypeName::new("VkShaderModuleCreateInfo"),
+        vec![
+            Override {
+                index: 3,
+                kind: FieldKind::Ignore,
+            },
+            Override {
+                index: 4,
+                kind: FieldKind::Overridden {
+                    ty: Type::Slice {
+                        of: Box::new(Type::UnsignedInt32),
+                        kind: Mutability::Const,
+                        lifetime: Some(lifetime_a.clone()),
+                    },
+                    body: quote! {
+                        self.0.p_code = code.as_ptr() as _;
+                        self.0.code_size = code.len() * 4;
+                    },
+                },
+            },
+        ],
+    );
+
+    map.insert(
+        TypeName::new("VkPipelineMultisampleStateCreateInfo"),
+        vec![Override {
+            index: 6,
+            kind: FieldKind::Overridden {
+                ty: Type::Slice {
+                    of: Box::new(Type::Named(Name::Type(TypeName::new("VkSampleMask")))),
+                    kind: Mutability::Const,
+                    lifetime: Some(lifetime_a.clone()),
+                },
+                body: quote! {
+                    self.0.p_sample_mask = sample_mask.as_ptr() as _;
+                },
+            },
+        }],
+    );
+
+    map.insert(
+        TypeName::new("VkPipelineViewportStateCreateInfo"),
+        vec![
+            Override {
+                index: 3,
+                kind: FieldKind::Regular,
+            },
+            Override {
+                index: 5,
+                kind: FieldKind::Regular,
+            },
+        ],
+    );
+
+    map.insert(
+        TypeName::new("VkDescriptorSetLayoutBinding"),
+        vec![Override {
+            index: 2,
+            kind: FieldKind::Regular,
+        }],
+    );
+
+    map.insert(
+        TypeName::new("VkAccelerationStructureBuildGeometryInfoKHR"),
+        vec![
+            Override {
+                index: 7,
+                kind: FieldKind::Ignore,
+            },
+            Override {
+                index: 8,
+                kind: FieldKind::Ignore,
+            },
+            Override {
+                index: 9,
+                kind: FieldKind::Overridden {
+                    ty: Type::Slice {
+                        of: Box::new(Type::Reference {
+                            to: Box::new(Type::Named(Name::Type(
+                                TypeName::new("VkAccelerationStructureGeometryKHR")
+                                    .set_builder(true),
+                            ))),
+                            kind: Mutability::Const,
+                            lifetime: Some(lifetime_a.clone()),
+                        }),
+                        kind: Mutability::Const,
+                        lifetime: Some(lifetime_a.clone()),
+                    },
+                    body: quote! {
+                        self.0 .geometry_array_of_pointers = crate::vk1_0::TRUE;
+                        self.0 .geometry_count = geometries.len() as _;
+                        self.0 .pp_geometries = geometries.as_ptr() as _;
+                    },
+                },
+            },
+        ],
+    );
+
+    map
+}
+
 struct Override {
     index: usize,
     kind: FieldKind,
-}
-
-impl Override {
-    fn list() -> HashMap<TypeName, Vec<Override>> {
-        let lifetime_a = Lifetime::new("'a", Span::call_site());
-
-        let mut map = HashMap::new();
-        map.insert(
-            TypeName::new("VkAccelerationStructureVersionKHR"),
-            vec![Override {
-                index: 2,
-                kind: FieldKind::Overridden {
-                    ty: Type::Slice {
-                        of: Box::new(Type::UnsignedInt8),
-                        kind: Mutability::Const,
-                        lifetime: Some(lifetime_a.clone()),
-                    },
-                    body: quote! {
-                        assert_eq!(version_data.len() as u32, 2 * crate::vk1_0::UUID_SIZE);
-                        self.0 .version_data = version_data.as_ptr() as _;
-                    },
-                },
-            }],
-        );
-
-        map.insert(
-            TypeName::new("VkShaderModuleCreateInfo"),
-            vec![
-                Override {
-                    index: 3,
-                    kind: FieldKind::Ignore,
-                },
-                Override {
-                    index: 4,
-                    kind: FieldKind::Overridden {
-                        ty: Type::Slice {
-                            of: Box::new(Type::UnsignedInt32),
-                            kind: Mutability::Const,
-                            lifetime: Some(lifetime_a.clone()),
-                        },
-                        body: quote! {
-                            self.0.p_code = code.as_ptr() as _;
-                            self.0.code_size = code.len() * 4;
-                        },
-                    },
-                },
-            ],
-        );
-
-        map.insert(
-            TypeName::new("VkPipelineMultisampleStateCreateInfo"),
-            vec![Override {
-                index: 6,
-                kind: FieldKind::Overridden {
-                    ty: Type::Slice {
-                        of: Box::new(Type::Named(Name::Type(TypeName::new("VkSampleMask")))),
-                        kind: Mutability::Const,
-                        lifetime: Some(lifetime_a.clone()),
-                    },
-                    body: quote! {
-                        self.0.p_sample_mask = sample_mask.as_ptr() as _;
-                    },
-                },
-            }],
-        );
-
-        map.insert(
-            TypeName::new("VkPipelineViewportStateCreateInfo"),
-            vec![
-                Override {
-                    index: 3,
-                    kind: FieldKind::Regular,
-                },
-                Override {
-                    index: 5,
-                    kind: FieldKind::Regular,
-                },
-            ],
-        );
-
-        map.insert(
-            TypeName::new("VkDescriptorSetLayoutBinding"),
-            vec![Override {
-                index: 2,
-                kind: FieldKind::Regular,
-            }],
-        );
-
-        map.insert(
-            TypeName::new("VkAccelerationStructureBuildGeometryInfoKHR"),
-            vec![
-                Override {
-                    index: 7,
-                    kind: FieldKind::Ignore,
-                },
-                Override {
-                    index: 8,
-                    kind: FieldKind::Ignore,
-                },
-                Override {
-                    index: 9,
-                    kind: FieldKind::Overridden {
-                        ty: Type::Slice {
-                            of: Box::new(Type::Reference {
-                                to: Box::new(Type::Named(Name::Type(
-                                    TypeName::new("VkAccelerationStructureGeometryKHR")
-                                        .set_builder(true),
-                                ))),
-                                kind: Mutability::Const,
-                                lifetime: Some(lifetime_a.clone()),
-                            }),
-                            kind: Mutability::Const,
-                            lifetime: Some(lifetime_a.clone()),
-                        },
-                        body: quote! {
-                            self.0 .geometry_array_of_pointers = crate::vk1_0::TRUE;
-                            self.0 .geometry_count = geometries.len() as _;
-                            self.0 .pp_geometries = geometries.as_ptr() as _;
-                        },
-                    },
-                },
-            ],
-        );
-
-        map
-    }
 }
 
 #[derive(Debug, Clone)]
@@ -249,12 +249,13 @@ impl Structure {
         );
 
         let mut field_kinds = FieldKind::generate_list(&self.fields);
-
-        if let Some(overrides) = Override::list().remove(&self.name) {
-            for field_override in overrides {
-                field_kinds[field_override.index] = field_override.kind;
+        OVERRIDE_LIST.with(|override_list| {
+            if let Some(overrides) = override_list.get(&self.name) {
+                for field_override in overrides {
+                    field_kinds[field_override.index] = field_override.kind.clone();
+                }
             }
-        }
+        });
 
         let lifetime_a = Lifetime::new("'a", Span::call_site());
         let field_builders =

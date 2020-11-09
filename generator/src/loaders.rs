@@ -303,7 +303,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         let origin = function.origin.as_ref().expect("Function has no origin");
         let command_level = function.command_level();
         wrappers
-            .entry((origin.clone(), command_level.clone()))
+            .entry((origin.clone(), command_level))
             .or_insert_with(Vec::new)
             .push(function.wrapper(&command_level, comment_gen, source));
 

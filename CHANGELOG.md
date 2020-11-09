@@ -6,17 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+- Update Vulkan Headers to version 160
+
+## [0.15.0+157] - 2020-10-25
+### Changed
 - Update Vulkan Headers to version 158
 
 ### Fixed
 - Don't use `std::ffi::c_void` for the return type of functions
 - Fix data types of `GgpStreamDescriptor` and `GgpFrameToken`
 
-## [0.14.0+154] - 2020-10-12
+## [0.14.0+154] - 2020-09-21
 ### Changed
 - Update Vulkan Headers to version 157
 
-## [0.14.0+154] - 2020-09-21
 ### Added
 - Add `#[track_caller]` to `VulkanResult`
 - Add `Allocation::memory`, allowing access to the inner `DeviceMemory` handle

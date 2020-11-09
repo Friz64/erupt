@@ -264,6 +264,7 @@ impl Function {
                     quote! { #cleaned_ident.as_mut_ptr() }
                 }
                 ParameterKind::LengthByArray { array_indices } => {
+                    #[allow(clippy::match_like_matches_macro)]
                     let length_exprs = array_indices
                         .into_iter()
                         .map(|array_index| &self.parameters[array_index])

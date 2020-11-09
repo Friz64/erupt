@@ -81,7 +81,7 @@ impl From<&Element> for StructureMetadata {
             .attributes
             .get("structextends")
             .map(|values| values.split(',').map(|s| TypeName::new(s)).collect())
-            .unwrap_or_else(|| Vec::new());
+            .unwrap_or_default();
 
         StructureMetadata { extends }
     }
@@ -173,36 +173,32 @@ impl TryFrom<&CDeclaration> for Structure {
         let mut result = Err(NotApplicable);
 
         for specifier in &declaration.specifiers {
-            match &specifier.node {
-                DeclarationSpecifier::TypeSpecifier(ty) => match &ty.node {
-                    TypeSpecifier::Struct(struct_type) => {
-                        if let (Some(identifier), Some(declarations)) = (
-                            struct_type.node.identifier.as_ref(),
-                            struct_type.node.declarations.as_ref(),
-                        ) {
-                            let fields = declarations
-                                .iter()
-                                .filter_map(|decl| match &decl.node {
-                                    StructDeclaration::Field(field) => {
-                                        Some(Declaration::from(&field.node))
-                                    }
-                                    _ => None,
-                                })
-                                .collect();
+            if let DeclarationSpecifier::TypeSpecifier(ty) = &specifier.node {
+                if let TypeSpecifier::Struct(struct_type) = &ty.node {
+                    if let (Some(identifier), Some(declarations)) = (
+                        struct_type.node.identifier.as_ref(),
+                        struct_type.node.declarations.as_ref(),
+                    ) {
+                        let fields = declarations
+                            .iter()
+                            .filter_map(|decl| match &decl.node {
+                                StructDeclaration::Field(field) => {
+                                    Some(Declaration::from(&field.node))
+                                }
+                                _ => None,
+                            })
+                            .collect();
 
-                            assert!(result.is_err());
-                            result = Ok(Structure {
-                                origin: Default::default(),
-                                name: TypeName::new(&identifier.node.name),
-                                kind: struct_type.node.kind.node.clone().into(),
-                                fields,
-                                metadata: StructureMetadata::empty(),
-                            });
-                        }
+                        assert!(result.is_err());
+                        result = Ok(Structure {
+                            origin: Default::default(),
+                            name: TypeName::new(&identifier.node.name),
+                            kind: struct_type.node.kind.node.clone().into(),
+                            fields,
+                            metadata: StructureMetadata::empty(),
+                        });
                     }
-                    _ => (),
-                },
-                _ => (),
+                }
             }
         }
 

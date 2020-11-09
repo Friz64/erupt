@@ -3,7 +3,7 @@ use crate::{
     source::Source,
 };
 use itertools::Itertools;
-use lazy_static::lazy_static;
+use once_cell::sync::Lazy;
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 use regex::Regex;
@@ -15,9 +15,8 @@ use std::{
 };
 use treexml::Element;
 
-lazy_static! {
-    static ref FEATURE_NAME_REGEX: Regex = Regex::new("VK_VERSION_([1-9]+)_([0-9]+)").unwrap();
-}
+static FEATURE_NAME_REGEX: Lazy<Regex> =
+    Lazy::new(|| Regex::new("VK_VERSION_([1-9]+)_([0-9]+)").unwrap());
 
 const BLACKLIST: &[&str] = &[
     "vk_platform",
@@ -64,17 +63,11 @@ impl Origin {
     }
 
     pub fn is_extension(&self) -> bool {
-        match self {
-            Origin::Extension { .. } => true,
-            _ => false,
-        }
+        matches!(self, Origin::Extension { .. })
     }
 
     pub fn is_vk1_0(&self) -> bool {
-        match self {
-            Origin::Feature { major: 1, minor: 0 } => true,
-            _ => false,
-        }
+        matches!(self, Origin::Feature { major: 1, minor: 0 })
     }
 
     pub fn path(&self) -> Vec<String> {

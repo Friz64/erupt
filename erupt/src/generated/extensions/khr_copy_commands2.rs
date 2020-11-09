@@ -290,6 +290,20 @@ impl ImageBlit2KHR {
         ImageBlit2KHRBuilder(self, std::marker::PhantomData)
     }
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM,
+    > for ImageBlit2KHRBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>,
+    > for ImageBlit2KHRBuilder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Builder of [`ImageBlit2KHR`](struct.ImageBlit2KHR.html)"]
 #[repr(transparent)]
@@ -398,6 +412,20 @@ impl BufferImageCopy2KHR {
     pub fn into_builder<'a>(self) -> BufferImageCopy2KHRBuilder<'a> {
         BufferImageCopy2KHRBuilder(self, std::marker::PhantomData)
     }
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM,
+    > for BufferImageCopy2KHRBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>,
+    > for BufferImageCopy2KHRBuilder<'a>
+{
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Builder of [`BufferImageCopy2KHR`](struct.BufferImageCopy2KHR.html)"]

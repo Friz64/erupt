@@ -9,13 +9,15 @@ mod name;
 mod origin;
 mod source;
 
+use log::LevelFilter;
 use source::Source;
 use std::{env, process::Command, time::Instant};
 
 fn main() {
     env::set_var("RUST_BACKTRACE", "1");
-    env::set_var("RUST_LOG", "generator");
-    pretty_env_logger::init();
+    pretty_env_logger::formatted_builder()
+        .filter(Some("generator"), LevelFilter::Trace)
+        .init();
 
     log::info!("Collecting source...");
     let start = Instant::now();

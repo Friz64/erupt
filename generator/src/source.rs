@@ -71,7 +71,7 @@ impl Source {
             .find_map(|ty| {
                 ty.find("name")
                     .ok()
-                    .and_then(|name| name.text.as_ref().map(|s| s.as_str()))
+                    .and_then(|name| name.text.as_deref())
                     .filter(|text| *text == "VK_HEADER_VERSION")
                     .and_then(|_| ty.text.as_ref().and_then(|s| s.split_whitespace().last()))
             })

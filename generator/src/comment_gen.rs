@@ -16,17 +16,14 @@ impl DocCommentGen {
     {
         let man_page = full_name
             .map(|name| {
-                let part = part
-                    .map(|part| format!("#{}", part))
-                    .unwrap_or(String::new());
-
+                let part = part.map(|part| format!("#{}", part)).unwrap_or_default();
                 format!(
                     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/\
                         {}.{}-extensions/man/html/{}.html{})",
                     self.version.0, self.version.1, name, part,
                 )
             })
-            .unwrap_or("<s>Vulkan Manual Page</s>".into());
+            .unwrap_or_else(|| "<s>Vulkan Manual Page</s>".into());
 
         format!("{} · {}", man_page, description)
     }

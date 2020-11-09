@@ -18,7 +18,7 @@ impl CodeMap {
         if let Some(origin) = origin {
             self.map
                 .entry(origin)
-                .or_insert_with(|| TokenStream::new())
+                .or_insert_with(TokenStream::new)
                 .extend(stream());
         }
     }

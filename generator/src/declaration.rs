@@ -3,15 +3,13 @@ use crate::{
     source::Source,
 };
 use heck::SnakeCase;
-use lazy_static::lazy_static;
+use once_cell::sync::Lazy;
 use proc_macro2::{Ident, Literal, TokenStream};
 use quote::{format_ident, quote};
 use regex::Regex;
 use syn::Lifetime;
 
-lazy_static! {
-    static ref CLEANED_IDENT_REGEX: Regex = Regex::new("(p+_)?(.*)").unwrap();
-}
+static CLEANED_IDENT_REGEX: Lazy<Regex> = Lazy::new(|| Regex::new("(p+_)?(.*)").unwrap());
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum Mutability {

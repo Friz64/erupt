@@ -4739,12 +4739,22 @@ impl std::fmt::Debug for StructureType {
             &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => {
                 "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV"
             }
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => {
+                "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV"
+            }
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => {
+                "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV"
+            }
+            &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => {
+                "PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV"
+            }
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT"
             }
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => {
                 "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT"
             }
+            &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => "COPY_COMMAND_TRANSFORM_INFO_QCOM",
             &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT"
             }
@@ -5617,10 +5627,20 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
     pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
 }
+#[doc = "Provided by [`extensions::nv_fragment_shading_rate_enums`](../extensions/nv_fragment_shading_rate_enums/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV: Self = Self(1000326000);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV: Self = Self(1000326001);
+    pub const PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV: Self = Self(1000326002);
+}
 #[doc = "Provided by [`extensions::ext_fragment_density_map2`](../extensions/ext_fragment_density_map2/index.html)"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT: Self = Self(1000332000);
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT: Self = Self(1000332001);
+}
+#[doc = "Provided by [`extensions::qcom_rotated_copy_commands`](../extensions/qcom_rotated_copy_commands/index.html)"]
+impl StructureType {
+    pub const COPY_COMMAND_TRANSFORM_INFO_QCOM: Self = Self(1000333000);
 }
 #[doc = "Provided by [`extensions::ext_image_robustness`](../extensions/ext_image_robustness/index.html)"]
 impl StructureType {
@@ -9852,6 +9872,8 @@ impl<'a>
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHR > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
 #[repr(transparent)]
@@ -16892,6 +16914,8 @@ impl<'a>
 {
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PipelineFragmentShadingRateStateCreateInfoKHRBuilder < '_ >> for GraphicsPipelineCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PipelineFragmentShadingRateEnumStateCreateInfoNV > for GraphicsPipelineCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder < '_ >> for GraphicsPipelineCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`](struct.GraphicsPipelineCreateInfo.html)"]
 #[repr(transparent)]

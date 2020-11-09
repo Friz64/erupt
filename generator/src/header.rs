@@ -71,7 +71,7 @@ impl From<&Element> for DeclarationMetadata {
             .attributes
             .get("values")
             .map(|values| values.split(',').map(|s| s.to_string()).collect())
-            .unwrap_or_else(|| Vec::new());
+            .unwrap_or_else(Vec::new);
 
         let mut lengths = element
             .attributes
@@ -84,7 +84,7 @@ impl From<&Element> for DeclarationMetadata {
                     .map(|s| s.to_string())
                     .collect()
             })
-            .unwrap_or_else(|| Vec::new());
+            .unwrap_or_else(Vec::new);
         let length = match lengths.len() {
             0 => None,
             1 => lengths.pop(),
@@ -133,10 +133,11 @@ where
                         primary_type = Some(other);
                     }
                 },
-                SpecifierQualifier::TypeQualifier(qualifier) => match &qualifier.node {
-                    TypeQualifier::Const => next_ptr_const = true,
-                    _ => (),
-                },
+                SpecifierQualifier::TypeQualifier(qualifier) => {
+                    if let TypeQualifier::Const = &qualifier.node {
+                        next_ptr_const = true;
+                    }
+                }
             }
         }
 
@@ -237,12 +238,10 @@ where
 
                     next_ptr_const = false;
                     for qualifier in qualifiers {
-                        match &qualifier.node {
-                            PointerQualifier::TypeQualifier(ty) => match &ty.node {
-                                TypeQualifier::Const => next_ptr_const = true,
-                                _ => (),
-                            },
-                            _ => (),
+                        if let PointerQualifier::TypeQualifier(ty) = &qualifier.node {
+                            if let TypeQualifier::Const = &ty.node {
+                                next_ptr_const = true;
+                            }
                         }
                     }
 
@@ -368,21 +367,18 @@ impl From<&TranslationUnit> for HeaderSource {
         let mut enum_variants = Vec::new();
 
         for external in &unit.0 {
-            match &external.node {
-                ExternalDeclaration::Declaration(declaration) => {
-                    if let Ok(constant) = Constant::try_from(&declaration.node) {
-                        constants.push(constant);
-                    } else if let Ok(structure) = Structure::try_from(&declaration.node) {
-                        structures.push(structure);
-                    } else if let Ok(function) = Function::try_from(&declaration.node) {
-                        functions.push(function);
-                    } else if let Ok(enum_variant) = EnumVariant::all_from(&declaration.node) {
-                        enum_variants.extend(enum_variant.into_iter());
-                    } else if let Ok(basetype) = Basetype::try_from(&declaration.node) {
-                        basetypes.push(basetype);
-                    }
+            if let ExternalDeclaration::Declaration(declaration) = &external.node {
+                if let Ok(constant) = Constant::try_from(&declaration.node) {
+                    constants.push(constant);
+                } else if let Ok(structure) = Structure::try_from(&declaration.node) {
+                    structures.push(structure);
+                } else if let Ok(function) = Function::try_from(&declaration.node) {
+                    functions.push(function);
+                } else if let Ok(enum_variant) = EnumVariant::all_from(&declaration.node) {
+                    enum_variants.extend(enum_variant.into_iter());
+                } else if let Ok(basetype) = Basetype::try_from(&declaration.node) {
+                    basetypes.push(basetype);
                 }
-                _ => (),
             }
         }
 

@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Update Vulkan Headers to version 160
+- Update Vulkan Headers to version 161
+- Deprecate the included allocator in favor of `gpu-alloc`
 
 ## [0.15.0+157] - 2020-10-25
 ### Changed

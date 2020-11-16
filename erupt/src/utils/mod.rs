@@ -2,6 +2,9 @@
 
 //! Utilities to aid your usage of this crate
 
+#[deprecated(
+    note = "Use [`gpu-alloc-erupt`](<https://github.com/zakarumych/gpu-alloc>) instead. This will be removed in a future version."
+)]
 pub mod allocator;
 #[cfg(feature = "loading")]
 pub mod loading;

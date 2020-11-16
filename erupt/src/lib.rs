@@ -9,7 +9,6 @@
 //! - A [utility module] aiding your use of this crate
 //!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
 //!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
-//!   - [`allocator`]: Provides a basic Vulkan memory allocator, aiming to be *correct*
 //! - Generated code distributed into multiple modules
 //! - Function loading ([`EntryLoader`], [`InstanceLoader`], [`DeviceLoader`])
 //! - Seperate `Flags` and `FlagBits` types
@@ -59,6 +58,9 @@
 //! ### Q: What does the number at the end of the version mean?
 //! A: It represents the Vulkan Header version this version of erupt was generated against and is purely
 //! informational.
+//!
+//! ### Q: I need to easily allocate memory, what should i use?
+//! A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc).
 //!
 //! ## Thank you
 //! - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate

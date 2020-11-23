@@ -73,23 +73,17 @@ impl From<&Element> for DeclarationMetadata {
             .map(|values| values.split(',').map(|s| s.to_string()).collect())
             .unwrap_or_else(Vec::new);
 
-        let mut lengths = element
+        let length = element
             .attributes
             .get("altlen")
             .or_else(|| element.attributes.get("len"))
-            .map(|values| {
+            .and_then(|values| {
                 values
                     .split(',')
                     .filter(|s| !(s.starts_with("latexmath:") || *s == "null-terminated"))
                     .map(|s| s.to_string())
-                    .collect()
-            })
-            .unwrap_or_else(Vec::new);
-        let length = match lengths.len() {
-            0 => None,
-            1 => lengths.pop(),
-            _ => panic!("Length exceeds 1 in declaration metadata of {:?}", element),
-        };
+                    .next()
+            });
 
         let optional = element
             .attributes

@@ -18,24 +18,6 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
 
     let mut map = HashMap::new();
     map.insert(
-        TypeName::new("VkAccelerationStructureVersionKHR"),
-        vec![Override {
-            index: 2,
-            kind: FieldKind::Overridden {
-                ty: Type::Slice {
-                    of: Box::new(Type::UnsignedInt8),
-                    kind: Mutability::Const,
-                    lifetime: Some(lifetime_a.clone()),
-                },
-                body: quote! {
-                    assert_eq!(version_data.len() as u32, 2 * crate::vk1_0::UUID_SIZE);
-                    self.0 .version_data = version_data.as_ptr() as _;
-                },
-            },
-        }],
-    );
-
-    map.insert(
         TypeName::new("VkShaderModuleCreateInfo"),
         vec![
             Override {
@@ -100,38 +82,30 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
 
     map.insert(
         TypeName::new("VkAccelerationStructureBuildGeometryInfoKHR"),
-        vec![
-            Override {
-                index: 7,
-                kind: FieldKind::Ignore,
-            },
-            Override {
-                index: 8,
-                kind: FieldKind::Ignore,
-            },
-            Override {
-                index: 9,
-                kind: FieldKind::Overridden {
-                    ty: Type::Slice {
-                        of: Box::new(Type::Reference {
-                            to: Box::new(Type::Named(Name::Type(
-                                TypeName::new("VkAccelerationStructureGeometryKHR")
-                                    .set_builder(true),
-                            ))),
-                            kind: Mutability::Const,
-                            lifetime: Some(lifetime_a.clone()),
-                        }),
-                        kind: Mutability::Const,
-                        lifetime: Some(lifetime_a.clone()),
-                    },
-                    body: quote! {
-                        self.0 .geometry_array_of_pointers = crate::vk1_0::TRUE;
-                        self.0 .geometry_count = geometries.len() as _;
-                        self.0 .pp_geometries = geometries.as_ptr() as _;
-                    },
+        vec![Override {
+            index: 9,
+            kind: FieldKind::Ignore,
+        }],
+    );
+
+    map.insert(
+        TypeName::new("VkAccelerationStructureVersionInfoKHR"),
+        vec![Override {
+            index: 2,
+            kind: FieldKind::Overridden {
+                ty: Type::Reference {
+                    to: Box::new(Type::Array {
+                        of: Box::new(Type::UnsignedInt8),
+                        length: 32, // 2 * VK_UUID_SIZE
+                    }),
+                    kind: Mutability::Const,
+                    lifetime: Some(lifetime_a.clone()),
+                },
+                body: quote! {
+                    self.0.p_version_data = version_data.as_ptr() as _;
                 },
             },
-        ],
+        }],
     );
 
     map
@@ -234,7 +208,7 @@ impl Structure {
         }
 
         let inner_ident = self.name.ident();
-        //log::trace!("Processing builder for `{}`", inner_ident);
+        //log::debug!("Processing builder for `{}`", inner_ident);
 
         let builder_name = self.name.clone().set_builder(true);
         let ident = builder_name.ident();
@@ -284,7 +258,11 @@ impl Structure {
                             let len_ident = match declaration::declaration_ident(&length) {
                                 Some(ident) => ident,
                                 None => {
-                                    panic!("Custom field required: {}, len: {:?}", ident, length)
+                                    panic!(
+                                        "Custom builder override required:\
+                                        builder: {}, field: {}, len: {:?}",
+                                        inner_ident, ident, length
+                                    )
                                 }
                             };
 

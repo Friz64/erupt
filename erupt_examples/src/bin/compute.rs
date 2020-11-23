@@ -1,3 +1,7 @@
+// This example currently uses the old and deprecated allocator.
+// TODO: Rewrite to use `gpu-alloc`
+#![allow(deprecated)]
+
 use bytemuck::{Pod, Zeroable};
 use erupt::{
     cstr,

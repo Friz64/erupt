@@ -1,5 +1,5 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 3;
+pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_deferred_host_operations");
@@ -51,85 +51,6 @@ pub type PFN_vkDeferredOperationJoinKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationInfoKHR.html) · Structure"]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct DeferredOperationInfoKHR {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
-    pub operation_handle: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-}
-impl Default for DeferredOperationInfoKHR {
-    fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEFERRED_OPERATION_INFO_KHR,
-            p_next: std::ptr::null(),
-            operation_handle: Default::default(),
-        }
-    }
-}
-impl std::fmt::Debug for DeferredOperationInfoKHR {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeferredOperationInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("operation_handle", &self.operation_handle)
-            .finish()
-    }
-}
-impl DeferredOperationInfoKHR {
-    #[inline]
-    pub fn into_builder<'a>(self) -> DeferredOperationInfoKHRBuilder<'a> {
-        DeferredOperationInfoKHRBuilder(self, std::marker::PhantomData)
-    }
-}
-#[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationInfoKHR.html) · Builder of [`DeferredOperationInfoKHR`](struct.DeferredOperationInfoKHR.html)"]
-#[repr(transparent)]
-pub struct DeferredOperationInfoKHRBuilder<'a>(
-    DeferredOperationInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> DeferredOperationInfoKHRBuilder<'a> {
-    #[inline]
-    pub fn new() -> DeferredOperationInfoKHRBuilder<'a> {
-        DeferredOperationInfoKHRBuilder(Default::default(), std::marker::PhantomData)
-    }
-    #[inline]
-    pub fn operation_handle(
-        mut self,
-        operation_handle: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-    ) -> Self {
-        self.0.operation_handle = operation_handle as _;
-        self
-    }
-    #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeferredOperationInfoKHR {
-        self.0
-    }
-}
-impl<'a> std::default::Default for DeferredOperationInfoKHRBuilder<'a> {
-    fn default() -> DeferredOperationInfoKHRBuilder<'a> {
-        Self::new()
-    }
-}
-impl<'a> std::fmt::Debug for DeferredOperationInfoKHRBuilder<'a> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, f)
-    }
-}
-impl<'a> std::ops::Deref for DeferredOperationInfoKHRBuilder<'a> {
-    type Target = DeferredOperationInfoKHR;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for DeferredOperationInfoKHRBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
 #[doc = "Provided by [`extensions::khr_deferred_host_operations`](extensions/khr_deferred_host_operations/index.html)"]
 impl crate::DeviceLoader {
     #[inline]

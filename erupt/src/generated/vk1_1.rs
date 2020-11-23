@@ -1191,17 +1191,25 @@ impl<'a>
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingFeaturesKHR,
+        crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR,
     > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_ray_tracing_pipeline :: PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR>
+    for PhysicalDeviceFeatures2Builder<'a>
 {
 }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingFeaturesKHRBuilder<'_>,
+        crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>,
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }
@@ -1857,20 +1865,16 @@ impl<'a>
     > for PhysicalDeviceProperties2Builder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructurePropertiesKHR > for PhysicalDeviceProperties2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructurePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingPropertiesKHR,
+        crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHR,
     > for PhysicalDeviceProperties2Builder<'a>
 {
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingPropertiesKHRBuilder<'_>,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_ray_tracing_pipeline :: PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,

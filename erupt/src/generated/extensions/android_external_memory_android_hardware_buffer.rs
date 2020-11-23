@@ -574,7 +574,7 @@ impl<'a> std::ops::DerefMut for ExternalFormatANDROIDBuilder<'a> {
 #[doc = "Provided by [`extensions::android_external_memory_android_hardware_buffer`](extensions/android_external_memory_android_hardware_buffer/index.html)"]
 impl crate::DeviceLoader {
     #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]pub unsafe fn get_android_hardware_buffer_properties_android (& self , buffer : & crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer , properties : Option < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >) -> crate :: utils :: VulkanResult < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >{
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]    pub unsafe fn get_android_hardware_buffer_properties_android (& self , buffer : & crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer , properties : Option < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >) -> crate :: utils :: VulkanResult < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >{
         let _function = self
             .get_android_hardware_buffer_properties_android
             .expect("`get_android_hardware_buffer_properties_android` is not loaded");

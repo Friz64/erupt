@@ -87,6 +87,7 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
             &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
             &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => "DESCRIPTOR_UPDATE_TEMPLATE_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
+            &Self::ACCELERATION_STRUCTURE_NV_EXT => "ACCELERATION_STRUCTURE_NV_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -130,9 +131,13 @@ impl DebugReportObjectTypeEXT {
     pub const DEBUG_REPORT_EXT: Self = Self::DEBUG_REPORT_CALLBACK_EXT_EXT;
     pub const VALIDATION_CACHE_EXT: Self = Self::VALIDATION_CACHE_EXT_EXT;
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../../extensions/khr_acceleration_structure/index.html)"]
 impl DebugReportObjectTypeEXT {
-    pub const ACCELERATION_STRUCTURE_KHR_EXT: Self = Self(1000165000);
+    pub const ACCELERATION_STRUCTURE_KHR_EXT: Self = Self(1000150000);
+}
+#[doc = "Provided by [`extensions::nv_ray_tracing`](../../extensions/nv_ray_tracing/index.html)"]
+impl DebugReportObjectTypeEXT {
+    pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self(1000165000);
 }
 #[doc = "Provided by [`extensions::khr_descriptor_update_template`](../../extensions/khr_descriptor_update_template/index.html)"]
 impl DebugReportObjectTypeEXT {
@@ -141,10 +146,6 @@ impl DebugReportObjectTypeEXT {
 #[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../../extensions/khr_sampler_ycbcr_conversion/index.html)"]
 impl DebugReportObjectTypeEXT {
     pub const SAMPLER_YCBCR_CONVERSION_KHR_EXT: Self = Self::SAMPLER_YCBCR_CONVERSION_EXT;
-}
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../../extensions/nv_ray_tracing/index.html)"]
-impl DebugReportObjectTypeEXT {
-    pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self::ACCELERATION_STRUCTURE_KHR_EXT;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]

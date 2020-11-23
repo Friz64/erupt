@@ -1240,7 +1240,7 @@ impl BufferCreateFlagBits {
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`](./struct.BufferUsageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const RAY_TRACING_KHR = BufferUsageFlagBits :: RAY_TRACING_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`](./struct.BufferUsageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`](./struct.BufferUsageFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1268,7 +1268,11 @@ impl std::fmt::Debug for BufferUsageFlagBits {
             &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
             &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT",
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
-            &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
+            &Self::ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR => {
+                "ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR"
+            }
+            &Self::ACCELERATION_STRUCTURE_STORAGE_KHR => "ACCELERATION_STRUCTURE_STORAGE_KHR",
+            &Self::SHADER_BINDING_TABLE_KHR => "SHADER_BINDING_TABLE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -1298,13 +1302,18 @@ impl BufferUsageFlagBits {
 impl BufferUsageFlagBits {
     pub const CONDITIONAL_RENDERING_EXT: Self = Self(512);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl BufferUsageFlagBits {
-    pub const RAY_TRACING_KHR: Self = Self(1024);
+    pub const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR: Self = Self(524288);
+    pub const ACCELERATION_STRUCTURE_STORAGE_KHR: Self = Self(1048576);
+}
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+impl BufferUsageFlagBits {
+    pub const SHADER_BINDING_TABLE_KHR: Self = Self(1024);
 }
 #[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
 impl BufferUsageFlagBits {
-    pub const RAY_TRACING_NV: Self = Self::RAY_TRACING_KHR;
+    pub const RAY_TRACING_NV: Self = Self::SHADER_BINDING_TABLE_KHR;
 }
 #[doc = "Provided by [`extensions::ext_buffer_device_address`](../extensions/ext_buffer_device_address/index.html)"]
 impl BufferUsageFlagBits {
@@ -1577,6 +1586,7 @@ impl std::fmt::Debug for DescriptorType {
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
             &Self::INLINE_UNIFORM_BLOCK_EXT => "INLINE_UNIFORM_BLOCK_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
+            &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
             _ => "(unknown variant)",
         })
     }
@@ -1599,13 +1609,13 @@ impl DescriptorType {
 impl DescriptorType {
     pub const INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138000);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl DescriptorType {
-    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000165000);
+    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
 }
 #[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
 impl DescriptorType {
-    pub const ACCELERATION_STRUCTURE_NV: Self = Self::ACCELERATION_STRUCTURE_KHR;
+    pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDynamicState.html) · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1626,6 +1636,7 @@ impl std::fmt::Debug for DynamicState {
             &Self::VIEWPORT_W_SCALING_NV => "VIEWPORT_W_SCALING_NV",
             &Self::DISCARD_RECTANGLE_EXT => "DISCARD_RECTANGLE_EXT",
             &Self::SAMPLE_LOCATIONS_EXT => "SAMPLE_LOCATIONS_EXT",
+            &Self::RAY_TRACING_PIPELINE_STACK_SIZE_KHR => "RAY_TRACING_PIPELINE_STACK_SIZE_KHR",
             &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => "VIEWPORT_SHADING_RATE_PALETTE_NV",
             &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => "VIEWPORT_COARSE_SAMPLE_ORDER_NV",
             &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
@@ -1670,6 +1681,10 @@ impl DynamicState {
 #[doc = "Provided by [`extensions::ext_sample_locations`](../extensions/ext_sample_locations/index.html)"]
 impl DynamicState {
     pub const SAMPLE_LOCATIONS_EXT: Self = Self(1000143000);
+}
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+impl DynamicState {
+    pub const RAY_TRACING_PIPELINE_STACK_SIZE_KHR: Self = Self(1000347000);
 }
 #[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
 impl DynamicState {
@@ -2438,7 +2453,7 @@ impl FormatFeatureFlagBits {
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_CUBIC_IMG: Self = Self(8192);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl FormatFeatureFlagBits {
     pub const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR: Self = Self(536870912);
 }
@@ -2918,7 +2933,7 @@ impl IndexType {
     pub const UINT16: Self = Self(0);
     pub const UINT32: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl IndexType {
     pub const NONE_KHR: Self = Self(1000165000);
 }
@@ -3090,7 +3105,7 @@ impl AccessFlagBits {
 impl AccessFlagBits {
     pub const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT: Self = Self(524288);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl AccessFlagBits {
     pub const ACCELERATION_STRUCTURE_READ_KHR: Self = Self(2097152);
     pub const ACCELERATION_STRUCTURE_WRITE_KHR: Self = Self(4194304);
@@ -3204,7 +3219,7 @@ impl PipelineBindPoint {
     pub const GRAPHICS: Self = Self(0);
     pub const COMPUTE: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
 impl PipelineBindPoint {
     pub const RAY_TRACING_KHR: Self = Self(1000165000);
 }
@@ -3212,7 +3227,7 @@ impl PipelineBindPoint {
 impl PipelineBindPoint {
     pub const RAY_TRACING_NV: Self = Self::RAY_TRACING_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`](./struct.PipelineCreateFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`](./struct.PipelineCreateFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`](./struct.PipelineCreateFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3244,6 +3259,9 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
             }
             &Self::RAY_TRACING_SKIP_TRIANGLES_KHR => "RAY_TRACING_SKIP_TRIANGLES_KHR",
             &Self::RAY_TRACING_SKIP_AABBS_KHR => "RAY_TRACING_SKIP_AABBS_KHR",
+            &Self::RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR => {
+                "RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR"
+            }
             &Self::DEFER_COMPILE_NV => "DEFER_COMPILE_NV",
             &Self::CAPTURE_STATISTICS_KHR => "CAPTURE_STATISTICS_KHR",
             &Self::CAPTURE_INTERNAL_REPRESENTATIONS_KHR => "CAPTURE_INTERNAL_REPRESENTATIONS_KHR",
@@ -3266,7 +3284,7 @@ impl PipelineCreateFlagBits {
     pub const VIEW_INDEX_FROM_DEVICE_INDEX: Self = Self(8);
     pub const DISPATCH_BASE: Self = Self(16);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
 impl PipelineCreateFlagBits {
     pub const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR: Self = Self(16384);
     pub const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR: Self = Self(32768);
@@ -3274,6 +3292,7 @@ impl PipelineCreateFlagBits {
     pub const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR: Self = Self(131072);
     pub const RAY_TRACING_SKIP_TRIANGLES_KHR: Self = Self(4096);
     pub const RAY_TRACING_SKIP_AABBS_KHR: Self = Self(8192);
+    pub const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR: Self = Self(524288);
 }
 #[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
 impl PipelineCreateFlagBits {
@@ -3456,6 +3475,9 @@ impl std::fmt::Debug for QueryType {
             &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => {
                 "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR"
             }
+            &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => {
+                "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV"
+            }
             &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
             _ => "(unknown variant)",
         })
@@ -3475,19 +3497,18 @@ impl QueryType {
 impl QueryType {
     pub const PERFORMANCE_QUERY_KHR: Self = Self(1000116000);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl QueryType {
-    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR: Self = Self(1000165000);
-    pub const ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR: Self = Self(1000150000);
+    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR: Self = Self(1000150000);
+    pub const ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR: Self = Self(1000150001);
+}
+#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+impl QueryType {
+    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV: Self = Self(1000165000);
 }
 #[doc = "Provided by [`extensions::intel_performance_query`](../extensions/intel_performance_query/index.html)"]
 impl QueryType {
     pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
-}
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
-impl QueryType {
-    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV: Self =
-        Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`](./struct.QueueFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`](./struct.QueueFlags.html)"]
@@ -3579,7 +3600,6 @@ impl std::fmt::Debug for Result {
             &Self::ERROR_INCOMPATIBLE_DISPLAY_KHR => "ERROR_INCOMPATIBLE_DISPLAY_KHR",
             &Self::ERROR_VALIDATION_FAILED_EXT => "ERROR_VALIDATION_FAILED_EXT",
             &Self::ERROR_INVALID_SHADER_NV => "ERROR_INVALID_SHADER_NV",
-            &Self::ERROR_INCOMPATIBLE_VERSION_KHR => "ERROR_INCOMPATIBLE_VERSION_KHR",
             &Self::ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT => {
                 "ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT"
             }
@@ -3649,10 +3669,6 @@ impl Result {
 #[doc = "Provided by [`extensions::nv_glsl_shader`](../extensions/nv_glsl_shader/index.html)"]
 impl Result {
     pub const ERROR_INVALID_SHADER_NV: Self = Self(-1000012000);
-}
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
-impl Result {
-    pub const ERROR_INCOMPATIBLE_VERSION_KHR: Self = Self(-1000150000);
 }
 #[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
 impl Result {
@@ -3745,7 +3761,7 @@ impl ShaderStageFlagBits {
     pub const ALL_GRAPHICS: Self = Self(31);
     pub const ALL: Self = Self(2147483647);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
 impl ShaderStageFlagBits {
     pub const RAYGEN_KHR: Self = Self(256);
     pub const ANY_HIT_KHR: Self = Self(512);
@@ -4340,17 +4356,11 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV => {
                 "PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV"
             }
-            &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_KHR => {
-                "BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_KHR"
-            }
             &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR => {
                 "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR"
             }
             &Self::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR => {
                 "ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR"
-            }
-            &Self::ACCELERATION_STRUCTURE_CREATE_GEOMETRY_TYPE_INFO_KHR => {
-                "ACCELERATION_STRUCTURE_CREATE_GEOMETRY_TYPE_INFO_KHR"
             }
             &Self::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR => {
                 "ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR"
@@ -4365,10 +4375,9 @@ impl std::fmt::Debug for StructureType {
                 "ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR"
             }
             &Self::ACCELERATION_STRUCTURE_GEOMETRY_KHR => "ACCELERATION_STRUCTURE_GEOMETRY_KHR",
-            &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_KHR => {
-                "ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_KHR"
+            &Self::ACCELERATION_STRUCTURE_VERSION_INFO_KHR => {
+                "ACCELERATION_STRUCTURE_VERSION_INFO_KHR"
             }
-            &Self::ACCELERATION_STRUCTURE_VERSION_KHR => "ACCELERATION_STRUCTURE_VERSION_KHR",
             &Self::COPY_ACCELERATION_STRUCTURE_INFO_KHR => "COPY_ACCELERATION_STRUCTURE_INFO_KHR",
             &Self::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR => {
                 "COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR"
@@ -4376,21 +4385,33 @@ impl std::fmt::Debug for StructureType {
             &Self::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR => {
                 "COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR"
             }
-            &Self::PHYSICAL_DEVICE_RAY_TRACING_FEATURES_KHR => {
-                "PHYSICAL_DEVICE_RAY_TRACING_FEATURES_KHR"
+            &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR"
             }
-            &Self::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_KHR => {
-                "PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_KHR"
+            &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR => {
+                "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR"
+            }
+            &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => {
+                "ACCELERATION_STRUCTURE_CREATE_INFO_KHR"
+            }
+            &Self::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR => {
+                "ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR => {
+                "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR"
             }
             &Self::RAY_TRACING_PIPELINE_CREATE_INFO_KHR => "RAY_TRACING_PIPELINE_CREATE_INFO_KHR",
             &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR => {
                 "RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR"
             }
-            &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => {
-                "ACCELERATION_STRUCTURE_CREATE_INFO_KHR"
-            }
             &Self::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR => {
                 "RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR"
+            }
+            &Self::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR"
             }
             &Self::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV => {
                 "PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV"
@@ -4443,6 +4464,12 @@ impl std::fmt::Debug for StructureType {
             &Self::GEOMETRY_NV => "GEOMETRY_NV",
             &Self::GEOMETRY_TRIANGLES_NV => "GEOMETRY_TRIANGLES_NV",
             &Self::GEOMETRY_AABB_NV => "GEOMETRY_AABB_NV",
+            &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV => {
+                "BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV"
+            }
+            &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV => {
+                "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV"
+            }
             &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV => {
                 "ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV"
             }
@@ -4658,7 +4685,6 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT"
             }
-            &Self::DEFERRED_OPERATION_INFO_KHR => "DEFERRED_OPERATION_INFO_KHR",
             &Self::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => {
                 "PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR"
             }
@@ -5248,28 +5274,35 @@ impl StructureType {
 impl StructureType {
     pub const PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV: Self = Self(1000149000);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl StructureType {
-    pub const BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_KHR: Self = Self(1000165006);
-    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR: Self = Self(1000165007);
+    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR: Self = Self(1000150007);
     pub const ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR: Self = Self(1000150000);
-    pub const ACCELERATION_STRUCTURE_CREATE_GEOMETRY_TYPE_INFO_KHR: Self = Self(1000150001);
     pub const ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR: Self = Self(1000150002);
     pub const ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR: Self = Self(1000150003);
     pub const ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR: Self = Self(1000150004);
     pub const ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR: Self = Self(1000150005);
     pub const ACCELERATION_STRUCTURE_GEOMETRY_KHR: Self = Self(1000150006);
-    pub const ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_KHR: Self = Self(1000150008);
-    pub const ACCELERATION_STRUCTURE_VERSION_KHR: Self = Self(1000150009);
+    pub const ACCELERATION_STRUCTURE_VERSION_INFO_KHR: Self = Self(1000150009);
     pub const COPY_ACCELERATION_STRUCTURE_INFO_KHR: Self = Self(1000150010);
     pub const COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR: Self = Self(1000150011);
     pub const COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR: Self = Self(1000150012);
-    pub const PHYSICAL_DEVICE_RAY_TRACING_FEATURES_KHR: Self = Self(1000150013);
-    pub const PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_KHR: Self = Self(1000150014);
+    pub const PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR: Self = Self(1000150013);
+    pub const PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR: Self = Self(1000150014);
+    pub const ACCELERATION_STRUCTURE_CREATE_INFO_KHR: Self = Self(1000150017);
+    pub const ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR: Self = Self(1000150020);
+}
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR: Self = Self(1000347000);
+    pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR: Self = Self(1000347001);
     pub const RAY_TRACING_PIPELINE_CREATE_INFO_KHR: Self = Self(1000150015);
     pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR: Self = Self(1000150016);
-    pub const ACCELERATION_STRUCTURE_CREATE_INFO_KHR: Self = Self(1000150017);
     pub const RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR: Self = Self(1000150018);
+}
+#[doc = "Provided by [`extensions::khr_ray_query`](../extensions/khr_ray_query/index.html)"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR: Self = Self(1000348013);
 }
 #[doc = "Provided by [`extensions::nv_framebuffer_mixed_samples`](../extensions/nv_framebuffer_mixed_samples/index.html)"]
 impl StructureType {
@@ -5312,14 +5345,12 @@ impl StructureType {
     pub const GEOMETRY_NV: Self = Self(1000165003);
     pub const GEOMETRY_TRIANGLES_NV: Self = Self(1000165004);
     pub const GEOMETRY_AABB_NV: Self = Self(1000165005);
+    pub const BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV: Self = Self(1000165006);
+    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV: Self = Self(1000165007);
     pub const ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV: Self = Self(1000165008);
     pub const PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV: Self = Self(1000165009);
     pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV: Self = Self(1000165011);
     pub const ACCELERATION_STRUCTURE_INFO_NV: Self = Self(1000165012);
-    pub const BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV: Self =
-        Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_KHR;
-    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV: Self =
-        Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR;
 }
 #[doc = "Provided by [`extensions::nv_representative_fragment_test`](../extensions/nv_representative_fragment_test/index.html)"]
 impl StructureType {
@@ -5551,10 +5582,6 @@ impl StructureType {
 #[doc = "Provided by [`extensions::ext_extended_dynamic_state`](../extensions/ext_extended_dynamic_state/index.html)"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000267000);
-}
-#[doc = "Provided by [`extensions::khr_deferred_host_operations`](../extensions/khr_deferred_host_operations/index.html)"]
-impl StructureType {
-    pub const DEFERRED_OPERATION_INFO_KHR: Self = Self(1000268000);
 }
 #[doc = "Provided by [`extensions::khr_pipeline_executable_properties`](../extensions/khr_pipeline_executable_properties/index.html)"]
 impl StructureType {
@@ -6084,7 +6111,7 @@ impl VertexInputRate {
     pub const VERTEX: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`](./struct.PipelineStageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`](./struct.PipelineStageFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`](./struct.PipelineStageFlags.html)"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6118,8 +6145,8 @@ impl std::fmt::Debug for PipelineStageFlagBits {
             &Self::ALL_COMMANDS => "ALL_COMMANDS",
             &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
-            &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
             &Self::ACCELERATION_STRUCTURE_BUILD_KHR => "ACCELERATION_STRUCTURE_BUILD_KHR",
+            &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
             &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
             &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
             &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
@@ -6157,10 +6184,13 @@ impl PipelineStageFlagBits {
 impl PipelineStageFlagBits {
     pub const CONDITIONAL_RENDERING_EXT: Self = Self(262144);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+impl PipelineStageFlagBits {
+    pub const ACCELERATION_STRUCTURE_BUILD_KHR: Self = Self(33554432);
+}
+#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
 impl PipelineStageFlagBits {
     pub const RAY_TRACING_SHADER_KHR: Self = Self(2097152);
-    pub const ACCELERATION_STRUCTURE_BUILD_KHR: Self = Self(33554432);
 }
 #[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
 impl PipelineStageFlagBits {
@@ -6391,6 +6421,7 @@ impl std::fmt::Debug for ObjectType {
             &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
             &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
+            &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
             &Self::PERFORMANCE_CONFIGURATION_INTEL => "PERFORMANCE_CONFIGURATION_INTEL",
             &Self::DEFERRED_OPERATION_KHR => "DEFERRED_OPERATION_KHR",
             &Self::INDIRECT_COMMANDS_LAYOUT_NV => "INDIRECT_COMMANDS_LAYOUT_NV",
@@ -6454,13 +6485,17 @@ impl ObjectType {
 impl ObjectType {
     pub const DEBUG_UTILS_MESSENGER_EXT: Self = Self(1000128000);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing`](../extensions/khr_ray_tracing/index.html)"]
+#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
 impl ObjectType {
-    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000165000);
+    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
 }
 #[doc = "Provided by [`extensions::ext_validation_cache`](../extensions/ext_validation_cache/index.html)"]
 impl ObjectType {
     pub const VALIDATION_CACHE_EXT: Self = Self(1000160000);
+}
+#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+impl ObjectType {
+    pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
 }
 #[doc = "Provided by [`extensions::intel_performance_query`](../extensions/intel_performance_query/index.html)"]
 impl ObjectType {
@@ -6485,10 +6520,6 @@ impl ObjectType {
 #[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
 impl ObjectType {
     pub const SAMPLER_YCBCR_CONVERSION_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION;
-}
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
-impl ObjectType {
-    pub const ACCELERATION_STRUCTURE_NV: Self = Self::ACCELERATION_STRUCTURE_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`](./struct.SubpassDescriptionFlagBits.html)"] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`](./struct.SubpassDescriptionFlags.html)"]
@@ -9508,17 +9539,25 @@ impl<'a>
     > for DeviceCreateInfoBuilder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHR > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingFeaturesKHR,
+        crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR,
     > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_ray_tracing_pipeline :: PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR>
+    for DeviceCreateInfoBuilder<'a>
 {
 }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::PhysicalDeviceRayTracingFeaturesKHRBuilder<'_>,
+        crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>,
     > for DeviceCreateInfoBuilder<'a>
 {
 }
@@ -11489,14 +11528,22 @@ impl<'a>
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::WriteDescriptorSetAccelerationStructureKHR,
+        crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHR,
+    > for WriteDescriptorSetBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: WriteDescriptorSetAccelerationStructureKHRBuilder < '_ >> for WriteDescriptorSetBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNV,
     > for WriteDescriptorSetBuilder<'a>
 {
 }
 impl<'a>
     crate::ExtendableFrom<
         'a,
-        crate::extensions::khr_ray_tracing::WriteDescriptorSetAccelerationStructureKHRBuilder<'_>,
+        crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNVBuilder<'_>,
     > for WriteDescriptorSetBuilder<'a>
 {
 }

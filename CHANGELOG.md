@@ -6,8 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Update Vulkan Headers to version 161
+- Update Vulkan Headers to version 162
 - Deprecate the included allocator in favor of `gpu-alloc`
+- The `{Entry,Instance,Device}Enabled` information can now only be accessed through read-only getters
 
 ## [0.15.0+157] - 2020-10-25
 ### Changed

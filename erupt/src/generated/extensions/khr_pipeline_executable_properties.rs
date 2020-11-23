@@ -704,7 +704,7 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, statistics)
     }
     #[inline]
-    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]pub unsafe fn get_pipeline_executable_internal_representations_khr (& self , executable_info : & crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , internal_representation_count : Option < u32 >) -> crate :: utils :: VulkanResult < Vec < crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR > >{
+    #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]    pub unsafe fn get_pipeline_executable_internal_representations_khr (& self , executable_info : & crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInfoKHR , internal_representation_count : Option < u32 >) -> crate :: utils :: VulkanResult < Vec < crate :: extensions :: khr_pipeline_executable_properties :: PipelineExecutableInternalRepresentationKHR > >{
         let _function = self
             .get_pipeline_executable_internal_representations_khr
             .expect("`get_pipeline_executable_internal_representations_khr` is not loaded");

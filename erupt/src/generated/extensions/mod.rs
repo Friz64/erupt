@@ -208,6 +208,8 @@ pub mod intel_shader_integer_functions2;
 pub mod khr_16bit_storage;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_8bit_storage.html) · Vulkan extension"]
 pub mod khr_8bit_storage;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_acceleration_structure.html) · Vulkan extension"]
+pub mod khr_acceleration_structure;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_android_surface.html) · Vulkan extension"]
 pub mod khr_android_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_bind_memory2.html) · Vulkan extension"]
@@ -296,8 +298,10 @@ pub mod khr_pipeline_library;
 pub mod khr_portability_subset;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_push_descriptor.html) · Vulkan extension"]
 pub mod khr_push_descriptor;
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_ray_tracing.html) · Vulkan extension"]
-pub mod khr_ray_tracing;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_ray_query.html) · Vulkan extension"]
+pub mod khr_ray_query;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_ray_tracing_pipeline.html) · Vulkan extension"]
+pub mod khr_ray_tracing_pipeline;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_relaxed_block_layout.html) · Vulkan extension"]
 pub mod khr_relaxed_block_layout;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_sampler_mirror_clamp_to_edge.html) · Vulkan extension"]

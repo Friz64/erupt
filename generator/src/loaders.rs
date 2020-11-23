@@ -391,7 +391,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         pub struct EntryLoader<T> {
             arc: std::sync::Arc<()>,
             pub loader: T,
-            pub enabled: EntryEnabled,
+            enabled: EntryEnabled,
             pub get_instance_proc_addr: crate::vk1_0::PFN_vkGetInstanceProcAddr,
             #(pub #entry_loader_idents: #entry_loader_types,)*
         }
@@ -414,6 +414,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     loader,
                     enabled: entry_enabled,
                 })
+            }
+
+            pub fn enabled(&self) -> &EntryEnabled {
+                &self.enabled
             }
 
             pub fn instance_version(&self) -> u32 {
@@ -466,7 +470,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             parent: std::sync::Weak<()>,
             arc: std::sync::Arc<()>,
             pub handle: crate::vk1_0::Instance,
-            pub enabled: InstanceEnabled,
+            enabled: InstanceEnabled,
             pub get_device_proc_addr: crate::vk1_0::PFN_vkGetDeviceProcAddr,
             #(pub #instance_loader_idents: #instance_loader_types,)*
         }
@@ -490,6 +494,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     #(#instance_loader_idents: #instance_loader_loading,)*
                     enabled: instance_enabled,
                 })
+            }
+
+            pub fn enabled(&self) -> &InstanceEnabled {
+                &self.enabled
             }
         }
 
@@ -531,7 +539,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             #[allow(dead_code)]
             parent: std::sync::Weak<()>,
             pub handle: crate::vk1_0::Device,
-            pub enabled: DeviceEnabled,
+            enabled: DeviceEnabled,
             #(pub #device_loader_idents: #device_loader_types,)*
         }
 
@@ -551,6 +559,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     #(#device_loader_idents: #device_loader_loading,)*
                     enabled: device_enabled,
                 })
+            }
+
+            pub fn enabled(&self) -> &DeviceEnabled {
+                &self.enabled
             }
         }
     };

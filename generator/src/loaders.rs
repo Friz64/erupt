@@ -178,7 +178,7 @@ impl EnabledData {
 
                 match enabled_kind {
                     EnabledKind::Normal => quote! {
-                        normal_extension(crate::#module_path#ident)
+                        enabled_extension(crate::#module_path#ident)
                     },
                     EnabledKind::InstanceAvailableDeviceExtension => quote! {
                         available_device_extension(crate::#module_path#ident)
@@ -442,17 +442,12 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         impl InstanceEnabled {
             pub unsafe fn new(
                 instance_version: u32,
-                instance_extensions_len: usize,
-                instance_extensions: *const *const std::os::raw::c_char,
+                enabled_extensions: &[&std::ffi::CStr],
                 available_device_extensions: &[&std::ffi::CStr],
             ) -> Result<InstanceEnabled, crate::LoaderError> {
                 let version = instance_version;
-                let normal_extension = |extension| crate::c_str_array_contains(
-                    instance_extensions_len,
-                    instance_extensions,
-                    extension,
-                );
-
+                let enabled_extension = |extension|
+                    enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
                 let available_device_extension = |extension|
                     available_device_extensions.contains(&std::ffi::CStr::from_ptr(extension));
 
@@ -516,15 +511,9 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl DeviceEnabled {
-            pub unsafe fn new(
-                extensions_len: usize,
-                extensions: *const *const std::os::raw::c_char
-            ) -> DeviceEnabled {
-                let normal_extension = |extension| crate::c_str_array_contains(
-                    extensions_len,
-                    extensions,
-                    extension,
-                );
+            pub unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
+                let enabled_extension = |extension|
+                    enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
 
                 DeviceEnabled {
                     #(#device_enabled_idents: #device_enabled_values,)*

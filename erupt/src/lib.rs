@@ -271,6 +271,16 @@ impl InstanceLoader {
         }
 
         unsafe {
+            let enabled_extensions = std::slice::from_raw_parts(
+                create_info.pp_enabled_extension_names,
+                create_info.enabled_extension_count as _,
+            );
+
+            let enabled_extensions: Vec<_> = enabled_extensions
+                .iter()
+                .map(|&ptr| CStr::from_ptr(ptr))
+                .collect();
+
             let symbol = |name| (entry_loader.get_instance_proc_addr)(instance, name);
 
             let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(
@@ -278,9 +288,10 @@ impl InstanceLoader {
                     .ok_or(crate::LoaderError::SymbolNotAvailable)?,
             );
 
-            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties =
-            mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)
-                .ok_or(crate::LoaderError::SymbolNotAvailable)?);
+            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(
+                symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)
+                    .ok_or(crate::LoaderError::SymbolNotAvailable)?,
+            );
 
             let mut physical_device_count = 0;
             let result =
@@ -335,12 +346,8 @@ impl InstanceLoader {
                 .map(|properties| CStr::from_ptr(properties.extension_name.as_ptr()))
                 .collect();
 
-            let instance_enabled = InstanceEnabled::new(
-                version,
-                create_info.enabled_extension_count as usize,
-                create_info.pp_enabled_extension_names,
-                &available_device_extensions,
-            )?;
+            let instance_enabled =
+                InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
 
             InstanceLoader::custom(entry_loader, instance, instance_enabled, symbol)
         }
@@ -367,10 +374,17 @@ impl DeviceLoader {
                 .map_err(LoaderError::VulkanError)?;
 
         let device_enabled = unsafe {
-            DeviceEnabled::new(
-                create_info.enabled_extension_count as usize,
+            let enabled_extensions = std::slice::from_raw_parts(
                 create_info.pp_enabled_extension_names,
-            )
+                create_info.enabled_extension_count as _,
+            );
+
+            let enabled_extensions: Vec<_> = enabled_extensions
+                .iter()
+                .map(|&ptr| CStr::from_ptr(ptr))
+                .collect();
+
+            DeviceEnabled::new(&enabled_extensions)
         };
 
         unsafe {
@@ -385,23 +399,6 @@ impl Debug for DeviceLoader {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         Debug::fmt(&self.handle, f)
     }
-}
-
-// Used by loaders to check for extensions
-#[inline]
-unsafe fn c_str_array_contains(
-    array_length: usize,
-    array: *const *const std::os::raw::c_char,
-    contains: *const std::os::raw::c_char,
-) -> bool {
-    let contains = CStr::from_ptr(contains);
-    for i in 0..array_length {
-        if CStr::from_ptr(*array.add(i)) == contains {
-            return true;
-        }
-    }
-
-    false
 }
 
 /// Provides type-safe pointer chain support

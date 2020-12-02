@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION")]
 pub const EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME")]
 pub const EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_fragment_density_map2");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceFragmentDensityMap2FeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
@@ -87,6 +90,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceFragmentDensityMap2PropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {

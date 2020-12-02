@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_INLINE_UNIFORM_BLOCK_SPEC_VERSION")]
 pub const EXT_INLINE_UNIFORM_BLOCK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME")]
 pub const EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_inline_uniform_block");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceInlineUniformBlockFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
@@ -99,6 +102,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockFeaturesEXTBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceInlineUniformBlockPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
@@ -244,6 +248,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockPropertiesEXTBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetInlineUniformBlockEXT.html) · Structure"]
+#[doc(alias = "VkWriteDescriptorSetInlineUniformBlockEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WriteDescriptorSetInlineUniformBlockEXT {
@@ -328,6 +333,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetInlineUniformBlockEXTBuilder<'
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkDescriptorPoolInlineUniformBlockCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {

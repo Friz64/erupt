@@ -1,10 +1,13 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION")]
 pub const AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME")]
 pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_shader_core_properties2");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`](./struct.ShaderCorePropertiesFlagBitsAMD.html)"] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`](./struct.ShaderCorePropertiesFlagBitsAMD.html)"] # [doc (alias = "VkShaderCorePropertiesFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`](./struct.ShaderCorePropertiesFlagsAMD.html)"]
+#[doc(alias = "VkShaderCorePropertiesFlagBitsAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderCorePropertiesFlagBitsAMD(pub u32);
@@ -23,6 +26,7 @@ impl std::fmt::Debug for ShaderCorePropertiesFlagBitsAMD {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceShaderCoreProperties2AMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderCoreProperties2AMD {

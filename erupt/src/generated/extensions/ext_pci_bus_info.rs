@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_PCI_BUS_INFO_SPEC_VERSION")]
 pub const EXT_PCI_BUS_INFO_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_PCI_BUS_INFO_EXTENSION_NAME")]
 pub const EXT_PCI_BUS_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_pci_bus_info");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePCIBusInfoPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePCIBusInfoPropertiesEXT {

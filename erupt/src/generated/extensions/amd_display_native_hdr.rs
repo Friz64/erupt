@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION")]
 pub const AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME")]
 pub const AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_display_native_hdr");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SET_LOCAL_DIMMING_AMD")]
 pub const FN_SET_LOCAL_DIMMING_AMD: *const std::os::raw::c_char =
     crate::cstr!("vkSetLocalDimmingAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
@@ -14,6 +17,7 @@ pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(
     local_dimming_enable: crate::vk1_0::Bool32,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure"]
+#[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayNativeHdrSurfaceCapabilitiesAMD {
@@ -90,6 +94,7 @@ impl<'a> std::ops::DerefMut for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Structure"]
+#[doc(alias = "VkSwapchainDisplayNativeHdrCreateInfoAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SwapchainDisplayNativeHdrCreateInfoAMD {
@@ -169,6 +174,7 @@ impl<'a> std::ops::DerefMut for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
+    #[doc(alias = "vkSetLocalDimmingAMD")]
     pub unsafe fn set_local_dimming_amd(
         &self,
         swap_chain: crate::extensions::khr_swapchain::SwapchainKHR,

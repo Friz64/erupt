@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION")]
 pub const EXT_GLOBAL_PRIORITY_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME")]
 pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_global_priority");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
+#[doc(alias = "VkQueueGlobalPriorityEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct QueueGlobalPriorityEXT(pub i32);
@@ -26,6 +29,7 @@ impl QueueGlobalPriorityEXT {
     pub const REALTIME_EXT: Self = Self(1024);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkDeviceQueueGlobalPriorityCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceQueueGlobalPriorityCreateInfoEXT {

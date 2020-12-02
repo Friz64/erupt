@@ -1,10 +1,13 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION")]
 pub const NV_VIEWPORT_SWIZZLE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME")]
 pub const NV_VIEWPORT_SWIZZLE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_viewport_swizzle");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateFlagsNV.html) · Bitmask of [`PipelineViewportSwizzleStateCreateFlagBitsNV`](./struct.PipelineViewportSwizzleStateCreateFlagBitsNV.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineViewportSwizzleStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateFlagsNV.html) · Bitmask of [`PipelineViewportSwizzleStateCreateFlagBitsNV`](./struct.PipelineViewportSwizzleStateCreateFlagBitsNV.html)"] # [doc (alias = "VkPipelineViewportSwizzleStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineViewportSwizzleStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineViewportSwizzleStateCreateFlagsNV`](./struct.PipelineViewportSwizzleStateCreateFlagsNV.html)"]
+#[doc(alias = "VkPipelineViewportSwizzleStateCreateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineViewportSwizzleStateCreateFlagBitsNV(pub u32);
@@ -23,6 +26,7 @@ impl std::fmt::Debug for PipelineViewportSwizzleStateCreateFlagBitsNV {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportCoordinateSwizzleNV.html) · Enum"]
+#[doc(alias = "VkViewportCoordinateSwizzleNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ViewportCoordinateSwizzleNV(pub i32);
@@ -53,6 +57,7 @@ impl ViewportCoordinateSwizzleNV {
     pub const NEGATIVE_W_NV: Self = Self(7);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportSwizzleNV.html) · Structure"]
+#[doc(alias = "VkViewportSwizzleNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ViewportSwizzleNV {
@@ -156,6 +161,7 @@ impl<'a> std::ops::DerefMut for ViewportSwizzleNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkPipelineViewportSwizzleStateCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportSwizzleStateCreateInfoNV {

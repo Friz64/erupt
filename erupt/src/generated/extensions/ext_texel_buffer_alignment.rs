@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION")]
 pub const EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME")]
 pub const EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_texel_buffer_alignment");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
@@ -87,6 +90,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTexelBufferAlignmentPropertiesEXT {

@@ -1,31 +1,42 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_SHADER_UNUSED_KHR")]
 pub const SHADER_UNUSED_KHR: u32 = 4294967295;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_RAY_TRACING_PIPELINE_SPEC_VERSION")]
 pub const KHR_RAY_TRACING_PIPELINE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME")]
 pub const KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_ray_tracing_pipeline");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_TRACE_RAYS_KHR")]
 pub const FN_CMD_TRACE_RAYS_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdTraceRaysKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR")]
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingShaderGroupHandlesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR")]
 pub const FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingCaptureReplayShaderGroupHandlesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_RAY_TRACING_PIPELINES_KHR")]
 pub const FN_CREATE_RAY_TRACING_PIPELINES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateRayTracingPipelinesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_TRACE_RAYS_INDIRECT_KHR")]
 pub const FN_CMD_TRACE_RAYS_INDIRECT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdTraceRaysIndirectKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR")]
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingShaderGroupStackSizeKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR")]
 pub const FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetRayTracingPipelineStackSizeKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeKHR.html) · Enum"]
+#[doc(alias = "VkRayTracingShaderGroupTypeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupTypeKHR(pub i32);
@@ -52,6 +63,7 @@ impl RayTracingShaderGroupTypeKHR {
     pub const PROCEDURAL_HIT_GROUP_NV: Self = Self::PROCEDURAL_HIT_GROUP_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderGroupShaderKHR.html) · Enum"]
+#[doc(alias = "VkShaderGroupShaderKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderGroupShaderKHR(pub i32);
@@ -120,6 +132,7 @@ pub type PFN_vkCmdSetRayTracingPipelineStackSizeKHR = unsafe extern "system" fn(
     pipeline_stack_size: u32,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkRayTracingShaderGroupCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingShaderGroupCreateInfoKHR {
@@ -245,6 +258,7 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkRayTracingPipelineCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingPipelineCreateInfoKHR { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub flags : crate :: vk1_0 :: PipelineCreateFlags , pub stage_count : u32 , pub p_stages : * const crate :: vk1_0 :: PipelineShaderStageCreateInfo , pub group_count : u32 , pub p_groups : * const crate :: extensions :: khr_ray_tracing_pipeline :: RayTracingShaderGroupCreateInfoKHR , pub max_pipeline_ray_recursion_depth : u32 , pub p_library_info : * const crate :: extensions :: khr_pipeline_library :: PipelineLibraryCreateInfoKHR , pub p_library_interface : * const crate :: extensions :: khr_ray_tracing_pipeline :: RayTracingPipelineInterfaceCreateInfoKHR , pub p_dynamic_state : * const crate :: vk1_0 :: PipelineDynamicStateCreateInfo , pub layout : crate :: vk1_0 :: PipelineLayout , pub base_pipeline_handle : crate :: vk1_0 :: Pipeline , pub base_pipeline_index : i32 }
@@ -415,6 +429,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelineFeaturesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceRayTracingPipelineFeaturesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingPipelineFeaturesKHR {
@@ -555,6 +570,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelineFeaturesKHRBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelinePropertiesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceRayTracingPipelinePropertiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingPipelinePropertiesKHR {
@@ -713,6 +729,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelinePropertiesKHRBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Structure"]
+#[doc(alias = "VkStridedDeviceAddressRegionKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StridedDeviceAddressRegionKHR {
@@ -799,6 +816,7 @@ impl<'a> std::ops::DerefMut for StridedDeviceAddressRegionKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Structure"]
+#[doc(alias = "VkTraceRaysIndirectCommandKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct TraceRaysIndirectCommandKHR {
@@ -885,6 +903,7 @@ impl<'a> std::ops::DerefMut for TraceRaysIndirectCommandKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkRayTracingPipelineInterfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingPipelineInterfaceCreateInfoKHR {
@@ -984,6 +1003,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineInterfaceCreateInfoKHRBuilder<
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]
+    #[doc(alias = "vkCmdTraceRaysKHR")]
     pub unsafe fn cmd_trace_rays_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -1012,6 +1032,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
+    #[doc(alias = "vkGetRayTracingShaderGroupHandlesKHR")]
     pub unsafe fn get_ray_tracing_shader_group_handles_khr(
         &self,
         pipeline: crate::vk1_0::Pipeline,
@@ -1035,6 +1056,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Function"]
+    #[doc(alias = "vkGetRayTracingCaptureReplayShaderGroupHandlesKHR")]
     pub unsafe fn get_ray_tracing_capture_replay_shader_group_handles_khr(
         &self,
         pipeline: crate::vk1_0::Pipeline,
@@ -1058,6 +1080,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
+    #[doc(alias = "vkCreateRayTracingPipelinesKHR")]
     pub unsafe fn create_ray_tracing_pipelines_khr(
         &self,
         deferred_operation: Option<
@@ -1094,6 +1117,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysIndirectKHR.html) · Function"]
+    #[doc(alias = "vkCmdTraceRaysIndirectKHR")]
     pub unsafe fn cmd_trace_rays_indirect_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -1118,6 +1142,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupStackSizeKHR.html) · Function"]
+    #[doc(alias = "vkGetRayTracingShaderGroupStackSizeKHR")]
     pub unsafe fn get_ray_tracing_shader_group_stack_size_khr(
         &self,
         pipeline: crate::vk1_0::Pipeline,
@@ -1132,6 +1157,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html) · Function"]
+    #[doc(alias = "vkCmdSetRayTracingPipelineStackSizeKHR")]
     pub unsafe fn cmd_set_ray_tracing_pipeline_stack_size_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

@@ -174,10 +174,12 @@ impl Enum {
         let mut stream = match &self.kind {
             EnumKind::Enum { name } => {
                 let ident = name.ident();
+                let doc_alias = &name.original;
                 let doc = comment_gen.def(Some(&name.original), "Enum", None);
 
                 quote! {
                     #[doc = #doc]
+                    #[doc(alias = #doc_alias)]
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                     #[repr(transparent)]
                     pub struct #ident(pub i32);
@@ -188,7 +190,9 @@ impl Enum {
                 flagbits_name,
             } => {
                 let flags_ident = flags_name.ident();
+                let flags_doc_alias = &flags_name.original;
                 let flagbits_ident = flagbits_name.ident();
+                let flagbits_doc_alias = &flagbits_name.original;
 
                 let flags_doc = comment_gen.def(
                     Some(&flags_name.original),
@@ -226,6 +230,7 @@ impl Enum {
                 quote! {
                     bitflags::bitflags! {
                         #[doc = #flags_doc]
+                        #[doc(alias = #flags_doc_alias)]
                         #[derive(Default)]
                         #[repr(transparent)]
                         pub struct #flags_ident: u32 {
@@ -236,6 +241,7 @@ impl Enum {
                     }
 
                     #[doc = #flagbits_doc]
+                    #[doc(alias = #flagbits_doc_alias)]
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                     #[repr(transparent)]
                     pub struct #flagbits_ident(pub u32);

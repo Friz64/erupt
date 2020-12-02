@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_BUFFER_MARKER_SPEC_VERSION")]
 pub const AMD_BUFFER_MARKER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_BUFFER_MARKER_EXTENSION_NAME")]
 pub const AMD_BUFFER_MARKER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_buffer_marker");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_WRITE_BUFFER_MARKER_AMD")]
 pub const FN_CMD_WRITE_BUFFER_MARKER_AMD: *const std::os::raw::c_char =
     crate::cstr!("vkCmdWriteBufferMarkerAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function"]
@@ -19,6 +22,7 @@ pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function"]
+    #[doc(alias = "vkCmdWriteBufferMarkerAMD")]
     pub unsafe fn cmd_write_buffer_marker_amd(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_FILTER_CUBIC_SPEC_VERSION")]
 pub const EXT_FILTER_CUBIC_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_FILTER_CUBIC_EXTENSION_NAME")]
 pub const EXT_FILTER_CUBIC_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_filter_cubic");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceImageViewImageFormatInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageViewImageFormatInfoEXT {
@@ -83,6 +86,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageViewImageFormatInfoEXTBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkFilterCubicImageViewImageFormatPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FilterCubicImageViewImageFormatPropertiesEXT {

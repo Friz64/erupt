@@ -1,28 +1,37 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_TRANSFORM_FEEDBACK_SPEC_VERSION")]
 pub const EXT_TRANSFORM_FEEDBACK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME")]
 pub const EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_transform_feedback");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT")]
 pub const FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindTransformFeedbackBuffersEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT")]
 pub const FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginTransformFeedbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_END_TRANSFORM_FEEDBACK_EXT")]
 pub const FN_CMD_END_TRANSFORM_FEEDBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndTransformFeedbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BEGIN_QUERY_INDEXED_EXT")]
 pub const FN_CMD_BEGIN_QUERY_INDEXED_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginQueryIndexedEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_END_QUERY_INDEXED_EXT")]
 pub const FN_CMD_END_QUERY_INDEXED_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndQueryIndexedEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT")]
 pub const FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectByteCountEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagBitsEXT.html)"] # [doc (alias = "VkPipelineRasterizationStateStreamCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateStreamCreateFlagsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagsEXT.html)"]
+#[doc(alias = "VkPipelineRasterizationStateStreamCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateFlagBitsEXT(pub u32);
@@ -97,6 +106,7 @@ pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
     vertex_stride: u32,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceTransformFeedbackFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTransformFeedbackFeaturesEXT {
@@ -184,6 +194,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackFeaturesEXTBuilde
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceTransformFeedbackPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTransformFeedbackPropertiesEXT {
@@ -388,6 +399,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackPropertiesEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPipelineRasterizationStateStreamCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationStateStreamCreateInfoEXT {
@@ -483,6 +495,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateStreamCreateInfoEXTBui
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
+    #[doc(alias = "vkCmdBindTransformFeedbackBuffersEXT")]
     pub unsafe fn cmd_bind_transform_feedback_buffers_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -507,6 +520,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
+    #[doc(alias = "vkCmdBeginTransformFeedbackEXT")]
     pub unsafe fn cmd_begin_transform_feedback_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -529,6 +543,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
+    #[doc(alias = "vkCmdEndTransformFeedbackEXT")]
     pub unsafe fn cmd_end_transform_feedback_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -551,6 +566,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
+    #[doc(alias = "vkCmdBeginQueryIndexedEXT")]
     pub unsafe fn cmd_begin_query_indexed_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -576,6 +592,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function"]
+    #[doc(alias = "vkCmdEndQueryIndexedEXT")]
     pub unsafe fn cmd_end_query_indexed_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -591,6 +608,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
+    #[doc(alias = "vkCmdDrawIndirectByteCountEXT")]
     pub unsafe fn cmd_draw_indirect_byte_count_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

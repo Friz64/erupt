@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION")]
 pub const EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME")]
 pub const EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_vertex_attribute_divisor");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure"]
+#[doc(alias = "VkVertexInputBindingDivisorDescriptionEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VertexInputBindingDivisorDescriptionEXT {
@@ -82,6 +85,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDivisorDescriptionEXTBuilder<'
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPipelineVertexInputDivisorStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineVertexInputDivisorStateCreateInfoEXT { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub vertex_binding_divisor_count : u32 , pub p_vertex_binding_divisors : * const crate :: extensions :: ext_vertex_attribute_divisor :: VertexInputBindingDivisorDescriptionEXT }
@@ -167,6 +171,7 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputDivisorStateCreateInfoEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
@@ -247,6 +252,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVertexAttributeDivisorPropertiesEX
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {

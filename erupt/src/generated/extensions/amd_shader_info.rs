@@ -1,11 +1,15 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_INFO_SPEC_VERSION")]
 pub const AMD_SHADER_INFO_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_INFO_EXTENSION_NAME")]
 pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_shader_info");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_SHADER_INFO_AMD")]
 pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!("vkGetShaderInfoAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum"]
+#[doc(alias = "VkShaderInfoTypeAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ShaderInfoTypeAMD(pub i32);
@@ -36,6 +40,7 @@ pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(
     p_info: *mut std::ffi::c_void,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure"]
+#[doc(alias = "VkShaderResourceUsageAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ShaderResourceUsageAMD {
@@ -144,6 +149,7 @@ impl<'a> std::ops::DerefMut for ShaderResourceUsageAMDBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure"]
+#[doc(alias = "VkShaderStatisticsInfoAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ShaderStatisticsInfoAMD {
@@ -268,6 +274,7 @@ impl<'a> std::ops::DerefMut for ShaderStatisticsInfoAMDBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function"]
+    #[doc(alias = "vkGetShaderInfoAMD")]
     pub unsafe fn get_shader_info_amd(
         &self,
         pipeline: crate::vk1_0::Pipeline,

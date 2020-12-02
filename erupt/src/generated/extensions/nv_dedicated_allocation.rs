@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION")]
 pub const NV_DEDICATED_ALLOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME")]
 pub const NV_DEDICATED_ALLOCATION_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_dedicated_allocation");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationImageCreateInfoNV {
@@ -80,6 +83,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationImageCreateInfoNVBuilder<'a> 
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkDedicatedAllocationBufferCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationBufferCreateInfoNV {
@@ -156,6 +160,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationBufferCreateInfoNVBuilder<'a>
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Structure"]
+#[doc(alias = "VkDedicatedAllocationMemoryAllocateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationMemoryAllocateInfoNV {

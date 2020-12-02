@@ -1,15 +1,20 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_ANDROID_SURFACE_SPEC_VERSION")]
 pub const KHR_ANDROID_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_ANDROID_SURFACE_EXTENSION_NAME")]
 pub const KHR_ANDROID_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_android_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_ANDROID_SURFACE_KHR")]
 pub const FN_CREATE_ANDROID_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAndroidSurfaceKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/ANativeWindow.html) · Basetype"]
+#[doc(alias = "ANativeWindow")]
 pub type ANativeWindow = std::ffi::c_void;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`](./struct.AndroidSurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`](./struct.AndroidSurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkAndroidSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AndroidSurfaceCreateFlagsKHR`](./struct.AndroidSurfaceCreateFlagsKHR.html)"]
+#[doc(alias = "VkAndroidSurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AndroidSurfaceCreateFlagBitsKHR(pub u32);
@@ -36,6 +41,7 @@ pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
     p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkAndroidSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidSurfaceCreateInfoKHR {
@@ -129,6 +135,7 @@ impl<'a> std::ops::DerefMut for AndroidSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
+    #[doc(alias = "vkCreateAndroidSurfaceKHR")]
     pub unsafe fn create_android_surface_khr(
         &self,
         create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,

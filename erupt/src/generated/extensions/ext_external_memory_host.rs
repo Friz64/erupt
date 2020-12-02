@@ -1,15 +1,19 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION")]
 pub const EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME")]
 pub const EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_external_memory_host");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT")]
 pub const FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryHostPointerPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , p_host_pointer : * const std :: ffi :: c_void , p_memory_host_pointer_properties : * mut crate :: extensions :: ext_external_memory_host :: MemoryHostPointerPropertiesEXT) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure"]
+#[doc(alias = "VkImportMemoryHostPointerInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryHostPointerInfoEXT {
@@ -97,6 +101,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryHostPointerInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkMemoryHostPointerPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryHostPointerPropertiesEXT {
@@ -173,6 +178,7 @@ impl<'a> std::ops::DerefMut for MemoryHostPointerPropertiesEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceExternalMemoryHostPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
@@ -262,6 +268,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalMemoryHostPropertiesEXTBui
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]
+    #[doc(alias = "vkGetMemoryHostPointerPropertiesEXT")]
     pub unsafe fn get_memory_host_pointer_properties_ext(
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,

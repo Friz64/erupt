@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_HDR_METADATA_SPEC_VERSION")]
 pub const EXT_HDR_METADATA_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_HDR_METADATA_EXTENSION_NAME")]
 pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_hdr_metadata");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SET_HDR_METADATA_EXT")]
 pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetHdrMetadataEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
@@ -15,6 +18,7 @@ pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
     p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Structure"]
+#[doc(alias = "VkXYColorEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct XYColorEXT {
@@ -90,6 +94,7 @@ impl<'a> std::ops::DerefMut for XYColorEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHdrMetadataEXT.html) · Structure"]
+#[doc(alias = "VkHdrMetadataEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct HdrMetadataEXT {
@@ -243,6 +248,7 @@ impl<'a> std::ops::DerefMut for HdrMetadataEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
+    #[doc(alias = "vkSetHdrMetadataEXT")]
     pub unsafe fn set_hdr_metadata_ext(
         &self,
         swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR],

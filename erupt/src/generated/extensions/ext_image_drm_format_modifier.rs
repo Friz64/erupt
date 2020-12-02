@@ -1,15 +1,19 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION")]
 pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME")]
 pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_image_drm_format_modifier");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT")]
 pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , image : crate :: vk1_0 :: Image , p_properties : * mut crate :: extensions :: ext_image_drm_format_modifier :: ImageDrmFormatModifierPropertiesEXT) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
+#[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesListEXT {
@@ -97,6 +101,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesListEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkDrmFormatModifierPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesEXT {
@@ -192,6 +197,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceImageDrmFormatModifierInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
@@ -291,6 +297,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageDrmFormatModifierInfoEXTBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkImageDrmFormatModifierListCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierListCreateInfoEXT {
@@ -371,6 +378,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierListCreateInfoEXTBuilder<'
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierExplicitCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkImageDrmFormatModifierExplicitCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
@@ -468,6 +476,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierExplicitCreateInfoEXTBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkImageDrmFormatModifierPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierPropertiesEXT {
@@ -547,6 +556,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
+    #[doc(alias = "vkGetImageDrmFormatModifierPropertiesEXT")]
     pub unsafe fn get_image_drm_format_modifier_properties_ext(
         &self,
         image: crate::vk1_0::Image,

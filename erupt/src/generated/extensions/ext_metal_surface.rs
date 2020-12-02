@@ -1,15 +1,20 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_METAL_SURFACE_SPEC_VERSION")]
 pub const EXT_METAL_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_METAL_SURFACE_EXTENSION_NAME")]
 pub const EXT_METAL_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_metal_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_METAL_SURFACE_EXT")]
 pub const FN_CREATE_METAL_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateMetalSurfaceEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/CAMetalLayer.html) · Basetype"]
+#[doc(alias = "CAMetalLayer")]
 pub type CAMetalLayer = std::ffi::c_void;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`](./struct.MetalSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct MetalSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`](./struct.MetalSurfaceCreateFlagBitsEXT.html)"] # [doc (alias = "VkMetalSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct MetalSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MetalSurfaceCreateFlagsEXT`](./struct.MetalSurfaceCreateFlagsEXT.html)"]
+#[doc(alias = "VkMetalSurfaceCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct MetalSurfaceCreateFlagBitsEXT(pub u32);
@@ -36,6 +41,7 @@ pub type PFN_vkCreateMetalSurfaceEXT = unsafe extern "system" fn(
     p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkMetalSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MetalSurfaceCreateInfoEXT {
@@ -126,6 +132,7 @@ impl<'a> std::ops::DerefMut for MetalSurfaceCreateInfoEXTBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function"]
+    #[doc(alias = "vkCreateMetalSurfaceEXT")]
     pub unsafe fn create_metal_surface_ext(
         &self,
         create_info: &crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,

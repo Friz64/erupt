@@ -1,16 +1,21 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_WAYLAND_SURFACE_SPEC_VERSION")]
 pub const KHR_WAYLAND_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME")]
 pub const KHR_WAYLAND_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_wayland_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_WAYLAND_SURFACE_KHR")]
 pub const FN_CREATE_WAYLAND_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateWaylandSurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceWaylandPresentationSupportKHR");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`](./struct.WaylandSurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`](./struct.WaylandSurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkWaylandSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`WaylandSurfaceCreateFlagsKHR`](./struct.WaylandSurfaceCreateFlagsKHR.html)"]
+#[doc(alias = "VkWaylandSurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct WaylandSurfaceCreateFlagBitsKHR(pub u32);
@@ -45,6 +50,7 @@ pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR =
         display: *mut std::ffi::c_void,
     ) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkWaylandSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WaylandSurfaceCreateInfoKHR {
@@ -143,6 +149,7 @@ impl<'a> std::ops::DerefMut for WaylandSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function"]
+    #[doc(alias = "vkCreateWaylandSurfaceKHR")]
     pub unsafe fn create_wayland_surface_khr(
         &self,
         create_info: &crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR,
@@ -169,6 +176,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceWaylandPresentationSupportKHR")]
     pub unsafe fn get_physical_device_wayland_presentation_support_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,

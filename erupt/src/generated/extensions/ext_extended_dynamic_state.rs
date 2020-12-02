@@ -1,42 +1,56 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION")]
 pub const EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME")]
 pub const EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_extended_dynamic_state");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_CULL_MODE_EXT")]
 pub const FN_CMD_SET_CULL_MODE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCullModeEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_FRONT_FACE_EXT")]
 pub const FN_CMD_SET_FRONT_FACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetFrontFaceEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT")]
 pub const FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPrimitiveTopologyEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT")]
 pub const FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetViewportWithCountEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_SCISSOR_WITH_COUNT_EXT")]
 pub const FN_CMD_SET_SCISSOR_WITH_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetScissorWithCountEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BIND_VERTEX_BUFFERS2_EXT")]
 pub const FN_CMD_BIND_VERTEX_BUFFERS2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindVertexBuffers2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_DEPTH_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthWriteEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_DEPTH_COMPARE_OP_EXT")]
 pub const FN_CMD_SET_DEPTH_COMPARE_OP_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthCompareOpEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthBoundsTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_STENCIL_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_STENCIL_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_STENCIL_OP_EXT")]
 pub const FN_CMD_SET_STENCIL_OP_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilOpEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]
@@ -123,6 +137,7 @@ pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(
     compare_op: crate::vk1_0::CompareOp,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceExtendedDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExtendedDynamicStateFeaturesEXT {
@@ -209,6 +224,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExtendedDynamicStateFeaturesEXTBui
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetCullModeEXT")]
     pub unsafe fn cmd_set_cull_mode_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -228,6 +244,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFrontFaceEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetFrontFaceEXT")]
     pub unsafe fn cmd_set_front_face_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -241,6 +258,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetPrimitiveTopologyEXT")]
     pub unsafe fn cmd_set_primitive_topology_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -254,6 +272,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWithCountEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetViewportWithCountEXT")]
     pub unsafe fn cmd_set_viewport_with_count_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -272,6 +291,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetScissorWithCountEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetScissorWithCountEXT")]
     pub unsafe fn cmd_set_scissor_with_count_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -290,6 +310,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers2EXT.html) · Function"]
+    #[doc(alias = "vkCmdBindVertexBuffers2EXT")]
     pub unsafe fn cmd_bind_vertex_buffers2_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -320,6 +341,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthTestEnableEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetDepthTestEnableEXT")]
     pub unsafe fn cmd_set_depth_test_enable_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -333,6 +355,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetDepthWriteEnableEXT")]
     pub unsafe fn cmd_set_depth_write_enable_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -346,6 +369,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthCompareOpEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetDepthCompareOpEXT")]
     pub unsafe fn cmd_set_depth_compare_op_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -359,6 +383,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBoundsTestEnableEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetDepthBoundsTestEnableEXT")]
     pub unsafe fn cmd_set_depth_bounds_test_enable_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -372,6 +397,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilTestEnableEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetStencilTestEnableEXT")]
     pub unsafe fn cmd_set_stencil_test_enable_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -385,6 +411,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetStencilOpEXT")]
     pub unsafe fn cmd_set_stencil_op_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

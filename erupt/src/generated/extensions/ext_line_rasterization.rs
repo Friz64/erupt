@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_LINE_RASTERIZATION_SPEC_VERSION")]
 pub const EXT_LINE_RASTERIZATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME")]
 pub const EXT_LINE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_line_rasterization");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_LINE_STIPPLE_EXT")]
 pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetLineStippleEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]
+#[doc(alias = "VkLineRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct LineRasterizationModeEXT(pub i32);
@@ -36,6 +40,7 @@ pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(
     line_stipple_pattern: u16,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceLineRasterizationFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLineRasterizationFeaturesEXT {
@@ -161,6 +166,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationFeaturesEXTBuilde
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceLineRasterizationPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLineRasterizationPropertiesEXT {
@@ -243,6 +249,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationPropertiesEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPipelineRasterizationLineStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationLineStateCreateInfoEXT {
@@ -353,6 +360,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetLineStippleEXT")]
     pub unsafe fn cmd_set_line_stipple_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

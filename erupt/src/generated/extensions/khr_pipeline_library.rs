@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PIPELINE_LIBRARY_SPEC_VERSION")]
 pub const KHR_PIPELINE_LIBRARY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME")]
 pub const KHR_PIPELINE_LIBRARY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_pipeline_library");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkPipelineLibraryCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineLibraryCreateInfoKHR {

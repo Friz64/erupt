@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_FENCE_WIN32_SPEC_VERSION")]
 pub const KHR_EXTERNAL_FENCE_WIN32_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_FENCE_WIN32_EXTENSION_NAME")]
 pub const KHR_EXTERNAL_FENCE_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_fence_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_FENCE_WIN32_HANDLE_KHR")]
 pub const FN_GET_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetFenceWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_IMPORT_FENCE_WIN32_HANDLE_KHR")]
 pub const FN_IMPORT_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkImportFenceWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
@@ -16,6 +20,7 @@ pub type PFN_vkGetFenceWin32HandleKHR = unsafe extern "system" fn (device : crat
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_fence_win32_handle_info : * const crate :: extensions :: khr_external_fence_win32 :: ImportFenceWin32HandleInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Structure"]
+#[doc(alias = "VkImportFenceWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportFenceWin32HandleInfoKHR {
@@ -127,6 +132,7 @@ impl<'a> std::ops::DerefMut for ImportFenceWin32HandleInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Structure"]
+#[doc(alias = "VkExportFenceWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportFenceWin32HandleInfoKHR {
@@ -219,6 +225,7 @@ impl<'a> std::ops::DerefMut for ExportFenceWin32HandleInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Structure"]
+#[doc(alias = "VkFenceGetWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FenceGetWin32HandleInfoKHR {
@@ -309,6 +316,7 @@ impl<'a> std::ops::DerefMut for FenceGetWin32HandleInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
+    #[doc(alias = "vkGetFenceWin32HandleKHR")]
     pub unsafe fn get_fence_win32_handle_khr(
         &self,
         get_win32_handle_info : & crate :: extensions :: khr_external_fence_win32 :: FenceGetWin32HandleInfoKHR,
@@ -322,6 +330,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceWin32HandleKHR.html) · Function"]
+    #[doc(alias = "vkImportFenceWin32HandleKHR")]
     pub unsafe fn import_fence_win32_handle_khr(
         &self,
         import_fence_win32_handle_info : & crate :: extensions :: khr_external_fence_win32 :: ImportFenceWin32HandleInfoKHR,

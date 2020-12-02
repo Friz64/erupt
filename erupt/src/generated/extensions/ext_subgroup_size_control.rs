@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_SUBGROUP_SIZE_CONTROL_SPEC_VERSION")]
 pub const EXT_SUBGROUP_SIZE_CONTROL_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME")]
 pub const EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_subgroup_size_control");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceSubgroupSizeControlFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
@@ -94,6 +97,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlFeaturesEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceSubgroupSizeControlPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
@@ -207,6 +211,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlPropertiesEXTBu
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {

@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION")]
 pub const AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME")]
 pub const AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_shader_core_properties");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceShaderCorePropertiesAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderCorePropertiesAMD {

@@ -55,12 +55,13 @@ pub struct Handle {
 impl Handle {
     pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
         let ident = self.name.ident();
+        let doc_alias = &self.name.original;
         let macro_path = self.kind.macro_path();
         let object_type = format_ident!("{}", self.name.trimmed.to_shouty_snake_case());
         let doc = comment_gen.def(Some(&self.name.original), &self.kind, None);
 
         quote! {
-            #macro_path(#ident, #object_type, doc = #doc);
+            #macro_path(#ident, #object_type, #doc, #doc_alias);
         }
     }
 }

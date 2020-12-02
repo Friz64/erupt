@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION")]
 pub const NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME")]
 pub const NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_fragment_shading_rate_enums");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV")]
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetFragmentShadingRateEnumNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateNV.html) · Enum"]
+#[doc(alias = "VkFragmentShadingRateNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct FragmentShadingRateNV(pub i32);
@@ -45,6 +49,7 @@ impl FragmentShadingRateNV {
     pub const NO_INVOCATIONS_NV: Self = Self(15);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateTypeNV.html) · Enum"]
+#[doc(alias = "VkFragmentShadingRateTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct FragmentShadingRateTypeNV(pub i32);
@@ -71,6 +76,7 @@ pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(
         2],
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
@@ -182,6 +188,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
@@ -264,6 +271,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateEnumsProperties
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkPipelineFragmentShadingRateEnumStateCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineFragmentShadingRateEnumStateCreateInfoNV {
@@ -368,6 +376,7 @@ impl<'a> std::ops::DerefMut for PipelineFragmentShadingRateEnumStateCreateInfoNV
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
+    #[doc(alias = "vkCmdSetFragmentShadingRateEnumNV")]
     pub unsafe fn cmd_set_fragment_shading_rate_enum_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

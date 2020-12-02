@@ -1,24 +1,31 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION")]
 pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME")]
 pub const KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_deferred_host_operations");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_DEFERRED_OPERATION_KHR")]
 pub const FN_CREATE_DEFERRED_OPERATION_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDeferredOperationKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DESTROY_DEFERRED_OPERATION_KHR")]
 pub const FN_DESTROY_DEFERRED_OPERATION_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDeferredOperationKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR")]
 pub const FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeferredOperationMaxConcurrencyKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_DEFERRED_OPERATION_RESULT_KHR")]
 pub const FN_GET_DEFERRED_OPERATION_RESULT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeferredOperationResultKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DEFERRED_OPERATION_JOIN_KHR")]
 pub const FN_DEFERRED_OPERATION_JOIN_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDeferredOperationJoinKHR");
-crate :: non_dispatchable_handle ! (DeferredOperationKHR , DEFERRED_OPERATION_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle") ;
+crate :: non_dispatchable_handle ! (DeferredOperationKHR , DEFERRED_OPERATION_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle" , "VkDeferredOperationKHR") ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDeferredOperationKHR = unsafe extern "system" fn(
@@ -55,6 +62,7 @@ pub type PFN_vkDeferredOperationJoinKHR = unsafe extern "system" fn(
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
+    #[doc(alias = "vkCreateDeferredOperationKHR")]
     pub unsafe fn create_deferred_operation_khr(
         &self,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
@@ -83,6 +91,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
+    #[doc(alias = "vkDestroyDeferredOperationKHR")]
     pub unsafe fn destroy_deferred_operation_khr(
         &self,
         operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
@@ -106,6 +115,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationMaxConcurrencyKHR.html) · Function"]
+    #[doc(alias = "vkGetDeferredOperationMaxConcurrencyKHR")]
     pub unsafe fn get_deferred_operation_max_concurrency_khr(
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
@@ -118,6 +128,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationResultKHR.html) · Function"]
+    #[doc(alias = "vkGetDeferredOperationResultKHR")]
     pub unsafe fn get_deferred_operation_result_khr(
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
@@ -130,6 +141,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDeferredOperationJoinKHR.html) · Function"]
+    #[doc(alias = "vkDeferredOperationJoinKHR")]
     pub unsafe fn deferred_operation_join_khr(
         &self,
         operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,

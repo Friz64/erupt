@@ -1,23 +1,30 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_PRIVATE_DATA_SPEC_VERSION")]
 pub const EXT_PRIVATE_DATA_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_PRIVATE_DATA_EXTENSION_NAME")]
 pub const EXT_PRIVATE_DATA_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_private_data");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_PRIVATE_DATA_SLOT_EXT")]
 pub const FN_CREATE_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreatePrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DESTROY_PRIVATE_DATA_SLOT_EXT")]
 pub const FN_DESTROY_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyPrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SET_PRIVATE_DATA_EXT")]
 pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetPrivateDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PRIVATE_DATA_EXT")]
 pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPrivateDataEXT");
-crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle" , "VkPrivateDataSlotEXT") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)"] # [doc (alias = "VkPrivateDataSlotCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`](./struct.PrivateDataSlotCreateFlagsEXT.html)"]
+#[doc(alias = "VkPrivateDataSlotCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PrivateDataSlotCreateFlagBitsEXT(pub u32);
@@ -69,6 +76,7 @@ pub type PFN_vkGetPrivateDataEXT = unsafe extern "system" fn(
     p_data: *mut u64,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkDevicePrivateDataCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DevicePrivateDataCreateInfoEXT {
@@ -148,6 +156,7 @@ impl<'a> std::ops::DerefMut for DevicePrivateDataCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPrivateDataSlotCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PrivateDataSlotCreateInfoEXT {
@@ -227,6 +236,7 @@ impl<'a> std::ops::DerefMut for PrivateDataSlotCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePrivateDataFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePrivateDataFeaturesEXT {
@@ -306,6 +316,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> 
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePrivateDataSlotEXT.html) · Function"]
+    #[doc(alias = "vkCreatePrivateDataSlotEXT")]
     pub unsafe fn create_private_data_slot_ext(
         &self,
         create_info: &crate::extensions::ext_private_data::PrivateDataSlotCreateInfoEXT,
@@ -332,6 +343,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPrivateDataSlotEXT.html) · Function"]
+    #[doc(alias = "vkDestroyPrivateDataSlotEXT")]
     pub unsafe fn destroy_private_data_slot_ext(
         &self,
         private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>,
@@ -355,6 +367,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetPrivateDataEXT.html) · Function"]
+    #[doc(alias = "vkSetPrivateDataEXT")]
     pub unsafe fn set_private_data_ext(
         &self,
         object_type: crate::vk1_0::ObjectType,
@@ -376,6 +389,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPrivateDataEXT.html) · Function"]
+    #[doc(alias = "vkGetPrivateDataEXT")]
     pub unsafe fn get_private_data_ext(
         &self,
         object_type: crate::vk1_0::ObjectType,

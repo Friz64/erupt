@@ -358,9 +358,11 @@ impl Function {
             }
         };
 
+        let doc_alias = &self.name.no_pfn;
         quote! {
             #[inline]
             #[doc = #doc]
+            #[doc(alias = #doc_alias)]
             pub unsafe fn #ident(&self, #(#param_idents: #param_types),*) -> #return_type {
                 let _function = self.#ident.expect(#error);
                 #extra_call

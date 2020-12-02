@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION")]
 pub const KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME")]
 pub const KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_semaphore_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_SEMAPHORE_FD_KHR")]
 pub const FN_GET_SEMAPHORE_FD_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSemaphoreFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_IMPORT_SEMAPHORE_FD_KHR")]
 pub const FN_IMPORT_SEMAPHORE_FD_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkImportSemaphoreFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
@@ -20,6 +24,7 @@ pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_semaphore_fd_info : * const crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Structure"]
+#[doc(alias = "VkImportSemaphoreFdInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportSemaphoreFdInfoKHR {
@@ -123,6 +128,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreFdInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Structure"]
+#[doc(alias = "VkSemaphoreGetFdInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SemaphoreGetFdInfoKHR {
@@ -213,6 +219,7 @@ impl<'a> std::ops::DerefMut for SemaphoreGetFdInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
+    #[doc(alias = "vkGetSemaphoreFdKHR")]
     pub unsafe fn get_semaphore_fd_khr(
         &self,
         get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR,
@@ -230,6 +237,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
+    #[doc(alias = "vkImportSemaphoreFdKHR")]
     pub unsafe fn import_semaphore_fd_khr(
         &self,
         import_semaphore_fd_info : & crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR,

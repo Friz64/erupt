@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_EXTERNAL_MEMORY_SPEC_VERSION")]
 pub const NV_EXTERNAL_MEMORY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME")]
 pub const NV_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_external_memory");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalMemoryImageCreateInfoNV {
@@ -84,6 +87,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Structure"]
+#[doc(alias = "VkExportMemoryAllocateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportMemoryAllocateInfoNV {

@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION")]
 pub const KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME")]
 pub const KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_get_surface_capabilities2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceFormats2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]
@@ -16,6 +20,7 @@ pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system"
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_format_count : * mut u32 , p_surface_formats : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceFormat2KHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceSurfaceInfo2KHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSurfaceInfo2KHR {
@@ -122,6 +127,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Structure"]
+#[doc(alias = "VkSurfaceCapabilities2KHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceCapabilities2KHR {
@@ -249,6 +255,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2KHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Structure"]
+#[doc(alias = "VkSurfaceFormat2KHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceFormat2KHR {
@@ -328,6 +335,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormat2KHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilities2KHR")]
     pub unsafe fn get_physical_device_surface_capabilities2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
@@ -354,6 +362,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceSurfaceFormats2KHR")]
     pub unsafe fn get_physical_device_surface_formats2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,

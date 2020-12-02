@@ -1,11 +1,15 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_FENCE_FD_SPEC_VERSION")]
 pub const KHR_EXTERNAL_FENCE_FD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME")]
 pub const KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_fence_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_FENCE_FD_KHR")]
 pub const FN_GET_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetFenceFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_IMPORT_FENCE_FD_KHR")]
 pub const FN_IMPORT_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -21,6 +25,7 @@ pub type PFN_vkImportFenceFdKHR = unsafe extern "system" fn(
     p_import_fence_fd_info: *const crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceFdInfoKHR.html) · Structure"]
+#[doc(alias = "VkImportFenceFdInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportFenceFdInfoKHR {
@@ -121,6 +126,7 @@ impl<'a> std::ops::DerefMut for ImportFenceFdInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetFdInfoKHR.html) · Structure"]
+#[doc(alias = "VkFenceGetFdInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FenceGetFdInfoKHR {
@@ -208,6 +214,7 @@ impl<'a> std::ops::DerefMut for FenceGetFdInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
+    #[doc(alias = "vkGetFenceFdKHR")]
     pub unsafe fn get_fence_fd_khr(
         &self,
         get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR,
@@ -225,6 +232,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceFdKHR.html) · Function"]
+    #[doc(alias = "vkImportFenceFdKHR")]
     pub unsafe fn import_fence_fd_khr(
         &self,
         import_fence_fd_info: &crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR,

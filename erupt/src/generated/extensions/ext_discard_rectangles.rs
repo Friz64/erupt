@@ -1,13 +1,17 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION")]
 pub const EXT_DISCARD_RECTANGLES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME")]
 pub const EXT_DISCARD_RECTANGLES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_discard_rectangles");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_DISCARD_RECTANGLE_EXT")]
 pub const FN_CMD_SET_DISCARD_RECTANGLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDiscardRectangleEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateFlagsEXT.html) · Bitmask of [`PipelineDiscardRectangleStateCreateFlagBitsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct PipelineDiscardRectangleStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateFlagsEXT.html) · Bitmask of [`PipelineDiscardRectangleStateCreateFlagBitsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagBitsEXT.html)"] # [doc (alias = "VkPipelineDiscardRectangleStateCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDiscardRectangleStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDiscardRectangleStateCreateFlagsEXT`](./struct.PipelineDiscardRectangleStateCreateFlagsEXT.html)"]
+#[doc(alias = "VkPipelineDiscardRectangleStateCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PipelineDiscardRectangleStateCreateFlagBitsEXT(pub u32);
@@ -26,6 +30,7 @@ impl std::fmt::Debug for PipelineDiscardRectangleStateCreateFlagBitsEXT {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDiscardRectangleModeEXT.html) · Enum"]
+#[doc(alias = "VkDiscardRectangleModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DiscardRectangleModeEXT(pub i32);
@@ -52,6 +57,7 @@ pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(
     p_discard_rectangles: *const crate::vk1_0::Rect2D,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceDiscardRectanglePropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDiscardRectanglePropertiesEXT {
@@ -131,6 +137,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiscardRectanglePropertiesEXTBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkPipelineDiscardRectangleStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineDiscardRectangleStateCreateInfoEXT {
@@ -243,6 +250,7 @@ impl<'a> std::ops::DerefMut for PipelineDiscardRectangleStateCreateInfoEXTBuilde
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
+    #[doc(alias = "vkCmdSetDiscardRectangleEXT")]
     pub unsafe fn cmd_set_discard_rectangle_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

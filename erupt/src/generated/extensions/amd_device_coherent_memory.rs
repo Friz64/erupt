@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION")]
 pub const AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME")]
 pub const AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_device_coherent_memory");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceCoherentMemoryFeaturesAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCoherentMemoryFeaturesAMD {

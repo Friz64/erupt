@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_WIN32_KEYED_MUTEX_SPEC_VERSION")]
 pub const NV_WIN32_KEYED_MUTEX_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_WIN32_KEYED_MUTEX_EXTENSION_NAME")]
 pub const NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_win32_keyed_mutex");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Structure"]
+#[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct Win32KeyedMutexAcquireReleaseInfoNV {

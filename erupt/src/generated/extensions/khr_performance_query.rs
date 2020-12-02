@@ -1,23 +1,30 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PERFORMANCE_QUERY_SPEC_VERSION")]
 pub const KHR_PERFORMANCE_QUERY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME")]
 pub const KHR_PERFORMANCE_QUERY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_performance_query");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR")]
 pub const FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR:
     *const std::os::raw::c_char =
     crate::cstr!("vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR:
     *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_ACQUIRE_PROFILING_LOCK_KHR")]
 pub const FN_ACQUIRE_PROFILING_LOCK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireProfilingLockKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_RELEASE_PROFILING_LOCK_KHR")]
 pub const FN_RELEASE_PROFILING_LOCK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkReleaseProfilingLockKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterScopeKHR.html) · Enum"]
+#[doc(alias = "VkPerformanceCounterScopeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterScopeKHR(pub i32);
@@ -41,6 +48,7 @@ impl PerformanceCounterScopeKHR {
     pub const QUERY_SCOPE_COMMAND_KHR: Self = Self::COMMAND_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterUnitKHR.html) · Enum"]
+#[doc(alias = "VkPerformanceCounterUnitKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterUnitKHR(pub i32);
@@ -77,6 +85,7 @@ impl PerformanceCounterUnitKHR {
     pub const CYCLES_KHR: Self = Self(10);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterStorageKHR.html) · Enum"]
+#[doc(alias = "VkPerformanceCounterStorageKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterStorageKHR(pub i32);
@@ -102,8 +111,9 @@ impl PerformanceCounterStorageKHR {
     pub const FLOAT32_KHR: Self = Self(4);
     pub const FLOAT64_KHR: Self = Self(5);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`](./struct.PerformanceCounterDescriptionFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`](./struct.PerformanceCounterDescriptionFlagBitsKHR.html)"] # [doc (alias = "VkPerformanceCounterDescriptionFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Bits enum of [`PerformanceCounterDescriptionFlagsKHR`](./struct.PerformanceCounterDescriptionFlagsKHR.html)"]
+#[doc(alias = "VkPerformanceCounterDescriptionFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceCounterDescriptionFlagBitsKHR(pub u32);
@@ -128,8 +138,9 @@ impl PerformanceCounterDescriptionFlagBitsKHR {
     pub const PERFORMANCE_IMPACTING_KHR: Self = Self(1);
     pub const CONCURRENTLY_IMPACTED_KHR: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockFlagsKHR.html) · Bitmask of [`AcquireProfilingLockFlagBitsKHR`](./struct.AcquireProfilingLockFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct AcquireProfilingLockFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockFlagsKHR.html) · Bitmask of [`AcquireProfilingLockFlagBitsKHR`](./struct.AcquireProfilingLockFlagBitsKHR.html)"] # [doc (alias = "VkAcquireProfilingLockFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AcquireProfilingLockFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AcquireProfilingLockFlagsKHR`](./struct.AcquireProfilingLockFlagsKHR.html)"]
+#[doc(alias = "VkAcquireProfilingLockFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AcquireProfilingLockFlagBitsKHR(pub u32);
@@ -164,6 +175,7 @@ pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(
 pub type PFN_vkReleaseProfilingLockKHR =
     unsafe extern "system" fn(device: crate::vk1_0::Device) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryFeaturesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePerformanceQueryFeaturesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
@@ -264,6 +276,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryFeaturesKHRBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryPropertiesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePerformanceQueryPropertiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
@@ -349,6 +362,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryPropertiesKHRBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterKHR.html) · Structure"]
+#[doc(alias = "VkPerformanceCounterKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceCounterKHR {
@@ -458,6 +472,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionKHR.html) · Structure"]
+#[doc(alias = "VkPerformanceCounterDescriptionKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceCounterDescriptionKHR {
@@ -567,6 +582,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterDescriptionKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkQueryPoolPerformanceCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueryPoolPerformanceCreateInfoKHR {
@@ -655,6 +671,7 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterResultKHR.html) · Structure"]
+#[doc(alias = "VkPerformanceCounterResultKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union PerformanceCounterResultKHR {
@@ -676,6 +693,7 @@ impl std::fmt::Debug for PerformanceCounterResultKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireProfilingLockInfoKHR.html) · Structure"]
+#[doc(alias = "VkAcquireProfilingLockInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AcquireProfilingLockInfoKHR {
@@ -763,6 +781,7 @@ impl<'a> std::ops::DerefMut for AcquireProfilingLockInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceQuerySubmitInfoKHR.html) · Structure"]
+#[doc(alias = "VkPerformanceQuerySubmitInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceQuerySubmitInfoKHR {
@@ -842,6 +861,7 @@ impl<'a> std::ops::DerefMut for PerformanceQuerySubmitInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
+    #[doc(alias = "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR")]
     pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
@@ -879,6 +899,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR")]
     pub unsafe fn get_physical_device_queue_family_performance_query_passes_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
@@ -906,6 +927,7 @@ impl crate::InstanceLoader {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
+    #[doc(alias = "vkAcquireProfilingLockKHR")]
     pub unsafe fn acquire_profiling_lock_khr(
         &self,
         info: &crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR,
@@ -918,6 +940,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Function"]
+    #[doc(alias = "vkReleaseProfilingLockKHR")]
     pub unsafe fn release_profiling_lock_khr(&self) -> () {
         let _function = self
             .release_profiling_lock_khr

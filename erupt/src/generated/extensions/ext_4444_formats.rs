@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_4444_FORMATS_SPEC_VERSION")]
 pub const EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_4444_FORMATS_EXTENSION_NAME")]
 pub const EXT_4444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_4444_formats");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDevice4444FormatsFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevice4444FormatsFeaturesEXT {

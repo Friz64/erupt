@@ -1,45 +1,59 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_INTEL_PERFORMANCE_QUERY_SPEC_VERSION")]
 pub const INTEL_PERFORMANCE_QUERY_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME")]
 pub const INTEL_PERFORMANCE_QUERY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_INTEL_performance_query");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_INITIALIZE_PERFORMANCE_API_INTEL")]
 pub const FN_INITIALIZE_PERFORMANCE_API_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkInitializePerformanceApiINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_UNINITIALIZE_PERFORMANCE_API_INTEL")]
 pub const FN_UNINITIALIZE_PERFORMANCE_API_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkUninitializePerformanceApiINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_PERFORMANCE_MARKER_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_MARKER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceMarkerINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceStreamMarkerINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceOverrideINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkAcquirePerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkReleasePerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkQueueSetPerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PERFORMANCE_PARAMETER_INTEL")]
 pub const FN_GET_PERFORMANCE_PARAMETER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkGetPerformanceParameterINTEL");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfoINTEL.html) · Alias"]
+#[doc(alias = "VkQueryPoolCreateInfoINTEL")]
 #[allow(non_camel_case_types)]
 pub type QueryPoolCreateInfoINTEL =
     crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTEL;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfoINTEL.html) · Alias"]
+#[doc(alias = "VkQueryPoolCreateInfoINTEL")]
 #[allow(non_camel_case_types)]
 pub type QueryPoolCreateInfoINTELBuilder<'a> =
     crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a>;
-crate :: non_dispatchable_handle ! (PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle") ;
+crate :: non_dispatchable_handle ! (PerformanceConfigurationINTEL , PERFORMANCE_CONFIGURATION_INTEL , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle" , "VkPerformanceConfigurationINTEL") ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
+#[doc(alias = "VkPerformanceConfigurationTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceConfigurationTypeINTEL(pub i32);
@@ -58,6 +72,7 @@ impl PerformanceConfigurationTypeINTEL {
     pub const COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolSamplingModeINTEL.html) · Enum"]
+#[doc(alias = "VkQueryPoolSamplingModeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct QueryPoolSamplingModeINTEL(pub i32);
@@ -74,6 +89,7 @@ impl QueryPoolSamplingModeINTEL {
     pub const MANUAL_INTEL: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideTypeINTEL.html) · Enum"]
+#[doc(alias = "VkPerformanceOverrideTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceOverrideTypeINTEL(pub i32);
@@ -92,6 +108,7 @@ impl PerformanceOverrideTypeINTEL {
     pub const FLUSH_GPU_CACHES_INTEL: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceParameterTypeINTEL.html) · Enum"]
+#[doc(alias = "VkPerformanceParameterTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceParameterTypeINTEL(pub i32);
@@ -110,6 +127,7 @@ impl PerformanceParameterTypeINTEL {
     pub const STREAM_MARKER_VALIDS_INTEL: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueTypeINTEL.html) · Enum"]
+#[doc(alias = "VkPerformanceValueTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct PerformanceValueTypeINTEL(pub i32);
@@ -180,6 +198,7 @@ pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(
     p_value: *mut crate::extensions::intel_performance_query::PerformanceValueINTEL,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueDataINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceValueDataINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union PerformanceValueDataINTEL {
@@ -200,6 +219,7 @@ impl std::fmt::Debug for PerformanceValueDataINTEL {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceValueINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceValueINTEL {
@@ -284,6 +304,7 @@ impl<'a> std::ops::DerefMut for PerformanceValueINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInitializePerformanceApiInfoINTEL.html) · Structure"]
+#[doc(alias = "VkInitializePerformanceApiInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct InitializePerformanceApiInfoINTEL {
@@ -360,6 +381,7 @@ impl<'a> std::ops::DerefMut for InitializePerformanceApiInfoINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceQueryCreateInfoINTEL.html) · Structure"]
+#[doc(alias = "VkQueryPoolPerformanceQueryCreateInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueryPoolPerformanceQueryCreateInfoINTEL {
@@ -446,6 +468,7 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceQueryCreateInfoINTELBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceMarkerInfoINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceMarkerInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceMarkerInfoINTEL {
@@ -522,6 +545,7 @@ impl<'a> std::ops::DerefMut for PerformanceMarkerInfoINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceStreamMarkerInfoINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceStreamMarkerInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceStreamMarkerInfoINTEL {
@@ -598,6 +622,7 @@ impl<'a> std::ops::DerefMut for PerformanceStreamMarkerInfoINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideInfoINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceOverrideInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceOverrideInfoINTEL {
@@ -693,6 +718,7 @@ impl<'a> std::ops::DerefMut for PerformanceOverrideInfoINTELBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationAcquireInfoINTEL.html) · Structure"]
+#[doc(alias = "VkPerformanceConfigurationAcquireInfoINTEL")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceConfigurationAcquireInfoINTEL {
@@ -778,6 +804,7 @@ impl<'a> std::ops::DerefMut for PerformanceConfigurationAcquireInfoINTELBuilder<
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkInitializePerformanceApiINTEL.html) · Function"]
+    #[doc(alias = "vkInitializePerformanceApiINTEL")]
     pub unsafe fn initialize_performance_api_intel(
         &self,
         initialize_info : & crate :: extensions :: intel_performance_query :: InitializePerformanceApiInfoINTEL,
@@ -790,6 +817,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUninitializePerformanceApiINTEL.html) · Function"]
+    #[doc(alias = "vkUninitializePerformanceApiINTEL")]
     pub unsafe fn uninitialize_performance_api_intel(&self) -> () {
         let _function = self
             .uninitialize_performance_api_intel
@@ -799,6 +827,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html) · Function"]
+    #[doc(alias = "vkCmdSetPerformanceMarkerINTEL")]
     pub unsafe fn cmd_set_performance_marker_intel(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -812,6 +841,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceStreamMarkerINTEL.html) · Function"]
+    #[doc(alias = "vkCmdSetPerformanceStreamMarkerINTEL")]
     pub unsafe fn cmd_set_performance_stream_marker_intel(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -825,6 +855,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceOverrideINTEL.html) · Function"]
+    #[doc(alias = "vkCmdSetPerformanceOverrideINTEL")]
     pub unsafe fn cmd_set_performance_override_intel(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -838,6 +869,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html) · Function"]
+    #[doc(alias = "vkAcquirePerformanceConfigurationINTEL")]
     pub unsafe fn acquire_performance_configuration_intel(
         &self,
         acquire_info : & crate :: extensions :: intel_performance_query :: PerformanceConfigurationAcquireInfoINTEL,
@@ -859,6 +891,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
+    #[doc(alias = "vkReleasePerformanceConfigurationINTEL")]
     pub unsafe fn release_performance_configuration_intel(
         &self,
         configuration: Option<
@@ -879,6 +912,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSetPerformanceConfigurationINTEL.html) · Function"]
+    #[doc(alias = "vkQueueSetPerformanceConfigurationINTEL")]
     pub unsafe fn queue_set_performance_configuration_intel(
         &self,
         queue: crate::vk1_0::Queue,
@@ -892,6 +926,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPerformanceParameterINTEL.html) · Function"]
+    #[doc(alias = "vkGetPerformanceParameterINTEL")]
     pub unsafe fn get_performance_parameter_intel(
         &self,
         parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL,

@@ -1,23 +1,30 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VALIDATION_CACHE_SPEC_VERSION")]
 pub const EXT_VALIDATION_CACHE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VALIDATION_CACHE_EXTENSION_NAME")]
 pub const EXT_VALIDATION_CACHE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_validation_cache");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_VALIDATION_CACHE_EXT")]
 pub const FN_CREATE_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DESTROY_VALIDATION_CACHE_EXT")]
 pub const FN_DESTROY_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_VALIDATION_CACHE_DATA_EXT")]
 pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetValidationCacheDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_MERGE_VALIDATION_CACHES_EXT")]
 pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkMergeValidationCachesEXT");
-crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle" , "VkValidationCacheEXT") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)"] # [doc (alias = "VkValidationCacheCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`](./struct.ValidationCacheCreateFlagsEXT.html)"]
+#[doc(alias = "VkValidationCacheCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCacheCreateFlagBitsEXT(pub u32);
@@ -36,6 +43,7 @@ impl std::fmt::Debug for ValidationCacheCreateFlagBitsEXT {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheHeaderVersionEXT.html) · Enum"]
+#[doc(alias = "VkValidationCacheHeaderVersionEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCacheHeaderVersionEXT(pub i32);
@@ -83,6 +91,7 @@ pub type PFN_vkMergeValidationCachesEXT = unsafe extern "system" fn(
     p_src_caches: *const crate::extensions::ext_validation_cache::ValidationCacheEXT,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkValidationCacheCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ValidationCacheCreateInfoEXT {
@@ -178,6 +187,7 @@ impl<'a> std::ops::DerefMut for ValidationCacheCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkShaderModuleValidationCacheCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ShaderModuleValidationCacheCreateInfoEXT {
@@ -263,6 +273,7 @@ impl<'a> std::ops::DerefMut for ShaderModuleValidationCacheCreateInfoEXTBuilder<
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateValidationCacheEXT.html) · Function"]
+    #[doc(alias = "vkCreateValidationCacheEXT")]
     pub unsafe fn create_validation_cache_ext(
         &self,
         create_info: &crate::extensions::ext_validation_cache::ValidationCacheCreateInfoEXT,
@@ -290,6 +301,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
+    #[doc(alias = "vkDestroyValidationCacheEXT")]
     pub unsafe fn destroy_validation_cache_ext(
         &self,
         validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
@@ -313,6 +325,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
+    #[doc(alias = "vkGetValidationCacheDataEXT")]
     pub unsafe fn get_validation_cache_data_ext(
         &self,
         validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
@@ -327,6 +340,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergeValidationCachesEXT.html) · Function"]
+    #[doc(alias = "vkMergeValidationCachesEXT")]
     pub unsafe fn merge_validation_caches_ext(
         &self,
         dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,

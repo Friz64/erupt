@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION")]
 pub const KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION: u32 = 10;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME")]
 pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_display_swapchain");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_SHARED_SWAPCHAINS_KHR")]
 pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateSharedSwapchainsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
@@ -16,6 +19,7 @@ pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
     p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure"]
+#[doc(alias = "VkDisplayPresentInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPresentInfoKHR {
@@ -111,6 +115,7 @@ impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
+    #[doc(alias = "vkCreateSharedSwapchainsKHR")]
     pub unsafe fn create_shared_swapchains_khr(
         &self,
         create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],

@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION")]
 pub const KHR_INCREMENTAL_PRESENT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME")]
 pub const KHR_INCREMENTAL_PRESENT_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_incremental_present");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Structure"]
+#[doc(alias = "VkPresentRegionsKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentRegionsKHR {
@@ -84,6 +87,7 @@ impl<'a> std::ops::DerefMut for PresentRegionsKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionKHR.html) · Structure"]
+#[doc(alias = "VkPresentRegionKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentRegionKHR {
@@ -158,6 +162,7 @@ impl<'a> std::ops::DerefMut for PresentRegionKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Structure"]
+#[doc(alias = "VkRectLayerKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RectLayerKHR {

@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION")]
 pub const NV_CLIP_SPACE_W_SCALING_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME")]
 pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_clip_space_w_scaling");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_VIEWPORT_W_SCALING_NV")]
 pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetViewportWScalingNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
@@ -15,6 +18,7 @@ pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(
     p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Structure"]
+#[doc(alias = "VkViewportWScalingNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ViewportWScalingNV {
@@ -90,6 +94,7 @@ impl<'a> std::ops::DerefMut for ViewportWScalingNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkPipelineViewportWScalingStateCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportWScalingStateCreateInfoNV {
@@ -191,6 +196,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportWScalingStateCreateInfoNVBuilder
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
+    #[doc(alias = "vkCmdSetViewportWScalingNV")]
     pub unsafe fn cmd_set_viewport_w_scaling_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

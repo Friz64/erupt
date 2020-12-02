@@ -1,16 +1,21 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DIRECTFB_SURFACE_SPEC_VERSION")]
 pub const EXT_DIRECTFB_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME")]
 pub const EXT_DIRECTFB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_directfb_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_DIRECT_FB_SURFACE_EXT")]
 pub const FN_CREATE_DIRECT_FB_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDirectFBSurfaceEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDirectFBPresentationSupportEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateFlagsEXT.html) · Bitmask of [`DirectFBSurfaceCreateFlagBitsEXT`](./struct.DirectFBSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DirectFBSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateFlagsEXT.html) · Bitmask of [`DirectFBSurfaceCreateFlagBitsEXT`](./struct.DirectFBSurfaceCreateFlagBitsEXT.html)"] # [doc (alias = "VkDirectFBSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DirectFBSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DirectFBSurfaceCreateFlagsEXT`](./struct.DirectFBSurfaceCreateFlagsEXT.html)"]
+#[doc(alias = "VkDirectFBSurfaceCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DirectFBSurfaceCreateFlagBitsEXT(pub u32);
@@ -45,6 +50,7 @@ pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT =
         dfb: *mut std::ffi::c_void,
     ) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkDirectFBSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DirectFBSurfaceCreateInfoEXT {
@@ -143,6 +149,7 @@ impl<'a> std::ops::DerefMut for DirectFBSurfaceCreateInfoEXTBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDirectFBSurfaceEXT.html) · Function"]
+    #[doc(alias = "vkCreateDirectFBSurfaceEXT")]
     pub unsafe fn create_direct_fb_surface_ext(
         &self,
         create_info: &crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT,
@@ -169,6 +176,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceDirectFBPresentationSupportEXT")]
     pub unsafe fn get_physical_device_direct_fb_presentation_support_ext(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,

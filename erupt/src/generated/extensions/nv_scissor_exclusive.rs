@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION")]
 pub const NV_SCISSOR_EXCLUSIVE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME")]
 pub const NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_scissor_exclusive");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_EXCLUSIVE_SCISSOR_NV")]
 pub const FN_CMD_SET_EXCLUSIVE_SCISSOR_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetExclusiveScissorNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
@@ -15,6 +18,7 @@ pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(
     p_exclusive_scissors: *const crate::vk1_0::Rect2D,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExclusiveScissorFeaturesNV {
@@ -94,6 +98,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Structure"]
+#[doc(alias = "VkPipelineViewportExclusiveScissorStateCreateInfoNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
@@ -178,6 +183,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportExclusiveScissorStateCreateInfoN
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
+    #[doc(alias = "vkCmdSetExclusiveScissorNV")]
     pub unsafe fn cmd_set_exclusive_scissor_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

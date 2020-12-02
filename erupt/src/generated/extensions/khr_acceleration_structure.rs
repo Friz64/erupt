@@ -1,59 +1,78 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION")]
 pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 11;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME")]
 pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_acceleration_structure");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DESTROY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_DESTROY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_COPY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR")]
 pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR")]
 pub const FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR")]
 pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR")]
 pub const FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR")]
 pub const FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceAccelerationStructureCompatibilityKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CREATE_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR")]
 pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR")]
 pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBuildAccelerationStructuresIndirectKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_BUILD_ACCELERATION_STRUCTURES_KHR")]
 pub const FN_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR")]
 pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureDeviceAddressKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR")]
 pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
-crate :: non_dispatchable_handle ! (AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`](./struct.GeometryFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
+crate :: non_dispatchable_handle ! (AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle" , "VkAccelerationStructureKHR") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`](./struct.GeometryFlagBitsKHR.html)"] # [doc (alias = "VkGeometryFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Bits enum of [`GeometryFlagsKHR`](./struct.GeometryFlagsKHR.html)"]
+#[doc(alias = "VkGeometryFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryFlagBitsKHR(pub u32);
@@ -83,8 +102,9 @@ impl GeometryFlagBitsKHR {
     pub const OPAQUE_NV: Self = Self::OPAQUE_KHR;
     pub const NO_DUPLICATE_ANY_HIT_INVOCATION_NV: Self = Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`](./struct.GeometryInstanceFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`](./struct.GeometryInstanceFlagBitsKHR.html)"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Bits enum of [`GeometryInstanceFlagsKHR`](./struct.GeometryInstanceFlagsKHR.html)"]
+#[doc(alias = "VkGeometryInstanceFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryInstanceFlagBitsKHR(pub u32);
@@ -120,8 +140,9 @@ impl GeometryInstanceFlagBitsKHR {
     pub const FORCE_OPAQUE_NV: Self = Self::FORCE_OPAQUE_KHR;
     pub const FORCE_NO_OPAQUE_NV: Self = Self::FORCE_NO_OPAQUE_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`](./struct.BuildAccelerationStructureFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`](./struct.BuildAccelerationStructureFlagBitsKHR.html)"] # [doc (alias = "VkBuildAccelerationStructureFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Bits enum of [`BuildAccelerationStructureFlagsKHR`](./struct.BuildAccelerationStructureFlagsKHR.html)"]
+#[doc(alias = "VkBuildAccelerationStructureFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct BuildAccelerationStructureFlagBitsKHR(pub u32);
@@ -160,8 +181,9 @@ impl BuildAccelerationStructureFlagBitsKHR {
     pub const PREFER_FAST_BUILD_NV: Self = Self::PREFER_FAST_BUILD_KHR;
     pub const LOW_MEMORY_NV: Self = Self::LOW_MEMORY_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagsKHR.html) · Bitmask of [`AccelerationStructureCreateFlagBitsKHR`](./struct.AccelerationStructureCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct AccelerationStructureCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = AccelerationStructureCreateFlagBitsKHR :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagsKHR.html) · Bitmask of [`AccelerationStructureCreateFlagBitsKHR`](./struct.AccelerationStructureCreateFlagBitsKHR.html)"] # [doc (alias = "VkAccelerationStructureCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AccelerationStructureCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = AccelerationStructureCreateFlagBitsKHR :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagBitsKHR.html) · Bits enum of [`AccelerationStructureCreateFlagsKHR`](./struct.AccelerationStructureCreateFlagsKHR.html)"]
+#[doc(alias = "VkAccelerationStructureCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureCreateFlagBitsKHR(pub u32);
@@ -185,6 +207,7 @@ impl AccelerationStructureCreateFlagBitsKHR {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureModeKHR.html) · Enum"]
+#[doc(alias = "VkBuildAccelerationStructureModeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct BuildAccelerationStructureModeKHR(pub i32);
@@ -203,6 +226,7 @@ impl BuildAccelerationStructureModeKHR {
     pub const UPDATE_KHR: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureModeKHR.html) · Enum"]
+#[doc(alias = "VkCopyAccelerationStructureModeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct CopyAccelerationStructureModeKHR(pub i32);
@@ -230,6 +254,7 @@ impl CopyAccelerationStructureModeKHR {
     pub const COMPACT_NV: Self = Self::COMPACT_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureTypeKHR.html) · Enum"]
+#[doc(alias = "VkAccelerationStructureTypeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureTypeKHR(pub i32);
@@ -255,6 +280,7 @@ impl AccelerationStructureTypeKHR {
     pub const BOTTOM_LEVEL_NV: Self = Self::BOTTOM_LEVEL_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTypeKHR.html) · Enum"]
+#[doc(alias = "VkGeometryTypeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct GeometryTypeKHR(pub i32);
@@ -280,6 +306,7 @@ impl GeometryTypeKHR {
     pub const AABBS_NV: Self = Self::AABBS_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildTypeKHR.html) · Enum"]
+#[doc(alias = "VkAccelerationStructureBuildTypeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureBuildTypeKHR(pub i32);
@@ -300,6 +327,7 @@ impl AccelerationStructureBuildTypeKHR {
     pub const HOST_OR_DEVICE_KHR: Self = Self(2);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCompatibilityKHR.html) · Enum"]
+#[doc(alias = "VkAccelerationStructureCompatibilityKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct AccelerationStructureCompatibilityKHR(pub i32);
@@ -377,6 +405,7 @@ pub type PFN_vkGetAccelerationStructureDeviceAddressKHR = unsafe extern "system"
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , build_type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildTypeKHR , p_build_info : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR , p_max_primitive_counts : * const u32 , p_size_info : * mut crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildSizesInfoKHR) -> () ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Structure"]
+#[doc(alias = "VkWriteDescriptorSetAccelerationStructureKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WriteDescriptorSetAccelerationStructureKHR {
@@ -467,6 +496,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetAccelerationStructureKHRBuilde
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceAccelerationStructureFeaturesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceAccelerationStructureFeaturesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceAccelerationStructureFeaturesKHR {
@@ -608,6 +638,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceAccelerationStructureFeaturesKHRBu
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceAccelerationStructurePropertiesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceAccelerationStructurePropertiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceAccelerationStructurePropertiesKHR {
@@ -781,6 +812,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceAccelerationStructurePropertiesKHR
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceOrHostAddressKHR.html) · Structure"]
+#[doc(alias = "VkDeviceOrHostAddressKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union DeviceOrHostAddressKHR {
@@ -798,6 +830,7 @@ impl std::fmt::Debug for DeviceOrHostAddressKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceOrHostAddressConstKHR.html) · Structure"]
+#[doc(alias = "VkDeviceOrHostAddressConstKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union DeviceOrHostAddressConstKHR {
@@ -815,6 +848,7 @@ impl std::fmt::Debug for DeviceOrHostAddressConstKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryTrianglesDataKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureGeometryTrianglesDataKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureGeometryTrianglesDataKHR {
@@ -951,6 +985,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryTrianglesDataKHRBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryAabbsDataKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureGeometryAabbsDataKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureGeometryAabbsDataKHR {
@@ -1041,6 +1076,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryAabbsDataKHRBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryInstancesDataKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureGeometryInstancesDataKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureGeometryInstancesDataKHR {
@@ -1131,6 +1167,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryInstancesDataKHRBui
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryDataKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureGeometryDataKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub union AccelerationStructureGeometryDataKHR { pub triangles : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryTrianglesDataKHR , pub aabbs : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryAabbsDataKHR , pub instances : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryInstancesDataKHR }
@@ -1146,6 +1183,7 @@ impl std::fmt::Debug for AccelerationStructureGeometryDataKHR {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureGeometryKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureGeometryKHR {
@@ -1248,6 +1286,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureBuildGeometryInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureBuildGeometryInfoKHR { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub _type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureTypeKHR , pub flags : crate :: extensions :: khr_acceleration_structure :: BuildAccelerationStructureFlagsKHR , pub mode : crate :: extensions :: khr_acceleration_structure :: BuildAccelerationStructureModeKHR , pub src_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , pub dst_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , pub geometry_count : u32 , pub p_geometries : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryKHR , pub pp_geometries : * const * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryKHR , pub scratch_data : crate :: extensions :: khr_acceleration_structure :: DeviceOrHostAddressKHR }
@@ -1397,6 +1436,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureBuildGeometryInfoKHRBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildRangeInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureBuildRangeInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureBuildRangeInfoKHR {
@@ -1491,6 +1531,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureBuildRangeInfoKHRBuilder<'a
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureCreateInfoKHR {
@@ -1614,6 +1655,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsKHR.html) · Structure"]
+#[doc(alias = "VkAabbPositionsKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AabbPositionsKHR {
@@ -1721,6 +1763,7 @@ impl<'a> std::ops::DerefMut for AabbPositionsKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixKHR.html) · Structure"]
+#[doc(alias = "VkTransformMatrixKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct TransformMatrixKHR {
@@ -1788,6 +1831,7 @@ impl<'a> std::ops::DerefMut for TransformMatrixKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureInstanceKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureInstanceKHR {
@@ -1917,6 +1961,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInstanceKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureDeviceAddressInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureDeviceAddressInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureDeviceAddressInfoKHR {
@@ -2000,6 +2045,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureDeviceAddressInfoKHRBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureVersionInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureVersionInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureVersionInfoKHR {
@@ -2076,6 +2122,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureVersionInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureInfoKHR.html) · Structure"]
+#[doc(alias = "VkCopyAccelerationStructureInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyAccelerationStructureInfoKHR {
@@ -2177,6 +2224,7 @@ impl<'a> std::ops::DerefMut for CopyAccelerationStructureInfoKHRBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureToMemoryInfoKHR.html) · Structure"]
+#[doc(alias = "VkCopyAccelerationStructureToMemoryInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyAccelerationStructureToMemoryInfoKHR {
@@ -2281,6 +2329,7 @@ impl<'a> std::ops::DerefMut for CopyAccelerationStructureToMemoryInfoKHRBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyMemoryToAccelerationStructureInfoKHR.html) · Structure"]
+#[doc(alias = "VkCopyMemoryToAccelerationStructureInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyMemoryToAccelerationStructureInfoKHR {
@@ -2385,6 +2434,7 @@ impl<'a> std::ops::DerefMut for CopyMemoryToAccelerationStructureInfoKHRBuilder<
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildSizesInfoKHR.html) · Structure"]
+#[doc(alias = "VkAccelerationStructureBuildSizesInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureBuildSizesInfoKHR {
@@ -2486,6 +2536,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureBuildSizesInfoKHRBuilder<'a
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkDestroyAccelerationStructureKHR")]
     pub unsafe fn destroy_acceleration_structure_khr(
         &self,
         acceleration_structure: Option<
@@ -2511,6 +2562,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkCmdCopyAccelerationStructureKHR")]
     pub unsafe fn cmd_copy_acceleration_structure_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2524,6 +2576,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkCopyAccelerationStructureKHR")]
     pub unsafe fn copy_acceleration_structure_khr(
         &self,
         deferred_operation: Option<
@@ -2546,6 +2599,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureToMemoryKHR.html) · Function"]
+    #[doc(alias = "vkCmdCopyAccelerationStructureToMemoryKHR")]
     pub unsafe fn cmd_copy_acceleration_structure_to_memory_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2559,6 +2613,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureToMemoryKHR.html) · Function"]
+    #[doc(alias = "vkCopyAccelerationStructureToMemoryKHR")]
     pub unsafe fn copy_acceleration_structure_to_memory_khr(
         &self,
         deferred_operation: Option<
@@ -2581,6 +2636,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyMemoryToAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkCmdCopyMemoryToAccelerationStructureKHR")]
     pub unsafe fn cmd_copy_memory_to_acceleration_structure_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2594,6 +2650,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyMemoryToAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkCopyMemoryToAccelerationStructureKHR")]
     pub unsafe fn copy_memory_to_acceleration_structure_khr(
         &self,
         deferred_operation: Option<
@@ -2616,6 +2673,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html) · Function"]
+    #[doc(alias = "vkCmdWriteAccelerationStructuresPropertiesKHR")]
     pub unsafe fn cmd_write_acceleration_structures_properties_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2640,6 +2698,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html) · Function"]
+    #[doc(alias = "vkWriteAccelerationStructuresPropertiesKHR")]
     pub unsafe fn write_acceleration_structures_properties_khr(
         &self,
         acceleration_structures : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR],
@@ -2665,6 +2724,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceAccelerationStructureCompatibilityKHR.html) · Function"]
+    #[doc(alias = "vkGetDeviceAccelerationStructureCompatibilityKHR")]
     pub unsafe fn get_device_acceleration_structure_compatibility_khr(
         &self,
         version_info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureVersionInfoKHR,
@@ -2684,6 +2744,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureKHR.html) · Function"]
+    #[doc(alias = "vkCreateAccelerationStructureKHR")]
     pub unsafe fn create_acceleration_structure_khr(
         &self,
         create_info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureCreateInfoKHR,
@@ -2714,6 +2775,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructuresKHR.html) · Function"]
+    #[doc(alias = "vkCmdBuildAccelerationStructuresKHR")]
     pub unsafe fn cmd_build_acceleration_structures_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2734,6 +2796,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructuresIndirectKHR.html) · Function"]
+    #[doc(alias = "vkCmdBuildAccelerationStructuresIndirectKHR")]
     pub unsafe fn cmd_build_acceleration_structures_indirect_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -2762,6 +2825,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBuildAccelerationStructuresKHR.html) · Function"]
+    #[doc(alias = "vkBuildAccelerationStructuresKHR")]
     pub unsafe fn build_acceleration_structures_khr(
         &self,
         deferred_operation: Option<
@@ -2788,6 +2852,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
+    #[doc(alias = "vkGetAccelerationStructureDeviceAddressKHR")]
     pub unsafe fn get_acceleration_structure_device_address_khr(
         &self,
         info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureDeviceAddressInfoKHR,
@@ -2800,6 +2865,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html) · Function"]
+    #[doc(alias = "vkGetAccelerationStructureBuildSizesKHR")]
     pub unsafe fn get_acceleration_structure_build_sizes_khr(
         &self,
         build_type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildTypeKHR,

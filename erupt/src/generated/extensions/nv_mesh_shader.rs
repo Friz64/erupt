@@ -1,15 +1,20 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_MESH_SHADER_SPEC_VERSION")]
 pub const NV_MESH_SHADER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_MESH_SHADER_EXTENSION_NAME")]
 pub const NV_MESH_SHADER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_mesh_shader");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
@@ -40,6 +45,7 @@ pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
     stride: u32,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceMeshShaderFeaturesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMeshShaderFeaturesNV {
@@ -124,6 +130,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceMeshShaderPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMeshShaderPropertiesNV {
@@ -326,6 +333,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> 
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Structure"]
+#[doc(alias = "VkDrawMeshTasksIndirectCommandNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DrawMeshTasksIndirectCommandNV {
@@ -407,6 +415,7 @@ impl<'a> std::ops::DerefMut for DrawMeshTasksIndirectCommandNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
+    #[doc(alias = "vkCmdDrawMeshTasksNV")]
     pub unsafe fn cmd_draw_mesh_tasks_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -421,6 +430,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
+    #[doc(alias = "vkCmdDrawMeshTasksIndirectNV")]
     pub unsafe fn cmd_draw_mesh_tasks_indirect_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -443,6 +453,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
+    #[doc(alias = "vkCmdDrawMeshTasksIndirectCountNV")]
     pub unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

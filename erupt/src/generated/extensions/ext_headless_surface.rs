@@ -1,13 +1,17 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_HEADLESS_SURFACE_SPEC_VERSION")]
 pub const EXT_HEADLESS_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_HEADLESS_SURFACE_EXTENSION_NAME")]
 pub const EXT_HEADLESS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_headless_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_HEADLESS_SURFACE_EXT")]
 pub const FN_CREATE_HEADLESS_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateHeadlessSurfaceEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`](./struct.HeadlessSurfaceCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`](./struct.HeadlessSurfaceCreateFlagBitsEXT.html)"] # [doc (alias = "VkHeadlessSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`HeadlessSurfaceCreateFlagsEXT`](./struct.HeadlessSurfaceCreateFlagsEXT.html)"]
+#[doc(alias = "VkHeadlessSurfaceCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct HeadlessSurfaceCreateFlagBitsEXT(pub u32);
@@ -34,6 +38,7 @@ pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(
     p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkHeadlessSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct HeadlessSurfaceCreateInfoEXT {
@@ -116,6 +121,7 @@ impl<'a> std::ops::DerefMut for HeadlessSurfaceCreateInfoEXTBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateHeadlessSurfaceEXT.html) · Function"]
+    #[doc(alias = "vkCreateHeadlessSurfaceEXT")]
     pub unsafe fn create_headless_surface_ext(
         &self,
         create_info: &crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT,

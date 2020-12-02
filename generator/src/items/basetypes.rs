@@ -22,11 +22,14 @@ pub struct Basetype {
 impl Basetype {
     pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
         let name = self.name.ident();
+        let doc_alias = &self.name.original;
+
         let ty = self.ty.rust_type(source);
         let doc = comment_gen.def(Some(&self.name.original), "Basetype", None);
 
         quote! {
             #[doc = #doc]
+            #[doc(alias = #doc_alias)]
             pub type #name = #ty;
         }
     }

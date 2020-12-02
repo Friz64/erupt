@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PORTABILITY_SUBSET_SPEC_VERSION")]
 pub const KHR_PORTABILITY_SUBSET_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME")]
 pub const KHR_PORTABILITY_SUBSET_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_portability_subset");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePortabilitySubsetFeaturesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePortabilitySubsetFeaturesKHR {
@@ -238,6 +241,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePortabilitySubsetFeaturesKHRBuilde
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePortabilitySubsetPropertiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePortabilitySubsetPropertiesKHR {

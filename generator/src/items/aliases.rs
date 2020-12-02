@@ -99,6 +99,7 @@ impl Alias {
         }
 
         let ident = self.name.ident();
+        let doc_alias = self.name.original();
         let alias = self.alias.path(source);
         let doc = comment_gen.def(Some(self.name.original()), "Alias", None);
         let lifetime = if is_builder_alias {
@@ -109,6 +110,7 @@ impl Alias {
 
         quote! {
             #[doc = #doc]
+            #[doc(alias = #doc_alias)]
             #[allow(non_camel_case_types)]
             pub type #ident#lifetime = #alias#lifetime;
 

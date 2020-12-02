@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION")]
 pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME")]
 pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_memory_overallocation_behavior");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum"]
+#[doc(alias = "VkMemoryOverallocationBehaviorAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct MemoryOverallocationBehaviorAMD(pub i32);
@@ -24,6 +27,7 @@ impl MemoryOverallocationBehaviorAMD {
     pub const DISALLOWED_AMD: Self = Self(2);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure"]
+#[doc(alias = "VkDeviceMemoryOverallocationCreateInfoAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceMemoryOverallocationCreateInfoAMD {

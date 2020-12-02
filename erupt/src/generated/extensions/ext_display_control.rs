@@ -1,21 +1,28 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DISPLAY_CONTROL_SPEC_VERSION")]
 pub const EXT_DISPLAY_CONTROL_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME")]
 pub const EXT_DISPLAY_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_display_control");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DISPLAY_POWER_CONTROL_EXT")]
 pub const FN_DISPLAY_POWER_CONTROL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDisplayPowerControlEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_REGISTER_DEVICE_EVENT_EXT")]
 pub const FN_REGISTER_DEVICE_EVENT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkRegisterDeviceEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_REGISTER_DISPLAY_EVENT_EXT")]
 pub const FN_REGISTER_DISPLAY_EVENT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkRegisterDisplayEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_SWAPCHAIN_COUNTER_EXT")]
 pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainCounterEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]
+#[doc(alias = "VkDisplayPowerStateEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayPowerStateEXT(pub i32);
@@ -36,6 +43,7 @@ impl DisplayPowerStateEXT {
     pub const ON_EXT: Self = Self(2);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventTypeEXT.html) · Enum"]
+#[doc(alias = "VkDeviceEventTypeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DeviceEventTypeEXT(pub i32);
@@ -52,6 +60,7 @@ impl DeviceEventTypeEXT {
     pub const DISPLAY_HOTPLUG_EXT: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventTypeEXT.html) · Enum"]
+#[doc(alias = "VkDisplayEventTypeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DisplayEventTypeEXT(pub i32);
@@ -100,6 +109,7 @@ pub type PFN_vkGetSwapchainCounterEXT = unsafe extern "system" fn(
     p_counter_value: *mut u64,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Structure"]
+#[doc(alias = "VkDisplayPowerInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPowerInfoEXT {
@@ -176,6 +186,7 @@ impl<'a> std::ops::DerefMut for DisplayPowerInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventInfoEXT.html) · Structure"]
+#[doc(alias = "VkDeviceEventInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceEventInfoEXT {
@@ -252,6 +263,7 @@ impl<'a> std::ops::DerefMut for DeviceEventInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventInfoEXT.html) · Structure"]
+#[doc(alias = "VkDisplayEventInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayEventInfoEXT {
@@ -328,6 +340,7 @@ impl<'a> std::ops::DerefMut for DisplayEventInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkSwapchainCounterCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SwapchainCounterCreateInfoEXT {
@@ -410,6 +423,7 @@ impl<'a> std::ops::DerefMut for SwapchainCounterCreateInfoEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]
+    #[doc(alias = "vkDisplayPowerControlEXT")]
     pub unsafe fn display_power_control_ext(
         &self,
         display: crate::extensions::khr_display::DisplayKHR,
@@ -423,6 +437,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDeviceEventEXT.html) · Function"]
+    #[doc(alias = "vkRegisterDeviceEventEXT")]
     pub unsafe fn register_device_event_ext(
         &self,
         device_event_info: &crate::extensions::ext_display_control::DeviceEventInfoEXT,
@@ -449,6 +464,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDisplayEventEXT.html) · Function"]
+    #[doc(alias = "vkRegisterDisplayEventEXT")]
     pub unsafe fn register_display_event_ext(
         &self,
         display: crate::extensions::khr_display::DisplayKHR,
@@ -477,6 +493,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
+    #[doc(alias = "vkGetSwapchainCounterEXT")]
     pub unsafe fn get_swapchain_counter_ext(
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,

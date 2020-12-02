@@ -142,8 +142,9 @@ macro_rules! try_vk {
 #[doc(hidden)]
 #[macro_export]
 macro_rules! non_dispatchable_handle {
-    ($name:ident, $ty:ident, $doc:meta) => {
-        #[$doc]
+    ($name:ident, $ty:ident, $doc:literal, $doc_alias:literal) => {
+        #[doc = $doc]
+        #[doc(alias = $doc_alias)]
         #[repr(transparent)]
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash, Default)]
         pub struct $name(pub u64);
@@ -178,8 +179,9 @@ macro_rules! non_dispatchable_handle {
 #[doc(hidden)]
 #[macro_export]
 macro_rules! dispatchable_handle {
-    ($name:ident, $ty:ident, $doc:meta) => {
-        #[$doc]
+    ($name:ident, $ty:ident, $doc:literal, $doc_alias:literal) => {
+        #[doc = $doc]
+        #[doc(alias = $doc_alias)]
         #[repr(transparent)]
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash)]
         pub struct $name(pub *mut ());

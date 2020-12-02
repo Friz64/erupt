@@ -1,16 +1,21 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_XLIB_SURFACE_SPEC_VERSION")]
 pub const KHR_XLIB_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_XLIB_SURFACE_EXTENSION_NAME")]
 pub const KHR_XLIB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_xlib_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_XLIB_SURFACE_KHR")]
 pub const FN_CREATE_XLIB_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateXlibSurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceXlibPresentationSupportKHR");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Bitmask of [`XlibSurfaceCreateFlagBitsKHR`](./struct.XlibSurfaceCreateFlagBitsKHR.html)"] # [derive (Default)] # [repr (transparent)] pub struct XlibSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Bitmask of [`XlibSurfaceCreateFlagBitsKHR`](./struct.XlibSurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkXlibSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct XlibSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XlibSurfaceCreateFlagsKHR`](./struct.XlibSurfaceCreateFlagsKHR.html)"]
+#[doc(alias = "VkXlibSurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct XlibSurfaceCreateFlagBitsKHR(pub u32);
@@ -46,6 +51,7 @@ pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR =
         visual_id: u64,
     ) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Structure"]
+#[doc(alias = "VkXlibSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct XlibSurfaceCreateInfoKHR {
@@ -144,6 +150,7 @@ impl<'a> std::ops::DerefMut for XlibSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
+    #[doc(alias = "vkCreateXlibSurfaceKHR")]
     pub unsafe fn create_xlib_surface_khr(
         &self,
         create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
@@ -170,6 +177,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceXlibPresentationSupportKHR")]
     pub unsafe fn get_physical_device_xlib_presentation_support_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,

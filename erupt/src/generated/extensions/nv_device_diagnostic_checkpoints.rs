@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION")]
 pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME")]
 pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_device_diagnostic_checkpoints");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_SET_CHECKPOINT_NV")]
 pub const FN_CMD_SET_CHECKPOINT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCheckpointNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_QUEUE_CHECKPOINT_DATA_NV")]
 pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetQueueCheckpointDataNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
@@ -23,6 +27,7 @@ pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(
     p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure"]
+#[doc(alias = "VkQueueFamilyCheckpointPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueueFamilyCheckpointPropertiesNV {
@@ -105,6 +110,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyCheckpointPropertiesNVBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Structure"]
+#[doc(alias = "VkCheckpointDataNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CheckpointDataNV {
@@ -189,6 +195,7 @@ impl<'a> std::ops::DerefMut for CheckpointDataNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
+    #[doc(alias = "vkCmdSetCheckpointNV")]
     pub unsafe fn cmd_set_checkpoint_nv(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -202,6 +209,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
+    #[doc(alias = "vkGetQueueCheckpointDataNV")]
     pub unsafe fn get_queue_checkpoint_data_nv(
         &self,
         queue: crate::vk1_0::Queue,

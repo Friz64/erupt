@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION")]
 pub const QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME")]
 pub const QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_QCOM_render_pass_transform");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Structure"]
+#[doc(alias = "VkRenderPassTransformBeginInfoQCOM")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassTransformBeginInfoQCOM {
@@ -83,6 +86,7 @@ impl<'a> std::ops::DerefMut for RenderPassTransformBeginInfoQCOMBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Structure"]
+#[doc(alias = "VkCommandBufferInheritanceRenderPassTransformInfoQCOM")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceRenderPassTransformInfoQCOM {

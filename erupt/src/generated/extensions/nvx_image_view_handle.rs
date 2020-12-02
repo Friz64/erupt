@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION")]
 pub const NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME")]
 pub const NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NVX_image_view_handle");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_IMAGE_VIEW_HANDLE_NVX")]
 pub const FN_GET_IMAGE_VIEW_HANDLE_NVX: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageViewHandleNVX");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_IMAGE_VIEW_ADDRESS_NVX")]
 pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageViewAddressNVX");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
@@ -23,6 +27,7 @@ pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
     p_properties: *mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Structure"]
+#[doc(alias = "VkImageViewHandleInfoNVX")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewHandleInfoNVX {
@@ -115,6 +120,7 @@ impl<'a> std::ops::DerefMut for ImageViewHandleInfoNVXBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Structure"]
+#[doc(alias = "VkImageViewAddressPropertiesNVX")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewAddressPropertiesNVX {
@@ -202,6 +208,7 @@ impl<'a> std::ops::DerefMut for ImageViewAddressPropertiesNVXBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
+    #[doc(alias = "vkGetImageViewHandleNVX")]
     pub unsafe fn get_image_view_handle_nvx(
         &self,
         info: &crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
@@ -214,6 +221,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function"]
+    #[doc(alias = "vkGetImageViewAddressNVX")]
     pub unsafe fn get_image_view_address_nvx(
         &self,
         image_view: crate::vk1_0::ImageView,

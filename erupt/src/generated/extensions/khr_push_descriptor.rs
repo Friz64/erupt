@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PUSH_DESCRIPTOR_SPEC_VERSION")]
 pub const KHR_PUSH_DESCRIPTOR_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME")]
 pub const KHR_PUSH_DESCRIPTOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_push_descriptor");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_PUSH_DESCRIPTOR_SET_KHR")]
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPushDescriptorSetKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR")]
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPushDescriptorSetWithTemplateKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
@@ -29,6 +33,7 @@ pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(
     p_data: *const std::ffi::c_void,
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure"]
+#[doc(alias = "VkPhysicalDevicePushDescriptorPropertiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePushDescriptorPropertiesKHR {
@@ -111,6 +116,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePushDescriptorPropertiesKHRBuilder
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
+    #[doc(alias = "vkCmdPushDescriptorSetKHR")]
     pub unsafe fn cmd_push_descriptor_set_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -135,6 +141,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
+    #[doc(alias = "vkCmdPushDescriptorSetWithTemplateKHR")]
     pub unsafe fn cmd_push_descriptor_set_with_template_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

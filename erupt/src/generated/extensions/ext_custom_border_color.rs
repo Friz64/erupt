@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION")]
 pub const EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION: u32 = 12;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME")]
 pub const EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_custom_border_color");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkSamplerCustomBorderColorCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerCustomBorderColorCreateInfoEXT {
@@ -91,6 +94,7 @@ impl<'a> std::ops::DerefMut for SamplerCustomBorderColorCreateInfoEXTBuilder<'a>
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceCustomBorderColorPropertiesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCustomBorderColorPropertiesEXT {
@@ -176,6 +180,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCustomBorderColorPropertiesEXTBuil
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceCustomBorderColorFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCustomBorderColorFeaturesEXT {

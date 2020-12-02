@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_YCBCR_IMAGE_ARRAYS_SPEC_VERSION")]
 pub const EXT_YCBCR_IMAGE_ARRAYS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME")]
 pub const EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_ycbcr_image_arrays");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceYcbcrImageArraysFeaturesEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXT {

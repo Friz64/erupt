@@ -1,24 +1,31 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DRAW_INDIRECT_COUNT_SPEC_VERSION")]
 pub const KHR_DRAW_INDIRECT_COUNT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME")]
 pub const KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_draw_indirect_count");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_INDIRECT_COUNT_KHR")]
 pub const FN_CMD_DRAW_INDIRECT_COUNT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectCountKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR")]
 pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndexedIndirectCountKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Alias"]
+#[doc(alias = "vkCmdDrawIndirectCountKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndirectCount;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Alias"]
+#[doc(alias = "vkCmdDrawIndexedIndirectCountKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndexedIndirectCount;
 #[doc = "Provided by [`extensions::khr_draw_indirect_count`](extensions/khr_draw_indirect_count/index.html)"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Function"]
+    #[doc(alias = "vkCmdDrawIndirectCountKHR")]
     pub unsafe fn cmd_draw_indirect_count_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -45,6 +52,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Function"]
+    #[doc(alias = "vkCmdDrawIndexedIndirectCountKHR")]
     pub unsafe fn cmd_draw_indexed_indirect_count_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,

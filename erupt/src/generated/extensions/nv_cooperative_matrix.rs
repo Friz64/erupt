@@ -1,12 +1,16 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_COOPERATIVE_MATRIX_SPEC_VERSION")]
 pub const NV_COOPERATIVE_MATRIX_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME")]
 pub const NV_COOPERATIVE_MATRIX_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_cooperative_matrix");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV")]
 pub const FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceCooperativeMatrixPropertiesNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScopeNV.html) · Enum"]
+#[doc(alias = "VkScopeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ScopeNV(pub i32);
@@ -29,6 +33,7 @@ impl ScopeNV {
     pub const QUEUE_FAMILY_NV: Self = Self(5);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentTypeNV.html) · Enum"]
+#[doc(alias = "VkComponentTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ComponentTypeNV(pub i32);
@@ -73,6 +78,7 @@ pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV =
         p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV,
     ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceCooperativeMatrixFeaturesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCooperativeMatrixFeaturesNV {
@@ -167,6 +173,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Structure"]
+#[doc(alias = "VkPhysicalDeviceCooperativeMatrixPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCooperativeMatrixPropertiesNV {
@@ -252,6 +259,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixPropertiesNVBuild
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCooperativeMatrixPropertiesNV.html) · Structure"]
+#[doc(alias = "VkCooperativeMatrixPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CooperativeMatrixPropertiesNV {
@@ -399,6 +407,7 @@ impl<'a> std::ops::DerefMut for CooperativeMatrixPropertiesNVBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
+    #[doc(alias = "vkGetPhysicalDeviceCooperativeMatrixPropertiesNV")]
     pub unsafe fn get_physical_device_cooperative_matrix_properties_nv(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,

@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VALIDATION_FLAGS_SPEC_VERSION")]
 pub const EXT_VALIDATION_FLAGS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME")]
 pub const EXT_VALIDATION_FLAGS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_validation_flags");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCheckEXT.html) · Enum"]
+#[doc(alias = "VkValidationCheckEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct ValidationCheckEXT(pub i32);
@@ -22,6 +25,7 @@ impl ValidationCheckEXT {
     pub const SHADERS_EXT: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Structure"]
+#[doc(alias = "VkValidationFlagsEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ValidationFlagsEXT {

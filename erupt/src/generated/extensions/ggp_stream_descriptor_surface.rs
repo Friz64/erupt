@@ -1,13 +1,17 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_GGP_STREAM_DESCRIPTOR_SURFACE_SPEC_VERSION")]
 pub const GGP_STREAM_DESCRIPTOR_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME")]
 pub const GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_GGP_stream_descriptor_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP")]
 pub const FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP: *const std::os::raw::c_char =
     crate::cstr!("vkCreateStreamDescriptorSurfaceGGP");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateFlagsGGP.html) · Bitmask of [`StreamDescriptorSurfaceCreateFlagBitsGGP`](./struct.StreamDescriptorSurfaceCreateFlagBitsGGP.html)"] # [derive (Default)] # [repr (transparent)] pub struct StreamDescriptorSurfaceCreateFlagsGGP : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateFlagsGGP.html) · Bitmask of [`StreamDescriptorSurfaceCreateFlagBitsGGP`](./struct.StreamDescriptorSurfaceCreateFlagBitsGGP.html)"] # [doc (alias = "VkStreamDescriptorSurfaceCreateFlagsGGP")] # [derive (Default)] # [repr (transparent)] pub struct StreamDescriptorSurfaceCreateFlagsGGP : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`StreamDescriptorSurfaceCreateFlagsGGP`](./struct.StreamDescriptorSurfaceCreateFlagsGGP.html)"]
+#[doc(alias = "VkStreamDescriptorSurfaceCreateFlagBitsGGP")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct StreamDescriptorSurfaceCreateFlagBitsGGP(pub u32);
@@ -29,6 +33,7 @@ impl std::fmt::Debug for StreamDescriptorSurfaceCreateFlagBitsGGP {
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn (instance : crate :: vk1_0 :: Instance , p_create_info : * const crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateInfoGGP , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_surface : * mut crate :: extensions :: khr_surface :: SurfaceKHR) -> crate :: vk1_0 :: Result ;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateInfoGGP.html) · Structure"]
+#[doc(alias = "VkStreamDescriptorSurfaceCreateInfoGGP")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StreamDescriptorSurfaceCreateInfoGGP {
@@ -120,6 +125,7 @@ impl<'a> std::ops::DerefMut for StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> 
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateStreamDescriptorSurfaceGGP.html) · Function"]
+    #[doc(alias = "vkCreateStreamDescriptorSurfaceGGP")]
     pub unsafe fn create_stream_descriptor_surface_ggp(
         &self,
         create_info : & crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateInfoGGP,

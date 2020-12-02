@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION")]
 pub const AMD_RASTERIZATION_ORDER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME")]
 pub const AMD_RASTERIZATION_ORDER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_rasterization_order");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRasterizationOrderAMD.html) · Enum"]
+#[doc(alias = "VkRasterizationOrderAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct RasterizationOrderAMD(pub i32);
@@ -22,6 +25,7 @@ impl RasterizationOrderAMD {
     pub const RELAXED_AMD: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Structure"]
+#[doc(alias = "VkPipelineRasterizationStateRasterizationOrderAMD")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationStateRasterizationOrderAMD {

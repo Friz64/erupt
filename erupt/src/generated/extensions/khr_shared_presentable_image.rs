@@ -1,9 +1,12 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION")]
 pub const KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME")]
 pub const KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_shared_presentable_image");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_GET_SWAPCHAIN_STATUS_KHR")]
 pub const FN_GET_SWAPCHAIN_STATUS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainStatusKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
@@ -13,6 +16,7 @@ pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(
     swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure"]
+#[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SharedPresentSurfaceCapabilitiesKHR {
@@ -98,6 +102,7 @@ impl<'a> std::ops::DerefMut for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
+    #[doc(alias = "vkGetSwapchainStatusKHR")]
     pub unsafe fn get_swapchain_status_khr(
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,

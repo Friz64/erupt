@@ -1,44 +1,58 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DEBUG_UTILS_SPEC_VERSION")]
 pub const EXT_DEBUG_UTILS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "VK_EXT_DEBUG_UTILS_EXTENSION_NAME")]
 pub const EXT_DEBUG_UTILS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_debug_utils");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT")]
 pub const FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetDebugUtilsObjectNameEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT")]
 pub const FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetDebugUtilsObjectTagEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_END_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_CREATE_DEBUG_UTILS_MESSENGER_EXT")]
 pub const FN_CREATE_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT")]
 pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[doc(alias = "FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT")]
 pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSubmitDebugUtilsMessageEXT");
-crate :: non_dispatchable_handle ! (DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`](./struct.DebugUtilsMessengerCreateFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+crate :: non_dispatchable_handle ! (DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle" , "VkDebugUtilsMessengerEXT") ;
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`](./struct.DebugUtilsMessengerCreateFlagBitsEXT.html)"] # [doc (alias = "VkDebugUtilsMessengerCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCreateFlagsEXT`](./struct.DebugUtilsMessengerCreateFlagsEXT.html)"]
+#[doc(alias = "VkDebugUtilsMessengerCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCreateFlagBitsEXT(pub u32);
@@ -56,8 +70,9 @@ impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCallbackDataFlagBitsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCallbackDataFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCallbackDataFlagBitsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagBitsEXT.html)"] # [doc (alias = "VkDebugUtilsMessengerCallbackDataFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCallbackDataFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCallbackDataFlagsEXT`](./struct.DebugUtilsMessengerCallbackDataFlagsEXT.html)"]
+#[doc(alias = "VkDebugUtilsMessengerCallbackDataFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessengerCallbackDataFlagBitsEXT(pub u32);
@@ -75,8 +90,9 @@ impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`](./struct.DebugUtilsMessageSeverityFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`](./struct.DebugUtilsMessageSeverityFlagBitsEXT.html)"] # [doc (alias = "VkDebugUtilsMessageSeverityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageSeverityFlagsEXT`](./struct.DebugUtilsMessageSeverityFlagsEXT.html)"]
+#[doc(alias = "VkDebugUtilsMessageSeverityFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessageSeverityFlagBitsEXT(pub u32);
@@ -105,8 +121,9 @@ impl DebugUtilsMessageSeverityFlagBitsEXT {
     pub const WARNING_EXT: Self = Self(256);
     pub const ERROR_EXT: Self = Self(4096);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`](./struct.DebugUtilsMessageTypeFlagBitsEXT.html)"] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`](./struct.DebugUtilsMessageTypeFlagBitsEXT.html)"] # [doc (alias = "VkDebugUtilsMessageTypeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageTypeFlagsEXT`](./struct.DebugUtilsMessageTypeFlagsEXT.html)"]
+#[doc(alias = "VkDebugUtilsMessageTypeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
 pub struct DebugUtilsMessageTypeFlagBitsEXT(pub u32);
@@ -209,6 +226,7 @@ pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(
     p_user_data: *mut std::ffi::c_void,
 ) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure"]
+#[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsObjectNameInfoEXT {
@@ -301,6 +319,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectNameInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectTagInfoEXT.html) · Structure"]
+#[doc(alias = "VkDebugUtilsObjectTagInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsObjectTagInfoEXT {
@@ -409,6 +428,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectTagInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) · Structure"]
+#[doc(alias = "VkDebugUtilsLabelEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsLabelEXT {
@@ -490,6 +510,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsLabelEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateInfoEXT.html) · Structure"]
+#[doc(alias = "VkDebugUtilsMessengerCreateInfoEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsMessengerCreateInfoEXT {
@@ -615,6 +636,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataEXT.html) · Structure"]
+#[doc(alias = "VkDebugUtilsMessengerCallbackDataEXT")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsMessengerCallbackDataEXT {
@@ -766,6 +788,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html) · Function"]
+    #[doc(alias = "vkSetDebugUtilsObjectNameEXT")]
     pub unsafe fn set_debug_utils_object_name_ext(
         &self,
         name_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT,
@@ -778,6 +801,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html) · Function"]
+    #[doc(alias = "vkSetDebugUtilsObjectTagEXT")]
     pub unsafe fn set_debug_utils_object_tag_ext(
         &self,
         tag_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT,
@@ -790,6 +814,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkQueueBeginDebugUtilsLabelEXT")]
     pub unsafe fn queue_begin_debug_utils_label_ext(
         &self,
         queue: crate::vk1_0::Queue,
@@ -803,6 +828,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkQueueEndDebugUtilsLabelEXT")]
     pub unsafe fn queue_end_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue) -> () {
         let _function = self
             .queue_end_debug_utils_label_ext
@@ -812,6 +838,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkQueueInsertDebugUtilsLabelEXT")]
     pub unsafe fn queue_insert_debug_utils_label_ext(
         &self,
         queue: crate::vk1_0::Queue,
@@ -825,6 +852,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkCmdBeginDebugUtilsLabelEXT")]
     pub unsafe fn cmd_begin_debug_utils_label_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -838,6 +866,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkCmdEndDebugUtilsLabelEXT")]
     pub unsafe fn cmd_end_debug_utils_label_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -850,6 +879,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html) · Function"]
+    #[doc(alias = "vkCmdInsertDebugUtilsLabelEXT")]
     pub unsafe fn cmd_insert_debug_utils_label_ext(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
@@ -866,6 +896,7 @@ impl crate::DeviceLoader {
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
+    #[doc(alias = "vkCreateDebugUtilsMessengerEXT")]
     pub unsafe fn create_debug_utils_messenger_ext(
         &self,
         create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT,
@@ -893,6 +924,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
+    #[doc(alias = "vkDestroyDebugUtilsMessengerEXT")]
     pub unsafe fn destroy_debug_utils_messenger_ext(
         &self,
         messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>,
@@ -916,6 +948,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
+    #[doc(alias = "vkSubmitDebugUtilsMessageEXT")]
     pub unsafe fn submit_debug_utils_message_ext(
         &self,
         message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT,

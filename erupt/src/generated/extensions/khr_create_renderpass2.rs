@@ -78,19 +78,15 @@ pub type SubpassEndInfoKHR = crate::vk1_2::SubpassEndInfo;
 #[allow(non_camel_case_types)]
 pub type SubpassEndInfoKHRBuilder<'a> = crate::vk1_2::SubpassEndInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2KHR.html) · Alias"]
-#[doc(alias = "vkCreateRenderPass2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRenderPass2KHR = crate::vk1_2::PFN_vkCreateRenderPass2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass2KHR.html) · Alias"]
-#[doc(alias = "vkCmdBeginRenderPass2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginRenderPass2KHR = crate::vk1_2::PFN_vkCmdBeginRenderPass2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2KHR.html) · Alias"]
-#[doc(alias = "vkCmdNextSubpass2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdNextSubpass2KHR = crate::vk1_2::PFN_vkCmdNextSubpass2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2KHR.html) · Alias"]
-#[doc(alias = "vkCmdEndRenderPass2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass2KHR = crate::vk1_2::PFN_vkCmdEndRenderPass2;
 #[doc = "Provided by [`extensions::khr_create_renderpass2`](extensions/khr_create_renderpass2/index.html)"]

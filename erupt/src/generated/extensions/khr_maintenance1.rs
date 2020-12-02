@@ -14,7 +14,6 @@ pub const FN_TRIM_COMMAND_POOL_KHR: *const std::os::raw::c_char =
 #[allow(non_camel_case_types)]
 pub type CommandPoolTrimFlagsKHR = crate::vk1_1::CommandPoolTrimFlags;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Alias"]
-#[doc(alias = "vkTrimCommandPoolKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPoolKHR = crate::vk1_1::PFN_vkTrimCommandPool;
 #[doc = "Provided by [`extensions::khr_maintenance1`](extensions/khr_maintenance1/index.html)"]

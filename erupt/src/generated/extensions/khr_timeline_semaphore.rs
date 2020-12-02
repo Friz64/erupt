@@ -82,15 +82,12 @@ pub type SemaphoreSignalInfoKHR = crate::vk1_2::SemaphoreSignalInfo;
 #[allow(non_camel_case_types)]
 pub type SemaphoreSignalInfoKHRBuilder<'a> = crate::vk1_2::SemaphoreSignalInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Alias"]
-#[doc(alias = "vkGetSemaphoreCounterValueKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreCounterValueKHR = crate::vk1_2::PFN_vkGetSemaphoreCounterValue;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphoresKHR.html) · Alias"]
-#[doc(alias = "vkWaitSemaphoresKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkWaitSemaphoresKHR = crate::vk1_2::PFN_vkWaitSemaphores;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphoreKHR.html) · Alias"]
-#[doc(alias = "vkSignalSemaphoreKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSignalSemaphoreKHR = crate::vk1_2::PFN_vkSignalSemaphore;
 #[doc = "Provided by [`extensions::khr_timeline_semaphore`](extensions/khr_timeline_semaphore/index.html)"]

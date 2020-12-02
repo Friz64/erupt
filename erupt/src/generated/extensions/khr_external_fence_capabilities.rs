@@ -43,7 +43,6 @@ pub type ExternalFencePropertiesKHR = crate::vk1_1::ExternalFenceProperties;
 #[allow(non_camel_case_types)]
 pub type ExternalFencePropertiesKHRBuilder<'a> = crate::vk1_1::ExternalFencePropertiesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceExternalFencePropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceExternalFenceProperties;

@@ -130,7 +130,6 @@ pub type AccelerationStructureInstanceNV =
 pub type AccelerationStructureInstanceNVBuilder<'a> =
     crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHRBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Alias"]
-#[doc(alias = "vkGetRayTracingShaderGroupHandlesNV")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRayTracingShaderGroupHandlesNV =
     crate::extensions::khr_ray_tracing_pipeline::PFN_vkGetRayTracingShaderGroupHandlesKHR;

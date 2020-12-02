@@ -29,7 +29,6 @@ pub type DescriptorSetLayoutSupportKHR = crate::vk1_1::DescriptorSetLayoutSuppor
 pub type DescriptorSetLayoutSupportKHRBuilder<'a> =
     crate::vk1_1::DescriptorSetLayoutSupportBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Alias"]
-#[doc(alias = "vkGetDescriptorSetLayoutSupportKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupportKHR = crate::vk1_1::PFN_vkGetDescriptorSetLayoutSupport;
 #[doc = "Provided by [`extensions::khr_maintenance3`](extensions/khr_maintenance3/index.html)"]

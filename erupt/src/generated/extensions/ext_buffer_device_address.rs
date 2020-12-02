@@ -27,7 +27,6 @@ pub type BufferDeviceAddressInfoEXT = crate::vk1_2::BufferDeviceAddressInfo;
 #[allow(non_camel_case_types)]
 pub type BufferDeviceAddressInfoEXTBuilder<'a> = crate::vk1_2::BufferDeviceAddressInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Alias"]
-#[doc(alias = "vkGetBufferDeviceAddressEXT")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferDeviceAddressEXT = crate::vk1_2::PFN_vkGetBufferDeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Structure"]

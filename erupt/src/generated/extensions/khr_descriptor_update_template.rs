@@ -48,17 +48,14 @@ pub type DescriptorUpdateTemplateCreateInfoKHR = crate::vk1_1::DescriptorUpdateT
 pub type DescriptorUpdateTemplateCreateInfoKHRBuilder<'a> =
     crate::vk1_1::DescriptorUpdateTemplateCreateInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Alias"]
-#[doc(alias = "vkCreateDescriptorUpdateTemplateKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorUpdateTemplateKHR =
     crate::vk1_1::PFN_vkCreateDescriptorUpdateTemplate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Alias"]
-#[doc(alias = "vkDestroyDescriptorUpdateTemplateKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDescriptorUpdateTemplateKHR =
     crate::vk1_1::PFN_vkDestroyDescriptorUpdateTemplate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Alias"]
-#[doc(alias = "vkUpdateDescriptorSetWithTemplateKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplateKHR =
     crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;

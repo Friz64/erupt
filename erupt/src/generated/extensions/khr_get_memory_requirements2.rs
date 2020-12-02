@@ -62,15 +62,12 @@ pub type SparseImageMemoryRequirements2KHR = crate::vk1_1::SparseImageMemoryRequ
 pub type SparseImageMemoryRequirements2KHRBuilder<'a> =
     crate::vk1_1::SparseImageMemoryRequirements2Builder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2KHR.html) · Alias"]
-#[doc(alias = "vkGetBufferMemoryRequirements2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferMemoryRequirements2KHR = crate::vk1_1::PFN_vkGetBufferMemoryRequirements2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements2KHR.html) · Alias"]
-#[doc(alias = "vkGetImageMemoryRequirements2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageMemoryRequirements2KHR = crate::vk1_1::PFN_vkGetImageMemoryRequirements2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2KHR.html) · Alias"]
-#[doc(alias = "vkGetImageSparseMemoryRequirements2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSparseMemoryRequirements2KHR =
     crate::vk1_1::PFN_vkGetImageSparseMemoryRequirements2;

@@ -20,7 +20,6 @@ pub type PhysicalDeviceHostQueryResetFeaturesEXT =
 pub type PhysicalDeviceHostQueryResetFeaturesEXTBuilder<'a> =
     crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPoolEXT.html) · Alias"]
-#[doc(alias = "vkResetQueryPoolEXT")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetQueryPoolEXT = crate::vk1_2::PFN_vkResetQueryPool;
 #[doc = "Provided by [`extensions::ext_host_query_reset`](extensions/ext_host_query_reset/index.html)"]

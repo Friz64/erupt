@@ -95,16 +95,13 @@ pub type DeviceGroupBindSparseInfoKHR = crate::vk1_1::DeviceGroupBindSparseInfo;
 pub type DeviceGroupBindSparseInfoKHRBuilder<'a> =
     crate::vk1_1::DeviceGroupBindSparseInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Alias"]
-#[doc(alias = "vkGetDeviceGroupPeerMemoryFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR =
     crate::vk1_1::PFN_vkGetDeviceGroupPeerMemoryFeatures;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Alias"]
-#[doc(alias = "vkCmdSetDeviceMaskKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDeviceMaskKHR = crate::vk1_1::PFN_vkCmdSetDeviceMask;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Alias"]
-#[doc(alias = "vkCmdDispatchBaseKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchBaseKHR = crate::vk1_1::PFN_vkCmdDispatchBase;
 #[doc = "Provided by [`extensions::khr_device_group`](extensions/khr_device_group/index.html)"]

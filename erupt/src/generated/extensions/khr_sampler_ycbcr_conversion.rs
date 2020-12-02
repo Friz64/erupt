@@ -85,11 +85,9 @@ pub type SamplerYcbcrConversionImageFormatPropertiesKHR =
 pub type SamplerYcbcrConversionImageFormatPropertiesKHRBuilder<'a> =
     crate::vk1_1::SamplerYcbcrConversionImageFormatPropertiesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Alias"]
-#[doc(alias = "vkCreateSamplerYcbcrConversionKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkCreateSamplerYcbcrConversion;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Alias"]
-#[doc(alias = "vkDestroySamplerYcbcrConversionKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkDestroySamplerYcbcrConversion;
 #[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](extensions/khr_sampler_ycbcr_conversion/index.html)"]

@@ -79,12 +79,17 @@ impl Alias {
     pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
         let mut is_builder_alias = false;
         let mut builder_tokens = None;
+        let mut doc_alias_code = None;
         if let Alias {
             name: Name::Type(name),
             alias: Name::Type(alias),
             ..
         } = &self
         {
+            // only generate the attribute for type aliases
+            let doc_alias = self.name.original();
+            doc_alias_code = Some(quote! { #[doc(alias = #doc_alias)] });
+
             is_builder_alias = name.builder || alias.builder;
             if !is_builder_alias {
                 if let Some(structure) = self.resolve_to_structure(source) {
@@ -99,7 +104,6 @@ impl Alias {
         }
 
         let ident = self.name.ident();
-        let doc_alias = self.name.original();
         let alias = self.alias.path(source);
         let doc = comment_gen.def(Some(self.name.original()), "Alias", None);
         let lifetime = if is_builder_alias {
@@ -110,7 +114,7 @@ impl Alias {
 
         quote! {
             #[doc = #doc]
-            #[doc(alias = #doc_alias)]
+            #doc_alias_code
             #[allow(non_camel_case_types)]
             pub type #ident#lifetime = #alias#lifetime;
 

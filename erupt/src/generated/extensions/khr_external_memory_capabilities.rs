@@ -82,7 +82,6 @@ pub type PhysicalDeviceIDPropertiesKHR = crate::vk1_1::PhysicalDeviceIDPropertie
 pub type PhysicalDeviceIDPropertiesKHRBuilder<'a> =
     crate::vk1_1::PhysicalDeviceIDPropertiesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceExternalBufferPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceExternalBufferProperties;

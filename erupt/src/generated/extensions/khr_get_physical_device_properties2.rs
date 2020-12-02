@@ -112,35 +112,28 @@ pub type PhysicalDeviceSparseImageFormatInfo2KHR =
 pub type PhysicalDeviceSparseImageFormatInfo2KHRBuilder<'a> =
     crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2Builder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceFeatures2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFeatures2KHR = crate::vk1_1::PFN_vkGetPhysicalDeviceFeatures2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceProperties2KHR = crate::vk1_1::PFN_vkGetPhysicalDeviceProperties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceFormatProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFormatProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceFormatProperties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceImageFormatProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceImageFormatProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceImageFormatProperties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceQueueFamilyProperties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceMemoryProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMemoryProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceMemoryProperties2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html) · Alias"]
-#[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2KHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceSparseImageFormatProperties2;

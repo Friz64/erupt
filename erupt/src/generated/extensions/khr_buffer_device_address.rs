@@ -66,15 +66,12 @@ pub type DeviceMemoryOpaqueCaptureAddressInfoKHR =
 pub type DeviceMemoryOpaqueCaptureAddressInfoKHRBuilder<'a> =
     crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Alias"]
-#[doc(alias = "vkGetBufferOpaqueCaptureAddressKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferOpaqueCaptureAddressKHR = crate::vk1_2::PFN_vkGetBufferOpaqueCaptureAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Alias"]
-#[doc(alias = "vkGetBufferDeviceAddressKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferDeviceAddressKHR = crate::vk1_2::PFN_vkGetBufferDeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Alias"]
-#[doc(alias = "vkGetDeviceMemoryOpaqueCaptureAddressKHR")]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR =
     crate::vk1_2::PFN_vkGetDeviceMemoryOpaqueCaptureAddress;

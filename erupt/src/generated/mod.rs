@@ -1,5 +1,7 @@
 #[doc = r" Provides Vulkan extension items"]
 pub mod extensions;
+#[doc = r" Re-exports **every** Vulkan item"]
+pub mod vk;
 #[doc = r" A list of requirements enabled in the entry loader"]
 #[derive(Debug)]
 pub struct EntryEnabled {

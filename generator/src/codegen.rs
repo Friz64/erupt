@@ -40,16 +40,25 @@ impl CodeMap {
         let mut root_mod = quote! {
             /// Provides Vulkan extension items
             pub mod extensions;
+            /// Re-exports **every** Vulkan item
+            pub mod vk;
 
             #root_code
         };
 
         let mut extensions_mod = quote! {};
+        let mut vk_mod = quote! {};
 
         for origin in self.map.keys() {
             if *origin == Origin::Root {
                 continue;
             }
+
+            let origin_module_path = origin.module_path();
+            vk_mod.extend(quote! {
+                #[doc(no_inline)]
+                pub use crate::#origin_module_path*;
+            });
 
             let name = format_ident!("{}", origin.path().last().unwrap());
             match origin {
@@ -72,6 +81,8 @@ impl CodeMap {
             .expect("Failed to write generated root module");
         fs::write(extensions_dir.join("mod.rs"), extensions_mod.to_string())
             .expect("Failed to write generated extensions module");
+        fs::write(output_dir.join("vk.rs"), vk_mod.to_string())
+            .expect("Failed to write generated vk re-export module");
 
         for (origin, tokens) in &self.map {
             if *origin == Origin::Root {

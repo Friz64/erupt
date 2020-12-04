@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added rustdoc alias support
+- Added `vk` module, which re-exports every Vulkan item
 
 ### Changed
 - Improved the idiomaticity of the `{Instance,Device}Enabled::new` API

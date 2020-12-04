@@ -13,8 +13,8 @@ pub const FN_CREATE_WIN32_SURFACE_KHR: *const std::os::raw::c_char =
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceWin32PresentationSupportKHR");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`](./struct.Win32SurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkWin32SurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct Win32SurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`Win32SurfaceCreateFlagsKHR`](./struct.Win32SurfaceCreateFlagsKHR.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkWin32SurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct Win32SurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`Win32SurfaceCreateFlagsKHR`]"]
 #[doc(alias = "VkWin32SurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -88,7 +88,7 @@ impl Win32SurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`](struct.Win32SurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct Win32SurfaceCreateInfoKHRBuilder<'a>(
     Win32SurfaceCreateInfoKHR,
@@ -144,7 +144,7 @@ impl<'a> std::ops::DerefMut for Win32SurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_win32_surface`](extensions/khr_win32_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_win32_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function"]

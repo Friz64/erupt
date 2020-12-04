@@ -14,7 +14,7 @@ pub type PFN_vkReleaseDisplayEXT = unsafe extern "system" fn(
     physical_device: crate::vk1_0::PhysicalDevice,
     display: crate::extensions::khr_display::DisplayKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provided by [`extensions::ext_direct_mode_display`](extensions/ext_direct_mode_display/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_direct_mode_display`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseDisplayEXT.html) · Function"]

@@ -174,7 +174,7 @@ impl PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Builder of [`PhysicalDeviceExtendedDynamicStateFeaturesEXT`](struct.PhysicalDeviceExtendedDynamicStateFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Builder of [`PhysicalDeviceExtendedDynamicStateFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'a>(
     PhysicalDeviceExtendedDynamicStateFeaturesEXT,
@@ -220,7 +220,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExtendedDynamicStateFeaturesEXTBui
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_extended_dynamic_state`](extensions/ext_extended_dynamic_state/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]

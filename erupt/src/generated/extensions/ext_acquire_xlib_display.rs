@@ -28,7 +28,7 @@ pub type PFN_vkGetRandROutputDisplayEXT = unsafe extern "system" fn(
     rr_output: u64,
     p_display: *mut crate::extensions::khr_display::DisplayKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provided by [`extensions::ext_acquire_xlib_display`](extensions/ext_acquire_xlib_display/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_acquire_xlib_display`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function"]

@@ -45,7 +45,7 @@ impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockFeaturesEXT`](struct.PhysicalDeviceInlineUniformBlockFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a>(
     PhysicalDeviceInlineUniformBlockFeaturesEXT,
@@ -163,7 +163,7 @@ impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockPropertiesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockPropertiesEXT`](struct.PhysicalDeviceInlineUniformBlockPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockPropertiesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a>(
     PhysicalDeviceInlineUniformBlockPropertiesEXT,
@@ -284,7 +284,7 @@ impl WriteDescriptorSetInlineUniformBlockEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetInlineUniformBlockEXT.html) · Builder of [`WriteDescriptorSetInlineUniformBlockEXT`](struct.WriteDescriptorSetInlineUniformBlockEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetInlineUniformBlockEXT.html) · Builder of [`WriteDescriptorSetInlineUniformBlockEXT`]"]
 #[repr(transparent)]
 pub struct WriteDescriptorSetInlineUniformBlockEXTBuilder<'a>(
     WriteDescriptorSetInlineUniformBlockEXT,
@@ -370,7 +370,7 @@ impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfoEXT.html) · Builder of [`DescriptorPoolInlineUniformBlockCreateInfoEXT`](struct.DescriptorPoolInlineUniformBlockCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfoEXT.html) · Builder of [`DescriptorPoolInlineUniformBlockCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a>(
     DescriptorPoolInlineUniformBlockCreateInfoEXT,

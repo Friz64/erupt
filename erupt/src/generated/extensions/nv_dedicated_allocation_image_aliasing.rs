@@ -43,7 +43,7 @@ impl PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV.html) · Builder of [`PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV`](struct.PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV.html) · Builder of [`PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a>(
     PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV,

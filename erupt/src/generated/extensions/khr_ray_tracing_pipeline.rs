@@ -50,13 +50,13 @@ impl std::fmt::Debug for RayTracingShaderGroupTypeKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl RayTracingShaderGroupTypeKHR {
     pub const GENERAL_KHR: Self = Self(0);
     pub const TRIANGLES_HIT_GROUP_KHR: Self = Self(1);
     pub const PROCEDURAL_HIT_GROUP_KHR: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl RayTracingShaderGroupTypeKHR {
     pub const GENERAL_NV: Self = Self::GENERAL_KHR;
     pub const TRIANGLES_HIT_GROUP_NV: Self = Self::TRIANGLES_HIT_GROUP_KHR;
@@ -78,7 +78,7 @@ impl std::fmt::Debug for ShaderGroupShaderKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl ShaderGroupShaderKHR {
     pub const GENERAL_KHR: Self = Self(0);
     pub const CLOSEST_HIT_KHR: Self = Self(1);
@@ -183,7 +183,7 @@ impl RayTracingShaderGroupCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Builder of [`RayTracingShaderGroupCreateInfoKHR`](struct.RayTracingShaderGroupCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Builder of [`RayTracingShaderGroupCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupCreateInfoKHRBuilder<'a>(
     RayTracingShaderGroupCreateInfoKHR,
@@ -320,7 +320,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackCreateInfoEXTBuilder < '_ >> for RayTracingPipelineCreateInfoKHRBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Builder of [`RayTracingPipelineCreateInfoKHR`](struct.RayTracingPipelineCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Builder of [`RayTracingPipelineCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct RayTracingPipelineCreateInfoKHRBuilder<'a>(
     RayTracingPipelineCreateInfoKHR,
@@ -486,7 +486,7 @@ impl PhysicalDeviceRayTracingPipelineFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelineFeaturesKHR.html) · Builder of [`PhysicalDeviceRayTracingPipelineFeaturesKHR`](struct.PhysicalDeviceRayTracingPipelineFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelineFeaturesKHR.html) · Builder of [`PhysicalDeviceRayTracingPipelineFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a>(
     PhysicalDeviceRayTracingPipelineFeaturesKHR,
@@ -640,7 +640,7 @@ impl PhysicalDeviceRayTracingPipelinePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelinePropertiesKHR.html) · Builder of [`PhysicalDeviceRayTracingPipelinePropertiesKHR`](struct.PhysicalDeviceRayTracingPipelinePropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelinePropertiesKHR.html) · Builder of [`PhysicalDeviceRayTracingPipelinePropertiesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a>(
     PhysicalDeviceRayTracingPipelinePropertiesKHR,
@@ -762,7 +762,7 @@ impl StridedDeviceAddressRegionKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Builder of [`StridedDeviceAddressRegionKHR`](struct.StridedDeviceAddressRegionKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Builder of [`StridedDeviceAddressRegionKHR`]"]
 #[repr(transparent)]
 pub struct StridedDeviceAddressRegionKHRBuilder<'a>(
     StridedDeviceAddressRegionKHR,
@@ -849,7 +849,7 @@ impl TraceRaysIndirectCommandKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Builder of [`TraceRaysIndirectCommandKHR`](struct.TraceRaysIndirectCommandKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Builder of [`TraceRaysIndirectCommandKHR`]"]
 #[repr(transparent)]
 pub struct TraceRaysIndirectCommandKHRBuilder<'a>(
     TraceRaysIndirectCommandKHR,
@@ -945,7 +945,7 @@ impl RayTracingPipelineInterfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Builder of [`RayTracingPipelineInterfaceCreateInfoKHR`](struct.RayTracingPipelineInterfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Builder of [`RayTracingPipelineInterfaceCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct RayTracingPipelineInterfaceCreateInfoKHRBuilder<'a>(
     RayTracingPipelineInterfaceCreateInfoKHR,
@@ -999,7 +999,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineInterfaceCreateInfoKHRBuilder<
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]

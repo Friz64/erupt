@@ -41,7 +41,7 @@ impl std::fmt::Debug for ShadingRatePaletteEntryNV {
         })
     }
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl ShadingRatePaletteEntryNV {
     pub const NO_INVOCATIONS_NV: Self = Self(0);
     pub const _16_INVOCATIONS_PER_PIXEL_NV: Self = Self(1);
@@ -72,7 +72,7 @@ impl std::fmt::Debug for CoarseSampleOrderTypeNV {
         })
     }
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl CoarseSampleOrderTypeNV {
     pub const DEFAULT_NV: Self = Self(0);
     pub const CUSTOM_NV: Self = Self(1);
@@ -135,7 +135,7 @@ impl ShadingRatePaletteNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Builder of [`ShadingRatePaletteNV`](struct.ShadingRatePaletteNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Builder of [`ShadingRatePaletteNV`]"]
 #[repr(transparent)]
 pub struct ShadingRatePaletteNVBuilder<'a>(ShadingRatePaletteNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ShadingRatePaletteNVBuilder<'a> {
@@ -217,7 +217,7 @@ impl PipelineViewportShadingRateImageStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html) · Builder of [`PipelineViewportShadingRateImageStateCreateInfoNV`](struct.PipelineViewportShadingRateImageStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html) · Builder of [`PipelineViewportShadingRateImageStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a>(
     PipelineViewportShadingRateImageStateCreateInfoNV,
@@ -312,7 +312,7 @@ impl PhysicalDeviceShadingRateImageFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImageFeaturesNV.html) · Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`](struct.PhysicalDeviceShadingRateImageFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImageFeaturesNV.html) · Builder of [`PhysicalDeviceShadingRateImageFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a>(
     PhysicalDeviceShadingRateImageFeaturesNV,
@@ -409,7 +409,7 @@ impl PhysicalDeviceShadingRateImagePropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImagePropertiesNV.html) · Builder of [`PhysicalDeviceShadingRateImagePropertiesNV`](struct.PhysicalDeviceShadingRateImagePropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImagePropertiesNV.html) · Builder of [`PhysicalDeviceShadingRateImagePropertiesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a>(
     PhysicalDeviceShadingRateImagePropertiesNV,
@@ -502,7 +502,7 @@ impl CoarseSampleLocationNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Builder of [`CoarseSampleLocationNV`](struct.CoarseSampleLocationNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Builder of [`CoarseSampleLocationNV`]"]
 #[repr(transparent)]
 pub struct CoarseSampleLocationNVBuilder<'a>(
     CoarseSampleLocationNV,
@@ -592,7 +592,7 @@ impl CoarseSampleOrderCustomNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Builder of [`CoarseSampleOrderCustomNV`](struct.CoarseSampleOrderCustomNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Builder of [`CoarseSampleOrderCustomNV`]"]
 #[repr(transparent)]
 pub struct CoarseSampleOrderCustomNVBuilder<'a>(
     CoarseSampleOrderCustomNV,
@@ -687,7 +687,7 @@ impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportCoarseSampleOrderStateCreateInfoNV.html) · Builder of [`PipelineViewportCoarseSampleOrderStateCreateInfoNV`](struct.PipelineViewportCoarseSampleOrderStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportCoarseSampleOrderStateCreateInfoNV.html) · Builder of [`PipelineViewportCoarseSampleOrderStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a>(
     PipelineViewportCoarseSampleOrderStateCreateInfoNV,
@@ -745,7 +745,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportCoarseSampleOrderStateCreateInfo
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Function"]

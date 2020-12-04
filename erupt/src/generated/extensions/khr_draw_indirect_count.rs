@@ -19,7 +19,7 @@ pub type PFN_vkCmdDrawIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndirectCoun
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndexedIndirectCount;
-#[doc = "Provided by [`extensions::khr_draw_indirect_count`](extensions/khr_draw_indirect_count/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_draw_indirect_count`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Function"]

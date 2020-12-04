@@ -39,7 +39,7 @@ impl PhysicalDeviceImageRobustnessFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageRobustnessFeaturesEXT.html) · Builder of [`PhysicalDeviceImageRobustnessFeaturesEXT`](struct.PhysicalDeviceImageRobustnessFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageRobustnessFeaturesEXT.html) · Builder of [`PhysicalDeviceImageRobustnessFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a>(
     PhysicalDeviceImageRobustnessFeaturesEXT,

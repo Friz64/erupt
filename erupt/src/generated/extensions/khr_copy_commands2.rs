@@ -97,7 +97,7 @@ impl BufferCopy2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy2KHR.html) · Builder of [`BufferCopy2KHR`](struct.BufferCopy2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy2KHR.html) · Builder of [`BufferCopy2KHR`]"]
 #[repr(transparent)]
 pub struct BufferCopy2KHRBuilder<'a>(BufferCopy2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferCopy2KHRBuilder<'a> {
@@ -193,7 +193,7 @@ impl ImageCopy2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy2KHR.html) · Builder of [`ImageCopy2KHR`](struct.ImageCopy2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy2KHR.html) · Builder of [`ImageCopy2KHR`]"]
 #[repr(transparent)]
 pub struct ImageCopy2KHRBuilder<'a>(ImageCopy2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageCopy2KHRBuilder<'a> {
@@ -316,7 +316,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Builder of [`ImageBlit2KHR`](struct.ImageBlit2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Builder of [`ImageBlit2KHR`]"]
 #[repr(transparent)]
 pub struct ImageBlit2KHRBuilder<'a>(ImageBlit2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageBlit2KHRBuilder<'a> {
@@ -440,7 +440,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Builder of [`BufferImageCopy2KHR`](struct.BufferImageCopy2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Builder of [`BufferImageCopy2KHR`]"]
 #[repr(transparent)]
 pub struct BufferImageCopy2KHRBuilder<'a>(BufferImageCopy2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferImageCopy2KHRBuilder<'a> {
@@ -554,7 +554,7 @@ impl ImageResolve2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve2KHR.html) · Builder of [`ImageResolve2KHR`](struct.ImageResolve2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve2KHR.html) · Builder of [`ImageResolve2KHR`]"]
 #[repr(transparent)]
 pub struct ImageResolve2KHRBuilder<'a>(ImageResolve2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageResolve2KHRBuilder<'a> {
@@ -663,7 +663,7 @@ impl CopyBufferInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferInfo2KHR.html) · Builder of [`CopyBufferInfo2KHR`](struct.CopyBufferInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferInfo2KHR.html) · Builder of [`CopyBufferInfo2KHR`]"]
 #[repr(transparent)]
 pub struct CopyBufferInfo2KHRBuilder<'a>(CopyBufferInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyBufferInfo2KHRBuilder<'a> {
@@ -766,7 +766,7 @@ impl CopyImageInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageInfo2KHR.html) · Builder of [`CopyImageInfo2KHR`](struct.CopyImageInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageInfo2KHR.html) · Builder of [`CopyImageInfo2KHR`]"]
 #[repr(transparent)]
 pub struct CopyImageInfo2KHRBuilder<'a>(CopyImageInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyImageInfo2KHRBuilder<'a> {
@@ -882,7 +882,7 @@ impl BlitImageInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlitImageInfo2KHR.html) · Builder of [`BlitImageInfo2KHR`](struct.BlitImageInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlitImageInfo2KHR.html) · Builder of [`BlitImageInfo2KHR`]"]
 #[repr(transparent)]
 pub struct BlitImageInfo2KHRBuilder<'a>(BlitImageInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> BlitImageInfo2KHRBuilder<'a> {
@@ -997,7 +997,7 @@ impl CopyBufferToImageInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferToImageInfo2KHR.html) · Builder of [`CopyBufferToImageInfo2KHR`](struct.CopyBufferToImageInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferToImageInfo2KHR.html) · Builder of [`CopyBufferToImageInfo2KHR`]"]
 #[repr(transparent)]
 pub struct CopyBufferToImageInfo2KHRBuilder<'a>(
     CopyBufferToImageInfo2KHR,
@@ -1105,7 +1105,7 @@ impl CopyImageToBufferInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageToBufferInfo2KHR.html) · Builder of [`CopyImageToBufferInfo2KHR`](struct.CopyImageToBufferInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageToBufferInfo2KHR.html) · Builder of [`CopyImageToBufferInfo2KHR`]"]
 #[repr(transparent)]
 pub struct CopyImageToBufferInfo2KHRBuilder<'a>(
     CopyImageToBufferInfo2KHR,
@@ -1216,7 +1216,7 @@ impl ResolveImageInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveImageInfo2KHR.html) · Builder of [`ResolveImageInfo2KHR`](struct.ResolveImageInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveImageInfo2KHR.html) · Builder of [`ResolveImageInfo2KHR`]"]
 #[repr(transparent)]
 pub struct ResolveImageInfo2KHRBuilder<'a>(ResolveImageInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ResolveImageInfo2KHRBuilder<'a> {
@@ -1280,7 +1280,7 @@ impl<'a> std::ops::DerefMut for ResolveImageInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_copy_commands2`](extensions/khr_copy_commands2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_copy_commands2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer2KHR.html) · Function"]

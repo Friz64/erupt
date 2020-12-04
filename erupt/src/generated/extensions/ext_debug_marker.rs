@@ -93,7 +93,7 @@ impl DebugMarkerObjectNameInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`](struct.DebugMarkerObjectNameInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`]"]
 #[repr(transparent)]
 pub struct DebugMarkerObjectNameInfoEXTBuilder<'a>(
     DebugMarkerObjectNameInfoEXT,
@@ -195,7 +195,7 @@ impl DebugMarkerObjectTagInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`](struct.DebugMarkerObjectTagInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`]"]
 #[repr(transparent)]
 pub struct DebugMarkerObjectTagInfoEXTBuilder<'a>(
     DebugMarkerObjectTagInfoEXT,
@@ -298,7 +298,7 @@ impl DebugMarkerMarkerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`](struct.DebugMarkerMarkerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`]"]
 #[repr(transparent)]
 pub struct DebugMarkerMarkerInfoEXTBuilder<'a>(
     DebugMarkerMarkerInfoEXT,
@@ -346,7 +346,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerMarkerInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_debug_marker`](extensions/ext_debug_marker/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_marker`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]

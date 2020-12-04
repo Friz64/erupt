@@ -29,8 +29,8 @@ pub const FN_CMD_END_QUERY_INDEXED_EXT: *const std::os::raw::c_char =
 #[doc(alias = "FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT")]
 pub const FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectByteCountEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagBitsEXT.html)"] # [doc (alias = "VkPipelineRasterizationStateStreamCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateStreamCreateFlagsEXT`](./struct.PipelineRasterizationStateStreamCreateFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`]"] # [doc (alias = "VkPipelineRasterizationStateStreamCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateStreamCreateFlagsEXT`]"]
 #[doc(alias = "VkPipelineRasterizationStateStreamCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -142,7 +142,7 @@ impl PhysicalDeviceTransformFeedbackFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`](struct.PhysicalDeviceTransformFeedbackFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackFeaturesEXT,
@@ -284,7 +284,7 @@ impl PhysicalDeviceTransformFeedbackPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`](struct.PhysicalDeviceTransformFeedbackPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackPropertiesEXT,
@@ -437,7 +437,7 @@ impl PipelineRasterizationStateStreamCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`](struct.PipelineRasterizationStateStreamCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a>(
     PipelineRasterizationStateStreamCreateInfoEXT,
@@ -491,7 +491,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateStreamCreateInfoEXTBui
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]

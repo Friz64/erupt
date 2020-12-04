@@ -67,7 +67,7 @@ impl ImportFenceFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceFdInfoKHR.html) · Builder of [`ImportFenceFdInfoKHR`](struct.ImportFenceFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceFdInfoKHR.html) · Builder of [`ImportFenceFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct ImportFenceFdInfoKHRBuilder<'a>(ImportFenceFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportFenceFdInfoKHRBuilder<'a> {
@@ -162,7 +162,7 @@ impl FenceGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetFdInfoKHR.html) · Builder of [`FenceGetFdInfoKHR`](struct.FenceGetFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetFdInfoKHR.html) · Builder of [`FenceGetFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct FenceGetFdInfoKHRBuilder<'a>(FenceGetFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> FenceGetFdInfoKHRBuilder<'a> {
@@ -210,7 +210,7 @@ impl<'a> std::ops::DerefMut for FenceGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_external_fence_fd`](extensions/khr_external_fence_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence_fd`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]

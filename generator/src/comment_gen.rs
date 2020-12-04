@@ -28,30 +28,10 @@ impl DocCommentGen {
         format!("{} · {}", man_page, description)
     }
 
-    pub fn link<I, T>(
-        &self,
-        comment_location: &Origin,
-        target_location: &Origin,
-        target_item: I,
-        target_title: T,
-    ) -> String
-    where
-        I: Display,
-        T: Display,
-    {
-        let redirection = comment_location.doc_path(target_location);
-        format!("[`{}`]({}/{}.html)", target_title, redirection, target_item)
-    }
-
-    pub fn provided_by(&self, comment_location: &Origin, target_location: &Origin) -> String {
+    pub fn provided_by(&self, target_location: &Origin) -> String {
         format!(
-            "Provided by {}",
-            self.link(
-                comment_location,
-                target_location,
-                "index",
-                target_location.module_path_pretty()
-            )
+            "Provided by [`crate::{}`]",
+            target_location.module_path_pretty()
         )
     }
 }

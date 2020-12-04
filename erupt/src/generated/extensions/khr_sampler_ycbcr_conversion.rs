@@ -90,7 +90,7 @@ pub type PFN_vkCreateSamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkCreateSampl
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkDestroySamplerYcbcrConversion;
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Function"]

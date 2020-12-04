@@ -30,7 +30,7 @@ impl std::fmt::Debug for FragmentShadingRateCombinerOpKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl FragmentShadingRateCombinerOpKHR {
     pub const KEEP_KHR: Self = Self(0);
     pub const REPLACE_KHR: Self = Self(1);
@@ -92,7 +92,7 @@ impl FragmentShadingRateAttachmentInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Builder of [`FragmentShadingRateAttachmentInfoKHR`](struct.FragmentShadingRateAttachmentInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Builder of [`FragmentShadingRateAttachmentInfoKHR`]"]
 #[repr(transparent)]
 pub struct FragmentShadingRateAttachmentInfoKHRBuilder<'a>(
     FragmentShadingRateAttachmentInfoKHR,
@@ -185,7 +185,7 @@ impl PipelineFragmentShadingRateStateCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateStateCreateInfoKHR.html) · Builder of [`PipelineFragmentShadingRateStateCreateInfoKHR`](struct.PipelineFragmentShadingRateStateCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateStateCreateInfoKHR.html) · Builder of [`PipelineFragmentShadingRateStateCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a>(
     PipelineFragmentShadingRateStateCreateInfoKHR,
@@ -289,7 +289,7 @@ impl PhysicalDeviceFragmentShadingRateFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateFeaturesKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRateFeaturesKHR`](struct.PhysicalDeviceFragmentShadingRateFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateFeaturesKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRateFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a>(
     PhysicalDeviceFragmentShadingRateFeaturesKHR,
@@ -482,7 +482,7 @@ impl PhysicalDeviceFragmentShadingRatePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRatePropertiesKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRatePropertiesKHR`](struct.PhysicalDeviceFragmentShadingRatePropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRatePropertiesKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRatePropertiesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a>(
     PhysicalDeviceFragmentShadingRatePropertiesKHR,
@@ -706,7 +706,7 @@ impl PhysicalDeviceFragmentShadingRateKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRateKHR`](struct.PhysicalDeviceFragmentShadingRateKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateKHR.html) · Builder of [`PhysicalDeviceFragmentShadingRateKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShadingRateKHRBuilder<'a>(
     PhysicalDeviceFragmentShadingRateKHR,
@@ -754,7 +754,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateKHRBuilder<'a> 
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html) · Function"]
@@ -773,7 +773,7 @@ impl crate::DeviceLoader {
         ()
     }
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]

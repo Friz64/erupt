@@ -71,7 +71,7 @@ pub type PFN_vkGetImageMemoryRequirements2KHR = crate::vk1_1::PFN_vkGetImageMemo
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSparseMemoryRequirements2KHR =
     crate::vk1_1::PFN_vkGetImageSparseMemoryRequirements2;
-#[doc = "Provided by [`extensions::khr_get_memory_requirements2`](extensions/khr_get_memory_requirements2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_memory_requirements2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2KHR.html) · Function"]

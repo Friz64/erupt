@@ -561,8 +561,8 @@ crate :: non_dispatchable_handle ! (QueryPool , QUERY_POOL , "[Vulkan Manual Pag
 crate :: non_dispatchable_handle ! (Framebuffer , FRAMEBUFFER , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebuffer.html) · Non-dispatchable Handle" , "VkFramebuffer") ;
 crate :: non_dispatchable_handle ! (RenderPass , RENDER_PASS , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPass.html) · Non-dispatchable Handle" , "VkRenderPass") ;
 crate :: non_dispatchable_handle ! (PipelineCache , PIPELINE_CACHE , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCache.html) · Non-dispatchable Handle" , "VkPipelineCache") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateFlags.html) · Bitmask of [`QueryPoolCreateFlagBits`](./struct.QueryPoolCreateFlagBits.html)"] # [doc (alias = "VkQueryPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`QueryPoolCreateFlags`](./struct.QueryPoolCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateFlags.html) · Bitmask of [`QueryPoolCreateFlagBits`]"] # [doc (alias = "VkQueryPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`QueryPoolCreateFlags`]"]
 #[doc(alias = "VkQueryPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -581,8 +581,8 @@ impl std::fmt::Debug for QueryPoolCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateFlags.html) · Bitmask of [`PipelineLayoutCreateFlagBits`](./struct.PipelineLayoutCreateFlagBits.html)"] # [doc (alias = "VkPipelineLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineLayoutCreateFlags`](./struct.PipelineLayoutCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateFlags.html) · Bitmask of [`PipelineLayoutCreateFlagBits`]"] # [doc (alias = "VkPipelineLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineLayoutCreateFlags`]"]
 #[doc(alias = "VkPipelineLayoutCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -601,8 +601,8 @@ impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateFlags.html) · Bitmask of [`PipelineDepthStencilStateCreateFlagBits`](./struct.PipelineDepthStencilStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineDepthStencilStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDepthStencilStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDepthStencilStateCreateFlags`](./struct.PipelineDepthStencilStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateFlags.html) · Bitmask of [`PipelineDepthStencilStateCreateFlagBits`]"] # [doc (alias = "VkPipelineDepthStencilStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDepthStencilStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDepthStencilStateCreateFlags`]"]
 #[doc(alias = "VkPipelineDepthStencilStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -621,8 +621,8 @@ impl std::fmt::Debug for PipelineDepthStencilStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateFlags.html) · Bitmask of [`PipelineDynamicStateCreateFlagBits`](./struct.PipelineDynamicStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineDynamicStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDynamicStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDynamicStateCreateFlags`](./struct.PipelineDynamicStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateFlags.html) · Bitmask of [`PipelineDynamicStateCreateFlagBits`]"] # [doc (alias = "VkPipelineDynamicStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDynamicStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDynamicStateCreateFlags`]"]
 #[doc(alias = "VkPipelineDynamicStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -641,8 +641,8 @@ impl std::fmt::Debug for PipelineDynamicStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateFlags.html) · Bitmask of [`PipelineColorBlendStateCreateFlagBits`](./struct.PipelineColorBlendStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineColorBlendStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineColorBlendStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineColorBlendStateCreateFlags`](./struct.PipelineColorBlendStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateFlags.html) · Bitmask of [`PipelineColorBlendStateCreateFlagBits`]"] # [doc (alias = "VkPipelineColorBlendStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineColorBlendStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineColorBlendStateCreateFlags`]"]
 #[doc(alias = "VkPipelineColorBlendStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -661,8 +661,8 @@ impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateFlags.html) · Bitmask of [`PipelineMultisampleStateCreateFlagBits`](./struct.PipelineMultisampleStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineMultisampleStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineMultisampleStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineMultisampleStateCreateFlags`](./struct.PipelineMultisampleStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateFlags.html) · Bitmask of [`PipelineMultisampleStateCreateFlagBits`]"] # [doc (alias = "VkPipelineMultisampleStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineMultisampleStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineMultisampleStateCreateFlags`]"]
 #[doc(alias = "VkPipelineMultisampleStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -681,8 +681,8 @@ impl std::fmt::Debug for PipelineMultisampleStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateFlags.html) · Bitmask of [`PipelineRasterizationStateCreateFlagBits`](./struct.PipelineRasterizationStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineRasterizationStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateCreateFlags`](./struct.PipelineRasterizationStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateFlags.html) · Bitmask of [`PipelineRasterizationStateCreateFlagBits`]"] # [doc (alias = "VkPipelineRasterizationStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationStateCreateFlags`]"]
 #[doc(alias = "VkPipelineRasterizationStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -701,8 +701,8 @@ impl std::fmt::Debug for PipelineRasterizationStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateFlags.html) · Bitmask of [`PipelineViewportStateCreateFlagBits`](./struct.PipelineViewportStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineViewportStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineViewportStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineViewportStateCreateFlags`](./struct.PipelineViewportStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateFlags.html) · Bitmask of [`PipelineViewportStateCreateFlagBits`]"] # [doc (alias = "VkPipelineViewportStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineViewportStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineViewportStateCreateFlags`]"]
 #[doc(alias = "VkPipelineViewportStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -721,8 +721,8 @@ impl std::fmt::Debug for PipelineViewportStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateFlags.html) · Bitmask of [`PipelineTessellationStateCreateFlagBits`](./struct.PipelineTessellationStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineTessellationStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineTessellationStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineTessellationStateCreateFlags`](./struct.PipelineTessellationStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateFlags.html) · Bitmask of [`PipelineTessellationStateCreateFlagBits`]"] # [doc (alias = "VkPipelineTessellationStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineTessellationStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineTessellationStateCreateFlags`]"]
 #[doc(alias = "VkPipelineTessellationStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -741,8 +741,8 @@ impl std::fmt::Debug for PipelineTessellationStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInputAssemblyStateCreateFlags.html) · Bitmask of [`PipelineInputAssemblyStateCreateFlagBits`](./struct.PipelineInputAssemblyStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineInputAssemblyStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineInputAssemblyStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineInputAssemblyStateCreateFlags`](./struct.PipelineInputAssemblyStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInputAssemblyStateCreateFlags.html) · Bitmask of [`PipelineInputAssemblyStateCreateFlagBits`]"] # [doc (alias = "VkPipelineInputAssemblyStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineInputAssemblyStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineInputAssemblyStateCreateFlags`]"]
 #[doc(alias = "VkPipelineInputAssemblyStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -761,8 +761,8 @@ impl std::fmt::Debug for PipelineInputAssemblyStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateFlags.html) · Bitmask of [`PipelineVertexInputStateCreateFlagBits`](./struct.PipelineVertexInputStateCreateFlagBits.html)"] # [doc (alias = "VkPipelineVertexInputStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineVertexInputStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineVertexInputStateCreateFlags`](./struct.PipelineVertexInputStateCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateFlags.html) · Bitmask of [`PipelineVertexInputStateCreateFlagBits`]"] # [doc (alias = "VkPipelineVertexInputStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineVertexInputStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineVertexInputStateCreateFlags`]"]
 #[doc(alias = "VkPipelineVertexInputStateCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -781,8 +781,8 @@ impl std::fmt::Debug for PipelineVertexInputStateCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferViewCreateFlags.html) · Bitmask of [`BufferViewCreateFlagBits`](./struct.BufferViewCreateFlagBits.html)"] # [doc (alias = "VkBufferViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`BufferViewCreateFlags`](./struct.BufferViewCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferViewCreateFlags.html) · Bitmask of [`BufferViewCreateFlagBits`]"] # [doc (alias = "VkBufferViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`BufferViewCreateFlags`]"]
 #[doc(alias = "VkBufferViewCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -801,8 +801,8 @@ impl std::fmt::Debug for BufferViewCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateFlags.html) · Bitmask of [`InstanceCreateFlagBits`](./struct.InstanceCreateFlagBits.html)"] # [doc (alias = "VkInstanceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct InstanceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`InstanceCreateFlags`](./struct.InstanceCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateFlags.html) · Bitmask of [`InstanceCreateFlagBits`]"] # [doc (alias = "VkInstanceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct InstanceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`InstanceCreateFlags`]"]
 #[doc(alias = "VkInstanceCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -821,8 +821,8 @@ impl std::fmt::Debug for InstanceCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateFlags.html) · Bitmask of [`DeviceCreateFlagBits`](./struct.DeviceCreateFlagBits.html)"] # [doc (alias = "VkDeviceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DeviceCreateFlags`](./struct.DeviceCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateFlags.html) · Bitmask of [`DeviceCreateFlagBits`]"] # [doc (alias = "VkDeviceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DeviceCreateFlags`]"]
 #[doc(alias = "VkDeviceCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -841,8 +841,8 @@ impl std::fmt::Debug for DeviceCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateFlags.html) · Bitmask of [`SemaphoreCreateFlagBits`](./struct.SemaphoreCreateFlagBits.html)"] # [doc (alias = "VkSemaphoreCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`SemaphoreCreateFlags`](./struct.SemaphoreCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateFlags.html) · Bitmask of [`SemaphoreCreateFlagBits`]"] # [doc (alias = "VkSemaphoreCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`SemaphoreCreateFlags`]"]
 #[doc(alias = "VkSemaphoreCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -861,8 +861,8 @@ impl std::fmt::Debug for SemaphoreCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`](./struct.EventCreateFlagBits.html)"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`EventCreateFlags`](./struct.EventCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`EventCreateFlags`]"]
 #[doc(alias = "VkEventCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -881,8 +881,8 @@ impl std::fmt::Debug for EventCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryMapFlags.html) · Bitmask of [`MemoryMapFlagBits`](./struct.MemoryMapFlagBits.html)"] # [doc (alias = "VkMemoryMapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryMapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MemoryMapFlags`](./struct.MemoryMapFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryMapFlags.html) · Bitmask of [`MemoryMapFlagBits`]"] # [doc (alias = "VkMemoryMapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryMapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MemoryMapFlags`]"]
 #[doc(alias = "VkMemoryMapFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -901,8 +901,8 @@ impl std::fmt::Debug for MemoryMapFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolResetFlags.html) · Bitmask of [`DescriptorPoolResetFlagBits`](./struct.DescriptorPoolResetFlagBits.html)"] # [doc (alias = "VkDescriptorPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DescriptorPoolResetFlags`](./struct.DescriptorPoolResetFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolResetFlags.html) · Bitmask of [`DescriptorPoolResetFlagBits`]"] # [doc (alias = "VkDescriptorPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DescriptorPoolResetFlags`]"]
 #[doc(alias = "VkDescriptorPoolResetFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -936,7 +936,7 @@ impl std::fmt::Debug for AttachmentLoadOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl AttachmentLoadOp {
     pub const LOAD: Self = Self(0);
     pub const CLEAR: Self = Self(1);
@@ -957,12 +957,12 @@ impl std::fmt::Debug for AttachmentStoreOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl AttachmentStoreOp {
     pub const STORE: Self = Self(0);
     pub const DONT_CARE: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::qcom_render_pass_store_ops`](../extensions/qcom_render_pass_store_ops/index.html)"]
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_store_ops`]"]
 impl AttachmentStoreOp {
     pub const NONE_QCOM: Self = Self(1000301000);
 }
@@ -997,7 +997,7 @@ impl std::fmt::Debug for BlendFactor {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl BlendFactor {
     pub const ZERO: Self = Self(0);
     pub const ONE: Self = Self(1);
@@ -1082,7 +1082,7 @@ impl std::fmt::Debug for BlendOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl BlendOp {
     pub const ADD: Self = Self(0);
     pub const SUBTRACT: Self = Self(1);
@@ -1090,7 +1090,7 @@ impl BlendOp {
     pub const MIN: Self = Self(3);
     pub const MAX: Self = Self(4);
 }
-#[doc = "Provided by [`extensions::ext_blend_operation_advanced`](../extensions/ext_blend_operation_advanced/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
 impl BlendOp {
     pub const ZERO_EXT: Self = Self(1000148000);
     pub const SRC_EXT: Self = Self(1000148001);
@@ -1159,7 +1159,7 @@ impl std::fmt::Debug for BorderColor {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl BorderColor {
     pub const FLOAT_TRANSPARENT_BLACK: Self = Self(0);
     pub const INT_TRANSPARENT_BLACK: Self = Self(1);
@@ -1168,13 +1168,13 @@ impl BorderColor {
     pub const FLOAT_OPAQUE_WHITE: Self = Self(4);
     pub const INT_OPAQUE_WHITE: Self = Self(5);
 }
-#[doc = "Provided by [`extensions::ext_custom_border_color`](../extensions/ext_custom_border_color/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_custom_border_color`]"]
 impl BorderColor {
     pub const FLOAT_CUSTOM_EXT: Self = Self(1000287003);
     pub const INT_CUSTOM_EXT: Self = Self(1000287004);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`](./struct.FramebufferCreateFlagBits.html)"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlagBits.html) · Bits enum of [`FramebufferCreateFlags`](./struct.FramebufferCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`]"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlagBits.html) · Bits enum of [`FramebufferCreateFlags`]"]
 #[doc(alias = "VkFramebufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1194,16 +1194,16 @@ impl std::fmt::Debug for FramebufferCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl FramebufferCreateFlagBits {
     pub const IMAGELESS: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_imageless_framebuffer`](../extensions/khr_imageless_framebuffer/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_imageless_framebuffer`]"]
 impl FramebufferCreateFlagBits {
     pub const IMAGELESS_KHR: Self = Self::IMAGELESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`](./struct.RenderPassCreateFlagBits.html)"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlagBits.html) · Bits enum of [`RenderPassCreateFlags`](./struct.RenderPassCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`]"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlagBits.html) · Bits enum of [`RenderPassCreateFlags`]"]
 #[doc(alias = "VkRenderPassCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1223,12 +1223,12 @@ impl std::fmt::Debug for RenderPassCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::qcom_render_pass_transform`](../extensions/qcom_render_pass_transform/index.html)"]
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_transform`]"]
 impl RenderPassCreateFlagBits {
     pub const TRANSFORM_QCOM: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`](./struct.SamplerCreateFlagBits.html)"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlagBits.html) · Bits enum of [`SamplerCreateFlags`](./struct.SamplerCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`]"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlagBits.html) · Bits enum of [`SamplerCreateFlags`]"]
 #[doc(alias = "VkSamplerCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1249,7 +1249,7 @@ impl std::fmt::Debug for SamplerCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl SamplerCreateFlagBits {
     pub const SUBSAMPLED_EXT: Self = Self(1);
     pub const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT: Self = Self(2);
@@ -1267,12 +1267,12 @@ impl std::fmt::Debug for PipelineCacheHeaderVersion {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PipelineCacheHeaderVersion {
     pub const ONE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`](./struct.PipelineCacheCreateFlagBits.html)"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlagBits.html) · Bits enum of [`PipelineCacheCreateFlags`](./struct.PipelineCacheCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`]"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlagBits.html) · Bits enum of [`PipelineCacheCreateFlags`]"]
 #[doc(alias = "VkPipelineCacheCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1292,12 +1292,12 @@ impl std::fmt::Debug for PipelineCacheCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_cache_control`](../extensions/ext_pipeline_creation_cache_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_cache_control`]"]
 impl PipelineCacheCreateFlagBits {
     pub const EXTERNALLY_SYNCHRONIZED_EXT: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`](./struct.PipelineShaderStageCreateFlagBits.html)"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html) · Bits enum of [`PipelineShaderStageCreateFlags`](./struct.PipelineShaderStageCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`]"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html) · Bits enum of [`PipelineShaderStageCreateFlags`]"]
 #[doc(alias = "VkPipelineShaderStageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1318,13 +1318,13 @@ impl std::fmt::Debug for PipelineShaderStageCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_subgroup_size_control`](../extensions/ext_subgroup_size_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_subgroup_size_control`]"]
 impl PipelineShaderStageCreateFlagBits {
     pub const ALLOW_VARYING_SUBGROUP_SIZE_EXT: Self = Self(1);
     pub const REQUIRE_FULL_SUBGROUPS_EXT: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`](./struct.DescriptorSetLayoutCreateFlagBits.html)"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`](./struct.DescriptorSetLayoutCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`]"]
 #[doc(alias = "VkDescriptorSetLayoutCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1345,20 +1345,20 @@ impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl DescriptorSetLayoutCreateFlagBits {
     pub const UPDATE_AFTER_BIND_POOL: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::khr_push_descriptor`](../extensions/khr_push_descriptor/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl DescriptorSetLayoutCreateFlagBits {
     pub const PUSH_DESCRIPTOR_KHR: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::ext_descriptor_indexing`](../extensions/ext_descriptor_indexing/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl DescriptorSetLayoutCreateFlagBits {
     pub const UPDATE_AFTER_BIND_POOL_EXT: Self = Self::UPDATE_AFTER_BIND_POOL;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlags.html) · Bitmask of [`DeviceQueueCreateFlagBits`](./struct.DeviceQueueCreateFlagBits.html)"] # [doc (alias = "VkDeviceQueueCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceQueueCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PROTECTED = DeviceQueueCreateFlagBits :: PROTECTED . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlagBits.html) · Bits enum of [`DeviceQueueCreateFlags`](./struct.DeviceQueueCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlags.html) · Bitmask of [`DeviceQueueCreateFlagBits`]"] # [doc (alias = "VkDeviceQueueCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceQueueCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PROTECTED = DeviceQueueCreateFlagBits :: PROTECTED . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlagBits.html) · Bits enum of [`DeviceQueueCreateFlags`]"]
 #[doc(alias = "VkDeviceQueueCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1378,12 +1378,12 @@ impl std::fmt::Debug for DeviceQueueCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl DeviceQueueCreateFlagBits {
     pub const PROTECTED: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`](./struct.BufferCreateFlagBits.html)"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlagBits.html) · Bits enum of [`BufferCreateFlags`](./struct.BufferCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`]"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlagBits.html) · Bits enum of [`BufferCreateFlags`]"]
 #[doc(alias = "VkBufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1407,30 +1407,30 @@ impl std::fmt::Debug for BufferCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl BufferCreateFlagBits {
     pub const SPARSE_BINDING: Self = Self(1);
     pub const SPARSE_RESIDENCY: Self = Self(2);
     pub const SPARSE_ALIASED: Self = Self(4);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl BufferCreateFlagBits {
     pub const PROTECTED: Self = Self(8);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY: Self = Self(16);
 }
-#[doc = "Provided by [`extensions::ext_buffer_device_address`](../extensions/ext_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-#[doc = "Provided by [`extensions::khr_buffer_device_address`](../extensions/khr_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`](./struct.BufferUsageFlagBits.html)"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`](./struct.BufferUsageFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`]"]
 #[doc(alias = "VkBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1467,7 +1467,7 @@ impl std::fmt::Debug for BufferUsageFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl BufferUsageFlagBits {
     pub const TRANSFER_SRC: Self = Self(1);
     pub const TRANSFER_DST: Self = Self(2);
@@ -1479,42 +1479,42 @@ impl BufferUsageFlagBits {
     pub const VERTEX_BUFFER: Self = Self(128);
     pub const INDIRECT_BUFFER: Self = Self(256);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_DEVICE_ADDRESS: Self = Self(131072);
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](../extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl BufferUsageFlagBits {
     pub const TRANSFORM_FEEDBACK_BUFFER_EXT: Self = Self(2048);
     pub const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT: Self = Self(4096);
 }
-#[doc = "Provided by [`extensions::ext_conditional_rendering`](../extensions/ext_conditional_rendering/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
 impl BufferUsageFlagBits {
     pub const CONDITIONAL_RENDERING_EXT: Self = Self(512);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl BufferUsageFlagBits {
     pub const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR: Self = Self(524288);
     pub const ACCELERATION_STRUCTURE_STORAGE_KHR: Self = Self(1048576);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_BINDING_TABLE_KHR: Self = Self(1024);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl BufferUsageFlagBits {
     pub const RAY_TRACING_NV: Self = Self::SHADER_BINDING_TABLE_KHR;
 }
-#[doc = "Provided by [`extensions::ext_buffer_device_address`](../extensions/ext_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_DEVICE_ADDRESS_EXT: Self = Self::SHADER_DEVICE_ADDRESS;
 }
-#[doc = "Provided by [`extensions::khr_buffer_device_address`](../extensions/khr_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_DEVICE_ADDRESS_KHR: Self = Self::SHADER_DEVICE_ADDRESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlags.html) · Bitmask of [`ColorComponentFlagBits`](./struct.ColorComponentFlagBits.html)"] # [doc (alias = "VkColorComponentFlags")] # [derive (Default)] # [repr (transparent)] pub struct ColorComponentFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const R = ColorComponentFlagBits :: R . 0 ; const G = ColorComponentFlagBits :: G . 0 ; const B = ColorComponentFlagBits :: B . 0 ; const A = ColorComponentFlagBits :: A . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlagBits.html) · Bits enum of [`ColorComponentFlags`](./struct.ColorComponentFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlags.html) · Bitmask of [`ColorComponentFlagBits`]"] # [doc (alias = "VkColorComponentFlags")] # [derive (Default)] # [repr (transparent)] pub struct ColorComponentFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const R = ColorComponentFlagBits :: R . 0 ; const G = ColorComponentFlagBits :: G . 0 ; const B = ColorComponentFlagBits :: B . 0 ; const A = ColorComponentFlagBits :: A . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlagBits.html) · Bits enum of [`ColorComponentFlags`]"]
 #[doc(alias = "VkColorComponentFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1537,7 +1537,7 @@ impl std::fmt::Debug for ColorComponentFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ColorComponentFlagBits {
     pub const R: Self = Self(1);
     pub const G: Self = Self(2);
@@ -1563,7 +1563,7 @@ impl std::fmt::Debug for ComponentSwizzle {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ComponentSwizzle {
     pub const IDENTITY: Self = Self(0);
     pub const ZERO: Self = Self(1);
@@ -1573,8 +1573,8 @@ impl ComponentSwizzle {
     pub const B: Self = Self(5);
     pub const A: Self = Self(6);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlags.html) · Bitmask of [`CommandPoolCreateFlagBits`](./struct.CommandPoolCreateFlagBits.html)"] # [doc (alias = "VkCommandPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSIENT = CommandPoolCreateFlagBits :: TRANSIENT . 0 ; const RESET_COMMAND_BUFFER = CommandPoolCreateFlagBits :: RESET_COMMAND_BUFFER . 0 ; const PROTECTED = CommandPoolCreateFlagBits :: PROTECTED . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlagBits.html) · Bits enum of [`CommandPoolCreateFlags`](./struct.CommandPoolCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlags.html) · Bitmask of [`CommandPoolCreateFlagBits`]"] # [doc (alias = "VkCommandPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSIENT = CommandPoolCreateFlagBits :: TRANSIENT . 0 ; const RESET_COMMAND_BUFFER = CommandPoolCreateFlagBits :: RESET_COMMAND_BUFFER . 0 ; const PROTECTED = CommandPoolCreateFlagBits :: PROTECTED . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlagBits.html) · Bits enum of [`CommandPoolCreateFlags`]"]
 #[doc(alias = "VkCommandPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1596,17 +1596,17 @@ impl std::fmt::Debug for CommandPoolCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CommandPoolCreateFlagBits {
     pub const TRANSIENT: Self = Self(1);
     pub const RESET_COMMAND_BUFFER: Self = Self(2);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl CommandPoolCreateFlagBits {
     pub const PROTECTED: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlags.html) · Bitmask of [`CommandPoolResetFlagBits`](./struct.CommandPoolResetFlagBits.html)"] # [doc (alias = "VkCommandPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandPoolResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlagBits.html) · Bits enum of [`CommandPoolResetFlags`](./struct.CommandPoolResetFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlags.html) · Bitmask of [`CommandPoolResetFlagBits`]"] # [doc (alias = "VkCommandPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandPoolResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlagBits.html) · Bits enum of [`CommandPoolResetFlags`]"]
 #[doc(alias = "VkCommandPoolResetFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1626,12 +1626,12 @@ impl std::fmt::Debug for CommandPoolResetFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CommandPoolResetFlagBits {
     pub const RELEASE_RESOURCES: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlags.html) · Bitmask of [`CommandBufferResetFlagBits`](./struct.CommandBufferResetFlagBits.html)"] # [doc (alias = "VkCommandBufferResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandBufferResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlagBits.html) · Bits enum of [`CommandBufferResetFlags`](./struct.CommandBufferResetFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlags.html) · Bitmask of [`CommandBufferResetFlagBits`]"] # [doc (alias = "VkCommandBufferResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandBufferResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlagBits.html) · Bits enum of [`CommandBufferResetFlags`]"]
 #[doc(alias = "VkCommandBufferResetFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1651,7 +1651,7 @@ impl std::fmt::Debug for CommandBufferResetFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CommandBufferResetFlagBits {
     pub const RELEASE_RESOURCES: Self = Self(1);
 }
@@ -1669,13 +1669,13 @@ impl std::fmt::Debug for CommandBufferLevel {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CommandBufferLevel {
     pub const PRIMARY: Self = Self(0);
     pub const SECONDARY: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlags.html) · Bitmask of [`CommandBufferUsageFlagBits`](./struct.CommandBufferUsageFlagBits.html)"] # [doc (alias = "VkCommandBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ONE_TIME_SUBMIT = CommandBufferUsageFlagBits :: ONE_TIME_SUBMIT . 0 ; const RENDER_PASS_CONTINUE = CommandBufferUsageFlagBits :: RENDER_PASS_CONTINUE . 0 ; const SIMULTANEOUS_USE = CommandBufferUsageFlagBits :: SIMULTANEOUS_USE . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlagBits.html) · Bits enum of [`CommandBufferUsageFlags`](./struct.CommandBufferUsageFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlags.html) · Bitmask of [`CommandBufferUsageFlagBits`]"] # [doc (alias = "VkCommandBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ONE_TIME_SUBMIT = CommandBufferUsageFlagBits :: ONE_TIME_SUBMIT . 0 ; const RENDER_PASS_CONTINUE = CommandBufferUsageFlagBits :: RENDER_PASS_CONTINUE . 0 ; const SIMULTANEOUS_USE = CommandBufferUsageFlagBits :: SIMULTANEOUS_USE . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlagBits.html) · Bits enum of [`CommandBufferUsageFlags`]"]
 #[doc(alias = "VkCommandBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1697,7 +1697,7 @@ impl std::fmt::Debug for CommandBufferUsageFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CommandBufferUsageFlagBits {
     pub const ONE_TIME_SUBMIT: Self = Self(1);
     pub const RENDER_PASS_CONTINUE: Self = Self(2);
@@ -1723,7 +1723,7 @@ impl std::fmt::Debug for CompareOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CompareOp {
     pub const NEVER: Self = Self(0);
     pub const LESS: Self = Self(1);
@@ -1734,8 +1734,8 @@ impl CompareOp {
     pub const GREATER_OR_EQUAL: Self = Self(6);
     pub const ALWAYS: Self = Self(7);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlags.html) · Bitmask of [`CullModeFlagBits`](./struct.CullModeFlagBits.html)"] # [doc (alias = "VkCullModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct CullModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = CullModeFlagBits :: NONE . 0 ; const FRONT = CullModeFlagBits :: FRONT . 0 ; const BACK = CullModeFlagBits :: BACK . 0 ; const FRONT_AND_BACK = CullModeFlagBits :: FRONT_AND_BACK . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlagBits.html) · Bits enum of [`CullModeFlags`](./struct.CullModeFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlags.html) · Bitmask of [`CullModeFlagBits`]"] # [doc (alias = "VkCullModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct CullModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = CullModeFlagBits :: NONE . 0 ; const FRONT = CullModeFlagBits :: FRONT . 0 ; const BACK = CullModeFlagBits :: BACK . 0 ; const FRONT_AND_BACK = CullModeFlagBits :: FRONT_AND_BACK . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlagBits.html) · Bits enum of [`CullModeFlags`]"]
 #[doc(alias = "VkCullModeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1758,7 +1758,7 @@ impl std::fmt::Debug for CullModeFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl CullModeFlagBits {
     pub const NONE: Self = Self(0);
     pub const FRONT: Self = Self(1);
@@ -1791,7 +1791,7 @@ impl std::fmt::Debug for DescriptorType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl DescriptorType {
     pub const SAMPLER: Self = Self(0);
     pub const COMBINED_IMAGE_SAMPLER: Self = Self(1);
@@ -1805,15 +1805,15 @@ impl DescriptorType {
     pub const STORAGE_BUFFER_DYNAMIC: Self = Self(9);
     pub const INPUT_ATTACHMENT: Self = Self(10);
 }
-#[doc = "Provided by [`extensions::ext_inline_uniform_block`](../extensions/ext_inline_uniform_block/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_inline_uniform_block`]"]
 impl DescriptorType {
     pub const INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138000);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl DescriptorType {
     pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl DescriptorType {
     pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
 }
@@ -1859,7 +1859,7 @@ impl std::fmt::Debug for DynamicState {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl DynamicState {
     pub const VIEWPORT: Self = Self(0);
     pub const SCISSOR: Self = Self(1);
@@ -1871,40 +1871,40 @@ impl DynamicState {
     pub const STENCIL_WRITE_MASK: Self = Self(7);
     pub const STENCIL_REFERENCE: Self = Self(8);
 }
-#[doc = "Provided by [`extensions::nv_clip_space_w_scaling`](../extensions/nv_clip_space_w_scaling/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
 impl DynamicState {
     pub const VIEWPORT_W_SCALING_NV: Self = Self(1000087000);
 }
-#[doc = "Provided by [`extensions::ext_discard_rectangles`](../extensions/ext_discard_rectangles/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
 impl DynamicState {
     pub const DISCARD_RECTANGLE_EXT: Self = Self(1000099000);
 }
-#[doc = "Provided by [`extensions::ext_sample_locations`](../extensions/ext_sample_locations/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl DynamicState {
     pub const SAMPLE_LOCATIONS_EXT: Self = Self(1000143000);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl DynamicState {
     pub const RAY_TRACING_PIPELINE_STACK_SIZE_KHR: Self = Self(1000347000);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl DynamicState {
     pub const VIEWPORT_SHADING_RATE_PALETTE_NV: Self = Self(1000164004);
     pub const VIEWPORT_COARSE_SAMPLE_ORDER_NV: Self = Self(1000164006);
 }
-#[doc = "Provided by [`extensions::nv_scissor_exclusive`](../extensions/nv_scissor_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
 impl DynamicState {
     pub const EXCLUSIVE_SCISSOR_NV: Self = Self(1000205001);
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl DynamicState {
     pub const FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226000);
 }
-#[doc = "Provided by [`extensions::ext_line_rasterization`](../extensions/ext_line_rasterization/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl DynamicState {
     pub const LINE_STIPPLE_EXT: Self = Self(1000259000);
 }
-#[doc = "Provided by [`extensions::ext_extended_dynamic_state`](../extensions/ext_extended_dynamic_state/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
 impl DynamicState {
     pub const CULL_MODE_EXT: Self = Self(1000267000);
     pub const FRONT_FACE_EXT: Self = Self(1000267001);
@@ -1919,8 +1919,8 @@ impl DynamicState {
     pub const STENCIL_TEST_ENABLE_EXT: Self = Self(1000267010);
     pub const STENCIL_OP_EXT: Self = Self(1000267011);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlags.html) · Bitmask of [`FenceCreateFlagBits`](./struct.FenceCreateFlagBits.html)"] # [doc (alias = "VkFenceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SIGNALED = FenceCreateFlagBits :: SIGNALED . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlagBits.html) · Bits enum of [`FenceCreateFlags`](./struct.FenceCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlags.html) · Bitmask of [`FenceCreateFlagBits`]"] # [doc (alias = "VkFenceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SIGNALED = FenceCreateFlagBits :: SIGNALED . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlagBits.html) · Bits enum of [`FenceCreateFlags`]"]
 #[doc(alias = "VkFenceCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -1940,7 +1940,7 @@ impl std::fmt::Debug for FenceCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl FenceCreateFlagBits {
     pub const SIGNALED: Self = Self(1);
 }
@@ -1960,13 +1960,13 @@ impl std::fmt::Debug for PolygonMode {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PolygonMode {
     pub const FILL: Self = Self(0);
     pub const LINE: Self = Self(1);
     pub const POINT: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::nv_fill_rectangle`](../extensions/nv_fill_rectangle/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_fill_rectangle`]"]
 impl PolygonMode {
     pub const FILL_RECTANGLE_NV: Self = Self(1000153000);
 }
@@ -2253,7 +2253,7 @@ impl std::fmt::Debug for Format {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl Format {
     pub const UNDEFINED: Self = Self(0);
     pub const R4G4_UNORM_PACK8: Self = Self(1);
@@ -2441,7 +2441,7 @@ impl Format {
     pub const ASTC_12X12_UNORM_BLOCK: Self = Self(183);
     pub const ASTC_12X12_SRGB_BLOCK: Self = Self(184);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl Format {
     pub const G8B8G8R8_422_UNORM: Self = Self(1000156000);
     pub const B8G8R8G8_422_UNORM: Self = Self(1000156001);
@@ -2478,7 +2478,7 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM: Self = Self(1000156032);
     pub const G16_B16_R16_3PLANE_444_UNORM: Self = Self(1000156033);
 }
-#[doc = "Provided by [`extensions::img_format_pvrtc`](../extensions/img_format_pvrtc/index.html)"]
+#[doc = "Provided by [`crate::extensions::img_format_pvrtc`]"]
 impl Format {
     pub const PVRTC1_2BPP_UNORM_BLOCK_IMG: Self = Self(1000054000);
     pub const PVRTC1_4BPP_UNORM_BLOCK_IMG: Self = Self(1000054001);
@@ -2489,7 +2489,7 @@ impl Format {
     pub const PVRTC2_2BPP_SRGB_BLOCK_IMG: Self = Self(1000054006);
     pub const PVRTC2_4BPP_SRGB_BLOCK_IMG: Self = Self(1000054007);
 }
-#[doc = "Provided by [`extensions::ext_texture_compression_astc_hdr`](../extensions/ext_texture_compression_astc_hdr/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_texture_compression_astc_hdr`]"]
 impl Format {
     pub const ASTC_4X4_SFLOAT_BLOCK_EXT: Self = Self(1000066000);
     pub const ASTC_5X4_SFLOAT_BLOCK_EXT: Self = Self(1000066001);
@@ -2506,12 +2506,12 @@ impl Format {
     pub const ASTC_12X10_SFLOAT_BLOCK_EXT: Self = Self(1000066012);
     pub const ASTC_12X12_SFLOAT_BLOCK_EXT: Self = Self(1000066013);
 }
-#[doc = "Provided by [`extensions::ext_4444_formats`](../extensions/ext_4444_formats/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_4444_formats`]"]
 impl Format {
     pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self(1000340000);
     pub const A4B4G4R4_UNORM_PACK16_EXT: Self = Self(1000340001);
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl Format {
     pub const G8B8G8R8_422_UNORM_KHR: Self = Self::G8B8G8R8_422_UNORM;
     pub const B8G8R8G8_422_UNORM_KHR: Self = Self::B8G8R8G8_422_UNORM;
@@ -2564,8 +2564,8 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
     pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`](./struct.FormatFeatureFlagBits.html)"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`](./struct.FormatFeatureFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`]"]
 #[doc(alias = "VkFormatFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -2621,7 +2621,7 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE: Self = Self(1);
     pub const STORAGE_IMAGE: Self = Self(2);
@@ -2637,7 +2637,7 @@ impl FormatFeatureFlagBits {
     pub const BLIT_DST: Self = Self(2048);
     pub const SAMPLED_IMAGE_FILTER_LINEAR: Self = Self(4096);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl FormatFeatureFlagBits {
     pub const TRANSFER_SRC: Self = Self(16384);
     pub const TRANSFER_DST: Self = Self(32768);
@@ -2650,36 +2650,36 @@ impl FormatFeatureFlagBits {
     pub const DISJOINT: Self = Self(4194304);
     pub const COSITED_CHROMA_SAMPLES: Self = Self(8388608);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_MINMAX: Self = Self(65536);
 }
-#[doc = "Provided by [`extensions::img_filter_cubic`](../extensions/img_filter_cubic/index.html)"]
+#[doc = "Provided by [`crate::extensions::img_filter_cubic`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_CUBIC_IMG: Self = Self(8192);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl FormatFeatureFlagBits {
     pub const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR: Self = Self(536870912);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl FormatFeatureFlagBits {
     pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(16777216);
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl FormatFeatureFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(1073741824);
 }
-#[doc = "Provided by [`extensions::khr_maintenance1`](../extensions/khr_maintenance1/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl FormatFeatureFlagBits {
     pub const TRANSFER_SRC_KHR: Self = Self::TRANSFER_SRC;
     pub const TRANSFER_DST_KHR: Self = Self::TRANSFER_DST;
 }
-#[doc = "Provided by [`extensions::ext_sampler_filter_minmax`](../extensions/ext_sampler_filter_minmax/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_MINMAX_EXT: Self = Self::SAMPLED_IMAGE_FILTER_MINMAX;
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl FormatFeatureFlagBits {
     pub const MIDPOINT_CHROMA_SAMPLES_KHR: Self = Self::MIDPOINT_CHROMA_SAMPLES;
     pub const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR: Self =
@@ -2693,7 +2693,7 @@ impl FormatFeatureFlagBits {
     pub const DISJOINT_KHR: Self = Self::DISJOINT;
     pub const COSITED_CHROMA_SAMPLES_KHR: Self = Self::COSITED_CHROMA_SAMPLES;
 }
-#[doc = "Provided by [`extensions::ext_filter_cubic`](../extensions/ext_filter_cubic/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_CUBIC_EXT: Self = Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG;
 }
@@ -2711,13 +2711,13 @@ impl std::fmt::Debug for FrontFace {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl FrontFace {
     pub const COUNTER_CLOCKWISE: Self = Self(0);
     pub const CLOCKWISE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`](./struct.ImageAspectFlagBits.html)"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlagBits.html) · Bits enum of [`ImageAspectFlags`](./struct.ImageAspectFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`]"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlagBits.html) · Bits enum of [`ImageAspectFlags`]"]
 #[doc(alias = "VkImageAspectFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -2747,34 +2747,34 @@ impl std::fmt::Debug for ImageAspectFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageAspectFlagBits {
     pub const COLOR: Self = Self(1);
     pub const DEPTH: Self = Self(2);
     pub const STENCIL: Self = Self(4);
     pub const METADATA: Self = Self(8);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl ImageAspectFlagBits {
     pub const PLANE_0: Self = Self(16);
     pub const PLANE_1: Self = Self(32);
     pub const PLANE_2: Self = Self(64);
 }
-#[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl ImageAspectFlagBits {
     pub const MEMORY_PLANE_0_EXT: Self = Self(128);
     pub const MEMORY_PLANE_1_EXT: Self = Self(256);
     pub const MEMORY_PLANE_2_EXT: Self = Self(512);
     pub const MEMORY_PLANE_3_EXT: Self = Self(1024);
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl ImageAspectFlagBits {
     pub const PLANE_0_KHR: Self = Self::PLANE_0;
     pub const PLANE_1_KHR: Self = Self::PLANE_1;
     pub const PLANE_2_KHR: Self = Self::PLANE_2;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`](./struct.ImageCreateFlagBits.html)"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlagBits.html) · Bits enum of [`ImageCreateFlags`](./struct.ImageCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`]"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlagBits.html) · Bits enum of [`ImageCreateFlags`]"]
 #[doc(alias = "VkImageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -2808,7 +2808,7 @@ impl std::fmt::Debug for ImageCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageCreateFlagBits {
     pub const SPARSE_BINDING: Self = Self(1);
     pub const SPARSE_RESIDENCY: Self = Self(2);
@@ -2816,7 +2816,7 @@ impl ImageCreateFlagBits {
     pub const MUTABLE_FORMAT: Self = Self(8);
     pub const CUBE_COMPATIBLE: Self = Self(16);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl ImageCreateFlagBits {
     pub const ALIAS: Self = Self(1024);
     pub const SPLIT_INSTANCE_BIND_REGIONS: Self = Self(64);
@@ -2826,36 +2826,36 @@ impl ImageCreateFlagBits {
     pub const PROTECTED: Self = Self(2048);
     pub const DISJOINT: Self = Self(512);
 }
-#[doc = "Provided by [`extensions::nv_corner_sampled_image`](../extensions/nv_corner_sampled_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_corner_sampled_image`]"]
 impl ImageCreateFlagBits {
     pub const CORNER_SAMPLED_NV: Self = Self(8192);
 }
-#[doc = "Provided by [`extensions::ext_sample_locations`](../extensions/ext_sample_locations/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl ImageCreateFlagBits {
     pub const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT: Self = Self(4096);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageCreateFlagBits {
     pub const SUBSAMPLED_EXT: Self = Self(16384);
 }
-#[doc = "Provided by [`extensions::khr_device_group`](../extensions/khr_device_group/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl ImageCreateFlagBits {
     pub const SPLIT_INSTANCE_BIND_REGIONS_KHR: Self = Self::SPLIT_INSTANCE_BIND_REGIONS;
 }
-#[doc = "Provided by [`extensions::khr_maintenance1`](../extensions/khr_maintenance1/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl ImageCreateFlagBits {
     pub const _2D_ARRAY_COMPATIBLE_KHR: Self = Self::_2D_ARRAY_COMPATIBLE;
 }
-#[doc = "Provided by [`extensions::khr_maintenance2`](../extensions/khr_maintenance2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
 impl ImageCreateFlagBits {
     pub const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR: Self = Self::BLOCK_TEXEL_VIEW_COMPATIBLE;
     pub const EXTENDED_USAGE_KHR: Self = Self::EXTENDED_USAGE;
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl ImageCreateFlagBits {
     pub const DISJOINT_KHR: Self = Self::DISJOINT;
 }
-#[doc = "Provided by [`extensions::khr_bind_memory2`](../extensions/khr_bind_memory2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_bind_memory2`]"]
 impl ImageCreateFlagBits {
     pub const ALIAS_KHR: Self = Self::ALIAS;
 }
@@ -2894,7 +2894,7 @@ impl std::fmt::Debug for ImageLayout {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageLayout {
     pub const UNDEFINED: Self = Self(0);
     pub const GENERAL: Self = Self(1);
@@ -2906,46 +2906,46 @@ impl ImageLayout {
     pub const TRANSFER_DST_OPTIMAL: Self = Self(7);
     pub const PREINITIALIZED: Self = Self(8);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl ImageLayout {
     pub const DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL: Self = Self(1000117000);
     pub const DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL: Self = Self(1000117001);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl ImageLayout {
     pub const DEPTH_ATTACHMENT_OPTIMAL: Self = Self(1000241000);
     pub const DEPTH_READ_ONLY_OPTIMAL: Self = Self(1000241001);
     pub const STENCIL_ATTACHMENT_OPTIMAL: Self = Self(1000241002);
     pub const STENCIL_READ_ONLY_OPTIMAL: Self = Self(1000241003);
 }
-#[doc = "Provided by [`extensions::khr_swapchain`](../extensions/khr_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl ImageLayout {
     pub const PRESENT_SRC_KHR: Self = Self(1000001002);
 }
-#[doc = "Provided by [`extensions::khr_shared_presentable_image`](../extensions/khr_shared_presentable_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl ImageLayout {
     pub const SHARED_PRESENT_KHR: Self = Self(1000111000);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl ImageLayout {
     pub const SHADING_RATE_OPTIMAL_NV: Self = Self(1000164003);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageLayout {
     pub const FRAGMENT_DENSITY_MAP_OPTIMAL_EXT: Self = Self(1000218000);
 }
-#[doc = "Provided by [`extensions::khr_maintenance2`](../extensions/khr_maintenance2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
 impl ImageLayout {
     pub const DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR: Self =
         Self::DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL;
     pub const DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR: Self =
         Self::DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL;
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl ImageLayout {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR: Self = Self::SHADING_RATE_OPTIMAL_NV;
 }
-#[doc = "Provided by [`extensions::khr_separate_depth_stencil_layouts`](../extensions/khr_separate_depth_stencil_layouts/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_separate_depth_stencil_layouts`]"]
 impl ImageLayout {
     pub const DEPTH_ATTACHMENT_OPTIMAL_KHR: Self = Self::DEPTH_ATTACHMENT_OPTIMAL;
     pub const DEPTH_READ_ONLY_OPTIMAL_KHR: Self = Self::DEPTH_READ_ONLY_OPTIMAL;
@@ -2967,12 +2967,12 @@ impl std::fmt::Debug for ImageTiling {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageTiling {
     pub const OPTIMAL: Self = Self(0);
     pub const LINEAR: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl ImageTiling {
     pub const DRM_FORMAT_MODIFIER_EXT: Self = Self(1000158000);
 }
@@ -2991,14 +2991,14 @@ impl std::fmt::Debug for ImageType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageType {
     pub const _1D: Self = Self(0);
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`](./struct.ImageUsageFlagBits.html)"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`](./struct.ImageUsageFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3027,7 +3027,7 @@ impl std::fmt::Debug for ImageUsageFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageUsageFlagBits {
     pub const TRANSFER_SRC: Self = Self(1);
     pub const TRANSFER_DST: Self = Self(2);
@@ -3038,20 +3038,20 @@ impl ImageUsageFlagBits {
     pub const TRANSIENT_ATTACHMENT: Self = Self(64);
     pub const INPUT_ATTACHMENT: Self = Self(128);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl ImageUsageFlagBits {
     pub const SHADING_RATE_IMAGE_NV: Self = Self(256);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageUsageFlagBits {
     pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(512);
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl ImageUsageFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`](./struct.ImageViewCreateFlagBits.html)"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlagBits.html) · Bits enum of [`ImageViewCreateFlags`](./struct.ImageViewCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`]"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlagBits.html) · Bits enum of [`ImageViewCreateFlags`]"]
 #[doc(alias = "VkImageViewCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3072,11 +3072,11 @@ impl std::fmt::Debug for ImageViewCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageViewCreateFlagBits {
     pub const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map2`](../extensions/ext_fragment_density_map2/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map2`]"]
 impl ImageViewCreateFlagBits {
     pub const FRAGMENT_DENSITY_MAP_DEFERRED_EXT: Self = Self(2);
 }
@@ -3099,7 +3099,7 @@ impl std::fmt::Debug for ImageViewType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ImageViewType {
     pub const _1D: Self = Self(0);
     pub const _2D: Self = Self(1);
@@ -3123,7 +3123,7 @@ impl std::fmt::Debug for SharingMode {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SharingMode {
     pub const EXCLUSIVE: Self = Self(0);
     pub const CONCURRENT: Self = Self(1);
@@ -3144,20 +3144,20 @@ impl std::fmt::Debug for IndexType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl IndexType {
     pub const UINT16: Self = Self(0);
     pub const UINT32: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl IndexType {
     pub const NONE_KHR: Self = Self(1000165000);
 }
-#[doc = "Provided by [`extensions::ext_index_type_uint8`](../extensions/ext_index_type_uint8/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_index_type_uint8`]"]
 impl IndexType {
     pub const UINT8_EXT: Self = Self(1000265000);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl IndexType {
     pub const NONE_NV: Self = Self::NONE_KHR;
 }
@@ -3189,7 +3189,7 @@ impl std::fmt::Debug for LogicOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl LogicOp {
     pub const CLEAR: Self = Self(0);
     pub const AND: Self = Self(1);
@@ -3208,8 +3208,8 @@ impl LogicOp {
     pub const NAND: Self = Self(14);
     pub const SET: Self = Self(15);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`](./struct.MemoryHeapFlagBits.html)"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlagBits.html) · Bits enum of [`MemoryHeapFlags`](./struct.MemoryHeapFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlagBits.html) · Bits enum of [`MemoryHeapFlags`]"]
 #[doc(alias = "VkMemoryHeapFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3230,20 +3230,20 @@ impl std::fmt::Debug for MemoryHeapFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl MemoryHeapFlagBits {
     pub const DEVICE_LOCAL: Self = Self(1);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl MemoryHeapFlagBits {
     pub const MULTI_INSTANCE: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::khr_device_group_creation`](../extensions/khr_device_group_creation/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
 impl MemoryHeapFlagBits {
     pub const MULTI_INSTANCE_KHR: Self = Self::MULTI_INSTANCE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`](./struct.AccessFlagBits.html)"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits.html) · Bits enum of [`AccessFlags`](./struct.AccessFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`]"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits.html) · Bits enum of [`AccessFlags`]"]
 #[doc(alias = "VkAccessFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3290,7 +3290,7 @@ impl std::fmt::Debug for AccessFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl AccessFlagBits {
     pub const INDIRECT_COMMAND_READ: Self = Self(1);
     pub const INDEX_READ: Self = Self(2);
@@ -3310,49 +3310,49 @@ impl AccessFlagBits {
     pub const MEMORY_READ: Self = Self(32768);
     pub const MEMORY_WRITE: Self = Self(65536);
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](../extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl AccessFlagBits {
     pub const TRANSFORM_FEEDBACK_WRITE_EXT: Self = Self(33554432);
     pub const TRANSFORM_FEEDBACK_COUNTER_READ_EXT: Self = Self(67108864);
     pub const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT: Self = Self(134217728);
 }
-#[doc = "Provided by [`extensions::ext_conditional_rendering`](../extensions/ext_conditional_rendering/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
 impl AccessFlagBits {
     pub const CONDITIONAL_RENDERING_READ_EXT: Self = Self(1048576);
 }
-#[doc = "Provided by [`extensions::ext_blend_operation_advanced`](../extensions/ext_blend_operation_advanced/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
 impl AccessFlagBits {
     pub const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT: Self = Self(524288);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl AccessFlagBits {
     pub const ACCELERATION_STRUCTURE_READ_KHR: Self = Self(2097152);
     pub const ACCELERATION_STRUCTURE_WRITE_KHR: Self = Self(4194304);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl AccessFlagBits {
     pub const SHADING_RATE_IMAGE_READ_NV: Self = Self(8388608);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl AccessFlagBits {
     pub const FRAGMENT_DENSITY_MAP_READ_EXT: Self = Self(16777216);
 }
-#[doc = "Provided by [`extensions::nv_device_generated_commands`](../extensions/nv_device_generated_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl AccessFlagBits {
     pub const COMMAND_PREPROCESS_READ_NV: Self = Self(131072);
     pub const COMMAND_PREPROCESS_WRITE_NV: Self = Self(262144);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl AccessFlagBits {
     pub const ACCELERATION_STRUCTURE_READ_NV: Self = Self::ACCELERATION_STRUCTURE_READ_KHR;
     pub const ACCELERATION_STRUCTURE_WRITE_NV: Self = Self::ACCELERATION_STRUCTURE_WRITE_KHR;
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl AccessFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR: Self = Self::SHADING_RATE_IMAGE_READ_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`](./struct.MemoryPropertyFlagBits.html)"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`](./struct.MemoryPropertyFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`]"]
 #[doc(alias = "VkMemoryPropertyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3379,7 +3379,7 @@ impl std::fmt::Debug for MemoryPropertyFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl MemoryPropertyFlagBits {
     pub const DEVICE_LOCAL: Self = Self(1);
     pub const HOST_VISIBLE: Self = Self(2);
@@ -3387,11 +3387,11 @@ impl MemoryPropertyFlagBits {
     pub const HOST_CACHED: Self = Self(8);
     pub const LAZILY_ALLOCATED: Self = Self(16);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl MemoryPropertyFlagBits {
     pub const PROTECTED: Self = Self(32);
 }
-#[doc = "Provided by [`extensions::amd_device_coherent_memory`](../extensions/amd_device_coherent_memory/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_device_coherent_memory`]"]
 impl MemoryPropertyFlagBits {
     pub const DEVICE_COHERENT_AMD: Self = Self(64);
     pub const DEVICE_UNCACHED_AMD: Self = Self(128);
@@ -3413,7 +3413,7 @@ impl std::fmt::Debug for PhysicalDeviceType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PhysicalDeviceType {
     pub const OTHER: Self = Self(0);
     pub const INTEGRATED_GPU: Self = Self(1);
@@ -3436,21 +3436,21 @@ impl std::fmt::Debug for PipelineBindPoint {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PipelineBindPoint {
     pub const GRAPHICS: Self = Self(0);
     pub const COMPUTE: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl PipelineBindPoint {
     pub const RAY_TRACING_KHR: Self = Self(1000165000);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl PipelineBindPoint {
     pub const RAY_TRACING_NV: Self = Self::RAY_TRACING_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`](./struct.PipelineCreateFlagBits.html)"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`](./struct.PipelineCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`]"]
 #[doc(alias = "VkPipelineCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3496,18 +3496,18 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PipelineCreateFlagBits {
     pub const DISABLE_OPTIMIZATION: Self = Self(1);
     pub const ALLOW_DERIVATIVES: Self = Self(2);
     pub const DERIVATIVE: Self = Self(4);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl PipelineCreateFlagBits {
     pub const VIEW_INDEX_FROM_DEVICE_INDEX: Self = Self(8);
     pub const DISPATCH_BASE: Self = Self(16);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl PipelineCreateFlagBits {
     pub const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR: Self = Self(16384);
     pub const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR: Self = Self(32768);
@@ -3517,29 +3517,29 @@ impl PipelineCreateFlagBits {
     pub const RAY_TRACING_SKIP_AABBS_KHR: Self = Self(8192);
     pub const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR: Self = Self(524288);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl PipelineCreateFlagBits {
     pub const DEFER_COMPILE_NV: Self = Self(32);
 }
-#[doc = "Provided by [`extensions::khr_pipeline_executable_properties`](../extensions/khr_pipeline_executable_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
 impl PipelineCreateFlagBits {
     pub const CAPTURE_STATISTICS_KHR: Self = Self(64);
     pub const CAPTURE_INTERNAL_REPRESENTATIONS_KHR: Self = Self(128);
 }
-#[doc = "Provided by [`extensions::nv_device_generated_commands`](../extensions/nv_device_generated_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl PipelineCreateFlagBits {
     pub const INDIRECT_BINDABLE_NV: Self = Self(262144);
 }
-#[doc = "Provided by [`extensions::khr_pipeline_library`](../extensions/khr_pipeline_library/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_library`]"]
 impl PipelineCreateFlagBits {
     pub const LIBRARY_KHR: Self = Self(2048);
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_cache_control`](../extensions/ext_pipeline_creation_cache_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_cache_control`]"]
 impl PipelineCreateFlagBits {
     pub const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT: Self = Self(256);
     pub const EARLY_RETURN_ON_FAILURE_EXT: Self = Self(512);
 }
-#[doc = "Provided by [`extensions::khr_device_group`](../extensions/khr_device_group/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl PipelineCreateFlagBits {
     pub const VIEW_INDEX_FROM_DEVICE_INDEX_KHR: Self = Self::VIEW_INDEX_FROM_DEVICE_INDEX;
     pub const DISPATCH_BASE_KHR: Self = Self::DISPATCH_BASE;
@@ -3567,7 +3567,7 @@ impl std::fmt::Debug for PrimitiveTopology {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PrimitiveTopology {
     pub const POINT_LIST: Self = Self(0);
     pub const LINE_LIST: Self = Self(1);
@@ -3581,8 +3581,8 @@ impl PrimitiveTopology {
     pub const TRIANGLE_STRIP_WITH_ADJACENCY: Self = Self(9);
     pub const PATCH_LIST: Self = Self(10);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlags.html) · Bitmask of [`QueryControlFlagBits`](./struct.QueryControlFlagBits.html)"] # [doc (alias = "VkQueryControlFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryControlFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PRECISE = QueryControlFlagBits :: PRECISE . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlagBits.html) · Bits enum of [`QueryControlFlags`](./struct.QueryControlFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlags.html) · Bitmask of [`QueryControlFlagBits`]"] # [doc (alias = "VkQueryControlFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryControlFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PRECISE = QueryControlFlagBits :: PRECISE . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlagBits.html) · Bits enum of [`QueryControlFlags`]"]
 #[doc(alias = "VkQueryControlFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3602,12 +3602,12 @@ impl std::fmt::Debug for QueryControlFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl QueryControlFlagBits {
     pub const PRECISE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlags.html) · Bitmask of [`QueryPipelineStatisticFlagBits`](./struct.QueryPipelineStatisticFlagBits.html)"] # [doc (alias = "VkQueryPipelineStatisticFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPipelineStatisticFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INPUT_ASSEMBLY_VERTICES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_VERTICES . 0 ; const INPUT_ASSEMBLY_PRIMITIVES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_PRIMITIVES . 0 ; const VERTEX_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: VERTEX_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_PRIMITIVES = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_PRIMITIVES . 0 ; const CLIPPING_INVOCATIONS = QueryPipelineStatisticFlagBits :: CLIPPING_INVOCATIONS . 0 ; const CLIPPING_PRIMITIVES = QueryPipelineStatisticFlagBits :: CLIPPING_PRIMITIVES . 0 ; const FRAGMENT_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: FRAGMENT_SHADER_INVOCATIONS . 0 ; const TESSELLATION_CONTROL_SHADER_PATCHES = QueryPipelineStatisticFlagBits :: TESSELLATION_CONTROL_SHADER_PATCHES . 0 ; const TESSELLATION_EVALUATION_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: TESSELLATION_EVALUATION_SHADER_INVOCATIONS . 0 ; const COMPUTE_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: COMPUTE_SHADER_INVOCATIONS . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlagBits.html) · Bits enum of [`QueryPipelineStatisticFlags`](./struct.QueryPipelineStatisticFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlags.html) · Bitmask of [`QueryPipelineStatisticFlagBits`]"] # [doc (alias = "VkQueryPipelineStatisticFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPipelineStatisticFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INPUT_ASSEMBLY_VERTICES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_VERTICES . 0 ; const INPUT_ASSEMBLY_PRIMITIVES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_PRIMITIVES . 0 ; const VERTEX_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: VERTEX_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_PRIMITIVES = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_PRIMITIVES . 0 ; const CLIPPING_INVOCATIONS = QueryPipelineStatisticFlagBits :: CLIPPING_INVOCATIONS . 0 ; const CLIPPING_PRIMITIVES = QueryPipelineStatisticFlagBits :: CLIPPING_PRIMITIVES . 0 ; const FRAGMENT_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: FRAGMENT_SHADER_INVOCATIONS . 0 ; const TESSELLATION_CONTROL_SHADER_PATCHES = QueryPipelineStatisticFlagBits :: TESSELLATION_CONTROL_SHADER_PATCHES . 0 ; const TESSELLATION_EVALUATION_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: TESSELLATION_EVALUATION_SHADER_INVOCATIONS . 0 ; const COMPUTE_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: COMPUTE_SHADER_INVOCATIONS . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlagBits.html) · Bits enum of [`QueryPipelineStatisticFlags`]"]
 #[doc(alias = "VkQueryPipelineStatisticFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3639,7 +3639,7 @@ impl std::fmt::Debug for QueryPipelineStatisticFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl QueryPipelineStatisticFlagBits {
     pub const INPUT_ASSEMBLY_VERTICES: Self = Self(1);
     pub const INPUT_ASSEMBLY_PRIMITIVES: Self = Self(2);
@@ -3653,8 +3653,8 @@ impl QueryPipelineStatisticFlagBits {
     pub const TESSELLATION_EVALUATION_SHADER_INVOCATIONS: Self = Self(512);
     pub const COMPUTE_SHADER_INVOCATIONS: Self = Self(1024);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`](./struct.QueryResultFlagBits.html)"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlagBits.html) · Bits enum of [`QueryResultFlags`](./struct.QueryResultFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlagBits.html) · Bits enum of [`QueryResultFlags`]"]
 #[doc(alias = "VkQueryResultFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3677,7 +3677,7 @@ impl std::fmt::Debug for QueryResultFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl QueryResultFlagBits {
     pub const _64: Self = Self(1);
     pub const WAIT: Self = Self(2);
@@ -3711,35 +3711,35 @@ impl std::fmt::Debug for QueryType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl QueryType {
     pub const OCCLUSION: Self = Self(0);
     pub const PIPELINE_STATISTICS: Self = Self(1);
     pub const TIMESTAMP: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](../extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl QueryType {
     pub const TRANSFORM_FEEDBACK_STREAM_EXT: Self = Self(1000028004);
 }
-#[doc = "Provided by [`extensions::khr_performance_query`](../extensions/khr_performance_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl QueryType {
     pub const PERFORMANCE_QUERY_KHR: Self = Self(1000116000);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl QueryType {
     pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR: Self = Self(1000150000);
     pub const ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR: Self = Self(1000150001);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl QueryType {
     pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV: Self = Self(1000165000);
 }
-#[doc = "Provided by [`extensions::intel_performance_query`](../extensions/intel_performance_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl QueryType {
     pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`](./struct.QueueFlagBits.html)"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`](./struct.QueueFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]"]
 #[doc(alias = "VkQueueFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3763,14 +3763,14 @@ impl std::fmt::Debug for QueueFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl QueueFlagBits {
     pub const GRAPHICS: Self = Self(1);
     pub const COMPUTE: Self = Self(2);
     pub const TRANSFER: Self = Self(4);
     pub const SPARSE_BINDING: Self = Self(8);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl QueueFlagBits {
     pub const PROTECTED: Self = Self(16);
 }
@@ -3788,7 +3788,7 @@ impl std::fmt::Debug for SubpassContents {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SubpassContents {
     pub const INLINE: Self = Self(0);
     pub const SECONDARY_COMMAND_BUFFERS: Self = Self(1);
@@ -3847,7 +3847,7 @@ impl std::fmt::Debug for Result {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl Result {
     pub const SUCCESS: Self = Self(0);
     pub const NOT_READY: Self = Self(1);
@@ -3869,85 +3869,85 @@ impl Result {
     pub const ERROR_FRAGMENTED_POOL: Self = Self(-12);
     pub const ERROR_UNKNOWN: Self = Self(-13);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl Result {
     pub const ERROR_OUT_OF_POOL_MEMORY: Self = Self(-1000069000);
     pub const ERROR_INVALID_EXTERNAL_HANDLE: Self = Self(-1000072003);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl Result {
     pub const ERROR_FRAGMENTATION: Self = Self(-1000161000);
     pub const ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: Self = Self(-1000257000);
 }
-#[doc = "Provided by [`extensions::khr_surface`](../extensions/khr_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl Result {
     pub const ERROR_SURFACE_LOST_KHR: Self = Self(-1000000000);
     pub const ERROR_NATIVE_WINDOW_IN_USE_KHR: Self = Self(-1000000001);
 }
-#[doc = "Provided by [`extensions::khr_swapchain`](../extensions/khr_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl Result {
     pub const SUBOPTIMAL_KHR: Self = Self(1000001003);
     pub const ERROR_OUT_OF_DATE_KHR: Self = Self(-1000001004);
 }
-#[doc = "Provided by [`extensions::khr_display_swapchain`](../extensions/khr_display_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl Result {
     pub const ERROR_INCOMPATIBLE_DISPLAY_KHR: Self = Self(-1000003001);
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](../extensions/ext_debug_report/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl Result {
     pub const ERROR_VALIDATION_FAILED_EXT: Self = Self(-1000011001);
 }
-#[doc = "Provided by [`extensions::nv_glsl_shader`](../extensions/nv_glsl_shader/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_glsl_shader`]"]
 impl Result {
     pub const ERROR_INVALID_SHADER_NV: Self = Self(-1000012000);
 }
-#[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl Result {
     pub const ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT: Self = Self(-1000158000);
 }
-#[doc = "Provided by [`extensions::ext_global_priority`](../extensions/ext_global_priority/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
 impl Result {
     pub const ERROR_NOT_PERMITTED_EXT: Self = Self(-1000174001);
 }
-#[doc = "Provided by [`extensions::ext_full_screen_exclusive`](../extensions/ext_full_screen_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl Result {
     pub const ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: Self = Self(-1000255000);
 }
-#[doc = "Provided by [`extensions::khr_deferred_host_operations`](../extensions/khr_deferred_host_operations/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
 impl Result {
     pub const THREAD_IDLE_KHR: Self = Self(1000268000);
     pub const THREAD_DONE_KHR: Self = Self(1000268001);
     pub const OPERATION_DEFERRED_KHR: Self = Self(1000268002);
     pub const OPERATION_NOT_DEFERRED_KHR: Self = Self(1000268003);
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_cache_control`](../extensions/ext_pipeline_creation_cache_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_cache_control`]"]
 impl Result {
     pub const PIPELINE_COMPILE_REQUIRED_EXT: Self = Self(1000297000);
     pub const ERROR_PIPELINE_COMPILE_REQUIRED_EXT: Self = Self::PIPELINE_COMPILE_REQUIRED_EXT;
 }
-#[doc = "Provided by [`extensions::khr_maintenance1`](../extensions/khr_maintenance1/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl Result {
     pub const ERROR_OUT_OF_POOL_MEMORY_KHR: Self = Self::ERROR_OUT_OF_POOL_MEMORY;
 }
-#[doc = "Provided by [`extensions::khr_external_memory`](../extensions/khr_external_memory/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory`]"]
 impl Result {
     pub const ERROR_INVALID_EXTERNAL_HANDLE_KHR: Self = Self::ERROR_INVALID_EXTERNAL_HANDLE;
 }
-#[doc = "Provided by [`extensions::ext_descriptor_indexing`](../extensions/ext_descriptor_indexing/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl Result {
     pub const ERROR_FRAGMENTATION_EXT: Self = Self::ERROR_FRAGMENTATION;
 }
-#[doc = "Provided by [`extensions::ext_buffer_device_address`](../extensions/ext_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl Result {
     pub const ERROR_INVALID_DEVICE_ADDRESS_EXT: Self = Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS;
 }
-#[doc = "Provided by [`extensions::khr_buffer_device_address`](../extensions/khr_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl Result {
     pub const ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR: Self =
         Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`](./struct.ShaderStageFlagBits.html)"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlagBits.html) · Bits enum of [`ShaderStageFlags`](./struct.ShaderStageFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`]"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlagBits.html) · Bits enum of [`ShaderStageFlags`]"]
 #[doc(alias = "VkShaderStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -3982,7 +3982,7 @@ impl std::fmt::Debug for ShaderStageFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ShaderStageFlagBits {
     pub const VERTEX: Self = Self(1);
     pub const TESSELLATION_CONTROL: Self = Self(2);
@@ -3993,7 +3993,7 @@ impl ShaderStageFlagBits {
     pub const ALL_GRAPHICS: Self = Self(31);
     pub const ALL: Self = Self(2147483647);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl ShaderStageFlagBits {
     pub const RAYGEN_KHR: Self = Self(256);
     pub const ANY_HIT_KHR: Self = Self(512);
@@ -4002,12 +4002,12 @@ impl ShaderStageFlagBits {
     pub const INTERSECTION_KHR: Self = Self(4096);
     pub const CALLABLE_KHR: Self = Self(8192);
 }
-#[doc = "Provided by [`extensions::nv_mesh_shader`](../extensions/nv_mesh_shader/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl ShaderStageFlagBits {
     pub const TASK_NV: Self = Self(64);
     pub const MESH_NV: Self = Self(128);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl ShaderStageFlagBits {
     pub const RAYGEN_NV: Self = Self::RAYGEN_KHR;
     pub const ANY_HIT_NV: Self = Self::ANY_HIT_KHR;
@@ -4016,8 +4016,8 @@ impl ShaderStageFlagBits {
     pub const INTERSECTION_NV: Self = Self::INTERSECTION_KHR;
     pub const CALLABLE_NV: Self = Self::CALLABLE_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlags.html) · Bitmask of [`SparseMemoryBindFlagBits`](./struct.SparseMemoryBindFlagBits.html)"] # [doc (alias = "VkSparseMemoryBindFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseMemoryBindFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const METADATA = SparseMemoryBindFlagBits :: METADATA . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlagBits.html) · Bits enum of [`SparseMemoryBindFlags`](./struct.SparseMemoryBindFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlags.html) · Bitmask of [`SparseMemoryBindFlagBits`]"] # [doc (alias = "VkSparseMemoryBindFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseMemoryBindFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const METADATA = SparseMemoryBindFlagBits :: METADATA . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlagBits.html) · Bits enum of [`SparseMemoryBindFlags`]"]
 #[doc(alias = "VkSparseMemoryBindFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -4037,12 +4037,12 @@ impl std::fmt::Debug for SparseMemoryBindFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SparseMemoryBindFlagBits {
     pub const METADATA: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`](./struct.StencilFaceFlagBits.html)"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlagBits.html) · Bits enum of [`StencilFaceFlags`](./struct.StencilFaceFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`]"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlagBits.html) · Bits enum of [`StencilFaceFlags`]"]
 #[doc(alias = "VkStencilFaceFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -4064,7 +4064,7 @@ impl std::fmt::Debug for StencilFaceFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl StencilFaceFlagBits {
     pub const FRONT: Self = Self(1);
     pub const BACK: Self = Self(2);
@@ -4091,7 +4091,7 @@ impl std::fmt::Debug for StencilOp {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl StencilOp {
     pub const KEEP: Self = Self(0);
     pub const ZERO: Self = Self(1);
@@ -5039,7 +5039,7 @@ impl std::fmt::Debug for StructureType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl StructureType {
     pub const APPLICATION_INFO: Self = Self(0);
     pub const INSTANCE_CREATE_INFO: Self = Self(1);
@@ -5091,7 +5091,7 @@ impl StructureType {
     pub const LOADER_INSTANCE_CREATE_INFO: Self = Self(47);
     pub const LOADER_DEVICE_CREATE_INFO: Self = Self(48);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SUBGROUP_PROPERTIES: Self = Self(1000094000);
     pub const BIND_BUFFER_MEMORY_INFO: Self = Self(1000157000);
@@ -5163,7 +5163,7 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES: Self =
         Self::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES;
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_VULKAN_1_1_FEATURES: Self = Self(49);
     pub const PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES: Self = Self(50);
@@ -5216,7 +5216,7 @@ impl StructureType {
     pub const MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO: Self = Self(1000257003);
     pub const DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO: Self = Self(1000257004);
 }
-#[doc = "Provided by [`extensions::khr_swapchain`](../extensions/khr_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl StructureType {
     pub const SWAPCHAIN_CREATE_INFO_KHR: Self = Self(1000001000);
     pub const PRESENT_INFO_KHR: Self = Self(1000001001);
@@ -5227,216 +5227,216 @@ impl StructureType {
     pub const DEVICE_GROUP_PRESENT_INFO_KHR: Self = Self(1000060011);
     pub const DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR: Self = Self(1000060012);
 }
-#[doc = "Provided by [`extensions::khr_display`](../extensions/khr_display/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_display`]"]
 impl StructureType {
     pub const DISPLAY_MODE_CREATE_INFO_KHR: Self = Self(1000002000);
     pub const DISPLAY_SURFACE_CREATE_INFO_KHR: Self = Self(1000002001);
 }
-#[doc = "Provided by [`extensions::khr_display_swapchain`](../extensions/khr_display_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl StructureType {
     pub const DISPLAY_PRESENT_INFO_KHR: Self = Self(1000003000);
 }
-#[doc = "Provided by [`extensions::khr_xlib_surface`](../extensions/khr_xlib_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_xlib_surface`]"]
 impl StructureType {
     pub const XLIB_SURFACE_CREATE_INFO_KHR: Self = Self(1000004000);
 }
-#[doc = "Provided by [`extensions::khr_xcb_surface`](../extensions/khr_xcb_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_xcb_surface`]"]
 impl StructureType {
     pub const XCB_SURFACE_CREATE_INFO_KHR: Self = Self(1000005000);
 }
-#[doc = "Provided by [`extensions::khr_wayland_surface`](../extensions/khr_wayland_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_wayland_surface`]"]
 impl StructureType {
     pub const WAYLAND_SURFACE_CREATE_INFO_KHR: Self = Self(1000006000);
 }
-#[doc = "Provided by [`extensions::khr_android_surface`](../extensions/khr_android_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_android_surface`]"]
 impl StructureType {
     pub const ANDROID_SURFACE_CREATE_INFO_KHR: Self = Self(1000008000);
 }
-#[doc = "Provided by [`extensions::khr_win32_surface`](../extensions/khr_win32_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_win32_surface`]"]
 impl StructureType {
     pub const WIN32_SURFACE_CREATE_INFO_KHR: Self = Self(1000009000);
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](../extensions/ext_debug_report/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl StructureType {
     pub const DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT: Self = Self(1000011000);
     pub const DEBUG_REPORT_CREATE_INFO_EXT: Self = Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
 }
-#[doc = "Provided by [`extensions::amd_rasterization_order`](../extensions/amd_rasterization_order/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_rasterization_order`]"]
 impl StructureType {
     pub const PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD: Self = Self(1000018000);
 }
-#[doc = "Provided by [`extensions::ext_debug_marker`](../extensions/ext_debug_marker/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_marker`]"]
 impl StructureType {
     pub const DEBUG_MARKER_OBJECT_NAME_INFO_EXT: Self = Self(1000022000);
     pub const DEBUG_MARKER_OBJECT_TAG_INFO_EXT: Self = Self(1000022001);
     pub const DEBUG_MARKER_MARKER_INFO_EXT: Self = Self(1000022002);
 }
-#[doc = "Provided by [`extensions::nv_dedicated_allocation`](../extensions/nv_dedicated_allocation/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_dedicated_allocation`]"]
 impl StructureType {
     pub const DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV: Self = Self(1000026000);
     pub const DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV: Self = Self(1000026001);
     pub const DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000026002);
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](../extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT: Self = Self(1000028000);
     pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT: Self = Self(1000028001);
     pub const PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT: Self = Self(1000028002);
 }
-#[doc = "Provided by [`extensions::nvx_image_view_handle`](../extensions/nvx_image_view_handle/index.html)"]
+#[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
 impl StructureType {
     pub const IMAGE_VIEW_HANDLE_INFO_NVX: Self = Self(1000030000);
     pub const IMAGE_VIEW_ADDRESS_PROPERTIES_NVX: Self = Self(1000030001);
 }
-#[doc = "Provided by [`extensions::amd_texture_gather_bias_lod`](../extensions/amd_texture_gather_bias_lod/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_texture_gather_bias_lod`]"]
 impl StructureType {
     pub const TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD: Self = Self(1000041000);
 }
-#[doc = "Provided by [`extensions::ggp_stream_descriptor_surface`](../extensions/ggp_stream_descriptor_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::ggp_stream_descriptor_surface`]"]
 impl StructureType {
     pub const STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP: Self = Self(1000049000);
 }
-#[doc = "Provided by [`extensions::nv_corner_sampled_image`](../extensions/nv_corner_sampled_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_corner_sampled_image`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV: Self = Self(1000050000);
 }
-#[doc = "Provided by [`extensions::nv_external_memory`](../extensions/nv_external_memory/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory`]"]
 impl StructureType {
     pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV: Self = Self(1000056000);
     pub const EXPORT_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000056001);
 }
-#[doc = "Provided by [`extensions::nv_external_memory_win32`](../extensions/nv_external_memory_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory_win32`]"]
 impl StructureType {
     pub const IMPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057000);
     pub const EXPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057001);
 }
-#[doc = "Provided by [`extensions::nv_win32_keyed_mutex`](../extensions/nv_win32_keyed_mutex/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_win32_keyed_mutex`]"]
 impl StructureType {
     pub const WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV: Self = Self(1000058000);
 }
-#[doc = "Provided by [`extensions::ext_validation_flags`](../extensions/ext_validation_flags/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_flags`]"]
 impl StructureType {
     pub const VALIDATION_FLAGS_EXT: Self = Self(1000061000);
 }
-#[doc = "Provided by [`extensions::nn_vi_surface`](../extensions/nn_vi_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::nn_vi_surface`]"]
 impl StructureType {
     pub const VI_SURFACE_CREATE_INFO_NN: Self = Self(1000062000);
 }
-#[doc = "Provided by [`extensions::ext_texture_compression_astc_hdr`](../extensions/ext_texture_compression_astc_hdr/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_texture_compression_astc_hdr`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT: Self = Self(1000066000);
 }
-#[doc = "Provided by [`extensions::ext_astc_decode_mode`](../extensions/ext_astc_decode_mode/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_astc_decode_mode`]"]
 impl StructureType {
     pub const IMAGE_VIEW_ASTC_DECODE_MODE_EXT: Self = Self(1000067000);
     pub const PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT: Self = Self(1000067001);
 }
-#[doc = "Provided by [`extensions::khr_external_memory_win32`](../extensions/khr_external_memory_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_win32`]"]
 impl StructureType {
     pub const IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR: Self = Self(1000073000);
     pub const EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR: Self = Self(1000073001);
     pub const MEMORY_WIN32_HANDLE_PROPERTIES_KHR: Self = Self(1000073002);
     pub const MEMORY_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000073003);
 }
-#[doc = "Provided by [`extensions::khr_external_memory_fd`](../extensions/khr_external_memory_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_fd`]"]
 impl StructureType {
     pub const IMPORT_MEMORY_FD_INFO_KHR: Self = Self(1000074000);
     pub const MEMORY_FD_PROPERTIES_KHR: Self = Self(1000074001);
     pub const MEMORY_GET_FD_INFO_KHR: Self = Self(1000074002);
 }
-#[doc = "Provided by [`extensions::khr_win32_keyed_mutex`](../extensions/khr_win32_keyed_mutex/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_win32_keyed_mutex`]"]
 impl StructureType {
     pub const WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR: Self = Self(1000075000);
 }
-#[doc = "Provided by [`extensions::khr_external_semaphore_win32`](../extensions/khr_external_semaphore_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_win32`]"]
 impl StructureType {
     pub const IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR: Self = Self(1000078000);
     pub const EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR: Self = Self(1000078001);
     pub const D3D12_FENCE_SUBMIT_INFO_KHR: Self = Self(1000078002);
     pub const SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000078003);
 }
-#[doc = "Provided by [`extensions::khr_external_semaphore_fd`](../extensions/khr_external_semaphore_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_fd`]"]
 impl StructureType {
     pub const IMPORT_SEMAPHORE_FD_INFO_KHR: Self = Self(1000079000);
     pub const SEMAPHORE_GET_FD_INFO_KHR: Self = Self(1000079001);
 }
-#[doc = "Provided by [`extensions::khr_push_descriptor`](../extensions/khr_push_descriptor/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR: Self = Self(1000080000);
 }
-#[doc = "Provided by [`extensions::ext_conditional_rendering`](../extensions/ext_conditional_rendering/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
 impl StructureType {
     pub const COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT: Self = Self(1000081000);
     pub const PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT: Self = Self(1000081001);
     pub const CONDITIONAL_RENDERING_BEGIN_INFO_EXT: Self = Self(1000081002);
 }
-#[doc = "Provided by [`extensions::khr_incremental_present`](../extensions/khr_incremental_present/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_incremental_present`]"]
 impl StructureType {
     pub const PRESENT_REGIONS_KHR: Self = Self(1000084000);
 }
-#[doc = "Provided by [`extensions::nv_clip_space_w_scaling`](../extensions/nv_clip_space_w_scaling/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
 impl StructureType {
     pub const PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV: Self = Self(1000087000);
 }
-#[doc = "Provided by [`extensions::ext_display_surface_counter`](../extensions/ext_display_surface_counter/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
 impl StructureType {
     pub const SURFACE_CAPABILITIES_2_EXT: Self = Self(1000090000);
     pub const SURFACE_CAPABILITIES2_EXT: Self = Self::SURFACE_CAPABILITIES_2_EXT;
 }
-#[doc = "Provided by [`extensions::ext_display_control`](../extensions/ext_display_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl StructureType {
     pub const DISPLAY_POWER_INFO_EXT: Self = Self(1000091000);
     pub const DEVICE_EVENT_INFO_EXT: Self = Self(1000091001);
     pub const DISPLAY_EVENT_INFO_EXT: Self = Self(1000091002);
     pub const SWAPCHAIN_COUNTER_CREATE_INFO_EXT: Self = Self(1000091003);
 }
-#[doc = "Provided by [`extensions::google_display_timing`](../extensions/google_display_timing/index.html)"]
+#[doc = "Provided by [`crate::extensions::google_display_timing`]"]
 impl StructureType {
     pub const PRESENT_TIMES_INFO_GOOGLE: Self = Self(1000092000);
 }
-#[doc = "Provided by [`extensions::nvx_multiview_per_view_attributes`](../extensions/nvx_multiview_per_view_attributes/index.html)"]
+#[doc = "Provided by [`crate::extensions::nvx_multiview_per_view_attributes`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX: Self = Self(1000097000);
 }
-#[doc = "Provided by [`extensions::nv_viewport_swizzle`](../extensions/nv_viewport_swizzle/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_viewport_swizzle`]"]
 impl StructureType {
     pub const PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV: Self = Self(1000098000);
 }
-#[doc = "Provided by [`extensions::ext_discard_rectangles`](../extensions/ext_discard_rectangles/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT: Self = Self(1000099000);
     pub const PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT: Self = Self(1000099001);
 }
-#[doc = "Provided by [`extensions::ext_conservative_rasterization`](../extensions/ext_conservative_rasterization/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_conservative_rasterization`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000101000);
     pub const PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT: Self = Self(1000101001);
 }
-#[doc = "Provided by [`extensions::ext_depth_clip_enable`](../extensions/ext_depth_clip_enable/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_depth_clip_enable`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT: Self = Self(1000102000);
     pub const PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT: Self = Self(1000102001);
 }
-#[doc = "Provided by [`extensions::ext_hdr_metadata`](../extensions/ext_hdr_metadata/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_hdr_metadata`]"]
 impl StructureType {
     pub const HDR_METADATA_EXT: Self = Self(1000105000);
 }
-#[doc = "Provided by [`extensions::khr_shared_presentable_image`](../extensions/khr_shared_presentable_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl StructureType {
     pub const SHARED_PRESENT_SURFACE_CAPABILITIES_KHR: Self = Self(1000111000);
 }
-#[doc = "Provided by [`extensions::khr_external_fence_win32`](../extensions/khr_external_fence_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence_win32`]"]
 impl StructureType {
     pub const IMPORT_FENCE_WIN32_HANDLE_INFO_KHR: Self = Self(1000114000);
     pub const EXPORT_FENCE_WIN32_HANDLE_INFO_KHR: Self = Self(1000114001);
     pub const FENCE_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000114002);
 }
-#[doc = "Provided by [`extensions::khr_external_fence_fd`](../extensions/khr_external_fence_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence_fd`]"]
 impl StructureType {
     pub const IMPORT_FENCE_FD_INFO_KHR: Self = Self(1000115000);
     pub const FENCE_GET_FD_INFO_KHR: Self = Self(1000115001);
 }
-#[doc = "Provided by [`extensions::khr_performance_query`](../extensions/khr_performance_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR: Self = Self(1000116000);
     pub const PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR: Self = Self(1000116001);
@@ -5446,13 +5446,13 @@ impl StructureType {
     pub const PERFORMANCE_COUNTER_KHR: Self = Self(1000116005);
     pub const PERFORMANCE_COUNTER_DESCRIPTION_KHR: Self = Self(1000116006);
 }
-#[doc = "Provided by [`extensions::khr_get_surface_capabilities2`](../extensions/khr_get_surface_capabilities2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_surface_capabilities2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SURFACE_INFO_2_KHR: Self = Self(1000119000);
     pub const SURFACE_CAPABILITIES_2_KHR: Self = Self(1000119001);
     pub const SURFACE_FORMAT_2_KHR: Self = Self(1000119002);
 }
-#[doc = "Provided by [`extensions::khr_get_display_properties2`](../extensions/khr_get_display_properties2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_display_properties2`]"]
 impl StructureType {
     pub const DISPLAY_PROPERTIES_2_KHR: Self = Self(1000121000);
     pub const DISPLAY_PLANE_PROPERTIES_2_KHR: Self = Self(1000121001);
@@ -5460,15 +5460,15 @@ impl StructureType {
     pub const DISPLAY_PLANE_INFO_2_KHR: Self = Self(1000121003);
     pub const DISPLAY_PLANE_CAPABILITIES_2_KHR: Self = Self(1000121004);
 }
-#[doc = "Provided by [`extensions::mvk_ios_surface`](../extensions/mvk_ios_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::mvk_ios_surface`]"]
 impl StructureType {
     pub const IOS_SURFACE_CREATE_INFO_MVK: Self = Self(1000122000);
 }
-#[doc = "Provided by [`extensions::mvk_macos_surface`](../extensions/mvk_macos_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::mvk_macos_surface`]"]
 impl StructureType {
     pub const MACOS_SURFACE_CREATE_INFO_MVK: Self = Self(1000123000);
 }
-#[doc = "Provided by [`extensions::ext_debug_utils`](../extensions/ext_debug_utils/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
 impl StructureType {
     pub const DEBUG_UTILS_OBJECT_NAME_INFO_EXT: Self = Self(1000128000);
     pub const DEBUG_UTILS_OBJECT_TAG_INFO_EXT: Self = Self(1000128001);
@@ -5476,7 +5476,7 @@ impl StructureType {
     pub const DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT: Self = Self(1000128003);
     pub const DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT: Self = Self(1000128004);
 }
-#[doc = "Provided by [`extensions::android_external_memory_android_hardware_buffer`](../extensions/android_external_memory_android_hardware_buffer/index.html)"]
+#[doc = "Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]"]
 impl StructureType {
     pub const ANDROID_HARDWARE_BUFFER_USAGE_ANDROID: Self = Self(1000129000);
     pub const ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: Self = Self(1000129001);
@@ -5485,14 +5485,14 @@ impl StructureType {
     pub const MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID: Self = Self(1000129004);
     pub const EXTERNAL_FORMAT_ANDROID: Self = Self(1000129005);
 }
-#[doc = "Provided by [`extensions::ext_inline_uniform_block`](../extensions/ext_inline_uniform_block/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_inline_uniform_block`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT: Self = Self(1000138000);
     pub const PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT: Self = Self(1000138001);
     pub const WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138002);
     pub const DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT: Self = Self(1000138003);
 }
-#[doc = "Provided by [`extensions::ext_sample_locations`](../extensions/ext_sample_locations/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl StructureType {
     pub const SAMPLE_LOCATIONS_INFO_EXT: Self = Self(1000143000);
     pub const RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT: Self = Self(1000143001);
@@ -5500,17 +5500,17 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT: Self = Self(1000143003);
     pub const MULTISAMPLE_PROPERTIES_EXT: Self = Self(1000143004);
 }
-#[doc = "Provided by [`extensions::ext_blend_operation_advanced`](../extensions/ext_blend_operation_advanced/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT: Self = Self(1000148000);
     pub const PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT: Self = Self(1000148001);
     pub const PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT: Self = Self(1000148002);
 }
-#[doc = "Provided by [`extensions::nv_fragment_coverage_to_color`](../extensions/nv_fragment_coverage_to_color/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_fragment_coverage_to_color`]"]
 impl StructureType {
     pub const PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV: Self = Self(1000149000);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl StructureType {
     pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR: Self = Self(1000150007);
     pub const ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR: Self = Self(1000150000);
@@ -5528,7 +5528,7 @@ impl StructureType {
     pub const ACCELERATION_STRUCTURE_CREATE_INFO_KHR: Self = Self(1000150017);
     pub const ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR: Self = Self(1000150020);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR: Self = Self(1000347000);
     pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR: Self = Self(1000347001);
@@ -5536,20 +5536,20 @@ impl StructureType {
     pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR: Self = Self(1000150016);
     pub const RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR: Self = Self(1000150018);
 }
-#[doc = "Provided by [`extensions::khr_ray_query`](../extensions/khr_ray_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_query`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR: Self = Self(1000348013);
 }
-#[doc = "Provided by [`extensions::nv_framebuffer_mixed_samples`](../extensions/nv_framebuffer_mixed_samples/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_framebuffer_mixed_samples`]"]
 impl StructureType {
     pub const PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV: Self = Self(1000152000);
 }
-#[doc = "Provided by [`extensions::nv_shader_sm_builtins`](../extensions/nv_shader_sm_builtins/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shader_sm_builtins`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV: Self = Self(1000154000);
     pub const PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV: Self = Self(1000154001);
 }
-#[doc = "Provided by [`extensions::ext_image_drm_format_modifier`](../extensions/ext_image_drm_format_modifier/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl StructureType {
     pub const DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT: Self = Self(1000158000);
     pub const PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT: Self = Self(1000158002);
@@ -5557,24 +5557,24 @@ impl StructureType {
     pub const IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT: Self = Self(1000158004);
     pub const IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: Self = Self(1000158005);
 }
-#[doc = "Provided by [`extensions::ext_validation_cache`](../extensions/ext_validation_cache/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl StructureType {
     pub const VALIDATION_CACHE_CREATE_INFO_EXT: Self = Self(1000160000);
     pub const SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT: Self = Self(1000160001);
 }
-#[doc = "Provided by [`extensions::khr_portability_subset`](../extensions/khr_portability_subset/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_portability_subset`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR: Self = Self(1000163000);
     pub const PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR: Self = Self(1000163001);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl StructureType {
     pub const PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV: Self = Self(1000164000);
     pub const PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV: Self = Self(1000164001);
     pub const PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV: Self = Self(1000164002);
     pub const PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV: Self = Self(1000164005);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl StructureType {
     pub const RAY_TRACING_PIPELINE_CREATE_INFO_NV: Self = Self(1000165000);
     pub const ACCELERATION_STRUCTURE_CREATE_INFO_NV: Self = Self(1000165001);
@@ -5588,92 +5588,92 @@ impl StructureType {
     pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV: Self = Self(1000165011);
     pub const ACCELERATION_STRUCTURE_INFO_NV: Self = Self(1000165012);
 }
-#[doc = "Provided by [`extensions::nv_representative_fragment_test`](../extensions/nv_representative_fragment_test/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_representative_fragment_test`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV: Self = Self(1000166000);
     pub const PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV: Self = Self(1000166001);
 }
-#[doc = "Provided by [`extensions::ext_filter_cubic`](../extensions/ext_filter_cubic/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT: Self = Self(1000170000);
     pub const FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT: Self = Self(1000170001);
 }
-#[doc = "Provided by [`extensions::ext_global_priority`](../extensions/ext_global_priority/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
 impl StructureType {
     pub const DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT: Self = Self(1000174000);
 }
-#[doc = "Provided by [`extensions::ext_external_memory_host`](../extensions/ext_external_memory_host/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_external_memory_host`]"]
 impl StructureType {
     pub const IMPORT_MEMORY_HOST_POINTER_INFO_EXT: Self = Self(1000178000);
     pub const MEMORY_HOST_POINTER_PROPERTIES_EXT: Self = Self(1000178001);
     pub const PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT: Self = Self(1000178002);
 }
-#[doc = "Provided by [`extensions::khr_shader_clock`](../extensions/khr_shader_clock/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_clock`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR: Self = Self(1000181000);
 }
-#[doc = "Provided by [`extensions::amd_pipeline_compiler_control`](../extensions/amd_pipeline_compiler_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_pipeline_compiler_control`]"]
 impl StructureType {
     pub const PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD: Self = Self(1000183000);
 }
-#[doc = "Provided by [`extensions::ext_calibrated_timestamps`](../extensions/ext_calibrated_timestamps/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl StructureType {
     pub const CALIBRATED_TIMESTAMP_INFO_EXT: Self = Self(1000184000);
 }
-#[doc = "Provided by [`extensions::amd_shader_core_properties`](../extensions/amd_shader_core_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_shader_core_properties`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD: Self = Self(1000185000);
 }
-#[doc = "Provided by [`extensions::amd_memory_overallocation_behavior`](../extensions/amd_memory_overallocation_behavior/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_memory_overallocation_behavior`]"]
 impl StructureType {
     pub const DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD: Self = Self(1000189000);
 }
-#[doc = "Provided by [`extensions::ext_vertex_attribute_divisor`](../extensions/ext_vertex_attribute_divisor/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_vertex_attribute_divisor`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT: Self = Self(1000190000);
     pub const PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT: Self = Self(1000190001);
     pub const PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT: Self = Self(1000190002);
 }
-#[doc = "Provided by [`extensions::ggp_frame_token`](../extensions/ggp_frame_token/index.html)"]
+#[doc = "Provided by [`crate::extensions::ggp_frame_token`]"]
 impl StructureType {
     pub const PRESENT_FRAME_TOKEN_GGP: Self = Self(1000191000);
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_feedback`](../extensions/ext_pipeline_creation_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_feedback`]"]
 impl StructureType {
     pub const PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT: Self = Self(1000192000);
 }
-#[doc = "Provided by [`extensions::nv_compute_shader_derivatives`](../extensions/nv_compute_shader_derivatives/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_compute_shader_derivatives`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV: Self = Self(1000201000);
 }
-#[doc = "Provided by [`extensions::nv_mesh_shader`](../extensions/nv_mesh_shader/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV: Self = Self(1000202000);
     pub const PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV: Self = Self(1000202001);
 }
-#[doc = "Provided by [`extensions::nv_fragment_shader_barycentric`](../extensions/nv_fragment_shader_barycentric/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_fragment_shader_barycentric`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV: Self = Self(1000203000);
 }
-#[doc = "Provided by [`extensions::nv_shader_image_footprint`](../extensions/nv_shader_image_footprint/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shader_image_footprint`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV: Self = Self(1000204000);
 }
-#[doc = "Provided by [`extensions::nv_scissor_exclusive`](../extensions/nv_scissor_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
 impl StructureType {
     pub const PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV: Self = Self(1000205000);
     pub const PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV: Self = Self(1000205002);
 }
-#[doc = "Provided by [`extensions::nv_device_diagnostic_checkpoints`](../extensions/nv_device_diagnostic_checkpoints/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_diagnostic_checkpoints`]"]
 impl StructureType {
     pub const CHECKPOINT_DATA_NV: Self = Self(1000206000);
     pub const QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV: Self = Self(1000206001);
 }
-#[doc = "Provided by [`extensions::intel_shader_integer_functions2`](../extensions/intel_shader_integer_functions2/index.html)"]
+#[doc = "Provided by [`crate::extensions::intel_shader_integer_functions2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL: Self = Self(1000209000);
 }
-#[doc = "Provided by [`extensions::intel_performance_query`](../extensions/intel_performance_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl StructureType {
     pub const QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL: Self = Self(1000210000);
     pub const INITIALIZE_PERFORMANCE_API_INFO_INTEL: Self = Self(1000210001);
@@ -5684,40 +5684,40 @@ impl StructureType {
     pub const QUERY_POOL_CREATE_INFO_INTEL: Self =
         Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL;
 }
-#[doc = "Provided by [`extensions::ext_pci_bus_info`](../extensions/ext_pci_bus_info/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pci_bus_info`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT: Self = Self(1000212000);
 }
-#[doc = "Provided by [`extensions::amd_display_native_hdr`](../extensions/amd_display_native_hdr/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl StructureType {
     pub const DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD: Self = Self(1000213000);
     pub const SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD: Self = Self(1000213001);
 }
-#[doc = "Provided by [`extensions::fuchsia_imagepipe_surface`](../extensions/fuchsia_imagepipe_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::fuchsia_imagepipe_surface`]"]
 impl StructureType {
     pub const IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA: Self = Self(1000214000);
 }
-#[doc = "Provided by [`extensions::khr_shader_terminate_invocation`](../extensions/khr_shader_terminate_invocation/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_terminate_invocation`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR: Self = Self(1000215000);
 }
-#[doc = "Provided by [`extensions::ext_metal_surface`](../extensions/ext_metal_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_metal_surface`]"]
 impl StructureType {
     pub const METAL_SURFACE_CREATE_INFO_EXT: Self = Self(1000217000);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT: Self = Self(1000218000);
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT: Self = Self(1000218001);
     pub const RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT: Self = Self(1000218002);
 }
-#[doc = "Provided by [`extensions::ext_subgroup_size_control`](../extensions/ext_subgroup_size_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_subgroup_size_control`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT: Self = Self(1000225000);
     pub const PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT: Self = Self(1000225001);
     pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT: Self = Self(1000225002);
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl StructureType {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR: Self = Self(1000226000);
     pub const PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR: Self = Self(1000226001);
@@ -5725,37 +5725,37 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR: Self = Self(1000226003);
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226004);
 }
-#[doc = "Provided by [`extensions::amd_shader_core_properties2`](../extensions/amd_shader_core_properties2/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_shader_core_properties2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD: Self = Self(1000227000);
 }
-#[doc = "Provided by [`extensions::amd_device_coherent_memory`](../extensions/amd_device_coherent_memory/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_device_coherent_memory`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD: Self = Self(1000229000);
 }
-#[doc = "Provided by [`extensions::ext_shader_image_atomic_int64`](../extensions/ext_shader_image_atomic_int64/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_shader_image_atomic_int64`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT: Self = Self(1000234000);
 }
-#[doc = "Provided by [`extensions::ext_memory_budget`](../extensions/ext_memory_budget/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_memory_budget`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT: Self = Self(1000237000);
 }
-#[doc = "Provided by [`extensions::ext_memory_priority`](../extensions/ext_memory_priority/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_memory_priority`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT: Self = Self(1000238000);
     pub const MEMORY_PRIORITY_ALLOCATE_INFO_EXT: Self = Self(1000238001);
 }
-#[doc = "Provided by [`extensions::khr_surface_protected_capabilities`](../extensions/khr_surface_protected_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface_protected_capabilities`]"]
 impl StructureType {
     pub const SURFACE_PROTECTED_CAPABILITIES_KHR: Self = Self(1000239000);
 }
-#[doc = "Provided by [`extensions::nv_dedicated_allocation_image_aliasing`](../extensions/nv_dedicated_allocation_image_aliasing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_dedicated_allocation_image_aliasing`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV: Self =
         Self(1000240000);
 }
-#[doc = "Provided by [`extensions::ext_buffer_device_address`](../extensions/ext_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT: Self = Self(1000244000);
     pub const BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT: Self = Self(1000244002);
@@ -5763,63 +5763,63 @@ impl StructureType {
         Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT;
     pub const BUFFER_DEVICE_ADDRESS_INFO_EXT: Self = Self::BUFFER_DEVICE_ADDRESS_INFO;
 }
-#[doc = "Provided by [`extensions::ext_tooling_info`](../extensions/ext_tooling_info/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: Self = Self(1000245000);
 }
-#[doc = "Provided by [`extensions::ext_validation_features`](../extensions/ext_validation_features/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
 impl StructureType {
     pub const VALIDATION_FEATURES_EXT: Self = Self(1000247000);
 }
-#[doc = "Provided by [`extensions::nv_cooperative_matrix`](../extensions/nv_cooperative_matrix/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_cooperative_matrix`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV: Self = Self(1000249000);
     pub const COOPERATIVE_MATRIX_PROPERTIES_NV: Self = Self(1000249001);
     pub const PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV: Self = Self(1000249002);
 }
-#[doc = "Provided by [`extensions::nv_coverage_reduction_mode`](../extensions/nv_coverage_reduction_mode/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV: Self = Self(1000250000);
     pub const PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV: Self = Self(1000250001);
     pub const FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV: Self = Self(1000250002);
 }
-#[doc = "Provided by [`extensions::ext_fragment_shader_interlock`](../extensions/ext_fragment_shader_interlock/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_shader_interlock`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT: Self = Self(1000251000);
 }
-#[doc = "Provided by [`extensions::ext_ycbcr_image_arrays`](../extensions/ext_ycbcr_image_arrays/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_ycbcr_image_arrays`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT: Self = Self(1000252000);
 }
-#[doc = "Provided by [`extensions::ext_full_screen_exclusive`](../extensions/ext_full_screen_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl StructureType {
     pub const SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT: Self = Self(1000255000);
     pub const SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT: Self = Self(1000255002);
     pub const SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT: Self = Self(1000255001);
 }
-#[doc = "Provided by [`extensions::ext_headless_surface`](../extensions/ext_headless_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_headless_surface`]"]
 impl StructureType {
     pub const HEADLESS_SURFACE_CREATE_INFO_EXT: Self = Self(1000256000);
 }
-#[doc = "Provided by [`extensions::ext_line_rasterization`](../extensions/ext_line_rasterization/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT: Self = Self(1000259000);
     pub const PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT: Self = Self(1000259001);
     pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000259002);
 }
-#[doc = "Provided by [`extensions::ext_shader_atomic_float`](../extensions/ext_shader_atomic_float/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_shader_atomic_float`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT: Self = Self(1000260000);
 }
-#[doc = "Provided by [`extensions::ext_index_type_uint8`](../extensions/ext_index_type_uint8/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_index_type_uint8`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT: Self = Self(1000265000);
 }
-#[doc = "Provided by [`extensions::ext_extended_dynamic_state`](../extensions/ext_extended_dynamic_state/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000267000);
 }
-#[doc = "Provided by [`extensions::khr_pipeline_executable_properties`](../extensions/khr_pipeline_executable_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR: Self = Self(1000269000);
     pub const PIPELINE_INFO_KHR: Self = Self(1000269001);
@@ -5828,12 +5828,12 @@ impl StructureType {
     pub const PIPELINE_EXECUTABLE_STATISTIC_KHR: Self = Self(1000269004);
     pub const PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR: Self = Self(1000269005);
 }
-#[doc = "Provided by [`extensions::ext_shader_demote_to_helper_invocation`](../extensions/ext_shader_demote_to_helper_invocation/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_shader_demote_to_helper_invocation`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT: Self =
         Self(1000276000);
 }
-#[doc = "Provided by [`extensions::nv_device_generated_commands`](../extensions/nv_device_generated_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV: Self = Self(1000277000);
     pub const GRAPHICS_SHADER_GROUP_CREATE_INFO_NV: Self = Self(1000277001);
@@ -5844,72 +5844,72 @@ impl StructureType {
     pub const GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV: Self = Self(1000277006);
     pub const PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV: Self = Self(1000277007);
 }
-#[doc = "Provided by [`extensions::ext_texel_buffer_alignment`](../extensions/ext_texel_buffer_alignment/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_texel_buffer_alignment`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT: Self = Self(1000281000);
     pub const PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT: Self = Self(1000281001);
 }
-#[doc = "Provided by [`extensions::qcom_render_pass_transform`](../extensions/qcom_render_pass_transform/index.html)"]
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_transform`]"]
 impl StructureType {
     pub const COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM: Self = Self(1000282000);
     pub const RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM: Self = Self(1000282001);
 }
-#[doc = "Provided by [`extensions::ext_device_memory_report`](../extensions/ext_device_memory_report/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_device_memory_report`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT: Self = Self(1000284000);
     pub const DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT: Self = Self(1000284001);
     pub const DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT: Self = Self(1000284002);
 }
-#[doc = "Provided by [`extensions::ext_robustness2`](../extensions/ext_robustness2/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_robustness2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT: Self = Self(1000286000);
     pub const PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT: Self = Self(1000286001);
 }
-#[doc = "Provided by [`extensions::ext_custom_border_color`](../extensions/ext_custom_border_color/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_custom_border_color`]"]
 impl StructureType {
     pub const SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT: Self = Self(1000287000);
     pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT: Self = Self(1000287001);
     pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT: Self = Self(1000287002);
 }
-#[doc = "Provided by [`extensions::khr_pipeline_library`](../extensions/khr_pipeline_library/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_library`]"]
 impl StructureType {
     pub const PIPELINE_LIBRARY_CREATE_INFO_KHR: Self = Self(1000290000);
 }
-#[doc = "Provided by [`extensions::ext_private_data`](../extensions/ext_private_data/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_private_data`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT: Self = Self(1000295000);
     pub const DEVICE_PRIVATE_DATA_CREATE_INFO_EXT: Self = Self(1000295001);
     pub const PRIVATE_DATA_SLOT_CREATE_INFO_EXT: Self = Self(1000295002);
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_cache_control`](../extensions/ext_pipeline_creation_cache_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_cache_control`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT: Self = Self(1000297000);
 }
-#[doc = "Provided by [`extensions::nv_device_diagnostics_config`](../extensions/nv_device_diagnostics_config/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_diagnostics_config`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
     pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
 }
-#[doc = "Provided by [`extensions::nv_fragment_shading_rate_enums`](../extensions/nv_fragment_shading_rate_enums/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV: Self = Self(1000326000);
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV: Self = Self(1000326001);
     pub const PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV: Self = Self(1000326002);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map2`](../extensions/ext_fragment_density_map2/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT: Self = Self(1000332000);
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT: Self = Self(1000332001);
 }
-#[doc = "Provided by [`extensions::qcom_rotated_copy_commands`](../extensions/qcom_rotated_copy_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::qcom_rotated_copy_commands`]"]
 impl StructureType {
     pub const COPY_COMMAND_TRANSFORM_INFO_QCOM: Self = Self(1000333000);
 }
-#[doc = "Provided by [`extensions::ext_image_robustness`](../extensions/ext_image_robustness/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_image_robustness`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT: Self = Self(1000335000);
 }
-#[doc = "Provided by [`extensions::khr_copy_commands2`](../extensions/khr_copy_commands2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_copy_commands2`]"]
 impl StructureType {
     pub const COPY_BUFFER_INFO_2_KHR: Self = Self(1000337000);
     pub const COPY_IMAGE_INFO_2_KHR: Self = Self(1000337001);
@@ -5923,15 +5923,15 @@ impl StructureType {
     pub const BUFFER_IMAGE_COPY_2_KHR: Self = Self(1000337009);
     pub const IMAGE_RESOLVE_2_KHR: Self = Self(1000337010);
 }
-#[doc = "Provided by [`extensions::ext_4444_formats`](../extensions/ext_4444_formats/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_4444_formats`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT: Self = Self(1000340000);
 }
-#[doc = "Provided by [`extensions::ext_directfb_surface`](../extensions/ext_directfb_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_directfb_surface`]"]
 impl StructureType {
     pub const DIRECTFB_SURFACE_CREATE_INFO_EXT: Self = Self(1000346000);
 }
-#[doc = "Provided by [`extensions::khr_multiview`](../extensions/khr_multiview/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_multiview`]"]
 impl StructureType {
     pub const RENDER_PASS_MULTIVIEW_CREATE_INFO_KHR: Self = Self::RENDER_PASS_MULTIVIEW_CREATE_INFO;
     pub const PHYSICAL_DEVICE_MULTIVIEW_FEATURES_KHR: Self =
@@ -5939,7 +5939,7 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES_KHR: Self =
         Self::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_get_physical_device_properties2`](../extensions/khr_get_physical_device_properties2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_physical_device_properties2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FEATURES_2_KHR: Self = Self::PHYSICAL_DEVICE_FEATURES_2;
     pub const PHYSICAL_DEVICE_PROPERTIES_2_KHR: Self = Self::PHYSICAL_DEVICE_PROPERTIES_2;
@@ -5954,7 +5954,7 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2_KHR: Self =
         Self::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
 }
-#[doc = "Provided by [`extensions::khr_device_group`](../extensions/khr_device_group/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl StructureType {
     pub const MEMORY_ALLOCATE_FLAGS_INFO_KHR: Self = Self::MEMORY_ALLOCATE_FLAGS_INFO;
     pub const DEVICE_GROUP_RENDER_PASS_BEGIN_INFO_KHR: Self =
@@ -5968,12 +5968,12 @@ impl StructureType {
     pub const BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO_KHR: Self =
         Self::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO;
 }
-#[doc = "Provided by [`extensions::khr_device_group_creation`](../extensions/khr_device_group_creation/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_GROUP_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_GROUP_PROPERTIES;
     pub const DEVICE_GROUP_DEVICE_CREATE_INFO_KHR: Self = Self::DEVICE_GROUP_DEVICE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_external_memory_capabilities`](../extensions/khr_external_memory_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO_KHR: Self =
         Self::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO;
@@ -5983,41 +5983,41 @@ impl StructureType {
     pub const EXTERNAL_BUFFER_PROPERTIES_KHR: Self = Self::EXTERNAL_BUFFER_PROPERTIES;
     pub const PHYSICAL_DEVICE_ID_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_ID_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_external_memory`](../extensions/khr_external_memory/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory`]"]
 impl StructureType {
     pub const EXTERNAL_MEMORY_BUFFER_CREATE_INFO_KHR: Self =
         Self::EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
     pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO_KHR: Self = Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO;
     pub const EXPORT_MEMORY_ALLOCATE_INFO_KHR: Self = Self::EXPORT_MEMORY_ALLOCATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_external_semaphore_capabilities`](../extensions/khr_external_semaphore_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_capabilities`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO_KHR: Self =
         Self::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO;
     pub const EXTERNAL_SEMAPHORE_PROPERTIES_KHR: Self = Self::EXTERNAL_SEMAPHORE_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_external_semaphore`](../extensions/khr_external_semaphore/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore`]"]
 impl StructureType {
     pub const EXPORT_SEMAPHORE_CREATE_INFO_KHR: Self = Self::EXPORT_SEMAPHORE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_shader_float16_int8`](../extensions/khr_shader_float16_int8/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_float16_int8`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
     pub const PHYSICAL_DEVICE_FLOAT16_INT8_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_16bit_storage`](../extensions/khr_16bit_storage/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_16bit_storage`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_descriptor_update_template`](../extensions/khr_descriptor_update_template/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl StructureType {
     pub const DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO_KHR: Self =
         Self::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_imageless_framebuffer`](../extensions/khr_imageless_framebuffer/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_imageless_framebuffer`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES;
@@ -6026,7 +6026,7 @@ impl StructureType {
     pub const FRAMEBUFFER_ATTACHMENT_IMAGE_INFO_KHR: Self = Self::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
     pub const RENDER_PASS_ATTACHMENT_BEGIN_INFO_KHR: Self = Self::RENDER_PASS_ATTACHMENT_BEGIN_INFO;
 }
-#[doc = "Provided by [`extensions::khr_create_renderpass2`](../extensions/khr_create_renderpass2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_create_renderpass2`]"]
 impl StructureType {
     pub const ATTACHMENT_DESCRIPTION_2_KHR: Self = Self::ATTACHMENT_DESCRIPTION_2;
     pub const ATTACHMENT_REFERENCE_2_KHR: Self = Self::ATTACHMENT_REFERENCE_2;
@@ -6036,17 +6036,17 @@ impl StructureType {
     pub const SUBPASS_BEGIN_INFO_KHR: Self = Self::SUBPASS_BEGIN_INFO;
     pub const SUBPASS_END_INFO_KHR: Self = Self::SUBPASS_END_INFO;
 }
-#[doc = "Provided by [`extensions::khr_external_fence_capabilities`](../extensions/khr_external_fence_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO_KHR: Self =
         Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
     pub const EXTERNAL_FENCE_PROPERTIES_KHR: Self = Self::EXTERNAL_FENCE_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_external_fence`](../extensions/khr_external_fence/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence`]"]
 impl StructureType {
     pub const EXPORT_FENCE_CREATE_INFO_KHR: Self = Self::EXPORT_FENCE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_maintenance2`](../extensions/khr_maintenance2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES_KHR: Self =
         Self::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES;
@@ -6056,26 +6056,26 @@ impl StructureType {
     pub const PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO_KHR: Self =
         Self::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_variable_pointers`](../extensions/khr_variable_pointers/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_variable_pointers`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES;
     pub const PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES_KHR;
 }
-#[doc = "Provided by [`extensions::khr_dedicated_allocation`](../extensions/khr_dedicated_allocation/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_dedicated_allocation`]"]
 impl StructureType {
     pub const MEMORY_DEDICATED_REQUIREMENTS_KHR: Self = Self::MEMORY_DEDICATED_REQUIREMENTS;
     pub const MEMORY_DEDICATED_ALLOCATE_INFO_KHR: Self = Self::MEMORY_DEDICATED_ALLOCATE_INFO;
 }
-#[doc = "Provided by [`extensions::ext_sampler_filter_minmax`](../extensions/ext_sampler_filter_minmax/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES_EXT: Self =
         Self::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES;
     pub const SAMPLER_REDUCTION_MODE_CREATE_INFO_EXT: Self =
         Self::SAMPLER_REDUCTION_MODE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_get_memory_requirements2`](../extensions/khr_get_memory_requirements2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_memory_requirements2`]"]
 impl StructureType {
     pub const BUFFER_MEMORY_REQUIREMENTS_INFO_2_KHR: Self = Self::BUFFER_MEMORY_REQUIREMENTS_INFO_2;
     pub const IMAGE_MEMORY_REQUIREMENTS_INFO_2_KHR: Self = Self::IMAGE_MEMORY_REQUIREMENTS_INFO_2;
@@ -6085,11 +6085,11 @@ impl StructureType {
     pub const SPARSE_IMAGE_MEMORY_REQUIREMENTS_2_KHR: Self =
         Self::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2;
 }
-#[doc = "Provided by [`extensions::khr_image_format_list`](../extensions/khr_image_format_list/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_image_format_list`]"]
 impl StructureType {
     pub const IMAGE_FORMAT_LIST_CREATE_INFO_KHR: Self = Self::IMAGE_FORMAT_LIST_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl StructureType {
     pub const SAMPLER_YCBCR_CONVERSION_CREATE_INFO_KHR: Self =
         Self::SAMPLER_YCBCR_CONVERSION_CREATE_INFO;
@@ -6102,12 +6102,12 @@ impl StructureType {
     pub const SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES_KHR: Self =
         Self::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_bind_memory2`](../extensions/khr_bind_memory2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_bind_memory2`]"]
 impl StructureType {
     pub const BIND_BUFFER_MEMORY_INFO_KHR: Self = Self::BIND_BUFFER_MEMORY_INFO;
     pub const BIND_IMAGE_MEMORY_INFO_KHR: Self = Self::BIND_IMAGE_MEMORY_INFO;
 }
-#[doc = "Provided by [`extensions::ext_descriptor_indexing`](../extensions/ext_descriptor_indexing/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl StructureType {
     pub const DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT: Self =
         Self::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
@@ -6120,44 +6120,44 @@ impl StructureType {
     pub const DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT_EXT: Self =
         Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT;
 }
-#[doc = "Provided by [`extensions::khr_maintenance3`](../extensions/khr_maintenance3/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance3`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES_KHR: Self =
         Self::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES;
     pub const DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR: Self = Self::DESCRIPTOR_SET_LAYOUT_SUPPORT;
 }
-#[doc = "Provided by [`extensions::khr_shader_subgroup_extended_types`](../extensions/khr_shader_subgroup_extended_types/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_subgroup_extended_types`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_8bit_storage`](../extensions/khr_8bit_storage/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_8bit_storage`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_shader_atomic_int64`](../extensions/khr_shader_atomic_int64/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_atomic_int64`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_driver_properties`](../extensions/khr_driver_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DRIVER_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_shader_float_controls`](../extensions/khr_shader_float_controls/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES_KHR: Self =
         Self::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES;
 }
-#[doc = "Provided by [`extensions::khr_depth_stencil_resolve`](../extensions/khr_depth_stencil_resolve/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_depth_stencil_resolve`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES_KHR: Self =
         Self::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
     pub const SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE_KHR: Self =
         Self::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE;
 }
-#[doc = "Provided by [`extensions::khr_timeline_semaphore`](../extensions/khr_timeline_semaphore/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES;
@@ -6168,17 +6168,17 @@ impl StructureType {
     pub const SEMAPHORE_WAIT_INFO_KHR: Self = Self::SEMAPHORE_WAIT_INFO;
     pub const SEMAPHORE_SIGNAL_INFO_KHR: Self = Self::SEMAPHORE_SIGNAL_INFO;
 }
-#[doc = "Provided by [`extensions::khr_vulkan_memory_model`](../extensions/khr_vulkan_memory_model/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_vulkan_memory_model`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES;
 }
-#[doc = "Provided by [`extensions::ext_scalar_block_layout`](../extensions/ext_scalar_block_layout/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_scalar_block_layout`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES_EXT: Self =
         Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_separate_depth_stencil_layouts`](../extensions/khr_separate_depth_stencil_layouts/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_separate_depth_stencil_layouts`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES;
@@ -6187,16 +6187,16 @@ impl StructureType {
     pub const ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT_KHR: Self =
         Self::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT;
 }
-#[doc = "Provided by [`extensions::ext_separate_stencil_usage`](../extensions/ext_separate_stencil_usage/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_separate_stencil_usage`]"]
 impl StructureType {
     pub const IMAGE_STENCIL_USAGE_CREATE_INFO_EXT: Self = Self::IMAGE_STENCIL_USAGE_CREATE_INFO;
 }
-#[doc = "Provided by [`extensions::khr_uniform_buffer_standard_layout`](../extensions/khr_uniform_buffer_standard_layout/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_uniform_buffer_standard_layout`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES;
 }
-#[doc = "Provided by [`extensions::khr_buffer_device_address`](../extensions/khr_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_KHR: Self =
         Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
@@ -6208,7 +6208,7 @@ impl StructureType {
     pub const DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO_KHR: Self =
         Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO;
 }
-#[doc = "Provided by [`extensions::ext_host_query_reset`](../extensions/ext_host_query_reset/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_host_query_reset`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES_EXT: Self =
         Self::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES;
@@ -6230,7 +6230,7 @@ impl std::fmt::Debug for SystemAllocationScope {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SystemAllocationScope {
     pub const COMMAND: Self = Self(0);
     pub const OBJECT: Self = Self(1);
@@ -6251,7 +6251,7 @@ impl std::fmt::Debug for InternalAllocationType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl InternalAllocationType {
     pub const EXECUTABLE: Self = Self(0);
 }
@@ -6272,18 +6272,18 @@ impl std::fmt::Debug for SamplerAddressMode {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SamplerAddressMode {
     pub const REPEAT: Self = Self(0);
     pub const MIRRORED_REPEAT: Self = Self(1);
     pub const CLAMP_TO_EDGE: Self = Self(2);
     pub const CLAMP_TO_BORDER: Self = Self(3);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl SamplerAddressMode {
     pub const MIRROR_CLAMP_TO_EDGE: Self = Self(4);
 }
-#[doc = "Provided by [`extensions::khr_sampler_mirror_clamp_to_edge`](../extensions/khr_sampler_mirror_clamp_to_edge/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_mirror_clamp_to_edge`]"]
 impl SamplerAddressMode {
     pub const MIRROR_CLAMP_TO_EDGE_KHR: Self = Self::MIRROR_CLAMP_TO_EDGE;
 }
@@ -6302,16 +6302,16 @@ impl std::fmt::Debug for Filter {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl Filter {
     pub const NEAREST: Self = Self(0);
     pub const LINEAR: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::img_filter_cubic`](../extensions/img_filter_cubic/index.html)"]
+#[doc = "Provided by [`crate::extensions::img_filter_cubic`]"]
 impl Filter {
     pub const CUBIC_IMG: Self = Self(1000015000);
 }
-#[doc = "Provided by [`extensions::ext_filter_cubic`](../extensions/ext_filter_cubic/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
 impl Filter {
     pub const CUBIC_EXT: Self = Self::CUBIC_IMG;
 }
@@ -6329,7 +6329,7 @@ impl std::fmt::Debug for SamplerMipmapMode {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SamplerMipmapMode {
     pub const NEAREST: Self = Self(0);
     pub const LINEAR: Self = Self(1);
@@ -6348,13 +6348,13 @@ impl std::fmt::Debug for VertexInputRate {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl VertexInputRate {
     pub const VERTEX: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`](./struct.PipelineStageFlagBits.html)"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`](./struct.PipelineStageFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`]"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`]"]
 #[doc(alias = "VkPipelineStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6399,7 +6399,7 @@ impl std::fmt::Debug for PipelineStageFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl PipelineStageFlagBits {
     pub const TOP_OF_PIPE: Self = Self(1);
     pub const DRAW_INDIRECT: Self = Self(2);
@@ -6419,50 +6419,50 @@ impl PipelineStageFlagBits {
     pub const ALL_GRAPHICS: Self = Self(32768);
     pub const ALL_COMMANDS: Self = Self(65536);
 }
-#[doc = "Provided by [`extensions::ext_transform_feedback`](../extensions/ext_transform_feedback/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl PipelineStageFlagBits {
     pub const TRANSFORM_FEEDBACK_EXT: Self = Self(16777216);
 }
-#[doc = "Provided by [`extensions::ext_conditional_rendering`](../extensions/ext_conditional_rendering/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
 impl PipelineStageFlagBits {
     pub const CONDITIONAL_RENDERING_EXT: Self = Self(262144);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl PipelineStageFlagBits {
     pub const ACCELERATION_STRUCTURE_BUILD_KHR: Self = Self(33554432);
 }
-#[doc = "Provided by [`extensions::khr_ray_tracing_pipeline`](../extensions/khr_ray_tracing_pipeline/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl PipelineStageFlagBits {
     pub const RAY_TRACING_SHADER_KHR: Self = Self(2097152);
 }
-#[doc = "Provided by [`extensions::nv_shading_rate_image`](../extensions/nv_shading_rate_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl PipelineStageFlagBits {
     pub const SHADING_RATE_IMAGE_NV: Self = Self(4194304);
 }
-#[doc = "Provided by [`extensions::nv_mesh_shader`](../extensions/nv_mesh_shader/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl PipelineStageFlagBits {
     pub const TASK_SHADER_NV: Self = Self(524288);
     pub const MESH_SHADER_NV: Self = Self(1048576);
 }
-#[doc = "Provided by [`extensions::ext_fragment_density_map`](../extensions/ext_fragment_density_map/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl PipelineStageFlagBits {
     pub const FRAGMENT_DENSITY_PROCESS_EXT: Self = Self(8388608);
 }
-#[doc = "Provided by [`extensions::nv_device_generated_commands`](../extensions/nv_device_generated_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl PipelineStageFlagBits {
     pub const COMMAND_PREPROCESS_NV: Self = Self(131072);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl PipelineStageFlagBits {
     pub const RAY_TRACING_SHADER_NV: Self = Self::RAY_TRACING_SHADER_KHR;
     pub const ACCELERATION_STRUCTURE_BUILD_NV: Self = Self::ACCELERATION_STRUCTURE_BUILD_KHR;
 }
-#[doc = "Provided by [`extensions::khr_fragment_shading_rate`](../extensions/khr_fragment_shading_rate/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl PipelineStageFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlags.html) · Bitmask of [`SparseImageFormatFlagBits`](./struct.SparseImageFormatFlagBits.html)"] # [doc (alias = "VkSparseImageFormatFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseImageFormatFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SINGLE_MIPTAIL = SparseImageFormatFlagBits :: SINGLE_MIPTAIL . 0 ; const ALIGNED_MIP_SIZE = SparseImageFormatFlagBits :: ALIGNED_MIP_SIZE . 0 ; const NONSTANDARD_BLOCK_SIZE = SparseImageFormatFlagBits :: NONSTANDARD_BLOCK_SIZE . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlagBits.html) · Bits enum of [`SparseImageFormatFlags`](./struct.SparseImageFormatFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlags.html) · Bitmask of [`SparseImageFormatFlagBits`]"] # [doc (alias = "VkSparseImageFormatFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseImageFormatFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SINGLE_MIPTAIL = SparseImageFormatFlagBits :: SINGLE_MIPTAIL . 0 ; const ALIGNED_MIP_SIZE = SparseImageFormatFlagBits :: ALIGNED_MIP_SIZE . 0 ; const NONSTANDARD_BLOCK_SIZE = SparseImageFormatFlagBits :: NONSTANDARD_BLOCK_SIZE . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlagBits.html) · Bits enum of [`SparseImageFormatFlags`]"]
 #[doc(alias = "VkSparseImageFormatFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6484,14 +6484,14 @@ impl std::fmt::Debug for SparseImageFormatFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SparseImageFormatFlagBits {
     pub const SINGLE_MIPTAIL: Self = Self(1);
     pub const ALIGNED_MIP_SIZE: Self = Self(2);
     pub const NONSTANDARD_BLOCK_SIZE: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlags.html) · Bitmask of [`SampleCountFlagBits`](./struct.SampleCountFlagBits.html)"] # [doc (alias = "VkSampleCountFlags")] # [derive (Default)] # [repr (transparent)] pub struct SampleCountFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _1 = SampleCountFlagBits :: _1 . 0 ; const _2 = SampleCountFlagBits :: _2 . 0 ; const _4 = SampleCountFlagBits :: _4 . 0 ; const _8 = SampleCountFlagBits :: _8 . 0 ; const _16 = SampleCountFlagBits :: _16 . 0 ; const _32 = SampleCountFlagBits :: _32 . 0 ; const _64 = SampleCountFlagBits :: _64 . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlagBits.html) · Bits enum of [`SampleCountFlags`](./struct.SampleCountFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlags.html) · Bitmask of [`SampleCountFlagBits`]"] # [doc (alias = "VkSampleCountFlags")] # [derive (Default)] # [repr (transparent)] pub struct SampleCountFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _1 = SampleCountFlagBits :: _1 . 0 ; const _2 = SampleCountFlagBits :: _2 . 0 ; const _4 = SampleCountFlagBits :: _4 . 0 ; const _8 = SampleCountFlagBits :: _8 . 0 ; const _16 = SampleCountFlagBits :: _16 . 0 ; const _32 = SampleCountFlagBits :: _32 . 0 ; const _64 = SampleCountFlagBits :: _64 . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlagBits.html) · Bits enum of [`SampleCountFlags`]"]
 #[doc(alias = "VkSampleCountFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6517,7 +6517,7 @@ impl std::fmt::Debug for SampleCountFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl SampleCountFlagBits {
     pub const _1: Self = Self(1);
     pub const _2: Self = Self(2);
@@ -6527,8 +6527,8 @@ impl SampleCountFlagBits {
     pub const _32: Self = Self(32);
     pub const _64: Self = Self(64);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlags.html) · Bitmask of [`AttachmentDescriptionFlagBits`](./struct.AttachmentDescriptionFlagBits.html)"] # [doc (alias = "VkAttachmentDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct AttachmentDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const MAY_ALIAS = AttachmentDescriptionFlagBits :: MAY_ALIAS . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlagBits.html) · Bits enum of [`AttachmentDescriptionFlags`](./struct.AttachmentDescriptionFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlags.html) · Bitmask of [`AttachmentDescriptionFlagBits`]"] # [doc (alias = "VkAttachmentDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct AttachmentDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const MAY_ALIAS = AttachmentDescriptionFlagBits :: MAY_ALIAS . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlagBits.html) · Bits enum of [`AttachmentDescriptionFlags`]"]
 #[doc(alias = "VkAttachmentDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6548,12 +6548,12 @@ impl std::fmt::Debug for AttachmentDescriptionFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl AttachmentDescriptionFlagBits {
     pub const MAY_ALIAS: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`](./struct.DescriptorPoolCreateFlagBits.html)"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html) · Bits enum of [`DescriptorPoolCreateFlags`](./struct.DescriptorPoolCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html) · Bits enum of [`DescriptorPoolCreateFlags`]"]
 #[doc(alias = "VkDescriptorPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6574,20 +6574,20 @@ impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl DescriptorPoolCreateFlagBits {
     pub const FREE_DESCRIPTOR_SET: Self = Self(1);
 }
-#[doc = "Provided by [`vk1_2`](../vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl DescriptorPoolCreateFlagBits {
     pub const UPDATE_AFTER_BIND: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::ext_descriptor_indexing`](../extensions/ext_descriptor_indexing/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl DescriptorPoolCreateFlagBits {
     pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`](./struct.DependencyFlagBits.html)"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlagBits.html) · Bits enum of [`DependencyFlags`](./struct.DependencyFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`]"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlagBits.html) · Bits enum of [`DependencyFlags`]"]
 #[doc(alias = "VkDependencyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6609,20 +6609,20 @@ impl std::fmt::Debug for DependencyFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl DependencyFlagBits {
     pub const BY_REGION: Self = Self(1);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl DependencyFlagBits {
     pub const DEVICE_GROUP: Self = Self(4);
     pub const VIEW_LOCAL: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::khr_multiview`](../extensions/khr_multiview/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_multiview`]"]
 impl DependencyFlagBits {
     pub const VIEW_LOCAL_KHR: Self = Self::VIEW_LOCAL;
 }
-#[doc = "Provided by [`extensions::khr_device_group`](../extensions/khr_device_group/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl DependencyFlagBits {
     pub const DEVICE_GROUP_KHR: Self = Self::DEVICE_GROUP;
 }
@@ -6679,7 +6679,7 @@ impl std::fmt::Debug for ObjectType {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl ObjectType {
     pub const UNKNOWN: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
@@ -6708,70 +6708,70 @@ impl ObjectType {
     pub const FRAMEBUFFER: Self = Self(24);
     pub const COMMAND_POOL: Self = Self(25);
 }
-#[doc = "Provided by [`vk1_1`](../vk1_1/index.html)"]
+#[doc = "Provided by [`crate::vk1_1`]"]
 impl ObjectType {
     pub const SAMPLER_YCBCR_CONVERSION: Self = Self(1000156000);
     pub const DESCRIPTOR_UPDATE_TEMPLATE: Self = Self(1000085000);
 }
-#[doc = "Provided by [`extensions::khr_surface`](../extensions/khr_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl ObjectType {
     pub const SURFACE_KHR: Self = Self(1000000000);
 }
-#[doc = "Provided by [`extensions::khr_swapchain`](../extensions/khr_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl ObjectType {
     pub const SWAPCHAIN_KHR: Self = Self(1000001000);
 }
-#[doc = "Provided by [`extensions::khr_display`](../extensions/khr_display/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_display`]"]
 impl ObjectType {
     pub const DISPLAY_KHR: Self = Self(1000002000);
     pub const DISPLAY_MODE_KHR: Self = Self(1000002001);
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](../extensions/ext_debug_report/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl ObjectType {
     pub const DEBUG_REPORT_CALLBACK_EXT: Self = Self(1000011000);
 }
-#[doc = "Provided by [`extensions::ext_debug_utils`](../extensions/ext_debug_utils/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
 impl ObjectType {
     pub const DEBUG_UTILS_MESSENGER_EXT: Self = Self(1000128000);
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl ObjectType {
     pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
 }
-#[doc = "Provided by [`extensions::ext_validation_cache`](../extensions/ext_validation_cache/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl ObjectType {
     pub const VALIDATION_CACHE_EXT: Self = Self(1000160000);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl ObjectType {
     pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
 }
-#[doc = "Provided by [`extensions::intel_performance_query`](../extensions/intel_performance_query/index.html)"]
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl ObjectType {
     pub const PERFORMANCE_CONFIGURATION_INTEL: Self = Self(1000210000);
 }
-#[doc = "Provided by [`extensions::khr_deferred_host_operations`](../extensions/khr_deferred_host_operations/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
 impl ObjectType {
     pub const DEFERRED_OPERATION_KHR: Self = Self(1000268000);
 }
-#[doc = "Provided by [`extensions::nv_device_generated_commands`](../extensions/nv_device_generated_commands/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl ObjectType {
     pub const INDIRECT_COMMANDS_LAYOUT_NV: Self = Self(1000277000);
 }
-#[doc = "Provided by [`extensions::ext_private_data`](../extensions/ext_private_data/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_private_data`]"]
 impl ObjectType {
     pub const PRIVATE_DATA_SLOT_EXT: Self = Self(1000295000);
 }
-#[doc = "Provided by [`extensions::khr_descriptor_update_template`](../extensions/khr_descriptor_update_template/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl ObjectType {
     pub const DESCRIPTOR_UPDATE_TEMPLATE_KHR: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE;
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl ObjectType {
     pub const SAMPLER_YCBCR_CONVERSION_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`](./struct.SubpassDescriptionFlagBits.html)"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`](./struct.SubpassDescriptionFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`]"]
 #[doc(alias = "VkSubpassDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6794,18 +6794,18 @@ impl std::fmt::Debug for SubpassDescriptionFlagBits {
         })
     }
 }
-#[doc = "Provided by [`extensions::nvx_multiview_per_view_attributes`](../extensions/nvx_multiview_per_view_attributes/index.html)"]
+#[doc = "Provided by [`crate::extensions::nvx_multiview_per_view_attributes`]"]
 impl SubpassDescriptionFlagBits {
     pub const PER_VIEW_ATTRIBUTES_NVX: Self = Self(1);
     pub const PER_VIEW_POSITION_X_ONLY_NVX: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::qcom_render_pass_shader_resolve`](../extensions/qcom_render_pass_shader_resolve/index.html)"]
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_shader_resolve`]"]
 impl SubpassDescriptionFlagBits {
     pub const FRAGMENT_REGION_QCOM: Self = Self(4);
     pub const SHADER_RESOLVE_QCOM: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateFlags.html) · Bitmask of [`ShaderModuleCreateFlagBits`](./struct.ShaderModuleCreateFlagBits.html)"] # [doc (alias = "VkShaderModuleCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderModuleCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderModuleCreateFlags`](./struct.ShaderModuleCreateFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateFlags.html) · Bitmask of [`ShaderModuleCreateFlagBits`]"] # [doc (alias = "VkShaderModuleCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderModuleCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderModuleCreateFlags`]"]
 #[doc(alias = "VkShaderModuleCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -6841,7 +6841,7 @@ impl std::fmt::Debug for VendorId {
         })
     }
 }
-#[doc = "Provided by [`vk1_0`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl VendorId {
     pub const VIV: Self = Self(65537);
     pub const VSI: Self = Self(65538);
@@ -7995,7 +7995,7 @@ impl BaseOutStructure {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Builder of [`BaseOutStructure`](struct.BaseOutStructure.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Builder of [`BaseOutStructure`]"]
 #[repr(transparent)]
 pub struct BaseOutStructureBuilder<'a>(BaseOutStructure, std::marker::PhantomData<&'a ()>);
 impl<'a> BaseOutStructureBuilder<'a> {
@@ -8066,7 +8066,7 @@ impl BaseInStructure {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Builder of [`BaseInStructure`](struct.BaseInStructure.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseInStructure.html) · Builder of [`BaseInStructure`]"]
 #[repr(transparent)]
 pub struct BaseInStructureBuilder<'a>(BaseInStructure, std::marker::PhantomData<&'a ()>);
 impl<'a> BaseInStructureBuilder<'a> {
@@ -8137,7 +8137,7 @@ impl Offset2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset2D.html) · Builder of [`Offset2D`](struct.Offset2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset2D.html) · Builder of [`Offset2D`]"]
 #[repr(transparent)]
 pub struct Offset2DBuilder<'a>(Offset2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Offset2DBuilder<'a> {
@@ -8216,7 +8216,7 @@ impl Offset3D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset3D.html) · Builder of [`Offset3D`](struct.Offset3D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset3D.html) · Builder of [`Offset3D`]"]
 #[repr(transparent)]
 pub struct Offset3DBuilder<'a>(Offset3D, std::marker::PhantomData<&'a ()>);
 impl<'a> Offset3DBuilder<'a> {
@@ -8297,7 +8297,7 @@ impl Extent2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent2D.html) · Builder of [`Extent2D`](struct.Extent2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent2D.html) · Builder of [`Extent2D`]"]
 #[repr(transparent)]
 pub struct Extent2DBuilder<'a>(Extent2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Extent2DBuilder<'a> {
@@ -8376,7 +8376,7 @@ impl Extent3D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent3D.html) · Builder of [`Extent3D`](struct.Extent3D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent3D.html) · Builder of [`Extent3D`]"]
 #[repr(transparent)]
 pub struct Extent3DBuilder<'a>(Extent3D, std::marker::PhantomData<&'a ()>);
 impl<'a> Extent3DBuilder<'a> {
@@ -8469,7 +8469,7 @@ impl Viewport {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewport.html) · Builder of [`Viewport`](struct.Viewport.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewport.html) · Builder of [`Viewport`]"]
 #[repr(transparent)]
 pub struct ViewportBuilder<'a>(Viewport, std::marker::PhantomData<&'a ()>);
 impl<'a> ViewportBuilder<'a> {
@@ -8565,7 +8565,7 @@ impl Rect2D {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRect2D.html) · Builder of [`Rect2D`](struct.Rect2D.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRect2D.html) · Builder of [`Rect2D`]"]
 #[repr(transparent)]
 pub struct Rect2DBuilder<'a>(Rect2D, std::marker::PhantomData<&'a ()>);
 impl<'a> Rect2DBuilder<'a> {
@@ -8644,7 +8644,7 @@ impl ClearRect {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearRect.html) · Builder of [`ClearRect`](struct.ClearRect.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearRect.html) · Builder of [`ClearRect`]"]
 #[repr(transparent)]
 pub struct ClearRectBuilder<'a>(ClearRect, std::marker::PhantomData<&'a ()>);
 impl<'a> ClearRectBuilder<'a> {
@@ -8731,7 +8731,7 @@ impl ComponentMapping {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentMapping.html) · Builder of [`ComponentMapping`](struct.ComponentMapping.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentMapping.html) · Builder of [`ComponentMapping`]"]
 #[repr(transparent)]
 pub struct ComponentMappingBuilder<'a>(ComponentMapping, std::marker::PhantomData<&'a ()>);
 impl<'a> ComponentMappingBuilder<'a> {
@@ -8840,7 +8840,7 @@ impl PhysicalDeviceProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties.html) · Builder of [`PhysicalDeviceProperties`](struct.PhysicalDeviceProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties.html) · Builder of [`PhysicalDeviceProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePropertiesBuilder<'a>(
     PhysicalDeviceProperties,
@@ -8959,7 +8959,7 @@ impl ExtensionProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtensionProperties.html) · Builder of [`ExtensionProperties`](struct.ExtensionProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtensionProperties.html) · Builder of [`ExtensionProperties`]"]
 #[repr(transparent)]
 pub struct ExtensionPropertiesBuilder<'a>(ExtensionProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExtensionPropertiesBuilder<'a> {
@@ -9045,7 +9045,7 @@ impl LayerProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLayerProperties.html) · Builder of [`LayerProperties`](struct.LayerProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLayerProperties.html) · Builder of [`LayerProperties`]"]
 #[repr(transparent)]
 pub struct LayerPropertiesBuilder<'a>(LayerProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> LayerPropertiesBuilder<'a> {
@@ -9146,7 +9146,7 @@ impl ApplicationInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkApplicationInfo.html) · Builder of [`ApplicationInfo`](struct.ApplicationInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkApplicationInfo.html) · Builder of [`ApplicationInfo`]"]
 #[repr(transparent)]
 pub struct ApplicationInfoBuilder<'a>(ApplicationInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ApplicationInfoBuilder<'a> {
@@ -9259,7 +9259,7 @@ impl AllocationCallbacks {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAllocationCallbacks.html) · Builder of [`AllocationCallbacks`](struct.AllocationCallbacks.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAllocationCallbacks.html) · Builder of [`AllocationCallbacks`]"]
 #[repr(transparent)]
 pub struct AllocationCallbacksBuilder<'a>(AllocationCallbacks, std::marker::PhantomData<&'a ()>);
 impl<'a> AllocationCallbacksBuilder<'a> {
@@ -9393,7 +9393,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateInfo.html) · Builder of [`DeviceQueueCreateInfo`](struct.DeviceQueueCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateInfo.html) · Builder of [`DeviceQueueCreateInfo`]"]
 #[repr(transparent)]
 pub struct DeviceQueueCreateInfoBuilder<'a>(
     DeviceQueueCreateInfo,
@@ -10183,7 +10183,7 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_ter
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`](struct.DeviceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`]"]
 #[repr(transparent)]
 pub struct DeviceCreateInfoBuilder<'a>(DeviceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceCreateInfoBuilder<'a> {
@@ -10357,7 +10357,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html) · Builder of [`InstanceCreateInfo`](struct.InstanceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html) · Builder of [`InstanceCreateInfo`]"]
 #[repr(transparent)]
 pub struct InstanceCreateInfoBuilder<'a>(InstanceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> InstanceCreateInfoBuilder<'a> {
@@ -10460,7 +10460,7 @@ impl QueueFamilyProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties.html) · Builder of [`QueueFamilyProperties`](struct.QueueFamilyProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties.html) · Builder of [`QueueFamilyProperties`]"]
 #[repr(transparent)]
 pub struct QueueFamilyPropertiesBuilder<'a>(
     QueueFamilyProperties,
@@ -10558,7 +10558,7 @@ impl PhysicalDeviceMemoryProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties.html) · Builder of [`PhysicalDeviceMemoryProperties`](struct.PhysicalDeviceMemoryProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties.html) · Builder of [`PhysicalDeviceMemoryProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryPropertiesBuilder<'a>(
     PhysicalDeviceMemoryProperties,
@@ -10808,7 +10808,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::MemoryOpaqueCaptureAddressAlloc
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateInfo.html) · Builder of [`MemoryAllocateInfo`](struct.MemoryAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateInfo.html) · Builder of [`MemoryAllocateInfo`]"]
 #[repr(transparent)]
 pub struct MemoryAllocateInfoBuilder<'a>(MemoryAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryAllocateInfoBuilder<'a> {
@@ -10887,7 +10887,7 @@ impl MemoryRequirements {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements.html) · Builder of [`MemoryRequirements`](struct.MemoryRequirements.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements.html) · Builder of [`MemoryRequirements`]"]
 #[repr(transparent)]
 pub struct MemoryRequirementsBuilder<'a>(MemoryRequirements, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryRequirementsBuilder<'a> {
@@ -10971,7 +10971,7 @@ impl SparseImageFormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties.html) · Builder of [`SparseImageFormatProperties`](struct.SparseImageFormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties.html) · Builder of [`SparseImageFormatProperties`]"]
 #[repr(transparent)]
 pub struct SparseImageFormatPropertiesBuilder<'a>(
     SparseImageFormatProperties,
@@ -11064,7 +11064,7 @@ impl SparseImageMemoryRequirements {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements.html) · Builder of [`SparseImageMemoryRequirements`](struct.SparseImageMemoryRequirements.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements.html) · Builder of [`SparseImageMemoryRequirements`]"]
 #[repr(transparent)]
 pub struct SparseImageMemoryRequirementsBuilder<'a>(
     SparseImageMemoryRequirements,
@@ -11167,7 +11167,7 @@ impl MemoryType {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryType.html) · Builder of [`MemoryType`](struct.MemoryType.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryType.html) · Builder of [`MemoryType`]"]
 #[repr(transparent)]
 pub struct MemoryTypeBuilder<'a>(MemoryType, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryTypeBuilder<'a> {
@@ -11243,7 +11243,7 @@ impl MemoryHeap {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeap.html) · Builder of [`MemoryHeap`](struct.MemoryHeap.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeap.html) · Builder of [`MemoryHeap`]"]
 #[repr(transparent)]
 pub struct MemoryHeapBuilder<'a>(MemoryHeap, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryHeapBuilder<'a> {
@@ -11328,7 +11328,7 @@ impl MappedMemoryRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMappedMemoryRange.html) · Builder of [`MappedMemoryRange`](struct.MappedMemoryRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMappedMemoryRange.html) · Builder of [`MappedMemoryRange`]"]
 #[repr(transparent)]
 pub struct MappedMemoryRangeBuilder<'a>(MappedMemoryRange, std::marker::PhantomData<&'a ()>);
 impl<'a> MappedMemoryRangeBuilder<'a> {
@@ -11412,7 +11412,7 @@ impl FormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties.html) · Builder of [`FormatProperties`](struct.FormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties.html) · Builder of [`FormatProperties`]"]
 #[repr(transparent)]
 pub struct FormatPropertiesBuilder<'a>(FormatProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> FormatPropertiesBuilder<'a> {
@@ -11508,7 +11508,7 @@ impl ImageFormatProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties.html) · Builder of [`ImageFormatProperties`](struct.ImageFormatProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties.html) · Builder of [`ImageFormatProperties`]"]
 #[repr(transparent)]
 pub struct ImageFormatPropertiesBuilder<'a>(
     ImageFormatProperties,
@@ -11605,7 +11605,7 @@ impl DescriptorBufferInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html) · Builder of [`DescriptorBufferInfo`](struct.DescriptorBufferInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html) · Builder of [`DescriptorBufferInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorBufferInfoBuilder<'a>(DescriptorBufferInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorBufferInfoBuilder<'a> {
@@ -11689,7 +11689,7 @@ impl DescriptorImageInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorImageInfo.html) · Builder of [`DescriptorImageInfo`](struct.DescriptorImageInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorImageInfo.html) · Builder of [`DescriptorImageInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorImageInfoBuilder<'a>(DescriptorImageInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorImageInfoBuilder<'a> {
@@ -11832,7 +11832,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSet.html) · Builder of [`WriteDescriptorSet`](struct.WriteDescriptorSet.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSet.html) · Builder of [`WriteDescriptorSet`]"]
 #[repr(transparent)]
 pub struct WriteDescriptorSetBuilder<'a>(WriteDescriptorSet, std::marker::PhantomData<&'a ()>);
 impl<'a> WriteDescriptorSetBuilder<'a> {
@@ -11963,7 +11963,7 @@ impl CopyDescriptorSet {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyDescriptorSet.html) · Builder of [`CopyDescriptorSet`](struct.CopyDescriptorSet.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyDescriptorSet.html) · Builder of [`CopyDescriptorSet`]"]
 #[repr(transparent)]
 pub struct CopyDescriptorSetBuilder<'a>(CopyDescriptorSet, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyDescriptorSetBuilder<'a> {
@@ -12128,7 +12128,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html) · Builder of [`BufferCreateInfo`](struct.BufferCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html) · Builder of [`BufferCreateInfo`]"]
 #[repr(transparent)]
 pub struct BufferCreateInfoBuilder<'a>(BufferCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferCreateInfoBuilder<'a> {
@@ -12235,7 +12235,7 @@ impl BufferViewCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferViewCreateInfo.html) · Builder of [`BufferViewCreateInfo`](struct.BufferViewCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferViewCreateInfo.html) · Builder of [`BufferViewCreateInfo`]"]
 #[repr(transparent)]
 pub struct BufferViewCreateInfoBuilder<'a>(BufferViewCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferViewCreateInfoBuilder<'a> {
@@ -12329,7 +12329,7 @@ impl ImageSubresource {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresource.html) · Builder of [`ImageSubresource`](struct.ImageSubresource.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresource.html) · Builder of [`ImageSubresource`]"]
 #[repr(transparent)]
 pub struct ImageSubresourceBuilder<'a>(ImageSubresource, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageSubresourceBuilder<'a> {
@@ -12416,7 +12416,7 @@ impl ImageSubresourceLayers {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceLayers.html) · Builder of [`ImageSubresourceLayers`](struct.ImageSubresourceLayers.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceLayers.html) · Builder of [`ImageSubresourceLayers`]"]
 #[repr(transparent)]
 pub struct ImageSubresourceLayersBuilder<'a>(
     ImageSubresourceLayers,
@@ -12514,7 +12514,7 @@ impl ImageSubresourceRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceRange.html) · Builder of [`ImageSubresourceRange`](struct.ImageSubresourceRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceRange.html) · Builder of [`ImageSubresourceRange`]"]
 #[repr(transparent)]
 pub struct ImageSubresourceRangeBuilder<'a>(
     ImageSubresourceRange,
@@ -12614,7 +12614,7 @@ impl MemoryBarrier {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier.html) · Builder of [`MemoryBarrier`](struct.MemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier.html) · Builder of [`MemoryBarrier`]"]
 #[repr(transparent)]
 pub struct MemoryBarrierBuilder<'a>(MemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryBarrierBuilder<'a> {
@@ -12711,7 +12711,7 @@ impl BufferMemoryBarrier {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryBarrier.html) · Builder of [`BufferMemoryBarrier`](struct.BufferMemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryBarrier.html) · Builder of [`BufferMemoryBarrier`]"]
 #[repr(transparent)]
 pub struct BufferMemoryBarrierBuilder<'a>(BufferMemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferMemoryBarrierBuilder<'a> {
@@ -12847,7 +12847,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier.html) · Builder of [`ImageMemoryBarrier`](struct.ImageMemoryBarrier.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier.html) · Builder of [`ImageMemoryBarrier`]"]
 #[repr(transparent)]
 pub struct ImageMemoryBarrierBuilder<'a>(ImageMemoryBarrier, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageMemoryBarrierBuilder<'a> {
@@ -13076,7 +13076,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuil
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateInfo.html) · Builder of [`ImageCreateInfo`](struct.ImageCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateInfo.html) · Builder of [`ImageCreateInfo`]"]
 #[repr(transparent)]
 pub struct ImageCreateInfoBuilder<'a>(ImageCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageCreateInfoBuilder<'a> {
@@ -13212,7 +13212,7 @@ impl SubresourceLayout {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubresourceLayout.html) · Builder of [`SubresourceLayout`](struct.SubresourceLayout.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubresourceLayout.html) · Builder of [`SubresourceLayout`]"]
 #[repr(transparent)]
 pub struct SubresourceLayoutBuilder<'a>(SubresourceLayout, std::marker::PhantomData<&'a ()>);
 impl<'a> SubresourceLayoutBuilder<'a> {
@@ -13349,7 +13349,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateInfo.html) · Builder of [`ImageViewCreateInfo`](struct.ImageViewCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateInfo.html) · Builder of [`ImageViewCreateInfo`]"]
 #[repr(transparent)]
 pub struct ImageViewCreateInfoBuilder<'a>(ImageViewCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageViewCreateInfoBuilder<'a> {
@@ -13451,7 +13451,7 @@ impl BufferCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy.html) · Builder of [`BufferCopy`](struct.BufferCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy.html) · Builder of [`BufferCopy`]"]
 #[repr(transparent)]
 pub struct BufferCopyBuilder<'a>(BufferCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferCopyBuilder<'a> {
@@ -13541,7 +13541,7 @@ impl SparseMemoryBind {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBind.html) · Builder of [`SparseMemoryBind`](struct.SparseMemoryBind.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBind.html) · Builder of [`SparseMemoryBind`]"]
 #[repr(transparent)]
 pub struct SparseMemoryBindBuilder<'a>(SparseMemoryBind, std::marker::PhantomData<&'a ()>);
 impl<'a> SparseMemoryBindBuilder<'a> {
@@ -13644,7 +13644,7 @@ impl SparseImageMemoryBind {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBind.html) · Builder of [`SparseImageMemoryBind`](struct.SparseImageMemoryBind.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBind.html) · Builder of [`SparseImageMemoryBind`]"]
 #[repr(transparent)]
 pub struct SparseImageMemoryBindBuilder<'a>(
     SparseImageMemoryBind,
@@ -13746,7 +13746,7 @@ impl SparseBufferMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseBufferMemoryBindInfo.html) · Builder of [`SparseBufferMemoryBindInfo`](struct.SparseBufferMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseBufferMemoryBindInfo.html) · Builder of [`SparseBufferMemoryBindInfo`]"]
 #[repr(transparent)]
 pub struct SparseBufferMemoryBindInfoBuilder<'a>(
     SparseBufferMemoryBindInfo,
@@ -13829,7 +13829,7 @@ impl SparseImageOpaqueMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageOpaqueMemoryBindInfo.html) · Builder of [`SparseImageOpaqueMemoryBindInfo`](struct.SparseImageOpaqueMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageOpaqueMemoryBindInfo.html) · Builder of [`SparseImageOpaqueMemoryBindInfo`]"]
 #[repr(transparent)]
 pub struct SparseImageOpaqueMemoryBindInfoBuilder<'a>(
     SparseImageOpaqueMemoryBindInfo,
@@ -13912,7 +13912,7 @@ impl SparseImageMemoryBindInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBindInfo.html) · Builder of [`SparseImageMemoryBindInfo`](struct.SparseImageMemoryBindInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBindInfo.html) · Builder of [`SparseImageMemoryBindInfo`]"]
 #[repr(transparent)]
 pub struct SparseImageMemoryBindInfoBuilder<'a>(
     SparseImageMemoryBindInfo,
@@ -14038,7 +14038,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::TimelineSemaphoreSubmitInfoBuil
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindSparseInfo.html) · Builder of [`BindSparseInfo`](struct.BindSparseInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindSparseInfo.html) · Builder of [`BindSparseInfo`]"]
 #[repr(transparent)]
 pub struct BindSparseInfoBuilder<'a>(BindSparseInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BindSparseInfoBuilder<'a> {
@@ -14152,7 +14152,7 @@ impl ImageCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy.html) · Builder of [`ImageCopy`](struct.ImageCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy.html) · Builder of [`ImageCopy`]"]
 #[repr(transparent)]
 pub struct ImageCopyBuilder<'a>(ImageCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageCopyBuilder<'a> {
@@ -14255,7 +14255,7 @@ impl ImageBlit {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit.html) · Builder of [`ImageBlit`](struct.ImageBlit.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit.html) · Builder of [`ImageBlit`]"]
 #[repr(transparent)]
 pub struct ImageBlitBuilder<'a>(ImageBlit, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageBlitBuilder<'a> {
@@ -14359,7 +14359,7 @@ impl BufferImageCopy {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy.html) · Builder of [`BufferImageCopy`](struct.BufferImageCopy.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy.html) · Builder of [`BufferImageCopy`]"]
 #[repr(transparent)]
 pub struct BufferImageCopyBuilder<'a>(BufferImageCopy, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferImageCopyBuilder<'a> {
@@ -14467,7 +14467,7 @@ impl ImageResolve {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve.html) · Builder of [`ImageResolve`](struct.ImageResolve.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve.html) · Builder of [`ImageResolve`]"]
 #[repr(transparent)]
 pub struct ImageResolveBuilder<'a>(ImageResolve, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageResolveBuilder<'a> {
@@ -14589,7 +14589,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateInfo.html) · Builder of [`ShaderModuleCreateInfo`](struct.ShaderModuleCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateInfo.html) · Builder of [`ShaderModuleCreateInfo`]"]
 #[repr(transparent)]
 pub struct ShaderModuleCreateInfoBuilder<'a>(
     ShaderModuleCreateInfo,
@@ -14678,7 +14678,7 @@ impl DescriptorSetLayoutBinding {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBinding.html) · Builder of [`DescriptorSetLayoutBinding`](struct.DescriptorSetLayoutBinding.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBinding.html) · Builder of [`DescriptorSetLayoutBinding`]"]
 #[repr(transparent)]
 pub struct DescriptorSetLayoutBindingBuilder<'a>(
     DescriptorSetLayoutBinding,
@@ -14791,7 +14791,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Builder of [`DescriptorSetLayoutCreateInfo`](struct.DescriptorSetLayoutCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Builder of [`DescriptorSetLayoutCreateInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorSetLayoutCreateInfoBuilder<'a>(
     DescriptorSetLayoutCreateInfo,
@@ -14874,7 +14874,7 @@ impl DescriptorPoolSize {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html) · Builder of [`DescriptorPoolSize`](struct.DescriptorPoolSize.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html) · Builder of [`DescriptorPoolSize`]"]
 #[repr(transparent)]
 pub struct DescriptorPoolSizeBuilder<'a>(DescriptorPoolSize, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorPoolSizeBuilder<'a> {
@@ -14970,7 +14970,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_inline_uniform_block :: DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder < '_ >> for DescriptorPoolCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Builder of [`DescriptorPoolCreateInfo`](struct.DescriptorPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Builder of [`DescriptorPoolCreateInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorPoolCreateInfoBuilder<'a>(
     DescriptorPoolCreateInfo,
@@ -15075,7 +15075,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetAllocateInfo.html) · Builder of [`DescriptorSetAllocateInfo`](struct.DescriptorSetAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetAllocateInfo.html) · Builder of [`DescriptorSetAllocateInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorSetAllocateInfoBuilder<'a>(
     DescriptorSetAllocateInfo,
@@ -15158,7 +15158,7 @@ impl SpecializationMapEntry {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationMapEntry.html) · Builder of [`SpecializationMapEntry`](struct.SpecializationMapEntry.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationMapEntry.html) · Builder of [`SpecializationMapEntry`]"]
 #[repr(transparent)]
 pub struct SpecializationMapEntryBuilder<'a>(
     SpecializationMapEntry,
@@ -15248,7 +15248,7 @@ impl SpecializationInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationInfo.html) · Builder of [`SpecializationInfo`](struct.SpecializationInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationInfo.html) · Builder of [`SpecializationInfo`]"]
 #[repr(transparent)]
 pub struct SpecializationInfoBuilder<'a>(SpecializationInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SpecializationInfoBuilder<'a> {
@@ -15350,7 +15350,7 @@ impl PipelineShaderStageCreateInfo {
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_subgroup_size_control :: PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT > for PipelineShaderStageCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_subgroup_size_control :: PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder < '_ >> for PipelineShaderStageCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Builder of [`PipelineShaderStageCreateInfo`](struct.PipelineShaderStageCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Builder of [`PipelineShaderStageCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineShaderStageCreateInfoBuilder<'a>(
     PipelineShaderStageCreateInfo,
@@ -15478,7 +15478,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: amd_pipeline_compiler_control :: PipelineCompilerControlCreateInfoAMDBuilder < '_ >> for ComputePipelineCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComputePipelineCreateInfo.html) · Builder of [`ComputePipelineCreateInfo`](struct.ComputePipelineCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComputePipelineCreateInfo.html) · Builder of [`ComputePipelineCreateInfo`]"]
 #[repr(transparent)]
 pub struct ComputePipelineCreateInfoBuilder<'a>(
     ComputePipelineCreateInfo,
@@ -15575,7 +15575,7 @@ impl VertexInputBindingDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDescription.html) · Builder of [`VertexInputBindingDescription`](struct.VertexInputBindingDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDescription.html) · Builder of [`VertexInputBindingDescription`]"]
 #[repr(transparent)]
 pub struct VertexInputBindingDescriptionBuilder<'a>(
     VertexInputBindingDescription,
@@ -15665,7 +15665,7 @@ impl VertexInputAttributeDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputAttributeDescription.html) · Builder of [`VertexInputAttributeDescription`](struct.VertexInputAttributeDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputAttributeDescription.html) · Builder of [`VertexInputAttributeDescription`]"]
 #[repr(transparent)]
 pub struct VertexInputAttributeDescriptionBuilder<'a>(
     VertexInputAttributeDescription,
@@ -15783,7 +15783,7 @@ impl PipelineVertexInputStateCreateInfo {
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PipelineVertexInputDivisorStateCreateInfoEXT > for PipelineVertexInputStateCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PipelineVertexInputDivisorStateCreateInfoEXTBuilder < '_ >> for PipelineVertexInputStateCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateInfo.html) · Builder of [`PipelineVertexInputStateCreateInfo`](struct.PipelineVertexInputStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateInfo.html) · Builder of [`PipelineVertexInputStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineVertexInputStateCreateInfoBuilder<'a>(
     PipelineVertexInputStateCreateInfo,
@@ -15887,7 +15887,7 @@ impl PipelineInputAssemblyStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInputAssemblyStateCreateInfo.html) · Builder of [`PipelineInputAssemblyStateCreateInfo`](struct.PipelineInputAssemblyStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInputAssemblyStateCreateInfo.html) · Builder of [`PipelineInputAssemblyStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineInputAssemblyStateCreateInfoBuilder<'a>(
     PipelineInputAssemblyStateCreateInfo,
@@ -15988,7 +15988,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateInfo.html) · Builder of [`PipelineTessellationStateCreateInfo`](struct.PipelineTessellationStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateInfo.html) · Builder of [`PipelineTessellationStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineTessellationStateCreateInfoBuilder<'a>(
     PipelineTessellationStateCreateInfo,
@@ -16122,7 +16122,7 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_shading_rat
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_shading_rate_image :: PipelineViewportCoarseSampleOrderStateCreateInfoNV > for PipelineViewportStateCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_shading_rate_image :: PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder < '_ >> for PipelineViewportStateCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateInfo.html) · Builder of [`PipelineViewportStateCreateInfo`](struct.PipelineViewportStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateInfo.html) · Builder of [`PipelineViewportStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineViewportStateCreateInfoBuilder<'a>(
     PipelineViewportStateCreateInfo,
@@ -16291,7 +16291,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_line_rasterization :: PipelineRasterizationLineStateCreateInfoEXTBuilder < '_ >> for PipelineRasterizationStateCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Builder of [`PipelineRasterizationStateCreateInfo`](struct.PipelineRasterizationStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Builder of [`PipelineRasterizationStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateCreateInfoBuilder<'a>(
     PipelineRasterizationStateCreateInfo,
@@ -16479,7 +16479,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_coverage_reduction_mode :: PipelineCoverageReductionStateCreateInfoNVBuilder < '_ >> for PipelineMultisampleStateCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html) · Builder of [`PipelineMultisampleStateCreateInfo`](struct.PipelineMultisampleStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html) · Builder of [`PipelineMultisampleStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineMultisampleStateCreateInfoBuilder<'a>(
     PipelineMultisampleStateCreateInfo,
@@ -16604,7 +16604,7 @@ impl PipelineColorBlendAttachmentState {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAttachmentState.html) · Builder of [`PipelineColorBlendAttachmentState`](struct.PipelineColorBlendAttachmentState.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAttachmentState.html) · Builder of [`PipelineColorBlendAttachmentState`]"]
 #[repr(transparent)]
 pub struct PipelineColorBlendAttachmentStateBuilder<'a>(
     PipelineColorBlendAttachmentState,
@@ -16745,7 +16745,7 @@ impl PipelineColorBlendStateCreateInfo {
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PipelineColorBlendAdvancedStateCreateInfoEXT > for PipelineColorBlendStateCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PipelineColorBlendAdvancedStateCreateInfoEXTBuilder < '_ >> for PipelineColorBlendStateCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Builder of [`PipelineColorBlendStateCreateInfo`](struct.PipelineColorBlendStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Builder of [`PipelineColorBlendStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineColorBlendStateCreateInfoBuilder<'a>(
     PipelineColorBlendStateCreateInfo,
@@ -16852,7 +16852,7 @@ impl PipelineDynamicStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateInfo.html) · Builder of [`PipelineDynamicStateCreateInfo`](struct.PipelineDynamicStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateInfo.html) · Builder of [`PipelineDynamicStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineDynamicStateCreateInfoBuilder<'a>(
     PipelineDynamicStateCreateInfo,
@@ -16947,7 +16947,7 @@ impl StencilOpState {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilOpState.html) · Builder of [`StencilOpState`](struct.StencilOpState.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilOpState.html) · Builder of [`StencilOpState`]"]
 #[repr(transparent)]
 pub struct StencilOpStateBuilder<'a>(StencilOpState, std::marker::PhantomData<&'a ()>);
 impl<'a> StencilOpStateBuilder<'a> {
@@ -17081,7 +17081,7 @@ impl PipelineDepthStencilStateCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html) · Builder of [`PipelineDepthStencilStateCreateInfo`](struct.PipelineDepthStencilStateCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html) · Builder of [`PipelineDepthStencilStateCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineDepthStencilStateCreateInfoBuilder<'a>(
     PipelineDepthStencilStateCreateInfo,
@@ -17295,7 +17295,7 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_s
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PipelineFragmentShadingRateEnumStateCreateInfoNV > for GraphicsPipelineCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder < '_ >> for GraphicsPipelineCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`](struct.GraphicsPipelineCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`]"]
 #[repr(transparent)]
 pub struct GraphicsPipelineCreateInfoBuilder<'a>(
     GraphicsPipelineCreateInfo,
@@ -17484,7 +17484,7 @@ impl PipelineCacheCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateInfo.html) · Builder of [`PipelineCacheCreateInfo`](struct.PipelineCacheCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateInfo.html) · Builder of [`PipelineCacheCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineCacheCreateInfoBuilder<'a>(
     PipelineCacheCreateInfo,
@@ -17571,7 +17571,7 @@ impl PushConstantRange {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPushConstantRange.html) · Builder of [`PushConstantRange`](struct.PushConstantRange.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPushConstantRange.html) · Builder of [`PushConstantRange`]"]
 #[repr(transparent)]
 pub struct PushConstantRangeBuilder<'a>(PushConstantRange, std::marker::PhantomData<&'a ()>);
 impl<'a> PushConstantRangeBuilder<'a> {
@@ -17667,7 +17667,7 @@ impl PipelineLayoutCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateInfo.html) · Builder of [`PipelineLayoutCreateInfo`](struct.PipelineLayoutCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayoutCreateInfo.html) · Builder of [`PipelineLayoutCreateInfo`]"]
 #[repr(transparent)]
 pub struct PipelineLayoutCreateInfoBuilder<'a>(
     PipelineLayoutCreateInfo,
@@ -17839,7 +17839,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateInfo.html) · Builder of [`SamplerCreateInfo`](struct.SamplerCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateInfo.html) · Builder of [`SamplerCreateInfo`]"]
 #[repr(transparent)]
 pub struct SamplerCreateInfoBuilder<'a>(SamplerCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerCreateInfoBuilder<'a> {
@@ -17991,7 +17991,7 @@ impl CommandPoolCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateInfo.html) · Builder of [`CommandPoolCreateInfo`](struct.CommandPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateInfo.html) · Builder of [`CommandPoolCreateInfo`]"]
 #[repr(transparent)]
 pub struct CommandPoolCreateInfoBuilder<'a>(
     CommandPoolCreateInfo,
@@ -18079,7 +18079,7 @@ impl CommandBufferAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferAllocateInfo.html) · Builder of [`CommandBufferAllocateInfo`](struct.CommandBufferAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferAllocateInfo.html) · Builder of [`CommandBufferAllocateInfo`]"]
 #[repr(transparent)]
 pub struct CommandBufferAllocateInfoBuilder<'a>(
     CommandBufferAllocateInfo,
@@ -18188,7 +18188,7 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_conditiona
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: qcom_render_pass_transform :: CommandBufferInheritanceRenderPassTransformInfoQCOM > for CommandBufferInheritanceInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: qcom_render_pass_transform :: CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder < '_ >> for CommandBufferInheritanceInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Builder of [`CommandBufferInheritanceInfo`](struct.CommandBufferInheritanceInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Builder of [`CommandBufferInheritanceInfo`]"]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceInfoBuilder<'a>(
     CommandBufferInheritanceInfo,
@@ -18304,7 +18304,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupCommandBufferBeginIn
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferBeginInfo.html) · Builder of [`CommandBufferBeginInfo`](struct.CommandBufferBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferBeginInfo.html) · Builder of [`CommandBufferBeginInfo`]"]
 #[repr(transparent)]
 pub struct CommandBufferBeginInfoBuilder<'a>(
     CommandBufferBeginInfo,
@@ -18445,7 +18445,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassBeginInfo.html) · Builder of [`RenderPassBeginInfo`](struct.RenderPassBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassBeginInfo.html) · Builder of [`RenderPassBeginInfo`]"]
 #[repr(transparent)]
 pub struct RenderPassBeginInfoBuilder<'a>(RenderPassBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassBeginInfoBuilder<'a> {
@@ -18551,7 +18551,7 @@ impl ClearDepthStencilValue {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearDepthStencilValue.html) · Builder of [`ClearDepthStencilValue`](struct.ClearDepthStencilValue.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearDepthStencilValue.html) · Builder of [`ClearDepthStencilValue`]"]
 #[repr(transparent)]
 pub struct ClearDepthStencilValueBuilder<'a>(
     ClearDepthStencilValue,
@@ -18651,7 +18651,7 @@ impl ClearAttachment {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearAttachment.html) · Builder of [`ClearAttachment`](struct.ClearAttachment.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearAttachment.html) · Builder of [`ClearAttachment`]"]
 #[repr(transparent)]
 pub struct ClearAttachmentBuilder<'a>(ClearAttachment, std::marker::PhantomData<&'a ()>);
 impl<'a> ClearAttachmentBuilder<'a> {
@@ -18753,7 +18753,7 @@ impl AttachmentDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription.html) · Builder of [`AttachmentDescription`](struct.AttachmentDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription.html) · Builder of [`AttachmentDescription`]"]
 #[repr(transparent)]
 pub struct AttachmentDescriptionBuilder<'a>(
     AttachmentDescription,
@@ -18867,7 +18867,7 @@ impl AttachmentReference {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference.html) · Builder of [`AttachmentReference`](struct.AttachmentReference.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference.html) · Builder of [`AttachmentReference`]"]
 #[repr(transparent)]
 pub struct AttachmentReferenceBuilder<'a>(AttachmentReference, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentReferenceBuilder<'a> {
@@ -18970,7 +18970,7 @@ impl SubpassDescription {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription.html) · Builder of [`SubpassDescription`](struct.SubpassDescription.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription.html) · Builder of [`SubpassDescription`]"]
 #[repr(transparent)]
 pub struct SubpassDescriptionBuilder<'a>(SubpassDescription, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDescriptionBuilder<'a> {
@@ -19105,7 +19105,7 @@ impl SubpassDependency {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency.html) · Builder of [`SubpassDependency`](struct.SubpassDependency.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency.html) · Builder of [`SubpassDependency`]"]
 #[repr(transparent)]
 pub struct SubpassDependencyBuilder<'a>(SubpassDependency, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDependencyBuilder<'a> {
@@ -19252,7 +19252,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map :: RenderPassFragmentDensityMapCreateInfoEXTBuilder < '_ >> for RenderPassCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo.html) · Builder of [`RenderPassCreateInfo`](struct.RenderPassCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo.html) · Builder of [`RenderPassCreateInfo`]"]
 #[repr(transparent)]
 pub struct RenderPassCreateInfoBuilder<'a>(RenderPassCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassCreateInfoBuilder<'a> {
@@ -19350,7 +19350,7 @@ impl EventCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateInfo.html) · Builder of [`EventCreateInfo`](struct.EventCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateInfo.html) · Builder of [`EventCreateInfo`]"]
 #[repr(transparent)]
 pub struct EventCreateInfoBuilder<'a>(EventCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> EventCreateInfoBuilder<'a> {
@@ -19446,7 +19446,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateInfo.html) · Builder of [`FenceCreateInfo`](struct.FenceCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateInfo.html) · Builder of [`FenceCreateInfo`]"]
 #[repr(transparent)]
 pub struct FenceCreateInfoBuilder<'a>(FenceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> FenceCreateInfoBuilder<'a> {
@@ -19766,7 +19766,7 @@ impl PhysicalDeviceFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures.html) · Builder of [`PhysicalDeviceFeatures`](struct.PhysicalDeviceFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures.html) · Builder of [`PhysicalDeviceFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFeaturesBuilder<'a>(
     PhysicalDeviceFeatures,
@@ -20171,7 +20171,7 @@ impl PhysicalDeviceSparseProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseProperties.html) · Builder of [`PhysicalDeviceSparseProperties`](struct.PhysicalDeviceSparseProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseProperties.html) · Builder of [`PhysicalDeviceSparseProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSparsePropertiesBuilder<'a>(
     PhysicalDeviceSparseProperties,
@@ -20767,7 +20767,7 @@ impl PhysicalDeviceLimits {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLimits.html) · Builder of [`PhysicalDeviceLimits`](struct.PhysicalDeviceLimits.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLimits.html) · Builder of [`PhysicalDeviceLimits`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLimitsBuilder<'a>(PhysicalDeviceLimits, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceLimitsBuilder<'a> {
@@ -21554,7 +21554,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateInfo.html) · Builder of [`SemaphoreCreateInfo`](struct.SemaphoreCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateInfo.html) · Builder of [`SemaphoreCreateInfo`]"]
 #[repr(transparent)]
 pub struct SemaphoreCreateInfoBuilder<'a>(SemaphoreCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreCreateInfoBuilder<'a> {
@@ -21667,7 +21667,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfo.html) · Builder of [`QueryPoolCreateInfo`](struct.QueryPoolCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfo.html) · Builder of [`QueryPoolCreateInfo`]"]
 #[repr(transparent)]
 pub struct QueryPoolCreateInfoBuilder<'a>(QueryPoolCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> QueryPoolCreateInfoBuilder<'a> {
@@ -21785,7 +21785,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::FramebufferAttachmentsCreateInf
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateInfo.html) · Builder of [`FramebufferCreateInfo`](struct.FramebufferCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateInfo.html) · Builder of [`FramebufferCreateInfo`]"]
 #[repr(transparent)]
 pub struct FramebufferCreateInfoBuilder<'a>(
     FramebufferCreateInfo,
@@ -21891,7 +21891,7 @@ impl DrawIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndirectCommand.html) · Builder of [`DrawIndirectCommand`](struct.DrawIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndirectCommand.html) · Builder of [`DrawIndirectCommand`]"]
 #[repr(transparent)]
 pub struct DrawIndirectCommandBuilder<'a>(DrawIndirectCommand, std::marker::PhantomData<&'a ()>);
 impl<'a> DrawIndirectCommandBuilder<'a> {
@@ -21986,7 +21986,7 @@ impl DrawIndexedIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndexedIndirectCommand.html) · Builder of [`DrawIndexedIndirectCommand`](struct.DrawIndexedIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndexedIndirectCommand.html) · Builder of [`DrawIndexedIndirectCommand`]"]
 #[repr(transparent)]
 pub struct DrawIndexedIndirectCommandBuilder<'a>(
     DrawIndexedIndirectCommand,
@@ -22083,7 +22083,7 @@ impl DispatchIndirectCommand {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDispatchIndirectCommand.html) · Builder of [`DispatchIndirectCommand`](struct.DispatchIndirectCommand.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDispatchIndirectCommand.html) · Builder of [`DispatchIndirectCommand`]"]
 #[repr(transparent)]
 pub struct DispatchIndirectCommandBuilder<'a>(
     DispatchIndirectCommand,
@@ -22262,7 +22262,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo.html) · Builder of [`SubmitInfo`](struct.SubmitInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo.html) · Builder of [`SubmitInfo`]"]
 #[repr(transparent)]
 pub struct SubmitInfoBuilder<'a>(SubmitInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SubmitInfoBuilder<'a> {
@@ -22340,7 +22340,7 @@ pub const fn version_minor(version: u32) -> u32 {
 pub const fn version_patch(version: u32) -> u32 {
     version & 0xfff
 }
-#[doc = "Provided by [`vk1_0`](vk1_0/index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateInstance.html) · Function"]
@@ -22428,7 +22428,7 @@ impl<T> crate::EntryLoader<T> {
         crate::utils::VulkanResult::new(_return, properties)
     }
 }
-#[doc = "Provided by [`vk1_0`](vk1_0/index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyInstance.html) · Function"]
@@ -22769,7 +22769,7 @@ impl crate::InstanceLoader {
         properties
     }
 }
-#[doc = "Provided by [`vk1_0`](vk1_0/index.html)"]
+#[doc = "Provided by [`crate::vk1_0`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceProcAddr.html) · Function"]

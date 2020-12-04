@@ -83,7 +83,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`](struct.PhysicalDeviceSurfaceInfo2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSurfaceInfo2KHRBuilder<'a>(
     PhysicalDeviceSurfaceInfo2KHR,
@@ -208,7 +208,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_full_screen_exclusive :: SurfaceCapabilitiesFullScreenExclusiveEXTBuilder < '_ >> for SurfaceCapabilities2KHRBuilder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`](struct.SurfaceCapabilities2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`]"]
 #[repr(transparent)]
 pub struct SurfaceCapabilities2KHRBuilder<'a>(
     SurfaceCapabilities2KHR,
@@ -288,7 +288,7 @@ impl SurfaceFormat2KHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Builder of [`SurfaceFormat2KHR`](struct.SurfaceFormat2KHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Builder of [`SurfaceFormat2KHR`]"]
 #[repr(transparent)]
 pub struct SurfaceFormat2KHRBuilder<'a>(SurfaceFormat2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFormat2KHRBuilder<'a> {
@@ -331,7 +331,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormat2KHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_get_surface_capabilities2`](extensions/khr_get_surface_capabilities2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_surface_capabilities2`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]

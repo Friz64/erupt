@@ -40,7 +40,7 @@ impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Builder of [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX`](struct.PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Builder of [`PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a>(
     PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX,

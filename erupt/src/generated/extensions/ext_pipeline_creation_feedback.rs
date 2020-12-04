@@ -5,8 +5,8 @@ pub const EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION: u32 = 1;
 #[doc(alias = "VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME")]
 pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_pipeline_creation_feedback");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`](./struct.PipelineCreationFeedbackFlagBitsEXT.html)"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`](./struct.PipelineCreationFeedbackFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`]"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`]"]
 #[doc(alias = "VkPipelineCreationFeedbackFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -28,7 +28,7 @@ impl std::fmt::Debug for PipelineCreationFeedbackFlagBitsEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_pipeline_creation_feedback`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_feedback`]"]
 impl PipelineCreationFeedbackFlagBitsEXT {
     pub const VALID_EXT: Self = Self(1);
     pub const APPLICATION_PIPELINE_CACHE_HIT_EXT: Self = Self(2);
@@ -65,7 +65,7 @@ impl PipelineCreationFeedbackEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Builder of [`PipelineCreationFeedbackEXT`](struct.PipelineCreationFeedbackEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Builder of [`PipelineCreationFeedbackEXT`]"]
 #[repr(transparent)]
 pub struct PipelineCreationFeedbackEXTBuilder<'a>(
     PipelineCreationFeedbackEXT,
@@ -167,7 +167,7 @@ impl PipelineCreationFeedbackCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackCreateInfoEXT.html) · Builder of [`PipelineCreationFeedbackCreateInfoEXT`](struct.PipelineCreationFeedbackCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackCreateInfoEXT.html) · Builder of [`PipelineCreationFeedbackCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct PipelineCreationFeedbackCreateInfoEXTBuilder<'a>(
     PipelineCreationFeedbackCreateInfoEXT,

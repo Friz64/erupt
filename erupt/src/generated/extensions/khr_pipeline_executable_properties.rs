@@ -33,7 +33,7 @@ impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_pipeline_executable_properties`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
 impl PipelineExecutableStatisticFormatKHR {
     pub const BOOL32_KHR: Self = Self(0);
     pub const INT64_KHR: Self = Self(1);
@@ -84,7 +84,7 @@ impl PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Builder of [`PhysicalDevicePipelineExecutablePropertiesFeaturesKHR`](struct.PhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Builder of [`PhysicalDevicePipelineExecutablePropertiesFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a>(
     PhysicalDevicePipelineExecutablePropertiesFeaturesKHR,
@@ -166,7 +166,7 @@ impl PipelineInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInfoKHR.html) · Builder of [`PipelineInfoKHR`](struct.PipelineInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineInfoKHR.html) · Builder of [`PipelineInfoKHR`]"]
 #[repr(transparent)]
 pub struct PipelineInfoKHRBuilder<'a>(PipelineInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineInfoKHRBuilder<'a> {
@@ -253,7 +253,7 @@ impl PipelineExecutablePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutablePropertiesKHR.html) · Builder of [`PipelineExecutablePropertiesKHR`](struct.PipelineExecutablePropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutablePropertiesKHR.html) · Builder of [`PipelineExecutablePropertiesKHR`]"]
 #[repr(transparent)]
 pub struct PipelineExecutablePropertiesKHRBuilder<'a>(
     PipelineExecutablePropertiesKHR,
@@ -348,7 +348,7 @@ impl PipelineExecutableInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableInfoKHR.html) · Builder of [`PipelineExecutableInfoKHR`](struct.PipelineExecutableInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableInfoKHR.html) · Builder of [`PipelineExecutableInfoKHR`]"]
 #[repr(transparent)]
 pub struct PipelineExecutableInfoKHRBuilder<'a>(
     PipelineExecutableInfoKHR,
@@ -466,7 +466,7 @@ impl PipelineExecutableStatisticKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableStatisticKHR.html) · Builder of [`PipelineExecutableStatisticKHR`](struct.PipelineExecutableStatisticKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableStatisticKHR.html) · Builder of [`PipelineExecutableStatisticKHR`]"]
 #[repr(transparent)]
 pub struct PipelineExecutableStatisticKHRBuilder<'a>(
     PipelineExecutableStatisticKHR,
@@ -580,7 +580,7 @@ impl PipelineExecutableInternalRepresentationKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableInternalRepresentationKHR.html) · Builder of [`PipelineExecutableInternalRepresentationKHR`](struct.PipelineExecutableInternalRepresentationKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableInternalRepresentationKHR.html) · Builder of [`PipelineExecutableInternalRepresentationKHR`]"]
 #[repr(transparent)]
 pub struct PipelineExecutableInternalRepresentationKHRBuilder<'a>(
     PipelineExecutableInternalRepresentationKHR,
@@ -646,7 +646,7 @@ impl<'a> std::ops::DerefMut for PipelineExecutableInternalRepresentationKHRBuild
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_pipeline_executable_properties`](extensions/khr_pipeline_executable_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]

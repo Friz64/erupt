@@ -18,7 +18,7 @@ pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(
     dst_offset: crate::vk1_0::DeviceSize,
     marker: u32,
 ) -> ();
-#[doc = "Provided by [`extensions::amd_buffer_marker`](extensions/amd_buffer_marker/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_buffer_marker`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function"]

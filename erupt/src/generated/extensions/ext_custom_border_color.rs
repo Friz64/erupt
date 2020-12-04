@@ -42,7 +42,7 @@ impl SamplerCustomBorderColorCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html) · Builder of [`SamplerCustomBorderColorCreateInfoEXT`](struct.SamplerCustomBorderColorCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html) · Builder of [`SamplerCustomBorderColorCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct SamplerCustomBorderColorCreateInfoEXTBuilder<'a>(
     SamplerCustomBorderColorCreateInfoEXT,
@@ -130,7 +130,7 @@ impl PhysicalDeviceCustomBorderColorPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html) · Builder of [`PhysicalDeviceCustomBorderColorPropertiesEXT`](struct.PhysicalDeviceCustomBorderColorPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html) · Builder of [`PhysicalDeviceCustomBorderColorPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'a>(
     PhysicalDeviceCustomBorderColorPropertiesEXT,
@@ -219,7 +219,7 @@ impl PhysicalDeviceCustomBorderColorFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorFeaturesEXT.html) · Builder of [`PhysicalDeviceCustomBorderColorFeaturesEXT`](struct.PhysicalDeviceCustomBorderColorFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorFeaturesEXT.html) · Builder of [`PhysicalDeviceCustomBorderColorFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a>(
     PhysicalDeviceCustomBorderColorFeaturesEXT,

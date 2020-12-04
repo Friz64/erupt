@@ -9,8 +9,8 @@ pub const EXT_TOOLING_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceToolPropertiesEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`](./struct.ToolPurposeFlagBitsEXT.html)"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Bits enum of [`ToolPurposeFlagsEXT`](./struct.ToolPurposeFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`]"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Bits enum of [`ToolPurposeFlagsEXT`]"]
 #[doc(alias = "VkToolPurposeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -36,7 +36,7 @@ impl std::fmt::Debug for ToolPurposeFlagBitsEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_tooling_info`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
 impl ToolPurposeFlagBitsEXT {
     pub const VALIDATION_EXT: Self = Self(1);
     pub const PROFILING_EXT: Self = Self(2);
@@ -108,7 +108,7 @@ impl PhysicalDeviceToolPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Builder of [`PhysicalDeviceToolPropertiesEXT`](struct.PhysicalDeviceToolPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Builder of [`PhysicalDeviceToolPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceToolPropertiesEXTBuilder<'a>(
     PhysicalDeviceToolPropertiesEXT,
@@ -174,7 +174,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceToolPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_tooling_info`](extensions/ext_tooling_info/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]

@@ -90,7 +90,7 @@ pub type PFN_vkWaitSemaphoresKHR = crate::vk1_2::PFN_vkWaitSemaphores;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphoreKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSignalSemaphoreKHR = crate::vk1_2::PFN_vkSignalSemaphore;
-#[doc = "Provided by [`extensions::khr_timeline_semaphore`](extensions/khr_timeline_semaphore/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Function"]

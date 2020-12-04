@@ -81,7 +81,7 @@ impl PhysicalDeviceMeshShaderFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Builder of [`PhysicalDeviceMeshShaderFeaturesNV`](struct.PhysicalDeviceMeshShaderFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Builder of [`PhysicalDeviceMeshShaderFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMeshShaderFeaturesNVBuilder<'a>(
     PhysicalDeviceMeshShaderFeaturesNV,
@@ -223,7 +223,7 @@ impl PhysicalDeviceMeshShaderPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Builder of [`PhysicalDeviceMeshShaderPropertiesNV`](struct.PhysicalDeviceMeshShaderPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Builder of [`PhysicalDeviceMeshShaderPropertiesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMeshShaderPropertiesNVBuilder<'a>(
     PhysicalDeviceMeshShaderPropertiesNV,
@@ -363,7 +363,7 @@ impl DrawMeshTasksIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Builder of [`DrawMeshTasksIndirectCommandNV`](struct.DrawMeshTasksIndirectCommandNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Builder of [`DrawMeshTasksIndirectCommandNV`]"]
 #[repr(transparent)]
 pub struct DrawMeshTasksIndirectCommandNVBuilder<'a>(
     DrawMeshTasksIndirectCommandNV,
@@ -411,7 +411,7 @@ impl<'a> std::ops::DerefMut for DrawMeshTasksIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_mesh_shader`](extensions/nv_mesh_shader/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]

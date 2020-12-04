@@ -29,7 +29,7 @@ impl std::fmt::Debug for TimeDomainEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_calibrated_timestamps`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl TimeDomainEXT {
     pub const DEVICE_EXT: Self = Self(0);
     pub const CLOCK_MONOTONIC_EXT: Self = Self(1);
@@ -81,7 +81,7 @@ impl CalibratedTimestampInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCalibratedTimestampInfoEXT.html) · Builder of [`CalibratedTimestampInfoEXT`](struct.CalibratedTimestampInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCalibratedTimestampInfoEXT.html) · Builder of [`CalibratedTimestampInfoEXT`]"]
 #[repr(transparent)]
 pub struct CalibratedTimestampInfoEXTBuilder<'a>(
     CalibratedTimestampInfoEXT,
@@ -127,7 +127,7 @@ impl<'a> std::ops::DerefMut for CalibratedTimestampInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_calibrated_timestamps`](extensions/ext_calibrated_timestamps/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCalibrateableTimeDomainsEXT.html) · Function"]
@@ -158,7 +158,7 @@ impl crate::InstanceLoader {
         crate::utils::VulkanResult::new(_return, time_domains)
     }
 }
-#[doc = "Provided by [`extensions::ext_calibrated_timestamps`](extensions/ext_calibrated_timestamps/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]

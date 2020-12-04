@@ -22,7 +22,7 @@ impl std::fmt::Debug for ValidationFeatureEnableEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_validation_features`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
 impl ValidationFeatureEnableEXT {
     pub const GPU_ASSISTED_EXT: Self = Self(0);
     pub const GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT: Self = Self(1);
@@ -49,7 +49,7 @@ impl std::fmt::Debug for ValidationFeatureDisableEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_validation_features`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
 impl ValidationFeatureDisableEXT {
     pub const ALL_EXT: Self = Self(0);
     pub const SHADERS_EXT: Self = Self(1);
@@ -116,7 +116,7 @@ impl ValidationFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`](struct.ValidationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct ValidationFeaturesEXTBuilder<'a>(
     ValidationFeaturesEXT,

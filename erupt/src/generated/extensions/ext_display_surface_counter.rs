@@ -9,8 +9,8 @@ pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_cha
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`](./struct.SurfaceCounterFlagBitsEXT.html)"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`](./struct.SurfaceCounterFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`]"]
 #[doc(alias = "VkSurfaceCounterFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -30,7 +30,7 @@ impl std::fmt::Debug for SurfaceCounterFlagBitsEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_display_surface_counter`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
 impl SurfaceCounterFlagBitsEXT {
     pub const VBLANK_EXT: Self = Self(1);
 }
@@ -105,7 +105,7 @@ impl SurfaceCapabilities2EXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Builder of [`SurfaceCapabilities2EXT`](struct.SurfaceCapabilities2EXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Builder of [`SurfaceCapabilities2EXT`]"]
 #[repr(transparent)]
 pub struct SurfaceCapabilities2EXTBuilder<'a>(
     SurfaceCapabilities2EXT,
@@ -213,7 +213,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2EXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_display_surface_counter`](extensions/ext_display_surface_counter/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]

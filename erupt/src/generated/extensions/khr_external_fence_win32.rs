@@ -65,7 +65,7 @@ impl ImportFenceWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Builder of [`ImportFenceWin32HandleInfoKHR`](struct.ImportFenceWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Builder of [`ImportFenceWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct ImportFenceWin32HandleInfoKHRBuilder<'a>(
     ImportFenceWin32HandleInfoKHR,
@@ -171,7 +171,7 @@ impl ExportFenceWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Builder of [`ExportFenceWin32HandleInfoKHR`](struct.ExportFenceWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Builder of [`ExportFenceWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct ExportFenceWin32HandleInfoKHRBuilder<'a>(
     ExportFenceWin32HandleInfoKHR,
@@ -261,7 +261,7 @@ impl FenceGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Builder of [`FenceGetWin32HandleInfoKHR`](struct.FenceGetWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Builder of [`FenceGetWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct FenceGetWin32HandleInfoKHRBuilder<'a>(
     FenceGetWin32HandleInfoKHR,
@@ -312,7 +312,7 @@ impl<'a> std::ops::DerefMut for FenceGetWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_external_fence_win32`](extensions/khr_external_fence_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_fence_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]

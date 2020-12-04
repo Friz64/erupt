@@ -39,7 +39,7 @@ impl PhysicalDeviceImageViewImageFormatInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Builder of [`PhysicalDeviceImageViewImageFormatInfoEXT`](struct.PhysicalDeviceImageViewImageFormatInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Builder of [`PhysicalDeviceImageViewImageFormatInfoEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a>(
     PhysicalDeviceImageViewImageFormatInfoEXT,
@@ -123,7 +123,7 @@ impl FilterCubicImageViewImageFormatPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Builder of [`FilterCubicImageViewImageFormatPropertiesEXT`](struct.FilterCubicImageViewImageFormatPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Builder of [`FilterCubicImageViewImageFormatPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a>(
     FilterCubicImageViewImageFormatPropertiesEXT,

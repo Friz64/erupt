@@ -59,7 +59,7 @@ impl ImportMemoryWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Builder of [`ImportMemoryWin32HandleInfoKHR`](struct.ImportMemoryWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Builder of [`ImportMemoryWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct ImportMemoryWin32HandleInfoKHRBuilder<'a>(
     ImportMemoryWin32HandleInfoKHR,
@@ -155,7 +155,7 @@ impl ExportMemoryWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoKHR.html) · Builder of [`ExportMemoryWin32HandleInfoKHR`](struct.ExportMemoryWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoKHR.html) · Builder of [`ExportMemoryWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct ExportMemoryWin32HandleInfoKHRBuilder<'a>(
     ExportMemoryWin32HandleInfoKHR,
@@ -242,7 +242,7 @@ impl MemoryWin32HandlePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryWin32HandlePropertiesKHR.html) · Builder of [`MemoryWin32HandlePropertiesKHR`](struct.MemoryWin32HandlePropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryWin32HandlePropertiesKHR.html) · Builder of [`MemoryWin32HandlePropertiesKHR`]"]
 #[repr(transparent)]
 pub struct MemoryWin32HandlePropertiesKHRBuilder<'a>(
     MemoryWin32HandlePropertiesKHR,
@@ -322,7 +322,7 @@ impl MemoryGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html) · Builder of [`MemoryGetWin32HandleInfoKHR`](struct.MemoryGetWin32HandleInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html) · Builder of [`MemoryGetWin32HandleInfoKHR`]"]
 #[repr(transparent)]
 pub struct MemoryGetWin32HandleInfoKHRBuilder<'a>(
     MemoryGetWin32HandleInfoKHR,
@@ -373,7 +373,7 @@ impl<'a> std::ops::DerefMut for MemoryGetWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_external_memory_win32`](extensions/khr_external_memory_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]

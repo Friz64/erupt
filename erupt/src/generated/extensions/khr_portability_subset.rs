@@ -111,7 +111,7 @@ impl PhysicalDevicePortabilitySubsetFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetFeaturesKHR`](struct.PhysicalDevicePortabilitySubsetFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a>(
     PhysicalDevicePortabilitySubsetFeaturesKHR,
@@ -277,7 +277,7 @@ impl PhysicalDevicePortabilitySubsetPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetPropertiesKHR`](struct.PhysicalDevicePortabilitySubsetPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetPropertiesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a>(
     PhysicalDevicePortabilitySubsetPropertiesKHR,

@@ -5,8 +5,8 @@ pub const AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION: u32 = 1;
 #[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME")]
 pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_shader_core_properties2");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`](./struct.ShaderCorePropertiesFlagBitsAMD.html)"] # [doc (alias = "VkShaderCorePropertiesFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`](./struct.ShaderCorePropertiesFlagsAMD.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`]"] # [doc (alias = "VkShaderCorePropertiesFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`]"]
 #[doc(alias = "VkShaderCorePropertiesFlagBitsAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -63,7 +63,7 @@ impl PhysicalDeviceShaderCoreProperties2AMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`](struct.PhysicalDeviceShaderCoreProperties2AMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a>(
     PhysicalDeviceShaderCoreProperties2AMD,

@@ -66,7 +66,7 @@ impl ImageViewHandleInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`](struct.ImageViewHandleInfoNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`]"]
 #[repr(transparent)]
 pub struct ImageViewHandleInfoNVXBuilder<'a>(
     ImageViewHandleInfoNVX,
@@ -156,7 +156,7 @@ impl ImageViewAddressPropertiesNVX {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`](struct.ImageViewAddressPropertiesNVX.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`]"]
 #[repr(transparent)]
 pub struct ImageViewAddressPropertiesNVXBuilder<'a>(
     ImageViewAddressPropertiesNVX,
@@ -204,7 +204,7 @@ impl<'a> std::ops::DerefMut for ImageViewAddressPropertiesNVXBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nvx_image_view_handle`](extensions/nvx_image_view_handle/index.html)"]
+#[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]

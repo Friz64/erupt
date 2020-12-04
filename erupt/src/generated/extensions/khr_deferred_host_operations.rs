@@ -58,7 +58,7 @@ pub type PFN_vkDeferredOperationJoinKHR = unsafe extern "system" fn(
     device: crate::vk1_0::Device,
     operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
 ) -> crate::vk1_0::Result;
-#[doc = "Provided by [`extensions::khr_deferred_host_operations`](extensions/khr_deferred_host_operations/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]

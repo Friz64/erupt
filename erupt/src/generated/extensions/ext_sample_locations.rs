@@ -57,7 +57,7 @@ impl SampleLocationEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Builder of [`SampleLocationEXT`](struct.SampleLocationEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Builder of [`SampleLocationEXT`]"]
 #[repr(transparent)]
 pub struct SampleLocationEXTBuilder<'a>(SampleLocationEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SampleLocationEXTBuilder<'a> {
@@ -148,7 +148,7 @@ impl SampleLocationsInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationsInfoEXT.html) · Builder of [`SampleLocationsInfoEXT`](struct.SampleLocationsInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationsInfoEXT.html) · Builder of [`SampleLocationsInfoEXT`]"]
 #[repr(transparent)]
 pub struct SampleLocationsInfoEXTBuilder<'a>(
     SampleLocationsInfoEXT,
@@ -242,7 +242,7 @@ impl AttachmentSampleLocationsEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentSampleLocationsEXT.html) · Builder of [`AttachmentSampleLocationsEXT`](struct.AttachmentSampleLocationsEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentSampleLocationsEXT.html) · Builder of [`AttachmentSampleLocationsEXT`]"]
 #[repr(transparent)]
 pub struct AttachmentSampleLocationsEXTBuilder<'a>(
     AttachmentSampleLocationsEXT,
@@ -324,7 +324,7 @@ impl SubpassSampleLocationsEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassSampleLocationsEXT.html) · Builder of [`SubpassSampleLocationsEXT`](struct.SubpassSampleLocationsEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassSampleLocationsEXT.html) · Builder of [`SubpassSampleLocationsEXT`]"]
 #[repr(transparent)]
 pub struct SubpassSampleLocationsEXTBuilder<'a>(
     SubpassSampleLocationsEXT,
@@ -432,7 +432,7 @@ impl RenderPassSampleLocationsBeginInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassSampleLocationsBeginInfoEXT.html) · Builder of [`RenderPassSampleLocationsBeginInfoEXT`](struct.RenderPassSampleLocationsBeginInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassSampleLocationsBeginInfoEXT.html) · Builder of [`RenderPassSampleLocationsBeginInfoEXT`]"]
 #[repr(transparent)]
 pub struct RenderPassSampleLocationsBeginInfoEXTBuilder<'a>(
     RenderPassSampleLocationsBeginInfoEXT,
@@ -530,7 +530,7 @@ impl PipelineSampleLocationsStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html) · Builder of [`PipelineSampleLocationsStateCreateInfoEXT`](struct.PipelineSampleLocationsStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html) · Builder of [`PipelineSampleLocationsStateCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct PipelineSampleLocationsStateCreateInfoEXTBuilder<'a>(
     PipelineSampleLocationsStateCreateInfoEXT,
@@ -645,7 +645,7 @@ impl PhysicalDeviceSampleLocationsPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSampleLocationsPropertiesEXT.html) · Builder of [`PhysicalDeviceSampleLocationsPropertiesEXT`](struct.PhysicalDeviceSampleLocationsPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSampleLocationsPropertiesEXT.html) · Builder of [`PhysicalDeviceSampleLocationsPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a>(
     PhysicalDeviceSampleLocationsPropertiesEXT,
@@ -757,7 +757,7 @@ impl MultisamplePropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultisamplePropertiesEXT.html) · Builder of [`MultisamplePropertiesEXT`](struct.MultisamplePropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultisamplePropertiesEXT.html) · Builder of [`MultisamplePropertiesEXT`]"]
 #[repr(transparent)]
 pub struct MultisamplePropertiesEXTBuilder<'a>(
     MultisamplePropertiesEXT,
@@ -803,7 +803,7 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_sample_locations`](extensions/ext_sample_locations/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
@@ -820,7 +820,7 @@ impl crate::DeviceLoader {
         ()
     }
 }
-#[doc = "Provided by [`extensions::ext_sample_locations`](extensions/ext_sample_locations/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]

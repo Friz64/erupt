@@ -38,7 +38,7 @@ impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`](struct.PhysicalDeviceRepresentativeFragmentTestFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a>(
     PhysicalDeviceRepresentativeFragmentTestFeaturesNV,
@@ -119,7 +119,7 @@ impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`](struct.PipelineRepresentativeFragmentTestStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a>(
     PipelineRepresentativeFragmentTestStateCreateInfoNV,

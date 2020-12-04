@@ -38,7 +38,7 @@ impl PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html) · Builder of [`PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT`](struct.PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html) · Builder of [`PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a>(
     PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT,

@@ -137,7 +137,7 @@ pub type PFN_vkGetPhysicalDeviceMemoryProperties2KHR =
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceSparseImageFormatProperties2;
-#[doc = "Provided by [`extensions::khr_get_physical_device_properties2`](extensions/khr_get_physical_device_properties2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_get_physical_device_properties2`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures2KHR.html) · Function"]

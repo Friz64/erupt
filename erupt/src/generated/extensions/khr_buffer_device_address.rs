@@ -75,7 +75,7 @@ pub type PFN_vkGetBufferDeviceAddressKHR = crate::vk1_2::PFN_vkGetBufferDeviceAd
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR =
     crate::vk1_2::PFN_vkGetDeviceMemoryOpaqueCaptureAddress;
-#[doc = "Provided by [`extensions::khr_buffer_device_address`](extensions/khr_buffer_device_address/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Function"]

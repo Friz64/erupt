@@ -104,7 +104,7 @@ pub type PFN_vkCmdSetDeviceMaskKHR = crate::vk1_1::PFN_vkCmdSetDeviceMask;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchBaseKHR = crate::vk1_1::PFN_vkCmdDispatchBase;
-#[doc = "Provided by [`extensions::khr_device_group`](extensions/khr_device_group/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Function"]

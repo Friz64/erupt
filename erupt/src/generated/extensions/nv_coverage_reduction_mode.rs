@@ -10,8 +10,8 @@ pub const NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME: *const std::os::raw::c_char
 pub const FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV:
     *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageReductionStateCreateFlagBitsNV`](./struct.PipelineCoverageReductionStateCreateFlagBitsNV.html)"] # [doc (alias = "VkPipelineCoverageReductionStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageReductionStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageReductionStateCreateFlagsNV`](./struct.PipelineCoverageReductionStateCreateFlagsNV.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageReductionStateCreateFlagBitsNV`]"] # [doc (alias = "VkPipelineCoverageReductionStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageReductionStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageReductionStateCreateFlagsNV`]"]
 #[doc(alias = "VkPipelineCoverageReductionStateCreateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -44,7 +44,7 @@ impl std::fmt::Debug for CoverageReductionModeNV {
         })
     }
 }
-#[doc = "Provided by [`extensions::nv_coverage_reduction_mode`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
 impl CoverageReductionModeNV {
     pub const MERGE_NV: Self = Self(0);
     pub const TRUNCATE_NV: Self = Self(1);
@@ -90,7 +90,7 @@ impl PhysicalDeviceCoverageReductionModeFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Builder of [`PhysicalDeviceCoverageReductionModeFeaturesNV`](struct.PhysicalDeviceCoverageReductionModeFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Builder of [`PhysicalDeviceCoverageReductionModeFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a>(
     PhysicalDeviceCoverageReductionModeFeaturesNV,
@@ -175,7 +175,7 @@ impl PipelineCoverageReductionStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html) · Builder of [`PipelineCoverageReductionStateCreateInfoNV`](struct.PipelineCoverageReductionStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html) · Builder of [`PipelineCoverageReductionStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineCoverageReductionStateCreateInfoNVBuilder<'a>(
     PipelineCoverageReductionStateCreateInfoNV,
@@ -276,7 +276,7 @@ impl FramebufferMixedSamplesCombinationNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferMixedSamplesCombinationNV.html) · Builder of [`FramebufferMixedSamplesCombinationNV`](struct.FramebufferMixedSamplesCombinationNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferMixedSamplesCombinationNV.html) · Builder of [`FramebufferMixedSamplesCombinationNV`]"]
 #[repr(transparent)]
 pub struct FramebufferMixedSamplesCombinationNVBuilder<'a>(
     FramebufferMixedSamplesCombinationNV,
@@ -343,7 +343,7 @@ impl<'a> std::ops::DerefMut for FramebufferMixedSamplesCombinationNVBuilder<'a> 
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_coverage_reduction_mode`](extensions/nv_coverage_reduction_mode/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]

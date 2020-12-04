@@ -22,8 +22,8 @@ pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char =
 pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkMergeValidationCachesEXT");
 crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle" , "VkValidationCacheEXT") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`](./struct.ValidationCacheCreateFlagBitsEXT.html)"] # [doc (alias = "VkValidationCacheCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`](./struct.ValidationCacheCreateFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`]"] # [doc (alias = "VkValidationCacheCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`]"]
 #[doc(alias = "VkValidationCacheCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -55,7 +55,7 @@ impl std::fmt::Debug for ValidationCacheHeaderVersionEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_validation_cache`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl ValidationCacheHeaderVersionEXT {
     pub const ONE_EXT: Self = Self(1);
 }
@@ -130,7 +130,7 @@ impl ValidationCacheCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Builder of [`ValidationCacheCreateInfoEXT`](struct.ValidationCacheCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Builder of [`ValidationCacheCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct ValidationCacheCreateInfoEXTBuilder<'a>(
     ValidationCacheCreateInfoEXT,
@@ -220,7 +220,7 @@ impl ShaderModuleValidationCacheCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Builder of [`ShaderModuleValidationCacheCreateInfoEXT`](struct.ShaderModuleValidationCacheCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Builder of [`ShaderModuleValidationCacheCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct ShaderModuleValidationCacheCreateInfoEXTBuilder<'a>(
     ShaderModuleValidationCacheCreateInfoEXT,
@@ -269,7 +269,7 @@ impl<'a> std::ops::DerefMut for ShaderModuleValidationCacheCreateInfoEXTBuilder<
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_validation_cache`](extensions/ext_validation_cache/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateValidationCacheEXT.html) · Function"]

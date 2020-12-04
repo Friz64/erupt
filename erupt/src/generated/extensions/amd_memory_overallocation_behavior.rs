@@ -20,7 +20,7 @@ impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
         })
     }
 }
-#[doc = "Provided by [`extensions::amd_memory_overallocation_behavior`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_memory_overallocation_behavior`]"]
 impl MemoryOverallocationBehaviorAMD {
     pub const DEFAULT_AMD: Self = Self(0);
     pub const ALLOWED_AMD: Self = Self(1);
@@ -61,7 +61,7 @@ impl DeviceMemoryOverallocationCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`](struct.DeviceMemoryOverallocationCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`]"]
 #[repr(transparent)]
 pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a>(
     DeviceMemoryOverallocationCreateInfoAMD,

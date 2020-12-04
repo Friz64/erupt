@@ -25,7 +25,7 @@ impl std::fmt::Debug for LineRasterizationModeEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_line_rasterization`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl LineRasterizationModeEXT {
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RECTANGULAR_EXT: Self = Self(1);
@@ -94,7 +94,7 @@ impl PhysicalDeviceLineRasterizationFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`](struct.PhysicalDeviceLineRasterizationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationFeaturesEXT,
@@ -202,7 +202,7 @@ impl PhysicalDeviceLineRasterizationPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`](struct.PhysicalDeviceLineRasterizationPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationPropertiesEXT,
@@ -292,7 +292,7 @@ impl PipelineRasterizationLineStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`](struct.PipelineRasterizationLineStateCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct PipelineRasterizationLineStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationLineStateCreateInfoEXT,
@@ -356,7 +356,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_line_rasterization`](extensions/ext_line_rasterization/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]

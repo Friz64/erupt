@@ -90,7 +90,7 @@ impl PhysicalDeviceShaderCorePropertiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Builder of [`PhysicalDeviceShaderCorePropertiesAMD`](struct.PhysicalDeviceShaderCorePropertiesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Builder of [`PhysicalDeviceShaderCorePropertiesAMD`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderCorePropertiesAMDBuilder<'a>(
     PhysicalDeviceShaderCorePropertiesAMD,

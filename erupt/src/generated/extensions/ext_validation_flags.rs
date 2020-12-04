@@ -19,7 +19,7 @@ impl std::fmt::Debug for ValidationCheckEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_validation_flags`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_validation_flags`]"]
 impl ValidationCheckEXT {
     pub const ALL_EXT: Self = Self(0);
     pub const SHADERS_EXT: Self = Self(1);
@@ -68,7 +68,7 @@ impl ValidationFlagsEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Builder of [`ValidationFlagsEXT`](struct.ValidationFlagsEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Builder of [`ValidationFlagsEXT`]"]
 #[repr(transparent)]
 pub struct ValidationFlagsEXTBuilder<'a>(ValidationFlagsEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ValidationFlagsEXTBuilder<'a> {

@@ -5,8 +5,8 @@ pub const NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION: u32 = 1;
 #[doc(alias = "VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME")]
 pub const NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_fragment_coverage_to_color");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageToColorStateCreateFlagBitsNV`](./struct.PipelineCoverageToColorStateCreateFlagBitsNV.html)"] # [doc (alias = "VkPipelineCoverageToColorStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageToColorStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageToColorStateCreateFlagsNV`](./struct.PipelineCoverageToColorStateCreateFlagsNV.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageToColorStateCreateFlagBitsNV`]"] # [doc (alias = "VkPipelineCoverageToColorStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageToColorStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageToColorStateCreateFlagsNV`]"]
 #[doc(alias = "VkPipelineCoverageToColorStateCreateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -72,7 +72,7 @@ impl PipelineCoverageToColorStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`](struct.PipelineCoverageToColorStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineCoverageToColorStateCreateInfoNVBuilder<'a>(
     PipelineCoverageToColorStateCreateInfoNV,

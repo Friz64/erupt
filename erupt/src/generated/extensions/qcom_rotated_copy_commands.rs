@@ -39,7 +39,7 @@ impl CopyCommandTransformInfoQCOM {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Builder of [`CopyCommandTransformInfoQCOM`](struct.CopyCommandTransformInfoQCOM.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Builder of [`CopyCommandTransformInfoQCOM`]"]
 #[repr(transparent)]
 pub struct CopyCommandTransformInfoQCOMBuilder<'a>(
     CopyCommandTransformInfoQCOM,

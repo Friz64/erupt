@@ -47,7 +47,7 @@ pub type ExternalSemaphorePropertiesKHRBuilder<'a> =
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceExternalSemaphoreProperties;
-#[doc = "Provided by [`extensions::khr_external_semaphore_capabilities`](extensions/khr_external_semaphore_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Function"]

@@ -9,8 +9,8 @@ pub const MVK_IOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc(alias = "FN_CREATE_IOS_SURFACE_MVK")]
 pub const FN_CREATE_IOS_SURFACE_MVK: *const std::os::raw::c_char =
     crate::cstr!("vkCreateIOSSurfaceMVK");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`](./struct.IOSSurfaceCreateFlagBitsMVK.html)"] # [doc (alias = "VkIOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct IOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`IOSSurfaceCreateFlagsMVK`](./struct.IOSSurfaceCreateFlagsMVK.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkIOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct IOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`IOSSurfaceCreateFlagsMVK`]"]
 #[doc(alias = "VkIOSSurfaceCreateFlagBitsMVK")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -74,7 +74,7 @@ impl IOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`](struct.IOSSurfaceCreateInfoMVK.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`]"]
 #[repr(transparent)]
 pub struct IOSSurfaceCreateInfoMVKBuilder<'a>(
     IOSSurfaceCreateInfoMVK,
@@ -125,7 +125,7 @@ impl<'a> std::ops::DerefMut for IOSSurfaceCreateInfoMVKBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::mvk_ios_surface`](extensions/mvk_ios_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::mvk_ios_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function"]

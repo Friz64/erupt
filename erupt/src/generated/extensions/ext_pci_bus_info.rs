@@ -48,7 +48,7 @@ impl PhysicalDevicePCIBusInfoPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Builder of [`PhysicalDevicePCIBusInfoPropertiesEXT`](struct.PhysicalDevicePCIBusInfoPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Builder of [`PhysicalDevicePCIBusInfoPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a>(
     PhysicalDevicePCIBusInfoPropertiesEXT,

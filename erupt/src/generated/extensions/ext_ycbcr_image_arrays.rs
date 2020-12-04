@@ -39,7 +39,7 @@ impl PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`](struct.PhysicalDeviceYcbcrImageArraysFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a>(
     PhysicalDeviceYcbcrImageArraysFeaturesEXT,

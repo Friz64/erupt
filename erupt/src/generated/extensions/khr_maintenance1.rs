@@ -16,7 +16,7 @@ pub type CommandPoolTrimFlagsKHR = crate::vk1_1::CommandPoolTrimFlags;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPoolKHR = crate::vk1_1::PFN_vkTrimCommandPool;
-#[doc = "Provided by [`extensions::khr_maintenance1`](extensions/khr_maintenance1/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Function"]

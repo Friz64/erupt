@@ -22,8 +22,8 @@ pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
 pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPrivateDataEXT");
 crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle" , "VkPrivateDataSlotEXT") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`](./struct.PrivateDataSlotCreateFlagBitsEXT.html)"] # [doc (alias = "VkPrivateDataSlotCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`](./struct.PrivateDataSlotCreateFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`]"] # [doc (alias = "VkPrivateDataSlotCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`]"]
 #[doc(alias = "VkPrivateDataSlotCreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -112,7 +112,7 @@ impl DevicePrivateDataCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Builder of [`DevicePrivateDataCreateInfoEXT`](struct.DevicePrivateDataCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Builder of [`DevicePrivateDataCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct DevicePrivateDataCreateInfoEXTBuilder<'a>(
     DevicePrivateDataCreateInfoEXT,
@@ -189,7 +189,7 @@ impl PrivateDataSlotCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateInfoEXT.html) · Builder of [`PrivateDataSlotCreateInfoEXT`](struct.PrivateDataSlotCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateInfoEXT.html) · Builder of [`PrivateDataSlotCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct PrivateDataSlotCreateInfoEXTBuilder<'a>(
     PrivateDataSlotCreateInfoEXT,
@@ -269,7 +269,7 @@ impl PhysicalDevicePrivateDataFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Builder of [`PhysicalDevicePrivateDataFeaturesEXT`](struct.PhysicalDevicePrivateDataFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Builder of [`PhysicalDevicePrivateDataFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePrivateDataFeaturesEXTBuilder<'a>(
     PhysicalDevicePrivateDataFeaturesEXT,
@@ -312,7 +312,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_private_data`](extensions/ext_private_data/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_private_data`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePrivateDataSlotEXT.html) · Function"]

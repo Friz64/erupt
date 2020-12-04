@@ -5,8 +5,8 @@ pub const AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION: u32 = 1;
 #[doc(alias = "VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME")]
 pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_pipeline_compiler_control");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`](./struct.PipelineCompilerControlFlagBitsAMD.html)"] # [doc (alias = "VkPipelineCompilerControlFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCompilerControlFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCompilerControlFlagsAMD`](./struct.PipelineCompilerControlFlagsAMD.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`]"] # [doc (alias = "VkPipelineCompilerControlFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCompilerControlFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCompilerControlFlagsAMD`]"]
 #[doc(alias = "VkPipelineCompilerControlFlagBitsAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -60,7 +60,7 @@ impl PipelineCompilerControlCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`](struct.PipelineCompilerControlCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`]"]
 #[repr(transparent)]
 pub struct PipelineCompilerControlCreateInfoAMDBuilder<'a>(
     PipelineCompilerControlCreateInfoAMD,

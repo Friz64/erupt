@@ -66,7 +66,7 @@ impl ImportSemaphoreFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Builder of [`ImportSemaphoreFdInfoKHR`](struct.ImportSemaphoreFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Builder of [`ImportSemaphoreFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct ImportSemaphoreFdInfoKHRBuilder<'a>(
     ImportSemaphoreFdInfoKHR,
@@ -164,7 +164,7 @@ impl SemaphoreGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Builder of [`SemaphoreGetFdInfoKHR`](struct.SemaphoreGetFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Builder of [`SemaphoreGetFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct SemaphoreGetFdInfoKHRBuilder<'a>(
     SemaphoreGetFdInfoKHR,
@@ -215,7 +215,7 @@ impl<'a> std::ops::DerefMut for SemaphoreGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_external_semaphore_fd`](extensions/khr_external_semaphore_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_fd`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]

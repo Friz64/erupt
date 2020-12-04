@@ -196,15 +196,7 @@ impl Enum {
 
                 let flags_doc = comment_gen.def(
                     Some(&flags_name.original),
-                    format!(
-                        "Bitmask of {}",
-                        comment_gen.link(
-                            &enum_origin,
-                            &enum_origin,
-                            format!("struct.{}", flagbits_ident),
-                            &flagbits_ident
-                        )
-                    ),
+                    format!("Bitmask of [`{}`]", flagbits_ident),
                     None,
                 );
 
@@ -214,15 +206,7 @@ impl Enum {
                     } else {
                         Some(&flagbits_name.original)
                     },
-                    format!(
-                        "Bits enum of {}",
-                        comment_gen.link(
-                            &enum_origin,
-                            &enum_origin,
-                            format!("struct.{}", flags_ident),
-                            &flags_ident
-                        )
-                    ),
+                    format!("Bits enum of [`{}`]", flags_ident),
                     None,
                 );
 
@@ -271,7 +255,7 @@ impl Enum {
         for (origin, variants) in variant_map {
             let variant_idents = variants.iter().map(|variant| variant.name.ident());
             let variant_values = variants.iter().map(|variant| variant.kind.value());
-            let doc = comment_gen.provided_by(&enum_origin, &origin);
+            let doc = comment_gen.provided_by(&origin);
 
             stream.extend(quote! {
                 #[doc = #doc]

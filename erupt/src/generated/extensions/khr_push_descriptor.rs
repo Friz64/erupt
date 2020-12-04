@@ -66,7 +66,7 @@ impl PhysicalDevicePushDescriptorPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Builder of [`PhysicalDevicePushDescriptorPropertiesKHR`](struct.PhysicalDevicePushDescriptorPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Builder of [`PhysicalDevicePushDescriptorPropertiesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a>(
     PhysicalDevicePushDescriptorPropertiesKHR,
@@ -112,7 +112,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePushDescriptorPropertiesKHRBuilder
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_push_descriptor`](extensions/khr_push_descriptor/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]

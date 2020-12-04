@@ -9,8 +9,8 @@ pub const NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsNV.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBitsNV`](./struct.ExternalMemoryHandleTypeFlagBitsNV.html)"] # [doc (alias = "VkExternalMemoryHandleTypeFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_WIN32_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_NV . 0 ; const OPAQUE_WIN32_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_KMT_NV . 0 ; const D3D11_IMAGE_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_NV . 0 ; const D3D11_IMAGE_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_KMT_NV . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsNV.html) · Bits enum of [`ExternalMemoryHandleTypeFlagsNV`](./struct.ExternalMemoryHandleTypeFlagsNV.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsNV.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBitsNV`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_WIN32_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_NV . 0 ; const OPAQUE_WIN32_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_KMT_NV . 0 ; const D3D11_IMAGE_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_NV . 0 ; const D3D11_IMAGE_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_KMT_NV . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsNV.html) · Bits enum of [`ExternalMemoryHandleTypeFlagsNV`]"]
 #[doc(alias = "VkExternalMemoryHandleTypeFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -33,15 +33,15 @@ impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBitsNV {
         })
     }
 }
-#[doc = "Provided by [`extensions::nv_external_memory_capabilities`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
 impl ExternalMemoryHandleTypeFlagBitsNV {
     pub const OPAQUE_WIN32_NV: Self = Self(1);
     pub const OPAQUE_WIN32_KMT_NV: Self = Self(2);
     pub const D3D11_IMAGE_NV: Self = Self(4);
     pub const D3D11_IMAGE_KMT_NV: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagsNV.html) · Bitmask of [`ExternalMemoryFeatureFlagBitsNV`](./struct.ExternalMemoryFeatureFlagBitsNV.html)"] # [doc (alias = "VkExternalMemoryFeatureFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryFeatureFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEDICATED_ONLY_NV = ExternalMemoryFeatureFlagBitsNV :: DEDICATED_ONLY_NV . 0 ; const EXPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: EXPORTABLE_NV . 0 ; const IMPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: IMPORTABLE_NV . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBitsNV.html) · Bits enum of [`ExternalMemoryFeatureFlagsNV`](./struct.ExternalMemoryFeatureFlagsNV.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagsNV.html) · Bitmask of [`ExternalMemoryFeatureFlagBitsNV`]"] # [doc (alias = "VkExternalMemoryFeatureFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryFeatureFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEDICATED_ONLY_NV = ExternalMemoryFeatureFlagBitsNV :: DEDICATED_ONLY_NV . 0 ; const EXPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: EXPORTABLE_NV . 0 ; const IMPORTABLE_NV = ExternalMemoryFeatureFlagBitsNV :: IMPORTABLE_NV . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBitsNV.html) · Bits enum of [`ExternalMemoryFeatureFlagsNV`]"]
 #[doc(alias = "VkExternalMemoryFeatureFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -63,7 +63,7 @@ impl std::fmt::Debug for ExternalMemoryFeatureFlagBitsNV {
         })
     }
 }
-#[doc = "Provided by [`extensions::nv_external_memory_capabilities`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
 impl ExternalMemoryFeatureFlagBitsNV {
     pub const DEDICATED_ONLY_NV: Self = Self(1);
     pub const EXPORTABLE_NV: Self = Self(2);
@@ -115,7 +115,7 @@ impl ExternalImageFormatPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Builder of [`ExternalImageFormatPropertiesNV`](struct.ExternalImageFormatPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Builder of [`ExternalImageFormatPropertiesNV`]"]
 #[repr(transparent)]
 pub struct ExternalImageFormatPropertiesNVBuilder<'a>(
     ExternalImageFormatPropertiesNV,
@@ -185,7 +185,7 @@ impl<'a> std::ops::DerefMut for ExternalImageFormatPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_external_memory_capabilities`](extensions/nv_external_memory_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html) · Function"]

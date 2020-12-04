@@ -50,7 +50,7 @@ impl DisplayNativeHdrSurfaceCapabilitiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`](struct.DisplayNativeHdrSurfaceCapabilitiesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`]"]
 #[repr(transparent)]
 pub struct DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a>(
     DisplayNativeHdrSurfaceCapabilitiesAMD,
@@ -127,7 +127,7 @@ impl SwapchainDisplayNativeHdrCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`](struct.SwapchainDisplayNativeHdrCreateInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`]"]
 #[repr(transparent)]
 pub struct SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a>(
     SwapchainDisplayNativeHdrCreateInfoAMD,
@@ -170,7 +170,7 @@ impl<'a> std::ops::DerefMut for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::amd_display_native_hdr`](extensions/amd_display_native_hdr/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]

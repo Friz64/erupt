@@ -52,12 +52,12 @@ impl std::fmt::Debug for ColorSpaceKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl ColorSpaceKHR {
     pub const SRGB_NONLINEAR_KHR: Self = Self(0);
     pub const COLORSPACE_SRGB_NONLINEAR_KHR: Self = Self::SRGB_NONLINEAR_KHR;
 }
-#[doc = "Provided by [`extensions::ext_swapchain_colorspace`](../../extensions/ext_swapchain_colorspace/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_swapchain_colorspace`]"]
 impl ColorSpaceKHR {
     pub const DISPLAY_P3_NONLINEAR_EXT: Self = Self(1000104001);
     pub const EXTENDED_SRGB_LINEAR_EXT: Self = Self(1000104002);
@@ -75,12 +75,12 @@ impl ColorSpaceKHR {
     pub const EXTENDED_SRGB_NONLINEAR_EXT: Self = Self(1000104014);
     pub const DCI_P3_LINEAR_EXT: Self = Self::DISPLAY_P3_LINEAR_EXT;
 }
-#[doc = "Provided by [`extensions::amd_display_native_hdr`](../../extensions/amd_display_native_hdr/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl ColorSpaceKHR {
     pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`](./struct.CompositeAlphaFlagBitsKHR.html)"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`](./struct.CompositeAlphaFlagsKHR.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`]"]
 #[doc(alias = "VkCompositeAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -103,7 +103,7 @@ impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl CompositeAlphaFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const PRE_MULTIPLIED_KHR: Self = Self(2);
@@ -128,20 +128,20 @@ impl std::fmt::Debug for PresentModeKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl PresentModeKHR {
     pub const IMMEDIATE_KHR: Self = Self(0);
     pub const MAILBOX_KHR: Self = Self(1);
     pub const FIFO_KHR: Self = Self(2);
     pub const FIFO_RELAXED_KHR: Self = Self(3);
 }
-#[doc = "Provided by [`extensions::khr_shared_presentable_image`](../../extensions/khr_shared_presentable_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl PresentModeKHR {
     pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
     pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`](./struct.SurfaceTransformFlagBitsKHR.html)"] # [doc (alias = "VkSurfaceTransformFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceTransformFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`](./struct.SurfaceTransformFlagsKHR.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"] # [doc (alias = "VkSurfaceTransformFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceTransformFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`]"]
 #[doc(alias = "VkSurfaceTransformFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -169,7 +169,7 @@ impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
         })
     }
 }
-#[doc = "Provided by [`extensions::khr_surface`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl SurfaceTransformFlagBitsKHR {
     pub const IDENTITY_KHR: Self = Self(1);
     pub const ROTATE_90_KHR: Self = Self(2);
@@ -278,7 +278,7 @@ impl SurfaceCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`](struct.SurfaceCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`]"]
 #[repr(transparent)]
 pub struct SurfaceCapabilitiesKHRBuilder<'a>(
     SurfaceCapabilitiesKHR,
@@ -409,7 +409,7 @@ impl SurfaceFormatKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`](struct.SurfaceFormatKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`]"]
 #[repr(transparent)]
 pub struct SurfaceFormatKHRBuilder<'a>(SurfaceFormatKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFormatKHRBuilder<'a> {
@@ -457,7 +457,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormatKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_surface`](extensions/khr_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]

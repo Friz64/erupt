@@ -43,7 +43,7 @@ impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT`](struct.PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a>(
     PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT,

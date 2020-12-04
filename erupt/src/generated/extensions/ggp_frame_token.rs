@@ -39,7 +39,7 @@ impl PresentFrameTokenGGP {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentFrameTokenGGP.html) · Builder of [`PresentFrameTokenGGP`](struct.PresentFrameTokenGGP.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentFrameTokenGGP.html) · Builder of [`PresentFrameTokenGGP`]"]
 #[repr(transparent)]
 pub struct PresentFrameTokenGGPBuilder<'a>(PresentFrameTokenGGP, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentFrameTokenGGPBuilder<'a> {

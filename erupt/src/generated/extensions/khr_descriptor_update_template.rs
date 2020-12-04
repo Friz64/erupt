@@ -59,7 +59,7 @@ pub type PFN_vkDestroyDescriptorUpdateTemplateKHR =
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplateKHR =
     crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;
-#[doc = "Provided by [`extensions::khr_descriptor_update_template`](extensions/khr_descriptor_update_template/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Function"]

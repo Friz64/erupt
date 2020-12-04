@@ -42,7 +42,7 @@ impl PhysicalDeviceCoherentMemoryFeaturesAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Builder of [`PhysicalDeviceCoherentMemoryFeaturesAMD`](struct.PhysicalDeviceCoherentMemoryFeaturesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Builder of [`PhysicalDeviceCoherentMemoryFeaturesAMD`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'a>(
     PhysicalDeviceCoherentMemoryFeaturesAMD,

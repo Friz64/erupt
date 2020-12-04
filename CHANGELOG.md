@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Improved the idiomaticity of the `{Instance,Device}Enabled::new` API
+- Transition to intra-doc links in the rustdoc
 
 ## [0.16.0+162] - 2020-11-24
 ### Changed

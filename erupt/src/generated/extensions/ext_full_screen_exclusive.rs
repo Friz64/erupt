@@ -37,7 +37,7 @@ impl std::fmt::Debug for FullScreenExclusiveEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_full_screen_exclusive`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl FullScreenExclusiveEXT {
     pub const DEFAULT_EXT: Self = Self(0);
     pub const ALLOWED_EXT: Self = Self(1);
@@ -98,7 +98,7 @@ impl SurfaceFullScreenExclusiveInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveInfoEXT`](struct.SurfaceFullScreenExclusiveInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveInfoEXT`]"]
 #[repr(transparent)]
 pub struct SurfaceFullScreenExclusiveInfoEXTBuilder<'a>(
     SurfaceFullScreenExclusiveInfoEXT,
@@ -178,7 +178,7 @@ impl SurfaceFullScreenExclusiveWin32InfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveWin32InfoEXT`](struct.SurfaceFullScreenExclusiveWin32InfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveWin32InfoEXT`]"]
 #[repr(transparent)]
 pub struct SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a>(
     SurfaceFullScreenExclusiveWin32InfoEXT,
@@ -258,7 +258,7 @@ impl SurfaceCapabilitiesFullScreenExclusiveEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Builder of [`SurfaceCapabilitiesFullScreenExclusiveEXT`](struct.SurfaceCapabilitiesFullScreenExclusiveEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Builder of [`SurfaceCapabilitiesFullScreenExclusiveEXT`]"]
 #[repr(transparent)]
 pub struct SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a>(
     SurfaceCapabilitiesFullScreenExclusiveEXT,
@@ -307,7 +307,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesFullScreenExclusiveEXTBuilder
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_full_screen_exclusive`](extensions/ext_full_screen_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
@@ -344,7 +344,7 @@ impl crate::InstanceLoader {
         crate::utils::VulkanResult::new(_return, present_modes)
     }
 }
-#[doc = "Provided by [`extensions::ext_full_screen_exclusive`](extensions/ext_full_screen_exclusive/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]

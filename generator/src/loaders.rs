@@ -341,7 +341,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
     for ((origin, command_level), wrappers) in wrappers {
         let generics = command_level.generics();
         let loader = command_level.loader();
-        let doc = comment_gen.provided_by(&Origin::Root, &origin);
+        let doc = comment_gen.provided_by(&origin);
 
         map.entry(origin)
             .or_insert_with(TokenStream::new)

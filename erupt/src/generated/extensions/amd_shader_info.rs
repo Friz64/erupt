@@ -23,7 +23,7 @@ impl std::fmt::Debug for ShaderInfoTypeAMD {
         })
     }
 }
-#[doc = "Provided by [`extensions::amd_shader_info`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_shader_info`]"]
 impl ShaderInfoTypeAMD {
     pub const STATISTICS_AMD: Self = Self(0);
     pub const BINARY_AMD: Self = Self(1);
@@ -85,7 +85,7 @@ impl ShaderResourceUsageAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`](struct.ShaderResourceUsageAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`]"]
 #[repr(transparent)]
 pub struct ShaderResourceUsageAMDBuilder<'a>(
     ShaderResourceUsageAMD,
@@ -194,7 +194,7 @@ impl ShaderStatisticsInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`](struct.ShaderStatisticsInfoAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`]"]
 #[repr(transparent)]
 pub struct ShaderStatisticsInfoAMDBuilder<'a>(
     ShaderStatisticsInfoAMD,
@@ -270,7 +270,7 @@ impl<'a> std::ops::DerefMut for ShaderStatisticsInfoAMDBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::amd_shader_info`](extensions/amd_shader_info/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_shader_info`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function"]

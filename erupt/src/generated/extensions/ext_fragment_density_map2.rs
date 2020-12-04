@@ -43,7 +43,7 @@ impl PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2FeaturesEXT`](struct.PhysicalDeviceFragmentDensityMap2FeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2FeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMap2FeaturesEXT,
@@ -142,7 +142,7 @@ impl PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2PropertiesEXT`](struct.PhysicalDeviceFragmentDensityMap2PropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2PropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMap2PropertiesEXT,

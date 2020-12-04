@@ -108,7 +108,7 @@ impl PhysicalDeviceShaderAtomicFloatFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloatFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderAtomicFloatFeaturesEXT`](struct.PhysicalDeviceShaderAtomicFloatFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloatFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderAtomicFloatFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a>(
     PhysicalDeviceShaderAtomicFloatFeaturesEXT,

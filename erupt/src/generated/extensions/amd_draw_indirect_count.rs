@@ -19,7 +19,7 @@ pub type PFN_vkCmdDrawIndirectCountAMD = crate::vk1_2::PFN_vkCmdDrawIndirectCoun
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountAMD.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCountAMD = crate::vk1_2::PFN_vkCmdDrawIndexedIndirectCount;
-#[doc = "Provided by [`extensions::amd_draw_indirect_count`](extensions/amd_draw_indirect_count/index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_draw_indirect_count`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Function"]

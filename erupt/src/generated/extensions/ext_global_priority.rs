@@ -21,7 +21,7 @@ impl std::fmt::Debug for QueueGlobalPriorityEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_global_priority`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
 impl QueueGlobalPriorityEXT {
     pub const LOW_EXT: Self = Self(128);
     pub const MEDIUM_EXT: Self = Self(256);
@@ -62,7 +62,7 @@ impl DeviceQueueGlobalPriorityCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`](struct.DeviceQueueGlobalPriorityCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a>(
     DeviceQueueGlobalPriorityCreateInfoEXT,

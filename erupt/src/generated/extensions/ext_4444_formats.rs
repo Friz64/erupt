@@ -42,7 +42,7 @@ impl PhysicalDevice4444FormatsFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Builder of [`PhysicalDevice4444FormatsFeaturesEXT`](struct.PhysicalDevice4444FormatsFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Builder of [`PhysicalDevice4444FormatsFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDevice4444FormatsFeaturesEXTBuilder<'a>(
     PhysicalDevice4444FormatsFeaturesEXT,

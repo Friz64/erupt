@@ -18,8 +18,8 @@ pub const FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char =
 pub const FN_DEBUG_REPORT_MESSAGE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDebugReportMessageEXT");
 crate :: non_dispatchable_handle ! (DebugReportCallbackEXT , DEBUG_REPORT_CALLBACK_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackEXT.html) · Non-dispatchable Handle" , "VkDebugReportCallbackEXT") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`](./struct.DebugReportFlagBitsEXT.html)"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Bits enum of [`DebugReportFlagsEXT`](./struct.DebugReportFlagsEXT.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`]"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Bits enum of [`DebugReportFlagsEXT`]"]
 #[doc(alias = "VkDebugReportFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -43,7 +43,7 @@ impl std::fmt::Debug for DebugReportFlagBitsEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl DebugReportFlagBitsEXT {
     pub const INFORMATION_EXT: Self = Self(1);
     pub const WARNING_EXT: Self = Self(2);
@@ -99,7 +99,7 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl DebugReportObjectTypeEXT {
     pub const UNKNOWN_EXT: Self = Self(0);
     pub const INSTANCE_EXT: Self = Self(1);
@@ -138,19 +138,19 @@ impl DebugReportObjectTypeEXT {
     pub const DEBUG_REPORT_EXT: Self = Self::DEBUG_REPORT_CALLBACK_EXT_EXT;
     pub const VALIDATION_CACHE_EXT: Self = Self::VALIDATION_CACHE_EXT_EXT;
 }
-#[doc = "Provided by [`extensions::khr_acceleration_structure`](../../extensions/khr_acceleration_structure/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl DebugReportObjectTypeEXT {
     pub const ACCELERATION_STRUCTURE_KHR_EXT: Self = Self(1000150000);
 }
-#[doc = "Provided by [`extensions::nv_ray_tracing`](../../extensions/nv_ray_tracing/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl DebugReportObjectTypeEXT {
     pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self(1000165000);
 }
-#[doc = "Provided by [`extensions::khr_descriptor_update_template`](../../extensions/khr_descriptor_update_template/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl DebugReportObjectTypeEXT {
     pub const DESCRIPTOR_UPDATE_TEMPLATE_KHR_EXT: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT;
 }
-#[doc = "Provided by [`extensions::khr_sampler_ycbcr_conversion`](../../extensions/khr_sampler_ycbcr_conversion/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl DebugReportObjectTypeEXT {
     pub const SAMPLER_YCBCR_CONVERSION_KHR_EXT: Self = Self::SAMPLER_YCBCR_CONVERSION_EXT;
 }
@@ -235,7 +235,7 @@ impl DebugReportCallbackCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Builder of [`DebugReportCallbackCreateInfoEXT`](struct.DebugReportCallbackCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Builder of [`DebugReportCallbackCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct DebugReportCallbackCreateInfoEXTBuilder<'a>(
     DebugReportCallbackCreateInfoEXT,
@@ -294,7 +294,7 @@ impl<'a> std::ops::DerefMut for DebugReportCallbackCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_debug_report`](extensions/ext_debug_report/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]

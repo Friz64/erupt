@@ -39,7 +39,7 @@ impl PhysicalDeviceShaderImageFootprintFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`](struct.PhysicalDeviceShaderImageFootprintFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a>(
     PhysicalDeviceShaderImageFootprintFeaturesNV,

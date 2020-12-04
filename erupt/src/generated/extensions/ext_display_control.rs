@@ -36,7 +36,7 @@ impl std::fmt::Debug for DisplayPowerStateEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_display_control`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl DisplayPowerStateEXT {
     pub const OFF_EXT: Self = Self(0);
     pub const SUSPEND_EXT: Self = Self(1);
@@ -55,7 +55,7 @@ impl std::fmt::Debug for DeviceEventTypeEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_display_control`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl DeviceEventTypeEXT {
     pub const DISPLAY_HOTPLUG_EXT: Self = Self(0);
 }
@@ -72,7 +72,7 @@ impl std::fmt::Debug for DisplayEventTypeEXT {
         })
     }
 }
-#[doc = "Provided by [`extensions::ext_display_control`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl DisplayEventTypeEXT {
     pub const FIRST_PIXEL_OUT_EXT: Self = Self(0);
 }
@@ -142,7 +142,7 @@ impl DisplayPowerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Builder of [`DisplayPowerInfoEXT`](struct.DisplayPowerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Builder of [`DisplayPowerInfoEXT`]"]
 #[repr(transparent)]
 pub struct DisplayPowerInfoEXTBuilder<'a>(DisplayPowerInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayPowerInfoEXTBuilder<'a> {
@@ -219,7 +219,7 @@ impl DeviceEventInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventInfoEXT.html) · Builder of [`DeviceEventInfoEXT`](struct.DeviceEventInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventInfoEXT.html) · Builder of [`DeviceEventInfoEXT`]"]
 #[repr(transparent)]
 pub struct DeviceEventInfoEXTBuilder<'a>(DeviceEventInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceEventInfoEXTBuilder<'a> {
@@ -296,7 +296,7 @@ impl DisplayEventInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventInfoEXT.html) · Builder of [`DisplayEventInfoEXT`](struct.DisplayEventInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventInfoEXT.html) · Builder of [`DisplayEventInfoEXT`]"]
 #[repr(transparent)]
 pub struct DisplayEventInfoEXTBuilder<'a>(DisplayEventInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayEventInfoEXTBuilder<'a> {
@@ -373,7 +373,7 @@ impl SwapchainCounterCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Builder of [`SwapchainCounterCreateInfoEXT`](struct.SwapchainCounterCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Builder of [`SwapchainCounterCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct SwapchainCounterCreateInfoEXTBuilder<'a>(
     SwapchainCounterCreateInfoEXT,
@@ -419,7 +419,7 @@ impl<'a> std::ops::DerefMut for SwapchainCounterCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_display_control`](extensions/ext_display_control/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]

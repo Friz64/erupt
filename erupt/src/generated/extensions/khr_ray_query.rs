@@ -39,7 +39,7 @@ impl PhysicalDeviceRayQueryFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Builder of [`PhysicalDeviceRayQueryFeaturesKHR`](struct.PhysicalDeviceRayQueryFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Builder of [`PhysicalDeviceRayQueryFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayQueryFeaturesKHRBuilder<'a>(
     PhysicalDeviceRayQueryFeaturesKHR,

@@ -64,7 +64,7 @@ impl ImportMemoryFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`](struct.ImportMemoryFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct ImportMemoryFdInfoKHRBuilder<'a>(
     ImportMemoryFdInfoKHR,
@@ -149,7 +149,7 @@ impl MemoryFdPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`](struct.MemoryFdPropertiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`]"]
 #[repr(transparent)]
 pub struct MemoryFdPropertiesKHRBuilder<'a>(
     MemoryFdPropertiesKHR,
@@ -229,7 +229,7 @@ impl MemoryGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Builder of [`MemoryGetFdInfoKHR`](struct.MemoryGetFdInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Builder of [`MemoryGetFdInfoKHR`]"]
 #[repr(transparent)]
 pub struct MemoryGetFdInfoKHRBuilder<'a>(MemoryGetFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
@@ -277,7 +277,7 @@ impl<'a> std::ops::DerefMut for MemoryGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_external_memory_fd`](extensions/khr_external_memory_fd/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_fd`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]

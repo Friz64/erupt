@@ -31,7 +31,7 @@ pub type DescriptorSetLayoutSupportKHRBuilder<'a> =
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupportKHR = crate::vk1_1::PFN_vkGetDescriptorSetLayoutSupport;
-#[doc = "Provided by [`extensions::khr_maintenance3`](extensions/khr_maintenance3/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_maintenance3`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Function"]

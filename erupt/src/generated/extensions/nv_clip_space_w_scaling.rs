@@ -48,7 +48,7 @@ impl ViewportWScalingNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Builder of [`ViewportWScalingNV`](struct.ViewportWScalingNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Builder of [`ViewportWScalingNV`]"]
 #[repr(transparent)]
 pub struct ViewportWScalingNVBuilder<'a>(ViewportWScalingNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ViewportWScalingNVBuilder<'a> {
@@ -137,7 +137,7 @@ impl PipelineViewportWScalingStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Builder of [`PipelineViewportWScalingStateCreateInfoNV`](struct.PipelineViewportWScalingStateCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Builder of [`PipelineViewportWScalingStateCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct PipelineViewportWScalingStateCreateInfoNVBuilder<'a>(
     PipelineViewportWScalingStateCreateInfoNV,
@@ -192,7 +192,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportWScalingStateCreateInfoNVBuilder
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_clip_space_w_scaling`](extensions/nv_clip_space_w_scaling/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]

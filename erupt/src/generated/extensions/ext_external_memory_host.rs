@@ -49,7 +49,7 @@ impl ImportMemoryHostPointerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`](struct.ImportMemoryHostPointerInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`]"]
 #[repr(transparent)]
 pub struct ImportMemoryHostPointerInfoEXTBuilder<'a>(
     ImportMemoryHostPointerInfoEXT,
@@ -134,7 +134,7 @@ impl MemoryHostPointerPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`](struct.MemoryHostPointerPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct MemoryHostPointerPropertiesEXTBuilder<'a>(
     MemoryHostPointerPropertiesEXT,
@@ -215,7 +215,7 @@ impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`](struct.PhysicalDeviceExternalMemoryHostPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a>(
     PhysicalDeviceExternalMemoryHostPropertiesEXT,
@@ -264,7 +264,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalMemoryHostPropertiesEXTBui
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::ext_external_memory_host`](extensions/ext_external_memory_host/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_external_memory_host`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]

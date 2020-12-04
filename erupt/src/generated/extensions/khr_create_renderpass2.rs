@@ -89,7 +89,7 @@ pub type PFN_vkCmdNextSubpass2KHR = crate::vk1_2::PFN_vkCmdNextSubpass2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2KHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass2KHR = crate::vk1_2::PFN_vkCmdEndRenderPass2;
-#[doc = "Provided by [`extensions::khr_create_renderpass2`](extensions/khr_create_renderpass2/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_create_renderpass2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2KHR.html) · Function"]

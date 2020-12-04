@@ -39,7 +39,7 @@ impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`](struct.PhysicalDeviceIndexTypeUint8FeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a>(
     PhysicalDeviceIndexTypeUint8FeaturesEXT,

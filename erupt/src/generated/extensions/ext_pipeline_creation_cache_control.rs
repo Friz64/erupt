@@ -40,7 +40,7 @@ impl PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT.html) · Builder of [`PhysicalDevicePipelineCreationCacheControlFeaturesEXT`](struct.PhysicalDevicePipelineCreationCacheControlFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT.html) · Builder of [`PhysicalDevicePipelineCreationCacheControlFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'a>(
     PhysicalDevicePipelineCreationCacheControlFeaturesEXT,

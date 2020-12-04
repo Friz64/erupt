@@ -39,7 +39,7 @@ impl RenderPassTransformBeginInfoQCOM {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Builder of [`RenderPassTransformBeginInfoQCOM`](struct.RenderPassTransformBeginInfoQCOM.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Builder of [`RenderPassTransformBeginInfoQCOM`]"]
 #[repr(transparent)]
 pub struct RenderPassTransformBeginInfoQCOMBuilder<'a>(
     RenderPassTransformBeginInfoQCOM,
@@ -119,7 +119,7 @@ impl CommandBufferInheritanceRenderPassTransformInfoQCOM {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Builder of [`CommandBufferInheritanceRenderPassTransformInfoQCOM`](struct.CommandBufferInheritanceRenderPassTransformInfoQCOM.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Builder of [`CommandBufferInheritanceRenderPassTransformInfoQCOM`]"]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a>(
     CommandBufferInheritanceRenderPassTransformInfoQCOM,

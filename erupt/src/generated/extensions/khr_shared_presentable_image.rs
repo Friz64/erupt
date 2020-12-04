@@ -52,7 +52,7 @@ impl SharedPresentSurfaceCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`](struct.SharedPresentSurfaceCapabilitiesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`]"]
 #[repr(transparent)]
 pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a>(
     SharedPresentSurfaceCapabilitiesKHR,
@@ -98,7 +98,7 @@ impl<'a> std::ops::DerefMut for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_shared_presentable_image`](extensions/khr_shared_presentable_image/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]

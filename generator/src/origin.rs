@@ -2,7 +2,6 @@ use crate::{
     name::{FunctionName, Name, TypeName},
     source::Source,
 };
-use itertools::Itertools;
 use once_cell::sync::Lazy;
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
@@ -10,7 +9,6 @@ use regex::Regex;
 use std::{
     fmt::{self, Debug},
     hash::Hash,
-    iter,
     path::PathBuf,
 };
 use treexml::Element;
@@ -99,20 +97,6 @@ impl Origin {
         let mut file_path: PathBuf = self.path().into_iter().collect();
         file_path.set_extension("rs");
         file_path
-    }
-
-    pub fn doc_path(&self, target: &Origin) -> String {
-        if self == target {
-            ".".into()
-        } else {
-            let current_path = self.path();
-            let target_path = target.path();
-
-            iter::repeat("..")
-                .take(current_path.len())
-                .chain(target_path.iter().map(|s| s.as_str()))
-                .join("/")
-        }
     }
 
     pub fn ident(&self) -> Ident {

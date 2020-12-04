@@ -13,8 +13,8 @@ pub const FN_CREATE_XCB_SURFACE_KHR: *const std::os::raw::c_char =
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceXcbPresentationSupportKHR");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`](./struct.XcbSurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkXcbSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XcbSurfaceCreateFlagsKHR`](./struct.XcbSurfaceCreateFlagsKHR.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkXcbSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XcbSurfaceCreateFlagsKHR`]"]
 #[doc(alias = "VkXcbSurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -90,7 +90,7 @@ impl XcbSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`](struct.XcbSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct XcbSurfaceCreateInfoKHRBuilder<'a>(
     XcbSurfaceCreateInfoKHR,
@@ -146,7 +146,7 @@ impl<'a> std::ops::DerefMut for XcbSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_xcb_surface`](extensions/khr_xcb_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_xcb_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function"]

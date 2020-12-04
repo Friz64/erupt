@@ -39,7 +39,7 @@ impl DedicatedAllocationImageCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`](struct.DedicatedAllocationImageCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a>(
     DedicatedAllocationImageCreateInfoNV,
@@ -116,7 +116,7 @@ impl DedicatedAllocationBufferCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`](struct.DedicatedAllocationBufferCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a>(
     DedicatedAllocationBufferCreateInfoNV,
@@ -196,7 +196,7 @@ impl DedicatedAllocationMemoryAllocateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`](struct.DedicatedAllocationMemoryAllocateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`]"]
 #[repr(transparent)]
 pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a>(
     DedicatedAllocationMemoryAllocateInfoNV,

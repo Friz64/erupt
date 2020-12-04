@@ -215,10 +215,7 @@ impl Structure {
 
         let doc = comment_gen.def(
             Some(&self.name.original),
-            format!(
-                "Builder of [`{name}`](struct.{name}.html)",
-                name = inner_ident
-            ),
+            format!("Builder of [`{}`]", inner_ident),
             None,
         );
 

@@ -51,7 +51,7 @@ impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`](struct.PhysicalDeviceFragmentDensityMapFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMapFeaturesEXT,
@@ -161,7 +161,7 @@ impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapPropertiesEXT`](struct.PhysicalDeviceFragmentDensityMapPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a>(
     PhysicalDeviceFragmentDensityMapPropertiesEXT,
@@ -260,7 +260,7 @@ impl RenderPassFragmentDensityMapCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`](struct.RenderPassFragmentDensityMapCreateInfoEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`]"]
 #[repr(transparent)]
 pub struct RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a>(
     RenderPassFragmentDensityMapCreateInfoEXT,

@@ -9,8 +9,8 @@ pub const MVK_MACOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc(alias = "FN_CREATE_MAC_OS_SURFACE_MVK")]
 pub const FN_CREATE_MAC_OS_SURFACE_MVK: *const std::os::raw::c_char =
     crate::cstr!("vkCreateMacOSSurfaceMVK");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`](./struct.MacOSSurfaceCreateFlagBitsMVK.html)"] # [doc (alias = "VkMacOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct MacOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MacOSSurfaceCreateFlagsMVK`](./struct.MacOSSurfaceCreateFlagsMVK.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkMacOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct MacOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MacOSSurfaceCreateFlagsMVK`]"]
 #[doc(alias = "VkMacOSSurfaceCreateFlagBitsMVK")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -74,7 +74,7 @@ impl MacOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`](struct.MacOSSurfaceCreateInfoMVK.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`]"]
 #[repr(transparent)]
 pub struct MacOSSurfaceCreateInfoMVKBuilder<'a>(
     MacOSSurfaceCreateInfoMVK,
@@ -125,7 +125,7 @@ impl<'a> std::ops::DerefMut for MacOSSurfaceCreateInfoMVKBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::mvk_macos_surface`](extensions/mvk_macos_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::mvk_macos_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function"]

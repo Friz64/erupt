@@ -40,7 +40,7 @@ impl ExternalMemoryImageCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`](struct.ExternalMemoryImageCreateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`]"]
 #[repr(transparent)]
 pub struct ExternalMemoryImageCreateInfoNVBuilder<'a>(
     ExternalMemoryImageCreateInfoNV,
@@ -121,7 +121,7 @@ impl ExportMemoryAllocateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`](struct.ExportMemoryAllocateInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`]"]
 #[repr(transparent)]
 pub struct ExportMemoryAllocateInfoNVBuilder<'a>(
     ExportMemoryAllocateInfoNV,

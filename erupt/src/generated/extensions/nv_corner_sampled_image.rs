@@ -39,7 +39,7 @@ impl PhysicalDeviceCornerSampledImageFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`](struct.PhysicalDeviceCornerSampledImageFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a>(
     PhysicalDeviceCornerSampledImageFeaturesNV,

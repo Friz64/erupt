@@ -38,7 +38,7 @@ impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Builder of [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL`](struct.PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Builder of [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a>(
     PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL,

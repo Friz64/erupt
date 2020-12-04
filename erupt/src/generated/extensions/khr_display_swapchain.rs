@@ -58,7 +58,7 @@ impl DisplayPresentInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`](struct.DisplayPresentInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`]"]
 #[repr(transparent)]
 pub struct DisplayPresentInfoKHRBuilder<'a>(
     DisplayPresentInfoKHR,
@@ -111,7 +111,7 @@ impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_display_swapchain`](extensions/khr_display_swapchain/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]

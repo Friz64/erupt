@@ -42,7 +42,7 @@ impl PhysicalDeviceShaderClockFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`](struct.PhysicalDeviceShaderClockFeaturesKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a>(
     PhysicalDeviceShaderClockFeaturesKHR,

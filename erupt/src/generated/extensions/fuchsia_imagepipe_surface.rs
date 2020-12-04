@@ -9,8 +9,8 @@ pub const FUCHSIA_IMAGEPIPE_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char 
 #[doc(alias = "FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA")]
 pub const FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA: *const std::os::raw::c_char =
     crate::cstr!("vkCreateImagePipeSurfaceFUCHSIA");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateFlagsFUCHSIA.html) · Bitmask of [`ImagePipeSurfaceCreateFlagBitsFUCHSIA`](./struct.ImagePipeSurfaceCreateFlagBitsFUCHSIA.html)"] # [doc (alias = "VkImagePipeSurfaceCreateFlagsFUCHSIA")] # [derive (Default)] # [repr (transparent)] pub struct ImagePipeSurfaceCreateFlagsFUCHSIA : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ImagePipeSurfaceCreateFlagsFUCHSIA`](./struct.ImagePipeSurfaceCreateFlagsFUCHSIA.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateFlagsFUCHSIA.html) · Bitmask of [`ImagePipeSurfaceCreateFlagBitsFUCHSIA`]"] # [doc (alias = "VkImagePipeSurfaceCreateFlagsFUCHSIA")] # [derive (Default)] # [repr (transparent)] pub struct ImagePipeSurfaceCreateFlagsFUCHSIA : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ImagePipeSurfaceCreateFlagsFUCHSIA`]"]
 #[doc(alias = "VkImagePipeSurfaceCreateFlagBitsFUCHSIA")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -69,7 +69,7 @@ impl ImagePipeSurfaceCreateInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateInfoFUCHSIA.html) · Builder of [`ImagePipeSurfaceCreateInfoFUCHSIA`](struct.ImagePipeSurfaceCreateInfoFUCHSIA.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateInfoFUCHSIA.html) · Builder of [`ImagePipeSurfaceCreateInfoFUCHSIA`]"]
 #[repr(transparent)]
 pub struct ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a>(
     ImagePipeSurfaceCreateInfoFUCHSIA,
@@ -120,7 +120,7 @@ impl<'a> std::ops::DerefMut for ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::fuchsia_imagepipe_surface`](extensions/fuchsia_imagepipe_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::fuchsia_imagepipe_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImagePipeSurfaceFUCHSIA.html) · Function"]

@@ -13,8 +13,8 @@ pub const FN_CREATE_WAYLAND_SURFACE_KHR: *const std::os::raw::c_char =
 #[doc(alias = "FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceWaylandPresentationSupportKHR");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`](./struct.WaylandSurfaceCreateFlagBitsKHR.html)"] # [doc (alias = "VkWaylandSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`WaylandSurfaceCreateFlagsKHR`](./struct.WaylandSurfaceCreateFlagsKHR.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkWaylandSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`WaylandSurfaceCreateFlagsKHR`]"]
 #[doc(alias = "VkWaylandSurfaceCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -89,7 +89,7 @@ impl WaylandSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Builder of [`WaylandSurfaceCreateInfoKHR`](struct.WaylandSurfaceCreateInfoKHR.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Builder of [`WaylandSurfaceCreateInfoKHR`]"]
 #[repr(transparent)]
 pub struct WaylandSurfaceCreateInfoKHRBuilder<'a>(
     WaylandSurfaceCreateInfoKHR,
@@ -145,7 +145,7 @@ impl<'a> std::ops::DerefMut for WaylandSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::khr_wayland_surface`](extensions/khr_wayland_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_wayland_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function"]

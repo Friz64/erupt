@@ -19,7 +19,7 @@ impl std::fmt::Debug for RasterizationOrderAMD {
         })
     }
 }
-#[doc = "Provided by [`extensions::amd_rasterization_order`](./index.html)"]
+#[doc = "Provided by [`crate::extensions::amd_rasterization_order`]"]
 impl RasterizationOrderAMD {
     pub const STRICT_AMD: Self = Self(0);
     pub const RELAXED_AMD: Self = Self(1);
@@ -59,7 +59,7 @@ impl PipelineRasterizationStateRasterizationOrderAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Builder of [`PipelineRasterizationStateRasterizationOrderAMD`](struct.PipelineRasterizationStateRasterizationOrderAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Builder of [`PipelineRasterizationStateRasterizationOrderAMD`]"]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateRasterizationOrderAMDBuilder<'a>(
     PipelineRasterizationStateRasterizationOrderAMD,

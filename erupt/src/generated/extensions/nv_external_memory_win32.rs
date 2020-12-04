@@ -55,7 +55,7 @@ impl ImportMemoryWin32HandleInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Builder of [`ImportMemoryWin32HandleInfoNV`](struct.ImportMemoryWin32HandleInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Builder of [`ImportMemoryWin32HandleInfoNV`]"]
 #[repr(transparent)]
 pub struct ImportMemoryWin32HandleInfoNVBuilder<'a>(
     ImportMemoryWin32HandleInfoNV,
@@ -143,7 +143,7 @@ impl ExportMemoryWin32HandleInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Builder of [`ExportMemoryWin32HandleInfoNV`](struct.ExportMemoryWin32HandleInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Builder of [`ExportMemoryWin32HandleInfoNV`]"]
 #[repr(transparent)]
 pub struct ExportMemoryWin32HandleInfoNVBuilder<'a>(
     ExportMemoryWin32HandleInfoNV,
@@ -191,7 +191,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryWin32HandleInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_external_memory_win32`](extensions/nv_external_memory_win32/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_external_memory_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]

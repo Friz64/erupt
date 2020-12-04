@@ -9,8 +9,8 @@ pub const NN_VI_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
 #[doc(alias = "FN_CREATE_VI_SURFACE_NN")]
 pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char =
     crate::cstr!("vkCreateViSurfaceNN");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`](./struct.ViSurfaceCreateFlagBitsNN.html)"] # [doc (alias = "VkViSurfaceCreateFlagsNN")] # [derive (Default)] # [repr (transparent)] pub struct ViSurfaceCreateFlagsNN : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ViSurfaceCreateFlagsNN`](./struct.ViSurfaceCreateFlagsNN.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`]"] # [doc (alias = "VkViSurfaceCreateFlagsNN")] # [derive (Default)] # [repr (transparent)] pub struct ViSurfaceCreateFlagsNN : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ViSurfaceCreateFlagsNN`]"]
 #[doc(alias = "VkViSurfaceCreateFlagBitsNN")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -74,7 +74,7 @@ impl ViSurfaceCreateInfoNN {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`](struct.ViSurfaceCreateInfoNN.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`]"]
 #[repr(transparent)]
 pub struct ViSurfaceCreateInfoNNBuilder<'a>(
     ViSurfaceCreateInfoNN,
@@ -125,7 +125,7 @@ impl<'a> std::ops::DerefMut for ViSurfaceCreateInfoNNBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nn_vi_surface`](extensions/nn_vi_surface/index.html)"]
+#[doc = "Provided by [`crate::extensions::nn_vi_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function"]

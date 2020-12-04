@@ -33,7 +33,7 @@ pub type DeviceGroupDeviceCreateInfoKHRBuilder<'a> =
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumeratePhysicalDeviceGroupsKHR = crate::vk1_1::PFN_vkEnumeratePhysicalDeviceGroups;
-#[doc = "Provided by [`extensions::khr_device_group_creation`](extensions/khr_device_group_creation/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Function"]

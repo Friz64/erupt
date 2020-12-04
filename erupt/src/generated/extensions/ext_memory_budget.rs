@@ -42,7 +42,7 @@ impl PhysicalDeviceMemoryBudgetPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Builder of [`PhysicalDeviceMemoryBudgetPropertiesEXT`](struct.PhysicalDeviceMemoryBudgetPropertiesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Builder of [`PhysicalDeviceMemoryBudgetPropertiesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a>(
     PhysicalDeviceMemoryBudgetPropertiesEXT,

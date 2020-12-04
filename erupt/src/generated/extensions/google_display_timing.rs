@@ -47,7 +47,7 @@ impl RefreshCycleDurationGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`](struct.RefreshCycleDurationGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`]"]
 #[repr(transparent)]
 pub struct RefreshCycleDurationGOOGLEBuilder<'a>(
     RefreshCycleDurationGOOGLE,
@@ -130,7 +130,7 @@ impl PastPresentationTimingGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`](struct.PastPresentationTimingGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`]"]
 #[repr(transparent)]
 pub struct PastPresentationTimingGOOGLEBuilder<'a>(
     PastPresentationTimingGOOGLE,
@@ -230,7 +230,7 @@ impl PresentTimesInfoGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`](struct.PresentTimesInfoGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`]"]
 #[repr(transparent)]
 pub struct PresentTimesInfoGOOGLEBuilder<'a>(
     PresentTimesInfoGOOGLE,
@@ -308,7 +308,7 @@ impl PresentTimeGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Builder of [`PresentTimeGOOGLE`](struct.PresentTimeGOOGLE.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Builder of [`PresentTimeGOOGLE`]"]
 #[repr(transparent)]
 pub struct PresentTimeGOOGLEBuilder<'a>(PresentTimeGOOGLE, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentTimeGOOGLEBuilder<'a> {
@@ -353,7 +353,7 @@ impl<'a> std::ops::DerefMut for PresentTimeGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::google_display_timing`](extensions/google_display_timing/index.html)"]
+#[doc = "Provided by [`crate::extensions::google_display_timing`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]

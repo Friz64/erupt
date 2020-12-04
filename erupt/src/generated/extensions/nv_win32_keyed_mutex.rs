@@ -60,7 +60,7 @@ impl Win32KeyedMutexAcquireReleaseInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoNV`](struct.Win32KeyedMutexAcquireReleaseInfoNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoNV`]"]
 #[repr(transparent)]
 pub struct Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a>(
     Win32KeyedMutexAcquireReleaseInfoNV,

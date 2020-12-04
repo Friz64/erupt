@@ -63,7 +63,7 @@ impl QueueFamilyCheckpointPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`](struct.QueueFamilyCheckpointPropertiesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`]"]
 #[repr(transparent)]
 pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a>(
     QueueFamilyCheckpointPropertiesNV,
@@ -146,7 +146,7 @@ impl CheckpointDataNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Builder of [`CheckpointDataNV`](struct.CheckpointDataNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Builder of [`CheckpointDataNV`]"]
 #[repr(transparent)]
 pub struct CheckpointDataNVBuilder<'a>(CheckpointDataNV, std::marker::PhantomData<&'a ()>);
 impl<'a> CheckpointDataNVBuilder<'a> {
@@ -191,7 +191,7 @@ impl<'a> std::ops::DerefMut for CheckpointDataNVBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`extensions::nv_device_diagnostic_checkpoints`](extensions/nv_device_diagnostic_checkpoints/index.html)"]
+#[doc = "Provided by [`crate::extensions::nv_device_diagnostic_checkpoints`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]

@@ -85,7 +85,7 @@ pub type PhysicalDeviceIDPropertiesKHRBuilder<'a> =
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR =
     crate::vk1_1::PFN_vkGetPhysicalDeviceExternalBufferProperties;
-#[doc = "Provided by [`extensions::khr_external_memory_capabilities`](extensions/khr_external_memory_capabilities/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Function"]

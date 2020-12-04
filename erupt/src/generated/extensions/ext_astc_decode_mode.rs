@@ -39,7 +39,7 @@ impl ImageViewASTCDecodeModeEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Builder of [`ImageViewASTCDecodeModeEXT`](struct.ImageViewASTCDecodeModeEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Builder of [`ImageViewASTCDecodeModeEXT`]"]
 #[repr(transparent)]
 pub struct ImageViewASTCDecodeModeEXTBuilder<'a>(
     ImageViewASTCDecodeModeEXT,
@@ -119,7 +119,7 @@ impl PhysicalDeviceASTCDecodeFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`](struct.PhysicalDeviceASTCDecodeFeaturesEXT.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a>(
     PhysicalDeviceASTCDecodeFeaturesEXT,

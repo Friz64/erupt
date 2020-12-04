@@ -51,8 +51,8 @@ pub const FN_GET_BUFFER_DEVICE_ADDRESS: *const std::os::raw::c_char =
 #[doc(alias = "FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS")]
 pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddress");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlags.html) · Bitmask of [`ResolveModeFlagBits`](./struct.ResolveModeFlagBits.html)"] # [doc (alias = "VkResolveModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ResolveModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = ResolveModeFlagBits :: NONE . 0 ; const SAMPLE_ZERO = ResolveModeFlagBits :: SAMPLE_ZERO . 0 ; const AVERAGE = ResolveModeFlagBits :: AVERAGE . 0 ; const MIN = ResolveModeFlagBits :: MIN . 0 ; const MAX = ResolveModeFlagBits :: MAX . 0 ; const NONE_KHR = ResolveModeFlagBits :: NONE_KHR . 0 ; const SAMPLE_ZERO_KHR = ResolveModeFlagBits :: SAMPLE_ZERO_KHR . 0 ; const AVERAGE_KHR = ResolveModeFlagBits :: AVERAGE_KHR . 0 ; const MIN_KHR = ResolveModeFlagBits :: MIN_KHR . 0 ; const MAX_KHR = ResolveModeFlagBits :: MAX_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlagBits.html) · Bits enum of [`ResolveModeFlags`](./struct.ResolveModeFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlags.html) · Bitmask of [`ResolveModeFlagBits`]"] # [doc (alias = "VkResolveModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ResolveModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = ResolveModeFlagBits :: NONE . 0 ; const SAMPLE_ZERO = ResolveModeFlagBits :: SAMPLE_ZERO . 0 ; const AVERAGE = ResolveModeFlagBits :: AVERAGE . 0 ; const MIN = ResolveModeFlagBits :: MIN . 0 ; const MAX = ResolveModeFlagBits :: MAX . 0 ; const NONE_KHR = ResolveModeFlagBits :: NONE_KHR . 0 ; const SAMPLE_ZERO_KHR = ResolveModeFlagBits :: SAMPLE_ZERO_KHR . 0 ; const AVERAGE_KHR = ResolveModeFlagBits :: AVERAGE_KHR . 0 ; const MIN_KHR = ResolveModeFlagBits :: MIN_KHR . 0 ; const MAX_KHR = ResolveModeFlagBits :: MAX_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlagBits.html) · Bits enum of [`ResolveModeFlags`]"]
 #[doc(alias = "VkResolveModeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -76,7 +76,7 @@ impl std::fmt::Debug for ResolveModeFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl ResolveModeFlagBits {
     pub const NONE: Self = Self(0);
     pub const SAMPLE_ZERO: Self = Self(1);
@@ -84,7 +84,7 @@ impl ResolveModeFlagBits {
     pub const MIN: Self = Self(4);
     pub const MAX: Self = Self(8);
 }
-#[doc = "Provided by [`extensions::khr_depth_stencil_resolve`](../extensions/khr_depth_stencil_resolve/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_depth_stencil_resolve`]"]
 impl ResolveModeFlagBits {
     pub const NONE_KHR: Self = Self::NONE;
     pub const SAMPLE_ZERO_KHR: Self = Self::SAMPLE_ZERO;
@@ -92,8 +92,8 @@ impl ResolveModeFlagBits {
     pub const MIN_KHR: Self = Self::MIN;
     pub const MAX_KHR: Self = Self::MAX;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlags.html) · Bitmask of [`DescriptorBindingFlagBits`](./struct.DescriptorBindingFlagBits.html)"] # [doc (alias = "VkDescriptorBindingFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorBindingFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_UNUSED_WHILE_PENDING = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING . 0 ; const PARTIALLY_BOUND = DescriptorBindingFlagBits :: PARTIALLY_BOUND . 0 ; const VARIABLE_DESCRIPTOR_COUNT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; const UPDATE_UNUSED_WHILE_PENDING_EXT = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING_EXT . 0 ; const PARTIALLY_BOUND_EXT = DescriptorBindingFlagBits :: PARTIALLY_BOUND_EXT . 0 ; const VARIABLE_DESCRIPTOR_COUNT_EXT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlagBits.html) · Bits enum of [`DescriptorBindingFlags`](./struct.DescriptorBindingFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlags.html) · Bitmask of [`DescriptorBindingFlagBits`]"] # [doc (alias = "VkDescriptorBindingFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorBindingFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_UNUSED_WHILE_PENDING = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING . 0 ; const PARTIALLY_BOUND = DescriptorBindingFlagBits :: PARTIALLY_BOUND . 0 ; const VARIABLE_DESCRIPTOR_COUNT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; const UPDATE_UNUSED_WHILE_PENDING_EXT = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING_EXT . 0 ; const PARTIALLY_BOUND_EXT = DescriptorBindingFlagBits :: PARTIALLY_BOUND_EXT . 0 ; const VARIABLE_DESCRIPTOR_COUNT_EXT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlagBits.html) · Bits enum of [`DescriptorBindingFlags`]"]
 #[doc(alias = "VkDescriptorBindingFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -116,14 +116,14 @@ impl std::fmt::Debug for DescriptorBindingFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl DescriptorBindingFlagBits {
     pub const UPDATE_AFTER_BIND: Self = Self(1);
     pub const UPDATE_UNUSED_WHILE_PENDING: Self = Self(2);
     pub const PARTIALLY_BOUND: Self = Self(4);
     pub const VARIABLE_DESCRIPTOR_COUNT: Self = Self(8);
 }
-#[doc = "Provided by [`extensions::ext_descriptor_indexing`](../extensions/ext_descriptor_indexing/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl DescriptorBindingFlagBits {
     pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
     pub const UPDATE_UNUSED_WHILE_PENDING_EXT: Self = Self::UPDATE_UNUSED_WHILE_PENDING;
@@ -144,18 +144,18 @@ impl std::fmt::Debug for SemaphoreType {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl SemaphoreType {
     pub const BINARY: Self = Self(0);
     pub const TIMELINE: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_timeline_semaphore`](../extensions/khr_timeline_semaphore/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
 impl SemaphoreType {
     pub const BINARY_KHR: Self = Self::BINARY;
     pub const TIMELINE_KHR: Self = Self::TIMELINE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlags.html) · Bitmask of [`SemaphoreWaitFlagBits`](./struct.SemaphoreWaitFlagBits.html)"] # [doc (alias = "VkSemaphoreWaitFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreWaitFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ANY = SemaphoreWaitFlagBits :: ANY . 0 ; const ANY_KHR = SemaphoreWaitFlagBits :: ANY_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagBits.html) · Bits enum of [`SemaphoreWaitFlags`](./struct.SemaphoreWaitFlags.html)"]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlags.html) · Bitmask of [`SemaphoreWaitFlagBits`]"] # [doc (alias = "VkSemaphoreWaitFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreWaitFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ANY = SemaphoreWaitFlagBits :: ANY . 0 ; const ANY_KHR = SemaphoreWaitFlagBits :: ANY_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagBits.html) · Bits enum of [`SemaphoreWaitFlags`]"]
 #[doc(alias = "VkSemaphoreWaitFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -175,11 +175,11 @@ impl std::fmt::Debug for SemaphoreWaitFlagBits {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl SemaphoreWaitFlagBits {
     pub const ANY: Self = Self(1);
 }
-#[doc = "Provided by [`extensions::khr_timeline_semaphore`](../extensions/khr_timeline_semaphore/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
 impl SemaphoreWaitFlagBits {
     pub const ANY_KHR: Self = Self::ANY;
 }
@@ -198,13 +198,13 @@ impl std::fmt::Debug for SamplerReductionMode {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl SamplerReductionMode {
     pub const WEIGHTED_AVERAGE: Self = Self(0);
     pub const MIN: Self = Self(1);
     pub const MAX: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::ext_sampler_filter_minmax`](../extensions/ext_sampler_filter_minmax/index.html)"]
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
 impl SamplerReductionMode {
     pub const WEIGHTED_AVERAGE_EXT: Self = Self::WEIGHTED_AVERAGE;
     pub const MIN_EXT: Self = Self::MIN;
@@ -225,13 +225,13 @@ impl std::fmt::Debug for ShaderFloatControlsIndependence {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl ShaderFloatControlsIndependence {
     pub const _32_ONLY: Self = Self(0);
     pub const ALL: Self = Self(1);
     pub const NONE: Self = Self(2);
 }
-#[doc = "Provided by [`extensions::khr_shader_float_controls`](../extensions/khr_shader_float_controls/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
 impl ShaderFloatControlsIndependence {
     pub const _32_ONLY_KHR: Self = Self::_32_ONLY;
     pub const ALL_KHR: Self = Self::ALL;
@@ -263,7 +263,7 @@ impl std::fmt::Debug for DriverId {
         })
     }
 }
-#[doc = "Provided by [`vk1_2`](./index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl DriverId {
     pub const AMD_PROPRIETARY: Self = Self(1);
     pub const AMD_OPEN_SOURCE: Self = Self(2);
@@ -280,7 +280,7 @@ impl DriverId {
     pub const MESA_LLVMPIPE: Self = Self(13);
     pub const MOLTENVK: Self = Self(14);
 }
-#[doc = "Provided by [`extensions::khr_driver_properties`](../extensions/khr_driver_properties/index.html)"]
+#[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
 impl DriverId {
     pub const AMD_PROPRIETARY_KHR: Self = Self::AMD_PROPRIETARY;
     pub const AMD_OPEN_SOURCE_KHR: Self = Self::AMD_OPEN_SOURCE;
@@ -428,7 +428,7 @@ impl ConformanceVersion {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersion.html) · Builder of [`ConformanceVersion`](struct.ConformanceVersion.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersion.html) · Builder of [`ConformanceVersion`]"]
 #[repr(transparent)]
 pub struct ConformanceVersionBuilder<'a>(ConformanceVersion, std::marker::PhantomData<&'a ()>);
 impl<'a> ConformanceVersionBuilder<'a> {
@@ -530,7 +530,7 @@ impl PhysicalDeviceDriverProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDriverProperties.html) · Builder of [`PhysicalDeviceDriverProperties`](struct.PhysicalDeviceDriverProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDriverProperties.html) · Builder of [`PhysicalDeviceDriverProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDriverPropertiesBuilder<'a>(
     PhysicalDeviceDriverProperties,
@@ -629,7 +629,7 @@ impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures.html) · Builder of [`PhysicalDeviceShaderSubgroupExtendedTypesFeatures`](struct.PhysicalDeviceShaderSubgroupExtendedTypesFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures.html) · Builder of [`PhysicalDeviceShaderSubgroupExtendedTypesFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a>(
     PhysicalDeviceShaderSubgroupExtendedTypesFeatures,
@@ -718,7 +718,7 @@ impl PhysicalDeviceSamplerFilterMinmaxProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxProperties.html) · Builder of [`PhysicalDeviceSamplerFilterMinmaxProperties`](struct.PhysicalDeviceSamplerFilterMinmaxProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxProperties.html) · Builder of [`PhysicalDeviceSamplerFilterMinmaxProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a>(
     PhysicalDeviceSamplerFilterMinmaxProperties,
@@ -809,7 +809,7 @@ impl SamplerReductionModeCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeCreateInfo.html) · Builder of [`SamplerReductionModeCreateInfo`](struct.SamplerReductionModeCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeCreateInfo.html) · Builder of [`SamplerReductionModeCreateInfo`]"]
 #[repr(transparent)]
 pub struct SamplerReductionModeCreateInfoBuilder<'a>(
     SamplerReductionModeCreateInfo,
@@ -889,7 +889,7 @@ impl ImageFormatListCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatListCreateInfo.html) · Builder of [`ImageFormatListCreateInfo`](struct.ImageFormatListCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatListCreateInfo.html) · Builder of [`ImageFormatListCreateInfo`]"]
 #[repr(transparent)]
 pub struct ImageFormatListCreateInfoBuilder<'a>(
     ImageFormatListCreateInfo,
@@ -970,7 +970,7 @@ impl PhysicalDeviceShaderFloat16Int8Features {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderFloat16Int8Features.html) · Builder of [`PhysicalDeviceShaderFloat16Int8Features`](struct.PhysicalDeviceShaderFloat16Int8Features.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderFloat16Int8Features.html) · Builder of [`PhysicalDeviceShaderFloat16Int8Features`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a>(
     PhysicalDeviceShaderFloat16Int8Features,
@@ -1151,7 +1151,7 @@ impl PhysicalDeviceFloatControlsProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFloatControlsProperties.html) · Builder of [`PhysicalDeviceFloatControlsProperties`](struct.PhysicalDeviceFloatControlsProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFloatControlsProperties.html) · Builder of [`PhysicalDeviceFloatControlsProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFloatControlsPropertiesBuilder<'a>(
     PhysicalDeviceFloatControlsProperties,
@@ -1353,7 +1353,7 @@ impl PhysicalDeviceHostQueryResetFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceHostQueryResetFeatures.html) · Builder of [`PhysicalDeviceHostQueryResetFeatures`](struct.PhysicalDeviceHostQueryResetFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceHostQueryResetFeatures.html) · Builder of [`PhysicalDeviceHostQueryResetFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceHostQueryResetFeaturesBuilder<'a>(
     PhysicalDeviceHostQueryResetFeatures,
@@ -1547,7 +1547,7 @@ impl PhysicalDeviceDescriptorIndexingFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingFeatures.html) · Builder of [`PhysicalDeviceDescriptorIndexingFeatures`](struct.PhysicalDeviceDescriptorIndexingFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingFeatures.html) · Builder of [`PhysicalDeviceDescriptorIndexingFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a>(
     PhysicalDeviceDescriptorIndexingFeatures,
@@ -1936,7 +1936,7 @@ impl PhysicalDeviceDescriptorIndexingProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingProperties.html) · Builder of [`PhysicalDeviceDescriptorIndexingProperties`](struct.PhysicalDeviceDescriptorIndexingProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingProperties.html) · Builder of [`PhysicalDeviceDescriptorIndexingProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a>(
     PhysicalDeviceDescriptorIndexingProperties,
@@ -2229,7 +2229,7 @@ impl DescriptorSetLayoutBindingFlagsCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfo.html) · Builder of [`DescriptorSetLayoutBindingFlagsCreateInfo`](struct.DescriptorSetLayoutBindingFlagsCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfo.html) · Builder of [`DescriptorSetLayoutBindingFlagsCreateInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a>(
     DescriptorSetLayoutBindingFlagsCreateInfo,
@@ -2317,7 +2317,7 @@ impl DescriptorSetVariableDescriptorCountAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountAllocateInfo.html) · Builder of [`DescriptorSetVariableDescriptorCountAllocateInfo`](struct.DescriptorSetVariableDescriptorCountAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountAllocateInfo.html) · Builder of [`DescriptorSetVariableDescriptorCountAllocateInfo`]"]
 #[repr(transparent)]
 pub struct DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a>(
     DescriptorSetVariableDescriptorCountAllocateInfo,
@@ -2402,7 +2402,7 @@ impl DescriptorSetVariableDescriptorCountLayoutSupport {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountLayoutSupport.html) · Builder of [`DescriptorSetVariableDescriptorCountLayoutSupport`](struct.DescriptorSetVariableDescriptorCountLayoutSupport.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountLayoutSupport.html) · Builder of [`DescriptorSetVariableDescriptorCountLayoutSupport`]"]
 #[repr(transparent)]
 pub struct DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a>(
     DescriptorSetVariableDescriptorCountLayoutSupport,
@@ -2514,7 +2514,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLay
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2.html) · Builder of [`AttachmentDescription2`](struct.AttachmentDescription2.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2.html) · Builder of [`AttachmentDescription2`]"]
 #[repr(transparent)]
 pub struct AttachmentDescription2Builder<'a>(
     AttachmentDescription2,
@@ -2645,7 +2645,7 @@ impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayou
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference2.html) · Builder of [`AttachmentReference2`](struct.AttachmentReference2.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference2.html) · Builder of [`AttachmentReference2`]"]
 #[repr(transparent)]
 pub struct AttachmentReference2Builder<'a>(AttachmentReference2, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentReference2Builder<'a> {
@@ -2786,7 +2786,7 @@ impl<'a>
 {
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`](struct.SubpassDescription2.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`]"]
 #[repr(transparent)]
 pub struct SubpassDescription2Builder<'a>(SubpassDescription2, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDescription2Builder<'a> {
@@ -2935,7 +2935,7 @@ impl SubpassDependency2 {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency2.html) · Builder of [`SubpassDependency2`](struct.SubpassDependency2.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency2.html) · Builder of [`SubpassDependency2`]"]
 #[repr(transparent)]
 pub struct SubpassDependency2Builder<'a>(SubpassDependency2, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDependency2Builder<'a> {
@@ -3079,7 +3079,7 @@ impl<'a>
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map :: RenderPassFragmentDensityMapCreateInfoEXTBuilder < '_ >> for RenderPassCreateInfo2Builder < 'a > { }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo2.html) · Builder of [`RenderPassCreateInfo2`](struct.RenderPassCreateInfo2.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo2.html) · Builder of [`RenderPassCreateInfo2`]"]
 #[repr(transparent)]
 pub struct RenderPassCreateInfo2Builder<'a>(
     RenderPassCreateInfo2,
@@ -3186,7 +3186,7 @@ impl SubpassBeginInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassBeginInfo.html) · Builder of [`SubpassBeginInfo`](struct.SubpassBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassBeginInfo.html) · Builder of [`SubpassBeginInfo`]"]
 #[repr(transparent)]
 pub struct SubpassBeginInfoBuilder<'a>(SubpassBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassBeginInfoBuilder<'a> {
@@ -3257,7 +3257,7 @@ impl SubpassEndInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassEndInfo.html) · Builder of [`SubpassEndInfo`](struct.SubpassEndInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassEndInfo.html) · Builder of [`SubpassEndInfo`]"]
 #[repr(transparent)]
 pub struct SubpassEndInfoBuilder<'a>(SubpassEndInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassEndInfoBuilder<'a> {
@@ -3326,7 +3326,7 @@ impl PhysicalDeviceTimelineSemaphoreFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeatures.html) · Builder of [`PhysicalDeviceTimelineSemaphoreFeatures`](struct.PhysicalDeviceTimelineSemaphoreFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeatures.html) · Builder of [`PhysicalDeviceTimelineSemaphoreFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a>(
     PhysicalDeviceTimelineSemaphoreFeatures,
@@ -3406,7 +3406,7 @@ impl PhysicalDeviceTimelineSemaphoreProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreProperties.html) · Builder of [`PhysicalDeviceTimelineSemaphoreProperties`](struct.PhysicalDeviceTimelineSemaphoreProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreProperties.html) · Builder of [`PhysicalDeviceTimelineSemaphoreProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a>(
     PhysicalDeviceTimelineSemaphoreProperties,
@@ -3493,7 +3493,7 @@ impl SemaphoreTypeCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeCreateInfo.html) · Builder of [`SemaphoreTypeCreateInfo`](struct.SemaphoreTypeCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeCreateInfo.html) · Builder of [`SemaphoreTypeCreateInfo`]"]
 #[repr(transparent)]
 pub struct SemaphoreTypeCreateInfoBuilder<'a>(
     SemaphoreTypeCreateInfo,
@@ -3590,7 +3590,7 @@ impl TimelineSemaphoreSubmitInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimelineSemaphoreSubmitInfo.html) · Builder of [`TimelineSemaphoreSubmitInfo`](struct.TimelineSemaphoreSubmitInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimelineSemaphoreSubmitInfo.html) · Builder of [`TimelineSemaphoreSubmitInfo`]"]
 #[repr(transparent)]
 pub struct TimelineSemaphoreSubmitInfoBuilder<'a>(
     TimelineSemaphoreSubmitInfo,
@@ -3683,7 +3683,7 @@ impl SemaphoreWaitInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitInfo.html) · Builder of [`SemaphoreWaitInfo`](struct.SemaphoreWaitInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitInfo.html) · Builder of [`SemaphoreWaitInfo`]"]
 #[repr(transparent)]
 pub struct SemaphoreWaitInfoBuilder<'a>(SemaphoreWaitInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreWaitInfoBuilder<'a> {
@@ -3772,7 +3772,7 @@ impl SemaphoreSignalInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSignalInfo.html) · Builder of [`SemaphoreSignalInfo`](struct.SemaphoreSignalInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSignalInfo.html) · Builder of [`SemaphoreSignalInfo`]"]
 #[repr(transparent)]
 pub struct SemaphoreSignalInfoBuilder<'a>(SemaphoreSignalInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreSignalInfoBuilder<'a> {
@@ -3866,7 +3866,7 @@ impl PhysicalDevice8BitStorageFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice8BitStorageFeatures.html) · Builder of [`PhysicalDevice8BitStorageFeatures`](struct.PhysicalDevice8BitStorageFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice8BitStorageFeatures.html) · Builder of [`PhysicalDevice8BitStorageFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDevice8BitStorageFeaturesBuilder<'a>(
     PhysicalDevice8BitStorageFeatures,
@@ -3968,7 +3968,7 @@ impl PhysicalDeviceVulkanMemoryModelFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkanMemoryModelFeatures.html) · Builder of [`PhysicalDeviceVulkanMemoryModelFeatures`](struct.PhysicalDeviceVulkanMemoryModelFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkanMemoryModelFeatures.html) · Builder of [`PhysicalDeviceVulkanMemoryModelFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a>(
     PhysicalDeviceVulkanMemoryModelFeatures,
@@ -4071,7 +4071,7 @@ impl PhysicalDeviceShaderAtomicInt64Features {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64Features.html) · Builder of [`PhysicalDeviceShaderAtomicInt64Features`](struct.PhysicalDeviceShaderAtomicInt64Features.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64Features.html) · Builder of [`PhysicalDeviceShaderAtomicInt64Features`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a>(
     PhysicalDeviceShaderAtomicInt64Features,
@@ -4171,7 +4171,7 @@ impl PhysicalDeviceDepthStencilResolveProperties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDepthStencilResolveProperties.html) · Builder of [`PhysicalDeviceDepthStencilResolveProperties`](struct.PhysicalDeviceDepthStencilResolveProperties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDepthStencilResolveProperties.html) · Builder of [`PhysicalDeviceDepthStencilResolveProperties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a>(
     PhysicalDeviceDepthStencilResolveProperties,
@@ -4281,7 +4281,7 @@ impl SubpassDescriptionDepthStencilResolve {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionDepthStencilResolve.html) · Builder of [`SubpassDescriptionDepthStencilResolve`](struct.SubpassDescriptionDepthStencilResolve.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionDepthStencilResolve.html) · Builder of [`SubpassDescriptionDepthStencilResolve`]"]
 #[repr(transparent)]
 pub struct SubpassDescriptionDepthStencilResolveBuilder<'a>(
     SubpassDescriptionDepthStencilResolve,
@@ -4377,7 +4377,7 @@ impl ImageStencilUsageCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageStencilUsageCreateInfo.html) · Builder of [`ImageStencilUsageCreateInfo`](struct.ImageStencilUsageCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageStencilUsageCreateInfo.html) · Builder of [`ImageStencilUsageCreateInfo`]"]
 #[repr(transparent)]
 pub struct ImageStencilUsageCreateInfoBuilder<'a>(
     ImageStencilUsageCreateInfo,
@@ -4454,7 +4454,7 @@ impl PhysicalDeviceScalarBlockLayoutFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeatures.html) · Builder of [`PhysicalDeviceScalarBlockLayoutFeatures`](struct.PhysicalDeviceScalarBlockLayoutFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeatures.html) · Builder of [`PhysicalDeviceScalarBlockLayoutFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a>(
     PhysicalDeviceScalarBlockLayoutFeatures,
@@ -4535,7 +4535,7 @@ impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceUniformBufferStandardLayoutFeatures.html) · Builder of [`PhysicalDeviceUniformBufferStandardLayoutFeatures`](struct.PhysicalDeviceUniformBufferStandardLayoutFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceUniformBufferStandardLayoutFeatures.html) · Builder of [`PhysicalDeviceUniformBufferStandardLayoutFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a>(
     PhysicalDeviceUniformBufferStandardLayoutFeatures,
@@ -4627,7 +4627,7 @@ impl PhysicalDeviceBufferDeviceAddressFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeatures.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeatures`](struct.PhysicalDeviceBufferDeviceAddressFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeatures.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a>(
     PhysicalDeviceBufferDeviceAddressFeatures,
@@ -4723,7 +4723,7 @@ impl BufferDeviceAddressInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfo.html) · Builder of [`BufferDeviceAddressInfo`](struct.BufferDeviceAddressInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfo.html) · Builder of [`BufferDeviceAddressInfo`]"]
 #[repr(transparent)]
 pub struct BufferDeviceAddressInfoBuilder<'a>(
     BufferDeviceAddressInfo,
@@ -4800,7 +4800,7 @@ impl BufferOpaqueCaptureAddressCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html) · Builder of [`BufferOpaqueCaptureAddressCreateInfo`](struct.BufferOpaqueCaptureAddressCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html) · Builder of [`BufferOpaqueCaptureAddressCreateInfo`]"]
 #[repr(transparent)]
 pub struct BufferOpaqueCaptureAddressCreateInfoBuilder<'a>(
     BufferOpaqueCaptureAddressCreateInfo,
@@ -4877,7 +4877,7 @@ impl PhysicalDeviceImagelessFramebufferFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImagelessFramebufferFeatures.html) · Builder of [`PhysicalDeviceImagelessFramebufferFeatures`](struct.PhysicalDeviceImagelessFramebufferFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImagelessFramebufferFeatures.html) · Builder of [`PhysicalDeviceImagelessFramebufferFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a>(
     PhysicalDeviceImagelessFramebufferFeatures,
@@ -4963,7 +4963,7 @@ impl FramebufferAttachmentsCreateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentsCreateInfo.html) · Builder of [`FramebufferAttachmentsCreateInfo`](struct.FramebufferAttachmentsCreateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentsCreateInfo.html) · Builder of [`FramebufferAttachmentsCreateInfo`]"]
 #[repr(transparent)]
 pub struct FramebufferAttachmentsCreateInfoBuilder<'a>(
     FramebufferAttachmentsCreateInfo,
@@ -5062,7 +5062,7 @@ impl FramebufferAttachmentImageInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentImageInfo.html) · Builder of [`FramebufferAttachmentImageInfo`](struct.FramebufferAttachmentImageInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentImageInfo.html) · Builder of [`FramebufferAttachmentImageInfo`]"]
 #[repr(transparent)]
 pub struct FramebufferAttachmentImageInfoBuilder<'a>(
     FramebufferAttachmentImageInfo,
@@ -5168,7 +5168,7 @@ impl RenderPassAttachmentBeginInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassAttachmentBeginInfo.html) · Builder of [`RenderPassAttachmentBeginInfo`](struct.RenderPassAttachmentBeginInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassAttachmentBeginInfo.html) · Builder of [`RenderPassAttachmentBeginInfo`]"]
 #[repr(transparent)]
 pub struct RenderPassAttachmentBeginInfoBuilder<'a>(
     RenderPassAttachmentBeginInfo,
@@ -5250,7 +5250,7 @@ impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures.html) · Builder of [`PhysicalDeviceSeparateDepthStencilLayoutsFeatures`](struct.PhysicalDeviceSeparateDepthStencilLayoutsFeatures.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures.html) · Builder of [`PhysicalDeviceSeparateDepthStencilLayoutsFeatures`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a>(
     PhysicalDeviceSeparateDepthStencilLayoutsFeatures,
@@ -5330,7 +5330,7 @@ impl AttachmentReferenceStencilLayout {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReferenceStencilLayout.html) · Builder of [`AttachmentReferenceStencilLayout`](struct.AttachmentReferenceStencilLayout.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReferenceStencilLayout.html) · Builder of [`AttachmentReferenceStencilLayout`]"]
 #[repr(transparent)]
 pub struct AttachmentReferenceStencilLayoutBuilder<'a>(
     AttachmentReferenceStencilLayout,
@@ -5410,7 +5410,7 @@ impl AttachmentDescriptionStencilLayout {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionStencilLayout.html) · Builder of [`AttachmentDescriptionStencilLayout`](struct.AttachmentDescriptionStencilLayout.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionStencilLayout.html) · Builder of [`AttachmentDescriptionStencilLayout`]"]
 #[repr(transparent)]
 pub struct AttachmentDescriptionStencilLayoutBuilder<'a>(
     AttachmentDescriptionStencilLayout,
@@ -5495,7 +5495,7 @@ impl MemoryOpaqueCaptureAddressAllocateInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfo.html) · Builder of [`MemoryOpaqueCaptureAddressAllocateInfo`](struct.MemoryOpaqueCaptureAddressAllocateInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfo.html) · Builder of [`MemoryOpaqueCaptureAddressAllocateInfo`]"]
 #[repr(transparent)]
 pub struct MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a>(
     MemoryOpaqueCaptureAddressAllocateInfo,
@@ -5572,7 +5572,7 @@ impl DeviceMemoryOpaqueCaptureAddressInfo {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfo.html) · Builder of [`DeviceMemoryOpaqueCaptureAddressInfo`](struct.DeviceMemoryOpaqueCaptureAddressInfo.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfo.html) · Builder of [`DeviceMemoryOpaqueCaptureAddressInfo`]"]
 #[repr(transparent)]
 pub struct DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a>(
     DeviceMemoryOpaqueCaptureAddressInfo,
@@ -5709,7 +5709,7 @@ impl PhysicalDeviceVulkan11Features {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Features.html) · Builder of [`PhysicalDeviceVulkan11Features`](struct.PhysicalDeviceVulkan11Features.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Features.html) · Builder of [`PhysicalDeviceVulkan11Features`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVulkan11FeaturesBuilder<'a>(
     PhysicalDeviceVulkan11Features,
@@ -5902,7 +5902,7 @@ impl PhysicalDeviceVulkan11Properties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Properties.html) · Builder of [`PhysicalDeviceVulkan11Properties`](struct.PhysicalDeviceVulkan11Properties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Properties.html) · Builder of [`PhysicalDeviceVulkan11Properties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVulkan11PropertiesBuilder<'a>(
     PhysicalDeviceVulkan11Properties,
@@ -6307,7 +6307,7 @@ impl PhysicalDeviceVulkan12Features {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Features.html) · Builder of [`PhysicalDeviceVulkan12Features`](struct.PhysicalDeviceVulkan12Features.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Features.html) · Builder of [`PhysicalDeviceVulkan12Features`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVulkan12FeaturesBuilder<'a>(
     PhysicalDeviceVulkan12Features,
@@ -7007,7 +7007,7 @@ impl PhysicalDeviceVulkan12Properties {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Properties.html) · Builder of [`PhysicalDeviceVulkan12Properties`](struct.PhysicalDeviceVulkan12Properties.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Properties.html) · Builder of [`PhysicalDeviceVulkan12Properties`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceVulkan12PropertiesBuilder<'a>(
     PhysicalDeviceVulkan12Properties,
@@ -7473,7 +7473,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         &mut self.0
     }
 }
-#[doc = "Provided by [`vk1_2`](vk1_2/index.html)"]
+#[doc = "Provided by [`crate::vk1_2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]

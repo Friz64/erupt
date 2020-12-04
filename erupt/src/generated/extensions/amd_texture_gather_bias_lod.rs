@@ -42,7 +42,7 @@ impl TextureLODGatherFormatPropertiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`](struct.TextureLODGatherFormatPropertiesAMD.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`]"]
 #[repr(transparent)]
 pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a>(
     TextureLODGatherFormatPropertiesAMD,

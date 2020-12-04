@@ -43,7 +43,7 @@ impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShaderBarycentricFeaturesNV`](struct.PhysicalDeviceFragmentShaderBarycentricFeaturesNV.html)"]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShaderBarycentricFeaturesNV`]"]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a>(
     PhysicalDeviceFragmentShaderBarycentricFeaturesNV,

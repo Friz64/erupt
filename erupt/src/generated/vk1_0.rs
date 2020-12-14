@@ -1323,7 +1323,7 @@ impl PipelineShaderStageCreateFlagBits {
     pub const ALLOW_VARYING_SUBGROUP_SIZE_EXT: Self = Self(1);
     pub const REQUIRE_FULL_SUBGROUPS_EXT: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits :: HOST_ONLY_POOL_VALVE . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`]"]
 #[doc(alias = "VkDescriptorSetLayoutCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1341,6 +1341,7 @@ impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
         f.write_str(match self {
             &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
             &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
+            &Self::HOST_ONLY_POOL_VALVE => "HOST_ONLY_POOL_VALVE",
             _ => "(unknown variant)",
         })
     }
@@ -1352,6 +1353,10 @@ impl DescriptorSetLayoutCreateFlagBits {
 #[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl DescriptorSetLayoutCreateFlagBits {
     pub const PUSH_DESCRIPTOR_KHR: Self = Self(1);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl DescriptorSetLayoutCreateFlagBits {
+    pub const HOST_ONLY_POOL_VALVE: Self = Self(4);
 }
 #[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl DescriptorSetLayoutCreateFlagBits {
@@ -1787,6 +1792,7 @@ impl std::fmt::Debug for DescriptorType {
             &Self::INLINE_UNIFORM_BLOCK_EXT => "INLINE_UNIFORM_BLOCK_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
             &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
+            &Self::MUTABLE_VALVE => "MUTABLE_VALVE",
             _ => "(unknown variant)",
         })
     }
@@ -1816,6 +1822,10 @@ impl DescriptorType {
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl DescriptorType {
     pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl DescriptorType {
+    pub const MUTABLE_VALVE: Self = Self(1000351000);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDynamicState.html) · Enum"]
 #[doc(alias = "VkDynamicState")]
@@ -5035,6 +5045,12 @@ impl std::fmt::Debug for StructureType {
                 "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT"
             }
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
+            &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => {
+                "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE"
+            }
+            &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => {
+                "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE"
+            }
             _ => "(unknown variant)",
         })
     }
@@ -5931,6 +5947,11 @@ impl StructureType {
 impl StructureType {
     pub const DIRECTFB_SURFACE_CREATE_INFO_EXT: Self = Self(1000346000);
 }
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE: Self = Self(1000351000);
+    pub const MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE: Self = Self(1000351002);
+}
 #[doc = "Provided by [`crate::extensions::khr_multiview`]"]
 impl StructureType {
     pub const RENDER_PASS_MULTIVIEW_CREATE_INFO_KHR: Self = Self::RENDER_PASS_MULTIVIEW_CREATE_INFO;
@@ -6552,7 +6573,7 @@ impl std::fmt::Debug for AttachmentDescriptionFlagBits {
 impl AttachmentDescriptionFlagBits {
     pub const MAY_ALIAS: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const HOST_ONLY_VALVE = DescriptorPoolCreateFlagBits :: HOST_ONLY_VALVE . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html) · Bits enum of [`DescriptorPoolCreateFlags`]"]
 #[doc(alias = "VkDescriptorPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6570,6 +6591,7 @@ impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
         f.write_str(match self {
             &Self::FREE_DESCRIPTOR_SET => "FREE_DESCRIPTOR_SET",
             &Self::UPDATE_AFTER_BIND => "UPDATE_AFTER_BIND",
+            &Self::HOST_ONLY_VALVE => "HOST_ONLY_VALVE",
             _ => "(unknown variant)",
         })
     }
@@ -6581,6 +6603,10 @@ impl DescriptorPoolCreateFlagBits {
 #[doc = "Provided by [`crate::vk1_2`]"]
 impl DescriptorPoolCreateFlagBits {
     pub const UPDATE_AFTER_BIND: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl DescriptorPoolCreateFlagBits {
+    pub const HOST_ONLY_VALVE: Self = Self(4);
 }
 #[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
 impl DescriptorPoolCreateFlagBits {
@@ -6837,6 +6863,7 @@ impl std::fmt::Debug for VendorId {
             &Self::KAZAN => "KAZAN",
             &Self::CODEPLAY => "CODEPLAY",
             &Self::MESA => "MESA",
+            &Self::POCL => "POCL",
             _ => "(unknown variant)",
         })
     }
@@ -6848,6 +6875,7 @@ impl VendorId {
     pub const KAZAN: Self = Self(65539);
     pub const CODEPLAY: Self = Self(65540);
     pub const MESA: Self = Self(65541);
+    pub const POCL: Self = Self(65542);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateInstance.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -10182,6 +10210,8 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_ter
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVE > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`]"]
 #[repr(transparent)]
@@ -14790,6 +14820,14 @@ impl<'a>
     for DescriptorSetLayoutCreateInfoBuilder<'a>
 {
 }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE,
+    > for DescriptorSetLayoutCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: MutableDescriptorTypeCreateInfoVALVEBuilder < '_ >> for DescriptorSetLayoutCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Builder of [`DescriptorSetLayoutCreateInfo`]"]
 #[repr(transparent)]
@@ -14969,6 +15007,14 @@ impl<'a>
 {
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_inline_uniform_block :: DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder < '_ >> for DescriptorPoolCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE,
+    > for DescriptorPoolCreateInfoBuilder<'a>
+{
+}
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: MutableDescriptorTypeCreateInfoVALVEBuilder < '_ >> for DescriptorPoolCreateInfoBuilder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Builder of [`DescriptorPoolCreateInfo`]"]
 #[repr(transparent)]

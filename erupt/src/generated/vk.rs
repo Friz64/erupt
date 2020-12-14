@@ -365,6 +365,8 @@ pub use crate::extensions::mvk_macos_surface::*;
 #[doc(no_inline)]
 pub use crate::extensions::nn_vi_surface::*;
 #[doc(no_inline)]
+pub use crate::extensions::nv_acquire_winrt_display::*;
+#[doc(no_inline)]
 pub use crate::extensions::nv_clip_space_w_scaling::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_compute_shader_derivatives::*;
@@ -440,6 +442,8 @@ pub use crate::extensions::qcom_render_pass_store_ops::*;
 pub use crate::extensions::qcom_render_pass_transform::*;
 #[doc(no_inline)]
 pub use crate::extensions::qcom_rotated_copy_commands::*;
+#[doc(no_inline)]
+pub use crate::extensions::valve_mutable_descriptor_type::*;
 #[doc(no_inline)]
 pub use crate::vk1_0::*;
 #[doc(no_inline)]

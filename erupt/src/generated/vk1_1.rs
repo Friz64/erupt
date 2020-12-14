@@ -1602,6 +1602,8 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_ter
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVE > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`]"]
 #[repr(transparent)]

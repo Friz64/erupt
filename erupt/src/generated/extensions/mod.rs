@@ -364,6 +364,8 @@ pub mod mvk_ios_surface;
 pub mod mvk_macos_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NN_vi_surface.html) · Vulkan extension"]
 pub mod nn_vi_surface;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_acquire_winrt_display.html) · Vulkan extension"]
+pub mod nv_acquire_winrt_display;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_clip_space_w_scaling.html) · Vulkan extension"]
 pub mod nv_clip_space_w_scaling;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_compute_shader_derivatives.html) · Vulkan extension"]
@@ -440,3 +442,5 @@ pub mod qcom_render_pass_store_ops;
 pub mod qcom_render_pass_transform;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_rotated_copy_commands.html) · Vulkan extension"]
 pub mod qcom_rotated_copy_commands;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_VALVE_mutable_descriptor_type.html) · Vulkan extension"]
+pub mod valve_mutable_descriptor_type;

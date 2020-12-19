@@ -387,7 +387,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
 
         /// Loader for entry commands
         ///
-        /// To create a new loader, call [`new`](#method.new).
+        /// To create a new loader, call [`EntryLoader::new`].
         pub struct EntryLoader<T> {
             arc: std::sync::Arc<()>,
             pub loader: T,
@@ -459,7 +459,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
 
         /// Loader for instance commands
         ///
-        /// To create a new loader, call [`new`](#method.new).
+        /// To create a new loader, call [`InstanceLoader::new`].
         pub struct InstanceLoader {
             #[allow(dead_code)]
             parent: std::sync::Weak<()>,
@@ -523,7 +523,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
 
         /// Loader for device commands
         ///
-        /// To create a new loader, call [`new`](#method.new).
+        /// To create a new loader, call [`DeviceLoader::new`].
         pub struct DeviceLoader {
             #[allow(dead_code)]
             parent: std::sync::Weak<()>,

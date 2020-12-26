@@ -22,12 +22,12 @@ fn main() {
     log::info!("Collecting source...");
     let start = Instant::now();
     let source = Source::collect();
-    log::info!("Source collection finished in {:?}", start.elapsed());
+    log::info!("Source collection finished in {:.2?}", start.elapsed());
 
     log::info!("Generating code...");
     let start = Instant::now();
     codegen::generate(&source);
-    log::info!("Code generation finished in {:?}", start.elapsed());
+    log::info!("Code generation finished in {:.2?}", start.elapsed());
 
     log::info!("Formatting output...");
     let start = Instant::now();
@@ -35,7 +35,7 @@ fn main() {
         .args(&["fmt", "-p", "erupt"])
         .status()
         .expect("Failed to run rustfmt");
-    log::info!("Output formatting finished in {:?}", start.elapsed());
+    log::info!("Output formatting finished in {:.2?}", start.elapsed());
     if !cmd.success() {
         log::error!("Output formatting failed");
         return;
@@ -47,7 +47,7 @@ fn main() {
         .args(&["check", "-p", "erupt"])
         .status()
         .expect("Failed to run cargo check");
-    log::info!("Output checking finished in {:?}", start.elapsed());
+    log::info!("Output checking finished in {:.2?}", start.elapsed());
     if !cmd.success() {
         log::error!("Output checking failed");
         return;
@@ -59,7 +59,11 @@ fn main() {
         .args(&["doc", "-p", "erupt"])
         .status()
         .expect("Failed to run rustdoc");
-    log::info!("Documentation generation finished in {:?}", start.elapsed());
+    log::info!(
+        "Documentation generation finished in {:.2?}",
+        start.elapsed()
+    );
+
     if !cmd.success() {
         log::error!("Documentation generation failed");
         return;

@@ -5011,6 +5011,9 @@ impl std::fmt::Debug for StructureType {
             &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => {
                 "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV"
             }
+            &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR"
+            }
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => {
                 "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV"
             }
@@ -5029,6 +5032,9 @@ impl std::fmt::Debug for StructureType {
             &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => "COPY_COMMAND_TRANSFORM_INFO_QCOM",
             &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => {
                 "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT"
+            }
+            &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR"
             }
             &Self::COPY_BUFFER_INFO_2_KHR => "COPY_BUFFER_INFO_2_KHR",
             &Self::COPY_IMAGE_INFO_2_KHR => "COPY_IMAGE_INFO_2_KHR",
@@ -5906,6 +5912,11 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
     pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
 }
+#[doc = "Provided by [`crate::extensions::khr_zero_initialize_workgroup_memory`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR: Self =
+        Self(1000325000);
+}
 #[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV: Self = Self(1000326000);
@@ -5924,6 +5935,11 @@ impl StructureType {
 #[doc = "Provided by [`crate::extensions::ext_image_robustness`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT: Self = Self(1000335000);
+}
+#[doc = "Provided by [`crate::extensions::khr_workgroup_memory_explicit_layout`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR: Self =
+        Self(1000336000);
 }
 #[doc = "Provided by [`crate::extensions::khr_copy_commands2`]"]
 impl StructureType {
@@ -10144,6 +10160,8 @@ impl<'a>
     > for DeviceCreateInfoBuilder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,
@@ -10174,6 +10192,8 @@ impl<'a>
     > for DeviceCreateInfoBuilder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR > for DeviceCreateInfoBuilder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,

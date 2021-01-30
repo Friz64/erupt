@@ -355,9 +355,13 @@ pub use crate::extensions::khr_win32_keyed_mutex::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_win32_surface::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_workgroup_memory_explicit_layout::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_xcb_surface::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_xlib_surface::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_zero_initialize_workgroup_memory::*;
 #[doc(no_inline)]
 pub use crate::extensions::mvk_ios_surface::*;
 #[doc(no_inline)]

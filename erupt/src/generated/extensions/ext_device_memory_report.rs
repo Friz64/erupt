@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION")]
-pub const EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION: u32 = 1;
+pub const EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME")]
 pub const EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME: *const std::os::raw::c_char =

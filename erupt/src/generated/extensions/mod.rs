@@ -354,10 +354,14 @@ pub mod khr_wayland_surface;
 pub mod khr_win32_keyed_mutex;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_win32_surface.html) · Vulkan extension"]
 pub mod khr_win32_surface;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_workgroup_memory_explicit_layout.html) · Vulkan extension"]
+pub mod khr_workgroup_memory_explicit_layout;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_xcb_surface.html) · Vulkan extension"]
 pub mod khr_xcb_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_xlib_surface.html) · Vulkan extension"]
 pub mod khr_xlib_surface;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_zero_initialize_workgroup_memory.html) · Vulkan extension"]
+pub mod khr_zero_initialize_workgroup_memory;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_MVK_ios_surface.html) · Vulkan extension"]
 pub mod mvk_ios_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_MVK_macos_surface.html) · Vulkan extension"]

@@ -1536,6 +1536,8 @@ impl<'a>
 {
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_diagnostics_config :: PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,
@@ -1566,6 +1568,8 @@ impl<'a>
     > for PhysicalDeviceFeatures2Builder<'a>
 {
 }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
+impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl<'a>
     crate::ExtendableFrom<
         'a,

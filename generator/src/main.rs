@@ -10,6 +10,7 @@ mod origin;
 mod source;
 
 use log::LevelFilter;
+pub use roxmltree::Node as XmlNode;
 use source::Source;
 use std::{env, process::Command, time::Instant};
 

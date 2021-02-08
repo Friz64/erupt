@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `vk` module, which re-exports every Vulkan item
 
 ### Changed
-- Update Vulkan Headers to version 168
+- Update Vulkan Headers to version 169
 - Improved the idiomaticity of the `{Instance,Device}Enabled::new` API
 - Transition to intra-doc links in the rustdoc
 

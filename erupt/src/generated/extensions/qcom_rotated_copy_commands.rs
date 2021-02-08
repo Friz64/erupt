@@ -1,8 +1,8 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "VK_QCOM_rotated_copy_commands_SPEC_VERSION")]
+#[doc(alias = "VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION")]
 pub const QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION: u32 = 0;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "VK_QCOM_rotated_copy_commands_EXTENSION_NAME")]
+#[doc(alias = "VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME")]
 pub const QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_QCOM_rotated_copy_commands");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Structure"]

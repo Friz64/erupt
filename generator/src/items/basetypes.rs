@@ -5,12 +5,12 @@ use crate::{
     name::TypeName,
     origin::Origin,
     source::{NotApplicable, Source},
+    XmlNode,
 };
 use lang_c::ast::{Declaration as CDeclaration, DeclarationSpecifier, TypeSpecifier};
 use proc_macro2::TokenStream;
 use quote::quote;
 use std::convert::{TryFrom, TryInto};
-use treexml::Element;
 
 #[derive(Debug)]
 pub struct Basetype {
@@ -76,8 +76,12 @@ impl TryFrom<&CDeclaration> for Basetype {
 }
 
 impl Source {
-    pub fn collect_basetype(&mut self, element: &Element) {
-        if let Ok(Some(name)) = element.find_value::<String>("name") {
+    pub fn collect_basetype(&mut self, node: XmlNode) {
+        if let Some(name) = node
+            .children()
+            .find(|n| n.has_tag_name("name"))
+            .and_then(|n| n.text())
+        {
             if let Some(basetype) = self.header.take_basetype(&name) {
                 self.basetypes.push(basetype);
             }

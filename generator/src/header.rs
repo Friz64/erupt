@@ -12,6 +12,7 @@ use crate::{
     },
     name::{FunctionName, Name, TypeName},
     source::NotApplicable,
+    XmlNode,
 };
 use lang_c::{
     ast::{
@@ -23,7 +24,6 @@ use lang_c::{
     span::Node,
 };
 use std::{convert::TryFrom, fmt::Debug, mem, path::Path};
-use treexml::Element;
 
 #[derive(Debug)]
 pub struct DeclarationTypeInfo(Vec<SpecifierQualifier>);
@@ -65,18 +65,16 @@ pub struct DeclarationInfo<'a> {
     pub declarator: Option<&'a Declarator>,
 }
 
-impl From<&Element> for DeclarationMetadata {
-    fn from(element: &Element) -> Self {
-        let values = element
-            .attributes
-            .get("values")
+impl From<XmlNode<'_, '_>> for DeclarationMetadata {
+    fn from(node: XmlNode) -> Self {
+        let values = node
+            .attribute("values")
             .map(|values| values.split(',').map(|s| s.to_string()).collect())
             .unwrap_or_else(Vec::new);
 
-        let length = element
-            .attributes
-            .get("altlen")
-            .or_else(|| element.attributes.get("len"))
+        let length = node
+            .attribute("altlen")
+            .or_else(|| node.attribute("len"))
             .and_then(|values| {
                 values
                     .split(',')
@@ -85,9 +83,8 @@ impl From<&Element> for DeclarationMetadata {
                     .next()
             });
 
-        let optional = element
-            .attributes
-            .get("optional")
+        let optional = node
+            .attribute("optional")
             .map(|v| match (v.contains("true"), v.contains("false")) {
                 (true, false) => Optional::Always,
                 (true, true) => Optional::Sometimes,
@@ -290,7 +287,7 @@ pub struct HeaderSource {
 }
 
 impl HeaderSource {
-    pub fn new(registry: &Element) -> HeaderSource {
+    pub fn new(registry: XmlNode) -> HeaderSource {
         let include_vulkan = "generator/Vulkan-Headers/include/vulkan";
 
         let header_config = Config {

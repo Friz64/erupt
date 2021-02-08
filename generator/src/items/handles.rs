@@ -4,12 +4,12 @@ use crate::{
     name::{Name, TypeName},
     origin::Origin,
     source::Source,
+    XmlNode,
 };
 use heck::ShoutySnakeCase;
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use std::fmt::{self, Display};
-use treexml::Element;
 
 #[derive(Debug)]
 pub enum HandleKind {
@@ -67,24 +67,29 @@ impl Handle {
 }
 
 impl Source {
-    pub fn collect_handle(&mut self, element: &Element) {
-        match (
-            element.attributes.get("name"),
-            element.attributes.get("alias"),
-        ) {
+    pub fn collect_handle(&mut self, node: XmlNode) {
+        match (node.attribute("name"), node.attribute("alias")) {
             (Some(name), Some(alias)) => self.aliases.push(Alias::new(
                 Name::Type(TypeName::new(name)),
                 Name::Type(TypeName::new(alias)),
             )),
             _ => {
-                let name = match element.find_value::<String>("name") {
-                    Ok(Some(name)) => TypeName::new(&name),
-                    _ => panic!("Handle has no name: {:?}", element),
+                let name = match node
+                    .children()
+                    .find(|n| n.has_tag_name("name"))
+                    .and_then(|n| n.text())
+                {
+                    Some(name) => TypeName::new(name),
+                    _ => panic!("Handle has no name: {:?}", node),
                 };
 
-                let kind = match element.find_value::<String>("type") {
-                    Ok(Some(type_str)) => type_str.as_str().into(),
-                    _ => panic!("Handle has no type: {:?}", element),
+                let kind = match node
+                    .children()
+                    .find(|n| n.has_tag_name("type"))
+                    .and_then(|n| n.text())
+                {
+                    Some(ty) => ty.into(),
+                    _ => panic!("Handle has no type: {:?}", node),
                 };
 
                 self.handles.push(Handle {

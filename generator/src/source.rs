@@ -12,12 +12,12 @@ use crate::{
     name::{FunctionName, Name, TypeName},
     origin::Origin,
 };
+use roxmltree::Document;
 use std::{
     error::Error,
     fmt::{self, Debug, Display},
-    fs::File,
+    fs,
 };
-use treexml::Document;
 
 #[derive(Debug)]
 pub struct NotApplicable;
@@ -45,15 +45,14 @@ pub struct Source {
 
 impl Source {
     pub fn collect() -> Source {
-        let vk_xml =
-            File::open("generator/Vulkan-Headers/registry/vk.xml").expect("Failed to open vk.xml");
-        let document = Document::parse(vk_xml).expect("Failed to parse vk.xml");
-        let registry = document.root.expect("Document has no root");
+        let vk_xml = fs::read_to_string("generator/Vulkan-Headers/registry/vk.xml")
+            .expect("Failed to read vk.xml");
+        let document = Document::parse(&vk_xml).expect("Failed to parse vk.xml");
+        let registry = document.root_element();
 
         let latest_vulkan_version = registry
-            .children
-            .iter()
-            .filter_map(|registry_child| match registry_child.name.as_str() {
+            .children()
+            .filter_map(|registry_child| match registry_child.tag_name().name() {
                 "feature" => match Origin::from_registry_item(registry_child) {
                     Origin::Feature { major, minor } => Some((major, minor)),
                     _ => unreachable!(),
@@ -64,21 +63,21 @@ impl Source {
             .expect("No Vulkan version");
 
         let header_version = registry
-            .find("types")
+            .children()
+            .find(|n| n.has_tag_name("types"))
             .expect("No `types` in registry")
-            .children
-            .iter()
+            .children()
             .find_map(|ty| {
-                ty.find("name")
-                    .ok()
-                    .and_then(|name| name.text.as_deref())
-                    .filter(|text| *text == "VK_HEADER_VERSION")
-                    .and_then(|_| ty.text.as_ref().and_then(|s| s.split_whitespace().last()))
+                ty.children()
+                    .find(|n| n.has_tag_name("name"))
+                    .and_then(|n| n.text())
+                    .filter(|&text| text == "VK_HEADER_VERSION")
+                    .and_then(|_| ty.text().and_then(|s| s.split_whitespace().last()))
             })
             .expect("Can't find header version element");
         log::info!("Generating against header version {}", header_version);
 
-        let mut header = HeaderSource::new(&registry);
+        let mut header = HeaderSource::new(registry);
         let constants = header.take_constants();
         let mut source = Source {
             header,
@@ -93,12 +92,12 @@ impl Source {
             latest_vulkan_version,
         };
 
-        for registry_child in &registry.children {
-            match registry_child.name.as_str() {
+        for registry_child in registry.children().filter(|n| n.is_element()) {
+            match registry_child.tag_name().name() {
                 "types" => {
-                    for element in &registry_child.children {
-                        if element.name == "type" {
-                            match element.attributes.get("category").map(|s| s.as_str()) {
+                    for element in registry_child.children() {
+                        if element.tag_name().name() == "type" {
+                            match element.attribute("category") {
                                 Some("struct") | Some("union") => source.collect_structure(element),
                                 Some("handle") => source.collect_handle(element),
                                 Some("funcpointer") => source.collect_funcpointer(element),
@@ -110,8 +109,8 @@ impl Source {
                     }
                 }
                 "commands" => {
-                    for element in &registry_child.children {
-                        if element.name == "command" {
+                    for element in registry_child.children() {
+                        if element.tag_name().name() == "command" {
                             source.collect_function(element);
                         }
                     }
@@ -124,10 +123,9 @@ impl Source {
                     source.assign_function_metadata(registry_child);
                 }
                 "extensions" => {
-                    for extension in &registry_child.children {
+                    for extension in registry_child.children().filter(|n| n.is_element()) {
                         // Skip disabled extensions
-                        let supported = extension.attributes.get("supported").map(|s| s.as_str());
-                        if supported == Some("disabled") {
+                        if extension.attribute("supported") == Some("disabled") {
                             continue;
                         }
 

@@ -6,6 +6,7 @@ use crate::{
     name::{FunctionName, Name},
     origin::Origin,
     source::{NotApplicable, Source},
+    XmlNode,
 };
 use lang_c::ast::{Declaration as CDeclaration, DerivedDeclarator, ParameterDeclaration};
 use proc_macro2::TokenStream;
@@ -14,7 +15,6 @@ use std::{
     convert::{TryFrom, TryInto},
     fmt::Debug,
 };
-use treexml::Element;
 
 impl<'a> From<&'a ParameterDeclaration> for DeclarationInfo<'a> {
     fn from(parameter_declaration: &'a ParameterDeclaration) -> Self {
@@ -45,10 +45,10 @@ pub struct Requirement {
 }
 
 impl Requirement {
-    pub fn new(base_origin: Origin, require_element: &Element) -> Requirement {
-        let require_origin = if let Some(feature) = require_element.attributes.get("feature") {
+    pub fn new(base_origin: Origin, require_node: XmlNode) -> Requirement {
+        let require_origin = if let Some(feature) = require_node.attribute("feature") {
             Some(Origin::feature_from_name(feature))
-        } else if let Some(extension) = require_element.attributes.get("extension") {
+        } else if let Some(extension) = require_node.attribute("extension") {
             Some(Origin::Extension {
                 full: extension.into(),
             })
@@ -64,12 +64,11 @@ impl Requirement {
 }
 
 impl Source {
-    pub fn assign_function_metadata(&mut self, element: &Element) {
-        let base_origin = Origin::from_registry_item(element);
+    pub fn assign_function_metadata(&mut self, node: XmlNode) {
+        let base_origin = Origin::from_registry_item(node);
         let extension_type = if base_origin.is_extension() {
-            let attribute = element
-                .attributes
-                .get("type")
+            let attribute = node
+                .attribute("type")
                 .expect("No type attribute on extension");
 
             Some(ExtensionType::from_attribute_name(attribute))
@@ -77,14 +76,14 @@ impl Source {
             None
         };
 
-        for element_child in &element.children {
-            if element_child.name == "require" {
-                let requirement = Requirement::new(base_origin.clone(), element_child);
+        for node_child in node.children() {
+            if node_child.has_tag_name("require") {
+                let requirement = Requirement::new(base_origin.clone(), node_child);
 
-                for command in &element_child.children {
-                    if command.name == "command" {
+                for command in node_child.children() {
+                    if command.has_tag_name("command") {
                         let function_name = FunctionName::new(
-                            command.attributes.get("name").expect("Command has no name"),
+                            command.attribute("name").expect("Command has no name"),
                         );
 
                         let extension_type = extension_type.clone();
@@ -228,28 +227,30 @@ impl TryFrom<&CDeclaration> for Function {
 }
 
 impl Source {
-    pub fn collect_function(&mut self, element: &Element) {
-        match (
-            element.attributes.get("name"),
-            element.attributes.get("alias"),
-        ) {
+    pub fn collect_function(&mut self, node: XmlNode) {
+        match (node.attribute("name"), node.attribute("alias")) {
             (Some(name), Some(alias)) => self.aliases.push(Alias::new(
                 Name::Function(FunctionName::new(name)),
                 Name::Function(FunctionName::new(alias)),
             )),
             _ => {
-                let name = match element.find_value::<String>("proto/name") {
-                    Ok(Some(name)) => FunctionName::new(&name),
-                    _ => panic!("Function has no proto/name text: {:?}", element),
+                let name = match node
+                    .children()
+                    .find(|n| n.has_tag_name("proto"))
+                    .and_then(|n| n.children().find(|n| n.has_tag_name("name")))
+                    .and_then(|n| n.text())
+                {
+                    Some(name) => FunctionName::new(&name),
+                    _ => panic!("Function has no proto/name text: {:?}", node),
                 };
 
                 if let Some(mut function) = self.header.take_function(&name) {
-                    let mut i = 0;
-                    for command_child in &element.children {
-                        if command_child.name == "param" {
-                            function.parameters[i].metadata = command_child.into();
-                            i += 1;
-                        }
+                    for (i, command_child) in node
+                        .children()
+                        .filter(|n| n.has_tag_name("param"))
+                        .enumerate()
+                    {
+                        function.parameters[i].metadata = command_child.into();
                     }
 
                     self.functions.push(function);
@@ -258,8 +259,12 @@ impl Source {
         }
     }
 
-    pub fn collect_funcpointer(&mut self, element: &Element) {
-        if let Ok(Some(name)) = element.find_value::<String>("name") {
+    pub fn collect_funcpointer(&mut self, node: XmlNode) {
+        if let Some(name) = node
+            .children()
+            .find(|n| n.has_tag_name("name"))
+            .and_then(|n| n.text())
+        {
             if let Some(mut function) = self.header.take_function(&FunctionName::new(&name)) {
                 function.pfn = true;
                 self.func_pointers.push(function);

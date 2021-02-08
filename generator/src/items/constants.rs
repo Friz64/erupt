@@ -3,6 +3,7 @@ use crate::{
     eval::{Expression, Literal},
     origin::Origin,
     source::{NotApplicable, Source},
+    XmlNode,
 };
 use lang_c::ast::{
     Declaration as CDeclaration, DeclaratorKind, Expression as CExpression, Initializer,
@@ -10,7 +11,6 @@ use lang_c::ast::{
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 use std::convert::TryFrom;
-use treexml::Element;
 
 const PREFIX: &str = "__ERUPT_CONSTANT_";
 
@@ -111,18 +111,17 @@ impl TryFrom<&CDeclaration> for Constant {
     }
 }
 
-pub fn header_ext(buf: &mut String, registry: &Element) {
+pub fn header_ext(buf: &mut String, registry: XmlNode) {
     let mut constants = Vec::new();
 
-    let constants_enum = registry.find_child(|child| {
-        child.name == "enums"
-            && child.attributes.get("name").map(|s| s.as_str()) == Some("API Constants")
-    });
+    let constants_enum = registry
+        .children()
+        .find(|n| n.has_tag_name("enums") && n.attribute("name") == Some("API Constants"));
 
     match constants_enum {
         Some(constants_enum) => {
-            for constant in &constants_enum.children {
-                let name = match constant.attributes.get("name") {
+            for constant in constants_enum.children().filter(|n| n.is_element()) {
+                let name = match constant.attribute("name") {
                     Some(name) => name,
                     None => panic!("Constant has no name: {:?}", constant),
                 };
@@ -133,22 +132,21 @@ pub fn header_ext(buf: &mut String, registry: &Element) {
         None => panic!("No `API Constants` in registry"),
     }
 
-    match registry.find("extensions") {
-        Ok(extensions) => {
-            for extension in &extensions.children {
+    match registry.children().find(|n| n.has_tag_name("extensions")) {
+        Some(extensions) => {
+            for extension in extensions.children() {
                 // Skip disabled extensions
-                let supported = extension.attributes.get("supported").map(|s| s.as_str());
-                if supported == Some("disabled") {
+                if extension.attribute("supported") == Some("disabled") {
                     continue;
                 }
 
-                for require in &extension.children {
-                    for element in &require.children {
-                        if element.name == "enum"
-                            && element.attributes.get("value").is_some()
-                            && element.attributes.get("extends").is_none()
+                for require in extension.children() {
+                    for element in require.children() {
+                        if element.has_tag_name("enum")
+                            && element.has_attribute("value")
+                            && !element.has_attribute("extends")
                         {
-                            if let Some(name) = element.attributes.get("name") {
+                            if let Some(name) = element.attribute("name") {
                                 constants.push(name);
                             }
                         }
@@ -156,7 +154,7 @@ pub fn header_ext(buf: &mut String, registry: &Element) {
                 }
             }
         }
-        Err(_) => panic!("No `extensions` in registry"),
+        None => panic!("No `extensions` in registry"),
     }
 
     for constant in constants {

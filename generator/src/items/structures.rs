@@ -8,6 +8,7 @@ use crate::{
     name::{Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},
+    XmlNode,
 };
 use lang_c::ast::{
     Declaration as CDeclaration, DeclarationSpecifier, StructDeclaration, StructField, StructKind,
@@ -16,7 +17,6 @@ use lang_c::ast::{
 use proc_macro2::TokenStream;
 use quote::quote;
 use std::convert::TryFrom;
-use treexml::Element;
 
 impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
     fn from(field: &'a StructField) -> Self {
@@ -75,11 +75,10 @@ impl StructureMetadata {
     }
 }
 
-impl From<&Element> for StructureMetadata {
-    fn from(element: &Element) -> Self {
-        let extends = element
-            .attributes
-            .get("structextends")
+impl From<XmlNode<'_, '_>> for StructureMetadata {
+    fn from(node: XmlNode) -> Self {
+        let extends = node
+            .attribute("structextends")
             .map(|values| values.split(',').map(|s| TypeName::new(s)).collect())
             .unwrap_or_default();
 
@@ -208,24 +207,24 @@ impl TryFrom<&CDeclaration> for Structure {
 }
 
 impl Source {
-    pub fn collect_structure(&mut self, element: &Element) {
-        let name = match element.attributes.get("name") {
+    pub fn collect_structure(&mut self, node: XmlNode) {
+        let name = match node.attribute("name") {
             Some(name) => name,
-            None => panic!("Structure has no name: {:?}", element),
+            None => panic!("Structure has no name: {:?}", node),
         };
 
-        match element.attributes.get("alias") {
+        match node.attribute("alias") {
             Some(alias) => self.aliases.push(Alias::new(
                 Name::Type(TypeName::new(name)),
                 Name::Type(TypeName::new(alias)),
             )),
             None => {
                 if let Some(mut structure) = self.header.take_structure(name) {
-                    structure.metadata = element.into();
+                    structure.metadata = node.into();
 
                     let mut i = 0;
-                    for structure_child in &element.children {
-                        if structure_child.name == "member" {
+                    for structure_child in node.children() {
+                        if structure_child.has_tag_name("member") {
                             structure.fields[i].metadata = structure_child.into();
                             i += 1;
                         }

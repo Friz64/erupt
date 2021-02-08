@@ -1,6 +1,7 @@
 use crate::{
     name::{FunctionName, Name, TypeName},
     source::Source,
+    XmlNode,
 };
 use once_cell::sync::Lazy;
 use proc_macro2::{Ident, TokenStream};
@@ -11,7 +12,6 @@ use std::{
     hash::Hash,
     path::PathBuf,
 };
-use treexml::Element;
 
 static FEATURE_NAME_REGEX: Lazy<Regex> =
     Lazy::new(|| Regex::new("VK_VERSION_([1-9]+)_([0-9]+)").unwrap());
@@ -52,8 +52,8 @@ impl Origin {
         }
     }
 
-    pub fn from_registry_item(element: &Element) -> Origin {
-        match (element.name.as_str(), element.attributes.get("name")) {
+    pub fn from_registry_item(node: XmlNode) -> Origin {
+        match (node.tag_name().name(), node.attribute("name")) {
             ("feature", Some(name)) => Origin::feature_from_name(name),
             ("extension", Some(name)) => Origin::Extension { full: name.into() },
             invalid => panic!("Failed to create origin from registry item: {:?} ", invalid),
@@ -150,19 +150,19 @@ impl Source {
         origin.as_ref().expect("Found Item has no origin")
     }
 
-    pub fn assign_origins(&mut self, element: &Element) {
-        let origin = Origin::from_registry_item(element);
-        for element_child in &element.children {
-            if element_child.name == "require" {
-                for item in &element_child.children {
-                    let name = item.attributes.get("name");
+    pub fn assign_origins(&mut self, node: XmlNode) {
+        let origin = Origin::from_registry_item(node);
+        for node_child in node.children() {
+            if node_child.tag_name().name() == "require" {
+                for item in node_child.children().filter(|n| n.is_element()) {
+                    let name = item.attribute("name");
                     if let Some(name) = name {
-                        if BLACKLIST.contains(&name.as_str()) {
+                        if BLACKLIST.contains(&name) {
                             continue;
                         }
                     }
 
-                    match (item.name.as_str(), name) {
+                    match (item.tag_name().name(), name) {
                         ("command", Some(name)) => {
                             let function_name = FunctionName::new(name);
                             if let Some(alias) = self.find_function_alias_mut(&function_name) {
@@ -202,10 +202,9 @@ impl Source {
                             }
                         }
                         ("comment", None) => (),
-                        unsupported => panic!(
-                            "Unsupported item name: {:?} from {:?}",
-                            unsupported, element
-                        ),
+                        unsupported => {
+                            panic!("Unsupported item name: {:?} from {:?}", unsupported, node)
+                        }
                     }
                 }
             }

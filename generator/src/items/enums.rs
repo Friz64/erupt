@@ -5,6 +5,7 @@ use crate::{
     name::{EnumVariantName, Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},
+    XmlNode,
 };
 use eval::Expression;
 use indexmap::IndexMap;
@@ -14,7 +15,6 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use treexml::Element;
 
 #[derive(Debug, PartialEq)]
 pub enum EnumKind {
@@ -292,41 +292,35 @@ impl Enum {
 }
 
 impl Source {
-    pub fn collect_enum_type(&mut self, element: &Element) {
-        if element.attributes.get("requires").is_none() {
-            match (
-                element.attributes.get("name"),
-                element.attributes.get("alias"),
-            ) {
+    pub fn collect_enum_type(&mut self, node: XmlNode) {
+        if !node.has_attribute("requires") {
+            match (node.attribute("name"), node.attribute("alias")) {
                 (Some(name), Some(alias)) => self.aliases.push(Alias::new(
                     Name::Type(TypeName::new(name)),
                     Name::Type(TypeName::new(alias)),
                 )),
                 (name_attribute, _) => {
-                    let name = element
-                        .find_value::<String>("name")
-                        .ok()
-                        .flatten()
-                        .or_else(|| name_attribute.cloned());
+                    let name = node
+                        .children()
+                        .find(|n| n.has_tag_name("name"))
+                        .and_then(|n| n.text())
+                        .or(name_attribute);
 
                     let kind = match name {
-                        Some(name) => {
-                            match element.attributes.get("category").map(|s| s.as_str()) {
-                                Some("bitmask") => EnumKind::from_flags_name(&name),
-                                Some("enum") => {
-                                    if name.contains("FlagBits") {
-                                        EnumKind::from_flagbits_name(&name)
-                                    } else {
-                                        EnumKind::from_enum_name(&name)
-                                    }
+                        Some(name) => match node.attribute("category") {
+                            Some("bitmask") => EnumKind::from_flags_name(&name),
+                            Some("enum") => {
+                                if name.contains("FlagBits") {
+                                    EnumKind::from_flagbits_name(&name)
+                                } else {
+                                    EnumKind::from_enum_name(&name)
                                 }
-                                invalid => panic!(
-                                    "Invalid enum type category: {:?} from {:?}",
-                                    invalid, element
-                                ),
                             }
-                        }
-                        _ => panic!("Enum type has no name: {:?}", element),
+                            invalid => {
+                                panic!("Invalid enum type category: {:?} from {:?}", invalid, node)
+                            }
+                        },
+                        _ => panic!("Enum type has no name: {:?}", node),
                     };
 
                     if self.enums.iter_mut().find(|en| en.kind == kind).is_none() {
@@ -341,17 +335,17 @@ impl Source {
         }
     }
 
-    pub fn collect_enum(&mut self, element: &Element) {
-        let name = match element.attributes.get("name") {
+    pub fn collect_enum(&mut self, node: XmlNode) {
+        let name = match node.attribute("name") {
             Some(name) => name,
-            None => panic!("Enum has no name: {:?}", element),
+            None => panic!("Enum has no name: {:?}", node),
         };
 
-        let kind = match element.attributes.get("type").map(|s| s.as_str()) {
+        let kind = match node.attribute("type") {
             Some("bitmask") => EnumKind::from_flagbits_name(name),
             Some("enum") => EnumKind::from_enum_name(name),
             None => return,
-            unknown => panic!("Unknown enum type: {:?} from {:?}", unknown, element),
+            unknown => panic!("Unknown enum type: {:?} from {:?}", unknown, node),
         };
 
         let existing_enum = self.enums.iter_mut().find(|en| en.kind == kind);

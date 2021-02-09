@@ -6,7 +6,6 @@ pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 1;
 pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_image_drm_format_modifier");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT")]
 pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]

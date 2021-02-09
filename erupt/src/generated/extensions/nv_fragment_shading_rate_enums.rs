@@ -6,7 +6,6 @@ pub const NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION: u32 = 1;
 pub const NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_fragment_shading_rate_enums");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV")]
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetFragmentShadingRateEnumNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateNV.html) · Enum"]

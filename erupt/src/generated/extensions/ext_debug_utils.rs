@@ -6,47 +6,36 @@ pub const EXT_DEBUG_UTILS_SPEC_VERSION: u32 = 2;
 pub const EXT_DEBUG_UTILS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_debug_utils");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT")]
 pub const FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetDebugUtilsObjectNameEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT")]
 pub const FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetDebugUtilsObjectTagEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkQueueInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT")]
 pub const FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DEBUG_UTILS_MESSENGER_EXT")]
 pub const FN_CREATE_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT")]
 pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT")]
 pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSubmitDebugUtilsMessageEXT");
 crate :: non_dispatchable_handle ! (DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle" , "VkDebugUtilsMessengerEXT") ;

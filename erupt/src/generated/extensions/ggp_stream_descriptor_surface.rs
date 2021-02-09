@@ -6,7 +6,6 @@ pub const GGP_STREAM_DESCRIPTOR_SURFACE_SPEC_VERSION: u32 = 1;
 pub const GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_GGP_stream_descriptor_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP")]
 pub const FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP: *const std::os::raw::c_char =
     crate::cstr!("vkCreateStreamDescriptorSurfaceGGP");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateFlagsGGP.html) · Bitmask of [`StreamDescriptorSurfaceCreateFlagBitsGGP`]"] # [doc (alias = "VkStreamDescriptorSurfaceCreateFlagsGGP")] # [derive (Default)] # [repr (transparent)] pub struct StreamDescriptorSurfaceCreateFlagsGGP : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

@@ -6,11 +6,9 @@ pub const KHR_ANDROID_SURFACE_SPEC_VERSION: u32 = 6;
 pub const KHR_ANDROID_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_android_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_ANDROID_SURFACE_KHR")]
 pub const FN_CREATE_ANDROID_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAndroidSurfaceKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/ANativeWindow.html) · Basetype"]
-#[doc(alias = "ANativeWindow")]
 pub type ANativeWindow = std::ffi::c_void;
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateFlagsKHR.html) · Bitmask of [`AndroidSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkAndroidSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AndroidSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`AndroidSurfaceCreateFlagsKHR`]"]

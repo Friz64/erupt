@@ -6,7 +6,6 @@ pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_semaphore_capabilities");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagsKHR.html) · Alias"]

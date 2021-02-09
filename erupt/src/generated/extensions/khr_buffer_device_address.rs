@@ -6,15 +6,12 @@ pub const KHR_BUFFER_DEVICE_ADDRESS_SPEC_VERSION: u32 = 1;
 pub const KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_buffer_device_address");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR")]
 pub const FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferOpaqueCaptureAddressKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_DEVICE_ADDRESS_KHR")]
 pub const FN_GET_BUFFER_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferDeviceAddressKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR")]
 pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddressKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesKHR.html) · Alias"]

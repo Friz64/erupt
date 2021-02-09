@@ -6,11 +6,9 @@ pub const KHR_XCB_SURFACE_SPEC_VERSION: u32 = 6;
 pub const KHR_XCB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_xcb_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_XCB_SURFACE_KHR")]
 pub const FN_CREATE_XCB_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateXcbSurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceXcbPresentationSupportKHR");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkXcbSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

@@ -6,7 +6,6 @@ pub const KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION: u32 = 10;
 pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_display_swapchain");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SHARED_SWAPCHAINS_KHR")]
 pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateSharedSwapchainsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]

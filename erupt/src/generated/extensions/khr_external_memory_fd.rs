@@ -6,10 +6,8 @@ pub const KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_memory_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_FD_KHR")]
 pub const FN_GET_MEMORY_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_FD_PROPERTIES_KHR")]
 pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryFdPropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]

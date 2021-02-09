@@ -6,23 +6,18 @@ pub const EXT_DEBUG_MARKER_SPEC_VERSION: u32 = 4;
 pub const EXT_DEBUG_MARKER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_debug_marker");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT")]
 pub const FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDebugMarkerSetObjectNameEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT")]
 pub const FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDebugMarkerSetObjectTagEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DEBUG_MARKER_BEGIN_EXT")]
 pub const FN_CMD_DEBUG_MARKER_BEGIN_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDebugMarkerBeginEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DEBUG_MARKER_END_EXT")]
 pub const FN_CMD_DEBUG_MARKER_END_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDebugMarkerEndEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DEBUG_MARKER_INSERT_EXT")]
 pub const FN_CMD_DEBUG_MARKER_INSERT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDebugMarkerInsertEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]

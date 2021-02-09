@@ -6,11 +6,9 @@ pub const KHR_EXTERNAL_MEMORY_WIN32_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_memory_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_WIN32_HANDLE_KHR")]
 pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR")]
 pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]

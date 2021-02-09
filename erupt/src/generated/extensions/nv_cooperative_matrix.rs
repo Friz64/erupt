@@ -6,7 +6,6 @@ pub const NV_COOPERATIVE_MATRIX_SPEC_VERSION: u32 = 1;
 pub const NV_COOPERATIVE_MATRIX_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_cooperative_matrix");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV")]
 pub const FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceCooperativeMatrixPropertiesNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScopeNV.html) · Enum"]

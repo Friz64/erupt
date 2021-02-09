@@ -6,15 +6,12 @@ pub const KHR_DEVICE_GROUP_SPEC_VERSION: u32 = 4;
 pub const KHR_DEVICE_GROUP_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_device_group");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR")]
 pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceGroupPeerMemoryFeaturesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEVICE_MASK_KHR")]
 pub const FN_CMD_SET_DEVICE_MASK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDeviceMaskKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DISPATCH_BASE_KHR")]
 pub const FN_CMD_DISPATCH_BASE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDispatchBaseKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagsKHR.html) · Alias"]

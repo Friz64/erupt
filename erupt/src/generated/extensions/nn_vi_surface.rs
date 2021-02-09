@@ -6,7 +6,6 @@ pub const NN_VI_SURFACE_SPEC_VERSION: u32 = 1;
 pub const NN_VI_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NN_vi_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_VI_SURFACE_NN")]
 pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char =
     crate::cstr!("vkCreateViSurfaceNN");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`]"] # [doc (alias = "VkViSurfaceCreateFlagsNN")] # [derive (Default)] # [repr (transparent)] pub struct ViSurfaceCreateFlagsNN : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

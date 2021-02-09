@@ -6,15 +6,12 @@ pub const KHR_PIPELINE_EXECUTABLE_PROPERTIES_SPEC_VERSION: u32 = 1;
 pub const KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_pipeline_executable_properties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR")]
 pub const FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPipelineExecutablePropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR")]
 pub const FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPipelineExecutableStatisticsKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR")]
 pub const FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPipelineExecutableInternalRepresentationsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableStatisticFormatKHR.html) · Enum"]

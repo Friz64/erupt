@@ -6,15 +6,12 @@ pub const NV_SHADING_RATE_IMAGE_SPEC_VERSION: u32 = 3;
 pub const NV_SHADING_RATE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_shading_rate_image");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_SHADING_RATE_IMAGE_NV")]
 pub const FN_CMD_BIND_SHADING_RATE_IMAGE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindShadingRateImageNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV")]
 pub const FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetViewportShadingRatePaletteNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_COARSE_SAMPLE_ORDER_NV")]
 pub const FN_CMD_SET_COARSE_SAMPLE_ORDER_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCoarseSampleOrderNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteEntryNV.html) · Enum"]

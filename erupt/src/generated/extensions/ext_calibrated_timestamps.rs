@@ -6,11 +6,9 @@ pub const EXT_CALIBRATED_TIMESTAMPS_SPEC_VERSION: u32 = 1;
 pub const EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_calibrated_timestamps");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceCalibrateableTimeDomainsEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_CALIBRATED_TIMESTAMPS_EXT")]
 pub const FN_GET_CALIBRATED_TIMESTAMPS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetCalibratedTimestampsEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimeDomainEXT.html) · Enum"]

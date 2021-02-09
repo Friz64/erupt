@@ -6,7 +6,6 @@ pub const NV_CLIP_SPACE_W_SCALING_SPEC_VERSION: u32 = 1;
 pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_clip_space_w_scaling");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_VIEWPORT_W_SCALING_NV")]
 pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetViewportWScalingNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]

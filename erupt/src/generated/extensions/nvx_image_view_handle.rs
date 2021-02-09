@@ -6,11 +6,9 @@ pub const NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION: u32 = 2;
 pub const NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NVX_image_view_handle");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_VIEW_HANDLE_NVX")]
 pub const FN_GET_IMAGE_VIEW_HANDLE_NVX: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageViewHandleNVX");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_VIEW_ADDRESS_NVX")]
 pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageViewAddressNVX");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]

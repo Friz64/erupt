@@ -9,49 +9,37 @@ pub const NV_RAY_TRACING_SPEC_VERSION: u32 = 3;
 pub const NV_RAY_TRACING_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_ray_tracing");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_COMPILE_DEFERRED_NV")]
 pub const FN_COMPILE_DEFERRED_NV: *const std::os::raw::c_char = crate::cstr!("vkCompileDeferredNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_ACCELERATION_STRUCTURE_NV")]
 pub const FN_CREATE_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_ACCELERATION_STRUCTURE_NV")]
 pub const FN_DESTROY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV")]
 pub const FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureMemoryRequirementsNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV")]
 pub const FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV: *const std::os::raw::c_char =
     crate::cstr!("vkBindAccelerationStructureMemoryNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_ACCELERATION_STRUCTURE_NV")]
 pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV")]
 pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV")]
 pub const FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBuildAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_TRACE_RAYS_NV")]
 pub const FN_CMD_TRACE_RAYS_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdTraceRaysNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV")]
 pub const FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureHandleNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_RAY_TRACING_PIPELINES_NV")]
 pub const FN_CREATE_RAY_TRACING_PIPELINES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCreateRayTracingPipelinesNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV")]
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingShaderGroupHandlesNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsNV.html) · Alias"]

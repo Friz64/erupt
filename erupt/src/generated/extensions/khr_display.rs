@@ -5,31 +5,24 @@ pub const KHR_DISPLAY_SPEC_VERSION: u32 = 23;
 #[doc(alias = "VK_KHR_DISPLAY_EXTENSION_NAME")]
 pub const KHR_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_display");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDisplayPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDisplayPlanePropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DISPLAY_PLANE_SUPPORTED_DISPLAYS_KHR")]
 pub const FN_GET_DISPLAY_PLANE_SUPPORTED_DISPLAYS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDisplayPlaneSupportedDisplaysKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DISPLAY_MODE_PROPERTIES_KHR")]
 pub const FN_GET_DISPLAY_MODE_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDisplayModePropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DISPLAY_MODE_KHR")]
 pub const FN_CREATE_DISPLAY_MODE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDisplayModeKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR")]
 pub const FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDisplayPlaneCapabilitiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DISPLAY_PLANE_SURFACE_KHR")]
 pub const FN_CREATE_DISPLAY_PLANE_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDisplayPlaneSurfaceKHR");
 crate :: non_dispatchable_handle ! (DisplayKHR , DISPLAY_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle" , "VkDisplayKHR") ;

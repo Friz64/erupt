@@ -6,38 +6,29 @@ pub const KHR_SWAPCHAIN_SPEC_VERSION: u32 = 70;
 pub const KHR_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_swapchain");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SWAPCHAIN_KHR")]
 pub const FN_CREATE_SWAPCHAIN_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateSwapchainKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SWAPCHAIN_KHR")]
 pub const FN_DESTROY_SWAPCHAIN_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroySwapchainKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SWAPCHAIN_IMAGES_KHR")]
 pub const FN_GET_SWAPCHAIN_IMAGES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainImagesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_NEXT_IMAGE_KHR")]
 pub const FN_ACQUIRE_NEXT_IMAGE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireNextImageKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_PRESENT_KHR")]
 pub const FN_QUEUE_PRESENT_KHR: *const std::os::raw::c_char = crate::cstr!("vkQueuePresentKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR")]
 pub const FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceGroupPresentCapabilitiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR")]
 pub const FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceGroupSurfacePresentModesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_NEXT_IMAGE2_KHR")]
 pub const FN_ACQUIRE_NEXT_IMAGE2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireNextImage2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDevicePresentRectanglesKHR");
 crate :: non_dispatchable_handle ! (SwapchainKHR , SWAPCHAIN_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle" , "VkSwapchainKHR") ;

@@ -6,11 +6,9 @@ pub const KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION: u32 = 1;
 pub const KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_get_surface_capabilities2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceFormats2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]

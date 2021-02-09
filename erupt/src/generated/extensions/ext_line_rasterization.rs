@@ -6,7 +6,6 @@ pub const EXT_LINE_RASTERIZATION_SPEC_VERSION: u32 = 1;
 pub const EXT_LINE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_line_rasterization");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_LINE_STIPPLE_EXT")]
 pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetLineStippleEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]

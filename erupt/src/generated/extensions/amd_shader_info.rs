@@ -6,7 +6,6 @@ pub const AMD_SHADER_INFO_SPEC_VERSION: u32 = 1;
 pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_shader_info");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SHADER_INFO_AMD")]
 pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!("vkGetShaderInfoAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum"]
 #[doc(alias = "VkShaderInfoTypeAMD")]

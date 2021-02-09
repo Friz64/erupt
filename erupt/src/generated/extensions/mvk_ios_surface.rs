@@ -6,7 +6,6 @@ pub const MVK_IOS_SURFACE_SPEC_VERSION: u32 = 3;
 pub const MVK_IOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_MVK_ios_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_IOS_SURFACE_MVK")]
 pub const FN_CREATE_IOS_SURFACE_MVK: *const std::os::raw::c_char =
     crate::cstr!("vkCreateIOSSurfaceMVK");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkIOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct IOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

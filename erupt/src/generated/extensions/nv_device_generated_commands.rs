@@ -6,27 +6,21 @@ pub const NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION: u32 = 3;
 pub const NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_device_generated_commands");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_EXECUTE_GENERATED_COMMANDS_NV")]
 pub const FN_CMD_EXECUTE_GENERATED_COMMANDS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdExecuteGeneratedCommandsNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV")]
 pub const FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPreprocessGeneratedCommandsNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV")]
 pub const FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindPipelineShaderGroupNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV")]
 pub const FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetGeneratedCommandsMemoryRequirementsNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV")]
 pub const FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCreateIndirectCommandsLayoutNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV")]
 pub const FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyIndirectCommandsLayoutNV");
 crate :: non_dispatchable_handle ! (IndirectCommandsLayoutNV , INDIRECT_COMMANDS_LAYOUT_NV , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle" , "VkIndirectCommandsLayoutNV") ;

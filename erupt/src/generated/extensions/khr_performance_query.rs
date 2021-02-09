@@ -6,21 +6,17 @@ pub const KHR_PERFORMANCE_QUERY_SPEC_VERSION: u32 = 1;
 pub const KHR_PERFORMANCE_QUERY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_performance_query");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR")]
 pub const FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR:
     *const std::os::raw::c_char =
     crate::cstr!("vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR:
     *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_PROFILING_LOCK_KHR")]
 pub const FN_ACQUIRE_PROFILING_LOCK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireProfilingLockKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RELEASE_PROFILING_LOCK_KHR")]
 pub const FN_RELEASE_PROFILING_LOCK_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkReleaseProfilingLockKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterScopeKHR.html) · Enum"]

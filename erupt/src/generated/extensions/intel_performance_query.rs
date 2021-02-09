@@ -6,39 +6,30 @@ pub const INTEL_PERFORMANCE_QUERY_SPEC_VERSION: u32 = 2;
 pub const INTEL_PERFORMANCE_QUERY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_INTEL_performance_query");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_INITIALIZE_PERFORMANCE_API_INTEL")]
 pub const FN_INITIALIZE_PERFORMANCE_API_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkInitializePerformanceApiINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_UNINITIALIZE_PERFORMANCE_API_INTEL")]
 pub const FN_UNINITIALIZE_PERFORMANCE_API_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkUninitializePerformanceApiINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_PERFORMANCE_MARKER_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_MARKER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceMarkerINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceStreamMarkerINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL")]
 pub const FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPerformanceOverrideINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkAcquirePerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkReleasePerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL")]
 pub const FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkQueueSetPerformanceConfigurationINTEL");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PERFORMANCE_PARAMETER_INTEL")]
 pub const FN_GET_PERFORMANCE_PARAMETER_INTEL: *const std::os::raw::c_char =
     crate::cstr!("vkGetPerformanceParameterINTEL");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfoINTEL.html) · Alias"]

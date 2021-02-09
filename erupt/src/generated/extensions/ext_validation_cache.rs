@@ -6,19 +6,15 @@ pub const EXT_VALIDATION_CACHE_SPEC_VERSION: u32 = 1;
 pub const EXT_VALIDATION_CACHE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_validation_cache");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_VALIDATION_CACHE_EXT")]
 pub const FN_CREATE_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_VALIDATION_CACHE_EXT")]
 pub const FN_DESTROY_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_VALIDATION_CACHE_DATA_EXT")]
 pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetValidationCacheDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_MERGE_VALIDATION_CACHES_EXT")]
 pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkMergeValidationCachesEXT");
 crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle" , "VkValidationCacheEXT") ;

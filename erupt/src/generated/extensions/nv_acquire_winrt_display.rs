@@ -6,11 +6,9 @@ pub const NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION: u32 = 1;
 pub const NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_acquire_winrt_display");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_WINRT_DISPLAY_NV")]
 pub const FN_ACQUIRE_WINRT_DISPLAY_NV: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireWinrtDisplayNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_WINRT_DISPLAY_NV")]
 pub const FN_GET_WINRT_DISPLAY_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetWinrtDisplayNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function"]

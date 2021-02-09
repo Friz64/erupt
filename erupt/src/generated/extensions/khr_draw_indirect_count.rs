@@ -6,11 +6,9 @@ pub const KHR_DRAW_INDIRECT_COUNT_SPEC_VERSION: u32 = 1;
 pub const KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_draw_indirect_count");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDIRECT_COUNT_KHR")]
 pub const FN_CMD_DRAW_INDIRECT_COUNT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectCountKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR")]
 pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndexedIndirectCountKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Alias"]

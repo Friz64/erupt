@@ -6,7 +6,6 @@ pub const EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION: u32 = 1;
 pub const EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_direct_mode_display");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RELEASE_DISPLAY_EXT")]
 pub const FN_RELEASE_DISPLAY_EXT: *const std::os::raw::c_char = crate::cstr!("vkReleaseDisplayEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseDisplayEXT.html) · Function"]
 #[allow(non_camel_case_types)]

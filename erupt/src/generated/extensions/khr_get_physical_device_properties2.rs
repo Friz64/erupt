@@ -6,31 +6,24 @@ pub const KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_SPEC_VERSION: u32 = 2;
 pub const KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_get_physical_device_properties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFeatures2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFormatProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceImageFormatProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceQueueFamilyProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceMemoryProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSparseImageFormatProperties2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2KHR.html) · Alias"]

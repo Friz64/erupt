@@ -6,19 +6,15 @@ pub const KHR_CREATE_RENDERPASS_2_SPEC_VERSION: u32 = 1;
 pub const KHR_CREATE_RENDERPASS_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_create_renderpass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_RENDER_PASS2_KHR")]
 pub const FN_CREATE_RENDER_PASS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateRenderPass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_RENDER_PASS2_KHR")]
 pub const FN_CMD_BEGIN_RENDER_PASS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginRenderPass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_NEXT_SUBPASS2_KHR")]
 pub const FN_CMD_NEXT_SUBPASS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdNextSubpass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_RENDER_PASS2_KHR")]
 pub const FN_CMD_END_RENDER_PASS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndRenderPass2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2KHR.html) · Alias"]

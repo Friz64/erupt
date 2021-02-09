@@ -6,15 +6,12 @@ pub const EXT_DEBUG_REPORT_SPEC_VERSION: u32 = 9;
 pub const EXT_DEBUG_REPORT_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_debug_report");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DEBUG_REPORT_CALLBACK_EXT")]
 pub const FN_CREATE_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDebugReportCallbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT")]
 pub const FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDebugReportCallbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DEBUG_REPORT_MESSAGE_EXT")]
 pub const FN_DEBUG_REPORT_MESSAGE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDebugReportMessageEXT");
 crate :: non_dispatchable_handle ! (DebugReportCallbackEXT , DEBUG_REPORT_CALLBACK_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackEXT.html) · Non-dispatchable Handle" , "VkDebugReportCallbackEXT") ;

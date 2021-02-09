@@ -6,7 +6,6 @@ pub const FUCHSIA_IMAGEPIPE_SURFACE_SPEC_VERSION: u32 = 1;
 pub const FUCHSIA_IMAGEPIPE_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_FUCHSIA_imagepipe_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA")]
 pub const FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA: *const std::os::raw::c_char =
     crate::cstr!("vkCreateImagePipeSurfaceFUCHSIA");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateFlagsFUCHSIA.html) · Bitmask of [`ImagePipeSurfaceCreateFlagBitsFUCHSIA`]"] # [doc (alias = "VkImagePipeSurfaceCreateFlagsFUCHSIA")] # [derive (Default)] # [repr (transparent)] pub struct ImagePipeSurfaceCreateFlagsFUCHSIA : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

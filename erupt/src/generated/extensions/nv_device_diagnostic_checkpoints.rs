@@ -6,11 +6,9 @@ pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION: u32 = 2;
 pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_device_diagnostic_checkpoints");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_CHECKPOINT_NV")]
 pub const FN_CMD_SET_CHECKPOINT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCheckpointNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_QUEUE_CHECKPOINT_DATA_NV")]
 pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetQueueCheckpointDataNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]

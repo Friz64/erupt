@@ -6,11 +6,9 @@ pub const KHR_WAYLAND_SURFACE_SPEC_VERSION: u32 = 6;
 pub const KHR_WAYLAND_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_wayland_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_WAYLAND_SURFACE_KHR")]
 pub const FN_CREATE_WAYLAND_SURFACE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateWaylandSurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceWaylandPresentationSupportKHR");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkWaylandSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

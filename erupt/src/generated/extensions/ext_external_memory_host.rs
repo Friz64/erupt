@@ -6,7 +6,6 @@ pub const EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION: u32 = 1;
 pub const EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_external_memory_host");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT")]
 pub const FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryHostPointerPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]

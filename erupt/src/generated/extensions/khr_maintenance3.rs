@@ -6,7 +6,6 @@ pub const KHR_MAINTENANCE3_SPEC_VERSION: u32 = 1;
 pub const KHR_MAINTENANCE3_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_maintenance3");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR")]
 pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDescriptorSetLayoutSupportKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias"]

@@ -6,11 +6,9 @@ pub const KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION: u32 = 1;
 pub const KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_fragment_shading_rate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR")]
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetFragmentShadingRateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFragmentShadingRatesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateCombinerOpKHR.html) · Enum"]

@@ -6,14 +6,11 @@ pub const KHR_TIMELINE_SEMAPHORE_SPEC_VERSION: u32 = 2;
 pub const KHR_TIMELINE_SEMAPHORE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_timeline_semaphore");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SEMAPHORE_COUNTER_VALUE_KHR")]
 pub const FN_GET_SEMAPHORE_COUNTER_VALUE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSemaphoreCounterValueKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_WAIT_SEMAPHORES_KHR")]
 pub const FN_WAIT_SEMAPHORES_KHR: *const std::os::raw::c_char = crate::cstr!("vkWaitSemaphoresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SIGNAL_SEMAPHORE_KHR")]
 pub const FN_SIGNAL_SEMAPHORE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkSignalSemaphoreKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagsKHR.html) · Alias"]

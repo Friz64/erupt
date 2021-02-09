@@ -44,481 +44,344 @@ pub const QUEUE_FAMILY_IGNORED: u32 = 4294967295;
 #[doc(alias = "VK_SUBPASS_EXTERNAL")]
 pub const SUBPASS_EXTERNAL: u32 = 4294967295;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_INSTANCE")]
 pub const FN_CREATE_INSTANCE: *const std::os::raw::c_char = crate::cstr!("vkCreateInstance");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_INSTANCE")]
 pub const FN_DESTROY_INSTANCE: *const std::os::raw::c_char = crate::cstr!("vkDestroyInstance");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_PHYSICAL_DEVICES")]
 pub const FN_ENUMERATE_PHYSICAL_DEVICES: *const std::os::raw::c_char =
     crate::cstr!("vkEnumeratePhysicalDevices");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_PROC_ADDR")]
 pub const FN_GET_DEVICE_PROC_ADDR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceProcAddr");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_INSTANCE_PROC_ADDR")]
 pub const FN_GET_INSTANCE_PROC_ADDR: *const std::os::raw::c_char =
     crate::cstr!("vkGetInstanceProcAddr");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceQueueFamilyProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceMemoryProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FEATURES")]
 pub const FN_GET_PHYSICAL_DEVICE_FEATURES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFeatures");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFormatProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceImageFormatProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DEVICE")]
 pub const FN_CREATE_DEVICE: *const std::os::raw::c_char = crate::cstr!("vkCreateDevice");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DEVICE")]
 pub const FN_DESTROY_DEVICE: *const std::os::raw::c_char = crate::cstr!("vkDestroyDevice");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES")]
 pub const FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkEnumerateInstanceLayerProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES")]
 pub const FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkEnumerateInstanceExtensionProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_DEVICE_LAYER_PROPERTIES")]
 pub const FN_ENUMERATE_DEVICE_LAYER_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkEnumerateDeviceLayerProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES")]
 pub const FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkEnumerateDeviceExtensionProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_QUEUE")]
 pub const FN_GET_DEVICE_QUEUE: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceQueue");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_SUBMIT")]
 pub const FN_QUEUE_SUBMIT: *const std::os::raw::c_char = crate::cstr!("vkQueueSubmit");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_WAIT_IDLE")]
 pub const FN_QUEUE_WAIT_IDLE: *const std::os::raw::c_char = crate::cstr!("vkQueueWaitIdle");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DEVICE_WAIT_IDLE")]
 pub const FN_DEVICE_WAIT_IDLE: *const std::os::raw::c_char = crate::cstr!("vkDeviceWaitIdle");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ALLOCATE_MEMORY")]
 pub const FN_ALLOCATE_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkAllocateMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_FREE_MEMORY")]
 pub const FN_FREE_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkFreeMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_MAP_MEMORY")]
 pub const FN_MAP_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkMapMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_UNMAP_MEMORY")]
 pub const FN_UNMAP_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkUnmapMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_FLUSH_MAPPED_MEMORY_RANGES")]
 pub const FN_FLUSH_MAPPED_MEMORY_RANGES: *const std::os::raw::c_char =
     crate::cstr!("vkFlushMappedMemoryRanges");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_INVALIDATE_MAPPED_MEMORY_RANGES")]
 pub const FN_INVALIDATE_MAPPED_MEMORY_RANGES: *const std::os::raw::c_char =
     crate::cstr!("vkInvalidateMappedMemoryRanges");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_MEMORY_COMMITMENT")]
 pub const FN_GET_DEVICE_MEMORY_COMMITMENT: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceMemoryCommitment");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_MEMORY_REQUIREMENTS")]
 pub const FN_GET_BUFFER_MEMORY_REQUIREMENTS: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferMemoryRequirements");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_BUFFER_MEMORY")]
 pub const FN_BIND_BUFFER_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkBindBufferMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_MEMORY_REQUIREMENTS")]
 pub const FN_GET_IMAGE_MEMORY_REQUIREMENTS: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageMemoryRequirements");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_IMAGE_MEMORY")]
 pub const FN_BIND_IMAGE_MEMORY: *const std::os::raw::c_char = crate::cstr!("vkBindImageMemory");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS")]
 pub const FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageSparseMemoryRequirements");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSparseImageFormatProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_QUEUE_BIND_SPARSE")]
 pub const FN_QUEUE_BIND_SPARSE: *const std::os::raw::c_char = crate::cstr!("vkQueueBindSparse");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_FENCE")]
 pub const FN_CREATE_FENCE: *const std::os::raw::c_char = crate::cstr!("vkCreateFence");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_FENCE")]
 pub const FN_DESTROY_FENCE: *const std::os::raw::c_char = crate::cstr!("vkDestroyFence");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_FENCES")]
 pub const FN_RESET_FENCES: *const std::os::raw::c_char = crate::cstr!("vkResetFences");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_FENCE_STATUS")]
 pub const FN_GET_FENCE_STATUS: *const std::os::raw::c_char = crate::cstr!("vkGetFenceStatus");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_WAIT_FOR_FENCES")]
 pub const FN_WAIT_FOR_FENCES: *const std::os::raw::c_char = crate::cstr!("vkWaitForFences");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SEMAPHORE")]
 pub const FN_CREATE_SEMAPHORE: *const std::os::raw::c_char = crate::cstr!("vkCreateSemaphore");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SEMAPHORE")]
 pub const FN_DESTROY_SEMAPHORE: *const std::os::raw::c_char = crate::cstr!("vkDestroySemaphore");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_EVENT")]
 pub const FN_CREATE_EVENT: *const std::os::raw::c_char = crate::cstr!("vkCreateEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_EVENT")]
 pub const FN_DESTROY_EVENT: *const std::os::raw::c_char = crate::cstr!("vkDestroyEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_EVENT_STATUS")]
 pub const FN_GET_EVENT_STATUS: *const std::os::raw::c_char = crate::cstr!("vkGetEventStatus");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_EVENT")]
 pub const FN_SET_EVENT: *const std::os::raw::c_char = crate::cstr!("vkSetEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_EVENT")]
 pub const FN_RESET_EVENT: *const std::os::raw::c_char = crate::cstr!("vkResetEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_QUERY_POOL")]
 pub const FN_CREATE_QUERY_POOL: *const std::os::raw::c_char = crate::cstr!("vkCreateQueryPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_QUERY_POOL")]
 pub const FN_DESTROY_QUERY_POOL: *const std::os::raw::c_char = crate::cstr!("vkDestroyQueryPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_QUERY_POOL_RESULTS")]
 pub const FN_GET_QUERY_POOL_RESULTS: *const std::os::raw::c_char =
     crate::cstr!("vkGetQueryPoolResults");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_BUFFER")]
 pub const FN_CREATE_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkCreateBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_BUFFER")]
 pub const FN_DESTROY_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkDestroyBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_BUFFER_VIEW")]
 pub const FN_CREATE_BUFFER_VIEW: *const std::os::raw::c_char = crate::cstr!("vkCreateBufferView");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_BUFFER_VIEW")]
 pub const FN_DESTROY_BUFFER_VIEW: *const std::os::raw::c_char = crate::cstr!("vkDestroyBufferView");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_IMAGE")]
 pub const FN_CREATE_IMAGE: *const std::os::raw::c_char = crate::cstr!("vkCreateImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_IMAGE")]
 pub const FN_DESTROY_IMAGE: *const std::os::raw::c_char = crate::cstr!("vkDestroyImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_SUBRESOURCE_LAYOUT")]
 pub const FN_GET_IMAGE_SUBRESOURCE_LAYOUT: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageSubresourceLayout");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_IMAGE_VIEW")]
 pub const FN_CREATE_IMAGE_VIEW: *const std::os::raw::c_char = crate::cstr!("vkCreateImageView");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_IMAGE_VIEW")]
 pub const FN_DESTROY_IMAGE_VIEW: *const std::os::raw::c_char = crate::cstr!("vkDestroyImageView");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SHADER_MODULE")]
 pub const FN_CREATE_SHADER_MODULE: *const std::os::raw::c_char =
     crate::cstr!("vkCreateShaderModule");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SHADER_MODULE")]
 pub const FN_DESTROY_SHADER_MODULE: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyShaderModule");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_PIPELINE_CACHE")]
 pub const FN_CREATE_PIPELINE_CACHE: *const std::os::raw::c_char =
     crate::cstr!("vkCreatePipelineCache");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_PIPELINE_CACHE")]
 pub const FN_DESTROY_PIPELINE_CACHE: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyPipelineCache");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PIPELINE_CACHE_DATA")]
 pub const FN_GET_PIPELINE_CACHE_DATA: *const std::os::raw::c_char =
     crate::cstr!("vkGetPipelineCacheData");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_MERGE_PIPELINE_CACHES")]
 pub const FN_MERGE_PIPELINE_CACHES: *const std::os::raw::c_char =
     crate::cstr!("vkMergePipelineCaches");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_GRAPHICS_PIPELINES")]
 pub const FN_CREATE_GRAPHICS_PIPELINES: *const std::os::raw::c_char =
     crate::cstr!("vkCreateGraphicsPipelines");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_COMPUTE_PIPELINES")]
 pub const FN_CREATE_COMPUTE_PIPELINES: *const std::os::raw::c_char =
     crate::cstr!("vkCreateComputePipelines");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_PIPELINE")]
 pub const FN_DESTROY_PIPELINE: *const std::os::raw::c_char = crate::cstr!("vkDestroyPipeline");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_PIPELINE_LAYOUT")]
 pub const FN_CREATE_PIPELINE_LAYOUT: *const std::os::raw::c_char =
     crate::cstr!("vkCreatePipelineLayout");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_PIPELINE_LAYOUT")]
 pub const FN_DESTROY_PIPELINE_LAYOUT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyPipelineLayout");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SAMPLER")]
 pub const FN_CREATE_SAMPLER: *const std::os::raw::c_char = crate::cstr!("vkCreateSampler");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SAMPLER")]
 pub const FN_DESTROY_SAMPLER: *const std::os::raw::c_char = crate::cstr!("vkDestroySampler");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DESCRIPTOR_SET_LAYOUT")]
 pub const FN_CREATE_DESCRIPTOR_SET_LAYOUT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDescriptorSetLayout");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DESCRIPTOR_SET_LAYOUT")]
 pub const FN_DESTROY_DESCRIPTOR_SET_LAYOUT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDescriptorSetLayout");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DESCRIPTOR_POOL")]
 pub const FN_CREATE_DESCRIPTOR_POOL: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDescriptorPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DESCRIPTOR_POOL")]
 pub const FN_DESTROY_DESCRIPTOR_POOL: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDescriptorPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_DESCRIPTOR_POOL")]
 pub const FN_RESET_DESCRIPTOR_POOL: *const std::os::raw::c_char =
     crate::cstr!("vkResetDescriptorPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ALLOCATE_DESCRIPTOR_SETS")]
 pub const FN_ALLOCATE_DESCRIPTOR_SETS: *const std::os::raw::c_char =
     crate::cstr!("vkAllocateDescriptorSets");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_FREE_DESCRIPTOR_SETS")]
 pub const FN_FREE_DESCRIPTOR_SETS: *const std::os::raw::c_char =
     crate::cstr!("vkFreeDescriptorSets");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_UPDATE_DESCRIPTOR_SETS")]
 pub const FN_UPDATE_DESCRIPTOR_SETS: *const std::os::raw::c_char =
     crate::cstr!("vkUpdateDescriptorSets");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_FRAMEBUFFER")]
 pub const FN_CREATE_FRAMEBUFFER: *const std::os::raw::c_char = crate::cstr!("vkCreateFramebuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_FRAMEBUFFER")]
 pub const FN_DESTROY_FRAMEBUFFER: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyFramebuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_RENDER_PASS")]
 pub const FN_CREATE_RENDER_PASS: *const std::os::raw::c_char = crate::cstr!("vkCreateRenderPass");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_RENDER_PASS")]
 pub const FN_DESTROY_RENDER_PASS: *const std::os::raw::c_char = crate::cstr!("vkDestroyRenderPass");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RENDER_AREA_GRANULARITY")]
 pub const FN_GET_RENDER_AREA_GRANULARITY: *const std::os::raw::c_char =
     crate::cstr!("vkGetRenderAreaGranularity");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_COMMAND_POOL")]
 pub const FN_CREATE_COMMAND_POOL: *const std::os::raw::c_char = crate::cstr!("vkCreateCommandPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_COMMAND_POOL")]
 pub const FN_DESTROY_COMMAND_POOL: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyCommandPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_COMMAND_POOL")]
 pub const FN_RESET_COMMAND_POOL: *const std::os::raw::c_char = crate::cstr!("vkResetCommandPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ALLOCATE_COMMAND_BUFFERS")]
 pub const FN_ALLOCATE_COMMAND_BUFFERS: *const std::os::raw::c_char =
     crate::cstr!("vkAllocateCommandBuffers");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_FREE_COMMAND_BUFFERS")]
 pub const FN_FREE_COMMAND_BUFFERS: *const std::os::raw::c_char =
     crate::cstr!("vkFreeCommandBuffers");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BEGIN_COMMAND_BUFFER")]
 pub const FN_BEGIN_COMMAND_BUFFER: *const std::os::raw::c_char =
     crate::cstr!("vkBeginCommandBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_END_COMMAND_BUFFER")]
 pub const FN_END_COMMAND_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkEndCommandBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_COMMAND_BUFFER")]
 pub const FN_RESET_COMMAND_BUFFER: *const std::os::raw::c_char =
     crate::cstr!("vkResetCommandBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_PIPELINE")]
 pub const FN_CMD_BIND_PIPELINE: *const std::os::raw::c_char = crate::cstr!("vkCmdBindPipeline");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_VIEWPORT")]
 pub const FN_CMD_SET_VIEWPORT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewport");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_SCISSOR")]
 pub const FN_CMD_SET_SCISSOR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetScissor");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_LINE_WIDTH")]
 pub const FN_CMD_SET_LINE_WIDTH: *const std::os::raw::c_char = crate::cstr!("vkCmdSetLineWidth");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_BIAS")]
 pub const FN_CMD_SET_DEPTH_BIAS: *const std::os::raw::c_char = crate::cstr!("vkCmdSetDepthBias");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_BLEND_CONSTANTS")]
 pub const FN_CMD_SET_BLEND_CONSTANTS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetBlendConstants");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_BOUNDS")]
 pub const FN_CMD_SET_DEPTH_BOUNDS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthBounds");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_STENCIL_COMPARE_MASK")]
 pub const FN_CMD_SET_STENCIL_COMPARE_MASK: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilCompareMask");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_STENCIL_WRITE_MASK")]
 pub const FN_CMD_SET_STENCIL_WRITE_MASK: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilWriteMask");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_STENCIL_REFERENCE")]
 pub const FN_CMD_SET_STENCIL_REFERENCE: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilReference");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_DESCRIPTOR_SETS")]
 pub const FN_CMD_BIND_DESCRIPTOR_SETS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindDescriptorSets");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_INDEX_BUFFER")]
 pub const FN_CMD_BIND_INDEX_BUFFER: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindIndexBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_VERTEX_BUFFERS")]
 pub const FN_CMD_BIND_VERTEX_BUFFERS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindVertexBuffers");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW")]
 pub const FN_CMD_DRAW: *const std::os::raw::c_char = crate::cstr!("vkCmdDraw");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDEXED")]
 pub const FN_CMD_DRAW_INDEXED: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndexed");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDIRECT")]
 pub const FN_CMD_DRAW_INDIRECT: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndirect");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDEXED_INDIRECT")]
 pub const FN_CMD_DRAW_INDEXED_INDIRECT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndexedIndirect");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DISPATCH")]
 pub const FN_CMD_DISPATCH: *const std::os::raw::c_char = crate::cstr!("vkCmdDispatch");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DISPATCH_INDIRECT")]
 pub const FN_CMD_DISPATCH_INDIRECT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDispatchIndirect");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_BUFFER")]
 pub const FN_CMD_COPY_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_IMAGE")]
 pub const FN_CMD_COPY_IMAGE: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BLIT_IMAGE")]
 pub const FN_CMD_BLIT_IMAGE: *const std::os::raw::c_char = crate::cstr!("vkCmdBlitImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_BUFFER_TO_IMAGE")]
 pub const FN_CMD_COPY_BUFFER_TO_IMAGE: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyBufferToImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_IMAGE_TO_BUFFER")]
 pub const FN_CMD_COPY_IMAGE_TO_BUFFER: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyImageToBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_UPDATE_BUFFER")]
 pub const FN_CMD_UPDATE_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkCmdUpdateBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_FILL_BUFFER")]
 pub const FN_CMD_FILL_BUFFER: *const std::os::raw::c_char = crate::cstr!("vkCmdFillBuffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_CLEAR_COLOR_IMAGE")]
 pub const FN_CMD_CLEAR_COLOR_IMAGE: *const std::os::raw::c_char =
     crate::cstr!("vkCmdClearColorImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_CLEAR_DEPTH_STENCIL_IMAGE")]
 pub const FN_CMD_CLEAR_DEPTH_STENCIL_IMAGE: *const std::os::raw::c_char =
     crate::cstr!("vkCmdClearDepthStencilImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_CLEAR_ATTACHMENTS")]
 pub const FN_CMD_CLEAR_ATTACHMENTS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdClearAttachments");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_RESOLVE_IMAGE")]
 pub const FN_CMD_RESOLVE_IMAGE: *const std::os::raw::c_char = crate::cstr!("vkCmdResolveImage");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_EVENT")]
 pub const FN_CMD_SET_EVENT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_RESET_EVENT")]
 pub const FN_CMD_RESET_EVENT: *const std::os::raw::c_char = crate::cstr!("vkCmdResetEvent");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_WAIT_EVENTS")]
 pub const FN_CMD_WAIT_EVENTS: *const std::os::raw::c_char = crate::cstr!("vkCmdWaitEvents");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_PIPELINE_BARRIER")]
 pub const FN_CMD_PIPELINE_BARRIER: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPipelineBarrier");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_QUERY")]
 pub const FN_CMD_BEGIN_QUERY: *const std::os::raw::c_char = crate::cstr!("vkCmdBeginQuery");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_QUERY")]
 pub const FN_CMD_END_QUERY: *const std::os::raw::c_char = crate::cstr!("vkCmdEndQuery");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_RESET_QUERY_POOL")]
 pub const FN_CMD_RESET_QUERY_POOL: *const std::os::raw::c_char =
     crate::cstr!("vkCmdResetQueryPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_WRITE_TIMESTAMP")]
 pub const FN_CMD_WRITE_TIMESTAMP: *const std::os::raw::c_char = crate::cstr!("vkCmdWriteTimestamp");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_QUERY_POOL_RESULTS")]
 pub const FN_CMD_COPY_QUERY_POOL_RESULTS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyQueryPoolResults");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_PUSH_CONSTANTS")]
 pub const FN_CMD_PUSH_CONSTANTS: *const std::os::raw::c_char = crate::cstr!("vkCmdPushConstants");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_RENDER_PASS")]
 pub const FN_CMD_BEGIN_RENDER_PASS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginRenderPass");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_NEXT_SUBPASS")]
 pub const FN_CMD_NEXT_SUBPASS: *const std::os::raw::c_char = crate::cstr!("vkCmdNextSubpass");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_RENDER_PASS")]
 pub const FN_CMD_END_RENDER_PASS: *const std::os::raw::c_char = crate::cstr!("vkCmdEndRenderPass");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_EXECUTE_COMMANDS")]
 pub const FN_CMD_EXECUTE_COMMANDS: *const std::os::raw::c_char =
     crate::cstr!("vkCmdExecuteCommands");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleMask.html) · Basetype"]

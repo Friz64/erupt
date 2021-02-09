@@ -6,7 +6,6 @@ pub const MVK_MACOS_SURFACE_SPEC_VERSION: u32 = 3;
 pub const MVK_MACOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_MVK_macos_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_MAC_OS_SURFACE_MVK")]
 pub const FN_CREATE_MAC_OS_SURFACE_MVK: *const std::os::raw::c_char =
     crate::cstr!("vkCreateMacOSSurfaceMVK");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkMacOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct MacOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

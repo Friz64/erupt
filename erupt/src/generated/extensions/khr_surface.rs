@@ -5,22 +5,17 @@ pub const KHR_SURFACE_SPEC_VERSION: u32 = 25;
 #[doc(alias = "VK_KHR_SURFACE_EXTENSION_NAME")]
 pub const KHR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SURFACE_KHR")]
 pub const FN_DESTROY_SURFACE_KHR: *const std::os::raw::c_char = crate::cstr!("vkDestroySurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceSupportKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceFormatsKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfacePresentModesKHR");
 crate :: non_dispatchable_handle ! (SurfaceKHR , SURFACE_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle" , "VkSurfaceKHR") ;

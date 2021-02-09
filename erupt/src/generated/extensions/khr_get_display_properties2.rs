@@ -6,19 +6,15 @@ pub const KHR_GET_DISPLAY_PROPERTIES_2_SPEC_VERSION: u32 = 1;
 pub const KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_get_display_properties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDisplayProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR")]
 pub const FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceDisplayPlaneProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DISPLAY_MODE_PROPERTIES2_KHR")]
 pub const FN_GET_DISPLAY_MODE_PROPERTIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDisplayModeProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR")]
 pub const FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDisplayPlaneCapabilities2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html) · Function"]

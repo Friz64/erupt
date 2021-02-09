@@ -6,7 +6,6 @@ pub const AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION: u32 = 1;
 pub const AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_AMD_display_native_hdr");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_LOCAL_DIMMING_AMD")]
 pub const FN_SET_LOCAL_DIMMING_AMD: *const std::os::raw::c_char =
     crate::cstr!("vkSetLocalDimmingAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]

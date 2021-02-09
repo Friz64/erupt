@@ -6,11 +6,9 @@ pub const GOOGLE_DISPLAY_TIMING_SPEC_VERSION: u32 = 1;
 pub const GOOGLE_DISPLAY_TIMING_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_GOOGLE_display_timing");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_REFRESH_CYCLE_DURATION_GOOGLE")]
 pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char =
     crate::cstr!("vkGetRefreshCycleDurationGOOGLE");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PAST_PRESENTATION_TIMING_GOOGLE")]
 pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char =
     crate::cstr!("vkGetPastPresentationTimingGOOGLE");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]

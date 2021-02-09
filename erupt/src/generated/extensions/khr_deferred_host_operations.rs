@@ -6,23 +6,18 @@ pub const KHR_DEFERRED_HOST_OPERATIONS_SPEC_VERSION: u32 = 4;
 pub const KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_deferred_host_operations");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DEFERRED_OPERATION_KHR")]
 pub const FN_CREATE_DEFERRED_OPERATION_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDeferredOperationKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DEFERRED_OPERATION_KHR")]
 pub const FN_DESTROY_DEFERRED_OPERATION_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDeferredOperationKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR")]
 pub const FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeferredOperationMaxConcurrencyKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEFERRED_OPERATION_RESULT_KHR")]
 pub const FN_GET_DEFERRED_OPERATION_RESULT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeferredOperationResultKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DEFERRED_OPERATION_JOIN_KHR")]
 pub const FN_DEFERRED_OPERATION_JOIN_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDeferredOperationJoinKHR");
 crate :: non_dispatchable_handle ! (DeferredOperationKHR , DEFERRED_OPERATION_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle" , "VkDeferredOperationKHR") ;

@@ -6,10 +6,8 @@ pub const KHR_EXTERNAL_FENCE_FD_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_fence_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_FENCE_FD_KHR")]
 pub const FN_GET_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetFenceFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_IMPORT_FENCE_FD_KHR")]
 pub const FN_IMPORT_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]

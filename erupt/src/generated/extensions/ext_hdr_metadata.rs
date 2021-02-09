@@ -6,7 +6,6 @@ pub const EXT_HDR_METADATA_SPEC_VERSION: u32 = 2;
 pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_hdr_metadata");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_HDR_METADATA_EXT")]
 pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetHdrMetadataEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]

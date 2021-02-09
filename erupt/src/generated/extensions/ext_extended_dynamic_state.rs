@@ -6,51 +6,39 @@ pub const EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION: u32 = 1;
 pub const EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_extended_dynamic_state");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_CULL_MODE_EXT")]
 pub const FN_CMD_SET_CULL_MODE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetCullModeEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_FRONT_FACE_EXT")]
 pub const FN_CMD_SET_FRONT_FACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetFrontFaceEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT")]
 pub const FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetPrimitiveTopologyEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT")]
 pub const FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetViewportWithCountEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_SCISSOR_WITH_COUNT_EXT")]
 pub const FN_CMD_SET_SCISSOR_WITH_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetScissorWithCountEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_VERTEX_BUFFERS2_EXT")]
 pub const FN_CMD_BIND_VERTEX_BUFFERS2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindVertexBuffers2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthWriteEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_COMPARE_OP_EXT")]
 pub const FN_CMD_SET_DEPTH_COMPARE_OP_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthCompareOpEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetDepthBoundsTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_STENCIL_TEST_ENABLE_EXT")]
 pub const FN_CMD_SET_STENCIL_TEST_ENABLE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_STENCIL_OP_EXT")]
 pub const FN_CMD_SET_STENCIL_OP_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetStencilOpEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]

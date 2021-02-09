@@ -9,30 +9,23 @@ pub const KHR_RAY_TRACING_PIPELINE_SPEC_VERSION: u32 = 1;
 pub const KHR_RAY_TRACING_PIPELINE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_ray_tracing_pipeline");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_TRACE_RAYS_KHR")]
 pub const FN_CMD_TRACE_RAYS_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdTraceRaysKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR")]
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingShaderGroupHandlesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR")]
 pub const FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingCaptureReplayShaderGroupHandlesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_RAY_TRACING_PIPELINES_KHR")]
 pub const FN_CREATE_RAY_TRACING_PIPELINES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateRayTracingPipelinesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_TRACE_RAYS_INDIRECT_KHR")]
 pub const FN_CMD_TRACE_RAYS_INDIRECT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdTraceRaysIndirectKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR")]
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetRayTracingShaderGroupStackSizeKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR")]
 pub const FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetRayTracingPipelineStackSizeKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeKHR.html) · Enum"]

@@ -6,11 +6,9 @@ pub const EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION: u32 = 1;
 pub const EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_acquire_xlib_display");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_XLIB_DISPLAY_EXT")]
 pub const FN_ACQUIRE_XLIB_DISPLAY_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireXlibDisplayEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_RAND_R_OUTPUT_DISPLAY_EXT")]
 pub const FN_GET_RAND_R_OUTPUT_DISPLAY_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetRandROutputDisplayEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function"]

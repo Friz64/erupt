@@ -6,11 +6,9 @@ pub const KHR_BIND_MEMORY_2_SPEC_VERSION: u32 = 1;
 pub const KHR_BIND_MEMORY_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_bind_memory2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_BUFFER_MEMORY2_KHR")]
 pub const FN_BIND_BUFFER_MEMORY2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkBindBufferMemory2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_IMAGE_MEMORY2_KHR")]
 pub const FN_BIND_IMAGE_MEMORY2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkBindImageMemory2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias"]

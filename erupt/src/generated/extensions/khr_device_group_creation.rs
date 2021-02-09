@@ -9,7 +9,6 @@ pub const KHR_DEVICE_GROUP_CREATION_SPEC_VERSION: u32 = 1;
 pub const KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_device_group_creation");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR")]
 pub const FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkEnumeratePhysicalDeviceGroupsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGroupPropertiesKHR.html) · Alias"]

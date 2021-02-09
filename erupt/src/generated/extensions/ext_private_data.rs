@@ -6,19 +6,15 @@ pub const EXT_PRIVATE_DATA_SPEC_VERSION: u32 = 1;
 pub const EXT_PRIVATE_DATA_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_private_data");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_PRIVATE_DATA_SLOT_EXT")]
 pub const FN_CREATE_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreatePrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_PRIVATE_DATA_SLOT_EXT")]
 pub const FN_DESTROY_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyPrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SET_PRIVATE_DATA_EXT")]
 pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkSetPrivateDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PRIVATE_DATA_EXT")]
 pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPrivateDataEXT");
 crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle" , "VkPrivateDataSlotEXT") ;

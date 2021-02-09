@@ -6,11 +6,9 @@ pub const KHR_PUSH_DESCRIPTOR_SPEC_VERSION: u32 = 2;
 pub const KHR_PUSH_DESCRIPTOR_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_push_descriptor");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_PUSH_DESCRIPTOR_SET_KHR")]
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPushDescriptorSetKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR")]
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdPushDescriptorSetWithTemplateKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]

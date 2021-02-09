@@ -6,11 +6,9 @@ pub const KHR_EXTERNAL_SEMAPHORE_WIN32_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_external_semaphore_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SEMAPHORE_WIN32_HANDLE_KHR")]
 pub const FN_GET_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSemaphoreWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR")]
 pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkImportSemaphoreWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]

@@ -6,7 +6,6 @@ pub const NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION: u32 = 1;
 pub const NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_external_memory_capabilities");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsNV.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBitsNV`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_WIN32_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_NV . 0 ; const OPAQUE_WIN32_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_KMT_NV . 0 ; const D3D11_IMAGE_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_NV . 0 ; const D3D11_IMAGE_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_KMT_NV . 0 ; } }

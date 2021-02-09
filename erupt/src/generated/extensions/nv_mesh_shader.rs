@@ -6,15 +6,12 @@ pub const NV_MESH_SHADER_SPEC_VERSION: u32 = 1;
 pub const NV_MESH_SHADER_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_mesh_shader");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV")]
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]

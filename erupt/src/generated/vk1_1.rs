@@ -8,109 +8,81 @@ pub const QUEUE_FAMILY_EXTERNAL: u32 = 4294967294;
 #[doc(alias = "VK_MAX_DEVICE_GROUP_SIZE")]
 pub const MAX_DEVICE_GROUP_SIZE: u32 = 32;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_INSTANCE_VERSION")]
 pub const FN_ENUMERATE_INSTANCE_VERSION: *const std::os::raw::c_char =
     crate::cstr!("vkEnumerateInstanceVersion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FEATURES2")]
 pub const FN_GET_PHYSICAL_DEVICE_FEATURES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFeatures2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceImageFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceQueueFamilyProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceMemoryProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2")]
 pub const FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSparseImageFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_TRIM_COMMAND_POOL")]
 pub const FN_TRIM_COMMAND_POOL: *const std::os::raw::c_char = crate::cstr!("vkTrimCommandPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalBufferProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalSemaphoreProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES")]
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceExternalFenceProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS")]
 pub const FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS: *const std::os::raw::c_char =
     crate::cstr!("vkEnumeratePhysicalDeviceGroups");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES")]
 pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceGroupPeerMemoryFeatures");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_BUFFER_MEMORY2")]
 pub const FN_BIND_BUFFER_MEMORY2: *const std::os::raw::c_char = crate::cstr!("vkBindBufferMemory2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BIND_IMAGE_MEMORY2")]
 pub const FN_BIND_IMAGE_MEMORY2: *const std::os::raw::c_char = crate::cstr!("vkBindImageMemory2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_DEVICE_MASK")]
 pub const FN_CMD_SET_DEVICE_MASK: *const std::os::raw::c_char = crate::cstr!("vkCmdSetDeviceMask");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DISPATCH_BASE")]
 pub const FN_CMD_DISPATCH_BASE: *const std::os::raw::c_char = crate::cstr!("vkCmdDispatchBase");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE")]
 pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDescriptorUpdateTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE")]
 pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDescriptorUpdateTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE")]
 pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE: *const std::os::raw::c_char =
     crate::cstr!("vkUpdateDescriptorSetWithTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_MEMORY_REQUIREMENTS2")]
 pub const FN_GET_BUFFER_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_MEMORY_REQUIREMENTS2")]
 pub const FN_GET_IMAGE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2")]
 pub const FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageSparseMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_SAMPLER_YCBCR_CONVERSION")]
 pub const FN_CREATE_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char =
     crate::cstr!("vkCreateSamplerYcbcrConversion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_SAMPLER_YCBCR_CONVERSION")]
 pub const FN_DESTROY_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char =
     crate::cstr!("vkDestroySamplerYcbcrConversion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_QUEUE2")]
 pub const FN_GET_DEVICE_QUEUE2: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceQueue2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT")]
 pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT: *const std::os::raw::c_char =
     crate::cstr!("vkGetDescriptorSetLayoutSupport");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVariablePointerFeatures.html) · Alias"]

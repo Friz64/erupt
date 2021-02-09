@@ -6,7 +6,6 @@ pub const EXT_HEADLESS_SURFACE_SPEC_VERSION: u32 = 1;
 pub const EXT_HEADLESS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_headless_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_HEADLESS_SURFACE_EXT")]
 pub const FN_CREATE_HEADLESS_SURFACE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCreateHeadlessSurfaceEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`]"] # [doc (alias = "VkHeadlessSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

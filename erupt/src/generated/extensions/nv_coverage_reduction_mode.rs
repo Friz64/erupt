@@ -6,7 +6,6 @@ pub const NV_COVERAGE_REDUCTION_MODE_SPEC_VERSION: u32 = 1;
 pub const NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_NV_coverage_reduction_mode");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV")]
 pub const FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV:
     *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV");

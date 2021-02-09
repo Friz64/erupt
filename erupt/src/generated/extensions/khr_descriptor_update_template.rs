@@ -6,15 +6,12 @@ pub const KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION: u32 = 1;
 pub const KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_descriptor_update_template");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR")]
 pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateDescriptorUpdateTemplateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR")]
 pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyDescriptorUpdateTemplateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR")]
 pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkUpdateDescriptorSetWithTemplateKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateFlagsKHR.html) · Alias"]

@@ -6,15 +6,12 @@ pub const KHR_GET_MEMORY_REQUIREMENTS_2_SPEC_VERSION: u32 = 1;
 pub const KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_get_memory_requirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR")]
 pub const FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferMemoryRequirements2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR")]
 pub const FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageMemoryRequirements2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR")]
 pub const FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetImageSparseMemoryRequirements2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryRequirementsInfo2KHR.html) · Alias"]

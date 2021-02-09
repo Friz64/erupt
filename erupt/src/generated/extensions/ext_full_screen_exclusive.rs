@@ -6,19 +6,15 @@ pub const EXT_FULL_SCREEN_EXCLUSIVE_SPEC_VERSION: u32 = 4;
 pub const EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_full_screen_exclusive");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfacePresentModes2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT")]
 pub const FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceGroupSurfacePresentModes2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT")]
 pub const FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkAcquireFullScreenExclusiveModeEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT")]
 pub const FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkReleaseFullScreenExclusiveModeEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFullScreenExclusiveEXT.html) · Enum"]

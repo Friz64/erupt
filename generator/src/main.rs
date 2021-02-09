@@ -57,7 +57,7 @@ fn main() {
     log::info!("Generating documentation...");
     let start = Instant::now();
     let cmd = Command::new("cargo")
-        .args(&["doc", "-p", "erupt"])
+        .args(&["+nightly", "doc", "-p", "erupt"])
         .status()
         .expect("Failed to run rustdoc");
     log::info!(

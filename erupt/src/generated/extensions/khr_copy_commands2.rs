@@ -6,25 +6,19 @@ pub const KHR_COPY_COMMANDS_2_SPEC_VERSION: u32 = 1;
 pub const KHR_COPY_COMMANDS_2_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_copy_commands2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_BUFFER2_KHR")]
 pub const FN_CMD_COPY_BUFFER2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyBuffer2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_IMAGE2_KHR")]
 pub const FN_CMD_COPY_IMAGE2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyImage2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BLIT_IMAGE2_KHR")]
 pub const FN_CMD_BLIT_IMAGE2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdBlitImage2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR")]
 pub const FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyBufferToImage2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR")]
 pub const FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyImageToBuffer2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_RESOLVE_IMAGE2_KHR")]
 pub const FN_CMD_RESOLVE_IMAGE2_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdResolveImage2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer2KHR.html) · Function"]

@@ -6,11 +6,9 @@ pub const EXT_CONDITIONAL_RENDERING_SPEC_VERSION: u32 = 2;
 pub const EXT_CONDITIONAL_RENDERING_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_conditional_rendering");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT")]
 pub const FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginConditionalRenderingEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_CONDITIONAL_RENDERING_EXT")]
 pub const FN_CMD_END_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndConditionalRenderingEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }

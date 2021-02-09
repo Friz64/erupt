@@ -5,50 +5,37 @@ pub const MAX_DRIVER_NAME_SIZE: u32 = 256;
 #[doc(alias = "VK_MAX_DRIVER_INFO_SIZE")]
 pub const MAX_DRIVER_INFO_SIZE: u32 = 256;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_RESET_QUERY_POOL")]
 pub const FN_RESET_QUERY_POOL: *const std::os::raw::c_char = crate::cstr!("vkResetQueryPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_RENDER_PASS2")]
 pub const FN_CREATE_RENDER_PASS2: *const std::os::raw::c_char = crate::cstr!("vkCreateRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_RENDER_PASS2")]
 pub const FN_CMD_BEGIN_RENDER_PASS2: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_NEXT_SUBPASS2")]
 pub const FN_CMD_NEXT_SUBPASS2: *const std::os::raw::c_char = crate::cstr!("vkCmdNextSubpass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_RENDER_PASS2")]
 pub const FN_CMD_END_RENDER_PASS2: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SEMAPHORE_COUNTER_VALUE")]
 pub const FN_GET_SEMAPHORE_COUNTER_VALUE: *const std::os::raw::c_char =
     crate::cstr!("vkGetSemaphoreCounterValue");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_WAIT_SEMAPHORES")]
 pub const FN_WAIT_SEMAPHORES: *const std::os::raw::c_char = crate::cstr!("vkWaitSemaphores");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_SIGNAL_SEMAPHORE")]
 pub const FN_SIGNAL_SEMAPHORE: *const std::os::raw::c_char = crate::cstr!("vkSignalSemaphore");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDIRECT_COUNT")]
 pub const FN_CMD_DRAW_INDIRECT_COUNT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectCount");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDEXED_INDIRECT_COUNT")]
 pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndexedIndirectCount");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS")]
 pub const FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferOpaqueCaptureAddress");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_BUFFER_DEVICE_ADDRESS")]
 pub const FN_GET_BUFFER_DEVICE_ADDRESS: *const std::os::raw::c_char =
     crate::cstr!("vkGetBufferDeviceAddress");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS")]
 pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddress");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlags.html) · Bitmask of [`ResolveModeFlagBits`]"] # [doc (alias = "VkResolveModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ResolveModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = ResolveModeFlagBits :: NONE . 0 ; const SAMPLE_ZERO = ResolveModeFlagBits :: SAMPLE_ZERO . 0 ; const AVERAGE = ResolveModeFlagBits :: AVERAGE . 0 ; const MIN = ResolveModeFlagBits :: MIN . 0 ; const MAX = ResolveModeFlagBits :: MAX . 0 ; const NONE_KHR = ResolveModeFlagBits :: NONE_KHR . 0 ; const SAMPLE_ZERO_KHR = ResolveModeFlagBits :: SAMPLE_ZERO_KHR . 0 ; const AVERAGE_KHR = ResolveModeFlagBits :: AVERAGE_KHR . 0 ; const MIN_KHR = ResolveModeFlagBits :: MIN_KHR . 0 ; const MAX_KHR = ResolveModeFlagBits :: MAX_KHR . 0 ; } }

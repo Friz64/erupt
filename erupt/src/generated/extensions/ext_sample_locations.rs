@@ -6,11 +6,9 @@ pub const EXT_SAMPLE_LOCATIONS_SPEC_VERSION: u32 = 1;
 pub const EXT_SAMPLE_LOCATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_sample_locations");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_SET_SAMPLE_LOCATIONS_EXT")]
 pub const FN_CMD_SET_SAMPLE_LOCATIONS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdSetSampleLocationsEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT")]
 pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceMultisamplePropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]

@@ -6,19 +6,15 @@ pub const EXT_DISPLAY_CONTROL_SPEC_VERSION: u32 = 1;
 pub const EXT_DISPLAY_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_display_control");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DISPLAY_POWER_CONTROL_EXT")]
 pub const FN_DISPLAY_POWER_CONTROL_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkDisplayPowerControlEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_REGISTER_DEVICE_EVENT_EXT")]
 pub const FN_REGISTER_DEVICE_EVENT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkRegisterDeviceEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_REGISTER_DISPLAY_EVENT_EXT")]
 pub const FN_REGISTER_DISPLAY_EVENT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkRegisterDisplayEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SWAPCHAIN_COUNTER_EXT")]
 pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainCounterEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]

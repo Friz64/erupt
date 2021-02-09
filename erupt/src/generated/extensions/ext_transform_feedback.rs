@@ -6,27 +6,21 @@ pub const EXT_TRANSFORM_FEEDBACK_SPEC_VERSION: u32 = 1;
 pub const EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_EXT_transform_feedback");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT")]
 pub const FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBindTransformFeedbackBuffersEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT")]
 pub const FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginTransformFeedbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_TRANSFORM_FEEDBACK_EXT")]
 pub const FN_CMD_END_TRANSFORM_FEEDBACK_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndTransformFeedbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BEGIN_QUERY_INDEXED_EXT")]
 pub const FN_CMD_BEGIN_QUERY_INDEXED_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBeginQueryIndexedEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_END_QUERY_INDEXED_EXT")]
 pub const FN_CMD_END_QUERY_INDEXED_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndQueryIndexedEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT")]
 pub const FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdDrawIndirectByteCountEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`]"] # [doc (alias = "VkPipelineRasterizationStateStreamCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }

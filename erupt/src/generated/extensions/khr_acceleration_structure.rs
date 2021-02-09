@@ -6,67 +6,51 @@ pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 11;
 pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_acceleration_structure");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_DESTROY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_DESTROY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_COPY_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR")]
 pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR")]
 pub const FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR")]
 pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR")]
 pub const FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR")]
 pub const FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetDeviceAccelerationStructureCompatibilityKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CREATE_ACCELERATION_STRUCTURE_KHR")]
 pub const FN_CREATE_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCreateAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR")]
 pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR")]
 pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkCmdBuildAccelerationStructuresIndirectKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_BUILD_ACCELERATION_STRUCTURES_KHR")]
 pub const FN_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR")]
 pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureDeviceAddressKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR")]
 pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
 crate :: non_dispatchable_handle ! (AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle" , "VkAccelerationStructureKHR") ;

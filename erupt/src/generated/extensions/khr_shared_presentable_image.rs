@@ -6,7 +6,6 @@ pub const KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION: u32 = 1;
 pub const KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char =
     crate::cstr!("VK_KHR_shared_presentable_image");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_SWAPCHAIN_STATUS_KHR")]
 pub const FN_GET_SWAPCHAIN_STATUS_KHR: *const std::os::raw::c_char =
     crate::cstr!("vkGetSwapchainStatusKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]

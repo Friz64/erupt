@@ -7,15 +7,12 @@ pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME:
     *const std::os::raw::c_char =
     crate::cstr!("VK_ANDROID_external_memory_android_hardware_buffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID")]
 pub const FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: *const std::os::raw::c_char =
     crate::cstr!("vkGetAndroidHardwareBufferPropertiesANDROID");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-#[doc(alias = "FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID")]
 pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_char =
     crate::cstr!("vkGetMemoryAndroidHardwareBufferANDROID");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/AHardwareBuffer.html) · Basetype"]
-#[doc(alias = "AHardwareBuffer")]
 pub type AHardwareBuffer = std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
 #[allow(non_camel_case_types)]

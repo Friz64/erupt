@@ -87,8 +87,9 @@ impl DefaultEntryLoader {
     pub fn with_lib_path<P: AsRef<OsStr>>(
         lib_path: P,
     ) -> Result<DefaultEntryLoader, EntryLoaderError> {
-        let mut library =
-            Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?;
+        let mut library = unsafe {
+            Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?
+        };
 
         let symbol = |library: &mut Library, name| unsafe {
             let cstr = CStr::from_ptr(name);

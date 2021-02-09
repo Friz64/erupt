@@ -72,9 +72,10 @@ impl Source {
                     .find(|n| n.has_tag_name("name"))
                     .and_then(|n| n.text())
                     .filter(|&text| text == "VK_HEADER_VERSION")
-                    .and_then(|_| ty.text().and_then(|s| s.split_whitespace().last()))
+                    .and_then(|_| ty.children().filter_map(|n| n.text()).last())
             })
-            .expect("Can't find header version element");
+            .expect("Can't find header version element")
+            .trim();
         log::info!("Generating against header version {}", header_version);
 
         let mut header = HeaderSource::new(registry);

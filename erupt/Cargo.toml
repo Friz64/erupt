@@ -1,6 +1,6 @@
 [package]
 name = "erupt"
-version = "0.16.0+162"
+version = "0.17.0+169"
 authors = ["Friz64 <friz64mc@gmail.com>"]
 license = "Zlib"
 description = "Vulkan API bindings"
@@ -13,7 +13,7 @@ edition = "2018"
 
 [dependencies]
 bitflags = "1.2"
-libloading = { version = "0.6", optional = true }
+libloading = { version = "0.7", optional = true }
 raw-window-handle = { version = "0.3", optional = true }
 
 [target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]

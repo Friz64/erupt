@@ -5,11 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.17.0+169] - 2021-02-09
 ### Added
 - Added rustdoc alias support
 - Added `vk` module, which re-exports every Vulkan item
 
 ### Changed
+- Update `libloading` to 0.7
 - Update Vulkan Headers to version 169
 - Improved the idiomaticity of the `{Instance,Device}Enabled::new` API
 - Transition to intra-doc links in the rustdoc

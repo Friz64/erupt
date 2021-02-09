@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.17.1+169] - 2021-02-09
+### Fixed
+- Fix nightly rustdoc errors
+
 ## [0.17.0+169] - 2021-02-09
 ### Added
 - Added rustdoc alias support

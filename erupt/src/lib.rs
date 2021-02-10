@@ -38,7 +38,6 @@
 //! - [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/triangle.rs)
 //! - [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/pointer_chain.rs)
 //! - [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/version.rs)
-//! - [compute](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/compute.rs)
 //!
 //! ## Cargo Features
 //! - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency

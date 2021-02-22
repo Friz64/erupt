@@ -225,12 +225,8 @@ impl EnumVariantName {
             .replace("FlagBits", "")
             .to_shouty_snake_case();
 
-        // insert '_' before every number
-        let enum_type_prefix_chars: Vec<_> = enum_type_prefix.chars().enumerate().collect();
-        for (i, c) in enum_type_prefix_chars.into_iter().rev() {
-            if c.is_ascii_digit() {
-                enum_type_prefix.insert(i, '_');
-            }
+        if enum_type_prefix.ends_with(|c: char| c.is_ascii_digit()) {
+            enum_type_prefix.insert(enum_type_prefix.len() - 1, '_');
         }
 
         let prefix_compliant = trimmed.starts_with(&enum_type_prefix);

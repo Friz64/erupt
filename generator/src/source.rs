@@ -260,7 +260,7 @@ impl Source {
             EnumKind::Bitflag {
                 flagbits_name,
                 flags_name,
-                bitwidth64: _,
+                bitwidth: _,
             } => flagbits_name == type_name || flags_name == type_name,
         })
     }
@@ -271,7 +271,7 @@ impl Source {
             EnumKind::Bitflag {
                 flagbits_name,
                 flags_name,
-                bitwidth64: _,
+                bitwidth: _,
             } => flagbits_name == type_name || flags_name == type_name,
         })
     }

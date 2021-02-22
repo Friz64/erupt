@@ -20,6 +20,35 @@ use lang_c::{
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 
+#[derive(Debug)]
+pub enum Bitwidth {
+    Bitwidth32,
+    Bitwidth64,
+    Unknown,
+}
+
+impl Bitwidth {
+    fn bitbase(&self) -> TokenStream {
+        match self {
+            Bitwidth::Bitwidth32 => quote! { u32 },
+            Bitwidth::Bitwidth64 => quote! { u64 },
+            Bitwidth::Unknown => panic!("Tried to get bitbase of unknown bitwidth"),
+        }
+    }
+}
+
+impl PartialEq for Bitwidth {
+    fn eq(&self, other: &Self) -> bool {
+        matches!(self, Bitwidth::Unknown)
+            || matches!(other, Bitwidth::Unknown)
+            || match (self, other) {
+                (Bitwidth::Bitwidth32, Bitwidth::Bitwidth32)
+                | (Bitwidth::Bitwidth64, Bitwidth::Bitwidth64) => true,
+                _ => false,
+            }
+    }
+}
+
 #[derive(Debug, PartialEq)]
 pub enum EnumKind {
     Enum {
@@ -28,7 +57,7 @@ pub enum EnumKind {
     Bitflag {
         flags_name: TypeName,
         flagbits_name: TypeName,
-        bitwidth64: bool,
+        bitwidth: Bitwidth,
     },
 }
 
@@ -46,19 +75,19 @@ impl EnumKind {
         }
     }
 
-    pub fn from_flags_name(flags_name: &str, bitwidth64: bool) -> Self {
+    pub fn from_flags_name(flags_name: &str, bitwidth: Bitwidth) -> Self {
         EnumKind::Bitflag {
             flags_name: TypeName::new(flags_name),
             flagbits_name: TypeName::new(&flags_name.replace("Flags", "FlagBits")),
-            bitwidth64,
+            bitwidth,
         }
     }
 
-    pub fn from_flagbits_name(flagbits_name: &str, bitwidth64: bool) -> Self {
+    pub fn from_flagbits_name(flagbits_name: &str, bitwidth: Bitwidth) -> Self {
         EnumKind::Bitflag {
             flags_name: TypeName::new(&flagbits_name.replace("FlagBits", "Flags")),
             flagbits_name: TypeName::new(flagbits_name),
-            bitwidth64,
+            bitwidth,
         }
     }
 }
@@ -264,13 +293,9 @@ impl Enum {
             EnumKind::Bitflag {
                 flags_name,
                 flagbits_name,
-                bitwidth64,
+                bitwidth,
             } => {
-                let bitbase = if *bitwidth64 {
-                    quote! { u64 }
-                } else {
-                    quote! { u32 }
-                };
+                let bitbase = bitwidth.bitbase();
 
                 let flags_ident = flags_name.ident();
                 let flags_doc_alias = &flags_name.original;
@@ -406,17 +431,17 @@ impl Source {
                                     .expect("Expected type child")
                                     .text()
                                     .expect("type child missing text");
-                                let bitwidth64 = match type_child {
-                                    "VkFlags" => false,
-                                    "VkFlags64" => true,
+                                let bitwidth = match type_child {
+                                    "VkFlags" => Bitwidth::Bitwidth32,
+                                    "VkFlags64" => Bitwidth::Bitwidth64,
                                     other => panic!("Unexpected bitmask type: {:?}", other),
                                 };
 
-                                EnumKind::from_flags_name(&name, bitwidth64)
+                                EnumKind::from_flags_name(&name, bitwidth)
                             }
                             Some("enum") => {
                                 if name.contains("FlagBits") {
-                                    EnumKind::from_flagbits_name(&name, false)
+                                    EnumKind::from_flagbits_name(&name, Bitwidth::Unknown)
                                 } else {
                                     EnumKind::from_enum_name(&name)
                                 }
@@ -448,8 +473,13 @@ impl Source {
 
         let kind = match node.attribute("type") {
             Some("bitmask") => {
-                let bitwidth64 = matches!(node.attribute("bitwidth"), Some("64"));
-                EnumKind::from_flagbits_name(name, bitwidth64)
+                let bitwidth = match node.attribute("bitwidth") {
+                    Some("64") => Bitwidth::Bitwidth64,
+                    None => Bitwidth::Bitwidth32,
+                    other => panic!("Unknown bitwidth: {:?}", other),
+                };
+
+                EnumKind::from_flagbits_name(name, bitwidth)
             }
             Some("enum") => EnumKind::from_enum_name(name),
             None => return,

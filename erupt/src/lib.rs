@@ -1,4 +1,4 @@
-#![allow(clippy::all)]
+#![allow(clippy::all, unreachable_patterns)]
 #![doc(html_logo_url = "https://gitlab.com/Friz64/erupt/-/raw/master/logo.png")]
 //! Vulkan API bindings
 //!

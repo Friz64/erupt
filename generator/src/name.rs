@@ -120,7 +120,9 @@ pub struct TypeName {
 impl TypeName {
     pub fn new(src: &str) -> TypeName {
         let trimmed = src.trim_start_matches("Vk");
-        let boundary = trimmed.rfind(char::is_lowercase).unwrap_or(0);
+        let boundary = trimmed
+            .rfind(|c: char| c.is_lowercase() || c.is_ascii_digit())
+            .unwrap_or(0);
         let (no_tag, tag) = if boundary + 1 == trimmed.len() {
             (trimmed, None)
         } else {
@@ -210,7 +212,7 @@ pub struct EnumVariantName {
     pub trimmed: Box<str>,
     /// Just the enum variant, without the variant's enum type name
     pub variant: Box<str>,
-    /// True if the enum variant properly cointains the enum type
+    /// True if the enum variant properly contains the enum type
     pub prefix_compliant: bool,
 }
 
@@ -218,10 +220,19 @@ impl EnumVariantName {
     pub fn new(src: &str, enum_type: &TypeName) -> Result<EnumVariantName, NotApplicable> {
         let trimmed = src.trim_start_matches("VK_").replace("_BIT", "");
 
-        let enum_type_prefix = enum_type
+        let mut enum_type_prefix = enum_type
             .no_tag
-            .trim_end_matches("FlagBits")
+            .replace("FlagBits", "")
             .to_shouty_snake_case();
+
+        // insert '_' before every number
+        let enum_type_prefix_chars: Vec<_> = enum_type_prefix.chars().enumerate().collect();
+        for (i, c) in enum_type_prefix_chars.into_iter().rev() {
+            if c.is_ascii_digit() {
+                enum_type_prefix.insert(i, '_');
+            }
+        }
+
         let prefix_compliant = trimmed.starts_with(&enum_type_prefix);
 
         let mut variant = trimmed

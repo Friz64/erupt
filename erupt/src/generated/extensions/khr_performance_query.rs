@@ -107,7 +107,7 @@ impl PerformanceCounterStorageKHR {
     pub const FLOAT32_KHR: Self = Self(4);
     pub const FLOAT64_KHR: Self = Self(5);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`]"] # [doc (alias = "VkPerformanceCounterDescriptionFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`]"] # [doc (alias = "VkPerformanceCounterDescriptionFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Bits enum of [`PerformanceCounterDescriptionFlagsKHR`]"]
 #[doc(alias = "VkPerformanceCounterDescriptionFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

@@ -24,7 +24,7 @@ pub const FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char =
 pub const FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char =
     crate::cstr!("vkDestroyIndirectCommandsLayoutNV");
 crate :: non_dispatchable_handle ! (IndirectCommandsLayoutNV , INDIRECT_COMMANDS_LAYOUT_NV , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle" , "VkIndirectCommandsLayoutNV") ;
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]"]
 #[doc(alias = "VkIndirectCommandsLayoutUsageFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -84,7 +84,7 @@ impl IndirectCommandsTokenTypeNV {
     pub const DRAW_NV: Self = Self(6);
     pub const DRAW_TASKS_NV: Self = Self(7);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"] # [doc (alias = "VkIndirectStateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectStateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FLAG_FRONTFACE_NV = IndirectStateFlagBitsNV :: FLAG_FRONTFACE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"] # [doc (alias = "VkIndirectStateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectStateFlagsNV : u32 { const FLAG_FRONTFACE_NV = IndirectStateFlagBitsNV :: FLAG_FRONTFACE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagBitsNV.html) · Bits enum of [`IndirectStateFlagsNV`]"]
 #[doc(alias = "VkIndirectStateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

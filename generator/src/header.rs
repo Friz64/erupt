@@ -21,9 +21,11 @@ use lang_c::{
         TranslationUnit, TypeQualifier, TypeSpecifier,
     },
     driver::{self, Config},
+    print::Printer,
     span::Node,
+    visit::Visit,
 };
-use std::{convert::TryFrom, fmt::Debug, mem, path::Path};
+use std::{convert::TryFrom, fmt::Debug, fs, mem, path::Path};
 
 #[derive(Debug)]
 pub struct DeclarationTypeInfo(Vec<SpecifierQualifier>);
@@ -129,6 +131,7 @@ where
                         next_ptr_const = true;
                     }
                 }
+                SpecifierQualifier::Extension(_) => (),
             }
         }
 
@@ -305,6 +308,15 @@ impl HeaderSource {
         let unit = &driver::parse(&header_config, root_header_path)
             .expect("Failed to parse header")
             .unit;
+
+        // toggle manually
+        if false {
+            log::info!("Writing header_debug");
+
+            let mut debug_print = String::new();
+            Printer::new(&mut debug_print).visit_translation_unit(&unit);
+            fs::write("header_debug", debug_print).expect("Failed to write header_debug");
+        }
 
         unit.into()
     }

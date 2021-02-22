@@ -197,7 +197,7 @@ impl PointClippingBehavior {
     pub const ALL_CLIP_PLANES_KHR: Self = Self::ALL_CLIP_PLANES;
     pub const USER_CLIP_PLANES_ONLY_KHR: Self = Self::USER_CLIP_PLANES_ONLY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlags.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBits`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_FD = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D11_TEXTURE = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE . 0 ; const D3D11_TEXTURE_KMT = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT . 0 ; const D3D12_HEAP = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP . 0 ; const D3D12_RESOURCE = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE . 0 ; const DMA_BUF_EXT = ExternalMemoryHandleTypeFlagBits :: DMA_BUF_EXT . 0 ; const ANDROID_HARDWARE_BUFFER_ANDROID = ExternalMemoryHandleTypeFlagBits :: ANDROID_HARDWARE_BUFFER_ANDROID . 0 ; const HOST_ALLOCATION_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_ALLOCATION_EXT . 0 ; const HOST_MAPPED_FOREIGN_MEMORY_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_MAPPED_FOREIGN_MEMORY_EXT . 0 ; const OPAQUE_FD_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D11_TEXTURE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KHR . 0 ; const D3D11_TEXTURE_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT_KHR . 0 ; const D3D12_HEAP_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP_KHR . 0 ; const D3D12_RESOURCE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlags.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBits`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlags : u32 { const OPAQUE_FD = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D11_TEXTURE = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE . 0 ; const D3D11_TEXTURE_KMT = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT . 0 ; const D3D12_HEAP = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP . 0 ; const D3D12_RESOURCE = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE . 0 ; const DMA_BUF_EXT = ExternalMemoryHandleTypeFlagBits :: DMA_BUF_EXT . 0 ; const ANDROID_HARDWARE_BUFFER_ANDROID = ExternalMemoryHandleTypeFlagBits :: ANDROID_HARDWARE_BUFFER_ANDROID . 0 ; const HOST_ALLOCATION_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_ALLOCATION_EXT . 0 ; const HOST_MAPPED_FOREIGN_MEMORY_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_MAPPED_FOREIGN_MEMORY_EXT . 0 ; const OPAQUE_FD_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D11_TEXTURE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KHR . 0 ; const D3D11_TEXTURE_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT_KHR . 0 ; const D3D12_HEAP_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP_KHR . 0 ; const D3D12_RESOURCE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBits.html) · Bits enum of [`ExternalMemoryHandleTypeFlags`]"]
 #[doc(alias = "VkExternalMemoryHandleTypeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -261,7 +261,7 @@ impl ExternalMemoryHandleTypeFlagBits {
     pub const D3D12_HEAP_KHR: Self = Self::D3D12_HEAP;
     pub const D3D12_RESOURCE_KHR: Self = Self::D3D12_RESOURCE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlags.html) · Bitmask of [`ExternalMemoryFeatureFlagBits`]"] # [doc (alias = "VkExternalMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEDICATED_ONLY = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY . 0 ; const EXPORTABLE = ExternalMemoryFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalMemoryFeatureFlagBits :: IMPORTABLE . 0 ; const DEDICATED_ONLY_KHR = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY_KHR . 0 ; const EXPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlags.html) · Bitmask of [`ExternalMemoryFeatureFlagBits`]"] # [doc (alias = "VkExternalMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryFeatureFlags : u32 { const DEDICATED_ONLY = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY . 0 ; const EXPORTABLE = ExternalMemoryFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalMemoryFeatureFlagBits :: IMPORTABLE . 0 ; const DEDICATED_ONLY_KHR = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY_KHR . 0 ; const EXPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBits.html) · Bits enum of [`ExternalMemoryFeatureFlags`]"]
 #[doc(alias = "VkExternalMemoryFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -296,7 +296,7 @@ impl ExternalMemoryFeatureFlagBits {
     pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
     pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlags.html) · Bitmask of [`ExternalSemaphoreHandleTypeFlagBits`]"] # [doc (alias = "VkExternalSemaphoreHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreHandleTypeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_FD = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D12_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE . 0 ; const SYNC_FD = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD . 0 ; const D3D11_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D11_FENCE . 0 ; const OPAQUE_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D12_FENCE_KHR = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE_KHR . 0 ; const SYNC_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlags.html) · Bitmask of [`ExternalSemaphoreHandleTypeFlagBits`]"] # [doc (alias = "VkExternalSemaphoreHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreHandleTypeFlags : u32 { const OPAQUE_FD = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D12_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE . 0 ; const SYNC_FD = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD . 0 ; const D3D11_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D11_FENCE . 0 ; const OPAQUE_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D12_FENCE_KHR = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE_KHR . 0 ; const SYNC_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagBits.html) · Bits enum of [`ExternalSemaphoreHandleTypeFlags`]"]
 #[doc(alias = "VkExternalSemaphoreHandleTypeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -338,7 +338,7 @@ impl ExternalSemaphoreHandleTypeFlagBits {
     pub const D3D12_FENCE_KHR: Self = Self::D3D12_FENCE;
     pub const SYNC_FD_KHR: Self = Self::SYNC_FD;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlags.html) · Bitmask of [`ExternalSemaphoreFeatureFlagBits`]"] # [doc (alias = "VkExternalSemaphoreFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXPORTABLE = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlags.html) · Bitmask of [`ExternalSemaphoreFeatureFlagBits`]"] # [doc (alias = "VkExternalSemaphoreFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreFeatureFlags : u32 { const EXPORTABLE = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagBits.html) · Bits enum of [`ExternalSemaphoreFeatureFlags`]"]
 #[doc(alias = "VkExternalSemaphoreFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -370,7 +370,7 @@ impl ExternalSemaphoreFeatureFlagBits {
     pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
     pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlags.html) · Bitmask of [`SemaphoreImportFlagBits`]"] # [doc (alias = "VkSemaphoreImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreImportFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TEMPORARY = SemaphoreImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = SemaphoreImportFlagBits :: TEMPORARY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlags.html) · Bitmask of [`SemaphoreImportFlagBits`]"] # [doc (alias = "VkSemaphoreImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreImportFlags : u32 { const TEMPORARY = SemaphoreImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = SemaphoreImportFlagBits :: TEMPORARY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlagBits.html) · Bits enum of [`SemaphoreImportFlags`]"]
 #[doc(alias = "VkSemaphoreImportFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -399,7 +399,7 @@ impl SemaphoreImportFlagBits {
 impl SemaphoreImportFlagBits {
     pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlags.html) · Bitmask of [`ExternalFenceHandleTypeFlagBits`]"] # [doc (alias = "VkExternalFenceHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceHandleTypeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_FD = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const SYNC_FD = ExternalFenceHandleTypeFlagBits :: SYNC_FD . 0 ; const OPAQUE_FD_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const SYNC_FD_KHR = ExternalFenceHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlags.html) · Bitmask of [`ExternalFenceHandleTypeFlagBits`]"] # [doc (alias = "VkExternalFenceHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceHandleTypeFlags : u32 { const OPAQUE_FD = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const SYNC_FD = ExternalFenceHandleTypeFlagBits :: SYNC_FD . 0 ; const OPAQUE_FD_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const SYNC_FD_KHR = ExternalFenceHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagBits.html) · Bits enum of [`ExternalFenceHandleTypeFlags`]"]
 #[doc(alias = "VkExternalFenceHandleTypeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -437,7 +437,7 @@ impl ExternalFenceHandleTypeFlagBits {
     pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
     pub const SYNC_FD_KHR: Self = Self::SYNC_FD;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlags.html) · Bitmask of [`ExternalFenceFeatureFlagBits`]"] # [doc (alias = "VkExternalFenceFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXPORTABLE = ExternalFenceFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalFenceFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalFenceFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalFenceFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlags.html) · Bitmask of [`ExternalFenceFeatureFlagBits`]"] # [doc (alias = "VkExternalFenceFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceFeatureFlags : u32 { const EXPORTABLE = ExternalFenceFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalFenceFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalFenceFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalFenceFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlagBits.html) · Bits enum of [`ExternalFenceFeatureFlags`]"]
 #[doc(alias = "VkExternalFenceFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -469,7 +469,7 @@ impl ExternalFenceFeatureFlagBits {
     pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
     pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlags.html) · Bitmask of [`FenceImportFlagBits`]"] # [doc (alias = "VkFenceImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceImportFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TEMPORARY = FenceImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = FenceImportFlagBits :: TEMPORARY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlags.html) · Bitmask of [`FenceImportFlagBits`]"] # [doc (alias = "VkFenceImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceImportFlags : u32 { const TEMPORARY = FenceImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = FenceImportFlagBits :: TEMPORARY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlagBits.html) · Bits enum of [`FenceImportFlags`]"]
 #[doc(alias = "VkFenceImportFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -498,7 +498,7 @@ impl FenceImportFlagBits {
 impl FenceImportFlagBits {
     pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlags.html) · Bitmask of [`PeerMemoryFeatureFlagBits`]"] # [doc (alias = "VkPeerMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct PeerMemoryFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const COPY_SRC = PeerMemoryFeatureFlagBits :: COPY_SRC . 0 ; const COPY_DST = PeerMemoryFeatureFlagBits :: COPY_DST . 0 ; const GENERIC_SRC = PeerMemoryFeatureFlagBits :: GENERIC_SRC . 0 ; const GENERIC_DST = PeerMemoryFeatureFlagBits :: GENERIC_DST . 0 ; const COPY_SRC_KHR = PeerMemoryFeatureFlagBits :: COPY_SRC_KHR . 0 ; const COPY_DST_KHR = PeerMemoryFeatureFlagBits :: COPY_DST_KHR . 0 ; const GENERIC_SRC_KHR = PeerMemoryFeatureFlagBits :: GENERIC_SRC_KHR . 0 ; const GENERIC_DST_KHR = PeerMemoryFeatureFlagBits :: GENERIC_DST_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlags.html) · Bitmask of [`PeerMemoryFeatureFlagBits`]"] # [doc (alias = "VkPeerMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct PeerMemoryFeatureFlags : u32 { const COPY_SRC = PeerMemoryFeatureFlagBits :: COPY_SRC . 0 ; const COPY_DST = PeerMemoryFeatureFlagBits :: COPY_DST . 0 ; const GENERIC_SRC = PeerMemoryFeatureFlagBits :: GENERIC_SRC . 0 ; const GENERIC_DST = PeerMemoryFeatureFlagBits :: GENERIC_DST . 0 ; const COPY_SRC_KHR = PeerMemoryFeatureFlagBits :: COPY_SRC_KHR . 0 ; const COPY_DST_KHR = PeerMemoryFeatureFlagBits :: COPY_DST_KHR . 0 ; const GENERIC_SRC_KHR = PeerMemoryFeatureFlagBits :: GENERIC_SRC_KHR . 0 ; const GENERIC_DST_KHR = PeerMemoryFeatureFlagBits :: GENERIC_DST_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagBits.html) · Bits enum of [`PeerMemoryFeatureFlags`]"]
 #[doc(alias = "VkPeerMemoryFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -536,7 +536,7 @@ impl PeerMemoryFeatureFlagBits {
     pub const GENERIC_SRC_KHR: Self = Self::GENERIC_SRC;
     pub const GENERIC_DST_KHR: Self = Self::GENERIC_DST;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlags.html) · Bitmask of [`MemoryAllocateFlagBits`]"] # [doc (alias = "VkMemoryAllocateFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryAllocateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_MASK = MemoryAllocateFlagBits :: DEVICE_MASK . 0 ; const DEVICE_ADDRESS = MemoryAllocateFlagBits :: DEVICE_ADDRESS . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_MASK_KHR = MemoryAllocateFlagBits :: DEVICE_MASK_KHR . 0 ; const DEVICE_ADDRESS_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_KHR . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlags.html) · Bitmask of [`MemoryAllocateFlagBits`]"] # [doc (alias = "VkMemoryAllocateFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryAllocateFlags : u32 { const DEVICE_MASK = MemoryAllocateFlagBits :: DEVICE_MASK . 0 ; const DEVICE_ADDRESS = MemoryAllocateFlagBits :: DEVICE_ADDRESS . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_MASK_KHR = MemoryAllocateFlagBits :: DEVICE_MASK_KHR . 0 ; const DEVICE_ADDRESS_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_KHR . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagBits.html) · Bits enum of [`MemoryAllocateFlags`]"]
 #[doc(alias = "VkMemoryAllocateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -577,7 +577,7 @@ impl MemoryAllocateFlagBits {
     pub const DEVICE_ADDRESS_KHR: Self = Self::DEVICE_ADDRESS;
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlags.html) · Bitmask of [`SubgroupFeatureFlagBits`]"] # [doc (alias = "VkSubgroupFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubgroupFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const BASIC = SubgroupFeatureFlagBits :: BASIC . 0 ; const VOTE = SubgroupFeatureFlagBits :: VOTE . 0 ; const ARITHMETIC = SubgroupFeatureFlagBits :: ARITHMETIC . 0 ; const BALLOT = SubgroupFeatureFlagBits :: BALLOT . 0 ; const SHUFFLE = SubgroupFeatureFlagBits :: SHUFFLE . 0 ; const SHUFFLE_RELATIVE = SubgroupFeatureFlagBits :: SHUFFLE_RELATIVE . 0 ; const CLUSTERED = SubgroupFeatureFlagBits :: CLUSTERED . 0 ; const QUAD = SubgroupFeatureFlagBits :: QUAD . 0 ; const PARTITIONED_NV = SubgroupFeatureFlagBits :: PARTITIONED_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlags.html) · Bitmask of [`SubgroupFeatureFlagBits`]"] # [doc (alias = "VkSubgroupFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubgroupFeatureFlags : u32 { const BASIC = SubgroupFeatureFlagBits :: BASIC . 0 ; const VOTE = SubgroupFeatureFlagBits :: VOTE . 0 ; const ARITHMETIC = SubgroupFeatureFlagBits :: ARITHMETIC . 0 ; const BALLOT = SubgroupFeatureFlagBits :: BALLOT . 0 ; const SHUFFLE = SubgroupFeatureFlagBits :: SHUFFLE . 0 ; const SHUFFLE_RELATIVE = SubgroupFeatureFlagBits :: SHUFFLE_RELATIVE . 0 ; const CLUSTERED = SubgroupFeatureFlagBits :: CLUSTERED . 0 ; const QUAD = SubgroupFeatureFlagBits :: QUAD . 0 ; const PARTITIONED_NV = SubgroupFeatureFlagBits :: PARTITIONED_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlagBits.html) · Bits enum of [`SubgroupFeatureFlags`]"]
 #[doc(alias = "VkSubgroupFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1580,6 +1580,22 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_sh
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVE > for PhysicalDeviceFeatures2Builder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<
+            '_,
+        >,
+    > for PhysicalDeviceFeatures2Builder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`]"]
 #[repr(transparent)]
@@ -2482,6 +2498,20 @@ impl<'a>
 {
 }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_diagnostic_checkpoints :: QueueFamilyCheckpointPropertiesNVBuilder < '_ >> for QueueFamilyProperties2Builder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV,
+    > for QueueFamilyProperties2Builder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NVBuilder<'_>,
+    > for QueueFamilyProperties2Builder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties2.html) · Builder of [`QueueFamilyProperties2`]"]
 #[repr(transparent)]

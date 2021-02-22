@@ -724,26 +724,6 @@ impl std::fmt::Debug for SemaphoreCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`EventCreateFlags`]"]
-#[doc(alias = "VkEventCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct EventCreateFlagBits(pub u32);
-impl EventCreateFlagBits {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> EventCreateFlags {
-        EventCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for EventCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
-            _ => "(unknown variant)",
-        })
-    }
-}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryMapFlags.html) · Bitmask of [`MemoryMapFlagBits`]"] # [doc (alias = "VkMemoryMapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryMapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MemoryMapFlags`]"]
 #[doc(alias = "VkMemoryMapFlagBits")]
@@ -1036,7 +1016,7 @@ impl BorderColor {
     pub const FLOAT_CUSTOM_EXT: Self = Self(1000287003);
     pub const INT_CUSTOM_EXT: Self = Self(1000287004);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`]"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`]"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlagBits.html) · Bits enum of [`FramebufferCreateFlags`]"]
 #[doc(alias = "VkFramebufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1065,7 +1045,7 @@ impl FramebufferCreateFlagBits {
 impl FramebufferCreateFlagBits {
     pub const IMAGELESS_KHR: Self = Self::IMAGELESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`]"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`]"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlagBits.html) · Bits enum of [`RenderPassCreateFlags`]"]
 #[doc(alias = "VkRenderPassCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1090,7 +1070,7 @@ impl std::fmt::Debug for RenderPassCreateFlagBits {
 impl RenderPassCreateFlagBits {
     pub const TRANSFORM_QCOM: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`]"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`]"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlagBits.html) · Bits enum of [`SamplerCreateFlags`]"]
 #[doc(alias = "VkSamplerCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1134,7 +1114,7 @@ impl std::fmt::Debug for PipelineCacheHeaderVersion {
 impl PipelineCacheHeaderVersion {
     pub const ONE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`]"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`]"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlagBits.html) · Bits enum of [`PipelineCacheCreateFlags`]"]
 #[doc(alias = "VkPipelineCacheCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1159,7 +1139,7 @@ impl std::fmt::Debug for PipelineCacheCreateFlagBits {
 impl PipelineCacheCreateFlagBits {
     pub const EXTERNALLY_SYNCHRONIZED_EXT: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`]"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`]"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html) · Bits enum of [`PipelineShaderStageCreateFlags`]"]
 #[doc(alias = "VkPipelineShaderStageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1186,7 +1166,7 @@ impl PipelineShaderStageCreateFlagBits {
     pub const ALLOW_VARYING_SUBGROUP_SIZE_EXT: Self = Self(1);
     pub const REQUIRE_FULL_SUBGROUPS_EXT: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits :: HOST_ONLY_POOL_VALVE . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits :: HOST_ONLY_POOL_VALVE . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`]"]
 #[doc(alias = "VkDescriptorSetLayoutCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1225,7 +1205,7 @@ impl DescriptorSetLayoutCreateFlagBits {
 impl DescriptorSetLayoutCreateFlagBits {
     pub const UPDATE_AFTER_BIND_POOL_EXT: Self = Self::UPDATE_AFTER_BIND_POOL;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlags.html) · Bitmask of [`DeviceQueueCreateFlagBits`]"] # [doc (alias = "VkDeviceQueueCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceQueueCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PROTECTED = DeviceQueueCreateFlagBits :: PROTECTED . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlags.html) · Bitmask of [`DeviceQueueCreateFlagBits`]"] # [doc (alias = "VkDeviceQueueCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DeviceQueueCreateFlags : u32 { const PROTECTED = DeviceQueueCreateFlagBits :: PROTECTED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateFlagBits.html) · Bits enum of [`DeviceQueueCreateFlags`]"]
 #[doc(alias = "VkDeviceQueueCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1250,7 +1230,7 @@ impl std::fmt::Debug for DeviceQueueCreateFlagBits {
 impl DeviceQueueCreateFlagBits {
     pub const PROTECTED: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`]"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`]"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlagBits.html) · Bits enum of [`BufferCreateFlags`]"]
 #[doc(alias = "VkBufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1297,7 +1277,7 @@ impl BufferCreateFlagBits {
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`]"]
 #[doc(alias = "VkBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1381,7 +1361,7 @@ impl BufferUsageFlagBits {
 impl BufferUsageFlagBits {
     pub const SHADER_DEVICE_ADDRESS_KHR: Self = Self::SHADER_DEVICE_ADDRESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlags.html) · Bitmask of [`ColorComponentFlagBits`]"] # [doc (alias = "VkColorComponentFlags")] # [derive (Default)] # [repr (transparent)] pub struct ColorComponentFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const R = ColorComponentFlagBits :: R . 0 ; const G = ColorComponentFlagBits :: G . 0 ; const B = ColorComponentFlagBits :: B . 0 ; const A = ColorComponentFlagBits :: A . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlags.html) · Bitmask of [`ColorComponentFlagBits`]"] # [doc (alias = "VkColorComponentFlags")] # [derive (Default)] # [repr (transparent)] pub struct ColorComponentFlags : u32 { const R = ColorComponentFlagBits :: R . 0 ; const G = ColorComponentFlagBits :: G . 0 ; const B = ColorComponentFlagBits :: B . 0 ; const A = ColorComponentFlagBits :: A . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorComponentFlagBits.html) · Bits enum of [`ColorComponentFlags`]"]
 #[doc(alias = "VkColorComponentFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1441,7 +1421,7 @@ impl ComponentSwizzle {
     pub const B: Self = Self(5);
     pub const A: Self = Self(6);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlags.html) · Bitmask of [`CommandPoolCreateFlagBits`]"] # [doc (alias = "VkCommandPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSIENT = CommandPoolCreateFlagBits :: TRANSIENT . 0 ; const RESET_COMMAND_BUFFER = CommandPoolCreateFlagBits :: RESET_COMMAND_BUFFER . 0 ; const PROTECTED = CommandPoolCreateFlagBits :: PROTECTED . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlags.html) · Bitmask of [`CommandPoolCreateFlagBits`]"] # [doc (alias = "VkCommandPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolCreateFlags : u32 { const TRANSIENT = CommandPoolCreateFlagBits :: TRANSIENT . 0 ; const RESET_COMMAND_BUFFER = CommandPoolCreateFlagBits :: RESET_COMMAND_BUFFER . 0 ; const PROTECTED = CommandPoolCreateFlagBits :: PROTECTED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolCreateFlagBits.html) · Bits enum of [`CommandPoolCreateFlags`]"]
 #[doc(alias = "VkCommandPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1473,7 +1453,7 @@ impl CommandPoolCreateFlagBits {
 impl CommandPoolCreateFlagBits {
     pub const PROTECTED: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlags.html) · Bitmask of [`CommandPoolResetFlagBits`]"] # [doc (alias = "VkCommandPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandPoolResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlags.html) · Bitmask of [`CommandPoolResetFlagBits`]"] # [doc (alias = "VkCommandPoolResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandPoolResetFlags : u32 { const RELEASE_RESOURCES = CommandPoolResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolResetFlagBits.html) · Bits enum of [`CommandPoolResetFlags`]"]
 #[doc(alias = "VkCommandPoolResetFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1498,7 +1478,7 @@ impl std::fmt::Debug for CommandPoolResetFlagBits {
 impl CommandPoolResetFlagBits {
     pub const RELEASE_RESOURCES: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlags.html) · Bitmask of [`CommandBufferResetFlagBits`]"] # [doc (alias = "VkCommandBufferResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferResetFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const RELEASE_RESOURCES = CommandBufferResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlags.html) · Bitmask of [`CommandBufferResetFlagBits`]"] # [doc (alias = "VkCommandBufferResetFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferResetFlags : u32 { const RELEASE_RESOURCES = CommandBufferResetFlagBits :: RELEASE_RESOURCES . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferResetFlagBits.html) · Bits enum of [`CommandBufferResetFlags`]"]
 #[doc(alias = "VkCommandBufferResetFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1542,7 +1522,7 @@ impl CommandBufferLevel {
     pub const PRIMARY: Self = Self(0);
     pub const SECONDARY: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlags.html) · Bitmask of [`CommandBufferUsageFlagBits`]"] # [doc (alias = "VkCommandBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const ONE_TIME_SUBMIT = CommandBufferUsageFlagBits :: ONE_TIME_SUBMIT . 0 ; const RENDER_PASS_CONTINUE = CommandBufferUsageFlagBits :: RENDER_PASS_CONTINUE . 0 ; const SIMULTANEOUS_USE = CommandBufferUsageFlagBits :: SIMULTANEOUS_USE . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlags.html) · Bitmask of [`CommandBufferUsageFlagBits`]"] # [doc (alias = "VkCommandBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct CommandBufferUsageFlags : u32 { const ONE_TIME_SUBMIT = CommandBufferUsageFlagBits :: ONE_TIME_SUBMIT . 0 ; const RENDER_PASS_CONTINUE = CommandBufferUsageFlagBits :: RENDER_PASS_CONTINUE . 0 ; const SIMULTANEOUS_USE = CommandBufferUsageFlagBits :: SIMULTANEOUS_USE . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferUsageFlagBits.html) · Bits enum of [`CommandBufferUsageFlags`]"]
 #[doc(alias = "VkCommandBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1602,7 +1582,7 @@ impl CompareOp {
     pub const GREATER_OR_EQUAL: Self = Self(6);
     pub const ALWAYS: Self = Self(7);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlags.html) · Bitmask of [`CullModeFlagBits`]"] # [doc (alias = "VkCullModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct CullModeFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const NONE = CullModeFlagBits :: NONE . 0 ; const FRONT = CullModeFlagBits :: FRONT . 0 ; const BACK = CullModeFlagBits :: BACK . 0 ; const FRONT_AND_BACK = CullModeFlagBits :: FRONT_AND_BACK . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlags.html) · Bitmask of [`CullModeFlagBits`]"] # [doc (alias = "VkCullModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct CullModeFlags : u32 { const NONE = CullModeFlagBits :: NONE . 0 ; const FRONT = CullModeFlagBits :: FRONT . 0 ; const BACK = CullModeFlagBits :: BACK . 0 ; const FRONT_AND_BACK = CullModeFlagBits :: FRONT_AND_BACK . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCullModeFlagBits.html) · Bits enum of [`CullModeFlags`]"]
 #[doc(alias = "VkCullModeFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1792,7 +1772,7 @@ impl DynamicState {
     pub const STENCIL_TEST_ENABLE_EXT: Self = Self(1000267010);
     pub const STENCIL_OP_EXT: Self = Self(1000267011);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlags.html) · Bitmask of [`FenceCreateFlagBits`]"] # [doc (alias = "VkFenceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SIGNALED = FenceCreateFlagBits :: SIGNALED . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlags.html) · Bitmask of [`FenceCreateFlagBits`]"] # [doc (alias = "VkFenceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceCreateFlags : u32 { const SIGNALED = FenceCreateFlagBits :: SIGNALED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlagBits.html) · Bits enum of [`FenceCreateFlags`]"]
 #[doc(alias = "VkFenceCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2437,7 +2417,7 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
     pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`]"]
 #[doc(alias = "VkFormatFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2589,7 +2569,7 @@ impl FrontFace {
     pub const COUNTER_CLOCKWISE: Self = Self(0);
     pub const CLOCKWISE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`]"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`]"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlagBits.html) · Bits enum of [`ImageAspectFlags`]"]
 #[doc(alias = "VkImageAspectFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2646,7 +2626,7 @@ impl ImageAspectFlagBits {
     pub const PLANE_1_KHR: Self = Self::PLANE_1;
     pub const PLANE_2_KHR: Self = Self::PLANE_2;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`]"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`]"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlagBits.html) · Bits enum of [`ImageCreateFlags`]"]
 #[doc(alias = "VkImageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2763,6 +2743,8 @@ impl std::fmt::Debug for ImageLayout {
             &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
             &Self::SHADING_RATE_OPTIMAL_NV => "SHADING_RATE_OPTIMAL_NV",
             &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT",
+            &Self::READ_ONLY_OPTIMAL_KHR => "READ_ONLY_OPTIMAL_KHR",
+            &Self::ATTACHMENT_OPTIMAL_KHR => "ATTACHMENT_OPTIMAL_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -2806,6 +2788,11 @@ impl ImageLayout {
 #[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageLayout {
     pub const FRAGMENT_DENSITY_MAP_OPTIMAL_EXT: Self = Self(1000218000);
+}
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl ImageLayout {
+    pub const READ_ONLY_OPTIMAL_KHR: Self = Self(1000314000);
+    pub const ATTACHMENT_OPTIMAL_KHR: Self = Self(1000314001);
 }
 #[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
 impl ImageLayout {
@@ -2870,7 +2857,7 @@ impl ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2923,7 +2910,7 @@ impl ImageUsageFlagBits {
 impl ImageUsageFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`]"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`]"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlagBits.html) · Bits enum of [`ImageViewCreateFlags`]"]
 #[doc(alias = "VkImageViewCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3081,7 +3068,7 @@ impl LogicOp {
     pub const NAND: Self = Self(14);
     pub const SET: Self = Self(15);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlagBits.html) · Bits enum of [`MemoryHeapFlags`]"]
 #[doc(alias = "VkMemoryHeapFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3115,7 +3102,7 @@ impl MemoryHeapFlagBits {
 impl MemoryHeapFlagBits {
     pub const MULTI_INSTANCE_KHR: Self = Self::MULTI_INSTANCE;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`]"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`]"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const NONE_KHR = AccessFlagBits :: NONE_KHR . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits.html) · Bits enum of [`AccessFlags`]"]
 #[doc(alias = "VkAccessFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3159,6 +3146,7 @@ impl std::fmt::Debug for AccessFlagBits {
             &Self::FRAGMENT_DENSITY_MAP_READ_EXT => "FRAGMENT_DENSITY_MAP_READ_EXT",
             &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
             &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
+            &Self::NONE_KHR => "NONE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -3215,6 +3203,10 @@ impl AccessFlagBits {
     pub const COMMAND_PREPROCESS_READ_NV: Self = Self(131072);
     pub const COMMAND_PREPROCESS_WRITE_NV: Self = Self(262144);
 }
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl AccessFlagBits {
+    pub const NONE_KHR: Self = Self(0);
+}
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl AccessFlagBits {
     pub const ACCELERATION_STRUCTURE_READ_NV: Self = Self::ACCELERATION_STRUCTURE_READ_KHR;
@@ -3224,7 +3216,7 @@ impl AccessFlagBits {
 impl AccessFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR: Self = Self::SHADING_RATE_IMAGE_READ_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`]"]
 #[doc(alias = "VkMemoryPropertyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3322,7 +3314,7 @@ impl PipelineBindPoint {
 impl PipelineBindPoint {
     pub const RAY_TRACING_NV: Self = Self::RAY_TRACING_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`]"]
 #[doc(alias = "VkPipelineCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3454,7 +3446,7 @@ impl PrimitiveTopology {
     pub const TRIANGLE_STRIP_WITH_ADJACENCY: Self = Self(9);
     pub const PATCH_LIST: Self = Self(10);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlags.html) · Bitmask of [`QueryControlFlagBits`]"] # [doc (alias = "VkQueryControlFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryControlFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PRECISE = QueryControlFlagBits :: PRECISE . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlags.html) · Bitmask of [`QueryControlFlagBits`]"] # [doc (alias = "VkQueryControlFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryControlFlags : u32 { const PRECISE = QueryControlFlagBits :: PRECISE . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryControlFlagBits.html) · Bits enum of [`QueryControlFlags`]"]
 #[doc(alias = "VkQueryControlFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3479,7 +3471,7 @@ impl std::fmt::Debug for QueryControlFlagBits {
 impl QueryControlFlagBits {
     pub const PRECISE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlags.html) · Bitmask of [`QueryPipelineStatisticFlagBits`]"] # [doc (alias = "VkQueryPipelineStatisticFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPipelineStatisticFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INPUT_ASSEMBLY_VERTICES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_VERTICES . 0 ; const INPUT_ASSEMBLY_PRIMITIVES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_PRIMITIVES . 0 ; const VERTEX_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: VERTEX_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_PRIMITIVES = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_PRIMITIVES . 0 ; const CLIPPING_INVOCATIONS = QueryPipelineStatisticFlagBits :: CLIPPING_INVOCATIONS . 0 ; const CLIPPING_PRIMITIVES = QueryPipelineStatisticFlagBits :: CLIPPING_PRIMITIVES . 0 ; const FRAGMENT_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: FRAGMENT_SHADER_INVOCATIONS . 0 ; const TESSELLATION_CONTROL_SHADER_PATCHES = QueryPipelineStatisticFlagBits :: TESSELLATION_CONTROL_SHADER_PATCHES . 0 ; const TESSELLATION_EVALUATION_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: TESSELLATION_EVALUATION_SHADER_INVOCATIONS . 0 ; const COMPUTE_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: COMPUTE_SHADER_INVOCATIONS . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlags.html) · Bitmask of [`QueryPipelineStatisticFlagBits`]"] # [doc (alias = "VkQueryPipelineStatisticFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPipelineStatisticFlags : u32 { const INPUT_ASSEMBLY_VERTICES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_VERTICES . 0 ; const INPUT_ASSEMBLY_PRIMITIVES = QueryPipelineStatisticFlagBits :: INPUT_ASSEMBLY_PRIMITIVES . 0 ; const VERTEX_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: VERTEX_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_INVOCATIONS . 0 ; const GEOMETRY_SHADER_PRIMITIVES = QueryPipelineStatisticFlagBits :: GEOMETRY_SHADER_PRIMITIVES . 0 ; const CLIPPING_INVOCATIONS = QueryPipelineStatisticFlagBits :: CLIPPING_INVOCATIONS . 0 ; const CLIPPING_PRIMITIVES = QueryPipelineStatisticFlagBits :: CLIPPING_PRIMITIVES . 0 ; const FRAGMENT_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: FRAGMENT_SHADER_INVOCATIONS . 0 ; const TESSELLATION_CONTROL_SHADER_PATCHES = QueryPipelineStatisticFlagBits :: TESSELLATION_CONTROL_SHADER_PATCHES . 0 ; const TESSELLATION_EVALUATION_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: TESSELLATION_EVALUATION_SHADER_INVOCATIONS . 0 ; const COMPUTE_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits :: COMPUTE_SHADER_INVOCATIONS . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPipelineStatisticFlagBits.html) · Bits enum of [`QueryPipelineStatisticFlags`]"]
 #[doc(alias = "VkQueryPipelineStatisticFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3526,7 +3518,7 @@ impl QueryPipelineStatisticFlagBits {
     pub const TESSELLATION_EVALUATION_SHADER_INVOCATIONS: Self = Self(512);
     pub const COMPUTE_SHADER_INVOCATIONS: Self = Self(1024);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlagBits.html) · Bits enum of [`QueryResultFlags`]"]
 #[doc(alias = "VkQueryResultFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3611,7 +3603,7 @@ impl QueryType {
 impl QueryType {
     pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]"]
 #[doc(alias = "VkQueueFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3819,7 +3811,7 @@ impl Result {
     pub const ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR: Self =
         Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`]"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`]"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlagBits.html) · Bits enum of [`ShaderStageFlags`]"]
 #[doc(alias = "VkShaderStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3889,7 +3881,7 @@ impl ShaderStageFlagBits {
     pub const INTERSECTION_NV: Self = Self::INTERSECTION_KHR;
     pub const CALLABLE_NV: Self = Self::CALLABLE_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlags.html) · Bitmask of [`SparseMemoryBindFlagBits`]"] # [doc (alias = "VkSparseMemoryBindFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseMemoryBindFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const METADATA = SparseMemoryBindFlagBits :: METADATA . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlags.html) · Bitmask of [`SparseMemoryBindFlagBits`]"] # [doc (alias = "VkSparseMemoryBindFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseMemoryBindFlags : u32 { const METADATA = SparseMemoryBindFlagBits :: METADATA . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBindFlagBits.html) · Bits enum of [`SparseMemoryBindFlags`]"]
 #[doc(alias = "VkSparseMemoryBindFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3914,7 +3906,7 @@ impl std::fmt::Debug for SparseMemoryBindFlagBits {
 impl SparseMemoryBindFlagBits {
     pub const METADATA: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`]"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`]"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlagBits.html) · Bits enum of [`StencilFaceFlags`]"]
 #[doc(alias = "VkStencilFaceFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -4874,6 +4866,20 @@ impl std::fmt::Debug for StructureType {
             &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => {
                 "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV"
             }
+            &Self::MEMORY_BARRIER_2_KHR => "MEMORY_BARRIER_2_KHR",
+            &Self::BUFFER_MEMORY_BARRIER_2_KHR => "BUFFER_MEMORY_BARRIER_2_KHR",
+            &Self::IMAGE_MEMORY_BARRIER_2_KHR => "IMAGE_MEMORY_BARRIER_2_KHR",
+            &Self::DEPENDENCY_INFO_KHR => "DEPENDENCY_INFO_KHR",
+            &Self::SUBMIT_INFO_2_KHR => "SUBMIT_INFO_2_KHR",
+            &Self::SEMAPHORE_SUBMIT_INFO_KHR => "SEMAPHORE_SUBMIT_INFO_KHR",
+            &Self::COMMAND_BUFFER_SUBMIT_INFO_KHR => "COMMAND_BUFFER_SUBMIT_INFO_KHR",
+            &Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR => {
+                "PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR"
+            }
+            &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => {
+                "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV"
+            }
+            &Self::CHECKPOINT_DATA_2_NV => "CHECKPOINT_DATA_2_NV",
             &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR => {
                 "PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR"
             }
@@ -5775,6 +5781,19 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
     pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
 }
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl StructureType {
+    pub const MEMORY_BARRIER_2_KHR: Self = Self(1000314000);
+    pub const BUFFER_MEMORY_BARRIER_2_KHR: Self = Self(1000314001);
+    pub const IMAGE_MEMORY_BARRIER_2_KHR: Self = Self(1000314002);
+    pub const DEPENDENCY_INFO_KHR: Self = Self(1000314003);
+    pub const SUBMIT_INFO_2_KHR: Self = Self(1000314004);
+    pub const SEMAPHORE_SUBMIT_INFO_KHR: Self = Self(1000314005);
+    pub const COMMAND_BUFFER_SUBMIT_INFO_KHR: Self = Self(1000314006);
+    pub const PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR: Self = Self(1000314007);
+    pub const QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV: Self = Self(1000314008);
+    pub const CHECKPOINT_DATA_2_NV: Self = Self(1000314009);
+}
 #[doc = "Provided by [`crate::extensions::khr_zero_initialize_workgroup_memory`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR: Self =
@@ -6253,7 +6272,7 @@ impl VertexInputRate {
     pub const VERTEX: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`]"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`]"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const NONE_KHR = PipelineStageFlagBits :: NONE_KHR . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`]"]
 #[doc(alias = "VkPipelineStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6295,6 +6314,7 @@ impl std::fmt::Debug for PipelineStageFlagBits {
             &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
             &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
             &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
+            &Self::NONE_KHR => "NONE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -6352,6 +6372,10 @@ impl PipelineStageFlagBits {
 impl PipelineStageFlagBits {
     pub const COMMAND_PREPROCESS_NV: Self = Self(131072);
 }
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl PipelineStageFlagBits {
+    pub const NONE_KHR: Self = Self(0);
+}
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl PipelineStageFlagBits {
     pub const RAY_TRACING_SHADER_NV: Self = Self::RAY_TRACING_SHADER_KHR;
@@ -6361,7 +6385,7 @@ impl PipelineStageFlagBits {
 impl PipelineStageFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::SHADING_RATE_IMAGE_NV;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlags.html) · Bitmask of [`SparseImageFormatFlagBits`]"] # [doc (alias = "VkSparseImageFormatFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseImageFormatFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const SINGLE_MIPTAIL = SparseImageFormatFlagBits :: SINGLE_MIPTAIL . 0 ; const ALIGNED_MIP_SIZE = SparseImageFormatFlagBits :: ALIGNED_MIP_SIZE . 0 ; const NONSTANDARD_BLOCK_SIZE = SparseImageFormatFlagBits :: NONSTANDARD_BLOCK_SIZE . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlags.html) · Bitmask of [`SparseImageFormatFlagBits`]"] # [doc (alias = "VkSparseImageFormatFlags")] # [derive (Default)] # [repr (transparent)] pub struct SparseImageFormatFlags : u32 { const SINGLE_MIPTAIL = SparseImageFormatFlagBits :: SINGLE_MIPTAIL . 0 ; const ALIGNED_MIP_SIZE = SparseImageFormatFlagBits :: ALIGNED_MIP_SIZE . 0 ; const NONSTANDARD_BLOCK_SIZE = SparseImageFormatFlagBits :: NONSTANDARD_BLOCK_SIZE . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatFlagBits.html) · Bits enum of [`SparseImageFormatFlags`]"]
 #[doc(alias = "VkSparseImageFormatFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6390,7 +6414,7 @@ impl SparseImageFormatFlagBits {
     pub const ALIGNED_MIP_SIZE: Self = Self(2);
     pub const NONSTANDARD_BLOCK_SIZE: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlags.html) · Bitmask of [`SampleCountFlagBits`]"] # [doc (alias = "VkSampleCountFlags")] # [derive (Default)] # [repr (transparent)] pub struct SampleCountFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const _1 = SampleCountFlagBits :: _1 . 0 ; const _2 = SampleCountFlagBits :: _2 . 0 ; const _4 = SampleCountFlagBits :: _4 . 0 ; const _8 = SampleCountFlagBits :: _8 . 0 ; const _16 = SampleCountFlagBits :: _16 . 0 ; const _32 = SampleCountFlagBits :: _32 . 0 ; const _64 = SampleCountFlagBits :: _64 . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlags.html) · Bitmask of [`SampleCountFlagBits`]"] # [doc (alias = "VkSampleCountFlags")] # [derive (Default)] # [repr (transparent)] pub struct SampleCountFlags : u32 { const _1 = SampleCountFlagBits :: _1 . 0 ; const _2 = SampleCountFlagBits :: _2 . 0 ; const _4 = SampleCountFlagBits :: _4 . 0 ; const _8 = SampleCountFlagBits :: _8 . 0 ; const _16 = SampleCountFlagBits :: _16 . 0 ; const _32 = SampleCountFlagBits :: _32 . 0 ; const _64 = SampleCountFlagBits :: _64 . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleCountFlagBits.html) · Bits enum of [`SampleCountFlags`]"]
 #[doc(alias = "VkSampleCountFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6427,7 +6451,7 @@ impl SampleCountFlagBits {
     pub const _32: Self = Self(32);
     pub const _64: Self = Self(64);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlags.html) · Bitmask of [`AttachmentDescriptionFlagBits`]"] # [doc (alias = "VkAttachmentDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct AttachmentDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const MAY_ALIAS = AttachmentDescriptionFlagBits :: MAY_ALIAS . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlags.html) · Bitmask of [`AttachmentDescriptionFlagBits`]"] # [doc (alias = "VkAttachmentDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct AttachmentDescriptionFlags : u32 { const MAY_ALIAS = AttachmentDescriptionFlagBits :: MAY_ALIAS . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionFlagBits.html) · Bits enum of [`AttachmentDescriptionFlags`]"]
 #[doc(alias = "VkAttachmentDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6452,7 +6476,7 @@ impl std::fmt::Debug for AttachmentDescriptionFlagBits {
 impl AttachmentDescriptionFlagBits {
     pub const MAY_ALIAS: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const HOST_ONLY_VALVE = DescriptorPoolCreateFlagBits :: HOST_ONLY_VALVE . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const HOST_ONLY_VALVE = DescriptorPoolCreateFlagBits :: HOST_ONLY_VALVE . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html) · Bits enum of [`DescriptorPoolCreateFlags`]"]
 #[doc(alias = "VkDescriptorPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6491,7 +6515,7 @@ impl DescriptorPoolCreateFlagBits {
 impl DescriptorPoolCreateFlagBits {
     pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`]"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`]"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlagBits.html) · Bits enum of [`DependencyFlags`]"]
 #[doc(alias = "VkDependencyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -6675,7 +6699,32 @@ impl ObjectType {
 impl ObjectType {
     pub const SAMPLER_YCBCR_CONVERSION_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { const DEVICE_ONLY_KHR = EventCreateFlagBits :: DEVICE_ONLY_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlagBits.html) · Bits enum of [`EventCreateFlags`]"]
+#[doc(alias = "VkEventCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct EventCreateFlagBits(pub u32);
+impl EventCreateFlagBits {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> EventCreateFlags {
+        EventCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for EventCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::DEVICE_ONLY_KHR => "DEVICE_ONLY_KHR",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl EventCreateFlagBits {
+    pub const DEVICE_ONLY_KHR: Self = Self(1);
+}
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`]"]
 #[doc(alias = "VkSubpassDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -10095,6 +10144,22 @@ impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_sh
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVE > for DeviceCreateInfoBuilder < 'a > { }
 impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder < '_ >> for DeviceCreateInfoBuilder < 'a > { }
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
+impl<'a>
+    crate::ExtendableFrom<
+        'a,
+        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<
+            '_,
+        >,
+    > for DeviceCreateInfoBuilder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`]"]
 #[repr(transparent)]
@@ -25034,8 +25099,8 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         events: &[crate::vk1_0::Event],
-        src_stage_mask: crate::vk1_0::PipelineStageFlags,
-        dst_stage_mask: crate::vk1_0::PipelineStageFlags,
+        src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>,
+        dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>,
         memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder],
         buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder],
         image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder],
@@ -25051,8 +25116,14 @@ impl crate::DeviceLoader {
             command_buffer as _,
             event_count as _,
             events.as_ptr() as _,
-            src_stage_mask as _,
-            dst_stage_mask as _,
+            match src_stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
+            match dst_stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
             memory_barrier_count as _,
             memory_barriers.as_ptr() as _,
             buffer_memory_barrier_count as _,

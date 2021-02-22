@@ -9,9 +9,13 @@ use crate::{
 };
 use eval::Expression;
 use indexmap::IndexMap;
-use lang_c::ast::{
-    Declaration as CDeclaration, DeclarationSpecifier, Enumerator, Expression as CExpression,
-    TypeSpecifier,
+use lang_c::{
+    ast::{
+        Declaration as CDeclaration, DeclarationSpecifier, DeclaratorKind, Enumerator,
+        Expression as CExpression, InitDeclarator, Initializer, StorageClassSpecifier,
+        TypeQualifier, TypeSpecifier,
+    },
+    span::Node,
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
@@ -24,6 +28,7 @@ pub enum EnumKind {
     Bitflag {
         flags_name: TypeName,
         flagbits_name: TypeName,
+        bitwidth64: bool,
     },
 }
 
@@ -41,17 +46,19 @@ impl EnumKind {
         }
     }
 
-    pub fn from_flags_name(flags_name: &str) -> Self {
+    pub fn from_flags_name(flags_name: &str, bitwidth64: bool) -> Self {
         EnumKind::Bitflag {
             flags_name: TypeName::new(flags_name),
             flagbits_name: TypeName::new(&flags_name.replace("Flags", "FlagBits")),
+            bitwidth64,
         }
     }
 
-    pub fn from_flagbits_name(flagbits_name: &str) -> Self {
+    pub fn from_flagbits_name(flagbits_name: &str, bitwidth64: bool) -> Self {
         EnumKind::Bitflag {
             flags_name: TypeName::new(&flagbits_name.replace("FlagBits", "Flags")),
             flagbits_name: TypeName::new(flagbits_name),
+            bitwidth64,
         }
     }
 }
@@ -106,7 +113,7 @@ pub struct EnumVariant {
 }
 
 impl EnumVariant {
-    pub fn new(
+    pub fn from_enumerator(
         enumerator: &Enumerator,
         enum_type_name: &TypeName,
     ) -> Result<EnumVariant, NotApplicable> {
@@ -121,8 +128,75 @@ impl EnumVariant {
         }
     }
 
+    pub fn from_init_declarator(
+        init_declarator: &InitDeclarator,
+        enum_type_name: &TypeName,
+    ) -> Result<EnumVariant, NotApplicable> {
+        let name = match &init_declarator.declarator.node.kind.node {
+            DeclaratorKind::Identifier(ident) => &ident.node.name,
+            _ => panic!("Declarator is not an identfier"),
+        };
+
+        match &init_declarator.initializer {
+            Some(initializer) => match &initializer.node {
+                Initializer::Expression(expression) => Ok(EnumVariant {
+                    origin: Default::default(),
+                    name: EnumVariantName::new(name, enum_type_name)?,
+                    kind: EnumVariantKind::new(&expression.node, enum_type_name),
+                }),
+                _ => panic!("Initializer is not an expression"),
+            },
+            _ => panic!("Missing initializer"),
+        }
+    }
+
     pub fn all_from(declaration: &CDeclaration) -> Result<Vec<EnumVariant>, NotApplicable> {
-        let mut vec = Vec::new();
+        let mut variants = Vec::new();
+
+        match declaration.specifiers.as_slice() {
+            [static_, const_, ident_specifier] => {
+                if matches!(
+                    static_.node,
+                    DeclarationSpecifier::StorageClass(Node {
+                        node: StorageClassSpecifier::Static,
+                        ..
+                    })
+                ) && matches!(
+                    const_.node,
+                    DeclarationSpecifier::TypeQualifier(Node {
+                        node: TypeQualifier::Const,
+                        ..
+                    })
+                ) {
+                    let init_declarator = match declaration.declarators.as_slice() {
+                        [init_declarator] => &init_declarator.node,
+                        _ => panic!("Wrong amount of init declarators"),
+                    };
+
+                    let enum_type_name = match &ident_specifier.node {
+                        DeclarationSpecifier::TypeSpecifier(ty) => match &ty.node {
+                            TypeSpecifier::TypedefName(identifier) => {
+                                // the typedef uses Flags instead of the expected FlagBits
+                                let flagbits_name =
+                                    identifier.node.name.replace("Flags", "FlagBits");
+                                TypeName::new(&flagbits_name)
+                            }
+                            _ => panic!("Type specifier is not a typedef name"),
+                        },
+                        _ => panic!("Expected type specifier"),
+                    };
+
+                    let variant =
+                        EnumVariant::from_init_declarator(init_declarator, &enum_type_name);
+                    if let Ok(v) = variant {
+                        if !variants.contains(&v) {
+                            variants.push(v);
+                        }
+                    }
+                }
+            }
+            _ => (),
+        }
 
         for specifier in &declaration.specifiers {
             if let DeclarationSpecifier::TypeSpecifier(ty) = &specifier.node {
@@ -133,9 +207,11 @@ impl EnumVariant {
                     };
 
                     for enumerator in &enum_type.node.enumerators {
-                        if let Ok(v) = EnumVariant::new(&enumerator.node, &enum_type_name) {
-                            if !vec.contains(&v) {
-                                vec.push(v);
+                        let variant =
+                            EnumVariant::from_enumerator(&enumerator.node, &enum_type_name);
+                        if let Ok(v) = variant {
+                            if !variants.contains(&v) {
+                                variants.push(v);
                             }
                         }
                     }
@@ -143,10 +219,10 @@ impl EnumVariant {
             }
         }
 
-        if vec.is_empty() {
+        if variants.is_empty() {
             Err(NotApplicable)
         } else {
-            Ok(vec)
+            Ok(variants)
         }
     }
 }
@@ -188,7 +264,14 @@ impl Enum {
             EnumKind::Bitflag {
                 flags_name,
                 flagbits_name,
+                bitwidth64,
             } => {
+                let bitbase = if *bitwidth64 {
+                    quote! { u64 }
+                } else {
+                    quote! { u32 }
+                };
+
                 let flags_ident = flags_name.ident();
                 let flags_doc_alias = &flags_name.original;
                 let flagbits_ident = flagbits_name.ident();
@@ -211,15 +294,23 @@ impl Enum {
                 );
 
                 let flagbits_variants = self.variants.iter().map(|variant| variant.name.ident());
+                let empty_bitflag_workaround = if self.variants.is_empty() {
+                    Some(quote! {
+                        #[cfg(empty_bitflag_workaround)]
+                        const EMPTY_BITFLAG_WORKAROUND = 0;
+                    })
+                } else {
+                    None
+                };
+
                 quote! {
                     bitflags::bitflags! {
                         #[doc = #flags_doc]
                         #[doc(alias = #flags_doc_alias)]
                         #[derive(Default)]
                         #[repr(transparent)]
-                        pub struct #flags_ident: u32 {
-                            #[cfg(empty_bitflag_workaround)]
-                            const EMPTY_BITFLAG_WORKAROUND = 0;
+                        pub struct #flags_ident: #bitbase {
+                            #empty_bitflag_workaround
                             #(const #flagbits_variants = #flagbits_ident::#flagbits_variants.0;)*
                         }
                     }
@@ -228,7 +319,7 @@ impl Enum {
                     #[doc(alias = #flagbits_doc_alias)]
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                     #[repr(transparent)]
-                    pub struct #flagbits_ident(pub u32);
+                    pub struct #flagbits_ident(pub #bitbase);
 
                     impl #flagbits_ident {
                         #[inline]
@@ -308,10 +399,24 @@ impl Source {
 
                     let kind = match name {
                         Some(name) => match node.attribute("category") {
-                            Some("bitmask") => EnumKind::from_flags_name(&name),
+                            Some("bitmask") => {
+                                let type_child = node
+                                    .children()
+                                    .find(|c| c.has_tag_name("type"))
+                                    .expect("Expected type child")
+                                    .text()
+                                    .expect("type child missing text");
+                                let bitwidth64 = match type_child {
+                                    "VkFlags" => false,
+                                    "VkFlags64" => true,
+                                    other => panic!("Unexpected bitmask type: {:?}", other),
+                                };
+
+                                EnumKind::from_flags_name(&name, bitwidth64)
+                            }
                             Some("enum") => {
                                 if name.contains("FlagBits") {
-                                    EnumKind::from_flagbits_name(&name)
+                                    EnumKind::from_flagbits_name(&name, false)
                                 } else {
                                     EnumKind::from_enum_name(&name)
                                 }
@@ -342,7 +447,10 @@ impl Source {
         };
 
         let kind = match node.attribute("type") {
-            Some("bitmask") => EnumKind::from_flagbits_name(name),
+            Some("bitmask") => {
+                let bitwidth64 = matches!(node.attribute("bitwidth"), Some("64"));
+                EnumKind::from_flagbits_name(name, bitwidth64)
+            }
             Some("enum") => EnumKind::from_enum_name(name),
             None => return,
             unknown => panic!("Unknown enum type: {:?} from {:?}", unknown, node),

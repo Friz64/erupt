@@ -11,7 +11,7 @@ pub const FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_END_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkCmdEndConditionalRenderingEXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagBitsEXT.html) · Bits enum of [`ConditionalRenderingFlagsEXT`]"]
 #[doc(alias = "VkConditionalRenderingFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

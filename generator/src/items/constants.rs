@@ -173,7 +173,7 @@ pub fn header_ext(buf: &mut String, registry: XmlNode) {
 }
 
 impl Source {
-    pub fn function_constants(&mut self) {
+    pub fn add_function_constants(&mut self) {
         for function in self.all_functions_emulated() {
             let name: Box<str> = function.name.constant_name().into();
             let value = function.name.no_pfn.clone();

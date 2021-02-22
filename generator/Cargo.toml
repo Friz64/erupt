@@ -6,7 +6,7 @@ authors = ["Friz64 <friz64mc@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-lang-c = "0.9"
+lang-c = "0.10"
 proc-macro2 = "1.0"
 quote = "1.0"
 roxmltree = "0.14"

@@ -341,6 +341,8 @@ pub use crate::extensions::khr_swapchain::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_swapchain_mutable_format::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_synchronization2::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_timeline_semaphore::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_uniform_buffer_standard_layout::*;

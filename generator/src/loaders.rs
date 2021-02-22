@@ -397,6 +397,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl<T> EntryLoader<T> {
+            #[allow(unused_parens)]
             pub unsafe fn custom(
                 mut loader: T,
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
@@ -471,6 +472,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl InstanceLoader {
+            #[allow(unused_parens)]
             pub unsafe fn custom<T>(
                 entry_loader: &EntryLoader<T>,
                 instance: crate::vk1_0::Instance,
@@ -533,6 +535,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl DeviceLoader {
+            #[allow(unused_parens)]
             pub unsafe fn custom(
                 instance_loader: &InstanceLoader,
                 device: crate::vk1_0::Device,

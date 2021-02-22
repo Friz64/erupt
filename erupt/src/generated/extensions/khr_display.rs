@@ -67,7 +67,7 @@ impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"] # [doc (alias = "VkDisplayPlaneAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"] # [doc (alias = "VkDisplayPlaneAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`]"]
 #[doc(alias = "VkDisplayPlaneAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

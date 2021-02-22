@@ -340,6 +340,8 @@ pub mod khr_surface_protected_capabilities;
 pub mod khr_swapchain;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_swapchain_mutable_format.html) · Vulkan extension"]
 pub mod khr_swapchain_mutable_format;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_synchronization2.html) · Vulkan extension"]
+pub mod khr_synchronization2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_timeline_semaphore.html) · Vulkan extension"]
 pub mod khr_timeline_semaphore;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_uniform_buffer_standard_layout.html) · Vulkan extension"]

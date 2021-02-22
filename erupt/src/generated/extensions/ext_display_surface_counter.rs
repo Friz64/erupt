@@ -8,7 +8,7 @@ pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_cha
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char =
     crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`]"]
 #[doc(alias = "VkSurfaceCounterFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]

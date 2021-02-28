@@ -3,57 +3,45 @@
 pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 11;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME")]
-pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_acceleration_structure");
+pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_acceleration_structure");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyAccelerationStructureKHR");
+pub const FN_DESTROY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkDestroyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdCopyAccelerationStructureKHR");
+pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCopyAccelerationStructureKHR");
+pub const FN_COPY_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCopyAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdCopyAccelerationStructureToMemoryKHR");
+pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCopyAccelerationStructureToMemoryKHR");
+pub const FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR: *const std::os::raw::c_char = crate::cstr!("vkCopyAccelerationStructureToMemoryKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdCopyMemoryToAccelerationStructureKHR");
+pub const FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCopyMemoryToAccelerationStructureKHR");
+pub const FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCopyMemoryToAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesKHR");
+pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkWriteAccelerationStructuresPropertiesKHR");
+pub const FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkWriteAccelerationStructuresPropertiesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDeviceAccelerationStructureCompatibilityKHR");
+pub const FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceAccelerationStructureCompatibilityKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateAccelerationStructureKHR");
+pub const FN_CREATE_ACCELERATION_STRUCTURE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateAccelerationStructureKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBuildAccelerationStructuresKHR");
+pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBuildAccelerationStructuresIndirectKHR");
+pub const FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdBuildAccelerationStructuresIndirectKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkBuildAccelerationStructuresKHR");
+pub const FN_BUILD_ACCELERATION_STRUCTURES_KHR: *const std::os::raw::c_char = crate::cstr!("vkBuildAccelerationStructuresKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetAccelerationStructureDeviceAddressKHR");
+pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureDeviceAddressKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
-crate :: non_dispatchable_handle ! (AccelerationStructureKHR , ACCELERATION_STRUCTURE_KHR , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle" , "VkAccelerationStructureKHR") ;
+pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
+crate::non_dispatchable_handle!(
+    AccelerationStructureKHR,
+    ACCELERATION_STRUCTURE_KHR,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle",
+    "VkAccelerationStructureKHR"
+);
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`]"] # [doc (alias = "VkGeometryFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Bits enum of [`GeometryFlagsKHR`]"]
 #[doc(alias = "VkGeometryFlagBitsKHR")]
@@ -338,10 +326,8 @@ pub type PFN_vkDestroyAccelerationStructureKHR = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyAccelerationStructureKHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR,
-) -> ();
+pub type PFN_vkCmdCopyAccelerationStructureKHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCopyAccelerationStructureKHR = unsafe extern "system" fn(
@@ -351,43 +337,102 @@ pub type PFN_vkCopyAccelerationStructureKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureToMemoryKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_info : * const crate :: extensions :: khr_acceleration_structure :: CopyAccelerationStructureToMemoryInfoKHR) -> () ;
+pub type PFN_vkCmdCopyAccelerationStructureToMemoryKHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureToMemoryKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , deferred_operation : crate :: extensions :: khr_deferred_host_operations :: DeferredOperationKHR , p_info : * const crate :: extensions :: khr_acceleration_structure :: CopyAccelerationStructureToMemoryInfoKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
+    p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyMemoryToAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyMemoryToAccelerationStructureKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , p_info : * const crate :: extensions :: khr_acceleration_structure :: CopyMemoryToAccelerationStructureInfoKHR) -> () ;
+pub type PFN_vkCmdCopyMemoryToAccelerationStructureKHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyMemoryToAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCopyMemoryToAccelerationStructureKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , deferred_operation : crate :: extensions :: khr_deferred_host_operations :: DeferredOperationKHR , p_info : * const crate :: extensions :: khr_acceleration_structure :: CopyMemoryToAccelerationStructureInfoKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkCopyMemoryToAccelerationStructureKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
+    p_info: *const crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , query_pool : crate :: vk1_0 :: QueryPool , first_query : u32) -> () ;
+pub type PFN_vkCmdWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn(
+    command_buffer: crate::vk1_0::CommandBuffer,
+    acceleration_structure_count: u32,
+    p_acceleration_structures: *const crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    query_type: crate::vk1_0::QueryType,
+    query_pool: crate::vk1_0::QueryPool,
+    first_query: u32,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , acceleration_structure_count : u32 , p_acceleration_structures : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , query_type : crate :: vk1_0 :: QueryType , data_size : usize , p_data : * mut std :: ffi :: c_void , stride : usize) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkWriteAccelerationStructuresPropertiesKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    acceleration_structure_count: u32,
+    p_acceleration_structures: *const crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    query_type: crate::vk1_0::QueryType,
+    data_size: usize,
+    p_data: *mut std::ffi::c_void,
+    stride: usize,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceAccelerationStructureCompatibilityKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceAccelerationStructureCompatibilityKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_version_info : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureVersionInfoKHR , p_compatibility : * mut crate :: extensions :: khr_acceleration_structure :: AccelerationStructureCompatibilityKHR) -> () ;
+pub type PFN_vkGetDeviceAccelerationStructureCompatibilityKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_version_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureVersionInfoKHR,
+    p_compatibility: *mut crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateAccelerationStructureKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_create_info : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureCreateInfoKHR , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_acceleration_structure : * mut crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkCreateAccelerationStructureKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_acceleration_structure: *mut crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructuresKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBuildAccelerationStructuresKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , info_count : u32 , p_infos : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR , pp_build_range_infos : * const * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildRangeInfoKHR) -> () ;
+pub type PFN_vkCmdBuildAccelerationStructuresKHR = unsafe extern "system" fn(
+    command_buffer: crate::vk1_0::CommandBuffer,
+    info_count: u32,
+    p_infos: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
+    pp_build_range_infos: *const *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructuresIndirectKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBuildAccelerationStructuresIndirectKHR = unsafe extern "system" fn (command_buffer : crate :: vk1_0 :: CommandBuffer , info_count : u32 , p_infos : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR , p_indirect_device_addresses : * const crate :: vk1_0 :: DeviceAddress , p_indirect_strides : * const u32 , pp_max_primitive_counts : * const * const u32) -> () ;
+pub type PFN_vkCmdBuildAccelerationStructuresIndirectKHR = unsafe extern "system" fn(
+    command_buffer: crate::vk1_0::CommandBuffer,
+    info_count: u32,
+    p_infos: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
+    p_indirect_device_addresses: *const crate::vk1_0::DeviceAddress,
+    p_indirect_strides: *const u32,
+    pp_max_primitive_counts: *const *const u32,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBuildAccelerationStructuresKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBuildAccelerationStructuresKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , deferred_operation : crate :: extensions :: khr_deferred_host_operations :: DeferredOperationKHR , info_count : u32 , p_infos : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR , pp_build_range_infos : * const * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildRangeInfoKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkBuildAccelerationStructuresKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
+    info_count: u32,
+    p_infos: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
+    pp_build_range_infos: *const *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureDeviceAddressKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureDeviceAddressInfoKHR) -> crate :: vk1_0 :: DeviceAddress ;
+pub type PFN_vkGetAccelerationStructureDeviceAddressKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR) -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , build_type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildTypeKHR , p_build_info : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR , p_max_primitive_counts : * const u32 , p_size_info : * mut crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildSizesInfoKHR) -> () ;
+pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    build_type: crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR,
+    p_build_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
+    p_max_primitive_counts: *const u32,
+    p_size_info: *mut crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Structure"]
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureKHR")]
 #[derive(Copy, Clone)]
@@ -396,8 +441,7 @@ pub struct WriteDescriptorSetAccelerationStructureKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub acceleration_structure_count: u32,
-    pub p_acceleration_structures:
-        *const crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    pub p_acceleration_structures: *const crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
 }
 impl Default for WriteDescriptorSetAccelerationStructureKHR {
     fn default() -> Self {
@@ -414,10 +458,7 @@ impl std::fmt::Debug for WriteDescriptorSetAccelerationStructureKHR {
         f.debug_struct("WriteDescriptorSetAccelerationStructureKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "acceleration_structure_count",
-                &self.acceleration_structure_count,
-            )
+            .field("acceleration_structure_count", &self.acceleration_structure_count)
             .field("p_acceleration_structures", &self.p_acceleration_structures)
             .finish()
     }
@@ -431,23 +472,14 @@ impl WriteDescriptorSetAccelerationStructureKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Builder of [`WriteDescriptorSetAccelerationStructureKHR`]"]
 #[repr(transparent)]
-pub struct WriteDescriptorSetAccelerationStructureKHRBuilder<'a>(
-    WriteDescriptorSetAccelerationStructureKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct WriteDescriptorSetAccelerationStructureKHRBuilder<'a>(WriteDescriptorSetAccelerationStructureKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
     #[inline]
     pub fn new() -> WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
-        WriteDescriptorSetAccelerationStructureKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        WriteDescriptorSetAccelerationStructureKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn acceleration_structures(
-        mut self,
-        acceleration_structures : & 'a [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR],
-    ) -> Self {
+    pub fn acceleration_structures(mut self, acceleration_structures: &'a [crate::extensions::khr_acceleration_structure::AccelerationStructureKHR]) -> Self {
         self.0.p_acceleration_structures = acceleration_structures.as_ptr() as _;
         self.0.acceleration_structure_count = acceleration_structures.len() as _;
         self
@@ -495,8 +527,7 @@ pub struct PhysicalDeviceAccelerationStructureFeaturesKHR {
 impl Default for PhysicalDeviceAccelerationStructureFeaturesKHR {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR,
             p_next: std::ptr::null_mut(),
             acceleration_structure: Default::default(),
             acceleration_structure_capture_replay: Default::default(),
@@ -511,22 +542,10 @@ impl std::fmt::Debug for PhysicalDeviceAccelerationStructureFeaturesKHR {
         f.debug_struct("PhysicalDeviceAccelerationStructureFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "acceleration_structure",
-                &(self.acceleration_structure != 0),
-            )
-            .field(
-                "acceleration_structure_capture_replay",
-                &(self.acceleration_structure_capture_replay != 0),
-            )
-            .field(
-                "acceleration_structure_indirect_build",
-                &(self.acceleration_structure_indirect_build != 0),
-            )
-            .field(
-                "acceleration_structure_host_commands",
-                &(self.acceleration_structure_host_commands != 0),
-            )
+            .field("acceleration_structure", &(self.acceleration_structure != 0))
+            .field("acceleration_structure_capture_replay", &(self.acceleration_structure_capture_replay != 0))
+            .field("acceleration_structure_indirect_build", &(self.acceleration_structure_indirect_build != 0))
+            .field("acceleration_structure_host_commands", &(self.acceleration_structure_host_commands != 0))
             .field(
                 "descriptor_binding_acceleration_structure_update_after_bind",
                 &(self.descriptor_binding_acceleration_structure_update_after_bind != 0),
@@ -543,17 +562,11 @@ impl PhysicalDeviceAccelerationStructureFeaturesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceAccelerationStructureFeaturesKHR.html) · Builder of [`PhysicalDeviceAccelerationStructureFeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a>(
-    PhysicalDeviceAccelerationStructureFeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a>(PhysicalDeviceAccelerationStructureFeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
-        PhysicalDeviceAccelerationStructureFeaturesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceAccelerationStructureFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn acceleration_structure(mut self, acceleration_structure: bool) -> Self {
@@ -561,37 +574,23 @@ impl<'a> PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn acceleration_structure_capture_replay(
-        mut self,
-        acceleration_structure_capture_replay: bool,
-    ) -> Self {
+    pub fn acceleration_structure_capture_replay(mut self, acceleration_structure_capture_replay: bool) -> Self {
         self.0.acceleration_structure_capture_replay = acceleration_structure_capture_replay as _;
         self
     }
     #[inline]
-    pub fn acceleration_structure_indirect_build(
-        mut self,
-        acceleration_structure_indirect_build: bool,
-    ) -> Self {
+    pub fn acceleration_structure_indirect_build(mut self, acceleration_structure_indirect_build: bool) -> Self {
         self.0.acceleration_structure_indirect_build = acceleration_structure_indirect_build as _;
         self
     }
     #[inline]
-    pub fn acceleration_structure_host_commands(
-        mut self,
-        acceleration_structure_host_commands: bool,
-    ) -> Self {
+    pub fn acceleration_structure_host_commands(mut self, acceleration_structure_host_commands: bool) -> Self {
         self.0.acceleration_structure_host_commands = acceleration_structure_host_commands as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_acceleration_structure_update_after_bind(
-        mut self,
-        descriptor_binding_acceleration_structure_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_acceleration_structure_update_after_bind =
-            descriptor_binding_acceleration_structure_update_after_bind as _;
+    pub fn descriptor_binding_acceleration_structure_update_after_bind(mut self, descriptor_binding_acceleration_structure_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_acceleration_structure_update_after_bind = descriptor_binding_acceleration_structure_update_after_bind as _;
         self
     }
     #[inline]
@@ -640,8 +639,7 @@ pub struct PhysicalDeviceAccelerationStructurePropertiesKHR {
 impl Default for PhysicalDeviceAccelerationStructurePropertiesKHR {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR,
             p_next: std::ptr::null_mut(),
             max_geometry_count: Default::default(),
             max_instance_count: Default::default(),
@@ -662,26 +660,17 @@ impl std::fmt::Debug for PhysicalDeviceAccelerationStructurePropertiesKHR {
             .field("max_geometry_count", &self.max_geometry_count)
             .field("max_instance_count", &self.max_instance_count)
             .field("max_primitive_count", &self.max_primitive_count)
-            .field(
-                "max_per_stage_descriptor_acceleration_structures",
-                &self.max_per_stage_descriptor_acceleration_structures,
-            )
+            .field("max_per_stage_descriptor_acceleration_structures", &self.max_per_stage_descriptor_acceleration_structures)
             .field(
                 "max_per_stage_descriptor_update_after_bind_acceleration_structures",
                 &self.max_per_stage_descriptor_update_after_bind_acceleration_structures,
             )
-            .field(
-                "max_descriptor_set_acceleration_structures",
-                &self.max_descriptor_set_acceleration_structures,
-            )
+            .field("max_descriptor_set_acceleration_structures", &self.max_descriptor_set_acceleration_structures)
             .field(
                 "max_descriptor_set_update_after_bind_acceleration_structures",
                 &self.max_descriptor_set_update_after_bind_acceleration_structures,
             )
-            .field(
-                "min_acceleration_structure_scratch_offset_alignment",
-                &self.min_acceleration_structure_scratch_offset_alignment,
-            )
+            .field("min_acceleration_structure_scratch_offset_alignment", &self.min_acceleration_structure_scratch_offset_alignment)
             .finish()
     }
 }
@@ -694,17 +683,11 @@ impl PhysicalDeviceAccelerationStructurePropertiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceAccelerationStructurePropertiesKHR.html) · Builder of [`PhysicalDeviceAccelerationStructurePropertiesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a>(
-    PhysicalDeviceAccelerationStructurePropertiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a>(PhysicalDeviceAccelerationStructurePropertiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a> {
-        PhysicalDeviceAccelerationStructurePropertiesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceAccelerationStructurePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn max_geometry_count(mut self, max_geometry_count: u64) -> Self {
@@ -722,50 +705,28 @@ impl<'a> PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_acceleration_structures(
-        mut self,
-        max_per_stage_descriptor_acceleration_structures: u32,
-    ) -> Self {
-        self.0.max_per_stage_descriptor_acceleration_structures =
-            max_per_stage_descriptor_acceleration_structures as _;
+    pub fn max_per_stage_descriptor_acceleration_structures(mut self, max_per_stage_descriptor_acceleration_structures: u32) -> Self {
+        self.0.max_per_stage_descriptor_acceleration_structures = max_per_stage_descriptor_acceleration_structures as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_acceleration_structures(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_acceleration_structures: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_acceleration_structures =
-            max_per_stage_descriptor_update_after_bind_acceleration_structures as _;
+    pub fn max_per_stage_descriptor_update_after_bind_acceleration_structures(mut self, max_per_stage_descriptor_update_after_bind_acceleration_structures: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_acceleration_structures = max_per_stage_descriptor_update_after_bind_acceleration_structures as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_acceleration_structures(
-        mut self,
-        max_descriptor_set_acceleration_structures: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_acceleration_structures =
-            max_descriptor_set_acceleration_structures as _;
+    pub fn max_descriptor_set_acceleration_structures(mut self, max_descriptor_set_acceleration_structures: u32) -> Self {
+        self.0.max_descriptor_set_acceleration_structures = max_descriptor_set_acceleration_structures as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_acceleration_structures(
-        mut self,
-        max_descriptor_set_update_after_bind_acceleration_structures: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_acceleration_structures =
-            max_descriptor_set_update_after_bind_acceleration_structures as _;
+    pub fn max_descriptor_set_update_after_bind_acceleration_structures(mut self, max_descriptor_set_update_after_bind_acceleration_structures: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_acceleration_structures = max_descriptor_set_update_after_bind_acceleration_structures as _;
         self
     }
     #[inline]
-    pub fn min_acceleration_structure_scratch_offset_alignment(
-        mut self,
-        min_acceleration_structure_scratch_offset_alignment: u32,
-    ) -> Self {
-        self.0.min_acceleration_structure_scratch_offset_alignment =
-            min_acceleration_structure_scratch_offset_alignment as _;
+    pub fn min_acceleration_structure_scratch_offset_alignment(mut self, min_acceleration_structure_scratch_offset_alignment: u32) -> Self {
+        self.0.min_acceleration_structure_scratch_offset_alignment = min_acceleration_structure_scratch_offset_alignment as _;
         self
     }
     #[inline]
@@ -885,17 +846,11 @@ impl AccelerationStructureGeometryTrianglesDataKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryTrianglesDataKHR.html) · Builder of [`AccelerationStructureGeometryTrianglesDataKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureGeometryTrianglesDataKHRBuilder<'a>(
-    AccelerationStructureGeometryTrianglesDataKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureGeometryTrianglesDataKHRBuilder<'a>(AccelerationStructureGeometryTrianglesDataKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {
-        AccelerationStructureGeometryTrianglesDataKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureGeometryTrianglesDataKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn vertex_format(mut self, vertex_format: crate::vk1_0::Format) -> Self {
@@ -903,10 +858,7 @@ impl<'a> AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn vertex_data(
-        mut self,
-        vertex_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn vertex_data(mut self, vertex_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.vertex_data = vertex_data as _;
         self
     }
@@ -926,18 +878,12 @@ impl<'a> AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn index_data(
-        mut self,
-        index_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn index_data(mut self, index_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.index_data = index_data as _;
         self
     }
     #[inline]
-    pub fn transform_data(
-        mut self,
-        transform_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn transform_data(mut self, transform_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.transform_data = transform_data as _;
         self
     }
@@ -1007,23 +953,14 @@ impl AccelerationStructureGeometryAabbsDataKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryAabbsDataKHR.html) · Builder of [`AccelerationStructureGeometryAabbsDataKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureGeometryAabbsDataKHRBuilder<'a>(
-    AccelerationStructureGeometryAabbsDataKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureGeometryAabbsDataKHRBuilder<'a>(AccelerationStructureGeometryAabbsDataKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureGeometryAabbsDataKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureGeometryAabbsDataKHRBuilder<'a> {
-        AccelerationStructureGeometryAabbsDataKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureGeometryAabbsDataKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn data(
-        mut self,
-        data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn data(mut self, data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.data = data as _;
         self
     }
@@ -1098,17 +1035,11 @@ impl AccelerationStructureGeometryInstancesDataKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryInstancesDataKHR.html) · Builder of [`AccelerationStructureGeometryInstancesDataKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureGeometryInstancesDataKHRBuilder<'a>(
-    AccelerationStructureGeometryInstancesDataKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureGeometryInstancesDataKHRBuilder<'a>(AccelerationStructureGeometryInstancesDataKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureGeometryInstancesDataKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureGeometryInstancesDataKHRBuilder<'a> {
-        AccelerationStructureGeometryInstancesDataKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureGeometryInstancesDataKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn array_of_pointers(mut self, array_of_pointers: bool) -> Self {
@@ -1116,10 +1047,7 @@ impl<'a> AccelerationStructureGeometryInstancesDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn data(
-        mut self,
-        data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn data(mut self, data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.data = data as _;
         self
     }
@@ -1154,7 +1082,11 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryInstancesDataKHRBui
 #[doc(alias = "VkAccelerationStructureGeometryDataKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
-pub union AccelerationStructureGeometryDataKHR { pub triangles : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryTrianglesDataKHR , pub aabbs : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryAabbsDataKHR , pub instances : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryInstancesDataKHR }
+pub union AccelerationStructureGeometryDataKHR {
+    pub triangles: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHR,
+    pub aabbs: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryAabbsDataKHR,
+    pub instances: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryInstancesDataKHR,
+}
 impl Default for AccelerationStructureGeometryDataKHR {
     fn default() -> Self {
         unsafe { std::mem::zeroed() }
@@ -1162,8 +1094,7 @@ impl Default for AccelerationStructureGeometryDataKHR {
 }
 impl std::fmt::Debug for AccelerationStructureGeometryDataKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AccelerationStructureGeometryDataKHR")
-            .finish()
+        f.debug_struct("AccelerationStructureGeometryDataKHR").finish()
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryKHR.html) · Structure"]
@@ -1174,8 +1105,7 @@ pub struct AccelerationStructureGeometryKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR,
-    pub geometry:
-        crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryDataKHR,
+    pub geometry: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryDataKHR,
     pub flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR,
 }
 impl Default for AccelerationStructureGeometryKHR {
@@ -1209,36 +1139,24 @@ impl AccelerationStructureGeometryKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryKHR.html) · Builder of [`AccelerationStructureGeometryKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureGeometryKHRBuilder<'a>(
-    AccelerationStructureGeometryKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureGeometryKHRBuilder<'a>(AccelerationStructureGeometryKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureGeometryKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureGeometryKHRBuilder<'a> {
         AccelerationStructureGeometryKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn geometry_type(
-        mut self,
-        geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR,
-    ) -> Self {
+    pub fn geometry_type(mut self, geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR) -> Self {
         self.0.geometry_type = geometry_type as _;
         self
     }
     #[inline]
-    pub fn geometry(
-        mut self,
-        geometry : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryDataKHR,
-    ) -> Self {
+    pub fn geometry(mut self, geometry: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryDataKHR) -> Self {
         self.0.geometry = geometry as _;
         self
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -1273,7 +1191,19 @@ impl<'a> std::ops::DerefMut for AccelerationStructureGeometryKHRBuilder<'a> {
 #[doc(alias = "VkAccelerationStructureBuildGeometryInfoKHR")]
 #[derive(Copy, Clone)]
 #[repr(C)]
-pub struct AccelerationStructureBuildGeometryInfoKHR { pub s_type : crate :: vk1_0 :: StructureType , pub p_next : * const std :: ffi :: c_void , pub _type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureTypeKHR , pub flags : crate :: extensions :: khr_acceleration_structure :: BuildAccelerationStructureFlagsKHR , pub mode : crate :: extensions :: khr_acceleration_structure :: BuildAccelerationStructureModeKHR , pub src_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , pub dst_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR , pub geometry_count : u32 , pub p_geometries : * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryKHR , pub pp_geometries : * const * const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryKHR , pub scratch_data : crate :: extensions :: khr_acceleration_structure :: DeviceOrHostAddressKHR }
+pub struct AccelerationStructureBuildGeometryInfoKHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR,
+    pub flags: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR,
+    pub mode: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureModeKHR,
+    pub src_acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    pub dst_acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    pub geometry_count: u32,
+    pub p_geometries: *const crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHR,
+    pub pp_geometries: *const *const crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHR,
+    pub scratch_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR,
+}
 impl Default for AccelerationStructureBuildGeometryInfoKHR {
     fn default() -> Self {
         Self {
@@ -1299,14 +1229,8 @@ impl std::fmt::Debug for AccelerationStructureBuildGeometryInfoKHR {
             .field("_type", &self._type)
             .field("flags", &self.flags)
             .field("mode", &self.mode)
-            .field(
-                "src_acceleration_structure",
-                &self.src_acceleration_structure,
-            )
-            .field(
-                "dst_acceleration_structure",
-                &self.dst_acceleration_structure,
-            )
+            .field("src_acceleration_structure", &self.src_acceleration_structure)
+            .field("dst_acceleration_structure", &self.dst_acceleration_structure)
             .field("geometry_count", &self.geometry_count)
             .field("p_geometries", &self.p_geometries)
             .field("pp_geometries", &self.pp_geometries)
@@ -1323,72 +1247,45 @@ impl AccelerationStructureBuildGeometryInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html) · Builder of [`AccelerationStructureBuildGeometryInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureBuildGeometryInfoKHRBuilder<'a>(
-    AccelerationStructureBuildGeometryInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureBuildGeometryInfoKHRBuilder<'a>(AccelerationStructureBuildGeometryInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureBuildGeometryInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureBuildGeometryInfoKHRBuilder<'a> {
-        AccelerationStructureBuildGeometryInfoKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureBuildGeometryInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn _type(
-        mut self,
-        _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR,
-    ) -> Self {
+    pub fn _type(mut self, _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn mode(
-        mut self,
-        mode: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureModeKHR,
-    ) -> Self {
+    pub fn mode(mut self, mode: crate::extensions::khr_acceleration_structure::BuildAccelerationStructureModeKHR) -> Self {
         self.0.mode = mode as _;
         self
     }
     #[inline]
-    pub fn src_acceleration_structure(
-        mut self,
-        src_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR,
-    ) -> Self {
+    pub fn src_acceleration_structure(mut self, src_acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.src_acceleration_structure = src_acceleration_structure as _;
         self
     }
     #[inline]
-    pub fn dst_acceleration_structure(
-        mut self,
-        dst_acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR,
-    ) -> Self {
+    pub fn dst_acceleration_structure(mut self, dst_acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.dst_acceleration_structure = dst_acceleration_structure as _;
         self
     }
     #[inline]
-    pub fn geometries(
-        mut self,
-        geometries : & 'a [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureGeometryKHRBuilder],
-    ) -> Self {
+    pub fn geometries(mut self, geometries: &'a [crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHRBuilder]) -> Self {
         self.0.p_geometries = geometries.as_ptr() as _;
         self.0.geometry_count = geometries.len() as _;
         self
     }
     #[inline]
-    pub fn scratch_data(
-        mut self,
-        scratch_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR,
-    ) -> Self {
+    pub fn scratch_data(mut self, scratch_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR) -> Self {
         self.0.scratch_data = scratch_data as _;
         self
     }
@@ -1458,10 +1355,7 @@ impl AccelerationStructureBuildRangeInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildRangeInfoKHR.html) · Builder of [`AccelerationStructureBuildRangeInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureBuildRangeInfoKHRBuilder<'a>(
-    AccelerationStructureBuildRangeInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureBuildRangeInfoKHRBuilder<'a>(AccelerationStructureBuildRangeInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureBuildRangeInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureBuildRangeInfoKHRBuilder<'a> {
@@ -1521,8 +1415,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureBuildRangeInfoKHRBuilder<'a
 pub struct AccelerationStructureCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub create_flags:
-        crate::extensions::khr_acceleration_structure::AccelerationStructureCreateFlagsKHR,
+    pub create_flags: crate::extensions::khr_acceleration_structure::AccelerationStructureCreateFlagsKHR,
     pub buffer: crate::vk1_0::Buffer,
     pub offset: crate::vk1_0::DeviceSize,
     pub size: crate::vk1_0::DeviceSize,
@@ -1566,20 +1459,14 @@ impl AccelerationStructureCreateInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoKHR.html) · Builder of [`AccelerationStructureCreateInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureCreateInfoKHRBuilder<'a>(
-    AccelerationStructureCreateInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureCreateInfoKHRBuilder<'a>(AccelerationStructureCreateInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureCreateInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureCreateInfoKHRBuilder<'a> {
         AccelerationStructureCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn create_flags(
-        mut self,
-        create_flags : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureCreateFlagsKHR,
-    ) -> Self {
+    pub fn create_flags(mut self, create_flags: crate::extensions::khr_acceleration_structure::AccelerationStructureCreateFlagsKHR) -> Self {
         self.0.create_flags = create_flags as _;
         self
     }
@@ -1599,10 +1486,7 @@ impl<'a> AccelerationStructureCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn _type(
-        mut self,
-        _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR,
-    ) -> Self {
+    pub fn _type(mut self, _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR) -> Self {
         self.0._type = _type as _;
         self
     }
@@ -1762,9 +1646,7 @@ impl Default for TransformMatrixKHR {
 }
 impl std::fmt::Debug for TransformMatrixKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("TransformMatrixKHR")
-            .field("matrix", &self.matrix)
-            .finish()
+        f.debug_struct("TransformMatrixKHR").field("matrix", &self.matrix).finish()
     }
 }
 impl TransformMatrixKHR {
@@ -1844,15 +1726,9 @@ impl std::fmt::Debug for AccelerationStructureInstanceKHR {
             .field("transform", &self.transform)
             .field("instance_custom_index", &self.instance_custom_index)
             .field("mask", &self.mask)
-            .field(
-                "instance_shader_binding_table_record_offset",
-                &self.instance_shader_binding_table_record_offset,
-            )
+            .field("instance_shader_binding_table_record_offset", &self.instance_shader_binding_table_record_offset)
             .field("flags", &self.flags)
-            .field(
-                "acceleration_structure_reference",
-                &self.acceleration_structure_reference,
-            )
+            .field("acceleration_structure_reference", &self.acceleration_structure_reference)
             .finish()
     }
 }
@@ -1865,20 +1741,14 @@ impl AccelerationStructureInstanceKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceKHR.html) · Builder of [`AccelerationStructureInstanceKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureInstanceKHRBuilder<'a>(
-    AccelerationStructureInstanceKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureInstanceKHRBuilder<'a>(AccelerationStructureInstanceKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureInstanceKHRBuilder<'a> {
         AccelerationStructureInstanceKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn transform(
-        mut self,
-        transform: crate::extensions::khr_acceleration_structure::TransformMatrixKHR,
-    ) -> Self {
+    pub fn transform(mut self, transform: crate::extensions::khr_acceleration_structure::TransformMatrixKHR) -> Self {
         self.0.transform = transform as _;
         self
     }
@@ -1893,27 +1763,17 @@ impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn instance_shader_binding_table_record_offset(
-        mut self,
-        instance_shader_binding_table_record_offset: u32,
-    ) -> Self {
-        self.0.instance_shader_binding_table_record_offset =
-            instance_shader_binding_table_record_offset as _;
+    pub fn instance_shader_binding_table_record_offset(mut self, instance_shader_binding_table_record_offset: u32) -> Self {
+        self.0.instance_shader_binding_table_record_offset = instance_shader_binding_table_record_offset as _;
         self
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn acceleration_structure_reference(
-        mut self,
-        acceleration_structure_reference: u64,
-    ) -> Self {
+    pub fn acceleration_structure_reference(mut self, acceleration_structure_reference: u64) -> Self {
         self.0.acceleration_structure_reference = acceleration_structure_reference as _;
         self
     }
@@ -1951,8 +1811,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInstanceKHRBuilder<'a> {
 pub struct AccelerationStructureDeviceAddressInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub acceleration_structure:
-        crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
+    pub acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
 }
 impl Default for AccelerationStructureDeviceAddressInfoKHR {
     fn default() -> Self {
@@ -1981,23 +1840,14 @@ impl AccelerationStructureDeviceAddressInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureDeviceAddressInfoKHR.html) · Builder of [`AccelerationStructureDeviceAddressInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureDeviceAddressInfoKHRBuilder<'a>(
-    AccelerationStructureDeviceAddressInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureDeviceAddressInfoKHRBuilder<'a>(AccelerationStructureDeviceAddressInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureDeviceAddressInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureDeviceAddressInfoKHRBuilder<'a> {
-        AccelerationStructureDeviceAddressInfoKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureDeviceAddressInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn acceleration_structure(
-        mut self,
-        acceleration_structure : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR,
-    ) -> Self {
+    pub fn acceleration_structure(mut self, acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.acceleration_structure = acceleration_structure as _;
         self
     }
@@ -2064,10 +1914,7 @@ impl AccelerationStructureVersionInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureVersionInfoKHR.html) · Builder of [`AccelerationStructureVersionInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureVersionInfoKHRBuilder<'a>(
-    AccelerationStructureVersionInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureVersionInfoKHRBuilder<'a>(AccelerationStructureVersionInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureVersionInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureVersionInfoKHRBuilder<'a> {
@@ -2147,36 +1994,24 @@ impl CopyAccelerationStructureInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureInfoKHR.html) · Builder of [`CopyAccelerationStructureInfoKHR`]"]
 #[repr(transparent)]
-pub struct CopyAccelerationStructureInfoKHRBuilder<'a>(
-    CopyAccelerationStructureInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CopyAccelerationStructureInfoKHRBuilder<'a>(CopyAccelerationStructureInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyAccelerationStructureInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> CopyAccelerationStructureInfoKHRBuilder<'a> {
         CopyAccelerationStructureInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src(
-        mut self,
-        src: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    ) -> Self {
+    pub fn src(mut self, src: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.src = src as _;
         self
     }
     #[inline]
-    pub fn dst(
-        mut self,
-        dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    ) -> Self {
+    pub fn dst(mut self, dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.dst = dst as _;
         self
     }
     #[inline]
-    pub fn mode(
-        mut self,
-        mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
-    ) -> Self {
+    pub fn mode(mut self, mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR) -> Self {
         self.0.mode = mode as _;
         self
     }
@@ -2249,39 +2084,24 @@ impl CopyAccelerationStructureToMemoryInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureToMemoryInfoKHR.html) · Builder of [`CopyAccelerationStructureToMemoryInfoKHR`]"]
 #[repr(transparent)]
-pub struct CopyAccelerationStructureToMemoryInfoKHRBuilder<'a>(
-    CopyAccelerationStructureToMemoryInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CopyAccelerationStructureToMemoryInfoKHRBuilder<'a>(CopyAccelerationStructureToMemoryInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyAccelerationStructureToMemoryInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> CopyAccelerationStructureToMemoryInfoKHRBuilder<'a> {
-        CopyAccelerationStructureToMemoryInfoKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        CopyAccelerationStructureToMemoryInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src(
-        mut self,
-        src: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    ) -> Self {
+    pub fn src(mut self, src: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.src = src as _;
         self
     }
     #[inline]
-    pub fn dst(
-        mut self,
-        dst: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR,
-    ) -> Self {
+    pub fn dst(mut self, dst: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR) -> Self {
         self.0.dst = dst as _;
         self
     }
     #[inline]
-    pub fn mode(
-        mut self,
-        mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
-    ) -> Self {
+    pub fn mode(mut self, mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR) -> Self {
         self.0.mode = mode as _;
         self
     }
@@ -2354,39 +2174,24 @@ impl CopyMemoryToAccelerationStructureInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyMemoryToAccelerationStructureInfoKHR.html) · Builder of [`CopyMemoryToAccelerationStructureInfoKHR`]"]
 #[repr(transparent)]
-pub struct CopyMemoryToAccelerationStructureInfoKHRBuilder<'a>(
-    CopyMemoryToAccelerationStructureInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CopyMemoryToAccelerationStructureInfoKHRBuilder<'a>(CopyMemoryToAccelerationStructureInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyMemoryToAccelerationStructureInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> CopyMemoryToAccelerationStructureInfoKHRBuilder<'a> {
-        CopyMemoryToAccelerationStructureInfoKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        CopyMemoryToAccelerationStructureInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src(
-        mut self,
-        src: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
-    ) -> Self {
+    pub fn src(mut self, src: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.src = src as _;
         self
     }
     #[inline]
-    pub fn dst(
-        mut self,
-        dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    ) -> Self {
+    pub fn dst(mut self, dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR) -> Self {
         self.0.dst = dst as _;
         self
     }
     #[inline]
-    pub fn mode(
-        mut self,
-        mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
-    ) -> Self {
+    pub fn mode(mut self, mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR) -> Self {
         self.0.mode = mode as _;
         self
     }
@@ -2444,10 +2249,7 @@ impl std::fmt::Debug for AccelerationStructureBuildSizesInfoKHR {
         f.debug_struct("AccelerationStructureBuildSizesInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "acceleration_structure_size",
-                &self.acceleration_structure_size,
-            )
+            .field("acceleration_structure_size", &self.acceleration_structure_size)
             .field("update_scratch_size", &self.update_scratch_size)
             .field("build_scratch_size", &self.build_scratch_size)
             .finish()
@@ -2462,20 +2264,14 @@ impl AccelerationStructureBuildSizesInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildSizesInfoKHR.html) · Builder of [`AccelerationStructureBuildSizesInfoKHR`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureBuildSizesInfoKHRBuilder<'a>(
-    AccelerationStructureBuildSizesInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureBuildSizesInfoKHRBuilder<'a>(AccelerationStructureBuildSizesInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureBuildSizesInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureBuildSizesInfoKHRBuilder<'a> {
         AccelerationStructureBuildSizesInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn acceleration_structure_size(
-        mut self,
-        acceleration_structure_size: crate::vk1_0::DeviceSize,
-    ) -> Self {
+    pub fn acceleration_structure_size(mut self, acceleration_structure_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.acceleration_structure_size = acceleration_structure_size as _;
         self
     }
@@ -2523,14 +2319,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkDestroyAccelerationStructureKHR")]
     pub unsafe fn destroy_acceleration_structure_khr(
         &self,
-        acceleration_structure: Option<
-            crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-        >,
+        acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let _function = self
-            .destroy_acceleration_structure_khr
-            .expect("`destroy_acceleration_structure_khr` is not loaded");
+        let _function = self.destroy_acceleration_structure_khr.expect("`destroy_acceleration_structure_khr` is not loaded");
         let _return = _function(
             self.handle,
             match acceleration_structure {
@@ -2552,9 +2344,7 @@ impl crate::DeviceLoader {
         command_buffer: crate::vk1_0::CommandBuffer,
         info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR,
     ) -> () {
-        let _function = self
-            .cmd_copy_acceleration_structure_khr
-            .expect("`cmd_copy_acceleration_structure_khr` is not loaded");
+        let _function = self.cmd_copy_acceleration_structure_khr.expect("`cmd_copy_acceleration_structure_khr` is not loaded");
         let _return = _function(command_buffer as _, info as _);
         ()
     }
@@ -2563,14 +2353,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkCopyAccelerationStructureKHR")]
     pub unsafe fn copy_acceleration_structure_khr(
         &self,
-        deferred_operation: Option<
-            crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-        >,
+        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
         info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .copy_acceleration_structure_khr
-            .expect("`copy_acceleration_structure_khr` is not loaded");
+        let _function = self.copy_acceleration_structure_khr.expect("`copy_acceleration_structure_khr` is not loaded");
         let _return = _function(
             self.handle,
             match deferred_operation {
@@ -2587,7 +2373,7 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_copy_acceleration_structure_to_memory_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        info : & crate :: extensions :: khr_acceleration_structure :: CopyAccelerationStructureToMemoryInfoKHR,
+        info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR,
     ) -> () {
         let _function = self
             .cmd_copy_acceleration_structure_to_memory_khr
@@ -2600,14 +2386,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkCopyAccelerationStructureToMemoryKHR")]
     pub unsafe fn copy_acceleration_structure_to_memory_khr(
         &self,
-        deferred_operation: Option<
-            crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-        >,
-        info : & crate :: extensions :: khr_acceleration_structure :: CopyAccelerationStructureToMemoryInfoKHR,
+        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
+        info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .copy_acceleration_structure_to_memory_khr
-            .expect("`copy_acceleration_structure_to_memory_khr` is not loaded");
+        let _function = self.copy_acceleration_structure_to_memory_khr.expect("`copy_acceleration_structure_to_memory_khr` is not loaded");
         let _return = _function(
             self.handle,
             match deferred_operation {
@@ -2624,7 +2406,7 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_copy_memory_to_acceleration_structure_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        info : & crate :: extensions :: khr_acceleration_structure :: CopyMemoryToAccelerationStructureInfoKHR,
+        info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR,
     ) -> () {
         let _function = self
             .cmd_copy_memory_to_acceleration_structure_khr
@@ -2637,14 +2419,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkCopyMemoryToAccelerationStructureKHR")]
     pub unsafe fn copy_memory_to_acceleration_structure_khr(
         &self,
-        deferred_operation: Option<
-            crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-        >,
-        info : & crate :: extensions :: khr_acceleration_structure :: CopyMemoryToAccelerationStructureInfoKHR,
+        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
+        info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .copy_memory_to_acceleration_structure_khr
-            .expect("`copy_memory_to_acceleration_structure_khr` is not loaded");
+        let _function = self.copy_memory_to_acceleration_structure_khr.expect("`copy_memory_to_acceleration_structure_khr` is not loaded");
         let _return = _function(
             self.handle,
             match deferred_operation {
@@ -2661,7 +2439,7 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_write_acceleration_structures_properties_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        acceleration_structures : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR],
+        acceleration_structures: &[crate::extensions::khr_acceleration_structure::AccelerationStructureKHR],
         query_type: crate::vk1_0::QueryType,
         query_pool: crate::vk1_0::QueryPool,
         first_query: u32,
@@ -2685,15 +2463,13 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkWriteAccelerationStructuresPropertiesKHR")]
     pub unsafe fn write_acceleration_structures_properties_khr(
         &self,
-        acceleration_structures : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureKHR],
+        acceleration_structures: &[crate::extensions::khr_acceleration_structure::AccelerationStructureKHR],
         query_type: crate::vk1_0::QueryType,
         data_size: usize,
         data: *mut std::ffi::c_void,
         stride: usize,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .write_acceleration_structures_properties_khr
-            .expect("`write_acceleration_structures_properties_khr` is not loaded");
+        let _function = self.write_acceleration_structures_properties_khr.expect("`write_acceleration_structures_properties_khr` is not loaded");
         let acceleration_structure_count = acceleration_structures.len();
         let _return = _function(
             self.handle,
@@ -2711,10 +2487,8 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetDeviceAccelerationStructureCompatibilityKHR")]
     pub unsafe fn get_device_acceleration_structure_compatibility_khr(
         &self,
-        version_info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureVersionInfoKHR,
-        compatibility: Option<
-            crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR,
-        >,
+        version_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureVersionInfoKHR,
+        compatibility: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR>,
     ) -> crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR {
         let _function = self
             .get_device_acceleration_structure_compatibility_khr
@@ -2731,17 +2505,11 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkCreateAccelerationStructureKHR")]
     pub unsafe fn create_acceleration_structure_khr(
         &self,
-        create_info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureCreateInfoKHR,
+        create_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        acceleration_structure: Option<
-            crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    > {
-        let _function = self
-            .create_acceleration_structure_khr
-            .expect("`create_acceleration_structure_khr` is not loaded");
+        acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR> {
+        let _function = self.create_acceleration_structure_khr.expect("`create_acceleration_structure_khr` is not loaded");
         let mut acceleration_structure = match acceleration_structure {
             Some(v) => v,
             None => Default::default(),
@@ -2763,19 +2531,12 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_build_acceleration_structures_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        infos : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHRBuilder],
-        build_range_infos : & [* const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildRangeInfoKHR],
+        infos: &[crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHRBuilder],
+        build_range_infos: &[*const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR],
     ) -> () {
-        let _function = self
-            .cmd_build_acceleration_structures_khr
-            .expect("`cmd_build_acceleration_structures_khr` is not loaded");
+        let _function = self.cmd_build_acceleration_structures_khr.expect("`cmd_build_acceleration_structures_khr` is not loaded");
         let info_count = infos.len().min(build_range_infos.len());
-        let _return = _function(
-            command_buffer as _,
-            info_count as _,
-            infos.as_ptr() as _,
-            build_range_infos.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, info_count as _, infos.as_ptr() as _, build_range_infos.as_ptr() as _);
         ()
     }
     #[inline]
@@ -2784,7 +2545,7 @@ impl crate::DeviceLoader {
     pub unsafe fn cmd_build_acceleration_structures_indirect_khr(
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
-        infos : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHRBuilder],
+        infos: &[crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHRBuilder],
         indirect_device_addresses: &[crate::vk1_0::DeviceAddress],
         indirect_strides: &[u32],
         max_primitive_counts: &[*const u32],
@@ -2792,11 +2553,7 @@ impl crate::DeviceLoader {
         let _function = self
             .cmd_build_acceleration_structures_indirect_khr
             .expect("`cmd_build_acceleration_structures_indirect_khr` is not loaded");
-        let info_count = infos
-            .len()
-            .min(indirect_device_addresses.len())
-            .min(indirect_strides.len())
-            .min(max_primitive_counts.len());
+        let info_count = infos.len().min(indirect_device_addresses.len()).min(indirect_strides.len()).min(max_primitive_counts.len());
         let _return = _function(
             command_buffer as _,
             info_count as _,
@@ -2812,15 +2569,11 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkBuildAccelerationStructuresKHR")]
     pub unsafe fn build_acceleration_structures_khr(
         &self,
-        deferred_operation: Option<
-            crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-        >,
-        infos : & [crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHRBuilder],
-        build_range_infos : & [* const crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildRangeInfoKHR],
+        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
+        infos: &[crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHRBuilder],
+        build_range_infos: &[*const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR],
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .build_acceleration_structures_khr
-            .expect("`build_acceleration_structures_khr` is not loaded");
+        let _function = self.build_acceleration_structures_khr.expect("`build_acceleration_structures_khr` is not loaded");
         let info_count = infos.len().min(build_range_infos.len());
         let _return = _function(
             self.handle,
@@ -2837,10 +2590,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
     #[doc(alias = "vkGetAccelerationStructureDeviceAddressKHR")]
-    pub unsafe fn get_acceleration_structure_device_address_khr(
-        &self,
-        info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureDeviceAddressInfoKHR,
-    ) -> crate::vk1_0::DeviceAddress {
+    pub unsafe fn get_acceleration_structure_device_address_khr(&self, info: &crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR) -> crate::vk1_0::DeviceAddress {
         let _function = self
             .get_acceleration_structure_device_address_khr
             .expect("`get_acceleration_structure_device_address_khr` is not loaded");
@@ -2852,27 +2602,17 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetAccelerationStructureBuildSizesKHR")]
     pub unsafe fn get_acceleration_structure_build_sizes_khr(
         &self,
-        build_type : crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildTypeKHR,
-        build_info : & crate :: extensions :: khr_acceleration_structure :: AccelerationStructureBuildGeometryInfoKHR,
+        build_type: crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR,
+        build_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
         max_primitive_counts: &[u32],
-        size_info: Option<
-            crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR,
-        >,
+        size_info: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR>,
     ) -> crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR {
-        let _function = self
-            .get_acceleration_structure_build_sizes_khr
-            .expect("`get_acceleration_structure_build_sizes_khr` is not loaded");
+        let _function = self.get_acceleration_structure_build_sizes_khr.expect("`get_acceleration_structure_build_sizes_khr` is not loaded");
         let mut size_info = match size_info {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            build_type as _,
-            build_info as _,
-            max_primitive_counts.as_ptr() as _,
-            &mut size_info,
-        );
+        let _return = _function(self.handle, build_type as _, build_info as _, max_primitive_counts.as_ptr() as _, &mut size_info);
         size_info
     }
 }

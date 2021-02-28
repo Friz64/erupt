@@ -3,17 +3,13 @@
 pub const KHR_DEVICE_GROUP_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_DEVICE_GROUP_EXTENSION_NAME")]
-pub const KHR_DEVICE_GROUP_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_device_group");
+pub const KHR_DEVICE_GROUP_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_device_group");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDeviceGroupPeerMemoryFeaturesKHR");
+pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceGroupPeerMemoryFeaturesKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_DEVICE_MASK_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetDeviceMaskKHR");
+pub const FN_CMD_SET_DEVICE_MASK_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetDeviceMaskKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DISPATCH_BASE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDispatchBaseKHR");
+pub const FN_CMD_DISPATCH_BASE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdDispatchBaseKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagsKHR.html) · Alias"]
 #[doc(alias = "VkPeerMemoryFeatureFlagsKHR")]
 #[allow(non_camel_case_types)]
@@ -45,8 +41,7 @@ pub type BindBufferMemoryDeviceGroupInfoKHR = crate::vk1_1::BindBufferMemoryDevi
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryDeviceGroupInfoKHR.html) · Alias"]
 #[doc(alias = "VkBindBufferMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type BindBufferMemoryDeviceGroupInfoKHRBuilder<'a> =
-    crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<'a>;
+pub type BindBufferMemoryDeviceGroupInfoKHRBuilder<'a> = crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias"]
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -54,8 +49,7 @@ pub type BindImageMemoryDeviceGroupInfoKHR = crate::vk1_1::BindImageMemoryDevice
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias"]
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type BindImageMemoryDeviceGroupInfoKHRBuilder<'a> =
-    crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<'a>;
+pub type BindImageMemoryDeviceGroupInfoKHRBuilder<'a> = crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -63,8 +57,7 @@ pub type DeviceGroupRenderPassBeginInfoKHR = crate::vk1_1::DeviceGroupRenderPass
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type DeviceGroupRenderPassBeginInfoKHRBuilder<'a> =
-    crate::vk1_1::DeviceGroupRenderPassBeginInfoBuilder<'a>;
+pub type DeviceGroupRenderPassBeginInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupRenderPassBeginInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -72,8 +65,7 @@ pub type DeviceGroupCommandBufferBeginInfoKHR = crate::vk1_1::DeviceGroupCommand
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type DeviceGroupCommandBufferBeginInfoKHRBuilder<'a> =
-    crate::vk1_1::DeviceGroupCommandBufferBeginInfoBuilder<'a>;
+pub type DeviceGroupCommandBufferBeginInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupCommandBufferBeginInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSubmitInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupSubmitInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -89,12 +81,10 @@ pub type DeviceGroupBindSparseInfoKHR = crate::vk1_1::DeviceGroupBindSparseInfo;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupBindSparseInfoKHR.html) · Alias"]
 #[doc(alias = "VkDeviceGroupBindSparseInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type DeviceGroupBindSparseInfoKHRBuilder<'a> =
-    crate::vk1_1::DeviceGroupBindSparseInfoBuilder<'a>;
+pub type DeviceGroupBindSparseInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupBindSparseInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR =
-    crate::vk1_1::PFN_vkGetDeviceGroupPeerMemoryFeatures;
+pub type PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR = crate::vk1_1::PFN_vkGetDeviceGroupPeerMemoryFeatures;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDeviceMaskKHR = crate::vk1_1::PFN_vkCmdSetDeviceMask;
@@ -113,33 +103,19 @@ impl crate::DeviceLoader {
         remote_device_index: u32,
         peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
     ) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let _function = self
-            .get_device_group_peer_memory_features_khr
-            .expect("`get_device_group_peer_memory_features_khr` is not loaded");
+        let _function = self.get_device_group_peer_memory_features_khr.expect("`get_device_group_peer_memory_features_khr` is not loaded");
         let mut peer_memory_features = match peer_memory_features {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            heap_index as _,
-            local_device_index as _,
-            remote_device_index as _,
-            &mut peer_memory_features,
-        );
+        let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Function"]
     #[doc(alias = "vkCmdSetDeviceMaskKHR")]
-    pub unsafe fn cmd_set_device_mask_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        device_mask: u32,
-    ) -> () {
-        let _function = self
-            .cmd_set_device_mask_khr
-            .expect("`cmd_set_device_mask_khr` is not loaded");
+    pub unsafe fn cmd_set_device_mask_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> () {
+        let _function = self.cmd_set_device_mask_khr.expect("`cmd_set_device_mask_khr` is not loaded");
         let _return = _function(command_buffer as _, device_mask as _);
         ()
     }
@@ -156,9 +132,7 @@ impl crate::DeviceLoader {
         group_count_y: u32,
         group_count_z: u32,
     ) -> () {
-        let _function = self
-            .cmd_dispatch_base_khr
-            .expect("`cmd_dispatch_base_khr` is not loaded");
+        let _function = self.cmd_dispatch_base_khr.expect("`cmd_dispatch_base_khr` is not loaded");
         let _return = _function(
             command_buffer as _,
             base_group_x as _,

@@ -3,33 +3,20 @@
 pub const NV_MESH_SHADER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_MESH_SHADER_EXTENSION_NAME")]
-pub const NV_MESH_SHADER_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_mesh_shader");
+pub const NV_MESH_SHADER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_mesh_shader");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawMeshTasksNV");
+pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawMeshTasksNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
+pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
+pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    task_count: u32,
-    first_task: u32,
-) -> ();
+pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, task_count: u32, first_task: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    buffer: crate::vk1_0::Buffer,
-    offset: crate::vk1_0::DeviceSize,
-    draw_count: u32,
-    stride: u32,
-) -> ();
+pub type PFN_vkCmdDrawMeshTasksIndirectNV =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
@@ -80,10 +67,7 @@ impl PhysicalDeviceMeshShaderFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Builder of [`PhysicalDeviceMeshShaderFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMeshShaderFeaturesNVBuilder<'a>(
-    PhysicalDeviceMeshShaderFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMeshShaderFeaturesNVBuilder<'a>(PhysicalDeviceMeshShaderFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
@@ -174,42 +158,18 @@ impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_draw_mesh_tasks_count", &self.max_draw_mesh_tasks_count)
-            .field(
-                "max_task_work_group_invocations",
-                &self.max_task_work_group_invocations,
-            )
+            .field("max_task_work_group_invocations", &self.max_task_work_group_invocations)
             .field("max_task_work_group_size", &self.max_task_work_group_size)
-            .field(
-                "max_task_total_memory_size",
-                &self.max_task_total_memory_size,
-            )
+            .field("max_task_total_memory_size", &self.max_task_total_memory_size)
             .field("max_task_output_count", &self.max_task_output_count)
-            .field(
-                "max_mesh_work_group_invocations",
-                &self.max_mesh_work_group_invocations,
-            )
+            .field("max_mesh_work_group_invocations", &self.max_mesh_work_group_invocations)
             .field("max_mesh_work_group_size", &self.max_mesh_work_group_size)
-            .field(
-                "max_mesh_total_memory_size",
-                &self.max_mesh_total_memory_size,
-            )
+            .field("max_mesh_total_memory_size", &self.max_mesh_total_memory_size)
             .field("max_mesh_output_vertices", &self.max_mesh_output_vertices)
-            .field(
-                "max_mesh_output_primitives",
-                &self.max_mesh_output_primitives,
-            )
-            .field(
-                "max_mesh_multiview_view_count",
-                &self.max_mesh_multiview_view_count,
-            )
-            .field(
-                "mesh_output_per_vertex_granularity",
-                &self.mesh_output_per_vertex_granularity,
-            )
-            .field(
-                "mesh_output_per_primitive_granularity",
-                &self.mesh_output_per_primitive_granularity,
-            )
+            .field("max_mesh_output_primitives", &self.max_mesh_output_primitives)
+            .field("max_mesh_multiview_view_count", &self.max_mesh_multiview_view_count)
+            .field("mesh_output_per_vertex_granularity", &self.mesh_output_per_vertex_granularity)
+            .field("mesh_output_per_primitive_granularity", &self.mesh_output_per_primitive_granularity)
             .finish()
     }
 }
@@ -222,10 +182,7 @@ impl PhysicalDeviceMeshShaderPropertiesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Builder of [`PhysicalDeviceMeshShaderPropertiesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMeshShaderPropertiesNVBuilder<'a>(
-    PhysicalDeviceMeshShaderPropertiesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMeshShaderPropertiesNVBuilder<'a>(PhysicalDeviceMeshShaderPropertiesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
@@ -287,18 +244,12 @@ impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn mesh_output_per_vertex_granularity(
-        mut self,
-        mesh_output_per_vertex_granularity: u32,
-    ) -> Self {
+    pub fn mesh_output_per_vertex_granularity(mut self, mesh_output_per_vertex_granularity: u32) -> Self {
         self.0.mesh_output_per_vertex_granularity = mesh_output_per_vertex_granularity as _;
         self
     }
     #[inline]
-    pub fn mesh_output_per_primitive_granularity(
-        mut self,
-        mesh_output_per_primitive_granularity: u32,
-    ) -> Self {
+    pub fn mesh_output_per_primitive_granularity(mut self, mesh_output_per_primitive_granularity: u32) -> Self {
         self.0.mesh_output_per_primitive_granularity = mesh_output_per_primitive_granularity as _;
         self
     }
@@ -362,10 +313,7 @@ impl DrawMeshTasksIndirectCommandNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Builder of [`DrawMeshTasksIndirectCommandNV`]"]
 #[repr(transparent)]
-pub struct DrawMeshTasksIndirectCommandNVBuilder<'a>(
-    DrawMeshTasksIndirectCommandNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DrawMeshTasksIndirectCommandNVBuilder<'a>(DrawMeshTasksIndirectCommandNV, std::marker::PhantomData<&'a ()>);
 impl<'a> DrawMeshTasksIndirectCommandNVBuilder<'a> {
     #[inline]
     pub fn new() -> DrawMeshTasksIndirectCommandNVBuilder<'a> {
@@ -413,15 +361,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksNV")]
-    pub unsafe fn cmd_draw_mesh_tasks_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        task_count: u32,
-        first_task: u32,
-    ) -> () {
-        let _function = self
-            .cmd_draw_mesh_tasks_nv
-            .expect("`cmd_draw_mesh_tasks_nv` is not loaded");
+    pub unsafe fn cmd_draw_mesh_tasks_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, task_count: u32, first_task: u32) -> () {
+        let _function = self.cmd_draw_mesh_tasks_nv.expect("`cmd_draw_mesh_tasks_nv` is not loaded");
         let _return = _function(command_buffer as _, task_count as _, first_task as _);
         ()
     }
@@ -436,16 +377,8 @@ impl crate::DeviceLoader {
         draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_mesh_tasks_indirect_nv
-            .expect("`cmd_draw_mesh_tasks_indirect_nv` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            draw_count as _,
-            stride as _,
-        );
+        let _function = self.cmd_draw_mesh_tasks_indirect_nv.expect("`cmd_draw_mesh_tasks_indirect_nv` is not loaded");
+        let _return = _function(command_buffer as _, buffer as _, offset as _, draw_count as _, stride as _);
         ()
     }
     #[inline]
@@ -461,9 +394,7 @@ impl crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_mesh_tasks_indirect_count_nv
-            .expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
+        let _function = self.cmd_draw_mesh_tasks_indirect_count_nv.expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
         let _return = _function(
             command_buffer as _,
             buffer as _,

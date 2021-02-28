@@ -12,10 +12,7 @@ use std::{
 /// The default `EntryLoader`, providing `EntryLoader::new`
 pub type DefaultEntryLoader = EntryLoader<Library>;
 
-#[cfg(all(
-    unix,
-    not(any(target_os = "macos", target_os = "ios", target_os = "android"))
-))]
+#[cfg(all(unix, not(any(target_os = "macos", target_os = "ios", target_os = "android"))))]
 const LIB_PATH: &str = "libvulkan.so.1";
 
 #[cfg(target_os = "android")]
@@ -84,12 +81,8 @@ impl DefaultEntryLoader {
     /// providing a custom library path
     ///
     /// Enabled using the `loading` cargo feature
-    pub fn with_lib_path<P: AsRef<OsStr>>(
-        lib_path: P,
-    ) -> Result<DefaultEntryLoader, EntryLoaderError> {
-        let mut library = unsafe {
-            Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))?
-        };
+    pub fn with_lib_path<P: AsRef<OsStr>>(lib_path: P) -> Result<DefaultEntryLoader, EntryLoaderError> {
+        let mut library = unsafe { Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))? };
 
         let symbol = |library: &mut Library, name| unsafe {
             let cstr = CStr::from_ptr(name);

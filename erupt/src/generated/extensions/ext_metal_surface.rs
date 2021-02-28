@@ -3,11 +3,9 @@
 pub const EXT_METAL_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_METAL_SURFACE_EXTENSION_NAME")]
-pub const EXT_METAL_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_metal_surface");
+pub const EXT_METAL_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_metal_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_METAL_SURFACE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateMetalSurfaceEXT");
+pub const FN_CREATE_METAL_SURFACE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreateMetalSurfaceEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/CAMetalLayer.html) · Basetype"]
 pub type CAMetalLayer = std::ffi::c_void;
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`]"] # [doc (alias = "VkMetalSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct MetalSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
@@ -77,20 +75,14 @@ impl MetalSurfaceCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Builder of [`MetalSurfaceCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct MetalSurfaceCreateInfoEXTBuilder<'a>(
-    MetalSurfaceCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MetalSurfaceCreateInfoEXTBuilder<'a>(MetalSurfaceCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> MetalSurfaceCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> MetalSurfaceCreateInfoEXTBuilder<'a> {
         MetalSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_metal_surface::MetalSurfaceCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_metal_surface::MetalSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -137,9 +129,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_metal_surface_ext
-            .expect("`create_metal_surface_ext` is not loaded");
+        let _function = self.create_metal_surface_ext.expect("`create_metal_surface_ext` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

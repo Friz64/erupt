@@ -3,20 +3,24 @@
 pub const KHR_EXTERNAL_SEMAPHORE_WIN32_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_semaphore_win32");
+pub const KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_semaphore_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetSemaphoreWin32HandleKHR");
+pub const FN_GET_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkImportSemaphoreWin32HandleKHR");
+pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR,
+    p_handle: *mut *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_semaphore_win32_handle_info : * const crate :: extensions :: khr_external_semaphore_win32 :: ImportSemaphoreWin32HandleInfoKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -65,10 +69,7 @@ impl ImportSemaphoreWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ImportSemaphoreWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct ImportSemaphoreWin32HandleInfoKHRBuilder<'a>(
-    ImportSemaphoreWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportSemaphoreWin32HandleInfoKHRBuilder<'a>(ImportSemaphoreWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
@@ -85,10 +86,7 @@ impl<'a> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -171,10 +169,7 @@ impl ExportSemaphoreWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ExportSemaphoreWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct ExportSemaphoreWin32HandleInfoKHRBuilder<'a>(
-    ExportSemaphoreWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportSemaphoreWin32HandleInfoKHRBuilder<'a>(ExportSemaphoreWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
@@ -251,15 +246,9 @@ impl std::fmt::Debug for D3D12FenceSubmitInfoKHR {
         f.debug_struct("D3D12FenceSubmitInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "wait_semaphore_values_count",
-                &self.wait_semaphore_values_count,
-            )
+            .field("wait_semaphore_values_count", &self.wait_semaphore_values_count)
             .field("p_wait_semaphore_values", &self.p_wait_semaphore_values)
-            .field(
-                "signal_semaphore_values_count",
-                &self.signal_semaphore_values_count,
-            )
+            .field("signal_semaphore_values_count", &self.signal_semaphore_values_count)
             .field("p_signal_semaphore_values", &self.p_signal_semaphore_values)
             .finish()
     }
@@ -273,10 +262,7 @@ impl D3D12FenceSubmitInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Builder of [`D3D12FenceSubmitInfoKHR`]"]
 #[repr(transparent)]
-pub struct D3D12FenceSubmitInfoKHRBuilder<'a>(
-    D3D12FenceSubmitInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct D3D12FenceSubmitInfoKHRBuilder<'a>(D3D12FenceSubmitInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> D3D12FenceSubmitInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> D3D12FenceSubmitInfoKHRBuilder<'a> {
@@ -360,10 +346,7 @@ impl SemaphoreGetWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Builder of [`SemaphoreGetWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct SemaphoreGetWin32HandleInfoKHRBuilder<'a>(
-    SemaphoreGetWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SemaphoreGetWin32HandleInfoKHRBuilder<'a>(SemaphoreGetWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
@@ -375,10 +358,7 @@ impl<'a> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -416,12 +396,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetSemaphoreWin32HandleKHR")]
     pub unsafe fn get_semaphore_win32_handle_khr(
         &self,
-        get_win32_handle_info : & crate :: extensions :: khr_external_semaphore_win32 :: SemaphoreGetWin32HandleInfoKHR,
+        get_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_semaphore_win32_handle_khr
-            .expect("`get_semaphore_win32_handle_khr` is not loaded");
+        let _function = self.get_semaphore_win32_handle_khr.expect("`get_semaphore_win32_handle_khr` is not loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -430,11 +408,9 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkImportSemaphoreWin32HandleKHR")]
     pub unsafe fn import_semaphore_win32_handle_khr(
         &self,
-        import_semaphore_win32_handle_info : & crate :: extensions :: khr_external_semaphore_win32 :: ImportSemaphoreWin32HandleInfoKHR,
+        import_semaphore_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .import_semaphore_win32_handle_khr
-            .expect("`import_semaphore_win32_handle_khr` is not loaded");
+        let _function = self.import_semaphore_win32_handle_khr.expect("`import_semaphore_win32_handle_khr` is not loaded");
         let _return = _function(self.handle, import_semaphore_win32_handle_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

@@ -3,42 +3,35 @@
 pub const EXT_DEBUG_UTILS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEBUG_UTILS_EXTENSION_NAME")]
-pub const EXT_DEBUG_UTILS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_debug_utils");
+pub const EXT_DEBUG_UTILS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_debug_utils");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkSetDebugUtilsObjectNameEXT");
+pub const FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetDebugUtilsObjectNameEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkSetDebugUtilsObjectTagEXT");
+pub const FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetDebugUtilsObjectTagEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkQueueBeginDebugUtilsLabelEXT");
+pub const FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkQueueBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkQueueEndDebugUtilsLabelEXT");
+pub const FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkQueueEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkQueueInsertDebugUtilsLabelEXT");
+pub const FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkQueueInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBeginDebugUtilsLabelEXT");
+pub const FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdBeginDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdEndDebugUtilsLabelEXT");
+pub const FN_CMD_END_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdEndDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdInsertDebugUtilsLabelEXT");
+pub const FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdInsertDebugUtilsLabelEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateDebugUtilsMessengerEXT");
+pub const FN_CREATE_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreateDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyDebugUtilsMessengerEXT");
+pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char = crate::cstr!("vkDestroyDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkSubmitDebugUtilsMessageEXT");
-crate :: non_dispatchable_handle ! (DebugUtilsMessengerEXT , DEBUG_UTILS_MESSENGER_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle" , "VkDebugUtilsMessengerEXT") ;
+pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char = crate::cstr!("vkSubmitDebugUtilsMessageEXT");
+crate::non_dispatchable_handle!(
+    DebugUtilsMessengerEXT,
+    DEBUG_UTILS_MESSENGER_EXT,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle",
+    "VkDebugUtilsMessengerEXT"
+);
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessengerCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCreateFlagsEXT`]"]
 #[doc(alias = "VkDebugUtilsMessengerCreateFlagBitsEXT")]
@@ -141,48 +134,30 @@ impl DebugUtilsMessageTypeFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetDebugUtilsObjectNameEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_name_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkSetDebugUtilsObjectNameEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetDebugUtilsObjectTagEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_tag_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkSetDebugUtilsObjectTagEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkQueueBeginDebugUtilsLabelEXT = unsafe extern "system" fn(
-    queue: crate::vk1_0::Queue,
-    p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> ();
+pub type PFN_vkQueueBeginDebugUtilsLabelEXT = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkQueueEndDebugUtilsLabelEXT =
-    unsafe extern "system" fn(queue: crate::vk1_0::Queue) -> ();
+pub type PFN_vkQueueEndDebugUtilsLabelEXT = unsafe extern "system" fn(queue: crate::vk1_0::Queue) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkQueueInsertDebugUtilsLabelEXT = unsafe extern "system" fn(
-    queue: crate::vk1_0::Queue,
-    p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> ();
+pub type PFN_vkQueueInsertDebugUtilsLabelEXT = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginDebugUtilsLabelEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> ();
+pub type PFN_vkCmdBeginDebugUtilsLabelEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdEndDebugUtilsLabelEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
+pub type PFN_vkCmdEndDebugUtilsLabelEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdInsertDebugUtilsLabelEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-) -> ();
+pub type PFN_vkCmdInsertDebugUtilsLabelEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(
@@ -193,11 +168,8 @@ pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDebugUtilsMessengerEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyDebugUtilsMessengerEXT =
+    unsafe extern "system" fn(instance: crate::vk1_0::Instance, messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(
@@ -256,10 +228,7 @@ impl DebugUtilsObjectNameInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Builder of [`DebugUtilsObjectNameInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugUtilsObjectNameInfoEXTBuilder<'a>(
-    DebugUtilsObjectNameInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugUtilsObjectNameInfoEXTBuilder<'a>(DebugUtilsObjectNameInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugUtilsObjectNameInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugUtilsObjectNameInfoEXTBuilder<'a> {
@@ -355,10 +324,7 @@ impl DebugUtilsObjectTagInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectTagInfoEXT.html) · Builder of [`DebugUtilsObjectTagInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugUtilsObjectTagInfoEXTBuilder<'a>(
-    DebugUtilsObjectTagInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugUtilsObjectTagInfoEXTBuilder<'a>(DebugUtilsObjectTagInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugUtilsObjectTagInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugUtilsObjectTagInfoEXTBuilder<'a> {
@@ -508,8 +474,7 @@ pub struct DebugUtilsMessengerCreateInfoEXT {
     pub flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateFlagsEXT,
     pub message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagsEXT,
     pub message_type: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
-    pub pfn_user_callback:
-        Option<crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT>,
+    pub pfn_user_callback: Option<crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT>,
     pub p_user_data: *mut std::ffi::c_void,
 }
 impl Default for DebugUtilsMessengerCreateInfoEXT {
@@ -533,9 +498,7 @@ impl std::fmt::Debug for DebugUtilsMessengerCreateInfoEXT {
             .field("flags", &self.flags)
             .field("message_severity", &self.message_severity)
             .field("message_type", &self.message_type)
-            .field("pfn_user_callback", unsafe {
-                &std::mem::transmute::<_, *const ()>(self.pfn_user_callback)
-            })
+            .field("pfn_user_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_user_callback) })
             .field("p_user_data", &self.p_user_data)
             .finish()
     }
@@ -549,46 +512,29 @@ impl DebugUtilsMessengerCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateInfoEXT.html) · Builder of [`DebugUtilsMessengerCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugUtilsMessengerCreateInfoEXTBuilder<'a>(
-    DebugUtilsMessengerCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugUtilsMessengerCreateInfoEXTBuilder<'a>(DebugUtilsMessengerCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
         DebugUtilsMessengerCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn message_severity(
-        mut self,
-        message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagsEXT,
-    ) -> Self {
+    pub fn message_severity(mut self, message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagsEXT) -> Self {
         self.0.message_severity = message_severity as _;
         self
     }
     #[inline]
-    pub fn message_type(
-        mut self,
-        message_type: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
-    ) -> Self {
+    pub fn message_type(mut self, message_type: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT) -> Self {
         self.0.message_type = message_type as _;
         self
     }
     #[inline]
-    pub fn pfn_user_callback(
-        mut self,
-        pfn_user_callback: Option<
-            crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT,
-        >,
-    ) -> Self {
+    pub fn pfn_user_callback(mut self, pfn_user_callback: Option<crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT>) -> Self {
         self.0.pfn_user_callback = pfn_user_callback as _;
         self
     }
@@ -687,20 +633,14 @@ impl DebugUtilsMessengerCallbackDataEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataEXT.html) · Builder of [`DebugUtilsMessengerCallbackDataEXT`]"]
 #[repr(transparent)]
-pub struct DebugUtilsMessengerCallbackDataEXTBuilder<'a>(
-    DebugUtilsMessengerCallbackDataEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugUtilsMessengerCallbackDataEXTBuilder<'a>(DebugUtilsMessengerCallbackDataEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         DebugUtilsMessengerCallbackDataEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -720,28 +660,19 @@ impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn queue_labels(
-        mut self,
-        queue_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder],
-    ) -> Self {
+    pub fn queue_labels(mut self, queue_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
         self.0.p_queue_labels = queue_labels.as_ptr() as _;
         self.0.queue_label_count = queue_labels.len() as _;
         self
     }
     #[inline]
-    pub fn cmd_buf_labels(
-        mut self,
-        cmd_buf_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder],
-    ) -> Self {
+    pub fn cmd_buf_labels(mut self, cmd_buf_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
         self.0.p_cmd_buf_labels = cmd_buf_labels.as_ptr() as _;
         self.0.cmd_buf_label_count = cmd_buf_labels.len() as _;
         self
     }
     #[inline]
-    pub fn objects(
-        mut self,
-        objects: &'a [crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder],
-    ) -> Self {
+    pub fn objects(mut self, objects: &'a [crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder]) -> Self {
         self.0.p_objects = objects.as_ptr() as _;
         self.0.object_count = objects.len() as _;
         self
@@ -778,40 +709,24 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html) · Function"]
     #[doc(alias = "vkSetDebugUtilsObjectNameEXT")]
-    pub unsafe fn set_debug_utils_object_name_ext(
-        &self,
-        name_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .set_debug_utils_object_name_ext
-            .expect("`set_debug_utils_object_name_ext` is not loaded");
+    pub unsafe fn set_debug_utils_object_name_ext(&self, name_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT) -> crate::utils::VulkanResult<()> {
+        let _function = self.set_debug_utils_object_name_ext.expect("`set_debug_utils_object_name_ext` is not loaded");
         let _return = _function(self.handle, name_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html) · Function"]
     #[doc(alias = "vkSetDebugUtilsObjectTagEXT")]
-    pub unsafe fn set_debug_utils_object_tag_ext(
-        &self,
-        tag_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .set_debug_utils_object_tag_ext
-            .expect("`set_debug_utils_object_tag_ext` is not loaded");
+    pub unsafe fn set_debug_utils_object_tag_ext(&self, tag_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT) -> crate::utils::VulkanResult<()> {
+        let _function = self.set_debug_utils_object_tag_ext.expect("`set_debug_utils_object_tag_ext` is not loaded");
         let _return = _function(self.handle, tag_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueBeginDebugUtilsLabelEXT")]
-    pub unsafe fn queue_begin_debug_utils_label_ext(
-        &self,
-        queue: crate::vk1_0::Queue,
-        label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-    ) -> () {
-        let _function = self
-            .queue_begin_debug_utils_label_ext
-            .expect("`queue_begin_debug_utils_label_ext` is not loaded");
+    pub unsafe fn queue_begin_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
+        let _function = self.queue_begin_debug_utils_label_ext.expect("`queue_begin_debug_utils_label_ext` is not loaded");
         let _return = _function(queue as _, label_info as _);
         ()
     }
@@ -819,64 +734,39 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueEndDebugUtilsLabelEXT")]
     pub unsafe fn queue_end_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue) -> () {
-        let _function = self
-            .queue_end_debug_utils_label_ext
-            .expect("`queue_end_debug_utils_label_ext` is not loaded");
+        let _function = self.queue_end_debug_utils_label_ext.expect("`queue_end_debug_utils_label_ext` is not loaded");
         let _return = _function(queue as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueInsertDebugUtilsLabelEXT")]
-    pub unsafe fn queue_insert_debug_utils_label_ext(
-        &self,
-        queue: crate::vk1_0::Queue,
-        label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-    ) -> () {
-        let _function = self
-            .queue_insert_debug_utils_label_ext
-            .expect("`queue_insert_debug_utils_label_ext` is not loaded");
+    pub unsafe fn queue_insert_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
+        let _function = self.queue_insert_debug_utils_label_ext.expect("`queue_insert_debug_utils_label_ext` is not loaded");
         let _return = _function(queue as _, label_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginDebugUtilsLabelEXT")]
-    pub unsafe fn cmd_begin_debug_utils_label_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-    ) -> () {
-        let _function = self
-            .cmd_begin_debug_utils_label_ext
-            .expect("`cmd_begin_debug_utils_label_ext` is not loaded");
+    pub unsafe fn cmd_begin_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
+        let _function = self.cmd_begin_debug_utils_label_ext.expect("`cmd_begin_debug_utils_label_ext` is not loaded");
         let _return = _function(command_buffer as _, label_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdEndDebugUtilsLabelEXT")]
-    pub unsafe fn cmd_end_debug_utils_label_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-    ) -> () {
-        let _function = self
-            .cmd_end_debug_utils_label_ext
-            .expect("`cmd_end_debug_utils_label_ext` is not loaded");
+    pub unsafe fn cmd_end_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
+        let _function = self.cmd_end_debug_utils_label_ext.expect("`cmd_end_debug_utils_label_ext` is not loaded");
         let _return = _function(command_buffer as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdInsertDebugUtilsLabelEXT")]
-    pub unsafe fn cmd_insert_debug_utils_label_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
-    ) -> () {
-        let _function = self
-            .cmd_insert_debug_utils_label_ext
-            .expect("`cmd_insert_debug_utils_label_ext` is not loaded");
+    pub unsafe fn cmd_insert_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
+        let _function = self.cmd_insert_debug_utils_label_ext.expect("`cmd_insert_debug_utils_label_ext` is not loaded");
         let _return = _function(command_buffer as _, label_info as _);
         ()
     }
@@ -891,11 +781,8 @@ impl crate::InstanceLoader {
         create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>
-    {
-        let _function = self
-            .create_debug_utils_messenger_ext
-            .expect("`create_debug_utils_messenger_ext` is not loaded");
+    ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT> {
+        let _function = self.create_debug_utils_messenger_ext.expect("`create_debug_utils_messenger_ext` is not loaded");
         let mut messenger = match messenger {
             Some(v) => v,
             None => Default::default(),
@@ -914,14 +801,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
     #[doc(alias = "vkDestroyDebugUtilsMessengerEXT")]
-    pub unsafe fn destroy_debug_utils_messenger_ext(
-        &self,
-        messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
-        let _function = self
-            .destroy_debug_utils_messenger_ext
-            .expect("`destroy_debug_utils_messenger_ext` is not loaded");
+    pub unsafe fn destroy_debug_utils_messenger_ext(&self, messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+        let _function = self.destroy_debug_utils_messenger_ext.expect("`destroy_debug_utils_messenger_ext` is not loaded");
         let _return = _function(
             self.handle,
             match messenger {
@@ -944,15 +825,8 @@ impl crate::InstanceLoader {
         message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
         callback_data: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
     ) -> () {
-        let _function = self
-            .submit_debug_utils_message_ext
-            .expect("`submit_debug_utils_message_ext` is not loaded");
-        let _return = _function(
-            self.handle,
-            message_severity as _,
-            message_types as _,
-            callback_data as _,
-        );
+        let _function = self.submit_debug_utils_message_ext.expect("`submit_debug_utils_message_ext` is not loaded");
+        let _return = _function(self.handle, message_severity as _, message_types as _, callback_data as _);
         ()
     }
 }

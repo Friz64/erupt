@@ -3,8 +3,7 @@
 pub const INTEL_SHADER_INTEGER_FUNCTIONS_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME")]
-pub const INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_INTEL_shader_integer_functions2");
+pub const INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_INTEL_shader_integer_functions2");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")]
 #[derive(Copy, Clone)]
@@ -16,7 +15,11 @@ pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 }
 impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL , p_next : std :: ptr :: null_mut () , shader_integer_functions2 : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL,
+            p_next: std::ptr::null_mut(),
+            shader_integer_functions2: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
@@ -24,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
         f.debug_struct("PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_integer_functions2",
-                &(self.shader_integer_functions2 != 0),
-            )
+            .field("shader_integer_functions2", &(self.shader_integer_functions2 != 0))
             .finish()
     }
 }
@@ -40,17 +40,11 @@ impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Builder of [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a>(
-    PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a>(PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a> {
-        PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_integer_functions2(mut self, shader_integer_functions2: bool) -> Self {

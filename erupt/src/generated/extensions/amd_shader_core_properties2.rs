@@ -3,8 +3,7 @@
 pub const AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME")]
-pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_shader_core_properties2");
+pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_shader_core_properties2");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`]"] # [doc (alias = "VkShaderCorePropertiesFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`]"]
 #[doc(alias = "VkShaderCorePropertiesFlagBitsAMD")]
@@ -32,8 +31,7 @@ impl std::fmt::Debug for ShaderCorePropertiesFlagBitsAMD {
 pub struct PhysicalDeviceShaderCoreProperties2AMD {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
-    pub shader_core_features:
-        crate::extensions::amd_shader_core_properties2::ShaderCorePropertiesFlagsAMD,
+    pub shader_core_features: crate::extensions::amd_shader_core_properties2::ShaderCorePropertiesFlagsAMD,
     pub active_compute_unit_count: u32,
 }
 impl Default for PhysicalDeviceShaderCoreProperties2AMD {
@@ -65,20 +63,14 @@ impl PhysicalDeviceShaderCoreProperties2AMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a>(
-    PhysicalDeviceShaderCoreProperties2AMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a>(PhysicalDeviceShaderCoreProperties2AMD, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
         PhysicalDeviceShaderCoreProperties2AMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn shader_core_features(
-        mut self,
-        shader_core_features : crate :: extensions :: amd_shader_core_properties2 :: ShaderCorePropertiesFlagsAMD,
-    ) -> Self {
+    pub fn shader_core_features(mut self, shader_core_features: crate::extensions::amd_shader_core_properties2::ShaderCorePropertiesFlagsAMD) -> Self {
         self.0.shader_core_features = shader_core_features as _;
         self
     }

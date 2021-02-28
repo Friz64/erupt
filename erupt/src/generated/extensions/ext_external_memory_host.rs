@@ -3,14 +3,17 @@
 pub const EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME")]
-pub const EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_external_memory_host");
+pub const EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_external_memory_host");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetMemoryHostPointerPropertiesEXT");
+pub const FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryHostPointerPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , p_host_pointer : * const std :: ffi :: c_void , p_memory_host_pointer_properties : * mut crate :: extensions :: ext_external_memory_host :: MemoryHostPointerPropertiesEXT) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+    p_host_pointer: *const std::ffi::c_void,
+    p_memory_host_pointer_properties: *mut crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure"]
 #[doc(alias = "VkImportMemoryHostPointerInfoEXT")]
 #[derive(Copy, Clone)]
@@ -50,20 +53,14 @@ impl ImportMemoryHostPointerInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`]"]
 #[repr(transparent)]
-pub struct ImportMemoryHostPointerInfoEXTBuilder<'a>(
-    ImportMemoryHostPointerInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportMemoryHostPointerInfoEXTBuilder<'a>(ImportMemoryHostPointerInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportMemoryHostPointerInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ImportMemoryHostPointerInfoEXTBuilder<'a> {
         ImportMemoryHostPointerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -135,10 +132,7 @@ impl MemoryHostPointerPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct MemoryHostPointerPropertiesEXTBuilder<'a>(
-    MemoryHostPointerPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryHostPointerPropertiesEXTBuilder<'a>(MemoryHostPointerPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryHostPointerPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryHostPointerPropertiesEXTBuilder<'a> {
@@ -188,8 +182,7 @@ pub struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
 impl Default for PhysicalDeviceExternalMemoryHostPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             min_imported_host_pointer_alignment: Default::default(),
         }
@@ -200,10 +193,7 @@ impl std::fmt::Debug for PhysicalDeviceExternalMemoryHostPropertiesEXT {
         f.debug_struct("PhysicalDeviceExternalMemoryHostPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "min_imported_host_pointer_alignment",
-                &self.min_imported_host_pointer_alignment,
-            )
+            .field("min_imported_host_pointer_alignment", &self.min_imported_host_pointer_alignment)
             .finish()
     }
 }
@@ -216,23 +206,14 @@ impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a>(
-    PhysicalDeviceExternalMemoryHostPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a>(PhysicalDeviceExternalMemoryHostPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
-        PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn min_imported_host_pointer_alignment(
-        mut self,
-        min_imported_host_pointer_alignment: crate::vk1_0::DeviceSize,
-    ) -> Self {
+    pub fn min_imported_host_pointer_alignment(mut self, min_imported_host_pointer_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_imported_host_pointer_alignment = min_imported_host_pointer_alignment as _;
         self
     }
@@ -272,25 +253,14 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         host_pointer: *const std::ffi::c_void,
-        memory_host_pointer_properties: Option<
-            crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
-    > {
-        let _function = self
-            .get_memory_host_pointer_properties_ext
-            .expect("`get_memory_host_pointer_properties_ext` is not loaded");
+        memory_host_pointer_properties: Option<crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT>,
+    ) -> crate::utils::VulkanResult<crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT> {
+        let _function = self.get_memory_host_pointer_properties_ext.expect("`get_memory_host_pointer_properties_ext` is not loaded");
         let mut memory_host_pointer_properties = match memory_host_pointer_properties {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            handle_type as _,
-            host_pointer,
-            &mut memory_host_pointer_properties,
-        );
+        let _return = _function(self.handle, handle_type as _, host_pointer, &mut memory_host_pointer_properties);
         crate::utils::VulkanResult::new(_return, memory_host_pointer_properties)
     }
 }

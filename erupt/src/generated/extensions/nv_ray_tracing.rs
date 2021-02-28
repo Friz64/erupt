@@ -6,42 +6,31 @@ pub const SHADER_UNUSED_NV: u32 = 4294967295;
 pub const NV_RAY_TRACING_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_RAY_TRACING_EXTENSION_NAME")]
-pub const NV_RAY_TRACING_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_ray_tracing");
+pub const NV_RAY_TRACING_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_ray_tracing");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_COMPILE_DEFERRED_NV: *const std::os::raw::c_char = crate::cstr!("vkCompileDeferredNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateAccelerationStructureNV");
+pub const FN_CREATE_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char = crate::cstr!("vkCreateAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyAccelerationStructureNV");
+pub const FN_DESTROY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char = crate::cstr!("vkDestroyAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetAccelerationStructureMemoryRequirementsNV");
+pub const FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureMemoryRequirementsNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkBindAccelerationStructureMemoryNV");
+pub const FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV: *const std::os::raw::c_char = crate::cstr!("vkBindAccelerationStructureMemoryNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdCopyAccelerationStructureNV");
+pub const FN_CMD_COPY_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesNV");
+pub const FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdWriteAccelerationStructuresPropertiesNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBuildAccelerationStructureNV");
+pub const FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdBuildAccelerationStructureNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_TRACE_RAYS_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdTraceRaysNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetAccelerationStructureHandleNV");
+pub const FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureHandleNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_RAY_TRACING_PIPELINES_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateRayTracingPipelinesNV");
+pub const FN_CREATE_RAY_TRACING_PIPELINES_NV: *const std::os::raw::c_char = crate::cstr!("vkCreateRayTracingPipelinesNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetRayTracingShaderGroupHandlesNV");
+pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV: *const std::os::raw::c_char = crate::cstr!("vkGetRayTracingShaderGroupHandlesNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsNV.html) · Alias"]
 #[doc(alias = "VkGeometryFlagsNV")]
 #[allow(non_camel_case_types)]
@@ -49,13 +38,11 @@ pub type GeometryFlagsNV = crate::extensions::khr_acceleration_structure::Geomet
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsNV.html) · Alias"]
 #[doc(alias = "VkGeometryInstanceFlagsNV")]
 #[allow(non_camel_case_types)]
-pub type GeometryInstanceFlagsNV =
-    crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR;
+pub type GeometryInstanceFlagsNV = crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsNV.html) · Alias"]
 #[doc(alias = "VkBuildAccelerationStructureFlagsNV")]
 #[allow(non_camel_case_types)]
-pub type BuildAccelerationStructureFlagsNV =
-    crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR;
+pub type BuildAccelerationStructureFlagsNV = crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsNV.html) · Alias"]
 #[doc(alias = "VkGeometryFlagBitsNV")]
 #[allow(non_camel_case_types)]
@@ -63,23 +50,19 @@ pub type GeometryFlagBitsNV = crate::extensions::khr_acceleration_structure::Geo
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsNV.html) · Alias"]
 #[doc(alias = "VkGeometryInstanceFlagBitsNV")]
 #[allow(non_camel_case_types)]
-pub type GeometryInstanceFlagBitsNV =
-    crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR;
+pub type GeometryInstanceFlagBitsNV = crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsNV.html) · Alias"]
 #[doc(alias = "VkBuildAccelerationStructureFlagBitsNV")]
 #[allow(non_camel_case_types)]
-pub type BuildAccelerationStructureFlagBitsNV =
-    crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagBitsKHR;
+pub type BuildAccelerationStructureFlagBitsNV = crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagBitsKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureModeNV.html) · Alias"]
 #[doc(alias = "VkCopyAccelerationStructureModeNV")]
 #[allow(non_camel_case_types)]
-pub type CopyAccelerationStructureModeNV =
-    crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR;
+pub type CopyAccelerationStructureModeNV = crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureTypeNV.html) · Alias"]
 #[doc(alias = "VkAccelerationStructureTypeNV")]
 #[allow(non_camel_case_types)]
-pub type AccelerationStructureTypeNV =
-    crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR;
+pub type AccelerationStructureTypeNV = crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTypeNV.html) · Alias"]
 #[doc(alias = "VkGeometryTypeNV")]
 #[allow(non_camel_case_types)]
@@ -87,8 +70,7 @@ pub type GeometryTypeNV = crate::extensions::khr_acceleration_structure::Geometr
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeNV.html) · Alias"]
 #[doc(alias = "VkRayTracingShaderGroupTypeNV")]
 #[allow(non_camel_case_types)]
-pub type RayTracingShaderGroupTypeNV =
-    crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR;
+pub type RayTracingShaderGroupTypeNV = crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsNV.html) · Alias"]
 #[doc(alias = "VkAabbPositionsNV")]
 #[allow(non_camel_case_types)]
@@ -96,8 +78,7 @@ pub type AabbPositionsNV = crate::extensions::khr_acceleration_structure::AabbPo
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsNV.html) · Alias"]
 #[doc(alias = "VkAabbPositionsNV")]
 #[allow(non_camel_case_types)]
-pub type AabbPositionsNVBuilder<'a> =
-    crate::extensions::khr_acceleration_structure::AabbPositionsKHRBuilder<'a>;
+pub type AabbPositionsNVBuilder<'a> = crate::extensions::khr_acceleration_structure::AabbPositionsKHRBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixNV.html) · Alias"]
 #[doc(alias = "VkTransformMatrixNV")]
 #[allow(non_camel_case_types)]
@@ -105,23 +86,24 @@ pub type TransformMatrixNV = crate::extensions::khr_acceleration_structure::Tran
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixNV.html) · Alias"]
 #[doc(alias = "VkTransformMatrixNV")]
 #[allow(non_camel_case_types)]
-pub type TransformMatrixNVBuilder<'a> =
-    crate::extensions::khr_acceleration_structure::TransformMatrixKHRBuilder<'a>;
+pub type TransformMatrixNVBuilder<'a> = crate::extensions::khr_acceleration_structure::TransformMatrixKHRBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias"]
 #[doc(alias = "VkAccelerationStructureInstanceNV")]
 #[allow(non_camel_case_types)]
-pub type AccelerationStructureInstanceNV =
-    crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHR;
+pub type AccelerationStructureInstanceNV = crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHR;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias"]
 #[doc(alias = "VkAccelerationStructureInstanceNV")]
 #[allow(non_camel_case_types)]
-pub type AccelerationStructureInstanceNVBuilder<'a> =
-    crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHRBuilder<'a>;
+pub type AccelerationStructureInstanceNVBuilder<'a> = crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHRBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingShaderGroupHandlesNV =
-    crate::extensions::khr_ray_tracing_pipeline::PFN_vkGetRayTracingShaderGroupHandlesKHR;
-crate :: non_dispatchable_handle ! (AccelerationStructureNV , ACCELERATION_STRUCTURE_NV , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureNV.html) · Non-dispatchable Handle" , "VkAccelerationStructureNV") ;
+pub type PFN_vkGetRayTracingShaderGroupHandlesNV = crate::extensions::khr_ray_tracing_pipeline::PFN_vkGetRayTracingShaderGroupHandlesKHR;
+crate::non_dispatchable_handle!(
+    AccelerationStructureNV,
+    ACCELERATION_STRUCTURE_NV,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureNV.html) · Non-dispatchable Handle",
+    "VkAccelerationStructureNV"
+);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsTypeNV.html) · Enum"]
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -145,11 +127,7 @@ impl AccelerationStructureMemoryRequirementsTypeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCompileDeferredNV = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline: crate::vk1_0::Pipeline,
-    shader: u32,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCompileDeferredNV = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, shader: u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateAccelerationStructureNV = unsafe extern "system" fn(
@@ -167,10 +145,18 @@ pub type PFN_vkDestroyAccelerationStructureNV = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: nv_ray_tracing :: AccelerationStructureMemoryRequirementsInfoNV , p_memory_requirements : * mut crate :: extensions :: khr_get_memory_requirements2 :: MemoryRequirements2KHR) -> () ;
+pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
+    p_memory_requirements: *mut crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
+) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindAccelerationStructureMemoryNV = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , bind_info_count : u32 , p_bind_infos : * const crate :: extensions :: nv_ray_tracing :: BindAccelerationStructureMemoryInfoNV) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkBindAccelerationStructureMemoryNV = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    bind_info_count: u32,
+    p_bind_infos: *const crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNV,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyAccelerationStructureNV = unsafe extern "system" fn(
@@ -228,8 +214,7 @@ pub type PFN_vkGetAccelerationStructureHandleNV = unsafe extern "system" fn(
     acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
     data_size: usize,
     p_data: *mut std::ffi::c_void,
-)
-    -> crate::vk1_0::Result;
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRayTracingPipelinesNV = unsafe extern "system" fn(
@@ -288,20 +273,14 @@ impl RayTracingShaderGroupCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Builder of [`RayTracingShaderGroupCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct RayTracingShaderGroupCreateInfoNVBuilder<'a>(
-    RayTracingShaderGroupCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RayTracingShaderGroupCreateInfoNVBuilder<'a>(RayTracingShaderGroupCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> RayTracingShaderGroupCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> RayTracingShaderGroupCreateInfoNVBuilder<'a> {
         RayTracingShaderGroupCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn _type(
-        mut self,
-        _type: crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR,
-    ) -> Self {
+    pub fn _type(mut self, _type: crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR) -> Self {
         self.0._type = _type as _;
         self
     }
@@ -409,21 +388,12 @@ impl RayTracingPipelineCreateInfoNV {
         RayTracingPipelineCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT,
-    > for RayTracingPipelineCreateInfoNVBuilder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackCreateInfoEXTBuilder < '_ >> for RayTracingPipelineCreateInfoNVBuilder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for RayTracingPipelineCreateInfoNVBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for RayTracingPipelineCreateInfoNVBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Builder of [`RayTracingPipelineCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct RayTracingPipelineCreateInfoNVBuilder<'a>(
-    RayTracingPipelineCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RayTracingPipelineCreateInfoNVBuilder<'a>(RayTracingPipelineCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> RayTracingPipelineCreateInfoNVBuilder<'a> {
@@ -435,19 +405,13 @@ impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn stages(
-        mut self,
-        stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder],
-    ) -> Self {
+    pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
-    pub fn groups(
-        mut self,
-        groups: &'a [crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNVBuilder],
-    ) -> Self {
+    pub fn groups(mut self, groups: &'a [crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNVBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
@@ -769,10 +733,7 @@ impl Default for GeometryDataNV {
 }
 impl std::fmt::Debug for GeometryDataNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GeometryDataNV")
-            .field("triangles", &self.triangles)
-            .field("aabbs", &self.aabbs)
-            .finish()
+        f.debug_struct("GeometryDataNV").field("triangles", &self.triangles).field("aabbs", &self.aabbs).finish()
     }
 }
 impl GeometryDataNV {
@@ -791,10 +752,7 @@ impl<'a> GeometryDataNVBuilder<'a> {
         GeometryDataNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn triangles(
-        mut self,
-        triangles: crate::extensions::nv_ray_tracing::GeometryTrianglesNV,
-    ) -> Self {
+    pub fn triangles(mut self, triangles: crate::extensions::nv_ray_tracing::GeometryTrianglesNV) -> Self {
         self.0.triangles = triangles as _;
         self
     }
@@ -879,10 +837,7 @@ impl<'a> GeometryNVBuilder<'a> {
         GeometryNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn geometry_type(
-        mut self,
-        geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR,
-    ) -> Self {
+    pub fn geometry_type(mut self, geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR) -> Self {
         self.0.geometry_type = geometry_type as _;
         self
     }
@@ -892,10 +847,7 @@ impl<'a> GeometryNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -974,28 +926,19 @@ impl AccelerationStructureInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInfoNV.html) · Builder of [`AccelerationStructureInfoNV`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureInfoNVBuilder<'a>(
-    AccelerationStructureInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureInfoNVBuilder<'a>(AccelerationStructureInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureInfoNVBuilder<'a> {
         AccelerationStructureInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn _type(
-        mut self,
-        _type: crate::extensions::nv_ray_tracing::AccelerationStructureTypeNV,
-    ) -> Self {
+    pub fn _type(mut self, _type: crate::extensions::nv_ray_tracing::AccelerationStructureTypeNV) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::nv_ray_tracing::BuildAccelerationStructureFlagsNV,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::nv_ray_tracing::BuildAccelerationStructureFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -1005,10 +948,7 @@ impl<'a> AccelerationStructureInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn geometries(
-        mut self,
-        geometries: &'a [crate::extensions::nv_ray_tracing::GeometryNVBuilder],
-    ) -> Self {
+    pub fn geometries(mut self, geometries: &'a [crate::extensions::nv_ray_tracing::GeometryNVBuilder]) -> Self {
         self.0.p_geometries = geometries.as_ptr() as _;
         self.0.geometry_count = geometries.len() as _;
         self
@@ -1079,10 +1019,7 @@ impl AccelerationStructureCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Builder of [`AccelerationStructureCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureCreateInfoNVBuilder<'a>(
-    AccelerationStructureCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureCreateInfoNVBuilder<'a>(AccelerationStructureCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureCreateInfoNVBuilder<'a> {
@@ -1094,10 +1031,7 @@ impl<'a> AccelerationStructureCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn info(
-        mut self,
-        info: crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV,
-    ) -> Self {
+    pub fn info(mut self, info: crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV) -> Self {
         self.0.info = info as _;
         self
     }
@@ -1176,20 +1110,14 @@ impl BindAccelerationStructureMemoryInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Builder of [`BindAccelerationStructureMemoryInfoNV`]"]
 #[repr(transparent)]
-pub struct BindAccelerationStructureMemoryInfoNVBuilder<'a>(
-    BindAccelerationStructureMemoryInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BindAccelerationStructureMemoryInfoNVBuilder<'a>(BindAccelerationStructureMemoryInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> BindAccelerationStructureMemoryInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> BindAccelerationStructureMemoryInfoNVBuilder<'a> {
         BindAccelerationStructureMemoryInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn acceleration_structure(
-        mut self,
-        acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-    ) -> Self {
+    pub fn acceleration_structure(mut self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV) -> Self {
         self.0.acceleration_structure = acceleration_structure as _;
         self
     }
@@ -1244,8 +1172,7 @@ pub struct WriteDescriptorSetAccelerationStructureNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub acceleration_structure_count: u32,
-    pub p_acceleration_structures:
-        *const crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    pub p_acceleration_structures: *const crate::extensions::nv_ray_tracing::AccelerationStructureNV,
 }
 impl Default for WriteDescriptorSetAccelerationStructureNV {
     fn default() -> Self {
@@ -1262,10 +1189,7 @@ impl std::fmt::Debug for WriteDescriptorSetAccelerationStructureNV {
         f.debug_struct("WriteDescriptorSetAccelerationStructureNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "acceleration_structure_count",
-                &self.acceleration_structure_count,
-            )
+            .field("acceleration_structure_count", &self.acceleration_structure_count)
             .field("p_acceleration_structures", &self.p_acceleration_structures)
             .finish()
     }
@@ -1279,23 +1203,14 @@ impl WriteDescriptorSetAccelerationStructureNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Builder of [`WriteDescriptorSetAccelerationStructureNV`]"]
 #[repr(transparent)]
-pub struct WriteDescriptorSetAccelerationStructureNVBuilder<'a>(
-    WriteDescriptorSetAccelerationStructureNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct WriteDescriptorSetAccelerationStructureNVBuilder<'a>(WriteDescriptorSetAccelerationStructureNV, std::marker::PhantomData<&'a ()>);
 impl<'a> WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
     #[inline]
     pub fn new() -> WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
-        WriteDescriptorSetAccelerationStructureNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        WriteDescriptorSetAccelerationStructureNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn acceleration_structures(
-        mut self,
-        acceleration_structures: &'a [crate::extensions::nv_ray_tracing::AccelerationStructureNV],
-    ) -> Self {
+    pub fn acceleration_structures(mut self, acceleration_structures: &'a [crate::extensions::nv_ray_tracing::AccelerationStructureNV]) -> Self {
         self.0.p_acceleration_structures = acceleration_structures.as_ptr() as _;
         self.0.acceleration_structure_count = acceleration_structures.len() as _;
         self
@@ -1366,31 +1281,19 @@ impl AccelerationStructureMemoryRequirementsInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Builder of [`AccelerationStructureMemoryRequirementsInfoNV`]"]
 #[repr(transparent)]
-pub struct AccelerationStructureMemoryRequirementsInfoNVBuilder<'a>(
-    AccelerationStructureMemoryRequirementsInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AccelerationStructureMemoryRequirementsInfoNVBuilder<'a>(AccelerationStructureMemoryRequirementsInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
-        AccelerationStructureMemoryRequirementsInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AccelerationStructureMemoryRequirementsInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn _type(
-        mut self,
-        _type: crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsTypeNV,
-    ) -> Self {
+    pub fn _type(mut self, _type: crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsTypeNV) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
-    pub fn acceleration_structure(
-        mut self,
-        acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-    ) -> Self {
+    pub fn acceleration_structure(mut self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV) -> Self {
         self.0.acceleration_structure = acceleration_structure as _;
         self
     }
@@ -1461,17 +1364,11 @@ impl std::fmt::Debug for PhysicalDeviceRayTracingPropertiesNV {
             .field("shader_group_handle_size", &self.shader_group_handle_size)
             .field("max_recursion_depth", &self.max_recursion_depth)
             .field("max_shader_group_stride", &self.max_shader_group_stride)
-            .field(
-                "shader_group_base_alignment",
-                &self.shader_group_base_alignment,
-            )
+            .field("shader_group_base_alignment", &self.shader_group_base_alignment)
             .field("max_geometry_count", &self.max_geometry_count)
             .field("max_instance_count", &self.max_instance_count)
             .field("max_triangle_count", &self.max_triangle_count)
-            .field(
-                "max_descriptor_set_acceleration_structures",
-                &self.max_descriptor_set_acceleration_structures,
-            )
+            .field("max_descriptor_set_acceleration_structures", &self.max_descriptor_set_acceleration_structures)
             .finish()
     }
 }
@@ -1484,10 +1381,7 @@ impl PhysicalDeviceRayTracingPropertiesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Builder of [`PhysicalDeviceRayTracingPropertiesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceRayTracingPropertiesNVBuilder<'a>(
-    PhysicalDeviceRayTracingPropertiesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceRayTracingPropertiesNVBuilder<'a>(PhysicalDeviceRayTracingPropertiesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
@@ -1529,12 +1423,8 @@ impl<'a> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_descriptor_set_acceleration_structures(
-        mut self,
-        max_descriptor_set_acceleration_structures: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_acceleration_structures =
-            max_descriptor_set_acceleration_structures as _;
+    pub fn max_descriptor_set_acceleration_structures(mut self, max_descriptor_set_acceleration_structures: u32) -> Self {
+        self.0.max_descriptor_set_acceleration_structures = max_descriptor_set_acceleration_structures as _;
         self
     }
     #[inline]
@@ -1569,14 +1459,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function"]
     #[doc(alias = "vkCompileDeferredNV")]
-    pub unsafe fn compile_deferred_nv(
-        &self,
-        pipeline: crate::vk1_0::Pipeline,
-        shader: u32,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .compile_deferred_nv
-            .expect("`compile_deferred_nv` is not loaded");
+    pub unsafe fn compile_deferred_nv(&self, pipeline: crate::vk1_0::Pipeline, shader: u32) -> crate::utils::VulkanResult<()> {
+        let _function = self.compile_deferred_nv.expect("`compile_deferred_nv` is not loaded");
         let _return = _function(self.handle, pipeline as _, shader as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1588,11 +1472,8 @@ impl crate::DeviceLoader {
         create_info: &crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>,
-    ) -> crate::utils::VulkanResult<crate::extensions::nv_ray_tracing::AccelerationStructureNV>
-    {
-        let _function = self
-            .create_acceleration_structure_nv
-            .expect("`create_acceleration_structure_nv` is not loaded");
+    ) -> crate::utils::VulkanResult<crate::extensions::nv_ray_tracing::AccelerationStructureNV> {
+        let _function = self.create_acceleration_structure_nv.expect("`create_acceleration_structure_nv` is not loaded");
         let mut acceleration_structure = match acceleration_structure {
             Some(v) => v,
             None => Default::default(),
@@ -1616,9 +1497,7 @@ impl crate::DeviceLoader {
         acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let _function = self
-            .destroy_acceleration_structure_nv
-            .expect("`destroy_acceleration_structure_nv` is not loaded");
+        let _function = self.destroy_acceleration_structure_nv.expect("`destroy_acceleration_structure_nv` is not loaded");
         let _return = _function(
             self.handle,
             match acceleration_structure {
@@ -1638,9 +1517,7 @@ impl crate::DeviceLoader {
     pub unsafe fn get_acceleration_structure_memory_requirements_nv(
         &self,
         info: &crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
-        memory_requirements: Option<
-            crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
-        >,
+        memory_requirements: Option<crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR>,
     ) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR {
         let _function = self
             .get_acceleration_structure_memory_requirements_nv
@@ -1655,13 +1532,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function"]
     #[doc(alias = "vkBindAccelerationStructureMemoryNV")]
-    pub unsafe fn bind_acceleration_structure_memory_nv(
-        &self,
-        bind_infos : & [crate :: extensions :: nv_ray_tracing :: BindAccelerationStructureMemoryInfoNVBuilder],
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .bind_acceleration_structure_memory_nv
-            .expect("`bind_acceleration_structure_memory_nv` is not loaded");
+    pub unsafe fn bind_acceleration_structure_memory_nv(&self, bind_infos: &[crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNVBuilder]) -> crate::utils::VulkanResult<()> {
+        let _function = self.bind_acceleration_structure_memory_nv.expect("`bind_acceleration_structure_memory_nv` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -1676,9 +1548,7 @@ impl crate::DeviceLoader {
         src: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
         mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
     ) -> () {
-        let _function = self
-            .cmd_copy_acceleration_structure_nv
-            .expect("`cmd_copy_acceleration_structure_nv` is not loaded");
+        let _function = self.cmd_copy_acceleration_structure_nv.expect("`cmd_copy_acceleration_structure_nv` is not loaded");
         let _return = _function(command_buffer as _, dst as _, src as _, mode as _);
         ()
     }
@@ -1722,9 +1592,7 @@ impl crate::DeviceLoader {
         scratch: crate::vk1_0::Buffer,
         scratch_offset: crate::vk1_0::DeviceSize,
     ) -> () {
-        let _function = self
-            .cmd_build_acceleration_structure_nv
-            .expect("`cmd_build_acceleration_structure_nv` is not loaded");
+        let _function = self.cmd_build_acceleration_structure_nv.expect("`cmd_build_acceleration_structure_nv` is not loaded");
         let _return = _function(
             command_buffer as _,
             info as _,
@@ -1765,9 +1633,7 @@ impl crate::DeviceLoader {
         height: u32,
         depth: u32,
     ) -> () {
-        let _function = self
-            .cmd_trace_rays_nv
-            .expect("`cmd_trace_rays_nv` is not loaded");
+        let _function = self.cmd_trace_rays_nv.expect("`cmd_trace_rays_nv` is not loaded");
         let _return = _function(
             command_buffer as _,
             raygen_shader_binding_table_buffer as _,
@@ -1805,9 +1671,7 @@ impl crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_acceleration_structure_handle_nv
-            .expect("`get_acceleration_structure_handle_nv` is not loaded");
+        let _function = self.get_acceleration_structure_handle_nv.expect("`get_acceleration_structure_handle_nv` is not loaded");
         let _return = _function(self.handle, acceleration_structure as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1820,9 +1684,7 @@ impl crate::DeviceLoader {
         create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let _function = self
-            .create_ray_tracing_pipelines_nv
-            .expect("`create_ray_tracing_pipelines_nv` is not loaded");
+        let _function = self.create_ray_tracing_pipelines_nv.expect("`create_ray_tracing_pipelines_nv` is not loaded");
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _return = _function(
@@ -1852,17 +1714,8 @@ impl crate::DeviceLoader {
         data_size: usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_ray_tracing_shader_group_handles_nv
-            .expect("`get_ray_tracing_shader_group_handles_nv` is not loaded");
-        let _return = _function(
-            self.handle,
-            pipeline as _,
-            first_group as _,
-            group_count as _,
-            data_size,
-            data,
-        );
+        let _function = self.get_ray_tracing_shader_group_handles_nv.expect("`get_ray_tracing_shader_group_handles_nv` is not loaded");
+        let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
 }

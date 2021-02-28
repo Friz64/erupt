@@ -3,17 +3,13 @@
 pub const KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME")]
-pub const KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_descriptor_update_template");
+pub const KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_descriptor_update_template");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateDescriptorUpdateTemplateKHR");
+pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateDescriptorUpdateTemplateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyDescriptorUpdateTemplateKHR");
+pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkDestroyDescriptorUpdateTemplateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkUpdateDescriptorSetWithTemplateKHR");
+pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkUpdateDescriptorSetWithTemplateKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateFlagsKHR.html) · Alias"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateFlagsKHR")]
 #[allow(non_camel_case_types)]
@@ -33,8 +29,7 @@ pub type DescriptorUpdateTemplateEntryKHR = crate::vk1_1::DescriptorUpdateTempla
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntryKHR.html) · Alias"]
 #[doc(alias = "VkDescriptorUpdateTemplateEntryKHR")]
 #[allow(non_camel_case_types)]
-pub type DescriptorUpdateTemplateEntryKHRBuilder<'a> =
-    crate::vk1_1::DescriptorUpdateTemplateEntryBuilder<'a>;
+pub type DescriptorUpdateTemplateEntryKHRBuilder<'a> = crate::vk1_1::DescriptorUpdateTemplateEntryBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -42,20 +37,16 @@ pub type DescriptorUpdateTemplateCreateInfoKHR = crate::vk1_1::DescriptorUpdateT
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type DescriptorUpdateTemplateCreateInfoKHRBuilder<'a> =
-    crate::vk1_1::DescriptorUpdateTemplateCreateInfoBuilder<'a>;
+pub type DescriptorUpdateTemplateCreateInfoKHRBuilder<'a> = crate::vk1_1::DescriptorUpdateTemplateCreateInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDescriptorUpdateTemplateKHR =
-    crate::vk1_1::PFN_vkCreateDescriptorUpdateTemplate;
+pub type PFN_vkCreateDescriptorUpdateTemplateKHR = crate::vk1_1::PFN_vkCreateDescriptorUpdateTemplate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDescriptorUpdateTemplateKHR =
-    crate::vk1_1::PFN_vkDestroyDescriptorUpdateTemplate;
+pub type PFN_vkDestroyDescriptorUpdateTemplateKHR = crate::vk1_1::PFN_vkDestroyDescriptorUpdateTemplate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkUpdateDescriptorSetWithTemplateKHR =
-    crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;
+pub type PFN_vkUpdateDescriptorSetWithTemplateKHR = crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;
 #[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -67,9 +58,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let _function = self
-            .create_descriptor_update_template_khr
-            .expect("`create_descriptor_update_template_khr` is not loaded");
+        let _function = self.create_descriptor_update_template_khr.expect("`create_descriptor_update_template_khr` is not loaded");
         let mut descriptor_update_template = match descriptor_update_template {
             Some(v) => v,
             None => Default::default(),
@@ -93,9 +82,7 @@ impl crate::DeviceLoader {
         descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let _function = self
-            .destroy_descriptor_update_template_khr
-            .expect("`destroy_descriptor_update_template_khr` is not loaded");
+        let _function = self.destroy_descriptor_update_template_khr.expect("`destroy_descriptor_update_template_khr` is not loaded");
         let _return = _function(
             self.handle,
             match descriptor_update_template {
@@ -118,15 +105,8 @@ impl crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         data: *const std::ffi::c_void,
     ) -> () {
-        let _function = self
-            .update_descriptor_set_with_template_khr
-            .expect("`update_descriptor_set_with_template_khr` is not loaded");
-        let _return = _function(
-            self.handle,
-            descriptor_set as _,
-            descriptor_update_template as _,
-            data,
-        );
+        let _function = self.update_descriptor_set_with_template_khr.expect("`update_descriptor_set_with_template_khr` is not loaded");
+        let _return = _function(self.handle, descriptor_set as _, descriptor_update_template as _, data);
         ()
     }
 }

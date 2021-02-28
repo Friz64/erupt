@@ -3,11 +3,9 @@
 pub const KHR_EXTERNAL_FENCE_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_fence_capabilities");
+pub const KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_fence_capabilities");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalFencePropertiesKHR");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalFencePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagsKHR.html) · Alias"]
 #[doc(alias = "VkExternalFenceHandleTypeFlagsKHR")]
 #[allow(non_camel_case_types)]
@@ -31,8 +29,7 @@ pub type PhysicalDeviceExternalFenceInfoKHR = crate::vk1_1::PhysicalDeviceExtern
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalFenceInfoKHR.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceExternalFenceInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceExternalFenceInfoKHRBuilder<'a> =
-    crate::vk1_1::PhysicalDeviceExternalFenceInfoBuilder<'a>;
+pub type PhysicalDeviceExternalFenceInfoKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceExternalFenceInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFencePropertiesKHR.html) · Alias"]
 #[doc(alias = "VkExternalFencePropertiesKHR")]
 #[allow(non_camel_case_types)]
@@ -43,8 +40,7 @@ pub type ExternalFencePropertiesKHR = crate::vk1_1::ExternalFenceProperties;
 pub type ExternalFencePropertiesKHRBuilder<'a> = crate::vk1_1::ExternalFencePropertiesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR =
-    crate::vk1_1::PFN_vkGetPhysicalDeviceExternalFenceProperties;
+pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalFenceProperties;
 #[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
@@ -63,11 +59,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            external_fence_info as _,
-            &mut external_fence_properties,
-        );
+        let _return = _function(physical_device as _, external_fence_info as _, &mut external_fence_properties);
         external_fence_properties
     }
 }

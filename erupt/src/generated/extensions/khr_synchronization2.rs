@@ -3,30 +3,23 @@
 pub const KHR_SYNCHRONIZATION_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME")]
-pub const KHR_SYNCHRONIZATION_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_synchronization2");
+pub const KHR_SYNCHRONIZATION_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_synchronization2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_EVENT2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetEvent2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_RESET_EVENT2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdResetEvent2KHR");
+pub const FN_CMD_RESET_EVENT2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdResetEvent2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_WAIT_EVENTS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdWaitEvents2KHR");
+pub const FN_CMD_WAIT_EVENTS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdWaitEvents2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_PIPELINE_BARRIER2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdPipelineBarrier2KHR");
+pub const FN_CMD_PIPELINE_BARRIER2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdPipelineBarrier2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_QUEUE_SUBMIT2_KHR: *const std::os::raw::c_char = crate::cstr!("vkQueueSubmit2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_WRITE_TIMESTAMP2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdWriteTimestamp2KHR");
+pub const FN_CMD_WRITE_TIMESTAMP2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdWriteTimestamp2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_WRITE_BUFFER_MARKER2_AMD: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdWriteBufferMarker2AMD");
+pub const FN_CMD_WRITE_BUFFER_MARKER2_AMD: *const std::os::raw::c_char = crate::cstr!("vkCmdWriteBufferMarker2AMD");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_QUEUE_CHECKPOINT_DATA2_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetQueueCheckpointData2NV");
+pub const FN_GET_QUEUE_CHECKPOINT_DATA2_NV: *const std::os::raw::c_char = crate::cstr!("vkGetQueueCheckpointData2NV");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags2KHR.html) · Bitmask of [`AccessFlagBits2KHR`]"] # [doc (alias = "VkAccessFlags2KHR")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags2KHR : u64 { const NONE_KHR = AccessFlagBits2KHR :: NONE_KHR . 0 ; const INDIRECT_COMMAND_READ_KHR = AccessFlagBits2KHR :: INDIRECT_COMMAND_READ_KHR . 0 ; const INDEX_READ_KHR = AccessFlagBits2KHR :: INDEX_READ_KHR . 0 ; const VERTEX_ATTRIBUTE_READ_KHR = AccessFlagBits2KHR :: VERTEX_ATTRIBUTE_READ_KHR . 0 ; const UNIFORM_READ_KHR = AccessFlagBits2KHR :: UNIFORM_READ_KHR . 0 ; const INPUT_ATTACHMENT_READ_KHR = AccessFlagBits2KHR :: INPUT_ATTACHMENT_READ_KHR . 0 ; const SHADER_READ_KHR = AccessFlagBits2KHR :: SHADER_READ_KHR . 0 ; const SHADER_WRITE_KHR = AccessFlagBits2KHR :: SHADER_WRITE_KHR . 0 ; const COLOR_ATTACHMENT_READ_KHR = AccessFlagBits2KHR :: COLOR_ATTACHMENT_READ_KHR . 0 ; const COLOR_ATTACHMENT_WRITE_KHR = AccessFlagBits2KHR :: COLOR_ATTACHMENT_WRITE_KHR . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ_KHR = AccessFlagBits2KHR :: DEPTH_STENCIL_ATTACHMENT_READ_KHR . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE_KHR = AccessFlagBits2KHR :: DEPTH_STENCIL_ATTACHMENT_WRITE_KHR . 0 ; const TRANSFER_READ_KHR = AccessFlagBits2KHR :: TRANSFER_READ_KHR . 0 ; const TRANSFER_WRITE_KHR = AccessFlagBits2KHR :: TRANSFER_WRITE_KHR . 0 ; const HOST_READ_KHR = AccessFlagBits2KHR :: HOST_READ_KHR . 0 ; const HOST_WRITE_KHR = AccessFlagBits2KHR :: HOST_WRITE_KHR . 0 ; const MEMORY_READ_KHR = AccessFlagBits2KHR :: MEMORY_READ_KHR . 0 ; const MEMORY_WRITE_KHR = AccessFlagBits2KHR :: MEMORY_WRITE_KHR . 0 ; const SHADER_SAMPLED_READ_KHR = AccessFlagBits2KHR :: SHADER_SAMPLED_READ_KHR . 0 ; const SHADER_STORAGE_READ_KHR = AccessFlagBits2KHR :: SHADER_STORAGE_READ_KHR . 0 ; const SHADER_STORAGE_WRITE_KHR = AccessFlagBits2KHR :: SHADER_STORAGE_WRITE_KHR . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits2KHR :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits2KHR :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits2KHR :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits2KHR :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits2KHR :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits2KHR :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits2KHR :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits2KHR :: SHADING_RATE_IMAGE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits2KHR :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits2KHR :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits2KHR :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits2KHR :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits2KHR :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits2KHR :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits2KHR.html) · Bits enum of [`AccessFlags2KHR`]"]
 #[doc(alias = "VkAccessFlagBits2KHR")]
@@ -70,9 +63,7 @@ impl std::fmt::Debug for AccessFlagBits2KHR {
             &Self::CONDITIONAL_RENDERING_READ_EXT => "CONDITIONAL_RENDERING_READ_EXT",
             &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
             &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
-            &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => {
-                "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR"
-            }
+            &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR",
             &Self::SHADING_RATE_IMAGE_READ_NV => "SHADING_RATE_IMAGE_READ_NV",
             &Self::ACCELERATION_STRUCTURE_READ_KHR => "ACCELERATION_STRUCTURE_READ_KHR",
             &Self::ACCELERATION_STRUCTURE_WRITE_KHR => "ACCELERATION_STRUCTURE_WRITE_KHR",
@@ -248,18 +239,12 @@ impl SubmitFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetEvent2KHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    event: crate::vk1_0::Event,
-    p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR,
-) -> ();
+pub type PFN_vkCmdSetEvent2KHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdResetEvent2KHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    event: crate::vk1_0::Event,
-    stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-) -> ();
+pub type PFN_vkCmdResetEvent2KHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdWaitEvents2KHR = unsafe extern "system" fn(
@@ -270,10 +255,8 @@ pub type PFN_vkCmdWaitEvents2KHR = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPipelineBarrier2KHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR,
-) -> ();
+pub type PFN_vkCmdPipelineBarrier2KHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueSubmit2KHR = unsafe extern "system" fn(
@@ -301,11 +284,8 @@ pub type PFN_vkCmdWriteBufferMarker2AMD = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetQueueCheckpointData2NV = unsafe extern "system" fn(
-    queue: crate::vk1_0::Queue,
-    p_checkpoint_data_count: *mut u32,
-    p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV,
-) -> ();
+pub type PFN_vkGetQueueCheckpointData2NV =
+    unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]
@@ -358,34 +338,22 @@ impl<'a> MemoryBarrier2KHRBuilder<'a> {
         MemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src_stage_mask(
-        mut self,
-        src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
-    pub fn src_access_mask(
-        mut self,
-        src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
-    pub fn dst_stage_mask(
-        mut self,
-        dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
-    pub fn dst_access_mask(
-        mut self,
-        dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
@@ -476,58 +444,34 @@ impl ImageMemoryBarrier2KHR {
         ImageMemoryBarrier2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT>
-    for ImageMemoryBarrier2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>,
-    > for ImageMemoryBarrier2KHRBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrier2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier2KHR.html) · Builder of [`ImageMemoryBarrier2KHR`]"]
 #[repr(transparent)]
-pub struct ImageMemoryBarrier2KHRBuilder<'a>(
-    ImageMemoryBarrier2KHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageMemoryBarrier2KHRBuilder<'a>(ImageMemoryBarrier2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageMemoryBarrier2KHRBuilder<'a> {
     #[inline]
     pub fn new() -> ImageMemoryBarrier2KHRBuilder<'a> {
         ImageMemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src_stage_mask(
-        mut self,
-        src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
-    pub fn src_access_mask(
-        mut self,
-        src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
-    pub fn dst_stage_mask(
-        mut self,
-        dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
-    pub fn dst_access_mask(
-        mut self,
-        dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
@@ -557,10 +501,7 @@ impl<'a> ImageMemoryBarrier2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn subresource_range(
-        mut self,
-        subresource_range: crate::vk1_0::ImageSubresourceRange,
-    ) -> Self {
+    pub fn subresource_range(mut self, subresource_range: crate::vk1_0::ImageSubresourceRange) -> Self {
         self.0.subresource_range = subresource_range as _;
         self
     }
@@ -651,44 +592,29 @@ impl BufferMemoryBarrier2KHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryBarrier2KHR.html) · Builder of [`BufferMemoryBarrier2KHR`]"]
 #[repr(transparent)]
-pub struct BufferMemoryBarrier2KHRBuilder<'a>(
-    BufferMemoryBarrier2KHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BufferMemoryBarrier2KHRBuilder<'a>(BufferMemoryBarrier2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferMemoryBarrier2KHRBuilder<'a> {
     #[inline]
     pub fn new() -> BufferMemoryBarrier2KHRBuilder<'a> {
         BufferMemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn src_stage_mask(
-        mut self,
-        src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
-    pub fn src_access_mask(
-        mut self,
-        src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
-    pub fn dst_stage_mask(
-        mut self,
-        dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
-    pub fn dst_access_mask(
-        mut self,
-        dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
-    ) -> Self {
+    pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
@@ -755,11 +681,9 @@ pub struct DependencyInfoKHR {
     pub memory_barrier_count: u32,
     pub p_memory_barriers: *const crate::extensions::khr_synchronization2::MemoryBarrier2KHR,
     pub buffer_memory_barrier_count: u32,
-    pub p_buffer_memory_barriers:
-        *const crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHR,
+    pub p_buffer_memory_barriers: *const crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHR,
     pub image_memory_barrier_count: u32,
-    pub p_image_memory_barriers:
-        *const crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHR,
+    pub p_image_memory_barriers: *const crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHR,
 }
 impl Default for DependencyInfoKHR {
     fn default() -> Self {
@@ -784,15 +708,9 @@ impl std::fmt::Debug for DependencyInfoKHR {
             .field("dependency_flags", &self.dependency_flags)
             .field("memory_barrier_count", &self.memory_barrier_count)
             .field("p_memory_barriers", &self.p_memory_barriers)
-            .field(
-                "buffer_memory_barrier_count",
-                &self.buffer_memory_barrier_count,
-            )
+            .field("buffer_memory_barrier_count", &self.buffer_memory_barrier_count)
             .field("p_buffer_memory_barriers", &self.p_buffer_memory_barriers)
-            .field(
-                "image_memory_barrier_count",
-                &self.image_memory_barrier_count,
-            )
+            .field("image_memory_barrier_count", &self.image_memory_barrier_count)
             .field("p_image_memory_barriers", &self.p_image_memory_barriers)
             .finish()
     }
@@ -818,28 +736,19 @@ impl<'a> DependencyInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn memory_barriers(
-        mut self,
-        memory_barriers: &'a [crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder],
-    ) -> Self {
+    pub fn memory_barriers(mut self, memory_barriers: &'a [crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_memory_barriers = memory_barriers.as_ptr() as _;
         self.0.memory_barrier_count = memory_barriers.len() as _;
         self
     }
     #[inline]
-    pub fn buffer_memory_barriers(
-        mut self,
-        buffer_memory_barriers : & 'a [crate :: extensions :: khr_synchronization2 :: BufferMemoryBarrier2KHRBuilder],
-    ) -> Self {
+    pub fn buffer_memory_barriers(mut self, buffer_memory_barriers: &'a [crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_buffer_memory_barriers = buffer_memory_barriers.as_ptr() as _;
         self.0.buffer_memory_barrier_count = buffer_memory_barriers.len() as _;
         self
     }
     #[inline]
-    pub fn image_memory_barriers(
-        mut self,
-        image_memory_barriers : & 'a [crate :: extensions :: khr_synchronization2 :: ImageMemoryBarrier2KHRBuilder],
-    ) -> Self {
+    pub fn image_memory_barriers(mut self, image_memory_barriers: &'a [crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_image_memory_barriers = image_memory_barriers.as_ptr() as _;
         self.0.image_memory_barrier_count = image_memory_barriers.len() as _;
         self
@@ -916,10 +825,7 @@ impl SemaphoreSubmitInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSubmitInfoKHR.html) · Builder of [`SemaphoreSubmitInfoKHR`]"]
 #[repr(transparent)]
-pub struct SemaphoreSubmitInfoKHRBuilder<'a>(
-    SemaphoreSubmitInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SemaphoreSubmitInfoKHRBuilder<'a>(SemaphoreSubmitInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreSubmitInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> SemaphoreSubmitInfoKHRBuilder<'a> {
@@ -936,10 +842,7 @@ impl<'a> SemaphoreSubmitInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn stage_mask(
-        mut self,
-        stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn stage_mask(mut self, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.stage_mask = stage_mask as _;
         self
     }
@@ -1014,10 +917,7 @@ impl CommandBufferSubmitInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferSubmitInfoKHR.html) · Builder of [`CommandBufferSubmitInfoKHR`]"]
 #[repr(transparent)]
-pub struct CommandBufferSubmitInfoKHRBuilder<'a>(
-    CommandBufferSubmitInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CommandBufferSubmitInfoKHRBuilder<'a>(CommandBufferSubmitInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> CommandBufferSubmitInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> CommandBufferSubmitInfoKHRBuilder<'a> {
@@ -1069,14 +969,11 @@ pub struct SubmitInfo2KHR {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_synchronization2::SubmitFlagsKHR,
     pub wait_semaphore_info_count: u32,
-    pub p_wait_semaphore_infos:
-        *const crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR,
+    pub p_wait_semaphore_infos: *const crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR,
     pub command_buffer_info_count: u32,
-    pub p_command_buffer_infos:
-        *const crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHR,
+    pub p_command_buffer_infos: *const crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHR,
     pub signal_semaphore_info_count: u32,
-    pub p_signal_semaphore_infos:
-        *const crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR,
+    pub p_signal_semaphore_infos: *const crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR,
 }
 impl Default for SubmitInfo2KHR {
     fn default() -> Self {
@@ -1103,10 +1000,7 @@ impl std::fmt::Debug for SubmitInfo2KHR {
             .field("p_wait_semaphore_infos", &self.p_wait_semaphore_infos)
             .field("command_buffer_info_count", &self.command_buffer_info_count)
             .field("p_command_buffer_infos", &self.p_command_buffer_infos)
-            .field(
-                "signal_semaphore_info_count",
-                &self.signal_semaphore_info_count,
-            )
+            .field("signal_semaphore_info_count", &self.signal_semaphore_info_count)
             .field("p_signal_semaphore_infos", &self.p_signal_semaphore_infos)
             .finish()
     }
@@ -1117,48 +1011,12 @@ impl SubmitInfo2KHR {
         SubmitInfo2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>,
-    > for SubmitInfo2KHRBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo2KHR.html) · Builder of [`SubmitInfo2KHR`]"]
 #[repr(transparent)]
@@ -1174,28 +1032,19 @@ impl<'a> SubmitInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn wait_semaphore_infos(
-        mut self,
-        wait_semaphore_infos : & 'a [crate :: extensions :: khr_synchronization2 :: SemaphoreSubmitInfoKHRBuilder],
-    ) -> Self {
+    pub fn wait_semaphore_infos(mut self, wait_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
         self.0.p_wait_semaphore_infos = wait_semaphore_infos.as_ptr() as _;
         self.0.wait_semaphore_info_count = wait_semaphore_infos.len() as _;
         self
     }
     #[inline]
-    pub fn command_buffer_infos(
-        mut self,
-        command_buffer_infos : & 'a [crate :: extensions :: khr_synchronization2 :: CommandBufferSubmitInfoKHRBuilder],
-    ) -> Self {
+    pub fn command_buffer_infos(mut self, command_buffer_infos: &'a [crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHRBuilder]) -> Self {
         self.0.p_command_buffer_infos = command_buffer_infos.as_ptr() as _;
         self.0.command_buffer_info_count = command_buffer_infos.len() as _;
         self
     }
     #[inline]
-    pub fn signal_semaphore_infos(
-        mut self,
-        signal_semaphore_infos : & 'a [crate :: extensions :: khr_synchronization2 :: SemaphoreSubmitInfoKHRBuilder],
-    ) -> Self {
+    pub fn signal_semaphore_infos(mut self, signal_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
         self.0.p_signal_semaphore_infos = signal_semaphore_infos.as_ptr() as _;
         self.0.signal_semaphore_info_count = signal_semaphore_infos.len() as _;
         self
@@ -1234,8 +1083,7 @@ impl<'a> std::ops::DerefMut for SubmitInfo2KHRBuilder<'a> {
 pub struct QueueFamilyCheckpointProperties2NV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
-    pub checkpoint_execution_stage_mask:
-        crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
+    pub checkpoint_execution_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
 }
 impl Default for QueueFamilyCheckpointProperties2NV {
     fn default() -> Self {
@@ -1251,10 +1099,7 @@ impl std::fmt::Debug for QueueFamilyCheckpointProperties2NV {
         f.debug_struct("QueueFamilyCheckpointProperties2NV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "checkpoint_execution_stage_mask",
-                &self.checkpoint_execution_stage_mask,
-            )
+            .field("checkpoint_execution_stage_mask", &self.checkpoint_execution_stage_mask)
             .finish()
     }
 }
@@ -1267,20 +1112,14 @@ impl QueueFamilyCheckpointProperties2NV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointProperties2NV.html) · Builder of [`QueueFamilyCheckpointProperties2NV`]"]
 #[repr(transparent)]
-pub struct QueueFamilyCheckpointProperties2NVBuilder<'a>(
-    QueueFamilyCheckpointProperties2NV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct QueueFamilyCheckpointProperties2NVBuilder<'a>(QueueFamilyCheckpointProperties2NV, std::marker::PhantomData<&'a ()>);
 impl<'a> QueueFamilyCheckpointProperties2NVBuilder<'a> {
     #[inline]
     pub fn new() -> QueueFamilyCheckpointProperties2NVBuilder<'a> {
         QueueFamilyCheckpointProperties2NVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn checkpoint_execution_stage_mask(
-        mut self,
-        checkpoint_execution_stage_mask : crate :: extensions :: khr_synchronization2 :: PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn checkpoint_execution_stage_mask(mut self, checkpoint_execution_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.checkpoint_execution_stage_mask = checkpoint_execution_stage_mask as _;
         self
     }
@@ -1357,10 +1196,7 @@ impl<'a> CheckpointData2NVBuilder<'a> {
         CheckpointData2NVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn stage(
-        mut self,
-        stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> Self {
+    pub fn stage(mut self, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.stage = stage as _;
         self
     }
@@ -1432,17 +1268,11 @@ impl PhysicalDeviceSynchronization2FeaturesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSynchronization2FeaturesKHR.html) · Builder of [`PhysicalDeviceSynchronization2FeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a>(
-    PhysicalDeviceSynchronization2FeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a>(PhysicalDeviceSynchronization2FeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
-        PhysicalDeviceSynchronization2FeaturesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSynchronization2FeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn synchronization2(mut self, synchronization2: bool) -> Self {
@@ -1487,9 +1317,7 @@ impl crate::DeviceLoader {
         event: crate::vk1_0::Event,
         dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR,
     ) -> () {
-        let _function = self
-            .cmd_set_event2_khr
-            .expect("`cmd_set_event2_khr` is not loaded");
+        let _function = self.cmd_set_event2_khr.expect("`cmd_set_event2_khr` is not loaded");
         let _return = _function(command_buffer as _, event as _, dependency_info as _);
         ()
     }
@@ -1502,9 +1330,7 @@ impl crate::DeviceLoader {
         event: crate::vk1_0::Event,
         stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
     ) -> () {
-        let _function = self
-            .cmd_reset_event2_khr
-            .expect("`cmd_reset_event2_khr` is not loaded");
+        let _function = self.cmd_reset_event2_khr.expect("`cmd_reset_event2_khr` is not loaded");
         let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
     }
@@ -1517,29 +1343,16 @@ impl crate::DeviceLoader {
         events: &[crate::vk1_0::Event],
         dependency_infos: &[crate::extensions::khr_synchronization2::DependencyInfoKHRBuilder],
     ) -> () {
-        let _function = self
-            .cmd_wait_events2_khr
-            .expect("`cmd_wait_events2_khr` is not loaded");
+        let _function = self.cmd_wait_events2_khr.expect("`cmd_wait_events2_khr` is not loaded");
         let event_count = events.len().min(dependency_infos.len());
-        let _return = _function(
-            command_buffer as _,
-            event_count as _,
-            events.as_ptr() as _,
-            dependency_infos.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, event_count as _, events.as_ptr() as _, dependency_infos.as_ptr() as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier2KHR.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier2KHR")]
-    pub unsafe fn cmd_pipeline_barrier2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR,
-    ) -> () {
-        let _function = self
-            .cmd_pipeline_barrier2_khr
-            .expect("`cmd_pipeline_barrier2_khr` is not loaded");
+    pub unsafe fn cmd_pipeline_barrier2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
+        let _function = self.cmd_pipeline_barrier2_khr.expect("`cmd_pipeline_barrier2_khr` is not loaded");
         let _return = _function(command_buffer as _, dependency_info as _);
         ()
     }
@@ -1552,9 +1365,7 @@ impl crate::DeviceLoader {
         submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder],
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .queue_submit2_khr
-            .expect("`queue_submit2_khr` is not loaded");
+        let _function = self.queue_submit2_khr.expect("`queue_submit2_khr` is not loaded");
         let submit_count = submits.len();
         let _return = _function(
             queue as _,
@@ -1577,9 +1388,7 @@ impl crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         query: u32,
     ) -> () {
-        let _function = self
-            .cmd_write_timestamp2_khr
-            .expect("`cmd_write_timestamp2_khr` is not loaded");
+        let _function = self.cmd_write_timestamp2_khr.expect("`cmd_write_timestamp2_khr` is not loaded");
         let _return = _function(command_buffer as _, stage as _, query_pool as _, query as _);
         ()
     }
@@ -1594,29 +1403,15 @@ impl crate::DeviceLoader {
         dst_offset: crate::vk1_0::DeviceSize,
         marker: u32,
     ) -> () {
-        let _function = self
-            .cmd_write_buffer_marker2_amd
-            .expect("`cmd_write_buffer_marker2_amd` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            stage as _,
-            dst_buffer as _,
-            dst_offset as _,
-            marker as _,
-        );
+        let _function = self.cmd_write_buffer_marker2_amd.expect("`cmd_write_buffer_marker2_amd` is not loaded");
+        let _return = _function(command_buffer as _, stage as _, dst_buffer as _, dst_offset as _, marker as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointData2NV")]
-    pub unsafe fn get_queue_checkpoint_data2_nv(
-        &self,
-        queue: crate::vk1_0::Queue,
-        checkpoint_data_count: Option<u32>,
-    ) -> Vec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
-        let _function = self
-            .get_queue_checkpoint_data2_nv
-            .expect("`get_queue_checkpoint_data2_nv` is not loaded");
+    pub unsafe fn get_queue_checkpoint_data2_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>) -> Vec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
+        let _function = self.get_queue_checkpoint_data2_nv.expect("`get_queue_checkpoint_data2_nv` is not loaded");
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
             None => {
@@ -1626,11 +1421,7 @@ impl crate::DeviceLoader {
             }
         };
         let mut checkpoint_data = vec![Default::default(); checkpoint_data_count as _];
-        let _return = _function(
-            queue as _,
-            &mut checkpoint_data_count,
-            checkpoint_data.as_mut_ptr(),
-        );
+        let _return = _function(queue as _, &mut checkpoint_data_count, checkpoint_data.as_mut_ptr());
         checkpoint_data
     }
 }

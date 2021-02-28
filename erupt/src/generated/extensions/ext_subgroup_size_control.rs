@@ -3,8 +3,7 @@
 pub const EXT_SUBGROUP_SIZE_CONTROL_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME")]
-pub const EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_subgroup_size_control");
+pub const EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_subgroup_size_control");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -31,10 +30,7 @@ impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subgroup_size_control", &(self.subgroup_size_control != 0))
-            .field(
-                "compute_full_subgroups",
-                &(self.compute_full_subgroups != 0),
-            )
+            .field("compute_full_subgroups", &(self.compute_full_subgroups != 0))
             .finish()
     }
 }
@@ -47,17 +43,11 @@ impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Builder of [`PhysicalDeviceSubgroupSizeControlFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a>(
-    PhysicalDeviceSubgroupSizeControlFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a>(PhysicalDeviceSubgroupSizeControlFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
-        PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn subgroup_size_control(mut self, subgroup_size_control: bool) -> Self {
@@ -111,8 +101,7 @@ pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 impl Default for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             min_subgroup_size: Default::default(),
             max_subgroup_size: Default::default(),
@@ -128,14 +117,8 @@ impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
             .field("p_next", &self.p_next)
             .field("min_subgroup_size", &self.min_subgroup_size)
             .field("max_subgroup_size", &self.max_subgroup_size)
-            .field(
-                "max_compute_workgroup_subgroups",
-                &self.max_compute_workgroup_subgroups,
-            )
-            .field(
-                "required_subgroup_size_stages",
-                &self.required_subgroup_size_stages,
-            )
+            .field("max_compute_workgroup_subgroups", &self.max_compute_workgroup_subgroups)
+            .field("required_subgroup_size_stages", &self.required_subgroup_size_stages)
             .finish()
     }
 }
@@ -148,17 +131,11 @@ impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlPropertiesEXT.html) · Builder of [`PhysicalDeviceSubgroupSizeControlPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a>(
-    PhysicalDeviceSubgroupSizeControlPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a>(PhysicalDeviceSubgroupSizeControlPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
-        PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn min_subgroup_size(mut self, min_subgroup_size: u32) -> Self {
@@ -176,10 +153,7 @@ impl<'a> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn required_subgroup_size_stages(
-        mut self,
-        required_subgroup_size_stages: crate::vk1_0::ShaderStageFlags,
-    ) -> Self {
+    pub fn required_subgroup_size_stages(mut self, required_subgroup_size_stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.required_subgroup_size_stages = required_subgroup_size_stages as _;
         self
     }
@@ -221,7 +195,11 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 }
 impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT , p_next : std :: ptr :: null_mut () , required_subgroup_size : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT,
+            p_next: std::ptr::null_mut(),
+            required_subgroup_size: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
@@ -235,26 +213,18 @@ impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 }
 impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
+    pub fn into_builder<'a>(self) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
         PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html) · Builder of [`PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a>(
-    PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a>(PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
-        PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn required_subgroup_size(mut self, required_subgroup_size: u32) -> Self {

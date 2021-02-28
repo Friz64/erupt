@@ -3,14 +3,11 @@
 pub const EXT_DIRECTFB_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME")]
-pub const EXT_DIRECTFB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_directfb_surface");
+pub const EXT_DIRECTFB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_directfb_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_DIRECT_FB_SURFACE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateDirectFBSurfaceEXT");
+pub const FN_CREATE_DIRECT_FB_SURFACE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreateDirectFBSurfaceEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceDirectFBPresentationSupportEXT");
+pub const FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceDirectFBPresentationSupportEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateFlagsEXT.html) · Bitmask of [`DirectFBSurfaceCreateFlagBitsEXT`]"] # [doc (alias = "VkDirectFBSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DirectFBSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DirectFBSurfaceCreateFlagsEXT`]"]
 #[doc(alias = "VkDirectFBSurfaceCreateFlagBitsEXT")]
@@ -42,11 +39,7 @@ pub type PFN_vkCreateDirectFBSurfaceEXT = unsafe extern "system" fn(
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        dfb: *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Bool32;
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDirectFBSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -89,20 +82,14 @@ impl DirectFBSurfaceCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateInfoEXT.html) · Builder of [`DirectFBSurfaceCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct DirectFBSurfaceCreateInfoEXTBuilder<'a>(
-    DirectFBSurfaceCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DirectFBSurfaceCreateInfoEXTBuilder<'a>(DirectFBSurfaceCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DirectFBSurfaceCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DirectFBSurfaceCreateInfoEXTBuilder<'a> {
         DirectFBSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -154,9 +141,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_direct_fb_surface_ext
-            .expect("`create_direct_fb_surface_ext` is not loaded");
+        let _function = self.create_direct_fb_surface_ext.expect("`create_direct_fb_surface_ext` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),
@@ -175,12 +160,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDirectFBPresentationSupportEXT")]
-    pub unsafe fn get_physical_device_direct_fb_presentation_support_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        dfb: *mut std::ffi::c_void,
-    ) -> bool {
+    pub unsafe fn get_physical_device_direct_fb_presentation_support_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> bool {
         let _function = self
             .get_physical_device_direct_fb_presentation_support_ext
             .expect("`get_physical_device_direct_fb_presentation_support_ext` is not loaded");

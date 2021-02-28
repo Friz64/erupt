@@ -3,11 +3,9 @@
 pub const EXT_HEADLESS_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_HEADLESS_SURFACE_EXTENSION_NAME")]
-pub const EXT_HEADLESS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_headless_surface");
+pub const EXT_HEADLESS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_headless_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_HEADLESS_SURFACE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateHeadlessSurfaceEXT");
+pub const FN_CREATE_HEADLESS_SURFACE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreateHeadlessSurfaceEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateFlagsEXT.html) · Bitmask of [`HeadlessSurfaceCreateFlagBitsEXT`]"] # [doc (alias = "VkHeadlessSurfaceCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct HeadlessSurfaceCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`HeadlessSurfaceCreateFlagsEXT`]"]
 #[doc(alias = "VkHeadlessSurfaceCreateFlagBitsEXT")]
@@ -72,20 +70,14 @@ impl HeadlessSurfaceCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateInfoEXT.html) · Builder of [`HeadlessSurfaceCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct HeadlessSurfaceCreateInfoEXTBuilder<'a>(
-    HeadlessSurfaceCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct HeadlessSurfaceCreateInfoEXTBuilder<'a>(HeadlessSurfaceCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> HeadlessSurfaceCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> HeadlessSurfaceCreateInfoEXTBuilder<'a> {
         HeadlessSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_headless_surface::HeadlessSurfaceCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_headless_surface::HeadlessSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -127,9 +119,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_headless_surface_ext
-            .expect("`create_headless_surface_ext` is not loaded");
+        let _function = self.create_headless_surface_ext.expect("`create_headless_surface_ext` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

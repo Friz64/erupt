@@ -3,8 +3,7 @@
 pub const NV_COMPUTE_SHADER_DERIVATIVES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME")]
-pub const NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_compute_shader_derivatives");
+pub const NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_compute_shader_derivatives");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceComputeShaderDerivativesFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -18,8 +17,7 @@ pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNV {
 impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV,
             p_next: std::ptr::null_mut(),
             compute_derivative_group_quads: Default::default(),
             compute_derivative_group_linear: Default::default(),
@@ -31,14 +29,8 @@ impl std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
         f.debug_struct("PhysicalDeviceComputeShaderDerivativesFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "compute_derivative_group_quads",
-                &(self.compute_derivative_group_quads != 0),
-            )
-            .field(
-                "compute_derivative_group_linear",
-                &(self.compute_derivative_group_linear != 0),
-            )
+            .field("compute_derivative_group_quads", &(self.compute_derivative_group_quads != 0))
+            .field("compute_derivative_group_linear", &(self.compute_derivative_group_linear != 0))
             .finish()
     }
 }
@@ -51,17 +43,11 @@ impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a>(
-    PhysicalDeviceComputeShaderDerivativesFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a>(PhysicalDeviceComputeShaderDerivativesFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
-        PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn compute_derivative_group_quads(mut self, compute_derivative_group_quads: bool) -> Self {
@@ -69,10 +55,7 @@ impl<'a> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn compute_derivative_group_linear(
-        mut self,
-        compute_derivative_group_linear: bool,
-    ) -> Self {
+    pub fn compute_derivative_group_linear(mut self, compute_derivative_group_linear: bool) -> Self {
         self.0.compute_derivative_group_linear = compute_derivative_group_linear as _;
         self
     }

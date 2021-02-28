@@ -3,8 +3,7 @@
 pub const NV_EXTERNAL_MEMORY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME")]
-pub const NV_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_external_memory");
+pub const NV_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_external_memory");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -12,8 +11,7 @@ pub const NV_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char =
 pub struct ExternalMemoryImageCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub handle_types:
-        crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    pub handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
 }
 impl Default for ExternalMemoryImageCreateInfoNV {
     fn default() -> Self {
@@ -42,20 +40,14 @@ impl ExternalMemoryImageCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct ExternalMemoryImageCreateInfoNVBuilder<'a>(
-    ExternalMemoryImageCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalMemoryImageCreateInfoNVBuilder<'a>(ExternalMemoryImageCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalMemoryImageCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalMemoryImageCreateInfoNVBuilder<'a> {
         ExternalMemoryImageCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -93,8 +85,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoNVBuilder<'a> {
 pub struct ExportMemoryAllocateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub handle_types:
-        crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    pub handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
 }
 impl Default for ExportMemoryAllocateInfoNV {
     fn default() -> Self {
@@ -123,20 +114,14 @@ impl ExportMemoryAllocateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`]"]
 #[repr(transparent)]
-pub struct ExportMemoryAllocateInfoNVBuilder<'a>(
-    ExportMemoryAllocateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportMemoryAllocateInfoNVBuilder<'a>(ExportMemoryAllocateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportMemoryAllocateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> ExportMemoryAllocateInfoNVBuilder<'a> {
         ExportMemoryAllocateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }

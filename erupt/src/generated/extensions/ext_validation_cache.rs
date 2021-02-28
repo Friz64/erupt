@@ -3,21 +3,21 @@
 pub const EXT_VALIDATION_CACHE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_CACHE_EXTENSION_NAME")]
-pub const EXT_VALIDATION_CACHE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_validation_cache");
+pub const EXT_VALIDATION_CACHE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_validation_cache");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateValidationCacheEXT");
+pub const FN_CREATE_VALIDATION_CACHE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreateValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_VALIDATION_CACHE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyValidationCacheEXT");
+pub const FN_DESTROY_VALIDATION_CACHE_EXT: *const std::os::raw::c_char = crate::cstr!("vkDestroyValidationCacheEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetValidationCacheDataEXT");
+pub const FN_GET_VALIDATION_CACHE_DATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetValidationCacheDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkMergeValidationCachesEXT");
-crate :: non_dispatchable_handle ! (ValidationCacheEXT , VALIDATION_CACHE_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle" , "VkValidationCacheEXT") ;
+pub const FN_MERGE_VALIDATION_CACHES_EXT: *const std::os::raw::c_char = crate::cstr!("vkMergeValidationCachesEXT");
+crate::non_dispatchable_handle!(
+    ValidationCacheEXT,
+    VALIDATION_CACHE_EXT,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheEXT.html) · Non-dispatchable Handle",
+    "VkValidationCacheEXT"
+);
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateFlagsEXT.html) · Bitmask of [`ValidationCacheCreateFlagBitsEXT`]"] # [doc (alias = "VkValidationCacheCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ValidationCacheCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ValidationCacheCreateFlagsEXT`]"]
 #[doc(alias = "VkValidationCacheCreateFlagBitsEXT")]
@@ -65,11 +65,8 @@ pub type PFN_vkCreateValidationCacheEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyValidationCacheEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyValidationCacheEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetValidationCacheDataEXT = unsafe extern "system" fn(
@@ -128,20 +125,14 @@ impl ValidationCacheCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Builder of [`ValidationCacheCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct ValidationCacheCreateInfoEXTBuilder<'a>(
-    ValidationCacheCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ValidationCacheCreateInfoEXTBuilder<'a>(ValidationCacheCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ValidationCacheCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ValidationCacheCreateInfoEXTBuilder<'a> {
         ValidationCacheCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_validation_cache::ValidationCacheCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_validation_cache::ValidationCacheCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -218,23 +209,14 @@ impl ShaderModuleValidationCacheCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Builder of [`ShaderModuleValidationCacheCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct ShaderModuleValidationCacheCreateInfoEXTBuilder<'a>(
-    ShaderModuleValidationCacheCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ShaderModuleValidationCacheCreateInfoEXTBuilder<'a>(ShaderModuleValidationCacheCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
-        ShaderModuleValidationCacheCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        ShaderModuleValidationCacheCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn validation_cache(
-        mut self,
-        validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
-    ) -> Self {
+    pub fn validation_cache(mut self, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT) -> Self {
         self.0.validation_cache = validation_cache as _;
         self
     }
@@ -275,11 +257,8 @@ impl crate::DeviceLoader {
         create_info: &crate::extensions::ext_validation_cache::ValidationCacheCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_validation_cache::ValidationCacheEXT>
-    {
-        let _function = self
-            .create_validation_cache_ext
-            .expect("`create_validation_cache_ext` is not loaded");
+    ) -> crate::utils::VulkanResult<crate::extensions::ext_validation_cache::ValidationCacheEXT> {
+        let _function = self.create_validation_cache_ext.expect("`create_validation_cache_ext` is not loaded");
         let mut validation_cache = match validation_cache {
             Some(v) => v,
             None => Default::default(),
@@ -303,9 +282,7 @@ impl crate::DeviceLoader {
         validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let _function = self
-            .destroy_validation_cache_ext
-            .expect("`destroy_validation_cache_ext` is not loaded");
+        let _function = self.destroy_validation_cache_ext.expect("`destroy_validation_cache_ext` is not loaded");
         let _return = _function(
             self.handle,
             match validation_cache {
@@ -328,9 +305,7 @@ impl crate::DeviceLoader {
         data_size: *mut usize,
         data: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_validation_cache_data_ext
-            .expect("`get_validation_cache_data_ext` is not loaded");
+        let _function = self.get_validation_cache_data_ext.expect("`get_validation_cache_data_ext` is not loaded");
         let _return = _function(self.handle, validation_cache as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -342,16 +317,9 @@ impl crate::DeviceLoader {
         dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
         src_caches: &[crate::extensions::ext_validation_cache::ValidationCacheEXT],
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .merge_validation_caches_ext
-            .expect("`merge_validation_caches_ext` is not loaded");
+        let _function = self.merge_validation_caches_ext.expect("`merge_validation_caches_ext` is not loaded");
         let src_cache_count = src_caches.len();
-        let _return = _function(
-            self.handle,
-            dst_cache as _,
-            src_cache_count as _,
-            src_caches.as_ptr() as _,
-        );
+        let _return = _function(self.handle, dst_cache as _, src_cache_count as _, src_caches.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
     }
 }

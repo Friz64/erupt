@@ -3,8 +3,7 @@
 pub const QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION: u32 = 0;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME")]
-pub const QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_QCOM_rotated_copy_commands");
+pub const QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_QCOM_rotated_copy_commands");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Structure"]
 #[doc(alias = "VkCopyCommandTransformInfoQCOM")]
 #[derive(Copy, Clone)]
@@ -41,20 +40,14 @@ impl CopyCommandTransformInfoQCOM {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Builder of [`CopyCommandTransformInfoQCOM`]"]
 #[repr(transparent)]
-pub struct CopyCommandTransformInfoQCOMBuilder<'a>(
-    CopyCommandTransformInfoQCOM,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CopyCommandTransformInfoQCOMBuilder<'a>(CopyCommandTransformInfoQCOM, std::marker::PhantomData<&'a ()>);
 impl<'a> CopyCommandTransformInfoQCOMBuilder<'a> {
     #[inline]
     pub fn new() -> CopyCommandTransformInfoQCOMBuilder<'a> {
         CopyCommandTransformInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn transform(
-        mut self,
-        transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    ) -> Self {
+    pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
     }

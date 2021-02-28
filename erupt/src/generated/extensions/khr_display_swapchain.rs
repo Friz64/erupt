@@ -3,11 +3,9 @@
 pub const KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION: u32 = 10;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME")]
-pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_display_swapchain");
+pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_display_swapchain");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateSharedSwapchainsKHR");
+pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateSharedSwapchainsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
@@ -59,10 +57,7 @@ impl DisplayPresentInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`]"]
 #[repr(transparent)]
-pub struct DisplayPresentInfoKHRBuilder<'a>(
-    DisplayPresentInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DisplayPresentInfoKHRBuilder<'a>(DisplayPresentInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> DisplayPresentInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> DisplayPresentInfoKHRBuilder<'a> {
@@ -120,9 +115,7 @@ impl crate::DeviceLoader {
         create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
-        let _function = self
-            .create_shared_swapchains_khr
-            .expect("`create_shared_swapchains_khr` is not loaded");
+        let _function = self.create_shared_swapchains_khr.expect("`create_shared_swapchains_khr` is not loaded");
         let swapchain_count = create_infos.len();
         let mut swapchains = vec![Default::default(); swapchain_count as _];
         let _return = _function(

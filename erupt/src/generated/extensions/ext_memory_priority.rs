@@ -3,8 +3,7 @@
 pub const EXT_MEMORY_PRIORITY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_MEMORY_PRIORITY_EXTENSION_NAME")]
-pub const EXT_MEMORY_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_memory_priority");
+pub const EXT_MEMORY_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_memory_priority");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryPriorityFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -41,10 +40,7 @@ impl PhysicalDeviceMemoryPriorityFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a>(
-    PhysicalDeviceMemoryPriorityFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a>(PhysicalDeviceMemoryPriorityFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
@@ -118,10 +114,7 @@ impl MemoryPriorityAllocateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Builder of [`MemoryPriorityAllocateInfoEXT`]"]
 #[repr(transparent)]
-pub struct MemoryPriorityAllocateInfoEXTBuilder<'a>(
-    MemoryPriorityAllocateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryPriorityAllocateInfoEXTBuilder<'a>(MemoryPriorityAllocateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryPriorityAllocateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryPriorityAllocateInfoEXTBuilder<'a> {

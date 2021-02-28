@@ -3,21 +3,21 @@
 pub const EXT_PRIVATE_DATA_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_PRIVATE_DATA_EXTENSION_NAME")]
-pub const EXT_PRIVATE_DATA_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_private_data");
+pub const EXT_PRIVATE_DATA_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_private_data");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCreatePrivateDataSlotEXT");
+pub const FN_CREATE_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char = crate::cstr!("vkCreatePrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyPrivateDataSlotEXT");
+pub const FN_DESTROY_PRIVATE_DATA_SLOT_EXT: *const std::os::raw::c_char = crate::cstr!("vkDestroyPrivateDataSlotEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkSetPrivateDataEXT");
+pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetPrivateDataEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPrivateDataEXT");
-crate :: non_dispatchable_handle ! (PrivateDataSlotEXT , PRIVATE_DATA_SLOT_EXT , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle" , "VkPrivateDataSlotEXT") ;
+pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPrivateDataEXT");
+crate::non_dispatchable_handle!(
+    PrivateDataSlotEXT,
+    PRIVATE_DATA_SLOT_EXT,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle",
+    "VkPrivateDataSlotEXT"
+);
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`]"] # [doc (alias = "VkPrivateDataSlotCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`]"]
 #[doc(alias = "VkPrivateDataSlotCreateFlagBitsEXT")]
@@ -48,11 +48,8 @@ pub type PFN_vkCreatePrivateDataSlotEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPrivateDataSlotEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyPrivateDataSlotEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyPrivateDataSlotEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetPrivateDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetPrivateDataEXT = unsafe extern "system" fn(
@@ -94,10 +91,7 @@ impl std::fmt::Debug for DevicePrivateDataCreateInfoEXT {
         f.debug_struct("DevicePrivateDataCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "private_data_slot_request_count",
-                &self.private_data_slot_request_count,
-            )
+            .field("private_data_slot_request_count", &self.private_data_slot_request_count)
             .finish()
     }
 }
@@ -110,10 +104,7 @@ impl DevicePrivateDataCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Builder of [`DevicePrivateDataCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct DevicePrivateDataCreateInfoEXTBuilder<'a>(
-    DevicePrivateDataCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DevicePrivateDataCreateInfoEXTBuilder<'a>(DevicePrivateDataCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DevicePrivateDataCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DevicePrivateDataCreateInfoEXTBuilder<'a> {
@@ -187,20 +178,14 @@ impl PrivateDataSlotCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateInfoEXT.html) · Builder of [`PrivateDataSlotCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PrivateDataSlotCreateInfoEXTBuilder<'a>(
-    PrivateDataSlotCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PrivateDataSlotCreateInfoEXTBuilder<'a>(PrivateDataSlotCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PrivateDataSlotCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PrivateDataSlotCreateInfoEXTBuilder<'a> {
         PrivateDataSlotCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_private_data::PrivateDataSlotCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_private_data::PrivateDataSlotCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -267,10 +252,7 @@ impl PhysicalDevicePrivateDataFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Builder of [`PhysicalDevicePrivateDataFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDevicePrivateDataFeaturesEXTBuilder<'a>(
-    PhysicalDevicePrivateDataFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevicePrivateDataFeaturesEXTBuilder<'a>(PhysicalDevicePrivateDataFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
@@ -319,9 +301,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_private_data::PrivateDataSlotEXT> {
-        let _function = self
-            .create_private_data_slot_ext
-            .expect("`create_private_data_slot_ext` is not loaded");
+        let _function = self.create_private_data_slot_ext.expect("`create_private_data_slot_ext` is not loaded");
         let mut private_data_slot = match private_data_slot {
             Some(v) => v,
             None => Default::default(),
@@ -345,9 +325,7 @@ impl crate::DeviceLoader {
         private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> () {
-        let _function = self
-            .destroy_private_data_slot_ext
-            .expect("`destroy_private_data_slot_ext` is not loaded");
+        let _function = self.destroy_private_data_slot_ext.expect("`destroy_private_data_slot_ext` is not loaded");
         let _return = _function(
             self.handle,
             match private_data_slot {
@@ -371,16 +349,8 @@ impl crate::DeviceLoader {
         private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
         data: u64,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .set_private_data_ext
-            .expect("`set_private_data_ext` is not loaded");
-        let _return = _function(
-            self.handle,
-            object_type as _,
-            object_handle as _,
-            private_data_slot as _,
-            data as _,
-        );
+        let _function = self.set_private_data_ext.expect("`set_private_data_ext` is not loaded");
+        let _return = _function(self.handle, object_type as _, object_handle as _, private_data_slot as _, data as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -393,20 +363,12 @@ impl crate::DeviceLoader {
         private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
         data: Option<u64>,
     ) -> u64 {
-        let _function = self
-            .get_private_data_ext
-            .expect("`get_private_data_ext` is not loaded");
+        let _function = self.get_private_data_ext.expect("`get_private_data_ext` is not loaded");
         let mut data = match data {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            object_type as _,
-            object_handle as _,
-            private_data_slot as _,
-            &mut data,
-        );
+        let _return = _function(self.handle, object_type as _, object_handle as _, private_data_slot as _, &mut data);
         data
     }
 }

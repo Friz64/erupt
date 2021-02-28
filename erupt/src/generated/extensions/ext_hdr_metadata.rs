@@ -3,11 +3,9 @@
 pub const EXT_HDR_METADATA_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_HDR_METADATA_EXTENSION_NAME")]
-pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_hdr_metadata");
+pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_hdr_metadata");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkSetHdrMetadataEXT");
+pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetHdrMetadataEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
@@ -34,10 +32,7 @@ impl Default for XYColorEXT {
 }
 impl std::fmt::Debug for XYColorEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("XYColorEXT")
-            .field("x", &self.x)
-            .field("y", &self.y)
-            .finish()
+        f.debug_struct("XYColorEXT").field("x", &self.x).field("y", &self.y).finish()
     }
 }
 impl XYColorEXT {
@@ -136,10 +131,7 @@ impl std::fmt::Debug for HdrMetadataEXT {
             .field("max_luminance", &self.max_luminance)
             .field("min_luminance", &self.min_luminance)
             .field("max_content_light_level", &self.max_content_light_level)
-            .field(
-                "max_frame_average_light_level",
-                &self.max_frame_average_light_level,
-            )
+            .field("max_frame_average_light_level", &self.max_frame_average_light_level)
             .finish()
     }
 }
@@ -159,34 +151,22 @@ impl<'a> HdrMetadataEXTBuilder<'a> {
         HdrMetadataEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn display_primary_red(
-        mut self,
-        display_primary_red: crate::extensions::ext_hdr_metadata::XYColorEXT,
-    ) -> Self {
+    pub fn display_primary_red(mut self, display_primary_red: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_red = display_primary_red as _;
         self
     }
     #[inline]
-    pub fn display_primary_green(
-        mut self,
-        display_primary_green: crate::extensions::ext_hdr_metadata::XYColorEXT,
-    ) -> Self {
+    pub fn display_primary_green(mut self, display_primary_green: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_green = display_primary_green as _;
         self
     }
     #[inline]
-    pub fn display_primary_blue(
-        mut self,
-        display_primary_blue: crate::extensions::ext_hdr_metadata::XYColorEXT,
-    ) -> Self {
+    pub fn display_primary_blue(mut self, display_primary_blue: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_blue = display_primary_blue as _;
         self
     }
     #[inline]
-    pub fn white_point(
-        mut self,
-        white_point: crate::extensions::ext_hdr_metadata::XYColorEXT,
-    ) -> Self {
+    pub fn white_point(mut self, white_point: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.white_point = white_point as _;
         self
     }
@@ -201,18 +181,12 @@ impl<'a> HdrMetadataEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_content_light_level(
-        mut self,
-        max_content_light_level: std::os::raw::c_float,
-    ) -> Self {
+    pub fn max_content_light_level(mut self, max_content_light_level: std::os::raw::c_float) -> Self {
         self.0.max_content_light_level = max_content_light_level as _;
         self
     }
     #[inline]
-    pub fn max_frame_average_light_level(
-        mut self,
-        max_frame_average_light_level: std::os::raw::c_float,
-    ) -> Self {
+    pub fn max_frame_average_light_level(mut self, max_frame_average_light_level: std::os::raw::c_float) -> Self {
         self.0.max_frame_average_light_level = max_frame_average_light_level as _;
         self
     }
@@ -248,21 +222,10 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
     #[doc(alias = "vkSetHdrMetadataEXT")]
-    pub unsafe fn set_hdr_metadata_ext(
-        &self,
-        swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR],
-        metadata: &[crate::extensions::ext_hdr_metadata::HdrMetadataEXTBuilder],
-    ) -> () {
-        let _function = self
-            .set_hdr_metadata_ext
-            .expect("`set_hdr_metadata_ext` is not loaded");
+    pub unsafe fn set_hdr_metadata_ext(&self, swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR], metadata: &[crate::extensions::ext_hdr_metadata::HdrMetadataEXTBuilder]) -> () {
+        let _function = self.set_hdr_metadata_ext.expect("`set_hdr_metadata_ext` is not loaded");
         let swapchain_count = swapchains.len().min(metadata.len());
-        let _return = _function(
-            self.handle,
-            swapchain_count as _,
-            swapchains.as_ptr() as _,
-            metadata.as_ptr() as _,
-        );
+        let _return = _function(self.handle, swapchain_count as _, swapchains.as_ptr() as _, metadata.as_ptr() as _);
         ()
     }
 }

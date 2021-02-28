@@ -3,8 +3,7 @@
 pub const EXT_IMAGE_ROBUSTNESS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME")]
-pub const EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_image_robustness");
+pub const EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_image_robustness");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageRobustnessFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageRobustnessFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -41,17 +40,11 @@ impl PhysicalDeviceImageRobustnessFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageRobustnessFeaturesEXT.html) · Builder of [`PhysicalDeviceImageRobustnessFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a>(
-    PhysicalDeviceImageRobustnessFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a>(PhysicalDeviceImageRobustnessFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
-        PhysicalDeviceImageRobustnessFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceImageRobustnessFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn robust_image_access(mut self, robust_image_access: bool) -> Self {

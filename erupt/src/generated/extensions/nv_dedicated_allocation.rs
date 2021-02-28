@@ -3,8 +3,7 @@
 pub const NV_DEDICATED_ALLOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME")]
-pub const NV_DEDICATED_ALLOCATION_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_dedicated_allocation");
+pub const NV_DEDICATED_ALLOCATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_dedicated_allocation");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -41,10 +40,7 @@ impl DedicatedAllocationImageCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a>(
-    DedicatedAllocationImageCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a>(DedicatedAllocationImageCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
@@ -118,10 +114,7 @@ impl DedicatedAllocationBufferCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a>(
-    DedicatedAllocationBufferCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a>(DedicatedAllocationBufferCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
@@ -198,10 +191,7 @@ impl DedicatedAllocationMemoryAllocateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`]"]
 #[repr(transparent)]
-pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a>(
-    DedicatedAllocationMemoryAllocateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a>(DedicatedAllocationMemoryAllocateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {

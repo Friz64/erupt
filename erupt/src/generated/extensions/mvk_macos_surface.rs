@@ -3,11 +3,9 @@
 pub const MVK_MACOS_SURFACE_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_MVK_MACOS_SURFACE_EXTENSION_NAME")]
-pub const MVK_MACOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_MVK_macos_surface");
+pub const MVK_MACOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_MVK_macos_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_MAC_OS_SURFACE_MVK: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateMacOSSurfaceMVK");
+pub const FN_CREATE_MAC_OS_SURFACE_MVK: *const std::os::raw::c_char = crate::cstr!("vkCreateMacOSSurfaceMVK");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkMacOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct MacOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MacOSSurfaceCreateFlagsMVK`]"]
 #[doc(alias = "VkMacOSSurfaceCreateFlagBitsMVK")]
@@ -75,20 +73,14 @@ impl MacOSSurfaceCreateInfoMVK {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`]"]
 #[repr(transparent)]
-pub struct MacOSSurfaceCreateInfoMVKBuilder<'a>(
-    MacOSSurfaceCreateInfoMVK,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MacOSSurfaceCreateInfoMVKBuilder<'a>(MacOSSurfaceCreateInfoMVK, std::marker::PhantomData<&'a ()>);
 impl<'a> MacOSSurfaceCreateInfoMVKBuilder<'a> {
     #[inline]
     pub fn new() -> MacOSSurfaceCreateInfoMVKBuilder<'a> {
         MacOSSurfaceCreateInfoMVKBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::mvk_macos_surface::MacOSSurfaceCreateFlagsMVK,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::mvk_macos_surface::MacOSSurfaceCreateFlagsMVK) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -135,9 +127,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_mac_os_surface_mvk
-            .expect("`create_mac_os_surface_mvk` is not loaded");
+        let _function = self.create_mac_os_surface_mvk.expect("`create_mac_os_surface_mvk` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

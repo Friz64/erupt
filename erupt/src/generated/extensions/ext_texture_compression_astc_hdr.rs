@@ -3,8 +3,7 @@
 pub const EXT_TEXTURE_COMPRESSION_ASTC_HDR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_TEXTURE_COMPRESSION_ASTC_HDR_EXTENSION_NAME")]
-pub const EXT_TEXTURE_COMPRESSION_ASTC_HDR_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_texture_compression_astc_hdr");
+pub const EXT_TEXTURE_COMPRESSION_ASTC_HDR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_texture_compression_astc_hdr");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -16,7 +15,11 @@ pub struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
 }
 impl Default for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT , p_next : std :: ptr :: null_mut () , texture_compression_astc_hdr : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT,
+            p_next: std::ptr::null_mut(),
+            texture_compression_astc_hdr: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
@@ -24,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
         f.debug_struct("PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "texture_compression_astc_hdr",
-                &(self.texture_compression_astc_hdr != 0),
-            )
+            .field("texture_compression_astc_hdr", &(self.texture_compression_astc_hdr != 0))
             .finish()
     }
 }
@@ -40,17 +40,11 @@ impl PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT.html) · Builder of [`PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a>(
-    PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a>(PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a> {
-        PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn texture_compression_astc_hdr(mut self, texture_compression_astc_hdr: bool) -> Self {

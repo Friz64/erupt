@@ -3,14 +3,11 @@
 pub const KHR_WIN32_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_WIN32_SURFACE_EXTENSION_NAME")]
-pub const KHR_WIN32_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_win32_surface");
+pub const KHR_WIN32_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_win32_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_WIN32_SURFACE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateWin32SurfaceKHR");
+pub const FN_CREATE_WIN32_SURFACE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateWin32SurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceWin32PresentationSupportKHR");
+pub const FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceWin32PresentationSupportKHR");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkWin32SurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct Win32SurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`Win32SurfaceCreateFlagsKHR`]"]
 #[doc(alias = "VkWin32SurfaceCreateFlagBitsKHR")]
@@ -41,11 +38,7 @@ pub type PFN_vkCreateWin32SurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-    ) -> crate::vk1_0::Bool32;
+pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkWin32SurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -88,20 +81,14 @@ impl Win32SurfaceCreateInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`]"]
 #[repr(transparent)]
-pub struct Win32SurfaceCreateInfoKHRBuilder<'a>(
-    Win32SurfaceCreateInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct Win32SurfaceCreateInfoKHRBuilder<'a>(Win32SurfaceCreateInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> Win32SurfaceCreateInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> Win32SurfaceCreateInfoKHRBuilder<'a> {
         Win32SurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_win32_surface::Win32SurfaceCreateFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_win32_surface::Win32SurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -153,9 +140,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_win32_surface_khr
-            .expect("`create_win32_surface_khr` is not loaded");
+        let _function = self.create_win32_surface_khr.expect("`create_win32_surface_khr` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),
@@ -174,11 +159,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
-    pub unsafe fn get_physical_device_win32_presentation_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-    ) -> bool {
+    pub unsafe fn get_physical_device_win32_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32) -> bool {
         let _function = self
             .get_physical_device_win32_presentation_support_khr
             .expect("`get_physical_device_win32_presentation_support_khr` is not loaded");

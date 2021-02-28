@@ -3,8 +3,7 @@
 pub const AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME")]
-pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_pipeline_compiler_control");
+pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_pipeline_compiler_control");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`]"] # [doc (alias = "VkPipelineCompilerControlFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCompilerControlFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCompilerControlFlagsAMD`]"]
 #[doc(alias = "VkPipelineCompilerControlFlagBitsAMD")]
@@ -32,8 +31,7 @@ impl std::fmt::Debug for PipelineCompilerControlFlagBitsAMD {
 pub struct PipelineCompilerControlCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub compiler_control_flags:
-        crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlFlagsAMD,
+    pub compiler_control_flags: crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlFlagsAMD,
 }
 impl Default for PipelineCompilerControlCreateInfoAMD {
     fn default() -> Self {
@@ -62,20 +60,14 @@ impl PipelineCompilerControlCreateInfoAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`]"]
 #[repr(transparent)]
-pub struct PipelineCompilerControlCreateInfoAMDBuilder<'a>(
-    PipelineCompilerControlCreateInfoAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineCompilerControlCreateInfoAMDBuilder<'a>(PipelineCompilerControlCreateInfoAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineCompilerControlCreateInfoAMDBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineCompilerControlCreateInfoAMDBuilder<'a> {
         PipelineCompilerControlCreateInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn compiler_control_flags(
-        mut self,
-        compiler_control_flags : crate :: extensions :: amd_pipeline_compiler_control :: PipelineCompilerControlFlagsAMD,
-    ) -> Self {
+    pub fn compiler_control_flags(mut self, compiler_control_flags: crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlFlagsAMD) -> Self {
         self.0.compiler_control_flags = compiler_control_flags as _;
         self
     }

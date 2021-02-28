@@ -3,8 +3,7 @@
 pub const QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME")]
-pub const QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_QCOM_render_pass_transform");
+pub const QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_QCOM_render_pass_transform");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Structure"]
 #[doc(alias = "VkRenderPassTransformBeginInfoQCOM")]
 #[derive(Copy, Clone)]
@@ -41,20 +40,14 @@ impl RenderPassTransformBeginInfoQCOM {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Builder of [`RenderPassTransformBeginInfoQCOM`]"]
 #[repr(transparent)]
-pub struct RenderPassTransformBeginInfoQCOMBuilder<'a>(
-    RenderPassTransformBeginInfoQCOM,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassTransformBeginInfoQCOMBuilder<'a>(RenderPassTransformBeginInfoQCOM, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassTransformBeginInfoQCOMBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassTransformBeginInfoQCOMBuilder<'a> {
         RenderPassTransformBeginInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn transform(
-        mut self,
-        transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    ) -> Self {
+    pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
     }
@@ -97,7 +90,12 @@ pub struct CommandBufferInheritanceRenderPassTransformInfoQCOM {
 }
 impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM , p_next : std :: ptr :: null_mut () , transform : Default :: default () , render_area : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM,
+            p_next: std::ptr::null_mut(),
+            transform: Default::default(),
+            render_area: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceRenderPassTransformInfoQCOM {
@@ -112,32 +110,21 @@ impl std::fmt::Debug for CommandBufferInheritanceRenderPassTransformInfoQCOM {
 }
 impl CommandBufferInheritanceRenderPassTransformInfoQCOM {
     #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
+    pub fn into_builder<'a>(self) -> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
         CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Builder of [`CommandBufferInheritanceRenderPassTransformInfoQCOM`]"]
 #[repr(transparent)]
-pub struct CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a>(
-    CommandBufferInheritanceRenderPassTransformInfoQCOM,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a>(CommandBufferInheritanceRenderPassTransformInfoQCOM, std::marker::PhantomData<&'a ()>);
 impl<'a> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
     #[inline]
     pub fn new() -> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
-        CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn transform(
-        mut self,
-        transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    ) -> Self {
+    pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
     }

@@ -3,14 +3,11 @@
 pub const KHR_XCB_SURFACE_SPEC_VERSION: u32 = 6;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_XCB_SURFACE_EXTENSION_NAME")]
-pub const KHR_XCB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_xcb_surface");
+pub const KHR_XCB_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_xcb_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_XCB_SURFACE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateXcbSurfaceKHR");
+pub const FN_CREATE_XCB_SURFACE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateXcbSurfaceKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceXcbPresentationSupportKHR");
+pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceXcbPresentationSupportKHR");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`]"] # [doc (alias = "VkXcbSurfaceCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct XcbSurfaceCreateFlagsKHR : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`XcbSurfaceCreateFlagsKHR`]"]
 #[doc(alias = "VkXcbSurfaceCreateFlagBitsKHR")]
@@ -42,12 +39,7 @@ pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        connection: *mut std::ffi::c_void,
-        visual_id: u32,
-    ) -> crate::vk1_0::Bool32;
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, connection: *mut std::ffi::c_void, visual_id: u32) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkXcbSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -90,20 +82,14 @@ impl XcbSurfaceCreateInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`]"]
 #[repr(transparent)]
-pub struct XcbSurfaceCreateInfoKHRBuilder<'a>(
-    XcbSurfaceCreateInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct XcbSurfaceCreateInfoKHRBuilder<'a>(XcbSurfaceCreateInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> XcbSurfaceCreateInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> XcbSurfaceCreateInfoKHRBuilder<'a> {
         XcbSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::khr_xcb_surface::XcbSurfaceCreateFlagsKHR,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::khr_xcb_surface::XcbSurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -155,9 +141,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_xcb_surface_khr
-            .expect("`create_xcb_surface_khr` is not loaded");
+        let _function = self.create_xcb_surface_khr.expect("`create_xcb_surface_khr` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),
@@ -186,12 +170,7 @@ impl crate::InstanceLoader {
         let _function = self
             .get_physical_device_xcb_presentation_support_khr
             .expect("`get_physical_device_xcb_presentation_support_khr` is not loaded");
-        let _return = _function(
-            physical_device as _,
-            queue_family_index as _,
-            connection,
-            visual_id as _,
-        );
+        let _return = _function(physical_device as _, queue_family_index as _, connection, visual_id as _);
         _return != 0
     }
 }

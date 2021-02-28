@@ -3,23 +3,27 @@
 pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME")]
-pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME:
-    *const std::os::raw::c_char =
-    crate::cstr!("VK_ANDROID_external_memory_android_hardware_buffer");
+pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_ANDROID_external_memory_android_hardware_buffer");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: *const std::os::raw::c_char =
-    crate::cstr!("vkGetAndroidHardwareBufferPropertiesANDROID");
+pub const FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: *const std::os::raw::c_char = crate::cstr!("vkGetAndroidHardwareBufferPropertiesANDROID");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_char =
-    crate::cstr!("vkGetMemoryAndroidHardwareBufferANDROID");
+pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryAndroidHardwareBufferANDROID");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/AHardwareBuffer.html) · Basetype"]
 pub type AHardwareBuffer = std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , buffer : * const crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer , p_properties : * mut crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+    p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_info : * const crate :: extensions :: android_external_memory_android_hardware_buffer :: MemoryGetAndroidHardwareBufferInfoANDROID , p_buffer : * mut * mut crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
+    p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure"]
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone)]
@@ -27,8 +31,7 @@ pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn
 pub struct ImportAndroidHardwareBufferInfoANDROID {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub buffer:
-        *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+    pub buffer: *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
 }
 impl Default for ImportAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
@@ -57,20 +60,14 @@ impl ImportAndroidHardwareBufferInfoANDROID {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Builder of [`ImportAndroidHardwareBufferInfoANDROID`]"]
 #[repr(transparent)]
-pub struct ImportAndroidHardwareBufferInfoANDROIDBuilder<'a>(
-    ImportAndroidHardwareBufferInfoANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportAndroidHardwareBufferInfoANDROIDBuilder<'a>(ImportAndroidHardwareBufferInfoANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
         ImportAndroidHardwareBufferInfoANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn buffer(
-        mut self,
-        buffer : & 'a mut crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer,
-    ) -> Self {
+    pub fn buffer(mut self, buffer: &'a mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
@@ -124,10 +121,7 @@ impl std::fmt::Debug for AndroidHardwareBufferUsageANDROID {
         f.debug_struct("AndroidHardwareBufferUsageANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "android_hardware_buffer_usage",
-                &self.android_hardware_buffer_usage,
-            )
+            .field("android_hardware_buffer_usage", &self.android_hardware_buffer_usage)
             .finish()
     }
 }
@@ -140,10 +134,7 @@ impl AndroidHardwareBufferUsageANDROID {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Builder of [`AndroidHardwareBufferUsageANDROID`]"]
 #[repr(transparent)]
-pub struct AndroidHardwareBufferUsageANDROIDBuilder<'a>(
-    AndroidHardwareBufferUsageANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AndroidHardwareBufferUsageANDROIDBuilder<'a>(AndroidHardwareBufferUsageANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> AndroidHardwareBufferUsageANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> AndroidHardwareBufferUsageANDROIDBuilder<'a> {
@@ -217,15 +208,18 @@ impl AndroidHardwareBufferPropertiesANDROID {
         AndroidHardwareBufferPropertiesANDROIDBuilder(self, std::marker::PhantomData)
     }
 }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferFormatPropertiesANDROID > for AndroidHardwareBufferPropertiesANDROIDBuilder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferFormatPropertiesANDROIDBuilder < '_ >> for AndroidHardwareBufferPropertiesANDROIDBuilder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROID>
+    for AndroidHardwareBufferPropertiesANDROIDBuilder<'a>
+{
+}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>>
+    for AndroidHardwareBufferPropertiesANDROIDBuilder<'a>
+{
+}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]
 #[repr(transparent)]
-pub struct AndroidHardwareBufferPropertiesANDROIDBuilder<'a>(
-    AndroidHardwareBufferPropertiesANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AndroidHardwareBufferPropertiesANDROIDBuilder<'a>(AndroidHardwareBufferPropertiesANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {
@@ -304,17 +298,11 @@ impl MemoryGetAndroidHardwareBufferInfoANDROID {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Builder of [`MemoryGetAndroidHardwareBufferInfoANDROID`]"]
 #[repr(transparent)]
-pub struct MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a>(
-    MemoryGetAndroidHardwareBufferInfoANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a>(MemoryGetAndroidHardwareBufferInfoANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a> {
-        MemoryGetAndroidHardwareBufferInfoANDROIDBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        MemoryGetAndroidHardwareBufferInfoANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
@@ -388,10 +376,7 @@ impl std::fmt::Debug for AndroidHardwareBufferFormatPropertiesANDROID {
             .field("format", &self.format)
             .field("external_format", &self.external_format)
             .field("format_features", &self.format_features)
-            .field(
-                "sampler_ycbcr_conversion_components",
-                &self.sampler_ycbcr_conversion_components,
-            )
+            .field("sampler_ycbcr_conversion_components", &self.sampler_ycbcr_conversion_components)
             .field("suggested_ycbcr_model", &self.suggested_ycbcr_model)
             .field("suggested_ycbcr_range", &self.suggested_ycbcr_range)
             .field("suggested_x_chroma_offset", &self.suggested_x_chroma_offset)
@@ -408,17 +393,11 @@ impl AndroidHardwareBufferFormatPropertiesANDROID {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`]"]
 #[repr(transparent)]
-pub struct AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a>(
-    AndroidHardwareBufferFormatPropertiesANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a>(AndroidHardwareBufferFormatPropertiesANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
-        AndroidHardwareBufferFormatPropertiesANDROIDBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        AndroidHardwareBufferFormatPropertiesANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
@@ -436,42 +415,27 @@ impl<'a> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sampler_ycbcr_conversion_components(
-        mut self,
-        sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping,
-    ) -> Self {
+    pub fn sampler_ycbcr_conversion_components(mut self, sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.sampler_ycbcr_conversion_components = sampler_ycbcr_conversion_components as _;
         self
     }
     #[inline]
-    pub fn suggested_ycbcr_model(
-        mut self,
-        suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion,
-    ) -> Self {
+    pub fn suggested_ycbcr_model(mut self, suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
         self.0.suggested_ycbcr_model = suggested_ycbcr_model as _;
         self
     }
     #[inline]
-    pub fn suggested_ycbcr_range(
-        mut self,
-        suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange,
-    ) -> Self {
+    pub fn suggested_ycbcr_range(mut self, suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
         self.0.suggested_ycbcr_range = suggested_ycbcr_range as _;
         self
     }
     #[inline]
-    pub fn suggested_x_chroma_offset(
-        mut self,
-        suggested_x_chroma_offset: crate::vk1_1::ChromaLocation,
-    ) -> Self {
+    pub fn suggested_x_chroma_offset(mut self, suggested_x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_x_chroma_offset = suggested_x_chroma_offset as _;
         self
     }
     #[inline]
-    pub fn suggested_y_chroma_offset(
-        mut self,
-        suggested_y_chroma_offset: crate::vk1_1::ChromaLocation,
-    ) -> Self {
+    pub fn suggested_y_chroma_offset(mut self, suggested_y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_y_chroma_offset = suggested_y_chroma_offset as _;
         self
     }
@@ -538,10 +502,7 @@ impl ExternalFormatANDROID {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFormatANDROID.html) · Builder of [`ExternalFormatANDROID`]"]
 #[repr(transparent)]
-pub struct ExternalFormatANDROIDBuilder<'a>(
-    ExternalFormatANDROID,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalFormatANDROIDBuilder<'a>(ExternalFormatANDROID, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalFormatANDROIDBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalFormatANDROIDBuilder<'a> {
@@ -583,7 +544,12 @@ impl<'a> std::ops::DerefMut for ExternalFormatANDROIDBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
-    #[doc(alias = "vkGetAndroidHardwareBufferPropertiesANDROID")]    pub unsafe fn get_android_hardware_buffer_properties_android (& self , buffer : & crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer , properties : Option < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >) -> crate :: utils :: VulkanResult < crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferPropertiesANDROID >{
+    #[doc(alias = "vkGetAndroidHardwareBufferPropertiesANDROID")]
+    pub unsafe fn get_android_hardware_buffer_properties_android(
+        &self,
+        buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+        properties: Option<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>,
+    ) -> crate::utils::VulkanResult<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID> {
         let _function = self
             .get_android_hardware_buffer_properties_android
             .expect("`get_android_hardware_buffer_properties_android` is not loaded");
@@ -599,14 +565,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetMemoryAndroidHardwareBufferANDROID")]
     pub unsafe fn get_memory_android_hardware_buffer_android(
         &self,
-        info : & crate :: extensions :: android_external_memory_android_hardware_buffer :: MemoryGetAndroidHardwareBufferInfoANDROID,
-        buffer : Option < * mut crate :: extensions :: android_external_memory_android_hardware_buffer :: AHardwareBuffer >,
-    ) -> crate::utils::VulkanResult<
-        *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-    > {
-        let _function = self
-            .get_memory_android_hardware_buffer_android
-            .expect("`get_memory_android_hardware_buffer_android` is not loaded");
+        info: &crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
+        buffer: Option<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer>,
+    ) -> crate::utils::VulkanResult<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer> {
+        let _function = self.get_memory_android_hardware_buffer_android.expect("`get_memory_android_hardware_buffer_android` is not loaded");
         let mut buffer = match buffer {
             Some(v) => v,
             None => std::ptr::null_mut(),

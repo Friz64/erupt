@@ -3,8 +3,7 @@
 pub const EXT_INLINE_UNIFORM_BLOCK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME")]
-pub const EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_inline_uniform_block");
+pub const EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_inline_uniform_block");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -47,17 +46,11 @@ impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a>(
-    PhysicalDeviceInlineUniformBlockFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a>(PhysicalDeviceInlineUniformBlockFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
-        PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn inline_uniform_block(mut self, inline_uniform_block: bool) -> Self {
@@ -65,13 +58,8 @@ impl<'a> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn descriptor_binding_inline_uniform_block_update_after_bind(
-        mut self,
-        descriptor_binding_inline_uniform_block_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_inline_uniform_block_update_after_bind =
-            descriptor_binding_inline_uniform_block_update_after_bind as _;
+    pub fn descriptor_binding_inline_uniform_block_update_after_bind(mut self, descriptor_binding_inline_uniform_block_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_inline_uniform_block_update_after_bind = descriptor_binding_inline_uniform_block_update_after_bind as _;
         self
     }
     #[inline]
@@ -117,8 +105,7 @@ pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
 impl Default for PhysicalDeviceInlineUniformBlockPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             max_inline_uniform_block_size: Default::default(),
             max_per_stage_descriptor_inline_uniform_blocks: Default::default(),
@@ -133,22 +120,13 @@ impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockPropertiesEXT {
         f.debug_struct("PhysicalDeviceInlineUniformBlockPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_inline_uniform_block_size",
-                &self.max_inline_uniform_block_size,
-            )
-            .field(
-                "max_per_stage_descriptor_inline_uniform_blocks",
-                &self.max_per_stage_descriptor_inline_uniform_blocks,
-            )
+            .field("max_inline_uniform_block_size", &self.max_inline_uniform_block_size)
+            .field("max_per_stage_descriptor_inline_uniform_blocks", &self.max_per_stage_descriptor_inline_uniform_blocks)
             .field(
                 "max_per_stage_descriptor_update_after_bind_inline_uniform_blocks",
                 &self.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks,
             )
-            .field(
-                "max_descriptor_set_inline_uniform_blocks",
-                &self.max_descriptor_set_inline_uniform_blocks,
-            )
+            .field("max_descriptor_set_inline_uniform_blocks", &self.max_descriptor_set_inline_uniform_blocks)
             .field(
                 "max_descriptor_set_update_after_bind_inline_uniform_blocks",
                 &self.max_descriptor_set_update_after_bind_inline_uniform_blocks,
@@ -165,17 +143,11 @@ impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockPropertiesEXT.html) · Builder of [`PhysicalDeviceInlineUniformBlockPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a>(
-    PhysicalDeviceInlineUniformBlockPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a>(PhysicalDeviceInlineUniformBlockPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
-        PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn max_inline_uniform_block_size(mut self, max_inline_uniform_block_size: u32) -> Self {
@@ -183,41 +155,23 @@ impl<'a> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_inline_uniform_blocks(
-        mut self,
-        max_per_stage_descriptor_inline_uniform_blocks: u32,
-    ) -> Self {
-        self.0.max_per_stage_descriptor_inline_uniform_blocks =
-            max_per_stage_descriptor_inline_uniform_blocks as _;
+    pub fn max_per_stage_descriptor_inline_uniform_blocks(mut self, max_per_stage_descriptor_inline_uniform_blocks: u32) -> Self {
+        self.0.max_per_stage_descriptor_inline_uniform_blocks = max_per_stage_descriptor_inline_uniform_blocks as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_inline_uniform_blocks(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_inline_uniform_blocks =
-            max_per_stage_descriptor_update_after_bind_inline_uniform_blocks as _;
+    pub fn max_per_stage_descriptor_update_after_bind_inline_uniform_blocks(mut self, max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks = max_per_stage_descriptor_update_after_bind_inline_uniform_blocks as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_inline_uniform_blocks(
-        mut self,
-        max_descriptor_set_inline_uniform_blocks: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_inline_uniform_blocks =
-            max_descriptor_set_inline_uniform_blocks as _;
+    pub fn max_descriptor_set_inline_uniform_blocks(mut self, max_descriptor_set_inline_uniform_blocks: u32) -> Self {
+        self.0.max_descriptor_set_inline_uniform_blocks = max_descriptor_set_inline_uniform_blocks as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_inline_uniform_blocks(
-        mut self,
-        max_descriptor_set_update_after_bind_inline_uniform_blocks: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_inline_uniform_blocks =
-            max_descriptor_set_update_after_bind_inline_uniform_blocks as _;
+    pub fn max_descriptor_set_update_after_bind_inline_uniform_blocks(mut self, max_descriptor_set_update_after_bind_inline_uniform_blocks: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_inline_uniform_blocks = max_descriptor_set_update_after_bind_inline_uniform_blocks as _;
         self
     }
     #[inline]
@@ -286,10 +240,7 @@ impl WriteDescriptorSetInlineUniformBlockEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetInlineUniformBlockEXT.html) · Builder of [`WriteDescriptorSetInlineUniformBlockEXT`]"]
 #[repr(transparent)]
-pub struct WriteDescriptorSetInlineUniformBlockEXTBuilder<'a>(
-    WriteDescriptorSetInlineUniformBlockEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct WriteDescriptorSetInlineUniformBlockEXTBuilder<'a>(WriteDescriptorSetInlineUniformBlockEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
     #[inline]
     pub fn new() -> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
@@ -344,8 +295,7 @@ pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
 impl Default for DescriptorPoolInlineUniformBlockCreateInfoEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT,
+            s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT,
             p_next: std::ptr::null(),
             max_inline_uniform_block_bindings: Default::default(),
         }
@@ -356,10 +306,7 @@ impl std::fmt::Debug for DescriptorPoolInlineUniformBlockCreateInfoEXT {
         f.debug_struct("DescriptorPoolInlineUniformBlockCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_inline_uniform_block_bindings",
-                &self.max_inline_uniform_block_bindings,
-            )
+            .field("max_inline_uniform_block_bindings", &self.max_inline_uniform_block_bindings)
             .finish()
     }
 }
@@ -372,23 +319,14 @@ impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfoEXT.html) · Builder of [`DescriptorPoolInlineUniformBlockCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a>(
-    DescriptorPoolInlineUniformBlockCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a>(DescriptorPoolInlineUniformBlockCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
-        DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn max_inline_uniform_block_bindings(
-        mut self,
-        max_inline_uniform_block_bindings: u32,
-    ) -> Self {
+    pub fn max_inline_uniform_block_bindings(mut self, max_inline_uniform_block_bindings: u32) -> Self {
         self.0.max_inline_uniform_block_bindings = max_inline_uniform_block_bindings as _;
         self
     }

@@ -3,8 +3,7 @@
 pub const NV_SHADER_IMAGE_FOOTPRINT_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME")]
-pub const NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_shader_image_footprint");
+pub const NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_shader_image_footprint");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderImageFootprintFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -41,17 +40,11 @@ impl PhysicalDeviceShaderImageFootprintFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a>(
-    PhysicalDeviceShaderImageFootprintFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a>(PhysicalDeviceShaderImageFootprintFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
-        PhysicalDeviceShaderImageFootprintFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderImageFootprintFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn image_footprint(mut self, image_footprint: bool) -> Self {

@@ -3,11 +3,9 @@
 pub const EXT_DISCARD_RECTANGLES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME")]
-pub const EXT_DISCARD_RECTANGLES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_discard_rectangles");
+pub const EXT_DISCARD_RECTANGLES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_discard_rectangles");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_DISCARD_RECTANGLE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetDiscardRectangleEXT");
+pub const FN_CMD_SET_DISCARD_RECTANGLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetDiscardRectangleEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateFlagsEXT.html) · Bitmask of [`PipelineDiscardRectangleStateCreateFlagBitsEXT`]"] # [doc (alias = "VkPipelineDiscardRectangleStateCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDiscardRectangleStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDiscardRectangleStateCreateFlagsEXT`]"]
 #[doc(alias = "VkPipelineDiscardRectangleStateCreateFlagBitsEXT")]
@@ -49,12 +47,8 @@ impl DiscardRectangleModeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_discard_rectangle: u32,
-    discard_rectangle_count: u32,
-    p_discard_rectangles: *const crate::vk1_0::Rect2D,
-) -> ();
+pub type PFN_vkCmdSetDiscardRectangleEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangle_count: u32, p_discard_rectangles: *const crate::vk1_0::Rect2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDiscardRectanglePropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -91,17 +85,11 @@ impl PhysicalDeviceDiscardRectanglePropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Builder of [`PhysicalDeviceDiscardRectanglePropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a>(
-    PhysicalDeviceDiscardRectanglePropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a>(PhysicalDeviceDiscardRectanglePropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
-        PhysicalDeviceDiscardRectanglePropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceDiscardRectanglePropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn max_discard_rectangles(mut self, max_discard_rectangles: u32) -> Self {
@@ -142,8 +130,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiscardRectanglePropertiesEXTBuild
 pub struct PipelineDiscardRectangleStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub flags:
-        crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateFlagsEXT,
+    pub flags: crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateFlagsEXT,
     pub discard_rectangle_mode: crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT,
     pub discard_rectangle_count: u32,
     pub p_discard_rectangles: *const crate::vk1_0::Rect2D,
@@ -181,39 +168,24 @@ impl PipelineDiscardRectangleStateCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html) · Builder of [`PipelineDiscardRectangleStateCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a>(
-    PipelineDiscardRectangleStateCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a>(PipelineDiscardRectangleStateCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
-        PipelineDiscardRectangleStateCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineDiscardRectangleStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags : crate :: extensions :: ext_discard_rectangles :: PipelineDiscardRectangleStateCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn discard_rectangle_mode(
-        mut self,
-        discard_rectangle_mode: crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT,
-    ) -> Self {
+    pub fn discard_rectangle_mode(mut self, discard_rectangle_mode: crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT) -> Self {
         self.0.discard_rectangle_mode = discard_rectangle_mode as _;
         self
     }
     #[inline]
-    pub fn discard_rectangles(
-        mut self,
-        discard_rectangles: &'a [crate::vk1_0::Rect2DBuilder],
-    ) -> Self {
+    pub fn discard_rectangles(mut self, discard_rectangles: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_discard_rectangles = discard_rectangles.as_ptr() as _;
         self.0.discard_rectangle_count = discard_rectangles.len() as _;
         self
@@ -250,22 +222,10 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDiscardRectangleEXT")]
-    pub unsafe fn cmd_set_discard_rectangle_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_discard_rectangle: u32,
-        discard_rectangles: &[crate::vk1_0::Rect2DBuilder],
-    ) -> () {
-        let _function = self
-            .cmd_set_discard_rectangle_ext
-            .expect("`cmd_set_discard_rectangle_ext` is not loaded");
+    pub unsafe fn cmd_set_discard_rectangle_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangles: &[crate::vk1_0::Rect2DBuilder]) -> () {
+        let _function = self.cmd_set_discard_rectangle_ext.expect("`cmd_set_discard_rectangle_ext` is not loaded");
         let discard_rectangle_count = discard_rectangles.len();
-        let _return = _function(
-            command_buffer as _,
-            first_discard_rectangle as _,
-            discard_rectangle_count as _,
-            discard_rectangles.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_discard_rectangle as _, discard_rectangle_count as _, discard_rectangles.as_ptr() as _);
         ()
     }
 }

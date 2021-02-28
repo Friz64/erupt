@@ -3,8 +3,7 @@
 pub const NV_VIEWPORT_SWIZZLE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME")]
-pub const NV_VIEWPORT_SWIZZLE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_viewport_swizzle");
+pub const NV_VIEWPORT_SWIZZLE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_viewport_swizzle");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateFlagsNV.html) · Bitmask of [`PipelineViewportSwizzleStateCreateFlagBitsNV`]"] # [doc (alias = "VkPipelineViewportSwizzleStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineViewportSwizzleStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineViewportSwizzleStateCreateFlagsNV`]"]
 #[doc(alias = "VkPipelineViewportSwizzleStateCreateFlagBitsNV")]
@@ -102,34 +101,22 @@ impl<'a> ViewportSwizzleNVBuilder<'a> {
         ViewportSwizzleNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn x(
-        mut self,
-        x: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,
-    ) -> Self {
+    pub fn x(mut self, x: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
-    pub fn y(
-        mut self,
-        y: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,
-    ) -> Self {
+    pub fn y(mut self, y: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.y = y as _;
         self
     }
     #[inline]
-    pub fn z(
-        mut self,
-        z: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,
-    ) -> Self {
+    pub fn z(mut self, z: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.z = z as _;
         self
     }
     #[inline]
-    pub fn w(
-        mut self,
-        w: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,
-    ) -> Self {
+    pub fn w(mut self, w: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.w = w as _;
         self
     }
@@ -202,31 +189,19 @@ impl PipelineViewportSwizzleStateCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html) · Builder of [`PipelineViewportSwizzleStateCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct PipelineViewportSwizzleStateCreateInfoNVBuilder<'a>(
-    PipelineViewportSwizzleStateCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineViewportSwizzleStateCreateInfoNVBuilder<'a>(PipelineViewportSwizzleStateCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
-        PipelineViewportSwizzleStateCreateInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineViewportSwizzleStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateFlagsNV,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn viewport_swizzles(
-        mut self,
-        viewport_swizzles: &'a [crate::extensions::nv_viewport_swizzle::ViewportSwizzleNVBuilder],
-    ) -> Self {
+    pub fn viewport_swizzles(mut self, viewport_swizzles: &'a [crate::extensions::nv_viewport_swizzle::ViewportSwizzleNVBuilder]) -> Self {
         self.0.p_viewport_swizzles = viewport_swizzles.as_ptr() as _;
         self.0.viewport_count = viewport_swizzles.len() as _;
         self

@@ -3,8 +3,7 @@
 pub const NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME")]
-pub const NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_representative_fragment_test");
+pub const NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_representative_fragment_test");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -16,7 +15,11 @@ pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 }
 impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV , p_next : std :: ptr :: null_mut () , representative_fragment_test : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV,
+            p_next: std::ptr::null_mut(),
+            representative_fragment_test: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
@@ -24,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
         f.debug_struct("PhysicalDeviceRepresentativeFragmentTestFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "representative_fragment_test",
-                &(self.representative_fragment_test != 0),
-            )
+            .field("representative_fragment_test", &(self.representative_fragment_test != 0))
             .finish()
     }
 }
@@ -40,17 +40,11 @@ impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Builder of [`PhysicalDeviceRepresentativeFragmentTestFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a>(
-    PhysicalDeviceRepresentativeFragmentTestFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a>(PhysicalDeviceRepresentativeFragmentTestFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
-        PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn representative_fragment_test(mut self, representative_fragment_test: bool) -> Self {
@@ -95,7 +89,11 @@ pub struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
 }
 impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , representative_fragment_test_enable : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV,
+            p_next: std::ptr::null(),
+            representative_fragment_test_enable: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {
@@ -103,41 +101,27 @@ impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {
         f.debug_struct("PipelineRepresentativeFragmentTestStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "representative_fragment_test_enable",
-                &(self.representative_fragment_test_enable != 0),
-            )
+            .field("representative_fragment_test_enable", &(self.representative_fragment_test_enable != 0))
             .finish()
     }
 }
 impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
     #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
+    pub fn into_builder<'a>(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
         PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Builder of [`PipelineRepresentativeFragmentTestStateCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a>(
-    PipelineRepresentativeFragmentTestStateCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a>(PipelineRepresentativeFragmentTestStateCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
-        PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn representative_fragment_test_enable(
-        mut self,
-        representative_fragment_test_enable: bool,
-    ) -> Self {
+    pub fn representative_fragment_test_enable(mut self, representative_fragment_test_enable: bool) -> Self {
         self.0.representative_fragment_test_enable = representative_fragment_test_enable as _;
         self
     }

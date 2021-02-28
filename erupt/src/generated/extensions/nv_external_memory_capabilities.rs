@@ -3,11 +3,9 @@
 pub const NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME")]
-pub const NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_external_memory_capabilities");
+pub const NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_external_memory_capabilities");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsNV.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBitsNV`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlagsNV : u32 { const OPAQUE_WIN32_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_NV . 0 ; const OPAQUE_WIN32_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: OPAQUE_WIN32_KMT_NV . 0 ; const D3D11_IMAGE_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_NV . 0 ; const D3D11_IMAGE_KMT_NV = ExternalMemoryHandleTypeFlagBitsNV :: D3D11_IMAGE_KMT_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsNV.html) · Bits enum of [`ExternalMemoryHandleTypeFlagsNV`]"]
 #[doc(alias = "VkExternalMemoryHandleTypeFlagBitsNV")]
@@ -70,19 +68,25 @@ impl ExternalMemoryFeatureFlagBitsNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , format : crate :: vk1_0 :: Format , _type : crate :: vk1_0 :: ImageType , tiling : crate :: vk1_0 :: ImageTiling , usage : crate :: vk1_0 :: ImageUsageFlags , flags : crate :: vk1_0 :: ImageCreateFlags , external_handle_type : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV , p_external_image_format_properties : * mut crate :: extensions :: nv_external_memory_capabilities :: ExternalImageFormatPropertiesNV) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    format: crate::vk1_0::Format,
+    _type: crate::vk1_0::ImageType,
+    tiling: crate::vk1_0::ImageTiling,
+    usage: crate::vk1_0::ImageUsageFlags,
+    flags: crate::vk1_0::ImageCreateFlags,
+    external_handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    p_external_image_format_properties: *mut crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Structure"]
 #[doc(alias = "VkExternalImageFormatPropertiesNV")]
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalImageFormatPropertiesNV {
     pub image_format_properties: crate::vk1_0::ImageFormatProperties,
-    pub external_memory_features:
-        crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFlagsNV,
-    pub export_from_imported_handle_types:
-        crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
-    pub compatible_handle_types:
-        crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    pub external_memory_features: crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFlagsNV,
+    pub export_from_imported_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    pub compatible_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
 }
 impl Default for ExternalImageFormatPropertiesNV {
     fn default() -> Self {
@@ -99,10 +103,7 @@ impl std::fmt::Debug for ExternalImageFormatPropertiesNV {
         f.debug_struct("ExternalImageFormatPropertiesNV")
             .field("image_format_properties", &self.image_format_properties)
             .field("external_memory_features", &self.external_memory_features)
-            .field(
-                "export_from_imported_handle_types",
-                &self.export_from_imported_handle_types,
-            )
+            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
             .field("compatible_handle_types", &self.compatible_handle_types)
             .finish()
     }
@@ -116,44 +117,29 @@ impl ExternalImageFormatPropertiesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Builder of [`ExternalImageFormatPropertiesNV`]"]
 #[repr(transparent)]
-pub struct ExternalImageFormatPropertiesNVBuilder<'a>(
-    ExternalImageFormatPropertiesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalImageFormatPropertiesNVBuilder<'a>(ExternalImageFormatPropertiesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalImageFormatPropertiesNVBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalImageFormatPropertiesNVBuilder<'a> {
         ExternalImageFormatPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn image_format_properties(
-        mut self,
-        image_format_properties: crate::vk1_0::ImageFormatProperties,
-    ) -> Self {
+    pub fn image_format_properties(mut self, image_format_properties: crate::vk1_0::ImageFormatProperties) -> Self {
         self.0.image_format_properties = image_format_properties as _;
         self
     }
     #[inline]
-    pub fn external_memory_features(
-        mut self,
-        external_memory_features : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryFeatureFlagsNV,
-    ) -> Self {
+    pub fn external_memory_features(mut self, external_memory_features: crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFlagsNV) -> Self {
         self.0.external_memory_features = external_memory_features as _;
         self
     }
     #[inline]
-    pub fn export_from_imported_handle_types(
-        mut self,
-        export_from_imported_handle_types : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV,
-    ) -> Self {
+    pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
-    pub fn compatible_handle_types(
-        mut self,
-        compatible_handle_types : crate :: extensions :: nv_external_memory_capabilities :: ExternalMemoryHandleTypeFlagsNV,
-    ) -> Self {
+    pub fn compatible_handle_types(mut self, compatible_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
@@ -197,15 +183,9 @@ impl crate::InstanceLoader {
         tiling: crate::vk1_0::ImageTiling,
         usage: crate::vk1_0::ImageUsageFlags,
         flags: Option<crate::vk1_0::ImageCreateFlags>,
-        external_handle_type: Option<
-            crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
-        >,
-        external_image_format_properties: Option<
-            crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV,
-    > {
+        external_handle_type: Option<crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV>,
+        external_image_format_properties: Option<crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV>,
+    ) -> crate::utils::VulkanResult<crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV> {
         let _function = self
             .get_physical_device_external_image_format_properties_nv
             .expect("`get_physical_device_external_image_format_properties_nv` is not loaded");

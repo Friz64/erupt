@@ -3,8 +3,7 @@
 pub const AMD_RASTERIZATION_ORDER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME")]
-pub const AMD_RASTERIZATION_ORDER_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_rasterization_order");
+pub const AMD_RASTERIZATION_ORDER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_rasterization_order");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRasterizationOrderAMD.html) · Enum"]
 #[doc(alias = "VkRasterizationOrderAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -36,8 +35,7 @@ pub struct PipelineRasterizationStateRasterizationOrderAMD {
 impl Default for PipelineRasterizationStateRasterizationOrderAMD {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD,
+            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD,
             p_next: std::ptr::null(),
             rasterization_order: Default::default(),
         }
@@ -61,23 +59,14 @@ impl PipelineRasterizationStateRasterizationOrderAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Builder of [`PipelineRasterizationStateRasterizationOrderAMD`]"]
 #[repr(transparent)]
-pub struct PipelineRasterizationStateRasterizationOrderAMDBuilder<'a>(
-    PipelineRasterizationStateRasterizationOrderAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineRasterizationStateRasterizationOrderAMDBuilder<'a>(PipelineRasterizationStateRasterizationOrderAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineRasterizationStateRasterizationOrderAMDBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineRasterizationStateRasterizationOrderAMDBuilder<'a> {
-        PipelineRasterizationStateRasterizationOrderAMDBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineRasterizationStateRasterizationOrderAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn rasterization_order(
-        mut self,
-        rasterization_order: crate::extensions::amd_rasterization_order::RasterizationOrderAMD,
-    ) -> Self {
+    pub fn rasterization_order(mut self, rasterization_order: crate::extensions::amd_rasterization_order::RasterizationOrderAMD) -> Self {
         self.0.rasterization_order = rasterization_order as _;
         self
     }

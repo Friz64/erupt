@@ -23,11 +23,8 @@ impl Basetype {
     pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
         let ident = self.name.ident();
         let doc_alias = &self.name.original;
-        let doc_alias_code = if &**doc_alias != ident.to_string().as_str() {
-            Some(quote! { #[doc(alias = #doc_alias)] })
-        } else {
-            None
-        };
+        let doc_alias_code = (&**doc_alias != ident.to_string().as_str())
+            .then(|| quote! { #[doc(alias = #doc_alias)] });
 
         let ty = self.ty.rust_type(source);
         let doc = comment_gen.def(Some(&self.name.original), "Basetype", None);

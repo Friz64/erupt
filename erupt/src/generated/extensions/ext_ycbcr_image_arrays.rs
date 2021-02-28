@@ -3,8 +3,7 @@
 pub const EXT_YCBCR_IMAGE_ARRAYS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME")]
-pub const EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_ycbcr_image_arrays");
+pub const EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_ycbcr_image_arrays");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceYcbcrImageArraysFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -41,17 +40,11 @@ impl PhysicalDeviceYcbcrImageArraysFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a>(
-    PhysicalDeviceYcbcrImageArraysFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a>(PhysicalDeviceYcbcrImageArraysFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a> {
-        PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn ycbcr_image_arrays(mut self, ycbcr_image_arrays: bool) -> Self {

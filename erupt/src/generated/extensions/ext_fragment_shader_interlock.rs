@@ -3,8 +3,7 @@
 pub const EXT_FRAGMENT_SHADER_INTERLOCK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME")]
-pub const EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_fragment_shader_interlock");
+pub const EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_shader_interlock");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -19,8 +18,7 @@ pub struct PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
 impl Default for PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             fragment_shader_sample_interlock: Default::default(),
             fragment_shader_pixel_interlock: Default::default(),
@@ -33,18 +31,9 @@ impl std::fmt::Debug for PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
         f.debug_struct("PhysicalDeviceFragmentShaderInterlockFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "fragment_shader_sample_interlock",
-                &(self.fragment_shader_sample_interlock != 0),
-            )
-            .field(
-                "fragment_shader_pixel_interlock",
-                &(self.fragment_shader_pixel_interlock != 0),
-            )
-            .field(
-                "fragment_shader_shading_rate_interlock",
-                &(self.fragment_shader_shading_rate_interlock != 0),
-            )
+            .field("fragment_shader_sample_interlock", &(self.fragment_shader_sample_interlock != 0))
+            .field("fragment_shader_pixel_interlock", &(self.fragment_shader_pixel_interlock != 0))
+            .field("fragment_shader_shading_rate_interlock", &(self.fragment_shader_shading_rate_interlock != 0))
             .finish()
     }
 }
@@ -57,39 +46,24 @@ impl PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentShaderInterlockFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a>(
-    PhysicalDeviceFragmentShaderInterlockFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a>(PhysicalDeviceFragmentShaderInterlockFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a> {
-        PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn fragment_shader_sample_interlock(
-        mut self,
-        fragment_shader_sample_interlock: bool,
-    ) -> Self {
+    pub fn fragment_shader_sample_interlock(mut self, fragment_shader_sample_interlock: bool) -> Self {
         self.0.fragment_shader_sample_interlock = fragment_shader_sample_interlock as _;
         self
     }
     #[inline]
-    pub fn fragment_shader_pixel_interlock(
-        mut self,
-        fragment_shader_pixel_interlock: bool,
-    ) -> Self {
+    pub fn fragment_shader_pixel_interlock(mut self, fragment_shader_pixel_interlock: bool) -> Self {
         self.0.fragment_shader_pixel_interlock = fragment_shader_pixel_interlock as _;
         self
     }
     #[inline]
-    pub fn fragment_shader_shading_rate_interlock(
-        mut self,
-        fragment_shader_shading_rate_interlock: bool,
-    ) -> Self {
+    pub fn fragment_shader_shading_rate_interlock(mut self, fragment_shader_shading_rate_interlock: bool) -> Self {
         self.0.fragment_shader_shading_rate_interlock = fragment_shader_shading_rate_interlock as _;
         self
     }

@@ -3,25 +3,19 @@
 pub const KHR_EXTERNAL_FENCE_FD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_fence_fd");
+pub const KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_fence_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetFenceFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_IMPORT_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetFenceFdKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_fd_info: *const crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR,
-    p_fd: *mut std::os::raw::c_int,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetFenceFdKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportFenceFdKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_import_fence_fd_info: *const crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkImportFenceFdKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_fd_info: *const crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportFenceFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -84,10 +78,7 @@ impl<'a> ImportFenceFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -174,10 +165,7 @@ impl<'a> FenceGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -218,9 +206,7 @@ impl crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self
-            .get_fence_fd_khr
-            .expect("`get_fence_fd_khr` is not loaded");
+        let _function = self.get_fence_fd_khr.expect("`get_fence_fd_khr` is not loaded");
         let mut fd = match fd {
             Some(v) => v,
             None => Default::default(),
@@ -231,13 +217,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceFdKHR.html) · Function"]
     #[doc(alias = "vkImportFenceFdKHR")]
-    pub unsafe fn import_fence_fd_khr(
-        &self,
-        import_fence_fd_info: &crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .import_fence_fd_khr
-            .expect("`import_fence_fd_khr` is not loaded");
+    pub unsafe fn import_fence_fd_khr(&self, import_fence_fd_info: &crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR) -> crate::utils::VulkanResult<()> {
+        let _function = self.import_fence_fd_khr.expect("`import_fence_fd_khr` is not loaded");
         let _return = _function(self.handle, import_fence_fd_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

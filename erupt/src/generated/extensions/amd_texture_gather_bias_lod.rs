@@ -3,8 +3,7 @@
 pub const AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME")]
-pub const AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_texture_gather_bias_lod");
+pub const AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_texture_gather_bias_lod");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure"]
 #[doc(alias = "VkTextureLODGatherFormatPropertiesAMD")]
 #[derive(Copy, Clone)]
@@ -28,10 +27,7 @@ impl std::fmt::Debug for TextureLODGatherFormatPropertiesAMD {
         f.debug_struct("TextureLODGatherFormatPropertiesAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "supports_texture_gather_lod_bias_amd",
-                &(self.supports_texture_gather_lod_bias_amd != 0),
-            )
+            .field("supports_texture_gather_lod_bias_amd", &(self.supports_texture_gather_lod_bias_amd != 0))
             .finish()
     }
 }
@@ -44,20 +40,14 @@ impl TextureLODGatherFormatPropertiesAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`]"]
 #[repr(transparent)]
-pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a>(
-    TextureLODGatherFormatPropertiesAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a>(TextureLODGatherFormatPropertiesAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> TextureLODGatherFormatPropertiesAMDBuilder<'a> {
     #[inline]
     pub fn new() -> TextureLODGatherFormatPropertiesAMDBuilder<'a> {
         TextureLODGatherFormatPropertiesAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn supports_texture_gather_lod_bias_amd(
-        mut self,
-        supports_texture_gather_lod_bias_amd: bool,
-    ) -> Self {
+    pub fn supports_texture_gather_lod_bias_amd(mut self, supports_texture_gather_lod_bias_amd: bool) -> Self {
         self.0.supports_texture_gather_lod_bias_amd = supports_texture_gather_lod_bias_amd as _;
         self
     }

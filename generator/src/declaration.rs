@@ -423,10 +423,6 @@ impl Declaration {
             .map(|(i, _)| i)
             .collect();
 
-        if array_indices.is_empty() {
-            None
-        } else {
-            Some(array_indices)
-        }
+        (!array_indices.is_empty()).then(|| array_indices)
     }
 }

@@ -3,8 +3,7 @@
 pub const EXT_SHADER_IMAGE_ATOMIC_INT64_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME")]
-pub const EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_shader_image_atomic_int64");
+pub const EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_shader_image_atomic_int64");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -18,8 +17,7 @@ pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
 impl Default for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             shader_image_int64_atomics: Default::default(),
             sparse_image_int64_atomics: Default::default(),
@@ -31,14 +29,8 @@ impl std::fmt::Debug for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
         f.debug_struct("PhysicalDeviceShaderImageAtomicInt64FeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_image_int64_atomics",
-                &(self.shader_image_int64_atomics != 0),
-            )
-            .field(
-                "sparse_image_int64_atomics",
-                &(self.sparse_image_int64_atomics != 0),
-            )
+            .field("shader_image_int64_atomics", &(self.shader_image_int64_atomics != 0))
+            .field("sparse_image_int64_atomics", &(self.sparse_image_int64_atomics != 0))
             .finish()
     }
 }
@@ -51,17 +43,11 @@ impl PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Builder of [`PhysicalDeviceShaderImageAtomicInt64FeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a>(
-    PhysicalDeviceShaderImageAtomicInt64FeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a>(PhysicalDeviceShaderImageAtomicInt64FeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a> {
-        PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_image_int64_atomics(mut self, shader_image_int64_atomics: bool) -> Self {

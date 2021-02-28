@@ -3,51 +3,36 @@
 pub const EXT_DEBUG_MARKER_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEBUG_MARKER_EXTENSION_NAME")]
-pub const EXT_DEBUG_MARKER_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_debug_marker");
+pub const EXT_DEBUG_MARKER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_debug_marker");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDebugMarkerSetObjectNameEXT");
+pub const FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT: *const std::os::raw::c_char = crate::cstr!("vkDebugMarkerSetObjectNameEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDebugMarkerSetObjectTagEXT");
+pub const FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT: *const std::os::raw::c_char = crate::cstr!("vkDebugMarkerSetObjectTagEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DEBUG_MARKER_BEGIN_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDebugMarkerBeginEXT");
+pub const FN_CMD_DEBUG_MARKER_BEGIN_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerBeginEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DEBUG_MARKER_END_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDebugMarkerEndEXT");
+pub const FN_CMD_DEBUG_MARKER_END_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerEndEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DEBUG_MARKER_INSERT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDebugMarkerInsertEXT");
+pub const FN_CMD_DEBUG_MARKER_INSERT_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerInsertEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugMarkerSetObjectNameEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkDebugMarkerSetObjectNameEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugMarkerSetObjectTagEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkDebugMarkerSetObjectTagEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDebugMarkerBeginEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-) -> ();
+pub type PFN_vkCmdDebugMarkerBeginEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDebugMarkerEndEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
+pub type PFN_vkCmdDebugMarkerEndEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDebugMarkerInsertEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-) -> ();
+pub type PFN_vkCmdDebugMarkerInsertEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugMarkerObjectNameInfoEXT")]
 #[derive(Copy, Clone)]
@@ -90,20 +75,14 @@ impl DebugMarkerObjectNameInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugMarkerObjectNameInfoEXTBuilder<'a>(
-    DebugMarkerObjectNameInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugMarkerObjectNameInfoEXTBuilder<'a>(DebugMarkerObjectNameInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugMarkerObjectNameInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugMarkerObjectNameInfoEXTBuilder<'a> {
         DebugMarkerObjectNameInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn object_type(
-        mut self,
-        object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT,
-    ) -> Self {
+    pub fn object_type(mut self, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT) -> Self {
         self.0.object_type = object_type as _;
         self
     }
@@ -192,20 +171,14 @@ impl DebugMarkerObjectTagInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugMarkerObjectTagInfoEXTBuilder<'a>(
-    DebugMarkerObjectTagInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugMarkerObjectTagInfoEXTBuilder<'a>(DebugMarkerObjectTagInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugMarkerObjectTagInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugMarkerObjectTagInfoEXTBuilder<'a> {
         DebugMarkerObjectTagInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn object_type(
-        mut self,
-        object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT,
-    ) -> Self {
+    pub fn object_type(mut self, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT) -> Self {
         self.0.object_type = object_type as _;
         self
     }
@@ -295,10 +268,7 @@ impl DebugMarkerMarkerInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`]"]
 #[repr(transparent)]
-pub struct DebugMarkerMarkerInfoEXTBuilder<'a>(
-    DebugMarkerMarkerInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DebugMarkerMarkerInfoEXTBuilder<'a>(DebugMarkerMarkerInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DebugMarkerMarkerInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DebugMarkerMarkerInfoEXTBuilder<'a> {
@@ -346,67 +316,40 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]
     #[doc(alias = "vkDebugMarkerSetObjectNameEXT")]
-    pub unsafe fn debug_marker_set_object_name_ext(
-        &self,
-        name_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .debug_marker_set_object_name_ext
-            .expect("`debug_marker_set_object_name_ext` is not loaded");
+    pub unsafe fn debug_marker_set_object_name_ext(&self, name_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT) -> crate::utils::VulkanResult<()> {
+        let _function = self.debug_marker_set_object_name_ext.expect("`debug_marker_set_object_name_ext` is not loaded");
         let _return = _function(self.handle, name_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function"]
     #[doc(alias = "vkDebugMarkerSetObjectTagEXT")]
-    pub unsafe fn debug_marker_set_object_tag_ext(
-        &self,
-        tag_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .debug_marker_set_object_tag_ext
-            .expect("`debug_marker_set_object_tag_ext` is not loaded");
+    pub unsafe fn debug_marker_set_object_tag_ext(&self, tag_info: &crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT) -> crate::utils::VulkanResult<()> {
+        let _function = self.debug_marker_set_object_tag_ext.expect("`debug_marker_set_object_tag_ext` is not loaded");
         let _return = _function(self.handle, tag_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function"]
     #[doc(alias = "vkCmdDebugMarkerBeginEXT")]
-    pub unsafe fn cmd_debug_marker_begin_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-    ) -> () {
-        let _function = self
-            .cmd_debug_marker_begin_ext
-            .expect("`cmd_debug_marker_begin_ext` is not loaded");
+    pub unsafe fn cmd_debug_marker_begin_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> () {
+        let _function = self.cmd_debug_marker_begin_ext.expect("`cmd_debug_marker_begin_ext` is not loaded");
         let _return = _function(command_buffer as _, marker_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function"]
     #[doc(alias = "vkCmdDebugMarkerEndEXT")]
-    pub unsafe fn cmd_debug_marker_end_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-    ) -> () {
-        let _function = self
-            .cmd_debug_marker_end_ext
-            .expect("`cmd_debug_marker_end_ext` is not loaded");
+    pub unsafe fn cmd_debug_marker_end_ext(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
+        let _function = self.cmd_debug_marker_end_ext.expect("`cmd_debug_marker_end_ext` is not loaded");
         let _return = _function(command_buffer as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function"]
     #[doc(alias = "vkCmdDebugMarkerInsertEXT")]
-    pub unsafe fn cmd_debug_marker_insert_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-    ) -> () {
-        let _function = self
-            .cmd_debug_marker_insert_ext
-            .expect("`cmd_debug_marker_insert_ext` is not loaded");
+    pub unsafe fn cmd_debug_marker_insert_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, marker_info: &crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> () {
+        let _function = self.cmd_debug_marker_insert_ext.expect("`cmd_debug_marker_insert_ext` is not loaded");
         let _return = _function(command_buffer as _, marker_info as _);
         ()
     }

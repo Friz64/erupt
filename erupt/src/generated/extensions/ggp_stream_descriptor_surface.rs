@@ -3,11 +3,9 @@
 pub const GGP_STREAM_DESCRIPTOR_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME")]
-pub const GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_GGP_stream_descriptor_surface");
+pub const GGP_STREAM_DESCRIPTOR_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_GGP_stream_descriptor_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateStreamDescriptorSurfaceGGP");
+pub const FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP: *const std::os::raw::c_char = crate::cstr!("vkCreateStreamDescriptorSurfaceGGP");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateFlagsGGP.html) · Bitmask of [`StreamDescriptorSurfaceCreateFlagBitsGGP`]"] # [doc (alias = "VkStreamDescriptorSurfaceCreateFlagsGGP")] # [derive (Default)] # [repr (transparent)] pub struct StreamDescriptorSurfaceCreateFlagsGGP : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`StreamDescriptorSurfaceCreateFlagsGGP`]"]
 #[doc(alias = "VkStreamDescriptorSurfaceCreateFlagBitsGGP")]
@@ -30,7 +28,12 @@ impl std::fmt::Debug for StreamDescriptorSurfaceCreateFlagBitsGGP {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateStreamDescriptorSurfaceGGP.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn (instance : crate :: vk1_0 :: Instance , p_create_info : * const crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateInfoGGP , p_allocator : * const crate :: vk1_0 :: AllocationCallbacks , p_surface : * mut crate :: extensions :: khr_surface :: SurfaceKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn(
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateInfoGGP,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateInfoGGP.html) · Structure"]
 #[doc(alias = "VkStreamDescriptorSurfaceCreateInfoGGP")]
 #[derive(Copy, Clone)]
@@ -38,8 +41,7 @@ pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn (ins
 pub struct StreamDescriptorSurfaceCreateInfoGGP {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub flags:
-        crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateFlagsGGP,
+    pub flags: crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateFlagsGGP,
     pub stream_descriptor: u32,
 }
 impl Default for StreamDescriptorSurfaceCreateInfoGGP {
@@ -71,20 +73,14 @@ impl StreamDescriptorSurfaceCreateInfoGGP {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStreamDescriptorSurfaceCreateInfoGGP.html) · Builder of [`StreamDescriptorSurfaceCreateInfoGGP`]"]
 #[repr(transparent)]
-pub struct StreamDescriptorSurfaceCreateInfoGGPBuilder<'a>(
-    StreamDescriptorSurfaceCreateInfoGGP,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct StreamDescriptorSurfaceCreateInfoGGPBuilder<'a>(StreamDescriptorSurfaceCreateInfoGGP, std::marker::PhantomData<&'a ()>);
 impl<'a> StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> {
     #[inline]
     pub fn new() -> StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> {
         StreamDescriptorSurfaceCreateInfoGGPBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags : crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateFlagsGGP,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateFlagsGGP) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -127,13 +123,11 @@ impl crate::InstanceLoader {
     #[doc(alias = "vkCreateStreamDescriptorSurfaceGGP")]
     pub unsafe fn create_stream_descriptor_surface_ggp(
         &self,
-        create_info : & crate :: extensions :: ggp_stream_descriptor_surface :: StreamDescriptorSurfaceCreateInfoGGP,
+        create_info: &crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateInfoGGP,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_stream_descriptor_surface_ggp
-            .expect("`create_stream_descriptor_surface_ggp` is not loaded");
+        let _function = self.create_stream_descriptor_surface_ggp.expect("`create_stream_descriptor_surface_ggp` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

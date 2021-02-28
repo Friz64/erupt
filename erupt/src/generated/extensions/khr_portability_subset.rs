@@ -3,8 +3,7 @@
 pub const KHR_PORTABILITY_SUBSET_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME")]
-pub const KHR_PORTABILITY_SUBSET_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_portability_subset");
+pub const KHR_PORTABILITY_SUBSET_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_portability_subset");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -56,51 +55,21 @@ impl std::fmt::Debug for PhysicalDevicePortabilitySubsetFeaturesKHR {
         f.debug_struct("PhysicalDevicePortabilitySubsetFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "constant_alpha_color_blend_factors",
-                &(self.constant_alpha_color_blend_factors != 0),
-            )
+            .field("constant_alpha_color_blend_factors", &(self.constant_alpha_color_blend_factors != 0))
             .field("events", &(self.events != 0))
-            .field(
-                "image_view_format_reinterpretation",
-                &(self.image_view_format_reinterpretation != 0),
-            )
-            .field(
-                "image_view_format_swizzle",
-                &(self.image_view_format_swizzle != 0),
-            )
-            .field(
-                "image_view2_d_on3_d_image",
-                &(self.image_view2_d_on3_d_image != 0),
-            )
-            .field(
-                "multisample_array_image",
-                &(self.multisample_array_image != 0),
-            )
-            .field(
-                "mutable_comparison_samplers",
-                &(self.mutable_comparison_samplers != 0),
-            )
+            .field("image_view_format_reinterpretation", &(self.image_view_format_reinterpretation != 0))
+            .field("image_view_format_swizzle", &(self.image_view_format_swizzle != 0))
+            .field("image_view2_d_on3_d_image", &(self.image_view2_d_on3_d_image != 0))
+            .field("multisample_array_image", &(self.multisample_array_image != 0))
+            .field("mutable_comparison_samplers", &(self.mutable_comparison_samplers != 0))
             .field("point_polygons", &(self.point_polygons != 0))
             .field("sampler_mip_lod_bias", &(self.sampler_mip_lod_bias != 0))
-            .field(
-                "separate_stencil_mask_ref",
-                &(self.separate_stencil_mask_ref != 0),
-            )
-            .field(
-                "shader_sample_rate_interpolation_functions",
-                &(self.shader_sample_rate_interpolation_functions != 0),
-            )
+            .field("separate_stencil_mask_ref", &(self.separate_stencil_mask_ref != 0))
+            .field("shader_sample_rate_interpolation_functions", &(self.shader_sample_rate_interpolation_functions != 0))
             .field("tessellation_isolines", &(self.tessellation_isolines != 0))
-            .field(
-                "tessellation_point_mode",
-                &(self.tessellation_point_mode != 0),
-            )
+            .field("tessellation_point_mode", &(self.tessellation_point_mode != 0))
             .field("triangle_fans", &(self.triangle_fans != 0))
-            .field(
-                "vertex_attribute_access_beyond_stride",
-                &(self.vertex_attribute_access_beyond_stride != 0),
-            )
+            .field("vertex_attribute_access_beyond_stride", &(self.vertex_attribute_access_beyond_stride != 0))
             .finish()
     }
 }
@@ -113,23 +82,14 @@ impl PhysicalDevicePortabilitySubsetFeaturesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetFeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a>(
-    PhysicalDevicePortabilitySubsetFeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a>(PhysicalDevicePortabilitySubsetFeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
-        PhysicalDevicePortabilitySubsetFeaturesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDevicePortabilitySubsetFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn constant_alpha_color_blend_factors(
-        mut self,
-        constant_alpha_color_blend_factors: bool,
-    ) -> Self {
+    pub fn constant_alpha_color_blend_factors(mut self, constant_alpha_color_blend_factors: bool) -> Self {
         self.0.constant_alpha_color_blend_factors = constant_alpha_color_blend_factors as _;
         self
     }
@@ -139,10 +99,7 @@ impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn image_view_format_reinterpretation(
-        mut self,
-        image_view_format_reinterpretation: bool,
-    ) -> Self {
+    pub fn image_view_format_reinterpretation(mut self, image_view_format_reinterpretation: bool) -> Self {
         self.0.image_view_format_reinterpretation = image_view_format_reinterpretation as _;
         self
     }
@@ -182,12 +139,8 @@ impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_sample_rate_interpolation_functions(
-        mut self,
-        shader_sample_rate_interpolation_functions: bool,
-    ) -> Self {
-        self.0.shader_sample_rate_interpolation_functions =
-            shader_sample_rate_interpolation_functions as _;
+    pub fn shader_sample_rate_interpolation_functions(mut self, shader_sample_rate_interpolation_functions: bool) -> Self {
+        self.0.shader_sample_rate_interpolation_functions = shader_sample_rate_interpolation_functions as _;
         self
     }
     #[inline]
@@ -206,10 +159,7 @@ impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn vertex_attribute_access_beyond_stride(
-        mut self,
-        vertex_attribute_access_beyond_stride: bool,
-    ) -> Self {
+    pub fn vertex_attribute_access_beyond_stride(mut self, vertex_attribute_access_beyond_stride: bool) -> Self {
         self.0.vertex_attribute_access_beyond_stride = vertex_attribute_access_beyond_stride as _;
         self
     }
@@ -263,10 +213,7 @@ impl std::fmt::Debug for PhysicalDevicePortabilitySubsetPropertiesKHR {
         f.debug_struct("PhysicalDevicePortabilitySubsetPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "min_vertex_input_binding_stride_alignment",
-                &self.min_vertex_input_binding_stride_alignment,
-            )
+            .field("min_vertex_input_binding_stride_alignment", &self.min_vertex_input_binding_stride_alignment)
             .finish()
     }
 }
@@ -279,25 +226,15 @@ impl PhysicalDevicePortabilitySubsetPropertiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetPropertiesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a>(
-    PhysicalDevicePortabilitySubsetPropertiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a>(PhysicalDevicePortabilitySubsetPropertiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a> {
-        PhysicalDevicePortabilitySubsetPropertiesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDevicePortabilitySubsetPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn min_vertex_input_binding_stride_alignment(
-        mut self,
-        min_vertex_input_binding_stride_alignment: u32,
-    ) -> Self {
-        self.0.min_vertex_input_binding_stride_alignment =
-            min_vertex_input_binding_stride_alignment as _;
+    pub fn min_vertex_input_binding_stride_alignment(mut self, min_vertex_input_binding_stride_alignment: u32) -> Self {
+        self.0.min_vertex_input_binding_stride_alignment = min_vertex_input_binding_stride_alignment as _;
         self
     }
     #[inline]

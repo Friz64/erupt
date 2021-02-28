@@ -3,8 +3,7 @@
 pub const NV_WIN32_KEYED_MUTEX_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_WIN32_KEYED_MUTEX_EXTENSION_NAME")]
-pub const NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_win32_keyed_mutex");
+pub const NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_win32_keyed_mutex");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Structure"]
 #[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoNV")]
 #[derive(Copy, Clone)]
@@ -43,10 +42,7 @@ impl std::fmt::Debug for Win32KeyedMutexAcquireReleaseInfoNV {
             .field("acquire_count", &self.acquire_count)
             .field("p_acquire_syncs", &self.p_acquire_syncs)
             .field("p_acquire_keys", &self.p_acquire_keys)
-            .field(
-                "p_acquire_timeout_milliseconds",
-                &self.p_acquire_timeout_milliseconds,
-            )
+            .field("p_acquire_timeout_milliseconds", &self.p_acquire_timeout_milliseconds)
             .field("release_count", &self.release_count)
             .field("p_release_syncs", &self.p_release_syncs)
             .field("p_release_keys", &self.p_release_keys)
@@ -62,10 +58,7 @@ impl Win32KeyedMutexAcquireReleaseInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoNV`]"]
 #[repr(transparent)]
-pub struct Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a>(
-    Win32KeyedMutexAcquireReleaseInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a>(Win32KeyedMutexAcquireReleaseInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {

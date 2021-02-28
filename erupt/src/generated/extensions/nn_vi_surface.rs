@@ -3,11 +3,9 @@
 pub const NN_VI_SURFACE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NN_VI_SURFACE_EXTENSION_NAME")]
-pub const NN_VI_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NN_vi_surface");
+pub const NN_VI_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NN_vi_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateViSurfaceNN");
+pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char = crate::cstr!("vkCreateViSurfaceNN");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`]"] # [doc (alias = "VkViSurfaceCreateFlagsNN")] # [derive (Default)] # [repr (transparent)] pub struct ViSurfaceCreateFlagsNN : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ViSurfaceCreateFlagsNN`]"]
 #[doc(alias = "VkViSurfaceCreateFlagBitsNN")]
@@ -75,20 +73,14 @@ impl ViSurfaceCreateInfoNN {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`]"]
 #[repr(transparent)]
-pub struct ViSurfaceCreateInfoNNBuilder<'a>(
-    ViSurfaceCreateInfoNN,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ViSurfaceCreateInfoNNBuilder<'a>(ViSurfaceCreateInfoNN, std::marker::PhantomData<&'a ()>);
 impl<'a> ViSurfaceCreateInfoNNBuilder<'a> {
     #[inline]
     pub fn new() -> ViSurfaceCreateInfoNNBuilder<'a> {
         ViSurfaceCreateInfoNNBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::nn_vi_surface::ViSurfaceCreateFlagsNN,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::nn_vi_surface::ViSurfaceCreateFlagsNN) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -135,9 +127,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_vi_surface_nn
-            .expect("`create_vi_surface_nn` is not loaded");
+        let _function = self.create_vi_surface_nn.expect("`create_vi_surface_nn` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

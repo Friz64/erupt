@@ -3,14 +3,11 @@
 pub const KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_semaphore_fd");
+pub const KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_semaphore_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_SEMAPHORE_FD_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetSemaphoreFdKHR");
+pub const FN_GET_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_IMPORT_SEMAPHORE_FD_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkImportSemaphoreFdKHR");
+pub const FN_IMPORT_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
@@ -20,7 +17,8 @@ pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_import_semaphore_fd_info : * const crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkImportSemaphoreFdKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_fd_info: *const crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -66,10 +64,7 @@ impl ImportSemaphoreFdInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Builder of [`ImportSemaphoreFdInfoKHR`]"]
 #[repr(transparent)]
-pub struct ImportSemaphoreFdInfoKHRBuilder<'a>(
-    ImportSemaphoreFdInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportSemaphoreFdInfoKHRBuilder<'a>(ImportSemaphoreFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportSemaphoreFdInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ImportSemaphoreFdInfoKHRBuilder<'a> {
@@ -86,10 +81,7 @@ impl<'a> ImportSemaphoreFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -164,10 +156,7 @@ impl SemaphoreGetFdInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Builder of [`SemaphoreGetFdInfoKHR`]"]
 #[repr(transparent)]
-pub struct SemaphoreGetFdInfoKHRBuilder<'a>(
-    SemaphoreGetFdInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SemaphoreGetFdInfoKHRBuilder<'a>(SemaphoreGetFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreGetFdInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> SemaphoreGetFdInfoKHRBuilder<'a> {
@@ -179,10 +168,7 @@ impl<'a> SemaphoreGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -223,9 +209,7 @@ impl crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self
-            .get_semaphore_fd_khr
-            .expect("`get_semaphore_fd_khr` is not loaded");
+        let _function = self.get_semaphore_fd_khr.expect("`get_semaphore_fd_khr` is not loaded");
         let mut fd = match fd {
             Some(v) => v,
             None => Default::default(),
@@ -236,13 +220,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
     #[doc(alias = "vkImportSemaphoreFdKHR")]
-    pub unsafe fn import_semaphore_fd_khr(
-        &self,
-        import_semaphore_fd_info : & crate :: extensions :: khr_external_semaphore_fd :: ImportSemaphoreFdInfoKHR,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .import_semaphore_fd_khr
-            .expect("`import_semaphore_fd_khr` is not loaded");
+    pub unsafe fn import_semaphore_fd_khr(&self, import_semaphore_fd_info: &crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR) -> crate::utils::VulkanResult<()> {
+        let _function = self.import_semaphore_fd_khr.expect("`import_semaphore_fd_khr` is not loaded");
         let _return = _function(self.handle, import_semaphore_fd_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

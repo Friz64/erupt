@@ -3,20 +3,26 @@
 pub const GOOGLE_DISPLAY_TIMING_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME")]
-pub const GOOGLE_DISPLAY_TIMING_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_GOOGLE_display_timing");
+pub const GOOGLE_DISPLAY_TIMING_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_GOOGLE_display_timing");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char =
-    crate::cstr!("vkGetRefreshCycleDurationGOOGLE");
+pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetRefreshCycleDurationGOOGLE");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPastPresentationTimingGOOGLE");
+pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetPastPresentationTimingGOOGLE");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_display_timing_properties : * mut crate :: extensions :: google_display_timing :: RefreshCycleDurationGOOGLE) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , swapchain : crate :: extensions :: khr_swapchain :: SwapchainKHR , p_presentation_timing_count : * mut u32 , p_presentation_timings : * mut crate :: extensions :: google_display_timing :: PastPresentationTimingGOOGLE) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_presentation_timing_count: *mut u32,
+    p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure"]
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
 #[derive(Copy, Clone)]
@@ -26,16 +32,12 @@ pub struct RefreshCycleDurationGOOGLE {
 }
 impl Default for RefreshCycleDurationGOOGLE {
     fn default() -> Self {
-        Self {
-            refresh_duration: Default::default(),
-        }
+        Self { refresh_duration: Default::default() }
     }
 }
 impl std::fmt::Debug for RefreshCycleDurationGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RefreshCycleDurationGOOGLE")
-            .field("refresh_duration", &self.refresh_duration)
-            .finish()
+        f.debug_struct("RefreshCycleDurationGOOGLE").field("refresh_duration", &self.refresh_duration).finish()
     }
 }
 impl RefreshCycleDurationGOOGLE {
@@ -47,10 +49,7 @@ impl RefreshCycleDurationGOOGLE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`]"]
 #[repr(transparent)]
-pub struct RefreshCycleDurationGOOGLEBuilder<'a>(
-    RefreshCycleDurationGOOGLE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RefreshCycleDurationGOOGLEBuilder<'a>(RefreshCycleDurationGOOGLE, std::marker::PhantomData<&'a ()>);
 impl<'a> RefreshCycleDurationGOOGLEBuilder<'a> {
     #[inline]
     pub fn new() -> RefreshCycleDurationGOOGLEBuilder<'a> {
@@ -130,10 +129,7 @@ impl PastPresentationTimingGOOGLE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`]"]
 #[repr(transparent)]
-pub struct PastPresentationTimingGOOGLEBuilder<'a>(
-    PastPresentationTimingGOOGLE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PastPresentationTimingGOOGLEBuilder<'a>(PastPresentationTimingGOOGLE, std::marker::PhantomData<&'a ()>);
 impl<'a> PastPresentationTimingGOOGLEBuilder<'a> {
     #[inline]
     pub fn new() -> PastPresentationTimingGOOGLEBuilder<'a> {
@@ -230,20 +226,14 @@ impl PresentTimesInfoGOOGLE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`]"]
 #[repr(transparent)]
-pub struct PresentTimesInfoGOOGLEBuilder<'a>(
-    PresentTimesInfoGOOGLE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PresentTimesInfoGOOGLEBuilder<'a>(PresentTimesInfoGOOGLE, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentTimesInfoGOOGLEBuilder<'a> {
     #[inline]
     pub fn new() -> PresentTimesInfoGOOGLEBuilder<'a> {
         PresentTimesInfoGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn times(
-        mut self,
-        times: &'a [crate::extensions::google_display_timing::PresentTimeGOOGLEBuilder],
-    ) -> Self {
+    pub fn times(mut self, times: &'a [crate::extensions::google_display_timing::PresentTimeGOOGLEBuilder]) -> Self {
         self.0.p_times = times.as_ptr() as _;
         self.0.swapchain_count = times.len() as _;
         self
@@ -359,15 +349,9 @@ impl crate::DeviceLoader {
     pub unsafe fn get_refresh_cycle_duration_google(
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        display_timing_properties: Option<
-            crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
-    > {
-        let _function = self
-            .get_refresh_cycle_duration_google
-            .expect("`get_refresh_cycle_duration_google` is not loaded");
+        display_timing_properties: Option<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE>,
+    ) -> crate::utils::VulkanResult<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE> {
+        let _function = self.get_refresh_cycle_duration_google.expect("`get_refresh_cycle_duration_google` is not loaded");
         let mut display_timing_properties = match display_timing_properties {
             Some(v) => v,
             None => Default::default(),
@@ -382,12 +366,8 @@ impl crate::DeviceLoader {
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
         presentation_timing_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<
-        Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>,
-    > {
-        let _function = self
-            .get_past_presentation_timing_google
-            .expect("`get_past_presentation_timing_google` is not loaded");
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>> {
+        let _function = self.get_past_presentation_timing_google.expect("`get_past_presentation_timing_google` is not loaded");
         let mut presentation_timing_count = match presentation_timing_count {
             Some(v) => v,
             None => {
@@ -397,12 +377,7 @@ impl crate::DeviceLoader {
             }
         };
         let mut presentation_timings = vec![Default::default(); presentation_timing_count as _];
-        let _return = _function(
-            self.handle,
-            swapchain as _,
-            &mut presentation_timing_count,
-            presentation_timings.as_mut_ptr(),
-        );
+        let _return = _function(self.handle, swapchain as _, &mut presentation_timing_count, presentation_timings.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, presentation_timings)
     }
 }

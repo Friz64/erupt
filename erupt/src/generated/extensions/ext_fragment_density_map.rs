@@ -3,8 +3,7 @@
 pub const EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME")]
-pub const EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_fragment_density_map");
+pub const EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_density_map");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -33,14 +32,8 @@ impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapFeaturesEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fragment_density_map", &(self.fragment_density_map != 0))
-            .field(
-                "fragment_density_map_dynamic",
-                &(self.fragment_density_map_dynamic != 0),
-            )
-            .field(
-                "fragment_density_map_non_subsampled_images",
-                &(self.fragment_density_map_non_subsampled_images != 0),
-            )
+            .field("fragment_density_map_dynamic", &(self.fragment_density_map_dynamic != 0))
+            .field("fragment_density_map_non_subsampled_images", &(self.fragment_density_map_non_subsampled_images != 0))
             .finish()
     }
 }
@@ -53,17 +46,11 @@ impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a>(
-    PhysicalDeviceFragmentDensityMapFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a>(PhysicalDeviceFragmentDensityMapFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
-        PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn fragment_density_map(mut self, fragment_density_map: bool) -> Self {
@@ -76,12 +63,8 @@ impl<'a> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn fragment_density_map_non_subsampled_images(
-        mut self,
-        fragment_density_map_non_subsampled_images: bool,
-    ) -> Self {
-        self.0.fragment_density_map_non_subsampled_images =
-            fragment_density_map_non_subsampled_images as _;
+    pub fn fragment_density_map_non_subsampled_images(mut self, fragment_density_map_non_subsampled_images: bool) -> Self {
+        self.0.fragment_density_map_non_subsampled_images = fragment_density_map_non_subsampled_images as _;
         self
     }
     #[inline]
@@ -125,8 +108,7 @@ pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
 impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             min_fragment_density_texel_size: Default::default(),
             max_fragment_density_texel_size: Default::default(),
@@ -139,18 +121,9 @@ impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapPropertiesEXT {
         f.debug_struct("PhysicalDeviceFragmentDensityMapPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "min_fragment_density_texel_size",
-                &self.min_fragment_density_texel_size,
-            )
-            .field(
-                "max_fragment_density_texel_size",
-                &self.max_fragment_density_texel_size,
-            )
-            .field(
-                "fragment_density_invocations",
-                &(self.fragment_density_invocations != 0),
-            )
+            .field("min_fragment_density_texel_size", &self.min_fragment_density_texel_size)
+            .field("max_fragment_density_texel_size", &self.max_fragment_density_texel_size)
+            .field("fragment_density_invocations", &(self.fragment_density_invocations != 0))
             .finish()
     }
 }
@@ -163,31 +136,19 @@ impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMapPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a>(
-    PhysicalDeviceFragmentDensityMapPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a>(PhysicalDeviceFragmentDensityMapPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
-        PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn min_fragment_density_texel_size(
-        mut self,
-        min_fragment_density_texel_size: crate::vk1_0::Extent2D,
-    ) -> Self {
+    pub fn min_fragment_density_texel_size(mut self, min_fragment_density_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.min_fragment_density_texel_size = min_fragment_density_texel_size as _;
         self
     }
     #[inline]
-    pub fn max_fragment_density_texel_size(
-        mut self,
-        max_fragment_density_texel_size: crate::vk1_0::Extent2D,
-    ) -> Self {
+    pub fn max_fragment_density_texel_size(mut self, max_fragment_density_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_fragment_density_texel_size = max_fragment_density_texel_size as _;
         self
     }
@@ -246,10 +207,7 @@ impl std::fmt::Debug for RenderPassFragmentDensityMapCreateInfoEXT {
         f.debug_struct("RenderPassFragmentDensityMapCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "fragment_density_map_attachment",
-                &self.fragment_density_map_attachment,
-            )
+            .field("fragment_density_map_attachment", &self.fragment_density_map_attachment)
             .finish()
     }
 }
@@ -262,23 +220,14 @@ impl RenderPassFragmentDensityMapCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Builder of [`RenderPassFragmentDensityMapCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a>(
-    RenderPassFragmentDensityMapCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a>(RenderPassFragmentDensityMapCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
-        RenderPassFragmentDensityMapCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        RenderPassFragmentDensityMapCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn fragment_density_map_attachment(
-        mut self,
-        fragment_density_map_attachment: crate::vk1_0::AttachmentReference,
-    ) -> Self {
+    pub fn fragment_density_map_attachment(mut self, fragment_density_map_attachment: crate::vk1_0::AttachmentReference) -> Self {
         self.0.fragment_density_map_attachment = fragment_density_map_attachment as _;
         self
     }

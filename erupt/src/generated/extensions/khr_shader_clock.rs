@@ -3,8 +3,7 @@
 pub const KHR_SHADER_CLOCK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SHADER_CLOCK_EXTENSION_NAME")]
-pub const KHR_SHADER_CLOCK_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_shader_clock");
+pub const KHR_SHADER_CLOCK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_shader_clock");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderClockFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -44,10 +43,7 @@ impl PhysicalDeviceShaderClockFeaturesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a>(
-    PhysicalDeviceShaderClockFeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a>(PhysicalDeviceShaderClockFeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> {

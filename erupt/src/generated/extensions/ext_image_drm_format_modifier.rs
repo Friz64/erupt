@@ -3,14 +3,16 @@
 pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME")]
-pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_image_drm_format_modifier");
+pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_image_drm_format_modifier");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
+pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , image : crate :: vk1_0 :: Image , p_properties : * mut crate :: extensions :: ext_image_drm_format_modifier :: ImageDrmFormatModifierPropertiesEXT) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    image: crate::vk1_0::Image,
+    p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]
@@ -19,8 +21,7 @@ pub struct DrmFormatModifierPropertiesListEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub drm_format_modifier_count: u32,
-    pub p_drm_format_modifier_properties:
-        *mut crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT,
+    pub p_drm_format_modifier_properties: *mut crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT,
 }
 impl Default for DrmFormatModifierPropertiesListEXT {
     fn default() -> Self {
@@ -38,10 +39,7 @@ impl std::fmt::Debug for DrmFormatModifierPropertiesListEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier_count", &self.drm_format_modifier_count)
-            .field(
-                "p_drm_format_modifier_properties",
-                &self.p_drm_format_modifier_properties,
-            )
+            .field("p_drm_format_modifier_properties", &self.p_drm_format_modifier_properties)
             .finish()
     }
 }
@@ -54,20 +52,14 @@ impl DrmFormatModifierPropertiesListEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Builder of [`DrmFormatModifierPropertiesListEXT`]"]
 #[repr(transparent)]
-pub struct DrmFormatModifierPropertiesListEXTBuilder<'a>(
-    DrmFormatModifierPropertiesListEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DrmFormatModifierPropertiesListEXTBuilder<'a>(DrmFormatModifierPropertiesListEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DrmFormatModifierPropertiesListEXTBuilder<'a> {
         DrmFormatModifierPropertiesListEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn drm_format_modifier_properties(
-        mut self,
-        drm_format_modifier_properties : & 'a mut [crate :: extensions :: ext_image_drm_format_modifier :: DrmFormatModifierPropertiesEXTBuilder],
-    ) -> Self {
+    pub fn drm_format_modifier_properties(mut self, drm_format_modifier_properties: &'a mut [crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXTBuilder]) -> Self {
         self.0.p_drm_format_modifier_properties = drm_format_modifier_properties.as_ptr() as _;
         self.0.drm_format_modifier_count = drm_format_modifier_properties.len() as _;
         self
@@ -121,14 +113,8 @@ impl std::fmt::Debug for DrmFormatModifierPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.debug_struct("DrmFormatModifierPropertiesEXT")
             .field("drm_format_modifier", &self.drm_format_modifier)
-            .field(
-                "drm_format_modifier_plane_count",
-                &self.drm_format_modifier_plane_count,
-            )
-            .field(
-                "drm_format_modifier_tiling_features",
-                &self.drm_format_modifier_tiling_features,
-            )
+            .field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count)
+            .field("drm_format_modifier_tiling_features", &self.drm_format_modifier_tiling_features)
             .finish()
     }
 }
@@ -141,10 +127,7 @@ impl DrmFormatModifierPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Builder of [`DrmFormatModifierPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct DrmFormatModifierPropertiesEXTBuilder<'a>(
-    DrmFormatModifierPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DrmFormatModifierPropertiesEXTBuilder<'a>(DrmFormatModifierPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DrmFormatModifierPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DrmFormatModifierPropertiesEXTBuilder<'a> {
@@ -161,10 +144,7 @@ impl<'a> DrmFormatModifierPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn drm_format_modifier_tiling_features(
-        mut self,
-        drm_format_modifier_tiling_features: crate::vk1_0::FormatFeatureFlags,
-    ) -> Self {
+    pub fn drm_format_modifier_tiling_features(mut self, drm_format_modifier_tiling_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.drm_format_modifier_tiling_features = drm_format_modifier_tiling_features as _;
         self
     }
@@ -240,17 +220,11 @@ impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html) · Builder of [`PhysicalDeviceImageDrmFormatModifierInfoEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a>(
-    PhysicalDeviceImageDrmFormatModifierInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a>(PhysicalDeviceImageDrmFormatModifierInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
-        PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn drm_format_modifier(mut self, drm_format_modifier: u64) -> Self {
@@ -334,10 +308,7 @@ impl ImageDrmFormatModifierListCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html) · Builder of [`ImageDrmFormatModifierListCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct ImageDrmFormatModifierListCreateInfoEXTBuilder<'a>(
-    ImageDrmFormatModifierListCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageDrmFormatModifierListCreateInfoEXTBuilder<'a>(ImageDrmFormatModifierListCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
@@ -404,10 +375,7 @@ impl std::fmt::Debug for ImageDrmFormatModifierExplicitCreateInfoEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier", &self.drm_format_modifier)
-            .field(
-                "drm_format_modifier_plane_count",
-                &self.drm_format_modifier_plane_count,
-            )
+            .field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count)
             .field("p_plane_layouts", &self.p_plane_layouts)
             .finish()
     }
@@ -421,17 +389,11 @@ impl ImageDrmFormatModifierExplicitCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierExplicitCreateInfoEXT.html) · Builder of [`ImageDrmFormatModifierExplicitCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a>(
-    ImageDrmFormatModifierExplicitCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a>(ImageDrmFormatModifierExplicitCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
-        ImageDrmFormatModifierExplicitCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        ImageDrmFormatModifierExplicitCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn drm_format_modifier(mut self, drm_format_modifier: u64) -> Self {
@@ -439,10 +401,7 @@ impl<'a> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn plane_layouts(
-        mut self,
-        plane_layouts: &'a [crate::vk1_0::SubresourceLayoutBuilder],
-    ) -> Self {
+    pub fn plane_layouts(mut self, plane_layouts: &'a [crate::vk1_0::SubresourceLayoutBuilder]) -> Self {
         self.0.p_plane_layouts = plane_layouts.as_ptr() as _;
         self.0.drm_format_modifier_plane_count = plane_layouts.len() as _;
         self
@@ -510,10 +469,7 @@ impl ImageDrmFormatModifierPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierPropertiesEXT.html) · Builder of [`ImageDrmFormatModifierPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct ImageDrmFormatModifierPropertiesEXTBuilder<'a>(
-    ImageDrmFormatModifierPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageDrmFormatModifierPropertiesEXTBuilder<'a>(ImageDrmFormatModifierPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
@@ -559,15 +515,9 @@ impl crate::DeviceLoader {
     pub unsafe fn get_image_drm_format_modifier_properties_ext(
         &self,
         image: crate::vk1_0::Image,
-        properties: Option<
-            crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
-    > {
-        let _function = self
-            .get_image_drm_format_modifier_properties_ext
-            .expect("`get_image_drm_format_modifier_properties_ext` is not loaded");
+        properties: Option<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT>,
+    ) -> crate::utils::VulkanResult<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT> {
+        let _function = self.get_image_drm_format_modifier_properties_ext.expect("`get_image_drm_format_modifier_properties_ext` is not loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),

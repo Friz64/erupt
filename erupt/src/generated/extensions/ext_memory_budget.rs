@@ -3,8 +3,7 @@
 pub const EXT_MEMORY_BUDGET_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_MEMORY_BUDGET_EXTENSION_NAME")]
-pub const EXT_MEMORY_BUDGET_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_memory_budget");
+pub const EXT_MEMORY_BUDGET_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_memory_budget");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryBudgetPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -44,10 +43,7 @@ impl PhysicalDeviceMemoryBudgetPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Builder of [`PhysicalDeviceMemoryBudgetPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a>(
-    PhysicalDeviceMemoryBudgetPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a>(PhysicalDeviceMemoryBudgetPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a> {

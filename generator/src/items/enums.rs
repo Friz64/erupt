@@ -41,11 +41,11 @@ impl PartialEq for Bitwidth {
     fn eq(&self, other: &Self) -> bool {
         matches!(self, Bitwidth::Unknown)
             || matches!(other, Bitwidth::Unknown)
-            || match (self, other) {
+            || matches!(
+                (self, other),
                 (Bitwidth::Bitwidth32, Bitwidth::Bitwidth32)
-                | (Bitwidth::Bitwidth64, Bitwidth::Bitwidth64) => true,
-                _ => false,
-            }
+                    | (Bitwidth::Bitwidth64, Bitwidth::Bitwidth64)
+            )
     }
 }
 
@@ -182,49 +182,44 @@ impl EnumVariant {
     pub fn all_from(declaration: &CDeclaration) -> Result<Vec<EnumVariant>, NotApplicable> {
         let mut variants = Vec::new();
 
-        match declaration.specifiers.as_slice() {
-            [static_, const_, ident_specifier] => {
-                if matches!(
-                    static_.node,
-                    DeclarationSpecifier::StorageClass(Node {
-                        node: StorageClassSpecifier::Static,
-                        ..
-                    })
-                ) && matches!(
-                    const_.node,
-                    DeclarationSpecifier::TypeQualifier(Node {
-                        node: TypeQualifier::Const,
-                        ..
-                    })
-                ) {
-                    let init_declarator = match declaration.declarators.as_slice() {
-                        [init_declarator] => &init_declarator.node,
-                        _ => panic!("Wrong amount of init declarators"),
-                    };
+        if let [static_, const_, ident_specifier] = declaration.specifiers.as_slice() {
+            if matches!(
+                static_.node,
+                DeclarationSpecifier::StorageClass(Node {
+                    node: StorageClassSpecifier::Static,
+                    ..
+                })
+            ) && matches!(
+                const_.node,
+                DeclarationSpecifier::TypeQualifier(Node {
+                    node: TypeQualifier::Const,
+                    ..
+                })
+            ) {
+                let init_declarator = match declaration.declarators.as_slice() {
+                    [init_declarator] => &init_declarator.node,
+                    _ => panic!("Wrong amount of init declarators"),
+                };
 
-                    let enum_type_name = match &ident_specifier.node {
-                        DeclarationSpecifier::TypeSpecifier(ty) => match &ty.node {
-                            TypeSpecifier::TypedefName(identifier) => {
-                                // the typedef uses Flags instead of the expected FlagBits
-                                let flagbits_name =
-                                    identifier.node.name.replace("Flags", "FlagBits");
-                                TypeName::new(&flagbits_name)
-                            }
-                            _ => panic!("Type specifier is not a typedef name"),
-                        },
-                        _ => panic!("Expected type specifier"),
-                    };
-
-                    let variant =
-                        EnumVariant::from_init_declarator(init_declarator, &enum_type_name);
-                    if let Ok(v) = variant {
-                        if !variants.contains(&v) {
-                            variants.push(v);
+                let enum_type_name = match &ident_specifier.node {
+                    DeclarationSpecifier::TypeSpecifier(ty) => match &ty.node {
+                        TypeSpecifier::TypedefName(identifier) => {
+                            // the typedef uses Flags instead of the expected FlagBits
+                            let flagbits_name = identifier.node.name.replace("Flags", "FlagBits");
+                            TypeName::new(&flagbits_name)
                         }
+                        _ => panic!("Type specifier is not a typedef name"),
+                    },
+                    _ => panic!("Expected type specifier"),
+                };
+
+                let variant = EnumVariant::from_init_declarator(init_declarator, &enum_type_name);
+                if let Ok(v) = variant {
+                    if !variants.contains(&v) {
+                        variants.push(v);
                     }
                 }
             }
-            _ => (),
         }
 
         for specifier in &declaration.specifiers {
@@ -309,24 +304,18 @@ impl Enum {
                 );
 
                 let flagbits_doc = comment_gen.def(
-                    if self.variants.is_empty() {
-                        None
-                    } else {
-                        Some(&flagbits_name.original)
-                    },
+                    (!self.variants.is_empty()).then(|| &*flagbits_name.original),
                     format!("Bits enum of [`{}`]", flags_ident),
                     None,
                 );
 
                 let flagbits_variants = self.variants.iter().map(|variant| variant.name.ident());
-                let empty_bitflag_workaround = if self.variants.is_empty() {
-                    Some(quote! {
+                let empty_bitflag_workaround = self.variants.is_empty().then(|| {
+                    quote! {
                         #[cfg(empty_bitflag_workaround)]
                         const EMPTY_BITFLAG_WORKAROUND = 0;
-                    })
-                } else {
-                    None
-                };
+                    }
+                });
 
                 quote! {
                     bitflags::bitflags! {

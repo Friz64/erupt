@@ -3,8 +3,7 @@
 pub const NV_SHADER_SM_BUILTINS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME")]
-pub const NV_SHADER_SM_BUILTINS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_shader_sm_builtins");
+pub const NV_SHADER_SM_BUILTINS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_shader_sm_builtins");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -44,17 +43,11 @@ impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a>(
-    PhysicalDeviceShaderSMBuiltinsPropertiesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a>(PhysicalDeviceShaderSMBuiltinsPropertiesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
-        PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_sm_count(mut self, shader_sm_count: u32) -> Self {
@@ -129,17 +122,11 @@ impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a>(
-    PhysicalDeviceShaderSMBuiltinsFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a>(PhysicalDeviceShaderSMBuiltinsFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
-        PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_sm_builtins(mut self, shader_sm_builtins: bool) -> Self {

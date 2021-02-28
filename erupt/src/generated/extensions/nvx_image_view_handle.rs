@@ -3,20 +3,14 @@
 pub const NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME")]
-pub const NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NVX_image_view_handle");
+pub const NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NVX_image_view_handle");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_IMAGE_VIEW_HANDLE_NVX: *const std::os::raw::c_char =
-    crate::cstr!("vkGetImageViewHandleNVX");
+pub const FN_GET_IMAGE_VIEW_HANDLE_NVX: *const std::os::raw::c_char = crate::cstr!("vkGetImageViewHandleNVX");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char =
-    crate::cstr!("vkGetImageViewAddressNVX");
+pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char = crate::cstr!("vkGetImageViewAddressNVX");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageViewHandleNVX = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
-) -> u32;
+pub type PFN_vkGetImageViewHandleNVX = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX) -> u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
@@ -66,10 +60,7 @@ impl ImageViewHandleInfoNVX {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`]"]
 #[repr(transparent)]
-pub struct ImageViewHandleInfoNVXBuilder<'a>(
-    ImageViewHandleInfoNVX,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageViewHandleInfoNVXBuilder<'a>(ImageViewHandleInfoNVX, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageViewHandleInfoNVXBuilder<'a> {
     #[inline]
     pub fn new() -> ImageViewHandleInfoNVXBuilder<'a> {
@@ -156,10 +147,7 @@ impl ImageViewAddressPropertiesNVX {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`]"]
 #[repr(transparent)]
-pub struct ImageViewAddressPropertiesNVXBuilder<'a>(
-    ImageViewAddressPropertiesNVX,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageViewAddressPropertiesNVXBuilder<'a>(ImageViewAddressPropertiesNVX, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageViewAddressPropertiesNVXBuilder<'a> {
     #[inline]
     pub fn new() -> ImageViewAddressPropertiesNVXBuilder<'a> {
@@ -207,13 +195,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
     #[doc(alias = "vkGetImageViewHandleNVX")]
-    pub unsafe fn get_image_view_handle_nvx(
-        &self,
-        info: &crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
-    ) -> u32 {
-        let _function = self
-            .get_image_view_handle_nvx
-            .expect("`get_image_view_handle_nvx` is not loaded");
+    pub unsafe fn get_image_view_handle_nvx(&self, info: &crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX) -> u32 {
+        let _function = self.get_image_view_handle_nvx.expect("`get_image_view_handle_nvx` is not loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
@@ -224,12 +207,8 @@ impl crate::DeviceLoader {
         &self,
         image_view: crate::vk1_0::ImageView,
         properties: Option<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX>,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
-    > {
-        let _function = self
-            .get_image_view_address_nvx
-            .expect("`get_image_view_address_nvx` is not loaded");
+    ) -> crate::utils::VulkanResult<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX> {
+        let _function = self.get_image_view_address_nvx.expect("`get_image_view_address_nvx` is not loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),

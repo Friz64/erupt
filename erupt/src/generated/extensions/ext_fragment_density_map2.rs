@@ -3,8 +3,7 @@
 pub const EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME")]
-pub const EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_fragment_density_map2");
+pub const EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_density_map2");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMap2FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -17,8 +16,7 @@ pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
 impl Default for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             fragment_density_map_deferred: Default::default(),
         }
@@ -29,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
         f.debug_struct("PhysicalDeviceFragmentDensityMap2FeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "fragment_density_map_deferred",
-                &(self.fragment_density_map_deferred != 0),
-            )
+            .field("fragment_density_map_deferred", &(self.fragment_density_map_deferred != 0))
             .finish()
     }
 }
@@ -45,17 +40,11 @@ impl PhysicalDeviceFragmentDensityMap2FeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2FeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a>(
-    PhysicalDeviceFragmentDensityMap2FeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a>(PhysicalDeviceFragmentDensityMap2FeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
-        PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn fragment_density_map_deferred(mut self, fragment_density_map_deferred: bool) -> Self {
@@ -104,8 +93,7 @@ pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {
 impl Default for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             subsampled_loads: Default::default(),
             subsampled_coarse_reconstruction_early_access: Default::default(),
@@ -120,18 +108,9 @@ impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subsampled_loads", &(self.subsampled_loads != 0))
-            .field(
-                "subsampled_coarse_reconstruction_early_access",
-                &(self.subsampled_coarse_reconstruction_early_access != 0),
-            )
-            .field(
-                "max_subsampled_array_layers",
-                &self.max_subsampled_array_layers,
-            )
-            .field(
-                "max_descriptor_set_subsampled_samplers",
-                &self.max_descriptor_set_subsampled_samplers,
-            )
+            .field("subsampled_coarse_reconstruction_early_access", &(self.subsampled_coarse_reconstruction_early_access != 0))
+            .field("max_subsampled_array_layers", &self.max_subsampled_array_layers)
+            .field("max_descriptor_set_subsampled_samplers", &self.max_descriptor_set_subsampled_samplers)
             .finish()
     }
 }
@@ -144,17 +123,11 @@ impl PhysicalDeviceFragmentDensityMap2PropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Builder of [`PhysicalDeviceFragmentDensityMap2PropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a>(
-    PhysicalDeviceFragmentDensityMap2PropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a>(PhysicalDeviceFragmentDensityMap2PropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
-        PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn subsampled_loads(mut self, subsampled_loads: bool) -> Self {
@@ -162,12 +135,8 @@ impl<'a> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn subsampled_coarse_reconstruction_early_access(
-        mut self,
-        subsampled_coarse_reconstruction_early_access: bool,
-    ) -> Self {
-        self.0.subsampled_coarse_reconstruction_early_access =
-            subsampled_coarse_reconstruction_early_access as _;
+    pub fn subsampled_coarse_reconstruction_early_access(mut self, subsampled_coarse_reconstruction_early_access: bool) -> Self {
+        self.0.subsampled_coarse_reconstruction_early_access = subsampled_coarse_reconstruction_early_access as _;
         self
     }
     #[inline]
@@ -176,10 +145,7 @@ impl<'a> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_descriptor_set_subsampled_samplers(
-        mut self,
-        max_descriptor_set_subsampled_samplers: u32,
-    ) -> Self {
+    pub fn max_descriptor_set_subsampled_samplers(mut self, max_descriptor_set_subsampled_samplers: u32) -> Self {
         self.0.max_descriptor_set_subsampled_samplers = max_descriptor_set_subsampled_samplers as _;
         self
     }

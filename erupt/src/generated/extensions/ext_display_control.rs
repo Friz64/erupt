@@ -3,20 +3,15 @@
 pub const EXT_DISPLAY_CONTROL_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME")]
-pub const EXT_DISPLAY_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_display_control");
+pub const EXT_DISPLAY_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_display_control");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DISPLAY_POWER_CONTROL_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkDisplayPowerControlEXT");
+pub const FN_DISPLAY_POWER_CONTROL_EXT: *const std::os::raw::c_char = crate::cstr!("vkDisplayPowerControlEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_REGISTER_DEVICE_EVENT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkRegisterDeviceEventEXT");
+pub const FN_REGISTER_DEVICE_EVENT_EXT: *const std::os::raw::c_char = crate::cstr!("vkRegisterDeviceEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_REGISTER_DISPLAY_EVENT_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkRegisterDisplayEventEXT");
+pub const FN_REGISTER_DISPLAY_EVENT_EXT: *const std::os::raw::c_char = crate::cstr!("vkRegisterDisplayEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetSwapchainCounterEXT");
+pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetSwapchainCounterEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]
 #[doc(alias = "VkDisplayPowerStateEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -147,10 +142,7 @@ impl<'a> DisplayPowerInfoEXTBuilder<'a> {
         DisplayPowerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn power_state(
-        mut self,
-        power_state: crate::extensions::ext_display_control::DisplayPowerStateEXT,
-    ) -> Self {
+    pub fn power_state(mut self, power_state: crate::extensions::ext_display_control::DisplayPowerStateEXT) -> Self {
         self.0.power_state = power_state as _;
         self
     }
@@ -224,10 +216,7 @@ impl<'a> DeviceEventInfoEXTBuilder<'a> {
         DeviceEventInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn device_event(
-        mut self,
-        device_event: crate::extensions::ext_display_control::DeviceEventTypeEXT,
-    ) -> Self {
+    pub fn device_event(mut self, device_event: crate::extensions::ext_display_control::DeviceEventTypeEXT) -> Self {
         self.0.device_event = device_event as _;
         self
     }
@@ -301,10 +290,7 @@ impl<'a> DisplayEventInfoEXTBuilder<'a> {
         DisplayEventInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn display_event(
-        mut self,
-        display_event: crate::extensions::ext_display_control::DisplayEventTypeEXT,
-    ) -> Self {
+    pub fn display_event(mut self, display_event: crate::extensions::ext_display_control::DisplayEventTypeEXT) -> Self {
         self.0.display_event = display_event as _;
         self
     }
@@ -371,20 +357,14 @@ impl SwapchainCounterCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Builder of [`SwapchainCounterCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct SwapchainCounterCreateInfoEXTBuilder<'a>(
-    SwapchainCounterCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SwapchainCounterCreateInfoEXTBuilder<'a>(SwapchainCounterCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SwapchainCounterCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SwapchainCounterCreateInfoEXTBuilder<'a> {
         SwapchainCounterCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn surface_counters(
-        mut self,
-        surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT,
-    ) -> Self {
+    pub fn surface_counters(mut self, surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT) -> Self {
         self.0.surface_counters = surface_counters as _;
         self
     }
@@ -425,9 +405,7 @@ impl crate::DeviceLoader {
         display: crate::extensions::khr_display::DisplayKHR,
         display_power_info: &crate::extensions::ext_display_control::DisplayPowerInfoEXT,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .display_power_control_ext
-            .expect("`display_power_control_ext` is not loaded");
+        let _function = self.display_power_control_ext.expect("`display_power_control_ext` is not loaded");
         let _return = _function(self.handle, display as _, display_power_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -440,9 +418,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let _function = self
-            .register_device_event_ext
-            .expect("`register_device_event_ext` is not loaded");
+        let _function = self.register_device_event_ext.expect("`register_device_event_ext` is not loaded");
         let mut fence = match fence {
             Some(v) => v,
             None => Default::default(),
@@ -468,9 +444,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let _function = self
-            .register_display_event_ext
-            .expect("`register_display_event_ext` is not loaded");
+        let _function = self.register_display_event_ext.expect("`register_display_event_ext` is not loaded");
         let mut fence = match fence {
             Some(v) => v,
             None => Default::default(),
@@ -496,19 +470,12 @@ impl crate::DeviceLoader {
         counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT,
         counter_value: Option<u64>,
     ) -> crate::utils::VulkanResult<u64> {
-        let _function = self
-            .get_swapchain_counter_ext
-            .expect("`get_swapchain_counter_ext` is not loaded");
+        let _function = self.get_swapchain_counter_ext.expect("`get_swapchain_counter_ext` is not loaded");
         let mut counter_value = match counter_value {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            swapchain as _,
-            counter as _,
-            &mut counter_value,
-        );
+        let _return = _function(self.handle, swapchain as _, counter as _, &mut counter_value);
         crate::utils::VulkanResult::new(_return, counter_value)
     }
 }

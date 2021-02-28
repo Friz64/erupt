@@ -3,11 +3,9 @@
 pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_semaphore_capabilities");
+pub const KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_semaphore_capabilities");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagsKHR.html) · Alias"]
 #[doc(alias = "VkExternalSemaphoreHandleTypeFlagsKHR")]
 #[allow(non_camel_case_types)]
@@ -31,8 +29,7 @@ pub type PhysicalDeviceExternalSemaphoreInfoKHR = crate::vk1_1::PhysicalDeviceEx
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfoKHR.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceExternalSemaphoreInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceExternalSemaphoreInfoKHRBuilder<'a> =
-    crate::vk1_1::PhysicalDeviceExternalSemaphoreInfoBuilder<'a>;
+pub type PhysicalDeviceExternalSemaphoreInfoKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceExternalSemaphoreInfoBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphorePropertiesKHR.html) · Alias"]
 #[doc(alias = "VkExternalSemaphorePropertiesKHR")]
 #[allow(non_camel_case_types)]
@@ -40,12 +37,10 @@ pub type ExternalSemaphorePropertiesKHR = crate::vk1_1::ExternalSemaphorePropert
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphorePropertiesKHR.html) · Alias"]
 #[doc(alias = "VkExternalSemaphorePropertiesKHR")]
 #[allow(non_camel_case_types)]
-pub type ExternalSemaphorePropertiesKHRBuilder<'a> =
-    crate::vk1_1::ExternalSemaphorePropertiesBuilder<'a>;
+pub type ExternalSemaphorePropertiesKHRBuilder<'a> = crate::vk1_1::ExternalSemaphorePropertiesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Alias"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
-    crate::vk1_1::PFN_vkGetPhysicalDeviceExternalSemaphoreProperties;
+pub type PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalSemaphoreProperties;
 #[doc = "Provided by [`crate::extensions::khr_external_semaphore_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
@@ -64,11 +59,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            external_semaphore_info as _,
-            &mut external_semaphore_properties,
-        );
+        let _return = _function(physical_device as _, external_semaphore_info as _, &mut external_semaphore_properties);
         external_semaphore_properties
     }
 }

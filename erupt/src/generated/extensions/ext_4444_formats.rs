@@ -3,8 +3,7 @@
 pub const EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_4444_FORMATS_EXTENSION_NAME")]
-pub const EXT_4444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_4444_formats");
+pub const EXT_4444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_4444_formats");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevice4444FormatsFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -44,10 +43,7 @@ impl PhysicalDevice4444FormatsFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Builder of [`PhysicalDevice4444FormatsFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDevice4444FormatsFeaturesEXTBuilder<'a>(
-    PhysicalDevice4444FormatsFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevice4444FormatsFeaturesEXTBuilder<'a>(PhysicalDevice4444FormatsFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {

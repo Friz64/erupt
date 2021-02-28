@@ -3,8 +3,7 @@
 pub const EXT_DEPTH_CLIP_ENABLE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME")]
-pub const EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_depth_clip_enable");
+pub const EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_depth_clip_enable");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationDepthClipStateCreateFlagBitsEXT`]"] # [doc (alias = "VkPipelineRasterizationDepthClipStateCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineRasterizationDepthClipStateCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineRasterizationDepthClipStateCreateFlagsEXT`]"]
 #[doc(alias = "VkPipelineRasterizationDepthClipStateCreateFlagBitsEXT")]
@@ -61,17 +60,11 @@ impl PhysicalDeviceDepthClipEnableFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDepthClipEnableFeaturesEXT.html) · Builder of [`PhysicalDeviceDepthClipEnableFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a>(
-    PhysicalDeviceDepthClipEnableFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a>(PhysicalDeviceDepthClipEnableFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
-        PhysicalDeviceDepthClipEnableFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceDepthClipEnableFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn depth_clip_enable(mut self, depth_clip_enable: bool) -> Self {
@@ -112,15 +105,13 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<
 pub struct PipelineRasterizationDepthClipStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub flags:
-        crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateFlagsEXT,
+    pub flags: crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateFlagsEXT,
     pub depth_clip_enable: crate::vk1_0::Bool32,
 }
 impl Default for PipelineRasterizationDepthClipStateCreateInfoEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT,
+            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT,
             p_next: std::ptr::null(),
             flags: Default::default(),
             depth_clip_enable: Default::default(),
@@ -146,23 +137,14 @@ impl PipelineRasterizationDepthClipStateCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationDepthClipStateCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a>(
-    PipelineRasterizationDepthClipStateCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a>(PipelineRasterizationDepthClipStateCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {
-        PipelineRasterizationDepthClipStateCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineRasterizationDepthClipStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags : crate :: extensions :: ext_depth_clip_enable :: PipelineRasterizationDepthClipStateCreateFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }

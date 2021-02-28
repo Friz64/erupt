@@ -3,8 +3,7 @@
 pub const KHR_SURFACE_PROTECTED_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME")]
-pub const KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_surface_protected_capabilities");
+pub const KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_surface_protected_capabilities");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceProtectedCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -41,10 +40,7 @@ impl SurfaceProtectedCapabilitiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Builder of [`SurfaceProtectedCapabilitiesKHR`]"]
 #[repr(transparent)]
-pub struct SurfaceProtectedCapabilitiesKHRBuilder<'a>(
-    SurfaceProtectedCapabilitiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceProtectedCapabilitiesKHRBuilder<'a>(SurfaceProtectedCapabilitiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceProtectedCapabilitiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceProtectedCapabilitiesKHRBuilder<'a> {

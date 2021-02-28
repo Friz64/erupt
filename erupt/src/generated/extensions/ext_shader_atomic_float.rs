@@ -3,8 +3,7 @@
 pub const EXT_SHADER_ATOMIC_FLOAT_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME")]
-pub const EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_shader_atomic_float");
+pub const EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_shader_atomic_float");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloatFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderAtomicFloatFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -50,54 +49,18 @@ impl std::fmt::Debug for PhysicalDeviceShaderAtomicFloatFeaturesEXT {
         f.debug_struct("PhysicalDeviceShaderAtomicFloatFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_buffer_float32_atomics",
-                &(self.shader_buffer_float32_atomics != 0),
-            )
-            .field(
-                "shader_buffer_float32_atomic_add",
-                &(self.shader_buffer_float32_atomic_add != 0),
-            )
-            .field(
-                "shader_buffer_float64_atomics",
-                &(self.shader_buffer_float64_atomics != 0),
-            )
-            .field(
-                "shader_buffer_float64_atomic_add",
-                &(self.shader_buffer_float64_atomic_add != 0),
-            )
-            .field(
-                "shader_shared_float32_atomics",
-                &(self.shader_shared_float32_atomics != 0),
-            )
-            .field(
-                "shader_shared_float32_atomic_add",
-                &(self.shader_shared_float32_atomic_add != 0),
-            )
-            .field(
-                "shader_shared_float64_atomics",
-                &(self.shader_shared_float64_atomics != 0),
-            )
-            .field(
-                "shader_shared_float64_atomic_add",
-                &(self.shader_shared_float64_atomic_add != 0),
-            )
-            .field(
-                "shader_image_float32_atomics",
-                &(self.shader_image_float32_atomics != 0),
-            )
-            .field(
-                "shader_image_float32_atomic_add",
-                &(self.shader_image_float32_atomic_add != 0),
-            )
-            .field(
-                "sparse_image_float32_atomics",
-                &(self.sparse_image_float32_atomics != 0),
-            )
-            .field(
-                "sparse_image_float32_atomic_add",
-                &(self.sparse_image_float32_atomic_add != 0),
-            )
+            .field("shader_buffer_float32_atomics", &(self.shader_buffer_float32_atomics != 0))
+            .field("shader_buffer_float32_atomic_add", &(self.shader_buffer_float32_atomic_add != 0))
+            .field("shader_buffer_float64_atomics", &(self.shader_buffer_float64_atomics != 0))
+            .field("shader_buffer_float64_atomic_add", &(self.shader_buffer_float64_atomic_add != 0))
+            .field("shader_shared_float32_atomics", &(self.shader_shared_float32_atomics != 0))
+            .field("shader_shared_float32_atomic_add", &(self.shader_shared_float32_atomic_add != 0))
+            .field("shader_shared_float64_atomics", &(self.shader_shared_float64_atomics != 0))
+            .field("shader_shared_float64_atomic_add", &(self.shader_shared_float64_atomic_add != 0))
+            .field("shader_image_float32_atomics", &(self.shader_image_float32_atomics != 0))
+            .field("shader_image_float32_atomic_add", &(self.shader_image_float32_atomic_add != 0))
+            .field("sparse_image_float32_atomics", &(self.sparse_image_float32_atomics != 0))
+            .field("sparse_image_float32_atomic_add", &(self.sparse_image_float32_atomic_add != 0))
             .finish()
     }
 }
@@ -110,17 +73,11 @@ impl PhysicalDeviceShaderAtomicFloatFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloatFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderAtomicFloatFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a>(
-    PhysicalDeviceShaderAtomicFloatFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a>(PhysicalDeviceShaderAtomicFloatFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
-        PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_buffer_float32_atomics(mut self, shader_buffer_float32_atomics: bool) -> Self {
@@ -128,10 +85,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_buffer_float32_atomic_add(
-        mut self,
-        shader_buffer_float32_atomic_add: bool,
-    ) -> Self {
+    pub fn shader_buffer_float32_atomic_add(mut self, shader_buffer_float32_atomic_add: bool) -> Self {
         self.0.shader_buffer_float32_atomic_add = shader_buffer_float32_atomic_add as _;
         self
     }
@@ -141,10 +95,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_buffer_float64_atomic_add(
-        mut self,
-        shader_buffer_float64_atomic_add: bool,
-    ) -> Self {
+    pub fn shader_buffer_float64_atomic_add(mut self, shader_buffer_float64_atomic_add: bool) -> Self {
         self.0.shader_buffer_float64_atomic_add = shader_buffer_float64_atomic_add as _;
         self
     }
@@ -154,10 +105,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_shared_float32_atomic_add(
-        mut self,
-        shader_shared_float32_atomic_add: bool,
-    ) -> Self {
+    pub fn shader_shared_float32_atomic_add(mut self, shader_shared_float32_atomic_add: bool) -> Self {
         self.0.shader_shared_float32_atomic_add = shader_shared_float32_atomic_add as _;
         self
     }
@@ -167,10 +115,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_shared_float64_atomic_add(
-        mut self,
-        shader_shared_float64_atomic_add: bool,
-    ) -> Self {
+    pub fn shader_shared_float64_atomic_add(mut self, shader_shared_float64_atomic_add: bool) -> Self {
         self.0.shader_shared_float64_atomic_add = shader_shared_float64_atomic_add as _;
         self
     }
@@ -180,10 +125,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_image_float32_atomic_add(
-        mut self,
-        shader_image_float32_atomic_add: bool,
-    ) -> Self {
+    pub fn shader_image_float32_atomic_add(mut self, shader_image_float32_atomic_add: bool) -> Self {
         self.0.shader_image_float32_atomic_add = shader_image_float32_atomic_add as _;
         self
     }
@@ -193,10 +135,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sparse_image_float32_atomic_add(
-        mut self,
-        sparse_image_float32_atomic_add: bool,
-    ) -> Self {
+    pub fn sparse_image_float32_atomic_add(mut self, sparse_image_float32_atomic_add: bool) -> Self {
         self.0.sparse_image_float32_atomic_add = sparse_image_float32_atomic_add as _;
         self
     }

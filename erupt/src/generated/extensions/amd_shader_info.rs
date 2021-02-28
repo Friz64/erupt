@@ -3,8 +3,7 @@
 pub const AMD_SHADER_INFO_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_SHADER_INFO_EXTENSION_NAME")]
-pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_shader_info");
+pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_shader_info");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!("vkGetShaderInfoAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum"]
@@ -65,15 +64,9 @@ impl std::fmt::Debug for ShaderResourceUsageAMD {
         f.debug_struct("ShaderResourceUsageAMD")
             .field("num_used_vgprs", &self.num_used_vgprs)
             .field("num_used_sgprs", &self.num_used_sgprs)
-            .field(
-                "lds_size_per_local_work_group",
-                &self.lds_size_per_local_work_group,
-            )
+            .field("lds_size_per_local_work_group", &self.lds_size_per_local_work_group)
             .field("lds_usage_size_in_bytes", &self.lds_usage_size_in_bytes)
-            .field(
-                "scratch_mem_usage_in_bytes",
-                &self.scratch_mem_usage_in_bytes,
-            )
+            .field("scratch_mem_usage_in_bytes", &self.scratch_mem_usage_in_bytes)
             .finish()
     }
 }
@@ -86,10 +79,7 @@ impl ShaderResourceUsageAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`]"]
 #[repr(transparent)]
-pub struct ShaderResourceUsageAMDBuilder<'a>(
-    ShaderResourceUsageAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ShaderResourceUsageAMDBuilder<'a>(ShaderResourceUsageAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> ShaderResourceUsageAMDBuilder<'a> {
     #[inline]
     pub fn new() -> ShaderResourceUsageAMDBuilder<'a> {
@@ -195,10 +185,7 @@ impl ShaderStatisticsInfoAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`]"]
 #[repr(transparent)]
-pub struct ShaderStatisticsInfoAMDBuilder<'a>(
-    ShaderStatisticsInfoAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ShaderStatisticsInfoAMDBuilder<'a>(ShaderStatisticsInfoAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> ShaderStatisticsInfoAMDBuilder<'a> {
     #[inline]
     pub fn new() -> ShaderStatisticsInfoAMDBuilder<'a> {
@@ -210,10 +197,7 @@ impl<'a> ShaderStatisticsInfoAMDBuilder<'a> {
         self
     }
     #[inline]
-    pub fn resource_usage(
-        mut self,
-        resource_usage: crate::extensions::amd_shader_info::ShaderResourceUsageAMD,
-    ) -> Self {
+    pub fn resource_usage(mut self, resource_usage: crate::extensions::amd_shader_info::ShaderResourceUsageAMD) -> Self {
         self.0.resource_usage = resource_usage as _;
         self
     }
@@ -282,17 +266,8 @@ impl crate::DeviceLoader {
         info_size: *mut usize,
         info: *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_shader_info_amd
-            .expect("`get_shader_info_amd` is not loaded");
-        let _return = _function(
-            self.handle,
-            pipeline as _,
-            shader_stage as _,
-            info_type as _,
-            info_size,
-            info,
-        );
+        let _function = self.get_shader_info_amd.expect("`get_shader_info_amd` is not loaded");
+        let _return = _function(self.handle, pipeline as _, shader_stage as _, info_type as _, info_size, info);
         crate::utils::VulkanResult::new(_return, ())
     }
 }

@@ -8,46 +8,33 @@ pub const QUEUE_FAMILY_EXTERNAL: u32 = 4294967294;
 #[doc(alias = "VK_MAX_DEVICE_GROUP_SIZE")]
 pub const MAX_DEVICE_GROUP_SIZE: u32 = 32;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_ENUMERATE_INSTANCE_VERSION: *const std::os::raw::c_char =
-    crate::cstr!("vkEnumerateInstanceVersion");
+pub const FN_ENUMERATE_INSTANCE_VERSION: *const std::os::raw::c_char = crate::cstr!("vkEnumerateInstanceVersion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_FEATURES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceFeatures2");
+pub const FN_GET_PHYSICAL_DEVICE_FEATURES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceFeatures2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceFormatProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceImageFormatProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceImageFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceQueueFamilyProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceQueueFamilyProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceMemoryProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceMemoryProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceSparseImageFormatProperties2");
+pub const FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSparseImageFormatProperties2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_TRIM_COMMAND_POOL: *const std::os::raw::c_char = crate::cstr!("vkTrimCommandPool");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalBufferProperties");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalBufferProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalSemaphoreProperties");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalSemaphoreProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceExternalFenceProperties");
+pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceExternalFenceProperties");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS: *const std::os::raw::c_char =
-    crate::cstr!("vkEnumeratePhysicalDeviceGroups");
+pub const FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS: *const std::os::raw::c_char = crate::cstr!("vkEnumeratePhysicalDeviceGroups");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDeviceGroupPeerMemoryFeatures");
+pub const FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceGroupPeerMemoryFeatures");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_BIND_BUFFER_MEMORY2: *const std::os::raw::c_char = crate::cstr!("vkBindBufferMemory2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
@@ -57,56 +44,53 @@ pub const FN_CMD_SET_DEVICE_MASK: *const std::os::raw::c_char = crate::cstr!("vk
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_DISPATCH_BASE: *const std::os::raw::c_char = crate::cstr!("vkCmdDispatchBase");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateDescriptorUpdateTemplate");
+pub const FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char = crate::cstr!("vkCreateDescriptorUpdateTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroyDescriptorUpdateTemplate");
+pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE: *const std::os::raw::c_char = crate::cstr!("vkDestroyDescriptorUpdateTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE: *const std::os::raw::c_char =
-    crate::cstr!("vkUpdateDescriptorSetWithTemplate");
+pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE: *const std::os::raw::c_char = crate::cstr!("vkUpdateDescriptorSetWithTemplate");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_BUFFER_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetBufferMemoryRequirements2");
+pub const FN_GET_BUFFER_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char = crate::cstr!("vkGetBufferMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_IMAGE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetImageMemoryRequirements2");
+pub const FN_GET_IMAGE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char = crate::cstr!("vkGetImageMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char =
-    crate::cstr!("vkGetImageSparseMemoryRequirements2");
+pub const FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2: *const std::os::raw::c_char = crate::cstr!("vkGetImageSparseMemoryRequirements2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateSamplerYcbcrConversion");
+pub const FN_CREATE_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char = crate::cstr!("vkCreateSamplerYcbcrConversion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_DESTROY_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char =
-    crate::cstr!("vkDestroySamplerYcbcrConversion");
+pub const FN_DESTROY_SAMPLER_YCBCR_CONVERSION: *const std::os::raw::c_char = crate::cstr!("vkDestroySamplerYcbcrConversion");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_DEVICE_QUEUE2: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceQueue2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDescriptorSetLayoutSupport");
+pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT: *const std::os::raw::c_char = crate::cstr!("vkGetDescriptorSetLayoutSupport");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVariablePointerFeatures.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceVariablePointerFeatures")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceVariablePointerFeatures =
-    crate::vk1_1::PhysicalDeviceVariablePointersFeatures;
+pub type PhysicalDeviceVariablePointerFeatures = crate::vk1_1::PhysicalDeviceVariablePointersFeatures;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVariablePointerFeatures.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceVariablePointerFeatures")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceVariablePointerFeaturesBuilder<'a> =
-    crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'a>;
+pub type PhysicalDeviceVariablePointerFeaturesBuilder<'a> = crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'a>;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDrawParameterFeatures.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceShaderDrawParameterFeatures")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceShaderDrawParameterFeatures =
-    crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures;
+pub type PhysicalDeviceShaderDrawParameterFeatures = crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDrawParameterFeatures.html) · Alias"]
 #[doc(alias = "VkPhysicalDeviceShaderDrawParameterFeatures")]
 #[allow(non_camel_case_types)]
-pub type PhysicalDeviceShaderDrawParameterFeaturesBuilder<'a> =
-    crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a>;
-crate :: non_dispatchable_handle ! (DescriptorUpdateTemplate , DESCRIPTOR_UPDATE_TEMPLATE , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplate.html) · Non-dispatchable Handle" , "VkDescriptorUpdateTemplate") ;
-crate :: non_dispatchable_handle ! (SamplerYcbcrConversion , SAMPLER_YCBCR_CONVERSION , "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversion.html) · Non-dispatchable Handle" , "VkSamplerYcbcrConversion") ;
+pub type PhysicalDeviceShaderDrawParameterFeaturesBuilder<'a> = crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a>;
+crate::non_dispatchable_handle!(
+    DescriptorUpdateTemplate,
+    DESCRIPTOR_UPDATE_TEMPLATE,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplate.html) · Non-dispatchable Handle",
+    "VkDescriptorUpdateTemplate"
+);
+crate::non_dispatchable_handle!(
+    SamplerYcbcrConversion,
+    SAMPLER_YCBCR_CONVERSION,
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversion.html) · Non-dispatchable Handle",
+    "VkSamplerYcbcrConversion"
+);
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateFlags.html) · Bitmask of [`DescriptorUpdateTemplateCreateFlagBits`]"] # [doc (alias = "VkDescriptorUpdateTemplateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorUpdateTemplateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DescriptorUpdateTemplateCreateFlags`]"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateFlagBits")]
@@ -728,48 +712,32 @@ impl ChromaLocation {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumerateInstanceVersion =
-    unsafe extern "system" fn(p_api_version: *mut u32) -> crate::vk1_0::Result;
+pub type PFN_vkEnumerateInstanceVersion = unsafe extern "system" fn(p_api_version: *mut u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceFeatures2 = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_features: *mut crate::vk1_1::PhysicalDeviceFeatures2,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceFeatures2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_features: *mut crate::vk1_1::PhysicalDeviceFeatures2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceProperties2 = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_properties: *mut crate::vk1_1::PhysicalDeviceProperties2,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_properties: *mut crate::vk1_1::PhysicalDeviceProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceFormatProperties2 = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    format: crate::vk1_0::Format,
-    p_format_properties: *mut crate::vk1_1::FormatProperties2,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceFormatProperties2 =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, p_format_properties: *mut crate::vk1_1::FormatProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_image_format_info: *const crate::vk1_1::PhysicalDeviceImageFormatInfo2,
-        p_image_format_properties: *mut crate::vk1_1::ImageFormatProperties2,
-    ) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_image_format_info: *const crate::vk1_1::PhysicalDeviceImageFormatInfo2,
+    p_image_format_properties: *mut crate::vk1_1::ImageFormatProperties2,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_queue_family_property_count: *mut u32,
-    p_queue_family_properties: *mut crate::vk1_1::QueueFamilyProperties2,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_queue_family_property_count: *mut u32, p_queue_family_properties: *mut crate::vk1_1::QueueFamilyProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMemoryProperties2 = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_memory_properties: *mut crate::vk1_1::PhysicalDeviceMemoryProperties2,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceMemoryProperties2 =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_memory_properties: *mut crate::vk1_1::PhysicalDeviceMemoryProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 = unsafe extern "system" fn(
@@ -780,11 +748,7 @@ pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 = unsafe extern "sy
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkTrimCommandPool = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    command_pool: crate::vk1_0::CommandPool,
-    flags: crate::vk1_1::CommandPoolTrimFlags,
-) -> ();
+pub type PFN_vkTrimCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, flags: crate::vk1_1::CommandPoolTrimFlags) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalBufferProperties = unsafe extern "system" fn(
@@ -824,33 +788,17 @@ pub type PFN_vkGetDeviceGroupPeerMemoryFeatures = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindBufferMemory2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    bind_info_count: u32,
-    p_bind_infos: *const crate::vk1_1::BindBufferMemoryInfo,
-) -> crate::vk1_0::Result;
+pub type PFN_vkBindBufferMemory2 = unsafe extern "system" fn(device: crate::vk1_0::Device, bind_info_count: u32, p_bind_infos: *const crate::vk1_1::BindBufferMemoryInfo) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindImageMemory2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    bind_info_count: u32,
-    p_bind_infos: *const crate::vk1_1::BindImageMemoryInfo,
-) -> crate::vk1_0::Result;
+pub type PFN_vkBindImageMemory2 = unsafe extern "system" fn(device: crate::vk1_0::Device, bind_info_count: u32, p_bind_infos: *const crate::vk1_1::BindImageMemoryInfo) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMask.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDeviceMask =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> ();
+pub type PFN_vkCmdSetDeviceMask = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBase.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDispatchBase = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    base_group_x: u32,
-    base_group_y: u32,
-    base_group_z: u32,
-    group_count_x: u32,
-    group_count_y: u32,
-    group_count_z: u32,
-) -> ();
+pub type PFN_vkCmdDispatchBase =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, base_group_x: u32, base_group_y: u32, base_group_z: u32, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorUpdateTemplate = unsafe extern "system" fn(
@@ -861,11 +809,8 @@ pub type PFN_vkCreateDescriptorUpdateTemplate = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDescriptorUpdateTemplate = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyDescriptorUpdateTemplate =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplate = unsafe extern "system" fn(
@@ -876,18 +821,12 @@ pub type PFN_vkUpdateDescriptorSetWithTemplate = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetBufferMemoryRequirements2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_1::BufferMemoryRequirementsInfo2,
-    p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-) -> ();
+pub type PFN_vkGetBufferMemoryRequirements2 =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_1::BufferMemoryRequirementsInfo2, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageMemoryRequirements2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_1::ImageMemoryRequirementsInfo2,
-    p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-) -> ();
+pub type PFN_vkGetImageMemoryRequirements2 =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_1::ImageMemoryRequirementsInfo2, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSparseMemoryRequirements2 = unsafe extern "system" fn(
@@ -906,25 +845,15 @@ pub type PFN_vkCreateSamplerYcbcrConversion = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversion.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroySamplerYcbcrConversion = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroySamplerYcbcrConversion =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceQueue2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_queue_info: *const crate::vk1_1::DeviceQueueInfo2,
-    p_queue: *mut crate::vk1_0::Queue,
-) -> ();
+pub type PFN_vkGetDeviceQueue2 = unsafe extern "system" fn(device: crate::vk1_0::Device, p_queue_info: *const crate::vk1_1::DeviceQueueInfo2, p_queue: *mut crate::vk1_0::Queue) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupport.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDescriptorSetLayoutSupport = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo,
-    p_support: *mut crate::vk1_1::DescriptorSetLayoutSupport,
-) -> ();
+pub type PFN_vkGetDescriptorSetLayoutSupport =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo, p_support: *mut crate::vk1_1::DescriptorSetLayoutSupport) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFeatures2")]
 #[derive(Copy, Clone)]
@@ -958,651 +887,176 @@ impl PhysicalDeviceFeatures2 {
         PhysicalDeviceFeatures2Builder(self, std::marker::PhantomData)
     }
 }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_generated_commands :: PhysicalDeviceDeviceGeneratedCommandsFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_generated_commands :: PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeatures>
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'_>>
     for PhysicalDeviceFeatures2Builder<'a>
 {
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'_>>
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'_>>
     for PhysicalDeviceFeatures2Builder<'a>
 {
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PhysicalDeviceBlendOperationAdvancedFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_inline_uniform_block :: PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_device_memory_report :: PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_conditional_rendering :: PhysicalDeviceConditionalRenderingFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_atomic_float :: PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_transform_feedback :: PhysicalDeviceTransformFeedbackFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_representative_fragment_test :: PhysicalDeviceRepresentativeFragmentTestFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_representative_fragment_test :: PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_corner_sampled_image :: PhysicalDeviceCornerSampledImageFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_compute_shader_derivatives :: PhysicalDeviceComputeShaderDerivativesFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_compute_shader_derivatives :: PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shader_barycentric :: PhysicalDeviceFragmentShaderBarycentricFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shader_barycentric :: PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_shader_image_footprint :: PhysicalDeviceShaderImageFootprintFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_dedicated_allocation_image_aliasing :: PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_dedicated_allocation_image_aliasing :: PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructureFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_ray_tracing_pipeline :: PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map :: PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map2 :: PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_buffer_device_address :: PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texture_compression_astc_hdr :: PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texture_compression_astc_hdr :: PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHRBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_coverage_reduction_mode :: PhysicalDeviceCoverageReductionModeFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_coverage_reduction_mode :: PhysicalDeviceCoverageReductionModeFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: intel_shader_integer_functions2 :: PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: intel_shader_integer_functions2 :: PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_shader_interlock :: PhysicalDeviceFragmentShaderInterlockFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_shader_interlock :: PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_pipeline_executable_properties :: PhysicalDevicePipelineExecutablePropertiesFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_pipeline_executable_properties :: PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_demote_to_helper_invocation :: PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_demote_to_helper_invocation :: PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texel_buffer_alignment :: PhysicalDeviceTexelBufferAlignmentFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texel_buffer_alignment :: PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_subgroup_size_control :: PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_line_rasterization :: PhysicalDeviceLineRasterizationFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_pipeline_creation_cache_control :: PhysicalDevicePipelineCreationCacheControlFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_pipeline_creation_cache_control :: PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11Features>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11FeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12Features>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12FeaturesBuilder<'_>>
-    for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: amd_device_coherent_memory :: PhysicalDeviceCoherentMemoryFeaturesAMDBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_custom_border_color :: PhysicalDeviceCustomBorderColorFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_extended_dynamic_state :: PhysicalDeviceExtendedDynamicStateFeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_extended_dynamic_state :: PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_diagnostics_config :: PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_zero_initialize_workgroup_memory :: PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_workgroup_memory_explicit_layout :: PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_portability_subset :: PhysicalDevicePortabilitySubsetFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXT > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_shader_image_atomic_int64 :: PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHR > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_shader_terminate_invocation :: PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNV > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVE > for PhysicalDeviceFeatures2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: valve_mutable_descriptor_type :: PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder < '_ >> for PhysicalDeviceFeatures2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceFeatures2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11Features> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12Features> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFeatures2Builder<'a>(
-    PhysicalDeviceFeatures2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFeatures2Builder<'a>(PhysicalDeviceFeatures2, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFeatures2Builder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFeatures2Builder<'a> {
@@ -1673,383 +1127,102 @@ impl PhysicalDeviceProperties2 {
         PhysicalDeviceProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_generated_commands :: PhysicalDeviceDeviceGeneratedCommandsPropertiesNV > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_generated_commands :: PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHR,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHRBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDriverProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDriverPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceIDProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceIDPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_discard_rectangles :: PhysicalDeviceDiscardRectanglePropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nvx_multiview_per_view_attributes :: PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nvx_multiview_per_view_attributes :: PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSubgroupProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSubgroupPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevicePointClippingProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevicePointClippingPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXTBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PhysicalDeviceBlendOperationAdvancedPropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_blend_operation_advanced :: PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_inline_uniform_block :: PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMaintenance3Properties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMaintenance3PropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceFloatControlsProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceFloatControlsPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_external_memory_host :: PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_conservative_rasterization :: PhysicalDeviceConservativeRasterizationPropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_conservative_rasterization :: PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMD,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMDBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMD,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: amd_shader_core_properties2 :: PhysicalDeviceShaderCoreProperties2AMDBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingPropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphorePropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorPropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_vertex_attribute_divisor :: PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolveProperties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolvePropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_transform_feedback :: PhysicalDeviceTransformFeedbackPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNV,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNV,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNVBuilder<'_>,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructurePropertiesKHR > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_acceleration_structure :: PhysicalDeviceAccelerationStructurePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHR,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_ray_tracing_pipeline :: PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNV,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNVBuilder<'_>,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map :: PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map2 :: PhysicalDeviceFragmentDensityMap2PropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map2 :: PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNV,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_cooperative_matrix :: PhysicalDeviceCooperativeMatrixPropertiesNVBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHR,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_performance_query :: PhysicalDevicePerformanceQueryPropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNV,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texel_buffer_alignment :: PhysicalDeviceTexelBufferAlignmentPropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_texel_buffer_alignment :: PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_subgroup_size_control :: PhysicalDeviceSubgroupSizeControlPropertiesEXT > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_subgroup_size_control :: PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_line_rasterization :: PhysicalDeviceLineRasterizationPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11Properties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11PropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12Properties>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12PropertiesBuilder<'_>>
-    for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_custom_border_color :: PhysicalDeviceCustomBorderColorPropertiesEXTBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXT,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXTBuilder<'_>,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHR,
-    > for PhysicalDeviceProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_portability_subset :: PhysicalDevicePortabilitySubsetPropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRatePropertiesKHR > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_fragment_shading_rate :: PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsPropertiesNV > for PhysicalDeviceProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_fragment_shading_rate_enums :: PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder < '_ >> for PhysicalDeviceProperties2Builder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDriverProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDriverPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceIDProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceIDPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nvx_multiview_per_view_attributes::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nvx_multiview_per_view_attributes::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSubgroupProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSubgroupPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevicePointClippingProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevicePointClippingPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMaintenance3Properties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMaintenance3PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceFloatControlsProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceFloatControlsPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conservative_rasterization::PhysicalDeviceConservativeRasterizationPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conservative_rasterization::PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMD> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMDBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMD> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMDBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphorePropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolveProperties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolvePropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructurePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2PropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11Properties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12Properties> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties2.html) · Builder of [`PhysicalDeviceProperties2`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceProperties2Builder<'a>(
-    PhysicalDeviceProperties2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceProperties2Builder<'a>(PhysicalDeviceProperties2, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceProperties2Builder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceProperties2Builder<'a> {
@@ -2120,22 +1293,8 @@ impl FormatProperties2 {
         FormatProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXT,
-    > for FormatProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXTBuilder<
-            '_,
-        >,
-    > for FormatProperties2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXT> for FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXTBuilder<'_>> for FormatProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties2.html) · Builder of [`FormatProperties2`]"]
 #[repr(transparent)]
@@ -2210,74 +1369,27 @@ impl ImageFormatProperties2 {
         ImageFormatProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalImageFormatProperties>
-    for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalImageFormatPropertiesBuilder<'_>>
-    for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatProperties>
-    for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatPropertiesBuilder<'_>>
-    for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMD,
-    > for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMDBuilder<
-            '_,
-        >,
-    > for ImageFormatProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferUsageANDROID > for ImageFormatProperties2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: android_external_memory_android_hardware_buffer :: AndroidHardwareBufferUsageANDROIDBuilder < '_ >> for ImageFormatProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXT,
-    > for ImageFormatProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXTBuilder<
-            '_,
-        >,
-    > for ImageFormatProperties2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalImageFormatProperties> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalImageFormatPropertiesBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatProperties> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatPropertiesBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMD> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMDBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferUsageANDROID> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferUsageANDROIDBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXT> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties2.html) · Builder of [`ImageFormatProperties2`]"]
 #[repr(transparent)]
-pub struct ImageFormatProperties2Builder<'a>(
-    ImageFormatProperties2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageFormatProperties2Builder<'a>(ImageFormatProperties2, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageFormatProperties2Builder<'a> {
     #[inline]
     pub fn new() -> ImageFormatProperties2Builder<'a> {
         ImageFormatProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn image_format_properties(
-        mut self,
-        image_format_properties: crate::vk1_0::ImageFormatProperties,
-    ) -> Self {
+    pub fn image_format_properties(mut self, image_format_properties: crate::vk1_0::ImageFormatProperties) -> Self {
         self.0.image_format_properties = image_format_properties as _;
         self
     }
@@ -2353,53 +1465,20 @@ impl PhysicalDeviceImageFormatInfo2 {
         PhysicalDeviceImageFormatInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfo>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfoBuilder<'_>>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfo>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_image_drm_format_modifier :: PhysicalDeviceImageDrmFormatModifierInfoEXT > for PhysicalDeviceImageFormatInfo2Builder < 'a > { }
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_image_drm_format_modifier :: PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder < '_ >> for PhysicalDeviceImageFormatInfo2Builder < 'a > { }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfo>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>>
-    for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXT,
-    > for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>,
-    > for PhysicalDeviceImageFormatInfo2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::PhysicalDeviceImageDrmFormatModifierInfoEXT> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXT> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageFormatInfo2.html) · Builder of [`PhysicalDeviceImageFormatInfo2`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceImageFormatInfo2Builder<'a>(
-    PhysicalDeviceImageFormatInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceImageFormatInfo2Builder<'a>(PhysicalDeviceImageFormatInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceImageFormatInfo2Builder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceImageFormatInfo2Builder<'a> {
@@ -2490,45 +1569,21 @@ impl QueueFamilyProperties2 {
         QueueFamilyProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNV,
-    > for QueueFamilyProperties2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: nv_device_diagnostic_checkpoints :: QueueFamilyCheckpointPropertiesNVBuilder < '_ >> for QueueFamilyProperties2Builder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV,
-    > for QueueFamilyProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NVBuilder<'_>,
-    > for QueueFamilyProperties2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNV> for QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV> for QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties2.html) · Builder of [`QueueFamilyProperties2`]"]
 #[repr(transparent)]
-pub struct QueueFamilyProperties2Builder<'a>(
-    QueueFamilyProperties2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct QueueFamilyProperties2Builder<'a>(QueueFamilyProperties2, std::marker::PhantomData<&'a ()>);
 impl<'a> QueueFamilyProperties2Builder<'a> {
     #[inline]
     pub fn new() -> QueueFamilyProperties2Builder<'a> {
         QueueFamilyProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn queue_family_properties(
-        mut self,
-        queue_family_properties: crate::vk1_0::QueueFamilyProperties,
-    ) -> Self {
+    pub fn queue_family_properties(mut self, queue_family_properties: crate::vk1_0::QueueFamilyProperties) -> Self {
         self.0.queue_family_properties = queue_family_properties as _;
         self
     }
@@ -2592,37 +1647,19 @@ impl PhysicalDeviceMemoryProperties2 {
         PhysicalDeviceMemoryProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXT,
-    > for PhysicalDeviceMemoryProperties2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>,
-    > for PhysicalDeviceMemoryProperties2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXT> for PhysicalDeviceMemoryProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>> for PhysicalDeviceMemoryProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties2.html) · Builder of [`PhysicalDeviceMemoryProperties2`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMemoryProperties2Builder<'a>(
-    PhysicalDeviceMemoryProperties2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMemoryProperties2Builder<'a>(PhysicalDeviceMemoryProperties2, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMemoryProperties2Builder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMemoryProperties2Builder<'a> {
         PhysicalDeviceMemoryProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn memory_properties(
-        mut self,
-        memory_properties: crate::vk1_0::PhysicalDeviceMemoryProperties,
-    ) -> Self {
+    pub fn memory_properties(mut self, memory_properties: crate::vk1_0::PhysicalDeviceMemoryProperties) -> Self {
         self.0.memory_properties = memory_properties as _;
         self
     }
@@ -2689,10 +1726,7 @@ impl SparseImageFormatProperties2 {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties2.html) · Builder of [`SparseImageFormatProperties2`]"]
 #[repr(transparent)]
-pub struct SparseImageFormatProperties2Builder<'a>(
-    SparseImageFormatProperties2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SparseImageFormatProperties2Builder<'a>(SparseImageFormatProperties2, std::marker::PhantomData<&'a ()>);
 impl<'a> SparseImageFormatProperties2Builder<'a> {
     #[inline]
     pub fn new() -> SparseImageFormatProperties2Builder<'a> {
@@ -2778,10 +1812,7 @@ impl PhysicalDeviceSparseImageFormatInfo2 {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseImageFormatInfo2.html) · Builder of [`PhysicalDeviceSparseImageFormatInfo2`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSparseImageFormatInfo2Builder<'a>(
-    PhysicalDeviceSparseImageFormatInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSparseImageFormatInfo2Builder<'a>(PhysicalDeviceSparseImageFormatInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSparseImageFormatInfo2Builder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSparseImageFormatInfo2Builder<'a> {
@@ -2864,10 +1895,7 @@ impl std::fmt::Debug for PhysicalDeviceVariablePointersFeatures {
         f.debug_struct("PhysicalDeviceVariablePointersFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "variable_pointers_storage_buffer",
-                &(self.variable_pointers_storage_buffer != 0),
-            )
+            .field("variable_pointers_storage_buffer", &(self.variable_pointers_storage_buffer != 0))
             .field("variable_pointers", &(self.variable_pointers != 0))
             .finish()
     }
@@ -2881,20 +1909,14 @@ impl PhysicalDeviceVariablePointersFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVariablePointersFeatures.html) · Builder of [`PhysicalDeviceVariablePointersFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVariablePointersFeaturesBuilder<'a>(
-    PhysicalDeviceVariablePointersFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVariablePointersFeaturesBuilder<'a>(PhysicalDeviceVariablePointersFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
         PhysicalDeviceVariablePointersFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn variable_pointers_storage_buffer(
-        mut self,
-        variable_pointers_storage_buffer: bool,
-    ) -> Self {
+    pub fn variable_pointers_storage_buffer(mut self, variable_pointers_storage_buffer: bool) -> Self {
         self.0.variable_pointers_storage_buffer = variable_pointers_storage_buffer as _;
         self
     }
@@ -2952,10 +1974,7 @@ impl std::fmt::Debug for ExternalMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.debug_struct("ExternalMemoryProperties")
             .field("external_memory_features", &self.external_memory_features)
-            .field(
-                "export_from_imported_handle_types",
-                &self.export_from_imported_handle_types,
-            )
+            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
             .field("compatible_handle_types", &self.compatible_handle_types)
             .finish()
     }
@@ -2969,36 +1988,24 @@ impl ExternalMemoryProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryProperties.html) · Builder of [`ExternalMemoryProperties`]"]
 #[repr(transparent)]
-pub struct ExternalMemoryPropertiesBuilder<'a>(
-    ExternalMemoryProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalMemoryPropertiesBuilder<'a>(ExternalMemoryProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalMemoryPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalMemoryPropertiesBuilder<'a> {
         ExternalMemoryPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn external_memory_features(
-        mut self,
-        external_memory_features: crate::vk1_1::ExternalMemoryFeatureFlags,
-    ) -> Self {
+    pub fn external_memory_features(mut self, external_memory_features: crate::vk1_1::ExternalMemoryFeatureFlags) -> Self {
         self.0.external_memory_features = external_memory_features as _;
         self
     }
     #[inline]
-    pub fn export_from_imported_handle_types(
-        mut self,
-        export_from_imported_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags,
-    ) -> Self {
+    pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
-    pub fn compatible_handle_types(
-        mut self,
-        compatible_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags,
-    ) -> Self {
+    pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
@@ -3065,20 +2072,14 @@ impl PhysicalDeviceExternalImageFormatInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfo.html) · Builder of [`PhysicalDeviceExternalImageFormatInfo`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExternalImageFormatInfoBuilder<'a>(
-    PhysicalDeviceExternalImageFormatInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExternalImageFormatInfoBuilder<'a>(PhysicalDeviceExternalImageFormatInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExternalImageFormatInfoBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExternalImageFormatInfoBuilder<'a> {
         PhysicalDeviceExternalImageFormatInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -3132,10 +2133,7 @@ impl std::fmt::Debug for ExternalImageFormatProperties {
         f.debug_struct("ExternalImageFormatProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "external_memory_properties",
-                &self.external_memory_properties,
-            )
+            .field("external_memory_properties", &self.external_memory_properties)
             .finish()
     }
 }
@@ -3148,20 +2146,14 @@ impl ExternalImageFormatProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatProperties.html) · Builder of [`ExternalImageFormatProperties`]"]
 #[repr(transparent)]
-pub struct ExternalImageFormatPropertiesBuilder<'a>(
-    ExternalImageFormatProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalImageFormatPropertiesBuilder<'a>(ExternalImageFormatProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalImageFormatPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalImageFormatPropertiesBuilder<'a> {
         ExternalImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn external_memory_properties(
-        mut self,
-        external_memory_properties: crate::vk1_1::ExternalMemoryProperties,
-    ) -> Self {
+    pub fn external_memory_properties(mut self, external_memory_properties: crate::vk1_1::ExternalMemoryProperties) -> Self {
         self.0.external_memory_properties = external_memory_properties as _;
         self
     }
@@ -3234,10 +2226,7 @@ impl PhysicalDeviceExternalBufferInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalBufferInfo.html) · Builder of [`PhysicalDeviceExternalBufferInfo`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExternalBufferInfoBuilder<'a>(
-    PhysicalDeviceExternalBufferInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExternalBufferInfoBuilder<'a>(PhysicalDeviceExternalBufferInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExternalBufferInfoBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExternalBufferInfoBuilder<'a> {
@@ -3254,10 +2243,7 @@ impl<'a> PhysicalDeviceExternalBufferInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -3311,10 +2297,7 @@ impl std::fmt::Debug for ExternalBufferProperties {
         f.debug_struct("ExternalBufferProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "external_memory_properties",
-                &self.external_memory_properties,
-            )
+            .field("external_memory_properties", &self.external_memory_properties)
             .finish()
     }
 }
@@ -3327,20 +2310,14 @@ impl ExternalBufferProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalBufferProperties.html) · Builder of [`ExternalBufferProperties`]"]
 #[repr(transparent)]
-pub struct ExternalBufferPropertiesBuilder<'a>(
-    ExternalBufferProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalBufferPropertiesBuilder<'a>(ExternalBufferProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalBufferPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalBufferPropertiesBuilder<'a> {
         ExternalBufferPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn external_memory_properties(
-        mut self,
-        external_memory_properties: crate::vk1_1::ExternalMemoryProperties,
-    ) -> Self {
+    pub fn external_memory_properties(mut self, external_memory_properties: crate::vk1_1::ExternalMemoryProperties) -> Self {
         self.0.external_memory_properties = external_memory_properties as _;
         self
     }
@@ -3419,10 +2396,7 @@ impl PhysicalDeviceIDProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIDProperties.html) · Builder of [`PhysicalDeviceIDProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceIDPropertiesBuilder<'a>(
-    PhysicalDeviceIDProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceIDPropertiesBuilder<'a>(PhysicalDeviceIDProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceIDPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceIDPropertiesBuilder<'a> {
@@ -3516,20 +2490,14 @@ impl ExternalMemoryImageCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfo.html) · Builder of [`ExternalMemoryImageCreateInfo`]"]
 #[repr(transparent)]
-pub struct ExternalMemoryImageCreateInfoBuilder<'a>(
-    ExternalMemoryImageCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalMemoryImageCreateInfoBuilder<'a>(ExternalMemoryImageCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalMemoryImageCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalMemoryImageCreateInfoBuilder<'a> {
         ExternalMemoryImageCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -3596,20 +2564,14 @@ impl ExternalMemoryBufferCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryBufferCreateInfo.html) · Builder of [`ExternalMemoryBufferCreateInfo`]"]
 #[repr(transparent)]
-pub struct ExternalMemoryBufferCreateInfoBuilder<'a>(
-    ExternalMemoryBufferCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalMemoryBufferCreateInfoBuilder<'a>(ExternalMemoryBufferCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalMemoryBufferCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalMemoryBufferCreateInfoBuilder<'a> {
         ExternalMemoryBufferCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -3676,20 +2638,14 @@ impl ExportMemoryAllocateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfo.html) · Builder of [`ExportMemoryAllocateInfo`]"]
 #[repr(transparent)]
-pub struct ExportMemoryAllocateInfoBuilder<'a>(
-    ExportMemoryAllocateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportMemoryAllocateInfoBuilder<'a>(ExportMemoryAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportMemoryAllocateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ExportMemoryAllocateInfoBuilder<'a> {
         ExportMemoryAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -3753,31 +2709,19 @@ impl PhysicalDeviceExternalSemaphoreInfo {
         PhysicalDeviceExternalSemaphoreInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfo>
-    for PhysicalDeviceExternalSemaphoreInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<'_>>
-    for PhysicalDeviceExternalSemaphoreInfoBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfo> for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<'_>> for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfo.html) · Builder of [`PhysicalDeviceExternalSemaphoreInfo`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExternalSemaphoreInfoBuilder<'a>(
-    PhysicalDeviceExternalSemaphoreInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExternalSemaphoreInfoBuilder<'a>(PhysicalDeviceExternalSemaphoreInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
         PhysicalDeviceExternalSemaphoreInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -3835,15 +2779,9 @@ impl std::fmt::Debug for ExternalSemaphoreProperties {
         f.debug_struct("ExternalSemaphoreProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "export_from_imported_handle_types",
-                &self.export_from_imported_handle_types,
-            )
+            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
             .field("compatible_handle_types", &self.compatible_handle_types)
-            .field(
-                "external_semaphore_features",
-                &self.external_semaphore_features,
-            )
+            .field("external_semaphore_features", &self.external_semaphore_features)
             .finish()
     }
 }
@@ -3856,36 +2794,24 @@ impl ExternalSemaphoreProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreProperties.html) · Builder of [`ExternalSemaphoreProperties`]"]
 #[repr(transparent)]
-pub struct ExternalSemaphorePropertiesBuilder<'a>(
-    ExternalSemaphoreProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalSemaphorePropertiesBuilder<'a>(ExternalSemaphoreProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalSemaphorePropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalSemaphorePropertiesBuilder<'a> {
         ExternalSemaphorePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn export_from_imported_handle_types(
-        mut self,
-        export_from_imported_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags,
-    ) -> Self {
+    pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
-    pub fn compatible_handle_types(
-        mut self,
-        compatible_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags,
-    ) -> Self {
+    pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
     #[inline]
-    pub fn external_semaphore_features(
-        mut self,
-        external_semaphore_features: crate::vk1_1::ExternalSemaphoreFeatureFlags,
-    ) -> Self {
+    pub fn external_semaphore_features(mut self, external_semaphore_features: crate::vk1_1::ExternalSemaphoreFeatureFlags) -> Self {
         self.0.external_semaphore_features = external_semaphore_features as _;
         self
     }
@@ -3952,20 +2878,14 @@ impl ExportSemaphoreCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreCreateInfo.html) · Builder of [`ExportSemaphoreCreateInfo`]"]
 #[repr(transparent)]
-pub struct ExportSemaphoreCreateInfoBuilder<'a>(
-    ExportSemaphoreCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportSemaphoreCreateInfoBuilder<'a>(ExportSemaphoreCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportSemaphoreCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ExportSemaphoreCreateInfoBuilder<'a> {
         ExportSemaphoreCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -4032,20 +2952,14 @@ impl PhysicalDeviceExternalFenceInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalFenceInfo.html) · Builder of [`PhysicalDeviceExternalFenceInfo`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExternalFenceInfoBuilder<'a>(
-    PhysicalDeviceExternalFenceInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExternalFenceInfoBuilder<'a>(PhysicalDeviceExternalFenceInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExternalFenceInfoBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExternalFenceInfoBuilder<'a> {
         PhysicalDeviceExternalFenceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -4103,10 +3017,7 @@ impl std::fmt::Debug for ExternalFenceProperties {
         f.debug_struct("ExternalFenceProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "export_from_imported_handle_types",
-                &self.export_from_imported_handle_types,
-            )
+            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
             .field("compatible_handle_types", &self.compatible_handle_types)
             .field("external_fence_features", &self.external_fence_features)
             .finish()
@@ -4121,36 +3032,24 @@ impl ExternalFenceProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceProperties.html) · Builder of [`ExternalFenceProperties`]"]
 #[repr(transparent)]
-pub struct ExternalFencePropertiesBuilder<'a>(
-    ExternalFenceProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExternalFencePropertiesBuilder<'a>(ExternalFenceProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> ExternalFencePropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> ExternalFencePropertiesBuilder<'a> {
         ExternalFencePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn export_from_imported_handle_types(
-        mut self,
-        export_from_imported_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags,
-    ) -> Self {
+    pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
-    pub fn compatible_handle_types(
-        mut self,
-        compatible_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags,
-    ) -> Self {
+    pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
     #[inline]
-    pub fn external_fence_features(
-        mut self,
-        external_fence_features: crate::vk1_1::ExternalFenceFeatureFlags,
-    ) -> Self {
+    pub fn external_fence_features(mut self, external_fence_features: crate::vk1_1::ExternalFenceFeatureFlags) -> Self {
         self.0.external_fence_features = external_fence_features as _;
         self
     }
@@ -4217,20 +3116,14 @@ impl ExportFenceCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceCreateInfo.html) · Builder of [`ExportFenceCreateInfo`]"]
 #[repr(transparent)]
-pub struct ExportFenceCreateInfoBuilder<'a>(
-    ExportFenceCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportFenceCreateInfoBuilder<'a>(ExportFenceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportFenceCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ExportFenceCreateInfoBuilder<'a> {
         ExportFenceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_types(
-        mut self,
-        handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags,
-    ) -> Self {
+    pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
     }
@@ -4289,14 +3182,8 @@ impl std::fmt::Debug for PhysicalDeviceMultiviewFeatures {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("multiview", &(self.multiview != 0))
-            .field(
-                "multiview_geometry_shader",
-                &(self.multiview_geometry_shader != 0),
-            )
-            .field(
-                "multiview_tessellation_shader",
-                &(self.multiview_tessellation_shader != 0),
-            )
+            .field("multiview_geometry_shader", &(self.multiview_geometry_shader != 0))
+            .field("multiview_tessellation_shader", &(self.multiview_tessellation_shader != 0))
             .finish()
     }
 }
@@ -4309,10 +3196,7 @@ impl PhysicalDeviceMultiviewFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewFeatures.html) · Builder of [`PhysicalDeviceMultiviewFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMultiviewFeaturesBuilder<'a>(
-    PhysicalDeviceMultiviewFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMultiviewFeaturesBuilder<'a>(PhysicalDeviceMultiviewFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMultiviewFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMultiviewFeaturesBuilder<'a> {
@@ -4386,10 +3270,7 @@ impl std::fmt::Debug for PhysicalDeviceMultiviewProperties {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_multiview_view_count", &self.max_multiview_view_count)
-            .field(
-                "max_multiview_instance_index",
-                &self.max_multiview_instance_index,
-            )
+            .field("max_multiview_instance_index", &self.max_multiview_instance_index)
             .finish()
     }
 }
@@ -4402,10 +3283,7 @@ impl PhysicalDeviceMultiviewProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewProperties.html) · Builder of [`PhysicalDeviceMultiviewProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMultiviewPropertiesBuilder<'a>(
-    PhysicalDeviceMultiviewProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMultiviewPropertiesBuilder<'a>(PhysicalDeviceMultiviewProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMultiviewPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMultiviewPropertiesBuilder<'a> {
@@ -4499,10 +3377,7 @@ impl RenderPassMultiviewCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassMultiviewCreateInfo.html) · Builder of [`RenderPassMultiviewCreateInfo`]"]
 #[repr(transparent)]
-pub struct RenderPassMultiviewCreateInfoBuilder<'a>(
-    RenderPassMultiviewCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassMultiviewCreateInfoBuilder<'a>(RenderPassMultiviewCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassMultiviewCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassMultiviewCreateInfoBuilder<'a> {
@@ -4595,10 +3470,7 @@ impl PhysicalDeviceGroupProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGroupProperties.html) · Builder of [`PhysicalDeviceGroupProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceGroupPropertiesBuilder<'a>(
-    PhysicalDeviceGroupProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceGroupPropertiesBuilder<'a>(PhysicalDeviceGroupProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceGroupPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceGroupPropertiesBuilder<'a> {
@@ -4610,10 +3482,7 @@ impl<'a> PhysicalDeviceGroupPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn physical_devices(
-        mut self,
-        physical_devices: [crate::vk1_0::PhysicalDevice; 32],
-    ) -> Self {
+    pub fn physical_devices(mut self, physical_devices: [crate::vk1_0::PhysicalDevice; 32]) -> Self {
         self.0.physical_devices = physical_devices as _;
         self
     }
@@ -4688,10 +3557,7 @@ impl MemoryAllocateFlagsInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagsInfo.html) · Builder of [`MemoryAllocateFlagsInfo`]"]
 #[repr(transparent)]
-pub struct MemoryAllocateFlagsInfoBuilder<'a>(
-    MemoryAllocateFlagsInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryAllocateFlagsInfoBuilder<'a>(MemoryAllocateFlagsInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryAllocateFlagsInfoBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryAllocateFlagsInfoBuilder<'a> {
@@ -4773,14 +3639,8 @@ impl BindBufferMemoryInfo {
         BindBufferMemoryInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfo>
-    for BindBufferMemoryInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<'_>>
-    for BindBufferMemoryInfoBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfo> for BindBufferMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<'_>> for BindBufferMemoryInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfo.html) · Builder of [`BindBufferMemoryInfo`]"]
 #[repr(transparent)]
@@ -4871,10 +3731,7 @@ impl BindBufferMemoryDeviceGroupInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryDeviceGroupInfo.html) · Builder of [`BindBufferMemoryDeviceGroupInfo`]"]
 #[repr(transparent)]
-pub struct BindBufferMemoryDeviceGroupInfoBuilder<'a>(
-    BindBufferMemoryDeviceGroupInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BindBufferMemoryDeviceGroupInfoBuilder<'a>(BindBufferMemoryDeviceGroupInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BindBufferMemoryDeviceGroupInfoBuilder<'a> {
     #[inline]
     pub fn new() -> BindBufferMemoryDeviceGroupInfoBuilder<'a> {
@@ -4952,34 +3809,12 @@ impl BindImageMemoryInfo {
         BindImageMemoryInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfo>
-    for BindImageMemoryInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<'_>>
-    for BindImageMemoryInfoBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHR>
-    for BindImageMemoryInfoBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHRBuilder<'_>,
-    > for BindImageMemoryInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImagePlaneMemoryInfo>
-    for BindImageMemoryInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImagePlaneMemoryInfoBuilder<'_>>
-    for BindImageMemoryInfoBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfo> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHR> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHRBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImagePlaneMemoryInfo> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::BindImagePlaneMemoryInfoBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryInfo.html) · Builder of [`BindImageMemoryInfo`]"]
 #[repr(transparent)]
@@ -5062,14 +3897,8 @@ impl std::fmt::Debug for BindImageMemoryDeviceGroupInfo {
             .field("p_next", &self.p_next)
             .field("device_index_count", &self.device_index_count)
             .field("p_device_indices", &self.p_device_indices)
-            .field(
-                "split_instance_bind_region_count",
-                &self.split_instance_bind_region_count,
-            )
-            .field(
-                "p_split_instance_bind_regions",
-                &self.p_split_instance_bind_regions,
-            )
+            .field("split_instance_bind_region_count", &self.split_instance_bind_region_count)
+            .field("p_split_instance_bind_regions", &self.p_split_instance_bind_regions)
             .finish()
     }
 }
@@ -5082,10 +3911,7 @@ impl BindImageMemoryDeviceGroupInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfo.html) · Builder of [`BindImageMemoryDeviceGroupInfo`]"]
 #[repr(transparent)]
-pub struct BindImageMemoryDeviceGroupInfoBuilder<'a>(
-    BindImageMemoryDeviceGroupInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BindImageMemoryDeviceGroupInfoBuilder<'a>(BindImageMemoryDeviceGroupInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BindImageMemoryDeviceGroupInfoBuilder<'a> {
     #[inline]
     pub fn new() -> BindImageMemoryDeviceGroupInfoBuilder<'a> {
@@ -5098,10 +3924,7 @@ impl<'a> BindImageMemoryDeviceGroupInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn split_instance_bind_regions(
-        mut self,
-        split_instance_bind_regions: &'a [crate::vk1_0::Rect2DBuilder],
-    ) -> Self {
+    pub fn split_instance_bind_regions(mut self, split_instance_bind_regions: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_split_instance_bind_regions = split_instance_bind_regions.as_ptr() as _;
         self.0.split_instance_bind_region_count = split_instance_bind_regions.len() as _;
         self
@@ -5175,10 +3998,7 @@ impl DeviceGroupRenderPassBeginInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfo.html) · Builder of [`DeviceGroupRenderPassBeginInfo`]"]
 #[repr(transparent)]
-pub struct DeviceGroupRenderPassBeginInfoBuilder<'a>(
-    DeviceGroupRenderPassBeginInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceGroupRenderPassBeginInfoBuilder<'a>(DeviceGroupRenderPassBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceGroupRenderPassBeginInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceGroupRenderPassBeginInfoBuilder<'a> {
@@ -5190,10 +4010,7 @@ impl<'a> DeviceGroupRenderPassBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn device_render_areas(
-        mut self,
-        device_render_areas: &'a [crate::vk1_0::Rect2DBuilder],
-    ) -> Self {
+    pub fn device_render_areas(mut self, device_render_areas: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_device_render_areas = device_render_areas.as_ptr() as _;
         self.0.device_render_area_count = device_render_areas.len() as _;
         self
@@ -5261,10 +4078,7 @@ impl DeviceGroupCommandBufferBeginInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfo.html) · Builder of [`DeviceGroupCommandBufferBeginInfo`]"]
 #[repr(transparent)]
-pub struct DeviceGroupCommandBufferBeginInfoBuilder<'a>(
-    DeviceGroupCommandBufferBeginInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceGroupCommandBufferBeginInfoBuilder<'a>(DeviceGroupCommandBufferBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceGroupCommandBufferBeginInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceGroupCommandBufferBeginInfoBuilder<'a> {
@@ -5336,20 +4150,11 @@ impl std::fmt::Debug for DeviceGroupSubmitInfo {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_count", &self.wait_semaphore_count)
-            .field(
-                "p_wait_semaphore_device_indices",
-                &self.p_wait_semaphore_device_indices,
-            )
+            .field("p_wait_semaphore_device_indices", &self.p_wait_semaphore_device_indices)
             .field("command_buffer_count", &self.command_buffer_count)
-            .field(
-                "p_command_buffer_device_masks",
-                &self.p_command_buffer_device_masks,
-            )
+            .field("p_command_buffer_device_masks", &self.p_command_buffer_device_masks)
             .field("signal_semaphore_count", &self.signal_semaphore_count)
-            .field(
-                "p_signal_semaphore_device_indices",
-                &self.p_signal_semaphore_device_indices,
-            )
+            .field("p_signal_semaphore_device_indices", &self.p_signal_semaphore_device_indices)
             .finish()
     }
 }
@@ -5362,20 +4167,14 @@ impl DeviceGroupSubmitInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSubmitInfo.html) · Builder of [`DeviceGroupSubmitInfo`]"]
 #[repr(transparent)]
-pub struct DeviceGroupSubmitInfoBuilder<'a>(
-    DeviceGroupSubmitInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceGroupSubmitInfoBuilder<'a>(DeviceGroupSubmitInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceGroupSubmitInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceGroupSubmitInfoBuilder<'a> {
         DeviceGroupSubmitInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn wait_semaphore_device_indices(
-        mut self,
-        wait_semaphore_device_indices: &'a [u32],
-    ) -> Self {
+    pub fn wait_semaphore_device_indices(mut self, wait_semaphore_device_indices: &'a [u32]) -> Self {
         self.0.p_wait_semaphore_device_indices = wait_semaphore_device_indices.as_ptr() as _;
         self.0.wait_semaphore_count = wait_semaphore_device_indices.len() as _;
         self
@@ -5387,10 +4186,7 @@ impl<'a> DeviceGroupSubmitInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn signal_semaphore_device_indices(
-        mut self,
-        signal_semaphore_device_indices: &'a [u32],
-    ) -> Self {
+    pub fn signal_semaphore_device_indices(mut self, signal_semaphore_device_indices: &'a [u32]) -> Self {
         self.0.p_signal_semaphore_device_indices = signal_semaphore_device_indices.as_ptr() as _;
         self.0.signal_semaphore_count = signal_semaphore_device_indices.len() as _;
         self
@@ -5461,10 +4257,7 @@ impl DeviceGroupBindSparseInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupBindSparseInfo.html) · Builder of [`DeviceGroupBindSparseInfo`]"]
 #[repr(transparent)]
-pub struct DeviceGroupBindSparseInfoBuilder<'a>(
-    DeviceGroupBindSparseInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceGroupBindSparseInfoBuilder<'a>(DeviceGroupBindSparseInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceGroupBindSparseInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceGroupBindSparseInfoBuilder<'a> {
@@ -5546,20 +4339,14 @@ impl DeviceGroupDeviceCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html) · Builder of [`DeviceGroupDeviceCreateInfo`]"]
 #[repr(transparent)]
-pub struct DeviceGroupDeviceCreateInfoBuilder<'a>(
-    DeviceGroupDeviceCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceGroupDeviceCreateInfoBuilder<'a>(DeviceGroupDeviceCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceGroupDeviceCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceGroupDeviceCreateInfoBuilder<'a> {
         DeviceGroupDeviceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn physical_devices(
-        mut self,
-        physical_devices: &'a [crate::vk1_0::PhysicalDevice],
-    ) -> Self {
+    pub fn physical_devices(mut self, physical_devices: &'a [crate::vk1_0::PhysicalDevice]) -> Self {
         self.0.p_physical_devices = physical_devices.as_ptr() as _;
         self.0.physical_device_count = physical_devices.len() as _;
         self
@@ -5636,10 +4423,7 @@ impl DescriptorUpdateTemplateEntry {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntry.html) · Builder of [`DescriptorUpdateTemplateEntry`]"]
 #[repr(transparent)]
-pub struct DescriptorUpdateTemplateEntryBuilder<'a>(
-    DescriptorUpdateTemplateEntry,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorUpdateTemplateEntryBuilder<'a>(DescriptorUpdateTemplateEntry, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorUpdateTemplateEntryBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorUpdateTemplateEntryBuilder<'a> {
@@ -5740,14 +4524,8 @@ impl std::fmt::Debug for DescriptorUpdateTemplateCreateInfo {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
-            .field(
-                "descriptor_update_entry_count",
-                &self.descriptor_update_entry_count,
-            )
-            .field(
-                "p_descriptor_update_entries",
-                &self.p_descriptor_update_entries,
-            )
+            .field("descriptor_update_entry_count", &self.descriptor_update_entry_count)
+            .field("p_descriptor_update_entries", &self.p_descriptor_update_entries)
             .field("template_type", &self.template_type)
             .field("descriptor_set_layout", &self.descriptor_set_layout)
             .field("pipeline_bind_point", &self.pipeline_bind_point)
@@ -5765,10 +4543,7 @@ impl DescriptorUpdateTemplateCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfo.html) · Builder of [`DescriptorUpdateTemplateCreateInfo`]"]
 #[repr(transparent)]
-pub struct DescriptorUpdateTemplateCreateInfoBuilder<'a>(
-    DescriptorUpdateTemplateCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorUpdateTemplateCreateInfoBuilder<'a>(DescriptorUpdateTemplateCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
@@ -5780,35 +4555,23 @@ impl<'a> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn descriptor_update_entries(
-        mut self,
-        descriptor_update_entries: &'a [crate::vk1_1::DescriptorUpdateTemplateEntryBuilder],
-    ) -> Self {
+    pub fn descriptor_update_entries(mut self, descriptor_update_entries: &'a [crate::vk1_1::DescriptorUpdateTemplateEntryBuilder]) -> Self {
         self.0.p_descriptor_update_entries = descriptor_update_entries.as_ptr() as _;
         self.0.descriptor_update_entry_count = descriptor_update_entries.len() as _;
         self
     }
     #[inline]
-    pub fn template_type(
-        mut self,
-        template_type: crate::vk1_1::DescriptorUpdateTemplateType,
-    ) -> Self {
+    pub fn template_type(mut self, template_type: crate::vk1_1::DescriptorUpdateTemplateType) -> Self {
         self.0.template_type = template_type as _;
         self
     }
     #[inline]
-    pub fn descriptor_set_layout(
-        mut self,
-        descriptor_set_layout: crate::vk1_0::DescriptorSetLayout,
-    ) -> Self {
+    pub fn descriptor_set_layout(mut self, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout) -> Self {
         self.0.descriptor_set_layout = descriptor_set_layout as _;
         self
     }
     #[inline]
-    pub fn pipeline_bind_point(
-        mut self,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-    ) -> Self {
+    pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
@@ -5885,10 +4648,7 @@ impl InputAttachmentAspectReference {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInputAttachmentAspectReference.html) · Builder of [`InputAttachmentAspectReference`]"]
 #[repr(transparent)]
-pub struct InputAttachmentAspectReferenceBuilder<'a>(
-    InputAttachmentAspectReference,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct InputAttachmentAspectReferenceBuilder<'a>(InputAttachmentAspectReference, std::marker::PhantomData<&'a ()>);
 impl<'a> InputAttachmentAspectReferenceBuilder<'a> {
     #[inline]
     pub fn new() -> InputAttachmentAspectReferenceBuilder<'a> {
@@ -5975,23 +4735,14 @@ impl RenderPassInputAttachmentAspectCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfo.html) · Builder of [`RenderPassInputAttachmentAspectCreateInfo`]"]
 #[repr(transparent)]
-pub struct RenderPassInputAttachmentAspectCreateInfoBuilder<'a>(
-    RenderPassInputAttachmentAspectCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassInputAttachmentAspectCreateInfoBuilder<'a>(RenderPassInputAttachmentAspectCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
-        RenderPassInputAttachmentAspectCreateInfoBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        RenderPassInputAttachmentAspectCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn aspect_references(
-        mut self,
-        aspect_references: &'a [crate::vk1_1::InputAttachmentAspectReferenceBuilder],
-    ) -> Self {
+    pub fn aspect_references(mut self, aspect_references: &'a [crate::vk1_1::InputAttachmentAspectReferenceBuilder]) -> Self {
         self.0.p_aspect_references = aspect_references.as_ptr() as _;
         self.0.aspect_reference_count = aspect_references.len() as _;
         self
@@ -6052,22 +4803,10 @@ impl std::fmt::Debug for PhysicalDevice16BitStorageFeatures {
         f.debug_struct("PhysicalDevice16BitStorageFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "storage_buffer16_bit_access",
-                &(self.storage_buffer16_bit_access != 0),
-            )
-            .field(
-                "uniform_and_storage_buffer16_bit_access",
-                &(self.uniform_and_storage_buffer16_bit_access != 0),
-            )
-            .field(
-                "storage_push_constant16",
-                &(self.storage_push_constant16 != 0),
-            )
-            .field(
-                "storage_input_output16",
-                &(self.storage_input_output16 != 0),
-            )
+            .field("storage_buffer16_bit_access", &(self.storage_buffer16_bit_access != 0))
+            .field("uniform_and_storage_buffer16_bit_access", &(self.uniform_and_storage_buffer16_bit_access != 0))
+            .field("storage_push_constant16", &(self.storage_push_constant16 != 0))
+            .field("storage_input_output16", &(self.storage_input_output16 != 0))
             .finish()
     }
 }
@@ -6080,10 +4819,7 @@ impl PhysicalDevice16BitStorageFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice16BitStorageFeatures.html) · Builder of [`PhysicalDevice16BitStorageFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDevice16BitStorageFeaturesBuilder<'a>(
-    PhysicalDevice16BitStorageFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevice16BitStorageFeaturesBuilder<'a>(PhysicalDevice16BitStorageFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevice16BitStorageFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevice16BitStorageFeaturesBuilder<'a> {
@@ -6095,12 +4831,8 @@ impl<'a> PhysicalDevice16BitStorageFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn uniform_and_storage_buffer16_bit_access(
-        mut self,
-        uniform_and_storage_buffer16_bit_access: bool,
-    ) -> Self {
-        self.0.uniform_and_storage_buffer16_bit_access =
-            uniform_and_storage_buffer16_bit_access as _;
+    pub fn uniform_and_storage_buffer16_bit_access(mut self, uniform_and_storage_buffer16_bit_access: bool) -> Self {
+        self.0.uniform_and_storage_buffer16_bit_access = uniform_and_storage_buffer16_bit_access as _;
         self
     }
     #[inline]
@@ -6172,10 +4904,7 @@ impl std::fmt::Debug for PhysicalDeviceSubgroupProperties {
             .field("subgroup_size", &self.subgroup_size)
             .field("supported_stages", &self.supported_stages)
             .field("supported_operations", &self.supported_operations)
-            .field(
-                "quad_operations_in_all_stages",
-                &(self.quad_operations_in_all_stages != 0),
-            )
+            .field("quad_operations_in_all_stages", &(self.quad_operations_in_all_stages != 0))
             .finish()
     }
 }
@@ -6188,10 +4917,7 @@ impl PhysicalDeviceSubgroupProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupProperties.html) · Builder of [`PhysicalDeviceSubgroupProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSubgroupPropertiesBuilder<'a>(
-    PhysicalDeviceSubgroupProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSubgroupPropertiesBuilder<'a>(PhysicalDeviceSubgroupProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSubgroupPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSubgroupPropertiesBuilder<'a> {
@@ -6208,10 +4934,7 @@ impl<'a> PhysicalDeviceSubgroupPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn supported_operations(
-        mut self,
-        supported_operations: crate::vk1_1::SubgroupFeatureFlags,
-    ) -> Self {
+    pub fn supported_operations(mut self, supported_operations: crate::vk1_1::SubgroupFeatureFlags) -> Self {
         self.0.supported_operations = supported_operations as _;
         self
     }
@@ -6283,10 +5006,7 @@ impl BufferMemoryRequirementsInfo2 {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryRequirementsInfo2.html) · Builder of [`BufferMemoryRequirementsInfo2`]"]
 #[repr(transparent)]
-pub struct BufferMemoryRequirementsInfo2Builder<'a>(
-    BufferMemoryRequirementsInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BufferMemoryRequirementsInfo2Builder<'a>(BufferMemoryRequirementsInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferMemoryRequirementsInfo2Builder<'a> {
     #[inline]
     pub fn new() -> BufferMemoryRequirementsInfo2Builder<'a> {
@@ -6357,21 +5077,12 @@ impl ImageMemoryRequirementsInfo2 {
         ImageMemoryRequirementsInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfo>
-    for ImageMemoryRequirementsInfo2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfoBuilder<'_>>
-    for ImageMemoryRequirementsInfo2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfo> for ImageMemoryRequirementsInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfoBuilder<'_>> for ImageMemoryRequirementsInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryRequirementsInfo2.html) · Builder of [`ImageMemoryRequirementsInfo2`]"]
 #[repr(transparent)]
-pub struct ImageMemoryRequirementsInfo2Builder<'a>(
-    ImageMemoryRequirementsInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageMemoryRequirementsInfo2Builder<'a>(ImageMemoryRequirementsInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageMemoryRequirementsInfo2Builder<'a> {
     #[inline]
     pub fn new() -> ImageMemoryRequirementsInfo2Builder<'a> {
@@ -6445,10 +5156,7 @@ impl ImageSparseMemoryRequirementsInfo2 {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSparseMemoryRequirementsInfo2.html) · Builder of [`ImageSparseMemoryRequirementsInfo2`]"]
 #[repr(transparent)]
-pub struct ImageSparseMemoryRequirementsInfo2Builder<'a>(
-    ImageSparseMemoryRequirementsInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageSparseMemoryRequirementsInfo2Builder<'a>(ImageSparseMemoryRequirementsInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageSparseMemoryRequirementsInfo2Builder<'a> {
     #[inline]
     pub fn new() -> ImageSparseMemoryRequirementsInfo2Builder<'a> {
@@ -6519,14 +5227,8 @@ impl MemoryRequirements2 {
         MemoryRequirements2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedRequirements>
-    for MemoryRequirements2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedRequirementsBuilder<'_>>
-    for MemoryRequirements2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedRequirements> for MemoryRequirements2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedRequirementsBuilder<'_>> for MemoryRequirements2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements2.html) · Builder of [`MemoryRequirements2`]"]
 #[repr(transparent)]
@@ -6537,10 +5239,7 @@ impl<'a> MemoryRequirements2Builder<'a> {
         MemoryRequirements2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn memory_requirements(
-        mut self,
-        memory_requirements: crate::vk1_0::MemoryRequirements,
-    ) -> Self {
+    pub fn memory_requirements(mut self, memory_requirements: crate::vk1_0::MemoryRequirements) -> Self {
         self.0.memory_requirements = memory_requirements as _;
         self
     }
@@ -6607,20 +5306,14 @@ impl SparseImageMemoryRequirements2 {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements2.html) · Builder of [`SparseImageMemoryRequirements2`]"]
 #[repr(transparent)]
-pub struct SparseImageMemoryRequirements2Builder<'a>(
-    SparseImageMemoryRequirements2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SparseImageMemoryRequirements2Builder<'a>(SparseImageMemoryRequirements2, std::marker::PhantomData<&'a ()>);
 impl<'a> SparseImageMemoryRequirements2Builder<'a> {
     #[inline]
     pub fn new() -> SparseImageMemoryRequirements2Builder<'a> {
         SparseImageMemoryRequirements2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn memory_requirements(
-        mut self,
-        memory_requirements: crate::vk1_0::SparseImageMemoryRequirements,
-    ) -> Self {
+    pub fn memory_requirements(mut self, memory_requirements: crate::vk1_0::SparseImageMemoryRequirements) -> Self {
         self.0.memory_requirements = memory_requirements as _;
         self
     }
@@ -6687,20 +5380,14 @@ impl PhysicalDevicePointClippingProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePointClippingProperties.html) · Builder of [`PhysicalDevicePointClippingProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDevicePointClippingPropertiesBuilder<'a>(
-    PhysicalDevicePointClippingProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevicePointClippingPropertiesBuilder<'a>(PhysicalDevicePointClippingProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevicePointClippingPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevicePointClippingPropertiesBuilder<'a> {
         PhysicalDevicePointClippingPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn point_clipping_behavior(
-        mut self,
-        point_clipping_behavior: crate::vk1_1::PointClippingBehavior,
-    ) -> Self {
+    pub fn point_clipping_behavior(mut self, point_clipping_behavior: crate::vk1_1::PointClippingBehavior) -> Self {
         self.0.point_clipping_behavior = point_clipping_behavior as _;
         self
     }
@@ -6756,14 +5443,8 @@ impl std::fmt::Debug for MemoryDedicatedRequirements {
         f.debug_struct("MemoryDedicatedRequirements")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "prefers_dedicated_allocation",
-                &(self.prefers_dedicated_allocation != 0),
-            )
-            .field(
-                "requires_dedicated_allocation",
-                &(self.requires_dedicated_allocation != 0),
-            )
+            .field("prefers_dedicated_allocation", &(self.prefers_dedicated_allocation != 0))
+            .field("requires_dedicated_allocation", &(self.requires_dedicated_allocation != 0))
             .finish()
     }
 }
@@ -6776,10 +5457,7 @@ impl MemoryDedicatedRequirements {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryDedicatedRequirements.html) · Builder of [`MemoryDedicatedRequirements`]"]
 #[repr(transparent)]
-pub struct MemoryDedicatedRequirementsBuilder<'a>(
-    MemoryDedicatedRequirements,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryDedicatedRequirementsBuilder<'a>(MemoryDedicatedRequirements, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryDedicatedRequirementsBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryDedicatedRequirementsBuilder<'a> {
@@ -6861,10 +5539,7 @@ impl MemoryDedicatedAllocateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryDedicatedAllocateInfo.html) · Builder of [`MemoryDedicatedAllocateInfo`]"]
 #[repr(transparent)]
-pub struct MemoryDedicatedAllocateInfoBuilder<'a>(
-    MemoryDedicatedAllocateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryDedicatedAllocateInfoBuilder<'a>(MemoryDedicatedAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryDedicatedAllocateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryDedicatedAllocateInfoBuilder<'a> {
@@ -6943,10 +5618,7 @@ impl ImageViewUsageCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewUsageCreateInfo.html) · Builder of [`ImageViewUsageCreateInfo`]"]
 #[repr(transparent)]
-pub struct ImageViewUsageCreateInfoBuilder<'a>(
-    ImageViewUsageCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageViewUsageCreateInfoBuilder<'a>(ImageViewUsageCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageViewUsageCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ImageViewUsageCreateInfoBuilder<'a> {
@@ -6996,8 +5668,7 @@ pub struct PipelineTessellationDomainOriginStateCreateInfo {
 impl Default for PipelineTessellationDomainOriginStateCreateInfo {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO,
+            s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO,
             p_next: std::ptr::null(),
             domain_origin: Default::default(),
         }
@@ -7021,17 +5692,11 @@ impl PipelineTessellationDomainOriginStateCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html) · Builder of [`PipelineTessellationDomainOriginStateCreateInfo`]"]
 #[repr(transparent)]
-pub struct PipelineTessellationDomainOriginStateCreateInfoBuilder<'a>(
-    PipelineTessellationDomainOriginStateCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineTessellationDomainOriginStateCreateInfoBuilder<'a>(PipelineTessellationDomainOriginStateCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
-        PipelineTessellationDomainOriginStateCreateInfoBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineTessellationDomainOriginStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn domain_origin(mut self, domain_origin: crate::vk1_1::TessellationDomainOrigin) -> Self {
@@ -7101,10 +5766,7 @@ impl SamplerYcbcrConversionInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionInfo.html) · Builder of [`SamplerYcbcrConversionInfo`]"]
 #[repr(transparent)]
-pub struct SamplerYcbcrConversionInfoBuilder<'a>(
-    SamplerYcbcrConversionInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SamplerYcbcrConversionInfoBuilder<'a>(SamplerYcbcrConversionInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerYcbcrConversionInfoBuilder<'a> {
     #[inline]
     pub fn new() -> SamplerYcbcrConversionInfoBuilder<'a> {
@@ -7186,10 +5848,7 @@ impl std::fmt::Debug for SamplerYcbcrConversionCreateInfo {
             .field("x_chroma_offset", &self.x_chroma_offset)
             .field("y_chroma_offset", &self.y_chroma_offset)
             .field("chroma_filter", &self.chroma_filter)
-            .field(
-                "force_explicit_reconstruction",
-                &(self.force_explicit_reconstruction != 0),
-            )
+            .field("force_explicit_reconstruction", &(self.force_explicit_reconstruction != 0))
             .finish()
     }
 }
@@ -7199,21 +5858,12 @@ impl SamplerYcbcrConversionCreateInfo {
         SamplerYcbcrConversionCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID,
-    > for SamplerYcbcrConversionCreateInfoBuilder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: android_external_memory_android_hardware_buffer :: ExternalFormatANDROIDBuilder < '_ >> for SamplerYcbcrConversionCreateInfoBuilder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID> for SamplerYcbcrConversionCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROIDBuilder<'_>> for SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionCreateInfo.html) · Builder of [`SamplerYcbcrConversionCreateInfo`]"]
 #[repr(transparent)]
-pub struct SamplerYcbcrConversionCreateInfoBuilder<'a>(
-    SamplerYcbcrConversionCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SamplerYcbcrConversionCreateInfoBuilder<'a>(SamplerYcbcrConversionCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerYcbcrConversionCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> SamplerYcbcrConversionCreateInfoBuilder<'a> {
@@ -7322,10 +5972,7 @@ impl BindImagePlaneMemoryInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImagePlaneMemoryInfo.html) · Builder of [`BindImagePlaneMemoryInfo`]"]
 #[repr(transparent)]
-pub struct BindImagePlaneMemoryInfoBuilder<'a>(
-    BindImagePlaneMemoryInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BindImagePlaneMemoryInfoBuilder<'a>(BindImagePlaneMemoryInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BindImagePlaneMemoryInfoBuilder<'a> {
     #[inline]
     pub fn new() -> BindImagePlaneMemoryInfoBuilder<'a> {
@@ -7399,10 +6046,7 @@ impl ImagePlaneMemoryRequirementsInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePlaneMemoryRequirementsInfo.html) · Builder of [`ImagePlaneMemoryRequirementsInfo`]"]
 #[repr(transparent)]
-pub struct ImagePlaneMemoryRequirementsInfoBuilder<'a>(
-    ImagePlaneMemoryRequirementsInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImagePlaneMemoryRequirementsInfoBuilder<'a>(ImagePlaneMemoryRequirementsInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImagePlaneMemoryRequirementsInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ImagePlaneMemoryRequirementsInfoBuilder<'a> {
@@ -7463,10 +6107,7 @@ impl std::fmt::Debug for PhysicalDeviceSamplerYcbcrConversionFeatures {
         f.debug_struct("PhysicalDeviceSamplerYcbcrConversionFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "sampler_ycbcr_conversion",
-                &(self.sampler_ycbcr_conversion != 0),
-            )
+            .field("sampler_ycbcr_conversion", &(self.sampler_ycbcr_conversion != 0))
             .finish()
     }
 }
@@ -7479,17 +6120,11 @@ impl PhysicalDeviceSamplerYcbcrConversionFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeatures.html) · Builder of [`PhysicalDeviceSamplerYcbcrConversionFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a>(
-    PhysicalDeviceSamplerYcbcrConversionFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a>(PhysicalDeviceSamplerYcbcrConversionFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
-        PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn sampler_ycbcr_conversion(mut self, sampler_ycbcr_conversion: bool) -> Self {
@@ -7546,10 +6181,7 @@ impl std::fmt::Debug for SamplerYcbcrConversionImageFormatProperties {
         f.debug_struct("SamplerYcbcrConversionImageFormatProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "combined_image_sampler_descriptor_count",
-                &self.combined_image_sampler_descriptor_count,
-            )
+            .field("combined_image_sampler_descriptor_count", &self.combined_image_sampler_descriptor_count)
             .finish()
     }
 }
@@ -7562,25 +6194,15 @@ impl SamplerYcbcrConversionImageFormatProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionImageFormatProperties.html) · Builder of [`SamplerYcbcrConversionImageFormatProperties`]"]
 #[repr(transparent)]
-pub struct SamplerYcbcrConversionImageFormatPropertiesBuilder<'a>(
-    SamplerYcbcrConversionImageFormatProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SamplerYcbcrConversionImageFormatPropertiesBuilder<'a>(SamplerYcbcrConversionImageFormatProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerYcbcrConversionImageFormatPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> SamplerYcbcrConversionImageFormatPropertiesBuilder<'a> {
-        SamplerYcbcrConversionImageFormatPropertiesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        SamplerYcbcrConversionImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn combined_image_sampler_descriptor_count(
-        mut self,
-        combined_image_sampler_descriptor_count: u32,
-    ) -> Self {
-        self.0.combined_image_sampler_descriptor_count =
-            combined_image_sampler_descriptor_count as _;
+    pub fn combined_image_sampler_descriptor_count(mut self, combined_image_sampler_descriptor_count: u32) -> Self {
+        self.0.combined_image_sampler_descriptor_count = combined_image_sampler_descriptor_count as _;
         self
     }
     #[inline]
@@ -7720,10 +6342,7 @@ impl PhysicalDeviceProtectedMemoryFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProtectedMemoryFeatures.html) · Builder of [`PhysicalDeviceProtectedMemoryFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceProtectedMemoryFeaturesBuilder<'a>(
-    PhysicalDeviceProtectedMemoryFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceProtectedMemoryFeaturesBuilder<'a>(PhysicalDeviceProtectedMemoryFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
@@ -7797,10 +6416,7 @@ impl PhysicalDeviceProtectedMemoryProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProtectedMemoryProperties.html) · Builder of [`PhysicalDeviceProtectedMemoryProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceProtectedMemoryPropertiesBuilder<'a>(
-    PhysicalDeviceProtectedMemoryProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceProtectedMemoryPropertiesBuilder<'a>(PhysicalDeviceProtectedMemoryProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceProtectedMemoryPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceProtectedMemoryPropertiesBuilder<'a> {
@@ -7954,10 +6570,7 @@ impl std::fmt::Debug for PhysicalDeviceMaintenance3Properties {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_per_set_descriptors", &self.max_per_set_descriptors)
-            .field(
-                "max_memory_allocation_size",
-                &self.max_memory_allocation_size,
-            )
+            .field("max_memory_allocation_size", &self.max_memory_allocation_size)
             .finish()
     }
 }
@@ -7970,10 +6583,7 @@ impl PhysicalDeviceMaintenance3Properties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3Properties.html) · Builder of [`PhysicalDeviceMaintenance3Properties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMaintenance3PropertiesBuilder<'a>(
-    PhysicalDeviceMaintenance3Properties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMaintenance3PropertiesBuilder<'a>(PhysicalDeviceMaintenance3Properties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
@@ -7985,10 +6595,7 @@ impl<'a> PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_memory_allocation_size(
-        mut self,
-        max_memory_allocation_size: crate::vk1_0::DeviceSize,
-    ) -> Self {
+    pub fn max_memory_allocation_size(mut self, max_memory_allocation_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_memory_allocation_size = max_memory_allocation_size as _;
         self
     }
@@ -8052,24 +6659,12 @@ impl DescriptorSetLayoutSupport {
         DescriptorSetLayoutSupportBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupport>
-    for DescriptorSetLayoutSupportBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'_>,
-    > for DescriptorSetLayoutSupportBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupport> for DescriptorSetLayoutSupportBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'_>> for DescriptorSetLayoutSupportBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupport.html) · Builder of [`DescriptorSetLayoutSupport`]"]
 #[repr(transparent)]
-pub struct DescriptorSetLayoutSupportBuilder<'a>(
-    DescriptorSetLayoutSupport,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorSetLayoutSupportBuilder<'a>(DescriptorSetLayoutSupport, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorSetLayoutSupportBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorSetLayoutSupportBuilder<'a> {
@@ -8130,10 +6725,7 @@ impl std::fmt::Debug for PhysicalDeviceShaderDrawParametersFeatures {
         f.debug_struct("PhysicalDeviceShaderDrawParametersFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_draw_parameters",
-                &(self.shader_draw_parameters != 0),
-            )
+            .field("shader_draw_parameters", &(self.shader_draw_parameters != 0))
             .finish()
     }
 }
@@ -8146,17 +6738,11 @@ impl PhysicalDeviceShaderDrawParametersFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDrawParametersFeatures.html) · Builder of [`PhysicalDeviceShaderDrawParametersFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a>(
-    PhysicalDeviceShaderDrawParametersFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a>(PhysicalDeviceShaderDrawParametersFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
-        PhysicalDeviceShaderDrawParametersFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderDrawParametersFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_draw_parameters(mut self, shader_draw_parameters: bool) -> Self {
@@ -8195,13 +6781,8 @@ impl<T> crate::EntryLoader<T> {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceVersion")]
-    pub unsafe fn enumerate_instance_version(
-        &self,
-        api_version: Option<u32>,
-    ) -> crate::utils::VulkanResult<u32> {
-        let _function = self
-            .enumerate_instance_version
-            .expect("`enumerate_instance_version` is not loaded");
+    pub unsafe fn enumerate_instance_version(&self, api_version: Option<u32>) -> crate::utils::VulkanResult<u32> {
+        let _function = self.enumerate_instance_version.expect("`enumerate_instance_version` is not loaded");
         let mut api_version = match api_version {
             Some(v) => v,
             None => Default::default(),
@@ -8220,9 +6801,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         features: Option<crate::vk1_1::PhysicalDeviceFeatures2>,
     ) -> crate::vk1_1::PhysicalDeviceFeatures2 {
-        let _function = self
-            .get_physical_device_features2
-            .expect("`get_physical_device_features2` is not loaded");
+        let _function = self.get_physical_device_features2.expect("`get_physical_device_features2` is not loaded");
         let mut features = match features {
             Some(v) => v,
             None => Default::default(),
@@ -8238,9 +6817,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         properties: Option<crate::vk1_1::PhysicalDeviceProperties2>,
     ) -> crate::vk1_1::PhysicalDeviceProperties2 {
-        let _function = self
-            .get_physical_device_properties2
-            .expect("`get_physical_device_properties2` is not loaded");
+        let _function = self.get_physical_device_properties2.expect("`get_physical_device_properties2` is not loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),
@@ -8257,9 +6834,7 @@ impl crate::InstanceLoader {
         format: crate::vk1_0::Format,
         format_properties: Option<crate::vk1_1::FormatProperties2>,
     ) -> crate::vk1_1::FormatProperties2 {
-        let _function = self
-            .get_physical_device_format_properties2
-            .expect("`get_physical_device_format_properties2` is not loaded");
+        let _function = self.get_physical_device_format_properties2.expect("`get_physical_device_format_properties2` is not loaded");
         let mut format_properties = match format_properties {
             Some(v) => v,
             None => Default::default(),
@@ -8276,18 +6851,12 @@ impl crate::InstanceLoader {
         image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2,
         image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
-        let _function = self
-            .get_physical_device_image_format_properties2
-            .expect("`get_physical_device_image_format_properties2` is not loaded");
+        let _function = self.get_physical_device_image_format_properties2.expect("`get_physical_device_image_format_properties2` is not loaded");
         let mut image_format_properties = match image_format_properties {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            image_format_info as _,
-            &mut image_format_properties,
-        );
+        let _return = _function(physical_device as _, image_format_info as _, &mut image_format_properties);
         crate::utils::VulkanResult::new(_return, image_format_properties)
     }
     #[inline]
@@ -8298,9 +6867,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_property_count: Option<u32>,
     ) -> Vec<crate::vk1_1::QueueFamilyProperties2> {
-        let _function = self
-            .get_physical_device_queue_family_properties2
-            .expect("`get_physical_device_queue_family_properties2` is not loaded");
+        let _function = self.get_physical_device_queue_family_properties2.expect("`get_physical_device_queue_family_properties2` is not loaded");
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
             None => {
@@ -8309,13 +6876,8 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut queue_family_properties =
-            vec![Default::default(); queue_family_property_count as _];
-        let _return = _function(
-            physical_device as _,
-            &mut queue_family_property_count,
-            queue_family_properties.as_mut_ptr(),
-        );
+        let mut queue_family_properties = vec![Default::default(); queue_family_property_count as _];
+        let _return = _function(physical_device as _, &mut queue_family_property_count, queue_family_properties.as_mut_ptr());
         queue_family_properties
     }
     #[inline]
@@ -8326,9 +6888,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         memory_properties: Option<crate::vk1_1::PhysicalDeviceMemoryProperties2>,
     ) -> crate::vk1_1::PhysicalDeviceMemoryProperties2 {
-        let _function = self
-            .get_physical_device_memory_properties2
-            .expect("`get_physical_device_memory_properties2` is not loaded");
+        let _function = self.get_physical_device_memory_properties2.expect("`get_physical_device_memory_properties2` is not loaded");
         let mut memory_properties = match memory_properties {
             Some(v) => v,
             None => Default::default(),
@@ -8352,22 +6912,12 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => {
                 let mut v = Default::default();
-                _function(
-                    physical_device as _,
-                    format_info as _,
-                    &mut v,
-                    std::ptr::null_mut(),
-                );
+                _function(physical_device as _, format_info as _, &mut v, std::ptr::null_mut());
                 v
             }
         };
         let mut properties = vec![Default::default(); property_count as _];
-        let _return = _function(
-            physical_device as _,
-            format_info as _,
-            &mut property_count,
-            properties.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, format_info as _, &mut property_count, properties.as_mut_ptr());
         properties
     }
     #[inline]
@@ -8386,11 +6936,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            external_buffer_info as _,
-            &mut external_buffer_properties,
-        );
+        let _return = _function(physical_device as _, external_buffer_info as _, &mut external_buffer_properties);
         external_buffer_properties
     }
     #[inline]
@@ -8409,11 +6955,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            external_semaphore_info as _,
-            &mut external_semaphore_properties,
-        );
+        let _return = _function(physical_device as _, external_semaphore_info as _, &mut external_semaphore_properties);
         external_semaphore_properties
     }
     #[inline]
@@ -8432,23 +6974,14 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            external_fence_info as _,
-            &mut external_fence_properties,
-        );
+        let _return = _function(physical_device as _, external_fence_info as _, &mut external_fence_properties);
         external_fence_properties
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroups.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceGroups")]
-    pub unsafe fn enumerate_physical_device_groups(
-        &self,
-        physical_device_group_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
-        let _function = self
-            .enumerate_physical_device_groups
-            .expect("`enumerate_physical_device_groups` is not loaded");
+    pub unsafe fn enumerate_physical_device_groups(&self, physical_device_group_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
+        let _function = self.enumerate_physical_device_groups.expect("`enumerate_physical_device_groups` is not loaded");
         let mut physical_device_group_count = match physical_device_group_count {
             Some(v) => v,
             None => {
@@ -8457,13 +6990,8 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut physical_device_group_properties =
-            vec![Default::default(); physical_device_group_count as _];
-        let _return = _function(
-            self.handle,
-            &mut physical_device_group_count,
-            physical_device_group_properties.as_mut_ptr(),
-        );
+        let mut physical_device_group_properties = vec![Default::default(); physical_device_group_count as _];
+        let _return = _function(self.handle, &mut physical_device_group_count, physical_device_group_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, physical_device_group_properties)
     }
 }
@@ -8472,14 +7000,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPool.html) · Function"]
     #[doc(alias = "vkTrimCommandPool")]
-    pub unsafe fn trim_command_pool(
-        &self,
-        command_pool: crate::vk1_0::CommandPool,
-        flags: Option<crate::vk1_1::CommandPoolTrimFlags>,
-    ) -> () {
-        let _function = self
-            .trim_command_pool
-            .expect("`trim_command_pool` is not loaded");
+    pub unsafe fn trim_command_pool(&self, command_pool: crate::vk1_0::CommandPool, flags: Option<crate::vk1_1::CommandPoolTrimFlags>) -> () {
+        let _function = self.trim_command_pool.expect("`trim_command_pool` is not loaded");
         let _return = _function(
             self.handle,
             command_pool as _,
@@ -8500,32 +7022,19 @@ impl crate::DeviceLoader {
         remote_device_index: u32,
         peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
     ) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let _function = self
-            .get_device_group_peer_memory_features
-            .expect("`get_device_group_peer_memory_features` is not loaded");
+        let _function = self.get_device_group_peer_memory_features.expect("`get_device_group_peer_memory_features` is not loaded");
         let mut peer_memory_features = match peer_memory_features {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            heap_index as _,
-            local_device_index as _,
-            remote_device_index as _,
-            &mut peer_memory_features,
-        );
+        let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2.html) · Function"]
     #[doc(alias = "vkBindBufferMemory2")]
-    pub unsafe fn bind_buffer_memory2(
-        &self,
-        bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder],
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .bind_buffer_memory2
-            .expect("`bind_buffer_memory2` is not loaded");
+    pub unsafe fn bind_buffer_memory2(&self, bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+        let _function = self.bind_buffer_memory2.expect("`bind_buffer_memory2` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -8533,13 +7042,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2.html) · Function"]
     #[doc(alias = "vkBindImageMemory2")]
-    pub unsafe fn bind_image_memory2(
-        &self,
-        bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder],
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .bind_image_memory2
-            .expect("`bind_image_memory2` is not loaded");
+    pub unsafe fn bind_image_memory2(&self, bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+        let _function = self.bind_image_memory2.expect("`bind_image_memory2` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -8547,14 +7051,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMask.html) · Function"]
     #[doc(alias = "vkCmdSetDeviceMask")]
-    pub unsafe fn cmd_set_device_mask(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        device_mask: u32,
-    ) -> () {
-        let _function = self
-            .cmd_set_device_mask
-            .expect("`cmd_set_device_mask` is not loaded");
+    pub unsafe fn cmd_set_device_mask(&self, command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> () {
+        let _function = self.cmd_set_device_mask.expect("`cmd_set_device_mask` is not loaded");
         let _return = _function(command_buffer as _, device_mask as _);
         ()
     }
@@ -8571,9 +7069,7 @@ impl crate::DeviceLoader {
         group_count_y: u32,
         group_count_z: u32,
     ) -> () {
-        let _function = self
-            .cmd_dispatch_base
-            .expect("`cmd_dispatch_base` is not loaded");
+        let _function = self.cmd_dispatch_base.expect("`cmd_dispatch_base` is not loaded");
         let _return = _function(
             command_buffer as _,
             base_group_x as _,
@@ -8594,9 +7090,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let _function = self
-            .create_descriptor_update_template
-            .expect("`create_descriptor_update_template` is not loaded");
+        let _function = self.create_descriptor_update_template.expect("`create_descriptor_update_template` is not loaded");
         let mut descriptor_update_template = match descriptor_update_template {
             Some(v) => v,
             None => Default::default(),
@@ -8615,14 +7109,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplate.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplate")]
-    pub unsafe fn destroy_descriptor_update_template(
-        &self,
-        descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
-        let _function = self
-            .destroy_descriptor_update_template
-            .expect("`destroy_descriptor_update_template` is not loaded");
+    pub unsafe fn destroy_descriptor_update_template(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+        let _function = self.destroy_descriptor_update_template.expect("`destroy_descriptor_update_template` is not loaded");
         let _return = _function(
             self.handle,
             match descriptor_update_template {
@@ -8645,15 +7133,8 @@ impl crate::DeviceLoader {
         descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
         data: *const std::ffi::c_void,
     ) -> () {
-        let _function = self
-            .update_descriptor_set_with_template
-            .expect("`update_descriptor_set_with_template` is not loaded");
-        let _return = _function(
-            self.handle,
-            descriptor_set as _,
-            descriptor_update_template as _,
-            data,
-        );
+        let _function = self.update_descriptor_set_with_template.expect("`update_descriptor_set_with_template` is not loaded");
+        let _return = _function(self.handle, descriptor_set as _, descriptor_update_template as _, data);
         ()
     }
     #[inline]
@@ -8664,9 +7145,7 @@ impl crate::DeviceLoader {
         info: &crate::vk1_1::BufferMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let _function = self
-            .get_buffer_memory_requirements2
-            .expect("`get_buffer_memory_requirements2` is not loaded");
+        let _function = self.get_buffer_memory_requirements2.expect("`get_buffer_memory_requirements2` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
             None => Default::default(),
@@ -8682,9 +7161,7 @@ impl crate::DeviceLoader {
         info: &crate::vk1_1::ImageMemoryRequirementsInfo2,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let _function = self
-            .get_image_memory_requirements2
-            .expect("`get_image_memory_requirements2` is not loaded");
+        let _function = self.get_image_memory_requirements2.expect("`get_image_memory_requirements2` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
             None => Default::default(),
@@ -8700,9 +7177,7 @@ impl crate::DeviceLoader {
         info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
         sparse_memory_requirement_count: Option<u32>,
     ) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
-        let _function = self
-            .get_image_sparse_memory_requirements2
-            .expect("`get_image_sparse_memory_requirements2` is not loaded");
+        let _function = self.get_image_sparse_memory_requirements2.expect("`get_image_sparse_memory_requirements2` is not loaded");
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,
             None => {
@@ -8711,14 +7186,8 @@ impl crate::DeviceLoader {
                 v
             }
         };
-        let mut sparse_memory_requirements =
-            vec![Default::default(); sparse_memory_requirement_count as _];
-        let _return = _function(
-            self.handle,
-            info as _,
-            &mut sparse_memory_requirement_count,
-            sparse_memory_requirements.as_mut_ptr(),
-        );
+        let mut sparse_memory_requirements = vec![Default::default(); sparse_memory_requirement_count as _];
+        let _return = _function(self.handle, info as _, &mut sparse_memory_requirement_count, sparse_memory_requirements.as_mut_ptr());
         sparse_memory_requirements
     }
     #[inline]
@@ -8730,9 +7199,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
-        let _function = self
-            .create_sampler_ycbcr_conversion
-            .expect("`create_sampler_ycbcr_conversion` is not loaded");
+        let _function = self.create_sampler_ycbcr_conversion.expect("`create_sampler_ycbcr_conversion` is not loaded");
         let mut ycbcr_conversion = match ycbcr_conversion {
             Some(v) => v,
             None => Default::default(),
@@ -8751,14 +7218,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversion.html) · Function"]
     #[doc(alias = "vkDestroySamplerYcbcrConversion")]
-    pub unsafe fn destroy_sampler_ycbcr_conversion(
-        &self,
-        ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
-        let _function = self
-            .destroy_sampler_ycbcr_conversion
-            .expect("`destroy_sampler_ycbcr_conversion` is not loaded");
+    pub unsafe fn destroy_sampler_ycbcr_conversion(&self, ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+        let _function = self.destroy_sampler_ycbcr_conversion.expect("`destroy_sampler_ycbcr_conversion` is not loaded");
         let _return = _function(
             self.handle,
             match ycbcr_conversion {
@@ -8775,14 +7236,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue2.html) · Function"]
     #[doc(alias = "vkGetDeviceQueue2")]
-    pub unsafe fn get_device_queue2(
-        &self,
-        queue_info: &crate::vk1_1::DeviceQueueInfo2,
-        queue: Option<crate::vk1_0::Queue>,
-    ) -> crate::vk1_0::Queue {
-        let _function = self
-            .get_device_queue2
-            .expect("`get_device_queue2` is not loaded");
+    pub unsafe fn get_device_queue2(&self, queue_info: &crate::vk1_1::DeviceQueueInfo2, queue: Option<crate::vk1_0::Queue>) -> crate::vk1_0::Queue {
+        let _function = self.get_device_queue2.expect("`get_device_queue2` is not loaded");
         let mut queue = match queue {
             Some(v) => v,
             None => Default::default(),
@@ -8798,9 +7253,7 @@ impl crate::DeviceLoader {
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
         support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
     ) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let _function = self
-            .get_descriptor_set_layout_support
-            .expect("`get_descriptor_set_layout_support` is not loaded");
+        let _function = self.get_descriptor_set_layout_support.expect("`get_descriptor_set_layout_support` is not loaded");
         let mut support = match support {
             Some(v) => v,
             None => Default::default(),

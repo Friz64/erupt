@@ -3,11 +3,9 @@
 pub const EXT_LINE_RASTERIZATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME")]
-pub const EXT_LINE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_line_rasterization");
+pub const EXT_LINE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_line_rasterization");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetLineStippleEXT");
+pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetLineStippleEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]
 #[doc(alias = "VkLineRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -33,11 +31,7 @@ impl LineRasterizationModeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    line_stipple_factor: u32,
-    line_stipple_pattern: u16,
-) -> ();
+pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, line_stipple_factor: u32, line_stipple_pattern: u16) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceLineRasterizationFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -74,14 +68,8 @@ impl std::fmt::Debug for PhysicalDeviceLineRasterizationFeaturesEXT {
             .field("rectangular_lines", &(self.rectangular_lines != 0))
             .field("bresenham_lines", &(self.bresenham_lines != 0))
             .field("smooth_lines", &(self.smooth_lines != 0))
-            .field(
-                "stippled_rectangular_lines",
-                &(self.stippled_rectangular_lines != 0),
-            )
-            .field(
-                "stippled_bresenham_lines",
-                &(self.stippled_bresenham_lines != 0),
-            )
+            .field("stippled_rectangular_lines", &(self.stippled_rectangular_lines != 0))
+            .field("stippled_bresenham_lines", &(self.stippled_bresenham_lines != 0))
             .field("stippled_smooth_lines", &(self.stippled_smooth_lines != 0))
             .finish()
     }
@@ -95,17 +83,11 @@ impl PhysicalDeviceLineRasterizationFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a>(
-    PhysicalDeviceLineRasterizationFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a>(PhysicalDeviceLineRasterizationFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
-        PhysicalDeviceLineRasterizationFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceLineRasterizationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn rectangular_lines(mut self, rectangular_lines: bool) -> Self {
@@ -187,10 +169,7 @@ impl std::fmt::Debug for PhysicalDeviceLineRasterizationPropertiesEXT {
         f.debug_struct("PhysicalDeviceLineRasterizationPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "line_sub_pixel_precision_bits",
-                &self.line_sub_pixel_precision_bits,
-            )
+            .field("line_sub_pixel_precision_bits", &self.line_sub_pixel_precision_bits)
             .finish()
     }
 }
@@ -203,17 +182,11 @@ impl PhysicalDeviceLineRasterizationPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a>(
-    PhysicalDeviceLineRasterizationPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a>(PhysicalDeviceLineRasterizationPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a> {
-        PhysicalDeviceLineRasterizationPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceLineRasterizationPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn line_sub_pixel_precision_bits(mut self, line_sub_pixel_precision_bits: u32) -> Self {
@@ -254,8 +227,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationPropertiesEXTBuil
 pub struct PipelineRasterizationLineStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub line_rasterization_mode:
-        crate::extensions::ext_line_rasterization::LineRasterizationModeEXT,
+    pub line_rasterization_mode: crate::extensions::ext_line_rasterization::LineRasterizationModeEXT,
     pub stippled_line_enable: crate::vk1_0::Bool32,
     pub line_stipple_factor: u32,
     pub line_stipple_pattern: u16,
@@ -293,23 +265,14 @@ impl PipelineRasterizationLineStateCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineRasterizationLineStateCreateInfoEXTBuilder<'a>(
-    PipelineRasterizationLineStateCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineRasterizationLineStateCreateInfoEXTBuilder<'a>(PipelineRasterizationLineStateCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineRasterizationLineStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineRasterizationLineStateCreateInfoEXTBuilder<'a> {
-        PipelineRasterizationLineStateCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineRasterizationLineStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn line_rasterization_mode(
-        mut self,
-        line_rasterization_mode : crate :: extensions :: ext_line_rasterization :: LineRasterizationModeEXT,
-    ) -> Self {
+    pub fn line_rasterization_mode(mut self, line_rasterization_mode: crate::extensions::ext_line_rasterization::LineRasterizationModeEXT) -> Self {
         self.0.line_rasterization_mode = line_rasterization_mode as _;
         self
     }
@@ -360,20 +323,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]
     #[doc(alias = "vkCmdSetLineStippleEXT")]
-    pub unsafe fn cmd_set_line_stipple_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        line_stipple_factor: u32,
-        line_stipple_pattern: u16,
-    ) -> () {
-        let _function = self
-            .cmd_set_line_stipple_ext
-            .expect("`cmd_set_line_stipple_ext` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            line_stipple_factor as _,
-            line_stipple_pattern as _,
-        );
+    pub unsafe fn cmd_set_line_stipple_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, line_stipple_factor: u32, line_stipple_pattern: u16) -> () {
+        let _function = self.cmd_set_line_stipple_ext.expect("`cmd_set_line_stipple_ext` is not loaded");
+        let _return = _function(command_buffer as _, line_stipple_factor as _, line_stipple_pattern as _);
         ()
     }
 }

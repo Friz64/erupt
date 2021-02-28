@@ -66,15 +66,13 @@ impl Requirement {
 impl Source {
     pub fn assign_function_metadata(&mut self, node: XmlNode) {
         let base_origin = Origin::from_registry_item(node);
-        let extension_type = if base_origin.is_extension() {
+        let extension_type = base_origin.is_extension().then(|| {
             let attribute = node
                 .attribute("type")
                 .expect("No type attribute on extension");
 
-            Some(ExtensionType::from_attribute_name(attribute))
-        } else {
-            None
-        };
+            ExtensionType::from_attribute_name(attribute)
+        });
 
         for node_child in node.children() {
             if node_child.has_tag_name("require") {

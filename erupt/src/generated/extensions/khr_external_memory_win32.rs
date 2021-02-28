@@ -3,20 +3,26 @@
 pub const KHR_EXTERNAL_MEMORY_WIN32_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_memory_win32");
+pub const KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_memory_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetMemoryWin32HandleKHR");
+pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
+pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_get_win32_handle_info : * const crate :: extensions :: khr_external_memory_win32 :: MemoryGetWin32HandleInfoKHR , p_handle : * mut * mut std :: ffi :: c_void) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR,
+    p_handle: *mut *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , handle_type : crate :: vk1_1 :: ExternalMemoryHandleTypeFlagBits , handle : * mut std :: ffi :: c_void , p_memory_win32_handle_properties : * mut crate :: extensions :: khr_external_memory_win32 :: MemoryWin32HandlePropertiesKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+    handle: *mut std::ffi::c_void,
+    p_memory_win32_handle_properties: *mut crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -59,20 +65,14 @@ impl ImportMemoryWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Builder of [`ImportMemoryWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct ImportMemoryWin32HandleInfoKHRBuilder<'a>(
-    ImportMemoryWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportMemoryWin32HandleInfoKHRBuilder<'a>(ImportMemoryWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportMemoryWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ImportMemoryWin32HandleInfoKHRBuilder<'a> {
         ImportMemoryWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -155,10 +155,7 @@ impl ExportMemoryWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoKHR.html) · Builder of [`ExportMemoryWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct ExportMemoryWin32HandleInfoKHRBuilder<'a>(
-    ExportMemoryWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ExportMemoryWin32HandleInfoKHRBuilder<'a>(ExportMemoryWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ExportMemoryWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ExportMemoryWin32HandleInfoKHRBuilder<'a> {
@@ -242,10 +239,7 @@ impl MemoryWin32HandlePropertiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryWin32HandlePropertiesKHR.html) · Builder of [`MemoryWin32HandlePropertiesKHR`]"]
 #[repr(transparent)]
-pub struct MemoryWin32HandlePropertiesKHRBuilder<'a>(
-    MemoryWin32HandlePropertiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryWin32HandlePropertiesKHRBuilder<'a>(MemoryWin32HandlePropertiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryWin32HandlePropertiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryWin32HandlePropertiesKHRBuilder<'a> {
@@ -322,10 +316,7 @@ impl MemoryGetWin32HandleInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html) · Builder of [`MemoryGetWin32HandleInfoKHR`]"]
 #[repr(transparent)]
-pub struct MemoryGetWin32HandleInfoKHRBuilder<'a>(
-    MemoryGetWin32HandleInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryGetWin32HandleInfoKHRBuilder<'a>(MemoryGetWin32HandleInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryGetWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryGetWin32HandleInfoKHRBuilder<'a> {
@@ -337,10 +328,7 @@ impl<'a> MemoryGetWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -378,12 +366,10 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetMemoryWin32HandleKHR")]
     pub unsafe fn get_memory_win32_handle_khr(
         &self,
-        get_win32_handle_info : & crate :: extensions :: khr_external_memory_win32 :: MemoryGetWin32HandleInfoKHR,
+        get_win32_handle_info: &crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR,
         handle: *mut *mut std::ffi::c_void,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_memory_win32_handle_khr
-            .expect("`get_memory_win32_handle_khr` is not loaded");
+        let _function = self.get_memory_win32_handle_khr.expect("`get_memory_win32_handle_khr` is not loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -394,25 +380,14 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         handle: *mut std::ffi::c_void,
-        memory_win32_handle_properties: Option<
-            crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
-    > {
-        let _function = self
-            .get_memory_win32_handle_properties_khr
-            .expect("`get_memory_win32_handle_properties_khr` is not loaded");
+        memory_win32_handle_properties: Option<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR> {
+        let _function = self.get_memory_win32_handle_properties_khr.expect("`get_memory_win32_handle_properties_khr` is not loaded");
         let mut memory_win32_handle_properties = match memory_win32_handle_properties {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            handle_type as _,
-            handle,
-            &mut memory_win32_handle_properties,
-        );
+        let _return = _function(self.handle, handle_type as _, handle, &mut memory_win32_handle_properties);
         crate::utils::VulkanResult::new(_return, memory_win32_handle_properties)
     }
 }

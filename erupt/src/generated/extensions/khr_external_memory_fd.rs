@@ -3,13 +3,11 @@
 pub const KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_memory_fd");
+pub const KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_memory_fd");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_MEMORY_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetMemoryFdPropertiesKHR");
+pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdPropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(
@@ -64,20 +62,14 @@ impl ImportMemoryFdInfoKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`]"]
 #[repr(transparent)]
-pub struct ImportMemoryFdInfoKHRBuilder<'a>(
-    ImportMemoryFdInfoKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImportMemoryFdInfoKHRBuilder<'a>(ImportMemoryFdInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> ImportMemoryFdInfoKHRBuilder<'a> {
     #[inline]
     pub fn new() -> ImportMemoryFdInfoKHRBuilder<'a> {
         ImportMemoryFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -149,10 +141,7 @@ impl MemoryFdPropertiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`]"]
 #[repr(transparent)]
-pub struct MemoryFdPropertiesKHRBuilder<'a>(
-    MemoryFdPropertiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryFdPropertiesKHRBuilder<'a>(MemoryFdPropertiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryFdPropertiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryFdPropertiesKHRBuilder<'a> {
@@ -241,10 +230,7 @@ impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn handle_type(
-        mut self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    ) -> Self {
+    pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
@@ -285,9 +271,7 @@ impl crate::DeviceLoader {
         get_fd_info: &crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR,
         fd: Option<std::os::raw::c_int>,
     ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self
-            .get_memory_fd_khr
-            .expect("`get_memory_fd_khr` is not loaded");
+        let _function = self.get_memory_fd_khr.expect("`get_memory_fd_khr` is not loaded");
         let mut fd = match fd {
             Some(v) => v,
             None => Default::default(),
@@ -302,24 +286,14 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         fd: std::os::raw::c_int,
-        memory_fd_properties: Option<
-            crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
-        >,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>
-    {
-        let _function = self
-            .get_memory_fd_properties_khr
-            .expect("`get_memory_fd_properties_khr` is not loaded");
+        memory_fd_properties: Option<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR> {
+        let _function = self.get_memory_fd_properties_khr.expect("`get_memory_fd_properties_khr` is not loaded");
         let mut memory_fd_properties = match memory_fd_properties {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            self.handle,
-            handle_type as _,
-            fd as _,
-            &mut memory_fd_properties,
-        );
+        let _return = _function(self.handle, handle_type as _, fd as _, &mut memory_fd_properties);
         crate::utils::VulkanResult::new(_return, memory_fd_properties)
     }
 }

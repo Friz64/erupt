@@ -3,8 +3,7 @@
 pub const EXT_ROBUSTNESS_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_ROBUSTNESS_2_EXTENSION_NAME")]
-pub const EXT_ROBUSTNESS_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_robustness2");
+pub const EXT_ROBUSTNESS_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_robustness2");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRobustness2FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -47,10 +46,7 @@ impl PhysicalDeviceRobustness2FeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Builder of [`PhysicalDeviceRobustness2FeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceRobustness2FeaturesEXTBuilder<'a>(
-    PhysicalDeviceRobustness2FeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceRobustness2FeaturesEXTBuilder<'a>(PhysicalDeviceRobustness2FeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
@@ -123,14 +119,8 @@ impl std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXT {
         f.debug_struct("PhysicalDeviceRobustness2PropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "robust_storage_buffer_access_size_alignment",
-                &self.robust_storage_buffer_access_size_alignment,
-            )
-            .field(
-                "robust_uniform_buffer_access_size_alignment",
-                &self.robust_uniform_buffer_access_size_alignment,
-            )
+            .field("robust_storage_buffer_access_size_alignment", &self.robust_storage_buffer_access_size_alignment)
+            .field("robust_uniform_buffer_access_size_alignment", &self.robust_uniform_buffer_access_size_alignment)
             .finish()
     }
 }
@@ -143,31 +133,20 @@ impl PhysicalDeviceRobustness2PropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Builder of [`PhysicalDeviceRobustness2PropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceRobustness2PropertiesEXTBuilder<'a>(
-    PhysicalDeviceRobustness2PropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceRobustness2PropertiesEXTBuilder<'a>(PhysicalDeviceRobustness2PropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
         PhysicalDeviceRobustness2PropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn robust_storage_buffer_access_size_alignment(
-        mut self,
-        robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
-    ) -> Self {
-        self.0.robust_storage_buffer_access_size_alignment =
-            robust_storage_buffer_access_size_alignment as _;
+    pub fn robust_storage_buffer_access_size_alignment(mut self, robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize) -> Self {
+        self.0.robust_storage_buffer_access_size_alignment = robust_storage_buffer_access_size_alignment as _;
         self
     }
     #[inline]
-    pub fn robust_uniform_buffer_access_size_alignment(
-        mut self,
-        robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
-    ) -> Self {
-        self.0.robust_uniform_buffer_access_size_alignment =
-            robust_uniform_buffer_access_size_alignment as _;
+    pub fn robust_uniform_buffer_access_size_alignment(mut self, robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize) -> Self {
+        self.0.robust_uniform_buffer_access_size_alignment = robust_uniform_buffer_access_size_alignment as _;
         self
     }
     #[inline]

@@ -58,11 +58,8 @@ impl Constant {
     pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
         let ident = self.ident();
         let doc_alias = &self.original_name;
-        let doc_alias_code = if &**doc_alias != ident.to_string().as_str() {
-            Some(quote! { #[doc(alias = #doc_alias)] })
-        } else {
-            None
-        };
+        let doc_alias_code = (&**doc_alias != ident.to_string().as_str())
+            .then(|| quote! { #[doc(alias = #doc_alias)] });
 
         let value = self.value.value();
         let ty = self.value.ty();

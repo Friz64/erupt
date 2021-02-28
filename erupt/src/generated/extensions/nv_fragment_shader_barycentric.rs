@@ -3,8 +3,7 @@
 pub const NV_FRAGMENT_SHADER_BARYCENTRIC_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME")]
-pub const NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_fragment_shader_barycentric");
+pub const NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_fragment_shader_barycentric");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -17,8 +16,7 @@ pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
 impl Default for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV,
             p_next: std::ptr::null_mut(),
             fragment_shader_barycentric: Default::default(),
         }
@@ -29,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
         f.debug_struct("PhysicalDeviceFragmentShaderBarycentricFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "fragment_shader_barycentric",
-                &(self.fragment_shader_barycentric != 0),
-            )
+            .field("fragment_shader_barycentric", &(self.fragment_shader_barycentric != 0))
             .finish()
     }
 }
@@ -45,17 +40,11 @@ impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShaderBarycentricFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a>(
-    PhysicalDeviceFragmentShaderBarycentricFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a>(PhysicalDeviceFragmentShaderBarycentricFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a> {
-        PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn fragment_shader_barycentric(mut self, fragment_shader_barycentric: bool) -> Self {

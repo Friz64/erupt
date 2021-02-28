@@ -3,8 +3,7 @@
 pub const KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME")]
-pub const KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_zero_initialize_workgroup_memory");
+pub const KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_zero_initialize_workgroup_memory");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -16,7 +15,11 @@ pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
 }
 impl Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR , p_next : std :: ptr :: null_mut () , shader_zero_initialize_workgroup_memory : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR,
+            p_next: std::ptr::null_mut(),
+            shader_zero_initialize_workgroup_memory: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
@@ -24,46 +27,28 @@ impl std::fmt::Debug for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR 
         f.debug_struct("PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_zero_initialize_workgroup_memory",
-                &(self.shader_zero_initialize_workgroup_memory != 0),
-            )
+            .field("shader_zero_initialize_workgroup_memory", &(self.shader_zero_initialize_workgroup_memory != 0))
             .finish()
     }
 }
 impl PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
-        PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder(
-            self,
-            std::marker::PhantomData,
-        )
+    pub fn into_builder<'a>(self) -> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
+        PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR.html) · Builder of [`PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a>(
-    PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a>(PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
-        PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn shader_zero_initialize_workgroup_memory(
-        mut self,
-        shader_zero_initialize_workgroup_memory: bool,
-    ) -> Self {
-        self.0.shader_zero_initialize_workgroup_memory =
-            shader_zero_initialize_workgroup_memory as _;
+    pub fn shader_zero_initialize_workgroup_memory(mut self, shader_zero_initialize_workgroup_memory: bool) -> Self {
+        self.0.shader_zero_initialize_workgroup_memory = shader_zero_initialize_workgroup_memory as _;
         self
     }
     #[inline]
@@ -72,9 +57,7 @@ impl<'a> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
         self.0
     }
 }
-impl<'a> std::default::Default
-    for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a>
-{
+impl<'a> std::default::Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
     fn default() -> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
         Self::new()
     }

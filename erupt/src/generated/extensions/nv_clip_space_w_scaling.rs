@@ -3,11 +3,9 @@
 pub const NV_CLIP_SPACE_W_SCALING_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME")]
-pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_clip_space_w_scaling");
+pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_clip_space_w_scaling");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetViewportWScalingNV");
+pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewportWScalingNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(
@@ -34,10 +32,7 @@ impl Default for ViewportWScalingNV {
 }
 impl std::fmt::Debug for ViewportWScalingNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ViewportWScalingNV")
-            .field("xcoeff", &self.xcoeff)
-            .field("ycoeff", &self.ycoeff)
-            .finish()
+        f.debug_struct("ViewportWScalingNV").field("xcoeff", &self.xcoeff).field("ycoeff", &self.ycoeff).finish()
     }
 }
 impl ViewportWScalingNV {
@@ -101,8 +96,7 @@ pub struct PipelineViewportWScalingStateCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub viewport_w_scaling_enable: crate::vk1_0::Bool32,
     pub viewport_count: u32,
-    pub p_viewport_w_scalings:
-        *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
+    pub p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
 }
 impl Default for PipelineViewportWScalingStateCreateInfoNV {
     fn default() -> Self {
@@ -120,10 +114,7 @@ impl std::fmt::Debug for PipelineViewportWScalingStateCreateInfoNV {
         f.debug_struct("PipelineViewportWScalingStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "viewport_w_scaling_enable",
-                &(self.viewport_w_scaling_enable != 0),
-            )
+            .field("viewport_w_scaling_enable", &(self.viewport_w_scaling_enable != 0))
             .field("viewport_count", &self.viewport_count)
             .field("p_viewport_w_scalings", &self.p_viewport_w_scalings)
             .finish()
@@ -138,17 +129,11 @@ impl PipelineViewportWScalingStateCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Builder of [`PipelineViewportWScalingStateCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct PipelineViewportWScalingStateCreateInfoNVBuilder<'a>(
-    PipelineViewportWScalingStateCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineViewportWScalingStateCreateInfoNVBuilder<'a>(PipelineViewportWScalingStateCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
-        PipelineViewportWScalingStateCreateInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineViewportWScalingStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn viewport_w_scaling_enable(mut self, viewport_w_scaling_enable: bool) -> Self {
@@ -156,10 +141,7 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn viewport_w_scalings(
-        mut self,
-        viewport_w_scalings : & 'a [crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder],
-    ) -> Self {
+    pub fn viewport_w_scalings(mut self, viewport_w_scalings: &'a [crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder]) -> Self {
         self.0.p_viewport_w_scalings = viewport_w_scalings.as_ptr() as _;
         self.0.viewport_count = viewport_w_scalings.len() as _;
         self
@@ -200,18 +182,11 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         first_viewport: u32,
-        viewport_w_scalings : & [crate :: extensions :: nv_clip_space_w_scaling :: ViewportWScalingNVBuilder],
+        viewport_w_scalings: &[crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder],
     ) -> () {
-        let _function = self
-            .cmd_set_viewport_w_scaling_nv
-            .expect("`cmd_set_viewport_w_scaling_nv` is not loaded");
+        let _function = self.cmd_set_viewport_w_scaling_nv.expect("`cmd_set_viewport_w_scaling_nv` is not loaded");
         let viewport_count = viewport_w_scalings.len();
-        let _return = _function(
-            command_buffer as _,
-            first_viewport as _,
-            viewport_count as _,
-            viewport_w_scalings.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, viewport_w_scalings.as_ptr() as _);
         ()
     }
 }

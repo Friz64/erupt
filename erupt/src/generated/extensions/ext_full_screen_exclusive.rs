@@ -3,20 +3,15 @@
 pub const EXT_FULL_SCREEN_EXCLUSIVE_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME")]
-pub const EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_full_screen_exclusive");
+pub const EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_full_screen_exclusive");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceSurfacePresentModes2EXT");
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfacePresentModes2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDeviceGroupSurfacePresentModes2EXT");
+pub const FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceGroupSurfacePresentModes2EXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkAcquireFullScreenExclusiveModeEXT");
+pub const FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char = crate::cstr!("vkAcquireFullScreenExclusiveModeEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkReleaseFullScreenExclusiveModeEXT");
+pub const FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT: *const std::os::raw::c_char = crate::cstr!("vkReleaseFullScreenExclusiveModeEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFullScreenExclusiveEXT.html) · Enum"]
 #[doc(alias = "VkFullScreenExclusiveEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -42,24 +37,25 @@ impl FullScreenExclusiveEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_present_mode_count : * mut u32 , p_present_modes : * mut crate :: extensions :: khr_surface :: PresentModeKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_present_mode_count: *mut u32,
+    p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn (device : crate :: vk1_0 :: Device , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_modes : * mut crate :: extensions :: khr_swapchain :: DeviceGroupPresentModeFlagsKHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn(
+    device: crate::vk1_0::Device,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquireFullScreenExclusiveModeEXT =
-    unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::vk1_0::Result;
+pub type PFN_vkAcquireFullScreenExclusiveModeEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkReleaseFullScreenExclusiveModeEXT =
-    unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::vk1_0::Result;
+pub type PFN_vkReleaseFullScreenExclusiveModeEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Structure"]
 #[doc(alias = "VkSurfaceFullScreenExclusiveInfoEXT")]
 #[derive(Copy, Clone)]
@@ -96,20 +92,14 @@ impl SurfaceFullScreenExclusiveInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveInfoEXT`]"]
 #[repr(transparent)]
-pub struct SurfaceFullScreenExclusiveInfoEXTBuilder<'a>(
-    SurfaceFullScreenExclusiveInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceFullScreenExclusiveInfoEXTBuilder<'a>(SurfaceFullScreenExclusiveInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
         SurfaceFullScreenExclusiveInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn full_screen_exclusive(
-        mut self,
-        full_screen_exclusive: crate::extensions::ext_full_screen_exclusive::FullScreenExclusiveEXT,
-    ) -> Self {
+    pub fn full_screen_exclusive(mut self, full_screen_exclusive: crate::extensions::ext_full_screen_exclusive::FullScreenExclusiveEXT) -> Self {
         self.0.full_screen_exclusive = full_screen_exclusive as _;
         self
     }
@@ -176,10 +166,7 @@ impl SurfaceFullScreenExclusiveWin32InfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Builder of [`SurfaceFullScreenExclusiveWin32InfoEXT`]"]
 #[repr(transparent)]
-pub struct SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a>(
-    SurfaceFullScreenExclusiveWin32InfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a>(SurfaceFullScreenExclusiveWin32InfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a> {
@@ -240,10 +227,7 @@ impl std::fmt::Debug for SurfaceCapabilitiesFullScreenExclusiveEXT {
         f.debug_struct("SurfaceCapabilitiesFullScreenExclusiveEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "full_screen_exclusive_supported",
-                &(self.full_screen_exclusive_supported != 0),
-            )
+            .field("full_screen_exclusive_supported", &(self.full_screen_exclusive_supported != 0))
             .finish()
     }
 }
@@ -256,23 +240,14 @@ impl SurfaceCapabilitiesFullScreenExclusiveEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Builder of [`SurfaceCapabilitiesFullScreenExclusiveEXT`]"]
 #[repr(transparent)]
-pub struct SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a>(
-    SurfaceCapabilitiesFullScreenExclusiveEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a>(SurfaceCapabilitiesFullScreenExclusiveEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a> {
-        SurfaceCapabilitiesFullScreenExclusiveEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        SurfaceCapabilitiesFullScreenExclusiveEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn full_screen_exclusive_supported(
-        mut self,
-        full_screen_exclusive_supported: bool,
-    ) -> Self {
+    pub fn full_screen_exclusive_supported(mut self, full_screen_exclusive_supported: bool) -> Self {
         self.0.full_screen_exclusive_supported = full_screen_exclusive_supported as _;
         self
     }
@@ -311,7 +286,7 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_surface_present_modes2_ext(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        surface_info : & crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR,
+        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
         present_mode_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
         let _function = self
@@ -321,22 +296,12 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => {
                 let mut v = Default::default();
-                _function(
-                    physical_device as _,
-                    surface_info as _,
-                    &mut v,
-                    std::ptr::null_mut(),
-                );
+                _function(physical_device as _, surface_info as _, &mut v, std::ptr::null_mut());
                 v
             }
         };
         let mut present_modes = vec![Default::default(); present_mode_count as _];
-        let _return = _function(
-            physical_device as _,
-            surface_info as _,
-            &mut present_mode_count,
-            present_modes.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, surface_info as _, &mut present_mode_count, present_modes.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, present_modes)
     }
 }
@@ -347,38 +312,26 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModes2EXT")]
     pub unsafe fn get_device_group_surface_present_modes2_ext(
         &self,
-        surface_info : & crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR,
+        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
         modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
     ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_device_group_surface_present_modes2_ext
-            .expect("`get_device_group_surface_present_modes2_ext` is not loaded");
+        let _function = self.get_device_group_surface_present_modes2_ext.expect("`get_device_group_surface_present_modes2_ext` is not loaded");
         let _return = _function(self.handle, surface_info as _, modes as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html) · Function"]
     #[doc(alias = "vkAcquireFullScreenExclusiveModeEXT")]
-    pub unsafe fn acquire_full_screen_exclusive_mode_ext(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .acquire_full_screen_exclusive_mode_ext
-            .expect("`acquire_full_screen_exclusive_mode_ext` is not loaded");
+    pub unsafe fn acquire_full_screen_exclusive_mode_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
+        let _function = self.acquire_full_screen_exclusive_mode_ext.expect("`acquire_full_screen_exclusive_mode_ext` is not loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html) · Function"]
     #[doc(alias = "vkReleaseFullScreenExclusiveModeEXT")]
-    pub unsafe fn release_full_screen_exclusive_mode_ext(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .release_full_screen_exclusive_mode_ext
-            .expect("`release_full_screen_exclusive_mode_ext` is not loaded");
+    pub unsafe fn release_full_screen_exclusive_mode_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
+        let _function = self.release_full_screen_exclusive_mode_ext.expect("`release_full_screen_exclusive_mode_ext` is not loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }

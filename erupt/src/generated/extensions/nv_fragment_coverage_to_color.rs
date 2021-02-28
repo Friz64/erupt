@@ -3,8 +3,7 @@
 pub const NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME")]
-pub const NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_fragment_coverage_to_color");
+pub const NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_fragment_coverage_to_color");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageToColorStateCreateFlagBitsNV`]"] # [doc (alias = "VkPipelineCoverageToColorStateCreateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCoverageToColorStateCreateFlagsNV : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCoverageToColorStateCreateFlagsNV`]"]
 #[doc(alias = "VkPipelineCoverageToColorStateCreateFlagBitsNV")]
@@ -32,8 +31,7 @@ impl std::fmt::Debug for PipelineCoverageToColorStateCreateFlagBitsNV {
 pub struct PipelineCoverageToColorStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub flags:
-        crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateFlagsNV,
+    pub flags: crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateFlagsNV,
     pub coverage_to_color_enable: crate::vk1_0::Bool32,
     pub coverage_to_color_location: u32,
 }
@@ -54,14 +52,8 @@ impl std::fmt::Debug for PipelineCoverageToColorStateCreateInfoNV {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
-            .field(
-                "coverage_to_color_enable",
-                &(self.coverage_to_color_enable != 0),
-            )
-            .field(
-                "coverage_to_color_location",
-                &self.coverage_to_color_location,
-            )
+            .field("coverage_to_color_enable", &(self.coverage_to_color_enable != 0))
+            .field("coverage_to_color_location", &self.coverage_to_color_location)
             .finish()
     }
 }
@@ -74,23 +66,14 @@ impl PipelineCoverageToColorStateCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct PipelineCoverageToColorStateCreateInfoNVBuilder<'a>(
-    PipelineCoverageToColorStateCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineCoverageToColorStateCreateInfoNVBuilder<'a>(PipelineCoverageToColorStateCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineCoverageToColorStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineCoverageToColorStateCreateInfoNVBuilder<'a> {
-        PipelineCoverageToColorStateCreateInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineCoverageToColorStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags : crate :: extensions :: nv_fragment_coverage_to_color :: PipelineCoverageToColorStateCreateFlagsNV,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }

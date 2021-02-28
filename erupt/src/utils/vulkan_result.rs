@@ -20,11 +20,7 @@ impl<T> VulkanResult<T> {
     /// This will not populate `self.value` if the raw result is negative (Error)
     #[inline]
     pub fn new(raw: vk::Result, value: T) -> VulkanResult<T> {
-        let value = if raw.0.is_negative() {
-            None
-        } else {
-            Some(value)
-        };
+        let value = if raw.0.is_negative() { None } else { Some(value) };
 
         VulkanResult { raw, value }
     }

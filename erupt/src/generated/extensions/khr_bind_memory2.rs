@@ -3,14 +3,11 @@
 pub const KHR_BIND_MEMORY_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_BIND_MEMORY_2_EXTENSION_NAME")]
-pub const KHR_BIND_MEMORY_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_bind_memory2");
+pub const KHR_BIND_MEMORY_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_bind_memory2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_BIND_BUFFER_MEMORY2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkBindBufferMemory2KHR");
+pub const FN_BIND_BUFFER_MEMORY2_KHR: *const std::os::raw::c_char = crate::cstr!("vkBindBufferMemory2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_BIND_IMAGE_MEMORY2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkBindImageMemory2KHR");
+pub const FN_BIND_IMAGE_MEMORY2_KHR: *const std::os::raw::c_char = crate::cstr!("vkBindImageMemory2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias"]
 #[doc(alias = "VkBindBufferMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
@@ -38,13 +35,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2KHR.html) · Function"]
     #[doc(alias = "vkBindBufferMemory2KHR")]
-    pub unsafe fn bind_buffer_memory2_khr(
-        &self,
-        bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder],
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .bind_buffer_memory2_khr
-            .expect("`bind_buffer_memory2_khr` is not loaded");
+    pub unsafe fn bind_buffer_memory2_khr(&self, bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+        let _function = self.bind_buffer_memory2_khr.expect("`bind_buffer_memory2_khr` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -52,13 +44,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2KHR.html) · Function"]
     #[doc(alias = "vkBindImageMemory2KHR")]
-    pub unsafe fn bind_image_memory2_khr(
-        &self,
-        bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder],
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .bind_image_memory2_khr
-            .expect("`bind_image_memory2_khr` is not loaded");
+    pub unsafe fn bind_image_memory2_khr(&self, bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+        let _function = self.bind_image_memory2_khr.expect("`bind_image_memory2_khr` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())

@@ -3,20 +3,15 @@
 pub const KHR_CREATE_RENDERPASS_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME")]
-pub const KHR_CREATE_RENDERPASS_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_create_renderpass2");
+pub const KHR_CREATE_RENDERPASS_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_create_renderpass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_RENDER_PASS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateRenderPass2KHR");
+pub const FN_CREATE_RENDER_PASS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateRenderPass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BEGIN_RENDER_PASS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBeginRenderPass2KHR");
+pub const FN_CMD_BEGIN_RENDER_PASS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdBeginRenderPass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_NEXT_SUBPASS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdNextSubpass2KHR");
+pub const FN_CMD_NEXT_SUBPASS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdNextSubpass2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_END_RENDER_PASS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdEndRenderPass2KHR");
+pub const FN_CMD_END_RENDER_PASS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdEndRenderPass2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2KHR.html) · Alias"]
 #[doc(alias = "VkAttachmentDescription2KHR")]
 #[allow(non_camel_case_types)]
@@ -96,9 +91,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let _function = self
-            .create_render_pass2_khr
-            .expect("`create_render_pass2_khr` is not loaded");
+        let _function = self.create_render_pass2_khr.expect("`create_render_pass2_khr` is not loaded");
         let mut render_pass = match render_pass {
             Some(v) => v,
             None => Default::default(),
@@ -123,14 +116,8 @@ impl crate::DeviceLoader {
         render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
     ) -> () {
-        let _function = self
-            .cmd_begin_render_pass2_khr
-            .expect("`cmd_begin_render_pass2_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            render_pass_begin as _,
-            subpass_begin_info as _,
-        );
+        let _function = self.cmd_begin_render_pass2_khr.expect("`cmd_begin_render_pass2_khr` is not loaded");
+        let _return = _function(command_buffer as _, render_pass_begin as _, subpass_begin_info as _);
         ()
     }
     #[inline]
@@ -142,27 +129,15 @@ impl crate::DeviceLoader {
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
         subpass_end_info: &crate::vk1_2::SubpassEndInfo,
     ) -> () {
-        let _function = self
-            .cmd_next_subpass2_khr
-            .expect("`cmd_next_subpass2_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            subpass_begin_info as _,
-            subpass_end_info as _,
-        );
+        let _function = self.cmd_next_subpass2_khr.expect("`cmd_next_subpass2_khr` is not loaded");
+        let _return = _function(command_buffer as _, subpass_begin_info as _, subpass_end_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2KHR.html) · Function"]
     #[doc(alias = "vkCmdEndRenderPass2KHR")]
-    pub unsafe fn cmd_end_render_pass2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        subpass_end_info: &crate::vk1_2::SubpassEndInfo,
-    ) -> () {
-        let _function = self
-            .cmd_end_render_pass2_khr
-            .expect("`cmd_end_render_pass2_khr` is not loaded");
+    pub unsafe fn cmd_end_render_pass2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, subpass_end_info: &crate::vk1_2::SubpassEndInfo) -> () {
+        let _function = self.cmd_end_render_pass2_khr.expect("`cmd_end_render_pass2_khr` is not loaded");
         let _return = _function(command_buffer as _, subpass_end_info as _);
         ()
     }

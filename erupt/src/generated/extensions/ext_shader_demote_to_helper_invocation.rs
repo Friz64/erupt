@@ -3,8 +3,7 @@
 pub const EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME")]
-pub const EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_shader_demote_to_helper_invocation");
+pub const EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_shader_demote_to_helper_invocation");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -16,7 +15,11 @@ pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT , p_next : std :: ptr :: null_mut () , shader_demote_to_helper_invocation : Default :: default () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT,
+            p_next: std::ptr::null_mut(),
+            shader_demote_to_helper_invocation: Default::default(),
+        }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
@@ -24,44 +27,27 @@ impl std::fmt::Debug for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
         f.debug_struct("PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_demote_to_helper_invocation",
-                &(self.shader_demote_to_helper_invocation != 0),
-            )
+            .field("shader_demote_to_helper_invocation", &(self.shader_demote_to_helper_invocation != 0))
             .finish()
     }
 }
 impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
-        PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder(
-            self,
-            std::marker::PhantomData,
-        )
+    pub fn into_builder<'a>(self) -> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
+        PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT.html) · Builder of [`PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a>(
-    PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a>(PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
-        PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn shader_demote_to_helper_invocation(
-        mut self,
-        shader_demote_to_helper_invocation: bool,
-    ) -> Self {
+    pub fn shader_demote_to_helper_invocation(mut self, shader_demote_to_helper_invocation: bool) -> Self {
         self.0.shader_demote_to_helper_invocation = shader_demote_to_helper_invocation as _;
         self
     }
@@ -71,9 +57,7 @@ impl<'a> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
         self.0
     }
 }
-impl<'a> std::default::Default
-    for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a>
-{
+impl<'a> std::default::Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
     fn default() -> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
         Self::new()
     }

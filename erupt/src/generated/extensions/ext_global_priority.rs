@@ -3,8 +3,7 @@
 pub const EXT_GLOBAL_PRIORITY_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME")]
-pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_global_priority");
+pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_global_priority");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
 #[doc(alias = "VkQueueGlobalPriorityEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -64,20 +63,14 @@ impl DeviceQueueGlobalPriorityCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Builder of [`DeviceQueueGlobalPriorityCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a>(
-    DeviceQueueGlobalPriorityCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a>(DeviceQueueGlobalPriorityCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
         DeviceQueueGlobalPriorityCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn global_priority(
-        mut self,
-        global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT,
-    ) -> Self {
+    pub fn global_priority(mut self, global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT) -> Self {
         self.0.global_priority = global_priority as _;
         self
     }

@@ -3,8 +3,7 @@
 pub const GGP_FRAME_TOKEN_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_GGP_FRAME_TOKEN_EXTENSION_NAME")]
-pub const GGP_FRAME_TOKEN_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_GGP_frame_token");
+pub const GGP_FRAME_TOKEN_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_GGP_frame_token");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentFrameTokenGGP.html) · Structure"]
 #[doc(alias = "VkPresentFrameTokenGGP")]
 #[derive(Copy, Clone)]

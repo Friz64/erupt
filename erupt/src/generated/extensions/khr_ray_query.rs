@@ -3,8 +3,7 @@
 pub const KHR_RAY_QUERY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_RAY_QUERY_EXTENSION_NAME")]
-pub const KHR_RAY_QUERY_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_ray_query");
+pub const KHR_RAY_QUERY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_ray_query");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayQueryFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -41,10 +40,7 @@ impl PhysicalDeviceRayQueryFeaturesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Builder of [`PhysicalDeviceRayQueryFeaturesKHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceRayQueryFeaturesKHRBuilder<'a>(
-    PhysicalDeviceRayQueryFeaturesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceRayQueryFeaturesKHRBuilder<'a>(PhysicalDeviceRayQueryFeaturesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {

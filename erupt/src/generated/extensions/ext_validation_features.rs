@@ -3,8 +3,7 @@
 pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME")]
-pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_validation_features");
+pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_validation_features");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum"]
 #[doc(alias = "VkValidationFeatureEnableEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -67,11 +66,9 @@ pub struct ValidationFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub enabled_validation_feature_count: u32,
-    pub p_enabled_validation_features:
-        *const crate::extensions::ext_validation_features::ValidationFeatureEnableEXT,
+    pub p_enabled_validation_features: *const crate::extensions::ext_validation_features::ValidationFeatureEnableEXT,
     pub disabled_validation_feature_count: u32,
-    pub p_disabled_validation_features:
-        *const crate::extensions::ext_validation_features::ValidationFeatureDisableEXT,
+    pub p_disabled_validation_features: *const crate::extensions::ext_validation_features::ValidationFeatureDisableEXT,
 }
 impl Default for ValidationFeaturesEXT {
     fn default() -> Self {
@@ -90,22 +87,10 @@ impl std::fmt::Debug for ValidationFeaturesEXT {
         f.debug_struct("ValidationFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "enabled_validation_feature_count",
-                &self.enabled_validation_feature_count,
-            )
-            .field(
-                "p_enabled_validation_features",
-                &self.p_enabled_validation_features,
-            )
-            .field(
-                "disabled_validation_feature_count",
-                &self.disabled_validation_feature_count,
-            )
-            .field(
-                "p_disabled_validation_features",
-                &self.p_disabled_validation_features,
-            )
+            .field("enabled_validation_feature_count", &self.enabled_validation_feature_count)
+            .field("p_enabled_validation_features", &self.p_enabled_validation_features)
+            .field("disabled_validation_feature_count", &self.disabled_validation_feature_count)
+            .field("p_disabled_validation_features", &self.p_disabled_validation_features)
             .finish()
     }
 }
@@ -118,29 +103,20 @@ impl ValidationFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct ValidationFeaturesEXTBuilder<'a>(
-    ValidationFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ValidationFeaturesEXTBuilder<'a>(ValidationFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> ValidationFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> ValidationFeaturesEXTBuilder<'a> {
         ValidationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn enabled_validation_features(
-        mut self,
-        enabled_validation_features : & 'a [crate :: extensions :: ext_validation_features :: ValidationFeatureEnableEXT],
-    ) -> Self {
+    pub fn enabled_validation_features(mut self, enabled_validation_features: &'a [crate::extensions::ext_validation_features::ValidationFeatureEnableEXT]) -> Self {
         self.0.p_enabled_validation_features = enabled_validation_features.as_ptr() as _;
         self.0.enabled_validation_feature_count = enabled_validation_features.len() as _;
         self
     }
     #[inline]
-    pub fn disabled_validation_features(
-        mut self,
-        disabled_validation_features : & 'a [crate :: extensions :: ext_validation_features :: ValidationFeatureDisableEXT],
-    ) -> Self {
+    pub fn disabled_validation_features(mut self, disabled_validation_features: &'a [crate::extensions::ext_validation_features::ValidationFeatureDisableEXT]) -> Self {
         self.0.p_disabled_validation_features = disabled_validation_features.as_ptr() as _;
         self.0.disabled_validation_feature_count = disabled_validation_features.len() as _;
         self

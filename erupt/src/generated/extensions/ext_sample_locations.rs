@@ -3,20 +3,15 @@
 pub const EXT_SAMPLE_LOCATIONS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME")]
-pub const EXT_SAMPLE_LOCATIONS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_sample_locations");
+pub const EXT_SAMPLE_LOCATIONS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_sample_locations");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_SAMPLE_LOCATIONS_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetSampleLocationsEXT");
+pub const FN_CMD_SET_SAMPLE_LOCATIONS_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetSampleLocationsEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceMultisamplePropertiesEXT");
+pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceMultisamplePropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-) -> ();
+pub type PFN_vkCmdSetSampleLocationsEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(
@@ -42,10 +37,7 @@ impl Default for SampleLocationEXT {
 }
 impl std::fmt::Debug for SampleLocationEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SampleLocationEXT")
-            .field("x", &self.x)
-            .field("y", &self.y)
-            .finish()
+        f.debug_struct("SampleLocationEXT").field("x", &self.x).field("y", &self.y).finish()
     }
 }
 impl SampleLocationEXT {
@@ -129,10 +121,7 @@ impl std::fmt::Debug for SampleLocationsInfoEXT {
         f.debug_struct("SampleLocationsInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "sample_locations_per_pixel",
-                &self.sample_locations_per_pixel,
-            )
+            .field("sample_locations_per_pixel", &self.sample_locations_per_pixel)
             .field("sample_location_grid_size", &self.sample_location_grid_size)
             .field("sample_locations_count", &self.sample_locations_count)
             .field("p_sample_locations", &self.p_sample_locations)
@@ -148,36 +137,24 @@ impl SampleLocationsInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationsInfoEXT.html) · Builder of [`SampleLocationsInfoEXT`]"]
 #[repr(transparent)]
-pub struct SampleLocationsInfoEXTBuilder<'a>(
-    SampleLocationsInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SampleLocationsInfoEXTBuilder<'a>(SampleLocationsInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SampleLocationsInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SampleLocationsInfoEXTBuilder<'a> {
         SampleLocationsInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn sample_locations_per_pixel(
-        mut self,
-        sample_locations_per_pixel: crate::vk1_0::SampleCountFlagBits,
-    ) -> Self {
+    pub fn sample_locations_per_pixel(mut self, sample_locations_per_pixel: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.sample_locations_per_pixel = sample_locations_per_pixel as _;
         self
     }
     #[inline]
-    pub fn sample_location_grid_size(
-        mut self,
-        sample_location_grid_size: crate::vk1_0::Extent2D,
-    ) -> Self {
+    pub fn sample_location_grid_size(mut self, sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.sample_location_grid_size = sample_location_grid_size as _;
         self
     }
     #[inline]
-    pub fn sample_locations(
-        mut self,
-        sample_locations: &'a [crate::extensions::ext_sample_locations::SampleLocationEXTBuilder],
-    ) -> Self {
+    pub fn sample_locations(mut self, sample_locations: &'a [crate::extensions::ext_sample_locations::SampleLocationEXTBuilder]) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_locations_count = sample_locations.len() as _;
         self
@@ -242,10 +219,7 @@ impl AttachmentSampleLocationsEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentSampleLocationsEXT.html) · Builder of [`AttachmentSampleLocationsEXT`]"]
 #[repr(transparent)]
-pub struct AttachmentSampleLocationsEXTBuilder<'a>(
-    AttachmentSampleLocationsEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AttachmentSampleLocationsEXTBuilder<'a>(AttachmentSampleLocationsEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
     #[inline]
     pub fn new() -> AttachmentSampleLocationsEXTBuilder<'a> {
@@ -257,10 +231,7 @@ impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sample_locations_info(
-        mut self,
-        sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-    ) -> Self {
+    pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
     }
@@ -324,10 +295,7 @@ impl SubpassSampleLocationsEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassSampleLocationsEXT.html) · Builder of [`SubpassSampleLocationsEXT`]"]
 #[repr(transparent)]
-pub struct SubpassSampleLocationsEXTBuilder<'a>(
-    SubpassSampleLocationsEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SubpassSampleLocationsEXTBuilder<'a>(SubpassSampleLocationsEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
     #[inline]
     pub fn new() -> SubpassSampleLocationsEXTBuilder<'a> {
@@ -339,10 +307,7 @@ impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sample_locations_info(
-        mut self,
-        sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-    ) -> Self {
+    pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
     }
@@ -381,11 +346,9 @@ pub struct RenderPassSampleLocationsBeginInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub attachment_initial_sample_locations_count: u32,
-    pub p_attachment_initial_sample_locations:
-        *const crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXT,
+    pub p_attachment_initial_sample_locations: *const crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXT,
     pub post_subpass_sample_locations_count: u32,
-    pub p_post_subpass_sample_locations:
-        *const crate::extensions::ext_sample_locations::SubpassSampleLocationsEXT,
+    pub p_post_subpass_sample_locations: *const crate::extensions::ext_sample_locations::SubpassSampleLocationsEXT,
 }
 impl Default for RenderPassSampleLocationsBeginInfoEXT {
     fn default() -> Self {
@@ -404,22 +367,10 @@ impl std::fmt::Debug for RenderPassSampleLocationsBeginInfoEXT {
         f.debug_struct("RenderPassSampleLocationsBeginInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "attachment_initial_sample_locations_count",
-                &self.attachment_initial_sample_locations_count,
-            )
-            .field(
-                "p_attachment_initial_sample_locations",
-                &self.p_attachment_initial_sample_locations,
-            )
-            .field(
-                "post_subpass_sample_locations_count",
-                &self.post_subpass_sample_locations_count,
-            )
-            .field(
-                "p_post_subpass_sample_locations",
-                &self.p_post_subpass_sample_locations,
-            )
+            .field("attachment_initial_sample_locations_count", &self.attachment_initial_sample_locations_count)
+            .field("p_attachment_initial_sample_locations", &self.p_attachment_initial_sample_locations)
+            .field("post_subpass_sample_locations_count", &self.post_subpass_sample_locations_count)
+            .field("p_post_subpass_sample_locations", &self.p_post_subpass_sample_locations)
             .finish()
     }
 }
@@ -432,31 +383,20 @@ impl RenderPassSampleLocationsBeginInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassSampleLocationsBeginInfoEXT.html) · Builder of [`RenderPassSampleLocationsBeginInfoEXT`]"]
 #[repr(transparent)]
-pub struct RenderPassSampleLocationsBeginInfoEXTBuilder<'a>(
-    RenderPassSampleLocationsBeginInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassSampleLocationsBeginInfoEXTBuilder<'a>(RenderPassSampleLocationsBeginInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
         RenderPassSampleLocationsBeginInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn attachment_initial_sample_locations(
-        mut self,
-        attachment_initial_sample_locations : & 'a [crate :: extensions :: ext_sample_locations :: AttachmentSampleLocationsEXTBuilder],
-    ) -> Self {
-        self.0.p_attachment_initial_sample_locations =
-            attachment_initial_sample_locations.as_ptr() as _;
-        self.0.attachment_initial_sample_locations_count =
-            attachment_initial_sample_locations.len() as _;
+    pub fn attachment_initial_sample_locations(mut self, attachment_initial_sample_locations: &'a [crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXTBuilder]) -> Self {
+        self.0.p_attachment_initial_sample_locations = attachment_initial_sample_locations.as_ptr() as _;
+        self.0.attachment_initial_sample_locations_count = attachment_initial_sample_locations.len() as _;
         self
     }
     #[inline]
-    pub fn post_subpass_sample_locations(
-        mut self,
-        post_subpass_sample_locations : & 'a [crate :: extensions :: ext_sample_locations :: SubpassSampleLocationsEXTBuilder],
-    ) -> Self {
+    pub fn post_subpass_sample_locations(mut self, post_subpass_sample_locations: &'a [crate::extensions::ext_sample_locations::SubpassSampleLocationsEXTBuilder]) -> Self {
         self.0.p_post_subpass_sample_locations = post_subpass_sample_locations.as_ptr() as _;
         self.0.post_subpass_sample_locations_count = post_subpass_sample_locations.len() as _;
         self
@@ -513,10 +453,7 @@ impl std::fmt::Debug for PipelineSampleLocationsStateCreateInfoEXT {
         f.debug_struct("PipelineSampleLocationsStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "sample_locations_enable",
-                &(self.sample_locations_enable != 0),
-            )
+            .field("sample_locations_enable", &(self.sample_locations_enable != 0))
             .field("sample_locations_info", &self.sample_locations_info)
             .finish()
     }
@@ -530,17 +467,11 @@ impl PipelineSampleLocationsStateCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html) · Builder of [`PipelineSampleLocationsStateCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineSampleLocationsStateCreateInfoEXTBuilder<'a>(
-    PipelineSampleLocationsStateCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineSampleLocationsStateCreateInfoEXTBuilder<'a>(PipelineSampleLocationsStateCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
-        PipelineSampleLocationsStateCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineSampleLocationsStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn sample_locations_enable(mut self, sample_locations_enable: bool) -> Self {
@@ -548,10 +479,7 @@ impl<'a> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sample_locations_info(
-        mut self,
-        sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-    ) -> Self {
+    pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
     }
@@ -613,26 +541,11 @@ impl std::fmt::Debug for PhysicalDeviceSampleLocationsPropertiesEXT {
         f.debug_struct("PhysicalDeviceSampleLocationsPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "sample_location_sample_counts",
-                &self.sample_location_sample_counts,
-            )
-            .field(
-                "max_sample_location_grid_size",
-                &self.max_sample_location_grid_size,
-            )
-            .field(
-                "sample_location_coordinate_range",
-                &self.sample_location_coordinate_range,
-            )
-            .field(
-                "sample_location_sub_pixel_bits",
-                &self.sample_location_sub_pixel_bits,
-            )
-            .field(
-                "variable_sample_locations",
-                &(self.variable_sample_locations != 0),
-            )
+            .field("sample_location_sample_counts", &self.sample_location_sample_counts)
+            .field("max_sample_location_grid_size", &self.max_sample_location_grid_size)
+            .field("sample_location_coordinate_range", &self.sample_location_coordinate_range)
+            .field("sample_location_sub_pixel_bits", &self.sample_location_sub_pixel_bits)
+            .field("variable_sample_locations", &(self.variable_sample_locations != 0))
             .finish()
     }
 }
@@ -645,39 +558,24 @@ impl PhysicalDeviceSampleLocationsPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSampleLocationsPropertiesEXT.html) · Builder of [`PhysicalDeviceSampleLocationsPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a>(
-    PhysicalDeviceSampleLocationsPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a>(PhysicalDeviceSampleLocationsPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
-        PhysicalDeviceSampleLocationsPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSampleLocationsPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn sample_location_sample_counts(
-        mut self,
-        sample_location_sample_counts: crate::vk1_0::SampleCountFlags,
-    ) -> Self {
+    pub fn sample_location_sample_counts(mut self, sample_location_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sample_location_sample_counts = sample_location_sample_counts as _;
         self
     }
     #[inline]
-    pub fn max_sample_location_grid_size(
-        mut self,
-        max_sample_location_grid_size: crate::vk1_0::Extent2D,
-    ) -> Self {
+    pub fn max_sample_location_grid_size(mut self, max_sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_sample_location_grid_size = max_sample_location_grid_size as _;
         self
     }
     #[inline]
-    pub fn sample_location_coordinate_range(
-        mut self,
-        sample_location_coordinate_range: [std::os::raw::c_float; 2],
-    ) -> Self {
+    pub fn sample_location_coordinate_range(mut self, sample_location_coordinate_range: [std::os::raw::c_float; 2]) -> Self {
         self.0.sample_location_coordinate_range = sample_location_coordinate_range as _;
         self
     }
@@ -741,10 +639,7 @@ impl std::fmt::Debug for MultisamplePropertiesEXT {
         f.debug_struct("MultisamplePropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_sample_location_grid_size",
-                &self.max_sample_location_grid_size,
-            )
+            .field("max_sample_location_grid_size", &self.max_sample_location_grid_size)
             .finish()
     }
 }
@@ -757,20 +652,14 @@ impl MultisamplePropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultisamplePropertiesEXT.html) · Builder of [`MultisamplePropertiesEXT`]"]
 #[repr(transparent)]
-pub struct MultisamplePropertiesEXTBuilder<'a>(
-    MultisamplePropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MultisamplePropertiesEXTBuilder<'a>(MultisamplePropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> MultisamplePropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> MultisamplePropertiesEXTBuilder<'a> {
         MultisamplePropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn max_sample_location_grid_size(
-        mut self,
-        max_sample_location_grid_size: crate::vk1_0::Extent2D,
-    ) -> Self {
+    pub fn max_sample_location_grid_size(mut self, max_sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_sample_location_grid_size = max_sample_location_grid_size as _;
         self
     }
@@ -806,14 +695,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
     #[doc(alias = "vkCmdSetSampleLocationsEXT")]
-    pub unsafe fn cmd_set_sample_locations_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        sample_locations_info: &crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
-    ) -> () {
-        let _function = self
-            .cmd_set_sample_locations_ext
-            .expect("`cmd_set_sample_locations_ext` is not loaded");
+    pub unsafe fn cmd_set_sample_locations_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, sample_locations_info: &crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> () {
+        let _function = self.cmd_set_sample_locations_ext.expect("`cmd_set_sample_locations_ext` is not loaded");
         let _return = _function(command_buffer as _, sample_locations_info as _);
         ()
     }
@@ -827,9 +710,7 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         samples: crate::vk1_0::SampleCountFlagBits,
-        multisample_properties: Option<
-            crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
-        >,
+        multisample_properties: Option<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>,
     ) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
         let _function = self
             .get_physical_device_multisample_properties_ext
@@ -838,11 +719,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            samples as _,
-            &mut multisample_properties,
-        );
+        let _return = _function(physical_device as _, samples as _, &mut multisample_properties);
         multisample_properties
     }
 }

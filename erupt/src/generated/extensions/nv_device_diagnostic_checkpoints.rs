@@ -3,27 +3,18 @@
 pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME")]
-pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_device_diagnostic_checkpoints");
+pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_device_diagnostic_checkpoints");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_CHECKPOINT_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetCheckpointNV");
+pub const FN_CMD_SET_CHECKPOINT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetCheckpointNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkGetQueueCheckpointDataNV");
+pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char = crate::cstr!("vkGetQueueCheckpointDataNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetCheckpointNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_checkpoint_marker: *const std::ffi::c_void,
-) -> ();
+pub type PFN_vkCmdSetCheckpointNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_checkpoint_marker: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(
-    queue: crate::vk1_0::Queue,
-    p_checkpoint_data_count: *mut u32,
-    p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV,
-) -> ();
+pub type PFN_vkGetQueueCheckpointDataNV =
+    unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure"]
 #[doc(alias = "VkQueueFamilyCheckpointPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -47,10 +38,7 @@ impl std::fmt::Debug for QueueFamilyCheckpointPropertiesNV {
         f.debug_struct("QueueFamilyCheckpointPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "checkpoint_execution_stage_mask",
-                &self.checkpoint_execution_stage_mask,
-            )
+            .field("checkpoint_execution_stage_mask", &self.checkpoint_execution_stage_mask)
             .finish()
     }
 }
@@ -63,20 +51,14 @@ impl QueueFamilyCheckpointPropertiesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`]"]
 #[repr(transparent)]
-pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a>(
-    QueueFamilyCheckpointPropertiesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a>(QueueFamilyCheckpointPropertiesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> QueueFamilyCheckpointPropertiesNVBuilder<'a> {
     #[inline]
     pub fn new() -> QueueFamilyCheckpointPropertiesNVBuilder<'a> {
         QueueFamilyCheckpointPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn checkpoint_execution_stage_mask(
-        mut self,
-        checkpoint_execution_stage_mask: crate::vk1_0::PipelineStageFlags,
-    ) -> Self {
+    pub fn checkpoint_execution_stage_mask(mut self, checkpoint_execution_stage_mask: crate::vk1_0::PipelineStageFlags) -> Self {
         self.0.checkpoint_execution_stage_mask = checkpoint_execution_stage_mask as _;
         self
     }
@@ -194,28 +176,16 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
     #[doc(alias = "vkCmdSetCheckpointNV")]
-    pub unsafe fn cmd_set_checkpoint_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        checkpoint_marker: *const std::ffi::c_void,
-    ) -> () {
-        let _function = self
-            .cmd_set_checkpoint_nv
-            .expect("`cmd_set_checkpoint_nv` is not loaded");
+    pub unsafe fn cmd_set_checkpoint_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, checkpoint_marker: *const std::ffi::c_void) -> () {
+        let _function = self.cmd_set_checkpoint_nv.expect("`cmd_set_checkpoint_nv` is not loaded");
         let _return = _function(command_buffer as _, checkpoint_marker);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointDataNV")]
-    pub unsafe fn get_queue_checkpoint_data_nv(
-        &self,
-        queue: crate::vk1_0::Queue,
-        checkpoint_data_count: Option<u32>,
-    ) -> Vec<crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV> {
-        let _function = self
-            .get_queue_checkpoint_data_nv
-            .expect("`get_queue_checkpoint_data_nv` is not loaded");
+    pub unsafe fn get_queue_checkpoint_data_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>) -> Vec<crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV> {
+        let _function = self.get_queue_checkpoint_data_nv.expect("`get_queue_checkpoint_data_nv` is not loaded");
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
             None => {
@@ -225,11 +195,7 @@ impl crate::DeviceLoader {
             }
         };
         let mut checkpoint_data = vec![Default::default(); checkpoint_data_count as _];
-        let _return = _function(
-            queue as _,
-            &mut checkpoint_data_count,
-            checkpoint_data.as_mut_ptr(),
-        );
+        let _return = _function(queue as _, &mut checkpoint_data_count, checkpoint_data.as_mut_ptr());
         checkpoint_data
     }
 }

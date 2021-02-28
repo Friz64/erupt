@@ -9,35 +9,27 @@ pub const FN_RESET_QUERY_POOL: *const std::os::raw::c_char = crate::cstr!("vkRes
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CREATE_RENDER_PASS2: *const std::os::raw::c_char = crate::cstr!("vkCreateRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_BEGIN_RENDER_PASS2: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdBeginRenderPass2");
+pub const FN_CMD_BEGIN_RENDER_PASS2: *const std::os::raw::c_char = crate::cstr!("vkCmdBeginRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_NEXT_SUBPASS2: *const std::os::raw::c_char = crate::cstr!("vkCmdNextSubpass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_END_RENDER_PASS2: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdEndRenderPass2");
+pub const FN_CMD_END_RENDER_PASS2: *const std::os::raw::c_char = crate::cstr!("vkCmdEndRenderPass2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_SEMAPHORE_COUNTER_VALUE: *const std::os::raw::c_char =
-    crate::cstr!("vkGetSemaphoreCounterValue");
+pub const FN_GET_SEMAPHORE_COUNTER_VALUE: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreCounterValue");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_WAIT_SEMAPHORES: *const std::os::raw::c_char = crate::cstr!("vkWaitSemaphores");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_SIGNAL_SEMAPHORE: *const std::os::raw::c_char = crate::cstr!("vkSignalSemaphore");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_INDIRECT_COUNT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawIndirectCount");
+pub const FN_CMD_DRAW_INDIRECT_COUNT: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndirectCount");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawIndexedIndirectCount");
+pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndexedIndirectCount");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char =
-    crate::cstr!("vkGetBufferOpaqueCaptureAddress");
+pub const FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char = crate::cstr!("vkGetBufferOpaqueCaptureAddress");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_BUFFER_DEVICE_ADDRESS: *const std::os::raw::c_char =
-    crate::cstr!("vkGetBufferDeviceAddress");
+pub const FN_GET_BUFFER_DEVICE_ADDRESS: *const std::os::raw::c_char = crate::cstr!("vkGetBufferDeviceAddress");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char =
-    crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddress");
+pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddress");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlags.html) · Bitmask of [`ResolveModeFlagBits`]"] # [doc (alias = "VkResolveModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ResolveModeFlags : u32 { const NONE = ResolveModeFlagBits :: NONE . 0 ; const SAMPLE_ZERO = ResolveModeFlagBits :: SAMPLE_ZERO . 0 ; const AVERAGE = ResolveModeFlagBits :: AVERAGE . 0 ; const MIN = ResolveModeFlagBits :: MIN . 0 ; const MAX = ResolveModeFlagBits :: MAX . 0 ; const NONE_KHR = ResolveModeFlagBits :: NONE_KHR . 0 ; const SAMPLE_ZERO_KHR = ResolveModeFlagBits :: SAMPLE_ZERO_KHR . 0 ; const AVERAGE_KHR = ResolveModeFlagBits :: AVERAGE_KHR . 0 ; const MIN_KHR = ResolveModeFlagBits :: MIN_KHR . 0 ; const MAX_KHR = ResolveModeFlagBits :: MAX_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlagBits.html) · Bits enum of [`ResolveModeFlags`]"]
 #[doc(alias = "VkResolveModeFlagBits")]
@@ -284,12 +276,7 @@ impl DriverId {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkResetQueryPool = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    query_pool: crate::vk1_0::QueryPool,
-    first_query: u32,
-    query_count: u32,
-) -> ();
+pub type PFN_vkResetQueryPool = unsafe extern "system" fn(device: crate::vk1_0::Device, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRenderPass2 = unsafe extern "system" fn(
@@ -307,37 +294,20 @@ pub type PFN_vkCmdBeginRenderPass2 = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdNextSubpass2 = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo,
-    p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo,
-) -> ();
+pub type PFN_vkCmdNextSubpass2 =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo, p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdEndRenderPass2 = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo,
-) -> ();
+pub type PFN_vkCmdEndRenderPass2 = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValue.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreCounterValue = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    semaphore: crate::vk1_0::Semaphore,
-    p_value: *mut u64,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetSemaphoreCounterValue = unsafe extern "system" fn(device: crate::vk1_0::Device, semaphore: crate::vk1_0::Semaphore, p_value: *mut u64) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphores.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkWaitSemaphores = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_wait_info: *const crate::vk1_2::SemaphoreWaitInfo,
-    timeout: u64,
-) -> crate::vk1_0::Result;
+pub type PFN_vkWaitSemaphores = unsafe extern "system" fn(device: crate::vk1_0::Device, p_wait_info: *const crate::vk1_2::SemaphoreWaitInfo, timeout: u64) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphore.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSignalSemaphore = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_signal_info: *const crate::vk1_2::SemaphoreSignalInfo,
-) -> crate::vk1_0::Result;
+pub type PFN_vkSignalSemaphore = unsafe extern "system" fn(device: crate::vk1_0::Device, p_signal_info: *const crate::vk1_2::SemaphoreSignalInfo) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCount.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectCount = unsafe extern "system" fn(
@@ -362,22 +332,13 @@ pub type PFN_vkCmdDrawIndexedIndirectCount = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetBufferOpaqueCaptureAddress = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_2::BufferDeviceAddressInfo,
-) -> u64;
+pub type PFN_vkGetBufferOpaqueCaptureAddress = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_2::BufferDeviceAddressInfo) -> u64;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddress.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetBufferDeviceAddress = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_2::BufferDeviceAddressInfo,
-) -> crate::vk1_0::DeviceAddress;
+pub type PFN_vkGetBufferDeviceAddress = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_2::BufferDeviceAddressInfo) -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddress = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo,
-) -> u64;
+pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddress = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo) -> u64;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersion.html) · Structure"]
 #[doc(alias = "VkConformanceVersion")]
 #[derive(Copy, Clone)]
@@ -500,12 +461,8 @@ impl std::fmt::Debug for PhysicalDeviceDriverProperties {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("driver_id", &self.driver_id)
-            .field("driver_name", unsafe {
-                &std::ffi::CStr::from_ptr(self.driver_name.as_ptr())
-            })
-            .field("driver_info", unsafe {
-                &std::ffi::CStr::from_ptr(self.driver_info.as_ptr())
-            })
+            .field("driver_name", unsafe { &std::ffi::CStr::from_ptr(self.driver_name.as_ptr()) })
+            .field("driver_info", unsafe { &std::ffi::CStr::from_ptr(self.driver_info.as_ptr()) })
             .field("conformance_version", &self.conformance_version)
             .finish()
     }
@@ -519,10 +476,7 @@ impl PhysicalDeviceDriverProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDriverProperties.html) · Builder of [`PhysicalDeviceDriverProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDriverPropertiesBuilder<'a>(
-    PhysicalDeviceDriverProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDriverPropertiesBuilder<'a>(PhysicalDeviceDriverProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDriverPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDriverPropertiesBuilder<'a> {
@@ -544,10 +498,7 @@ impl<'a> PhysicalDeviceDriverPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn conformance_version(
-        mut self,
-        conformance_version: crate::vk1_2::ConformanceVersion,
-    ) -> Self {
+    pub fn conformance_version(mut self, conformance_version: crate::vk1_2::ConformanceVersion) -> Self {
         self.0.conformance_version = conformance_version as _;
         self
     }
@@ -590,8 +541,7 @@ pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
 impl Default for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES,
             p_next: std::ptr::null_mut(),
             shader_subgroup_extended_types: Default::default(),
         }
@@ -602,10 +552,7 @@ impl std::fmt::Debug for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
         f.debug_struct("PhysicalDeviceShaderSubgroupExtendedTypesFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_subgroup_extended_types",
-                &(self.shader_subgroup_extended_types != 0),
-            )
+            .field("shader_subgroup_extended_types", &(self.shader_subgroup_extended_types != 0))
             .finish()
     }
 }
@@ -618,17 +565,11 @@ impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures.html) · Builder of [`PhysicalDeviceShaderSubgroupExtendedTypesFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a>(
-    PhysicalDeviceShaderSubgroupExtendedTypesFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a>(PhysicalDeviceShaderSubgroupExtendedTypesFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
-        PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn shader_subgroup_extended_types(mut self, shader_subgroup_extended_types: bool) -> Self {
@@ -687,14 +628,8 @@ impl std::fmt::Debug for PhysicalDeviceSamplerFilterMinmaxProperties {
         f.debug_struct("PhysicalDeviceSamplerFilterMinmaxProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "filter_minmax_single_component_formats",
-                &(self.filter_minmax_single_component_formats != 0),
-            )
-            .field(
-                "filter_minmax_image_component_mapping",
-                &(self.filter_minmax_image_component_mapping != 0),
-            )
+            .field("filter_minmax_single_component_formats", &(self.filter_minmax_single_component_formats != 0))
+            .field("filter_minmax_image_component_mapping", &(self.filter_minmax_image_component_mapping != 0))
             .finish()
     }
 }
@@ -707,31 +642,19 @@ impl PhysicalDeviceSamplerFilterMinmaxProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxProperties.html) · Builder of [`PhysicalDeviceSamplerFilterMinmaxProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a>(
-    PhysicalDeviceSamplerFilterMinmaxProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a>(PhysicalDeviceSamplerFilterMinmaxProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
-        PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn filter_minmax_single_component_formats(
-        mut self,
-        filter_minmax_single_component_formats: bool,
-    ) -> Self {
+    pub fn filter_minmax_single_component_formats(mut self, filter_minmax_single_component_formats: bool) -> Self {
         self.0.filter_minmax_single_component_formats = filter_minmax_single_component_formats as _;
         self
     }
     #[inline]
-    pub fn filter_minmax_image_component_mapping(
-        mut self,
-        filter_minmax_image_component_mapping: bool,
-    ) -> Self {
+    pub fn filter_minmax_image_component_mapping(mut self, filter_minmax_image_component_mapping: bool) -> Self {
         self.0.filter_minmax_image_component_mapping = filter_minmax_image_component_mapping as _;
         self
     }
@@ -798,10 +721,7 @@ impl SamplerReductionModeCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeCreateInfo.html) · Builder of [`SamplerReductionModeCreateInfo`]"]
 #[repr(transparent)]
-pub struct SamplerReductionModeCreateInfoBuilder<'a>(
-    SamplerReductionModeCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SamplerReductionModeCreateInfoBuilder<'a>(SamplerReductionModeCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SamplerReductionModeCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> SamplerReductionModeCreateInfoBuilder<'a> {
@@ -878,10 +798,7 @@ impl ImageFormatListCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatListCreateInfo.html) · Builder of [`ImageFormatListCreateInfo`]"]
 #[repr(transparent)]
-pub struct ImageFormatListCreateInfoBuilder<'a>(
-    ImageFormatListCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageFormatListCreateInfoBuilder<'a>(ImageFormatListCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageFormatListCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ImageFormatListCreateInfoBuilder<'a> {
@@ -959,10 +876,7 @@ impl PhysicalDeviceShaderFloat16Int8Features {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderFloat16Int8Features.html) · Builder of [`PhysicalDeviceShaderFloat16Int8Features`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a>(
-    PhysicalDeviceShaderFloat16Int8Features,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a>(PhysicalDeviceShaderFloat16Int8Features, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
@@ -1060,74 +974,23 @@ impl std::fmt::Debug for PhysicalDeviceFloatControlsProperties {
         f.debug_struct("PhysicalDeviceFloatControlsProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "denorm_behavior_independence",
-                &self.denorm_behavior_independence,
-            )
-            .field(
-                "rounding_mode_independence",
-                &self.rounding_mode_independence,
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float16",
-                &(self.shader_signed_zero_inf_nan_preserve_float16 != 0),
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float32",
-                &(self.shader_signed_zero_inf_nan_preserve_float32 != 0),
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float64",
-                &(self.shader_signed_zero_inf_nan_preserve_float64 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float16",
-                &(self.shader_denorm_preserve_float16 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float32",
-                &(self.shader_denorm_preserve_float32 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float64",
-                &(self.shader_denorm_preserve_float64 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float16",
-                &(self.shader_denorm_flush_to_zero_float16 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float32",
-                &(self.shader_denorm_flush_to_zero_float32 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float64",
-                &(self.shader_denorm_flush_to_zero_float64 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float16",
-                &(self.shader_rounding_mode_rte_float16 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float32",
-                &(self.shader_rounding_mode_rte_float32 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float64",
-                &(self.shader_rounding_mode_rte_float64 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float16",
-                &(self.shader_rounding_mode_rtz_float16 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float32",
-                &(self.shader_rounding_mode_rtz_float32 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float64",
-                &(self.shader_rounding_mode_rtz_float64 != 0),
-            )
+            .field("denorm_behavior_independence", &self.denorm_behavior_independence)
+            .field("rounding_mode_independence", &self.rounding_mode_independence)
+            .field("shader_signed_zero_inf_nan_preserve_float16", &(self.shader_signed_zero_inf_nan_preserve_float16 != 0))
+            .field("shader_signed_zero_inf_nan_preserve_float32", &(self.shader_signed_zero_inf_nan_preserve_float32 != 0))
+            .field("shader_signed_zero_inf_nan_preserve_float64", &(self.shader_signed_zero_inf_nan_preserve_float64 != 0))
+            .field("shader_denorm_preserve_float16", &(self.shader_denorm_preserve_float16 != 0))
+            .field("shader_denorm_preserve_float32", &(self.shader_denorm_preserve_float32 != 0))
+            .field("shader_denorm_preserve_float64", &(self.shader_denorm_preserve_float64 != 0))
+            .field("shader_denorm_flush_to_zero_float16", &(self.shader_denorm_flush_to_zero_float16 != 0))
+            .field("shader_denorm_flush_to_zero_float32", &(self.shader_denorm_flush_to_zero_float32 != 0))
+            .field("shader_denorm_flush_to_zero_float64", &(self.shader_denorm_flush_to_zero_float64 != 0))
+            .field("shader_rounding_mode_rte_float16", &(self.shader_rounding_mode_rte_float16 != 0))
+            .field("shader_rounding_mode_rte_float32", &(self.shader_rounding_mode_rte_float32 != 0))
+            .field("shader_rounding_mode_rte_float64", &(self.shader_rounding_mode_rte_float64 != 0))
+            .field("shader_rounding_mode_rtz_float16", &(self.shader_rounding_mode_rtz_float16 != 0))
+            .field("shader_rounding_mode_rtz_float32", &(self.shader_rounding_mode_rtz_float32 != 0))
+            .field("shader_rounding_mode_rtz_float64", &(self.shader_rounding_mode_rtz_float64 != 0))
             .finish()
     }
 }
@@ -1140,56 +1003,35 @@ impl PhysicalDeviceFloatControlsProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFloatControlsProperties.html) · Builder of [`PhysicalDeviceFloatControlsProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceFloatControlsPropertiesBuilder<'a>(
-    PhysicalDeviceFloatControlsProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceFloatControlsPropertiesBuilder<'a>(PhysicalDeviceFloatControlsProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
         PhysicalDeviceFloatControlsPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn denorm_behavior_independence(
-        mut self,
-        denorm_behavior_independence: crate::vk1_2::ShaderFloatControlsIndependence,
-    ) -> Self {
+    pub fn denorm_behavior_independence(mut self, denorm_behavior_independence: crate::vk1_2::ShaderFloatControlsIndependence) -> Self {
         self.0.denorm_behavior_independence = denorm_behavior_independence as _;
         self
     }
     #[inline]
-    pub fn rounding_mode_independence(
-        mut self,
-        rounding_mode_independence: crate::vk1_2::ShaderFloatControlsIndependence,
-    ) -> Self {
+    pub fn rounding_mode_independence(mut self, rounding_mode_independence: crate::vk1_2::ShaderFloatControlsIndependence) -> Self {
         self.0.rounding_mode_independence = rounding_mode_independence as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float16(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float16: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float16 =
-            shader_signed_zero_inf_nan_preserve_float16 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float16(mut self, shader_signed_zero_inf_nan_preserve_float16: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float16 = shader_signed_zero_inf_nan_preserve_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float32(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float32: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float32 =
-            shader_signed_zero_inf_nan_preserve_float32 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float32(mut self, shader_signed_zero_inf_nan_preserve_float32: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float32 = shader_signed_zero_inf_nan_preserve_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float64(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float64: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float64 =
-            shader_signed_zero_inf_nan_preserve_float64 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float64(mut self, shader_signed_zero_inf_nan_preserve_float64: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float64 = shader_signed_zero_inf_nan_preserve_float64 as _;
         self
     }
     #[inline]
@@ -1208,74 +1050,47 @@ impl<'a> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float16(
-        mut self,
-        shader_denorm_flush_to_zero_float16: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float16(mut self, shader_denorm_flush_to_zero_float16: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float16 = shader_denorm_flush_to_zero_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float32(
-        mut self,
-        shader_denorm_flush_to_zero_float32: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float32(mut self, shader_denorm_flush_to_zero_float32: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float32 = shader_denorm_flush_to_zero_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float64(
-        mut self,
-        shader_denorm_flush_to_zero_float64: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float64(mut self, shader_denorm_flush_to_zero_float64: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float64 = shader_denorm_flush_to_zero_float64 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float16(
-        mut self,
-        shader_rounding_mode_rte_float16: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float16(mut self, shader_rounding_mode_rte_float16: bool) -> Self {
         self.0.shader_rounding_mode_rte_float16 = shader_rounding_mode_rte_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float32(
-        mut self,
-        shader_rounding_mode_rte_float32: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float32(mut self, shader_rounding_mode_rte_float32: bool) -> Self {
         self.0.shader_rounding_mode_rte_float32 = shader_rounding_mode_rte_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float64(
-        mut self,
-        shader_rounding_mode_rte_float64: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float64(mut self, shader_rounding_mode_rte_float64: bool) -> Self {
         self.0.shader_rounding_mode_rte_float64 = shader_rounding_mode_rte_float64 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float16(
-        mut self,
-        shader_rounding_mode_rtz_float16: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float16(mut self, shader_rounding_mode_rtz_float16: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float16 = shader_rounding_mode_rtz_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float32(
-        mut self,
-        shader_rounding_mode_rtz_float32: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float32(mut self, shader_rounding_mode_rtz_float32: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float32 = shader_rounding_mode_rtz_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float64(
-        mut self,
-        shader_rounding_mode_rtz_float64: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float64(mut self, shader_rounding_mode_rtz_float64: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float64 = shader_rounding_mode_rtz_float64 as _;
         self
     }
@@ -1342,10 +1157,7 @@ impl PhysicalDeviceHostQueryResetFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceHostQueryResetFeatures.html) · Builder of [`PhysicalDeviceHostQueryResetFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceHostQueryResetFeaturesBuilder<'a>(
-    PhysicalDeviceHostQueryResetFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceHostQueryResetFeaturesBuilder<'a>(PhysicalDeviceHostQueryResetFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
@@ -1444,38 +1256,14 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingFeatures {
         f.debug_struct("PhysicalDeviceDescriptorIndexingFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_input_attachment_array_dynamic_indexing",
-                &(self.shader_input_attachment_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_uniform_texel_buffer_array_dynamic_indexing",
-                &(self.shader_uniform_texel_buffer_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_storage_texel_buffer_array_dynamic_indexing",
-                &(self.shader_storage_texel_buffer_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_uniform_buffer_array_non_uniform_indexing",
-                &(self.shader_uniform_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_sampled_image_array_non_uniform_indexing",
-                &(self.shader_sampled_image_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_buffer_array_non_uniform_indexing",
-                &(self.shader_storage_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_image_array_non_uniform_indexing",
-                &(self.shader_storage_image_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_input_attachment_array_non_uniform_indexing",
-                &(self.shader_input_attachment_array_non_uniform_indexing != 0),
-            )
+            .field("shader_input_attachment_array_dynamic_indexing", &(self.shader_input_attachment_array_dynamic_indexing != 0))
+            .field("shader_uniform_texel_buffer_array_dynamic_indexing", &(self.shader_uniform_texel_buffer_array_dynamic_indexing != 0))
+            .field("shader_storage_texel_buffer_array_dynamic_indexing", &(self.shader_storage_texel_buffer_array_dynamic_indexing != 0))
+            .field("shader_uniform_buffer_array_non_uniform_indexing", &(self.shader_uniform_buffer_array_non_uniform_indexing != 0))
+            .field("shader_sampled_image_array_non_uniform_indexing", &(self.shader_sampled_image_array_non_uniform_indexing != 0))
+            .field("shader_storage_buffer_array_non_uniform_indexing", &(self.shader_storage_buffer_array_non_uniform_indexing != 0))
+            .field("shader_storage_image_array_non_uniform_indexing", &(self.shader_storage_image_array_non_uniform_indexing != 0))
+            .field("shader_input_attachment_array_non_uniform_indexing", &(self.shader_input_attachment_array_non_uniform_indexing != 0))
             .field(
                 "shader_uniform_texel_buffer_array_non_uniform_indexing",
                 &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0),
@@ -1484,22 +1272,10 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingFeatures {
                 "shader_storage_texel_buffer_array_non_uniform_indexing",
                 &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0),
             )
-            .field(
-                "descriptor_binding_uniform_buffer_update_after_bind",
-                &(self.descriptor_binding_uniform_buffer_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_sampled_image_update_after_bind",
-                &(self.descriptor_binding_sampled_image_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_image_update_after_bind",
-                &(self.descriptor_binding_storage_image_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_buffer_update_after_bind",
-                &(self.descriptor_binding_storage_buffer_update_after_bind != 0),
-            )
+            .field("descriptor_binding_uniform_buffer_update_after_bind", &(self.descriptor_binding_uniform_buffer_update_after_bind != 0))
+            .field("descriptor_binding_sampled_image_update_after_bind", &(self.descriptor_binding_sampled_image_update_after_bind != 0))
+            .field("descriptor_binding_storage_image_update_after_bind", &(self.descriptor_binding_storage_image_update_after_bind != 0))
+            .field("descriptor_binding_storage_buffer_update_after_bind", &(self.descriptor_binding_storage_buffer_update_after_bind != 0))
             .field(
                 "descriptor_binding_uniform_texel_buffer_update_after_bind",
                 &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0),
@@ -1508,22 +1284,10 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingFeatures {
                 "descriptor_binding_storage_texel_buffer_update_after_bind",
                 &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0),
             )
-            .field(
-                "descriptor_binding_update_unused_while_pending",
-                &(self.descriptor_binding_update_unused_while_pending != 0),
-            )
-            .field(
-                "descriptor_binding_partially_bound",
-                &(self.descriptor_binding_partially_bound != 0),
-            )
-            .field(
-                "descriptor_binding_variable_descriptor_count",
-                &(self.descriptor_binding_variable_descriptor_count != 0),
-            )
-            .field(
-                "runtime_descriptor_array",
-                &(self.runtime_descriptor_array != 0),
-            )
+            .field("descriptor_binding_update_unused_while_pending", &(self.descriptor_binding_update_unused_while_pending != 0))
+            .field("descriptor_binding_partially_bound", &(self.descriptor_binding_partially_bound != 0))
+            .field("descriptor_binding_variable_descriptor_count", &(self.descriptor_binding_variable_descriptor_count != 0))
+            .field("runtime_descriptor_array", &(self.runtime_descriptor_array != 0))
             .finish()
     }
 }
@@ -1536,190 +1300,105 @@ impl PhysicalDeviceDescriptorIndexingFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingFeatures.html) · Builder of [`PhysicalDeviceDescriptorIndexingFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a>(
-    PhysicalDeviceDescriptorIndexingFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a>(PhysicalDeviceDescriptorIndexingFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
-        PhysicalDeviceDescriptorIndexingFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceDescriptorIndexingFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn shader_input_attachment_array_dynamic_indexing(
-        mut self,
-        shader_input_attachment_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_input_attachment_array_dynamic_indexing =
-            shader_input_attachment_array_dynamic_indexing as _;
+    pub fn shader_input_attachment_array_dynamic_indexing(mut self, shader_input_attachment_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_input_attachment_array_dynamic_indexing = shader_input_attachment_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_texel_buffer_array_dynamic_indexing(
-        mut self,
-        shader_uniform_texel_buffer_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_uniform_texel_buffer_array_dynamic_indexing =
-            shader_uniform_texel_buffer_array_dynamic_indexing as _;
+    pub fn shader_uniform_texel_buffer_array_dynamic_indexing(mut self, shader_uniform_texel_buffer_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_uniform_texel_buffer_array_dynamic_indexing = shader_uniform_texel_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_texel_buffer_array_dynamic_indexing(
-        mut self,
-        shader_storage_texel_buffer_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_texel_buffer_array_dynamic_indexing =
-            shader_storage_texel_buffer_array_dynamic_indexing as _;
+    pub fn shader_storage_texel_buffer_array_dynamic_indexing(mut self, shader_storage_texel_buffer_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_storage_texel_buffer_array_dynamic_indexing = shader_storage_texel_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_uniform_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_uniform_buffer_array_non_uniform_indexing =
-            shader_uniform_buffer_array_non_uniform_indexing as _;
+    pub fn shader_uniform_buffer_array_non_uniform_indexing(mut self, shader_uniform_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_uniform_buffer_array_non_uniform_indexing = shader_uniform_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_sampled_image_array_non_uniform_indexing(
-        mut self,
-        shader_sampled_image_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_sampled_image_array_non_uniform_indexing =
-            shader_sampled_image_array_non_uniform_indexing as _;
+    pub fn shader_sampled_image_array_non_uniform_indexing(mut self, shader_sampled_image_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_sampled_image_array_non_uniform_indexing = shader_sampled_image_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_storage_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_buffer_array_non_uniform_indexing =
-            shader_storage_buffer_array_non_uniform_indexing as _;
+    pub fn shader_storage_buffer_array_non_uniform_indexing(mut self, shader_storage_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_buffer_array_non_uniform_indexing = shader_storage_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_image_array_non_uniform_indexing(
-        mut self,
-        shader_storage_image_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_image_array_non_uniform_indexing =
-            shader_storage_image_array_non_uniform_indexing as _;
+    pub fn shader_storage_image_array_non_uniform_indexing(mut self, shader_storage_image_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_image_array_non_uniform_indexing = shader_storage_image_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_input_attachment_array_non_uniform_indexing(
-        mut self,
-        shader_input_attachment_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_input_attachment_array_non_uniform_indexing =
-            shader_input_attachment_array_non_uniform_indexing as _;
+    pub fn shader_input_attachment_array_non_uniform_indexing(mut self, shader_input_attachment_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_input_attachment_array_non_uniform_indexing = shader_input_attachment_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_texel_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_uniform_texel_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0
-            .shader_uniform_texel_buffer_array_non_uniform_indexing =
-            shader_uniform_texel_buffer_array_non_uniform_indexing as _;
+    pub fn shader_uniform_texel_buffer_array_non_uniform_indexing(mut self, shader_uniform_texel_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_uniform_texel_buffer_array_non_uniform_indexing = shader_uniform_texel_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_texel_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_storage_texel_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_texel_buffer_array_non_uniform_indexing =
-            shader_storage_texel_buffer_array_non_uniform_indexing as _;
+    pub fn shader_storage_texel_buffer_array_non_uniform_indexing(mut self, shader_storage_texel_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_texel_buffer_array_non_uniform_indexing = shader_storage_texel_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_uniform_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_uniform_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_uniform_buffer_update_after_bind =
-            descriptor_binding_uniform_buffer_update_after_bind as _;
+    pub fn descriptor_binding_uniform_buffer_update_after_bind(mut self, descriptor_binding_uniform_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_uniform_buffer_update_after_bind = descriptor_binding_uniform_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_sampled_image_update_after_bind(
-        mut self,
-        descriptor_binding_sampled_image_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_sampled_image_update_after_bind =
-            descriptor_binding_sampled_image_update_after_bind as _;
+    pub fn descriptor_binding_sampled_image_update_after_bind(mut self, descriptor_binding_sampled_image_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_sampled_image_update_after_bind = descriptor_binding_sampled_image_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_image_update_after_bind(
-        mut self,
-        descriptor_binding_storage_image_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_storage_image_update_after_bind =
-            descriptor_binding_storage_image_update_after_bind as _;
+    pub fn descriptor_binding_storage_image_update_after_bind(mut self, descriptor_binding_storage_image_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_image_update_after_bind = descriptor_binding_storage_image_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_storage_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_storage_buffer_update_after_bind =
-            descriptor_binding_storage_buffer_update_after_bind as _;
+    pub fn descriptor_binding_storage_buffer_update_after_bind(mut self, descriptor_binding_storage_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_buffer_update_after_bind = descriptor_binding_storage_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_uniform_texel_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_uniform_texel_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_uniform_texel_buffer_update_after_bind =
-            descriptor_binding_uniform_texel_buffer_update_after_bind as _;
+    pub fn descriptor_binding_uniform_texel_buffer_update_after_bind(mut self, descriptor_binding_uniform_texel_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_uniform_texel_buffer_update_after_bind = descriptor_binding_uniform_texel_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_texel_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_storage_texel_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_storage_texel_buffer_update_after_bind =
-            descriptor_binding_storage_texel_buffer_update_after_bind as _;
+    pub fn descriptor_binding_storage_texel_buffer_update_after_bind(mut self, descriptor_binding_storage_texel_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_texel_buffer_update_after_bind = descriptor_binding_storage_texel_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_update_unused_while_pending(
-        mut self,
-        descriptor_binding_update_unused_while_pending: bool,
-    ) -> Self {
-        self.0.descriptor_binding_update_unused_while_pending =
-            descriptor_binding_update_unused_while_pending as _;
+    pub fn descriptor_binding_update_unused_while_pending(mut self, descriptor_binding_update_unused_while_pending: bool) -> Self {
+        self.0.descriptor_binding_update_unused_while_pending = descriptor_binding_update_unused_while_pending as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_partially_bound(
-        mut self,
-        descriptor_binding_partially_bound: bool,
-    ) -> Self {
+    pub fn descriptor_binding_partially_bound(mut self, descriptor_binding_partially_bound: bool) -> Self {
         self.0.descriptor_binding_partially_bound = descriptor_binding_partially_bound as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_variable_descriptor_count(
-        mut self,
-        descriptor_binding_variable_descriptor_count: bool,
-    ) -> Self {
-        self.0.descriptor_binding_variable_descriptor_count =
-            descriptor_binding_variable_descriptor_count as _;
+    pub fn descriptor_binding_variable_descriptor_count(mut self, descriptor_binding_variable_descriptor_count: bool) -> Self {
+        self.0.descriptor_binding_variable_descriptor_count = descriptor_binding_variable_descriptor_count as _;
         self
     }
     #[inline]
@@ -1821,10 +1500,7 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingProperties {
         f.debug_struct("PhysicalDeviceDescriptorIndexingProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_update_after_bind_descriptors_in_all_pools",
-                &self.max_update_after_bind_descriptors_in_all_pools,
-            )
+            .field("max_update_after_bind_descriptors_in_all_pools", &self.max_update_after_bind_descriptors_in_all_pools)
             .field(
                 "shader_uniform_buffer_array_non_uniform_indexing_native",
                 &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0),
@@ -1845,18 +1521,9 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingProperties {
                 "shader_input_attachment_array_non_uniform_indexing_native",
                 &(self.shader_input_attachment_array_non_uniform_indexing_native != 0),
             )
-            .field(
-                "robust_buffer_access_update_after_bind",
-                &(self.robust_buffer_access_update_after_bind != 0),
-            )
-            .field(
-                "quad_divergent_implicit_lod",
-                &(self.quad_divergent_implicit_lod != 0),
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_samplers",
-                &self.max_per_stage_descriptor_update_after_bind_samplers,
-            )
+            .field("robust_buffer_access_update_after_bind", &(self.robust_buffer_access_update_after_bind != 0))
+            .field("quad_divergent_implicit_lod", &(self.quad_divergent_implicit_lod != 0))
+            .field("max_per_stage_descriptor_update_after_bind_samplers", &self.max_per_stage_descriptor_update_after_bind_samplers)
             .field(
                 "max_per_stage_descriptor_update_after_bind_uniform_buffers",
                 &self.max_per_stage_descriptor_update_after_bind_uniform_buffers,
@@ -1877,42 +1544,21 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingProperties {
                 "max_per_stage_descriptor_update_after_bind_input_attachments",
                 &self.max_per_stage_descriptor_update_after_bind_input_attachments,
             )
-            .field(
-                "max_per_stage_update_after_bind_resources",
-                &self.max_per_stage_update_after_bind_resources,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_samplers",
-                &self.max_descriptor_set_update_after_bind_samplers,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_uniform_buffers",
-                &self.max_descriptor_set_update_after_bind_uniform_buffers,
-            )
+            .field("max_per_stage_update_after_bind_resources", &self.max_per_stage_update_after_bind_resources)
+            .field("max_descriptor_set_update_after_bind_samplers", &self.max_descriptor_set_update_after_bind_samplers)
+            .field("max_descriptor_set_update_after_bind_uniform_buffers", &self.max_descriptor_set_update_after_bind_uniform_buffers)
             .field(
                 "max_descriptor_set_update_after_bind_uniform_buffers_dynamic",
                 &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic,
             )
-            .field(
-                "max_descriptor_set_update_after_bind_storage_buffers",
-                &self.max_descriptor_set_update_after_bind_storage_buffers,
-            )
+            .field("max_descriptor_set_update_after_bind_storage_buffers", &self.max_descriptor_set_update_after_bind_storage_buffers)
             .field(
                 "max_descriptor_set_update_after_bind_storage_buffers_dynamic",
                 &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic,
             )
-            .field(
-                "max_descriptor_set_update_after_bind_sampled_images",
-                &self.max_descriptor_set_update_after_bind_sampled_images,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_storage_images",
-                &self.max_descriptor_set_update_after_bind_storage_images,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_input_attachments",
-                &self.max_descriptor_set_update_after_bind_input_attachments,
-            )
+            .field("max_descriptor_set_update_after_bind_sampled_images", &self.max_descriptor_set_update_after_bind_sampled_images)
+            .field("max_descriptor_set_update_after_bind_storage_images", &self.max_descriptor_set_update_after_bind_storage_images)
+            .field("max_descriptor_set_update_after_bind_input_attachments", &self.max_descriptor_set_update_after_bind_input_attachments)
             .finish()
     }
 }
@@ -1925,82 +1571,44 @@ impl PhysicalDeviceDescriptorIndexingProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDescriptorIndexingProperties.html) · Builder of [`PhysicalDeviceDescriptorIndexingProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a>(
-    PhysicalDeviceDescriptorIndexingProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a>(PhysicalDeviceDescriptorIndexingProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
-        PhysicalDeviceDescriptorIndexingPropertiesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceDescriptorIndexingPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn max_update_after_bind_descriptors_in_all_pools(
-        mut self,
-        max_update_after_bind_descriptors_in_all_pools: u32,
-    ) -> Self {
-        self.0.max_update_after_bind_descriptors_in_all_pools =
-            max_update_after_bind_descriptors_in_all_pools as _;
+    pub fn max_update_after_bind_descriptors_in_all_pools(mut self, max_update_after_bind_descriptors_in_all_pools: u32) -> Self {
+        self.0.max_update_after_bind_descriptors_in_all_pools = max_update_after_bind_descriptors_in_all_pools as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_buffer_array_non_uniform_indexing_native(
-        mut self,
-        shader_uniform_buffer_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_uniform_buffer_array_non_uniform_indexing_native =
-            shader_uniform_buffer_array_non_uniform_indexing_native as _;
+    pub fn shader_uniform_buffer_array_non_uniform_indexing_native(mut self, shader_uniform_buffer_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_uniform_buffer_array_non_uniform_indexing_native = shader_uniform_buffer_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_sampled_image_array_non_uniform_indexing_native(
-        mut self,
-        shader_sampled_image_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_sampled_image_array_non_uniform_indexing_native =
-            shader_sampled_image_array_non_uniform_indexing_native as _;
+    pub fn shader_sampled_image_array_non_uniform_indexing_native(mut self, shader_sampled_image_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_sampled_image_array_non_uniform_indexing_native = shader_sampled_image_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_storage_buffer_array_non_uniform_indexing_native(
-        mut self,
-        shader_storage_buffer_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_buffer_array_non_uniform_indexing_native =
-            shader_storage_buffer_array_non_uniform_indexing_native as _;
+    pub fn shader_storage_buffer_array_non_uniform_indexing_native(mut self, shader_storage_buffer_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_storage_buffer_array_non_uniform_indexing_native = shader_storage_buffer_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_storage_image_array_non_uniform_indexing_native(
-        mut self,
-        shader_storage_image_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_image_array_non_uniform_indexing_native =
-            shader_storage_image_array_non_uniform_indexing_native as _;
+    pub fn shader_storage_image_array_non_uniform_indexing_native(mut self, shader_storage_image_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_storage_image_array_non_uniform_indexing_native = shader_storage_image_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_input_attachment_array_non_uniform_indexing_native(
-        mut self,
-        shader_input_attachment_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_input_attachment_array_non_uniform_indexing_native =
-            shader_input_attachment_array_non_uniform_indexing_native as _;
+    pub fn shader_input_attachment_array_non_uniform_indexing_native(mut self, shader_input_attachment_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_input_attachment_array_non_uniform_indexing_native = shader_input_attachment_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn robust_buffer_access_update_after_bind(
-        mut self,
-        robust_buffer_access_update_after_bind: bool,
-    ) -> Self {
+    pub fn robust_buffer_access_update_after_bind(mut self, robust_buffer_access_update_after_bind: bool) -> Self {
         self.0.robust_buffer_access_update_after_bind = robust_buffer_access_update_after_bind as _;
         self
     }
@@ -2010,146 +1618,78 @@ impl<'a> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_samplers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_samplers: u32,
-    ) -> Self {
-        self.0.max_per_stage_descriptor_update_after_bind_samplers =
-            max_per_stage_descriptor_update_after_bind_samplers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_samplers(mut self, max_per_stage_descriptor_update_after_bind_samplers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_samplers = max_per_stage_descriptor_update_after_bind_samplers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_uniform_buffers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_uniform_buffers: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_uniform_buffers =
-            max_per_stage_descriptor_update_after_bind_uniform_buffers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_uniform_buffers(mut self, max_per_stage_descriptor_update_after_bind_uniform_buffers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_uniform_buffers = max_per_stage_descriptor_update_after_bind_uniform_buffers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_storage_buffers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_storage_buffers: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_storage_buffers =
-            max_per_stage_descriptor_update_after_bind_storage_buffers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_storage_buffers(mut self, max_per_stage_descriptor_update_after_bind_storage_buffers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_storage_buffers = max_per_stage_descriptor_update_after_bind_storage_buffers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_sampled_images(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_sampled_images: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_sampled_images =
-            max_per_stage_descriptor_update_after_bind_sampled_images as _;
+    pub fn max_per_stage_descriptor_update_after_bind_sampled_images(mut self, max_per_stage_descriptor_update_after_bind_sampled_images: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_sampled_images = max_per_stage_descriptor_update_after_bind_sampled_images as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_storage_images(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_storage_images: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_storage_images =
-            max_per_stage_descriptor_update_after_bind_storage_images as _;
+    pub fn max_per_stage_descriptor_update_after_bind_storage_images(mut self, max_per_stage_descriptor_update_after_bind_storage_images: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_storage_images = max_per_stage_descriptor_update_after_bind_storage_images as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_input_attachments(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_input_attachments: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_input_attachments =
-            max_per_stage_descriptor_update_after_bind_input_attachments as _;
+    pub fn max_per_stage_descriptor_update_after_bind_input_attachments(mut self, max_per_stage_descriptor_update_after_bind_input_attachments: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_input_attachments = max_per_stage_descriptor_update_after_bind_input_attachments as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_update_after_bind_resources(
-        mut self,
-        max_per_stage_update_after_bind_resources: u32,
-    ) -> Self {
-        self.0.max_per_stage_update_after_bind_resources =
-            max_per_stage_update_after_bind_resources as _;
+    pub fn max_per_stage_update_after_bind_resources(mut self, max_per_stage_update_after_bind_resources: u32) -> Self {
+        self.0.max_per_stage_update_after_bind_resources = max_per_stage_update_after_bind_resources as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_samplers(
-        mut self,
-        max_descriptor_set_update_after_bind_samplers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_samplers =
-            max_descriptor_set_update_after_bind_samplers as _;
+    pub fn max_descriptor_set_update_after_bind_samplers(mut self, max_descriptor_set_update_after_bind_samplers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_samplers = max_descriptor_set_update_after_bind_samplers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_uniform_buffers(
-        mut self,
-        max_descriptor_set_update_after_bind_uniform_buffers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_uniform_buffers =
-            max_descriptor_set_update_after_bind_uniform_buffers as _;
+    pub fn max_descriptor_set_update_after_bind_uniform_buffers(mut self, max_descriptor_set_update_after_bind_uniform_buffers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_uniform_buffers = max_descriptor_set_update_after_bind_uniform_buffers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_uniform_buffers_dynamic(
-        mut self,
-        max_descriptor_set_update_after_bind_uniform_buffers_dynamic: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_uniform_buffers_dynamic =
-            max_descriptor_set_update_after_bind_uniform_buffers_dynamic as _;
+    pub fn max_descriptor_set_update_after_bind_uniform_buffers_dynamic(mut self, max_descriptor_set_update_after_bind_uniform_buffers_dynamic: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_uniform_buffers_dynamic = max_descriptor_set_update_after_bind_uniform_buffers_dynamic as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_buffers(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_buffers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_storage_buffers =
-            max_descriptor_set_update_after_bind_storage_buffers as _;
+    pub fn max_descriptor_set_update_after_bind_storage_buffers(mut self, max_descriptor_set_update_after_bind_storage_buffers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_buffers = max_descriptor_set_update_after_bind_storage_buffers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_buffers_dynamic(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_buffers_dynamic: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_storage_buffers_dynamic =
-            max_descriptor_set_update_after_bind_storage_buffers_dynamic as _;
+    pub fn max_descriptor_set_update_after_bind_storage_buffers_dynamic(mut self, max_descriptor_set_update_after_bind_storage_buffers_dynamic: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_buffers_dynamic = max_descriptor_set_update_after_bind_storage_buffers_dynamic as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_sampled_images(
-        mut self,
-        max_descriptor_set_update_after_bind_sampled_images: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_sampled_images =
-            max_descriptor_set_update_after_bind_sampled_images as _;
+    pub fn max_descriptor_set_update_after_bind_sampled_images(mut self, max_descriptor_set_update_after_bind_sampled_images: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_sampled_images = max_descriptor_set_update_after_bind_sampled_images as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_images(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_images: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_storage_images =
-            max_descriptor_set_update_after_bind_storage_images as _;
+    pub fn max_descriptor_set_update_after_bind_storage_images(mut self, max_descriptor_set_update_after_bind_storage_images: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_images = max_descriptor_set_update_after_bind_storage_images as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_input_attachments(
-        mut self,
-        max_descriptor_set_update_after_bind_input_attachments: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_input_attachments =
-            max_descriptor_set_update_after_bind_input_attachments as _;
+    pub fn max_descriptor_set_update_after_bind_input_attachments(mut self, max_descriptor_set_update_after_bind_input_attachments: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_input_attachments = max_descriptor_set_update_after_bind_input_attachments as _;
         self
     }
     #[inline]
@@ -2218,23 +1758,14 @@ impl DescriptorSetLayoutBindingFlagsCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfo.html) · Builder of [`DescriptorSetLayoutBindingFlagsCreateInfo`]"]
 #[repr(transparent)]
-pub struct DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a>(
-    DescriptorSetLayoutBindingFlagsCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a>(DescriptorSetLayoutBindingFlagsCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
-        DescriptorSetLayoutBindingFlagsCreateInfoBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        DescriptorSetLayoutBindingFlagsCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn binding_flags(
-        mut self,
-        binding_flags: &'a [crate::vk1_2::DescriptorBindingFlags],
-    ) -> Self {
+    pub fn binding_flags(mut self, binding_flags: &'a [crate::vk1_2::DescriptorBindingFlags]) -> Self {
         self.0.p_binding_flags = binding_flags.as_ptr() as _;
         self.0.binding_count = binding_flags.len() as _;
         self
@@ -2279,8 +1810,7 @@ pub struct DescriptorSetVariableDescriptorCountAllocateInfo {
 impl Default for DescriptorSetVariableDescriptorCountAllocateInfo {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO,
+            s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO,
             p_next: std::ptr::null(),
             descriptor_set_count: Default::default(),
             p_descriptor_counts: std::ptr::null(),
@@ -2306,17 +1836,11 @@ impl DescriptorSetVariableDescriptorCountAllocateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountAllocateInfo.html) · Builder of [`DescriptorSetVariableDescriptorCountAllocateInfo`]"]
 #[repr(transparent)]
-pub struct DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a>(
-    DescriptorSetVariableDescriptorCountAllocateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a>(DescriptorSetVariableDescriptorCountAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
-        DescriptorSetVariableDescriptorCountAllocateInfoBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        DescriptorSetVariableDescriptorCountAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn descriptor_counts(mut self, descriptor_counts: &'a [u32]) -> Self {
@@ -2363,8 +1887,7 @@ pub struct DescriptorSetVariableDescriptorCountLayoutSupport {
 impl Default for DescriptorSetVariableDescriptorCountLayoutSupport {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT,
+            s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT,
             p_next: std::ptr::null_mut(),
             max_variable_descriptor_count: Default::default(),
         }
@@ -2375,10 +1898,7 @@ impl std::fmt::Debug for DescriptorSetVariableDescriptorCountLayoutSupport {
         f.debug_struct("DescriptorSetVariableDescriptorCountLayoutSupport")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_variable_descriptor_count",
-                &self.max_variable_descriptor_count,
-            )
+            .field("max_variable_descriptor_count", &self.max_variable_descriptor_count)
             .finish()
     }
 }
@@ -2391,17 +1911,11 @@ impl DescriptorSetVariableDescriptorCountLayoutSupport {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetVariableDescriptorCountLayoutSupport.html) · Builder of [`DescriptorSetVariableDescriptorCountLayoutSupport`]"]
 #[repr(transparent)]
-pub struct DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a>(
-    DescriptorSetVariableDescriptorCountLayoutSupport,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a>(DescriptorSetVariableDescriptorCountLayoutSupport, std::marker::PhantomData<&'a ()>);
 impl<'a> DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
     #[inline]
     pub fn new() -> DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
-        DescriptorSetVariableDescriptorCountLayoutSupportBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        DescriptorSetVariableDescriptorCountLayoutSupportBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn max_variable_descriptor_count(mut self, max_variable_descriptor_count: u32) -> Self {
@@ -2492,21 +2006,12 @@ impl AttachmentDescription2 {
         AttachmentDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayout>
-    for AttachmentDescription2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'_>>
-    for AttachmentDescription2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayout> for AttachmentDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'_>> for AttachmentDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2.html) · Builder of [`AttachmentDescription2`]"]
 #[repr(transparent)]
-pub struct AttachmentDescription2Builder<'a>(
-    AttachmentDescription2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AttachmentDescription2Builder<'a>(AttachmentDescription2, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentDescription2Builder<'a> {
     #[inline]
     pub fn new() -> AttachmentDescription2Builder<'a> {
@@ -2623,14 +2128,8 @@ impl AttachmentReference2 {
         AttachmentReference2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayout>
-    for AttachmentReference2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<'_>>
-    for AttachmentReference2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayout> for AttachmentReference2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<'_>> for AttachmentReference2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference2.html) · Builder of [`AttachmentReference2`]"]
 #[repr(transparent)]
@@ -2733,10 +2232,7 @@ impl std::fmt::Debug for SubpassDescription2 {
             .field("color_attachment_count", &self.color_attachment_count)
             .field("p_color_attachments", &self.p_color_attachments)
             .field("p_resolve_attachments", &self.p_resolve_attachments)
-            .field(
-                "p_depth_stencil_attachment",
-                &self.p_depth_stencil_attachment,
-            )
+            .field("p_depth_stencil_attachment", &self.p_depth_stencil_attachment)
             .field("preserve_attachment_count", &self.preserve_attachment_count)
             .field("p_preserve_attachments", &self.p_preserve_attachments)
             .finish()
@@ -2748,30 +2244,10 @@ impl SubpassDescription2 {
         SubpassDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolve>
-    for SubpassDescription2Builder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolveBuilder<'_>>
-    for SubpassDescription2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR,
-    > for SubpassDescription2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<
-            '_,
-        >,
-    > for SubpassDescription2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolve> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolveBuilder<'_>> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for SubpassDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`]"]
 #[repr(transparent)]
@@ -2787,10 +2263,7 @@ impl<'a> SubpassDescription2Builder<'a> {
         self
     }
     #[inline]
-    pub fn pipeline_bind_point(
-        mut self,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-    ) -> Self {
+    pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
@@ -2800,37 +2273,25 @@ impl<'a> SubpassDescription2Builder<'a> {
         self
     }
     #[inline]
-    pub fn input_attachments(
-        mut self,
-        input_attachments: &'a [crate::vk1_2::AttachmentReference2Builder],
-    ) -> Self {
+    pub fn input_attachments(mut self, input_attachments: &'a [crate::vk1_2::AttachmentReference2Builder]) -> Self {
         self.0.p_input_attachments = input_attachments.as_ptr() as _;
         self.0.input_attachment_count = input_attachments.len() as _;
         self
     }
     #[inline]
-    pub fn color_attachments(
-        mut self,
-        color_attachments: &'a [crate::vk1_2::AttachmentReference2Builder],
-    ) -> Self {
+    pub fn color_attachments(mut self, color_attachments: &'a [crate::vk1_2::AttachmentReference2Builder]) -> Self {
         self.0.p_color_attachments = color_attachments.as_ptr() as _;
         self.0.color_attachment_count = color_attachments.len() as _;
         self
     }
     #[inline]
-    pub fn resolve_attachments(
-        mut self,
-        resolve_attachments: &'a [crate::vk1_2::AttachmentReference2Builder],
-    ) -> Self {
+    pub fn resolve_attachments(mut self, resolve_attachments: &'a [crate::vk1_2::AttachmentReference2Builder]) -> Self {
         self.0.p_resolve_attachments = resolve_attachments.as_ptr() as _;
         self.0.color_attachment_count = resolve_attachments.len() as _;
         self
     }
     #[inline]
-    pub fn depth_stencil_attachment(
-        mut self,
-        depth_stencil_attachment: &'a crate::vk1_2::AttachmentReference2,
-    ) -> Self {
+    pub fn depth_stencil_attachment(mut self, depth_stencil_attachment: &'a crate::vk1_2::AttachmentReference2) -> Self {
         self.0.p_depth_stencil_attachment = depth_stencil_attachment as _;
         self
     }
@@ -2921,15 +2382,8 @@ impl SubpassDependency2 {
         SubpassDependency2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHR>
-    for SubpassDependency2Builder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder<'_>>
-    for SubpassDependency2Builder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHR> for SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder<'_>> for SubpassDependency2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency2.html) · Builder of [`SubpassDependency2`]"]
 #[repr(transparent)]
@@ -3052,10 +2506,7 @@ impl std::fmt::Debug for RenderPassCreateInfo2 {
             .field("p_subpasses", &self.p_subpasses)
             .field("dependency_count", &self.dependency_count)
             .field("p_dependencies", &self.p_dependencies)
-            .field(
-                "correlated_view_mask_count",
-                &self.correlated_view_mask_count,
-            )
+            .field("correlated_view_mask_count", &self.correlated_view_mask_count)
             .field("p_correlated_view_masks", &self.p_correlated_view_masks)
             .finish()
     }
@@ -3066,21 +2517,12 @@ impl RenderPassCreateInfo2 {
         RenderPassCreateInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT,
-    > for RenderPassCreateInfo2Builder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_fragment_density_map :: RenderPassFragmentDensityMapCreateInfoEXTBuilder < '_ >> for RenderPassCreateInfo2Builder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo2.html) · Builder of [`RenderPassCreateInfo2`]"]
 #[repr(transparent)]
-pub struct RenderPassCreateInfo2Builder<'a>(
-    RenderPassCreateInfo2,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassCreateInfo2Builder<'a>(RenderPassCreateInfo2, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassCreateInfo2Builder<'a> {
     #[inline]
     pub fn new() -> RenderPassCreateInfo2Builder<'a> {
@@ -3092,10 +2534,7 @@ impl<'a> RenderPassCreateInfo2Builder<'a> {
         self
     }
     #[inline]
-    pub fn attachments(
-        mut self,
-        attachments: &'a [crate::vk1_2::AttachmentDescription2Builder],
-    ) -> Self {
+    pub fn attachments(mut self, attachments: &'a [crate::vk1_2::AttachmentDescription2Builder]) -> Self {
         self.0.p_attachments = attachments.as_ptr() as _;
         self.0.attachment_count = attachments.len() as _;
         self
@@ -3107,10 +2546,7 @@ impl<'a> RenderPassCreateInfo2Builder<'a> {
         self
     }
     #[inline]
-    pub fn dependencies(
-        mut self,
-        dependencies: &'a [crate::vk1_2::SubpassDependency2Builder],
-    ) -> Self {
+    pub fn dependencies(mut self, dependencies: &'a [crate::vk1_2::SubpassDependency2Builder]) -> Self {
         self.0.p_dependencies = dependencies.as_ptr() as _;
         self.0.dependency_count = dependencies.len() as _;
         self
@@ -3240,10 +2676,7 @@ impl Default for SubpassEndInfo {
 }
 impl std::fmt::Debug for SubpassEndInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubpassEndInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .finish()
+        f.debug_struct("SubpassEndInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).finish()
     }
 }
 impl SubpassEndInfo {
@@ -3324,10 +2757,7 @@ impl PhysicalDeviceTimelineSemaphoreFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeatures.html) · Builder of [`PhysicalDeviceTimelineSemaphoreFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a>(
-    PhysicalDeviceTimelineSemaphoreFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a>(PhysicalDeviceTimelineSemaphoreFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
@@ -3388,10 +2818,7 @@ impl std::fmt::Debug for PhysicalDeviceTimelineSemaphoreProperties {
         f.debug_struct("PhysicalDeviceTimelineSemaphoreProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "max_timeline_semaphore_value_difference",
-                &self.max_timeline_semaphore_value_difference,
-            )
+            .field("max_timeline_semaphore_value_difference", &self.max_timeline_semaphore_value_difference)
             .finish()
     }
 }
@@ -3404,25 +2831,15 @@ impl PhysicalDeviceTimelineSemaphoreProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreProperties.html) · Builder of [`PhysicalDeviceTimelineSemaphoreProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a>(
-    PhysicalDeviceTimelineSemaphoreProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a>(PhysicalDeviceTimelineSemaphoreProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
-        PhysicalDeviceTimelineSemaphorePropertiesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceTimelineSemaphorePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn max_timeline_semaphore_value_difference(
-        mut self,
-        max_timeline_semaphore_value_difference: u64,
-    ) -> Self {
-        self.0.max_timeline_semaphore_value_difference =
-            max_timeline_semaphore_value_difference as _;
+    pub fn max_timeline_semaphore_value_difference(mut self, max_timeline_semaphore_value_difference: u64) -> Self {
+        self.0.max_timeline_semaphore_value_difference = max_timeline_semaphore_value_difference as _;
         self
     }
     #[inline]
@@ -3491,10 +2908,7 @@ impl SemaphoreTypeCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeCreateInfo.html) · Builder of [`SemaphoreTypeCreateInfo`]"]
 #[repr(transparent)]
-pub struct SemaphoreTypeCreateInfoBuilder<'a>(
-    SemaphoreTypeCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SemaphoreTypeCreateInfoBuilder<'a>(SemaphoreTypeCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> SemaphoreTypeCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> SemaphoreTypeCreateInfoBuilder<'a> {
@@ -3566,15 +2980,9 @@ impl std::fmt::Debug for TimelineSemaphoreSubmitInfo {
         f.debug_struct("TimelineSemaphoreSubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "wait_semaphore_value_count",
-                &self.wait_semaphore_value_count,
-            )
+            .field("wait_semaphore_value_count", &self.wait_semaphore_value_count)
             .field("p_wait_semaphore_values", &self.p_wait_semaphore_values)
-            .field(
-                "signal_semaphore_value_count",
-                &self.signal_semaphore_value_count,
-            )
+            .field("signal_semaphore_value_count", &self.signal_semaphore_value_count)
             .field("p_signal_semaphore_values", &self.p_signal_semaphore_values)
             .finish()
     }
@@ -3588,10 +2996,7 @@ impl TimelineSemaphoreSubmitInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimelineSemaphoreSubmitInfo.html) · Builder of [`TimelineSemaphoreSubmitInfo`]"]
 #[repr(transparent)]
-pub struct TimelineSemaphoreSubmitInfoBuilder<'a>(
-    TimelineSemaphoreSubmitInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct TimelineSemaphoreSubmitInfoBuilder<'a>(TimelineSemaphoreSubmitInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> TimelineSemaphoreSubmitInfoBuilder<'a> {
     #[inline]
     pub fn new() -> TimelineSemaphoreSubmitInfoBuilder<'a> {
@@ -3840,18 +3245,9 @@ impl std::fmt::Debug for PhysicalDevice8BitStorageFeatures {
         f.debug_struct("PhysicalDevice8BitStorageFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "storage_buffer8_bit_access",
-                &(self.storage_buffer8_bit_access != 0),
-            )
-            .field(
-                "uniform_and_storage_buffer8_bit_access",
-                &(self.uniform_and_storage_buffer8_bit_access != 0),
-            )
-            .field(
-                "storage_push_constant8",
-                &(self.storage_push_constant8 != 0),
-            )
+            .field("storage_buffer8_bit_access", &(self.storage_buffer8_bit_access != 0))
+            .field("uniform_and_storage_buffer8_bit_access", &(self.uniform_and_storage_buffer8_bit_access != 0))
+            .field("storage_push_constant8", &(self.storage_push_constant8 != 0))
             .finish()
     }
 }
@@ -3864,10 +3260,7 @@ impl PhysicalDevice8BitStorageFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice8BitStorageFeatures.html) · Builder of [`PhysicalDevice8BitStorageFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDevice8BitStorageFeaturesBuilder<'a>(
-    PhysicalDevice8BitStorageFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDevice8BitStorageFeaturesBuilder<'a>(PhysicalDevice8BitStorageFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
@@ -3879,10 +3272,7 @@ impl<'a> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn uniform_and_storage_buffer8_bit_access(
-        mut self,
-        uniform_and_storage_buffer8_bit_access: bool,
-    ) -> Self {
+    pub fn uniform_and_storage_buffer8_bit_access(mut self, uniform_and_storage_buffer8_bit_access: bool) -> Self {
         self.0.uniform_and_storage_buffer8_bit_access = uniform_and_storage_buffer8_bit_access as _;
         self
     }
@@ -3946,14 +3336,8 @@ impl std::fmt::Debug for PhysicalDeviceVulkanMemoryModelFeatures {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vulkan_memory_model", &(self.vulkan_memory_model != 0))
-            .field(
-                "vulkan_memory_model_device_scope",
-                &(self.vulkan_memory_model_device_scope != 0),
-            )
-            .field(
-                "vulkan_memory_model_availability_visibility_chains",
-                &(self.vulkan_memory_model_availability_visibility_chains != 0),
-            )
+            .field("vulkan_memory_model_device_scope", &(self.vulkan_memory_model_device_scope != 0))
+            .field("vulkan_memory_model_availability_visibility_chains", &(self.vulkan_memory_model_availability_visibility_chains != 0))
             .finish()
     }
 }
@@ -3966,10 +3350,7 @@ impl PhysicalDeviceVulkanMemoryModelFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkanMemoryModelFeatures.html) · Builder of [`PhysicalDeviceVulkanMemoryModelFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a>(
-    PhysicalDeviceVulkanMemoryModelFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a>(PhysicalDeviceVulkanMemoryModelFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
@@ -3981,20 +3362,13 @@ impl<'a> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn vulkan_memory_model_device_scope(
-        mut self,
-        vulkan_memory_model_device_scope: bool,
-    ) -> Self {
+    pub fn vulkan_memory_model_device_scope(mut self, vulkan_memory_model_device_scope: bool) -> Self {
         self.0.vulkan_memory_model_device_scope = vulkan_memory_model_device_scope as _;
         self
     }
     #[inline]
-    pub fn vulkan_memory_model_availability_visibility_chains(
-        mut self,
-        vulkan_memory_model_availability_visibility_chains: bool,
-    ) -> Self {
-        self.0.vulkan_memory_model_availability_visibility_chains =
-            vulkan_memory_model_availability_visibility_chains as _;
+    pub fn vulkan_memory_model_availability_visibility_chains(mut self, vulkan_memory_model_availability_visibility_chains: bool) -> Self {
+        self.0.vulkan_memory_model_availability_visibility_chains = vulkan_memory_model_availability_visibility_chains as _;
         self
     }
     #[inline]
@@ -4049,14 +3423,8 @@ impl std::fmt::Debug for PhysicalDeviceShaderAtomicInt64Features {
         f.debug_struct("PhysicalDeviceShaderAtomicInt64Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shader_buffer_int64_atomics",
-                &(self.shader_buffer_int64_atomics != 0),
-            )
-            .field(
-                "shader_shared_int64_atomics",
-                &(self.shader_shared_int64_atomics != 0),
-            )
+            .field("shader_buffer_int64_atomics", &(self.shader_buffer_int64_atomics != 0))
+            .field("shader_shared_int64_atomics", &(self.shader_shared_int64_atomics != 0))
             .finish()
     }
 }
@@ -4069,10 +3437,7 @@ impl PhysicalDeviceShaderAtomicInt64Features {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64Features.html) · Builder of [`PhysicalDeviceShaderAtomicInt64Features`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a>(
-    PhysicalDeviceShaderAtomicInt64Features,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a>(PhysicalDeviceShaderAtomicInt64Features, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
@@ -4144,18 +3509,9 @@ impl std::fmt::Debug for PhysicalDeviceDepthStencilResolveProperties {
         f.debug_struct("PhysicalDeviceDepthStencilResolveProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "supported_depth_resolve_modes",
-                &self.supported_depth_resolve_modes,
-            )
-            .field(
-                "supported_stencil_resolve_modes",
-                &self.supported_stencil_resolve_modes,
-            )
-            .field(
-                "independent_resolve_none",
-                &(self.independent_resolve_none != 0),
-            )
+            .field("supported_depth_resolve_modes", &self.supported_depth_resolve_modes)
+            .field("supported_stencil_resolve_modes", &self.supported_stencil_resolve_modes)
+            .field("independent_resolve_none", &(self.independent_resolve_none != 0))
             .field("independent_resolve", &(self.independent_resolve != 0))
             .finish()
     }
@@ -4169,31 +3525,19 @@ impl PhysicalDeviceDepthStencilResolveProperties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDepthStencilResolveProperties.html) · Builder of [`PhysicalDeviceDepthStencilResolveProperties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a>(
-    PhysicalDeviceDepthStencilResolveProperties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a>(PhysicalDeviceDepthStencilResolveProperties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
-        PhysicalDeviceDepthStencilResolvePropertiesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceDepthStencilResolvePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn supported_depth_resolve_modes(
-        mut self,
-        supported_depth_resolve_modes: crate::vk1_2::ResolveModeFlags,
-    ) -> Self {
+    pub fn supported_depth_resolve_modes(mut self, supported_depth_resolve_modes: crate::vk1_2::ResolveModeFlags) -> Self {
         self.0.supported_depth_resolve_modes = supported_depth_resolve_modes as _;
         self
     }
     #[inline]
-    pub fn supported_stencil_resolve_modes(
-        mut self,
-        supported_stencil_resolve_modes: crate::vk1_2::ResolveModeFlags,
-    ) -> Self {
+    pub fn supported_stencil_resolve_modes(mut self, supported_stencil_resolve_modes: crate::vk1_2::ResolveModeFlags) -> Self {
         self.0.supported_stencil_resolve_modes = supported_stencil_resolve_modes as _;
         self
     }
@@ -4263,10 +3607,7 @@ impl std::fmt::Debug for SubpassDescriptionDepthStencilResolve {
             .field("p_next", &self.p_next)
             .field("depth_resolve_mode", &self.depth_resolve_mode)
             .field("stencil_resolve_mode", &self.stencil_resolve_mode)
-            .field(
-                "p_depth_stencil_resolve_attachment",
-                &self.p_depth_stencil_resolve_attachment,
-            )
+            .field("p_depth_stencil_resolve_attachment", &self.p_depth_stencil_resolve_attachment)
             .finish()
     }
 }
@@ -4279,36 +3620,24 @@ impl SubpassDescriptionDepthStencilResolve {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionDepthStencilResolve.html) · Builder of [`SubpassDescriptionDepthStencilResolve`]"]
 #[repr(transparent)]
-pub struct SubpassDescriptionDepthStencilResolveBuilder<'a>(
-    SubpassDescriptionDepthStencilResolve,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SubpassDescriptionDepthStencilResolveBuilder<'a>(SubpassDescriptionDepthStencilResolve, std::marker::PhantomData<&'a ()>);
 impl<'a> SubpassDescriptionDepthStencilResolveBuilder<'a> {
     #[inline]
     pub fn new() -> SubpassDescriptionDepthStencilResolveBuilder<'a> {
         SubpassDescriptionDepthStencilResolveBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn depth_resolve_mode(
-        mut self,
-        depth_resolve_mode: crate::vk1_2::ResolveModeFlagBits,
-    ) -> Self {
+    pub fn depth_resolve_mode(mut self, depth_resolve_mode: crate::vk1_2::ResolveModeFlagBits) -> Self {
         self.0.depth_resolve_mode = depth_resolve_mode as _;
         self
     }
     #[inline]
-    pub fn stencil_resolve_mode(
-        mut self,
-        stencil_resolve_mode: crate::vk1_2::ResolveModeFlagBits,
-    ) -> Self {
+    pub fn stencil_resolve_mode(mut self, stencil_resolve_mode: crate::vk1_2::ResolveModeFlagBits) -> Self {
         self.0.stencil_resolve_mode = stencil_resolve_mode as _;
         self
     }
     #[inline]
-    pub fn depth_stencil_resolve_attachment(
-        mut self,
-        depth_stencil_resolve_attachment: &'a crate::vk1_2::AttachmentReference2,
-    ) -> Self {
+    pub fn depth_stencil_resolve_attachment(mut self, depth_stencil_resolve_attachment: &'a crate::vk1_2::AttachmentReference2) -> Self {
         self.0.p_depth_stencil_resolve_attachment = depth_stencil_resolve_attachment as _;
         self
     }
@@ -4375,10 +3704,7 @@ impl ImageStencilUsageCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageStencilUsageCreateInfo.html) · Builder of [`ImageStencilUsageCreateInfo`]"]
 #[repr(transparent)]
-pub struct ImageStencilUsageCreateInfoBuilder<'a>(
-    ImageStencilUsageCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct ImageStencilUsageCreateInfoBuilder<'a>(ImageStencilUsageCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> ImageStencilUsageCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> ImageStencilUsageCreateInfoBuilder<'a> {
@@ -4452,10 +3778,7 @@ impl PhysicalDeviceScalarBlockLayoutFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeatures.html) · Builder of [`PhysicalDeviceScalarBlockLayoutFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a>(
-    PhysicalDeviceScalarBlockLayoutFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a>(PhysicalDeviceScalarBlockLayoutFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
@@ -4505,8 +3828,7 @@ pub struct PhysicalDeviceUniformBufferStandardLayoutFeatures {
 impl Default for PhysicalDeviceUniformBufferStandardLayoutFeatures {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES,
             p_next: std::ptr::null_mut(),
             uniform_buffer_standard_layout: Default::default(),
         }
@@ -4517,10 +3839,7 @@ impl std::fmt::Debug for PhysicalDeviceUniformBufferStandardLayoutFeatures {
         f.debug_struct("PhysicalDeviceUniformBufferStandardLayoutFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "uniform_buffer_standard_layout",
-                &(self.uniform_buffer_standard_layout != 0),
-            )
+            .field("uniform_buffer_standard_layout", &(self.uniform_buffer_standard_layout != 0))
             .finish()
     }
 }
@@ -4533,17 +3852,11 @@ impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceUniformBufferStandardLayoutFeatures.html) · Builder of [`PhysicalDeviceUniformBufferStandardLayoutFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a>(
-    PhysicalDeviceUniformBufferStandardLayoutFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a>(PhysicalDeviceUniformBufferStandardLayoutFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
-        PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn uniform_buffer_standard_layout(mut self, uniform_buffer_standard_layout: bool) -> Self {
@@ -4605,14 +3918,8 @@ impl std::fmt::Debug for PhysicalDeviceBufferDeviceAddressFeatures {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer_device_address", &(self.buffer_device_address != 0))
-            .field(
-                "buffer_device_address_capture_replay",
-                &(self.buffer_device_address_capture_replay != 0),
-            )
-            .field(
-                "buffer_device_address_multi_device",
-                &(self.buffer_device_address_multi_device != 0),
-            )
+            .field("buffer_device_address_capture_replay", &(self.buffer_device_address_capture_replay != 0))
+            .field("buffer_device_address_multi_device", &(self.buffer_device_address_multi_device != 0))
             .finish()
     }
 }
@@ -4625,17 +3932,11 @@ impl PhysicalDeviceBufferDeviceAddressFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeatures.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a>(
-    PhysicalDeviceBufferDeviceAddressFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a>(PhysicalDeviceBufferDeviceAddressFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
-        PhysicalDeviceBufferDeviceAddressFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceBufferDeviceAddressFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn buffer_device_address(mut self, buffer_device_address: bool) -> Self {
@@ -4643,18 +3944,12 @@ impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn buffer_device_address_capture_replay(
-        mut self,
-        buffer_device_address_capture_replay: bool,
-    ) -> Self {
+    pub fn buffer_device_address_capture_replay(mut self, buffer_device_address_capture_replay: bool) -> Self {
         self.0.buffer_device_address_capture_replay = buffer_device_address_capture_replay as _;
         self
     }
     #[inline]
-    pub fn buffer_device_address_multi_device(
-        mut self,
-        buffer_device_address_multi_device: bool,
-    ) -> Self {
+    pub fn buffer_device_address_multi_device(mut self, buffer_device_address_multi_device: bool) -> Self {
         self.0.buffer_device_address_multi_device = buffer_device_address_multi_device as _;
         self
     }
@@ -4721,10 +4016,7 @@ impl BufferDeviceAddressInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfo.html) · Builder of [`BufferDeviceAddressInfo`]"]
 #[repr(transparent)]
-pub struct BufferDeviceAddressInfoBuilder<'a>(
-    BufferDeviceAddressInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BufferDeviceAddressInfoBuilder<'a>(BufferDeviceAddressInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferDeviceAddressInfoBuilder<'a> {
     #[inline]
     pub fn new() -> BufferDeviceAddressInfoBuilder<'a> {
@@ -4798,10 +4090,7 @@ impl BufferOpaqueCaptureAddressCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html) · Builder of [`BufferOpaqueCaptureAddressCreateInfo`]"]
 #[repr(transparent)]
-pub struct BufferOpaqueCaptureAddressCreateInfoBuilder<'a>(
-    BufferOpaqueCaptureAddressCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct BufferOpaqueCaptureAddressCreateInfoBuilder<'a>(BufferOpaqueCaptureAddressCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
@@ -4875,17 +4164,11 @@ impl PhysicalDeviceImagelessFramebufferFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImagelessFramebufferFeatures.html) · Builder of [`PhysicalDeviceImagelessFramebufferFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a>(
-    PhysicalDeviceImagelessFramebufferFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a>(PhysicalDeviceImagelessFramebufferFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
-        PhysicalDeviceImagelessFramebufferFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceImagelessFramebufferFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn imageless_framebuffer(mut self, imageless_framebuffer: bool) -> Self {
@@ -4944,10 +4227,7 @@ impl std::fmt::Debug for FramebufferAttachmentsCreateInfo {
         f.debug_struct("FramebufferAttachmentsCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "attachment_image_info_count",
-                &self.attachment_image_info_count,
-            )
+            .field("attachment_image_info_count", &self.attachment_image_info_count)
             .field("p_attachment_image_infos", &self.p_attachment_image_infos)
             .finish()
     }
@@ -4961,20 +4241,14 @@ impl FramebufferAttachmentsCreateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentsCreateInfo.html) · Builder of [`FramebufferAttachmentsCreateInfo`]"]
 #[repr(transparent)]
-pub struct FramebufferAttachmentsCreateInfoBuilder<'a>(
-    FramebufferAttachmentsCreateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct FramebufferAttachmentsCreateInfoBuilder<'a>(FramebufferAttachmentsCreateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> FramebufferAttachmentsCreateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> FramebufferAttachmentsCreateInfoBuilder<'a> {
         FramebufferAttachmentsCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn attachment_image_infos(
-        mut self,
-        attachment_image_infos: &'a [crate::vk1_2::FramebufferAttachmentImageInfoBuilder],
-    ) -> Self {
+    pub fn attachment_image_infos(mut self, attachment_image_infos: &'a [crate::vk1_2::FramebufferAttachmentImageInfoBuilder]) -> Self {
         self.0.p_attachment_image_infos = attachment_image_infos.as_ptr() as _;
         self.0.attachment_image_info_count = attachment_image_infos.len() as _;
         self
@@ -5060,10 +4334,7 @@ impl FramebufferAttachmentImageInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferAttachmentImageInfo.html) · Builder of [`FramebufferAttachmentImageInfo`]"]
 #[repr(transparent)]
-pub struct FramebufferAttachmentImageInfoBuilder<'a>(
-    FramebufferAttachmentImageInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct FramebufferAttachmentImageInfoBuilder<'a>(FramebufferAttachmentImageInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> FramebufferAttachmentImageInfoBuilder<'a> {
     #[inline]
     pub fn new() -> FramebufferAttachmentImageInfoBuilder<'a> {
@@ -5166,10 +4437,7 @@ impl RenderPassAttachmentBeginInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassAttachmentBeginInfo.html) · Builder of [`RenderPassAttachmentBeginInfo`]"]
 #[repr(transparent)]
-pub struct RenderPassAttachmentBeginInfoBuilder<'a>(
-    RenderPassAttachmentBeginInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct RenderPassAttachmentBeginInfoBuilder<'a>(RenderPassAttachmentBeginInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> RenderPassAttachmentBeginInfoBuilder<'a> {
     #[inline]
     pub fn new() -> RenderPassAttachmentBeginInfoBuilder<'a> {
@@ -5220,8 +4488,7 @@ pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
 impl Default for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES,
             p_next: std::ptr::null_mut(),
             separate_depth_stencil_layouts: Default::default(),
         }
@@ -5232,10 +4499,7 @@ impl std::fmt::Debug for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
         f.debug_struct("PhysicalDeviceSeparateDepthStencilLayoutsFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "separate_depth_stencil_layouts",
-                &(self.separate_depth_stencil_layouts != 0),
-            )
+            .field("separate_depth_stencil_layouts", &(self.separate_depth_stencil_layouts != 0))
             .finish()
     }
 }
@@ -5248,17 +4512,11 @@ impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures.html) · Builder of [`PhysicalDeviceSeparateDepthStencilLayoutsFeatures`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a>(
-    PhysicalDeviceSeparateDepthStencilLayoutsFeatures,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a>(PhysicalDeviceSeparateDepthStencilLayoutsFeatures, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
-        PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn separate_depth_stencil_layouts(mut self, separate_depth_stencil_layouts: bool) -> Self {
@@ -5328,10 +4586,7 @@ impl AttachmentReferenceStencilLayout {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReferenceStencilLayout.html) · Builder of [`AttachmentReferenceStencilLayout`]"]
 #[repr(transparent)]
-pub struct AttachmentReferenceStencilLayoutBuilder<'a>(
-    AttachmentReferenceStencilLayout,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AttachmentReferenceStencilLayoutBuilder<'a>(AttachmentReferenceStencilLayout, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentReferenceStencilLayoutBuilder<'a> {
     #[inline]
     pub fn new() -> AttachmentReferenceStencilLayoutBuilder<'a> {
@@ -5408,20 +4663,14 @@ impl AttachmentDescriptionStencilLayout {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionStencilLayout.html) · Builder of [`AttachmentDescriptionStencilLayout`]"]
 #[repr(transparent)]
-pub struct AttachmentDescriptionStencilLayoutBuilder<'a>(
-    AttachmentDescriptionStencilLayout,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct AttachmentDescriptionStencilLayoutBuilder<'a>(AttachmentDescriptionStencilLayout, std::marker::PhantomData<&'a ()>);
 impl<'a> AttachmentDescriptionStencilLayoutBuilder<'a> {
     #[inline]
     pub fn new() -> AttachmentDescriptionStencilLayoutBuilder<'a> {
         AttachmentDescriptionStencilLayoutBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn stencil_initial_layout(
-        mut self,
-        stencil_initial_layout: crate::vk1_0::ImageLayout,
-    ) -> Self {
+    pub fn stencil_initial_layout(mut self, stencil_initial_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.stencil_initial_layout = stencil_initial_layout as _;
         self
     }
@@ -5493,10 +4742,7 @@ impl MemoryOpaqueCaptureAddressAllocateInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfo.html) · Builder of [`MemoryOpaqueCaptureAddressAllocateInfo`]"]
 #[repr(transparent)]
-pub struct MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a>(
-    MemoryOpaqueCaptureAddressAllocateInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a>(MemoryOpaqueCaptureAddressAllocateInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
     #[inline]
     pub fn new() -> MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
@@ -5570,10 +4816,7 @@ impl DeviceMemoryOpaqueCaptureAddressInfo {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfo.html) · Builder of [`DeviceMemoryOpaqueCaptureAddressInfo`]"]
 #[repr(transparent)]
-pub struct DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a>(
-    DeviceMemoryOpaqueCaptureAddressInfo,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a>(DeviceMemoryOpaqueCaptureAddressInfo, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a> {
@@ -5656,45 +4899,18 @@ impl std::fmt::Debug for PhysicalDeviceVulkan11Features {
         f.debug_struct("PhysicalDeviceVulkan11Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "storage_buffer16_bit_access",
-                &(self.storage_buffer16_bit_access != 0),
-            )
-            .field(
-                "uniform_and_storage_buffer16_bit_access",
-                &(self.uniform_and_storage_buffer16_bit_access != 0),
-            )
-            .field(
-                "storage_push_constant16",
-                &(self.storage_push_constant16 != 0),
-            )
-            .field(
-                "storage_input_output16",
-                &(self.storage_input_output16 != 0),
-            )
+            .field("storage_buffer16_bit_access", &(self.storage_buffer16_bit_access != 0))
+            .field("uniform_and_storage_buffer16_bit_access", &(self.uniform_and_storage_buffer16_bit_access != 0))
+            .field("storage_push_constant16", &(self.storage_push_constant16 != 0))
+            .field("storage_input_output16", &(self.storage_input_output16 != 0))
             .field("multiview", &(self.multiview != 0))
-            .field(
-                "multiview_geometry_shader",
-                &(self.multiview_geometry_shader != 0),
-            )
-            .field(
-                "multiview_tessellation_shader",
-                &(self.multiview_tessellation_shader != 0),
-            )
-            .field(
-                "variable_pointers_storage_buffer",
-                &(self.variable_pointers_storage_buffer != 0),
-            )
+            .field("multiview_geometry_shader", &(self.multiview_geometry_shader != 0))
+            .field("multiview_tessellation_shader", &(self.multiview_tessellation_shader != 0))
+            .field("variable_pointers_storage_buffer", &(self.variable_pointers_storage_buffer != 0))
             .field("variable_pointers", &(self.variable_pointers != 0))
             .field("protected_memory", &(self.protected_memory != 0))
-            .field(
-                "sampler_ycbcr_conversion",
-                &(self.sampler_ycbcr_conversion != 0),
-            )
-            .field(
-                "shader_draw_parameters",
-                &(self.shader_draw_parameters != 0),
-            )
+            .field("sampler_ycbcr_conversion", &(self.sampler_ycbcr_conversion != 0))
+            .field("shader_draw_parameters", &(self.shader_draw_parameters != 0))
             .finish()
     }
 }
@@ -5707,10 +4923,7 @@ impl PhysicalDeviceVulkan11Features {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Features.html) · Builder of [`PhysicalDeviceVulkan11Features`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVulkan11FeaturesBuilder<'a>(
-    PhysicalDeviceVulkan11Features,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVulkan11FeaturesBuilder<'a>(PhysicalDeviceVulkan11Features, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
@@ -5722,12 +4935,8 @@ impl<'a> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn uniform_and_storage_buffer16_bit_access(
-        mut self,
-        uniform_and_storage_buffer16_bit_access: bool,
-    ) -> Self {
-        self.0.uniform_and_storage_buffer16_bit_access =
-            uniform_and_storage_buffer16_bit_access as _;
+    pub fn uniform_and_storage_buffer16_bit_access(mut self, uniform_and_storage_buffer16_bit_access: bool) -> Self {
+        self.0.uniform_and_storage_buffer16_bit_access = uniform_and_storage_buffer16_bit_access as _;
         self
     }
     #[inline]
@@ -5756,10 +4965,7 @@ impl<'a> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn variable_pointers_storage_buffer(
-        mut self,
-        variable_pointers_storage_buffer: bool,
-    ) -> Self {
+    pub fn variable_pointers_storage_buffer(mut self, variable_pointers_storage_buffer: bool) -> Self {
         self.0.variable_pointers_storage_buffer = variable_pointers_storage_buffer as _;
         self
     }
@@ -5868,26 +5074,14 @@ impl std::fmt::Debug for PhysicalDeviceVulkan11Properties {
             .field("device_luid_valid", &(self.device_luid_valid != 0))
             .field("subgroup_size", &self.subgroup_size)
             .field("subgroup_supported_stages", &self.subgroup_supported_stages)
-            .field(
-                "subgroup_supported_operations",
-                &self.subgroup_supported_operations,
-            )
-            .field(
-                "subgroup_quad_operations_in_all_stages",
-                &(self.subgroup_quad_operations_in_all_stages != 0),
-            )
+            .field("subgroup_supported_operations", &self.subgroup_supported_operations)
+            .field("subgroup_quad_operations_in_all_stages", &(self.subgroup_quad_operations_in_all_stages != 0))
             .field("point_clipping_behavior", &self.point_clipping_behavior)
             .field("max_multiview_view_count", &self.max_multiview_view_count)
-            .field(
-                "max_multiview_instance_index",
-                &self.max_multiview_instance_index,
-            )
+            .field("max_multiview_instance_index", &self.max_multiview_instance_index)
             .field("protected_no_fault", &(self.protected_no_fault != 0))
             .field("max_per_set_descriptors", &self.max_per_set_descriptors)
-            .field(
-                "max_memory_allocation_size",
-                &self.max_memory_allocation_size,
-            )
+            .field("max_memory_allocation_size", &self.max_memory_allocation_size)
             .finish()
     }
 }
@@ -5900,10 +5094,7 @@ impl PhysicalDeviceVulkan11Properties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan11Properties.html) · Builder of [`PhysicalDeviceVulkan11Properties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVulkan11PropertiesBuilder<'a>(
-    PhysicalDeviceVulkan11Properties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVulkan11PropertiesBuilder<'a>(PhysicalDeviceVulkan11Properties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
@@ -5940,34 +5131,22 @@ impl<'a> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn subgroup_supported_stages(
-        mut self,
-        subgroup_supported_stages: crate::vk1_0::ShaderStageFlags,
-    ) -> Self {
+    pub fn subgroup_supported_stages(mut self, subgroup_supported_stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.subgroup_supported_stages = subgroup_supported_stages as _;
         self
     }
     #[inline]
-    pub fn subgroup_supported_operations(
-        mut self,
-        subgroup_supported_operations: crate::vk1_1::SubgroupFeatureFlags,
-    ) -> Self {
+    pub fn subgroup_supported_operations(mut self, subgroup_supported_operations: crate::vk1_1::SubgroupFeatureFlags) -> Self {
         self.0.subgroup_supported_operations = subgroup_supported_operations as _;
         self
     }
     #[inline]
-    pub fn subgroup_quad_operations_in_all_stages(
-        mut self,
-        subgroup_quad_operations_in_all_stages: bool,
-    ) -> Self {
+    pub fn subgroup_quad_operations_in_all_stages(mut self, subgroup_quad_operations_in_all_stages: bool) -> Self {
         self.0.subgroup_quad_operations_in_all_stages = subgroup_quad_operations_in_all_stages as _;
         self
     }
     #[inline]
-    pub fn point_clipping_behavior(
-        mut self,
-        point_clipping_behavior: crate::vk1_1::PointClippingBehavior,
-    ) -> Self {
+    pub fn point_clipping_behavior(mut self, point_clipping_behavior: crate::vk1_1::PointClippingBehavior) -> Self {
         self.0.point_clipping_behavior = point_clipping_behavior as _;
         self
     }
@@ -5992,10 +5171,7 @@ impl<'a> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_memory_allocation_size(
-        mut self,
-        max_memory_allocation_size: crate::vk1_0::DeviceSize,
-    ) -> Self {
+    pub fn max_memory_allocation_size(mut self, max_memory_allocation_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_memory_allocation_size = max_memory_allocation_size as _;
         self
     }
@@ -6141,66 +5317,24 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Features {
         f.debug_struct("PhysicalDeviceVulkan12Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "sampler_mirror_clamp_to_edge",
-                &(self.sampler_mirror_clamp_to_edge != 0),
-            )
+            .field("sampler_mirror_clamp_to_edge", &(self.sampler_mirror_clamp_to_edge != 0))
             .field("draw_indirect_count", &(self.draw_indirect_count != 0))
-            .field(
-                "storage_buffer8_bit_access",
-                &(self.storage_buffer8_bit_access != 0),
-            )
-            .field(
-                "uniform_and_storage_buffer8_bit_access",
-                &(self.uniform_and_storage_buffer8_bit_access != 0),
-            )
-            .field(
-                "storage_push_constant8",
-                &(self.storage_push_constant8 != 0),
-            )
-            .field(
-                "shader_buffer_int64_atomics",
-                &(self.shader_buffer_int64_atomics != 0),
-            )
-            .field(
-                "shader_shared_int64_atomics",
-                &(self.shader_shared_int64_atomics != 0),
-            )
+            .field("storage_buffer8_bit_access", &(self.storage_buffer8_bit_access != 0))
+            .field("uniform_and_storage_buffer8_bit_access", &(self.uniform_and_storage_buffer8_bit_access != 0))
+            .field("storage_push_constant8", &(self.storage_push_constant8 != 0))
+            .field("shader_buffer_int64_atomics", &(self.shader_buffer_int64_atomics != 0))
+            .field("shader_shared_int64_atomics", &(self.shader_shared_int64_atomics != 0))
             .field("shader_float16", &(self.shader_float16 != 0))
             .field("shader_int8", &(self.shader_int8 != 0))
             .field("descriptor_indexing", &(self.descriptor_indexing != 0))
-            .field(
-                "shader_input_attachment_array_dynamic_indexing",
-                &(self.shader_input_attachment_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_uniform_texel_buffer_array_dynamic_indexing",
-                &(self.shader_uniform_texel_buffer_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_storage_texel_buffer_array_dynamic_indexing",
-                &(self.shader_storage_texel_buffer_array_dynamic_indexing != 0),
-            )
-            .field(
-                "shader_uniform_buffer_array_non_uniform_indexing",
-                &(self.shader_uniform_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_sampled_image_array_non_uniform_indexing",
-                &(self.shader_sampled_image_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_buffer_array_non_uniform_indexing",
-                &(self.shader_storage_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_image_array_non_uniform_indexing",
-                &(self.shader_storage_image_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_input_attachment_array_non_uniform_indexing",
-                &(self.shader_input_attachment_array_non_uniform_indexing != 0),
-            )
+            .field("shader_input_attachment_array_dynamic_indexing", &(self.shader_input_attachment_array_dynamic_indexing != 0))
+            .field("shader_uniform_texel_buffer_array_dynamic_indexing", &(self.shader_uniform_texel_buffer_array_dynamic_indexing != 0))
+            .field("shader_storage_texel_buffer_array_dynamic_indexing", &(self.shader_storage_texel_buffer_array_dynamic_indexing != 0))
+            .field("shader_uniform_buffer_array_non_uniform_indexing", &(self.shader_uniform_buffer_array_non_uniform_indexing != 0))
+            .field("shader_sampled_image_array_non_uniform_indexing", &(self.shader_sampled_image_array_non_uniform_indexing != 0))
+            .field("shader_storage_buffer_array_non_uniform_indexing", &(self.shader_storage_buffer_array_non_uniform_indexing != 0))
+            .field("shader_storage_image_array_non_uniform_indexing", &(self.shader_storage_image_array_non_uniform_indexing != 0))
+            .field("shader_input_attachment_array_non_uniform_indexing", &(self.shader_input_attachment_array_non_uniform_indexing != 0))
             .field(
                 "shader_uniform_texel_buffer_array_non_uniform_indexing",
                 &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0),
@@ -6209,22 +5343,10 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Features {
                 "shader_storage_texel_buffer_array_non_uniform_indexing",
                 &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0),
             )
-            .field(
-                "descriptor_binding_uniform_buffer_update_after_bind",
-                &(self.descriptor_binding_uniform_buffer_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_sampled_image_update_after_bind",
-                &(self.descriptor_binding_sampled_image_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_image_update_after_bind",
-                &(self.descriptor_binding_storage_image_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_buffer_update_after_bind",
-                &(self.descriptor_binding_storage_buffer_update_after_bind != 0),
-            )
+            .field("descriptor_binding_uniform_buffer_update_after_bind", &(self.descriptor_binding_uniform_buffer_update_after_bind != 0))
+            .field("descriptor_binding_sampled_image_update_after_bind", &(self.descriptor_binding_sampled_image_update_after_bind != 0))
+            .field("descriptor_binding_storage_image_update_after_bind", &(self.descriptor_binding_storage_image_update_after_bind != 0))
+            .field("descriptor_binding_storage_buffer_update_after_bind", &(self.descriptor_binding_storage_buffer_update_after_bind != 0))
             .field(
                 "descriptor_binding_uniform_texel_buffer_update_after_bind",
                 &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0),
@@ -6233,66 +5355,27 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Features {
                 "descriptor_binding_storage_texel_buffer_update_after_bind",
                 &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0),
             )
-            .field(
-                "descriptor_binding_update_unused_while_pending",
-                &(self.descriptor_binding_update_unused_while_pending != 0),
-            )
-            .field(
-                "descriptor_binding_partially_bound",
-                &(self.descriptor_binding_partially_bound != 0),
-            )
-            .field(
-                "descriptor_binding_variable_descriptor_count",
-                &(self.descriptor_binding_variable_descriptor_count != 0),
-            )
-            .field(
-                "runtime_descriptor_array",
-                &(self.runtime_descriptor_array != 0),
-            )
+            .field("descriptor_binding_update_unused_while_pending", &(self.descriptor_binding_update_unused_while_pending != 0))
+            .field("descriptor_binding_partially_bound", &(self.descriptor_binding_partially_bound != 0))
+            .field("descriptor_binding_variable_descriptor_count", &(self.descriptor_binding_variable_descriptor_count != 0))
+            .field("runtime_descriptor_array", &(self.runtime_descriptor_array != 0))
             .field("sampler_filter_minmax", &(self.sampler_filter_minmax != 0))
             .field("scalar_block_layout", &(self.scalar_block_layout != 0))
             .field("imageless_framebuffer", &(self.imageless_framebuffer != 0))
-            .field(
-                "uniform_buffer_standard_layout",
-                &(self.uniform_buffer_standard_layout != 0),
-            )
-            .field(
-                "shader_subgroup_extended_types",
-                &(self.shader_subgroup_extended_types != 0),
-            )
-            .field(
-                "separate_depth_stencil_layouts",
-                &(self.separate_depth_stencil_layouts != 0),
-            )
+            .field("uniform_buffer_standard_layout", &(self.uniform_buffer_standard_layout != 0))
+            .field("shader_subgroup_extended_types", &(self.shader_subgroup_extended_types != 0))
+            .field("separate_depth_stencil_layouts", &(self.separate_depth_stencil_layouts != 0))
             .field("host_query_reset", &(self.host_query_reset != 0))
             .field("timeline_semaphore", &(self.timeline_semaphore != 0))
             .field("buffer_device_address", &(self.buffer_device_address != 0))
-            .field(
-                "buffer_device_address_capture_replay",
-                &(self.buffer_device_address_capture_replay != 0),
-            )
-            .field(
-                "buffer_device_address_multi_device",
-                &(self.buffer_device_address_multi_device != 0),
-            )
+            .field("buffer_device_address_capture_replay", &(self.buffer_device_address_capture_replay != 0))
+            .field("buffer_device_address_multi_device", &(self.buffer_device_address_multi_device != 0))
             .field("vulkan_memory_model", &(self.vulkan_memory_model != 0))
-            .field(
-                "vulkan_memory_model_device_scope",
-                &(self.vulkan_memory_model_device_scope != 0),
-            )
-            .field(
-                "vulkan_memory_model_availability_visibility_chains",
-                &(self.vulkan_memory_model_availability_visibility_chains != 0),
-            )
-            .field(
-                "shader_output_viewport_index",
-                &(self.shader_output_viewport_index != 0),
-            )
+            .field("vulkan_memory_model_device_scope", &(self.vulkan_memory_model_device_scope != 0))
+            .field("vulkan_memory_model_availability_visibility_chains", &(self.vulkan_memory_model_availability_visibility_chains != 0))
+            .field("shader_output_viewport_index", &(self.shader_output_viewport_index != 0))
             .field("shader_output_layer", &(self.shader_output_layer != 0))
-            .field(
-                "subgroup_broadcast_dynamic_id",
-                &(self.subgroup_broadcast_dynamic_id != 0),
-            )
+            .field("subgroup_broadcast_dynamic_id", &(self.subgroup_broadcast_dynamic_id != 0))
             .finish()
     }
 }
@@ -6305,10 +5388,7 @@ impl PhysicalDeviceVulkan12Features {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Features.html) · Builder of [`PhysicalDeviceVulkan12Features`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVulkan12FeaturesBuilder<'a>(
-    PhysicalDeviceVulkan12Features,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVulkan12FeaturesBuilder<'a>(PhysicalDeviceVulkan12Features, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
@@ -6330,10 +5410,7 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn uniform_and_storage_buffer8_bit_access(
-        mut self,
-        uniform_and_storage_buffer8_bit_access: bool,
-    ) -> Self {
+    pub fn uniform_and_storage_buffer8_bit_access(mut self, uniform_and_storage_buffer8_bit_access: bool) -> Self {
         self.0.uniform_and_storage_buffer8_bit_access = uniform_and_storage_buffer8_bit_access as _;
         self
     }
@@ -6368,177 +5445,98 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_input_attachment_array_dynamic_indexing(
-        mut self,
-        shader_input_attachment_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_input_attachment_array_dynamic_indexing =
-            shader_input_attachment_array_dynamic_indexing as _;
+    pub fn shader_input_attachment_array_dynamic_indexing(mut self, shader_input_attachment_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_input_attachment_array_dynamic_indexing = shader_input_attachment_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_texel_buffer_array_dynamic_indexing(
-        mut self,
-        shader_uniform_texel_buffer_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_uniform_texel_buffer_array_dynamic_indexing =
-            shader_uniform_texel_buffer_array_dynamic_indexing as _;
+    pub fn shader_uniform_texel_buffer_array_dynamic_indexing(mut self, shader_uniform_texel_buffer_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_uniform_texel_buffer_array_dynamic_indexing = shader_uniform_texel_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_texel_buffer_array_dynamic_indexing(
-        mut self,
-        shader_storage_texel_buffer_array_dynamic_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_texel_buffer_array_dynamic_indexing =
-            shader_storage_texel_buffer_array_dynamic_indexing as _;
+    pub fn shader_storage_texel_buffer_array_dynamic_indexing(mut self, shader_storage_texel_buffer_array_dynamic_indexing: bool) -> Self {
+        self.0.shader_storage_texel_buffer_array_dynamic_indexing = shader_storage_texel_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_uniform_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_uniform_buffer_array_non_uniform_indexing =
-            shader_uniform_buffer_array_non_uniform_indexing as _;
+    pub fn shader_uniform_buffer_array_non_uniform_indexing(mut self, shader_uniform_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_uniform_buffer_array_non_uniform_indexing = shader_uniform_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_sampled_image_array_non_uniform_indexing(
-        mut self,
-        shader_sampled_image_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_sampled_image_array_non_uniform_indexing =
-            shader_sampled_image_array_non_uniform_indexing as _;
+    pub fn shader_sampled_image_array_non_uniform_indexing(mut self, shader_sampled_image_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_sampled_image_array_non_uniform_indexing = shader_sampled_image_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_storage_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_buffer_array_non_uniform_indexing =
-            shader_storage_buffer_array_non_uniform_indexing as _;
+    pub fn shader_storage_buffer_array_non_uniform_indexing(mut self, shader_storage_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_buffer_array_non_uniform_indexing = shader_storage_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_image_array_non_uniform_indexing(
-        mut self,
-        shader_storage_image_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_storage_image_array_non_uniform_indexing =
-            shader_storage_image_array_non_uniform_indexing as _;
+    pub fn shader_storage_image_array_non_uniform_indexing(mut self, shader_storage_image_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_image_array_non_uniform_indexing = shader_storage_image_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_input_attachment_array_non_uniform_indexing(
-        mut self,
-        shader_input_attachment_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0.shader_input_attachment_array_non_uniform_indexing =
-            shader_input_attachment_array_non_uniform_indexing as _;
+    pub fn shader_input_attachment_array_non_uniform_indexing(mut self, shader_input_attachment_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_input_attachment_array_non_uniform_indexing = shader_input_attachment_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_texel_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_uniform_texel_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0
-            .shader_uniform_texel_buffer_array_non_uniform_indexing =
-            shader_uniform_texel_buffer_array_non_uniform_indexing as _;
+    pub fn shader_uniform_texel_buffer_array_non_uniform_indexing(mut self, shader_uniform_texel_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_uniform_texel_buffer_array_non_uniform_indexing = shader_uniform_texel_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn shader_storage_texel_buffer_array_non_uniform_indexing(
-        mut self,
-        shader_storage_texel_buffer_array_non_uniform_indexing: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_texel_buffer_array_non_uniform_indexing =
-            shader_storage_texel_buffer_array_non_uniform_indexing as _;
+    pub fn shader_storage_texel_buffer_array_non_uniform_indexing(mut self, shader_storage_texel_buffer_array_non_uniform_indexing: bool) -> Self {
+        self.0.shader_storage_texel_buffer_array_non_uniform_indexing = shader_storage_texel_buffer_array_non_uniform_indexing as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_uniform_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_uniform_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_uniform_buffer_update_after_bind =
-            descriptor_binding_uniform_buffer_update_after_bind as _;
+    pub fn descriptor_binding_uniform_buffer_update_after_bind(mut self, descriptor_binding_uniform_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_uniform_buffer_update_after_bind = descriptor_binding_uniform_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_sampled_image_update_after_bind(
-        mut self,
-        descriptor_binding_sampled_image_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_sampled_image_update_after_bind =
-            descriptor_binding_sampled_image_update_after_bind as _;
+    pub fn descriptor_binding_sampled_image_update_after_bind(mut self, descriptor_binding_sampled_image_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_sampled_image_update_after_bind = descriptor_binding_sampled_image_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_image_update_after_bind(
-        mut self,
-        descriptor_binding_storage_image_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_storage_image_update_after_bind =
-            descriptor_binding_storage_image_update_after_bind as _;
+    pub fn descriptor_binding_storage_image_update_after_bind(mut self, descriptor_binding_storage_image_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_image_update_after_bind = descriptor_binding_storage_image_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_storage_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0.descriptor_binding_storage_buffer_update_after_bind =
-            descriptor_binding_storage_buffer_update_after_bind as _;
+    pub fn descriptor_binding_storage_buffer_update_after_bind(mut self, descriptor_binding_storage_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_buffer_update_after_bind = descriptor_binding_storage_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_uniform_texel_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_uniform_texel_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_uniform_texel_buffer_update_after_bind =
-            descriptor_binding_uniform_texel_buffer_update_after_bind as _;
+    pub fn descriptor_binding_uniform_texel_buffer_update_after_bind(mut self, descriptor_binding_uniform_texel_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_uniform_texel_buffer_update_after_bind = descriptor_binding_uniform_texel_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_storage_texel_buffer_update_after_bind(
-        mut self,
-        descriptor_binding_storage_texel_buffer_update_after_bind: bool,
-    ) -> Self {
-        self.0
-            .descriptor_binding_storage_texel_buffer_update_after_bind =
-            descriptor_binding_storage_texel_buffer_update_after_bind as _;
+    pub fn descriptor_binding_storage_texel_buffer_update_after_bind(mut self, descriptor_binding_storage_texel_buffer_update_after_bind: bool) -> Self {
+        self.0.descriptor_binding_storage_texel_buffer_update_after_bind = descriptor_binding_storage_texel_buffer_update_after_bind as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_update_unused_while_pending(
-        mut self,
-        descriptor_binding_update_unused_while_pending: bool,
-    ) -> Self {
-        self.0.descriptor_binding_update_unused_while_pending =
-            descriptor_binding_update_unused_while_pending as _;
+    pub fn descriptor_binding_update_unused_while_pending(mut self, descriptor_binding_update_unused_while_pending: bool) -> Self {
+        self.0.descriptor_binding_update_unused_while_pending = descriptor_binding_update_unused_while_pending as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_partially_bound(
-        mut self,
-        descriptor_binding_partially_bound: bool,
-    ) -> Self {
+    pub fn descriptor_binding_partially_bound(mut self, descriptor_binding_partially_bound: bool) -> Self {
         self.0.descriptor_binding_partially_bound = descriptor_binding_partially_bound as _;
         self
     }
     #[inline]
-    pub fn descriptor_binding_variable_descriptor_count(
-        mut self,
-        descriptor_binding_variable_descriptor_count: bool,
-    ) -> Self {
-        self.0.descriptor_binding_variable_descriptor_count =
-            descriptor_binding_variable_descriptor_count as _;
+    pub fn descriptor_binding_variable_descriptor_count(mut self, descriptor_binding_variable_descriptor_count: bool) -> Self {
+        self.0.descriptor_binding_variable_descriptor_count = descriptor_binding_variable_descriptor_count as _;
         self
     }
     #[inline]
@@ -6592,18 +5590,12 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn buffer_device_address_capture_replay(
-        mut self,
-        buffer_device_address_capture_replay: bool,
-    ) -> Self {
+    pub fn buffer_device_address_capture_replay(mut self, buffer_device_address_capture_replay: bool) -> Self {
         self.0.buffer_device_address_capture_replay = buffer_device_address_capture_replay as _;
         self
     }
     #[inline]
-    pub fn buffer_device_address_multi_device(
-        mut self,
-        buffer_device_address_multi_device: bool,
-    ) -> Self {
+    pub fn buffer_device_address_multi_device(mut self, buffer_device_address_multi_device: bool) -> Self {
         self.0.buffer_device_address_multi_device = buffer_device_address_multi_device as _;
         self
     }
@@ -6613,20 +5605,13 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn vulkan_memory_model_device_scope(
-        mut self,
-        vulkan_memory_model_device_scope: bool,
-    ) -> Self {
+    pub fn vulkan_memory_model_device_scope(mut self, vulkan_memory_model_device_scope: bool) -> Self {
         self.0.vulkan_memory_model_device_scope = vulkan_memory_model_device_scope as _;
         self
     }
     #[inline]
-    pub fn vulkan_memory_model_availability_visibility_chains(
-        mut self,
-        vulkan_memory_model_availability_visibility_chains: bool,
-    ) -> Self {
-        self.0.vulkan_memory_model_availability_visibility_chains =
-            vulkan_memory_model_availability_visibility_chains as _;
+    pub fn vulkan_memory_model_availability_visibility_chains(mut self, vulkan_memory_model_availability_visibility_chains: bool) -> Self {
+        self.0.vulkan_memory_model_availability_visibility_chains = vulkan_memory_model_availability_visibility_chains as _;
         self
     }
     #[inline]
@@ -6797,85 +5782,27 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Properties {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("driver_id", &self.driver_id)
-            .field("driver_name", unsafe {
-                &std::ffi::CStr::from_ptr(self.driver_name.as_ptr())
-            })
-            .field("driver_info", unsafe {
-                &std::ffi::CStr::from_ptr(self.driver_info.as_ptr())
-            })
+            .field("driver_name", unsafe { &std::ffi::CStr::from_ptr(self.driver_name.as_ptr()) })
+            .field("driver_info", unsafe { &std::ffi::CStr::from_ptr(self.driver_info.as_ptr()) })
             .field("conformance_version", &self.conformance_version)
-            .field(
-                "denorm_behavior_independence",
-                &self.denorm_behavior_independence,
-            )
-            .field(
-                "rounding_mode_independence",
-                &self.rounding_mode_independence,
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float16",
-                &(self.shader_signed_zero_inf_nan_preserve_float16 != 0),
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float32",
-                &(self.shader_signed_zero_inf_nan_preserve_float32 != 0),
-            )
-            .field(
-                "shader_signed_zero_inf_nan_preserve_float64",
-                &(self.shader_signed_zero_inf_nan_preserve_float64 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float16",
-                &(self.shader_denorm_preserve_float16 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float32",
-                &(self.shader_denorm_preserve_float32 != 0),
-            )
-            .field(
-                "shader_denorm_preserve_float64",
-                &(self.shader_denorm_preserve_float64 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float16",
-                &(self.shader_denorm_flush_to_zero_float16 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float32",
-                &(self.shader_denorm_flush_to_zero_float32 != 0),
-            )
-            .field(
-                "shader_denorm_flush_to_zero_float64",
-                &(self.shader_denorm_flush_to_zero_float64 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float16",
-                &(self.shader_rounding_mode_rte_float16 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float32",
-                &(self.shader_rounding_mode_rte_float32 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rte_float64",
-                &(self.shader_rounding_mode_rte_float64 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float16",
-                &(self.shader_rounding_mode_rtz_float16 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float32",
-                &(self.shader_rounding_mode_rtz_float32 != 0),
-            )
-            .field(
-                "shader_rounding_mode_rtz_float64",
-                &(self.shader_rounding_mode_rtz_float64 != 0),
-            )
-            .field(
-                "max_update_after_bind_descriptors_in_all_pools",
-                &self.max_update_after_bind_descriptors_in_all_pools,
-            )
+            .field("denorm_behavior_independence", &self.denorm_behavior_independence)
+            .field("rounding_mode_independence", &self.rounding_mode_independence)
+            .field("shader_signed_zero_inf_nan_preserve_float16", &(self.shader_signed_zero_inf_nan_preserve_float16 != 0))
+            .field("shader_signed_zero_inf_nan_preserve_float32", &(self.shader_signed_zero_inf_nan_preserve_float32 != 0))
+            .field("shader_signed_zero_inf_nan_preserve_float64", &(self.shader_signed_zero_inf_nan_preserve_float64 != 0))
+            .field("shader_denorm_preserve_float16", &(self.shader_denorm_preserve_float16 != 0))
+            .field("shader_denorm_preserve_float32", &(self.shader_denorm_preserve_float32 != 0))
+            .field("shader_denorm_preserve_float64", &(self.shader_denorm_preserve_float64 != 0))
+            .field("shader_denorm_flush_to_zero_float16", &(self.shader_denorm_flush_to_zero_float16 != 0))
+            .field("shader_denorm_flush_to_zero_float32", &(self.shader_denorm_flush_to_zero_float32 != 0))
+            .field("shader_denorm_flush_to_zero_float64", &(self.shader_denorm_flush_to_zero_float64 != 0))
+            .field("shader_rounding_mode_rte_float16", &(self.shader_rounding_mode_rte_float16 != 0))
+            .field("shader_rounding_mode_rte_float32", &(self.shader_rounding_mode_rte_float32 != 0))
+            .field("shader_rounding_mode_rte_float64", &(self.shader_rounding_mode_rte_float64 != 0))
+            .field("shader_rounding_mode_rtz_float16", &(self.shader_rounding_mode_rtz_float16 != 0))
+            .field("shader_rounding_mode_rtz_float32", &(self.shader_rounding_mode_rtz_float32 != 0))
+            .field("shader_rounding_mode_rtz_float64", &(self.shader_rounding_mode_rtz_float64 != 0))
+            .field("max_update_after_bind_descriptors_in_all_pools", &self.max_update_after_bind_descriptors_in_all_pools)
             .field(
                 "shader_uniform_buffer_array_non_uniform_indexing_native",
                 &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0),
@@ -6896,18 +5823,9 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Properties {
                 "shader_input_attachment_array_non_uniform_indexing_native",
                 &(self.shader_input_attachment_array_non_uniform_indexing_native != 0),
             )
-            .field(
-                "robust_buffer_access_update_after_bind",
-                &(self.robust_buffer_access_update_after_bind != 0),
-            )
-            .field(
-                "quad_divergent_implicit_lod",
-                &(self.quad_divergent_implicit_lod != 0),
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_samplers",
-                &self.max_per_stage_descriptor_update_after_bind_samplers,
-            )
+            .field("robust_buffer_access_update_after_bind", &(self.robust_buffer_access_update_after_bind != 0))
+            .field("quad_divergent_implicit_lod", &(self.quad_divergent_implicit_lod != 0))
+            .field("max_per_stage_descriptor_update_after_bind_samplers", &self.max_per_stage_descriptor_update_after_bind_samplers)
             .field(
                 "max_per_stage_descriptor_update_after_bind_uniform_buffers",
                 &self.max_per_stage_descriptor_update_after_bind_uniform_buffers,
@@ -6928,71 +5846,29 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Properties {
                 "max_per_stage_descriptor_update_after_bind_input_attachments",
                 &self.max_per_stage_descriptor_update_after_bind_input_attachments,
             )
-            .field(
-                "max_per_stage_update_after_bind_resources",
-                &self.max_per_stage_update_after_bind_resources,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_samplers",
-                &self.max_descriptor_set_update_after_bind_samplers,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_uniform_buffers",
-                &self.max_descriptor_set_update_after_bind_uniform_buffers,
-            )
+            .field("max_per_stage_update_after_bind_resources", &self.max_per_stage_update_after_bind_resources)
+            .field("max_descriptor_set_update_after_bind_samplers", &self.max_descriptor_set_update_after_bind_samplers)
+            .field("max_descriptor_set_update_after_bind_uniform_buffers", &self.max_descriptor_set_update_after_bind_uniform_buffers)
             .field(
                 "max_descriptor_set_update_after_bind_uniform_buffers_dynamic",
                 &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic,
             )
-            .field(
-                "max_descriptor_set_update_after_bind_storage_buffers",
-                &self.max_descriptor_set_update_after_bind_storage_buffers,
-            )
+            .field("max_descriptor_set_update_after_bind_storage_buffers", &self.max_descriptor_set_update_after_bind_storage_buffers)
             .field(
                 "max_descriptor_set_update_after_bind_storage_buffers_dynamic",
                 &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic,
             )
-            .field(
-                "max_descriptor_set_update_after_bind_sampled_images",
-                &self.max_descriptor_set_update_after_bind_sampled_images,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_storage_images",
-                &self.max_descriptor_set_update_after_bind_storage_images,
-            )
-            .field(
-                "max_descriptor_set_update_after_bind_input_attachments",
-                &self.max_descriptor_set_update_after_bind_input_attachments,
-            )
-            .field(
-                "supported_depth_resolve_modes",
-                &self.supported_depth_resolve_modes,
-            )
-            .field(
-                "supported_stencil_resolve_modes",
-                &self.supported_stencil_resolve_modes,
-            )
-            .field(
-                "independent_resolve_none",
-                &(self.independent_resolve_none != 0),
-            )
+            .field("max_descriptor_set_update_after_bind_sampled_images", &self.max_descriptor_set_update_after_bind_sampled_images)
+            .field("max_descriptor_set_update_after_bind_storage_images", &self.max_descriptor_set_update_after_bind_storage_images)
+            .field("max_descriptor_set_update_after_bind_input_attachments", &self.max_descriptor_set_update_after_bind_input_attachments)
+            .field("supported_depth_resolve_modes", &self.supported_depth_resolve_modes)
+            .field("supported_stencil_resolve_modes", &self.supported_stencil_resolve_modes)
+            .field("independent_resolve_none", &(self.independent_resolve_none != 0))
             .field("independent_resolve", &(self.independent_resolve != 0))
-            .field(
-                "filter_minmax_single_component_formats",
-                &(self.filter_minmax_single_component_formats != 0),
-            )
-            .field(
-                "filter_minmax_image_component_mapping",
-                &(self.filter_minmax_image_component_mapping != 0),
-            )
-            .field(
-                "max_timeline_semaphore_value_difference",
-                &self.max_timeline_semaphore_value_difference,
-            )
-            .field(
-                "framebuffer_integer_color_sample_counts",
-                &self.framebuffer_integer_color_sample_counts,
-            )
+            .field("filter_minmax_single_component_formats", &(self.filter_minmax_single_component_formats != 0))
+            .field("filter_minmax_image_component_mapping", &(self.filter_minmax_image_component_mapping != 0))
+            .field("max_timeline_semaphore_value_difference", &self.max_timeline_semaphore_value_difference)
+            .field("framebuffer_integer_color_sample_counts", &self.framebuffer_integer_color_sample_counts)
             .finish()
     }
 }
@@ -7005,10 +5881,7 @@ impl PhysicalDeviceVulkan12Properties {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVulkan12Properties.html) · Builder of [`PhysicalDeviceVulkan12Properties`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceVulkan12PropertiesBuilder<'a>(
-    PhysicalDeviceVulkan12Properties,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceVulkan12PropertiesBuilder<'a>(PhysicalDeviceVulkan12Properties, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
@@ -7030,54 +5903,33 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn conformance_version(
-        mut self,
-        conformance_version: crate::vk1_2::ConformanceVersion,
-    ) -> Self {
+    pub fn conformance_version(mut self, conformance_version: crate::vk1_2::ConformanceVersion) -> Self {
         self.0.conformance_version = conformance_version as _;
         self
     }
     #[inline]
-    pub fn denorm_behavior_independence(
-        mut self,
-        denorm_behavior_independence: crate::vk1_2::ShaderFloatControlsIndependence,
-    ) -> Self {
+    pub fn denorm_behavior_independence(mut self, denorm_behavior_independence: crate::vk1_2::ShaderFloatControlsIndependence) -> Self {
         self.0.denorm_behavior_independence = denorm_behavior_independence as _;
         self
     }
     #[inline]
-    pub fn rounding_mode_independence(
-        mut self,
-        rounding_mode_independence: crate::vk1_2::ShaderFloatControlsIndependence,
-    ) -> Self {
+    pub fn rounding_mode_independence(mut self, rounding_mode_independence: crate::vk1_2::ShaderFloatControlsIndependence) -> Self {
         self.0.rounding_mode_independence = rounding_mode_independence as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float16(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float16: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float16 =
-            shader_signed_zero_inf_nan_preserve_float16 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float16(mut self, shader_signed_zero_inf_nan_preserve_float16: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float16 = shader_signed_zero_inf_nan_preserve_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float32(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float32: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float32 =
-            shader_signed_zero_inf_nan_preserve_float32 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float32(mut self, shader_signed_zero_inf_nan_preserve_float32: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float32 = shader_signed_zero_inf_nan_preserve_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_signed_zero_inf_nan_preserve_float64(
-        mut self,
-        shader_signed_zero_inf_nan_preserve_float64: bool,
-    ) -> Self {
-        self.0.shader_signed_zero_inf_nan_preserve_float64 =
-            shader_signed_zero_inf_nan_preserve_float64 as _;
+    pub fn shader_signed_zero_inf_nan_preserve_float64(mut self, shader_signed_zero_inf_nan_preserve_float64: bool) -> Self {
+        self.0.shader_signed_zero_inf_nan_preserve_float64 = shader_signed_zero_inf_nan_preserve_float64 as _;
         self
     }
     #[inline]
@@ -7096,141 +5948,82 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float16(
-        mut self,
-        shader_denorm_flush_to_zero_float16: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float16(mut self, shader_denorm_flush_to_zero_float16: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float16 = shader_denorm_flush_to_zero_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float32(
-        mut self,
-        shader_denorm_flush_to_zero_float32: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float32(mut self, shader_denorm_flush_to_zero_float32: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float32 = shader_denorm_flush_to_zero_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_denorm_flush_to_zero_float64(
-        mut self,
-        shader_denorm_flush_to_zero_float64: bool,
-    ) -> Self {
+    pub fn shader_denorm_flush_to_zero_float64(mut self, shader_denorm_flush_to_zero_float64: bool) -> Self {
         self.0.shader_denorm_flush_to_zero_float64 = shader_denorm_flush_to_zero_float64 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float16(
-        mut self,
-        shader_rounding_mode_rte_float16: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float16(mut self, shader_rounding_mode_rte_float16: bool) -> Self {
         self.0.shader_rounding_mode_rte_float16 = shader_rounding_mode_rte_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float32(
-        mut self,
-        shader_rounding_mode_rte_float32: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float32(mut self, shader_rounding_mode_rte_float32: bool) -> Self {
         self.0.shader_rounding_mode_rte_float32 = shader_rounding_mode_rte_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rte_float64(
-        mut self,
-        shader_rounding_mode_rte_float64: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rte_float64(mut self, shader_rounding_mode_rte_float64: bool) -> Self {
         self.0.shader_rounding_mode_rte_float64 = shader_rounding_mode_rte_float64 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float16(
-        mut self,
-        shader_rounding_mode_rtz_float16: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float16(mut self, shader_rounding_mode_rtz_float16: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float16 = shader_rounding_mode_rtz_float16 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float32(
-        mut self,
-        shader_rounding_mode_rtz_float32: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float32(mut self, shader_rounding_mode_rtz_float32: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float32 = shader_rounding_mode_rtz_float32 as _;
         self
     }
     #[inline]
-    pub fn shader_rounding_mode_rtz_float64(
-        mut self,
-        shader_rounding_mode_rtz_float64: bool,
-    ) -> Self {
+    pub fn shader_rounding_mode_rtz_float64(mut self, shader_rounding_mode_rtz_float64: bool) -> Self {
         self.0.shader_rounding_mode_rtz_float64 = shader_rounding_mode_rtz_float64 as _;
         self
     }
     #[inline]
-    pub fn max_update_after_bind_descriptors_in_all_pools(
-        mut self,
-        max_update_after_bind_descriptors_in_all_pools: u32,
-    ) -> Self {
-        self.0.max_update_after_bind_descriptors_in_all_pools =
-            max_update_after_bind_descriptors_in_all_pools as _;
+    pub fn max_update_after_bind_descriptors_in_all_pools(mut self, max_update_after_bind_descriptors_in_all_pools: u32) -> Self {
+        self.0.max_update_after_bind_descriptors_in_all_pools = max_update_after_bind_descriptors_in_all_pools as _;
         self
     }
     #[inline]
-    pub fn shader_uniform_buffer_array_non_uniform_indexing_native(
-        mut self,
-        shader_uniform_buffer_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_uniform_buffer_array_non_uniform_indexing_native =
-            shader_uniform_buffer_array_non_uniform_indexing_native as _;
+    pub fn shader_uniform_buffer_array_non_uniform_indexing_native(mut self, shader_uniform_buffer_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_uniform_buffer_array_non_uniform_indexing_native = shader_uniform_buffer_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_sampled_image_array_non_uniform_indexing_native(
-        mut self,
-        shader_sampled_image_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_sampled_image_array_non_uniform_indexing_native =
-            shader_sampled_image_array_non_uniform_indexing_native as _;
+    pub fn shader_sampled_image_array_non_uniform_indexing_native(mut self, shader_sampled_image_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_sampled_image_array_non_uniform_indexing_native = shader_sampled_image_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_storage_buffer_array_non_uniform_indexing_native(
-        mut self,
-        shader_storage_buffer_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_buffer_array_non_uniform_indexing_native =
-            shader_storage_buffer_array_non_uniform_indexing_native as _;
+    pub fn shader_storage_buffer_array_non_uniform_indexing_native(mut self, shader_storage_buffer_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_storage_buffer_array_non_uniform_indexing_native = shader_storage_buffer_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_storage_image_array_non_uniform_indexing_native(
-        mut self,
-        shader_storage_image_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_storage_image_array_non_uniform_indexing_native =
-            shader_storage_image_array_non_uniform_indexing_native as _;
+    pub fn shader_storage_image_array_non_uniform_indexing_native(mut self, shader_storage_image_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_storage_image_array_non_uniform_indexing_native = shader_storage_image_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn shader_input_attachment_array_non_uniform_indexing_native(
-        mut self,
-        shader_input_attachment_array_non_uniform_indexing_native: bool,
-    ) -> Self {
-        self.0
-            .shader_input_attachment_array_non_uniform_indexing_native =
-            shader_input_attachment_array_non_uniform_indexing_native as _;
+    pub fn shader_input_attachment_array_non_uniform_indexing_native(mut self, shader_input_attachment_array_non_uniform_indexing_native: bool) -> Self {
+        self.0.shader_input_attachment_array_non_uniform_indexing_native = shader_input_attachment_array_non_uniform_indexing_native as _;
         self
     }
     #[inline]
-    pub fn robust_buffer_access_update_after_bind(
-        mut self,
-        robust_buffer_access_update_after_bind: bool,
-    ) -> Self {
+    pub fn robust_buffer_access_update_after_bind(mut self, robust_buffer_access_update_after_bind: bool) -> Self {
         self.0.robust_buffer_access_update_after_bind = robust_buffer_access_update_after_bind as _;
         self
     }
@@ -7240,161 +6033,87 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_samplers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_samplers: u32,
-    ) -> Self {
-        self.0.max_per_stage_descriptor_update_after_bind_samplers =
-            max_per_stage_descriptor_update_after_bind_samplers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_samplers(mut self, max_per_stage_descriptor_update_after_bind_samplers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_samplers = max_per_stage_descriptor_update_after_bind_samplers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_uniform_buffers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_uniform_buffers: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_uniform_buffers =
-            max_per_stage_descriptor_update_after_bind_uniform_buffers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_uniform_buffers(mut self, max_per_stage_descriptor_update_after_bind_uniform_buffers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_uniform_buffers = max_per_stage_descriptor_update_after_bind_uniform_buffers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_storage_buffers(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_storage_buffers: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_storage_buffers =
-            max_per_stage_descriptor_update_after_bind_storage_buffers as _;
+    pub fn max_per_stage_descriptor_update_after_bind_storage_buffers(mut self, max_per_stage_descriptor_update_after_bind_storage_buffers: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_storage_buffers = max_per_stage_descriptor_update_after_bind_storage_buffers as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_sampled_images(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_sampled_images: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_sampled_images =
-            max_per_stage_descriptor_update_after_bind_sampled_images as _;
+    pub fn max_per_stage_descriptor_update_after_bind_sampled_images(mut self, max_per_stage_descriptor_update_after_bind_sampled_images: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_sampled_images = max_per_stage_descriptor_update_after_bind_sampled_images as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_storage_images(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_storage_images: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_storage_images =
-            max_per_stage_descriptor_update_after_bind_storage_images as _;
+    pub fn max_per_stage_descriptor_update_after_bind_storage_images(mut self, max_per_stage_descriptor_update_after_bind_storage_images: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_storage_images = max_per_stage_descriptor_update_after_bind_storage_images as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_descriptor_update_after_bind_input_attachments(
-        mut self,
-        max_per_stage_descriptor_update_after_bind_input_attachments: u32,
-    ) -> Self {
-        self.0
-            .max_per_stage_descriptor_update_after_bind_input_attachments =
-            max_per_stage_descriptor_update_after_bind_input_attachments as _;
+    pub fn max_per_stage_descriptor_update_after_bind_input_attachments(mut self, max_per_stage_descriptor_update_after_bind_input_attachments: u32) -> Self {
+        self.0.max_per_stage_descriptor_update_after_bind_input_attachments = max_per_stage_descriptor_update_after_bind_input_attachments as _;
         self
     }
     #[inline]
-    pub fn max_per_stage_update_after_bind_resources(
-        mut self,
-        max_per_stage_update_after_bind_resources: u32,
-    ) -> Self {
-        self.0.max_per_stage_update_after_bind_resources =
-            max_per_stage_update_after_bind_resources as _;
+    pub fn max_per_stage_update_after_bind_resources(mut self, max_per_stage_update_after_bind_resources: u32) -> Self {
+        self.0.max_per_stage_update_after_bind_resources = max_per_stage_update_after_bind_resources as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_samplers(
-        mut self,
-        max_descriptor_set_update_after_bind_samplers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_samplers =
-            max_descriptor_set_update_after_bind_samplers as _;
+    pub fn max_descriptor_set_update_after_bind_samplers(mut self, max_descriptor_set_update_after_bind_samplers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_samplers = max_descriptor_set_update_after_bind_samplers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_uniform_buffers(
-        mut self,
-        max_descriptor_set_update_after_bind_uniform_buffers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_uniform_buffers =
-            max_descriptor_set_update_after_bind_uniform_buffers as _;
+    pub fn max_descriptor_set_update_after_bind_uniform_buffers(mut self, max_descriptor_set_update_after_bind_uniform_buffers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_uniform_buffers = max_descriptor_set_update_after_bind_uniform_buffers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_uniform_buffers_dynamic(
-        mut self,
-        max_descriptor_set_update_after_bind_uniform_buffers_dynamic: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_uniform_buffers_dynamic =
-            max_descriptor_set_update_after_bind_uniform_buffers_dynamic as _;
+    pub fn max_descriptor_set_update_after_bind_uniform_buffers_dynamic(mut self, max_descriptor_set_update_after_bind_uniform_buffers_dynamic: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_uniform_buffers_dynamic = max_descriptor_set_update_after_bind_uniform_buffers_dynamic as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_buffers(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_buffers: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_storage_buffers =
-            max_descriptor_set_update_after_bind_storage_buffers as _;
+    pub fn max_descriptor_set_update_after_bind_storage_buffers(mut self, max_descriptor_set_update_after_bind_storage_buffers: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_buffers = max_descriptor_set_update_after_bind_storage_buffers as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_buffers_dynamic(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_buffers_dynamic: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_storage_buffers_dynamic =
-            max_descriptor_set_update_after_bind_storage_buffers_dynamic as _;
+    pub fn max_descriptor_set_update_after_bind_storage_buffers_dynamic(mut self, max_descriptor_set_update_after_bind_storage_buffers_dynamic: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_buffers_dynamic = max_descriptor_set_update_after_bind_storage_buffers_dynamic as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_sampled_images(
-        mut self,
-        max_descriptor_set_update_after_bind_sampled_images: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_sampled_images =
-            max_descriptor_set_update_after_bind_sampled_images as _;
+    pub fn max_descriptor_set_update_after_bind_sampled_images(mut self, max_descriptor_set_update_after_bind_sampled_images: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_sampled_images = max_descriptor_set_update_after_bind_sampled_images as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_storage_images(
-        mut self,
-        max_descriptor_set_update_after_bind_storage_images: u32,
-    ) -> Self {
-        self.0.max_descriptor_set_update_after_bind_storage_images =
-            max_descriptor_set_update_after_bind_storage_images as _;
+    pub fn max_descriptor_set_update_after_bind_storage_images(mut self, max_descriptor_set_update_after_bind_storage_images: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_storage_images = max_descriptor_set_update_after_bind_storage_images as _;
         self
     }
     #[inline]
-    pub fn max_descriptor_set_update_after_bind_input_attachments(
-        mut self,
-        max_descriptor_set_update_after_bind_input_attachments: u32,
-    ) -> Self {
-        self.0
-            .max_descriptor_set_update_after_bind_input_attachments =
-            max_descriptor_set_update_after_bind_input_attachments as _;
+    pub fn max_descriptor_set_update_after_bind_input_attachments(mut self, max_descriptor_set_update_after_bind_input_attachments: u32) -> Self {
+        self.0.max_descriptor_set_update_after_bind_input_attachments = max_descriptor_set_update_after_bind_input_attachments as _;
         self
     }
     #[inline]
-    pub fn supported_depth_resolve_modes(
-        mut self,
-        supported_depth_resolve_modes: crate::vk1_2::ResolveModeFlags,
-    ) -> Self {
+    pub fn supported_depth_resolve_modes(mut self, supported_depth_resolve_modes: crate::vk1_2::ResolveModeFlags) -> Self {
         self.0.supported_depth_resolve_modes = supported_depth_resolve_modes as _;
         self
     }
     #[inline]
-    pub fn supported_stencil_resolve_modes(
-        mut self,
-        supported_stencil_resolve_modes: crate::vk1_2::ResolveModeFlags,
-    ) -> Self {
+    pub fn supported_stencil_resolve_modes(mut self, supported_stencil_resolve_modes: crate::vk1_2::ResolveModeFlags) -> Self {
         self.0.supported_stencil_resolve_modes = supported_stencil_resolve_modes as _;
         self
     }
@@ -7409,37 +6128,23 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    pub fn filter_minmax_single_component_formats(
-        mut self,
-        filter_minmax_single_component_formats: bool,
-    ) -> Self {
+    pub fn filter_minmax_single_component_formats(mut self, filter_minmax_single_component_formats: bool) -> Self {
         self.0.filter_minmax_single_component_formats = filter_minmax_single_component_formats as _;
         self
     }
     #[inline]
-    pub fn filter_minmax_image_component_mapping(
-        mut self,
-        filter_minmax_image_component_mapping: bool,
-    ) -> Self {
+    pub fn filter_minmax_image_component_mapping(mut self, filter_minmax_image_component_mapping: bool) -> Self {
         self.0.filter_minmax_image_component_mapping = filter_minmax_image_component_mapping as _;
         self
     }
     #[inline]
-    pub fn max_timeline_semaphore_value_difference(
-        mut self,
-        max_timeline_semaphore_value_difference: u64,
-    ) -> Self {
-        self.0.max_timeline_semaphore_value_difference =
-            max_timeline_semaphore_value_difference as _;
+    pub fn max_timeline_semaphore_value_difference(mut self, max_timeline_semaphore_value_difference: u64) -> Self {
+        self.0.max_timeline_semaphore_value_difference = max_timeline_semaphore_value_difference as _;
         self
     }
     #[inline]
-    pub fn framebuffer_integer_color_sample_counts(
-        mut self,
-        framebuffer_integer_color_sample_counts: crate::vk1_0::SampleCountFlags,
-    ) -> Self {
-        self.0.framebuffer_integer_color_sample_counts =
-            framebuffer_integer_color_sample_counts as _;
+    pub fn framebuffer_integer_color_sample_counts(mut self, framebuffer_integer_color_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
+        self.0.framebuffer_integer_color_sample_counts = framebuffer_integer_color_sample_counts as _;
         self
     }
     #[inline]
@@ -7474,21 +6179,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]
     #[doc(alias = "vkResetQueryPool")]
-    pub unsafe fn reset_query_pool(
-        &self,
-        query_pool: crate::vk1_0::QueryPool,
-        first_query: u32,
-        query_count: u32,
-    ) -> () {
-        let _function = self
-            .reset_query_pool
-            .expect("`reset_query_pool` is not loaded");
-        let _return = _function(
-            self.handle,
-            query_pool as _,
-            first_query as _,
-            query_count as _,
-        );
+    pub unsafe fn reset_query_pool(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> () {
+        let _function = self.reset_query_pool.expect("`reset_query_pool` is not loaded");
+        let _return = _function(self.handle, query_pool as _, first_query as _, query_count as _);
         ()
     }
     #[inline]
@@ -7500,9 +6193,7 @@ impl crate::DeviceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let _function = self
-            .create_render_pass2
-            .expect("`create_render_pass2` is not loaded");
+        let _function = self.create_render_pass2.expect("`create_render_pass2` is not loaded");
         let mut render_pass = match render_pass {
             Some(v) => v,
             None => Default::default(),
@@ -7527,60 +6218,31 @@ impl crate::DeviceLoader {
         render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
         subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
     ) -> () {
-        let _function = self
-            .cmd_begin_render_pass2
-            .expect("`cmd_begin_render_pass2` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            render_pass_begin as _,
-            subpass_begin_info as _,
-        );
+        let _function = self.cmd_begin_render_pass2.expect("`cmd_begin_render_pass2` is not loaded");
+        let _return = _function(command_buffer as _, render_pass_begin as _, subpass_begin_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2.html) · Function"]
     #[doc(alias = "vkCmdNextSubpass2")]
-    pub unsafe fn cmd_next_subpass2(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
-        subpass_end_info: &crate::vk1_2::SubpassEndInfo,
-    ) -> () {
-        let _function = self
-            .cmd_next_subpass2
-            .expect("`cmd_next_subpass2` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            subpass_begin_info as _,
-            subpass_end_info as _,
-        );
+    pub unsafe fn cmd_next_subpass2(&self, command_buffer: crate::vk1_0::CommandBuffer, subpass_begin_info: &crate::vk1_2::SubpassBeginInfo, subpass_end_info: &crate::vk1_2::SubpassEndInfo) -> () {
+        let _function = self.cmd_next_subpass2.expect("`cmd_next_subpass2` is not loaded");
+        let _return = _function(command_buffer as _, subpass_begin_info as _, subpass_end_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2.html) · Function"]
     #[doc(alias = "vkCmdEndRenderPass2")]
-    pub unsafe fn cmd_end_render_pass2(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        subpass_end_info: &crate::vk1_2::SubpassEndInfo,
-    ) -> () {
-        let _function = self
-            .cmd_end_render_pass2
-            .expect("`cmd_end_render_pass2` is not loaded");
+    pub unsafe fn cmd_end_render_pass2(&self, command_buffer: crate::vk1_0::CommandBuffer, subpass_end_info: &crate::vk1_2::SubpassEndInfo) -> () {
+        let _function = self.cmd_end_render_pass2.expect("`cmd_end_render_pass2` is not loaded");
         let _return = _function(command_buffer as _, subpass_end_info as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValue.html) · Function"]
     #[doc(alias = "vkGetSemaphoreCounterValue")]
-    pub unsafe fn get_semaphore_counter_value(
-        &self,
-        semaphore: crate::vk1_0::Semaphore,
-        value: Option<u64>,
-    ) -> crate::utils::VulkanResult<u64> {
-        let _function = self
-            .get_semaphore_counter_value
-            .expect("`get_semaphore_counter_value` is not loaded");
+    pub unsafe fn get_semaphore_counter_value(&self, semaphore: crate::vk1_0::Semaphore, value: Option<u64>) -> crate::utils::VulkanResult<u64> {
+        let _function = self.get_semaphore_counter_value.expect("`get_semaphore_counter_value` is not loaded");
         let mut value = match value {
             Some(v) => v,
             None => Default::default(),
@@ -7591,27 +6253,16 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphores.html) · Function"]
     #[doc(alias = "vkWaitSemaphores")]
-    pub unsafe fn wait_semaphores(
-        &self,
-        wait_info: &crate::vk1_2::SemaphoreWaitInfo,
-        timeout: u64,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .wait_semaphores
-            .expect("`wait_semaphores` is not loaded");
+    pub unsafe fn wait_semaphores(&self, wait_info: &crate::vk1_2::SemaphoreWaitInfo, timeout: u64) -> crate::utils::VulkanResult<()> {
+        let _function = self.wait_semaphores.expect("`wait_semaphores` is not loaded");
         let _return = _function(self.handle, wait_info as _, timeout as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphore.html) · Function"]
     #[doc(alias = "vkSignalSemaphore")]
-    pub unsafe fn signal_semaphore(
-        &self,
-        signal_info: &crate::vk1_2::SemaphoreSignalInfo,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .signal_semaphore
-            .expect("`signal_semaphore` is not loaded");
+    pub unsafe fn signal_semaphore(&self, signal_info: &crate::vk1_2::SemaphoreSignalInfo) -> crate::utils::VulkanResult<()> {
+        let _function = self.signal_semaphore.expect("`signal_semaphore` is not loaded");
         let _return = _function(self.handle, signal_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -7628,9 +6279,7 @@ impl crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_indirect_count
-            .expect("`cmd_draw_indirect_count` is not loaded");
+        let _function = self.cmd_draw_indirect_count.expect("`cmd_draw_indirect_count` is not loaded");
         let _return = _function(
             command_buffer as _,
             buffer as _,
@@ -7655,9 +6304,7 @@ impl crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_indexed_indirect_count
-            .expect("`cmd_draw_indexed_indirect_count` is not loaded");
+        let _function = self.cmd_draw_indexed_indirect_count.expect("`cmd_draw_indexed_indirect_count` is not loaded");
         let _return = _function(
             command_buffer as _,
             buffer as _,
@@ -7672,39 +6319,24 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Function"]
     #[doc(alias = "vkGetBufferOpaqueCaptureAddress")]
-    pub unsafe fn get_buffer_opaque_capture_address(
-        &self,
-        info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> u64 {
-        let _function = self
-            .get_buffer_opaque_capture_address
-            .expect("`get_buffer_opaque_capture_address` is not loaded");
+    pub unsafe fn get_buffer_opaque_capture_address(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> u64 {
+        let _function = self.get_buffer_opaque_capture_address.expect("`get_buffer_opaque_capture_address` is not loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddress.html) · Function"]
     #[doc(alias = "vkGetBufferDeviceAddress")]
-    pub unsafe fn get_buffer_device_address(
-        &self,
-        info: &crate::vk1_2::BufferDeviceAddressInfo,
-    ) -> crate::vk1_0::DeviceAddress {
-        let _function = self
-            .get_buffer_device_address
-            .expect("`get_buffer_device_address` is not loaded");
+    pub unsafe fn get_buffer_device_address(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> crate::vk1_0::DeviceAddress {
+        let _function = self.get_buffer_device_address.expect("`get_buffer_device_address` is not loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html) · Function"]
     #[doc(alias = "vkGetDeviceMemoryOpaqueCaptureAddress")]
-    pub unsafe fn get_device_memory_opaque_capture_address(
-        &self,
-        info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo,
-    ) -> u64 {
-        let _function = self
-            .get_device_memory_opaque_capture_address
-            .expect("`get_device_memory_opaque_capture_address` is not loaded");
+    pub unsafe fn get_device_memory_opaque_capture_address(&self, info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo) -> u64 {
+        let _function = self.get_device_memory_opaque_capture_address.expect("`get_device_memory_opaque_capture_address` is not loaded");
         let _return = _function(self.handle, info as _);
         _return
     }

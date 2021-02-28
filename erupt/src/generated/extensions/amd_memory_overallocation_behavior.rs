@@ -3,8 +3,7 @@
 pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME")]
-pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_memory_overallocation_behavior");
+pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_memory_overallocation_behavior");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum"]
 #[doc(alias = "VkMemoryOverallocationBehaviorAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -33,8 +32,7 @@ impl MemoryOverallocationBehaviorAMD {
 pub struct DeviceMemoryOverallocationCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub overallocation_behavior:
-        crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD,
+    pub overallocation_behavior: crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD,
 }
 impl Default for DeviceMemoryOverallocationCreateInfoAMD {
     fn default() -> Self {
@@ -63,20 +61,14 @@ impl DeviceMemoryOverallocationCreateInfoAMD {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`]"]
 #[repr(transparent)]
-pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a>(
-    DeviceMemoryOverallocationCreateInfoAMD,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a>(DeviceMemoryOverallocationCreateInfoAMD, std::marker::PhantomData<&'a ()>);
 impl<'a> DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
     #[inline]
     pub fn new() -> DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
         DeviceMemoryOverallocationCreateInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn overallocation_behavior(
-        mut self,
-        overallocation_behavior : crate :: extensions :: amd_memory_overallocation_behavior :: MemoryOverallocationBehaviorAMD,
-    ) -> Self {
+    pub fn overallocation_behavior(mut self, overallocation_behavior: crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD) -> Self {
         self.0.overallocation_behavior = overallocation_behavior as _;
         self
     }

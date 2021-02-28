@@ -3,19 +3,13 @@
 pub const NV_SCISSOR_EXCLUSIVE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME")]
-pub const NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_NV_scissor_exclusive");
+pub const NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_scissor_exclusive");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_SET_EXCLUSIVE_SCISSOR_NV: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdSetExclusiveScissorNV");
+pub const FN_CMD_SET_EXCLUSIVE_SCISSOR_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetExclusiveScissorNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_exclusive_scissor: u32,
-    exclusive_scissor_count: u32,
-    p_exclusive_scissors: *const crate::vk1_0::Rect2D,
-) -> ();
+pub type PFN_vkCmdSetExclusiveScissorNV =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissor_count: u32, p_exclusive_scissors: *const crate::vk1_0::Rect2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -52,17 +46,11 @@ impl PhysicalDeviceExclusiveScissorFeaturesNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a>(
-    PhysicalDeviceExclusiveScissorFeaturesNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a>(PhysicalDeviceExclusiveScissorFeaturesNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
-        PhysicalDeviceExclusiveScissorFeaturesNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceExclusiveScissorFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn exclusive_scissor(mut self, exclusive_scissor: bool) -> Self {
@@ -108,7 +96,12 @@ pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
 }
 impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type : crate :: vk1_0 :: StructureType :: PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV , p_next : std :: ptr :: null () , exclusive_scissor_count : Default :: default () , p_exclusive_scissors : std :: ptr :: null () }
+        Self {
+            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV,
+            p_next: std::ptr::null(),
+            exclusive_scissor_count: Default::default(),
+            p_exclusive_scissors: std::ptr::null(),
+        }
     }
 }
 impl std::fmt::Debug for PipelineViewportExclusiveScissorStateCreateInfoNV {
@@ -130,23 +123,14 @@ impl PipelineViewportExclusiveScissorStateCreateInfoNV {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Builder of [`PipelineViewportExclusiveScissorStateCreateInfoNV`]"]
 #[repr(transparent)]
-pub struct PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a>(
-    PipelineViewportExclusiveScissorStateCreateInfoNV,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a>(PipelineViewportExclusiveScissorStateCreateInfoNV, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
-        PipelineViewportExclusiveScissorStateCreateInfoNVBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineViewportExclusiveScissorStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn exclusive_scissors(
-        mut self,
-        exclusive_scissors: &'a [crate::vk1_0::Rect2DBuilder],
-    ) -> Self {
+    pub fn exclusive_scissors(mut self, exclusive_scissors: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_exclusive_scissors = exclusive_scissors.as_ptr() as _;
         self.0.exclusive_scissor_count = exclusive_scissors.len() as _;
         self
@@ -183,22 +167,10 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
     #[doc(alias = "vkCmdSetExclusiveScissorNV")]
-    pub unsafe fn cmd_set_exclusive_scissor_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_exclusive_scissor: u32,
-        exclusive_scissors: &[crate::vk1_0::Rect2DBuilder],
-    ) -> () {
-        let _function = self
-            .cmd_set_exclusive_scissor_nv
-            .expect("`cmd_set_exclusive_scissor_nv` is not loaded");
+    pub unsafe fn cmd_set_exclusive_scissor_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissors: &[crate::vk1_0::Rect2DBuilder]) -> () {
+        let _function = self.cmd_set_exclusive_scissor_nv.expect("`cmd_set_exclusive_scissor_nv` is not loaded");
         let exclusive_scissor_count = exclusive_scissors.len();
-        let _return = _function(
-            command_buffer as _,
-            first_exclusive_scissor as _,
-            exclusive_scissor_count as _,
-            exclusive_scissors.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_exclusive_scissor as _, exclusive_scissor_count as _, exclusive_scissors.as_ptr() as _);
         ()
     }
 }

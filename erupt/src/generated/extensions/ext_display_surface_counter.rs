@@ -3,11 +3,9 @@
 pub const EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME")]
-pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_display_surface_counter");
+pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_display_surface_counter");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`]"]
 #[doc(alias = "VkSurfaceCounterFlagBitsEXT")]
@@ -35,7 +33,11 @@ impl SurfaceCounterFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , surface : crate :: extensions :: khr_surface :: SurfaceKHR , p_surface_capabilities : * mut crate :: extensions :: ext_display_surface_counter :: SurfaceCapabilities2EXT) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_surface_capabilities: *mut crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilities2EXT")]
 #[derive(Copy, Clone)]
@@ -53,8 +55,7 @@ pub struct SurfaceCapabilities2EXT {
     pub current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
     pub supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
     pub supported_usage_flags: crate::vk1_0::ImageUsageFlags,
-    pub supported_surface_counters:
-        crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT,
+    pub supported_surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT,
 }
 impl Default for SurfaceCapabilities2EXT {
     fn default() -> Self {
@@ -90,10 +91,7 @@ impl std::fmt::Debug for SurfaceCapabilities2EXT {
             .field("current_transform", &self.current_transform)
             .field("supported_composite_alpha", &self.supported_composite_alpha)
             .field("supported_usage_flags", &self.supported_usage_flags)
-            .field(
-                "supported_surface_counters",
-                &self.supported_surface_counters,
-            )
+            .field("supported_surface_counters", &self.supported_surface_counters)
             .finish()
     }
 }
@@ -106,10 +104,7 @@ impl SurfaceCapabilities2EXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Builder of [`SurfaceCapabilities2EXT`]"]
 #[repr(transparent)]
-pub struct SurfaceCapabilities2EXTBuilder<'a>(
-    SurfaceCapabilities2EXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceCapabilities2EXTBuilder<'a>(SurfaceCapabilities2EXT, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceCapabilities2EXTBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceCapabilities2EXTBuilder<'a> {
@@ -146,42 +141,27 @@ impl<'a> SurfaceCapabilities2EXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn supported_transforms(
-        mut self,
-        supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR,
-    ) -> Self {
+    pub fn supported_transforms(mut self, supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR) -> Self {
         self.0.supported_transforms = supported_transforms as _;
         self
     }
     #[inline]
-    pub fn current_transform(
-        mut self,
-        current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
-    ) -> Self {
+    pub fn current_transform(mut self, current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.current_transform = current_transform as _;
         self
     }
     #[inline]
-    pub fn supported_composite_alpha(
-        mut self,
-        supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR,
-    ) -> Self {
+    pub fn supported_composite_alpha(mut self, supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR) -> Self {
         self.0.supported_composite_alpha = supported_composite_alpha as _;
         self
     }
     #[inline]
-    pub fn supported_usage_flags(
-        mut self,
-        supported_usage_flags: crate::vk1_0::ImageUsageFlags,
-    ) -> Self {
+    pub fn supported_usage_flags(mut self, supported_usage_flags: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.supported_usage_flags = supported_usage_flags as _;
         self
     }
     #[inline]
-    pub fn supported_surface_counters(
-        mut self,
-        supported_surface_counters : crate :: extensions :: ext_display_surface_counter :: SurfaceCounterFlagsEXT,
-    ) -> Self {
+    pub fn supported_surface_counters(mut self, supported_surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT) -> Self {
         self.0.supported_surface_counters = supported_surface_counters as _;
         self
     }
@@ -221,12 +201,8 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<
-            crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
-    > {
+        surface_capabilities: Option<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>,
+    ) -> crate::utils::VulkanResult<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT> {
         let _function = self
             .get_physical_device_surface_capabilities2_ext
             .expect("`get_physical_device_surface_capabilities2_ext` is not loaded");
@@ -234,11 +210,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            surface as _,
-            &mut surface_capabilities,
-        );
+        let _return = _function(physical_device as _, surface as _, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_return, surface_capabilities)
     }
 }

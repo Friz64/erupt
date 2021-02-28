@@ -3,14 +3,11 @@
 pub const AMD_DRAW_INDIRECT_COUNT_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME")]
-pub const AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_AMD_draw_indirect_count");
+pub const AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_draw_indirect_count");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_INDIRECT_COUNT_AMD: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawIndirectCountAMD");
+pub const FN_CMD_DRAW_INDIRECT_COUNT_AMD: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndirectCountAMD");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD: *const std::os::raw::c_char =
-    crate::cstr!("vkCmdDrawIndexedIndirectCountAMD");
+pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawIndexedIndirectCountAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Alias"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectCountAMD = crate::vk1_2::PFN_vkCmdDrawIndirectCount;
@@ -32,9 +29,7 @@ impl crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_indirect_count_amd
-            .expect("`cmd_draw_indirect_count_amd` is not loaded");
+        let _function = self.cmd_draw_indirect_count_amd.expect("`cmd_draw_indirect_count_amd` is not loaded");
         let _return = _function(
             command_buffer as _,
             buffer as _,
@@ -59,9 +54,7 @@ impl crate::DeviceLoader {
         max_draw_count: u32,
         stride: u32,
     ) -> () {
-        let _function = self
-            .cmd_draw_indexed_indirect_count_amd
-            .expect("`cmd_draw_indexed_indirect_count_amd` is not loaded");
+        let _function = self.cmd_draw_indexed_indirect_count_amd.expect("`cmd_draw_indexed_indirect_count_amd` is not loaded");
         let _return = _function(
             command_buffer as _,
             buffer as _,

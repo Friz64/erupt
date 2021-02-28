@@ -3,8 +3,7 @@
 pub const EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME")]
-pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_pipeline_creation_feedback");
+pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_pipeline_creation_feedback");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`]"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`]"]
 #[doc(alias = "VkPipelineCreationFeedbackFlagBitsEXT")]
@@ -52,10 +51,7 @@ impl Default for PipelineCreationFeedbackEXT {
 }
 impl std::fmt::Debug for PipelineCreationFeedbackEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCreationFeedbackEXT")
-            .field("flags", &self.flags)
-            .field("duration", &self.duration)
-            .finish()
+        f.debug_struct("PipelineCreationFeedbackEXT").field("flags", &self.flags).field("duration", &self.duration).finish()
     }
 }
 impl PipelineCreationFeedbackEXT {
@@ -67,20 +63,14 @@ impl PipelineCreationFeedbackEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Builder of [`PipelineCreationFeedbackEXT`]"]
 #[repr(transparent)]
-pub struct PipelineCreationFeedbackEXTBuilder<'a>(
-    PipelineCreationFeedbackEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineCreationFeedbackEXTBuilder<'a>(PipelineCreationFeedbackEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineCreationFeedbackEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineCreationFeedbackEXTBuilder<'a> {
         PipelineCreationFeedbackEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackFlagsEXT,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -123,11 +113,9 @@ impl<'a> std::ops::DerefMut for PipelineCreationFeedbackEXTBuilder<'a> {
 pub struct PipelineCreationFeedbackCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub p_pipeline_creation_feedback:
-        *mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT,
+    pub p_pipeline_creation_feedback: *mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT,
     pub pipeline_stage_creation_feedback_count: u32,
-    pub p_pipeline_stage_creation_feedbacks:
-        *mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT,
+    pub p_pipeline_stage_creation_feedbacks: *mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT,
 }
 impl Default for PipelineCreationFeedbackCreateInfoEXT {
     fn default() -> Self {
@@ -145,18 +133,9 @@ impl std::fmt::Debug for PipelineCreationFeedbackCreateInfoEXT {
         f.debug_struct("PipelineCreationFeedbackCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "p_pipeline_creation_feedback",
-                &self.p_pipeline_creation_feedback,
-            )
-            .field(
-                "pipeline_stage_creation_feedback_count",
-                &self.pipeline_stage_creation_feedback_count,
-            )
-            .field(
-                "p_pipeline_stage_creation_feedbacks",
-                &self.p_pipeline_stage_creation_feedbacks,
-            )
+            .field("p_pipeline_creation_feedback", &self.p_pipeline_creation_feedback)
+            .field("pipeline_stage_creation_feedback_count", &self.pipeline_stage_creation_feedback_count)
+            .field("p_pipeline_stage_creation_feedbacks", &self.p_pipeline_stage_creation_feedbacks)
             .finish()
     }
 }
@@ -169,32 +148,21 @@ impl PipelineCreationFeedbackCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackCreateInfoEXT.html) · Builder of [`PipelineCreationFeedbackCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineCreationFeedbackCreateInfoEXTBuilder<'a>(
-    PipelineCreationFeedbackCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineCreationFeedbackCreateInfoEXTBuilder<'a>(PipelineCreationFeedbackCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
         PipelineCreationFeedbackCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn pipeline_creation_feedback(
-        mut self,
-        pipeline_creation_feedback : & 'a mut crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackEXT,
-    ) -> Self {
+    pub fn pipeline_creation_feedback(mut self, pipeline_creation_feedback: &'a mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT) -> Self {
         self.0.p_pipeline_creation_feedback = pipeline_creation_feedback as _;
         self
     }
     #[inline]
-    pub fn pipeline_stage_creation_feedbacks(
-        mut self,
-        pipeline_stage_creation_feedbacks : & 'a mut [crate :: extensions :: ext_pipeline_creation_feedback :: PipelineCreationFeedbackEXTBuilder],
-    ) -> Self {
-        self.0.p_pipeline_stage_creation_feedbacks =
-            pipeline_stage_creation_feedbacks.as_ptr() as _;
-        self.0.pipeline_stage_creation_feedback_count =
-            pipeline_stage_creation_feedbacks.len() as _;
+    pub fn pipeline_stage_creation_feedbacks(mut self, pipeline_stage_creation_feedbacks: &'a mut [crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXTBuilder]) -> Self {
+        self.0.p_pipeline_stage_creation_feedbacks = pipeline_stage_creation_feedbacks.as_ptr() as _;
+        self.0.pipeline_stage_creation_feedback_count = pipeline_stage_creation_feedbacks.len() as _;
         self
     }
     #[inline]

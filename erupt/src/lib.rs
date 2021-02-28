@@ -61,6 +61,9 @@
 //! ### Q: I need to easily allocate memory, what should i use?
 //! A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc).
 //!
+//! ## Minimum Supported Rust Version (MSRV)
+//! Rust 1.50 or higher.
+//!
 //! ## Thank you
 //! - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate
 //! - [`libloading`](https://crates.io/crates/libloading) for providing symbol loading
@@ -232,11 +235,7 @@ pub enum LoaderError {
 impl Display for LoaderError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            LoaderError::VulkanError(err) => write!(
-                f,
-                "A Vulkan function returned a negative `Result` value: {}",
-                err
-            ),
+            LoaderError::VulkanError(err) => write!(f, "A Vulkan function returned a negative `Result` value: {}", err),
             LoaderError::SymbolNotAvailable => {
                 write!(f, "A symbol was not available while it should have been")
             }
@@ -254,14 +253,8 @@ impl<T> Debug for EntryLoader<T> {
 
 impl InstanceLoader {
     #[inline]
-    pub fn new<T>(
-        entry_loader: &EntryLoader<T>,
-        create_info: &crate::vk1_0::InstanceCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> Result<InstanceLoader, LoaderError> {
-        let instance = unsafe { entry_loader.create_instance(create_info, allocator, None) }
-            .result()
-            .map_err(LoaderError::VulkanError)?;
+    pub fn new<T>(entry_loader: &EntryLoader<T>, create_info: &crate::vk1_0::InstanceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
+        let instance = unsafe { entry_loader.create_instance(create_info, allocator, None) }.result().map_err(LoaderError::VulkanError)?;
 
         let mut version = crate::vk1_0::make_version(1, 0, 0);
         if !create_info.p_application_info.is_null() {
@@ -272,42 +265,26 @@ impl InstanceLoader {
         }
 
         unsafe {
-            let enabled_extensions = std::slice::from_raw_parts(
-                create_info.pp_enabled_extension_names,
-                create_info.enabled_extension_count as _,
-            );
+            let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
 
-            let enabled_extensions: Vec<_> = enabled_extensions
-                .iter()
-                .map(|&ptr| CStr::from_ptr(ptr))
-                .collect();
+            let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
 
             let symbol = |name| (entry_loader.get_instance_proc_addr)(instance, name);
 
-            let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(
-                symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES)
-                    .ok_or(crate::LoaderError::SymbolNotAvailable)?,
-            );
+            let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
 
-            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(
-                symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)
-                    .ok_or(crate::LoaderError::SymbolNotAvailable)?,
-            );
+            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties =
+                mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
 
             let mut physical_device_count = 0;
-            let result =
-                enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
+            let result = enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
 
             if result.0 < 0 {
                 return Err(LoaderError::VulkanError(result));
             }
 
             let mut physical_devices = vec![Default::default(); physical_device_count as usize];
-            let result = enumerate_physical_devices(
-                instance,
-                &mut physical_device_count,
-                physical_devices.as_mut_ptr(),
-            );
+            let result = enumerate_physical_devices(instance, &mut physical_device_count, physical_devices.as_mut_ptr());
 
             if result.0 < 0 {
                 return Err(LoaderError::VulkanError(result));
@@ -316,24 +293,14 @@ impl InstanceLoader {
             let mut all_device_extension_properties = Vec::new();
             for physical_device in physical_devices {
                 let mut property_count = 0;
-                let result = enumerate_device_extension_properties(
-                    physical_device,
-                    ptr::null(),
-                    &mut property_count,
-                    ptr::null_mut(),
-                );
+                let result = enumerate_device_extension_properties(physical_device, ptr::null(), &mut property_count, ptr::null_mut());
 
                 if result.0 < 0 {
                     return Err(LoaderError::VulkanError(result));
                 }
 
                 let mut properties = vec![Default::default(); property_count as usize];
-                let result = enumerate_device_extension_properties(
-                    physical_device,
-                    ptr::null(),
-                    &mut property_count,
-                    properties.as_mut_ptr(),
-                );
+                let result = enumerate_device_extension_properties(physical_device, ptr::null(), &mut property_count, properties.as_mut_ptr());
 
                 if result.0 < 0 {
                     return Err(LoaderError::VulkanError(result));
@@ -342,13 +309,9 @@ impl InstanceLoader {
                 all_device_extension_properties.extend(properties.into_iter());
             }
 
-            let available_device_extensions: Vec<_> = all_device_extension_properties
-                .iter()
-                .map(|properties| CStr::from_ptr(properties.extension_name.as_ptr()))
-                .collect();
+            let available_device_extensions: Vec<_> = all_device_extension_properties.iter().map(|properties| CStr::from_ptr(properties.extension_name.as_ptr())).collect();
 
-            let instance_enabled =
-                InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
+            let instance_enabled = InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
 
             InstanceLoader::custom(entry_loader, instance, instance_enabled, symbol)
         }
@@ -369,30 +332,19 @@ impl DeviceLoader {
         create_info: &crate::vk1_0::DeviceCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> Result<DeviceLoader, LoaderError> {
-        let device =
-            unsafe { instance_loader.create_device(physical_device, create_info, allocator, None) }
-                .result()
-                .map_err(LoaderError::VulkanError)?;
+        let device = unsafe { instance_loader.create_device(physical_device, create_info, allocator, None) }
+            .result()
+            .map_err(LoaderError::VulkanError)?;
 
         let device_enabled = unsafe {
-            let enabled_extensions = std::slice::from_raw_parts(
-                create_info.pp_enabled_extension_names,
-                create_info.enabled_extension_count as _,
-            );
+            let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
 
-            let enabled_extensions: Vec<_> = enabled_extensions
-                .iter()
-                .map(|&ptr| CStr::from_ptr(ptr))
-                .collect();
+            let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
 
             DeviceEnabled::new(&enabled_extensions)
         };
 
-        unsafe {
-            DeviceLoader::custom(instance_loader, device, device_enabled, |name| {
-                (instance_loader.get_device_proc_addr)(device, name)
-            })
-        }
+        unsafe { DeviceLoader::custom(instance_loader, device, device_enabled, |name| (instance_loader.get_device_proc_addr)(device, name)) }
     }
 }
 
@@ -419,10 +371,7 @@ pub trait ExtendableFrom<'a, T> {
 }
 
 #[inline]
-unsafe fn append_ptr_chain(
-    mut host: *mut vk1_0::BaseOutStructure,
-    tail: *mut vk1_0::BaseOutStructure,
-) {
+unsafe fn append_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, tail: *mut vk1_0::BaseOutStructure) {
     loop {
         let p_next = &mut (*host).p_next;
 

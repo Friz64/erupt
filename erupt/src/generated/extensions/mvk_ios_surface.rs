@@ -3,11 +3,9 @@
 pub const MVK_IOS_SURFACE_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_MVK_IOS_SURFACE_EXTENSION_NAME")]
-pub const MVK_IOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_MVK_ios_surface");
+pub const MVK_IOS_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_MVK_ios_surface");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_CREATE_IOS_SURFACE_MVK: *const std::os::raw::c_char =
-    crate::cstr!("vkCreateIOSSurfaceMVK");
+pub const FN_CREATE_IOS_SURFACE_MVK: *const std::os::raw::c_char = crate::cstr!("vkCreateIOSSurfaceMVK");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`]"] # [doc (alias = "VkIOSSurfaceCreateFlagsMVK")] # [derive (Default)] # [repr (transparent)] pub struct IOSSurfaceCreateFlagsMVK : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`IOSSurfaceCreateFlagsMVK`]"]
 #[doc(alias = "VkIOSSurfaceCreateFlagBitsMVK")]
@@ -75,20 +73,14 @@ impl IOSSurfaceCreateInfoMVK {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`]"]
 #[repr(transparent)]
-pub struct IOSSurfaceCreateInfoMVKBuilder<'a>(
-    IOSSurfaceCreateInfoMVK,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct IOSSurfaceCreateInfoMVKBuilder<'a>(IOSSurfaceCreateInfoMVK, std::marker::PhantomData<&'a ()>);
 impl<'a> IOSSurfaceCreateInfoMVKBuilder<'a> {
     #[inline]
     pub fn new() -> IOSSurfaceCreateInfoMVKBuilder<'a> {
         IOSSurfaceCreateInfoMVKBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::mvk_ios_surface::IOSSurfaceCreateFlagsMVK,
-    ) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::mvk_ios_surface::IOSSurfaceCreateFlagsMVK) -> Self {
         self.0.flags = flags as _;
         self
     }
@@ -135,9 +127,7 @@ impl crate::InstanceLoader {
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
         surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self
-            .create_ios_surface_mvk
-            .expect("`create_ios_surface_mvk` is not loaded");
+        let _function = self.create_ios_surface_mvk.expect("`create_ios_surface_mvk` is not loaded");
         let mut surface = match surface {
             Some(v) => v,
             None => Default::default(),

@@ -3,20 +3,26 @@
 pub const KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME")]
-pub const KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_get_surface_capabilities2");
+pub const KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_get_surface_capabilities2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2KHR");
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceSurfaceFormats2KHR");
+pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfaceFormats2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_capabilities : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceCapabilities2KHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_surface_capabilities: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn (physical_device : crate :: vk1_0 :: PhysicalDevice , p_surface_info : * const crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR , p_surface_format_count : * mut u32 , p_surface_formats : * mut crate :: extensions :: khr_get_surface_capabilities2 :: SurfaceFormat2KHR) -> crate :: vk1_0 :: Result ;
+pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_surface_format_count: *mut u32,
+    p_surface_formats: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSurfaceInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -50,43 +56,14 @@ impl PhysicalDeviceSurfaceInfo2KHR {
         PhysicalDeviceSurfaceInfo2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT,
-    > for PhysicalDeviceSurfaceInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXTBuilder<'_>,
-    > for PhysicalDeviceSurfaceInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT,
-    > for PhysicalDeviceSurfaceInfo2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXTBuilder<
-            '_,
-        >,
-    > for PhysicalDeviceSurfaceInfo2KHRBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT> for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT> for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceSurfaceInfo2KHRBuilder<'a>(
-    PhysicalDeviceSurfaceInfo2KHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceSurfaceInfo2KHRBuilder<'a>(PhysicalDeviceSurfaceInfo2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
@@ -157,71 +134,25 @@ impl SurfaceCapabilities2KHR {
         SurfaceCapabilities2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_display_native_hdr::DisplayNativeHdrSurfaceCapabilitiesAMD,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::amd_display_native_hdr::DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<
-            '_,
-        >,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_shared_presentable_image::SharedPresentSurfaceCapabilitiesKHR,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_shared_presentable_image::SharedPresentSurfaceCapabilitiesKHRBuilder<
-            '_,
-        >,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::khr_surface_protected_capabilities::SurfaceProtectedCapabilitiesKHR,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: khr_surface_protected_capabilities :: SurfaceProtectedCapabilitiesKHRBuilder < '_ >> for SurfaceCapabilities2KHRBuilder < 'a > { }
-impl<'a>
-    crate::ExtendableFrom<
-        'a,
-        crate::extensions::ext_full_screen_exclusive::SurfaceCapabilitiesFullScreenExclusiveEXT,
-    > for SurfaceCapabilities2KHRBuilder<'a>
-{
-}
-impl < 'a > crate :: ExtendableFrom < 'a , crate :: extensions :: ext_full_screen_exclusive :: SurfaceCapabilitiesFullScreenExclusiveEXTBuilder < '_ >> for SurfaceCapabilities2KHRBuilder < 'a > { }
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_display_native_hdr::DisplayNativeHdrSurfaceCapabilitiesAMD> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_display_native_hdr::DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'_>> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shared_presentable_image::SharedPresentSurfaceCapabilitiesKHR> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shared_presentable_image::SharedPresentSurfaceCapabilitiesKHRBuilder<'_>> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_surface_protected_capabilities::SurfaceProtectedCapabilitiesKHR> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_surface_protected_capabilities::SurfaceProtectedCapabilitiesKHRBuilder<'_>> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceCapabilitiesFullScreenExclusiveEXT> for SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'_>> for SurfaceCapabilities2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`]"]
 #[repr(transparent)]
-pub struct SurfaceCapabilities2KHRBuilder<'a>(
-    SurfaceCapabilities2KHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SurfaceCapabilities2KHRBuilder<'a>(SurfaceCapabilities2KHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SurfaceCapabilities2KHRBuilder<'a> {
     #[inline]
     pub fn new() -> SurfaceCapabilities2KHRBuilder<'a> {
         SurfaceCapabilities2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn surface_capabilities(
-        mut self,
-        surface_capabilities: crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
-    ) -> Self {
+    pub fn surface_capabilities(mut self, surface_capabilities: crate::extensions::khr_surface::SurfaceCapabilitiesKHR) -> Self {
         self.0.surface_capabilities = surface_capabilities as _;
         self
     }
@@ -295,10 +226,7 @@ impl<'a> SurfaceFormat2KHRBuilder<'a> {
         SurfaceFormat2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn surface_format(
-        mut self,
-        surface_format: crate::extensions::khr_surface::SurfaceFormatKHR,
-    ) -> Self {
+    pub fn surface_format(mut self, surface_format: crate::extensions::khr_surface::SurfaceFormatKHR) -> Self {
         self.0.surface_format = surface_format as _;
         self
     }
@@ -337,13 +265,9 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_surface_capabilities2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        surface_info : & crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR,
-        surface_capabilities: Option<
-            crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-        crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
-    > {
+        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+        surface_capabilities: Option<crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR>,
+    ) -> crate::utils::VulkanResult<crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR> {
         let _function = self
             .get_physical_device_surface_capabilities2_khr
             .expect("`get_physical_device_surface_capabilities2_khr` is not loaded");
@@ -351,11 +275,7 @@ impl crate::InstanceLoader {
             Some(v) => v,
             None => Default::default(),
         };
-        let _return = _function(
-            physical_device as _,
-            surface_info as _,
-            &mut surface_capabilities,
-        );
+        let _return = _function(physical_device as _, surface_info as _, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_return, surface_capabilities)
     }
     #[inline]
@@ -364,34 +284,20 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_surface_formats2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        surface_info : & crate :: extensions :: khr_get_surface_capabilities2 :: PhysicalDeviceSurfaceInfo2KHR,
+        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
         surface_format_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<
-        Vec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>,
-    > {
-        let _function = self
-            .get_physical_device_surface_formats2_khr
-            .expect("`get_physical_device_surface_formats2_khr` is not loaded");
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>> {
+        let _function = self.get_physical_device_surface_formats2_khr.expect("`get_physical_device_surface_formats2_khr` is not loaded");
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
             None => {
                 let mut v = Default::default();
-                _function(
-                    physical_device as _,
-                    surface_info as _,
-                    &mut v,
-                    std::ptr::null_mut(),
-                );
+                _function(physical_device as _, surface_info as _, &mut v, std::ptr::null_mut());
                 v
             }
         };
         let mut surface_formats = vec![Default::default(); surface_format_count as _];
-        let _return = _function(
-            physical_device as _,
-            surface_info as _,
-            &mut surface_format_count,
-            surface_formats.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, surface_info as _, &mut surface_format_count, surface_formats.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, surface_formats)
     }
 }

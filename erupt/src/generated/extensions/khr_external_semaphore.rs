@@ -3,8 +3,7 @@
 pub const KHR_EXTERNAL_SEMAPHORE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME")]
-pub const KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_external_semaphore");
+pub const KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_external_semaphore");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlagsKHR.html) · Alias"]
 #[doc(alias = "VkSemaphoreImportFlagsKHR")]
 #[allow(non_camel_case_types)]
@@ -20,5 +19,4 @@ pub type ExportSemaphoreCreateInfoKHR = crate::vk1_1::ExportSemaphoreCreateInfo;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreCreateInfoKHR.html) · Alias"]
 #[doc(alias = "VkExportSemaphoreCreateInfoKHR")]
 #[allow(non_camel_case_types)]
-pub type ExportSemaphoreCreateInfoKHRBuilder<'a> =
-    crate::vk1_1::ExportSemaphoreCreateInfoBuilder<'a>;
+pub type ExportSemaphoreCreateInfoKHRBuilder<'a> = crate::vk1_1::ExportSemaphoreCreateInfoBuilder<'a>;

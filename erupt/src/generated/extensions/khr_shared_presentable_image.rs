@@ -3,17 +3,12 @@
 pub const KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME")]
-pub const KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_KHR_shared_presentable_image");
+pub const KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_shared_presentable_image");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_SWAPCHAIN_STATUS_KHR: *const std::os::raw::c_char =
-    crate::cstr!("vkGetSwapchainStatusKHR");
+pub const FN_GET_SWAPCHAIN_STATUS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSwapchainStatusKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -37,10 +32,7 @@ impl std::fmt::Debug for SharedPresentSurfaceCapabilitiesKHR {
         f.debug_struct("SharedPresentSurfaceCapabilitiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "shared_present_supported_usage_flags",
-                &self.shared_present_supported_usage_flags,
-            )
+            .field("shared_present_supported_usage_flags", &self.shared_present_supported_usage_flags)
             .finish()
     }
 }
@@ -53,20 +45,14 @@ impl SharedPresentSurfaceCapabilitiesKHR {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`]"]
 #[repr(transparent)]
-pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a>(
-    SharedPresentSurfaceCapabilitiesKHR,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a>(SharedPresentSurfaceCapabilitiesKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
     #[inline]
     pub fn new() -> SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
         SharedPresentSurfaceCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn shared_present_supported_usage_flags(
-        mut self,
-        shared_present_supported_usage_flags: crate::vk1_0::ImageUsageFlags,
-    ) -> Self {
+    pub fn shared_present_supported_usage_flags(mut self, shared_present_supported_usage_flags: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.shared_present_supported_usage_flags = shared_present_supported_usage_flags as _;
         self
     }
@@ -102,13 +88,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainStatusKHR")]
-    pub unsafe fn get_swapchain_status_khr(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_swapchain_status_khr
-            .expect("`get_swapchain_status_khr` is not loaded");
+    pub unsafe fn get_swapchain_status_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
+        let _function = self.get_swapchain_status_khr.expect("`get_swapchain_status_khr` is not loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }

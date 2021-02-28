@@ -3,11 +3,9 @@
 pub const EXT_TOOLING_INFO_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_TOOLING_INFO_EXTENSION_NAME")]
-pub const EXT_TOOLING_INFO_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_tooling_info");
+pub const EXT_TOOLING_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_tooling_info");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
-pub const FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: *const std::os::raw::c_char =
-    crate::cstr!("vkGetPhysicalDeviceToolPropertiesEXT");
+pub const FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceToolPropertiesEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`]"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Bits enum of [`ToolPurposeFlagsEXT`]"]
 #[doc(alias = "VkToolPurposeFlagBitsEXT")]
@@ -47,12 +45,11 @@ impl ToolPurposeFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT =
-    unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_tool_count: *mut u32,
-        p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT,
-    ) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT = unsafe extern "system" fn(
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_tool_count: *mut u32,
+    p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT,
+) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceToolPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -84,19 +81,11 @@ impl std::fmt::Debug for PhysicalDeviceToolPropertiesEXT {
         f.debug_struct("PhysicalDeviceToolPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field("name", unsafe {
-                &std::ffi::CStr::from_ptr(self.name.as_ptr())
-            })
-            .field("version", unsafe {
-                &std::ffi::CStr::from_ptr(self.version.as_ptr())
-            })
+            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
+            .field("version", unsafe { &std::ffi::CStr::from_ptr(self.version.as_ptr()) })
             .field("purposes", &self.purposes)
-            .field("description", unsafe {
-                &std::ffi::CStr::from_ptr(self.description.as_ptr())
-            })
-            .field("layer", unsafe {
-                &std::ffi::CStr::from_ptr(self.layer.as_ptr())
-            })
+            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
+            .field("layer", unsafe { &std::ffi::CStr::from_ptr(self.layer.as_ptr()) })
             .finish()
     }
 }
@@ -109,10 +98,7 @@ impl PhysicalDeviceToolPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Builder of [`PhysicalDeviceToolPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceToolPropertiesEXTBuilder<'a>(
-    PhysicalDeviceToolPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceToolPropertiesEXTBuilder<'a>(PhysicalDeviceToolPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceToolPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceToolPropertiesEXTBuilder<'a> {
@@ -129,10 +115,7 @@ impl<'a> PhysicalDeviceToolPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn purposes(
-        mut self,
-        purposes: crate::extensions::ext_tooling_info::ToolPurposeFlagsEXT,
-    ) -> Self {
+    pub fn purposes(mut self, purposes: crate::extensions::ext_tooling_info::ToolPurposeFlagsEXT) -> Self {
         self.0.purposes = purposes as _;
         self
     }
@@ -182,12 +165,8 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         tool_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<
-        Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>,
-    > {
-        let _function = self
-            .get_physical_device_tool_properties_ext
-            .expect("`get_physical_device_tool_properties_ext` is not loaded");
+    ) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
+        let _function = self.get_physical_device_tool_properties_ext.expect("`get_physical_device_tool_properties_ext` is not loaded");
         let mut tool_count = match tool_count {
             Some(v) => v,
             None => {
@@ -197,11 +176,7 @@ impl crate::InstanceLoader {
             }
         };
         let mut tool_properties = vec![Default::default(); tool_count as _];
-        let _return = _function(
-            physical_device as _,
-            &mut tool_count,
-            tool_properties.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, &mut tool_count, tool_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, tool_properties)
     }
 }

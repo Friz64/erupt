@@ -3,8 +3,7 @@
 pub const EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME")]
-pub const EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_blend_operation_advanced");
+pub const EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_blend_operation_advanced");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlendOverlapEXT.html) · Enum"]
 #[doc(alias = "VkBlendOverlapEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -38,8 +37,7 @@ pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT,
             p_next: std::ptr::null_mut(),
             advanced_blend_coherent_operations: Default::default(),
         }
@@ -50,10 +48,7 @@ impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
         f.debug_struct("PhysicalDeviceBlendOperationAdvancedFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "advanced_blend_coherent_operations",
-                &(self.advanced_blend_coherent_operations != 0),
-            )
+            .field("advanced_blend_coherent_operations", &(self.advanced_blend_coherent_operations != 0))
             .finish()
     }
 }
@@ -66,23 +61,14 @@ impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a>(
-    PhysicalDeviceBlendOperationAdvancedFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a>(PhysicalDeviceBlendOperationAdvancedFeaturesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
-        PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn advanced_blend_coherent_operations(
-        mut self,
-        advanced_blend_coherent_operations: bool,
-    ) -> Self {
+    pub fn advanced_blend_coherent_operations(mut self, advanced_blend_coherent_operations: bool) -> Self {
         self.0.advanced_blend_coherent_operations = advanced_blend_coherent_operations as _;
         self
     }
@@ -130,8 +116,7 @@ pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             advanced_blend_max_color_attachments: Default::default(),
             advanced_blend_independent_blend: Default::default(),
@@ -147,30 +132,12 @@ impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
         f.debug_struct("PhysicalDeviceBlendOperationAdvancedPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "advanced_blend_max_color_attachments",
-                &self.advanced_blend_max_color_attachments,
-            )
-            .field(
-                "advanced_blend_independent_blend",
-                &(self.advanced_blend_independent_blend != 0),
-            )
-            .field(
-                "advanced_blend_non_premultiplied_src_color",
-                &(self.advanced_blend_non_premultiplied_src_color != 0),
-            )
-            .field(
-                "advanced_blend_non_premultiplied_dst_color",
-                &(self.advanced_blend_non_premultiplied_dst_color != 0),
-            )
-            .field(
-                "advanced_blend_correlated_overlap",
-                &(self.advanced_blend_correlated_overlap != 0),
-            )
-            .field(
-                "advanced_blend_all_operations",
-                &(self.advanced_blend_all_operations != 0),
-            )
+            .field("advanced_blend_max_color_attachments", &self.advanced_blend_max_color_attachments)
+            .field("advanced_blend_independent_blend", &(self.advanced_blend_independent_blend != 0))
+            .field("advanced_blend_non_premultiplied_src_color", &(self.advanced_blend_non_premultiplied_src_color != 0))
+            .field("advanced_blend_non_premultiplied_dst_color", &(self.advanced_blend_non_premultiplied_dst_color != 0))
+            .field("advanced_blend_correlated_overlap", &(self.advanced_blend_correlated_overlap != 0))
+            .field("advanced_blend_all_operations", &(self.advanced_blend_all_operations != 0))
             .finish()
     }
 }
@@ -183,57 +150,34 @@ impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a>(
-    PhysicalDeviceBlendOperationAdvancedPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a>(PhysicalDeviceBlendOperationAdvancedPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
-        PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn advanced_blend_max_color_attachments(
-        mut self,
-        advanced_blend_max_color_attachments: u32,
-    ) -> Self {
+    pub fn advanced_blend_max_color_attachments(mut self, advanced_blend_max_color_attachments: u32) -> Self {
         self.0.advanced_blend_max_color_attachments = advanced_blend_max_color_attachments as _;
         self
     }
     #[inline]
-    pub fn advanced_blend_independent_blend(
-        mut self,
-        advanced_blend_independent_blend: bool,
-    ) -> Self {
+    pub fn advanced_blend_independent_blend(mut self, advanced_blend_independent_blend: bool) -> Self {
         self.0.advanced_blend_independent_blend = advanced_blend_independent_blend as _;
         self
     }
     #[inline]
-    pub fn advanced_blend_non_premultiplied_src_color(
-        mut self,
-        advanced_blend_non_premultiplied_src_color: bool,
-    ) -> Self {
-        self.0.advanced_blend_non_premultiplied_src_color =
-            advanced_blend_non_premultiplied_src_color as _;
+    pub fn advanced_blend_non_premultiplied_src_color(mut self, advanced_blend_non_premultiplied_src_color: bool) -> Self {
+        self.0.advanced_blend_non_premultiplied_src_color = advanced_blend_non_premultiplied_src_color as _;
         self
     }
     #[inline]
-    pub fn advanced_blend_non_premultiplied_dst_color(
-        mut self,
-        advanced_blend_non_premultiplied_dst_color: bool,
-    ) -> Self {
-        self.0.advanced_blend_non_premultiplied_dst_color =
-            advanced_blend_non_premultiplied_dst_color as _;
+    pub fn advanced_blend_non_premultiplied_dst_color(mut self, advanced_blend_non_premultiplied_dst_color: bool) -> Self {
+        self.0.advanced_blend_non_premultiplied_dst_color = advanced_blend_non_premultiplied_dst_color as _;
         self
     }
     #[inline]
-    pub fn advanced_blend_correlated_overlap(
-        mut self,
-        advanced_blend_correlated_overlap: bool,
-    ) -> Self {
+    pub fn advanced_blend_correlated_overlap(mut self, advanced_blend_correlated_overlap: bool) -> Self {
         self.0.advanced_blend_correlated_overlap = advanced_blend_correlated_overlap as _;
         self
     }
@@ -283,8 +227,7 @@ pub struct PipelineColorBlendAdvancedStateCreateInfoEXT {
 impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT,
+            s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT,
             p_next: std::ptr::null(),
             src_premultiplied: Default::default(),
             dst_premultiplied: Default::default(),
@@ -312,17 +255,11 @@ impl PipelineColorBlendAdvancedStateCreateInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Builder of [`PipelineColorBlendAdvancedStateCreateInfoEXT`]"]
 #[repr(transparent)]
-pub struct PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a>(
-    PipelineColorBlendAdvancedStateCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a>(PipelineColorBlendAdvancedStateCreateInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
-        PipelineColorBlendAdvancedStateCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PipelineColorBlendAdvancedStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn src_premultiplied(mut self, src_premultiplied: bool) -> Self {
@@ -335,10 +272,7 @@ impl<'a> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn blend_overlap(
-        mut self,
-        blend_overlap: crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT,
-    ) -> Self {
+    pub fn blend_overlap(mut self, blend_overlap: crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT) -> Self {
         self.0.blend_overlap = blend_overlap as _;
         self
     }

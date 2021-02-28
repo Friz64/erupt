@@ -106,11 +106,7 @@ impl Alias {
         let ident = self.name.ident();
         let alias = self.alias.path(source);
         let doc = comment_gen.def(Some(self.name.original()), "Alias", None);
-        let lifetime = if is_builder_alias {
-            Some(quote! { <'a> })
-        } else {
-            None
-        };
+        let lifetime = is_builder_alias.then(|| quote! { <'a> });
 
         quote! {
             #[doc = #doc]

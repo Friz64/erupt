@@ -3,8 +3,7 @@
 pub const EXT_FILTER_CUBIC_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FILTER_CUBIC_EXTENSION_NAME")]
-pub const EXT_FILTER_CUBIC_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_EXT_filter_cubic");
+pub const EXT_FILTER_CUBIC_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_filter_cubic");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageViewImageFormatInfoEXT")]
 #[derive(Copy, Clone)]
@@ -41,17 +40,11 @@ impl PhysicalDeviceImageViewImageFormatInfoEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Builder of [`PhysicalDeviceImageViewImageFormatInfoEXT`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a>(
-    PhysicalDeviceImageViewImageFormatInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a>(PhysicalDeviceImageViewImageFormatInfoEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
-        PhysicalDeviceImageViewImageFormatInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceImageViewImageFormatInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn image_view_type(mut self, image_view_type: crate::vk1_0::ImageViewType) -> Self {
@@ -98,8 +91,7 @@ pub struct FilterCubicImageViewImageFormatPropertiesEXT {
 impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT,
+            s_type: crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT,
             p_next: std::ptr::null_mut(),
             filter_cubic: Default::default(),
             filter_cubic_minmax: Default::default(),
@@ -125,17 +117,11 @@ impl FilterCubicImageViewImageFormatPropertiesEXT {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Builder of [`FilterCubicImageViewImageFormatPropertiesEXT`]"]
 #[repr(transparent)]
-pub struct FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a>(
-    FilterCubicImageViewImageFormatPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a>(FilterCubicImageViewImageFormatPropertiesEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
     #[inline]
     pub fn new() -> FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
-        FilterCubicImageViewImageFormatPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        FilterCubicImageViewImageFormatPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn filter_cubic(mut self, filter_cubic: bool) -> Self {

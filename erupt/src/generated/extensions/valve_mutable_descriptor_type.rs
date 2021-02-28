@@ -3,8 +3,7 @@
 pub const VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME")]
-pub const VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME: *const std::os::raw::c_char =
-    crate::cstr!("VK_VALVE_mutable_descriptor_type");
+pub const VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_VALVE_mutable_descriptor_type");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE")]
 #[derive(Copy, Clone)]
@@ -17,8 +16,7 @@ pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
 impl Default for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn default() -> Self {
         Self {
-            s_type:
-                crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE,
+            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE,
             p_next: std::ptr::null_mut(),
             mutable_descriptor_type: Default::default(),
         }
@@ -29,10 +27,7 @@ impl std::fmt::Debug for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
         f.debug_struct("PhysicalDeviceMutableDescriptorTypeFeaturesVALVE")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "mutable_descriptor_type",
-                &(self.mutable_descriptor_type != 0),
-            )
+            .field("mutable_descriptor_type", &(self.mutable_descriptor_type != 0))
             .finish()
     }
 }
@@ -45,17 +40,11 @@ impl PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Builder of [`PhysicalDeviceMutableDescriptorTypeFeaturesVALVE`]"]
 #[repr(transparent)]
-pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a>(
-    PhysicalDeviceMutableDescriptorTypeFeaturesVALVE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a>(PhysicalDeviceMutableDescriptorTypeFeaturesVALVE, std::marker::PhantomData<&'a ()>);
 impl<'a> PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
     #[inline]
     pub fn new() -> PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
-        PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
+        PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
     pub fn mutable_descriptor_type(mut self, mutable_descriptor_type: bool) -> Self {
@@ -122,20 +111,14 @@ impl MutableDescriptorTypeListVALVE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Builder of [`MutableDescriptorTypeListVALVE`]"]
 #[repr(transparent)]
-pub struct MutableDescriptorTypeListVALVEBuilder<'a>(
-    MutableDescriptorTypeListVALVE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MutableDescriptorTypeListVALVEBuilder<'a>(MutableDescriptorTypeListVALVE, std::marker::PhantomData<&'a ()>);
 impl<'a> MutableDescriptorTypeListVALVEBuilder<'a> {
     #[inline]
     pub fn new() -> MutableDescriptorTypeListVALVEBuilder<'a> {
         MutableDescriptorTypeListVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn descriptor_types(
-        mut self,
-        descriptor_types: &'a [crate::vk1_0::DescriptorType],
-    ) -> Self {
+    pub fn descriptor_types(mut self, descriptor_types: &'a [crate::vk1_0::DescriptorType]) -> Self {
         self.0.p_descriptor_types = descriptor_types.as_ptr() as _;
         self.0.descriptor_type_count = descriptor_types.len() as _;
         self
@@ -175,8 +158,7 @@ pub struct MutableDescriptorTypeCreateInfoVALVE {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub mutable_descriptor_type_list_count: u32,
-    pub p_mutable_descriptor_type_lists:
-        *const crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVE,
+    pub p_mutable_descriptor_type_lists: *const crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVE,
 }
 impl Default for MutableDescriptorTypeCreateInfoVALVE {
     fn default() -> Self {
@@ -193,14 +175,8 @@ impl std::fmt::Debug for MutableDescriptorTypeCreateInfoVALVE {
         f.debug_struct("MutableDescriptorTypeCreateInfoVALVE")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "mutable_descriptor_type_list_count",
-                &self.mutable_descriptor_type_list_count,
-            )
-            .field(
-                "p_mutable_descriptor_type_lists",
-                &self.p_mutable_descriptor_type_lists,
-            )
+            .field("mutable_descriptor_type_list_count", &self.mutable_descriptor_type_list_count)
+            .field("p_mutable_descriptor_type_lists", &self.p_mutable_descriptor_type_lists)
             .finish()
     }
 }
@@ -213,20 +189,14 @@ impl MutableDescriptorTypeCreateInfoVALVE {
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Builder of [`MutableDescriptorTypeCreateInfoVALVE`]"]
 #[repr(transparent)]
-pub struct MutableDescriptorTypeCreateInfoVALVEBuilder<'a>(
-    MutableDescriptorTypeCreateInfoVALVE,
-    std::marker::PhantomData<&'a ()>,
-);
+pub struct MutableDescriptorTypeCreateInfoVALVEBuilder<'a>(MutableDescriptorTypeCreateInfoVALVE, std::marker::PhantomData<&'a ()>);
 impl<'a> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
     #[inline]
     pub fn new() -> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
         MutableDescriptorTypeCreateInfoVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn mutable_descriptor_type_lists(
-        mut self,
-        mutable_descriptor_type_lists : & 'a [crate :: extensions :: valve_mutable_descriptor_type :: MutableDescriptorTypeListVALVEBuilder],
-    ) -> Self {
+    pub fn mutable_descriptor_type_lists(mut self, mutable_descriptor_type_lists: &'a [crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVEBuilder]) -> Self {
         self.0.p_mutable_descriptor_type_lists = mutable_descriptor_type_lists.as_ptr() as _;
         self.0.mutable_descriptor_type_list_count = mutable_descriptor_type_lists.len() as _;
         self

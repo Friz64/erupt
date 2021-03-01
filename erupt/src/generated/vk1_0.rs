@@ -4430,6 +4430,7 @@ impl std::fmt::Debug for StructureType {
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE",
             &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE",
+            &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
             _ => "(unknown variant)",
         })
     }
@@ -5345,6 +5346,10 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE: Self = Self(1000351000);
     pub const MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE: Self = Self(1000351002);
+}
+#[doc = "Provided by [`crate::extensions::qnx_screen_surface`]"]
+impl StructureType {
+    pub const SCREEN_SURFACE_CREATE_INFO_QNX: Self = Self(1000378000);
 }
 #[doc = "Provided by [`crate::extensions::khr_multiview`]"]
 impl StructureType {

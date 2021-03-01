@@ -131,6 +131,8 @@ impl Type {
             "GgpFrameToken" => Some(Type::UnsignedInt64),
             "IDirectFB" => Some(Type::Void),
             "IDirectFBSurface" => Some(Type::Void),
+            "_screen_context" => Some(Type::Void),
+            "_screen_window" => Some(Type::Void),
             _ => None,
         }
     }

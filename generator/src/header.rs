@@ -296,6 +296,7 @@ impl HeaderSource {
         let header_config = Config {
             cpp_options: vec![
                 "-DVK_NO_PROTOTYPES".into(),
+                "-DVK_ENABLE_BETA_EXTENSIONS".into(),
                 format!("-I{}", include_vulkan),
                 "-E".into(),
             ],

@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for 64-bit bitmasks
 
 ### Changed
-- Update Vulkan Headers to version 170
+- Update Vulkan Headers to version 171
 - Make use of `bool::then` (MSRV: 1.50)
 
 ## [0.17.1+169] - 2021-02-09

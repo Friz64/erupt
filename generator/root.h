@@ -20,6 +20,8 @@ typedef void IDirectFBSurface;
 typedef void zx_handle_t;
 typedef void GgpStreamDescriptor;
 typedef void GgpFrameToken;
+typedef void _screen_context;
+typedef void _screen_window;
 #include "vk_platform.h"
 #include "vulkan_core.h"
 #include "vulkan_android.h"
@@ -35,6 +37,7 @@ typedef void GgpFrameToken;
 #include "vulkan_directfb.h"
 #include "vulkan_xlib_xrandr.h"
 #include "vulkan_ggp.h"
+#include "vulkan_screen.h"
 #include "vulkan_beta.h"
 void __ERUPT_CONSTANT_VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = VK_MAX_PHYSICAL_DEVICE_NAME_SIZE;
 void __ERUPT_CONSTANT_VK_UUID_SIZE = VK_UUID_SIZE;
@@ -516,3 +519,5 @@ void __ERUPT_CONSTANT_VK_EXT_DIRECTFB_SURFACE_SPEC_VERSION = VK_EXT_DIRECTFB_SUR
 void __ERUPT_CONSTANT_VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME = VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME;
 void __ERUPT_CONSTANT_VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION = VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION;
 void __ERUPT_CONSTANT_VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME;
+void __ERUPT_CONSTANT_VK_QNX_SCREEN_SURFACE_SPEC_VERSION = VK_QNX_SCREEN_SURFACE_SPEC_VERSION;
+void __ERUPT_CONSTANT_VK_QNX_SCREEN_SURFACE_EXTENSION_NAME = VK_QNX_SCREEN_SURFACE_EXTENSION_NAME;

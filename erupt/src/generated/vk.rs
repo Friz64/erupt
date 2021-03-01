@@ -449,6 +449,8 @@ pub use crate::extensions::qcom_render_pass_transform::*;
 #[doc(no_inline)]
 pub use crate::extensions::qcom_rotated_copy_commands::*;
 #[doc(no_inline)]
+pub use crate::extensions::qnx_screen_surface::*;
+#[doc(no_inline)]
 pub use crate::extensions::valve_mutable_descriptor_type::*;
 #[doc(no_inline)]
 pub use crate::vk1_0::*;

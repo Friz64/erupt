@@ -448,5 +448,7 @@ pub mod qcom_render_pass_store_ops;
 pub mod qcom_render_pass_transform;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_rotated_copy_commands.html) · Vulkan extension"]
 pub mod qcom_rotated_copy_commands;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QNX_screen_surface.html) · Vulkan extension"]
+pub mod qnx_screen_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_VALVE_mutable_descriptor_type.html) · Vulkan extension"]
 pub mod valve_mutable_descriptor_type;

@@ -161,6 +161,11 @@ macro_rules! non_dispatchable_handle {
             pub const fn is_null(&self) -> bool {
                 self.0 == 0
             }
+
+            #[inline]
+            pub fn object_handle(&self) -> u64 {
+                self.0
+            }
         }
 
         impl std::fmt::Pointer for $name {
@@ -197,6 +202,11 @@ macro_rules! dispatchable_handle {
 
             pub fn is_null(&self) -> bool {
                 self.0.is_null()
+            }
+
+            #[inline]
+            pub fn object_handle(&self) -> u64 {
+                self.0 as u64
             }
         }
 

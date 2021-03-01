@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Support for 64-bit bitmasks
+- Added `VulkanResult::map_err`
 
 ### Changed
 - Update Vulkan Headers to version 171
@@ -35,16 +36,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.15.0+157] - 2020-10-25
 ### Changed
-- Update Vulkan Headers to version 158
+- Update Vulkan Headers to version 157
 
 ### Fixed
 - Don't use `std::ffi::c_void` for the return type of functions
 - Fix data types of `GgpStreamDescriptor` and `GgpFrameToken`
 
 ## [0.14.0+154] - 2020-09-21
-### Changed
-- Update Vulkan Headers to version 157
-
 ### Added
 - Add `#[track_caller]` to `VulkanResult`
 - Add `Allocation::memory`, allowing access to the inner `DeviceMemory` handle

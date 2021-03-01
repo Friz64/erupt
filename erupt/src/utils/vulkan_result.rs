@@ -99,6 +99,13 @@ impl<T> VulkanResult<T> {
         self.value.ok_or(self.raw)
     }
 
+    /// Maps `Some(v)` of `self.value` to `Ok(v)` and `None` of `self.value` to `Err(op(self.raw))`
+    #[inline]
+    pub fn map_err<F, O: FnOnce(vk::Result) -> F>(self, op: O) -> Result<T, F> {
+        let raw = self.raw;
+        self.value.ok_or_else(move || op(raw))
+    }
+
     /// Returns `true` if `self.value` is `Some`
     #[inline]
     pub fn is_ok(&self) -> bool {

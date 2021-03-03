@@ -1,97 +1,100 @@
 #![allow(clippy::all, unreachable_patterns)]
 #![doc(html_logo_url = "https://gitlab.com/Friz64/erupt/-/raw/master/logo.png")]
-//! Vulkan API bindings
-//!
-//! ## Features
-//! - Full Vulkan API coverage
-//! - First-class support for all extensions
-//! - High quality auto-generated function wrappers
-//! - A [utility module] aiding your use of this crate
-//!   - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
-//!   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
-//! - Generated code distributed into multiple modules
-//! - Function loading ([`EntryLoader`], [`InstanceLoader`], [`DeviceLoader`])
-//! - Seperate `Flags` and `FlagBits` types
-//! - A high level `Builder` for every struct
-//! - Type-safe pointer chain support
-//! - `Default` and `Debug` implementation for every type
-//! - Confirmed support for Linux, Windows, macOS and Android
-//! - Complete auto-generation of everything except [`utils`]
-//!
-//! ## Example: Instance Creation
-//! ```rust ignore
-//! use erupt::{vk1_0, EntryLoader, InstanceLoader};
-//!
-//! let entry = EntryLoader::new()?;
-//!
-//! let app_info = vk1_0::ApplicationInfoBuilder::new().api_version(vk1_0::make_version(1, 0, 0));
-//! let instance_info = vk1_0::InstanceCreateInfoBuilder::new().application_info(&app_info);
-//!
-//! let instance = InstanceLoader::new(&entry, &instance_info, None)?;
-//!
-//! // ...
-//!
-//! instance.destroy_instance(None);
-//! ```
-//!
-//! ## Additional examples
-//! - [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/triangle.rs)
-//! - [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/pointer_chain.rs)
-//! - [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/version.rs)
-//!
-//! ## Cargo Features
-//! - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency
-//! - `loading` (enabled by default): Enables the [`EntryLoader::new`] function, adds [`libloading`] dependency
-//!
-//! ## FAQ
-//! ### Q: What's the difference between this, ash and vulkano?
-//! A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example
-//! it has a special hand-written wrapper around a Vulkan `PhysicalDevice`. On the other hand ash and
-//! erupt both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead
-//! focusing on having good bindings to the *raw* Vulkan API.
-//!
-//! The big selling points of erupt is that it has better documentation, high level function support for
-//! all extensions (which is only really relevant if you use those extensions), being fully generated
-//! and some more smaller improvements. On the other hand ash has a bigger existing community.
-//!
-//! ### Q: What does the number at the end of the version mean?
-//! A: It represents the Vulkan Header version this version of erupt was generated against and is purely
-//! informational.
-//!
-//! ### Q: I need to easily allocate memory, what should i use?
-//! A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc).
-//!
-//! ## Minimum Supported Rust Version (MSRV)
-//! Rust 1.50 or higher.
-//!
-//! ## Thank you
-//! - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate
-//! - [`libloading`](https://crates.io/crates/libloading) for providing symbol loading
-//! - [`ash-window`](https://crates.io/crates/ash-window) for providing a base for the [`surface`] module
-//! - [`bitflags`](https://crates.io/crates/bitflags) for providing a perfect bitflag macro
-//! - The Vulkan Community ❤️
-//! - The Rust Community ❤️
-//!
-//! ## Licensing
-//!
-//! The logo is the Volcano Emoji of [Twemoji](https://twemoji.twitter.com/) ([License](https://creativecommons.org/licenses/by/4.0/)). The name "erupt" was added on top of it.
-//!
-//! This project is licensed under the [zlib License](https://gitlab.com/Friz64/erupt/-/blob/master/LICENSE).
-//!
-//! [utility module]: https://docs.rs/erupt/*/erupt/utils/index.html
-//! [`VulkanResult`]: https://docs.rs/erupt/*/erupt/utils/struct.VulkanResult.html
-//! [`surface`]: https://docs.rs/erupt/*/erupt/utils/surface/index.html
-//! [`SurfaceKHR`]: https://docs.rs/erupt/*/erupt/extensions/khr_surface/struct.SurfaceKHR.html
-//! [`allocator`]: https://docs.rs/erupt/*/erupt/utils/allocator/index.html
-//! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
-//! [`libloading`]: https://crates.io/crates/libloading
-//! [`raw-window-handle`]: https://crates.io/crates/raw-window-handle
-//! [`ash-window`]: https://crates.io/crates/ash-window
-//! [`EntryLoader`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html
-//! [`EntryLoader::new`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html#method.new
-//! [`InstanceLoader`]: https://docs.rs/erupt/*/erupt/struct.InstanceLoader.html
-//! [`DeviceLoader`]: https://docs.rs/erupt/*/erupt/struct.DeviceLoader.html
-//! [`utils`]: https://docs.rs/erupt/*/erupt/utils/index.html
+/*!
+Vulkan API bindings
+
+## Features
+- Full Vulkan API coverage
+- First-class support for all extensions
+- High quality auto-generated function wrappers
+- A [utility module] aiding your use of this crate
+  - [`VulkanResult`]: Idiomatic wrapper around a Vulkan Result
+  - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
+- Generated code distributed into multiple modules
+- Function loading ([`EntryLoader`], [`InstanceLoader`], [`DeviceLoader`])
+- Seperate `Flags` and `FlagBits` types
+- A high level `Builder` for every struct
+- Type-safe pointer chain support
+- `Default` and `Debug` implementation for every type
+- Confirmed support for Linux, Windows, macOS and Android
+- Complete auto-generation of everything except [`utils`]
+
+## Example: Instance Creation
+```rust ignore
+use erupt::{vk1_0, EntryLoader, InstanceLoader};
+
+let entry = EntryLoader::new()?;
+
+let app_info = vk1_0::ApplicationInfoBuilder::new().api_version(vk1_0::make_version(1, 0, 0));
+let instance_info = vk1_0::InstanceCreateInfoBuilder::new().application_info(&app_info);
+
+let instance = InstanceLoader::new(&entry, &instance_info, None)?;
+
+// ...
+
+instance.destroy_instance(None);
+```
+
+## Additional examples
+- [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/triangle.rs)
+- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/pointer_chain.rs)
+- [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/version.rs)
+
+## Cargo Features
+- `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency
+- `loading` (enabled by default): Enables the [`EntryLoader::new`] function, adds [`libloading`] dependency
+
+## FAQ
+### Q: What's the difference between this, ash and vulkano?
+A: Vulkano is special because it provides hand-written Vulkan wrappers, which means that for example
+it has a special hand-written wrapper around a Vulkan `PhysicalDevice`. On the other hand ash and
+erupt both provide Vulkan API bindings too, but not exposing such *fancy* wrappers and instead
+focusing on having good bindings to the *raw* Vulkan API.
+
+The big selling points of erupt is that it has better documentation, high level function support for
+all extensions (which is only really relevant if you use those extensions), being fully generated
+and some more smaller improvements. On the other hand ash has a bigger existing community.
+
+### Q: What does the number at the end of the version mean?
+A: It represents the Vulkan Header version this version of erupt was generated against and is purely
+informational.
+
+### Q: I need to easily allocate memory, what should i use?
+A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc)
+or [`vk-alloc`](https://github.com/hasenbanck/vk-alloc).
+
+## Minimum Supported Rust Version (MSRV)
+Rust 1.50 or higher.
+
+## Thank you
+- [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate
+- [`libloading`](https://crates.io/crates/libloading) for providing symbol loading
+- [`ash-window`](https://crates.io/crates/ash-window) for providing a base for the [`surface`] module
+- [`bitflags`](https://crates.io/crates/bitflags) for providing a perfect bitflag macro
+- The Vulkan Community ❤️
+- The Rust Community ❤️
+
+## Licensing
+
+The logo is the Volcano Emoji of [Twemoji](https://twemoji.twitter.com/) ([License](https://creativecommons.org/licenses/by/4.0/)). The name "erupt" was added on top of it.
+
+This project is licensed under the [zlib License](https://gitlab.com/Friz64/erupt/-/blob/master/LICENSE).
+
+[utility module]: https://docs.rs/erupt/%2A/erupt/utils/index.html
+[`VulkanResult`]: https://docs.rs/erupt/%2A/erupt/utils/struct.VulkanResult.html
+[`surface`]: https://docs.rs/erupt/%2A/erupt/utils/surface/index.html
+[`SurfaceKHR`]: https://docs.rs/erupt/%2A/erupt/extensions/khr_surface/struct.SurfaceKHR.html
+[`allocator`]: https://docs.rs/erupt/%2A/erupt/utils/allocator/index.html
+[`RawWindowHandle`]: https://docs.rs/raw-window-handle/%2A/raw_window_handle/enum.RawWindowHandle.html
+[`libloading`]: https://crates.io/crates/libloading
+[`raw-window-handle`]: https://crates.io/crates/raw-window-handle
+[`ash-window`]: https://crates.io/crates/ash-window
+[`EntryLoader`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html
+[`EntryLoader::new`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html#method.new
+[`InstanceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.InstanceLoader.html
+[`DeviceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.DeviceLoader.html
+[`utils`]: https://docs.rs/erupt/%2A/erupt/utils/index.html
+*/
 
 mod generated;
 pub mod utils;
@@ -152,16 +155,22 @@ macro_rules! non_dispatchable_handle {
         pub struct $name(pub u64);
 
         impl $name {
+            /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
             pub const TYPE: crate::vk1_0::ObjectType = crate::vk1_0::ObjectType::$ty;
 
+            /// Returns a null handle.
             pub const fn null() -> $name {
                 $name(0)
             }
 
+            /// Returns `true` if this handle is null.
             pub const fn is_null(&self) -> bool {
                 self.0 == 0
             }
 
+            /// Returns the raw handle value.
+            ///
+            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
             #[inline]
             pub fn object_handle(&self) -> u64 {
                 self.0
@@ -194,16 +203,22 @@ macro_rules! dispatchable_handle {
         pub struct $name(pub *mut ());
 
         impl $name {
+            /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
             pub const TYPE: crate::vk1_0::ObjectType = crate::vk1_0::ObjectType::$ty;
 
+            /// Returns a null handle.
             pub const fn null() -> Self {
                 $name(std::ptr::null_mut())
             }
 
+            /// Returns `true` if this handle is null.
             pub fn is_null(&self) -> bool {
                 self.0.is_null()
             }
 
+            /// Returns the raw handle value.
+            ///
+            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
             #[inline]
             pub fn object_handle(&self) -> u64 {
                 self.0 as u64

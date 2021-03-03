@@ -143,7 +143,6 @@ fn main() {
                                     None,
                                 )
                                 .unwrap()
-                                == true
                     }) {
                     Some(queue_family) => queue_family as u32,
                     None => return None,

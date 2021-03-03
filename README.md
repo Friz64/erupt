@@ -63,7 +63,8 @@ A: It represents the Vulkan Header version this version of erupt was generated a
 informational.
 
 ### Q: I need to easily allocate memory, what should i use?
-A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc).
+A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc)
+or [`vk-alloc`](https://github.com/hasenbanck/vk-alloc).
 
 ## Minimum Supported Rust Version (MSRV)
 Rust 1.50 or higher.
@@ -82,17 +83,17 @@ The logo is the Volcano Emoji of [Twemoji](https://twemoji.twitter.com/) ([Licen
 
 This project is licensed under the [zlib License](https://gitlab.com/Friz64/erupt/-/blob/master/LICENSE).
 
-[utility module]: https://docs.rs/erupt/*/erupt/utils/index.html
-[`VulkanResult`]: https://docs.rs/erupt/*/erupt/utils/struct.VulkanResult.html
-[`surface`]: https://docs.rs/erupt/*/erupt/utils/surface/index.html
-[`SurfaceKHR`]: https://docs.rs/erupt/*/erupt/extensions/khr_surface/struct.SurfaceKHR.html
-[`allocator`]: https://docs.rs/erupt/*/erupt/utils/allocator/index.html
-[`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html
+[utility module]: https://docs.rs/erupt/%2A/erupt/utils/index.html
+[`VulkanResult`]: https://docs.rs/erupt/%2A/erupt/utils/struct.VulkanResult.html
+[`surface`]: https://docs.rs/erupt/%2A/erupt/utils/surface/index.html
+[`SurfaceKHR`]: https://docs.rs/erupt/%2A/erupt/extensions/khr_surface/struct.SurfaceKHR.html
+[`allocator`]: https://docs.rs/erupt/%2A/erupt/utils/allocator/index.html
+[`RawWindowHandle`]: https://docs.rs/raw-window-handle/%2A/raw_window_handle/enum.RawWindowHandle.html
 [`libloading`]: https://crates.io/crates/libloading
 [`raw-window-handle`]: https://crates.io/crates/raw-window-handle
 [`ash-window`]: https://crates.io/crates/ash-window
-[`EntryLoader`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html
-[`EntryLoader::new`]: https://docs.rs/erupt/*/erupt/struct.EntryLoader.html#method.new
-[`InstanceLoader`]: https://docs.rs/erupt/*/erupt/struct.InstanceLoader.html
-[`DeviceLoader`]: https://docs.rs/erupt/*/erupt/struct.DeviceLoader.html
-[`utils`]: https://docs.rs/erupt/*/erupt/utils/index.html
+[`EntryLoader`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html
+[`EntryLoader::new`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html#method.new
+[`InstanceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.InstanceLoader.html
+[`DeviceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.DeviceLoader.html
+[`utils`]: https://docs.rs/erupt/%2A/erupt/utils/index.html

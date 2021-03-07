@@ -2,6 +2,8 @@
 
 //! Utilities to aid your usage of this crate
 
+#[cfg(feature = "bytemuck")]
+mod bytemuck;
 mod decode_spv;
 #[cfg(feature = "loading")]
 pub mod loading;

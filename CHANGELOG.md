@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for 64-bit bitmasks
 - Added `VulkanResult::map_err`
 - Added `object_handle` method on handles
+- Optional bytemuck support for some hand-picked structs (`*IndirectCommand`, etc.)
 
 ### Changed
 - Update Vulkan Headers to version 171

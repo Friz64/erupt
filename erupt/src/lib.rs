@@ -43,6 +43,7 @@ instance.destroy_instance(None);
 ## Cargo Features
 - `surface` (enabled by default): Enables the [`surface`] module, adds [`raw-window-handle`] dependency
 - `loading` (enabled by default): Enables the [`EntryLoader::new`] function, adds [`libloading`] dependency
+- `bytemuck`: Implements [`Pod`] for some hand-picked structs (`*IndirectCommand`, etc.), adds [`bytemuck`] dependency
 
 ## FAQ
 ### Q: What's the difference between this, ash and vulkano?
@@ -91,6 +92,8 @@ This project is licensed under the [zlib License](https://gitlab.com/Friz64/erup
 [`ash-window`]: https://crates.io/crates/ash-window
 [`EntryLoader`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html
 [`EntryLoader::new`]: https://docs.rs/erupt/%2A/erupt/struct.EntryLoader.html#method.new
+[`Pod`]: https://docs.rs/bytemuck/%2A/bytemuck/trait.Pod.html
+[`bytemuck`]: https://crates.io/crates/bytemuck
 [`InstanceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.InstanceLoader.html
 [`DeviceLoader`]: https://docs.rs/erupt/%2A/erupt/struct.DeviceLoader.html
 [`utils`]: https://docs.rs/erupt/%2A/erupt/utils/index.html

@@ -110,6 +110,7 @@ use std::{
     fmt::{self, Display},
     mem, ptr,
 };
+#[cfg(feature = "loading")]
 pub use utils::loading::DefaultEntryLoader;
 
 /// Construct a `*const std::os::raw::c_char` from a string

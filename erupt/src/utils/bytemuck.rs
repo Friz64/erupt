@@ -22,5 +22,4 @@ impl_pod!(vk::BindVertexBufferIndirectCommandNV);
 impl_pod!(vk::TraceRaysIndirectCommandKHR);
 
 // khr_acceleration_structure
-// Disabled due to issue #10 (https://gitlab.com/Friz64/erupt/-/issues/10)
-//impl_pod!(vk::AccelerationStructureInstanceKHR);
+impl_pod!(vk::AccelerationStructureInstanceKHR);

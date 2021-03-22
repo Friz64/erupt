@@ -1,4 +1,4 @@
-use erupt::{vk1_0, EntryLoader};
+use erupt::{vk, EntryLoader};
 
 const TITLE: &str = "erupt_examples: version";
 
@@ -7,8 +7,8 @@ fn main() {
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
-        vk1_0::version_major(entry.instance_version()),
-        vk1_0::version_minor(entry.instance_version()),
-        vk1_0::version_patch(entry.instance_version())
+        vk::version_major(entry.instance_version()),
+        vk::version_minor(entry.instance_version()),
+        vk::version_patch(entry.instance_version())
     );
 }

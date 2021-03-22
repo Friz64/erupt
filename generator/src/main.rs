@@ -1,7 +1,6 @@
 mod codegen;
 mod comment_gen;
 mod declaration;
-mod eval;
 mod header;
 mod items;
 mod loaders;

@@ -182,6 +182,10 @@ pub mod ext_validation_flags;
 pub mod ext_vertex_attribute_divisor;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_image_arrays.html) · Vulkan extension"]
 pub mod ext_ycbcr_image_arrays;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_external_memory.html) · Vulkan extension"]
+pub mod fuchsia_external_memory;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_external_semaphore.html) · Vulkan extension"]
+pub mod fuchsia_external_semaphore;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_imagepipe_surface.html) · Vulkan extension"]
 pub mod fuchsia_imagepipe_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GGP_frame_token.html) · Vulkan extension"]

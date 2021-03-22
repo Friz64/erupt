@@ -12,8 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optional bytemuck support for some hand-picked structs (`*IndirectCommand`, etc.)
 
 ### Changed
-- Update Vulkan Headers to version 171
+- Update Vulkan Headers to version 173
 - Make use of `bool::then` (MSRV: 1.50)
+
+### Fixed
+- Bit-field support (Wrong layout of `VkAccelerationStructureInstanceKHR`)
+[#10](https://gitlab.com/Friz64/erupt/-/issues/10)
 
 ## [0.17.1+169] - 2021-02-09
 ### Fixed
@@ -64,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Vulkan Headers to version 150
 
 ### Fixed
-- Fix memory mapper calculations (https://gitlab.com/Friz64/erupt/-/merge_requests/5)
+- Fix memory mapper calculations [!5](https://gitlab.com/Friz64/erupt/-/merge_requests/5)
 
 ## [0.12.0+149] - 2020-08-04
 ### Added

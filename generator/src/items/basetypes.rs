@@ -1,7 +1,7 @@
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{Declaration, Type},
-    header::DeclarationInfo,
+    header::{BitWidth, DeclarationInfo},
     name::TypeName,
     origin::Origin,
     source::{NotApplicable, Source},
@@ -46,6 +46,7 @@ impl TryFrom<&CDeclaration> for Basetype {
                 let declaration = Declaration::from(DeclarationInfo {
                     type_info: declaration.specifiers.as_slice().try_into()?,
                     declarator: Some(&init_declarator.node.declarator.node),
+                    bitwidth: BitWidth::Full,
                 });
 
                 let ty = declaration.ty;

@@ -1,4 +1,7 @@
+use std::borrow::Borrow;
+
 use crate::{
+    header::BitWidth,
     name::{EnumVariantName, FunctionName, Name, TypeName},
     source::Source,
 };
@@ -286,6 +289,20 @@ impl Type {
             _ => false,
         }
     }
+
+    pub fn bitwidth(&self) -> usize {
+        match self {
+            Type::UnsignedInt32 => 32,
+            _ => unimplemented!(),
+        }
+    }
+
+    pub fn is_flags(&self) -> bool {
+        match self {
+            Type::Named(Name::Type(name)) => name.is_flags(),
+            _ => false,
+        }
+    }
 }
 
 #[derive(Debug, Clone)]
@@ -352,6 +369,7 @@ pub struct Declaration {
     pub name: Option<String>,
     pub ty: Type,
     pub metadata: DeclarationMetadata,
+    pub bitwidth: BitWidth,
 }
 
 impl Declaration {
@@ -399,29 +417,14 @@ impl Declaration {
         }
     }
 
-    pub fn debug_impl(&self) -> TokenStream {
-        let ident = self.ident();
-        let field = quote! { self.#ident };
-
-        match &self.ty {
-            Type::Array { of, .. } if matches!(**of, Type::Char) => quote! {
-                unsafe { &std::ffi::CStr::from_ptr(#field.as_ptr()) }
-            },
-            Type::Option(of) if matches!(**of, Type::Named(Name::Function(_))) => quote! {
-                unsafe { &std::mem::transmute::<_, *const ()>(#field) }
-            },
-            Type::Named(Name::Type(name)) if *name == TypeName::bool32() => {
-                quote! { &(#field != 0) }
-            }
-            _ => quote! { &#field },
-        }
-    }
-
-    pub fn array_indices(&self, other: &[Declaration]) -> Option<Vec<usize>> {
+    pub fn array_indices(&self, other: &[impl Borrow<Declaration>]) -> Option<Vec<usize>> {
         let array_indices: Vec<_> = other
             .iter()
             .enumerate()
-            .filter(|(_, array)| array.metadata.length.as_ref() == Some(self.name()))
+            .filter(|(_, array)| {
+                let array: &Declaration = (*array).borrow();
+                array.metadata.length.as_ref() == Some(self.name())
+            })
             .map(|(i, _)| i)
             .collect();
 

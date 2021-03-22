@@ -4430,6 +4430,11 @@ impl std::fmt::Debug for StructureType {
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE",
             &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE",
+            &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA",
+            &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA",
+            &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
+            &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA",
+            &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
             _ => "(unknown variant)",
         })
@@ -5346,6 +5351,17 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE: Self = Self(1000351000);
     pub const MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE: Self = Self(1000351002);
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
+impl StructureType {
+    pub const IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000364000);
+    pub const MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA: Self = Self(1000364001);
+    pub const MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000364002);
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_external_semaphore`]"]
+impl StructureType {
+    pub const IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365000);
+    pub const SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365001);
 }
 #[doc = "Provided by [`crate::extensions::qnx_screen_surface`]"]
 impl StructureType {
@@ -9070,6 +9086,8 @@ impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32:
 impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIA> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryAllocateFlagsInfo> for MemoryAllocateInfoBuilder<'a> {}

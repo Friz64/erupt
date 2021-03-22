@@ -183,6 +183,10 @@ pub use crate::extensions::ext_vertex_attribute_divisor::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_ycbcr_image_arrays::*;
 #[doc(no_inline)]
+pub use crate::extensions::fuchsia_external_memory::*;
+#[doc(no_inline)]
+pub use crate::extensions::fuchsia_external_semaphore::*;
+#[doc(no_inline)]
 pub use crate::extensions::fuchsia_imagepipe_surface::*;
 #[doc(no_inline)]
 pub use crate::extensions::ggp_frame_token::*;

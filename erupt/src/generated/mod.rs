@@ -464,8 +464,10 @@ pub struct DeviceEnabled {
     pub khr_push_descriptor: bool,
     pub khr_external_memory_win32: bool,
     pub khr_external_memory_fd: bool,
+    pub fuchsia_external_memory: bool,
     pub khr_external_semaphore_win32: bool,
     pub khr_external_semaphore_fd: bool,
+    pub fuchsia_external_semaphore: bool,
     pub khr_external_fence_win32: bool,
     pub khr_external_fence_fd: bool,
     pub nv_acquire_winrt_display: bool,
@@ -536,8 +538,10 @@ impl DeviceEnabled {
             khr_push_descriptor: enabled_extension(crate::extensions::khr_push_descriptor::KHR_PUSH_DESCRIPTOR_EXTENSION_NAME),
             khr_external_memory_win32: enabled_extension(crate::extensions::khr_external_memory_win32::KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME),
             khr_external_memory_fd: enabled_extension(crate::extensions::khr_external_memory_fd::KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME),
+            fuchsia_external_memory: enabled_extension(crate::extensions::fuchsia_external_memory::FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME),
             khr_external_semaphore_win32: enabled_extension(crate::extensions::khr_external_semaphore_win32::KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME),
             khr_external_semaphore_fd: enabled_extension(crate::extensions::khr_external_semaphore_fd::KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME),
+            fuchsia_external_semaphore: enabled_extension(crate::extensions::fuchsia_external_semaphore::FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME),
             khr_external_fence_win32: enabled_extension(crate::extensions::khr_external_fence_win32::KHR_EXTERNAL_FENCE_WIN32_EXTENSION_NAME),
             khr_external_fence_fd: enabled_extension(crate::extensions::khr_external_fence_fd::KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME),
             nv_acquire_winrt_display: enabled_extension(crate::extensions::nv_acquire_winrt_display::NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME),
@@ -755,10 +759,14 @@ pub struct DeviceLoader {
     pub get_memory_win32_handle_properties_khr: Option<extensions::khr_external_memory_win32::PFN_vkGetMemoryWin32HandlePropertiesKHR>,
     pub get_memory_fd_khr: Option<extensions::khr_external_memory_fd::PFN_vkGetMemoryFdKHR>,
     pub get_memory_fd_properties_khr: Option<extensions::khr_external_memory_fd::PFN_vkGetMemoryFdPropertiesKHR>,
+    pub get_memory_zircon_handle_fuchsia: Option<extensions::fuchsia_external_memory::PFN_vkGetMemoryZirconHandleFUCHSIA>,
+    pub get_memory_zircon_handle_properties_fuchsia: Option<extensions::fuchsia_external_memory::PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA>,
     pub get_semaphore_win32_handle_khr: Option<extensions::khr_external_semaphore_win32::PFN_vkGetSemaphoreWin32HandleKHR>,
     pub import_semaphore_win32_handle_khr: Option<extensions::khr_external_semaphore_win32::PFN_vkImportSemaphoreWin32HandleKHR>,
     pub get_semaphore_fd_khr: Option<extensions::khr_external_semaphore_fd::PFN_vkGetSemaphoreFdKHR>,
     pub import_semaphore_fd_khr: Option<extensions::khr_external_semaphore_fd::PFN_vkImportSemaphoreFdKHR>,
+    pub get_semaphore_zircon_handle_fuchsia: Option<extensions::fuchsia_external_semaphore::PFN_vkGetSemaphoreZirconHandleFUCHSIA>,
+    pub import_semaphore_zircon_handle_fuchsia: Option<extensions::fuchsia_external_semaphore::PFN_vkImportSemaphoreZirconHandleFUCHSIA>,
     pub get_fence_win32_handle_khr: Option<extensions::khr_external_fence_win32::PFN_vkGetFenceWin32HandleKHR>,
     pub import_fence_win32_handle_khr: Option<extensions::khr_external_fence_win32::PFN_vkImportFenceWin32HandleKHR>,
     pub get_fence_fd_khr: Option<extensions::khr_external_fence_fd::PFN_vkGetFenceFdKHR>,
@@ -1133,12 +1141,20 @@ impl DeviceLoader {
                 .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR))),
             get_memory_fd_khr: (device_enabled.khr_external_memory_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_KHR))),
             get_memory_fd_properties_khr: (device_enabled.khr_external_memory_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_PROPERTIES_KHR))),
+            get_memory_zircon_handle_fuchsia: (device_enabled.fuchsia_external_memory)
+                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA))),
+            get_memory_zircon_handle_properties_fuchsia: (device_enabled.fuchsia_external_memory)
+                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA))),
             get_semaphore_win32_handle_khr: (device_enabled.khr_external_semaphore_win32)
                 .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_GET_SEMAPHORE_WIN32_HANDLE_KHR))),
             import_semaphore_win32_handle_khr: (device_enabled.khr_external_semaphore_win32)
                 .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR))),
             get_semaphore_fd_khr: (device_enabled.khr_external_semaphore_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_GET_SEMAPHORE_FD_KHR))),
             import_semaphore_fd_khr: (device_enabled.khr_external_semaphore_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_IMPORT_SEMAPHORE_FD_KHR))),
+            get_semaphore_zircon_handle_fuchsia: (device_enabled.fuchsia_external_semaphore)
+                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))),
+            import_semaphore_zircon_handle_fuchsia: (device_enabled.fuchsia_external_semaphore)
+                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))),
             get_fence_win32_handle_khr: (device_enabled.khr_external_fence_win32).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_GET_FENCE_WIN32_HANDLE_KHR))),
             import_fence_win32_handle_khr: (device_enabled.khr_external_fence_win32)
                 .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_IMPORT_FENCE_WIN32_HANDLE_KHR))),

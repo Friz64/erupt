@@ -2,21 +2,25 @@ mod builders;
 
 use crate::{
     comment_gen::DocCommentGen,
-    declaration::Declaration,
-    header::DeclarationInfo,
+    declaration::{Declaration, Type},
+    header::{
+        eval::{Expression, Literal},
+        BitWidth, DeclarationInfo,
+    },
     items::aliases::Alias,
     name::{Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},
     XmlNode,
 };
+use itertools::Itertools;
 use lang_c::ast::{
     Declaration as CDeclaration, DeclarationSpecifier, StructDeclaration, StructField, StructKind,
     TypeSpecifier,
 };
-use proc_macro2::TokenStream;
-use quote::quote;
-use std::convert::TryFrom;
+use proc_macro2::{Ident, TokenStream};
+use quote::{format_ident, quote};
+use std::{cmp::Ordering, convert::TryFrom};
 
 impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
     fn from(field: &'a StructField) -> Self {
@@ -30,9 +34,22 @@ impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
             .as_ref()
             .map(|declarator| &declarator.node);
 
+        let bitwidth = match struct_declarator.bit_width.as_ref() {
+            Some(bitwidth) => {
+                let bitwidth = match Expression::from(&bitwidth.node).eval_to_literal() {
+                    Literal::Int32(val) => val,
+                    unexpected => panic!("Unexpected bit-width type: {:?}", unexpected),
+                };
+
+                BitWidth::Partial(bitwidth as _)
+            }
+            None => BitWidth::Full,
+        };
+
         DeclarationInfo {
             type_info: specifiers.into(),
             declarator,
+            bitwidth,
         }
     }
 }
@@ -87,11 +104,100 @@ impl From<XmlNode<'_, '_>> for StructureMetadata {
 }
 
 #[derive(Debug)]
+pub enum StructureField {
+    Normal(Declaration),
+    Bitfield(Vec<Declaration>),
+}
+
+impl StructureField {
+    fn distribute_field_decls(
+        field_decls: impl Iterator<Item = Declaration>,
+    ) -> Vec<StructureField> {
+        let mut fields = Vec::new();
+        let mut required_bitwidth = 0;
+        let mut bitwidth_sum = 0;
+        let mut finished = false;
+        for field_decl in field_decls {
+            match field_decl.bitwidth {
+                BitWidth::Full => fields.push(StructureField::Normal(field_decl)),
+                BitWidth::Partial(bitwidth) => match fields.last_mut() {
+                    Some(StructureField::Bitfield(v)) if !finished => {
+                        bitwidth_sum += bitwidth;
+                        match bitwidth_sum.cmp(&required_bitwidth) {
+                            Ordering::Less => v.push(field_decl),
+                            Ordering::Equal => {
+                                v.push(field_decl);
+                                bitwidth_sum = 0;
+                                finished = true;
+                            }
+                            Ordering::Greater => panic!(
+                                "Unmatched bitwidth ({} > {})",
+                                bitwidth_sum, required_bitwidth
+                            ),
+                        }
+                    }
+                    _ => {
+                        finished = false;
+                        bitwidth_sum = bitwidth;
+                        required_bitwidth = field_decl.ty.bitwidth();
+                        fields.push(StructureField::Bitfield(vec![field_decl]));
+                    }
+                },
+            }
+        }
+
+        fields
+    }
+
+    pub fn ident(&self) -> Ident {
+        let string = match self {
+            StructureField::Normal(decl) => decl.ident().to_string(),
+            StructureField::Bitfield(decls) => decls
+                .iter()
+                .map(|decl| decl.ident().to_string())
+                .join("_and_"),
+        };
+
+        format_ident!("{}", string)
+    }
+
+    pub fn debug_impl(&self) -> TokenStream {
+        let ident = self.ident();
+        let field = quote! { self.#ident };
+
+        match self {
+            StructureField::Normal(_) => match &self.main_decl().ty {
+                Type::Array { of, .. } if matches!(**of, Type::Char) => quote! {
+                    unsafe { &std::ffi::CStr::from_ptr(#field.as_ptr()) }
+                },
+                Type::Option(of) if matches!(**of, Type::Named(Name::Function(_))) => quote! {
+                    unsafe { &std::mem::transmute::<_, *const ()>(#field) }
+                },
+                Type::Named(Name::Type(name)) if *name == TypeName::bool32() => {
+                    quote! { &(#field != 0) }
+                }
+                _ => quote! { &#field },
+            },
+            StructureField::Bitfield(_) => {
+                quote! { &format!("{:#b}", &#field) }
+            }
+        }
+    }
+
+    pub fn main_decl(&self) -> &Declaration {
+        match self {
+            StructureField::Normal(decl) => decl,
+            StructureField::Bitfield(decls) => &decls[0],
+        }
+    }
+}
+
+#[derive(Debug)]
 pub struct Structure {
     pub origin: Option<Origin>,
     pub name: TypeName,
     pub kind: StructureKind,
-    pub fields: Vec<Declaration>,
+    pub fields: Vec<StructureField>,
     pub metadata: StructureMetadata,
 }
 
@@ -107,11 +213,17 @@ impl Structure {
         let doc = comment_gen.def(Some(&self.name.original), "Structure", None);
 
         let field_idents: Vec<_> = self.fields.iter().map(|field| field.ident()).collect();
-        let field_types = self.fields.iter().map(|field| field.ty.rust_type(source));
+        let field_types = self
+            .fields
+            .iter()
+            .map(|field| field.main_decl().ty.rust_type(source));
 
         let default_impl = match self.kind {
             StructureKind::Struct => {
-                let field_defaults = self.fields.iter().map(|field| field.default_impl(source));
+                let field_defaults = self
+                    .fields
+                    .iter()
+                    .map(|field| field.main_decl().default_impl(source));
                 quote! {
                     Self {
                         #(#field_idents: #field_defaults),*
@@ -179,22 +291,17 @@ impl TryFrom<&CDeclaration> for Structure {
                         struct_type.node.identifier.as_ref(),
                         struct_type.node.declarations.as_ref(),
                     ) {
-                        let fields = declarations
-                            .iter()
-                            .filter_map(|decl| match &decl.node {
-                                StructDeclaration::Field(field) => {
-                                    Some(Declaration::from(&field.node))
-                                }
-                                _ => None,
-                            })
-                            .collect();
+                        let field_decls = declarations.iter().filter_map(|decl| match &decl.node {
+                            StructDeclaration::Field(field) => Some(Declaration::from(&field.node)),
+                            _ => None,
+                        });
 
                         assert!(result.is_err());
                         result = Ok(Structure {
                             origin: Default::default(),
                             name: TypeName::new(&identifier.node.name),
                             kind: struct_type.node.kind.node.clone().into(),
-                            fields,
+                            fields: StructureField::distribute_field_decls(field_decls),
                             metadata: StructureMetadata::empty(),
                         });
                     }
@@ -222,11 +329,26 @@ impl Source {
                 if let Some(mut structure) = self.header.take_structure(name) {
                     structure.metadata = node.into();
 
+                    // assign metadata to every declaration in order (respecting bitfields)
                     let mut i = 0;
+                    let mut inner_i = 0;
                     for structure_child in node.children() {
                         if structure_child.has_tag_name("member") {
-                            structure.fields[i].metadata = structure_child.into();
-                            i += 1;
+                            let field_metadata = structure_child.into();
+                            match &mut structure.fields[i] {
+                                StructureField::Normal(decl) => {
+                                    decl.metadata = field_metadata;
+                                    i += 1;
+                                }
+                                StructureField::Bitfield(decls) => {
+                                    decls[inner_i].metadata = field_metadata;
+                                    inner_i += 1;
+                                    if inner_i >= decls.len() {
+                                        inner_i = 0;
+                                        i += 1;
+                                    }
+                                }
+                            }
                         }
                     }
 

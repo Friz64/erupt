@@ -1,8 +1,8 @@
+pub mod eval;
 mod root_gen;
 
 use crate::{
     declaration::{Declaration, DeclarationMetadata, Mutability, Optional, Type},
-    eval::{Expression, Literal},
     items::{
         basetypes::Basetype,
         constants::Constant,
@@ -14,6 +14,7 @@ use crate::{
     source::NotApplicable,
     XmlNode,
 };
+use eval::{Expression, Literal};
 use lang_c::{
     ast::{
         ArraySize, DeclarationSpecifier, Declarator, DeclaratorKind, DerivedDeclarator,
@@ -26,6 +27,12 @@ use lang_c::{
     visit::Visit,
 };
 use std::{convert::TryFrom, fmt::Debug, fs, mem, path::Path};
+
+#[derive(Debug, Clone)]
+pub enum BitWidth {
+    Full,
+    Partial(usize),
+}
 
 #[derive(Debug)]
 pub struct DeclarationTypeInfo(Vec<SpecifierQualifier>);
@@ -65,6 +72,7 @@ impl TryFrom<&[Node<DeclarationSpecifier>]> for DeclarationTypeInfo {
 pub struct DeclarationInfo<'a> {
     pub type_info: DeclarationTypeInfo,
     pub declarator: Option<&'a Declarator>,
+    pub bitwidth: BitWidth,
 }
 
 impl From<XmlNode<'_, '_>> for DeclarationMetadata {
@@ -276,6 +284,7 @@ where
             name: name.cloned(),
             ty,
             metadata: DeclarationMetadata::empty(),
+            bitwidth: info.bitwidth,
         }
     }
 }

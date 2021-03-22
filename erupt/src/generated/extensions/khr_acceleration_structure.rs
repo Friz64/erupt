@@ -1702,20 +1702,16 @@ impl<'a> std::ops::DerefMut for TransformMatrixKHRBuilder<'a> {
 #[repr(C)]
 pub struct AccelerationStructureInstanceKHR {
     pub transform: crate::extensions::khr_acceleration_structure::TransformMatrixKHR,
-    pub instance_custom_index: u32,
-    pub mask: u32,
-    pub instance_shader_binding_table_record_offset: u32,
-    pub flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR,
+    pub instance_custom_index_and_mask: u32,
+    pub instance_shader_binding_table_record_offset_and_flags: u32,
     pub acceleration_structure_reference: u64,
 }
 impl Default for AccelerationStructureInstanceKHR {
     fn default() -> Self {
         Self {
             transform: Default::default(),
-            instance_custom_index: Default::default(),
-            mask: Default::default(),
-            instance_shader_binding_table_record_offset: Default::default(),
-            flags: Default::default(),
+            instance_custom_index_and_mask: Default::default(),
+            instance_shader_binding_table_record_offset_and_flags: Default::default(),
             acceleration_structure_reference: Default::default(),
         }
     }
@@ -1724,10 +1720,11 @@ impl std::fmt::Debug for AccelerationStructureInstanceKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.debug_struct("AccelerationStructureInstanceKHR")
             .field("transform", &self.transform)
-            .field("instance_custom_index", &self.instance_custom_index)
-            .field("mask", &self.mask)
-            .field("instance_shader_binding_table_record_offset", &self.instance_shader_binding_table_record_offset)
-            .field("flags", &self.flags)
+            .field("instance_custom_index_and_mask", &format!("{:#b}", &self.instance_custom_index_and_mask))
+            .field(
+                "instance_shader_binding_table_record_offset_and_flags",
+                &format!("{:#b}", &self.instance_shader_binding_table_record_offset_and_flags),
+            )
             .field("acceleration_structure_reference", &self.acceleration_structure_reference)
             .finish()
     }
@@ -1754,22 +1751,27 @@ impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
     }
     #[inline]
     pub fn instance_custom_index(mut self, instance_custom_index: u32) -> Self {
-        self.0.instance_custom_index = instance_custom_index as _;
+        self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, instance_custom_index, 0usize, 23usize);
         self
     }
     #[inline]
     pub fn mask(mut self, mask: u32) -> Self {
-        self.0.mask = mask as _;
+        self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, mask, 24usize, 31usize);
         self
     }
     #[inline]
     pub fn instance_shader_binding_table_record_offset(mut self, instance_shader_binding_table_record_offset: u32) -> Self {
-        self.0.instance_shader_binding_table_record_offset = instance_shader_binding_table_record_offset as _;
+        self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(
+            self.0.instance_shader_binding_table_record_offset_and_flags,
+            instance_shader_binding_table_record_offset,
+            0usize,
+            23usize
+        );
         self
     }
     #[inline]
     pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR) -> Self {
-        self.0.flags = flags as _;
+        self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, flags.bits(), 24usize, 31usize);
         self
     }
     #[inline]

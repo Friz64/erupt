@@ -1,7 +1,7 @@
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{Declaration, Mutability, Type},
-    header::DeclarationInfo,
+    header::{BitWidth, DeclarationInfo},
     items::aliases::Alias,
     name::{FunctionName, Name},
     origin::Origin,
@@ -34,6 +34,7 @@ impl<'a> From<&'a ParameterDeclaration> for DeclarationInfo<'a> {
         DeclarationInfo {
             type_info,
             declarator,
+            bitwidth: BitWidth::Full,
         }
     }
 }
@@ -180,6 +181,7 @@ impl TryFrom<&CDeclaration> for Function {
                         let ty = Declaration::from(DeclarationInfo {
                             type_info: declaration.specifiers.as_slice().try_into()?,
                             declarator: Some(&declarator),
+                            bitwidth: BitWidth::Full,
                         });
 
                         let parameters = function_declarator

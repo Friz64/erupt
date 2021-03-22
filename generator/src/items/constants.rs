@@ -1,6 +1,6 @@
 use crate::{
     comment_gen::DocCommentGen,
-    eval::{Expression, Literal},
+    header::eval::{Expression, Literal},
     origin::Origin,
     source::{NotApplicable, Source},
     XmlNode,

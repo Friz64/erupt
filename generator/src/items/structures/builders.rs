@@ -1,11 +1,10 @@
-use super::Structure;
+use super::{BitWidth, Structure, StructureField};
 use crate::{
     comment_gen::DocCommentGen,
-    declaration::{self, Declaration, Type},
+    declaration::{self, Mutability, Type},
     name::{Name, TypeName},
     source::Source,
 };
-use declaration::Mutability;
 use proc_macro2::{Span, TokenStream};
 use quote::quote;
 use std::collections::HashMap;
@@ -119,6 +118,7 @@ struct Override {
 #[derive(Debug, Clone)]
 enum FieldKind {
     Regular,
+    Bitfield,
     Array { length: String },
     CStr,
     Passthrough,
@@ -127,8 +127,10 @@ enum FieldKind {
 }
 
 impl FieldKind {
-    fn generate_list(fields: &[Declaration]) -> Vec<FieldKind> {
-        let mut kinds = vec![None; fields.len()];
+    fn generate_list(fields: &[StructureField]) -> Vec<FieldKind> {
+        let main_decls: Vec<_> = fields.iter().map(|field| field.main_decl()).collect();
+
+        let mut kinds = vec![None; main_decls.len()];
         let mut passthrough = Vec::new();
         for group in 0.. {
             // Finish algorithm if every kind is filled
@@ -136,7 +138,7 @@ impl FieldKind {
                 break;
             }
 
-            let fields_iter = fields.iter().zip(kinds.iter_mut()).enumerate();
+            let fields_iter = main_decls.iter().zip(kinds.iter_mut()).enumerate();
             for (i, (field, field_kind)) in fields_iter {
                 // Don't test for this field if it already has a kind
                 if field_kind.is_some() {
@@ -145,8 +147,14 @@ impl FieldKind {
 
                 let is_passthrough = field.ty.has_types(&[Type::Void]);
                 match group {
-                    // Apply `Ignore` kinds for sType and pNext
-                    0 => match (i, field.name_lossy(), &field.ty) {
+                    // Apply `BitField` kind
+                    0 => {
+                        if let StructureField::Bitfield(..) = fields[i] {
+                            *field_kind = Some(FieldKind::Bitfield);
+                        }
+                    }
+                    // Apply `Ignore` kinds
+                    1 => match (i, field.name_lossy(), &field.ty) {
                         (0, "sType", Type::Named(Name::Type(name)))
                             if *name == TypeName::structure_type() =>
                         {
@@ -158,7 +166,7 @@ impl FieldKind {
                         _ => (),
                     },
                     // Mark the length passthrough if this parameter is passthrough
-                    1 => {
+                    2 => {
                         if let Some(length) = &field.metadata.length {
                             if is_passthrough {
                                 passthrough.push(length.as_str());
@@ -166,25 +174,25 @@ impl FieldKind {
                         }
                     }
                     // Apply `Passthrough` kind if applicable
-                    2 => {
+                    3 => {
                         if is_passthrough || passthrough.contains(&field.name().as_str()) {
                             *field_kind = Some(FieldKind::Passthrough);
                         }
                     }
                     // Apply `Ignore` kind if the field is a length
-                    3 => {
-                        if field.array_indices(fields).is_some() {
+                    4 => {
+                        if field.array_indices(&main_decls).is_some() {
                             *field_kind = Some(FieldKind::Ignore);
                         }
                     }
                     // Apply `CStr` kind if the field is a char pointer
-                    4 => {
+                    5 => {
                         if field.ty == Type::char_pointer() {
                             *field_kind = Some(FieldKind::CStr);
                         }
                     }
                     // Apply other kinds
-                    5 => match &field.metadata.length {
+                    6 => match &field.metadata.length {
                         Some(length) => {
                             *field_kind = Some(FieldKind::Array {
                                 length: length.clone(),
@@ -229,88 +237,131 @@ impl Structure {
         });
 
         let lifetime_a = Lifetime::new("'a", Span::call_site());
-        let field_builders =
-            self.fields
-                .iter()
-                .zip(field_kinds.into_iter())
-                .map(|(field, kind)| {
-                    let raw_ident = field.ident();
-                    let ident = field.cleaned_ident();
+        let mut bitfield_start = 0;
+        let field_builders = self
+            .fields
+            .iter()
+            .zip(field_kinds.into_iter())
+            .flat_map(|(field, kind)| match field {
+                StructureField::Normal(decl) => vec![(true, field, decl, kind)],
+                StructureField::Bitfield(decls) => decls
+                    .iter()
+                    .enumerate()
+                    .map(|(i, decl)| (i == 0, field, decl, kind.clone()))
+                    .collect(),
+            })
+            .map(|(new_field, field, decl, kind)| {
+                let raw_ident = decl.ident();
+                let ident = decl.cleaned_ident();
 
-                    let ty;
-                    let body;
-                    match kind {
-                        FieldKind::Regular => {
-                            ty = field
-                                .ty
-                                .clone()
-                                .pointer_to_ref(Some(lifetime_a.clone()))
-                                .map_bool();
+                let ty;
+                let body;
+                match kind {
+                    FieldKind::Regular => {
+                        ty = decl
+                            .ty
+                            .clone()
+                            .pointer_to_ref(Some(lifetime_a.clone()))
+                            .map_bool();
 
-                            body = quote! {
-                                self.0 .#raw_ident = #ident as _;
-                            };
-                        }
-                        FieldKind::Array { length } => {
-                            let len_ident = match declaration::declaration_ident(&length) {
-                                Some(ident) => ident,
-                                None => {
-                                    panic!(
-                                        "Custom builder override required:\
-                                        builder: {}, field: {}, len: {:?}",
-                                        inner_ident, ident, length
-                                    )
-                                }
-                            };
-
-                            ty = field
-                                .ty
-                                .clone()
-                                .pointer_to_slice(Some(lifetime_a.clone()), source);
-
-                            body = quote! {
-                                self.0 .#raw_ident = #ident.as_ptr() as _;
-                                self.0 .#len_ident = #ident.len() as _;
-                            };
-                        }
-                        FieldKind::CStr => {
-                            ty = Type::Reference {
-                                to: Box::new(Type::CStr),
-                                kind: Mutability::Const,
-                                lifetime: Some(lifetime_a.clone()),
-                            };
-
-                            body = quote! {
-                                self.0 .#raw_ident = #ident.as_ptr();
-                            };
-                        }
-                        FieldKind::Passthrough => {
-                            ty = field.ty.clone();
-                            body = quote! {
-                                self.0 .#raw_ident = #ident;
-                            };
-                        }
-                        FieldKind::Ignore => {
-                            return TokenStream::new();
-                        }
-                        FieldKind::Overridden {
-                            ty: ty_val,
-                            body: body_val,
-                        } => {
-                            ty = ty_val;
-                            body = body_val;
-                        }
-                    };
-
-                    let ty = ty.rust_type(source);
-                    quote! {
-                        #[inline]
-                        pub fn #ident(mut self, #ident: #ty) -> Self {
-                            #body
-                            self
-                        }
+                        body = quote! {
+                            self.0 .#raw_ident = #ident as _;
+                        };
                     }
-                });
+                    FieldKind::Bitfield => {
+                        ty = decl
+                            .ty
+                            .clone()
+                            .pointer_to_ref(Some(lifetime_a.clone()))
+                            .map_bool();
+
+                        let field_ident = field.ident();
+                        let field_access = quote! { self.0 .#field_ident };
+
+                        let src_int_ident = if decl.ty.is_flags() {
+                            quote! { #ident.bits() }
+                        } else {
+                            quote! { #ident }
+                        };
+
+                        if new_field {
+                            bitfield_start = 0;
+                        }
+
+                        let bitwidth = match decl.bitwidth {
+                            BitWidth::Full => unreachable!(),
+                            BitWidth::Partial(bitwidth) => bitwidth,
+                        };
+
+                        let start = bitfield_start;
+                        let end = start + bitwidth - 1;
+                        body = quote! {
+                            #field_access =
+                                crate::bits_copy!(#field_access, #src_int_ident, #start, #end);
+                        };
+
+                        bitfield_start += bitwidth;
+                    }
+                    FieldKind::Array { length } => {
+                        let len_ident = match declaration::declaration_ident(&length) {
+                            Some(ident) => ident,
+                            None => {
+                                panic!(
+                                    "Custom builder override required - \
+                                        builder: {}, field: {}, len: {:?}",
+                                    inner_ident, ident, length
+                                )
+                            }
+                        };
+
+                        ty = decl
+                            .ty
+                            .clone()
+                            .pointer_to_slice(Some(lifetime_a.clone()), source);
+
+                        body = quote! {
+                            self.0 .#raw_ident = #ident.as_ptr() as _;
+                            self.0 .#len_ident = #ident.len() as _;
+                        };
+                    }
+                    FieldKind::CStr => {
+                        ty = Type::Reference {
+                            to: Box::new(Type::CStr),
+                            kind: Mutability::Const,
+                            lifetime: Some(lifetime_a.clone()),
+                        };
+
+                        body = quote! {
+                            self.0 .#raw_ident = #ident.as_ptr();
+                        };
+                    }
+                    FieldKind::Passthrough => {
+                        ty = decl.ty.clone();
+                        body = quote! {
+                            self.0 .#raw_ident = #ident;
+                        };
+                    }
+                    FieldKind::Ignore => {
+                        return TokenStream::new();
+                    }
+                    FieldKind::Overridden {
+                        ty: ty_val,
+                        body: body_val,
+                    } => {
+                        ty = ty_val;
+                        body = body_val;
+                    }
+                };
+
+                let ty = ty.rust_type(source);
+                quote! {
+                    #[inline]
+                    pub fn #ident(mut self, #ident: #ty) -> Self {
+                        #body
+                        self
+                    }
+                }
+            });
 
         let extends = source
             .structures

@@ -160,7 +160,7 @@ macro_rules! non_dispatchable_handle {
 
         impl $name {
             /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
-            pub const TYPE: crate::vk1_0::ObjectType = crate::vk1_0::ObjectType::$ty;
+            pub const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
 
             /// Returns a null handle.
             pub const fn null() -> $name {
@@ -208,7 +208,7 @@ macro_rules! dispatchable_handle {
 
         impl $name {
             /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
-            pub const TYPE: crate::vk1_0::ObjectType = crate::vk1_0::ObjectType::$ty;
+            pub const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
 
             /// Returns a null handle.
             pub const fn null() -> Self {
@@ -250,6 +250,28 @@ macro_rules! dispatchable_handle {
             }
         }
     };
+}
+
+// used in builders for bitwidth fields
+#[doc(hidden)]
+#[macro_export]
+macro_rules! bits_copy {
+    ($dst:expr, $src:expr, $start:expr, $end:expr) => {{
+        let mut dst = $dst;
+        let src = $src;
+        let start: usize = $start;
+        let end: usize = $end;
+
+        // bits in the range are 1 (end inclusive)
+        let mask = !0 << start & !(!0 << end);
+
+        // clear bits
+        dst &= !mask;
+        // set bits from src
+        dst |= (src << start) & mask;
+
+        dst
+    }};
 }
 
 /// An error which can occur while initializing a loader

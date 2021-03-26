@@ -21,12 +21,12 @@ Vulkan API bindings
 
 ## Example: Instance Creation
 ```rust ignore
-use erupt::{vk1_0, EntryLoader, InstanceLoader};
+use erupt::{vk, EntryLoader, InstanceLoader};
 
 let entry = EntryLoader::new()?;
 
-let app_info = vk1_0::ApplicationInfoBuilder::new().api_version(vk1_0::make_version(1, 0, 0));
-let instance_info = vk1_0::InstanceCreateInfoBuilder::new().application_info(&app_info);
+let app_info = vk::ApplicationInfoBuilder::new().api_version(vk::make_version(1, 0, 0));
+let instance_info = vk::InstanceCreateInfoBuilder::new().application_info(&app_info);
 
 let instance = InstanceLoader::new(&entry, &instance_info, None)?;
 

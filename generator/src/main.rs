@@ -67,6 +67,5 @@ fn main() {
 
     if !cmd.success() {
         log::error!("Documentation generation failed");
-        return;
     }
 }

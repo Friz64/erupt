@@ -96,7 +96,7 @@ fn main() {
         .enabled_extension_names(&instance_extensions)
         .enabled_layer_names(&instance_layers);
 
-    let mut instance = InstanceLoader::new(&entry, &instance_info, None).unwrap();
+    let instance = InstanceLoader::new(&entry, &instance_info, None).unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Validation_layers
     let messenger = if opt.validation_layers {
@@ -119,7 +119,7 @@ fn main() {
     };
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Presentation/Window_surface
-    let surface = unsafe { surface::create_surface(&mut instance, &window, None) }.unwrap();
+    let surface = unsafe { surface::create_surface(&instance, &window, None) }.unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Physical_devices_and_queue_families
     let (physical_device, queue_family, format, present_mode, device_properties) =
@@ -159,7 +159,7 @@ fn main() {
                     })
                     .or_else(|| formats.get(0))
                 {
-                    Some(surface_format) => surface_format.clone(),
+                    Some(surface_format) => *surface_format,
                     None => return None,
                 };
 
@@ -173,13 +173,16 @@ fn main() {
                 let supported_device_extensions = instance
                     .enumerate_device_extension_properties(physical_device, None, None)
                     .unwrap();
-                if !device_extensions.iter().all(|device_extension| {
-                    let device_extension = CStr::from_ptr(*device_extension);
+                let device_extensions_supported =
+                    device_extensions.iter().all(|device_extension| {
+                        let device_extension = CStr::from_ptr(*device_extension);
 
-                    supported_device_extensions.iter().any(|properties| {
-                        CStr::from_ptr(properties.extension_name.as_ptr()) == device_extension
-                    })
-                }) {
+                        supported_device_extensions.iter().any(|properties| {
+                            CStr::from_ptr(properties.extension_name.as_ptr()) == device_extension
+                        })
+                    });
+
+                if !device_extensions_supported {
                     return None;
                 }
 

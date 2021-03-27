@@ -73,7 +73,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
             let layer = match macos::metal_layer_from_handle(handle) {
                 Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
-                Layer::None => return VulkanResult::new_err(RawResult::ERROR_INITIALIZATION_FAILED),
+                Layer::None => return VulkanResult::new_err(crate::generated::vk::Result::ERROR_INITIALIZATION_FAILED),
             };
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };
@@ -88,7 +88,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
             let layer = match ios::metal_layer_from_handle(handle) {
                 Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
-                Layer::None => return VulkanResult::new_err(RawResult::ERROR_INITIALIZATION_FAILED),
+                Layer::None => return VulkanResult::new_err(crate::generated::vk::Result::ERROR_INITIALIZATION_FAILED),
             };
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };

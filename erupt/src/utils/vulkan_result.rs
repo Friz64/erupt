@@ -73,7 +73,7 @@ impl<T> VulkanResult<T> {
 
     /// Constructs a new `VulkanResult` from `value`
     ///
-    /// This will always set `self.raw` to `RawResult::SUCCESS`
+    /// This will always set `self.raw` to `vk::Result::SUCCESS`
     #[inline]
     pub fn new_ok(value: T) -> VulkanResult<T> {
         VulkanResult::new(vk::Result::SUCCESS, value)

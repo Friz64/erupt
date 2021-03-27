@@ -68,12 +68,12 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
         #[cfg(any(target_os = "macos"))]
         RawWindowHandle::MacOS(handle) => {
-            use crate::extensions::ext_metal_surface;
+            use crate::{extensions::ext_metal_surface, vk1_0};
             use raw_window_metal::{macos, Layer};
 
             let layer = match macos::metal_layer_from_handle(handle) {
                 Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
-                Layer::None => return VulkanResult::new_err(crate::generated::vk::Result::ERROR_INITIALIZATION_FAILED),
+                Layer::None => return VulkanResult::new_err(vk1_0::Result::ERROR_INITIALIZATION_FAILED),
             };
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };
@@ -83,12 +83,12 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
         #[cfg(any(target_os = "ios"))]
         RawWindowHandle::IOS(handle) => {
-            use crate::extensions::ext_metal_surface;
+            use crate::{extensions::ext_metal_surface, vk1_0};
             use raw_window_metal::{ios, Layer};
 
             let layer = match ios::metal_layer_from_handle(handle) {
                 Layer::Existing(layer) | Layer::Allocated(layer) => layer as *mut _,
-                Layer::None => return VulkanResult::new_err(crate::generated::vk::Result::ERROR_INITIALIZATION_FAILED),
+                Layer::None => return VulkanResult::new_err(vk1_0::Result::ERROR_INITIALIZATION_FAILED),
             };
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };

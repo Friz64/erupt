@@ -472,6 +472,7 @@ fn main() {
     let mut images_in_flight: Vec<_> = swapchain_images.iter().map(|_| vk::Fence::null()).collect();
 
     let mut frame = 0;
+    #[allow(clippy::collapsible_match, clippy::single_match)]
     event_loop.run(move |event, _, control_flow| match event {
         Event::NewEvents(StartCause::Init) => {
             *control_flow = ControlFlow::Poll;

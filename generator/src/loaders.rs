@@ -245,37 +245,49 @@ impl LoaderData {
             }
         };
 
-        self.requirements.iter().zip(self.loads.iter()).map(move |(requirements, load)| {
-            let possibilities: Vec<_> = requirements
-                .iter()
-                .filter_map(|requirement| match (&requirement.base_origin, &requirement.require_origin) {
-                    (base_origin, _) if base_origin.is_vk1_0() => None,
-                    (base_origin, Some(require_origin)) => {
-                        let base_enabled = enabled_ident(base_origin);
-                        let base_ident = base_origin.ident();
+        self.requirements
+            .iter()
+            .zip(self.loads.iter())
+            .map(move |(requirements, load)| {
+                let possibilities: Vec<_> = requirements
+                    .iter()
+                    .filter_map(|requirement| {
+                        match (&requirement.base_origin, &requirement.require_origin) {
+                            (base_origin, _) if base_origin.is_vk1_0() => None,
+                            (base_origin, Some(require_origin)) => {
+                                let base_enabled = enabled_ident(base_origin);
+                                let base_ident = base_origin.ident();
 
-                        let require_enabled = enabled_ident(require_origin);
-                        let require_ident = require_origin.ident();
+                                let require_enabled = enabled_ident(require_origin);
+                                let require_ident = require_origin.ident();
 
-                        Some(quote! { (#base_enabled.#base_ident && #require_enabled.#require_ident) })
+                                Some(quote! {
+                                    (#base_enabled.#base_ident
+                                        && #require_enabled.#require_ident)
+                                })
+                            }
+                            (base_origin, None) => {
+                                let base_enabled = enabled_ident(base_origin);
+                                let base_ident = base_origin.ident();
+
+                                Some(quote! { #base_enabled.#base_ident })
+                            }
+                        }
+                    })
+                    .collect();
+
+                if possibilities.is_empty() {
+                    load.clone()
+                } else {
+                    quote! {
+                        if #(#possibilities) ||* {
+                            #load
+                        } else {
+                            None
+                        }
                     }
-                    (base_origin, None) => {
-                        let base_enabled = enabled_ident(base_origin);
-                        let base_ident = base_origin.ident();
-
-                        Some(quote! { #base_enabled.#base_ident })
-                    }
-                })
-                .collect();
-
-            if possibilities.is_empty() {
-                load.clone()
-            } else {
-                quote! {
-                    (#(#possibilities) ||*).then(|| #load)
                 }
-            }
-        })
+            })
     }
 }
 

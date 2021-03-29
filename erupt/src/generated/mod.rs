@@ -52,7 +52,11 @@ impl<T> EntryLoader<T> {
             arc: std::sync::Arc::new(()),
             get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr),
             create_instance: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_INSTANCE)),
-            enumerate_instance_version: (entry_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION))),
+            enumerate_instance_version: if entry_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION))
+            } else {
+                None
+            },
             enumerate_instance_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES)),
             enumerate_instance_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES)),
             loader,
@@ -304,140 +308,427 @@ impl InstanceLoader {
             enumerate_device_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_LAYER_PROPERTIES)),
             enumerate_device_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)),
             get_physical_device_sparse_image_format_properties: std::mem::transmute(symbol(crate::vk1_0::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES)),
-            create_android_surface_khr: (instance_enabled.khr_android_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_android_surface::FN_CREATE_ANDROID_SURFACE_KHR))),
-            get_physical_device_display_properties_khr: (instance_enabled.khr_display)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR))),
-            get_physical_device_display_plane_properties_khr: (instance_enabled.khr_display)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR))),
-            get_display_plane_supported_displays_khr: (instance_enabled.khr_display).then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_SUPPORTED_DISPLAYS_KHR))),
-            get_display_mode_properties_khr: (instance_enabled.khr_display).then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_MODE_PROPERTIES_KHR))),
-            create_display_mode_khr: (instance_enabled.khr_display).then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_CREATE_DISPLAY_MODE_KHR))),
-            get_display_plane_capabilities_khr: (instance_enabled.khr_display).then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR))),
-            create_display_plane_surface_khr: (instance_enabled.khr_display).then(|| std::mem::transmute(symbol(crate::extensions::khr_display::FN_CREATE_DISPLAY_PLANE_SURFACE_KHR))),
-            destroy_surface_khr: (instance_enabled.khr_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_surface::FN_DESTROY_SURFACE_KHR))),
-            get_physical_device_surface_support_khr: (instance_enabled.khr_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR))),
-            get_physical_device_surface_capabilities_khr: (instance_enabled.khr_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR))),
-            get_physical_device_surface_formats_khr: (instance_enabled.khr_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR))),
-            get_physical_device_surface_present_modes_khr: (instance_enabled.khr_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR))),
-            create_vi_surface_nn: (instance_enabled.nn_vi_surface).then(|| std::mem::transmute(symbol(crate::extensions::nn_vi_surface::FN_CREATE_VI_SURFACE_NN))),
-            create_wayland_surface_khr: (instance_enabled.khr_wayland_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_wayland_surface::FN_CREATE_WAYLAND_SURFACE_KHR))),
-            get_physical_device_wayland_presentation_support_khr: (instance_enabled.khr_wayland_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_wayland_surface::FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR))),
-            create_win32_surface_khr: (instance_enabled.khr_win32_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_win32_surface::FN_CREATE_WIN32_SURFACE_KHR))),
-            get_physical_device_win32_presentation_support_khr: (instance_enabled.khr_win32_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_win32_surface::FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR))),
-            create_xlib_surface_khr: (instance_enabled.khr_xlib_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_xlib_surface::FN_CREATE_XLIB_SURFACE_KHR))),
-            get_physical_device_xlib_presentation_support_khr: (instance_enabled.khr_xlib_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_xlib_surface::FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR))),
-            create_xcb_surface_khr: (instance_enabled.khr_xcb_surface).then(|| std::mem::transmute(symbol(crate::extensions::khr_xcb_surface::FN_CREATE_XCB_SURFACE_KHR))),
-            get_physical_device_xcb_presentation_support_khr: (instance_enabled.khr_xcb_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_xcb_surface::FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR))),
-            create_direct_fb_surface_ext: (instance_enabled.ext_directfb_surface).then(|| std::mem::transmute(symbol(crate::extensions::ext_directfb_surface::FN_CREATE_DIRECT_FB_SURFACE_EXT))),
-            get_physical_device_direct_fb_presentation_support_ext: (instance_enabled.ext_directfb_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_directfb_surface::FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT))),
-            create_image_pipe_surface_fuchsia: (instance_enabled.fuchsia_imagepipe_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_imagepipe_surface::FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA))),
-            create_stream_descriptor_surface_ggp: (instance_enabled.ggp_stream_descriptor_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ggp_stream_descriptor_surface::FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP))),
-            create_screen_surface_qnx: (instance_enabled.qnx_screen_surface).then(|| std::mem::transmute(symbol(crate::extensions::qnx_screen_surface::FN_CREATE_SCREEN_SURFACE_QNX))),
-            get_physical_device_screen_presentation_support_qnx: (instance_enabled.qnx_screen_surface)
-                .then(|| std::mem::transmute(symbol(crate::extensions::qnx_screen_surface::FN_GET_PHYSICAL_DEVICE_SCREEN_PRESENTATION_SUPPORT_QNX))),
-            create_debug_report_callback_ext: (instance_enabled.ext_debug_report).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_CREATE_DEBUG_REPORT_CALLBACK_EXT))),
-            destroy_debug_report_callback_ext: (instance_enabled.ext_debug_report).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT))),
-            debug_report_message_ext: (instance_enabled.ext_debug_report).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_DEBUG_REPORT_MESSAGE_EXT))),
-            get_physical_device_external_image_format_properties_nv: (instance_enabled.nv_external_memory_capabilities)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_external_memory_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV))),
-            get_physical_device_features2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FEATURES2))),
-            get_physical_device_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_PROPERTIES2))),
-            get_physical_device_format_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2))),
-            get_physical_device_image_format_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2))),
-            get_physical_device_queue_family_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2))),
-            get_physical_device_memory_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2))),
-            get_physical_device_sparse_image_format_properties2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2))),
-            get_physical_device_external_buffer_properties: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES))),
-            get_physical_device_external_semaphore_properties: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES))),
-            get_physical_device_external_fence_properties: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES))),
-            release_display_ext: (instance_enabled.ext_direct_mode_display).then(|| std::mem::transmute(symbol(crate::extensions::ext_direct_mode_display::FN_RELEASE_DISPLAY_EXT))),
-            acquire_xlib_display_ext: (instance_enabled.ext_acquire_xlib_display).then(|| std::mem::transmute(symbol(crate::extensions::ext_acquire_xlib_display::FN_ACQUIRE_XLIB_DISPLAY_EXT))),
-            get_rand_r_output_display_ext: (instance_enabled.ext_acquire_xlib_display)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_acquire_xlib_display::FN_GET_RAND_R_OUTPUT_DISPLAY_EXT))),
-            acquire_winrt_display_nv: (instance_enabled.nv_acquire_winrt_display).then(|| std::mem::transmute(symbol(crate::extensions::nv_acquire_winrt_display::FN_ACQUIRE_WINRT_DISPLAY_NV))),
-            get_winrt_display_nv: (instance_enabled.nv_acquire_winrt_display).then(|| std::mem::transmute(symbol(crate::extensions::nv_acquire_winrt_display::FN_GET_WINRT_DISPLAY_NV))),
-            get_physical_device_surface_capabilities2_ext: (instance_enabled.ext_display_surface_counter)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_display_surface_counter::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT))),
-            enumerate_physical_device_groups: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS))),
-            get_physical_device_present_rectangles_khr: ((instance_enabled.khr_swapchain && instance_enabled.vk1_1) || (instance_enabled.khr_device_group && instance_enabled.khr_surface))
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR))),
-            create_ios_surface_mvk: (instance_enabled.mvk_ios_surface).then(|| std::mem::transmute(symbol(crate::extensions::mvk_ios_surface::FN_CREATE_IOS_SURFACE_MVK))),
-            create_mac_os_surface_mvk: (instance_enabled.mvk_macos_surface).then(|| std::mem::transmute(symbol(crate::extensions::mvk_macos_surface::FN_CREATE_MAC_OS_SURFACE_MVK))),
-            create_metal_surface_ext: (instance_enabled.ext_metal_surface).then(|| std::mem::transmute(symbol(crate::extensions::ext_metal_surface::FN_CREATE_METAL_SURFACE_EXT))),
-            get_physical_device_multisample_properties_ext: (instance_enabled.ext_sample_locations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_sample_locations::FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT))),
-            get_physical_device_surface_capabilities2_khr: (instance_enabled.khr_get_surface_capabilities2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_surface_capabilities2::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR))),
-            get_physical_device_surface_formats2_khr: (instance_enabled.khr_get_surface_capabilities2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_surface_capabilities2::FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR))),
-            get_physical_device_display_properties2_khr: (instance_enabled.khr_get_display_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR))),
-            get_physical_device_display_plane_properties2_khr: (instance_enabled.khr_get_display_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR))),
-            get_display_mode_properties2_khr: (instance_enabled.khr_get_display_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_DISPLAY_MODE_PROPERTIES2_KHR))),
-            get_display_plane_capabilities2_khr: (instance_enabled.khr_get_display_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR))),
-            get_physical_device_calibrateable_time_domains_ext: (instance_enabled.ext_calibrated_timestamps)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_calibrated_timestamps::FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT))),
-            create_debug_utils_messenger_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CREATE_DEBUG_UTILS_MESSENGER_EXT))),
-            destroy_debug_utils_messenger_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT))),
-            submit_debug_utils_message_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT))),
-            get_physical_device_cooperative_matrix_properties_nv: (instance_enabled.nv_cooperative_matrix)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_cooperative_matrix::FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV))),
-            get_physical_device_surface_present_modes2_ext: (instance_enabled.ext_full_screen_exclusive)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT))),
-            enumerate_physical_device_queue_family_performance_query_counters_khr: (instance_enabled.khr_performance_query).then(|| {
+            create_android_surface_khr: if instance_enabled.khr_android_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_android_surface::FN_CREATE_ANDROID_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_display_properties_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_physical_device_display_plane_properties_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_display_plane_supported_displays_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_SUPPORTED_DISPLAYS_KHR))
+            } else {
+                None
+            },
+            get_display_mode_properties_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_MODE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            create_display_mode_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_CREATE_DISPLAY_MODE_KHR))
+            } else {
+                None
+            },
+            get_display_plane_capabilities_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_GET_DISPLAY_PLANE_CAPABILITIES_KHR))
+            } else {
+                None
+            },
+            create_display_plane_surface_khr: if instance_enabled.khr_display {
+                std::mem::transmute(symbol(crate::extensions::khr_display::FN_CREATE_DISPLAY_PLANE_SURFACE_KHR))
+            } else {
+                None
+            },
+            destroy_surface_khr: if instance_enabled.khr_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_surface::FN_DESTROY_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_surface_support_khr: if instance_enabled.khr_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_SUPPORT_KHR))
+            } else {
+                None
+            },
+            get_physical_device_surface_capabilities_khr: if instance_enabled.khr_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR))
+            } else {
+                None
+            },
+            get_physical_device_surface_formats_khr: if instance_enabled.khr_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR))
+            } else {
+                None
+            },
+            get_physical_device_surface_present_modes_khr: if instance_enabled.khr_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_surface::FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR))
+            } else {
+                None
+            },
+            create_vi_surface_nn: if instance_enabled.nn_vi_surface {
+                std::mem::transmute(symbol(crate::extensions::nn_vi_surface::FN_CREATE_VI_SURFACE_NN))
+            } else {
+                None
+            },
+            create_wayland_surface_khr: if instance_enabled.khr_wayland_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_wayland_surface::FN_CREATE_WAYLAND_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_wayland_presentation_support_khr: if instance_enabled.khr_wayland_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_wayland_surface::FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR))
+            } else {
+                None
+            },
+            create_win32_surface_khr: if instance_enabled.khr_win32_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_win32_surface::FN_CREATE_WIN32_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_win32_presentation_support_khr: if instance_enabled.khr_win32_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_win32_surface::FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR))
+            } else {
+                None
+            },
+            create_xlib_surface_khr: if instance_enabled.khr_xlib_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_xlib_surface::FN_CREATE_XLIB_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_xlib_presentation_support_khr: if instance_enabled.khr_xlib_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_xlib_surface::FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR))
+            } else {
+                None
+            },
+            create_xcb_surface_khr: if instance_enabled.khr_xcb_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_xcb_surface::FN_CREATE_XCB_SURFACE_KHR))
+            } else {
+                None
+            },
+            get_physical_device_xcb_presentation_support_khr: if instance_enabled.khr_xcb_surface {
+                std::mem::transmute(symbol(crate::extensions::khr_xcb_surface::FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR))
+            } else {
+                None
+            },
+            create_direct_fb_surface_ext: if instance_enabled.ext_directfb_surface {
+                std::mem::transmute(symbol(crate::extensions::ext_directfb_surface::FN_CREATE_DIRECT_FB_SURFACE_EXT))
+            } else {
+                None
+            },
+            get_physical_device_direct_fb_presentation_support_ext: if instance_enabled.ext_directfb_surface {
+                std::mem::transmute(symbol(crate::extensions::ext_directfb_surface::FN_GET_PHYSICAL_DEVICE_DIRECT_FB_PRESENTATION_SUPPORT_EXT))
+            } else {
+                None
+            },
+            create_image_pipe_surface_fuchsia: if instance_enabled.fuchsia_imagepipe_surface {
+                std::mem::transmute(symbol(crate::extensions::fuchsia_imagepipe_surface::FN_CREATE_IMAGE_PIPE_SURFACE_FUCHSIA))
+            } else {
+                None
+            },
+            create_stream_descriptor_surface_ggp: if instance_enabled.ggp_stream_descriptor_surface {
+                std::mem::transmute(symbol(crate::extensions::ggp_stream_descriptor_surface::FN_CREATE_STREAM_DESCRIPTOR_SURFACE_GGP))
+            } else {
+                None
+            },
+            create_screen_surface_qnx: if instance_enabled.qnx_screen_surface {
+                std::mem::transmute(symbol(crate::extensions::qnx_screen_surface::FN_CREATE_SCREEN_SURFACE_QNX))
+            } else {
+                None
+            },
+            get_physical_device_screen_presentation_support_qnx: if instance_enabled.qnx_screen_surface {
+                std::mem::transmute(symbol(crate::extensions::qnx_screen_surface::FN_GET_PHYSICAL_DEVICE_SCREEN_PRESENTATION_SUPPORT_QNX))
+            } else {
+                None
+            },
+            create_debug_report_callback_ext: if instance_enabled.ext_debug_report {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_CREATE_DEBUG_REPORT_CALLBACK_EXT))
+            } else {
+                None
+            },
+            destroy_debug_report_callback_ext: if instance_enabled.ext_debug_report {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT))
+            } else {
+                None
+            },
+            debug_report_message_ext: if instance_enabled.ext_debug_report {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_report::FN_DEBUG_REPORT_MESSAGE_EXT))
+            } else {
+                None
+            },
+            get_physical_device_external_image_format_properties_nv: if instance_enabled.nv_external_memory_capabilities {
+                std::mem::transmute(symbol(crate::extensions::nv_external_memory_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_PROPERTIES_NV))
+            } else {
+                None
+            },
+            get_physical_device_features2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FEATURES2))
+            } else {
+                None
+            },
+            get_physical_device_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_format_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_image_format_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_queue_family_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_memory_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_sparse_image_format_properties2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2))
+            } else {
+                None
+            },
+            get_physical_device_external_buffer_properties: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES))
+            } else {
+                None
+            },
+            get_physical_device_external_semaphore_properties: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES))
+            } else {
+                None
+            },
+            get_physical_device_external_fence_properties: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES))
+            } else {
+                None
+            },
+            release_display_ext: if instance_enabled.ext_direct_mode_display {
+                std::mem::transmute(symbol(crate::extensions::ext_direct_mode_display::FN_RELEASE_DISPLAY_EXT))
+            } else {
+                None
+            },
+            acquire_xlib_display_ext: if instance_enabled.ext_acquire_xlib_display {
+                std::mem::transmute(symbol(crate::extensions::ext_acquire_xlib_display::FN_ACQUIRE_XLIB_DISPLAY_EXT))
+            } else {
+                None
+            },
+            get_rand_r_output_display_ext: if instance_enabled.ext_acquire_xlib_display {
+                std::mem::transmute(symbol(crate::extensions::ext_acquire_xlib_display::FN_GET_RAND_R_OUTPUT_DISPLAY_EXT))
+            } else {
+                None
+            },
+            acquire_winrt_display_nv: if instance_enabled.nv_acquire_winrt_display {
+                std::mem::transmute(symbol(crate::extensions::nv_acquire_winrt_display::FN_ACQUIRE_WINRT_DISPLAY_NV))
+            } else {
+                None
+            },
+            get_winrt_display_nv: if instance_enabled.nv_acquire_winrt_display {
+                std::mem::transmute(symbol(crate::extensions::nv_acquire_winrt_display::FN_GET_WINRT_DISPLAY_NV))
+            } else {
+                None
+            },
+            get_physical_device_surface_capabilities2_ext: if instance_enabled.ext_display_surface_counter {
+                std::mem::transmute(symbol(crate::extensions::ext_display_surface_counter::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT))
+            } else {
+                None
+            },
+            enumerate_physical_device_groups: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS))
+            } else {
+                None
+            },
+            get_physical_device_present_rectangles_khr: if (instance_enabled.khr_swapchain && instance_enabled.vk1_1) || (instance_enabled.khr_device_group && instance_enabled.khr_surface) {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR))
+            } else {
+                None
+            },
+            create_ios_surface_mvk: if instance_enabled.mvk_ios_surface {
+                std::mem::transmute(symbol(crate::extensions::mvk_ios_surface::FN_CREATE_IOS_SURFACE_MVK))
+            } else {
+                None
+            },
+            create_mac_os_surface_mvk: if instance_enabled.mvk_macos_surface {
+                std::mem::transmute(symbol(crate::extensions::mvk_macos_surface::FN_CREATE_MAC_OS_SURFACE_MVK))
+            } else {
+                None
+            },
+            create_metal_surface_ext: if instance_enabled.ext_metal_surface {
+                std::mem::transmute(symbol(crate::extensions::ext_metal_surface::FN_CREATE_METAL_SURFACE_EXT))
+            } else {
+                None
+            },
+            get_physical_device_multisample_properties_ext: if instance_enabled.ext_sample_locations {
+                std::mem::transmute(symbol(crate::extensions::ext_sample_locations::FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT))
+            } else {
+                None
+            },
+            get_physical_device_surface_capabilities2_khr: if instance_enabled.khr_get_surface_capabilities2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_surface_capabilities2::FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_surface_formats2_khr: if instance_enabled.khr_get_surface_capabilities2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_surface_capabilities2::FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_display_properties2_khr: if instance_enabled.khr_get_display_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_PHYSICAL_DEVICE_DISPLAY_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_display_plane_properties2_khr: if instance_enabled.khr_get_display_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_display_mode_properties2_khr: if instance_enabled.khr_get_display_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_DISPLAY_MODE_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_display_plane_capabilities2_khr: if instance_enabled.khr_get_display_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_display_properties2::FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_calibrateable_time_domains_ext: if instance_enabled.ext_calibrated_timestamps {
+                std::mem::transmute(symbol(crate::extensions::ext_calibrated_timestamps::FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT))
+            } else {
+                None
+            },
+            create_debug_utils_messenger_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CREATE_DEBUG_UTILS_MESSENGER_EXT))
+            } else {
+                None
+            },
+            destroy_debug_utils_messenger_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT))
+            } else {
+                None
+            },
+            submit_debug_utils_message_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT))
+            } else {
+                None
+            },
+            get_physical_device_cooperative_matrix_properties_nv: if instance_enabled.nv_cooperative_matrix {
+                std::mem::transmute(symbol(crate::extensions::nv_cooperative_matrix::FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV))
+            } else {
+                None
+            },
+            get_physical_device_surface_present_modes2_ext: if instance_enabled.ext_full_screen_exclusive {
+                std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES2_EXT))
+            } else {
+                None
+            },
+            enumerate_physical_device_queue_family_performance_query_counters_khr: if instance_enabled.khr_performance_query {
                 std::mem::transmute(symbol(
                     crate::extensions::khr_performance_query::FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR,
                 ))
-            }),
-            get_physical_device_queue_family_performance_query_passes_khr: (instance_enabled.khr_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR))),
-            create_headless_surface_ext: (instance_enabled.ext_headless_surface).then(|| std::mem::transmute(symbol(crate::extensions::ext_headless_surface::FN_CREATE_HEADLESS_SURFACE_EXT))),
-            get_physical_device_supported_framebuffer_mixed_samples_combinations_nv: (instance_enabled.nv_coverage_reduction_mode).then(|| {
+            } else {
+                None
+            },
+            get_physical_device_queue_family_performance_query_passes_khr: if instance_enabled.khr_performance_query {
+                std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR))
+            } else {
+                None
+            },
+            create_headless_surface_ext: if instance_enabled.ext_headless_surface {
+                std::mem::transmute(symbol(crate::extensions::ext_headless_surface::FN_CREATE_HEADLESS_SURFACE_EXT))
+            } else {
+                None
+            },
+            get_physical_device_supported_framebuffer_mixed_samples_combinations_nv: if instance_enabled.nv_coverage_reduction_mode {
                 std::mem::transmute(symbol(
                     crate::extensions::nv_coverage_reduction_mode::FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV,
                 ))
-            }),
-            get_physical_device_tool_properties_ext: (instance_enabled.ext_tooling_info)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_tooling_info::FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT))),
-            get_physical_device_fragment_shading_rates_khr: (instance_enabled.khr_fragment_shading_rate)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_fragment_shading_rate::FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR))),
-            get_physical_device_features2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR))),
-            get_physical_device_properties2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR))),
-            get_physical_device_format_properties2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR))),
-            get_physical_device_image_format_properties2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR))),
-            get_physical_device_queue_family_properties2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR))),
-            get_physical_device_memory_properties2_khr: (instance_enabled.khr_get_physical_device_properties2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR))),
-            get_physical_device_sparse_image_format_properties2_khr: (instance_enabled.khr_get_physical_device_properties2).then(|| {
+            } else {
+                None
+            },
+            get_physical_device_tool_properties_ext: if instance_enabled.ext_tooling_info {
+                std::mem::transmute(symbol(crate::extensions::ext_tooling_info::FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT))
+            } else {
+                None
+            },
+            get_physical_device_fragment_shading_rates_khr: if instance_enabled.khr_fragment_shading_rate {
+                std::mem::transmute(symbol(crate::extensions::khr_fragment_shading_rate::FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR))
+            } else {
+                None
+            },
+            get_physical_device_features2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_FEATURES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_format_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_image_format_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_IMAGE_FORMAT_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_queue_family_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_memory_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_MEMORY_PROPERTIES2_KHR))
+            } else {
+                None
+            },
+            get_physical_device_sparse_image_format_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
                 std::mem::transmute(symbol(
                     crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR,
                 ))
-            }),
-            get_physical_device_external_buffer_properties_khr: (instance_enabled.khr_external_memory_capabilities)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES_KHR))),
-            get_physical_device_external_semaphore_properties_khr: (instance_enabled.khr_external_semaphore_capabilities)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR))),
-            get_physical_device_external_fence_properties_khr: (instance_enabled.khr_external_fence_capabilities)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR))),
-            enumerate_physical_device_groups_khr: (instance_enabled.khr_device_group_creation)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_device_group_creation::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR))),
+            } else {
+                None
+            },
+            get_physical_device_external_buffer_properties_khr: if instance_enabled.khr_external_memory_capabilities {
+                std::mem::transmute(symbol(crate::extensions::khr_external_memory_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_physical_device_external_semaphore_properties_khr: if instance_enabled.khr_external_semaphore_capabilities {
+                std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_physical_device_external_fence_properties_khr: if instance_enabled.khr_external_fence_capabilities {
+                std::mem::transmute(symbol(crate::extensions::khr_external_fence_capabilities::FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            enumerate_physical_device_groups_khr: if instance_enabled.khr_device_group_creation {
+                std::mem::transmute(symbol(crate::extensions::khr_device_group_creation::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR))
+            } else {
+                None
+            },
             enabled: instance_enabled,
         })
     }
@@ -1018,7 +1309,11 @@ impl DeviceLoader {
             create_query_pool: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_QUERY_POOL)),
             destroy_query_pool: std::mem::transmute(symbol(crate::vk1_0::FN_DESTROY_QUERY_POOL)),
             get_query_pool_results: std::mem::transmute(symbol(crate::vk1_0::FN_GET_QUERY_POOL_RESULTS)),
-            reset_query_pool: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_RESET_QUERY_POOL))),
+            reset_query_pool: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_RESET_QUERY_POOL))
+            } else {
+                None
+            },
             create_buffer: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_BUFFER)),
             destroy_buffer: std::mem::transmute(symbol(crate::vk1_0::FN_DESTROY_BUFFER)),
             create_buffer_view: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_BUFFER_VIEW)),
@@ -1098,10 +1393,16 @@ impl DeviceLoader {
             cmd_pipeline_barrier: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_PIPELINE_BARRIER)),
             cmd_begin_query: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_BEGIN_QUERY)),
             cmd_end_query: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_END_QUERY)),
-            cmd_begin_conditional_rendering_ext: (device_enabled.ext_conditional_rendering)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_conditional_rendering::FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT))),
-            cmd_end_conditional_rendering_ext: (device_enabled.ext_conditional_rendering)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_conditional_rendering::FN_CMD_END_CONDITIONAL_RENDERING_EXT))),
+            cmd_begin_conditional_rendering_ext: if device_enabled.ext_conditional_rendering {
+                std::mem::transmute(symbol(crate::extensions::ext_conditional_rendering::FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT))
+            } else {
+                None
+            },
+            cmd_end_conditional_rendering_ext: if device_enabled.ext_conditional_rendering {
+                std::mem::transmute(symbol(crate::extensions::ext_conditional_rendering::FN_CMD_END_CONDITIONAL_RENDERING_EXT))
+            } else {
+                None
+            },
             cmd_reset_query_pool: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_RESET_QUERY_POOL)),
             cmd_write_timestamp: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_WRITE_TIMESTAMP)),
             cmd_copy_query_pool_results: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_COPY_QUERY_POOL_RESULTS)),
@@ -1110,356 +1411,1195 @@ impl DeviceLoader {
             cmd_next_subpass: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_NEXT_SUBPASS)),
             cmd_end_render_pass: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_END_RENDER_PASS)),
             cmd_execute_commands: std::mem::transmute(symbol(crate::vk1_0::FN_CMD_EXECUTE_COMMANDS)),
-            create_shared_swapchains_khr: (device_enabled.khr_display_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_display_swapchain::FN_CREATE_SHARED_SWAPCHAINS_KHR))),
-            create_swapchain_khr: (device_enabled.khr_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_CREATE_SWAPCHAIN_KHR))),
-            destroy_swapchain_khr: (device_enabled.khr_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_DESTROY_SWAPCHAIN_KHR))),
-            get_swapchain_images_khr: (device_enabled.khr_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_SWAPCHAIN_IMAGES_KHR))),
-            acquire_next_image_khr: (device_enabled.khr_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE_KHR))),
-            queue_present_khr: (device_enabled.khr_swapchain).then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_QUEUE_PRESENT_KHR))),
-            debug_marker_set_object_name_ext: (device_enabled.ext_debug_marker).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT))),
-            debug_marker_set_object_tag_ext: (device_enabled.ext_debug_marker).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT))),
-            cmd_debug_marker_begin_ext: (device_enabled.ext_debug_marker).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_BEGIN_EXT))),
-            cmd_debug_marker_end_ext: (device_enabled.ext_debug_marker).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_END_EXT))),
-            cmd_debug_marker_insert_ext: (device_enabled.ext_debug_marker).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_INSERT_EXT))),
-            get_memory_win32_handle_nv: (device_enabled.nv_external_memory_win32).then(|| std::mem::transmute(symbol(crate::extensions::nv_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_NV))),
-            cmd_execute_generated_commands_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_EXECUTE_GENERATED_COMMANDS_NV))),
-            cmd_preprocess_generated_commands_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV))),
-            cmd_bind_pipeline_shader_group_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV))),
-            get_generated_commands_memory_requirements_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV))),
-            create_indirect_commands_layout_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV))),
-            destroy_indirect_commands_layout_nv: (device_enabled.nv_device_generated_commands)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV))),
-            cmd_push_descriptor_set_khr: (device_enabled.khr_push_descriptor).then(|| std::mem::transmute(symbol(crate::extensions::khr_push_descriptor::FN_CMD_PUSH_DESCRIPTOR_SET_KHR))),
-            trim_command_pool: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_TRIM_COMMAND_POOL))),
-            get_memory_win32_handle_khr: (device_enabled.khr_external_memory_win32).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_KHR))),
-            get_memory_win32_handle_properties_khr: (device_enabled.khr_external_memory_win32)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR))),
-            get_memory_fd_khr: (device_enabled.khr_external_memory_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_KHR))),
-            get_memory_fd_properties_khr: (device_enabled.khr_external_memory_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_PROPERTIES_KHR))),
-            get_memory_zircon_handle_fuchsia: (device_enabled.fuchsia_external_memory)
-                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA))),
-            get_memory_zircon_handle_properties_fuchsia: (device_enabled.fuchsia_external_memory)
-                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA))),
-            get_semaphore_win32_handle_khr: (device_enabled.khr_external_semaphore_win32)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_GET_SEMAPHORE_WIN32_HANDLE_KHR))),
-            import_semaphore_win32_handle_khr: (device_enabled.khr_external_semaphore_win32)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR))),
-            get_semaphore_fd_khr: (device_enabled.khr_external_semaphore_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_GET_SEMAPHORE_FD_KHR))),
-            import_semaphore_fd_khr: (device_enabled.khr_external_semaphore_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_IMPORT_SEMAPHORE_FD_KHR))),
-            get_semaphore_zircon_handle_fuchsia: (device_enabled.fuchsia_external_semaphore)
-                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))),
-            import_semaphore_zircon_handle_fuchsia: (device_enabled.fuchsia_external_semaphore)
-                .then(|| std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))),
-            get_fence_win32_handle_khr: (device_enabled.khr_external_fence_win32).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_GET_FENCE_WIN32_HANDLE_KHR))),
-            import_fence_win32_handle_khr: (device_enabled.khr_external_fence_win32)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_IMPORT_FENCE_WIN32_HANDLE_KHR))),
-            get_fence_fd_khr: (device_enabled.khr_external_fence_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_fd::FN_GET_FENCE_FD_KHR))),
-            import_fence_fd_khr: (device_enabled.khr_external_fence_fd).then(|| std::mem::transmute(symbol(crate::extensions::khr_external_fence_fd::FN_IMPORT_FENCE_FD_KHR))),
-            display_power_control_ext: (device_enabled.ext_display_control).then(|| std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_DISPLAY_POWER_CONTROL_EXT))),
-            register_device_event_ext: (device_enabled.ext_display_control).then(|| std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_REGISTER_DEVICE_EVENT_EXT))),
-            register_display_event_ext: (device_enabled.ext_display_control).then(|| std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_REGISTER_DISPLAY_EVENT_EXT))),
-            get_swapchain_counter_ext: (device_enabled.ext_display_control).then(|| std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_GET_SWAPCHAIN_COUNTER_EXT))),
-            get_device_group_peer_memory_features: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES))),
-            bind_buffer_memory2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_BIND_BUFFER_MEMORY2))),
-            bind_image_memory2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_BIND_IMAGE_MEMORY2))),
-            cmd_set_device_mask: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_CMD_SET_DEVICE_MASK))),
-            get_device_group_present_capabilities_khr: ((device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && instance_enabled.khr_surface))
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR))),
-            get_device_group_surface_present_modes_khr: ((device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && instance_enabled.khr_surface))
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR))),
-            acquire_next_image2_khr: ((device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && device_enabled.khr_swapchain))
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE2_KHR))),
-            cmd_dispatch_base: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_CMD_DISPATCH_BASE))),
-            create_descriptor_update_template: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE))),
-            destroy_descriptor_update_template: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE))),
-            update_descriptor_set_with_template: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE))),
-            cmd_push_descriptor_set_with_template_khr: ((device_enabled.khr_push_descriptor && instance_enabled.vk1_1)
+            create_shared_swapchains_khr: if device_enabled.khr_display_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_display_swapchain::FN_CREATE_SHARED_SWAPCHAINS_KHR))
+            } else {
+                None
+            },
+            create_swapchain_khr: if device_enabled.khr_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_CREATE_SWAPCHAIN_KHR))
+            } else {
+                None
+            },
+            destroy_swapchain_khr: if device_enabled.khr_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_DESTROY_SWAPCHAIN_KHR))
+            } else {
+                None
+            },
+            get_swapchain_images_khr: if device_enabled.khr_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_SWAPCHAIN_IMAGES_KHR))
+            } else {
+                None
+            },
+            acquire_next_image_khr: if device_enabled.khr_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE_KHR))
+            } else {
+                None
+            },
+            queue_present_khr: if device_enabled.khr_swapchain {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_QUEUE_PRESENT_KHR))
+            } else {
+                None
+            },
+            debug_marker_set_object_name_ext: if device_enabled.ext_debug_marker {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_NAME_EXT))
+            } else {
+                None
+            },
+            debug_marker_set_object_tag_ext: if device_enabled.ext_debug_marker {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_DEBUG_MARKER_SET_OBJECT_TAG_EXT))
+            } else {
+                None
+            },
+            cmd_debug_marker_begin_ext: if device_enabled.ext_debug_marker {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_BEGIN_EXT))
+            } else {
+                None
+            },
+            cmd_debug_marker_end_ext: if device_enabled.ext_debug_marker {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_END_EXT))
+            } else {
+                None
+            },
+            cmd_debug_marker_insert_ext: if device_enabled.ext_debug_marker {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_marker::FN_CMD_DEBUG_MARKER_INSERT_EXT))
+            } else {
+                None
+            },
+            get_memory_win32_handle_nv: if device_enabled.nv_external_memory_win32 {
+                std::mem::transmute(symbol(crate::extensions::nv_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_NV))
+            } else {
+                None
+            },
+            cmd_execute_generated_commands_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_EXECUTE_GENERATED_COMMANDS_NV))
+            } else {
+                None
+            },
+            cmd_preprocess_generated_commands_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_PREPROCESS_GENERATED_COMMANDS_NV))
+            } else {
+                None
+            },
+            cmd_bind_pipeline_shader_group_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CMD_BIND_PIPELINE_SHADER_GROUP_NV))
+            } else {
+                None
+            },
+            get_generated_commands_memory_requirements_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV))
+            } else {
+                None
+            },
+            create_indirect_commands_layout_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV))
+            } else {
+                None
+            },
+            destroy_indirect_commands_layout_nv: if device_enabled.nv_device_generated_commands {
+                std::mem::transmute(symbol(crate::extensions::nv_device_generated_commands::FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV))
+            } else {
+                None
+            },
+            cmd_push_descriptor_set_khr: if device_enabled.khr_push_descriptor {
+                std::mem::transmute(symbol(crate::extensions::khr_push_descriptor::FN_CMD_PUSH_DESCRIPTOR_SET_KHR))
+            } else {
+                None
+            },
+            trim_command_pool: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_TRIM_COMMAND_POOL))
+            } else {
+                None
+            },
+            get_memory_win32_handle_khr: if device_enabled.khr_external_memory_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_KHR))
+            } else {
+                None
+            },
+            get_memory_win32_handle_properties_khr: if device_enabled.khr_external_memory_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_memory_fd_khr: if device_enabled.khr_external_memory_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_KHR))
+            } else {
+                None
+            },
+            get_memory_fd_properties_khr: if device_enabled.khr_external_memory_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_memory_fd::FN_GET_MEMORY_FD_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_memory_zircon_handle_fuchsia: if device_enabled.fuchsia_external_memory {
+                std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA))
+            } else {
+                None
+            },
+            get_memory_zircon_handle_properties_fuchsia: if device_enabled.fuchsia_external_memory {
+                std::mem::transmute(symbol(crate::extensions::fuchsia_external_memory::FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA))
+            } else {
+                None
+            },
+            get_semaphore_win32_handle_khr: if device_enabled.khr_external_semaphore_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_GET_SEMAPHORE_WIN32_HANDLE_KHR))
+            } else {
+                None
+            },
+            import_semaphore_win32_handle_khr: if device_enabled.khr_external_semaphore_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_win32::FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR))
+            } else {
+                None
+            },
+            get_semaphore_fd_khr: if device_enabled.khr_external_semaphore_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_GET_SEMAPHORE_FD_KHR))
+            } else {
+                None
+            },
+            import_semaphore_fd_khr: if device_enabled.khr_external_semaphore_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_semaphore_fd::FN_IMPORT_SEMAPHORE_FD_KHR))
+            } else {
+                None
+            },
+            get_semaphore_zircon_handle_fuchsia: if device_enabled.fuchsia_external_semaphore {
+                std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))
+            } else {
+                None
+            },
+            import_semaphore_zircon_handle_fuchsia: if device_enabled.fuchsia_external_semaphore {
+                std::mem::transmute(symbol(crate::extensions::fuchsia_external_semaphore::FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA))
+            } else {
+                None
+            },
+            get_fence_win32_handle_khr: if device_enabled.khr_external_fence_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_GET_FENCE_WIN32_HANDLE_KHR))
+            } else {
+                None
+            },
+            import_fence_win32_handle_khr: if device_enabled.khr_external_fence_win32 {
+                std::mem::transmute(symbol(crate::extensions::khr_external_fence_win32::FN_IMPORT_FENCE_WIN32_HANDLE_KHR))
+            } else {
+                None
+            },
+            get_fence_fd_khr: if device_enabled.khr_external_fence_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_fence_fd::FN_GET_FENCE_FD_KHR))
+            } else {
+                None
+            },
+            import_fence_fd_khr: if device_enabled.khr_external_fence_fd {
+                std::mem::transmute(symbol(crate::extensions::khr_external_fence_fd::FN_IMPORT_FENCE_FD_KHR))
+            } else {
+                None
+            },
+            display_power_control_ext: if device_enabled.ext_display_control {
+                std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_DISPLAY_POWER_CONTROL_EXT))
+            } else {
+                None
+            },
+            register_device_event_ext: if device_enabled.ext_display_control {
+                std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_REGISTER_DEVICE_EVENT_EXT))
+            } else {
+                None
+            },
+            register_display_event_ext: if device_enabled.ext_display_control {
+                std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_REGISTER_DISPLAY_EVENT_EXT))
+            } else {
+                None
+            },
+            get_swapchain_counter_ext: if device_enabled.ext_display_control {
+                std::mem::transmute(symbol(crate::extensions::ext_display_control::FN_GET_SWAPCHAIN_COUNTER_EXT))
+            } else {
+                None
+            },
+            get_device_group_peer_memory_features: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES))
+            } else {
+                None
+            },
+            bind_buffer_memory2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_BIND_BUFFER_MEMORY2))
+            } else {
+                None
+            },
+            bind_image_memory2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_BIND_IMAGE_MEMORY2))
+            } else {
+                None
+            },
+            cmd_set_device_mask: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_CMD_SET_DEVICE_MASK))
+            } else {
+                None
+            },
+            get_device_group_present_capabilities_khr: if (device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && instance_enabled.khr_surface) {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR))
+            } else {
+                None
+            },
+            get_device_group_surface_present_modes_khr: if (device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && instance_enabled.khr_surface) {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR))
+            } else {
+                None
+            },
+            acquire_next_image2_khr: if (device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && device_enabled.khr_swapchain) {
+                std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_ACQUIRE_NEXT_IMAGE2_KHR))
+            } else {
+                None
+            },
+            cmd_dispatch_base: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_CMD_DISPATCH_BASE))
+            } else {
+                None
+            },
+            create_descriptor_update_template: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE))
+            } else {
+                None
+            },
+            destroy_descriptor_update_template: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE))
+            } else {
+                None
+            },
+            update_descriptor_set_with_template: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE))
+            } else {
+                None
+            },
+            cmd_push_descriptor_set_with_template_khr: if (device_enabled.khr_push_descriptor && instance_enabled.vk1_1)
                 || (device_enabled.khr_push_descriptor && device_enabled.khr_descriptor_update_template)
-                || (device_enabled.khr_descriptor_update_template && device_enabled.khr_push_descriptor))
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_push_descriptor::FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR))),
-            set_hdr_metadata_ext: (device_enabled.ext_hdr_metadata).then(|| std::mem::transmute(symbol(crate::extensions::ext_hdr_metadata::FN_SET_HDR_METADATA_EXT))),
-            get_swapchain_status_khr: (device_enabled.khr_shared_presentable_image).then(|| std::mem::transmute(symbol(crate::extensions::khr_shared_presentable_image::FN_GET_SWAPCHAIN_STATUS_KHR))),
-            get_refresh_cycle_duration_google: (device_enabled.google_display_timing)
-                .then(|| std::mem::transmute(symbol(crate::extensions::google_display_timing::FN_GET_REFRESH_CYCLE_DURATION_GOOGLE))),
-            get_past_presentation_timing_google: (device_enabled.google_display_timing)
-                .then(|| std::mem::transmute(symbol(crate::extensions::google_display_timing::FN_GET_PAST_PRESENTATION_TIMING_GOOGLE))),
-            cmd_set_viewport_w_scaling_nv: (device_enabled.nv_clip_space_w_scaling).then(|| std::mem::transmute(symbol(crate::extensions::nv_clip_space_w_scaling::FN_CMD_SET_VIEWPORT_W_SCALING_NV))),
-            cmd_set_discard_rectangle_ext: (device_enabled.ext_discard_rectangles).then(|| std::mem::transmute(symbol(crate::extensions::ext_discard_rectangles::FN_CMD_SET_DISCARD_RECTANGLE_EXT))),
-            cmd_set_sample_locations_ext: (device_enabled.ext_sample_locations).then(|| std::mem::transmute(symbol(crate::extensions::ext_sample_locations::FN_CMD_SET_SAMPLE_LOCATIONS_EXT))),
-            get_buffer_memory_requirements2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_BUFFER_MEMORY_REQUIREMENTS2))),
-            get_image_memory_requirements2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_MEMORY_REQUIREMENTS2))),
-            get_image_sparse_memory_requirements2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2))),
-            create_sampler_ycbcr_conversion: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_SAMPLER_YCBCR_CONVERSION))),
-            destroy_sampler_ycbcr_conversion: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_SAMPLER_YCBCR_CONVERSION))),
-            get_device_queue2: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_QUEUE2))),
-            create_validation_cache_ext: (device_enabled.ext_validation_cache).then(|| std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_CREATE_VALIDATION_CACHE_EXT))),
-            destroy_validation_cache_ext: (device_enabled.ext_validation_cache).then(|| std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_DESTROY_VALIDATION_CACHE_EXT))),
-            get_validation_cache_data_ext: (device_enabled.ext_validation_cache).then(|| std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_GET_VALIDATION_CACHE_DATA_EXT))),
-            merge_validation_caches_ext: (device_enabled.ext_validation_cache).then(|| std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_MERGE_VALIDATION_CACHES_EXT))),
-            get_descriptor_set_layout_support: (instance_enabled.vk1_1).then(|| std::mem::transmute(symbol(crate::vk1_1::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT))),
-            get_shader_info_amd: (device_enabled.amd_shader_info).then(|| std::mem::transmute(symbol(crate::extensions::amd_shader_info::FN_GET_SHADER_INFO_AMD))),
-            set_local_dimming_amd: (device_enabled.amd_display_native_hdr).then(|| std::mem::transmute(symbol(crate::extensions::amd_display_native_hdr::FN_SET_LOCAL_DIMMING_AMD))),
-            get_calibrated_timestamps_ext: (device_enabled.ext_calibrated_timestamps)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_calibrated_timestamps::FN_GET_CALIBRATED_TIMESTAMPS_EXT))),
-            set_debug_utils_object_name_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT))),
-            set_debug_utils_object_tag_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT))),
-            queue_begin_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT))),
-            queue_end_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT))),
-            queue_insert_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT))),
-            cmd_begin_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT))),
-            cmd_end_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_END_DEBUG_UTILS_LABEL_EXT))),
-            cmd_insert_debug_utils_label_ext: (instance_enabled.ext_debug_utils).then(|| std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT))),
-            get_memory_host_pointer_properties_ext: (device_enabled.ext_external_memory_host)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_external_memory_host::FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT))),
-            cmd_write_buffer_marker_amd: (device_enabled.amd_buffer_marker).then(|| std::mem::transmute(symbol(crate::extensions::amd_buffer_marker::FN_CMD_WRITE_BUFFER_MARKER_AMD))),
-            create_render_pass2: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CREATE_RENDER_PASS2))),
-            cmd_begin_render_pass2: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CMD_BEGIN_RENDER_PASS2))),
-            cmd_next_subpass2: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CMD_NEXT_SUBPASS2))),
-            cmd_end_render_pass2: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CMD_END_RENDER_PASS2))),
-            get_semaphore_counter_value: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_GET_SEMAPHORE_COUNTER_VALUE))),
-            wait_semaphores: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_WAIT_SEMAPHORES))),
-            signal_semaphore: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_SIGNAL_SEMAPHORE))),
-            get_android_hardware_buffer_properties_android: (device_enabled.android_external_memory_android_hardware_buffer).then(|| {
+                || (device_enabled.khr_descriptor_update_template && device_enabled.khr_push_descriptor)
+            {
+                std::mem::transmute(symbol(crate::extensions::khr_push_descriptor::FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR))
+            } else {
+                None
+            },
+            set_hdr_metadata_ext: if device_enabled.ext_hdr_metadata {
+                std::mem::transmute(symbol(crate::extensions::ext_hdr_metadata::FN_SET_HDR_METADATA_EXT))
+            } else {
+                None
+            },
+            get_swapchain_status_khr: if device_enabled.khr_shared_presentable_image {
+                std::mem::transmute(symbol(crate::extensions::khr_shared_presentable_image::FN_GET_SWAPCHAIN_STATUS_KHR))
+            } else {
+                None
+            },
+            get_refresh_cycle_duration_google: if device_enabled.google_display_timing {
+                std::mem::transmute(symbol(crate::extensions::google_display_timing::FN_GET_REFRESH_CYCLE_DURATION_GOOGLE))
+            } else {
+                None
+            },
+            get_past_presentation_timing_google: if device_enabled.google_display_timing {
+                std::mem::transmute(symbol(crate::extensions::google_display_timing::FN_GET_PAST_PRESENTATION_TIMING_GOOGLE))
+            } else {
+                None
+            },
+            cmd_set_viewport_w_scaling_nv: if device_enabled.nv_clip_space_w_scaling {
+                std::mem::transmute(symbol(crate::extensions::nv_clip_space_w_scaling::FN_CMD_SET_VIEWPORT_W_SCALING_NV))
+            } else {
+                None
+            },
+            cmd_set_discard_rectangle_ext: if device_enabled.ext_discard_rectangles {
+                std::mem::transmute(symbol(crate::extensions::ext_discard_rectangles::FN_CMD_SET_DISCARD_RECTANGLE_EXT))
+            } else {
+                None
+            },
+            cmd_set_sample_locations_ext: if device_enabled.ext_sample_locations {
+                std::mem::transmute(symbol(crate::extensions::ext_sample_locations::FN_CMD_SET_SAMPLE_LOCATIONS_EXT))
+            } else {
+                None
+            },
+            get_buffer_memory_requirements2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_BUFFER_MEMORY_REQUIREMENTS2))
+            } else {
+                None
+            },
+            get_image_memory_requirements2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_MEMORY_REQUIREMENTS2))
+            } else {
+                None
+            },
+            get_image_sparse_memory_requirements2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2))
+            } else {
+                None
+            },
+            create_sampler_ycbcr_conversion: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_SAMPLER_YCBCR_CONVERSION))
+            } else {
+                None
+            },
+            destroy_sampler_ycbcr_conversion: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_SAMPLER_YCBCR_CONVERSION))
+            } else {
+                None
+            },
+            get_device_queue2: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_QUEUE2))
+            } else {
+                None
+            },
+            create_validation_cache_ext: if device_enabled.ext_validation_cache {
+                std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_CREATE_VALIDATION_CACHE_EXT))
+            } else {
+                None
+            },
+            destroy_validation_cache_ext: if device_enabled.ext_validation_cache {
+                std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_DESTROY_VALIDATION_CACHE_EXT))
+            } else {
+                None
+            },
+            get_validation_cache_data_ext: if device_enabled.ext_validation_cache {
+                std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_GET_VALIDATION_CACHE_DATA_EXT))
+            } else {
+                None
+            },
+            merge_validation_caches_ext: if device_enabled.ext_validation_cache {
+                std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_MERGE_VALIDATION_CACHES_EXT))
+            } else {
+                None
+            },
+            get_descriptor_set_layout_support: if instance_enabled.vk1_1 {
+                std::mem::transmute(symbol(crate::vk1_1::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT))
+            } else {
+                None
+            },
+            get_shader_info_amd: if device_enabled.amd_shader_info {
+                std::mem::transmute(symbol(crate::extensions::amd_shader_info::FN_GET_SHADER_INFO_AMD))
+            } else {
+                None
+            },
+            set_local_dimming_amd: if device_enabled.amd_display_native_hdr {
+                std::mem::transmute(symbol(crate::extensions::amd_display_native_hdr::FN_SET_LOCAL_DIMMING_AMD))
+            } else {
+                None
+            },
+            get_calibrated_timestamps_ext: if device_enabled.ext_calibrated_timestamps {
+                std::mem::transmute(symbol(crate::extensions::ext_calibrated_timestamps::FN_GET_CALIBRATED_TIMESTAMPS_EXT))
+            } else {
+                None
+            },
+            set_debug_utils_object_name_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_NAME_EXT))
+            } else {
+                None
+            },
+            set_debug_utils_object_tag_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_SET_DEBUG_UTILS_OBJECT_TAG_EXT))
+            } else {
+                None
+            },
+            queue_begin_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_BEGIN_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            queue_end_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_END_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            queue_insert_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_QUEUE_INSERT_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            cmd_begin_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_BEGIN_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            cmd_end_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_END_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            cmd_insert_debug_utils_label_ext: if instance_enabled.ext_debug_utils {
+                std::mem::transmute(symbol(crate::extensions::ext_debug_utils::FN_CMD_INSERT_DEBUG_UTILS_LABEL_EXT))
+            } else {
+                None
+            },
+            get_memory_host_pointer_properties_ext: if device_enabled.ext_external_memory_host {
+                std::mem::transmute(symbol(crate::extensions::ext_external_memory_host::FN_GET_MEMORY_HOST_POINTER_PROPERTIES_EXT))
+            } else {
+                None
+            },
+            cmd_write_buffer_marker_amd: if device_enabled.amd_buffer_marker {
+                std::mem::transmute(symbol(crate::extensions::amd_buffer_marker::FN_CMD_WRITE_BUFFER_MARKER_AMD))
+            } else {
+                None
+            },
+            create_render_pass2: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CREATE_RENDER_PASS2))
+            } else {
+                None
+            },
+            cmd_begin_render_pass2: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_BEGIN_RENDER_PASS2))
+            } else {
+                None
+            },
+            cmd_next_subpass2: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_NEXT_SUBPASS2))
+            } else {
+                None
+            },
+            cmd_end_render_pass2: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_END_RENDER_PASS2))
+            } else {
+                None
+            },
+            get_semaphore_counter_value: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_GET_SEMAPHORE_COUNTER_VALUE))
+            } else {
+                None
+            },
+            wait_semaphores: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_WAIT_SEMAPHORES))
+            } else {
+                None
+            },
+            signal_semaphore: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_SIGNAL_SEMAPHORE))
+            } else {
+                None
+            },
+            get_android_hardware_buffer_properties_android: if device_enabled.android_external_memory_android_hardware_buffer {
                 std::mem::transmute(symbol(
                     crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID,
                 ))
-            }),
-            get_memory_android_hardware_buffer_android: (device_enabled.android_external_memory_android_hardware_buffer).then(|| {
+            } else {
+                None
+            },
+            get_memory_android_hardware_buffer_android: if device_enabled.android_external_memory_android_hardware_buffer {
                 std::mem::transmute(symbol(
                     crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID,
                 ))
-            }),
-            cmd_draw_indirect_count: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDIRECT_COUNT))),
-            cmd_draw_indexed_indirect_count: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT))),
-            cmd_set_checkpoint_nv: (device_enabled.nv_device_diagnostic_checkpoints)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_diagnostic_checkpoints::FN_CMD_SET_CHECKPOINT_NV))),
-            get_queue_checkpoint_data_nv: (device_enabled.nv_device_diagnostic_checkpoints)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_device_diagnostic_checkpoints::FN_GET_QUEUE_CHECKPOINT_DATA_NV))),
-            cmd_bind_transform_feedback_buffers_ext: (device_enabled.ext_transform_feedback)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT))),
-            cmd_begin_transform_feedback_ext: (device_enabled.ext_transform_feedback)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT))),
-            cmd_end_transform_feedback_ext: (device_enabled.ext_transform_feedback).then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_END_TRANSFORM_FEEDBACK_EXT))),
-            cmd_begin_query_indexed_ext: (device_enabled.ext_transform_feedback).then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BEGIN_QUERY_INDEXED_EXT))),
-            cmd_end_query_indexed_ext: (device_enabled.ext_transform_feedback).then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_END_QUERY_INDEXED_EXT))),
-            cmd_draw_indirect_byte_count_ext: (device_enabled.ext_transform_feedback)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT))),
-            cmd_set_exclusive_scissor_nv: (device_enabled.nv_scissor_exclusive).then(|| std::mem::transmute(symbol(crate::extensions::nv_scissor_exclusive::FN_CMD_SET_EXCLUSIVE_SCISSOR_NV))),
-            cmd_bind_shading_rate_image_nv: (device_enabled.nv_shading_rate_image).then(|| std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_BIND_SHADING_RATE_IMAGE_NV))),
-            cmd_set_viewport_shading_rate_palette_nv: (device_enabled.nv_shading_rate_image)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV))),
-            cmd_set_coarse_sample_order_nv: (device_enabled.nv_shading_rate_image).then(|| std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_SET_COARSE_SAMPLE_ORDER_NV))),
-            cmd_draw_mesh_tasks_nv: (device_enabled.nv_mesh_shader).then(|| std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_NV))),
-            cmd_draw_mesh_tasks_indirect_nv: (device_enabled.nv_mesh_shader).then(|| std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV))),
-            cmd_draw_mesh_tasks_indirect_count_nv: (device_enabled.nv_mesh_shader).then(|| std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV))),
-            compile_deferred_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_COMPILE_DEFERRED_NV))),
-            create_acceleration_structure_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CREATE_ACCELERATION_STRUCTURE_NV))),
-            destroy_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_DESTROY_ACCELERATION_STRUCTURE_KHR))),
-            destroy_acceleration_structure_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_DESTROY_ACCELERATION_STRUCTURE_NV))),
-            get_acceleration_structure_memory_requirements_nv: (device_enabled.nv_ray_tracing)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV))),
-            bind_acceleration_structure_memory_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV))),
-            cmd_copy_acceleration_structure_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_COPY_ACCELERATION_STRUCTURE_NV))),
-            cmd_copy_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR))),
-            copy_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_ACCELERATION_STRUCTURE_KHR))),
-            cmd_copy_acceleration_structure_to_memory_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR))),
-            copy_acceleration_structure_to_memory_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR))),
-            cmd_copy_memory_to_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR))),
-            copy_memory_to_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR))),
-            cmd_write_acceleration_structures_properties_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR))),
-            cmd_write_acceleration_structures_properties_nv: (device_enabled.nv_ray_tracing)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV))),
-            cmd_build_acceleration_structure_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV))),
-            write_acceleration_structures_properties_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR))),
-            cmd_trace_rays_khr: (device_enabled.khr_ray_tracing_pipeline).then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_TRACE_RAYS_KHR))),
-            cmd_trace_rays_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_TRACE_RAYS_NV))),
-            get_ray_tracing_shader_group_handles_khr: (device_enabled.khr_ray_tracing_pipeline)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR))),
-            get_ray_tracing_capture_replay_shader_group_handles_khr: (device_enabled.khr_ray_tracing_pipeline)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR))),
-            get_acceleration_structure_handle_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV))),
-            create_ray_tracing_pipelines_nv: (device_enabled.nv_ray_tracing).then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CREATE_RAY_TRACING_PIPELINES_NV))),
-            create_ray_tracing_pipelines_khr: (device_enabled.khr_ray_tracing_pipeline)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CREATE_RAY_TRACING_PIPELINES_KHR))),
-            cmd_trace_rays_indirect_khr: (device_enabled.khr_ray_tracing_pipeline).then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_TRACE_RAYS_INDIRECT_KHR))),
-            get_device_acceleration_structure_compatibility_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR))),
-            get_ray_tracing_shader_group_stack_size_khr: (device_enabled.khr_ray_tracing_pipeline)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR))),
-            cmd_set_ray_tracing_pipeline_stack_size_khr: (device_enabled.khr_ray_tracing_pipeline)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR))),
-            get_image_view_handle_nvx: (device_enabled.nvx_image_view_handle).then(|| std::mem::transmute(symbol(crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_HANDLE_NVX))),
-            get_image_view_address_nvx: (device_enabled.nvx_image_view_handle).then(|| std::mem::transmute(symbol(crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_ADDRESS_NVX))),
-            get_device_group_surface_present_modes2_ext: ((device_enabled.ext_full_screen_exclusive && device_enabled.khr_device_group)
-                || (device_enabled.ext_full_screen_exclusive && instance_enabled.vk1_1))
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT))),
-            acquire_full_screen_exclusive_mode_ext: (device_enabled.ext_full_screen_exclusive)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT))),
-            release_full_screen_exclusive_mode_ext: (device_enabled.ext_full_screen_exclusive)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT))),
-            acquire_profiling_lock_khr: (device_enabled.khr_performance_query).then(|| std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_ACQUIRE_PROFILING_LOCK_KHR))),
-            release_profiling_lock_khr: (device_enabled.khr_performance_query).then(|| std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_RELEASE_PROFILING_LOCK_KHR))),
-            get_image_drm_format_modifier_properties_ext: (device_enabled.ext_image_drm_format_modifier)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_image_drm_format_modifier::FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT))),
-            get_buffer_opaque_capture_address: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS))),
-            get_buffer_device_address: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_DEVICE_ADDRESS))),
-            initialize_performance_api_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_INITIALIZE_PERFORMANCE_API_INTEL))),
-            uninitialize_performance_api_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_UNINITIALIZE_PERFORMANCE_API_INTEL))),
-            cmd_set_performance_marker_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_MARKER_INTEL))),
-            cmd_set_performance_stream_marker_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL))),
-            cmd_set_performance_override_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL))),
-            acquire_performance_configuration_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL))),
-            release_performance_configuration_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL))),
-            queue_set_performance_configuration_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL))),
-            get_performance_parameter_intel: (device_enabled.intel_performance_query)
-                .then(|| std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_GET_PERFORMANCE_PARAMETER_INTEL))),
-            get_device_memory_opaque_capture_address: (instance_enabled.vk1_2).then(|| std::mem::transmute(symbol(crate::vk1_2::FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS))),
-            get_pipeline_executable_properties_khr: (device_enabled.khr_pipeline_executable_properties)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR))),
-            get_pipeline_executable_statistics_khr: (device_enabled.khr_pipeline_executable_properties)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR))),
-            get_pipeline_executable_internal_representations_khr: (device_enabled.khr_pipeline_executable_properties)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR))),
-            cmd_set_line_stipple_ext: (device_enabled.ext_line_rasterization).then(|| std::mem::transmute(symbol(crate::extensions::ext_line_rasterization::FN_CMD_SET_LINE_STIPPLE_EXT))),
-            create_acceleration_structure_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CREATE_ACCELERATION_STRUCTURE_KHR))),
-            cmd_build_acceleration_structures_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR))),
-            cmd_build_acceleration_structures_indirect_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR))),
-            build_acceleration_structures_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_BUILD_ACCELERATION_STRUCTURES_KHR))),
-            get_acceleration_structure_device_address_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR))),
-            create_deferred_operation_khr: (device_enabled.khr_deferred_host_operations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_CREATE_DEFERRED_OPERATION_KHR))),
-            destroy_deferred_operation_khr: (device_enabled.khr_deferred_host_operations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_DESTROY_DEFERRED_OPERATION_KHR))),
-            get_deferred_operation_max_concurrency_khr: (device_enabled.khr_deferred_host_operations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR))),
-            get_deferred_operation_result_khr: (device_enabled.khr_deferred_host_operations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_GET_DEFERRED_OPERATION_RESULT_KHR))),
-            deferred_operation_join_khr: (device_enabled.khr_deferred_host_operations)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_DEFERRED_OPERATION_JOIN_KHR))),
-            cmd_set_cull_mode_ext: (device_enabled.ext_extended_dynamic_state).then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_CULL_MODE_EXT))),
-            cmd_set_front_face_ext: (device_enabled.ext_extended_dynamic_state).then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_FRONT_FACE_EXT))),
-            cmd_set_primitive_topology_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT))),
-            cmd_set_viewport_with_count_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT))),
-            cmd_set_scissor_with_count_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_SCISSOR_WITH_COUNT_EXT))),
-            cmd_bind_vertex_buffers2_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_BIND_VERTEX_BUFFERS2_EXT))),
-            cmd_set_depth_test_enable_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_TEST_ENABLE_EXT))),
-            cmd_set_depth_write_enable_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT))),
-            cmd_set_depth_compare_op_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_COMPARE_OP_EXT))),
-            cmd_set_depth_bounds_test_enable_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT))),
-            cmd_set_stencil_test_enable_ext: (device_enabled.ext_extended_dynamic_state)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_TEST_ENABLE_EXT))),
-            cmd_set_stencil_op_ext: (device_enabled.ext_extended_dynamic_state).then(|| std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_OP_EXT))),
-            create_private_data_slot_ext: (device_enabled.ext_private_data).then(|| std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_CREATE_PRIVATE_DATA_SLOT_EXT))),
-            destroy_private_data_slot_ext: (device_enabled.ext_private_data).then(|| std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_DESTROY_PRIVATE_DATA_SLOT_EXT))),
-            set_private_data_ext: (device_enabled.ext_private_data).then(|| std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_SET_PRIVATE_DATA_EXT))),
-            get_private_data_ext: (device_enabled.ext_private_data).then(|| std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_GET_PRIVATE_DATA_EXT))),
-            cmd_copy_buffer2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER2_KHR))),
-            cmd_copy_image2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE2_KHR))),
-            cmd_blit_image2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_BLIT_IMAGE2_KHR))),
-            cmd_copy_buffer_to_image2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR))),
-            cmd_copy_image_to_buffer2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR))),
-            cmd_resolve_image2_khr: (device_enabled.khr_copy_commands2).then(|| std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_RESOLVE_IMAGE2_KHR))),
-            cmd_set_fragment_shading_rate_khr: (device_enabled.khr_fragment_shading_rate)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_fragment_shading_rate::FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR))),
-            cmd_set_fragment_shading_rate_enum_nv: (device_enabled.nv_fragment_shading_rate_enums)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_fragment_shading_rate_enums::FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV))),
-            get_acceleration_structure_build_sizes_khr: (device_enabled.khr_acceleration_structure)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR))),
-            cmd_set_event2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_SET_EVENT2_KHR))),
-            cmd_reset_event2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_RESET_EVENT2_KHR))),
-            cmd_wait_events2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WAIT_EVENTS2_KHR))),
-            cmd_pipeline_barrier2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_PIPELINE_BARRIER2_KHR))),
-            queue_submit2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_QUEUE_SUBMIT2_KHR))),
-            cmd_write_timestamp2_khr: (device_enabled.khr_synchronization2).then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WRITE_TIMESTAMP2_KHR))),
-            cmd_write_buffer_marker2_amd: (device_enabled.khr_synchronization2 && device_enabled.amd_buffer_marker)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WRITE_BUFFER_MARKER2_AMD))),
-            get_queue_checkpoint_data2_nv: (device_enabled.khr_synchronization2 && device_enabled.nv_device_diagnostic_checkpoints)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_GET_QUEUE_CHECKPOINT_DATA2_NV))),
-            reset_query_pool_ext: (device_enabled.ext_host_query_reset).then(|| std::mem::transmute(symbol(crate::extensions::ext_host_query_reset::FN_RESET_QUERY_POOL_EXT))),
-            trim_command_pool_khr: (device_enabled.khr_maintenance1).then(|| std::mem::transmute(symbol(crate::extensions::khr_maintenance1::FN_TRIM_COMMAND_POOL_KHR))),
-            get_device_group_peer_memory_features_khr: (device_enabled.khr_device_group)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR))),
-            bind_buffer_memory2_khr: (device_enabled.khr_bind_memory2).then(|| std::mem::transmute(symbol(crate::extensions::khr_bind_memory2::FN_BIND_BUFFER_MEMORY2_KHR))),
-            bind_image_memory2_khr: (device_enabled.khr_bind_memory2).then(|| std::mem::transmute(symbol(crate::extensions::khr_bind_memory2::FN_BIND_IMAGE_MEMORY2_KHR))),
-            cmd_set_device_mask_khr: (device_enabled.khr_device_group).then(|| std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_CMD_SET_DEVICE_MASK_KHR))),
-            cmd_dispatch_base_khr: (device_enabled.khr_device_group).then(|| std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_CMD_DISPATCH_BASE_KHR))),
-            create_descriptor_update_template_khr: (device_enabled.khr_descriptor_update_template)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR))),
-            destroy_descriptor_update_template_khr: (device_enabled.khr_descriptor_update_template)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR))),
-            update_descriptor_set_with_template_khr: (device_enabled.khr_descriptor_update_template)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR))),
-            get_buffer_memory_requirements2_khr: (device_enabled.khr_get_memory_requirements2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR))),
-            get_image_memory_requirements2_khr: (device_enabled.khr_get_memory_requirements2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR))),
-            get_image_sparse_memory_requirements2_khr: (device_enabled.khr_get_memory_requirements2)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR))),
-            create_sampler_ycbcr_conversion_khr: (device_enabled.khr_sampler_ycbcr_conversion)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_sampler_ycbcr_conversion::FN_CREATE_SAMPLER_YCBCR_CONVERSION_KHR))),
-            destroy_sampler_ycbcr_conversion_khr: (device_enabled.khr_sampler_ycbcr_conversion)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_sampler_ycbcr_conversion::FN_DESTROY_SAMPLER_YCBCR_CONVERSION_KHR))),
-            get_descriptor_set_layout_support_khr: (device_enabled.khr_maintenance3)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_maintenance3::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR))),
-            create_render_pass2_khr: (device_enabled.khr_create_renderpass2).then(|| std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CREATE_RENDER_PASS2_KHR))),
-            cmd_begin_render_pass2_khr: (device_enabled.khr_create_renderpass2).then(|| std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_BEGIN_RENDER_PASS2_KHR))),
-            cmd_next_subpass2_khr: (device_enabled.khr_create_renderpass2).then(|| std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_NEXT_SUBPASS2_KHR))),
-            cmd_end_render_pass2_khr: (device_enabled.khr_create_renderpass2).then(|| std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_END_RENDER_PASS2_KHR))),
-            get_semaphore_counter_value_khr: (device_enabled.khr_timeline_semaphore)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_GET_SEMAPHORE_COUNTER_VALUE_KHR))),
-            wait_semaphores_khr: (device_enabled.khr_timeline_semaphore).then(|| std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_WAIT_SEMAPHORES_KHR))),
-            signal_semaphore_khr: (device_enabled.khr_timeline_semaphore).then(|| std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_SIGNAL_SEMAPHORE_KHR))),
-            cmd_draw_indirect_count_khr: (device_enabled.khr_draw_indirect_count).then(|| std::mem::transmute(symbol(crate::extensions::khr_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_KHR))),
-            cmd_draw_indirect_count_amd: (device_enabled.amd_draw_indirect_count).then(|| std::mem::transmute(symbol(crate::extensions::amd_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_AMD))),
-            cmd_draw_indexed_indirect_count_khr: (device_enabled.khr_draw_indirect_count)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_draw_indirect_count::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR))),
-            cmd_draw_indexed_indirect_count_amd: (device_enabled.amd_draw_indirect_count)
-                .then(|| std::mem::transmute(symbol(crate::extensions::amd_draw_indirect_count::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD))),
-            get_ray_tracing_shader_group_handles_nv: (device_enabled.nv_ray_tracing)
-                .then(|| std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV))),
-            get_buffer_opaque_capture_address_khr: (device_enabled.khr_buffer_device_address)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR))),
-            get_buffer_device_address_khr: (device_enabled.khr_buffer_device_address)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_BUFFER_DEVICE_ADDRESS_KHR))),
-            get_buffer_device_address_ext: (device_enabled.ext_buffer_device_address)
-                .then(|| std::mem::transmute(symbol(crate::extensions::ext_buffer_device_address::FN_GET_BUFFER_DEVICE_ADDRESS_EXT))),
-            get_device_memory_opaque_capture_address_khr: (device_enabled.khr_buffer_device_address)
-                .then(|| std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR))),
+            } else {
+                None
+            },
+            cmd_draw_indirect_count: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDIRECT_COUNT))
+            } else {
+                None
+            },
+            cmd_draw_indexed_indirect_count: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT))
+            } else {
+                None
+            },
+            cmd_set_checkpoint_nv: if device_enabled.nv_device_diagnostic_checkpoints {
+                std::mem::transmute(symbol(crate::extensions::nv_device_diagnostic_checkpoints::FN_CMD_SET_CHECKPOINT_NV))
+            } else {
+                None
+            },
+            get_queue_checkpoint_data_nv: if device_enabled.nv_device_diagnostic_checkpoints {
+                std::mem::transmute(symbol(crate::extensions::nv_device_diagnostic_checkpoints::FN_GET_QUEUE_CHECKPOINT_DATA_NV))
+            } else {
+                None
+            },
+            cmd_bind_transform_feedback_buffers_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BIND_TRANSFORM_FEEDBACK_BUFFERS_EXT))
+            } else {
+                None
+            },
+            cmd_begin_transform_feedback_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BEGIN_TRANSFORM_FEEDBACK_EXT))
+            } else {
+                None
+            },
+            cmd_end_transform_feedback_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_END_TRANSFORM_FEEDBACK_EXT))
+            } else {
+                None
+            },
+            cmd_begin_query_indexed_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_BEGIN_QUERY_INDEXED_EXT))
+            } else {
+                None
+            },
+            cmd_end_query_indexed_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_END_QUERY_INDEXED_EXT))
+            } else {
+                None
+            },
+            cmd_draw_indirect_byte_count_ext: if device_enabled.ext_transform_feedback {
+                std::mem::transmute(symbol(crate::extensions::ext_transform_feedback::FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT))
+            } else {
+                None
+            },
+            cmd_set_exclusive_scissor_nv: if device_enabled.nv_scissor_exclusive {
+                std::mem::transmute(symbol(crate::extensions::nv_scissor_exclusive::FN_CMD_SET_EXCLUSIVE_SCISSOR_NV))
+            } else {
+                None
+            },
+            cmd_bind_shading_rate_image_nv: if device_enabled.nv_shading_rate_image {
+                std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_BIND_SHADING_RATE_IMAGE_NV))
+            } else {
+                None
+            },
+            cmd_set_viewport_shading_rate_palette_nv: if device_enabled.nv_shading_rate_image {
+                std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV))
+            } else {
+                None
+            },
+            cmd_set_coarse_sample_order_nv: if device_enabled.nv_shading_rate_image {
+                std::mem::transmute(symbol(crate::extensions::nv_shading_rate_image::FN_CMD_SET_COARSE_SAMPLE_ORDER_NV))
+            } else {
+                None
+            },
+            cmd_draw_mesh_tasks_nv: if device_enabled.nv_mesh_shader {
+                std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_NV))
+            } else {
+                None
+            },
+            cmd_draw_mesh_tasks_indirect_nv: if device_enabled.nv_mesh_shader {
+                std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV))
+            } else {
+                None
+            },
+            cmd_draw_mesh_tasks_indirect_count_nv: if device_enabled.nv_mesh_shader {
+                std::mem::transmute(symbol(crate::extensions::nv_mesh_shader::FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV))
+            } else {
+                None
+            },
+            compile_deferred_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_COMPILE_DEFERRED_NV))
+            } else {
+                None
+            },
+            create_acceleration_structure_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CREATE_ACCELERATION_STRUCTURE_NV))
+            } else {
+                None
+            },
+            destroy_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_DESTROY_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            destroy_acceleration_structure_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_DESTROY_ACCELERATION_STRUCTURE_NV))
+            } else {
+                None
+            },
+            get_acceleration_structure_memory_requirements_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_NV))
+            } else {
+                None
+            },
+            bind_acceleration_structure_memory_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_BIND_ACCELERATION_STRUCTURE_MEMORY_NV))
+            } else {
+                None
+            },
+            cmd_copy_acceleration_structure_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_COPY_ACCELERATION_STRUCTURE_NV))
+            } else {
+                None
+            },
+            cmd_copy_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            copy_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            cmd_copy_acceleration_structure_to_memory_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR))
+            } else {
+                None
+            },
+            copy_acceleration_structure_to_memory_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_ACCELERATION_STRUCTURE_TO_MEMORY_KHR))
+            } else {
+                None
+            },
+            cmd_copy_memory_to_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            copy_memory_to_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_COPY_MEMORY_TO_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            cmd_write_acceleration_structures_properties_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            cmd_write_acceleration_structures_properties_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_NV))
+            } else {
+                None
+            },
+            cmd_build_acceleration_structure_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_BUILD_ACCELERATION_STRUCTURE_NV))
+            } else {
+                None
+            },
+            write_acceleration_structures_properties_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_WRITE_ACCELERATION_STRUCTURES_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            cmd_trace_rays_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_TRACE_RAYS_KHR))
+            } else {
+                None
+            },
+            cmd_trace_rays_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CMD_TRACE_RAYS_NV))
+            } else {
+                None
+            },
+            get_ray_tracing_shader_group_handles_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_KHR))
+            } else {
+                None
+            },
+            get_ray_tracing_capture_replay_shader_group_handles_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_CAPTURE_REPLAY_SHADER_GROUP_HANDLES_KHR))
+            } else {
+                None
+            },
+            get_acceleration_structure_handle_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_ACCELERATION_STRUCTURE_HANDLE_NV))
+            } else {
+                None
+            },
+            create_ray_tracing_pipelines_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_CREATE_RAY_TRACING_PIPELINES_NV))
+            } else {
+                None
+            },
+            create_ray_tracing_pipelines_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CREATE_RAY_TRACING_PIPELINES_KHR))
+            } else {
+                None
+            },
+            cmd_trace_rays_indirect_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_TRACE_RAYS_INDIRECT_KHR))
+            } else {
+                None
+            },
+            get_device_acceleration_structure_compatibility_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_DEVICE_ACCELERATION_STRUCTURE_COMPATIBILITY_KHR))
+            } else {
+                None
+            },
+            get_ray_tracing_shader_group_stack_size_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR))
+            } else {
+                None
+            },
+            cmd_set_ray_tracing_pipeline_stack_size_khr: if device_enabled.khr_ray_tracing_pipeline {
+                std::mem::transmute(symbol(crate::extensions::khr_ray_tracing_pipeline::FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR))
+            } else {
+                None
+            },
+            get_image_view_handle_nvx: if device_enabled.nvx_image_view_handle {
+                std::mem::transmute(symbol(crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_HANDLE_NVX))
+            } else {
+                None
+            },
+            get_image_view_address_nvx: if device_enabled.nvx_image_view_handle {
+                std::mem::transmute(symbol(crate::extensions::nvx_image_view_handle::FN_GET_IMAGE_VIEW_ADDRESS_NVX))
+            } else {
+                None
+            },
+            get_device_group_surface_present_modes2_ext: if (device_enabled.ext_full_screen_exclusive && device_enabled.khr_device_group)
+                || (device_enabled.ext_full_screen_exclusive && instance_enabled.vk1_1)
+            {
+                std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT))
+            } else {
+                None
+            },
+            acquire_full_screen_exclusive_mode_ext: if device_enabled.ext_full_screen_exclusive {
+                std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_ACQUIRE_FULL_SCREEN_EXCLUSIVE_MODE_EXT))
+            } else {
+                None
+            },
+            release_full_screen_exclusive_mode_ext: if device_enabled.ext_full_screen_exclusive {
+                std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_RELEASE_FULL_SCREEN_EXCLUSIVE_MODE_EXT))
+            } else {
+                None
+            },
+            acquire_profiling_lock_khr: if device_enabled.khr_performance_query {
+                std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_ACQUIRE_PROFILING_LOCK_KHR))
+            } else {
+                None
+            },
+            release_profiling_lock_khr: if device_enabled.khr_performance_query {
+                std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_RELEASE_PROFILING_LOCK_KHR))
+            } else {
+                None
+            },
+            get_image_drm_format_modifier_properties_ext: if device_enabled.ext_image_drm_format_modifier {
+                std::mem::transmute(symbol(crate::extensions::ext_image_drm_format_modifier::FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT))
+            } else {
+                None
+            },
+            get_buffer_opaque_capture_address: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS))
+            } else {
+                None
+            },
+            get_buffer_device_address: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_DEVICE_ADDRESS))
+            } else {
+                None
+            },
+            initialize_performance_api_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_INITIALIZE_PERFORMANCE_API_INTEL))
+            } else {
+                None
+            },
+            uninitialize_performance_api_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_UNINITIALIZE_PERFORMANCE_API_INTEL))
+            } else {
+                None
+            },
+            cmd_set_performance_marker_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_MARKER_INTEL))
+            } else {
+                None
+            },
+            cmd_set_performance_stream_marker_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_STREAM_MARKER_INTEL))
+            } else {
+                None
+            },
+            cmd_set_performance_override_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_CMD_SET_PERFORMANCE_OVERRIDE_INTEL))
+            } else {
+                None
+            },
+            acquire_performance_configuration_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_ACQUIRE_PERFORMANCE_CONFIGURATION_INTEL))
+            } else {
+                None
+            },
+            release_performance_configuration_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_RELEASE_PERFORMANCE_CONFIGURATION_INTEL))
+            } else {
+                None
+            },
+            queue_set_performance_configuration_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_QUEUE_SET_PERFORMANCE_CONFIGURATION_INTEL))
+            } else {
+                None
+            },
+            get_performance_parameter_intel: if device_enabled.intel_performance_query {
+                std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_GET_PERFORMANCE_PARAMETER_INTEL))
+            } else {
+                None
+            },
+            get_device_memory_opaque_capture_address: if instance_enabled.vk1_2 {
+                std::mem::transmute(symbol(crate::vk1_2::FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS))
+            } else {
+                None
+            },
+            get_pipeline_executable_properties_khr: if device_enabled.khr_pipeline_executable_properties {
+                std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR))
+            } else {
+                None
+            },
+            get_pipeline_executable_statistics_khr: if device_enabled.khr_pipeline_executable_properties {
+                std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR))
+            } else {
+                None
+            },
+            get_pipeline_executable_internal_representations_khr: if device_enabled.khr_pipeline_executable_properties {
+                std::mem::transmute(symbol(crate::extensions::khr_pipeline_executable_properties::FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR))
+            } else {
+                None
+            },
+            cmd_set_line_stipple_ext: if device_enabled.ext_line_rasterization {
+                std::mem::transmute(symbol(crate::extensions::ext_line_rasterization::FN_CMD_SET_LINE_STIPPLE_EXT))
+            } else {
+                None
+            },
+            create_acceleration_structure_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CREATE_ACCELERATION_STRUCTURE_KHR))
+            } else {
+                None
+            },
+            cmd_build_acceleration_structures_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_BUILD_ACCELERATION_STRUCTURES_KHR))
+            } else {
+                None
+            },
+            cmd_build_acceleration_structures_indirect_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_CMD_BUILD_ACCELERATION_STRUCTURES_INDIRECT_KHR))
+            } else {
+                None
+            },
+            build_acceleration_structures_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_BUILD_ACCELERATION_STRUCTURES_KHR))
+            } else {
+                None
+            },
+            get_acceleration_structure_device_address_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR))
+            } else {
+                None
+            },
+            create_deferred_operation_khr: if device_enabled.khr_deferred_host_operations {
+                std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_CREATE_DEFERRED_OPERATION_KHR))
+            } else {
+                None
+            },
+            destroy_deferred_operation_khr: if device_enabled.khr_deferred_host_operations {
+                std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_DESTROY_DEFERRED_OPERATION_KHR))
+            } else {
+                None
+            },
+            get_deferred_operation_max_concurrency_khr: if device_enabled.khr_deferred_host_operations {
+                std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR))
+            } else {
+                None
+            },
+            get_deferred_operation_result_khr: if device_enabled.khr_deferred_host_operations {
+                std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_GET_DEFERRED_OPERATION_RESULT_KHR))
+            } else {
+                None
+            },
+            deferred_operation_join_khr: if device_enabled.khr_deferred_host_operations {
+                std::mem::transmute(symbol(crate::extensions::khr_deferred_host_operations::FN_DEFERRED_OPERATION_JOIN_KHR))
+            } else {
+                None
+            },
+            cmd_set_cull_mode_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_CULL_MODE_EXT))
+            } else {
+                None
+            },
+            cmd_set_front_face_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_FRONT_FACE_EXT))
+            } else {
+                None
+            },
+            cmd_set_primitive_topology_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT))
+            } else {
+                None
+            },
+            cmd_set_viewport_with_count_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT))
+            } else {
+                None
+            },
+            cmd_set_scissor_with_count_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_SCISSOR_WITH_COUNT_EXT))
+            } else {
+                None
+            },
+            cmd_bind_vertex_buffers2_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_BIND_VERTEX_BUFFERS2_EXT))
+            } else {
+                None
+            },
+            cmd_set_depth_test_enable_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_TEST_ENABLE_EXT))
+            } else {
+                None
+            },
+            cmd_set_depth_write_enable_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT))
+            } else {
+                None
+            },
+            cmd_set_depth_compare_op_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_COMPARE_OP_EXT))
+            } else {
+                None
+            },
+            cmd_set_depth_bounds_test_enable_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT))
+            } else {
+                None
+            },
+            cmd_set_stencil_test_enable_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_TEST_ENABLE_EXT))
+            } else {
+                None
+            },
+            cmd_set_stencil_op_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(symbol(crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_OP_EXT))
+            } else {
+                None
+            },
+            create_private_data_slot_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_CREATE_PRIVATE_DATA_SLOT_EXT))
+            } else {
+                None
+            },
+            destroy_private_data_slot_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_DESTROY_PRIVATE_DATA_SLOT_EXT))
+            } else {
+                None
+            },
+            set_private_data_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_SET_PRIVATE_DATA_EXT))
+            } else {
+                None
+            },
+            get_private_data_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(symbol(crate::extensions::ext_private_data::FN_GET_PRIVATE_DATA_EXT))
+            } else {
+                None
+            },
+            cmd_copy_buffer2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER2_KHR))
+            } else {
+                None
+            },
+            cmd_copy_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE2_KHR))
+            } else {
+                None
+            },
+            cmd_blit_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_BLIT_IMAGE2_KHR))
+            } else {
+                None
+            },
+            cmd_copy_buffer_to_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR))
+            } else {
+                None
+            },
+            cmd_copy_image_to_buffer2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR))
+            } else {
+                None
+            },
+            cmd_resolve_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(symbol(crate::extensions::khr_copy_commands2::FN_CMD_RESOLVE_IMAGE2_KHR))
+            } else {
+                None
+            },
+            cmd_set_fragment_shading_rate_khr: if device_enabled.khr_fragment_shading_rate {
+                std::mem::transmute(symbol(crate::extensions::khr_fragment_shading_rate::FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR))
+            } else {
+                None
+            },
+            cmd_set_fragment_shading_rate_enum_nv: if device_enabled.nv_fragment_shading_rate_enums {
+                std::mem::transmute(symbol(crate::extensions::nv_fragment_shading_rate_enums::FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV))
+            } else {
+                None
+            },
+            get_acceleration_structure_build_sizes_khr: if device_enabled.khr_acceleration_structure {
+                std::mem::transmute(symbol(crate::extensions::khr_acceleration_structure::FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR))
+            } else {
+                None
+            },
+            cmd_set_event2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_SET_EVENT2_KHR))
+            } else {
+                None
+            },
+            cmd_reset_event2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_RESET_EVENT2_KHR))
+            } else {
+                None
+            },
+            cmd_wait_events2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WAIT_EVENTS2_KHR))
+            } else {
+                None
+            },
+            cmd_pipeline_barrier2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_PIPELINE_BARRIER2_KHR))
+            } else {
+                None
+            },
+            queue_submit2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_QUEUE_SUBMIT2_KHR))
+            } else {
+                None
+            },
+            cmd_write_timestamp2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WRITE_TIMESTAMP2_KHR))
+            } else {
+                None
+            },
+            cmd_write_buffer_marker2_amd: if (device_enabled.khr_synchronization2 && device_enabled.amd_buffer_marker) {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_CMD_WRITE_BUFFER_MARKER2_AMD))
+            } else {
+                None
+            },
+            get_queue_checkpoint_data2_nv: if (device_enabled.khr_synchronization2 && device_enabled.nv_device_diagnostic_checkpoints) {
+                std::mem::transmute(symbol(crate::extensions::khr_synchronization2::FN_GET_QUEUE_CHECKPOINT_DATA2_NV))
+            } else {
+                None
+            },
+            reset_query_pool_ext: if device_enabled.ext_host_query_reset {
+                std::mem::transmute(symbol(crate::extensions::ext_host_query_reset::FN_RESET_QUERY_POOL_EXT))
+            } else {
+                None
+            },
+            trim_command_pool_khr: if device_enabled.khr_maintenance1 {
+                std::mem::transmute(symbol(crate::extensions::khr_maintenance1::FN_TRIM_COMMAND_POOL_KHR))
+            } else {
+                None
+            },
+            get_device_group_peer_memory_features_khr: if device_enabled.khr_device_group {
+                std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_GET_DEVICE_GROUP_PEER_MEMORY_FEATURES_KHR))
+            } else {
+                None
+            },
+            bind_buffer_memory2_khr: if device_enabled.khr_bind_memory2 {
+                std::mem::transmute(symbol(crate::extensions::khr_bind_memory2::FN_BIND_BUFFER_MEMORY2_KHR))
+            } else {
+                None
+            },
+            bind_image_memory2_khr: if device_enabled.khr_bind_memory2 {
+                std::mem::transmute(symbol(crate::extensions::khr_bind_memory2::FN_BIND_IMAGE_MEMORY2_KHR))
+            } else {
+                None
+            },
+            cmd_set_device_mask_khr: if device_enabled.khr_device_group {
+                std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_CMD_SET_DEVICE_MASK_KHR))
+            } else {
+                None
+            },
+            cmd_dispatch_base_khr: if device_enabled.khr_device_group {
+                std::mem::transmute(symbol(crate::extensions::khr_device_group::FN_CMD_DISPATCH_BASE_KHR))
+            } else {
+                None
+            },
+            create_descriptor_update_template_khr: if device_enabled.khr_descriptor_update_template {
+                std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE_KHR))
+            } else {
+                None
+            },
+            destroy_descriptor_update_template_khr: if device_enabled.khr_descriptor_update_template {
+                std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR))
+            } else {
+                None
+            },
+            update_descriptor_set_with_template_khr: if device_enabled.khr_descriptor_update_template {
+                std::mem::transmute(symbol(crate::extensions::khr_descriptor_update_template::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR))
+            } else {
+                None
+            },
+            get_buffer_memory_requirements2_khr: if device_enabled.khr_get_memory_requirements2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_BUFFER_MEMORY_REQUIREMENTS2_KHR))
+            } else {
+                None
+            },
+            get_image_memory_requirements2_khr: if device_enabled.khr_get_memory_requirements2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_IMAGE_MEMORY_REQUIREMENTS2_KHR))
+            } else {
+                None
+            },
+            get_image_sparse_memory_requirements2_khr: if device_enabled.khr_get_memory_requirements2 {
+                std::mem::transmute(symbol(crate::extensions::khr_get_memory_requirements2::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR))
+            } else {
+                None
+            },
+            create_sampler_ycbcr_conversion_khr: if device_enabled.khr_sampler_ycbcr_conversion {
+                std::mem::transmute(symbol(crate::extensions::khr_sampler_ycbcr_conversion::FN_CREATE_SAMPLER_YCBCR_CONVERSION_KHR))
+            } else {
+                None
+            },
+            destroy_sampler_ycbcr_conversion_khr: if device_enabled.khr_sampler_ycbcr_conversion {
+                std::mem::transmute(symbol(crate::extensions::khr_sampler_ycbcr_conversion::FN_DESTROY_SAMPLER_YCBCR_CONVERSION_KHR))
+            } else {
+                None
+            },
+            get_descriptor_set_layout_support_khr: if device_enabled.khr_maintenance3 {
+                std::mem::transmute(symbol(crate::extensions::khr_maintenance3::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR))
+            } else {
+                None
+            },
+            create_render_pass2_khr: if device_enabled.khr_create_renderpass2 {
+                std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CREATE_RENDER_PASS2_KHR))
+            } else {
+                None
+            },
+            cmd_begin_render_pass2_khr: if device_enabled.khr_create_renderpass2 {
+                std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_BEGIN_RENDER_PASS2_KHR))
+            } else {
+                None
+            },
+            cmd_next_subpass2_khr: if device_enabled.khr_create_renderpass2 {
+                std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_NEXT_SUBPASS2_KHR))
+            } else {
+                None
+            },
+            cmd_end_render_pass2_khr: if device_enabled.khr_create_renderpass2 {
+                std::mem::transmute(symbol(crate::extensions::khr_create_renderpass2::FN_CMD_END_RENDER_PASS2_KHR))
+            } else {
+                None
+            },
+            get_semaphore_counter_value_khr: if device_enabled.khr_timeline_semaphore {
+                std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_GET_SEMAPHORE_COUNTER_VALUE_KHR))
+            } else {
+                None
+            },
+            wait_semaphores_khr: if device_enabled.khr_timeline_semaphore {
+                std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_WAIT_SEMAPHORES_KHR))
+            } else {
+                None
+            },
+            signal_semaphore_khr: if device_enabled.khr_timeline_semaphore {
+                std::mem::transmute(symbol(crate::extensions::khr_timeline_semaphore::FN_SIGNAL_SEMAPHORE_KHR))
+            } else {
+                None
+            },
+            cmd_draw_indirect_count_khr: if device_enabled.khr_draw_indirect_count {
+                std::mem::transmute(symbol(crate::extensions::khr_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_KHR))
+            } else {
+                None
+            },
+            cmd_draw_indirect_count_amd: if device_enabled.amd_draw_indirect_count {
+                std::mem::transmute(symbol(crate::extensions::amd_draw_indirect_count::FN_CMD_DRAW_INDIRECT_COUNT_AMD))
+            } else {
+                None
+            },
+            cmd_draw_indexed_indirect_count_khr: if device_enabled.khr_draw_indirect_count {
+                std::mem::transmute(symbol(crate::extensions::khr_draw_indirect_count::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR))
+            } else {
+                None
+            },
+            cmd_draw_indexed_indirect_count_amd: if device_enabled.amd_draw_indirect_count {
+                std::mem::transmute(symbol(crate::extensions::amd_draw_indirect_count::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD))
+            } else {
+                None
+            },
+            get_ray_tracing_shader_group_handles_nv: if device_enabled.nv_ray_tracing {
+                std::mem::transmute(symbol(crate::extensions::nv_ray_tracing::FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV))
+            } else {
+                None
+            },
+            get_buffer_opaque_capture_address_khr: if device_enabled.khr_buffer_device_address {
+                std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS_KHR))
+            } else {
+                None
+            },
+            get_buffer_device_address_khr: if device_enabled.khr_buffer_device_address {
+                std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_BUFFER_DEVICE_ADDRESS_KHR))
+            } else {
+                None
+            },
+            get_buffer_device_address_ext: if device_enabled.ext_buffer_device_address {
+                std::mem::transmute(symbol(crate::extensions::ext_buffer_device_address::FN_GET_BUFFER_DEVICE_ADDRESS_EXT))
+            } else {
+                None
+            },
+            get_device_memory_opaque_capture_address_khr: if device_enabled.khr_buffer_device_address {
+                std::mem::transmute(symbol(crate::extensions::khr_buffer_device_address::FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR))
+            } else {
+                None
+            },
             enabled: device_enabled,
         })
     }

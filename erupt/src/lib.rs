@@ -65,7 +65,7 @@ A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc)
 or [`vk-alloc`](https://github.com/hasenbanck/vk-alloc).
 
 ## Minimum Supported Rust Version (MSRV)
-Rust 1.50 or higher.
+Rust 1.48 or higher.
 
 ## Thank you
 - [`ash`](https://crates.io/crates/ash) for helping inspiring and making this crate

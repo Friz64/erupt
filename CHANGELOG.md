@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optional bytemuck support for some hand-picked structs (`*IndirectCommand`, etc.)
 
 ### Changed
-- Update Vulkan Headers to version 173
+- Update Vulkan Headers to version 174
 - Make use of `bool::then` (MSRV: 1.50)
 
 ### Fixed

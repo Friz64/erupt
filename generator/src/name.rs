@@ -240,7 +240,7 @@ impl EnumVariantName {
             .trim_start_matches('_')
             .to_uppercase();
 
-        if variant.starts_with("MAX_ENUM") || variant.starts_with("FLAGS_MAX_ENUM") {
+        if variant.contains("MAX_ENUM") || variant.contains("FLAGS_MAX_ENUM") {
             return Err(NotApplicable);
         }
 

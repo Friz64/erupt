@@ -16,7 +16,7 @@ use std::{
 static FEATURE_NAME_REGEX: Lazy<Regex> =
     Lazy::new(|| Regex::new("VK_VERSION_([1-9]+)_([0-9]+)").unwrap());
 
-const BLACKLIST: &[&str] = &[
+const TYPES_SKIPPED: &[&str] = &[
     "vk_platform",
     "VK_DEFINE_HANDLE",
     "VK_DEFINE_NON_DISPATCHABLE_HANDLE",
@@ -32,6 +32,7 @@ const BLACKLIST: &[&str] = &[
     "VK_API_VERSION_1_1",
     "VK_API_VERSION_1_2",
     "VK_PIPELINE_CREATE_DISPATCH_BASE",
+    "VK_USE_64_BIT_PTR_DEFINES",
 ];
 
 #[derive(Clone, PartialEq, Hash, Eq)]
@@ -157,7 +158,7 @@ impl Source {
                 for item in node_child.children().filter(|n| n.is_element()) {
                     let name = item.attribute("name");
                     if let Some(name) = name {
-                        if BLACKLIST.contains(&name) {
+                        if TYPES_SKIPPED.contains(&name) {
                             continue;
                         }
                     }

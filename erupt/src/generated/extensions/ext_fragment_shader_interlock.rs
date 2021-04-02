@@ -94,3 +94,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShaderInterlockFeaturesEXT
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentShaderInterlockFeaturesEXT> for PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'_> {}

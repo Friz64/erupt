@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalMemoryImageCreateInfoNV> for ExternalMemoryImageCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Structure"]
 #[doc(alias = "VkExportMemoryAllocateInfoNV")]
 #[derive(Copy, Clone)]
@@ -152,3 +153,4 @@ impl<'a> std::ops::DerefMut for ExportMemoryAllocateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportMemoryAllocateInfoNV> for ExportMemoryAllocateInfoNVBuilder<'_> {}

@@ -87,6 +87,7 @@ impl<'a> std::ops::DerefMut for ViewportWScalingNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ViewportWScalingNV> for ViewportWScalingNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineViewportWScalingStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -141,7 +142,7 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn viewport_w_scalings(mut self, viewport_w_scalings: &'a [crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder]) -> Self {
+    pub fn viewport_w_scalings(mut self, viewport_w_scalings: &'a [impl crate::Repr<crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV>]) -> Self {
         self.0.p_viewport_w_scalings = viewport_w_scalings.as_ptr() as _;
         self.0.viewport_count = viewport_w_scalings.len() as _;
         self
@@ -173,6 +174,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportWScalingStateCreateInfoNVBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineViewportWScalingStateCreateInfoNV> for PipelineViewportWScalingStateCreateInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -182,7 +184,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         first_viewport: u32,
-        viewport_w_scalings: &[crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder],
+        viewport_w_scalings: &[impl crate::Repr<crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV>],
     ) -> () {
         let _function = self.cmd_set_viewport_w_scaling_nv.expect("`cmd_set_viewport_w_scaling_nv` is not loaded");
         let viewport_count = viewport_w_scalings.len();

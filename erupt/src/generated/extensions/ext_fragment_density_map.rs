@@ -94,6 +94,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMapFeaturesEXTBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentDensityMapFeaturesEXT> for PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -184,6 +185,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMapPropertiesEXTBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentDensityMapPropertiesEXT> for PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkRenderPassFragmentDensityMapCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -258,3 +260,4 @@ impl<'a> std::ops::DerefMut for RenderPassFragmentDensityMapCreateInfoEXTBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_> {}

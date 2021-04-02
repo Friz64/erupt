@@ -99,3 +99,4 @@ impl<'a> std::ops::DerefMut for DeviceMemoryOverallocationCreateInfoAMDBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceMemoryOverallocationCreateInfoAMD> for DeviceMemoryOverallocationCreateInfoAMDBuilder<'_> {}

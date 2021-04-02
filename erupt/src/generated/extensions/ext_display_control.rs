@@ -173,6 +173,7 @@ impl<'a> std::ops::DerefMut for DisplayPowerInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayPowerInfoEXT> for DisplayPowerInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceEventInfoEXT.html) · Structure"]
 #[doc(alias = "VkDeviceEventInfoEXT")]
 #[derive(Copy, Clone)]
@@ -247,6 +248,7 @@ impl<'a> std::ops::DerefMut for DeviceEventInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceEventInfoEXT> for DeviceEventInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventInfoEXT.html) · Structure"]
 #[doc(alias = "VkDisplayEventInfoEXT")]
 #[derive(Copy, Clone)]
@@ -321,6 +323,7 @@ impl<'a> std::ops::DerefMut for DisplayEventInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayEventInfoEXT> for DisplayEventInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCounterCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkSwapchainCounterCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -395,6 +398,7 @@ impl<'a> std::ops::DerefMut for SwapchainCounterCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SwapchainCounterCreateInfoEXT> for SwapchainCounterCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_display_control`]"]
 impl crate::DeviceLoader {
     #[inline]

@@ -155,6 +155,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCooperativeMatrixFeaturesNV> for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -229,6 +230,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixPropertiesNVBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCooperativeMatrixPropertiesNV> for PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCooperativeMatrixPropertiesNV.html) · Structure"]
 #[doc(alias = "VkCooperativeMatrixPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -359,6 +361,7 @@ impl<'a> std::ops::DerefMut for CooperativeMatrixPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CooperativeMatrixPropertiesNV> for CooperativeMatrixPropertiesNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_cooperative_matrix`]"]
 impl crate::InstanceLoader {
     #[inline]

@@ -405,9 +405,20 @@ impl Debug for DeviceLoader {
     }
 }
 
-/// Provides type-safe pointer chain support
+/// Any type implementing this trait may be safely transmuted/pointer-casted into `T`.
+///
+/// This is used to allow either builder or non-builder variants of Vulkan structs
+/// to be passed into APIs.
+///
+/// Please note that is *strongly* encouraged to pass the builder variants
+/// because they hold lifetime information. This helps prevent dangling pointer bugs.
+pub unsafe trait Repr<T> {}
+
+unsafe impl<T> Repr<T> for T {}
+
+/// Provides type-safe pointer chain support.
 pub trait ExtendableFrom<'a, T> {
-    /// Appends `other`'s pointer chain to the end of this pointer chain
+    /// Appends `other`'s pointer chain to the end of this pointer chain.
     #[must_use]
     fn extend_from(mut self, other: &'a mut T) -> Self
     where

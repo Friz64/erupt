@@ -115,6 +115,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceBufferDeviceAddressFeaturesEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceBufferDeviceAddressFeaturesEXT> for PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkBufferDeviceAddressCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -189,6 +190,7 @@ impl<'a> std::ops::DerefMut for BufferDeviceAddressCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BufferDeviceAddressCreateInfoEXT> for BufferDeviceAddressCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl crate::DeviceLoader {
     #[inline]

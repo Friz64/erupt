@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentDensityMap2FeaturesEXT> for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMap2PropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -176,3 +177,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMap2PropertiesEXTBu
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentDensityMap2PropertiesEXT> for PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'_> {}

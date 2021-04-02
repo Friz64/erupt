@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationImageCreateInfoNVBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DedicatedAllocationImageCreateInfoNV> for DedicatedAllocationImageCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkDedicatedAllocationBufferCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -152,6 +153,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationBufferCreateInfoNVBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DedicatedAllocationBufferCreateInfoNV> for DedicatedAllocationBufferCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Structure"]
 #[doc(alias = "VkDedicatedAllocationMemoryAllocateInfoNV")]
 #[derive(Copy, Clone)]
@@ -234,3 +236,4 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationMemoryAllocateInfoNVBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DedicatedAllocationMemoryAllocateInfoNV> for DedicatedAllocationMemoryAllocateInfoNVBuilder<'_> {}

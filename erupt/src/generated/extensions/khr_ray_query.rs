@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceRayQueryFeaturesKHR> for PhysicalDeviceRayQueryFeaturesKHRBuilder<'_> {}

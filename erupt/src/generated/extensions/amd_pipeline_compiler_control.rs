@@ -98,3 +98,4 @@ impl<'a> std::ops::DerefMut for PipelineCompilerControlCreateInfoAMDBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineCompilerControlCreateInfoAMD> for PipelineCompilerControlCreateInfoAMDBuilder<'_> {}

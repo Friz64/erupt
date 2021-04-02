@@ -82,3 +82,4 @@ impl<'a> std::ops::DerefMut for PipelineLibraryCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineLibraryCreateInfoKHR> for PipelineLibraryCreateInfoKHRBuilder<'_> {}

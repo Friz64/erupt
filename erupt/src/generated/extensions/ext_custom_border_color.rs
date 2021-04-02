@@ -86,6 +86,7 @@ impl<'a> std::ops::DerefMut for SamplerCustomBorderColorCreateInfoEXTBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SamplerCustomBorderColorCreateInfoEXT> for SamplerCustomBorderColorCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCustomBorderColorPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -160,6 +161,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCustomBorderColorPropertiesEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCustomBorderColorPropertiesEXT> for PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCustomBorderColorFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCustomBorderColorFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -242,3 +244,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCustomBorderColorFeaturesEXTBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCustomBorderColorFeaturesEXT> for PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_> {}

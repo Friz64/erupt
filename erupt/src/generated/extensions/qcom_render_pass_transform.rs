@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for RenderPassTransformBeginInfoQCOMBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RenderPassTransformBeginInfoQCOM> for RenderPassTransformBeginInfoQCOMBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Structure"]
 #[doc(alias = "VkCommandBufferInheritanceRenderPassTransformInfoQCOM")]
 #[derive(Copy, Clone)]
@@ -160,3 +161,4 @@ impl<'a> std::ops::DerefMut for CommandBufferInheritanceRenderPassTransformInfoQ
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CommandBufferInheritanceRenderPassTransformInfoQCOM> for CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_> {}

@@ -50,7 +50,7 @@ impl<'a> PresentRegionsKHRBuilder<'a> {
         PresentRegionsKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [crate::extensions::khr_incremental_present::PresentRegionKHRBuilder]) -> Self {
+    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_incremental_present::PresentRegionKHR>]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.swapchain_count = regions.len() as _;
         self
@@ -82,6 +82,7 @@ impl<'a> std::ops::DerefMut for PresentRegionsKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PresentRegionsKHR> for PresentRegionsKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionKHR.html) · Structure"]
 #[doc(alias = "VkPresentRegionKHR")]
 #[derive(Copy, Clone)]
@@ -122,7 +123,7 @@ impl<'a> PresentRegionKHRBuilder<'a> {
         PresentRegionKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn rectangles(mut self, rectangles: &'a [crate::extensions::khr_incremental_present::RectLayerKHRBuilder]) -> Self {
+    pub fn rectangles(mut self, rectangles: &'a [impl crate::Repr<crate::extensions::khr_incremental_present::RectLayerKHR>]) -> Self {
         self.0.p_rectangles = rectangles.as_ptr() as _;
         self.0.rectangle_count = rectangles.len() as _;
         self
@@ -154,6 +155,7 @@ impl<'a> std::ops::DerefMut for PresentRegionKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PresentRegionKHR> for PresentRegionKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Structure"]
 #[doc(alias = "VkRectLayerKHR")]
 #[derive(Copy, Clone)]
@@ -238,3 +240,4 @@ impl<'a> std::ops::DerefMut for RectLayerKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RectLayerKHR> for RectLayerKHRBuilder<'_> {}

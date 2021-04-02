@@ -101,6 +101,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSurfaceInfo2KHR> for PhysicalDeviceSurfaceInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilities2KHR")]
 #[derive(Copy, Clone)]
@@ -183,6 +184,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceCapabilities2KHR> for SurfaceCapabilities2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Structure"]
 #[doc(alias = "VkSurfaceFormat2KHR")]
 #[derive(Copy, Clone)]
@@ -257,6 +259,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormat2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceFormat2KHR> for SurfaceFormat2KHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_get_surface_capabilities2`]"]
 impl crate::InstanceLoader {
     #[inline]

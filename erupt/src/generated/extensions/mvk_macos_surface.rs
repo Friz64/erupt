@@ -116,6 +116,7 @@ impl<'a> std::ops::DerefMut for MacOSSurfaceCreateInfoMVKBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MacOSSurfaceCreateInfoMVK> for MacOSSurfaceCreateInfoMVKBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::mvk_macos_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

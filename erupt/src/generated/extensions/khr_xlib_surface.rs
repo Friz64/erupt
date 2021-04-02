@@ -130,6 +130,7 @@ impl<'a> std::ops::DerefMut for XlibSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<XlibSurfaceCreateInfoKHR> for XlibSurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_xlib_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

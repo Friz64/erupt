@@ -123,6 +123,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiscardRectanglePropertiesEXTBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceDiscardRectanglePropertiesEXT> for PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineDiscardRectangleStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -185,7 +186,7 @@ impl<'a> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn discard_rectangles(mut self, discard_rectangles: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
+    pub fn discard_rectangles(mut self, discard_rectangles: &'a [impl crate::Repr<crate::vk1_0::Rect2D>]) -> Self {
         self.0.p_discard_rectangles = discard_rectangles.as_ptr() as _;
         self.0.discard_rectangle_count = discard_rectangles.len() as _;
         self
@@ -217,12 +218,13 @@ impl<'a> std::ops::DerefMut for PipelineDiscardRectangleStateCreateInfoEXTBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineDiscardRectangleStateCreateInfoEXT> for PipelineDiscardRectangleStateCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDiscardRectangleEXT")]
-    pub unsafe fn cmd_set_discard_rectangle_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangles: &[crate::vk1_0::Rect2DBuilder]) -> () {
+    pub unsafe fn cmd_set_discard_rectangle_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangles: &[impl crate::Repr<crate::vk1_0::Rect2D>]) -> () {
         let _function = self.cmd_set_discard_rectangle_ext.expect("`cmd_set_discard_rectangle_ext` is not loaded");
         let discard_rectangle_count = discard_rectangles.len();
         let _return = _function(command_buffer as _, first_discard_rectangle as _, discard_rectangle_count as _, discard_rectangles.as_ptr() as _);

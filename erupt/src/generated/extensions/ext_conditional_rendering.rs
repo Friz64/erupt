@@ -130,6 +130,7 @@ impl<'a> std::ops::DerefMut for ConditionalRenderingBeginInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ConditionalRenderingBeginInfoEXT> for ConditionalRenderingBeginInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceConditionalRenderingInfoEXT.html) · Structure"]
 #[doc(alias = "VkCommandBufferInheritanceConditionalRenderingInfoEXT")]
 #[derive(Copy, Clone)]
@@ -204,6 +205,7 @@ impl<'a> std::ops::DerefMut for CommandBufferInheritanceConditionalRenderingInfo
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CommandBufferInheritanceConditionalRenderingInfoEXT> for CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConditionalRenderingFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceConditionalRenderingFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -286,6 +288,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceConditionalRenderingFeaturesEXTBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceConditionalRenderingFeaturesEXT> for PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
 impl crate::DeviceLoader {
     #[inline]

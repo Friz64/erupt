@@ -129,6 +129,7 @@ impl<'a> std::ops::DerefMut for FragmentShadingRateAttachmentInfoKHRBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<FragmentShadingRateAttachmentInfoKHR> for FragmentShadingRateAttachmentInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateStateCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkPipelineFragmentShadingRateStateCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -211,6 +212,7 @@ impl<'a> std::ops::DerefMut for PipelineFragmentShadingRateStateCreateInfoKHRBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineFragmentShadingRateStateCreateInfoKHR> for PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -301,6 +303,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateFeaturesKHRBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentShadingRateFeaturesKHR> for PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRatePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRatePropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -518,6 +521,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRatePropertiesKHRBu
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentShadingRatePropertiesKHR> for PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateKHR")]
 #[derive(Copy, Clone)]
@@ -600,6 +604,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateKHRBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentShadingRateKHR> for PhysicalDeviceFragmentShadingRateKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::DeviceLoader {
     #[inline]

@@ -147,6 +147,7 @@ impl<'a> std::ops::DerefMut for ViewportSwizzleNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ViewportSwizzleNV> for ViewportSwizzleNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineViewportSwizzleStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -201,7 +202,7 @@ impl<'a> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn viewport_swizzles(mut self, viewport_swizzles: &'a [crate::extensions::nv_viewport_swizzle::ViewportSwizzleNVBuilder]) -> Self {
+    pub fn viewport_swizzles(mut self, viewport_swizzles: &'a [impl crate::Repr<crate::extensions::nv_viewport_swizzle::ViewportSwizzleNV>]) -> Self {
         self.0.p_viewport_swizzles = viewport_swizzles.as_ptr() as _;
         self.0.viewport_count = viewport_swizzles.len() as _;
         self
@@ -233,3 +234,4 @@ impl<'a> std::ops::DerefMut for PipelineViewportSwizzleStateCreateInfoNVBuilder<
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineViewportSwizzleStateCreateInfoNV> for PipelineViewportSwizzleStateCreateInfoNVBuilder<'_> {}

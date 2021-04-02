@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRepresentativeFragmentTestFeatures
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineRepresentativeFragmentTestStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -152,3 +153,4 @@ impl<'a> std::ops::DerefMut for PipelineRepresentativeFragmentTestStateCreateInf
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineRepresentativeFragmentTestStateCreateInfoNV> for PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'_> {}

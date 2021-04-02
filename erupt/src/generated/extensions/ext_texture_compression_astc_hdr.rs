@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTextureCompressionASTCHDRFeaturesE
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'_> {}

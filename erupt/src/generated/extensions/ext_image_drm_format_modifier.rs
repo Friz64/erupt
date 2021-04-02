@@ -59,7 +59,10 @@ impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
         DrmFormatModifierPropertiesListEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn drm_format_modifier_properties(mut self, drm_format_modifier_properties: &'a mut [crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXTBuilder]) -> Self {
+    pub fn drm_format_modifier_properties(
+        mut self,
+        drm_format_modifier_properties: &'a mut [impl crate::Repr<crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT>],
+    ) -> Self {
         self.0.p_drm_format_modifier_properties = drm_format_modifier_properties.as_ptr() as _;
         self.0.drm_format_modifier_count = drm_format_modifier_properties.len() as _;
         self
@@ -91,6 +94,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesListEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DrmFormatModifierPropertiesListEXT> for DrmFormatModifierPropertiesListEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -175,6 +179,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DrmFormatModifierPropertiesEXT> for DrmFormatModifierPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageDrmFormatModifierInfoEXT")]
 #[derive(Copy, Clone)]
@@ -269,6 +274,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageDrmFormatModifierInfoEXTBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceImageDrmFormatModifierInfoEXT> for PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkImageDrmFormatModifierListCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -347,6 +353,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierListCreateInfoEXTBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageDrmFormatModifierListCreateInfoEXT> for ImageDrmFormatModifierListCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierExplicitCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkImageDrmFormatModifierExplicitCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -401,7 +408,7 @@ impl<'a> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn plane_layouts(mut self, plane_layouts: &'a [crate::vk1_0::SubresourceLayoutBuilder]) -> Self {
+    pub fn plane_layouts(mut self, plane_layouts: &'a [impl crate::Repr<crate::vk1_0::SubresourceLayout>]) -> Self {
         self.0.p_plane_layouts = plane_layouts.as_ptr() as _;
         self.0.drm_format_modifier_plane_count = plane_layouts.len() as _;
         self
@@ -433,6 +440,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierExplicitCreateInfoEXTBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageDrmFormatModifierExplicitCreateInfoEXT> for ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageDrmFormatModifierPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkImageDrmFormatModifierPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -507,6 +515,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageDrmFormatModifierPropertiesEXT> for ImageDrmFormatModifierPropertiesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl crate::DeviceLoader {
     #[inline]

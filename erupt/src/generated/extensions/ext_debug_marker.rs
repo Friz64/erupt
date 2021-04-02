@@ -123,6 +123,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectNameInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugMarkerObjectNameInfoEXT> for DebugMarkerObjectNameInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugMarkerObjectTagInfoEXT")]
 #[derive(Copy, Clone)]
@@ -229,6 +230,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectTagInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugMarkerObjectTagInfoEXT> for DebugMarkerObjectTagInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugMarkerMarkerInfoEXT")]
 #[derive(Copy, Clone)]
@@ -311,6 +313,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerMarkerInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugMarkerMarkerInfoEXT> for DebugMarkerMarkerInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_debug_marker`]"]
 impl crate::DeviceLoader {
     #[inline]

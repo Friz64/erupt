@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderImageFootprintFeaturesNVBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderImageFootprintFeaturesNV> for PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_> {}

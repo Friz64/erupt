@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCoherentMemoryFeaturesAMD> for PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_> {}

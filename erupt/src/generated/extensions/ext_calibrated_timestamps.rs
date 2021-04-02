@@ -121,6 +121,7 @@ impl<'a> std::ops::DerefMut for CalibratedTimestampInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CalibratedTimestampInfoEXT> for CalibratedTimestampInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::InstanceLoader {
     #[inline]
@@ -154,7 +155,7 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetCalibratedTimestampsEXT")]
     pub unsafe fn get_calibrated_timestamps_ext(
         &self,
-        timestamp_infos: &[crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXTBuilder],
+        timestamp_infos: &[impl crate::Repr<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>],
         max_deviation: Option<u64>,
     ) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
         let _function = self.get_calibrated_timestamps_ext.expect("`get_calibrated_timestamps_ext` is not loaded");

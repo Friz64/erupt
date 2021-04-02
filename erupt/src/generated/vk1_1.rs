@@ -1104,6 +1104,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFeatures2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFeatures2> for PhysicalDeviceFeatures2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceProperties2")]
 #[derive(Copy, Clone)]
@@ -1270,6 +1271,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceProperties2> for PhysicalDeviceProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties2.html) · Structure"]
 #[doc(alias = "VkFormatProperties2")]
 #[derive(Copy, Clone)]
@@ -1346,6 +1348,7 @@ impl<'a> std::ops::DerefMut for FormatProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<FormatProperties2> for FormatProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties2.html) · Structure"]
 #[doc(alias = "VkImageFormatProperties2")]
 #[derive(Copy, Clone)]
@@ -1430,6 +1433,7 @@ impl<'a> std::ops::DerefMut for ImageFormatProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageFormatProperties2> for ImageFormatProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageFormatInfo2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageFormatInfo2")]
 #[derive(Copy, Clone)]
@@ -1546,6 +1550,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageFormatInfo2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceImageFormatInfo2> for PhysicalDeviceImageFormatInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties2.html) · Structure"]
 #[doc(alias = "VkQueueFamilyProperties2")]
 #[derive(Copy, Clone)]
@@ -1624,6 +1629,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<QueueFamilyProperties2> for QueueFamilyProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryProperties2")]
 #[derive(Copy, Clone)]
@@ -1700,6 +1706,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceMemoryProperties2> for PhysicalDeviceMemoryProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties2.html) · Structure"]
 #[doc(alias = "VkSparseImageFormatProperties2")]
 #[derive(Copy, Clone)]
@@ -1774,6 +1781,7 @@ impl<'a> std::ops::DerefMut for SparseImageFormatProperties2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SparseImageFormatProperties2> for SparseImageFormatProperties2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseImageFormatInfo2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSparseImageFormatInfo2")]
 #[derive(Copy, Clone)]
@@ -1880,6 +1888,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSparseImageFormatInfo2Builder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSparseImageFormatInfo2> for PhysicalDeviceSparseImageFormatInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVariablePointersFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceVariablePointersFeatures")]
 #[derive(Copy, Clone)]
@@ -1962,6 +1971,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVariablePointersFeaturesBuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceVariablePointersFeatures> for PhysicalDeviceVariablePointersFeaturesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryProperties.html) · Structure"]
 #[doc(alias = "VkExternalMemoryProperties")]
 #[derive(Copy, Clone)]
@@ -2046,6 +2056,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalMemoryProperties> for ExternalMemoryPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfo.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalImageFormatInfo")]
 #[derive(Copy, Clone)]
@@ -2120,6 +2131,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalImageFormatInfoBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceExternalImageFormatInfo> for PhysicalDeviceExternalImageFormatInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatProperties.html) · Structure"]
 #[doc(alias = "VkExternalImageFormatProperties")]
 #[derive(Copy, Clone)]
@@ -2194,6 +2206,7 @@ impl<'a> std::ops::DerefMut for ExternalImageFormatPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalImageFormatProperties> for ExternalImageFormatPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalBufferInfo.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalBufferInfo")]
 #[derive(Copy, Clone)]
@@ -2284,6 +2297,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalBufferInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceExternalBufferInfo> for PhysicalDeviceExternalBufferInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalBufferProperties.html) · Structure"]
 #[doc(alias = "VkExternalBufferProperties")]
 #[derive(Copy, Clone)]
@@ -2358,6 +2372,7 @@ impl<'a> std::ops::DerefMut for ExternalBufferPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalBufferProperties> for ExternalBufferPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIDProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceIDProperties")]
 #[derive(Copy, Clone)]
@@ -2464,6 +2479,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceIDPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceIDProperties> for PhysicalDeviceIDPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfo.html) · Structure"]
 #[doc(alias = "VkExternalMemoryImageCreateInfo")]
 #[derive(Copy, Clone)]
@@ -2538,6 +2554,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalMemoryImageCreateInfo> for ExternalMemoryImageCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryBufferCreateInfo.html) · Structure"]
 #[doc(alias = "VkExternalMemoryBufferCreateInfo")]
 #[derive(Copy, Clone)]
@@ -2612,6 +2629,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryBufferCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalMemoryBufferCreateInfo> for ExternalMemoryBufferCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfo.html) · Structure"]
 #[doc(alias = "VkExportMemoryAllocateInfo")]
 #[derive(Copy, Clone)]
@@ -2686,6 +2704,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryAllocateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportMemoryAllocateInfo> for ExportMemoryAllocateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfo.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalSemaphoreInfo")]
 #[derive(Copy, Clone)]
@@ -2762,6 +2781,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceExternalSemaphoreInfo> for PhysicalDeviceExternalSemaphoreInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreProperties.html) · Structure"]
 #[doc(alias = "VkExternalSemaphoreProperties")]
 #[derive(Copy, Clone)]
@@ -2852,6 +2872,7 @@ impl<'a> std::ops::DerefMut for ExternalSemaphorePropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalSemaphoreProperties> for ExternalSemaphorePropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreCreateInfo.html) · Structure"]
 #[doc(alias = "VkExportSemaphoreCreateInfo")]
 #[derive(Copy, Clone)]
@@ -2926,6 +2947,7 @@ impl<'a> std::ops::DerefMut for ExportSemaphoreCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportSemaphoreCreateInfo> for ExportSemaphoreCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalFenceInfo.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalFenceInfo")]
 #[derive(Copy, Clone)]
@@ -3000,6 +3022,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalFenceInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceExternalFenceInfo> for PhysicalDeviceExternalFenceInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceProperties.html) · Structure"]
 #[doc(alias = "VkExternalFenceProperties")]
 #[derive(Copy, Clone)]
@@ -3090,6 +3113,7 @@ impl<'a> std::ops::DerefMut for ExternalFencePropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalFenceProperties> for ExternalFencePropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceCreateInfo.html) · Structure"]
 #[doc(alias = "VkExportFenceCreateInfo")]
 #[derive(Copy, Clone)]
@@ -3164,6 +3188,7 @@ impl<'a> std::ops::DerefMut for ExportFenceCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportFenceCreateInfo> for ExportFenceCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMultiviewFeatures")]
 #[derive(Copy, Clone)]
@@ -3254,6 +3279,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiviewFeaturesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceMultiviewFeatures> for PhysicalDeviceMultiviewFeaturesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMultiviewProperties")]
 #[derive(Copy, Clone)]
@@ -3336,6 +3362,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiviewPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceMultiviewProperties> for PhysicalDeviceMultiviewPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassMultiviewCreateInfo.html) · Structure"]
 #[doc(alias = "VkRenderPassMultiviewCreateInfo")]
 #[derive(Copy, Clone)]
@@ -3438,6 +3465,7 @@ impl<'a> std::ops::DerefMut for RenderPassMultiviewCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RenderPassMultiviewCreateInfo> for RenderPassMultiviewCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGroupProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceGroupProperties")]
 #[derive(Copy, Clone)]
@@ -3528,6 +3556,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceGroupPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceGroupProperties> for PhysicalDeviceGroupPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagsInfo.html) · Structure"]
 #[doc(alias = "VkMemoryAllocateFlagsInfo")]
 #[derive(Copy, Clone)]
@@ -3610,6 +3639,7 @@ impl<'a> std::ops::DerefMut for MemoryAllocateFlagsInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryAllocateFlagsInfo> for MemoryAllocateFlagsInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfo.html) · Structure"]
 #[doc(alias = "VkBindBufferMemoryInfo")]
 #[derive(Copy, Clone)]
@@ -3702,6 +3732,7 @@ impl<'a> std::ops::DerefMut for BindBufferMemoryInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindBufferMemoryInfo> for BindBufferMemoryInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryDeviceGroupInfo.html) · Structure"]
 #[doc(alias = "VkBindBufferMemoryDeviceGroupInfo")]
 #[derive(Copy, Clone)]
@@ -3780,6 +3811,7 @@ impl<'a> std::ops::DerefMut for BindBufferMemoryDeviceGroupInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindBufferMemoryDeviceGroupInfo> for BindBufferMemoryDeviceGroupInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryInfo.html) · Structure"]
 #[doc(alias = "VkBindImageMemoryInfo")]
 #[derive(Copy, Clone)]
@@ -3876,6 +3908,7 @@ impl<'a> std::ops::DerefMut for BindImageMemoryInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindImageMemoryInfo> for BindImageMemoryInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfo.html) · Structure"]
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfo")]
 #[derive(Copy, Clone)]
@@ -3934,7 +3967,7 @@ impl<'a> BindImageMemoryDeviceGroupInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn split_instance_bind_regions(mut self, split_instance_bind_regions: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
+    pub fn split_instance_bind_regions(mut self, split_instance_bind_regions: &'a [impl crate::Repr<crate::vk1_0::Rect2D>]) -> Self {
         self.0.p_split_instance_bind_regions = split_instance_bind_regions.as_ptr() as _;
         self.0.split_instance_bind_region_count = split_instance_bind_regions.len() as _;
         self
@@ -3966,6 +3999,7 @@ impl<'a> std::ops::DerefMut for BindImageMemoryDeviceGroupInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindImageMemoryDeviceGroupInfo> for BindImageMemoryDeviceGroupInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfo.html) · Structure"]
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfo")]
 #[derive(Copy, Clone)]
@@ -4020,7 +4054,7 @@ impl<'a> DeviceGroupRenderPassBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn device_render_areas(mut self, device_render_areas: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
+    pub fn device_render_areas(mut self, device_render_areas: &'a [impl crate::Repr<crate::vk1_0::Rect2D>]) -> Self {
         self.0.p_device_render_areas = device_render_areas.as_ptr() as _;
         self.0.device_render_area_count = device_render_areas.len() as _;
         self
@@ -4052,6 +4086,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupRenderPassBeginInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceGroupRenderPassBeginInfo> for DeviceGroupRenderPassBeginInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfo.html) · Structure"]
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfo")]
 #[derive(Copy, Clone)]
@@ -4126,6 +4161,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupCommandBufferBeginInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceGroupCommandBufferBeginInfo> for DeviceGroupCommandBufferBeginInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSubmitInfo.html) · Structure"]
 #[doc(alias = "VkDeviceGroupSubmitInfo")]
 #[derive(Copy, Clone)]
@@ -4228,6 +4264,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupSubmitInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceGroupSubmitInfo> for DeviceGroupSubmitInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupBindSparseInfo.html) · Structure"]
 #[doc(alias = "VkDeviceGroupBindSparseInfo")]
 #[derive(Copy, Clone)]
@@ -4310,6 +4347,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupBindSparseInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceGroupBindSparseInfo> for DeviceGroupBindSparseInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html) · Structure"]
 #[doc(alias = "VkDeviceGroupDeviceCreateInfo")]
 #[derive(Copy, Clone)]
@@ -4388,6 +4426,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupDeviceCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceGroupDeviceCreateInfo> for DeviceGroupDeviceCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntry.html) · Structure"]
 #[doc(alias = "VkDescriptorUpdateTemplateEntry")]
 #[derive(Copy, Clone)]
@@ -4496,6 +4535,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateEntryBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DescriptorUpdateTemplateEntry> for DescriptorUpdateTemplateEntryBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfo.html) · Structure"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfo")]
 #[derive(Copy, Clone)]
@@ -4565,7 +4605,7 @@ impl<'a> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    pub fn descriptor_update_entries(mut self, descriptor_update_entries: &'a [crate::vk1_1::DescriptorUpdateTemplateEntryBuilder]) -> Self {
+    pub fn descriptor_update_entries(mut self, descriptor_update_entries: &'a [impl crate::Repr<crate::vk1_1::DescriptorUpdateTemplateEntry>]) -> Self {
         self.0.p_descriptor_update_entries = descriptor_update_entries.as_ptr() as _;
         self.0.descriptor_update_entry_count = descriptor_update_entries.len() as _;
         self
@@ -4622,6 +4662,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DescriptorUpdateTemplateCreateInfo> for DescriptorUpdateTemplateCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInputAttachmentAspectReference.html) · Structure"]
 #[doc(alias = "VkInputAttachmentAspectReference")]
 #[derive(Copy, Clone)]
@@ -4706,6 +4747,7 @@ impl<'a> std::ops::DerefMut for InputAttachmentAspectReferenceBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<InputAttachmentAspectReference> for InputAttachmentAspectReferenceBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfo.html) · Structure"]
 #[doc(alias = "VkRenderPassInputAttachmentAspectCreateInfo")]
 #[derive(Copy, Clone)]
@@ -4752,7 +4794,7 @@ impl<'a> RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
         RenderPassInputAttachmentAspectCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn aspect_references(mut self, aspect_references: &'a [crate::vk1_1::InputAttachmentAspectReferenceBuilder]) -> Self {
+    pub fn aspect_references(mut self, aspect_references: &'a [impl crate::Repr<crate::vk1_1::InputAttachmentAspectReference>]) -> Self {
         self.0.p_aspect_references = aspect_references.as_ptr() as _;
         self.0.aspect_reference_count = aspect_references.len() as _;
         self
@@ -4784,6 +4826,7 @@ impl<'a> std::ops::DerefMut for RenderPassInputAttachmentAspectCreateInfoBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RenderPassInputAttachmentAspectCreateInfo> for RenderPassInputAttachmentAspectCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice16BitStorageFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDevice16BitStorageFeatures")]
 #[derive(Copy, Clone)]
@@ -4882,6 +4925,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevice16BitStorageFeaturesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDevice16BitStorageFeatures> for PhysicalDevice16BitStorageFeaturesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSubgroupProperties")]
 #[derive(Copy, Clone)]
@@ -4980,6 +5024,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSubgroupProperties> for PhysicalDeviceSubgroupPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryRequirementsInfo2.html) · Structure"]
 #[doc(alias = "VkBufferMemoryRequirementsInfo2")]
 #[derive(Copy, Clone)]
@@ -5054,6 +5099,7 @@ impl<'a> std::ops::DerefMut for BufferMemoryRequirementsInfo2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BufferMemoryRequirementsInfo2> for BufferMemoryRequirementsInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryRequirementsInfo2.html) · Structure"]
 #[doc(alias = "VkImageMemoryRequirementsInfo2")]
 #[derive(Copy, Clone)]
@@ -5130,6 +5176,7 @@ impl<'a> std::ops::DerefMut for ImageMemoryRequirementsInfo2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageMemoryRequirementsInfo2> for ImageMemoryRequirementsInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSparseMemoryRequirementsInfo2.html) · Structure"]
 #[doc(alias = "VkImageSparseMemoryRequirementsInfo2")]
 #[derive(Copy, Clone)]
@@ -5204,6 +5251,7 @@ impl<'a> std::ops::DerefMut for ImageSparseMemoryRequirementsInfo2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageSparseMemoryRequirementsInfo2> for ImageSparseMemoryRequirementsInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements2.html) · Structure"]
 #[doc(alias = "VkMemoryRequirements2")]
 #[derive(Copy, Clone)]
@@ -5280,6 +5328,7 @@ impl<'a> std::ops::DerefMut for MemoryRequirements2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryRequirements2> for MemoryRequirements2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements2.html) · Structure"]
 #[doc(alias = "VkSparseImageMemoryRequirements2")]
 #[derive(Copy, Clone)]
@@ -5354,6 +5403,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryRequirements2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SparseImageMemoryRequirements2> for SparseImageMemoryRequirements2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePointClippingProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePointClippingProperties")]
 #[derive(Copy, Clone)]
@@ -5428,6 +5478,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePointClippingPropertiesBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDevicePointClippingProperties> for PhysicalDevicePointClippingPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryDedicatedRequirements.html) · Structure"]
 #[doc(alias = "VkMemoryDedicatedRequirements")]
 #[derive(Copy, Clone)]
@@ -5510,6 +5561,7 @@ impl<'a> std::ops::DerefMut for MemoryDedicatedRequirementsBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryDedicatedRequirements> for MemoryDedicatedRequirementsBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryDedicatedAllocateInfo.html) · Structure"]
 #[doc(alias = "VkMemoryDedicatedAllocateInfo")]
 #[derive(Copy, Clone)]
@@ -5592,6 +5644,7 @@ impl<'a> std::ops::DerefMut for MemoryDedicatedAllocateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryDedicatedAllocateInfo> for MemoryDedicatedAllocateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewUsageCreateInfo.html) · Structure"]
 #[doc(alias = "VkImageViewUsageCreateInfo")]
 #[derive(Copy, Clone)]
@@ -5666,6 +5719,7 @@ impl<'a> std::ops::DerefMut for ImageViewUsageCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageViewUsageCreateInfo> for ImageViewUsageCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html) · Structure"]
 #[doc(alias = "VkPipelineTessellationDomainOriginStateCreateInfo")]
 #[derive(Copy, Clone)]
@@ -5740,6 +5794,7 @@ impl<'a> std::ops::DerefMut for PipelineTessellationDomainOriginStateCreateInfoB
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineTessellationDomainOriginStateCreateInfo> for PipelineTessellationDomainOriginStateCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionInfo.html) · Structure"]
 #[doc(alias = "VkSamplerYcbcrConversionInfo")]
 #[derive(Copy, Clone)]
@@ -5814,6 +5869,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SamplerYcbcrConversionInfo> for SamplerYcbcrConversionInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionCreateInfo.html) · Structure"]
 #[doc(alias = "VkSamplerYcbcrConversionCreateInfo")]
 #[derive(Copy, Clone)]
@@ -5946,6 +6002,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SamplerYcbcrConversionCreateInfo> for SamplerYcbcrConversionCreateInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImagePlaneMemoryInfo.html) · Structure"]
 #[doc(alias = "VkBindImagePlaneMemoryInfo")]
 #[derive(Copy, Clone)]
@@ -6020,6 +6077,7 @@ impl<'a> std::ops::DerefMut for BindImagePlaneMemoryInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindImagePlaneMemoryInfo> for BindImagePlaneMemoryInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePlaneMemoryRequirementsInfo.html) · Structure"]
 #[doc(alias = "VkImagePlaneMemoryRequirementsInfo")]
 #[derive(Copy, Clone)]
@@ -6094,6 +6152,7 @@ impl<'a> std::ops::DerefMut for ImagePlaneMemoryRequirementsInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImagePlaneMemoryRequirementsInfo> for ImagePlaneMemoryRequirementsInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSamplerYcbcrConversionFeatures")]
 #[derive(Copy, Clone)]
@@ -6168,6 +6227,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSamplerYcbcrConversionFeaturesBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSamplerYcbcrConversionFeatures> for PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionImageFormatProperties.html) · Structure"]
 #[doc(alias = "VkSamplerYcbcrConversionImageFormatProperties")]
 #[derive(Copy, Clone)]
@@ -6242,6 +6302,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionImageFormatPropertiesBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SamplerYcbcrConversionImageFormatProperties> for SamplerYcbcrConversionImageFormatPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkProtectedSubmitInfo.html) · Structure"]
 #[doc(alias = "VkProtectedSubmitInfo")]
 #[derive(Copy, Clone)]
@@ -6316,6 +6377,7 @@ impl<'a> std::ops::DerefMut for ProtectedSubmitInfoBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ProtectedSubmitInfo> for ProtectedSubmitInfoBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProtectedMemoryFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceProtectedMemoryFeatures")]
 #[derive(Copy, Clone)]
@@ -6390,6 +6452,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProtectedMemoryFeaturesBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceProtectedMemoryFeatures> for PhysicalDeviceProtectedMemoryFeaturesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProtectedMemoryProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceProtectedMemoryProperties")]
 #[derive(Copy, Clone)]
@@ -6464,6 +6527,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProtectedMemoryPropertiesBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceProtectedMemoryProperties> for PhysicalDeviceProtectedMemoryPropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueInfo2.html) · Structure"]
 #[doc(alias = "VkDeviceQueueInfo2")]
 #[derive(Copy, Clone)]
@@ -6554,6 +6618,7 @@ impl<'a> std::ops::DerefMut for DeviceQueueInfo2Builder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceQueueInfo2> for DeviceQueueInfo2Builder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3Properties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMaintenance3Properties")]
 #[derive(Copy, Clone)]
@@ -6636,6 +6701,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMaintenance3PropertiesBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceMaintenance3Properties> for PhysicalDeviceMaintenance3PropertiesBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupport.html) · Structure"]
 #[doc(alias = "VkDescriptorSetLayoutSupport")]
 #[derive(Copy, Clone)]
@@ -6712,6 +6778,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutSupportBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DescriptorSetLayoutSupport> for DescriptorSetLayoutSupportBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderDrawParametersFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderDrawParametersFeatures")]
 #[derive(Copy, Clone)]
@@ -6786,6 +6853,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderDrawParametersFeaturesBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderDrawParametersFeatures> for PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_> {}
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]
@@ -7043,7 +7111,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2.html) · Function"]
     #[doc(alias = "vkBindBufferMemory2")]
-    pub unsafe fn bind_buffer_memory2(&self, bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn bind_buffer_memory2(&self, bind_infos: &[impl crate::Repr<crate::vk1_1::BindBufferMemoryInfo>]) -> crate::utils::VulkanResult<()> {
         let _function = self.bind_buffer_memory2.expect("`bind_buffer_memory2` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
@@ -7052,7 +7120,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2.html) · Function"]
     #[doc(alias = "vkBindImageMemory2")]
-    pub unsafe fn bind_image_memory2(&self, bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn bind_image_memory2(&self, bind_infos: &[impl crate::Repr<crate::vk1_1::BindImageMemoryInfo>]) -> crate::utils::VulkanResult<()> {
         let _function = self.bind_image_memory2.expect("`bind_image_memory2` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);

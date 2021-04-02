@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for SurfaceProtectedCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceProtectedCapabilitiesKHR> for SurfaceProtectedCapabilitiesKHRBuilder<'_> {}

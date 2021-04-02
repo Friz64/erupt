@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShaderBarycentricFeaturesN
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_> {}

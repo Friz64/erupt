@@ -101,3 +101,4 @@ impl<'a> std::ops::DerefMut for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DeviceQueueGlobalPriorityCreateInfoEXT> for DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_> {}

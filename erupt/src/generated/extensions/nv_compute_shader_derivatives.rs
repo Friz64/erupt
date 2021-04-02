@@ -86,3 +86,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceComputeShaderDerivativesFeaturesNV
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceComputeShaderDerivativesFeaturesNV> for PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_> {}

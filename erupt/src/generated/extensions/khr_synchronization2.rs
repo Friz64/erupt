@@ -384,6 +384,7 @@ impl<'a> std::ops::DerefMut for MemoryBarrier2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryBarrier2KHR> for MemoryBarrier2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkImageMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]
@@ -532,6 +533,7 @@ impl<'a> std::ops::DerefMut for ImageMemoryBarrier2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImageMemoryBarrier2KHR> for ImageMemoryBarrier2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkBufferMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]
@@ -670,6 +672,7 @@ impl<'a> std::ops::DerefMut for BufferMemoryBarrier2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BufferMemoryBarrier2KHR> for BufferMemoryBarrier2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyInfoKHR.html) · Structure"]
 #[doc(alias = "VkDependencyInfoKHR")]
 #[derive(Copy, Clone)]
@@ -736,19 +739,19 @@ impl<'a> DependencyInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn memory_barriers(mut self, memory_barriers: &'a [crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder]) -> Self {
+    pub fn memory_barriers(mut self, memory_barriers: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::MemoryBarrier2KHR>]) -> Self {
         self.0.p_memory_barriers = memory_barriers.as_ptr() as _;
         self.0.memory_barrier_count = memory_barriers.len() as _;
         self
     }
     #[inline]
-    pub fn buffer_memory_barriers(mut self, buffer_memory_barriers: &'a [crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHRBuilder]) -> Self {
+    pub fn buffer_memory_barriers(mut self, buffer_memory_barriers: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHR>]) -> Self {
         self.0.p_buffer_memory_barriers = buffer_memory_barriers.as_ptr() as _;
         self.0.buffer_memory_barrier_count = buffer_memory_barriers.len() as _;
         self
     }
     #[inline]
-    pub fn image_memory_barriers(mut self, image_memory_barriers: &'a [crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder]) -> Self {
+    pub fn image_memory_barriers(mut self, image_memory_barriers: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHR>]) -> Self {
         self.0.p_image_memory_barriers = image_memory_barriers.as_ptr() as _;
         self.0.image_memory_barrier_count = image_memory_barriers.len() as _;
         self
@@ -780,6 +783,7 @@ impl<'a> std::ops::DerefMut for DependencyInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DependencyInfoKHR> for DependencyInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSubmitInfoKHR.html) · Structure"]
 #[doc(alias = "VkSemaphoreSubmitInfoKHR")]
 #[derive(Copy, Clone)]
@@ -878,6 +882,7 @@ impl<'a> std::ops::DerefMut for SemaphoreSubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SemaphoreSubmitInfoKHR> for SemaphoreSubmitInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferSubmitInfoKHR.html) · Structure"]
 #[doc(alias = "VkCommandBufferSubmitInfoKHR")]
 #[derive(Copy, Clone)]
@@ -960,6 +965,7 @@ impl<'a> std::ops::DerefMut for CommandBufferSubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CommandBufferSubmitInfoKHR> for CommandBufferSubmitInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo2KHR.html) · Structure"]
 #[doc(alias = "VkSubmitInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -1032,19 +1038,19 @@ impl<'a> SubmitInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn wait_semaphore_infos(mut self, wait_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
+    pub fn wait_semaphore_infos(mut self, wait_semaphore_infos: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR>]) -> Self {
         self.0.p_wait_semaphore_infos = wait_semaphore_infos.as_ptr() as _;
         self.0.wait_semaphore_info_count = wait_semaphore_infos.len() as _;
         self
     }
     #[inline]
-    pub fn command_buffer_infos(mut self, command_buffer_infos: &'a [crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHRBuilder]) -> Self {
+    pub fn command_buffer_infos(mut self, command_buffer_infos: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHR>]) -> Self {
         self.0.p_command_buffer_infos = command_buffer_infos.as_ptr() as _;
         self.0.command_buffer_info_count = command_buffer_infos.len() as _;
         self
     }
     #[inline]
-    pub fn signal_semaphore_infos(mut self, signal_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
+    pub fn signal_semaphore_infos(mut self, signal_semaphore_infos: &'a [impl crate::Repr<crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR>]) -> Self {
         self.0.p_signal_semaphore_infos = signal_semaphore_infos.as_ptr() as _;
         self.0.signal_semaphore_info_count = signal_semaphore_infos.len() as _;
         self
@@ -1076,6 +1082,7 @@ impl<'a> std::ops::DerefMut for SubmitInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SubmitInfo2KHR> for SubmitInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointProperties2NV.html) · Structure"]
 #[doc(alias = "VkQueueFamilyCheckpointProperties2NV")]
 #[derive(Copy, Clone)]
@@ -1150,6 +1157,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyCheckpointProperties2NVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<QueueFamilyCheckpointProperties2NV> for QueueFamilyCheckpointProperties2NVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointData2NV.html) · Structure"]
 #[doc(alias = "VkCheckpointData2NV")]
 #[derive(Copy, Clone)]
@@ -1232,6 +1240,7 @@ impl<'a> std::ops::DerefMut for CheckpointData2NVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<CheckpointData2NV> for CheckpointData2NVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSynchronization2FeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSynchronization2FeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -1306,6 +1315,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSynchronization2FeaturesKHRBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSynchronization2FeaturesKHR> for PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -1341,7 +1351,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         events: &[crate::vk1_0::Event],
-        dependency_infos: &[crate::extensions::khr_synchronization2::DependencyInfoKHRBuilder],
+        dependency_infos: &[impl crate::Repr<crate::extensions::khr_synchronization2::DependencyInfoKHR>],
     ) -> () {
         let _function = self.cmd_wait_events2_khr.expect("`cmd_wait_events2_khr` is not loaded");
         let event_count = events.len().min(dependency_infos.len());
@@ -1362,7 +1372,7 @@ impl crate::DeviceLoader {
     pub unsafe fn queue_submit2_khr(
         &self,
         queue: crate::vk1_0::Queue,
-        submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder],
+        submits: &[impl crate::Repr<crate::extensions::khr_synchronization2::SubmitInfo2KHR>],
         fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_submit2_khr.expect("`queue_submit2_khr` is not loaded");

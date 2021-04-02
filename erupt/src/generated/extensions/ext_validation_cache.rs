@@ -173,6 +173,7 @@ impl<'a> std::ops::DerefMut for ValidationCacheCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ValidationCacheCreateInfoEXT> for ValidationCacheCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkShaderModuleValidationCacheCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -247,6 +248,7 @@ impl<'a> std::ops::DerefMut for ShaderModuleValidationCacheCreateInfoEXTBuilder<
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ShaderModuleValidationCacheCreateInfoEXT> for ShaderModuleValidationCacheCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl crate::DeviceLoader {
     #[inline]

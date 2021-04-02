@@ -218,6 +218,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVB
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -356,6 +357,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDeviceGeneratedCommandsPropertiesN
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceDeviceGeneratedCommandsPropertiesNV> for PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkGraphicsShaderGroupCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -408,7 +410,7 @@ impl<'a> GraphicsShaderGroupCreateInfoNVBuilder<'a> {
         GraphicsShaderGroupCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
+    pub fn stages(mut self, stages: &'a [impl crate::Repr<crate::vk1_0::PipelineShaderStageCreateInfo>]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
@@ -450,6 +452,7 @@ impl<'a> std::ops::DerefMut for GraphicsShaderGroupCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<GraphicsShaderGroupCreateInfoNV> for GraphicsShaderGroupCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkGraphicsPipelineShaderGroupsCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -502,7 +505,7 @@ impl<'a> GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {
         GraphicsPipelineShaderGroupsCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn groups(mut self, groups: &'a [crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNVBuilder]) -> Self {
+    pub fn groups(mut self, groups: &'a [impl crate::Repr<crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNV>]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
@@ -540,6 +543,7 @@ impl<'a> std::ops::DerefMut for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<
         &mut self.0
     }
 }
+unsafe impl crate::Repr<GraphicsPipelineShaderGroupsCreateInfoNV> for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindShaderGroupIndirectCommandNV")]
 #[derive(Copy, Clone)]
@@ -604,6 +608,7 @@ impl<'a> std::ops::DerefMut for BindShaderGroupIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindShaderGroupIndirectCommandNV> for BindShaderGroupIndirectCommandNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindIndexBufferIndirectCommandNV")]
 #[derive(Copy, Clone)]
@@ -688,6 +693,7 @@ impl<'a> std::ops::DerefMut for BindIndexBufferIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindIndexBufferIndirectCommandNV> for BindIndexBufferIndirectCommandNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindVertexBufferIndirectCommandNV")]
 #[derive(Copy, Clone)]
@@ -772,6 +778,7 @@ impl<'a> std::ops::DerefMut for BindVertexBufferIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<BindVertexBufferIndirectCommandNV> for BindVertexBufferIndirectCommandNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkSetStateFlagsIndirectCommandNV")]
 #[derive(Copy, Clone)]
@@ -836,6 +843,7 @@ impl<'a> std::ops::DerefMut for SetStateFlagsIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SetStateFlagsIndirectCommandNV> for SetStateFlagsIndirectCommandNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsStreamNV.html) · Structure"]
 #[doc(alias = "VkIndirectCommandsStreamNV")]
 #[derive(Copy, Clone)]
@@ -909,6 +917,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsStreamNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<IndirectCommandsStreamNV> for IndirectCommandsStreamNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Structure"]
 #[doc(alias = "VkIndirectCommandsLayoutTokenNV")]
 #[derive(Copy, Clone)]
@@ -1076,6 +1085,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutTokenNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<IndirectCommandsLayoutTokenNV> for IndirectCommandsLayoutTokenNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkIndirectCommandsLayoutCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -1144,7 +1154,7 @@ impl<'a> IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn tokens(mut self, tokens: &'a [crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutTokenNVBuilder]) -> Self {
+    pub fn tokens(mut self, tokens: &'a [impl crate::Repr<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutTokenNV>]) -> Self {
         self.0.p_tokens = tokens.as_ptr() as _;
         self.0.token_count = tokens.len() as _;
         self
@@ -1182,6 +1192,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<IndirectCommandsLayoutCreateInfoNV> for IndirectCommandsLayoutCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Structure"]
 #[doc(alias = "VkGeneratedCommandsInfoNV")]
 #[derive(Copy, Clone)]
@@ -1276,7 +1287,7 @@ impl<'a> GeneratedCommandsInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn streams(mut self, streams: &'a [crate::extensions::nv_device_generated_commands::IndirectCommandsStreamNVBuilder]) -> Self {
+    pub fn streams(mut self, streams: &'a [impl crate::Repr<crate::extensions::nv_device_generated_commands::IndirectCommandsStreamNV>]) -> Self {
         self.0.p_streams = streams.as_ptr() as _;
         self.0.stream_count = streams.len() as _;
         self
@@ -1348,6 +1359,7 @@ impl<'a> std::ops::DerefMut for GeneratedCommandsInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<GeneratedCommandsInfoNV> for GeneratedCommandsInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Structure"]
 #[doc(alias = "VkGeneratedCommandsMemoryRequirementsInfoNV")]
 #[derive(Copy, Clone)]
@@ -1446,6 +1458,7 @@ impl<'a> std::ops::DerefMut for GeneratedCommandsMemoryRequirementsInfoNVBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<GeneratedCommandsMemoryRequirementsInfoNV> for GeneratedCommandsMemoryRequirementsInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl crate::DeviceLoader {
     #[inline]

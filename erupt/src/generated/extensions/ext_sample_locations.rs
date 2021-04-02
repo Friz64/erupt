@@ -92,6 +92,7 @@ impl<'a> std::ops::DerefMut for SampleLocationEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SampleLocationEXT> for SampleLocationEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationsInfoEXT.html) · Structure"]
 #[doc(alias = "VkSampleLocationsInfoEXT")]
 #[derive(Copy, Clone)]
@@ -154,7 +155,7 @@ impl<'a> SampleLocationsInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sample_locations(mut self, sample_locations: &'a [crate::extensions::ext_sample_locations::SampleLocationEXTBuilder]) -> Self {
+    pub fn sample_locations(mut self, sample_locations: &'a [impl crate::Repr<crate::extensions::ext_sample_locations::SampleLocationEXT>]) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_locations_count = sample_locations.len() as _;
         self
@@ -186,6 +187,7 @@ impl<'a> std::ops::DerefMut for SampleLocationsInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SampleLocationsInfoEXT> for SampleLocationsInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentSampleLocationsEXT.html) · Structure"]
 #[doc(alias = "VkAttachmentSampleLocationsEXT")]
 #[derive(Copy, Clone)]
@@ -262,6 +264,7 @@ impl<'a> std::ops::DerefMut for AttachmentSampleLocationsEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<AttachmentSampleLocationsEXT> for AttachmentSampleLocationsEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassSampleLocationsEXT.html) · Structure"]
 #[doc(alias = "VkSubpassSampleLocationsEXT")]
 #[derive(Copy, Clone)]
@@ -338,6 +341,7 @@ impl<'a> std::ops::DerefMut for SubpassSampleLocationsEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SubpassSampleLocationsEXT> for SubpassSampleLocationsEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassSampleLocationsBeginInfoEXT.html) · Structure"]
 #[doc(alias = "VkRenderPassSampleLocationsBeginInfoEXT")]
 #[derive(Copy, Clone)]
@@ -390,13 +394,13 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
         RenderPassSampleLocationsBeginInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn attachment_initial_sample_locations(mut self, attachment_initial_sample_locations: &'a [crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXTBuilder]) -> Self {
+    pub fn attachment_initial_sample_locations(mut self, attachment_initial_sample_locations: &'a [impl crate::Repr<crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXT>]) -> Self {
         self.0.p_attachment_initial_sample_locations = attachment_initial_sample_locations.as_ptr() as _;
         self.0.attachment_initial_sample_locations_count = attachment_initial_sample_locations.len() as _;
         self
     }
     #[inline]
-    pub fn post_subpass_sample_locations(mut self, post_subpass_sample_locations: &'a [crate::extensions::ext_sample_locations::SubpassSampleLocationsEXTBuilder]) -> Self {
+    pub fn post_subpass_sample_locations(mut self, post_subpass_sample_locations: &'a [impl crate::Repr<crate::extensions::ext_sample_locations::SubpassSampleLocationsEXT>]) -> Self {
         self.0.p_post_subpass_sample_locations = post_subpass_sample_locations.as_ptr() as _;
         self.0.post_subpass_sample_locations_count = post_subpass_sample_locations.len() as _;
         self
@@ -428,6 +432,7 @@ impl<'a> std::ops::DerefMut for RenderPassSampleLocationsBeginInfoEXTBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<RenderPassSampleLocationsBeginInfoEXT> for RenderPassSampleLocationsBeginInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineSampleLocationsStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -510,6 +515,7 @@ impl<'a> std::ops::DerefMut for PipelineSampleLocationsStateCreateInfoEXTBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineSampleLocationsStateCreateInfoEXT> for PipelineSampleLocationsStateCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSampleLocationsPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSampleLocationsPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -616,6 +622,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSampleLocationsPropertiesEXTBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSampleLocationsPropertiesEXT> for PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultisamplePropertiesEXT.html) · Structure"]
 #[doc(alias = "VkMultisamplePropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -690,6 +697,7 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MultisamplePropertiesEXT> for MultisamplePropertiesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {
     #[inline]

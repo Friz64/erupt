@@ -105,6 +105,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImportMemoryZirconHandleInfoFUCHSIA> for ImportMemoryZirconHandleInfoFUCHSIABuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryZirconHandlePropertiesFUCHSIA.html) · Structure"]
 #[doc(alias = "VkMemoryZirconHandlePropertiesFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -179,6 +180,7 @@ impl<'a> std::ops::DerefMut for MemoryZirconHandlePropertiesFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryZirconHandlePropertiesFUCHSIA> for MemoryZirconHandlePropertiesFUCHSIABuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkMemoryGetZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -261,6 +263,7 @@ impl<'a> std::ops::DerefMut for MemoryGetZirconHandleInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<MemoryGetZirconHandleInfoFUCHSIA> for MemoryGetZirconHandleInfoFUCHSIABuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
 impl crate::DeviceLoader {
     #[inline]

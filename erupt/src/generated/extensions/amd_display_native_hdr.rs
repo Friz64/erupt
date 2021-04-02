@@ -84,6 +84,7 @@ impl<'a> std::ops::DerefMut for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayNativeHdrSurfaceCapabilitiesAMD> for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Structure"]
 #[doc(alias = "VkSwapchainDisplayNativeHdrCreateInfoAMD")]
 #[derive(Copy, Clone)]
@@ -158,6 +159,7 @@ impl<'a> std::ops::DerefMut for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SwapchainDisplayNativeHdrCreateInfoAMD> for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl crate::DeviceLoader {
     #[inline]

@@ -96,6 +96,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryWin32HandleInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImportMemoryWin32HandleInfoNV> for ImportMemoryWin32HandleInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Structure"]
 #[doc(alias = "VkExportMemoryWin32HandleInfoNV")]
 #[derive(Copy, Clone)]
@@ -178,6 +179,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryWin32HandleInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportMemoryWin32HandleInfoNV> for ExportMemoryWin32HandleInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_external_memory_win32`]"]
 impl crate::DeviceLoader {
     #[inline]

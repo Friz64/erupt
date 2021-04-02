@@ -126,6 +126,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCoverageReductionModeFeaturesNVBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCoverageReductionModeFeaturesNV> for PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineCoverageReductionStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -208,6 +209,7 @@ impl<'a> std::ops::DerefMut for PipelineCoverageReductionStateCreateInfoNVBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineCoverageReductionStateCreateInfoNV> for PipelineCoverageReductionStateCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferMixedSamplesCombinationNV.html) · Structure"]
 #[doc(alias = "VkFramebufferMixedSamplesCombinationNV")]
 #[derive(Copy, Clone)]
@@ -306,6 +308,7 @@ impl<'a> std::ops::DerefMut for FramebufferMixedSamplesCombinationNVBuilder<'a> 
         &mut self.0
     }
 }
+unsafe impl crate::Repr<FramebufferMixedSamplesCombinationNV> for FramebufferMixedSamplesCombinationNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
 impl crate::InstanceLoader {
     #[inline]

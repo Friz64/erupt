@@ -276,6 +276,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectNameInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugUtilsObjectNameInfoEXT> for DebugUtilsObjectNameInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectTagInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsObjectTagInfoEXT")]
 #[derive(Copy, Clone)]
@@ -382,6 +383,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectTagInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugUtilsObjectTagInfoEXT> for DebugUtilsObjectTagInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsLabelEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsLabelEXT")]
 #[derive(Copy, Clone)]
@@ -464,6 +466,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsLabelEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugUtilsLabelEXT> for DebugUtilsLabelEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsMessengerCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -570,6 +573,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugUtilsMessengerCreateInfoEXT> for DebugUtilsMessengerCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCallbackDataEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsMessengerCallbackDataEXT")]
 #[derive(Copy, Clone)]
@@ -660,19 +664,19 @@ impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn queue_labels(mut self, queue_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
+    pub fn queue_labels(mut self, queue_labels: &'a [impl crate::Repr<crate::extensions::ext_debug_utils::DebugUtilsLabelEXT>]) -> Self {
         self.0.p_queue_labels = queue_labels.as_ptr() as _;
         self.0.queue_label_count = queue_labels.len() as _;
         self
     }
     #[inline]
-    pub fn cmd_buf_labels(mut self, cmd_buf_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
+    pub fn cmd_buf_labels(mut self, cmd_buf_labels: &'a [impl crate::Repr<crate::extensions::ext_debug_utils::DebugUtilsLabelEXT>]) -> Self {
         self.0.p_cmd_buf_labels = cmd_buf_labels.as_ptr() as _;
         self.0.cmd_buf_label_count = cmd_buf_labels.len() as _;
         self
     }
     #[inline]
-    pub fn objects(mut self, objects: &'a [crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder]) -> Self {
+    pub fn objects(mut self, objects: &'a [impl crate::Repr<crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT>]) -> Self {
         self.0.p_objects = objects.as_ptr() as _;
         self.0.object_count = objects.len() as _;
         self
@@ -704,6 +708,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DebugUtilsMessengerCallbackDataEXT> for DebugUtilsMessengerCallbackDataEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
 impl crate::DeviceLoader {
     #[inline]

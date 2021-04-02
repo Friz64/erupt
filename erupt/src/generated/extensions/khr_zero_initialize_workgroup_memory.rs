@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceZeroInitializeWorkgroupMemoryFeatu
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'_> {}

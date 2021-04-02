@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCornerSampledImageFeaturesNVBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceCornerSampledImageFeaturesNV> for PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_> {}

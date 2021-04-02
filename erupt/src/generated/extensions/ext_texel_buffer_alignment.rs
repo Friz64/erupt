@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -176,3 +177,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTexelBufferAlignmentPropertiesEXTB
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceTexelBufferAlignmentPropertiesEXT> for PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'_> {}

@@ -106,6 +106,7 @@ impl<'a> std::ops::DerefMut for PipelineCreationFeedbackEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineCreationFeedbackEXT> for PipelineCreationFeedbackEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineCreationFeedbackCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -160,7 +161,10 @@ impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn pipeline_stage_creation_feedbacks(mut self, pipeline_stage_creation_feedbacks: &'a mut [crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXTBuilder]) -> Self {
+    pub fn pipeline_stage_creation_feedbacks(
+        mut self,
+        pipeline_stage_creation_feedbacks: &'a mut [impl crate::Repr<crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT>],
+    ) -> Self {
         self.0.p_pipeline_stage_creation_feedbacks = pipeline_stage_creation_feedbacks.as_ptr() as _;
         self.0.pipeline_stage_creation_feedback_count = pipeline_stage_creation_feedbacks.len() as _;
         self
@@ -192,3 +196,4 @@ impl<'a> std::ops::DerefMut for PipelineCreationFeedbackCreateInfoEXTBuilder<'a>
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineCreationFeedbackCreateInfoEXT> for PipelineCreationFeedbackCreateInfoEXTBuilder<'_> {}

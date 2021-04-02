@@ -170,6 +170,7 @@ impl<'a> std::ops::DerefMut for ExternalImageFormatPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExternalImageFormatPropertiesNV> for ExternalImageFormatPropertiesNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]

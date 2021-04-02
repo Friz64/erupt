@@ -130,6 +130,7 @@ impl<'a> std::ops::DerefMut for SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceFullScreenExclusiveInfoEXT> for SurfaceFullScreenExclusiveInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Structure"]
 #[doc(alias = "VkSurfaceFullScreenExclusiveWin32InfoEXT")]
 #[derive(Copy, Clone)]
@@ -204,6 +205,7 @@ impl<'a> std::ops::DerefMut for SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceFullScreenExclusiveWin32InfoEXT> for SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilitiesFullScreenExclusiveEXT")]
 #[derive(Copy, Clone)]
@@ -278,6 +280,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesFullScreenExclusiveEXTBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceCapabilitiesFullScreenExclusiveEXT> for SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl crate::InstanceLoader {
     #[inline]

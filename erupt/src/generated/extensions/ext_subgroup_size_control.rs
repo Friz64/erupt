@@ -86,6 +86,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlFeaturesEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSubgroupSizeControlFeaturesEXT> for PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -184,6 +185,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlPropertiesEXTBu
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceSubgroupSizeControlPropertiesEXT> for PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -258,3 +260,4 @@ impl<'a> std::ops::DerefMut for PipelineShaderStageRequiredSubgroupSizeCreateInf
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_> {}

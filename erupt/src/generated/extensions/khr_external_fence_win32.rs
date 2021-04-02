@@ -127,6 +127,7 @@ impl<'a> std::ops::DerefMut for ImportFenceWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImportFenceWin32HandleInfoKHR> for ImportFenceWin32HandleInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkExportFenceWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -217,6 +218,7 @@ impl<'a> std::ops::DerefMut for ExportFenceWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ExportFenceWin32HandleInfoKHR> for ExportFenceWin32HandleInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkFenceGetWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -299,6 +301,7 @@ impl<'a> std::ops::DerefMut for FenceGetWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<FenceGetWin32HandleInfoKHR> for FenceGetWin32HandleInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_external_fence_win32`]"]
 impl crate::DeviceLoader {
     #[inline]

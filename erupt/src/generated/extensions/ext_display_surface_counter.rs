@@ -192,6 +192,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2EXTBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceCapabilities2EXT> for SurfaceCapabilities2EXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
 impl crate::InstanceLoader {
     #[inline]

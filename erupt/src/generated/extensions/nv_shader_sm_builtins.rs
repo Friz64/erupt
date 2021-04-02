@@ -86,6 +86,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderSMBuiltinsPropertiesNV> for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -160,3 +161,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderSMBuiltinsFeaturesNV> for PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_> {}

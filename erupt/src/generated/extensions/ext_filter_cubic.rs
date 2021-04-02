@@ -78,6 +78,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageViewImageFormatInfoEXTBuilder
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceImageViewImageFormatInfoEXT> for PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkFilterCubicImageViewImageFormatPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -160,3 +161,4 @@ impl<'a> std::ops::DerefMut for FilterCubicImageViewImageFormatPropertiesEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<FilterCubicImageViewImageFormatPropertiesEXT> for FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_> {}

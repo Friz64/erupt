@@ -166,3 +166,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilde
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderAtomicFloatFeaturesEXT> for PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_> {}

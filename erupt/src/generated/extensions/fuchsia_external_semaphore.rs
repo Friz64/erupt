@@ -119,6 +119,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a
         &mut self.0
     }
 }
+unsafe impl crate::Repr<ImportSemaphoreZirconHandleInfoFUCHSIA> for ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkSemaphoreGetZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -201,6 +202,7 @@ impl<'a> std::ops::DerefMut for SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SemaphoreGetZirconHandleInfoFUCHSIA> for SemaphoreGetZirconHandleInfoFUCHSIABuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::fuchsia_external_semaphore`]"]
 impl crate::DeviceLoader {
     #[inline]

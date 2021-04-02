@@ -89,6 +89,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockFeaturesEXTBuild
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceInlineUniformBlockFeaturesEXT> for PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -201,6 +202,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockPropertiesEXTBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceInlineUniformBlockPropertiesEXT> for PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetInlineUniformBlockEXT.html) · Structure"]
 #[doc(alias = "VkWriteDescriptorSetInlineUniformBlockEXT")]
 #[derive(Copy, Clone)]
@@ -283,6 +285,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetInlineUniformBlockEXTBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<WriteDescriptorSetInlineUniformBlockEXT> for WriteDescriptorSetInlineUniformBlockEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDescriptorPoolInlineUniformBlockCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -357,3 +360,4 @@ impl<'a> std::ops::DerefMut for DescriptorPoolInlineUniformBlockCreateInfoEXTBui
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DescriptorPoolInlineUniformBlockCreateInfoEXT> for DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_> {}

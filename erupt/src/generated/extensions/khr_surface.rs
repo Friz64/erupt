@@ -352,6 +352,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceCapabilitiesKHR> for SurfaceCapabilitiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceFormatKHR")]
 #[derive(Copy, Clone)]
@@ -425,6 +426,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormatKHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<SurfaceFormatKHR> for SurfaceFormatKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

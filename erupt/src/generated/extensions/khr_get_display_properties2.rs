@@ -115,6 +115,7 @@ impl<'a> std::ops::DerefMut for DisplayProperties2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayProperties2KHR> for DisplayProperties2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneProperties2KHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlaneProperties2KHR")]
 #[derive(Copy, Clone)]
@@ -189,6 +190,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneProperties2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayPlaneProperties2KHR> for DisplayPlaneProperties2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeProperties2KHR.html) · Structure"]
 #[doc(alias = "VkDisplayModeProperties2KHR")]
 #[derive(Copy, Clone)]
@@ -263,6 +265,7 @@ impl<'a> std::ops::DerefMut for DisplayModeProperties2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayModeProperties2KHR> for DisplayModeProperties2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneInfo2KHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlaneInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -345,6 +348,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayPlaneInfo2KHR> for DisplayPlaneInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilities2KHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlaneCapabilities2KHR")]
 #[derive(Copy, Clone)]
@@ -419,6 +423,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneCapabilities2KHRBuilder<'a> {
         &mut self.0
     }
 }
+unsafe impl crate::Repr<DisplayPlaneCapabilities2KHR> for DisplayPlaneCapabilities2KHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_get_display_properties2`]"]
 impl crate::InstanceLoader {
     #[inline]

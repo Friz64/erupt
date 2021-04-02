@@ -80,6 +80,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDivisorDescriptionEXTBuilder<'
         &mut self.0
     }
 }
+unsafe impl crate::Repr<VertexInputBindingDivisorDescriptionEXT> for VertexInputBindingDivisorDescriptionEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineVertexInputDivisorStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -126,7 +127,7 @@ impl<'a> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
         PipelineVertexInputDivisorStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn vertex_binding_divisors(mut self, vertex_binding_divisors: &'a [crate::extensions::ext_vertex_attribute_divisor::VertexInputBindingDivisorDescriptionEXTBuilder]) -> Self {
+    pub fn vertex_binding_divisors(mut self, vertex_binding_divisors: &'a [impl crate::Repr<crate::extensions::ext_vertex_attribute_divisor::VertexInputBindingDivisorDescriptionEXT>]) -> Self {
         self.0.p_vertex_binding_divisors = vertex_binding_divisors.as_ptr() as _;
         self.0.vertex_binding_divisor_count = vertex_binding_divisors.len() as _;
         self
@@ -158,6 +159,7 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputDivisorStateCreateInfoEXTBuil
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PipelineVertexInputDivisorStateCreateInfoEXT> for PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -232,6 +234,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVertexAttributeDivisorPropertiesEX
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceVertexAttributeDivisorPropertiesEXT> for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -314,3 +317,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVertexAttributeDivisorFeaturesEXTB
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_> {}

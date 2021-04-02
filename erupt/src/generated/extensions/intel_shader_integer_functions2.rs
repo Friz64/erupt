@@ -78,3 +78,4 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderIntegerFunctions2FeaturesINT
         &mut self.0
     }
 }
+unsafe impl crate::Repr<PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_> {}

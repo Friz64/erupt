@@ -128,13 +128,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_metal_surface_ext.expect("`create_metal_surface_ext` is not loaded");
-        let mut surface = match surface {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut surface = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

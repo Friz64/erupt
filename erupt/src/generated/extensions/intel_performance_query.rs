@@ -795,13 +795,9 @@ impl crate::DeviceLoader {
     pub unsafe fn acquire_performance_configuration_intel(
         &self,
         acquire_info: &crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL,
-        configuration: Option<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL>,
     ) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL> {
         let _function = self.acquire_performance_configuration_intel.expect("`acquire_performance_configuration_intel` is not loaded");
-        let mut configuration = match configuration {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut configuration = Default::default();
         let _return = _function(self.handle, acquire_info as _, &mut configuration);
         crate::utils::VulkanResult::new(_return, configuration)
     }
@@ -837,13 +833,9 @@ impl crate::DeviceLoader {
     pub unsafe fn get_performance_parameter_intel(
         &self,
         parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL,
-        value: Option<crate::extensions::intel_performance_query::PerformanceValueINTEL>,
     ) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceValueINTEL> {
         let _function = self.get_performance_parameter_intel.expect("`get_performance_parameter_intel` is not loaded");
-        let mut value = match value {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut value = Default::default();
         let _return = _function(self.handle, parameter as _, &mut value);
         crate::utils::VulkanResult::new(_return, value)
     }

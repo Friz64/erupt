@@ -1483,13 +1483,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>,
     ) -> crate::utils::VulkanResult<crate::extensions::nv_ray_tracing::AccelerationStructureNV> {
         let _function = self.create_acceleration_structure_nv.expect("`create_acceleration_structure_nv` is not loaded");
-        let mut acceleration_structure = match acceleration_structure {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut acceleration_structure = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -1529,15 +1525,11 @@ impl crate::DeviceLoader {
     pub unsafe fn get_acceleration_structure_memory_requirements_nv(
         &self,
         info: &crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
-        memory_requirements: Option<crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR>,
     ) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR {
         let _function = self
             .get_acceleration_structure_memory_requirements_nv
             .expect("`get_acceleration_structure_memory_requirements_nv` is not loaded");
-        let mut memory_requirements = match memory_requirements {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut memory_requirements = Default::default();
         let _return = _function(self.handle, info as _, &mut memory_requirements);
         memory_requirements
     }

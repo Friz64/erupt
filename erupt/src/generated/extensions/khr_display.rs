@@ -950,13 +950,9 @@ impl crate::InstanceLoader {
         display: crate::extensions::khr_display::DisplayKHR,
         create_info: &crate::extensions::khr_display::DisplayModeCreateInfoKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        mode: Option<crate::extensions::khr_display::DisplayModeKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayModeKHR> {
         let _function = self.create_display_mode_khr.expect("`create_display_mode_khr` is not loaded");
-        let mut mode = match mode {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut mode = Default::default();
         let _return = _function(
             physical_device as _,
             display as _,
@@ -977,13 +973,9 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         mode: crate::extensions::khr_display::DisplayModeKHR,
         plane_index: u32,
-        capabilities: Option<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR> {
         let _function = self.get_display_plane_capabilities_khr.expect("`get_display_plane_capabilities_khr` is not loaded");
-        let mut capabilities = match capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut capabilities = Default::default();
         let _return = _function(physical_device as _, mode as _, plane_index as _, &mut capabilities);
         crate::utils::VulkanResult::new(_return, capabilities)
     }
@@ -994,13 +986,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_display_plane_surface_khr.expect("`create_display_plane_surface_khr` is not loaded");
-        let mut surface = match surface {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut surface = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

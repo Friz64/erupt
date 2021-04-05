@@ -2,7 +2,7 @@ use super::{value::Value, CommandLevel};
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{self, Declaration, Mutability, Optional, Type},
-    items::functions::Function,
+    items::{functions::Function, structures::StructureField},
     name::{Name, TypeName},
     source::Source,
 };
@@ -20,6 +20,9 @@ enum ParameterKind {
     ValueWrittenTo {
         inner: Type,
     },
+    ValueWrittenToChained {
+        inner: Type,
+    },
     ArrayWrittenTo {
         inner: Type,
         length: String,
@@ -34,7 +37,11 @@ enum ParameterKind {
 }
 
 impl ParameterKind {
-    fn generate_list(parameters: &[Declaration], handle_type: Option<&Type>) -> Vec<ParameterKind> {
+    fn generate_list(
+        source: &Source,
+        parameters: &[Declaration],
+        handle_type: Option<&Type>,
+    ) -> Vec<ParameterKind> {
         let mut kinds = vec![None; parameters.len()];
         let mut passthrough = Vec::new();
         for group in 0.. {
@@ -103,7 +110,17 @@ impl ParameterKind {
                         {
                             *param_kind = Some(ParameterKind::ValueWrittenTo {
                                 inner: (**to).clone(),
-                            })
+                            });
+
+                            if let Type::Named(Name::Type(type_name)) = &**to {
+                                if let Some(structure) = source.find_structure(&type_name) {
+                                    if structure.has_p_next(Mutability::Mut) {
+                                        *param_kind = Some(ParameterKind::ValueWrittenToChained {
+                                            inner: (**to).clone(),
+                                        });
+                                    }
+                                }
+                            }
                         }
                         (optional, Type::Pointer { kind, to }, Some(length))
                             if matches!(optional, Optional::Never | Optional::Always)
@@ -146,7 +163,7 @@ impl Function {
         //log::trace!("Processing wrapper for `{}`", ident);
 
         let handle_type = command_level.handle_type();
-        let kinds = ParameterKind::generate_list(&self.parameters, handle_type.as_ref());
+        let kinds = ParameterKind::generate_list(source, &self.parameters, handle_type.as_ref());
 
         // Parameters to the user-facing function
         let mut user_params: Vec<Declaration> = Vec::new();
@@ -227,6 +244,19 @@ impl Function {
                     }
                 }
                 ParameterKind::ValueWrittenTo { inner } => {
+                    let mut inner_declaration = param;
+                    inner_declaration.ty = inner.clone();
+                    let default = inner_declaration.default_impl(source);
+
+                    return_init.extend(quote! {
+                        let mut #cleaned_ident = #default;
+                    });
+
+                    return_values.push(Value::new(quote! { #cleaned_ident }, inner).map_bool());
+
+                    quote! { &mut #cleaned_ident }
+                }
+                ParameterKind::ValueWrittenToChained { inner } => {
                     let mut user_param = param.clone();
                     user_param.ty = Type::Option(Box::new(inner.clone()));
                     user_params.push(user_param);

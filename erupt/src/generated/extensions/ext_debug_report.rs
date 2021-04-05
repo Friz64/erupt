@@ -288,13 +288,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        callback: Option<crate::extensions::ext_debug_report::DebugReportCallbackEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_report::DebugReportCallbackEXT> {
         let _function = self.create_debug_report_callback_ext.expect("`create_debug_report_callback_ext` is not loaded");
-        let mut callback = match callback {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut callback = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

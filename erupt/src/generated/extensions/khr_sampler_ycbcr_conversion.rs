@@ -87,13 +87,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
         let _function = self.create_sampler_ycbcr_conversion_khr.expect("`create_sampler_ycbcr_conversion_khr` is not loaded");
-        let mut ycbcr_conversion = match ycbcr_conversion {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut ycbcr_conversion = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

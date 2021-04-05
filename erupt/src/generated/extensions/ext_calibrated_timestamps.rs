@@ -156,15 +156,11 @@ impl crate::DeviceLoader {
     pub unsafe fn get_calibrated_timestamps_ext(
         &self,
         timestamp_infos: &[impl crate::Repr<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>],
-        max_deviation: Option<u64>,
     ) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
         let _function = self.get_calibrated_timestamps_ext.expect("`get_calibrated_timestamps_ext` is not loaded");
         let timestamp_count = timestamp_infos.len();
         let mut timestamps = vec![Default::default(); timestamp_count as _];
-        let mut max_deviation = match max_deviation {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut max_deviation = Default::default();
         let _return = _function(self.handle, timestamp_count as _, timestamp_infos.as_ptr() as _, timestamps.as_mut_ptr(), &mut max_deviation);
         crate::utils::VulkanResult::new(_return, (timestamps, max_deviation))
     }

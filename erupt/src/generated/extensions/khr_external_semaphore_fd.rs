@@ -206,16 +206,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreFdKHR")]
-    pub unsafe fn get_semaphore_fd_khr(
-        &self,
-        get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR,
-        fd: Option<std::os::raw::c_int>,
-    ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
+    pub unsafe fn get_semaphore_fd_khr(&self, get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR) -> crate::utils::VulkanResult<std::os::raw::c_int> {
         let _function = self.get_semaphore_fd_khr.expect("`get_semaphore_fd_khr` is not loaded");
-        let mut fd = match fd {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut fd = Default::default();
         let _return = _function(self.handle, get_fd_info as _, &mut fd);
         crate::utils::VulkanResult::new(_return, fd)
     }

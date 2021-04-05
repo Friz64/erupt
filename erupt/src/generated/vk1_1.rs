@@ -6859,12 +6859,9 @@ impl<T> crate::EntryLoader<T> {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceVersion")]
-    pub unsafe fn enumerate_instance_version(&self, api_version: Option<u32>) -> crate::utils::VulkanResult<u32> {
+    pub unsafe fn enumerate_instance_version(&self) -> crate::utils::VulkanResult<u32> {
         let _function = self.enumerate_instance_version.expect("`enumerate_instance_version` is not loaded");
-        let mut api_version = match api_version {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut api_version = Default::default();
         let _return = _function(&mut api_version);
         crate::utils::VulkanResult::new(_return, api_version)
     }
@@ -7093,18 +7090,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeatures.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPeerMemoryFeatures")]
-    pub unsafe fn get_device_group_peer_memory_features(
-        &self,
-        heap_index: u32,
-        local_device_index: u32,
-        remote_device_index: u32,
-        peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
-    ) -> crate::vk1_1::PeerMemoryFeatureFlags {
+    pub unsafe fn get_device_group_peer_memory_features(&self, heap_index: u32, local_device_index: u32, remote_device_index: u32) -> crate::vk1_1::PeerMemoryFeatureFlags {
         let _function = self.get_device_group_peer_memory_features.expect("`get_device_group_peer_memory_features` is not loaded");
-        let mut peer_memory_features = match peer_memory_features {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut peer_memory_features = Default::default();
         let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
     }
@@ -7166,13 +7154,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
         let _function = self.create_descriptor_update_template.expect("`create_descriptor_update_template` is not loaded");
-        let mut descriptor_update_template = match descriptor_update_template {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut descriptor_update_template = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -7275,13 +7259,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
         let _function = self.create_sampler_ycbcr_conversion.expect("`create_sampler_ycbcr_conversion` is not loaded");
-        let mut ycbcr_conversion = match ycbcr_conversion {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut ycbcr_conversion = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -7314,12 +7294,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue2.html) · Function"]
     #[doc(alias = "vkGetDeviceQueue2")]
-    pub unsafe fn get_device_queue2(&self, queue_info: &crate::vk1_1::DeviceQueueInfo2, queue: Option<crate::vk1_0::Queue>) -> crate::vk1_0::Queue {
+    pub unsafe fn get_device_queue2(&self, queue_info: &crate::vk1_1::DeviceQueueInfo2) -> crate::vk1_0::Queue {
         let _function = self.get_device_queue2.expect("`get_device_queue2` is not loaded");
-        let mut queue = match queue {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut queue = Default::default();
         let _return = _function(self.handle, queue_info as _, &mut queue);
         queue
     }

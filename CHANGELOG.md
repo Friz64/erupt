@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Introduced unsafe `Repr` trait to allow either
 builder or non-builder variants of Vulkan structs to be passed into APIs
 
+### Changed
+- Simplified function wrapper arguments
+
 ## [0.18.0+174] - 2021-03-29
 ### Added
 - Added `VulkanResult::map_err`

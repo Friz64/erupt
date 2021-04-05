@@ -258,13 +258,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::ext_validation_cache::ValidationCacheCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_validation_cache::ValidationCacheEXT> {
         let _function = self.create_validation_cache_ext.expect("`create_validation_cache_ext` is not loaded");
-        let mut validation_cache = match validation_cache {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut validation_cache = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

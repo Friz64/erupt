@@ -785,13 +785,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT> {
         let _function = self.create_debug_utils_messenger_ext.expect("`create_debug_utils_messenger_ext` is not loaded");
-        let mut messenger = match messenger {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut messenger = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

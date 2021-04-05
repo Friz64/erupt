@@ -836,15 +836,11 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         performance_query_create_info: &crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR,
-        num_passes: Option<u32>,
     ) -> u32 {
         let _function = self
             .get_physical_device_queue_family_performance_query_passes_khr
             .expect("`get_physical_device_queue_family_performance_query_passes_khr` is not loaded");
-        let mut num_passes = match num_passes {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut num_passes = Default::default();
         let _return = _function(physical_device as _, performance_query_create_info as _, &mut num_passes);
         num_passes
     }

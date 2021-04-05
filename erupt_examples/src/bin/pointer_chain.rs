@@ -19,8 +19,7 @@ fn main() {
 
     let physical_devices = unsafe { instance.enumerate_physical_devices(None) }.unwrap();
     for physical_device in physical_devices {
-        let device_properties =
-            unsafe { instance.get_physical_device_properties(physical_device, None) };
+        let device_properties = unsafe { instance.get_physical_device_properties(physical_device) };
         println!("Physical device: {:?}", unsafe {
             CStr::from_ptr(device_properties.device_name.as_ptr())
         });

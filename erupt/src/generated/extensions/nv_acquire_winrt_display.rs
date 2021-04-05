@@ -28,17 +28,9 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetWinrtDisplayNV.html) · Function"]
     #[doc(alias = "vkGetWinrtDisplayNV")]
-    pub unsafe fn get_winrt_display_nv(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        device_relative_id: u32,
-        display: Option<crate::extensions::khr_display::DisplayKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
+    pub unsafe fn get_winrt_display_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, device_relative_id: u32) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
         let _function = self.get_winrt_display_nv.expect("`get_winrt_display_nv` is not loaded");
-        let mut display = match display {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut display = Default::default();
         let _return = _function(physical_device as _, device_relative_id as _, &mut display);
         crate::utils::VulkanResult::new(_return, display)
     }

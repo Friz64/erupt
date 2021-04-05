@@ -1525,13 +1525,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        indirect_commands_layout: Option<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV>,
     ) -> crate::utils::VulkanResult<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV> {
         let _function = self.create_indirect_commands_layout_nv.expect("`create_indirect_commands_layout_nv` is not loaded");
-        let mut indirect_commands_layout = match indirect_commands_layout {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut indirect_commands_layout = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

@@ -572,13 +572,9 @@ impl crate::DeviceLoader {
     pub unsafe fn get_memory_android_hardware_buffer_android(
         &self,
         info: &crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
-        buffer: Option<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer>,
     ) -> crate::utils::VulkanResult<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer> {
         let _function = self.get_memory_android_hardware_buffer_android.expect("`get_memory_android_hardware_buffer_android` is not loaded");
-        let mut buffer = match buffer {
-            Some(v) => v,
-            None => std::ptr::null_mut(),
-        };
+        let mut buffer = std::ptr::null_mut();
         let _return = _function(self.handle, info as _, &mut buffer);
         crate::utils::VulkanResult::new(_return, buffer)
     }

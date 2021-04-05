@@ -56,13 +56,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
     ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
         let _function = self.create_descriptor_update_template_khr.expect("`create_descriptor_update_template_khr` is not loaded");
-        let mut descriptor_update_template = match descriptor_update_template {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut descriptor_update_template = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

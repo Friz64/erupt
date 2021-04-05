@@ -19360,17 +19360,9 @@ impl<T> crate::EntryLoader<T> {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateInstance.html) · Function"]
     #[doc(alias = "vkCreateInstance")]
-    pub unsafe fn create_instance(
-        &self,
-        create_info: &crate::vk1_0::InstanceCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        instance: Option<crate::vk1_0::Instance>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Instance> {
+    pub unsafe fn create_instance(&self, create_info: &crate::vk1_0::InstanceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Instance> {
         let _function = self.create_instance.expect("`create_instance` is not loaded");
-        let mut instance = match instance {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut instance = Default::default();
         let _return = _function(
             create_info as _,
             match allocator {
@@ -19484,16 +19476,9 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceProperties")]
-    pub unsafe fn get_physical_device_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        properties: Option<crate::vk1_0::PhysicalDeviceProperties>,
-    ) -> crate::vk1_0::PhysicalDeviceProperties {
+    pub unsafe fn get_physical_device_properties(&self, physical_device: crate::vk1_0::PhysicalDevice) -> crate::vk1_0::PhysicalDeviceProperties {
         let _function = self.get_physical_device_properties.expect("`get_physical_device_properties` is not loaded");
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut properties = Default::default();
         let _return = _function(physical_device as _, &mut properties);
         properties
     }
@@ -19521,45 +19506,27 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceMemoryProperties")]
-    pub unsafe fn get_physical_device_memory_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        memory_properties: Option<crate::vk1_0::PhysicalDeviceMemoryProperties>,
-    ) -> crate::vk1_0::PhysicalDeviceMemoryProperties {
+    pub unsafe fn get_physical_device_memory_properties(&self, physical_device: crate::vk1_0::PhysicalDevice) -> crate::vk1_0::PhysicalDeviceMemoryProperties {
         let _function = self.get_physical_device_memory_properties.expect("`get_physical_device_memory_properties` is not loaded");
-        let mut memory_properties = match memory_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut memory_properties = Default::default();
         let _return = _function(physical_device as _, &mut memory_properties);
         memory_properties
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFeatures")]
-    pub unsafe fn get_physical_device_features(&self, physical_device: crate::vk1_0::PhysicalDevice, features: Option<crate::vk1_0::PhysicalDeviceFeatures>) -> crate::vk1_0::PhysicalDeviceFeatures {
+    pub unsafe fn get_physical_device_features(&self, physical_device: crate::vk1_0::PhysicalDevice) -> crate::vk1_0::PhysicalDeviceFeatures {
         let _function = self.get_physical_device_features.expect("`get_physical_device_features` is not loaded");
-        let mut features = match features {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut features = Default::default();
         let _return = _function(physical_device as _, &mut features);
         features
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFormatProperties")]
-    pub unsafe fn get_physical_device_format_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format: crate::vk1_0::Format,
-        format_properties: Option<crate::vk1_0::FormatProperties>,
-    ) -> crate::vk1_0::FormatProperties {
+    pub unsafe fn get_physical_device_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format) -> crate::vk1_0::FormatProperties {
         let _function = self.get_physical_device_format_properties.expect("`get_physical_device_format_properties` is not loaded");
-        let mut format_properties = match format_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut format_properties = Default::default();
         let _return = _function(physical_device as _, format as _, &mut format_properties);
         format_properties
     }
@@ -19574,13 +19541,9 @@ impl crate::InstanceLoader {
         tiling: crate::vk1_0::ImageTiling,
         usage: crate::vk1_0::ImageUsageFlags,
         flags: Option<crate::vk1_0::ImageCreateFlags>,
-        image_format_properties: Option<crate::vk1_0::ImageFormatProperties>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
         let _function = self.get_physical_device_image_format_properties.expect("`get_physical_device_image_format_properties` is not loaded");
-        let mut image_format_properties = match image_format_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut image_format_properties = Default::default();
         let _return = _function(
             physical_device as _,
             format as _,
@@ -19603,13 +19566,9 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         create_info: &crate::vk1_0::DeviceCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        device: Option<crate::vk1_0::Device>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Device> {
         let _function = self.create_device.expect("`create_device` is not loaded");
-        let mut device = match device {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut device = Default::default();
         let _return = _function(
             physical_device as _,
             create_info as _,
@@ -19751,12 +19710,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue.html) · Function"]
     #[doc(alias = "vkGetDeviceQueue")]
-    pub unsafe fn get_device_queue(&self, queue_family_index: u32, queue_index: u32, queue: Option<crate::vk1_0::Queue>) -> crate::vk1_0::Queue {
+    pub unsafe fn get_device_queue(&self, queue_family_index: u32, queue_index: u32) -> crate::vk1_0::Queue {
         let _function = self.get_device_queue.expect("`get_device_queue` is not loaded");
-        let mut queue = match queue {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut queue = Default::default();
         let _return = _function(self.handle, queue_family_index as _, queue_index as _, &mut queue);
         queue
     }
@@ -19800,13 +19756,9 @@ impl crate::DeviceLoader {
         &self,
         allocate_info: &crate::vk1_0::MemoryAllocateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        memory: Option<crate::vk1_0::DeviceMemory>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DeviceMemory> {
         let _function = self.allocate_memory.expect("`allocate_memory` is not loaded");
-        let mut memory = match memory {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut memory = Default::default();
         let _return = _function(
             self.handle,
             allocate_info as _,
@@ -19890,24 +19842,18 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryCommitment.html) · Function"]
     #[doc(alias = "vkGetDeviceMemoryCommitment")]
-    pub unsafe fn get_device_memory_commitment(&self, memory: crate::vk1_0::DeviceMemory, committed_memory_in_bytes: Option<crate::vk1_0::DeviceSize>) -> crate::vk1_0::DeviceSize {
+    pub unsafe fn get_device_memory_commitment(&self, memory: crate::vk1_0::DeviceMemory) -> crate::vk1_0::DeviceSize {
         let _function = self.get_device_memory_commitment.expect("`get_device_memory_commitment` is not loaded");
-        let mut committed_memory_in_bytes = match committed_memory_in_bytes {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut committed_memory_in_bytes = Default::default();
         let _return = _function(self.handle, memory as _, &mut committed_memory_in_bytes);
         committed_memory_in_bytes
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements.html) · Function"]
     #[doc(alias = "vkGetBufferMemoryRequirements")]
-    pub unsafe fn get_buffer_memory_requirements(&self, buffer: crate::vk1_0::Buffer, memory_requirements: Option<crate::vk1_0::MemoryRequirements>) -> crate::vk1_0::MemoryRequirements {
+    pub unsafe fn get_buffer_memory_requirements(&self, buffer: crate::vk1_0::Buffer) -> crate::vk1_0::MemoryRequirements {
         let _function = self.get_buffer_memory_requirements.expect("`get_buffer_memory_requirements` is not loaded");
-        let mut memory_requirements = match memory_requirements {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut memory_requirements = Default::default();
         let _return = _function(self.handle, buffer as _, &mut memory_requirements);
         memory_requirements
     }
@@ -19922,12 +19868,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements.html) · Function"]
     #[doc(alias = "vkGetImageMemoryRequirements")]
-    pub unsafe fn get_image_memory_requirements(&self, image: crate::vk1_0::Image, memory_requirements: Option<crate::vk1_0::MemoryRequirements>) -> crate::vk1_0::MemoryRequirements {
+    pub unsafe fn get_image_memory_requirements(&self, image: crate::vk1_0::Image) -> crate::vk1_0::MemoryRequirements {
         let _function = self.get_image_memory_requirements.expect("`get_image_memory_requirements` is not loaded");
-        let mut memory_requirements = match memory_requirements {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut memory_requirements = Default::default();
         let _return = _function(self.handle, image as _, &mut memory_requirements);
         memory_requirements
     }
@@ -19981,17 +19924,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFence.html) · Function"]
     #[doc(alias = "vkCreateFence")]
-    pub unsafe fn create_fence(
-        &self,
-        create_info: &crate::vk1_0::FenceCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        fence: Option<crate::vk1_0::Fence>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
+    pub unsafe fn create_fence(&self, create_info: &crate::vk1_0::FenceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
         let _function = self.create_fence.expect("`create_fence` is not loaded");
-        let mut fence = match fence {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut fence = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20054,13 +19989,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::SemaphoreCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        semaphore: Option<crate::vk1_0::Semaphore>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Semaphore> {
         let _function = self.create_semaphore.expect("`create_semaphore` is not loaded");
-        let mut semaphore = match semaphore {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut semaphore = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20093,17 +20024,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateEvent.html) · Function"]
     #[doc(alias = "vkCreateEvent")]
-    pub unsafe fn create_event(
-        &self,
-        create_info: &crate::vk1_0::EventCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        event: Option<crate::vk1_0::Event>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Event> {
+    pub unsafe fn create_event(&self, create_info: &crate::vk1_0::EventCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Event> {
         let _function = self.create_event.expect("`create_event` is not loaded");
-        let mut event = match event {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut event = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20164,13 +20087,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::QueryPoolCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        query_pool: Option<crate::vk1_0::QueryPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::QueryPool> {
         let _function = self.create_query_pool.expect("`create_query_pool` is not loaded");
-        let mut query_pool = match query_pool {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut query_pool = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20232,17 +20151,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBuffer.html) · Function"]
     #[doc(alias = "vkCreateBuffer")]
-    pub unsafe fn create_buffer(
-        &self,
-        create_info: &crate::vk1_0::BufferCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        buffer: Option<crate::vk1_0::Buffer>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Buffer> {
+    pub unsafe fn create_buffer(&self, create_info: &crate::vk1_0::BufferCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Buffer> {
         let _function = self.create_buffer.expect("`create_buffer` is not loaded");
-        let mut buffer = match buffer {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut buffer = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20279,13 +20190,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::BufferViewCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        view: Option<crate::vk1_0::BufferView>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::BufferView> {
         let _function = self.create_buffer_view.expect("`create_buffer_view` is not loaded");
-        let mut view = match view {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut view = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20318,17 +20225,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImage.html) · Function"]
     #[doc(alias = "vkCreateImage")]
-    pub unsafe fn create_image(
-        &self,
-        create_info: &crate::vk1_0::ImageCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        image: Option<crate::vk1_0::Image>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Image> {
+    pub unsafe fn create_image(&self, create_info: &crate::vk1_0::ImageCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Image> {
         let _function = self.create_image.expect("`create_image` is not loaded");
-        let mut image = match image {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut image = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20361,17 +20260,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSubresourceLayout.html) · Function"]
     #[doc(alias = "vkGetImageSubresourceLayout")]
-    pub unsafe fn get_image_subresource_layout(
-        &self,
-        image: crate::vk1_0::Image,
-        subresource: &crate::vk1_0::ImageSubresource,
-        layout: Option<crate::vk1_0::SubresourceLayout>,
-    ) -> crate::vk1_0::SubresourceLayout {
+    pub unsafe fn get_image_subresource_layout(&self, image: crate::vk1_0::Image, subresource: &crate::vk1_0::ImageSubresource) -> crate::vk1_0::SubresourceLayout {
         let _function = self.get_image_subresource_layout.expect("`get_image_subresource_layout` is not loaded");
-        let mut layout = match layout {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut layout = Default::default();
         let _return = _function(self.handle, image as _, subresource as _, &mut layout);
         layout
     }
@@ -20382,13 +20273,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::ImageViewCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        view: Option<crate::vk1_0::ImageView>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ImageView> {
         let _function = self.create_image_view.expect("`create_image_view` is not loaded");
-        let mut view = match view {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut view = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20425,13 +20312,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::ShaderModuleCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        shader_module: Option<crate::vk1_0::ShaderModule>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::ShaderModule> {
         let _function = self.create_shader_module.expect("`create_shader_module` is not loaded");
-        let mut shader_module = match shader_module {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut shader_module = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20468,13 +20351,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::PipelineCacheCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        pipeline_cache: Option<crate::vk1_0::PipelineCache>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineCache> {
         let _function = self.create_pipeline_cache.expect("`create_pipeline_cache` is not loaded");
-        let mut pipeline_cache = match pipeline_cache {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut pipeline_cache = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20602,13 +20481,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::PipelineLayoutCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        pipeline_layout: Option<crate::vk1_0::PipelineLayout>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineLayout> {
         let _function = self.create_pipeline_layout.expect("`create_pipeline_layout` is not loaded");
-        let mut pipeline_layout = match pipeline_layout {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut pipeline_layout = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20641,17 +20516,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSampler.html) · Function"]
     #[doc(alias = "vkCreateSampler")]
-    pub unsafe fn create_sampler(
-        &self,
-        create_info: &crate::vk1_0::SamplerCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        sampler: Option<crate::vk1_0::Sampler>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Sampler> {
+    pub unsafe fn create_sampler(&self, create_info: &crate::vk1_0::SamplerCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Sampler> {
         let _function = self.create_sampler.expect("`create_sampler` is not loaded");
-        let mut sampler = match sampler {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut sampler = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20688,13 +20555,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        set_layout: Option<crate::vk1_0::DescriptorSetLayout>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorSetLayout> {
         let _function = self.create_descriptor_set_layout.expect("`create_descriptor_set_layout` is not loaded");
-        let mut set_layout = match set_layout {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut set_layout = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20731,13 +20594,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::DescriptorPoolCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        descriptor_pool: Option<crate::vk1_0::DescriptorPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorPool> {
         let _function = self.create_descriptor_pool.expect("`create_descriptor_pool` is not loaded");
-        let mut descriptor_pool = match descriptor_pool {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut descriptor_pool = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20827,13 +20686,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::FramebufferCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        framebuffer: Option<crate::vk1_0::Framebuffer>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Framebuffer> {
         let _function = self.create_framebuffer.expect("`create_framebuffer` is not loaded");
-        let mut framebuffer = match framebuffer {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut framebuffer = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20870,13 +20725,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::RenderPassCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
         let _function = self.create_render_pass.expect("`create_render_pass` is not loaded");
-        let mut render_pass = match render_pass {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut render_pass = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -20909,12 +20760,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRenderAreaGranularity.html) · Function"]
     #[doc(alias = "vkGetRenderAreaGranularity")]
-    pub unsafe fn get_render_area_granularity(&self, render_pass: crate::vk1_0::RenderPass, granularity: Option<crate::vk1_0::Extent2D>) -> crate::vk1_0::Extent2D {
+    pub unsafe fn get_render_area_granularity(&self, render_pass: crate::vk1_0::RenderPass) -> crate::vk1_0::Extent2D {
         let _function = self.get_render_area_granularity.expect("`get_render_area_granularity` is not loaded");
-        let mut granularity = match granularity {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut granularity = Default::default();
         let _return = _function(self.handle, render_pass as _, &mut granularity);
         granularity
     }
@@ -20925,13 +20773,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_0::CommandPoolCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        command_pool: Option<crate::vk1_0::CommandPool>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::CommandPool> {
         let _function = self.create_command_pool.expect("`create_command_pool` is not loaded");
-        let mut command_pool = match command_pool {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut command_pool = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

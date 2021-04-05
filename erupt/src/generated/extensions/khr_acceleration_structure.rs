@@ -2509,15 +2509,11 @@ impl crate::DeviceLoader {
     pub unsafe fn get_device_acceleration_structure_compatibility_khr(
         &self,
         version_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureVersionInfoKHR,
-        compatibility: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR>,
     ) -> crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR {
         let _function = self
             .get_device_acceleration_structure_compatibility_khr
             .expect("`get_device_acceleration_structure_compatibility_khr` is not loaded");
-        let mut compatibility = match compatibility {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut compatibility = Default::default();
         let _return = _function(self.handle, version_info as _, &mut compatibility);
         compatibility
     }
@@ -2528,13 +2524,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR> {
         let _function = self.create_acceleration_structure_khr.expect("`create_acceleration_structure_khr` is not loaded");
-        let mut acceleration_structure = match acceleration_structure {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut acceleration_structure = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -2626,13 +2618,9 @@ impl crate::DeviceLoader {
         build_type: crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR,
         build_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR,
         max_primitive_counts: &[u32],
-        size_info: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR>,
     ) -> crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR {
         let _function = self.get_acceleration_structure_build_sizes_khr.expect("`get_acceleration_structure_build_sizes_khr` is not loaded");
-        let mut size_info = match size_info {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut size_info = Default::default();
         let _return = _function(self.handle, build_type as _, build_info as _, max_primitive_counts.as_ptr() as _, &mut size_info);
         size_info
     }

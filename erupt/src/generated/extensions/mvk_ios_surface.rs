@@ -126,13 +126,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_ios_surface_mvk.expect("`create_ios_surface_mvk` is not loaded");
-        let mut surface = match surface {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut surface = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

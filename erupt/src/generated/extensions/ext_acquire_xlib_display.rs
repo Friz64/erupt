@@ -43,13 +43,9 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         dpy: *mut std::ffi::c_void,
         rr_output: u64,
-        display: Option<crate::extensions::khr_display::DisplayKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
         let _function = self.get_rand_r_output_display_ext.expect("`get_rand_r_output_display_ext` is not loaded");
-        let mut display = match display {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut display = Default::default();
         let _return = _function(physical_device as _, dpy, rr_output as _, &mut display);
         crate::utils::VulkanResult::new(_return, display)
     }

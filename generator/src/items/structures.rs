@@ -2,7 +2,7 @@ mod builders;
 
 use crate::{
     comment_gen::DocCommentGen,
-    declaration::{Declaration, Type},
+    declaration::{Declaration, Mutability, Type},
     header::{
         eval::{Expression, Literal},
         BitWidth, DeclarationInfo,
@@ -274,6 +274,13 @@ impl Structure {
             }
 
             #builder
+        }
+    }
+
+    pub fn has_p_next(&self, kind: Mutability) -> bool {
+        match self.fields.get(1) {
+            Some(StructureField::Normal(decl)) => decl.is_p_next(kind),
+            _ => false,
         }
     }
 }

@@ -455,13 +455,9 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_index: u32,
         surface: crate::extensions::khr_surface::SurfaceKHR,
-        supported: Option<crate::vk1_0::Bool32>,
     ) -> crate::utils::VulkanResult<bool> {
         let _function = self.get_physical_device_surface_support_khr.expect("`get_physical_device_surface_support_khr` is not loaded");
-        let mut supported = match supported {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut supported = Default::default();
         let _return = _function(physical_device as _, queue_family_index as _, surface as _, &mut supported);
         crate::utils::VulkanResult::new(_return, supported != 0)
     }
@@ -472,13 +468,9 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<crate::extensions::khr_surface::SurfaceCapabilitiesKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
         let _function = self.get_physical_device_surface_capabilities_khr.expect("`get_physical_device_surface_capabilities_khr` is not loaded");
-        let mut surface_capabilities = match surface_capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut surface_capabilities = Default::default();
         let _return = _function(physical_device as _, surface as _, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_return, surface_capabilities)
     }

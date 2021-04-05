@@ -305,7 +305,7 @@ impl<T> Debug for EntryLoader<T> {
 impl InstanceLoader {
     #[inline]
     pub fn new<T>(entry_loader: &EntryLoader<T>, create_info: &crate::vk1_0::InstanceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
-        let instance = unsafe { entry_loader.create_instance(create_info, allocator, None) }.result().map_err(LoaderError::VulkanError)?;
+        let instance = unsafe { entry_loader.create_instance(create_info, allocator) }.result().map_err(LoaderError::VulkanError)?;
 
         let mut version = crate::vk1_0::make_version(1, 0, 0);
         if !create_info.p_application_info.is_null() {
@@ -383,7 +383,7 @@ impl DeviceLoader {
         create_info: &crate::vk1_0::DeviceCreateInfo,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> Result<DeviceLoader, LoaderError> {
-        let device = unsafe { instance_loader.create_device(physical_device, create_info, allocator, None) }
+        let device = unsafe { instance_loader.create_device(physical_device, create_info, allocator) }
             .result()
             .map_err(LoaderError::VulkanError)?;
 

@@ -435,4 +435,12 @@ impl Declaration {
 
         (!array_indices.is_empty()).then(|| array_indices)
     }
+
+    pub fn is_p_next(&self, kind: Mutability) -> bool {
+        self.name() == "pNext"
+            && match &self.ty {
+                Type::Pointer { to, kind: ty_kind } => **to == Type::Void && kind == *ty_kind,
+                _ => false,
+            }
+    }
 }

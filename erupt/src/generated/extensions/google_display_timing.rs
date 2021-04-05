@@ -353,13 +353,9 @@ impl crate::DeviceLoader {
     pub unsafe fn get_refresh_cycle_duration_google(
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        display_timing_properties: Option<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE>,
     ) -> crate::utils::VulkanResult<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE> {
         let _function = self.get_refresh_cycle_duration_google.expect("`get_refresh_cycle_duration_google` is not loaded");
-        let mut display_timing_properties = match display_timing_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut display_timing_properties = Default::default();
         let _return = _function(self.handle, swapchain as _, &mut display_timing_properties);
         crate::utils::VulkanResult::new(_return, display_timing_properties)
     }

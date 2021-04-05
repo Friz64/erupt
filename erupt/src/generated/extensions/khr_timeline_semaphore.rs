@@ -84,12 +84,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreCounterValueKHR")]
-    pub unsafe fn get_semaphore_counter_value_khr(&self, semaphore: crate::vk1_0::Semaphore, value: Option<u64>) -> crate::utils::VulkanResult<u64> {
+    pub unsafe fn get_semaphore_counter_value_khr(&self, semaphore: crate::vk1_0::Semaphore) -> crate::utils::VulkanResult<u64> {
         let _function = self.get_semaphore_counter_value_khr.expect("`get_semaphore_counter_value_khr` is not loaded");
-        let mut value = match value {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut value = Default::default();
         let _return = _function(self.handle, semaphore as _, &mut value);
         crate::utils::VulkanResult::new(_return, value)
     }

@@ -89,13 +89,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::vk1_2::RenderPassCreateInfo2,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        render_pass: Option<crate::vk1_0::RenderPass>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
         let _function = self.create_render_pass2_khr.expect("`create_render_pass2_khr` is not loaded");
-        let mut render_pass = match render_pass {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut render_pass = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

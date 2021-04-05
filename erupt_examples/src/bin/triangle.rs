@@ -113,7 +113,7 @@ fn main() {
             )
             .pfn_user_callback(Some(debug_callback));
 
-        unsafe { instance.create_debug_utils_messenger_ext(&messenger_info, None, None) }.unwrap()
+        unsafe { instance.create_debug_utils_messenger_ext(&messenger_info, None) }.unwrap()
     } else {
         Default::default()
     };
@@ -140,7 +140,6 @@ fn main() {
                                     physical_device,
                                     i as u32,
                                     surface,
-                                    None,
                                 )
                                 .unwrap()
                     }) {
@@ -186,8 +185,7 @@ fn main() {
                     return None;
                 }
 
-                let device_properties =
-                    instance.get_physical_device_properties(physical_device, None);
+                let device_properties = instance.get_physical_device_properties(physical_device);
                 Some((
                     physical_device,
                     queue_family,
@@ -220,13 +218,12 @@ fn main() {
         .enabled_layer_names(&device_layers);
 
     let device = DeviceLoader::new(&instance, physical_device, &device_info, None).unwrap();
-    let queue = unsafe { device.get_device_queue(queue_family, 0, None) };
+    let queue = unsafe { device.get_device_queue(queue_family, 0) };
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Presentation/Swap_chain
-    let surface_caps = unsafe {
-        instance.get_physical_device_surface_capabilities_khr(physical_device, surface, None)
-    }
-    .unwrap();
+    let surface_caps =
+        unsafe { instance.get_physical_device_surface_capabilities_khr(physical_device, surface) }
+            .unwrap();
     let mut image_count = surface_caps.min_image_count + 1;
     if surface_caps.max_image_count > 0 && image_count > surface_caps.max_image_count {
         image_count = surface_caps.max_image_count;
@@ -247,7 +244,7 @@ fn main() {
         .clipped(true)
         .old_swapchain(vk::SwapchainKHR::null());
 
-    let swapchain = unsafe { device.create_swapchain_khr(&swapchain_info, None, None) }.unwrap();
+    let swapchain = unsafe { device.create_swapchain_khr(&swapchain_info, None) }.unwrap();
     let swapchain_images = unsafe { device.get_swapchain_images_khr(swapchain, None) }.unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Presentation/Image_views
@@ -273,7 +270,7 @@ fn main() {
                         .layer_count(1)
                         .build(),
                 );
-            unsafe { device.create_image_view(&image_view_info, None, None) }.unwrap()
+            unsafe { device.create_image_view(&image_view_info, None) }.unwrap()
         })
         .collect();
 
@@ -282,11 +279,11 @@ fn main() {
 
     let vert_decoded = utils::decode_spv(SHADER_VERT).unwrap();
     let module_info = vk::ShaderModuleCreateInfoBuilder::new().code(&vert_decoded);
-    let shader_vert = unsafe { device.create_shader_module(&module_info, None, None) }.unwrap();
+    let shader_vert = unsafe { device.create_shader_module(&module_info, None) }.unwrap();
 
     let frag_decoded = utils::decode_spv(SHADER_FRAG).unwrap();
     let module_info = vk::ShaderModuleCreateInfoBuilder::new().code(&frag_decoded);
-    let shader_frag = unsafe { device.create_shader_module(&module_info, None, None) }.unwrap();
+    let shader_frag = unsafe { device.create_shader_module(&module_info, None) }.unwrap();
 
     let shader_stages = vec![
         vk::PipelineShaderStageCreateInfoBuilder::new()
@@ -347,7 +344,7 @@ fn main() {
 
     let pipeline_layout_info = vk::PipelineLayoutCreateInfoBuilder::new();
     let pipeline_layout =
-        unsafe { device.create_pipeline_layout(&pipeline_layout_info, None, None) }.unwrap();
+        unsafe { device.create_pipeline_layout(&pipeline_layout_info, None) }.unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Render_passes
     let attachments = vec![vk::AttachmentDescriptionBuilder::new()
@@ -378,7 +375,7 @@ fn main() {
         .attachments(&attachments)
         .subpasses(&subpasses)
         .dependencies(&dependencies);
-    let render_pass = unsafe { device.create_render_pass(&render_pass_info, None, None) }.unwrap();
+    let render_pass = unsafe { device.create_render_pass(&render_pass_info, None) }.unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Conclusion
     let pipeline_info = vk::GraphicsPipelineCreateInfoBuilder::new()
@@ -407,15 +404,14 @@ fn main() {
                 .height(surface_caps.current_extent.height)
                 .layers(1);
 
-            unsafe { device.create_framebuffer(&framebuffer_info, None, None) }.unwrap()
+            unsafe { device.create_framebuffer(&framebuffer_info, None) }.unwrap()
         })
         .collect();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Drawing/Command_buffers
     let command_pool_info =
         vk::CommandPoolCreateInfoBuilder::new().queue_family_index(queue_family);
-    let command_pool =
-        unsafe { device.create_command_pool(&command_pool_info, None, None) }.unwrap();
+    let command_pool = unsafe { device.create_command_pool(&command_pool_info, None) }.unwrap();
 
     let cmd_buf_allocate_info = vk::CommandBufferAllocateInfoBuilder::new()
         .command_pool(command_pool)
@@ -459,15 +455,15 @@ fn main() {
     // https://vulkan-tutorial.com/en/Drawing_a_triangle/Drawing/Rendering_and_presentation
     let semaphore_info = vk::SemaphoreCreateInfoBuilder::new();
     let image_available_semaphores: Vec<_> = (0..FRAMES_IN_FLIGHT)
-        .map(|_| unsafe { device.create_semaphore(&semaphore_info, None, None) }.unwrap())
+        .map(|_| unsafe { device.create_semaphore(&semaphore_info, None) }.unwrap())
         .collect();
     let render_finished_semaphores: Vec<_> = (0..FRAMES_IN_FLIGHT)
-        .map(|_| unsafe { device.create_semaphore(&semaphore_info, None, None) }.unwrap())
+        .map(|_| unsafe { device.create_semaphore(&semaphore_info, None) }.unwrap())
         .collect();
 
     let fence_info = vk::FenceCreateInfoBuilder::new().flags(vk::FenceCreateFlags::SIGNALED);
     let in_flight_fences: Vec<_> = (0..FRAMES_IN_FLIGHT)
-        .map(|_| unsafe { device.create_fence(&fence_info, None, None) }.unwrap())
+        .map(|_| unsafe { device.create_fence(&fence_info, None) }.unwrap())
         .collect();
     let mut images_in_flight: Vec<_> = swapchain_images.iter().map(|_| vk::Fence::null()).collect();
 
@@ -506,7 +502,6 @@ fn main() {
                     swapchain,
                     u64::MAX,
                     Some(image_available_semaphores[frame]),
-                    None,
                     None,
                 )
             }

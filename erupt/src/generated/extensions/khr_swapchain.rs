@@ -988,13 +988,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        swapchain: Option<crate::extensions::khr_swapchain::SwapchainKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::SwapchainKHR> {
         let _function = self.create_swapchain_khr.expect("`create_swapchain_khr` is not loaded");
-        let mut swapchain = match swapchain {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut swapchain = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -1054,13 +1050,9 @@ impl crate::DeviceLoader {
         timeout: u64,
         semaphore: Option<crate::vk1_0::Semaphore>,
         fence: Option<crate::vk1_0::Fence>,
-        image_index: Option<u32>,
     ) -> crate::utils::VulkanResult<u32> {
         let _function = self.acquire_next_image_khr.expect("`acquire_next_image_khr` is not loaded");
-        let mut image_index = match image_index {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut image_index = Default::default();
         let _return = _function(
             self.handle,
             swapchain as _,
@@ -1088,15 +1080,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPresentCapabilitiesKHR")]
-    pub unsafe fn get_device_group_present_capabilities_khr(
-        &self,
-        device_group_present_capabilities: Option<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR> {
+    pub unsafe fn get_device_group_present_capabilities_khr(&self) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR> {
         let _function = self.get_device_group_present_capabilities_khr.expect("`get_device_group_present_capabilities_khr` is not loaded");
-        let mut device_group_present_capabilities = match device_group_present_capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut device_group_present_capabilities = Default::default();
         let _return = _function(self.handle, &mut device_group_present_capabilities);
         crate::utils::VulkanResult::new(_return, device_group_present_capabilities)
     }
@@ -1115,12 +1101,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function"]
     #[doc(alias = "vkAcquireNextImage2KHR")]
-    pub unsafe fn acquire_next_image2_khr(&self, acquire_info: &crate::extensions::khr_swapchain::AcquireNextImageInfoKHR, image_index: Option<u32>) -> crate::utils::VulkanResult<u32> {
+    pub unsafe fn acquire_next_image2_khr(&self, acquire_info: &crate::extensions::khr_swapchain::AcquireNextImageInfoKHR) -> crate::utils::VulkanResult<u32> {
         let _function = self.acquire_next_image2_khr.expect("`acquire_next_image2_khr` is not loaded");
-        let mut image_index = match image_index {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut image_index = Default::default();
         let _return = _function(self.handle, acquire_info as _, &mut image_index);
         crate::utils::VulkanResult::new(_return, image_index)
     }

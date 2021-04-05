@@ -25,7 +25,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
                 ..Default::default()
             };
 
-            instance.create_wayland_surface_khr(&create_info, allocation_callbacks, None)
+            instance.create_wayland_surface_khr(&create_info, allocation_callbacks)
         }
 
         #[cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "netbsd", target_os = "openbsd"))]
@@ -38,7 +38,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
                 ..Default::default()
             };
 
-            instance.create_xlib_surface_khr(&create_info, allocation_callbacks, None)
+            instance.create_xlib_surface_khr(&create_info, allocation_callbacks)
         }
 
         #[cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "netbsd", target_os = "openbsd"))]
@@ -51,7 +51,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
                 ..Default::default()
             };
 
-            instance.create_xcb_surface_khr(&create_info, allocation_callbacks, None)
+            instance.create_xcb_surface_khr(&create_info, allocation_callbacks)
         }
 
         #[cfg(any(target_os = "android"))]
@@ -63,7 +63,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
                 ..Default::default()
             };
 
-            instance.create_android_surface_khr(&create_info, allocation_callbacks, None)
+            instance.create_android_surface_khr(&create_info, allocation_callbacks)
         }
 
         #[cfg(any(target_os = "macos"))]
@@ -78,7 +78,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };
 
-            instance.create_metal_surface_ext(&create_info, allocation_callbacks, None)
+            instance.create_metal_surface_ext(&create_info, allocation_callbacks)
         }
 
         #[cfg(any(target_os = "ios"))]
@@ -93,7 +93,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
 
             let create_info = ext_metal_surface::MetalSurfaceCreateInfoEXT { p_layer: layer, ..Default::default() };
 
-            instance.create_metal_surface_ext(&create_info, allocation_callbacks, None)
+            instance.create_metal_surface_ext(&create_info, allocation_callbacks)
         }
 
         #[cfg(target_os = "windows")]
@@ -106,7 +106,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
                 ..Default::default()
             };
 
-            instance.create_win32_surface_khr(&create_info, allocation_callbacks, None)
+            instance.create_win32_surface_khr(&create_info, allocation_callbacks)
         }
 
         _ => VulkanResult::new_err(vk1_0::Result::ERROR_EXTENSION_NOT_PRESENT), // not supported

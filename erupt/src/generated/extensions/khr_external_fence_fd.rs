@@ -203,16 +203,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
     #[doc(alias = "vkGetFenceFdKHR")]
-    pub unsafe fn get_fence_fd_khr(
-        &self,
-        get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR,
-        fd: Option<std::os::raw::c_int>,
-    ) -> crate::utils::VulkanResult<std::os::raw::c_int> {
+    pub unsafe fn get_fence_fd_khr(&self, get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR) -> crate::utils::VulkanResult<std::os::raw::c_int> {
         let _function = self.get_fence_fd_khr.expect("`get_fence_fd_khr` is not loaded");
-        let mut fd = match fd {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut fd = Default::default();
         let _return = _function(self.handle, get_fd_info as _, &mut fd);
         crate::utils::VulkanResult::new(_return, fd)
     }

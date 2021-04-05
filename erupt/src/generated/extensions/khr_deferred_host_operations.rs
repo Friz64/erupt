@@ -53,13 +53,9 @@ impl crate::DeviceLoader {
     pub unsafe fn create_deferred_operation_khr(
         &self,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR> {
         let _function = self.create_deferred_operation_khr.expect("`create_deferred_operation_khr` is not loaded");
-        let mut deferred_operation = match deferred_operation {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut deferred_operation = Default::default();
         let _return = _function(
             self.handle,
             match allocator {

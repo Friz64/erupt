@@ -140,13 +140,9 @@ impl crate::InstanceLoader {
         &self,
         create_info: &crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        surface: Option<crate::extensions::khr_surface::SurfaceKHR>,
     ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_screen_surface_qnx.expect("`create_screen_surface_qnx` is not loaded");
-        let mut surface = match surface {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut surface = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,

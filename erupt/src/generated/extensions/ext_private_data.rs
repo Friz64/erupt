@@ -302,13 +302,9 @@ impl crate::DeviceLoader {
         &self,
         create_info: &crate::extensions::ext_private_data::PrivateDataSlotCreateInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_private_data::PrivateDataSlotEXT> {
         let _function = self.create_private_data_slot_ext.expect("`create_private_data_slot_ext` is not loaded");
-        let mut private_data_slot = match private_data_slot {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut private_data_slot = Default::default();
         let _return = _function(
             self.handle,
             create_info as _,
@@ -359,18 +355,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPrivateDataEXT.html) · Function"]
     #[doc(alias = "vkGetPrivateDataEXT")]
-    pub unsafe fn get_private_data_ext(
-        &self,
-        object_type: crate::vk1_0::ObjectType,
-        object_handle: u64,
-        private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT,
-        data: Option<u64>,
-    ) -> u64 {
+    pub unsafe fn get_private_data_ext(&self, object_type: crate::vk1_0::ObjectType, object_handle: u64, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT) -> u64 {
         let _function = self.get_private_data_ext.expect("`get_private_data_ext` is not loaded");
-        let mut data = match data {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut data = Default::default();
         let _return = _function(self.handle, object_type as _, object_handle as _, private_data_slot as _, &mut data);
         data
     }

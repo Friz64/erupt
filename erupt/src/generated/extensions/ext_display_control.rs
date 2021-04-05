@@ -420,13 +420,9 @@ impl crate::DeviceLoader {
         &self,
         device_event_info: &crate::extensions::ext_display_control::DeviceEventInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
         let _function = self.register_device_event_ext.expect("`register_device_event_ext` is not loaded");
-        let mut fence = match fence {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut fence = Default::default();
         let _return = _function(
             self.handle,
             device_event_info as _,
@@ -446,13 +442,9 @@ impl crate::DeviceLoader {
         display: crate::extensions::khr_display::DisplayKHR,
         display_event_info: &crate::extensions::ext_display_control::DisplayEventInfoEXT,
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-        fence: Option<crate::vk1_0::Fence>,
     ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
         let _function = self.register_display_event_ext.expect("`register_display_event_ext` is not loaded");
-        let mut fence = match fence {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut fence = Default::default();
         let _return = _function(
             self.handle,
             display as _,
@@ -472,13 +464,9 @@ impl crate::DeviceLoader {
         &self,
         swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
         counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT,
-        counter_value: Option<u64>,
     ) -> crate::utils::VulkanResult<u64> {
         let _function = self.get_swapchain_counter_ext.expect("`get_swapchain_counter_ext` is not loaded");
-        let mut counter_value = match counter_value {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut counter_value = Default::default();
         let _return = _function(self.handle, swapchain as _, counter as _, &mut counter_value);
         crate::utils::VulkanResult::new(_return, counter_value)
     }

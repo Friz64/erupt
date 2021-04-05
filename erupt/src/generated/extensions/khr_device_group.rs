@@ -96,18 +96,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPeerMemoryFeaturesKHR")]
-    pub unsafe fn get_device_group_peer_memory_features_khr(
-        &self,
-        heap_index: u32,
-        local_device_index: u32,
-        remote_device_index: u32,
-        peer_memory_features: Option<crate::vk1_1::PeerMemoryFeatureFlags>,
-    ) -> crate::vk1_1::PeerMemoryFeatureFlags {
+    pub unsafe fn get_device_group_peer_memory_features_khr(&self, heap_index: u32, local_device_index: u32, remote_device_index: u32) -> crate::vk1_1::PeerMemoryFeatureFlags {
         let _function = self.get_device_group_peer_memory_features_khr.expect("`get_device_group_peer_memory_features_khr` is not loaded");
-        let mut peer_memory_features = match peer_memory_features {
-            Some(v) => v,
-            None => Default::default(),
-        };
+        let mut peer_memory_features = Default::default();
         let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
     }

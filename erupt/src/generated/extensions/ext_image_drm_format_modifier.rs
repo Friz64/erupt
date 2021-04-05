@@ -8,11 +8,8 @@ pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_c
 pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    image: crate::vk1_0::Image,
-    p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]
@@ -59,10 +56,7 @@ impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
         DrmFormatModifierPropertiesListEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn drm_format_modifier_properties(
-        mut self,
-        drm_format_modifier_properties: &'a mut [impl crate::Repr<crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT>],
-    ) -> Self {
+    pub fn drm_format_modifier_properties(mut self, drm_format_modifier_properties: &'a mut [impl crate::Repr<crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT>]) -> Self {
         self.0.p_drm_format_modifier_properties = drm_format_modifier_properties.as_ptr() as _;
         self.0.drm_format_modifier_count = drm_format_modifier_properties.len() as _;
         self

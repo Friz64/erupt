@@ -16,23 +16,19 @@ pub const FN_CMD_DEBUG_MARKER_END_EXT: *const std::os::raw::c_char = crate::cstr
 pub const FN_CMD_DEBUG_MARKER_INSERT_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerInsertEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugMarkerSetObjectNameEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT) -> crate::vk1_0::Result;
+pub type PFN_vkDebugMarkerSetObjectNameEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugMarkerSetObjectTagEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT) -> crate::vk1_0::Result;
+pub type PFN_vkDebugMarkerSetObjectTagEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDebugMarkerBeginEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
+pub type PFN_vkCmdDebugMarkerBeginEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDebugMarkerEndEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDebugMarkerInsertEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
+pub type PFN_vkCmdDebugMarkerInsertEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugMarkerObjectNameInfoEXT")]
 #[derive(Copy, Clone)]

@@ -47,8 +47,7 @@ impl DiscardRectangleModeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDiscardRectangleEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangle_count: u32, p_discard_rectangles: *const crate::vk1_0::Rect2D) -> ();
+pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangle_count: u32, p_discard_rectangles: *const crate::vk1_0::Rect2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDiscardRectanglePropertiesEXT")]
 #[derive(Copy, Clone)]

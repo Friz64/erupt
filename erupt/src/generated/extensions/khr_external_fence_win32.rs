@@ -10,17 +10,11 @@ pub const FN_GET_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cs
 pub const FN_IMPORT_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetFenceWin32HandleKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_win32_handle_info: *const crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR,
-    p_handle: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetFenceWin32HandleKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_import_fence_win32_handle_info: *const crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_win32_handle_info: *const crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportFenceWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -307,11 +301,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetFenceWin32HandleKHR")]
-    pub unsafe fn get_fence_win32_handle_khr(
-        &self,
-        get_win32_handle_info: &crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR,
-        handle: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_fence_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_fence_win32_handle_khr.expect("`get_fence_win32_handle_khr` is not loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())

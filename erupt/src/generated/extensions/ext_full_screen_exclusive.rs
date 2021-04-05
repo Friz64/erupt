@@ -292,9 +292,7 @@ impl crate::InstanceLoader {
         surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
         present_mode_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let _function = self
-            .get_physical_device_surface_present_modes2_ext
-            .expect("`get_physical_device_surface_present_modes2_ext` is not loaded");
+        let _function = self.get_physical_device_surface_present_modes2_ext.expect("`get_physical_device_surface_present_modes2_ext` is not loaded");
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
             None => {

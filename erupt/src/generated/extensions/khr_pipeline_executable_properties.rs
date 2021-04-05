@@ -152,11 +152,7 @@ impl Default for PipelineInfoKHR {
 }
 impl std::fmt::Debug for PipelineInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline", &self.pipeline)
-            .finish()
+        f.debug_struct("PipelineInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline", &self.pipeline).finish()
     }
 }
 impl PipelineInfoKHR {
@@ -667,9 +663,7 @@ impl crate::DeviceLoader {
         executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR,
         internal_representation_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
-        let _function = self
-            .get_pipeline_executable_internal_representations_khr
-            .expect("`get_pipeline_executable_internal_representations_khr` is not loaded");
+        let _function = self.get_pipeline_executable_internal_representations_khr.expect("`get_pipeline_executable_internal_representations_khr` is not loaded");
         let mut internal_representation_count = match internal_representation_count {
             Some(v) => v,
             None => {

@@ -30,10 +30,7 @@ impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockFeaturesEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("inline_uniform_block", &(self.inline_uniform_block != 0))
-            .field(
-                "descriptor_binding_inline_uniform_block_update_after_bind",
-                &(self.descriptor_binding_inline_uniform_block_update_after_bind != 0),
-            )
+            .field("descriptor_binding_inline_uniform_block_update_after_bind", &(self.descriptor_binding_inline_uniform_block_update_after_bind != 0))
             .finish()
     }
 }
@@ -123,15 +120,9 @@ impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockPropertiesEXT {
             .field("p_next", &self.p_next)
             .field("max_inline_uniform_block_size", &self.max_inline_uniform_block_size)
             .field("max_per_stage_descriptor_inline_uniform_blocks", &self.max_per_stage_descriptor_inline_uniform_blocks)
-            .field(
-                "max_per_stage_descriptor_update_after_bind_inline_uniform_blocks",
-                &self.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks,
-            )
+            .field("max_per_stage_descriptor_update_after_bind_inline_uniform_blocks", &self.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks)
             .field("max_descriptor_set_inline_uniform_blocks", &self.max_descriptor_set_inline_uniform_blocks)
-            .field(
-                "max_descriptor_set_update_after_bind_inline_uniform_blocks",
-                &self.max_descriptor_set_update_after_bind_inline_uniform_blocks,
-            )
+            .field("max_descriptor_set_update_after_bind_inline_uniform_blocks", &self.max_descriptor_set_update_after_bind_inline_uniform_blocks)
             .finish()
     }
 }

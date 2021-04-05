@@ -15,8 +15,7 @@ pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char 
 pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, task_count: u32, first_task: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawMeshTasksIndirectNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
+pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
@@ -300,10 +299,7 @@ impl Default for DrawMeshTasksIndirectCommandNV {
 }
 impl std::fmt::Debug for DrawMeshTasksIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DrawMeshTasksIndirectCommandNV")
-            .field("task_count", &self.task_count)
-            .field("first_task", &self.first_task)
-            .finish()
+        f.debug_struct("DrawMeshTasksIndirectCommandNV").field("task_count", &self.task_count).field("first_task", &self.first_task).finish()
     }
 }
 impl DrawMeshTasksIndirectCommandNV {
@@ -372,14 +368,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksIndirectNV")]
-    pub unsafe fn cmd_draw_mesh_tasks_indirect_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        draw_count: u32,
-        stride: u32,
-    ) -> () {
+    pub unsafe fn cmd_draw_mesh_tasks_indirect_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> () {
         let _function = self.cmd_draw_mesh_tasks_indirect_nv.expect("`cmd_draw_mesh_tasks_indirect_nv` is not loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, draw_count as _, stride as _);
         ()
@@ -398,15 +387,7 @@ impl crate::DeviceLoader {
         stride: u32,
     ) -> () {
         let _function = self.cmd_draw_mesh_tasks_indirect_count_nv.expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            count_buffer as _,
-            count_buffer_offset as _,
-            max_draw_count as _,
-            stride as _,
-        );
+        let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
 }

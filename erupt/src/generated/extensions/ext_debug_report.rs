@@ -162,8 +162,7 @@ pub type PFN_vkCreateDebugReportCallbackEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDebugReportCallbackEXT =
-    unsafe extern "system" fn(instance: crate::vk1_0::Instance, callback: crate::extensions::ext_debug_report::DebugReportCallbackEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyDebugReportCallbackEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, callback: crate::extensions::ext_debug_report::DebugReportCallbackEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugReportMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(

@@ -99,11 +99,7 @@ impl Default for MemoryPriorityAllocateInfoEXT {
 }
 impl std::fmt::Debug for MemoryPriorityAllocateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryPriorityAllocateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("priority", &self.priority)
-            .finish()
+        f.debug_struct("MemoryPriorityAllocateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("priority", &self.priority).finish()
     }
 }
 impl MemoryPriorityAllocateInfoEXT {

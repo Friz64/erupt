@@ -13,8 +13,7 @@ pub const FN_GET_WINRT_DISPLAY_NV: *const std::os::raw::c_char = crate::cstr!("v
 pub type PFN_vkAcquireWinrtDisplayNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetWinrtDisplayNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetWinrtDisplayNV =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, device_relative_id: u32, p_display: *mut crate::extensions::khr_display::DisplayKHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetWinrtDisplayNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, device_relative_id: u32, p_display: *mut crate::extensions::khr_display::DisplayKHR) -> crate::vk1_0::Result;
 #[doc = "Provided by [`crate::extensions::nv_acquire_winrt_display`]"]
 impl crate::InstanceLoader {
     #[inline]

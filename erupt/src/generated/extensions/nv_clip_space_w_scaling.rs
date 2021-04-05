@@ -8,12 +8,8 @@ pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char = 
 pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewportWScalingNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_viewport: u32,
-    viewport_count: u32,
-    p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
-) -> ();
+pub type PFN_vkCmdSetViewportWScalingNV =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Structure"]
 #[doc(alias = "VkViewportWScalingNV")]
 #[derive(Copy, Clone)]
@@ -180,12 +176,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
     #[doc(alias = "vkCmdSetViewportWScalingNV")]
-    pub unsafe fn cmd_set_viewport_w_scaling_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_viewport: u32,
-        viewport_w_scalings: &[impl crate::Repr<crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV>],
-    ) -> () {
+    pub unsafe fn cmd_set_viewport_w_scaling_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_w_scalings: &[impl crate::Repr<crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV>]) -> () {
         let _function = self.cmd_set_viewport_w_scaling_nv.expect("`cmd_set_viewport_w_scaling_nv` is not loaded");
         let viewport_count = viewport_w_scalings.len();
         let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, viewport_w_scalings.as_ptr() as _);

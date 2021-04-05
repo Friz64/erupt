@@ -103,26 +103,16 @@ impl DisplayPlaneAlphaFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDisplayPropertiesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::extensions::khr_display::DisplayPropertiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceDisplayPropertiesKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_display::DisplayPropertiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::extensions::khr_display::DisplayPlanePropertiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_display::DisplayPlanePropertiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDisplayPlaneSupportedDisplaysKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    plane_index: u32,
-    p_display_count: *mut u32,
-    p_displays: *mut crate::extensions::khr_display::DisplayKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetDisplayPlaneSupportedDisplaysKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, plane_index: u32, p_display_count: *mut u32, p_displays: *mut crate::extensions::khr_display::DisplayKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDisplayModePropertiesKHR = unsafe extern "system" fn(
@@ -368,10 +358,7 @@ impl Default for DisplayModeParametersKHR {
 }
 impl std::fmt::Debug for DisplayModeParametersKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayModeParametersKHR")
-            .field("visible_region", &self.visible_region)
-            .field("refresh_rate", &self.refresh_rate)
-            .finish()
+        f.debug_struct("DisplayModeParametersKHR").field("visible_region", &self.visible_region).field("refresh_rate", &self.refresh_rate).finish()
     }
 }
 impl DisplayModeParametersKHR {
@@ -445,10 +432,7 @@ impl Default for DisplayModePropertiesKHR {
 }
 impl std::fmt::Debug for DisplayModePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayModePropertiesKHR")
-            .field("display_mode", &self.display_mode)
-            .field("parameters", &self.parameters)
-            .finish()
+        f.debug_struct("DisplayModePropertiesKHR").field("display_mode", &self.display_mode).field("parameters", &self.parameters).finish()
     }
 }
 impl DisplayModePropertiesKHR {
@@ -856,11 +840,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPropertiesKHR")]
-    pub unsafe fn get_physical_device_display_properties_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
+    pub unsafe fn get_physical_device_display_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
         let _function = self.get_physical_device_display_properties_khr.expect("`get_physical_device_display_properties_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -877,14 +857,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlanePropertiesKHR")]
-    pub unsafe fn get_physical_device_display_plane_properties_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>> {
-        let _function = self
-            .get_physical_device_display_plane_properties_khr
-            .expect("`get_physical_device_display_plane_properties_khr` is not loaded");
+    pub unsafe fn get_physical_device_display_plane_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>> {
+        let _function = self.get_physical_device_display_plane_properties_khr.expect("`get_physical_device_display_plane_properties_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -900,12 +874,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneSupportedDisplaysKHR")]
-    pub unsafe fn get_display_plane_supported_displays_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        plane_index: u32,
-        display_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
+    pub unsafe fn get_display_plane_supported_displays_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, plane_index: u32, display_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
         let _function = self.get_display_plane_supported_displays_khr.expect("`get_display_plane_supported_displays_khr` is not loaded");
         let mut display_count = match display_count {
             Some(v) => v,

@@ -65,16 +65,11 @@ pub type PFN_vkCreateValidationCacheEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyValidationCacheEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyValidationCacheEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetValidationCacheDataEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
-    p_data_size: *mut usize,
-    p_data: *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetValidationCacheDataEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, p_data_size: *mut usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergeValidationCachesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkMergeValidationCachesEXT = unsafe extern "system" fn(
@@ -275,11 +270,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
     #[doc(alias = "vkDestroyValidationCacheEXT")]
-    pub unsafe fn destroy_validation_cache_ext(
-        &self,
-        validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
+    pub unsafe fn destroy_validation_cache_ext(&self, validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_validation_cache_ext.expect("`destroy_validation_cache_ext` is not loaded");
         let _return = _function(
             self.handle,
@@ -297,12 +288,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
     #[doc(alias = "vkGetValidationCacheDataEXT")]
-    pub unsafe fn get_validation_cache_data_ext(
-        &self,
-        validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
-        data_size: *mut usize,
-        data: *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_validation_cache_data_ext(&self, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, data_size: *mut usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_validation_cache_data_ext.expect("`get_validation_cache_data_ext` is not loaded");
         let _return = _function(self.handle, validation_cache as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
@@ -310,11 +296,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergeValidationCachesEXT.html) · Function"]
     #[doc(alias = "vkMergeValidationCachesEXT")]
-    pub unsafe fn merge_validation_caches_ext(
-        &self,
-        dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
-        src_caches: &[crate::extensions::ext_validation_cache::ValidationCacheEXT],
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn merge_validation_caches_ext(&self, dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, src_caches: &[crate::extensions::ext_validation_cache::ValidationCacheEXT]) -> crate::utils::VulkanResult<()> {
         let _function = self.merge_validation_caches_ext.expect("`merge_validation_caches_ext` is not loaded");
         let src_cache_count = src_caches.len();
         let _return = _function(self.handle, dst_cache as _, src_cache_count as _, src_caches.as_ptr() as _);

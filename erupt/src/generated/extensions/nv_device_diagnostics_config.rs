@@ -128,11 +128,7 @@ impl Default for DeviceDiagnosticsConfigCreateInfoNV {
 }
 impl std::fmt::Debug for DeviceDiagnosticsConfigCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceDiagnosticsConfigCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("DeviceDiagnosticsConfigCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).finish()
     }
 }
 impl DeviceDiagnosticsConfigCreateInfoNV {

@@ -27,16 +27,13 @@ pub type PFN_vkCmdCopyImage2KHR = unsafe extern "system" fn(command_buffer: crat
 pub type PFN_vkCmdBlitImage2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_blit_image_info: *const crate::extensions::khr_copy_commands2::BlitImageInfo2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyBufferToImage2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_copy_buffer_to_image_info: *const crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR) -> ();
+pub type PFN_vkCmdCopyBufferToImage2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_copy_buffer_to_image_info: *const crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyImageToBuffer2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_copy_image_to_buffer_info: *const crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR) -> ();
+pub type PFN_vkCmdCopyImageToBuffer2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_copy_image_to_buffer_info: *const crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdResolveImage2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_resolve_image_info: *const crate::extensions::khr_copy_commands2::ResolveImageInfo2KHR) -> ();
+pub type PFN_vkCmdResolveImage2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_resolve_image_info: *const crate::extensions::khr_copy_commands2::ResolveImageInfo2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy2KHR.html) · Structure"]
 #[doc(alias = "VkBufferCopy2KHR")]
 #[derive(Copy, Clone)]
@@ -277,8 +274,8 @@ impl ImageBlit2KHR {
         ImageBlit2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for ImageBlit2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for ImageBlit2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Builder of [`ImageBlit2KHR`]"]
 #[repr(transparent)]
@@ -384,8 +381,8 @@ impl BufferImageCopy2KHR {
         BufferImageCopy2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for BufferImageCopy2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for BufferImageCopy2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for BufferImageCopy2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for BufferImageCopy2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Builder of [`BufferImageCopy2KHR`]"]
 #[repr(transparent)]
@@ -1231,11 +1228,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyBufferToImage2KHR")]
-    pub unsafe fn cmd_copy_buffer_to_image2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        copy_buffer_to_image_info: &crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR,
-    ) -> () {
+    pub unsafe fn cmd_copy_buffer_to_image2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_buffer_to_image_info: &crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR) -> () {
         let _function = self.cmd_copy_buffer_to_image2_khr.expect("`cmd_copy_buffer_to_image2_khr` is not loaded");
         let _return = _function(command_buffer as _, copy_buffer_to_image_info as _);
         ()
@@ -1243,11 +1236,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyImageToBuffer2KHR")]
-    pub unsafe fn cmd_copy_image_to_buffer2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        copy_image_to_buffer_info: &crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR,
-    ) -> () {
+    pub unsafe fn cmd_copy_image_to_buffer2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_image_to_buffer_info: &crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR) -> () {
         let _function = self.cmd_copy_image_to_buffer2_khr.expect("`cmd_copy_image_to_buffer2_khr` is not loaded");
         let _return = _function(command_buffer as _, copy_image_to_buffer_info as _);
         ()

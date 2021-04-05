@@ -186,9 +186,7 @@ impl crate::InstanceLoader {
         flags: Option<crate::vk1_0::ImageCreateFlags>,
         external_handle_type: Option<crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV>,
     ) -> crate::utils::VulkanResult<crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV> {
-        let _function = self
-            .get_physical_device_external_image_format_properties_nv
-            .expect("`get_physical_device_external_image_format_properties_nv` is not loaded");
+        let _function = self.get_physical_device_external_image_format_properties_nv.expect("`get_physical_device_external_image_format_properties_nv` is not loaded");
         let mut external_image_format_properties = Default::default();
         let _return = _function(
             physical_device as _,

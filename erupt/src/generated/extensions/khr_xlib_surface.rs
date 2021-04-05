@@ -38,8 +38,7 @@ pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dpy: *mut std::ffi::c_void, visual_id: u64) -> crate::vk1_0::Bool32;
+pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dpy: *mut std::ffi::c_void, visual_id: u64) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkXlibSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -158,9 +157,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceXlibPresentationSupportKHR")]
     pub unsafe fn get_physical_device_xlib_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dpy: *mut std::ffi::c_void, visual_id: u64) -> bool {
-        let _function = self
-            .get_physical_device_xlib_presentation_support_khr
-            .expect("`get_physical_device_xlib_presentation_support_khr` is not loaded");
+        let _function = self.get_physical_device_xlib_presentation_support_khr.expect("`get_physical_device_xlib_presentation_support_khr` is not loaded");
         let _return = _function(physical_device as _, queue_family_index as _, dpy, visual_id as _);
         _return != 0
     }

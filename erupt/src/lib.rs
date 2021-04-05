@@ -324,8 +324,7 @@ impl InstanceLoader {
 
             let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
 
-            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties =
-                mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
+            let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
 
             let mut physical_device_count = 0;
             let result = enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
@@ -377,15 +376,8 @@ impl Debug for InstanceLoader {
 
 impl DeviceLoader {
     #[inline]
-    pub fn new(
-        instance_loader: &InstanceLoader,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        create_info: &crate::vk1_0::DeviceCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> Result<DeviceLoader, LoaderError> {
-        let device = unsafe { instance_loader.create_device(physical_device, create_info, allocator) }
-            .result()
-            .map_err(LoaderError::VulkanError)?;
+    pub fn new(instance_loader: &InstanceLoader, physical_device: crate::vk1_0::PhysicalDevice, create_info: &crate::vk1_0::DeviceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> Result<DeviceLoader, LoaderError> {
+        let device = unsafe { instance_loader.create_device(physical_device, create_info, allocator) }.result().map_err(LoaderError::VulkanError)?;
 
         let device_enabled = unsafe {
             let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
@@ -416,16 +408,16 @@ pub unsafe trait Repr<T> {}
 
 unsafe impl<T> Repr<T> for T {}
 
-/// Provides type-safe pointer chain support.
-pub trait ExtendableFrom<'a, T> {
-    /// Appends `other`'s pointer chain to the end of this pointer chain.
+/// Provides type-safe `*const` pointer chain support.
+pub trait ExtendableFromConst<'a, T> {
+    /// Appends `other` (+ its pointer chain) to the end of this pointer chain.
     #[must_use]
-    fn extend_from(mut self, other: &'a mut T) -> Self
+    fn extend_from(mut self, other: &'a T) -> Self
     where
         Self: Sized,
     {
         unsafe {
-            crate::append_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
+            crate::append_const_ptr_chain(&mut self as *mut Self as _, other as *const T as _);
         }
 
         self
@@ -433,7 +425,37 @@ pub trait ExtendableFrom<'a, T> {
 }
 
 #[inline]
-unsafe fn append_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, tail: *mut vk1_0::BaseOutStructure) {
+unsafe fn append_const_ptr_chain(mut host: *mut vk1_0::BaseInStructure, tail: *const vk1_0::BaseInStructure) {
+    loop {
+        let p_next = &mut (*host).p_next;
+
+        if p_next.is_null() {
+            *p_next = tail;
+            break;
+        } else {
+            host = *p_next as *mut _;
+        }
+    }
+}
+
+/// Provides type-safe `*mut` pointer chain support.
+pub trait ExtendableFromMut<'a, T> {
+    /// Appends `other` (+ its pointer chain) to the end of this pointer chain.
+    #[must_use]
+    fn extend_from(mut self, other: &'a mut T) -> Self
+    where
+        Self: Sized,
+    {
+        unsafe {
+            crate::append_mut_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
+        }
+
+        self
+    }
+}
+
+#[inline]
+unsafe fn append_mut_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, tail: *mut vk1_0::BaseOutStructure) {
     loop {
         let p_next = &mut (*host).p_next;
 

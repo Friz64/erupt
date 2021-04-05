@@ -38,36 +38,19 @@ impl std::fmt::Debug for PipelineRasterizationStateStreamCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindTransformFeedbackBuffersEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_binding: u32,
-    binding_count: u32,
-    p_buffers: *const crate::vk1_0::Buffer,
-    p_offsets: *const crate::vk1_0::DeviceSize,
-    p_sizes: *const crate::vk1_0::DeviceSize,
-) -> ();
+pub type PFN_vkCmdBindTransformFeedbackBuffersEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize, p_sizes: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginTransformFeedbackEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_counter_buffer: u32,
-    counter_buffer_count: u32,
-    p_counter_buffers: *const crate::vk1_0::Buffer,
-    p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-) -> ();
+pub type PFN_vkCmdBeginTransformFeedbackEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdEndTransformFeedbackEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_counter_buffer: u32,
-    counter_buffer_count: u32,
-    p_counter_buffers: *const crate::vk1_0::Buffer,
-    p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-) -> ();
+pub type PFN_vkCmdEndTransformFeedbackEXT =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginQueryIndexedEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags, index: u32) -> ();
+pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags, index: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, index: u32) -> ();
@@ -400,79 +383,34 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
     #[doc(alias = "vkCmdBindTransformFeedbackBuffersEXT")]
-    pub unsafe fn cmd_bind_transform_feedback_buffers_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_binding: u32,
-        buffers: &[crate::vk1_0::Buffer],
-        offsets: &[crate::vk1_0::DeviceSize],
-        sizes: &[crate::vk1_0::DeviceSize],
-    ) -> () {
+    pub unsafe fn cmd_bind_transform_feedback_buffers_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, buffers: &[crate::vk1_0::Buffer], offsets: &[crate::vk1_0::DeviceSize], sizes: &[crate::vk1_0::DeviceSize]) -> () {
         let _function = self.cmd_bind_transform_feedback_buffers_ext.expect("`cmd_bind_transform_feedback_buffers_ext` is not loaded");
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len());
-        let _return = _function(
-            command_buffer as _,
-            first_binding as _,
-            binding_count as _,
-            buffers.as_ptr() as _,
-            offsets.as_ptr() as _,
-            sizes.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_binding as _, binding_count as _, buffers.as_ptr() as _, offsets.as_ptr() as _, sizes.as_ptr() as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginTransformFeedbackEXT")]
-    pub unsafe fn cmd_begin_transform_feedback_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_counter_buffer: u32,
-        counter_buffers: &[crate::vk1_0::Buffer],
-        counter_buffer_offsets: &[crate::vk1_0::DeviceSize],
-    ) -> () {
+    pub unsafe fn cmd_begin_transform_feedback_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffers: &[crate::vk1_0::Buffer], counter_buffer_offsets: &[crate::vk1_0::DeviceSize]) -> () {
         let _function = self.cmd_begin_transform_feedback_ext.expect("`cmd_begin_transform_feedback_ext` is not loaded");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len());
-        let _return = _function(
-            command_buffer as _,
-            first_counter_buffer as _,
-            counter_buffer_count as _,
-            counter_buffers.as_ptr() as _,
-            counter_buffer_offsets.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_counter_buffer as _, counter_buffer_count as _, counter_buffers.as_ptr() as _, counter_buffer_offsets.as_ptr() as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
     #[doc(alias = "vkCmdEndTransformFeedbackEXT")]
-    pub unsafe fn cmd_end_transform_feedback_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_counter_buffer: u32,
-        counter_buffers: &[crate::vk1_0::Buffer],
-        counter_buffer_offsets: &[crate::vk1_0::DeviceSize],
-    ) -> () {
+    pub unsafe fn cmd_end_transform_feedback_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffers: &[crate::vk1_0::Buffer], counter_buffer_offsets: &[crate::vk1_0::DeviceSize]) -> () {
         let _function = self.cmd_end_transform_feedback_ext.expect("`cmd_end_transform_feedback_ext` is not loaded");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len());
-        let _return = _function(
-            command_buffer as _,
-            first_counter_buffer as _,
-            counter_buffer_count as _,
-            counter_buffers.as_ptr() as _,
-            counter_buffer_offsets.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_counter_buffer as _, counter_buffer_count as _, counter_buffers.as_ptr() as _, counter_buffer_offsets.as_ptr() as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginQueryIndexedEXT")]
-    pub unsafe fn cmd_begin_query_indexed_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        query_pool: crate::vk1_0::QueryPool,
-        query: u32,
-        flags: Option<crate::vk1_0::QueryControlFlags>,
-        index: u32,
-    ) -> () {
+    pub unsafe fn cmd_begin_query_indexed_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: Option<crate::vk1_0::QueryControlFlags>, index: u32) -> () {
         let _function = self.cmd_begin_query_indexed_ext.expect("`cmd_begin_query_indexed_ext` is not loaded");
         let _return = _function(
             command_buffer as _,

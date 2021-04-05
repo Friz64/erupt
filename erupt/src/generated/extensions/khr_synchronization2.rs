@@ -239,53 +239,30 @@ impl SubmitFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetEvent2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
+pub type PFN_vkCmdSetEvent2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdResetEvent2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> ();
+pub type PFN_vkCmdResetEvent2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWaitEvents2KHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    event_count: u32,
-    p_events: *const crate::vk1_0::Event,
-    p_dependency_infos: *const crate::extensions::khr_synchronization2::DependencyInfoKHR,
-) -> ();
+pub type PFN_vkCmdWaitEvents2KHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event_count: u32, p_events: *const crate::vk1_0::Event, p_dependency_infos: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPipelineBarrier2KHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
+pub type PFN_vkCmdPipelineBarrier2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_dependency_info: *const crate::extensions::khr_synchronization2::DependencyInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkQueueSubmit2KHR = unsafe extern "system" fn(
-    queue: crate::vk1_0::Queue,
-    submit_count: u32,
-    p_submits: *const crate::extensions::khr_synchronization2::SubmitInfo2KHR,
-    fence: crate::vk1_0::Fence,
-) -> crate::vk1_0::Result;
+pub type PFN_vkQueueSubmit2KHR = unsafe extern "system" fn(queue: crate::vk1_0::Queue, submit_count: u32, p_submits: *const crate::extensions::khr_synchronization2::SubmitInfo2KHR, fence: crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWriteTimestamp2KHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    query_pool: crate::vk1_0::QueryPool,
-    query: u32,
-) -> ();
+pub type PFN_vkCmdWriteTimestamp2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, query_pool: crate::vk1_0::QueryPool, query: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarker2AMD.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWriteBufferMarker2AMD = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    dst_buffer: crate::vk1_0::Buffer,
-    dst_offset: crate::vk1_0::DeviceSize,
-    marker: u32,
-) -> ();
+pub type PFN_vkCmdWriteBufferMarker2AMD =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetQueueCheckpointData2NV =
-    unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV) -> ();
+pub type PFN_vkGetQueueCheckpointData2NV = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]
@@ -445,8 +422,8 @@ impl ImageMemoryBarrier2KHR {
         ImageMemoryBarrier2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrier2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrier2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier2KHR.html) · Builder of [`ImageMemoryBarrier2KHR`]"]
 #[repr(transparent)]
@@ -1017,12 +994,12 @@ impl SubmitInfo2KHR {
         SubmitInfo2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo2KHR.html) · Builder of [`SubmitInfo2KHR`]"]
 #[repr(transparent)]
@@ -1321,12 +1298,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdSetEvent2KHR")]
-    pub unsafe fn cmd_set_event2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        event: crate::vk1_0::Event,
-        dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR,
-    ) -> () {
+    pub unsafe fn cmd_set_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
         let _function = self.cmd_set_event2_khr.expect("`cmd_set_event2_khr` is not loaded");
         let _return = _function(command_buffer as _, event as _, dependency_info as _);
         ()
@@ -1334,12 +1306,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdResetEvent2KHR")]
-    pub unsafe fn cmd_reset_event2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        event: crate::vk1_0::Event,
-        stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-    ) -> () {
+    pub unsafe fn cmd_reset_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> () {
         let _function = self.cmd_reset_event2_khr.expect("`cmd_reset_event2_khr` is not loaded");
         let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
@@ -1347,12 +1314,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents2KHR.html) · Function"]
     #[doc(alias = "vkCmdWaitEvents2KHR")]
-    pub unsafe fn cmd_wait_events2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        events: &[crate::vk1_0::Event],
-        dependency_infos: &[impl crate::Repr<crate::extensions::khr_synchronization2::DependencyInfoKHR>],
-    ) -> () {
+    pub unsafe fn cmd_wait_events2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], dependency_infos: &[impl crate::Repr<crate::extensions::khr_synchronization2::DependencyInfoKHR>]) -> () {
         let _function = self.cmd_wait_events2_khr.expect("`cmd_wait_events2_khr` is not loaded");
         let event_count = events.len().min(dependency_infos.len());
         let _return = _function(command_buffer as _, event_count as _, events.as_ptr() as _, dependency_infos.as_ptr() as _);
@@ -1369,12 +1331,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
     #[doc(alias = "vkQueueSubmit2KHR")]
-    pub unsafe fn queue_submit2_khr(
-        &self,
-        queue: crate::vk1_0::Queue,
-        submits: &[impl crate::Repr<crate::extensions::khr_synchronization2::SubmitInfo2KHR>],
-        fence: Option<crate::vk1_0::Fence>,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn queue_submit2_khr(&self, queue: crate::vk1_0::Queue, submits: &[impl crate::Repr<crate::extensions::khr_synchronization2::SubmitInfo2KHR>], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_submit2_khr.expect("`queue_submit2_khr` is not loaded");
         let submit_count = submits.len();
         let _return = _function(
@@ -1391,13 +1348,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp2KHR.html) · Function"]
     #[doc(alias = "vkCmdWriteTimestamp2KHR")]
-    pub unsafe fn cmd_write_timestamp2_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
-        query_pool: crate::vk1_0::QueryPool,
-        query: u32,
-    ) -> () {
+    pub unsafe fn cmd_write_timestamp2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, query_pool: crate::vk1_0::QueryPool, query: u32) -> () {
         let _function = self.cmd_write_timestamp2_khr.expect("`cmd_write_timestamp2_khr` is not loaded");
         let _return = _function(command_buffer as _, stage as _, query_pool as _, query as _);
         ()

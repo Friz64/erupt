@@ -134,12 +134,10 @@ impl DebugUtilsMessageTypeFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetDebugUtilsObjectNameEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT) -> crate::vk1_0::Result;
+pub type PFN_vkSetDebugUtilsObjectNameEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetDebugUtilsObjectTagEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT) -> crate::vk1_0::Result;
+pub type PFN_vkSetDebugUtilsObjectTagEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_tag_info: *const crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueBeginDebugUtilsLabelEXT = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
@@ -168,8 +166,7 @@ pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDebugUtilsMessengerEXT =
-    unsafe extern "system" fn(instance: crate::vk1_0::Instance, messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyDebugUtilsMessengerEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(

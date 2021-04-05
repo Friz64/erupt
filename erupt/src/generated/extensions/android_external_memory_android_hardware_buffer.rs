@@ -210,14 +210,8 @@ impl AndroidHardwareBufferPropertiesANDROID {
         AndroidHardwareBufferPropertiesANDROIDBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROID>
-    for AndroidHardwareBufferPropertiesANDROIDBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>>
-    for AndroidHardwareBufferPropertiesANDROIDBuilder<'a>
-{
-}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROID> for AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]
 #[repr(transparent)]
@@ -556,9 +550,7 @@ impl crate::DeviceLoader {
         buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
         properties: Option<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>,
     ) -> crate::utils::VulkanResult<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID> {
-        let _function = self
-            .get_android_hardware_buffer_properties_android
-            .expect("`get_android_hardware_buffer_properties_android` is not loaded");
+        let _function = self.get_android_hardware_buffer_properties_android.expect("`get_android_hardware_buffer_properties_android` is not loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),

@@ -109,26 +109,18 @@ impl IndirectStateFlagBitsNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdExecuteGeneratedCommandsNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    is_preprocessed: crate::vk1_0::Bool32,
-    p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
-) -> ();
+pub type PFN_vkCmdExecuteGeneratedCommandsNV =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, is_preprocessed: crate::vk1_0::Bool32, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPreprocessGeneratedCommandsNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
+pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindPipelineShaderGroupNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, pipeline: crate::vk1_0::Pipeline, group_index: u32) -> ();
+pub type PFN_vkCmdBindPipelineShaderGroupNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, pipeline: crate::vk1_0::Pipeline, group_index: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV,
-    p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-) -> ();
+pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(
@@ -139,11 +131,8 @@ pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyIndirectCommandsLayoutNV =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -1464,12 +1453,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function"]
     #[doc(alias = "vkCmdExecuteGeneratedCommandsNV")]
-    pub unsafe fn cmd_execute_generated_commands_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        is_preprocessed: bool,
-        generated_commands_info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
-    ) -> () {
+    pub unsafe fn cmd_execute_generated_commands_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, is_preprocessed: bool, generated_commands_info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> () {
         let _function = self.cmd_execute_generated_commands_nv.expect("`cmd_execute_generated_commands_nv` is not loaded");
         let _return = _function(command_buffer as _, is_preprocessed as _, generated_commands_info as _);
         ()
@@ -1477,11 +1461,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function"]
     #[doc(alias = "vkCmdPreprocessGeneratedCommandsNV")]
-    pub unsafe fn cmd_preprocess_generated_commands_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        generated_commands_info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
-    ) -> () {
+    pub unsafe fn cmd_preprocess_generated_commands_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, generated_commands_info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> () {
         let _function = self.cmd_preprocess_generated_commands_nv.expect("`cmd_preprocess_generated_commands_nv` is not loaded");
         let _return = _function(command_buffer as _, generated_commands_info as _);
         ()
@@ -1489,13 +1469,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function"]
     #[doc(alias = "vkCmdBindPipelineShaderGroupNV")]
-    pub unsafe fn cmd_bind_pipeline_shader_group_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-        pipeline: crate::vk1_0::Pipeline,
-        group_index: u32,
-    ) -> () {
+    pub unsafe fn cmd_bind_pipeline_shader_group_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, pipeline: crate::vk1_0::Pipeline, group_index: u32) -> () {
         let _function = self.cmd_bind_pipeline_shader_group_nv.expect("`cmd_bind_pipeline_shader_group_nv` is not loaded");
         let _return = _function(command_buffer as _, pipeline_bind_point as _, pipeline as _, group_index as _);
         ()
@@ -1508,9 +1482,7 @@ impl crate::DeviceLoader {
         info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV,
         memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
     ) -> crate::vk1_1::MemoryRequirements2 {
-        let _function = self
-            .get_generated_commands_memory_requirements_nv
-            .expect("`get_generated_commands_memory_requirements_nv` is not loaded");
+        let _function = self.get_generated_commands_memory_requirements_nv.expect("`get_generated_commands_memory_requirements_nv` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
             None => Default::default(),
@@ -1542,11 +1514,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
     #[doc(alias = "vkDestroyIndirectCommandsLayoutNV")]
-    pub unsafe fn destroy_indirect_commands_layout_nv(
-        &self,
-        indirect_commands_layout: Option<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
+    pub unsafe fn destroy_indirect_commands_layout_nv(&self, indirect_commands_layout: Option<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_indirect_commands_layout_nv.expect("`destroy_indirect_commands_layout_nv` is not loaded");
         let _return = _function(
             self.handle,

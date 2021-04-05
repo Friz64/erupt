@@ -22,38 +22,26 @@ crate::non_dispatchable_handle!(
 );
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDeferredOperationKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_deferred_operation: *mut crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDeferredOperationKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_deferred_operation: *mut crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDeferredOperationKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyDeferredOperationKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationMaxConcurrencyKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeferredOperationMaxConcurrencyKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationResultKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeferredOperationResultKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetDeferredOperationResultKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDeferredOperationJoinKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDeferredOperationJoinKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
+pub type PFN_vkDeferredOperationJoinKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
 #[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
     #[doc(alias = "vkCreateDeferredOperationKHR")]
-    pub unsafe fn create_deferred_operation_khr(
-        &self,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR> {
+    pub unsafe fn create_deferred_operation_khr(&self, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR> {
         let _function = self.create_deferred_operation_khr.expect("`create_deferred_operation_khr` is not loaded");
         let mut deferred_operation = Default::default();
         let _return = _function(
@@ -69,11 +57,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
     #[doc(alias = "vkDestroyDeferredOperationKHR")]
-    pub unsafe fn destroy_deferred_operation_khr(
-        &self,
-        operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
+    pub unsafe fn destroy_deferred_operation_khr(&self, operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_deferred_operation_khr.expect("`destroy_deferred_operation_khr` is not loaded");
         let _return = _function(
             self.handle,

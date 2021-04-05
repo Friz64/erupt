@@ -6266,18 +6266,13 @@ impl VendorId {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateInstance.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateInstance = unsafe extern "system" fn(
-    p_create_info: *const crate::vk1_0::InstanceCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_instance: *mut crate::vk1_0::Instance,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateInstance = unsafe extern "system" fn(p_create_info: *const crate::vk1_0::InstanceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_instance: *mut crate::vk1_0::Instance) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyInstance.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyInstance = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDevices.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumeratePhysicalDevices =
-    unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_physical_device_count: *mut u32, p_physical_devices: *mut crate::vk1_0::PhysicalDevice) -> crate::vk1_0::Result;
+pub type PFN_vkEnumeratePhysicalDevices = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_physical_device_count: *mut u32, p_physical_devices: *mut crate::vk1_0::PhysicalDevice) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceProcAddr.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceProcAddr = unsafe extern "system" fn(device: crate::vk1_0::Device, p_name: *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>;
@@ -6289,19 +6284,16 @@ pub type PFN_vkGetInstanceProcAddr = unsafe extern "system" fn(instance: crate::
 pub type PFN_vkGetPhysicalDeviceProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_properties: *mut crate::vk1_0::PhysicalDeviceProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_queue_family_property_count: *mut u32, p_queue_family_properties: *mut crate::vk1_0::QueueFamilyProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_queue_family_property_count: *mut u32, p_queue_family_properties: *mut crate::vk1_0::QueueFamilyProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMemoryProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_memory_properties: *mut crate::vk1_0::PhysicalDeviceMemoryProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceMemoryProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_memory_properties: *mut crate::vk1_0::PhysicalDeviceMemoryProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFeatures = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_features: *mut crate::vk1_0::PhysicalDeviceFeatures) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceFormatProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, p_format_properties: *mut crate::vk1_0::FormatProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceFormatProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, p_format_properties: *mut crate::vk1_0::FormatProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceImageFormatProperties = unsafe extern "system" fn(
@@ -6315,12 +6307,8 @@ pub type PFN_vkGetPhysicalDeviceImageFormatProperties = unsafe extern "system" f
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDevice.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDevice = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_create_info: *const crate::vk1_0::DeviceCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_device: *mut crate::vk1_0::Device,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDevice =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_create_info: *const crate::vk1_0::DeviceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_device: *mut crate::vk1_0::Device) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDevice.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDevice = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6329,20 +6317,14 @@ pub type PFN_vkDestroyDevice = unsafe extern "system" fn(device: crate::vk1_0::D
 pub type PFN_vkEnumerateInstanceLayerProperties = unsafe extern "system" fn(p_property_count: *mut u32, p_properties: *mut crate::vk1_0::LayerProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceExtensionProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumerateInstanceExtensionProperties =
-    unsafe extern "system" fn(p_layer_name: *const std::os::raw::c_char, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::ExtensionProperties) -> crate::vk1_0::Result;
+pub type PFN_vkEnumerateInstanceExtensionProperties = unsafe extern "system" fn(p_layer_name: *const std::os::raw::c_char, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::ExtensionProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceLayerProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumerateDeviceLayerProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::LayerProperties) -> crate::vk1_0::Result;
+pub type PFN_vkEnumerateDeviceLayerProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::LayerProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceExtensionProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumerateDeviceExtensionProperties = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_layer_name: *const std::os::raw::c_char,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::vk1_0::ExtensionProperties,
-) -> crate::vk1_0::Result;
+pub type PFN_vkEnumerateDeviceExtensionProperties =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_layer_name: *const std::os::raw::c_char, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::ExtensionProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceQueue = unsafe extern "system" fn(device: crate::vk1_0::Device, queue_family_index: u32, queue_index: u32, p_queue: *mut crate::vk1_0::Queue) -> ();
@@ -6357,12 +6339,8 @@ pub type PFN_vkQueueWaitIdle = unsafe extern "system" fn(queue: crate::vk1_0::Qu
 pub type PFN_vkDeviceWaitIdle = unsafe extern "system" fn(device: crate::vk1_0::Device) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateMemory.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAllocateMemory = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_allocate_info: *const crate::vk1_0::MemoryAllocateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_memory: *mut crate::vk1_0::DeviceMemory,
-) -> crate::vk1_0::Result;
+pub type PFN_vkAllocateMemory =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocate_info: *const crate::vk1_0::MemoryAllocateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_memory: *mut crate::vk1_0::DeviceMemory) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFreeMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkFreeMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6381,38 +6359,29 @@ pub type PFN_vkMapMemory = unsafe extern "system" fn(
 pub type PFN_vkUnmapMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFlushMappedMemoryRanges.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkFlushMappedMemoryRanges =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, memory_range_count: u32, p_memory_ranges: *const crate::vk1_0::MappedMemoryRange) -> crate::vk1_0::Result;
+pub type PFN_vkFlushMappedMemoryRanges = unsafe extern "system" fn(device: crate::vk1_0::Device, memory_range_count: u32, p_memory_ranges: *const crate::vk1_0::MappedMemoryRange) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkInvalidateMappedMemoryRanges.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkInvalidateMappedMemoryRanges =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, memory_range_count: u32, p_memory_ranges: *const crate::vk1_0::MappedMemoryRange) -> crate::vk1_0::Result;
+pub type PFN_vkInvalidateMappedMemoryRanges = unsafe extern "system" fn(device: crate::vk1_0::Device, memory_range_count: u32, p_memory_ranges: *const crate::vk1_0::MappedMemoryRange) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryCommitment.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceMemoryCommitment =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, p_committed_memory_in_bytes: *mut crate::vk1_0::DeviceSize) -> ();
+pub type PFN_vkGetDeviceMemoryCommitment = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, p_committed_memory_in_bytes: *mut crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferMemoryRequirements = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: crate::vk1_0::Buffer, p_memory_requirements: *mut crate::vk1_0::MemoryRequirements) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindBufferMemory =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: crate::vk1_0::Buffer, memory: crate::vk1_0::DeviceMemory, memory_offset: crate::vk1_0::DeviceSize) -> crate::vk1_0::Result;
+pub type PFN_vkBindBufferMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: crate::vk1_0::Buffer, memory: crate::vk1_0::DeviceMemory, memory_offset: crate::vk1_0::DeviceSize) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageMemoryRequirements = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_memory_requirements: *mut crate::vk1_0::MemoryRequirements) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkBindImageMemory =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, memory: crate::vk1_0::DeviceMemory, memory_offset: crate::vk1_0::DeviceSize) -> crate::vk1_0::Result;
+pub type PFN_vkBindImageMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, memory: crate::vk1_0::DeviceMemory, memory_offset: crate::vk1_0::DeviceSize) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageSparseMemoryRequirements = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    image: crate::vk1_0::Image,
-    p_sparse_memory_requirement_count: *mut u32,
-    p_sparse_memory_requirements: *mut crate::vk1_0::SparseImageMemoryRequirements,
-) -> ();
+pub type PFN_vkGetImageSparseMemoryRequirements =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_sparse_memory_requirement_count: *mut u32, p_sparse_memory_requirements: *mut crate::vk1_0::SparseImageMemoryRequirements) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties = unsafe extern "system" fn(
@@ -6427,16 +6396,11 @@ pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties = unsafe extern "sys
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBindSparse.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkQueueBindSparse =
-    unsafe extern "system" fn(queue: crate::vk1_0::Queue, bind_info_count: u32, p_bind_info: *const crate::vk1_0::BindSparseInfo, fence: crate::vk1_0::Fence) -> crate::vk1_0::Result;
+pub type PFN_vkQueueBindSparse = unsafe extern "system" fn(queue: crate::vk1_0::Queue, bind_info_count: u32, p_bind_info: *const crate::vk1_0::BindSparseInfo, fence: crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFence.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateFence = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::FenceCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_fence: *mut crate::vk1_0::Fence,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateFence =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FenceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_fence: *mut crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFence.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyFence = unsafe extern "system" fn(device: crate::vk1_0::Device, fence: crate::vk1_0::Fence, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6448,27 +6412,18 @@ pub type PFN_vkResetFences = unsafe extern "system" fn(device: crate::vk1_0::Dev
 pub type PFN_vkGetFenceStatus = unsafe extern "system" fn(device: crate::vk1_0::Device, fence: crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitForFences.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkWaitForFences =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, fence_count: u32, p_fences: *const crate::vk1_0::Fence, wait_all: crate::vk1_0::Bool32, timeout: u64) -> crate::vk1_0::Result;
+pub type PFN_vkWaitForFences = unsafe extern "system" fn(device: crate::vk1_0::Device, fence_count: u32, p_fences: *const crate::vk1_0::Fence, wait_all: crate::vk1_0::Bool32, timeout: u64) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSemaphore.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSemaphore = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::SemaphoreCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_semaphore: *mut crate::vk1_0::Semaphore,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSemaphore =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SemaphoreCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_semaphore: *mut crate::vk1_0::Semaphore) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySemaphore.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySemaphore = unsafe extern "system" fn(device: crate::vk1_0::Device, semaphore: crate::vk1_0::Semaphore, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateEvent.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateEvent = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::EventCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_event: *mut crate::vk1_0::Event,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateEvent =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::EventCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_event: *mut crate::vk1_0::Event) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyEvent = unsafe extern "system" fn(device: crate::vk1_0::Device, event: crate::vk1_0::Event, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6483,12 +6438,8 @@ pub type PFN_vkSetEvent = unsafe extern "system" fn(device: crate::vk1_0::Device
 pub type PFN_vkResetEvent = unsafe extern "system" fn(device: crate::vk1_0::Device, event: crate::vk1_0::Event) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateQueryPool = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::QueryPoolCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_query_pool: *mut crate::vk1_0::QueryPool,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateQueryPool =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::QueryPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_query_pool: *mut crate::vk1_0::QueryPool) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyQueryPool = unsafe extern "system" fn(device: crate::vk1_0::Device, query_pool: crate::vk1_0::QueryPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6506,60 +6457,39 @@ pub type PFN_vkGetQueryPoolResults = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateBuffer = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::BufferCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_buffer: *mut crate::vk1_0::Buffer,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateBuffer =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_buffer: *mut crate::vk1_0::Buffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyBuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: crate::vk1_0::Buffer, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferView.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateBufferView = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::BufferViewCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_view: *mut crate::vk1_0::BufferView,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateBufferView =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::BufferView) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBufferView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyBufferView = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer_view: crate::vk1_0::BufferView, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateImage = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::ImageCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_image: *mut crate::vk1_0::Image,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateImage =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_image: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyImage = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSubresourceLayout.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageSubresourceLayout =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_subresource: *const crate::vk1_0::ImageSubresource, p_layout: *mut crate::vk1_0::SubresourceLayout) -> ();
+pub type PFN_vkGetImageSubresourceLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_subresource: *const crate::vk1_0::ImageSubresource, p_layout: *mut crate::vk1_0::SubresourceLayout) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImageView.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateImageView = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::ImageViewCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_view: *mut crate::vk1_0::ImageView,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateImageView =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::ImageView) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImageView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyImageView = unsafe extern "system" fn(device: crate::vk1_0::Device, image_view: crate::vk1_0::ImageView, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateShaderModule.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateShaderModule = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::ShaderModuleCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_shader_module: *mut crate::vk1_0::ShaderModule,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateShaderModule =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ShaderModuleCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_shader_module: *mut crate::vk1_0::ShaderModule) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyShaderModule.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyShaderModule = unsafe extern "system" fn(device: crate::vk1_0::Device, shader_module: crate::vk1_0::ShaderModule, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6576,12 +6506,10 @@ pub type PFN_vkCreatePipelineCache = unsafe extern "system" fn(
 pub type PFN_vkDestroyPipelineCache = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineCacheData.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineCacheData =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, p_data_size: *mut usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetPipelineCacheData = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, p_data_size: *mut usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergePipelineCaches.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkMergePipelineCaches =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, dst_cache: crate::vk1_0::PipelineCache, src_cache_count: u32, p_src_caches: *const crate::vk1_0::PipelineCache) -> crate::vk1_0::Result;
+pub type PFN_vkMergePipelineCaches = unsafe extern "system" fn(device: crate::vk1_0::Device, dst_cache: crate::vk1_0::PipelineCache, src_cache_count: u32, p_src_caches: *const crate::vk1_0::PipelineCache) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateGraphicsPipelines.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateGraphicsPipelines = unsafe extern "system" fn(
@@ -6615,16 +6543,11 @@ pub type PFN_vkCreatePipelineLayout = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipelineLayout.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyPipelineLayout =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_layout: crate::vk1_0::PipelineLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyPipelineLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_layout: crate::vk1_0::PipelineLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSampler.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSampler = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::SamplerCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_sampler: *mut crate::vk1_0::Sampler,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSampler =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SamplerCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_sampler: *mut crate::vk1_0::Sampler) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySampler.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySampler = unsafe extern "system" fn(device: crate::vk1_0::Device, sampler: crate::vk1_0::Sampler, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6638,8 +6561,7 @@ pub type PFN_vkCreateDescriptorSetLayout = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorSetLayout.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDescriptorSetLayout =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyDescriptorSetLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorPool = unsafe extern "system" fn(
@@ -6650,55 +6572,31 @@ pub type PFN_vkCreateDescriptorPool = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyDescriptorPool =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyDescriptorPool = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkResetDescriptorPool =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, flags: crate::vk1_0::DescriptorPoolResetFlags) -> crate::vk1_0::Result;
+pub type PFN_vkResetDescriptorPool = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, flags: crate::vk1_0::DescriptorPoolResetFlags) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAllocateDescriptorSets = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_allocate_info: *const crate::vk1_0::DescriptorSetAllocateInfo,
-    p_descriptor_sets: *mut crate::vk1_0::DescriptorSet,
-) -> crate::vk1_0::Result;
+pub type PFN_vkAllocateDescriptorSets = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocate_info: *const crate::vk1_0::DescriptorSetAllocateInfo, p_descriptor_sets: *mut crate::vk1_0::DescriptorSet) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFreeDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkFreeDescriptorSets = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    descriptor_pool: crate::vk1_0::DescriptorPool,
-    descriptor_set_count: u32,
-    p_descriptor_sets: *const crate::vk1_0::DescriptorSet,
-) -> crate::vk1_0::Result;
+pub type PFN_vkFreeDescriptorSets = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, descriptor_set_count: u32, p_descriptor_sets: *const crate::vk1_0::DescriptorSet) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkUpdateDescriptorSets = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    descriptor_write_count: u32,
-    p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet,
-    descriptor_copy_count: u32,
-    p_descriptor_copies: *const crate::vk1_0::CopyDescriptorSet,
-) -> ();
+pub type PFN_vkUpdateDescriptorSets =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_write_count: u32, p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet, descriptor_copy_count: u32, p_descriptor_copies: *const crate::vk1_0::CopyDescriptorSet) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFramebuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateFramebuffer = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::FramebufferCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_framebuffer: *mut crate::vk1_0::Framebuffer,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateFramebuffer =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FramebufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_framebuffer: *mut crate::vk1_0::Framebuffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFramebuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyFramebuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, framebuffer: crate::vk1_0::Framebuffer, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateRenderPass = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::RenderPassCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_render_pass: *mut crate::vk1_0::RenderPass,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateRenderPass =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::RenderPassCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_render_pass: *mut crate::vk1_0::RenderPass) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyRenderPass = unsafe extern "system" fn(device: crate::vk1_0::Device, render_pass: crate::vk1_0::RenderPass, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6707,12 +6605,8 @@ pub type PFN_vkDestroyRenderPass = unsafe extern "system" fn(device: crate::vk1_
 pub type PFN_vkGetRenderAreaGranularity = unsafe extern "system" fn(device: crate::vk1_0::Device, render_pass: crate::vk1_0::RenderPass, p_granularity: *mut crate::vk1_0::Extent2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateCommandPool = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::CommandPoolCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_command_pool: *mut crate::vk1_0::CommandPool,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateCommandPool =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::CommandPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_command_pool: *mut crate::vk1_0::CommandPool) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6721,15 +6615,10 @@ pub type PFN_vkDestroyCommandPool = unsafe extern "system" fn(device: crate::vk1
 pub type PFN_vkResetCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, flags: crate::vk1_0::CommandPoolResetFlags) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateCommandBuffers.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAllocateCommandBuffers = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_allocate_info: *const crate::vk1_0::CommandBufferAllocateInfo,
-    p_command_buffers: *mut crate::vk1_0::CommandBuffer,
-) -> crate::vk1_0::Result;
+pub type PFN_vkAllocateCommandBuffers = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocate_info: *const crate::vk1_0::CommandBufferAllocateInfo, p_command_buffers: *mut crate::vk1_0::CommandBuffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFreeCommandBuffers.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkFreeCommandBuffers =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, command_buffer_count: u32, p_command_buffers: *const crate::vk1_0::CommandBuffer) -> ();
+pub type PFN_vkFreeCommandBuffers = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, command_buffer_count: u32, p_command_buffers: *const crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBeginCommandBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkBeginCommandBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_begin_info: *const crate::vk1_0::CommandBufferBeginInfo) -> crate::vk1_0::Result;
@@ -6753,12 +6642,7 @@ pub type PFN_vkCmdSetScissor = unsafe extern "system" fn(command_buffer: crate::
 pub type PFN_vkCmdSetLineWidth = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, line_width: std::os::raw::c_float) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBias.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDepthBias = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    depth_bias_constant_factor: std::os::raw::c_float,
-    depth_bias_clamp: std::os::raw::c_float,
-    depth_bias_slope_factor: std::os::raw::c_float,
-) -> ();
+pub type PFN_vkCmdSetDepthBias = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, depth_bias_constant_factor: std::os::raw::c_float, depth_bias_clamp: std::os::raw::c_float, depth_bias_slope_factor: std::os::raw::c_float) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetBlendConstants.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetBlendConstants = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, blend_constants: [std::os::raw::c_float; 4]) -> ();
@@ -6788,32 +6672,22 @@ pub type PFN_vkCmdBindDescriptorSets = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindIndexBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindIndexBuffer =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, index_type: crate::vk1_0::IndexType) -> ();
+pub type PFN_vkCmdBindIndexBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, index_type: crate::vk1_0::IndexType) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindVertexBuffers = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_binding: u32,
-    binding_count: u32,
-    p_buffers: *const crate::vk1_0::Buffer,
-    p_offsets: *const crate::vk1_0::DeviceSize,
-) -> ();
+pub type PFN_vkCmdBindVertexBuffers = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDraw.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDraw = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, vertex_count: u32, instance_count: u32, first_vertex: u32, first_instance: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexed.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawIndexed =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, index_count: u32, instance_count: u32, first_index: u32, vertex_offset: i32, first_instance: u32) -> ();
+pub type PFN_vkCmdDrawIndexed = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, index_count: u32, instance_count: u32, first_index: u32, vertex_offset: i32, first_instance: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirect.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawIndirect =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
+pub type PFN_vkCmdDrawIndirect = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirect.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawIndexedIndirect =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
+pub type PFN_vkCmdDrawIndexedIndirect = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatch.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatch = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> ();
@@ -6822,13 +6696,7 @@ pub type PFN_vkCmdDispatch = unsafe extern "system" fn(command_buffer: crate::vk
 pub type PFN_vkCmdDispatchIndirect = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyBuffer = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_buffer: crate::vk1_0::Buffer,
-    dst_buffer: crate::vk1_0::Buffer,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::BufferCopy,
-) -> ();
+pub type PFN_vkCmdCopyBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_buffer: crate::vk1_0::Buffer, dst_buffer: crate::vk1_0::Buffer, region_count: u32, p_regions: *const crate::vk1_0::BufferCopy) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyImage = unsafe extern "system" fn(
@@ -6874,17 +6742,11 @@ pub type PFN_vkCmdCopyImageToBuffer = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdUpdateBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdUpdateBuffer = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    dst_buffer: crate::vk1_0::Buffer,
-    dst_offset: crate::vk1_0::DeviceSize,
-    data_size: crate::vk1_0::DeviceSize,
-    p_data: *const std::ffi::c_void,
-) -> ();
+pub type PFN_vkCmdUpdateBuffer =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, data_size: crate::vk1_0::DeviceSize, p_data: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdFillBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdFillBuffer =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, data: u32) -> ();
+pub type PFN_vkCmdFillBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, data: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearColorImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdClearColorImage = unsafe extern "system" fn(
@@ -6907,13 +6769,7 @@ pub type PFN_vkCmdClearDepthStencilImage = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearAttachments.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdClearAttachments = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    attachment_count: u32,
-    p_attachments: *const crate::vk1_0::ClearAttachment,
-    rect_count: u32,
-    p_rects: *const crate::vk1_0::ClearRect,
-) -> ();
+pub type PFN_vkCmdClearAttachments = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, attachment_count: u32, p_attachments: *const crate::vk1_0::ClearAttachment, rect_count: u32, p_rects: *const crate::vk1_0::ClearRect) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdResolveImage = unsafe extern "system" fn(
@@ -6971,8 +6827,7 @@ pub type PFN_vkCmdEndQuery = unsafe extern "system" fn(command_buffer: crate::vk
 pub type PFN_vkCmdResetQueryPool = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWriteTimestamp =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: crate::vk1_0::PipelineStageFlagBits, query_pool: crate::vk1_0::QueryPool, query: u32) -> ();
+pub type PFN_vkCmdWriteTimestamp = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: crate::vk1_0::PipelineStageFlagBits, query_pool: crate::vk1_0::QueryPool, query: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyQueryPoolResults.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(
@@ -6987,18 +6842,11 @@ pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushConstants.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPushConstants = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    layout: crate::vk1_0::PipelineLayout,
-    stage_flags: crate::vk1_0::ShaderStageFlags,
-    offset: u32,
-    size: u32,
-    p_values: *const std::ffi::c_void,
-) -> ();
+pub type PFN_vkCmdPushConstants =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, layout: crate::vk1_0::PipelineLayout, stage_flags: crate::vk1_0::ShaderStageFlags, offset: u32, size: u32, p_values: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginRenderPass =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo, contents: crate::vk1_0::SubpassContents) -> ();
+pub type PFN_vkCmdBeginRenderPass = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo, contents: crate::vk1_0::SubpassContents) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdNextSubpass = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, contents: crate::vk1_0::SubpassContents) -> ();
@@ -7010,25 +6858,16 @@ pub type PFN_vkCmdEndRenderPass = unsafe extern "system" fn(command_buffer: crat
 pub type PFN_vkCmdExecuteCommands = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, command_buffer_count: u32, p_command_buffers: *const crate::vk1_0::CommandBuffer) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkInternalAllocationNotification.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkInternalAllocationNotification =
-    unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, allocation_type: crate::vk1_0::InternalAllocationType, allocation_scope: crate::vk1_0::SystemAllocationScope) -> ();
+pub type PFN_vkInternalAllocationNotification = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, allocation_type: crate::vk1_0::InternalAllocationType, allocation_scope: crate::vk1_0::SystemAllocationScope) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkInternalFreeNotification.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkInternalFreeNotification =
-    unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, allocation_type: crate::vk1_0::InternalAllocationType, allocation_scope: crate::vk1_0::SystemAllocationScope) -> ();
+pub type PFN_vkInternalFreeNotification = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, allocation_type: crate::vk1_0::InternalAllocationType, allocation_scope: crate::vk1_0::SystemAllocationScope) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkReallocationFunction.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkReallocationFunction = unsafe extern "system" fn(
-    p_user_data: *mut std::ffi::c_void,
-    p_original: *mut std::ffi::c_void,
-    size: usize,
-    alignment: usize,
-    allocation_scope: crate::vk1_0::SystemAllocationScope,
-) -> *mut std::ffi::c_void;
+pub type PFN_vkReallocationFunction = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, p_original: *mut std::ffi::c_void, size: usize, alignment: usize, allocation_scope: crate::vk1_0::SystemAllocationScope) -> *mut std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkAllocationFunction.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAllocationFunction =
-    unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, alignment: usize, allocation_scope: crate::vk1_0::SystemAllocationScope) -> *mut std::ffi::c_void;
+pub type PFN_vkAllocationFunction = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, size: usize, alignment: usize, allocation_scope: crate::vk1_0::SystemAllocationScope) -> *mut std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkFreeFunction.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkFreeFunction = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, p_memory: *mut std::ffi::c_void) -> ();
@@ -7183,10 +7022,7 @@ pub struct Offset2D {
 }
 impl Default for Offset2D {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default() }
     }
 }
 impl std::fmt::Debug for Offset2D {
@@ -7422,11 +7258,7 @@ impl Default for Extent3D {
 }
 impl std::fmt::Debug for Extent3D {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("Extent3D")
-            .field("width", &self.width)
-            .field("height", &self.height)
-            .field("depth", &self.depth)
-            .finish()
+        f.debug_struct("Extent3D").field("width", &self.width).field("height", &self.height).field("depth", &self.depth).finish()
     }
 }
 impl Extent3D {
@@ -7777,12 +7609,7 @@ impl Default for ComponentMapping {
 }
 impl std::fmt::Debug for ComponentMapping {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ComponentMapping")
-            .field("r", &self.r)
-            .field("g", &self.g)
-            .field("b", &self.b)
-            .field("a", &self.a)
-            .finish()
+        f.debug_struct("ComponentMapping").field("r", &self.r).field("g", &self.g).field("b", &self.b).field("a", &self.a).finish()
     }
 }
 impl ComponentMapping {
@@ -8409,8 +8236,8 @@ impl DeviceQueueCreateInfo {
         DeviceQueueCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_global_priority::DeviceQueueGlobalPriorityCreateInfoEXT> for DeviceQueueCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_global_priority::DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_>> for DeviceQueueCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_global_priority::DeviceQueueGlobalPriorityCreateInfoEXT> for DeviceQueueCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_global_priority::DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_>> for DeviceQueueCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueCreateInfo.html) · Builder of [`DeviceQueueCreateInfo`]"]
 #[repr(transparent)]
@@ -8518,178 +8345,178 @@ impl DeviceCreateInfo {
         DeviceCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceFeatures2> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceFeatures2Builder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupDeviceCreateInfo> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupDeviceCreateInfoBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_memory_overallocation_behavior::DeviceMemoryOverallocationCreateInfoAMD> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_memory_overallocation_behavior::DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11Features> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan11FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12Features> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::PhysicalDeviceVulkan12FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceFeatures2> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceFeatures2Builder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceMultiviewFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupDeviceCreateInfo> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupDeviceCreateInfoBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDevice16BitStorageFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDevice8BitStorageFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_memory_overallocation_behavior::DeviceMemoryOverallocationCreateInfoAMD> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_memory_overallocation_behavior::DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkan11Features> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkan11FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkan12Features> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::PhysicalDeviceVulkan12FeaturesBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`]"]
 #[repr(transparent)]
@@ -8803,14 +8630,14 @@ impl InstanceCreateInfo {
         InstanceCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_flags::ValidationFlagsEXT> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_flags::ValidationFlagsEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_features::ValidationFeaturesEXT> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_features::ValidationFeaturesEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT> for InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_flags::ValidationFlagsEXT> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_flags::ValidationFlagsEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_features::ValidationFeaturesEXT> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_features::ValidationFeaturesEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT> for InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXTBuilder<'_>> for InstanceCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstanceCreateInfo.html) · Builder of [`InstanceCreateInfo`]"]
 #[repr(transparent)]
@@ -9092,36 +8919,36 @@ impl MemoryAllocateInfo {
         MemoryAllocateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationMemoryAllocateInfoNV> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationMemoryAllocateInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory::ExportMemoryAllocateInfoNV> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory::ExportMemoryAllocateInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory_win32::ImportMemoryWin32HandleInfoNV> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory_win32::ImportMemoryWin32HandleInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory_win32::ExportMemoryWin32HandleInfoNV> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory_win32::ExportMemoryWin32HandleInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportMemoryAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportMemoryAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIA> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryAllocateFlagsInfo> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryAllocateFlagsInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::MemoryDedicatedAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_external_memory_host::ImportMemoryHostPointerInfoEXT> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_external_memory_host::ImportMemoryHostPointerInfoEXTBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ImportAndroidHardwareBufferInfoANDROID> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::MemoryPriorityAllocateInfoEXT> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_memory_priority::MemoryPriorityAllocateInfoEXTBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationMemoryAllocateInfoNV> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationMemoryAllocateInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory::ExportMemoryAllocateInfoNV> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory::ExportMemoryAllocateInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory_win32::ImportMemoryWin32HandleInfoNV> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory_win32::ImportMemoryWin32HandleInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory_win32::ExportMemoryWin32HandleInfoNV> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory_win32::ExportMemoryWin32HandleInfoNVBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportMemoryAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportMemoryAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIA> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHR> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHRBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::MemoryAllocateFlagsInfo> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::MemoryAllocateFlagsInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::MemoryDedicatedAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::MemoryDedicatedAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_external_memory_host::ImportMemoryHostPointerInfoEXT> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_external_memory_host::ImportMemoryHostPointerInfoEXTBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ImportAndroidHardwareBufferInfoANDROID> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_memory_priority::MemoryPriorityAllocateInfoEXT> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_memory_priority::MemoryPriorityAllocateInfoEXTBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfo> for MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfoBuilder<'_>> for MemoryAllocateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateInfo.html) · Builder of [`MemoryAllocateInfo`]"]
 #[repr(transparent)]
@@ -9458,10 +9285,7 @@ impl Default for MemoryType {
 }
 impl std::fmt::Debug for MemoryType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryType")
-            .field("property_flags", &self.property_flags)
-            .field("heap_index", &self.heap_index)
-            .finish()
+        f.debug_struct("MemoryType").field("property_flags", &self.property_flags).field("heap_index", &self.heap_index).finish()
     }
 }
 impl MemoryType {
@@ -9888,11 +9712,7 @@ impl Default for DescriptorBufferInfo {
 }
 impl std::fmt::Debug for DescriptorBufferInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorBufferInfo")
-            .field("buffer", &self.buffer)
-            .field("offset", &self.offset)
-            .field("range", &self.range)
-            .finish()
+        f.debug_struct("DescriptorBufferInfo").field("buffer", &self.buffer).field("offset", &self.offset).field("range", &self.range).finish()
     }
 }
 impl DescriptorBufferInfo {
@@ -10092,12 +9912,12 @@ impl WriteDescriptorSet {
         WriteDescriptorSetBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::WriteDescriptorSetInlineUniformBlockEXT> for WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::WriteDescriptorSetInlineUniformBlockEXTBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHR> for WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHRBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNV> for WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNVBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::WriteDescriptorSetInlineUniformBlockEXT> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::WriteDescriptorSetInlineUniformBlockEXTBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHR> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHRBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNV> for WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNVBuilder<'_>> for WriteDescriptorSetBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSet.html) · Builder of [`WriteDescriptorSet`]"]
 #[repr(transparent)]
@@ -10344,14 +10164,14 @@ impl BufferCreateInfo {
         BufferCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationBufferCreateInfoNV> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationBufferCreateInfoNVBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalMemoryBufferCreateInfo> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalMemoryBufferCreateInfoBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::BufferOpaqueCaptureAddressCreateInfo> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::BufferOpaqueCaptureAddressCreateInfoBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXT> for BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXTBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationBufferCreateInfoNV> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationBufferCreateInfoNVBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExternalMemoryBufferCreateInfo> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExternalMemoryBufferCreateInfoBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::BufferOpaqueCaptureAddressCreateInfo> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::BufferOpaqueCaptureAddressCreateInfoBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXT> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXTBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html) · Builder of [`BufferCreateInfo`]"]
 #[repr(transparent)]
@@ -11061,8 +10881,8 @@ impl ImageMemoryBarrier {
         ImageMemoryBarrierBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrierBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrierBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier.html) · Builder of [`ImageMemoryBarrier`]"]
 #[repr(transparent)]
@@ -11209,24 +11029,24 @@ impl ImageCreateInfo {
         ImageCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationImageCreateInfoNV> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationImageCreateInfoNVBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory::ExternalMemoryImageCreateInfoNV> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_external_memory::ExternalMemoryImageCreateInfoNVBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalMemoryImageCreateInfo> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExternalMemoryImageCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::ImageSwapchainCreateInfoKHR> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::ImageSwapchainCreateInfoKHRBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfo> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROIDBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierListCreateInfoEXT> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierListCreateInfoEXTBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXT> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfo> for ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationImageCreateInfoNV> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_dedicated_allocation::DedicatedAllocationImageCreateInfoNVBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory::ExternalMemoryImageCreateInfoNV> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_external_memory::ExternalMemoryImageCreateInfoNVBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExternalMemoryImageCreateInfo> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExternalMemoryImageCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::ImageSwapchainCreateInfoKHR> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::ImageSwapchainCreateInfoKHRBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfo> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROIDBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierListCreateInfoEXT> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierListCreateInfoEXTBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXT> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfo> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateInfo.html) · Builder of [`ImageCreateInfo`]"]
 #[repr(transparent)]
@@ -11474,12 +11294,12 @@ impl ImageViewCreateInfo {
         ImageViewCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImageViewUsageCreateInfo> for ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ImageViewUsageCreateInfoBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionInfo> for ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionInfoBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXT> for ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXTBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ImageViewUsageCreateInfo> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ImageViewUsageCreateInfoBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfo> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfoBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXT> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXTBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateInfo.html) · Builder of [`ImageViewCreateInfo`]"]
 #[repr(transparent)]
@@ -11567,11 +11387,7 @@ impl Default for BufferCopy {
 }
 impl std::fmt::Debug for BufferCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferCopy")
-            .field("src_offset", &self.src_offset)
-            .field("dst_offset", &self.dst_offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("BufferCopy").field("src_offset", &self.src_offset).field("dst_offset", &self.dst_offset).field("size", &self.size).finish()
     }
 }
 impl BufferCopy {
@@ -12024,11 +11840,7 @@ impl Default for SparseImageMemoryBindInfo {
 }
 impl std::fmt::Debug for SparseImageMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageMemoryBindInfo")
-            .field("image", &self.image)
-            .field("bind_count", &self.bind_count)
-            .field("p_binds", &self.p_binds)
-            .finish()
+        f.debug_struct("SparseImageMemoryBindInfo").field("image", &self.image).field("bind_count", &self.bind_count).field("p_binds", &self.p_binds).finish()
     }
 }
 impl SparseImageMemoryBindInfo {
@@ -12145,10 +11957,10 @@ impl BindSparseInfo {
         BindSparseInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupBindSparseInfo> for BindSparseInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupBindSparseInfoBuilder<'_>> for BindSparseInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::TimelineSemaphoreSubmitInfo> for BindSparseInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::TimelineSemaphoreSubmitInfoBuilder<'_>> for BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupBindSparseInfo> for BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupBindSparseInfoBuilder<'_>> for BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::TimelineSemaphoreSubmitInfo> for BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::TimelineSemaphoreSubmitInfoBuilder<'_>> for BindSparseInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindSparseInfo.html) · Builder of [`BindSparseInfo`]"]
 #[repr(transparent)]
@@ -12659,8 +12471,8 @@ impl ShaderModuleCreateInfo {
         ShaderModuleCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_cache::ShaderModuleValidationCacheCreateInfoEXT> for ShaderModuleCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_validation_cache::ShaderModuleValidationCacheCreateInfoEXTBuilder<'_>> for ShaderModuleCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_cache::ShaderModuleValidationCacheCreateInfoEXT> for ShaderModuleCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_validation_cache::ShaderModuleValidationCacheCreateInfoEXTBuilder<'_>> for ShaderModuleCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateInfo.html) · Builder of [`ShaderModuleCreateInfo`]"]
 #[repr(transparent)]
@@ -12850,10 +12662,10 @@ impl DescriptorSetLayoutCreateInfo {
         DescriptorSetLayoutCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetLayoutBindingFlagsCreateInfo> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'_>> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::DescriptorSetLayoutBindingFlagsCreateInfo> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'_>> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for DescriptorSetLayoutCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Builder of [`DescriptorSetLayoutCreateInfo`]"]
 #[repr(transparent)]
@@ -12920,10 +12732,7 @@ impl Default for DescriptorPoolSize {
 }
 impl std::fmt::Debug for DescriptorPoolSize {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorPoolSize")
-            .field("_type", &self._type)
-            .field("descriptor_count", &self.descriptor_count)
-            .finish()
+        f.debug_struct("DescriptorPoolSize").field("_type", &self._type).field("descriptor_count", &self.descriptor_count).finish()
     }
 }
 impl DescriptorPoolSize {
@@ -13021,10 +12830,10 @@ impl DescriptorPoolCreateInfo {
         DescriptorPoolCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::DescriptorPoolInlineUniformBlockCreateInfoEXT> for DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_inline_uniform_block::DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_>> for DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE> for DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::DescriptorPoolInlineUniformBlockCreateInfoEXT> for DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_inline_uniform_block::DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_>> for DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE> for DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for DescriptorPoolCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Builder of [`DescriptorPoolCreateInfo`]"]
 #[repr(transparent)]
@@ -13117,8 +12926,8 @@ impl DescriptorSetAllocateInfo {
         DescriptorSetAllocateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountAllocateInfo> for DescriptorSetAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'_>> for DescriptorSetAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountAllocateInfo> for DescriptorSetAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'_>> for DescriptorSetAllocateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetAllocateInfo.html) · Builder of [`DescriptorSetAllocateInfo`]"]
 #[repr(transparent)]
@@ -13187,11 +12996,7 @@ impl Default for SpecializationMapEntry {
 }
 impl std::fmt::Debug for SpecializationMapEntry {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SpecializationMapEntry")
-            .field("constant_id", &self.constant_id)
-            .field("offset", &self.offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("SpecializationMapEntry").field("constant_id", &self.constant_id).field("offset", &self.offset).field("size", &self.size).finish()
     }
 }
 impl SpecializationMapEntry {
@@ -13386,8 +13191,8 @@ impl PipelineShaderStageCreateInfo {
         PipelineShaderStageCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for PipelineShaderStageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_subgroup_size_control::PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_>> for PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_subgroup_size_control::PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_subgroup_size_control::PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_>> for PipelineShaderStageCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Builder of [`PipelineShaderStageCreateInfo`]"]
 #[repr(transparent)]
@@ -13495,10 +13300,10 @@ impl ComputePipelineCreateInfo {
         ComputePipelineCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMD> for ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMDBuilder<'_>> for ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMD> for ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMDBuilder<'_>> for ComputePipelineCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComputePipelineCreateInfo.html) · Builder of [`ComputePipelineCreateInfo`]"]
 #[repr(transparent)]
@@ -13784,8 +13589,8 @@ impl PipelineVertexInputStateCreateInfo {
         PipelineVertexInputStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PipelineVertexInputDivisorStateCreateInfoEXT> for PipelineVertexInputStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_vertex_attribute_divisor::PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'_>> for PipelineVertexInputStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_attribute_divisor::PipelineVertexInputDivisorStateCreateInfoEXT> for PipelineVertexInputStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_attribute_divisor::PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'_>> for PipelineVertexInputStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputStateCreateInfo.html) · Builder of [`PipelineVertexInputStateCreateInfo`]"]
 #[repr(transparent)]
@@ -13967,8 +13772,8 @@ impl PipelineTessellationStateCreateInfo {
         PipelineTessellationStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfo> for PipelineTessellationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfoBuilder<'_>> for PipelineTessellationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfo> for PipelineTessellationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfoBuilder<'_>> for PipelineTessellationStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationStateCreateInfo.html) · Builder of [`PipelineTessellationStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14061,16 +13866,16 @@ impl PipelineViewportStateCreateInfo {
         PipelineViewportStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_clip_space_w_scaling::PipelineViewportWScalingStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_clip_space_w_scaling::PipelineViewportWScalingStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PipelineViewportExclusiveScissorStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_scissor_exclusive::PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PipelineViewportShadingRateImageStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PipelineViewportCoarseSampleOrderStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_shading_rate_image::PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_clip_space_w_scaling::PipelineViewportWScalingStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_clip_space_w_scaling::PipelineViewportWScalingStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_scissor_exclusive::PipelineViewportExclusiveScissorStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_scissor_exclusive::PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PipelineViewportShadingRateImageStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PipelineViewportCoarseSampleOrderStateCreateInfoNV> for PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_shading_rate_image::PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'_>> for PipelineViewportStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportStateCreateInfo.html) · Builder of [`PipelineViewportStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14198,19 +14003,16 @@ impl PipelineRasterizationStateCreateInfo {
         PipelineRasterizationStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_rasterization_order::PipelineRasterizationStateRasterizationOrderAMD> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_rasterization_order::PipelineRasterizationStateRasterizationOrderAMDBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_>>
-    for PipelineRasterizationStateCreateInfoBuilder<'a>
-{
-}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_rasterization_order::PipelineRasterizationStateRasterizationOrderAMD> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_rasterization_order::PipelineRasterizationStateRasterizationOrderAMDBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Builder of [`PipelineRasterizationStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14354,14 +14156,14 @@ impl PipelineMultisampleStateCreateInfo {
         PipelineMultisampleStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::PipelineSampleLocationsStateCreateInfoEXT> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::PipelineSampleLocationsStateCreateInfoEXTBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::PipelineSampleLocationsStateCreateInfoEXT> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::PipelineSampleLocationsStateCreateInfoEXTBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateInfoNV> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateInfoNVBuilder<'_>> for PipelineMultisampleStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html) · Builder of [`PipelineMultisampleStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14607,8 +14409,8 @@ impl PipelineColorBlendStateCreateInfo {
         PipelineColorBlendStateCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXT> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXT> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Builder of [`PipelineColorBlendStateCreateInfo`]"]
 #[repr(transparent)]
@@ -15104,20 +14906,20 @@ impl GraphicsPipelineCreateInfo {
         GraphicsPipelineCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::GraphicsPipelineShaderGroupsCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_device_generated_commands::GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateInfoEXT> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateInfoEXTBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PipelineRepresentativeFragmentTestStateCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_representative_fragment_test::PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMD> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMDBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHR> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PipelineFragmentShadingRateEnumStateCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_fragment_shading_rate_enums::PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_generated_commands::GraphicsPipelineShaderGroupsCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_generated_commands::GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateInfoEXT> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateInfoEXTBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_representative_fragment_test::PipelineRepresentativeFragmentTestStateCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_representative_fragment_test::PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMD> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMDBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHR> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_rate_enums::PipelineFragmentShadingRateEnumStateCreateInfoNV> for GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_rate_enums::PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_>> for GraphicsPipelineCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Builder of [`GraphicsPipelineCreateInfo`]"]
 #[repr(transparent)]
@@ -15347,11 +15149,7 @@ impl Default for PushConstantRange {
 }
 impl std::fmt::Debug for PushConstantRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PushConstantRange")
-            .field("stage_flags", &self.stage_flags)
-            .field("offset", &self.offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("PushConstantRange").field("stage_flags", &self.stage_flags).field("offset", &self.offset).field("size", &self.size).finish()
     }
 }
 impl PushConstantRange {
@@ -15589,12 +15387,12 @@ impl SamplerCreateInfo {
         SamplerCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionInfo> for SamplerCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::SamplerYcbcrConversionInfoBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SamplerReductionModeCreateInfo> for SamplerCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SamplerReductionModeCreateInfoBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::SamplerCustomBorderColorCreateInfoEXT> for SamplerCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_custom_border_color::SamplerCustomBorderColorCreateInfoEXTBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfo> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfoBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SamplerReductionModeCreateInfo> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SamplerReductionModeCreateInfoBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_color::SamplerCustomBorderColorCreateInfoEXT> for SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_color::SamplerCustomBorderColorCreateInfoEXTBuilder<'_>> for SamplerCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateInfo.html) · Builder of [`SamplerCreateInfo`]"]
 #[repr(transparent)]
@@ -15934,10 +15732,10 @@ impl CommandBufferInheritanceInfo {
         CommandBufferInheritanceInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXT> for CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOM> for CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXT> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOM> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Builder of [`CommandBufferInheritanceInfo`]"]
 #[repr(transparent)]
@@ -16041,8 +15839,8 @@ impl CommandBufferBeginInfo {
         CommandBufferBeginInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupCommandBufferBeginInfo> for CommandBufferBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupCommandBufferBeginInfoBuilder<'_>> for CommandBufferBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupCommandBufferBeginInfo> for CommandBufferBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupCommandBufferBeginInfoBuilder<'_>> for CommandBufferBeginInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferBeginInfo.html) · Builder of [`CommandBufferBeginInfo`]"]
 #[repr(transparent)]
@@ -16135,14 +15933,14 @@ impl RenderPassBeginInfo {
         RenderPassBeginInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupRenderPassBeginInfo> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupRenderPassBeginInfoBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::RenderPassSampleLocationsBeginInfoEXT> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_sample_locations::RenderPassSampleLocationsBeginInfoEXTBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::RenderPassAttachmentBeginInfo> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::RenderPassAttachmentBeginInfoBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_render_pass_transform::RenderPassTransformBeginInfoQCOM> for RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::qcom_render_pass_transform::RenderPassTransformBeginInfoQCOMBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupRenderPassBeginInfo> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupRenderPassBeginInfoBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::RenderPassSampleLocationsBeginInfoEXT> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::RenderPassSampleLocationsBeginInfoEXTBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::RenderPassAttachmentBeginInfo> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::RenderPassAttachmentBeginInfoBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::RenderPassTransformBeginInfoQCOM> for RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::RenderPassTransformBeginInfoQCOMBuilder<'_>> for RenderPassBeginInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassBeginInfo.html) · Builder of [`RenderPassBeginInfo`]"]
 #[repr(transparent)]
@@ -16902,12 +16700,12 @@ impl RenderPassCreateInfo {
         RenderPassCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::RenderPassMultiviewCreateInfo> for RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::RenderPassMultiviewCreateInfoBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::RenderPassInputAttachmentAspectCreateInfo> for RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::RenderPassInputAttachmentAspectCreateInfoBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::RenderPassMultiviewCreateInfo> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::RenderPassMultiviewCreateInfoBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::RenderPassInputAttachmentAspectCreateInfo> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::RenderPassInputAttachmentAspectCreateInfoBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo.html) · Builder of [`RenderPassCreateInfo`]"]
 #[repr(transparent)]
@@ -16988,11 +16786,7 @@ impl Default for EventCreateInfo {
 }
 impl std::fmt::Debug for EventCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("EventCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("EventCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).finish()
     }
 }
 impl EventCreateInfo {
@@ -17063,11 +16857,7 @@ impl Default for FenceCreateInfo {
 }
 impl std::fmt::Debug for FenceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FenceCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("FenceCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).finish()
     }
 }
 impl FenceCreateInfo {
@@ -17076,10 +16866,10 @@ impl FenceCreateInfo {
         FenceCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportFenceCreateInfo> for FenceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportFenceCreateInfoBuilder<'_>> for FenceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_fence_win32::ExportFenceWin32HandleInfoKHR> for FenceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_fence_win32::ExportFenceWin32HandleInfoKHRBuilder<'_>> for FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportFenceCreateInfo> for FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportFenceCreateInfoBuilder<'_>> for FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_fence_win32::ExportFenceWin32HandleInfoKHR> for FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_fence_win32::ExportFenceWin32HandleInfoKHRBuilder<'_>> for FenceCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateInfo.html) · Builder of [`FenceCreateInfo`]"]
 #[repr(transparent)]
@@ -18653,11 +18443,7 @@ impl Default for SemaphoreCreateInfo {
 }
 impl std::fmt::Debug for SemaphoreCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SemaphoreCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("SemaphoreCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).finish()
     }
 }
 impl SemaphoreCreateInfo {
@@ -18666,12 +18452,12 @@ impl SemaphoreCreateInfo {
         SemaphoreCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportSemaphoreCreateInfo> for SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ExportSemaphoreCreateInfoBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_semaphore_win32::ExportSemaphoreWin32HandleInfoKHR> for SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_semaphore_win32::ExportSemaphoreWin32HandleInfoKHRBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfo> for SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportSemaphoreCreateInfo> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ExportSemaphoreCreateInfoBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_semaphore_win32::ExportSemaphoreWin32HandleInfoKHR> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_semaphore_win32::ExportSemaphoreWin32HandleInfoKHRBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SemaphoreTypeCreateInfo> for SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<'_>> for SemaphoreCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreCreateInfo.html) · Builder of [`SemaphoreCreateInfo`]"]
 #[repr(transparent)]
@@ -18756,10 +18542,10 @@ impl QueryPoolCreateInfo {
         QueryPoolCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR> for QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHRBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTEL> for QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHRBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTEL> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfo.html) · Builder of [`QueryPoolCreateInfo`]"]
 #[repr(transparent)]
@@ -18868,8 +18654,8 @@ impl FramebufferCreateInfo {
         FramebufferCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::FramebufferAttachmentsCreateInfo> for FramebufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::FramebufferAttachmentsCreateInfoBuilder<'_>> for FramebufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::FramebufferAttachmentsCreateInfo> for FramebufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::FramebufferAttachmentsCreateInfoBuilder<'_>> for FramebufferCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateInfo.html) · Builder of [`FramebufferCreateInfo`]"]
 #[repr(transparent)]
@@ -19264,20 +19050,20 @@ impl SubmitInfo {
         SubmitInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_semaphore_win32::D3D12FenceSubmitInfoKHR> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_external_semaphore_win32::D3D12FenceSubmitInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupSubmitInfo> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::DeviceGroupSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ProtectedSubmitInfo> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_1::ProtectedSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::TimelineSemaphoreSubmitInfo> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::TimelineSemaphoreSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_semaphore_win32::D3D12FenceSubmitInfoKHR> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_external_semaphore_win32::D3D12FenceSubmitInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupSubmitInfo> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::DeviceGroupSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ProtectedSubmitInfo> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ProtectedSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::TimelineSemaphoreSubmitInfo> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::TimelineSemaphoreSubmitInfoBuilder<'_>> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo.html) · Builder of [`SubmitInfo`]"]
 #[repr(transparent)]
@@ -19393,11 +19179,7 @@ impl<T> crate::EntryLoader<T> {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceExtensionProperties.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceExtensionProperties")]
-    pub unsafe fn enumerate_instance_extension_properties(
-        &self,
-        layer_name: Option<&std::ffi::CStr>,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
+    pub unsafe fn enumerate_instance_extension_properties(&self, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
         let _function = self.enumerate_instance_extension_properties.expect("`enumerate_instance_extension_properties` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -19485,11 +19267,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties")]
-    pub unsafe fn get_physical_device_queue_family_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_property_count: Option<u32>,
-    ) -> Vec<crate::vk1_0::QueueFamilyProperties> {
+    pub unsafe fn get_physical_device_queue_family_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> Vec<crate::vk1_0::QueueFamilyProperties> {
         let _function = self.get_physical_device_queue_family_properties.expect("`get_physical_device_queue_family_properties` is not loaded");
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
@@ -19561,12 +19339,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDevice.html) · Function"]
     #[doc(alias = "vkCreateDevice")]
-    pub unsafe fn create_device(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        create_info: &crate::vk1_0::DeviceCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Device> {
+    pub unsafe fn create_device(&self, physical_device: crate::vk1_0::PhysicalDevice, create_info: &crate::vk1_0::DeviceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Device> {
         let _function = self.create_device.expect("`create_device` is not loaded");
         let mut device = Default::default();
         let _return = _function(
@@ -19583,11 +19356,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceLayerProperties.html) · Function"]
     #[doc(alias = "vkEnumerateDeviceLayerProperties")]
-    pub unsafe fn enumerate_device_layer_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
+    pub unsafe fn enumerate_device_layer_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
         let _function = self.enumerate_device_layer_properties.expect("`enumerate_device_layer_properties` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -19604,12 +19373,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceExtensionProperties.html) · Function"]
     #[doc(alias = "vkEnumerateDeviceExtensionProperties")]
-    pub unsafe fn enumerate_device_extension_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        layer_name: Option<&std::ffi::CStr>,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
+    pub unsafe fn enumerate_device_extension_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
         let _function = self.enumerate_device_extension_properties.expect("`enumerate_device_extension_properties` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -19652,9 +19416,7 @@ impl crate::InstanceLoader {
         tiling: crate::vk1_0::ImageTiling,
         property_count: Option<u32>,
     ) -> Vec<crate::vk1_0::SparseImageFormatProperties> {
-        let _function = self
-            .get_physical_device_sparse_image_format_properties
-            .expect("`get_physical_device_sparse_image_format_properties` is not loaded");
+        let _function = self.get_physical_device_sparse_image_format_properties.expect("`get_physical_device_sparse_image_format_properties` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -19664,16 +19426,7 @@ impl crate::InstanceLoader {
             }
         };
         let mut properties = vec![Default::default(); property_count as _];
-        let _return = _function(
-            physical_device as _,
-            format as _,
-            _type as _,
-            samples as _,
-            usage as _,
-            tiling as _,
-            &mut property_count,
-            properties.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, format as _, _type as _, samples as _, usage as _, tiling as _, &mut property_count, properties.as_mut_ptr());
         properties
     }
 }
@@ -19752,11 +19505,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateMemory.html) · Function"]
     #[doc(alias = "vkAllocateMemory")]
-    pub unsafe fn allocate_memory(
-        &self,
-        allocate_info: &crate::vk1_0::MemoryAllocateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::DeviceMemory> {
+    pub unsafe fn allocate_memory(&self, allocate_info: &crate::vk1_0::MemoryAllocateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::DeviceMemory> {
         let _function = self.allocate_memory.expect("`allocate_memory` is not loaded");
         let mut memory = Default::default();
         let _return = _function(
@@ -19902,12 +19651,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBindSparse.html) · Function"]
     #[doc(alias = "vkQueueBindSparse")]
-    pub unsafe fn queue_bind_sparse(
-        &self,
-        queue: crate::vk1_0::Queue,
-        bind_info: &[impl crate::Repr<crate::vk1_0::BindSparseInfo>],
-        fence: Option<crate::vk1_0::Fence>,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn queue_bind_sparse(&self, queue: crate::vk1_0::Queue, bind_info: &[impl crate::Repr<crate::vk1_0::BindSparseInfo>], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_bind_sparse.expect("`queue_bind_sparse` is not loaded");
         let bind_info_count = bind_info.len();
         let _return = _function(
@@ -19985,11 +19729,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSemaphore.html) · Function"]
     #[doc(alias = "vkCreateSemaphore")]
-    pub unsafe fn create_semaphore(
-        &self,
-        create_info: &crate::vk1_0::SemaphoreCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Semaphore> {
+    pub unsafe fn create_semaphore(&self, create_info: &crate::vk1_0::SemaphoreCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Semaphore> {
         let _function = self.create_semaphore.expect("`create_semaphore` is not loaded");
         let mut semaphore = Default::default();
         let _return = _function(
@@ -20083,11 +19823,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateQueryPool.html) · Function"]
     #[doc(alias = "vkCreateQueryPool")]
-    pub unsafe fn create_query_pool(
-        &self,
-        create_info: &crate::vk1_0::QueryPoolCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::QueryPool> {
+    pub unsafe fn create_query_pool(&self, create_info: &crate::vk1_0::QueryPoolCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::QueryPool> {
         let _function = self.create_query_pool.expect("`create_query_pool` is not loaded");
         let mut query_pool = Default::default();
         let _return = _function(
@@ -20186,11 +19922,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferView.html) · Function"]
     #[doc(alias = "vkCreateBufferView")]
-    pub unsafe fn create_buffer_view(
-        &self,
-        create_info: &crate::vk1_0::BufferViewCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::BufferView> {
+    pub unsafe fn create_buffer_view(&self, create_info: &crate::vk1_0::BufferViewCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::BufferView> {
         let _function = self.create_buffer_view.expect("`create_buffer_view` is not loaded");
         let mut view = Default::default();
         let _return = _function(
@@ -20269,11 +20001,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImageView.html) · Function"]
     #[doc(alias = "vkCreateImageView")]
-    pub unsafe fn create_image_view(
-        &self,
-        create_info: &crate::vk1_0::ImageViewCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::ImageView> {
+    pub unsafe fn create_image_view(&self, create_info: &crate::vk1_0::ImageViewCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::ImageView> {
         let _function = self.create_image_view.expect("`create_image_view` is not loaded");
         let mut view = Default::default();
         let _return = _function(
@@ -20308,11 +20036,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateShaderModule.html) · Function"]
     #[doc(alias = "vkCreateShaderModule")]
-    pub unsafe fn create_shader_module(
-        &self,
-        create_info: &crate::vk1_0::ShaderModuleCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::ShaderModule> {
+    pub unsafe fn create_shader_module(&self, create_info: &crate::vk1_0::ShaderModuleCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::ShaderModule> {
         let _function = self.create_shader_module.expect("`create_shader_module` is not loaded");
         let mut shader_module = Default::default();
         let _return = _function(
@@ -20347,11 +20071,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineCache.html) · Function"]
     #[doc(alias = "vkCreatePipelineCache")]
-    pub unsafe fn create_pipeline_cache(
-        &self,
-        create_info: &crate::vk1_0::PipelineCacheCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineCache> {
+    pub unsafe fn create_pipeline_cache(&self, create_info: &crate::vk1_0::PipelineCacheCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::PipelineCache> {
         let _function = self.create_pipeline_cache.expect("`create_pipeline_cache` is not loaded");
         let mut pipeline_cache = Default::default();
         let _return = _function(
@@ -20477,11 +20197,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineLayout.html) · Function"]
     #[doc(alias = "vkCreatePipelineLayout")]
-    pub unsafe fn create_pipeline_layout(
-        &self,
-        create_info: &crate::vk1_0::PipelineLayoutCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::PipelineLayout> {
+    pub unsafe fn create_pipeline_layout(&self, create_info: &crate::vk1_0::PipelineLayoutCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::PipelineLayout> {
         let _function = self.create_pipeline_layout.expect("`create_pipeline_layout` is not loaded");
         let mut pipeline_layout = Default::default();
         let _return = _function(
@@ -20551,11 +20267,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorSetLayout.html) · Function"]
     #[doc(alias = "vkCreateDescriptorSetLayout")]
-    pub unsafe fn create_descriptor_set_layout(
-        &self,
-        create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorSetLayout> {
+    pub unsafe fn create_descriptor_set_layout(&self, create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorSetLayout> {
         let _function = self.create_descriptor_set_layout.expect("`create_descriptor_set_layout` is not loaded");
         let mut set_layout = Default::default();
         let _return = _function(
@@ -20590,11 +20302,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorPool.html) · Function"]
     #[doc(alias = "vkCreateDescriptorPool")]
-    pub unsafe fn create_descriptor_pool(
-        &self,
-        create_info: &crate::vk1_0::DescriptorPoolCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorPool> {
+    pub unsafe fn create_descriptor_pool(&self, create_info: &crate::vk1_0::DescriptorPoolCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::DescriptorPool> {
         let _function = self.create_descriptor_pool.expect("`create_descriptor_pool` is not loaded");
         let mut descriptor_pool = Default::default();
         let _return = _function(
@@ -20662,31 +20370,17 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSets.html) · Function"]
     #[doc(alias = "vkUpdateDescriptorSets")]
-    pub unsafe fn update_descriptor_sets(
-        &self,
-        descriptor_writes: &[impl crate::Repr<crate::vk1_0::WriteDescriptorSet>],
-        descriptor_copies: &[impl crate::Repr<crate::vk1_0::CopyDescriptorSet>],
-    ) -> () {
+    pub unsafe fn update_descriptor_sets(&self, descriptor_writes: &[impl crate::Repr<crate::vk1_0::WriteDescriptorSet>], descriptor_copies: &[impl crate::Repr<crate::vk1_0::CopyDescriptorSet>]) -> () {
         let _function = self.update_descriptor_sets.expect("`update_descriptor_sets` is not loaded");
         let descriptor_write_count = descriptor_writes.len();
         let descriptor_copy_count = descriptor_copies.len();
-        let _return = _function(
-            self.handle,
-            descriptor_write_count as _,
-            descriptor_writes.as_ptr() as _,
-            descriptor_copy_count as _,
-            descriptor_copies.as_ptr() as _,
-        );
+        let _return = _function(self.handle, descriptor_write_count as _, descriptor_writes.as_ptr() as _, descriptor_copy_count as _, descriptor_copies.as_ptr() as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFramebuffer.html) · Function"]
     #[doc(alias = "vkCreateFramebuffer")]
-    pub unsafe fn create_framebuffer(
-        &self,
-        create_info: &crate::vk1_0::FramebufferCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Framebuffer> {
+    pub unsafe fn create_framebuffer(&self, create_info: &crate::vk1_0::FramebufferCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Framebuffer> {
         let _function = self.create_framebuffer.expect("`create_framebuffer` is not loaded");
         let mut framebuffer = Default::default();
         let _return = _function(
@@ -20721,11 +20415,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass.html) · Function"]
     #[doc(alias = "vkCreateRenderPass")]
-    pub unsafe fn create_render_pass(
-        &self,
-        create_info: &crate::vk1_0::RenderPassCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
+    pub unsafe fn create_render_pass(&self, create_info: &crate::vk1_0::RenderPassCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
         let _function = self.create_render_pass.expect("`create_render_pass` is not loaded");
         let mut render_pass = Default::default();
         let _return = _function(
@@ -20769,11 +20459,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCommandPool.html) · Function"]
     #[doc(alias = "vkCreateCommandPool")]
-    pub unsafe fn create_command_pool(
-        &self,
-        create_info: &crate::vk1_0::CommandPoolCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::CommandPool> {
+    pub unsafe fn create_command_pool(&self, create_info: &crate::vk1_0::CommandPoolCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::CommandPool> {
         let _function = self.create_command_pool.expect("`create_command_pool` is not loaded");
         let mut command_pool = Default::default();
         let _return = _function(
@@ -20905,13 +20591,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBias.html) · Function"]
     #[doc(alias = "vkCmdSetDepthBias")]
-    pub unsafe fn cmd_set_depth_bias(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        depth_bias_constant_factor: std::os::raw::c_float,
-        depth_bias_clamp: std::os::raw::c_float,
-        depth_bias_slope_factor: std::os::raw::c_float,
-    ) -> () {
+    pub unsafe fn cmd_set_depth_bias(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_bias_constant_factor: std::os::raw::c_float, depth_bias_clamp: std::os::raw::c_float, depth_bias_slope_factor: std::os::raw::c_float) -> () {
         let _function = self.cmd_set_depth_bias.expect("`cmd_set_depth_bias` is not loaded");
         let _return = _function(command_buffer as _, depth_bias_constant_factor as _, depth_bias_clamp as _, depth_bias_slope_factor as _);
         ()
@@ -21051,13 +20731,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer.html) · Function"]
     #[doc(alias = "vkCmdCopyBuffer")]
-    pub unsafe fn cmd_copy_buffer(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_buffer: crate::vk1_0::Buffer,
-        dst_buffer: crate::vk1_0::Buffer,
-        regions: &[impl crate::Repr<crate::vk1_0::BufferCopy>],
-    ) -> () {
+    pub unsafe fn cmd_copy_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, src_buffer: crate::vk1_0::Buffer, dst_buffer: crate::vk1_0::Buffer, regions: &[impl crate::Repr<crate::vk1_0::BufferCopy>]) -> () {
         let _function = self.cmd_copy_buffer.expect("`cmd_copy_buffer` is not loaded");
         let region_count = regions.len();
         let _return = _function(command_buffer as _, src_buffer as _, dst_buffer as _, region_count as _, regions.as_ptr() as _);
@@ -21077,15 +20751,7 @@ impl crate::DeviceLoader {
     ) -> () {
         let _function = self.cmd_copy_image.expect("`cmd_copy_image` is not loaded");
         let region_count = regions.len();
-        let _return = _function(
-            command_buffer as _,
-            src_image as _,
-            src_image_layout as _,
-            dst_image as _,
-            dst_image_layout as _,
-            region_count as _,
-            regions.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _);
         ()
     }
     #[inline]
@@ -21150,14 +20816,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdUpdateBuffer.html) · Function"]
     #[doc(alias = "vkCmdUpdateBuffer")]
-    pub unsafe fn cmd_update_buffer(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        dst_buffer: crate::vk1_0::Buffer,
-        dst_offset: crate::vk1_0::DeviceSize,
-        data_size: crate::vk1_0::DeviceSize,
-        data: *const std::ffi::c_void,
-    ) -> () {
+    pub unsafe fn cmd_update_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, data_size: crate::vk1_0::DeviceSize, data: *const std::ffi::c_void) -> () {
         let _function = self.cmd_update_buffer.expect("`cmd_update_buffer` is not loaded");
         let _return = _function(command_buffer as _, dst_buffer as _, dst_offset as _, data_size, data);
         ()
@@ -21165,14 +20824,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdFillBuffer.html) · Function"]
     #[doc(alias = "vkCmdFillBuffer")]
-    pub unsafe fn cmd_fill_buffer(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        dst_buffer: crate::vk1_0::Buffer,
-        dst_offset: crate::vk1_0::DeviceSize,
-        size: crate::vk1_0::DeviceSize,
-        data: u32,
-    ) -> () {
+    pub unsafe fn cmd_fill_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, data: u32) -> () {
         let _function = self.cmd_fill_buffer.expect("`cmd_fill_buffer` is not loaded");
         let _return = _function(command_buffer as _, dst_buffer as _, dst_offset as _, size as _, data as _);
         ()
@@ -21212,12 +20864,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearAttachments.html) · Function"]
     #[doc(alias = "vkCmdClearAttachments")]
-    pub unsafe fn cmd_clear_attachments(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        attachments: &[impl crate::Repr<crate::vk1_0::ClearAttachment>],
-        rects: &[impl crate::Repr<crate::vk1_0::ClearRect>],
-    ) -> () {
+    pub unsafe fn cmd_clear_attachments(&self, command_buffer: crate::vk1_0::CommandBuffer, attachments: &[impl crate::Repr<crate::vk1_0::ClearAttachment>], rects: &[impl crate::Repr<crate::vk1_0::ClearRect>]) -> () {
         let _function = self.cmd_clear_attachments.expect("`cmd_clear_attachments` is not loaded");
         let attachment_count = attachments.len();
         let rect_count = rects.len();
@@ -21238,15 +20885,7 @@ impl crate::DeviceLoader {
     ) -> () {
         let _function = self.cmd_resolve_image.expect("`cmd_resolve_image` is not loaded");
         let region_count = regions.len();
-        let _return = _function(
-            command_buffer as _,
-            src_image as _,
-            src_image_layout as _,
-            dst_image as _,
-            dst_image_layout as _,
-            region_count as _,
-            regions.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _);
         ()
     }
     #[inline]
@@ -21411,15 +21050,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushConstants.html) · Function"]
     #[doc(alias = "vkCmdPushConstants")]
-    pub unsafe fn cmd_push_constants(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        layout: crate::vk1_0::PipelineLayout,
-        stage_flags: crate::vk1_0::ShaderStageFlags,
-        offset: u32,
-        size: u32,
-        values: *const std::ffi::c_void,
-    ) -> () {
+    pub unsafe fn cmd_push_constants(&self, command_buffer: crate::vk1_0::CommandBuffer, layout: crate::vk1_0::PipelineLayout, stage_flags: crate::vk1_0::ShaderStageFlags, offset: u32, size: u32, values: *const std::ffi::c_void) -> () {
         let _function = self.cmd_push_constants.expect("`cmd_push_constants` is not loaded");
         let _return = _function(command_buffer as _, layout as _, stage_flags as _, offset as _, size, values);
         ()

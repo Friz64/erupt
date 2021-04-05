@@ -157,9 +157,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
     pub unsafe fn get_physical_device_win32_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32) -> bool {
-        let _function = self
-            .get_physical_device_win32_presentation_support_khr
-            .expect("`get_physical_device_win32_presentation_support_khr` is not loaded");
+        let _function = self.get_physical_device_win32_presentation_support_khr.expect("`get_physical_device_win32_presentation_support_khr` is not loaded");
         let _return = _function(physical_device as _, queue_family_index as _);
         _return != 0
     }

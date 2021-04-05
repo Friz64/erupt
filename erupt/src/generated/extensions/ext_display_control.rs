@@ -69,11 +69,8 @@ impl DisplayEventTypeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDisplayPowerControlEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    display: crate::extensions::khr_display::DisplayKHR,
-    p_display_power_info: *const crate::extensions::ext_display_control::DisplayPowerInfoEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkDisplayPowerControlEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, display: crate::extensions::khr_display::DisplayKHR, p_display_power_info: *const crate::extensions::ext_display_control::DisplayPowerInfoEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDeviceEventEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkRegisterDeviceEventEXT = unsafe extern "system" fn(
@@ -119,11 +116,7 @@ impl Default for DisplayPowerInfoEXT {
 }
 impl std::fmt::Debug for DisplayPowerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayPowerInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("power_state", &self.power_state)
-            .finish()
+        f.debug_struct("DisplayPowerInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("power_state", &self.power_state).finish()
     }
 }
 impl DisplayPowerInfoEXT {
@@ -194,11 +187,7 @@ impl Default for DeviceEventInfoEXT {
 }
 impl std::fmt::Debug for DeviceEventInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceEventInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_event", &self.device_event)
-            .finish()
+        f.debug_struct("DeviceEventInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_event", &self.device_event).finish()
     }
 }
 impl DeviceEventInfoEXT {
@@ -269,11 +258,7 @@ impl Default for DisplayEventInfoEXT {
 }
 impl std::fmt::Debug for DisplayEventInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayEventInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("display_event", &self.display_event)
-            .finish()
+        f.debug_struct("DisplayEventInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("display_event", &self.display_event).finish()
     }
 }
 impl DisplayEventInfoEXT {
@@ -404,11 +389,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]
     #[doc(alias = "vkDisplayPowerControlEXT")]
-    pub unsafe fn display_power_control_ext(
-        &self,
-        display: crate::extensions::khr_display::DisplayKHR,
-        display_power_info: &crate::extensions::ext_display_control::DisplayPowerInfoEXT,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn display_power_control_ext(&self, display: crate::extensions::khr_display::DisplayKHR, display_power_info: &crate::extensions::ext_display_control::DisplayPowerInfoEXT) -> crate::utils::VulkanResult<()> {
         let _function = self.display_power_control_ext.expect("`display_power_control_ext` is not loaded");
         let _return = _function(self.handle, display as _, display_power_info as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -416,11 +397,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDeviceEventEXT.html) · Function"]
     #[doc(alias = "vkRegisterDeviceEventEXT")]
-    pub unsafe fn register_device_event_ext(
-        &self,
-        device_event_info: &crate::extensions::ext_display_control::DeviceEventInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
+    pub unsafe fn register_device_event_ext(&self, device_event_info: &crate::extensions::ext_display_control::DeviceEventInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
         let _function = self.register_device_event_ext.expect("`register_device_event_ext` is not loaded");
         let mut fence = Default::default();
         let _return = _function(
@@ -460,11 +437,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
     #[doc(alias = "vkGetSwapchainCounterEXT")]
-    pub unsafe fn get_swapchain_counter_ext(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT,
-    ) -> crate::utils::VulkanResult<u64> {
+    pub unsafe fn get_swapchain_counter_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT) -> crate::utils::VulkanResult<u64> {
         let _function = self.get_swapchain_counter_ext.expect("`get_swapchain_counter_ext` is not loaded");
         let mut counter_value = Default::default();
         let _return = _function(self.handle, swapchain as _, counter as _, &mut counter_value);

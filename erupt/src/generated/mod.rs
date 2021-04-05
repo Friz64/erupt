@@ -41,22 +41,14 @@ pub struct EntryLoader<T> {
 }
 impl<T> EntryLoader<T> {
     #[allow(unused_parens)]
-    pub unsafe fn custom(
-        mut loader: T,
-        mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>,
-        entry_enabled: EntryEnabled,
-    ) -> Result<EntryLoader<T>, crate::LoaderError> {
+    pub unsafe fn custom(mut loader: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>, entry_enabled: EntryEnabled) -> Result<EntryLoader<T>, crate::LoaderError> {
         let mut symbol = |name| symbol(&mut loader, name);
         let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR).ok_or(crate::LoaderError::SymbolNotAvailable)?;
         Ok(EntryLoader {
             arc: std::sync::Arc::new(()),
             get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr),
             create_instance: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_INSTANCE)),
-            enumerate_instance_version: if entry_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION))
-            } else {
-                None
-            },
+            enumerate_instance_version: if entry_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION)) } else { None },
             enumerate_instance_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES)),
             enumerate_instance_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES)),
             loader,
@@ -468,16 +460,8 @@ impl InstanceLoader {
             } else {
                 None
             },
-            get_physical_device_features2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FEATURES2))
-            } else {
-                None
-            },
-            get_physical_device_properties2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_PROPERTIES2))
-            } else {
-                None
-            },
+            get_physical_device_features2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FEATURES2)) } else { None },
+            get_physical_device_properties2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_PROPERTIES2)) } else { None },
             get_physical_device_format_properties2: if instance_enabled.vk1_1 {
                 std::mem::transmute(symbol(crate::vk1_1::FN_GET_PHYSICAL_DEVICE_FORMAT_PROPERTIES2))
             } else {
@@ -548,11 +532,7 @@ impl InstanceLoader {
             } else {
                 None
             },
-            enumerate_physical_device_groups: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS))
-            } else {
-                None
-            },
+            enumerate_physical_device_groups: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS)) } else { None },
             get_physical_device_present_rectangles_khr: if (instance_enabled.khr_swapchain && instance_enabled.vk1_1) || (instance_enabled.khr_device_group && instance_enabled.khr_surface) {
                 std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR))
             } else {
@@ -639,9 +619,7 @@ impl InstanceLoader {
                 None
             },
             enumerate_physical_device_queue_family_performance_query_counters_khr: if instance_enabled.khr_performance_query {
-                std::mem::transmute(symbol(
-                    crate::extensions::khr_performance_query::FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR,
-                ))
+                std::mem::transmute(symbol(crate::extensions::khr_performance_query::FN_ENUMERATE_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_COUNTERS_KHR))
             } else {
                 None
             },
@@ -656,9 +634,7 @@ impl InstanceLoader {
                 None
             },
             get_physical_device_supported_framebuffer_mixed_samples_combinations_nv: if instance_enabled.nv_coverage_reduction_mode {
-                std::mem::transmute(symbol(
-                    crate::extensions::nv_coverage_reduction_mode::FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV,
-                ))
+                std::mem::transmute(symbol(crate::extensions::nv_coverage_reduction_mode::FN_GET_PHYSICAL_DEVICE_SUPPORTED_FRAMEBUFFER_MIXED_SAMPLES_COMBINATIONS_NV))
             } else {
                 None
             },
@@ -703,9 +679,7 @@ impl InstanceLoader {
                 None
             },
             get_physical_device_sparse_image_format_properties2_khr: if instance_enabled.khr_get_physical_device_properties2 {
-                std::mem::transmute(symbol(
-                    crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR,
-                ))
+                std::mem::transmute(symbol(crate::extensions::khr_get_physical_device_properties2::FN_GET_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_PROPERTIES2_KHR))
             } else {
                 None
             },
@@ -849,9 +823,7 @@ impl DeviceEnabled {
             ext_calibrated_timestamps: enabled_extension(crate::extensions::ext_calibrated_timestamps::EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME),
             ext_external_memory_host: enabled_extension(crate::extensions::ext_external_memory_host::EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME),
             amd_buffer_marker: enabled_extension(crate::extensions::amd_buffer_marker::AMD_BUFFER_MARKER_EXTENSION_NAME),
-            android_external_memory_android_hardware_buffer: enabled_extension(
-                crate::extensions::android_external_memory_android_hardware_buffer::ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME,
-            ),
+            android_external_memory_android_hardware_buffer: enabled_extension(crate::extensions::android_external_memory_android_hardware_buffer::ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME),
             nv_device_diagnostic_checkpoints: enabled_extension(crate::extensions::nv_device_diagnostic_checkpoints::NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME),
             ext_transform_feedback: enabled_extension(crate::extensions::ext_transform_feedback::EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME),
             nv_scissor_exclusive: enabled_extension(crate::extensions::nv_scissor_exclusive::NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME),
@@ -1309,11 +1281,7 @@ impl DeviceLoader {
             create_query_pool: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_QUERY_POOL)),
             destroy_query_pool: std::mem::transmute(symbol(crate::vk1_0::FN_DESTROY_QUERY_POOL)),
             get_query_pool_results: std::mem::transmute(symbol(crate::vk1_0::FN_GET_QUERY_POOL_RESULTS)),
-            reset_query_pool: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_RESET_QUERY_POOL))
-            } else {
-                None
-            },
+            reset_query_pool: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_RESET_QUERY_POOL)) } else { None },
             create_buffer: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_BUFFER)),
             destroy_buffer: std::mem::transmute(symbol(crate::vk1_0::FN_DESTROY_BUFFER)),
             create_buffer_view: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_BUFFER_VIEW)),
@@ -1506,11 +1474,7 @@ impl DeviceLoader {
             } else {
                 None
             },
-            trim_command_pool: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_TRIM_COMMAND_POOL))
-            } else {
-                None
-            },
+            trim_command_pool: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_TRIM_COMMAND_POOL)) } else { None },
             get_memory_win32_handle_khr: if device_enabled.khr_external_memory_win32 {
                 std::mem::transmute(symbol(crate::extensions::khr_external_memory_win32::FN_GET_MEMORY_WIN32_HANDLE_KHR))
             } else {
@@ -1616,21 +1580,9 @@ impl DeviceLoader {
             } else {
                 None
             },
-            bind_buffer_memory2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_BIND_BUFFER_MEMORY2))
-            } else {
-                None
-            },
-            bind_image_memory2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_BIND_IMAGE_MEMORY2))
-            } else {
-                None
-            },
-            cmd_set_device_mask: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_CMD_SET_DEVICE_MASK))
-            } else {
-                None
-            },
+            bind_buffer_memory2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_BIND_BUFFER_MEMORY2)) } else { None },
+            bind_image_memory2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_BIND_IMAGE_MEMORY2)) } else { None },
+            cmd_set_device_mask: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_CMD_SET_DEVICE_MASK)) } else { None },
             get_device_group_present_capabilities_khr: if (device_enabled.khr_swapchain && instance_enabled.vk1_1) || (device_enabled.khr_device_group && instance_enabled.khr_surface) {
                 std::mem::transmute(symbol(crate::extensions::khr_swapchain::FN_GET_DEVICE_GROUP_PRESENT_CAPABILITIES_KHR))
             } else {
@@ -1646,26 +1598,10 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_dispatch_base: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_CMD_DISPATCH_BASE))
-            } else {
-                None
-            },
-            create_descriptor_update_template: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE))
-            } else {
-                None
-            },
-            destroy_descriptor_update_template: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE))
-            } else {
-                None
-            },
-            update_descriptor_set_with_template: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE))
-            } else {
-                None
-            },
+            cmd_dispatch_base: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_CMD_DISPATCH_BASE)) } else { None },
+            create_descriptor_update_template: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_DESCRIPTOR_UPDATE_TEMPLATE)) } else { None },
+            destroy_descriptor_update_template: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE)) } else { None },
+            update_descriptor_set_with_template: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE)) } else { None },
             cmd_push_descriptor_set_with_template_khr: if (device_enabled.khr_push_descriptor && instance_enabled.vk1_1)
                 || (device_enabled.khr_push_descriptor && device_enabled.khr_descriptor_update_template)
                 || (device_enabled.khr_descriptor_update_template && device_enabled.khr_push_descriptor)
@@ -1709,36 +1645,16 @@ impl DeviceLoader {
             } else {
                 None
             },
-            get_buffer_memory_requirements2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_BUFFER_MEMORY_REQUIREMENTS2))
-            } else {
-                None
-            },
-            get_image_memory_requirements2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_MEMORY_REQUIREMENTS2))
-            } else {
-                None
-            },
+            get_buffer_memory_requirements2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_BUFFER_MEMORY_REQUIREMENTS2)) } else { None },
+            get_image_memory_requirements2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_MEMORY_REQUIREMENTS2)) } else { None },
             get_image_sparse_memory_requirements2: if instance_enabled.vk1_1 {
                 std::mem::transmute(symbol(crate::vk1_1::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2))
             } else {
                 None
             },
-            create_sampler_ycbcr_conversion: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_SAMPLER_YCBCR_CONVERSION))
-            } else {
-                None
-            },
-            destroy_sampler_ycbcr_conversion: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_SAMPLER_YCBCR_CONVERSION))
-            } else {
-                None
-            },
-            get_device_queue2: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_QUEUE2))
-            } else {
-                None
-            },
+            create_sampler_ycbcr_conversion: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_CREATE_SAMPLER_YCBCR_CONVERSION)) } else { None },
+            destroy_sampler_ycbcr_conversion: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_DESTROY_SAMPLER_YCBCR_CONVERSION)) } else { None },
+            get_device_queue2: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_DEVICE_QUEUE2)) } else { None },
             create_validation_cache_ext: if device_enabled.ext_validation_cache {
                 std::mem::transmute(symbol(crate::extensions::ext_validation_cache::FN_CREATE_VALIDATION_CACHE_EXT))
             } else {
@@ -1759,11 +1675,7 @@ impl DeviceLoader {
             } else {
                 None
             },
-            get_descriptor_set_layout_support: if instance_enabled.vk1_1 {
-                std::mem::transmute(symbol(crate::vk1_1::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT))
-            } else {
-                None
-            },
+            get_descriptor_set_layout_support: if instance_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT)) } else { None },
             get_shader_info_amd: if device_enabled.amd_shader_info {
                 std::mem::transmute(symbol(crate::extensions::amd_shader_info::FN_GET_SHADER_INFO_AMD))
             } else {
@@ -1829,65 +1741,25 @@ impl DeviceLoader {
             } else {
                 None
             },
-            create_render_pass2: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CREATE_RENDER_PASS2))
-            } else {
-                None
-            },
-            cmd_begin_render_pass2: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_BEGIN_RENDER_PASS2))
-            } else {
-                None
-            },
-            cmd_next_subpass2: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_NEXT_SUBPASS2))
-            } else {
-                None
-            },
-            cmd_end_render_pass2: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_END_RENDER_PASS2))
-            } else {
-                None
-            },
-            get_semaphore_counter_value: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_GET_SEMAPHORE_COUNTER_VALUE))
-            } else {
-                None
-            },
-            wait_semaphores: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_WAIT_SEMAPHORES))
-            } else {
-                None
-            },
-            signal_semaphore: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_SIGNAL_SEMAPHORE))
-            } else {
-                None
-            },
+            create_render_pass2: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CREATE_RENDER_PASS2)) } else { None },
+            cmd_begin_render_pass2: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CMD_BEGIN_RENDER_PASS2)) } else { None },
+            cmd_next_subpass2: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CMD_NEXT_SUBPASS2)) } else { None },
+            cmd_end_render_pass2: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CMD_END_RENDER_PASS2)) } else { None },
+            get_semaphore_counter_value: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_GET_SEMAPHORE_COUNTER_VALUE)) } else { None },
+            wait_semaphores: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_WAIT_SEMAPHORES)) } else { None },
+            signal_semaphore: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_SIGNAL_SEMAPHORE)) } else { None },
             get_android_hardware_buffer_properties_android: if device_enabled.android_external_memory_android_hardware_buffer {
-                std::mem::transmute(symbol(
-                    crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID,
-                ))
+                std::mem::transmute(symbol(crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID))
             } else {
                 None
             },
             get_memory_android_hardware_buffer_android: if device_enabled.android_external_memory_android_hardware_buffer {
-                std::mem::transmute(symbol(
-                    crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID,
-                ))
+                std::mem::transmute(symbol(crate::extensions::android_external_memory_android_hardware_buffer::FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID))
             } else {
                 None
             },
-            cmd_draw_indirect_count: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDIRECT_COUNT))
-            } else {
-                None
-            },
-            cmd_draw_indexed_indirect_count: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT))
-            } else {
-                None
-            },
+            cmd_draw_indirect_count: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDIRECT_COUNT)) } else { None },
+            cmd_draw_indexed_indirect_count: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_CMD_DRAW_INDEXED_INDIRECT_COUNT)) } else { None },
             cmd_set_checkpoint_nv: if device_enabled.nv_device_diagnostic_checkpoints {
                 std::mem::transmute(symbol(crate::extensions::nv_device_diagnostic_checkpoints::FN_CMD_SET_CHECKPOINT_NV))
             } else {
@@ -2113,9 +1985,7 @@ impl DeviceLoader {
             } else {
                 None
             },
-            get_device_group_surface_present_modes2_ext: if (device_enabled.ext_full_screen_exclusive && device_enabled.khr_device_group)
-                || (device_enabled.ext_full_screen_exclusive && instance_enabled.vk1_1)
-            {
+            get_device_group_surface_present_modes2_ext: if (device_enabled.ext_full_screen_exclusive && device_enabled.khr_device_group) || (device_enabled.ext_full_screen_exclusive && instance_enabled.vk1_1) {
                 std::mem::transmute(symbol(crate::extensions::ext_full_screen_exclusive::FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES2_EXT))
             } else {
                 None
@@ -2145,16 +2015,8 @@ impl DeviceLoader {
             } else {
                 None
             },
-            get_buffer_opaque_capture_address: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS))
-            } else {
-                None
-            },
-            get_buffer_device_address: if instance_enabled.vk1_2 {
-                std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_DEVICE_ADDRESS))
-            } else {
-                None
-            },
+            get_buffer_opaque_capture_address: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS)) } else { None },
+            get_buffer_device_address: if instance_enabled.vk1_2 { std::mem::transmute(symbol(crate::vk1_2::FN_GET_BUFFER_DEVICE_ADDRESS)) } else { None },
             initialize_performance_api_intel: if device_enabled.intel_performance_query {
                 std::mem::transmute(symbol(crate::extensions::intel_performance_query::FN_INITIALIZE_PERFORMANCE_API_INTEL))
             } else {

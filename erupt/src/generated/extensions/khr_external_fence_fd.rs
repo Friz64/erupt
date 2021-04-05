@@ -10,12 +10,10 @@ pub const FN_GET_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGet
 pub const FN_IMPORT_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetFenceFdKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
+pub type PFN_vkGetFenceFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportFenceFdKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_fd_info: *const crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR) -> crate::vk1_0::Result;
+pub type PFN_vkImportFenceFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_fd_info: *const crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportFenceFdInfoKHR")]
 #[derive(Copy, Clone)]

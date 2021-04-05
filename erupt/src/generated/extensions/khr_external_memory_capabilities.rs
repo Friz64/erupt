@@ -87,9 +87,7 @@ impl crate::InstanceLoader {
         external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo,
         external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>,
     ) -> crate::vk1_1::ExternalBufferProperties {
-        let _function = self
-            .get_physical_device_external_buffer_properties_khr
-            .expect("`get_physical_device_external_buffer_properties_khr` is not loaded");
+        let _function = self.get_physical_device_external_buffer_properties_khr.expect("`get_physical_device_external_buffer_properties_khr` is not loaded");
         let mut external_buffer_properties = match external_buffer_properties {
             Some(v) => v,
             None => Default::default(),

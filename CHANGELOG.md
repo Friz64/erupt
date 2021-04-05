@@ -11,6 +11,7 @@ builder or non-builder variants of Vulkan structs to be passed into APIs
 
 ### Changed
 - Simplified function wrapper arguments
+- Split `ExtendableFrom` into `Const` and `Mut` variants
 
 ## [0.18.0+174] - 2021-03-29
 ### Added

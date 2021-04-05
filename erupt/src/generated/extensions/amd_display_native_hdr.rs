@@ -8,8 +8,7 @@ pub const AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME: *const std::os::raw::c_char = c
 pub const FN_SET_LOCAL_DIMMING_AMD: *const std::os::raw::c_char = crate::cstr!("vkSetLocalDimmingAMD");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetLocalDimmingAMD =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swap_chain: crate::extensions::khr_swapchain::SwapchainKHR, local_dimming_enable: crate::vk1_0::Bool32) -> ();
+pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(device: crate::vk1_0::Device, swap_chain: crate::extensions::khr_swapchain::SwapchainKHR, local_dimming_enable: crate::vk1_0::Bool32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure"]
 #[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
 #[derive(Copy, Clone)]

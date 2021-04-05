@@ -64,11 +64,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2KHR.html) · Function"]
     #[doc(alias = "vkGetBufferMemoryRequirements2KHR")]
-    pub unsafe fn get_buffer_memory_requirements2_khr(
-        &self,
-        info: &crate::vk1_1::BufferMemoryRequirementsInfo2,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
-    ) -> crate::vk1_1::MemoryRequirements2 {
+    pub unsafe fn get_buffer_memory_requirements2_khr(&self, info: &crate::vk1_1::BufferMemoryRequirementsInfo2, memory_requirements: Option<crate::vk1_1::MemoryRequirements2>) -> crate::vk1_1::MemoryRequirements2 {
         let _function = self.get_buffer_memory_requirements2_khr.expect("`get_buffer_memory_requirements2_khr` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
@@ -80,11 +76,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements2KHR.html) · Function"]
     #[doc(alias = "vkGetImageMemoryRequirements2KHR")]
-    pub unsafe fn get_image_memory_requirements2_khr(
-        &self,
-        info: &crate::vk1_1::ImageMemoryRequirementsInfo2,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
-    ) -> crate::vk1_1::MemoryRequirements2 {
+    pub unsafe fn get_image_memory_requirements2_khr(&self, info: &crate::vk1_1::ImageMemoryRequirementsInfo2, memory_requirements: Option<crate::vk1_1::MemoryRequirements2>) -> crate::vk1_1::MemoryRequirements2 {
         let _function = self.get_image_memory_requirements2_khr.expect("`get_image_memory_requirements2_khr` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
@@ -96,11 +88,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2KHR.html) · Function"]
     #[doc(alias = "vkGetImageSparseMemoryRequirements2KHR")]
-    pub unsafe fn get_image_sparse_memory_requirements2_khr(
-        &self,
-        info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
-        sparse_memory_requirement_count: Option<u32>,
-    ) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
+    pub unsafe fn get_image_sparse_memory_requirements2_khr(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
         let _function = self.get_image_sparse_memory_requirements2_khr.expect("`get_image_sparse_memory_requirements2_khr` is not loaded");
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,

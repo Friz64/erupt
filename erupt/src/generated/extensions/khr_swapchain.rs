@@ -101,52 +101,32 @@ pub type PFN_vkCreateSwapchainKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroySwapchainKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroySwapchainKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSwapchainImagesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    p_swapchain_image_count: *mut u32,
-    p_swapchain_images: *mut crate::vk1_0::Image,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetSwapchainImagesKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_swapchain_image_count: *mut u32, p_swapchain_images: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquireNextImageKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    timeout: u64,
-    semaphore: crate::vk1_0::Semaphore,
-    fence: crate::vk1_0::Fence,
-    p_image_index: *mut u32,
-) -> crate::vk1_0::Result;
+pub type PFN_vkAcquireNextImageKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: crate::vk1_0::Semaphore, fence: crate::vk1_0::Fence, p_image_index: *mut u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueuePresentKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueuePresentKHR = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_present_info: *const crate::extensions::khr_swapchain::PresentInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupPresentCapabilitiesKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_device_group_present_capabilities: *mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetDeviceGroupPresentCapabilitiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_device_group_present_capabilities: *mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupSurfacePresentModesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetDeviceGroupSurfacePresentModesKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, surface: crate::extensions::khr_surface::SurfaceKHR, p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquireNextImage2KHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_acquire_info: *const crate::extensions::khr_swapchain::AcquireNextImageInfoKHR, p_image_index: *mut u32) -> crate::vk1_0::Result;
+pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_acquire_info: *const crate::extensions::khr_swapchain::AcquireNextImageInfoKHR, p_image_index: *mut u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_rect_count: *mut u32,
-    p_rects: *mut crate::vk1_0::Rect2D,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_rect_count: *mut u32, p_rects: *mut crate::vk1_0::Rect2D) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -225,18 +205,18 @@ impl SwapchainCreateInfoKHR {
         SwapchainCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHR> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMD> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfo> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHR> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMD> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfo> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`]"]
 #[repr(transparent)]
@@ -398,16 +378,16 @@ impl PresentInfoKHR {
         PresentInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_incremental_present::PresentRegionsKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_incremental_present::PresentRegionsKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLE> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLEBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGP> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGPBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_incremental_present::PresentRegionsKHR> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_incremental_present::PresentRegionsKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLE> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLEBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGP> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGPBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`]"]
 #[repr(transparent)]
@@ -572,11 +552,7 @@ impl Default for ImageSwapchainCreateInfoKHR {
 }
 impl std::fmt::Debug for ImageSwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageSwapchainCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain", &self.swapchain)
-            .finish()
+        f.debug_struct("ImageSwapchainCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain", &self.swapchain).finish()
     }
 }
 impl ImageSwapchainCreateInfoKHR {
@@ -924,11 +900,7 @@ impl Default for DeviceGroupSwapchainCreateInfoKHR {
 }
 impl std::fmt::Debug for DeviceGroupSwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupSwapchainCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("modes", &self.modes)
-            .finish()
+        f.debug_struct("DeviceGroupSwapchainCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("modes", &self.modes).finish()
     }
 }
 impl DeviceGroupSwapchainCreateInfoKHR {
@@ -1023,11 +995,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainImagesKHR")]
-    pub unsafe fn get_swapchain_images_khr(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        swapchain_image_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Image>> {
+    pub unsafe fn get_swapchain_images_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, swapchain_image_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Image>> {
         let _function = self.get_swapchain_images_khr.expect("`get_swapchain_images_khr` is not loaded");
         let mut swapchain_image_count = match swapchain_image_count {
             Some(v) => v,
@@ -1044,13 +1012,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function"]
     #[doc(alias = "vkAcquireNextImageKHR")]
-    pub unsafe fn acquire_next_image_khr(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        timeout: u64,
-        semaphore: Option<crate::vk1_0::Semaphore>,
-        fence: Option<crate::vk1_0::Fence>,
-    ) -> crate::utils::VulkanResult<u32> {
+    pub unsafe fn acquire_next_image_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: Option<crate::vk1_0::Semaphore>, fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<u32> {
         let _function = self.acquire_next_image_khr.expect("`acquire_next_image_khr` is not loaded");
         let mut image_index = Default::default();
         let _return = _function(
@@ -1089,11 +1051,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModesKHR")]
-    pub unsafe fn get_device_group_surface_present_modes_khr(
-        &self,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_device_group_surface_present_modes_khr(&self, surface: crate::extensions::khr_surface::SurfaceKHR, modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::utils::VulkanResult<()> {
         let _function = self.get_device_group_surface_present_modes_khr.expect("`get_device_group_surface_present_modes_khr` is not loaded");
         let _return = _function(self.handle, surface as _, modes as _);
         crate::utils::VulkanResult::new(_return, ())

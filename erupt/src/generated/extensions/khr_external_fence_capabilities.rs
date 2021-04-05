@@ -52,9 +52,7 @@ impl crate::InstanceLoader {
         external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo,
         external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>,
     ) -> crate::vk1_1::ExternalFenceProperties {
-        let _function = self
-            .get_physical_device_external_fence_properties_khr
-            .expect("`get_physical_device_external_fence_properties_khr` is not loaded");
+        let _function = self.get_physical_device_external_fence_properties_khr.expect("`get_physical_device_external_fence_properties_khr` is not loaded");
         let mut external_fence_properties = match external_fence_properties {
             Some(v) => v,
             None => Default::default(),

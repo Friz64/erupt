@@ -83,11 +83,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Function"]
     #[doc(alias = "vkCreateSamplerYcbcrConversionKHR")]
-    pub unsafe fn create_sampler_ycbcr_conversion_khr(
-        &self,
-        create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
+    pub unsafe fn create_sampler_ycbcr_conversion_khr(&self, create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
         let _function = self.create_sampler_ycbcr_conversion_khr.expect("`create_sampler_ycbcr_conversion_khr` is not loaded");
         let mut ycbcr_conversion = Default::default();
         let _return = _function(

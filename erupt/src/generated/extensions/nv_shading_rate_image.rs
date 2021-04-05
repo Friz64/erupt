@@ -77,12 +77,8 @@ impl CoarseSampleOrderTypeNV {
 pub type PFN_vkCmdBindShadingRateImageNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, image_view: crate::vk1_0::ImageView, image_layout: crate::vk1_0::ImageLayout) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_viewport: u32,
-    viewport_count: u32,
-    p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
-) -> ();
+pub type PFN_vkCmdSetViewportShadingRatePaletteNV =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn(
@@ -445,11 +441,7 @@ impl Default for CoarseSampleLocationNV {
 }
 impl std::fmt::Debug for CoarseSampleLocationNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CoarseSampleLocationNV")
-            .field("pixel_x", &self.pixel_x)
-            .field("pixel_y", &self.pixel_y)
-            .field("sample", &self.sample)
-            .finish()
+        f.debug_struct("CoarseSampleLocationNV").field("pixel_x", &self.pixel_x).field("pixel_y", &self.pixel_y).field("sample", &self.sample).finish()
     }
 }
 impl CoarseSampleLocationNV {
@@ -706,12 +698,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
     #[doc(alias = "vkCmdSetViewportShadingRatePaletteNV")]
-    pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_viewport: u32,
-        shading_rate_palettes: &[impl crate::Repr<crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV>],
-    ) -> () {
+    pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, shading_rate_palettes: &[impl crate::Repr<crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV>]) -> () {
         let _function = self.cmd_set_viewport_shading_rate_palette_nv.expect("`cmd_set_viewport_shading_rate_palette_nv` is not loaded");
         let viewport_count = shading_rate_palettes.len();
         let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, shading_rate_palettes.as_ptr() as _);

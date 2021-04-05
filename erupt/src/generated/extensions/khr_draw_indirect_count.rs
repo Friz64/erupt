@@ -30,15 +30,7 @@ impl crate::DeviceLoader {
         stride: u32,
     ) -> () {
         let _function = self.cmd_draw_indirect_count_khr.expect("`cmd_draw_indirect_count_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            count_buffer as _,
-            count_buffer_offset as _,
-            max_draw_count as _,
-            stride as _,
-        );
+        let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
     #[inline]
@@ -55,15 +47,7 @@ impl crate::DeviceLoader {
         stride: u32,
     ) -> () {
         let _function = self.cmd_draw_indexed_indirect_count_khr.expect("`cmd_draw_indexed_indirect_count_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            count_buffer as _,
-            count_buffer_offset as _,
-            max_draw_count as _,
-            stride as _,
-        );
+        let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
 }

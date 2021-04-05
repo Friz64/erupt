@@ -10,17 +10,12 @@ pub const FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = 
 pub const FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreZirconHandleFUCHSIA");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA,
-    p_zircon_handle: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA,
-) -> crate::vk1_0::Result;
+pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -208,11 +203,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetSemaphoreZirconHandleFUCHSIA")]
-    pub unsafe fn get_semaphore_zircon_handle_fuchsia(
-        &self,
-        get_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA,
-        zircon_handle: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_semaphore_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, zircon_handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_semaphore_zircon_handle_fuchsia.expect("`get_semaphore_zircon_handle_fuchsia` is not loaded");
         let _return = _function(self.handle, get_zircon_handle_info as _, zircon_handle);
         crate::utils::VulkanResult::new(_return, ())
@@ -220,10 +211,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkImportSemaphoreZirconHandleFUCHSIA")]
-    pub unsafe fn import_semaphore_zircon_handle_fuchsia(
-        &self,
-        import_semaphore_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn import_semaphore_zircon_handle_fuchsia(&self, import_semaphore_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA) -> crate::utils::VulkanResult<()> {
         let _function = self.import_semaphore_zircon_handle_fuchsia.expect("`import_semaphore_zircon_handle_fuchsia` is not loaded");
         let _return = _function(self.handle, import_semaphore_zircon_handle_info as _);
         crate::utils::VulkanResult::new(_return, ())

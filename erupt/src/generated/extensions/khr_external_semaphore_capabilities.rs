@@ -52,9 +52,7 @@ impl crate::InstanceLoader {
         external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
         external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
     ) -> crate::vk1_1::ExternalSemaphoreProperties {
-        let _function = self
-            .get_physical_device_external_semaphore_properties_khr
-            .expect("`get_physical_device_external_semaphore_properties_khr` is not loaded");
+        let _function = self.get_physical_device_external_semaphore_properties_khr.expect("`get_physical_device_external_semaphore_properties_khr` is not loaded");
         let mut external_semaphore_properties = match external_semaphore_properties {
             Some(v) => v,
             None => Default::default(),

@@ -10,11 +10,7 @@ pub const FN_GET_MEMORY_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGe
 pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdPropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR,
-    p_fd: *mut std::os::raw::c_int,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(

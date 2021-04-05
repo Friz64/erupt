@@ -51,8 +51,7 @@ impl DeviceMemoryReportEventTypeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDeviceMemoryReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDeviceMemoryReportCallbackEXT =
-    unsafe extern "system" fn(p_callback_data: *const crate::extensions::ext_device_memory_report::DeviceMemoryReportCallbackDataEXT, p_user_data: *mut std::ffi::c_void) -> ();
+pub type PFN_vkDeviceMemoryReportCallbackEXT = unsafe extern "system" fn(p_callback_data: *const crate::extensions::ext_device_memory_report::DeviceMemoryReportCallbackDataEXT, p_user_data: *mut std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDeviceMemoryReportFeaturesEXT")]
 #[derive(Copy, Clone)]

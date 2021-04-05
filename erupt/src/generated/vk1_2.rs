@@ -279,23 +279,14 @@ impl DriverId {
 pub type PFN_vkResetQueryPool = unsafe extern "system" fn(device: crate::vk1_0::Device, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateRenderPass2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_2::RenderPassCreateInfo2,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_render_pass: *mut crate::vk1_0::RenderPass,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateRenderPass2 =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_2::RenderPassCreateInfo2, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_render_pass: *mut crate::vk1_0::RenderPass) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginRenderPass2 = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo,
-    p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo,
-) -> ();
+pub type PFN_vkCmdBeginRenderPass2 = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo, p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdNextSubpass2 =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo, p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo) -> ();
+pub type PFN_vkCmdNextSubpass2 = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_subpass_begin_info: *const crate::vk1_2::SubpassBeginInfo, p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass2 = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_subpass_end_info: *const crate::vk1_2::SubpassEndInfo) -> ();
@@ -1273,26 +1264,14 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingFeatures {
             .field("shader_storage_buffer_array_non_uniform_indexing", &(self.shader_storage_buffer_array_non_uniform_indexing != 0))
             .field("shader_storage_image_array_non_uniform_indexing", &(self.shader_storage_image_array_non_uniform_indexing != 0))
             .field("shader_input_attachment_array_non_uniform_indexing", &(self.shader_input_attachment_array_non_uniform_indexing != 0))
-            .field(
-                "shader_uniform_texel_buffer_array_non_uniform_indexing",
-                &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_texel_buffer_array_non_uniform_indexing",
-                &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0),
-            )
+            .field("shader_uniform_texel_buffer_array_non_uniform_indexing", &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0))
+            .field("shader_storage_texel_buffer_array_non_uniform_indexing", &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0))
             .field("descriptor_binding_uniform_buffer_update_after_bind", &(self.descriptor_binding_uniform_buffer_update_after_bind != 0))
             .field("descriptor_binding_sampled_image_update_after_bind", &(self.descriptor_binding_sampled_image_update_after_bind != 0))
             .field("descriptor_binding_storage_image_update_after_bind", &(self.descriptor_binding_storage_image_update_after_bind != 0))
             .field("descriptor_binding_storage_buffer_update_after_bind", &(self.descriptor_binding_storage_buffer_update_after_bind != 0))
-            .field(
-                "descriptor_binding_uniform_texel_buffer_update_after_bind",
-                &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_texel_buffer_update_after_bind",
-                &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0),
-            )
+            .field("descriptor_binding_uniform_texel_buffer_update_after_bind", &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0))
+            .field("descriptor_binding_storage_texel_buffer_update_after_bind", &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0))
             .field("descriptor_binding_update_unused_while_pending", &(self.descriptor_binding_update_unused_while_pending != 0))
             .field("descriptor_binding_partially_bound", &(self.descriptor_binding_partially_bound != 0))
             .field("descriptor_binding_variable_descriptor_count", &(self.descriptor_binding_variable_descriptor_count != 0))
@@ -1511,61 +1490,25 @@ impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingProperties {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_update_after_bind_descriptors_in_all_pools", &self.max_update_after_bind_descriptors_in_all_pools)
-            .field(
-                "shader_uniform_buffer_array_non_uniform_indexing_native",
-                &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_sampled_image_array_non_uniform_indexing_native",
-                &(self.shader_sampled_image_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_storage_buffer_array_non_uniform_indexing_native",
-                &(self.shader_storage_buffer_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_storage_image_array_non_uniform_indexing_native",
-                &(self.shader_storage_image_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_input_attachment_array_non_uniform_indexing_native",
-                &(self.shader_input_attachment_array_non_uniform_indexing_native != 0),
-            )
+            .field("shader_uniform_buffer_array_non_uniform_indexing_native", &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0))
+            .field("shader_sampled_image_array_non_uniform_indexing_native", &(self.shader_sampled_image_array_non_uniform_indexing_native != 0))
+            .field("shader_storage_buffer_array_non_uniform_indexing_native", &(self.shader_storage_buffer_array_non_uniform_indexing_native != 0))
+            .field("shader_storage_image_array_non_uniform_indexing_native", &(self.shader_storage_image_array_non_uniform_indexing_native != 0))
+            .field("shader_input_attachment_array_non_uniform_indexing_native", &(self.shader_input_attachment_array_non_uniform_indexing_native != 0))
             .field("robust_buffer_access_update_after_bind", &(self.robust_buffer_access_update_after_bind != 0))
             .field("quad_divergent_implicit_lod", &(self.quad_divergent_implicit_lod != 0))
             .field("max_per_stage_descriptor_update_after_bind_samplers", &self.max_per_stage_descriptor_update_after_bind_samplers)
-            .field(
-                "max_per_stage_descriptor_update_after_bind_uniform_buffers",
-                &self.max_per_stage_descriptor_update_after_bind_uniform_buffers,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_storage_buffers",
-                &self.max_per_stage_descriptor_update_after_bind_storage_buffers,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_sampled_images",
-                &self.max_per_stage_descriptor_update_after_bind_sampled_images,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_storage_images",
-                &self.max_per_stage_descriptor_update_after_bind_storage_images,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_input_attachments",
-                &self.max_per_stage_descriptor_update_after_bind_input_attachments,
-            )
+            .field("max_per_stage_descriptor_update_after_bind_uniform_buffers", &self.max_per_stage_descriptor_update_after_bind_uniform_buffers)
+            .field("max_per_stage_descriptor_update_after_bind_storage_buffers", &self.max_per_stage_descriptor_update_after_bind_storage_buffers)
+            .field("max_per_stage_descriptor_update_after_bind_sampled_images", &self.max_per_stage_descriptor_update_after_bind_sampled_images)
+            .field("max_per_stage_descriptor_update_after_bind_storage_images", &self.max_per_stage_descriptor_update_after_bind_storage_images)
+            .field("max_per_stage_descriptor_update_after_bind_input_attachments", &self.max_per_stage_descriptor_update_after_bind_input_attachments)
             .field("max_per_stage_update_after_bind_resources", &self.max_per_stage_update_after_bind_resources)
             .field("max_descriptor_set_update_after_bind_samplers", &self.max_descriptor_set_update_after_bind_samplers)
             .field("max_descriptor_set_update_after_bind_uniform_buffers", &self.max_descriptor_set_update_after_bind_uniform_buffers)
-            .field(
-                "max_descriptor_set_update_after_bind_uniform_buffers_dynamic",
-                &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic,
-            )
+            .field("max_descriptor_set_update_after_bind_uniform_buffers_dynamic", &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic)
             .field("max_descriptor_set_update_after_bind_storage_buffers", &self.max_descriptor_set_update_after_bind_storage_buffers)
-            .field(
-                "max_descriptor_set_update_after_bind_storage_buffers_dynamic",
-                &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic,
-            )
+            .field("max_descriptor_set_update_after_bind_storage_buffers_dynamic", &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic)
             .field("max_descriptor_set_update_after_bind_sampled_images", &self.max_descriptor_set_update_after_bind_sampled_images)
             .field("max_descriptor_set_update_after_bind_storage_images", &self.max_descriptor_set_update_after_bind_storage_images)
             .field("max_descriptor_set_update_after_bind_input_attachments", &self.max_descriptor_set_update_after_bind_input_attachments)
@@ -2020,8 +1963,8 @@ impl AttachmentDescription2 {
         AttachmentDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayout> for AttachmentDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'_>> for AttachmentDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentDescriptionStencilLayout> for AttachmentDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'_>> for AttachmentDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2.html) · Builder of [`AttachmentDescription2`]"]
 #[repr(transparent)]
@@ -2143,8 +2086,8 @@ impl AttachmentReference2 {
         AttachmentReference2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayout> for AttachmentReference2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<'_>> for AttachmentReference2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentReferenceStencilLayout> for AttachmentReference2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<'_>> for AttachmentReference2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference2.html) · Builder of [`AttachmentReference2`]"]
 #[repr(transparent)]
@@ -2260,10 +2203,10 @@ impl SubpassDescription2 {
         SubpassDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolve> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolveBuilder<'_>> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolve> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolveBuilder<'_>> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for SubpassDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`]"]
 #[repr(transparent)]
@@ -2399,8 +2342,8 @@ impl SubpassDependency2 {
         SubpassDependency2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHR> for SubpassDependency2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder<'_>> for SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHR> for SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder<'_>> for SubpassDependency2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency2.html) · Builder of [`SubpassDependency2`]"]
 #[repr(transparent)]
@@ -2535,8 +2478,8 @@ impl RenderPassCreateInfo2 {
         RenderPassCreateInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo2.html) · Builder of [`RenderPassCreateInfo2`]"]
 #[repr(transparent)]
@@ -2623,11 +2566,7 @@ impl Default for SubpassBeginInfo {
 }
 impl std::fmt::Debug for SubpassBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubpassBeginInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("contents", &self.contents)
-            .finish()
+        f.debug_struct("SubpassBeginInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("contents", &self.contents).finish()
     }
 }
 impl SubpassBeginInfo {
@@ -4036,11 +3975,7 @@ impl Default for BufferDeviceAddressInfo {
 }
 impl std::fmt::Debug for BufferDeviceAddressInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferDeviceAddressInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer", &self.buffer)
-            .finish()
+        f.debug_struct("BufferDeviceAddressInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer", &self.buffer).finish()
     }
 }
 impl BufferDeviceAddressInfo {
@@ -5384,26 +5319,14 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Features {
             .field("shader_storage_buffer_array_non_uniform_indexing", &(self.shader_storage_buffer_array_non_uniform_indexing != 0))
             .field("shader_storage_image_array_non_uniform_indexing", &(self.shader_storage_image_array_non_uniform_indexing != 0))
             .field("shader_input_attachment_array_non_uniform_indexing", &(self.shader_input_attachment_array_non_uniform_indexing != 0))
-            .field(
-                "shader_uniform_texel_buffer_array_non_uniform_indexing",
-                &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0),
-            )
-            .field(
-                "shader_storage_texel_buffer_array_non_uniform_indexing",
-                &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0),
-            )
+            .field("shader_uniform_texel_buffer_array_non_uniform_indexing", &(self.shader_uniform_texel_buffer_array_non_uniform_indexing != 0))
+            .field("shader_storage_texel_buffer_array_non_uniform_indexing", &(self.shader_storage_texel_buffer_array_non_uniform_indexing != 0))
             .field("descriptor_binding_uniform_buffer_update_after_bind", &(self.descriptor_binding_uniform_buffer_update_after_bind != 0))
             .field("descriptor_binding_sampled_image_update_after_bind", &(self.descriptor_binding_sampled_image_update_after_bind != 0))
             .field("descriptor_binding_storage_image_update_after_bind", &(self.descriptor_binding_storage_image_update_after_bind != 0))
             .field("descriptor_binding_storage_buffer_update_after_bind", &(self.descriptor_binding_storage_buffer_update_after_bind != 0))
-            .field(
-                "descriptor_binding_uniform_texel_buffer_update_after_bind",
-                &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0),
-            )
-            .field(
-                "descriptor_binding_storage_texel_buffer_update_after_bind",
-                &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0),
-            )
+            .field("descriptor_binding_uniform_texel_buffer_update_after_bind", &(self.descriptor_binding_uniform_texel_buffer_update_after_bind != 0))
+            .field("descriptor_binding_storage_texel_buffer_update_after_bind", &(self.descriptor_binding_storage_texel_buffer_update_after_bind != 0))
             .field("descriptor_binding_update_unused_while_pending", &(self.descriptor_binding_update_unused_while_pending != 0))
             .field("descriptor_binding_partially_bound", &(self.descriptor_binding_partially_bound != 0))
             .field("descriptor_binding_variable_descriptor_count", &(self.descriptor_binding_variable_descriptor_count != 0))
@@ -5853,61 +5776,25 @@ impl std::fmt::Debug for PhysicalDeviceVulkan12Properties {
             .field("shader_rounding_mode_rtz_float32", &(self.shader_rounding_mode_rtz_float32 != 0))
             .field("shader_rounding_mode_rtz_float64", &(self.shader_rounding_mode_rtz_float64 != 0))
             .field("max_update_after_bind_descriptors_in_all_pools", &self.max_update_after_bind_descriptors_in_all_pools)
-            .field(
-                "shader_uniform_buffer_array_non_uniform_indexing_native",
-                &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_sampled_image_array_non_uniform_indexing_native",
-                &(self.shader_sampled_image_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_storage_buffer_array_non_uniform_indexing_native",
-                &(self.shader_storage_buffer_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_storage_image_array_non_uniform_indexing_native",
-                &(self.shader_storage_image_array_non_uniform_indexing_native != 0),
-            )
-            .field(
-                "shader_input_attachment_array_non_uniform_indexing_native",
-                &(self.shader_input_attachment_array_non_uniform_indexing_native != 0),
-            )
+            .field("shader_uniform_buffer_array_non_uniform_indexing_native", &(self.shader_uniform_buffer_array_non_uniform_indexing_native != 0))
+            .field("shader_sampled_image_array_non_uniform_indexing_native", &(self.shader_sampled_image_array_non_uniform_indexing_native != 0))
+            .field("shader_storage_buffer_array_non_uniform_indexing_native", &(self.shader_storage_buffer_array_non_uniform_indexing_native != 0))
+            .field("shader_storage_image_array_non_uniform_indexing_native", &(self.shader_storage_image_array_non_uniform_indexing_native != 0))
+            .field("shader_input_attachment_array_non_uniform_indexing_native", &(self.shader_input_attachment_array_non_uniform_indexing_native != 0))
             .field("robust_buffer_access_update_after_bind", &(self.robust_buffer_access_update_after_bind != 0))
             .field("quad_divergent_implicit_lod", &(self.quad_divergent_implicit_lod != 0))
             .field("max_per_stage_descriptor_update_after_bind_samplers", &self.max_per_stage_descriptor_update_after_bind_samplers)
-            .field(
-                "max_per_stage_descriptor_update_after_bind_uniform_buffers",
-                &self.max_per_stage_descriptor_update_after_bind_uniform_buffers,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_storage_buffers",
-                &self.max_per_stage_descriptor_update_after_bind_storage_buffers,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_sampled_images",
-                &self.max_per_stage_descriptor_update_after_bind_sampled_images,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_storage_images",
-                &self.max_per_stage_descriptor_update_after_bind_storage_images,
-            )
-            .field(
-                "max_per_stage_descriptor_update_after_bind_input_attachments",
-                &self.max_per_stage_descriptor_update_after_bind_input_attachments,
-            )
+            .field("max_per_stage_descriptor_update_after_bind_uniform_buffers", &self.max_per_stage_descriptor_update_after_bind_uniform_buffers)
+            .field("max_per_stage_descriptor_update_after_bind_storage_buffers", &self.max_per_stage_descriptor_update_after_bind_storage_buffers)
+            .field("max_per_stage_descriptor_update_after_bind_sampled_images", &self.max_per_stage_descriptor_update_after_bind_sampled_images)
+            .field("max_per_stage_descriptor_update_after_bind_storage_images", &self.max_per_stage_descriptor_update_after_bind_storage_images)
+            .field("max_per_stage_descriptor_update_after_bind_input_attachments", &self.max_per_stage_descriptor_update_after_bind_input_attachments)
             .field("max_per_stage_update_after_bind_resources", &self.max_per_stage_update_after_bind_resources)
             .field("max_descriptor_set_update_after_bind_samplers", &self.max_descriptor_set_update_after_bind_samplers)
             .field("max_descriptor_set_update_after_bind_uniform_buffers", &self.max_descriptor_set_update_after_bind_uniform_buffers)
-            .field(
-                "max_descriptor_set_update_after_bind_uniform_buffers_dynamic",
-                &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic,
-            )
+            .field("max_descriptor_set_update_after_bind_uniform_buffers_dynamic", &self.max_descriptor_set_update_after_bind_uniform_buffers_dynamic)
             .field("max_descriptor_set_update_after_bind_storage_buffers", &self.max_descriptor_set_update_after_bind_storage_buffers)
-            .field(
-                "max_descriptor_set_update_after_bind_storage_buffers_dynamic",
-                &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic,
-            )
+            .field("max_descriptor_set_update_after_bind_storage_buffers_dynamic", &self.max_descriptor_set_update_after_bind_storage_buffers_dynamic)
             .field("max_descriptor_set_update_after_bind_sampled_images", &self.max_descriptor_set_update_after_bind_sampled_images)
             .field("max_descriptor_set_update_after_bind_storage_images", &self.max_descriptor_set_update_after_bind_storage_images)
             .field("max_descriptor_set_update_after_bind_input_attachments", &self.max_descriptor_set_update_after_bind_input_attachments)
@@ -6238,11 +6125,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2.html) · Function"]
     #[doc(alias = "vkCreateRenderPass2")]
-    pub unsafe fn create_render_pass2(
-        &self,
-        create_info: &crate::vk1_2::RenderPassCreateInfo2,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
+    pub unsafe fn create_render_pass2(&self, create_info: &crate::vk1_2::RenderPassCreateInfo2, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
         let _function = self.create_render_pass2.expect("`create_render_pass2` is not loaded");
         let mut render_pass = Default::default();
         let _return = _function(
@@ -6259,12 +6142,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass2.html) · Function"]
     #[doc(alias = "vkCmdBeginRenderPass2")]
-    pub unsafe fn cmd_begin_render_pass2(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        render_pass_begin: &crate::vk1_0::RenderPassBeginInfo,
-        subpass_begin_info: &crate::vk1_2::SubpassBeginInfo,
-    ) -> () {
+    pub unsafe fn cmd_begin_render_pass2(&self, command_buffer: crate::vk1_0::CommandBuffer, render_pass_begin: &crate::vk1_0::RenderPassBeginInfo, subpass_begin_info: &crate::vk1_2::SubpassBeginInfo) -> () {
         let _function = self.cmd_begin_render_pass2.expect("`cmd_begin_render_pass2` is not loaded");
         let _return = _function(command_buffer as _, render_pass_begin as _, subpass_begin_info as _);
         ()
@@ -6324,15 +6202,7 @@ impl crate::DeviceLoader {
         stride: u32,
     ) -> () {
         let _function = self.cmd_draw_indirect_count.expect("`cmd_draw_indirect_count` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            count_buffer as _,
-            count_buffer_offset as _,
-            max_draw_count as _,
-            stride as _,
-        );
+        let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
     #[inline]
@@ -6349,15 +6219,7 @@ impl crate::DeviceLoader {
         stride: u32,
     ) -> () {
         let _function = self.cmd_draw_indexed_indirect_count.expect("`cmd_draw_indexed_indirect_count` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            buffer as _,
-            offset as _,
-            count_buffer as _,
-            count_buffer_offset as _,
-            max_draw_count as _,
-            stride as _,
-        );
+        let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
     #[inline]

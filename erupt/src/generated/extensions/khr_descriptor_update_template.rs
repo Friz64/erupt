@@ -73,11 +73,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplateKHR")]
-    pub unsafe fn destroy_descriptor_update_template_khr(
-        &self,
-        descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
+    pub unsafe fn destroy_descriptor_update_template_khr(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_descriptor_update_template_khr.expect("`destroy_descriptor_update_template_khr` is not loaded");
         let _return = _function(
             self.handle,
@@ -95,12 +91,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Function"]
     #[doc(alias = "vkUpdateDescriptorSetWithTemplateKHR")]
-    pub unsafe fn update_descriptor_set_with_template_khr(
-        &self,
-        descriptor_set: crate::vk1_0::DescriptorSet,
-        descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate,
-        data: *const std::ffi::c_void,
-    ) -> () {
+    pub unsafe fn update_descriptor_set_with_template_khr(&self, descriptor_set: crate::vk1_0::DescriptorSet, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, data: *const std::ffi::c_void) -> () {
         let _function = self.update_descriptor_set_with_template_khr.expect("`update_descriptor_set_with_template_khr` is not loaded");
         let _return = _function(self.handle, descriptor_set as _, descriptor_update_template as _, data);
         ()

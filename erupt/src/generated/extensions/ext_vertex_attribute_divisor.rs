@@ -22,10 +22,7 @@ impl Default for VertexInputBindingDivisorDescriptionEXT {
 }
 impl std::fmt::Debug for VertexInputBindingDivisorDescriptionEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VertexInputBindingDivisorDescriptionEXT")
-            .field("binding", &self.binding)
-            .field("divisor", &self.divisor)
-            .finish()
+        f.debug_struct("VertexInputBindingDivisorDescriptionEXT").field("binding", &self.binding).field("divisor", &self.divisor).finish()
     }
 }
 impl VertexInputBindingDivisorDescriptionEXT {

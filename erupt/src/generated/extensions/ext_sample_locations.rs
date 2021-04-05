@@ -10,15 +10,11 @@ pub const FN_CMD_SET_SAMPLE_LOCATIONS_EXT: *const std::os::raw::c_char = crate::
 pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceMultisamplePropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetSampleLocationsEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> ();
+pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    samples: crate::vk1_0::SampleCountFlagBits,
-    p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[doc(alias = "VkSampleLocationEXT")]
 #[derive(Copy, Clone)]
@@ -29,10 +25,7 @@ pub struct SampleLocationEXT {
 }
 impl Default for SampleLocationEXT {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default() }
     }
 }
 impl std::fmt::Debug for SampleLocationEXT {
@@ -720,9 +713,7 @@ impl crate::InstanceLoader {
         samples: crate::vk1_0::SampleCountFlagBits,
         multisample_properties: Option<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>,
     ) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
-        let _function = self
-            .get_physical_device_multisample_properties_ext
-            .expect("`get_physical_device_multisample_properties_ext` is not loaded");
+        let _function = self.get_physical_device_multisample_properties_ext.expect("`get_physical_device_multisample_properties_ext` is not loaded");
         let mut multisample_properties = match multisample_properties {
             Some(v) => v,
             None => Default::default(),

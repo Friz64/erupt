@@ -85,24 +85,12 @@ pub type PFN_vkCmdTraceRaysKHR = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingShaderGroupHandlesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline: crate::vk1_0::Pipeline,
-    first_group: u32,
-    group_count: u32,
-    data_size: usize,
-    p_data: *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetRayTracingShaderGroupHandlesKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline: crate::vk1_0::Pipeline,
-    first_group: u32,
-    group_count: u32,
-    data_size: usize,
-    p_data: *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRayTracingPipelinesKHR = unsafe extern "system" fn(
@@ -126,12 +114,8 @@ pub type PFN_vkCmdTraceRaysIndirectKHR = unsafe extern "system" fn(
 ) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupStackSizeKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingShaderGroupStackSizeKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline: crate::vk1_0::Pipeline,
-    group: u32,
-    group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR,
-) -> crate::vk1_0::DeviceSize;
+pub type PFN_vkGetRayTracingShaderGroupStackSizeKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, group: u32, group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR) -> crate::vk1_0::DeviceSize;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetRayTracingPipelineStackSizeKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stack_size: u32) -> ();
@@ -316,8 +300,8 @@ impl RayTracingPipelineCreateInfoKHR {
         RayTracingPipelineCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Builder of [`RayTracingPipelineCreateInfoKHR`]"]
 #[repr(transparent)]
@@ -439,14 +423,8 @@ impl std::fmt::Debug for PhysicalDeviceRayTracingPipelineFeaturesKHR {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ray_tracing_pipeline", &(self.ray_tracing_pipeline != 0))
-            .field(
-                "ray_tracing_pipeline_shader_group_handle_capture_replay",
-                &(self.ray_tracing_pipeline_shader_group_handle_capture_replay != 0),
-            )
-            .field(
-                "ray_tracing_pipeline_shader_group_handle_capture_replay_mixed",
-                &(self.ray_tracing_pipeline_shader_group_handle_capture_replay_mixed != 0),
-            )
+            .field("ray_tracing_pipeline_shader_group_handle_capture_replay", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay != 0))
+            .field("ray_tracing_pipeline_shader_group_handle_capture_replay_mixed", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay_mixed != 0))
             .field("ray_tracing_pipeline_trace_rays_indirect", &(self.ray_tracing_pipeline_trace_rays_indirect != 0))
             .field("ray_traversal_primitive_culling", &(self.ray_traversal_primitive_culling != 0))
             .finish()
@@ -756,11 +734,7 @@ impl Default for TraceRaysIndirectCommandKHR {
 }
 impl std::fmt::Debug for TraceRaysIndirectCommandKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("TraceRaysIndirectCommandKHR")
-            .field("width", &self.width)
-            .field("height", &self.height)
-            .field("depth", &self.depth)
-            .finish()
+        f.debug_struct("TraceRaysIndirectCommandKHR").field("width", &self.width).field("height", &self.height).field("depth", &self.depth).finish()
     }
 }
 impl TraceRaysIndirectCommandKHR {
@@ -936,14 +910,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingShaderGroupHandlesKHR")]
-    pub unsafe fn get_ray_tracing_shader_group_handles_khr(
-        &self,
-        pipeline: crate::vk1_0::Pipeline,
-        first_group: u32,
-        group_count: u32,
-        data_size: usize,
-        data: *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_ray_tracing_shader_group_handles_khr(&self, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_ray_tracing_shader_group_handles_khr.expect("`get_ray_tracing_shader_group_handles_khr` is not loaded");
         let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
@@ -951,17 +918,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingCaptureReplayShaderGroupHandlesKHR")]
-    pub unsafe fn get_ray_tracing_capture_replay_shader_group_handles_khr(
-        &self,
-        pipeline: crate::vk1_0::Pipeline,
-        first_group: u32,
-        group_count: u32,
-        data_size: usize,
-        data: *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
-        let _function = self
-            .get_ray_tracing_capture_replay_shader_group_handles_khr
-            .expect("`get_ray_tracing_capture_replay_shader_group_handles_khr` is not loaded");
+    pub unsafe fn get_ray_tracing_capture_replay_shader_group_handles_khr(&self, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+        let _function = self.get_ray_tracing_capture_replay_shader_group_handles_khr.expect("`get_ray_tracing_capture_replay_shader_group_handles_khr` is not loaded");
         let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1024,12 +982,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupStackSizeKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingShaderGroupStackSizeKHR")]
-    pub unsafe fn get_ray_tracing_shader_group_stack_size_khr(
-        &self,
-        pipeline: crate::vk1_0::Pipeline,
-        group: u32,
-        group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR,
-    ) -> crate::vk1_0::DeviceSize {
+    pub unsafe fn get_ray_tracing_shader_group_stack_size_khr(&self, pipeline: crate::vk1_0::Pipeline, group: u32, group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR) -> crate::vk1_0::DeviceSize {
         let _function = self.get_ray_tracing_shader_group_stack_size_khr.expect("`get_ray_tracing_shader_group_stack_size_khr` is not loaded");
         let _return = _function(self.handle, pipeline as _, group as _, group_shader as _);
         _return

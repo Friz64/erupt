@@ -68,11 +68,8 @@ impl ComponentTypeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -372,9 +369,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         property_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>> {
-        let _function = self
-            .get_physical_device_cooperative_matrix_properties_nv
-            .expect("`get_physical_device_cooperative_matrix_properties_nv` is not loaded");
+        let _function = self.get_physical_device_cooperative_matrix_properties_nv.expect("`get_physical_device_cooperative_matrix_properties_nv` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
             None => {

@@ -8,8 +8,7 @@ pub const NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char = cra
 pub const FN_CMD_SET_EXCLUSIVE_SCISSOR_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetExclusiveScissorNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetExclusiveScissorNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissor_count: u32, p_exclusive_scissors: *const crate::vk1_0::Rect2D) -> ();
+pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissor_count: u32, p_exclusive_scissors: *const crate::vk1_0::Rect2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
 #[derive(Copy, Clone)]

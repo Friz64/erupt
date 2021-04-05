@@ -113,26 +113,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Function"]
     #[doc(alias = "vkCmdDispatchBaseKHR")]
-    pub unsafe fn cmd_dispatch_base_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        base_group_x: u32,
-        base_group_y: u32,
-        base_group_z: u32,
-        group_count_x: u32,
-        group_count_y: u32,
-        group_count_z: u32,
-    ) -> () {
+    pub unsafe fn cmd_dispatch_base_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, base_group_x: u32, base_group_y: u32, base_group_z: u32, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> () {
         let _function = self.cmd_dispatch_base_khr.expect("`cmd_dispatch_base_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            base_group_x as _,
-            base_group_y as _,
-            base_group_z as _,
-            group_count_x as _,
-            group_count_y as _,
-            group_count_z as _,
-        );
+        let _return = _function(command_buffer as _, base_group_x as _, base_group_y as _, base_group_z as _, group_count_x as _, group_count_y as _, group_count_z as _);
         ()
     }
 }

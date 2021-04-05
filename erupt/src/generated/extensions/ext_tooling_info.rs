@@ -45,11 +45,8 @@ impl ToolPurposeFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_tool_count: *mut u32,
-    p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_tool_count: *mut u32, p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceToolPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -162,11 +159,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceToolPropertiesEXT")]
-    pub unsafe fn get_physical_device_tool_properties_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        tool_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
+    pub unsafe fn get_physical_device_tool_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, tool_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
         let _function = self.get_physical_device_tool_properties_ext.expect("`get_physical_device_tool_properties_ext` is not loaded");
         let mut tool_count = match tool_count {
             Some(v) => v,

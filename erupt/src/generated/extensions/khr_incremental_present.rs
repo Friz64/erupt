@@ -101,10 +101,7 @@ impl Default for PresentRegionKHR {
 }
 impl std::fmt::Debug for PresentRegionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PresentRegionKHR")
-            .field("rectangle_count", &self.rectangle_count)
-            .field("p_rectangles", &self.p_rectangles)
-            .finish()
+        f.debug_struct("PresentRegionKHR").field("rectangle_count", &self.rectangle_count).field("p_rectangles", &self.p_rectangles).finish()
     }
 }
 impl PresentRegionKHR {
@@ -176,11 +173,7 @@ impl Default for RectLayerKHR {
 }
 impl std::fmt::Debug for RectLayerKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RectLayerKHR")
-            .field("offset", &self.offset)
-            .field("extent", &self.extent)
-            .field("layer", &self.layer)
-            .finish()
+        f.debug_struct("RectLayerKHR").field("offset", &self.offset).field("extent", &self.extent).field("layer", &self.layer).finish()
     }
 }
 impl RectLayerKHR {

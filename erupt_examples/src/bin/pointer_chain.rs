@@ -1,4 +1,4 @@
-use erupt::{vk, EntryLoader, ExtendableFrom, InstanceLoader};
+use erupt::{vk, EntryLoader, ExtendableFromMut, InstanceLoader};
 use std::ffi::CStr;
 
 const TITLE: &str = "erupt_examples: pointer_chain";

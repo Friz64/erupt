@@ -363,6 +363,16 @@ impl Structure {
                 }
             });
 
+        let extendable_from_kind = match (
+            self.has_p_next(Mutability::Const),
+            self.has_p_next(Mutability::Mut),
+        ) {
+            (true, false) => Some(quote! { ExtendableFromConst }),
+            (false, true) => Some(quote! { ExtendableFromMut }),
+            (false, false) => None,
+            (true, true) => Some(quote! { unreachable!() }),
+        };
+
         let extends = source
             .structures
             .iter()
@@ -380,10 +390,10 @@ impl Structure {
                 let other_builder_ident = other_name.ident();
 
                 quote! {
-                    impl<'a> crate::ExtendableFrom<'a, crate::#other_path#other_ident>
+                    impl<'a> crate::#extendable_from_kind<'a, crate::#other_path#other_ident>
                         for #ident<'a> {}
 
-                    impl<'a> crate::ExtendableFrom<'a, crate::#other_path#other_builder_ident<'_>>
+                    impl<'a> crate::#extendable_from_kind<'a, crate::#other_path#other_builder_ident<'_>>
                         for #ident<'a> {}
                 }
             });

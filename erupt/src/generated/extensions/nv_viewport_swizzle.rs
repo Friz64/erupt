@@ -77,12 +77,7 @@ impl Default for ViewportSwizzleNV {
 }
 impl std::fmt::Debug for ViewportSwizzleNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ViewportSwizzleNV")
-            .field("x", &self.x)
-            .field("y", &self.y)
-            .field("z", &self.z)
-            .field("w", &self.w)
-            .finish()
+        f.debug_struct("ViewportSwizzleNV").field("x", &self.x).field("y", &self.y).field("z", &self.z).field("w", &self.w).finish()
     }
 }
 impl ViewportSwizzleNV {

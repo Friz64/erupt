@@ -161,10 +161,7 @@ impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn pipeline_stage_creation_feedbacks(
-        mut self,
-        pipeline_stage_creation_feedbacks: &'a mut [impl crate::Repr<crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT>],
-    ) -> Self {
+    pub fn pipeline_stage_creation_feedbacks(mut self, pipeline_stage_creation_feedbacks: &'a mut [impl crate::Repr<crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT>]) -> Self {
         self.0.p_pipeline_stage_creation_feedbacks = pipeline_stage_creation_feedbacks.as_ptr() as _;
         self.0.pipeline_stage_creation_feedback_count = pipeline_stage_creation_feedbacks.len() as _;
         self

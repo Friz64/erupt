@@ -33,11 +33,8 @@ impl TimeDomainEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCalibrateableTimeDomainsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsEXT = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_time_domain_count: *mut u32,
-    p_time_domains: *mut crate::extensions::ext_calibrated_timestamps::TimeDomainEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsEXT =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_time_domain_count: *mut u32, p_time_domains: *mut crate::extensions::ext_calibrated_timestamps::TimeDomainEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetCalibratedTimestampsEXT = unsafe extern "system" fn(
@@ -132,9 +129,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         time_domain_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_calibrated_timestamps::TimeDomainEXT>> {
-        let _function = self
-            .get_physical_device_calibrateable_time_domains_ext
-            .expect("`get_physical_device_calibrateable_time_domains_ext` is not loaded");
+        let _function = self.get_physical_device_calibrateable_time_domains_ext.expect("`get_physical_device_calibrateable_time_domains_ext` is not loaded");
         let mut time_domain_count = match time_domain_count {
             Some(v) => v,
             None => {
@@ -153,10 +148,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
     #[doc(alias = "vkGetCalibratedTimestampsEXT")]
-    pub unsafe fn get_calibrated_timestamps_ext(
-        &self,
-        timestamp_infos: &[impl crate::Repr<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>],
-    ) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
+    pub unsafe fn get_calibrated_timestamps_ext(&self, timestamp_infos: &[impl crate::Repr<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>]) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
         let _function = self.get_calibrated_timestamps_ext.expect("`get_calibrated_timestamps_ext` is not loaded");
         let timestamp_count = timestamp_infos.len();
         let mut timestamps = vec![Default::default(); timestamp_count as _];

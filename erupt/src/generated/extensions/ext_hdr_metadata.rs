@@ -8,12 +8,8 @@ pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetHdrMetadataEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain_count: u32,
-    p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR,
-    p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT,
-) -> ();
+pub type PFN_vkSetHdrMetadataEXT =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR, p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Structure"]
 #[doc(alias = "VkXYColorEXT")]
 #[derive(Copy, Clone)]
@@ -24,10 +20,7 @@ pub struct XYColorEXT {
 }
 impl Default for XYColorEXT {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default() }
     }
 }
 impl std::fmt::Debug for XYColorEXT {

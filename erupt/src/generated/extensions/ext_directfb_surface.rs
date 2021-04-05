@@ -38,8 +38,7 @@ pub type PFN_vkCreateDirectFBSurfaceEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
+pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDirectFBSurfaceCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDirectFBSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -158,9 +157,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDirectFBPresentationSupportEXT")]
     pub unsafe fn get_physical_device_direct_fb_presentation_support_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> bool {
-        let _function = self
-            .get_physical_device_direct_fb_presentation_support_ext
-            .expect("`get_physical_device_direct_fb_presentation_support_ext` is not loaded");
+        let _function = self.get_physical_device_direct_fb_presentation_support_ext.expect("`get_physical_device_direct_fb_presentation_support_ext` is not loaded");
         let _return = _function(physical_device as _, queue_family_index as _, dfb);
         _return != 0
     }

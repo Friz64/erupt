@@ -179,23 +179,15 @@ impl SurfaceTransformFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroySurfaceKHR =
-    unsafe extern "system" fn(instance: crate::vk1_0::Instance, surface: crate::extensions::khr_surface::SurfaceKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, surface: crate::extensions::khr_surface::SurfaceKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    queue_family_index: u32,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_supported: *mut crate::vk1_0::Bool32,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, surface: crate::extensions::khr_surface::SurfaceKHR, p_supported: *mut crate::vk1_0::Bool32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR = unsafe extern "system" fn(
@@ -450,12 +442,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceSupportKHR")]
-    pub unsafe fn get_physical_device_surface_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::utils::VulkanResult<bool> {
+    pub unsafe fn get_physical_device_surface_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, surface: crate::extensions::khr_surface::SurfaceKHR) -> crate::utils::VulkanResult<bool> {
         let _function = self.get_physical_device_surface_support_khr.expect("`get_physical_device_surface_support_khr` is not loaded");
         let mut supported = Default::default();
         let _return = _function(physical_device as _, queue_family_index as _, surface as _, &mut supported);
@@ -505,9 +492,7 @@ impl crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         present_mode_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let _function = self
-            .get_physical_device_surface_present_modes_khr
-            .expect("`get_physical_device_surface_present_modes_khr` is not loaded");
+        let _function = self.get_physical_device_surface_present_modes_khr.expect("`get_physical_device_surface_present_modes_khr` is not loaded");
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
             None => {

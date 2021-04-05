@@ -10,11 +10,8 @@ pub const FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = cra
 pub const FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryZirconHandlePropertiesFUCHSIA");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryZirconHandleFUCHSIA = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA,
-    p_zircon_handle: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryZirconHandleFUCHSIA =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = unsafe extern "system" fn(
@@ -269,11 +266,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetMemoryZirconHandleFUCHSIA")]
-    pub unsafe fn get_memory_zircon_handle_fuchsia(
-        &self,
-        get_zircon_handle_info: &crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA,
-        zircon_handle: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_memory_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, zircon_handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_memory_zircon_handle_fuchsia.expect("`get_memory_zircon_handle_fuchsia` is not loaded");
         let _return = _function(self.handle, get_zircon_handle_info as _, zircon_handle);
         crate::utils::VulkanResult::new(_return, ())

@@ -158,15 +158,11 @@ pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = u
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_performance_query_create_info: *const crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR,
-    p_num_passes: *mut u32,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR =
+    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_performance_query_create_info: *const crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR, p_num_passes: *mut u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquireProfilingLockKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR) -> crate::vk1_0::Result;
+pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleaseProfilingLockKHR = unsafe extern "system" fn(device: crate::vk1_0::Device) -> ();
@@ -803,10 +799,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         queue_family_index: u32,
         counter_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<(
-        Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>,
-        Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>,
-    )> {
+    ) -> crate::utils::VulkanResult<(Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
         let _function = self
             .enumerate_physical_device_queue_family_performance_query_counters_khr
             .expect("`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded");
@@ -820,13 +813,7 @@ impl crate::InstanceLoader {
         };
         let mut counters = vec![Default::default(); counter_count as _];
         let mut counter_descriptions = vec![Default::default(); counter_count as _];
-        let _return = _function(
-            physical_device as _,
-            queue_family_index as _,
-            &mut counter_count,
-            counters.as_mut_ptr(),
-            counter_descriptions.as_mut_ptr(),
-        );
+        let _return = _function(physical_device as _, queue_family_index as _, &mut counter_count, counters.as_mut_ptr(), counter_descriptions.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, (counters, counter_descriptions))
     }
     #[inline]

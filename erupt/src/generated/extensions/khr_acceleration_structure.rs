@@ -319,15 +319,11 @@ impl AccelerationStructureCompatibilityKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyAccelerationStructureKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-) -> ();
+pub type PFN_vkDestroyAccelerationStructureKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyAccelerationStructureKHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> ();
+pub type PFN_vkCmdCopyAccelerationStructureKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCopyAccelerationStructureKHR = unsafe extern "system" fn(
@@ -337,8 +333,7 @@ pub type PFN_vkCopyAccelerationStructureKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureToMemoryKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyAccelerationStructureToMemoryKHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> ();
+pub type PFN_vkCmdCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureToMemoryKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn(
@@ -348,8 +343,7 @@ pub type PFN_vkCopyAccelerationStructureToMemoryKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyMemoryToAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyMemoryToAccelerationStructureKHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> ();
+pub type PFN_vkCmdCopyMemoryToAccelerationStructureKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_info: *const crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyMemoryToAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCopyMemoryToAccelerationStructureKHR = unsafe extern "system" fn(
@@ -422,8 +416,7 @@ pub type PFN_vkBuildAccelerationStructuresKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAccelerationStructureDeviceAddressKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR) -> crate::vk1_0::DeviceAddress;
+pub type PFN_vkGetAccelerationStructureDeviceAddressKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR) -> crate::vk1_0::DeviceAddress;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn(
@@ -547,10 +540,7 @@ impl std::fmt::Debug for PhysicalDeviceAccelerationStructureFeaturesKHR {
             .field("acceleration_structure_capture_replay", &(self.acceleration_structure_capture_replay != 0))
             .field("acceleration_structure_indirect_build", &(self.acceleration_structure_indirect_build != 0))
             .field("acceleration_structure_host_commands", &(self.acceleration_structure_host_commands != 0))
-            .field(
-                "descriptor_binding_acceleration_structure_update_after_bind",
-                &(self.descriptor_binding_acceleration_structure_update_after_bind != 0),
-            )
+            .field("descriptor_binding_acceleration_structure_update_after_bind", &(self.descriptor_binding_acceleration_structure_update_after_bind != 0))
             .finish()
     }
 }
@@ -663,15 +653,9 @@ impl std::fmt::Debug for PhysicalDeviceAccelerationStructurePropertiesKHR {
             .field("max_instance_count", &self.max_instance_count)
             .field("max_primitive_count", &self.max_primitive_count)
             .field("max_per_stage_descriptor_acceleration_structures", &self.max_per_stage_descriptor_acceleration_structures)
-            .field(
-                "max_per_stage_descriptor_update_after_bind_acceleration_structures",
-                &self.max_per_stage_descriptor_update_after_bind_acceleration_structures,
-            )
+            .field("max_per_stage_descriptor_update_after_bind_acceleration_structures", &self.max_per_stage_descriptor_update_after_bind_acceleration_structures)
             .field("max_descriptor_set_acceleration_structures", &self.max_descriptor_set_acceleration_structures)
-            .field(
-                "max_descriptor_set_update_after_bind_acceleration_structures",
-                &self.max_descriptor_set_update_after_bind_acceleration_structures,
-            )
+            .field("max_descriptor_set_update_after_bind_acceleration_structures", &self.max_descriptor_set_update_after_bind_acceleration_structures)
             .field("min_acceleration_structure_scratch_offset_alignment", &self.min_acceleration_structure_scratch_offset_alignment)
             .finish()
     }
@@ -1650,9 +1634,7 @@ pub struct TransformMatrixKHR {
 }
 impl Default for TransformMatrixKHR {
     fn default() -> Self {
-        Self {
-            matrix: unsafe { std::mem::zeroed() },
-        }
+        Self { matrix: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for TransformMatrixKHR {
@@ -1733,10 +1715,7 @@ impl std::fmt::Debug for AccelerationStructureInstanceKHR {
         f.debug_struct("AccelerationStructureInstanceKHR")
             .field("transform", &self.transform)
             .field("instance_custom_index_and_mask", &format!("{:#b}", &self.instance_custom_index_and_mask))
-            .field(
-                "instance_shader_binding_table_record_offset_and_flags",
-                &format!("{:#b}", &self.instance_shader_binding_table_record_offset_and_flags),
-            )
+            .field("instance_shader_binding_table_record_offset_and_flags", &format!("{:#b}", &self.instance_shader_binding_table_record_offset_and_flags))
             .field("acceleration_structure_reference", &self.acceleration_structure_reference)
             .finish()
     }
@@ -1773,12 +1752,7 @@ impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
     }
     #[inline]
     pub fn instance_shader_binding_table_record_offset(mut self, instance_shader_binding_table_record_offset: u32) -> Self {
-        self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(
-            self.0.instance_shader_binding_table_record_offset_and_flags,
-            instance_shader_binding_table_record_offset,
-            0usize,
-            23usize
-        );
+        self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, instance_shader_binding_table_record_offset, 0usize, 23usize);
         self
     }
     #[inline]
@@ -2338,11 +2312,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkDestroyAccelerationStructureKHR")]
-    pub unsafe fn destroy_acceleration_structure_khr(
-        &self,
-        acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> () {
+    pub unsafe fn destroy_acceleration_structure_khr(&self, acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_acceleration_structure_khr.expect("`destroy_acceleration_structure_khr` is not loaded");
         let _return = _function(
             self.handle,
@@ -2360,11 +2330,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkCmdCopyAccelerationStructureKHR")]
-    pub unsafe fn cmd_copy_acceleration_structure_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR,
-    ) -> () {
+    pub unsafe fn cmd_copy_acceleration_structure_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> () {
         let _function = self.cmd_copy_acceleration_structure_khr.expect("`cmd_copy_acceleration_structure_khr` is not loaded");
         let _return = _function(command_buffer as _, info as _);
         ()
@@ -2391,14 +2357,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureToMemoryKHR.html) · Function"]
     #[doc(alias = "vkCmdCopyAccelerationStructureToMemoryKHR")]
-    pub unsafe fn cmd_copy_acceleration_structure_to_memory_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR,
-    ) -> () {
-        let _function = self
-            .cmd_copy_acceleration_structure_to_memory_khr
-            .expect("`cmd_copy_acceleration_structure_to_memory_khr` is not loaded");
+    pub unsafe fn cmd_copy_acceleration_structure_to_memory_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> () {
+        let _function = self.cmd_copy_acceleration_structure_to_memory_khr.expect("`cmd_copy_acceleration_structure_to_memory_khr` is not loaded");
         let _return = _function(command_buffer as _, info as _);
         ()
     }
@@ -2424,14 +2384,8 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyMemoryToAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkCmdCopyMemoryToAccelerationStructureKHR")]
-    pub unsafe fn cmd_copy_memory_to_acceleration_structure_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR,
-    ) -> () {
-        let _function = self
-            .cmd_copy_memory_to_acceleration_structure_khr
-            .expect("`cmd_copy_memory_to_acceleration_structure_khr` is not loaded");
+    pub unsafe fn cmd_copy_memory_to_acceleration_structure_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> () {
+        let _function = self.cmd_copy_memory_to_acceleration_structure_khr.expect("`cmd_copy_memory_to_acceleration_structure_khr` is not loaded");
         let _return = _function(command_buffer as _, info as _);
         ()
     }
@@ -2465,18 +2419,9 @@ impl crate::DeviceLoader {
         query_pool: crate::vk1_0::QueryPool,
         first_query: u32,
     ) -> () {
-        let _function = self
-            .cmd_write_acceleration_structures_properties_khr
-            .expect("`cmd_write_acceleration_structures_properties_khr` is not loaded");
+        let _function = self.cmd_write_acceleration_structures_properties_khr.expect("`cmd_write_acceleration_structures_properties_khr` is not loaded");
         let acceleration_structure_count = acceleration_structures.len();
-        let _return = _function(
-            command_buffer as _,
-            acceleration_structure_count as _,
-            acceleration_structures.as_ptr() as _,
-            query_type as _,
-            query_pool as _,
-            first_query as _,
-        );
+        let _return = _function(command_buffer as _, acceleration_structure_count as _, acceleration_structures.as_ptr() as _, query_type as _, query_pool as _, first_query as _);
         ()
     }
     #[inline]
@@ -2492,15 +2437,7 @@ impl crate::DeviceLoader {
     ) -> crate::utils::VulkanResult<()> {
         let _function = self.write_acceleration_structures_properties_khr.expect("`write_acceleration_structures_properties_khr` is not loaded");
         let acceleration_structure_count = acceleration_structures.len();
-        let _return = _function(
-            self.handle,
-            acceleration_structure_count as _,
-            acceleration_structures.as_ptr() as _,
-            query_type as _,
-            data_size,
-            data,
-            stride as _,
-        );
+        let _return = _function(self.handle, acceleration_structure_count as _, acceleration_structures.as_ptr() as _, query_type as _, data_size, data, stride as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -2510,9 +2447,7 @@ impl crate::DeviceLoader {
         &self,
         version_info: &crate::extensions::khr_acceleration_structure::AccelerationStructureVersionInfoKHR,
     ) -> crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR {
-        let _function = self
-            .get_device_acceleration_structure_compatibility_khr
-            .expect("`get_device_acceleration_structure_compatibility_khr` is not loaded");
+        let _function = self.get_device_acceleration_structure_compatibility_khr.expect("`get_device_acceleration_structure_compatibility_khr` is not loaded");
         let mut compatibility = Default::default();
         let _return = _function(self.handle, version_info as _, &mut compatibility);
         compatibility
@@ -2563,9 +2498,7 @@ impl crate::DeviceLoader {
         indirect_strides: &[u32],
         max_primitive_counts: &[*const u32],
     ) -> () {
-        let _function = self
-            .cmd_build_acceleration_structures_indirect_khr
-            .expect("`cmd_build_acceleration_structures_indirect_khr` is not loaded");
+        let _function = self.cmd_build_acceleration_structures_indirect_khr.expect("`cmd_build_acceleration_structures_indirect_khr` is not loaded");
         let info_count = infos.len().min(indirect_device_addresses.len()).min(indirect_strides.len()).min(max_primitive_counts.len());
         let _return = _function(
             command_buffer as _,
@@ -2604,9 +2537,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html) · Function"]
     #[doc(alias = "vkGetAccelerationStructureDeviceAddressKHR")]
     pub unsafe fn get_acceleration_structure_device_address_khr(&self, info: &crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR) -> crate::vk1_0::DeviceAddress {
-        let _function = self
-            .get_acceleration_structure_device_address_khr
-            .expect("`get_acceleration_structure_device_address_khr` is not loaded");
+        let _function = self.get_acceleration_structure_device_address_khr.expect("`get_acceleration_structure_device_address_khr` is not loaded");
         let _return = _function(self.handle, info as _);
         _return
     }

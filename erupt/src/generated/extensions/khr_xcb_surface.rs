@@ -38,8 +38,7 @@ pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, connection: *mut std::ffi::c_void, visual_id: u32) -> crate::vk1_0::Bool32;
+pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, connection: *mut std::ffi::c_void, visual_id: u32) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkXcbSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -157,16 +156,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceXcbPresentationSupportKHR")]
-    pub unsafe fn get_physical_device_xcb_presentation_support_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        connection: *mut std::ffi::c_void,
-        visual_id: u32,
-    ) -> bool {
-        let _function = self
-            .get_physical_device_xcb_presentation_support_khr
-            .expect("`get_physical_device_xcb_presentation_support_khr` is not loaded");
+    pub unsafe fn get_physical_device_xcb_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, connection: *mut std::ffi::c_void, visual_id: u32) -> bool {
+        let _function = self.get_physical_device_xcb_presentation_support_khr.expect("`get_physical_device_xcb_presentation_support_khr` is not loaded");
         let _return = _function(physical_device as _, queue_family_index as _, connection, visual_id as _);
         _return != 0
     }

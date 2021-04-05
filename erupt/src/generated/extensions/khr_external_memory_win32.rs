@@ -10,11 +10,8 @@ pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::c
 pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR,
-    p_handle: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryWin32HandleKHR =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn(
@@ -368,11 +365,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandleKHR")]
-    pub unsafe fn get_memory_win32_handle_khr(
-        &self,
-        get_win32_handle_info: &crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR,
-        handle: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_memory_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_memory_win32_handle_khr.expect("`get_memory_win32_handle_khr` is not loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())

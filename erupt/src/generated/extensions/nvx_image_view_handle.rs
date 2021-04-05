@@ -13,11 +13,7 @@ pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char = crate::cs
 pub type PFN_vkGetImageViewHandleNVX = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX) -> u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    image_view: crate::vk1_0::ImageView,
-    p_properties: *mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(device: crate::vk1_0::Device, image_view: crate::vk1_0::ImageView, p_properties: *mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Structure"]
 #[doc(alias = "VkImageViewHandleInfoNVX")]
 #[derive(Copy, Clone)]

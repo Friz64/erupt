@@ -218,15 +218,7 @@ impl crate::DeviceLoader {
     ) -> () {
         let _function = self.cmd_bind_vertex_buffers2_ext.expect("`cmd_bind_vertex_buffers2_ext` is not loaded");
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len()).min(strides.len());
-        let _return = _function(
-            command_buffer as _,
-            first_binding as _,
-            binding_count as _,
-            buffers.as_ptr() as _,
-            offsets.as_ptr() as _,
-            sizes.as_ptr() as _,
-            strides.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, first_binding as _, binding_count as _, buffers.as_ptr() as _, offsets.as_ptr() as _, sizes.as_ptr() as _, strides.as_ptr() as _);
         ()
     }
     #[inline]

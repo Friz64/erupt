@@ -35,11 +35,8 @@ impl FragmentShadingRateCombinerOpKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetFragmentShadingRateKHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_fragment_size: *const crate::vk1_0::Extent2D,
-    combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
-) -> ();
+pub type PFN_vkCmdSetFragmentShadingRateKHR =
+    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_fragment_size: *const crate::vk1_0::Extent2D, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR = unsafe extern "system" fn(
@@ -361,34 +358,19 @@ impl std::fmt::Debug for PhysicalDeviceFragmentShadingRatePropertiesKHR {
             .field("p_next", &self.p_next)
             .field("min_fragment_shading_rate_attachment_texel_size", &self.min_fragment_shading_rate_attachment_texel_size)
             .field("max_fragment_shading_rate_attachment_texel_size", &self.max_fragment_shading_rate_attachment_texel_size)
-            .field(
-                "max_fragment_shading_rate_attachment_texel_size_aspect_ratio",
-                &self.max_fragment_shading_rate_attachment_texel_size_aspect_ratio,
-            )
-            .field(
-                "primitive_fragment_shading_rate_with_multiple_viewports",
-                &(self.primitive_fragment_shading_rate_with_multiple_viewports != 0),
-            )
+            .field("max_fragment_shading_rate_attachment_texel_size_aspect_ratio", &self.max_fragment_shading_rate_attachment_texel_size_aspect_ratio)
+            .field("primitive_fragment_shading_rate_with_multiple_viewports", &(self.primitive_fragment_shading_rate_with_multiple_viewports != 0))
             .field("layered_shading_rate_attachments", &(self.layered_shading_rate_attachments != 0))
             .field("fragment_shading_rate_non_trivial_combiner_ops", &(self.fragment_shading_rate_non_trivial_combiner_ops != 0))
             .field("max_fragment_size", &self.max_fragment_size)
             .field("max_fragment_size_aspect_ratio", &self.max_fragment_size_aspect_ratio)
             .field("max_fragment_shading_rate_coverage_samples", &self.max_fragment_shading_rate_coverage_samples)
             .field("max_fragment_shading_rate_rasterization_samples", &self.max_fragment_shading_rate_rasterization_samples)
-            .field(
-                "fragment_shading_rate_with_shader_depth_stencil_writes",
-                &(self.fragment_shading_rate_with_shader_depth_stencil_writes != 0),
-            )
+            .field("fragment_shading_rate_with_shader_depth_stencil_writes", &(self.fragment_shading_rate_with_shader_depth_stencil_writes != 0))
             .field("fragment_shading_rate_with_sample_mask", &(self.fragment_shading_rate_with_sample_mask != 0))
             .field("fragment_shading_rate_with_shader_sample_mask", &(self.fragment_shading_rate_with_shader_sample_mask != 0))
-            .field(
-                "fragment_shading_rate_with_conservative_rasterization",
-                &(self.fragment_shading_rate_with_conservative_rasterization != 0),
-            )
-            .field(
-                "fragment_shading_rate_with_fragment_shader_interlock",
-                &(self.fragment_shading_rate_with_fragment_shader_interlock != 0),
-            )
+            .field("fragment_shading_rate_with_conservative_rasterization", &(self.fragment_shading_rate_with_conservative_rasterization != 0))
+            .field("fragment_shading_rate_with_fragment_shader_interlock", &(self.fragment_shading_rate_with_fragment_shader_interlock != 0))
             .field("fragment_shading_rate_with_custom_sample_locations", &(self.fragment_shading_rate_with_custom_sample_locations != 0))
             .field("fragment_shading_rate_strict_multiply_combiner", &(self.fragment_shading_rate_strict_multiply_combiner != 0))
             .finish()
@@ -610,12 +592,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html) · Function"]
     #[doc(alias = "vkCmdSetFragmentShadingRateKHR")]
-    pub unsafe fn cmd_set_fragment_shading_rate_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        fragment_size: &crate::vk1_0::Extent2D,
-        combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
-    ) -> () {
+    pub unsafe fn cmd_set_fragment_shading_rate_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, fragment_size: &crate::vk1_0::Extent2D, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> () {
         let _function = self.cmd_set_fragment_shading_rate_khr.expect("`cmd_set_fragment_shading_rate_khr` is not loaded");
         let _return = _function(command_buffer as _, fragment_size as _, combiner_ops as _);
         ()
@@ -631,9 +608,7 @@ impl crate::InstanceLoader {
         physical_device: crate::vk1_0::PhysicalDevice,
         fragment_shading_rate_count: Option<u32>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
-        let _function = self
-            .get_physical_device_fragment_shading_rates_khr
-            .expect("`get_physical_device_fragment_shading_rates_khr` is not loaded");
+        let _function = self.get_physical_device_fragment_shading_rates_khr.expect("`get_physical_device_fragment_shading_rates_khr` is not loaded");
         let mut fragment_shading_rate_count = match fragment_shading_rate_count {
             Some(v) => v,
             None => {

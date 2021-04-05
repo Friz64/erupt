@@ -10,11 +10,8 @@ pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char = cr
 pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetPastPresentationTimingGOOGLE");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetRefreshCycleDurationGOOGLE =
+    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(
@@ -286,10 +283,7 @@ impl Default for PresentTimeGOOGLE {
 }
 impl std::fmt::Debug for PresentTimeGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PresentTimeGOOGLE")
-            .field("present_id", &self.present_id)
-            .field("desired_present_time", &self.desired_present_time)
-            .finish()
+        f.debug_struct("PresentTimeGOOGLE").field("present_id", &self.present_id).field("desired_present_time", &self.desired_present_time).finish()
     }
 }
 impl PresentTimeGOOGLE {
@@ -350,10 +344,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
     #[doc(alias = "vkGetRefreshCycleDurationGOOGLE")]
-    pub unsafe fn get_refresh_cycle_duration_google(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::utils::VulkanResult<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE> {
+    pub unsafe fn get_refresh_cycle_duration_google(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE> {
         let _function = self.get_refresh_cycle_duration_google.expect("`get_refresh_cycle_duration_google` is not loaded");
         let mut display_timing_properties = Default::default();
         let _return = _function(self.handle, swapchain as _, &mut display_timing_properties);

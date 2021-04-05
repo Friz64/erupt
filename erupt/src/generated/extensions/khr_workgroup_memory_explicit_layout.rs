@@ -34,10 +34,7 @@ impl std::fmt::Debug for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR 
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("workgroup_memory_explicit_layout", &(self.workgroup_memory_explicit_layout != 0))
-            .field(
-                "workgroup_memory_explicit_layout_scalar_block_layout",
-                &(self.workgroup_memory_explicit_layout_scalar_block_layout != 0),
-            )
+            .field("workgroup_memory_explicit_layout_scalar_block_layout", &(self.workgroup_memory_explicit_layout_scalar_block_layout != 0))
             .field("workgroup_memory_explicit_layout8_bit_access", &(self.workgroup_memory_explicit_layout8_bit_access != 0))
             .field("workgroup_memory_explicit_layout16_bit_access", &(self.workgroup_memory_explicit_layout16_bit_access != 0))
             .finish()

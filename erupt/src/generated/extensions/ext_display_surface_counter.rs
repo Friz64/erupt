@@ -204,9 +204,7 @@ impl crate::InstanceLoader {
         surface: crate::extensions::khr_surface::SurfaceKHR,
         surface_capabilities: Option<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>,
     ) -> crate::utils::VulkanResult<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT> {
-        let _function = self
-            .get_physical_device_surface_capabilities2_ext
-            .expect("`get_physical_device_surface_capabilities2_ext` is not loaded");
+        let _function = self.get_physical_device_surface_capabilities2_ext.expect("`get_physical_device_surface_capabilities2_ext` is not loaded");
         let mut surface_capabilities = match surface_capabilities {
             Some(v) => v,
             None => Default::default(),

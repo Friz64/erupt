@@ -10,15 +10,10 @@ pub const FN_GET_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("v
 pub const FN_IMPORT_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreFdKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_get_fd_info: *const crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR,
-    p_fd: *mut std::os::raw::c_int,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreFdKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_fd_info: *const crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR) -> crate::vk1_0::Result;
+pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_fd_info: *const crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreFdInfoKHR")]
 #[derive(Copy, Clone)]

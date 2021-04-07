@@ -96,7 +96,7 @@ fn main() {
         .enabled_extension_names(&instance_extensions)
         .enabled_layer_names(&instance_layers);
 
-    let instance = InstanceLoader::new(&entry, &instance_info, None).unwrap();
+    let instance = unsafe { InstanceLoader::new(&entry, &instance_info, None) }.unwrap();
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Validation_layers
     let messenger = if opt.validation_layers {
@@ -217,7 +217,8 @@ fn main() {
         .enabled_extension_names(&device_extensions)
         .enabled_layer_names(&device_layers);
 
-    let device = DeviceLoader::new(&instance, physical_device, &device_info, None).unwrap();
+    let device =
+        unsafe { DeviceLoader::new(&instance, physical_device, &device_info, None) }.unwrap();
     let queue = unsafe { device.get_device_queue(queue_family, 0) };
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Presentation/Swap_chain

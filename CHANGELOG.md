@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 builder or non-builder variants of Vulkan structs to be passed into APIs
 
 ### Changed
+- Mark `{Instance,Device}Loader::new` functions unsafe
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants
 

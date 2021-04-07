@@ -112,7 +112,6 @@ impl<'a> std::ops::DerefMut for ImportFenceFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImportFenceFdInfoKHR> for ImportFenceFdInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceGetFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkFenceGetFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -195,7 +194,6 @@ impl<'a> std::ops::DerefMut for FenceGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<FenceGetFdInfoKHR> for FenceGetFdInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_external_fence_fd`]"]
 impl crate::DeviceLoader {
     #[inline]

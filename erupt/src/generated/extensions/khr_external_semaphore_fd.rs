@@ -112,7 +112,6 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImportSemaphoreFdInfoKHR> for ImportSemaphoreFdInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkSemaphoreGetFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -195,7 +194,6 @@ impl<'a> std::ops::DerefMut for SemaphoreGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<SemaphoreGetFdInfoKHR> for SemaphoreGetFdInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_external_semaphore_fd`]"]
 impl crate::DeviceLoader {
     #[inline]

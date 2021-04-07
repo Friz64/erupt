@@ -183,7 +183,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceConservativeRasterizationPropertie
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceConservativeRasterizationPropertiesEXT> for PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationConservativeStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -274,4 +273,3 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationConservativeStateCreateInfo
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineRasterizationConservativeStateCreateInfoEXT> for PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_> {}

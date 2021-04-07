@@ -74,4 +74,3 @@ impl<'a> std::ops::DerefMut for PresentFrameTokenGGPBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PresentFrameTokenGGP> for PresentFrameTokenGGPBuilder<'_> {}

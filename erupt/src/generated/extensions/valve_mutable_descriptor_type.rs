@@ -78,7 +78,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Structure"]
 #[doc(alias = "VkMutableDescriptorTypeListVALVE")]
 #[derive(Copy, Clone)]
@@ -151,7 +150,6 @@ impl<'a> std::ops::DerefMut for MutableDescriptorTypeListVALVEBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MutableDescriptorTypeListVALVE> for MutableDescriptorTypeListVALVEBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Structure"]
 #[doc(alias = "VkMutableDescriptorTypeCreateInfoVALVE")]
 #[derive(Copy, Clone)]
@@ -198,7 +196,7 @@ impl<'a> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
         MutableDescriptorTypeCreateInfoVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn mutable_descriptor_type_lists(mut self, mutable_descriptor_type_lists: &'a [impl crate::Repr<crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVE>]) -> Self {
+    pub fn mutable_descriptor_type_lists(mut self, mutable_descriptor_type_lists: &'a [crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVEBuilder]) -> Self {
         self.0.p_mutable_descriptor_type_lists = mutable_descriptor_type_lists.as_ptr() as _;
         self.0.mutable_descriptor_type_list_count = mutable_descriptor_type_lists.len() as _;
         self
@@ -230,4 +228,3 @@ impl<'a> std::ops::DerefMut for MutableDescriptorTypeCreateInfoVALVEBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MutableDescriptorTypeCreateInfoVALVE> for MutableDescriptorTypeCreateInfoVALVEBuilder<'_> {}

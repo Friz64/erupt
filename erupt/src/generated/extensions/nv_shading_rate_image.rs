@@ -159,7 +159,6 @@ impl<'a> std::ops::DerefMut for ShadingRatePaletteNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ShadingRatePaletteNV> for ShadingRatePaletteNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineViewportShadingRateImageStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -214,7 +213,7 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn shading_rate_palettes(mut self, shading_rate_palettes: &'a [impl crate::Repr<crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV>]) -> Self {
+    pub fn shading_rate_palettes(mut self, shading_rate_palettes: &'a [crate::extensions::nv_shading_rate_image::ShadingRatePaletteNVBuilder]) -> Self {
         self.0.p_shading_rate_palettes = shading_rate_palettes.as_ptr() as _;
         self.0.viewport_count = shading_rate_palettes.len() as _;
         self
@@ -246,7 +245,6 @@ impl<'a> std::ops::DerefMut for PipelineViewportShadingRateImageStateCreateInfoN
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineViewportShadingRateImageStateCreateInfoNV> for PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImageFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShadingRateImageFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -329,7 +327,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShadingRateImageFeaturesNVBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShadingRateImageFeaturesNV> for PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShadingRateImagePropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShadingRateImagePropertiesNV")]
 #[derive(Copy, Clone)]
@@ -420,7 +417,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShadingRateImagePropertiesNVBuilde
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShadingRateImagePropertiesNV> for PhysicalDeviceShadingRateImagePropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Structure"]
 #[doc(alias = "VkCoarseSampleLocationNV")]
 #[derive(Copy, Clone)]
@@ -501,7 +497,6 @@ impl<'a> std::ops::DerefMut for CoarseSampleLocationNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CoarseSampleLocationNV> for CoarseSampleLocationNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleOrderCustomNV.html) · Structure"]
 #[doc(alias = "VkCoarseSampleOrderCustomNV")]
 #[derive(Copy, Clone)]
@@ -558,7 +553,7 @@ impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn sample_locations(mut self, sample_locations: &'a [impl crate::Repr<crate::extensions::nv_shading_rate_image::CoarseSampleLocationNV>]) -> Self {
+    pub fn sample_locations(mut self, sample_locations: &'a [crate::extensions::nv_shading_rate_image::CoarseSampleLocationNVBuilder]) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_location_count = sample_locations.len() as _;
         self
@@ -590,7 +585,6 @@ impl<'a> std::ops::DerefMut for CoarseSampleOrderCustomNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CoarseSampleOrderCustomNV> for CoarseSampleOrderCustomNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportCoarseSampleOrderStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineViewportCoarseSampleOrderStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -645,7 +639,7 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn custom_sample_orders(mut self, custom_sample_orders: &'a [impl crate::Repr<crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV>]) -> Self {
+    pub fn custom_sample_orders(mut self, custom_sample_orders: &'a [crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder]) -> Self {
         self.0.p_custom_sample_orders = custom_sample_orders.as_ptr() as _;
         self.0.custom_sample_order_count = custom_sample_orders.len() as _;
         self
@@ -677,7 +671,6 @@ impl<'a> std::ops::DerefMut for PipelineViewportCoarseSampleOrderStateCreateInfo
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineViewportCoarseSampleOrderStateCreateInfoNV> for PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -698,7 +691,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
     #[doc(alias = "vkCmdSetViewportShadingRatePaletteNV")]
-    pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, shading_rate_palettes: &[impl crate::Repr<crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV>]) -> () {
+    pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, shading_rate_palettes: &[crate::extensions::nv_shading_rate_image::ShadingRatePaletteNVBuilder]) -> () {
         let _function = self.cmd_set_viewport_shading_rate_palette_nv.expect("`cmd_set_viewport_shading_rate_palette_nv` is not loaded");
         let viewport_count = shading_rate_palettes.len();
         let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, shading_rate_palettes.as_ptr() as _);
@@ -711,7 +704,7 @@ impl crate::DeviceLoader {
         &self,
         command_buffer: crate::vk1_0::CommandBuffer,
         sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-        custom_sample_orders: &[impl crate::Repr<crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV>],
+        custom_sample_orders: &[crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder],
     ) -> () {
         let _function = self.cmd_set_coarse_sample_order_nv.expect("`cmd_set_coarse_sample_order_nv` is not loaded");
         let custom_sample_order_count = custom_sample_orders.len();

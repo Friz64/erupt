@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceIndexTypeUint8FeaturesEXT> for PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_> {}

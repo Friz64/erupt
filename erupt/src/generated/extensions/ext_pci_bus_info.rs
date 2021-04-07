@@ -102,4 +102,3 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a>
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePCIBusInfoPropertiesEXT> for PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_> {}

@@ -86,4 +86,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMemoryBudgetPropertiesEXT> for PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_> {}

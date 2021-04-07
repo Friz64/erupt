@@ -129,7 +129,6 @@ impl<'a> std::ops::DerefMut for ScreenSurfaceCreateInfoQNXBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ScreenSurfaceCreateInfoQNX> for ScreenSurfaceCreateInfoQNXBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::qnx_screen_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

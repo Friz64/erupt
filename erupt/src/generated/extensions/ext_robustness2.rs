@@ -94,7 +94,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceRobustness2FeaturesEXT> for PhysicalDeviceRobustness2FeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRobustness2PropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -177,4 +176,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRobustness2PropertiesEXTBuilder<'a
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceRobustness2PropertiesEXT> for PhysicalDeviceRobustness2PropertiesEXTBuilder<'_> {}

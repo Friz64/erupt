@@ -86,4 +86,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShaderClockFeaturesKHR> for PhysicalDeviceShaderClockFeaturesKHRBuilder<'_> {}

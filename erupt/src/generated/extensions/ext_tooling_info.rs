@@ -153,7 +153,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceToolPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceToolPropertiesEXT> for PhysicalDeviceToolPropertiesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
 impl crate::InstanceLoader {
     #[inline]

@@ -107,7 +107,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceDiagnosticsConfigFeaturesNV> for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkDeviceDiagnosticsConfigCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -178,4 +177,3 @@ impl<'a> std::ops::DerefMut for DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceDiagnosticsConfigCreateInfoNV> for DeviceDiagnosticsConfigCreateInfoNVBuilder<'_> {}

@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderTerminateInvocationFeaturesK
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_> {}

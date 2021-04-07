@@ -83,7 +83,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceExclusiveScissorFeaturesNV> for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineViewportExclusiveScissorStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -130,7 +129,7 @@ impl<'a> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
         PipelineViewportExclusiveScissorStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn exclusive_scissors(mut self, exclusive_scissors: &'a [impl crate::Repr<crate::vk1_0::Rect2D>]) -> Self {
+    pub fn exclusive_scissors(mut self, exclusive_scissors: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_exclusive_scissors = exclusive_scissors.as_ptr() as _;
         self.0.exclusive_scissor_count = exclusive_scissors.len() as _;
         self
@@ -162,13 +161,12 @@ impl<'a> std::ops::DerefMut for PipelineViewportExclusiveScissorStateCreateInfoN
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineViewportExclusiveScissorStateCreateInfoNV> for PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
     #[doc(alias = "vkCmdSetExclusiveScissorNV")]
-    pub unsafe fn cmd_set_exclusive_scissor_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissors: &[impl crate::Repr<crate::vk1_0::Rect2D>]) -> () {
+    pub unsafe fn cmd_set_exclusive_scissor_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissors: &[crate::vk1_0::Rect2DBuilder]) -> () {
         let _function = self.cmd_set_exclusive_scissor_nv.expect("`cmd_set_exclusive_scissor_nv` is not loaded");
         let exclusive_scissor_count = exclusive_scissors.len();
         let _return = _function(command_buffer as _, first_exclusive_scissor as _, exclusive_scissor_count as _, exclusive_scissors.as_ptr() as _);

@@ -262,7 +262,6 @@ impl<'a> std::ops::DerefMut for PerformanceValueINTELBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceValueINTEL> for PerformanceValueINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInitializePerformanceApiInfoINTEL.html) · Structure"]
 #[doc(alias = "VkInitializePerformanceApiInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -337,7 +336,6 @@ impl<'a> std::ops::DerefMut for InitializePerformanceApiInfoINTELBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<InitializePerformanceApiInfoINTEL> for InitializePerformanceApiInfoINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceQueryCreateInfoINTEL.html) · Structure"]
 #[doc(alias = "VkQueryPoolPerformanceQueryCreateInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -412,7 +410,6 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceQueryCreateInfoINTELBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<QueryPoolPerformanceQueryCreateInfoINTEL> for QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceMarkerInfoINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceMarkerInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -483,7 +480,6 @@ impl<'a> std::ops::DerefMut for PerformanceMarkerInfoINTELBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceMarkerInfoINTEL> for PerformanceMarkerInfoINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceStreamMarkerInfoINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceStreamMarkerInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -554,7 +550,6 @@ impl<'a> std::ops::DerefMut for PerformanceStreamMarkerInfoINTELBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceStreamMarkerInfoINTEL> for PerformanceStreamMarkerInfoINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideInfoINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceOverrideInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -645,7 +640,6 @@ impl<'a> std::ops::DerefMut for PerformanceOverrideInfoINTELBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceOverrideInfoINTEL> for PerformanceOverrideInfoINTELBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationAcquireInfoINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceConfigurationAcquireInfoINTEL")]
 #[derive(Copy, Clone)]
@@ -720,7 +714,6 @@ impl<'a> std::ops::DerefMut for PerformanceConfigurationAcquireInfoINTELBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceConfigurationAcquireInfoINTEL> for PerformanceConfigurationAcquireInfoINTELBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl crate::DeviceLoader {
     #[inline]

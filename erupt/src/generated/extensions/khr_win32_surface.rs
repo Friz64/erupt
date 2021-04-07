@@ -129,7 +129,6 @@ impl<'a> std::ops::DerefMut for Win32SurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<Win32SurfaceCreateInfoKHR> for Win32SurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_win32_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

@@ -453,8 +453,6 @@ impl Structure {
                     &mut self.0
                 }
             }
-
-            unsafe impl crate::Repr<#inner_ident> for #ident<'_> {}
         }
     }
 }

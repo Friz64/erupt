@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageRobustnessFeaturesEXTBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceImageRobustnessFeaturesEXT> for PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_> {}

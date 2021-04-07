@@ -116,7 +116,6 @@ impl<'a> std::ops::DerefMut for ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImagePipeSurfaceCreateInfoFUCHSIA> for ImagePipeSurfaceCreateInfoFUCHSIABuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::fuchsia_imagepipe_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

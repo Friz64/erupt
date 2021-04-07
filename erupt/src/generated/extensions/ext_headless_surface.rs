@@ -104,7 +104,6 @@ impl<'a> std::ops::DerefMut for HeadlessSurfaceCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<HeadlessSurfaceCreateInfoEXT> for HeadlessSurfaceCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_headless_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

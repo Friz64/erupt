@@ -80,7 +80,6 @@ impl<'a> std::ops::DerefMut for XYColorEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<XYColorEXT> for XYColorEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHdrMetadataEXT.html) · Structure"]
 #[doc(alias = "VkHdrMetadataEXT")]
 #[derive(Copy, Clone)]
@@ -211,13 +210,12 @@ impl<'a> std::ops::DerefMut for HdrMetadataEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<HdrMetadataEXT> for HdrMetadataEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_hdr_metadata`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
     #[doc(alias = "vkSetHdrMetadataEXT")]
-    pub unsafe fn set_hdr_metadata_ext(&self, swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR], metadata: &[impl crate::Repr<crate::extensions::ext_hdr_metadata::HdrMetadataEXT>]) -> () {
+    pub unsafe fn set_hdr_metadata_ext(&self, swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR], metadata: &[crate::extensions::ext_hdr_metadata::HdrMetadataEXTBuilder]) -> () {
         let _function = self.set_hdr_metadata_ext.expect("`set_hdr_metadata_ext` is not loaded");
         let swapchain_count = swapchains.len().min(metadata.len());
         let _return = _function(self.handle, swapchain_count as _, swapchains.as_ptr() as _, metadata.as_ptr() as _);

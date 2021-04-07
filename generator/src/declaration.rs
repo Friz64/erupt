@@ -81,7 +81,6 @@ pub enum Type {
         kind: Mutability,
         lifetime: Option<Lifetime>,
     },
-    ImplRepr(Box<Type>),
 }
 
 impl Type {
@@ -220,10 +219,6 @@ impl Type {
                     Mutability::Mut => quote! { &#lifetime mut [#of] },
                 }
             }
-            Type::ImplRepr(ty) => {
-                let ty = ty.rust_type(source);
-                quote! { impl crate::Repr<#ty> }
-            }
         }
     }
 
@@ -248,7 +243,7 @@ impl Type {
     pub fn pointer_to_slice(self, lifetime: Option<Lifetime>, source: &Source) -> Type {
         match self {
             Type::Pointer { to, kind } => Type::Slice {
-                of: Box::new(to.apply_impl_repr(source)),
+                of: Box::new(to.builderify(source)),
                 kind,
                 lifetime,
             },
@@ -256,7 +251,7 @@ impl Type {
         }
     }
 
-    pub fn apply_impl_repr(self, source: &Source) -> Type {
+    pub fn builderify(self, source: &Source) -> Type {
         if let Type::Named(Name::Type(name)) = &self {
             let structure = source.find_structure(&name).or_else(|| {
                 source
@@ -266,7 +261,7 @@ impl Type {
 
             if let Some(structure) = structure {
                 if structure.qualifies_as_builder() {
-                    return Type::ImplRepr(Box::new(Type::Named(Name::Type(name.clone()))));
+                    return Type::Named(Name::Type(name.clone().set_builder(true)));
                 }
             }
         }

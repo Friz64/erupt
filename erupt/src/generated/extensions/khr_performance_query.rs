@@ -248,7 +248,6 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryFeaturesKHRBuilder
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePerformanceQueryFeaturesKHR> for PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryPropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePerformanceQueryPropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -323,7 +322,6 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryPropertiesKHRBuild
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePerformanceQueryPropertiesKHR> for PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterKHR.html) · Structure"]
 #[doc(alias = "VkPerformanceCounterKHR")]
 #[derive(Copy, Clone)]
@@ -422,7 +420,6 @@ impl<'a> std::ops::DerefMut for PerformanceCounterKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceCounterKHR> for PerformanceCounterKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionKHR.html) · Structure"]
 #[doc(alias = "VkPerformanceCounterDescriptionKHR")]
 #[derive(Copy, Clone)]
@@ -521,7 +518,6 @@ impl<'a> std::ops::DerefMut for PerformanceCounterDescriptionKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceCounterDescriptionKHR> for PerformanceCounterDescriptionKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolPerformanceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkQueryPoolPerformanceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -608,7 +604,6 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<QueryPoolPerformanceCreateInfoKHR> for QueryPoolPerformanceCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterResultKHR.html) · Structure"]
 #[doc(alias = "VkPerformanceCounterResultKHR")]
 #[derive(Copy, Clone)]
@@ -713,7 +708,6 @@ impl<'a> std::ops::DerefMut for AcquireProfilingLockInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AcquireProfilingLockInfoKHR> for AcquireProfilingLockInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceQuerySubmitInfoKHR.html) · Structure"]
 #[doc(alias = "VkPerformanceQuerySubmitInfoKHR")]
 #[derive(Copy, Clone)]
@@ -788,7 +782,6 @@ impl<'a> std::ops::DerefMut for PerformanceQuerySubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PerformanceQuerySubmitInfoKHR> for PerformanceQuerySubmitInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl crate::InstanceLoader {
     #[inline]

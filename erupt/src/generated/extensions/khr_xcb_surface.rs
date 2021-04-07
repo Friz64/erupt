@@ -129,7 +129,6 @@ impl<'a> std::ops::DerefMut for XcbSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<XcbSurfaceCreateInfoKHR> for XcbSurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_xcb_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

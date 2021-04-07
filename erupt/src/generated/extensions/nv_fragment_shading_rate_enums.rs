@@ -161,7 +161,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -236,7 +235,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateEnumsProperties
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineFragmentShadingRateEnumStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -327,7 +325,6 @@ impl<'a> std::ops::DerefMut for PipelineFragmentShadingRateEnumStateCreateInfoNV
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineFragmentShadingRateEnumStateCreateInfoNV> for PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
 impl crate::DeviceLoader {
     #[inline]

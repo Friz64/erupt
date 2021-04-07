@@ -118,7 +118,6 @@ impl<'a> std::ops::DerefMut for AndroidSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AndroidSurfaceCreateInfoKHR> for AndroidSurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_android_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

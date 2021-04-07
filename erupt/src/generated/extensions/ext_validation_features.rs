@@ -148,4 +148,3 @@ impl<'a> std::ops::DerefMut for ValidationFeaturesEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ValidationFeaturesEXT> for ValidationFeaturesEXTBuilder<'_> {}

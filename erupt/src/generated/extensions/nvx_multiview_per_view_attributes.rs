@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiviewPerViewAttributesProperti
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_> {}

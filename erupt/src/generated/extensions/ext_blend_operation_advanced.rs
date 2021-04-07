@@ -99,7 +99,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceBlendOperationAdvancedFeaturesEXTB
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -214,7 +213,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceBlendOperationAdvancedPropertiesEX
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineColorBlendAdvancedStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -305,4 +303,3 @@ impl<'a> std::ops::DerefMut for PipelineColorBlendAdvancedStateCreateInfoEXTBuil
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineColorBlendAdvancedStateCreateInfoEXT> for PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_> {}

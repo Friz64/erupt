@@ -86,4 +86,3 @@ impl<'a> std::ops::DerefMut for PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevice4444FormatsFeaturesEXT> for PhysicalDevice4444FormatsFeaturesEXTBuilder<'_> {}

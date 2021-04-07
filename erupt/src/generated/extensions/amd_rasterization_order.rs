@@ -97,4 +97,3 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateRasterizationOrderAMDB
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineRasterizationStateRasterizationOrderAMD> for PipelineRasterizationStateRasterizationOrderAMDBuilder<'_> {}

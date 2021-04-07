@@ -83,7 +83,6 @@ impl<'a> std::ops::DerefMut for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<SharedPresentSurfaceCapabilitiesKHR> for SharedPresentSurfaceCapabilitiesKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl crate::DeviceLoader {
     #[inline]

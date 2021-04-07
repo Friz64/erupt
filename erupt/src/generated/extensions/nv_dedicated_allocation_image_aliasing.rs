@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDedicatedAllocationImageAliasingFe
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'_> {}

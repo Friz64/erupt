@@ -101,4 +101,3 @@ impl<'a> std::ops::DerefMut for ValidationFlagsEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ValidationFlagsEXT> for ValidationFlagsEXTBuilder<'_> {}

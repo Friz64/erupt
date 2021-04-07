@@ -114,4 +114,3 @@ impl<'a> std::ops::DerefMut for PipelineCoverageToColorStateCreateInfoNVBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineCoverageToColorStateCreateInfoNV> for PipelineCoverageToColorStateCreateInfoNVBuilder<'_> {}

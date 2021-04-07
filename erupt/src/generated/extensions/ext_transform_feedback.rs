@@ -147,7 +147,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackFeaturesEXTBuilde
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceTransformFeedbackFeaturesEXT> for PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -294,7 +293,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackPropertiesEXTBuil
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceTransformFeedbackPropertiesEXT> for PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationStateStreamCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -377,7 +375,6 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateStreamCreateInfoEXTBui
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineRasterizationStateStreamCreateInfoEXT> for PipelineRasterizationStateStreamCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl crate::DeviceLoader {
     #[inline]

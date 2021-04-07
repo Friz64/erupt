@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for TextureLODGatherFormatPropertiesAMDBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<TextureLODGatherFormatPropertiesAMD> for TextureLODGatherFormatPropertiesAMDBuilder<'_> {}

@@ -86,4 +86,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderImageAtomicInt64FeaturesEXTB
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShaderImageAtomicInt64FeaturesEXT> for PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_> {}

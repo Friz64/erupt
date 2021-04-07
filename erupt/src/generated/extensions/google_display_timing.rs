@@ -84,7 +84,6 @@ impl<'a> std::ops::DerefMut for RefreshCycleDurationGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RefreshCycleDurationGOOGLE> for RefreshCycleDurationGOOGLEBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Structure"]
 #[doc(alias = "VkPastPresentationTimingGOOGLE")]
 #[derive(Copy, Clone)]
@@ -185,7 +184,6 @@ impl<'a> std::ops::DerefMut for PastPresentationTimingGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PastPresentationTimingGOOGLE> for PastPresentationTimingGOOGLEBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Structure"]
 #[doc(alias = "VkPresentTimesInfoGOOGLE")]
 #[derive(Copy, Clone)]
@@ -232,7 +230,7 @@ impl<'a> PresentTimesInfoGOOGLEBuilder<'a> {
         PresentTimesInfoGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn times(mut self, times: &'a [impl crate::Repr<crate::extensions::google_display_timing::PresentTimeGOOGLE>]) -> Self {
+    pub fn times(mut self, times: &'a [crate::extensions::google_display_timing::PresentTimeGOOGLEBuilder]) -> Self {
         self.0.p_times = times.as_ptr() as _;
         self.0.swapchain_count = times.len() as _;
         self
@@ -264,7 +262,6 @@ impl<'a> std::ops::DerefMut for PresentTimesInfoGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PresentTimesInfoGOOGLE> for PresentTimesInfoGOOGLEBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Structure"]
 #[doc(alias = "VkPresentTimeGOOGLE")]
 #[derive(Copy, Clone)]
@@ -338,7 +335,6 @@ impl<'a> std::ops::DerefMut for PresentTimeGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PresentTimeGOOGLE> for PresentTimeGOOGLEBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::google_display_timing`]"]
 impl crate::DeviceLoader {
     #[inline]

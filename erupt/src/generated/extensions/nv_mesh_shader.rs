@@ -109,7 +109,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMeshShaderFeaturesNV> for PhysicalDeviceMeshShaderFeaturesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMeshShaderPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -280,7 +279,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMeshShaderPropertiesNV> for PhysicalDeviceMeshShaderPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkDrawMeshTasksIndirectCommandNV")]
 #[derive(Copy, Clone)]
@@ -354,7 +352,6 @@ impl<'a> std::ops::DerefMut for DrawMeshTasksIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DrawMeshTasksIndirectCommandNV> for DrawMeshTasksIndirectCommandNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl crate::DeviceLoader {
     #[inline]

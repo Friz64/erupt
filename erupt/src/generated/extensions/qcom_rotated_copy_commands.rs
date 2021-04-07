@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for CopyCommandTransformInfoQCOMBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CopyCommandTransformInfoQCOM> for CopyCommandTransformInfoQCOMBuilder<'_> {}

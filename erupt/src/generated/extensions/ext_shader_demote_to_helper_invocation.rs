@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderDemoteToHelperInvocationFeat
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'_> {}

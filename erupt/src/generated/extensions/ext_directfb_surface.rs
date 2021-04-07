@@ -129,7 +129,6 @@ impl<'a> std::ops::DerefMut for DirectFBSurfaceCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DirectFBSurfaceCreateInfoEXT> for DirectFBSurfaceCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_directfb_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

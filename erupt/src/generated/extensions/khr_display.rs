@@ -262,7 +262,6 @@ impl<'a> std::ops::DerefMut for DisplayPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayPropertiesKHR> for DisplayPropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlanePropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -339,7 +338,6 @@ impl<'a> std::ops::DerefMut for DisplayPlanePropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayPlanePropertiesKHR> for DisplayPlanePropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure"]
 #[doc(alias = "VkDisplayModeParametersKHR")]
 #[derive(Copy, Clone)]
@@ -413,7 +411,6 @@ impl<'a> std::ops::DerefMut for DisplayModeParametersKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayModeParametersKHR> for DisplayModeParametersKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayModePropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -487,7 +484,6 @@ impl<'a> std::ops::DerefMut for DisplayModePropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayModePropertiesKHR> for DisplayModePropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkDisplayModeCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -570,7 +566,6 @@ impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayModeCreateInfoKHR> for DisplayModeCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlaneCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -703,7 +698,6 @@ impl<'a> std::ops::DerefMut for DisplayPlaneCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayPlaneCapabilitiesKHR> for DisplayPlaneCapabilitiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkDisplaySurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -834,7 +828,6 @@ impl<'a> std::ops::DerefMut for DisplaySurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplaySurfaceCreateInfoKHR> for DisplaySurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_display`]"]
 impl crate::InstanceLoader {
     #[inline]

@@ -190,7 +190,6 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePortabilitySubsetFeaturesKHRBuilde
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePortabilitySubsetFeaturesKHR> for PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetPropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -265,4 +264,3 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePortabilitySubsetPropertiesKHRBuil
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePortabilitySubsetPropertiesKHR> for PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'_> {}

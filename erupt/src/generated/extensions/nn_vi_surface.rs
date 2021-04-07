@@ -116,7 +116,6 @@ impl<'a> std::ops::DerefMut for ViSurfaceCreateInfoNNBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ViSurfaceCreateInfoNN> for ViSurfaceCreateInfoNNBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nn_vi_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

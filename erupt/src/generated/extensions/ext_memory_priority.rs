@@ -78,7 +78,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceMemoryPriorityFeaturesEXT> for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Structure"]
 #[doc(alias = "VkMemoryPriorityAllocateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -149,4 +148,3 @@ impl<'a> std::ops::DerefMut for MemoryPriorityAllocateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MemoryPriorityAllocateInfoEXT> for MemoryPriorityAllocateInfoEXTBuilder<'_> {}

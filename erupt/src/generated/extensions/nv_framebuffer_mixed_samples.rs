@@ -149,4 +149,3 @@ impl<'a> std::ops::DerefMut for PipelineCoverageModulationStateCreateInfoNVBuild
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineCoverageModulationStateCreateInfoNV> for PipelineCoverageModulationStateCreateInfoNVBuilder<'_> {}

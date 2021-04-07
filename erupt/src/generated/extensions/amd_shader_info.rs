@@ -137,7 +137,6 @@ impl<'a> std::ops::DerefMut for ShaderResourceUsageAMDBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ShaderResourceUsageAMD> for ShaderResourceUsageAMDBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure"]
 #[doc(alias = "VkShaderStatisticsInfoAMD")]
 #[derive(Copy, Clone)]
@@ -254,7 +253,6 @@ impl<'a> std::ops::DerefMut for ShaderStatisticsInfoAMDBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ShaderStatisticsInfoAMD> for ShaderStatisticsInfoAMDBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::amd_shader_info`]"]
 impl crate::DeviceLoader {
     #[inline]

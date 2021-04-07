@@ -106,4 +106,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderCoreProperties2AMDBuilder<'a
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceShaderCoreProperties2AMD> for PhysicalDeviceShaderCoreProperties2AMDBuilder<'_> {}

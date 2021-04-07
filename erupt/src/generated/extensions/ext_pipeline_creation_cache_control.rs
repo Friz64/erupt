@@ -78,4 +78,3 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePipelineCreationCacheControlFeatur
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_> {}

@@ -118,7 +118,6 @@ impl<'a> std::ops::DerefMut for MetalSurfaceCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MetalSurfaceCreateInfoEXT> for MetalSurfaceCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_metal_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

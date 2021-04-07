@@ -102,4 +102,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeatu
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR> for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_> {}

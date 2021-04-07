@@ -88,7 +88,6 @@ impl<'a> std::ops::DerefMut for QueueFamilyCheckpointPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<QueueFamilyCheckpointPropertiesNV> for QueueFamilyCheckpointPropertiesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Structure"]
 #[doc(alias = "VkCheckpointDataNV")]
 #[derive(Copy, Clone)]
@@ -171,7 +170,6 @@ impl<'a> std::ops::DerefMut for CheckpointDataNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CheckpointDataNV> for CheckpointDataNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_device_diagnostic_checkpoints`]"]
 impl crate::DeviceLoader {
     #[inline]

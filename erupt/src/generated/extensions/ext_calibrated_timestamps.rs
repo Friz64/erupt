@@ -118,7 +118,6 @@ impl<'a> std::ops::DerefMut for CalibratedTimestampInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CalibratedTimestampInfoEXT> for CalibratedTimestampInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::InstanceLoader {
     #[inline]
@@ -148,7 +147,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
     #[doc(alias = "vkGetCalibratedTimestampsEXT")]
-    pub unsafe fn get_calibrated_timestamps_ext(&self, timestamp_infos: &[impl crate::Repr<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>]) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
+    pub unsafe fn get_calibrated_timestamps_ext(&self, timestamp_infos: &[crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXTBuilder]) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
         let _function = self.get_calibrated_timestamps_ext.expect("`get_calibrated_timestamps_ext` is not loaded");
         let timestamp_count = timestamp_infos.len();
         let mut timestamps = vec![Default::default(); timestamp_count as _];

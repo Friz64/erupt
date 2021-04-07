@@ -153,7 +153,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExtendedDynamicStateFeaturesEXTBui
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceExtendedDynamicStateFeaturesEXT> for PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -189,7 +188,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWithCountEXT.html) · Function"]
     #[doc(alias = "vkCmdSetViewportWithCountEXT")]
-    pub unsafe fn cmd_set_viewport_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, viewports: &[impl crate::Repr<crate::vk1_0::Viewport>]) -> () {
+    pub unsafe fn cmd_set_viewport_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, viewports: &[crate::vk1_0::ViewportBuilder]) -> () {
         let _function = self.cmd_set_viewport_with_count_ext.expect("`cmd_set_viewport_with_count_ext` is not loaded");
         let viewport_count = viewports.len();
         let _return = _function(command_buffer as _, viewport_count as _, viewports.as_ptr() as _);
@@ -198,7 +197,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetScissorWithCountEXT.html) · Function"]
     #[doc(alias = "vkCmdSetScissorWithCountEXT")]
-    pub unsafe fn cmd_set_scissor_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, scissors: &[impl crate::Repr<crate::vk1_0::Rect2D>]) -> () {
+    pub unsafe fn cmd_set_scissor_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, scissors: &[crate::vk1_0::Rect2DBuilder]) -> () {
         let _function = self.cmd_set_scissor_with_count_ext.expect("`cmd_set_scissor_with_count_ext` is not loaded");
         let scissor_count = scissors.len();
         let _return = _function(command_buffer as _, scissor_count as _, scissors.as_ptr() as _);

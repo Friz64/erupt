@@ -105,7 +105,6 @@ impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DisplayPresentInfoKHR> for DisplayPresentInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -113,7 +112,7 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkCreateSharedSwapchainsKHR")]
     pub unsafe fn create_shared_swapchains_khr(
         &self,
-        create_infos: &[impl crate::Repr<crate::extensions::khr_swapchain::SwapchainCreateInfoKHR>],
+        create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
         let _function = self.create_shared_swapchains_khr.expect("`create_shared_swapchains_khr` is not loaded");

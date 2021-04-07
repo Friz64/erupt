@@ -146,7 +146,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationFeaturesEXTBuilde
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceLineRasterizationFeaturesEXT> for PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceLineRasterizationPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -221,7 +220,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationPropertiesEXTBuil
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceLineRasterizationPropertiesEXT> for PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationLineStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -320,7 +318,6 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineRasterizationLineStateCreateInfoEXT> for PipelineRasterizationLineStateCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl crate::DeviceLoader {
     #[inline]

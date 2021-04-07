@@ -129,7 +129,6 @@ impl<'a> std::ops::DerefMut for WaylandSurfaceCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<WaylandSurfaceCreateInfoKHR> for WaylandSurfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_wayland_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

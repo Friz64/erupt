@@ -96,7 +96,6 @@ impl<'a> std::ops::DerefMut for ImportMemoryHostPointerInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImportMemoryHostPointerInfoEXT> for ImportMemoryHostPointerInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkMemoryHostPointerPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -171,7 +170,6 @@ impl<'a> std::ops::DerefMut for MemoryHostPointerPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MemoryHostPointerPropertiesEXT> for MemoryHostPointerPropertiesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalMemoryHostPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -246,7 +244,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalMemoryHostPropertiesEXTBui
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceExternalMemoryHostPropertiesEXT> for PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_external_memory_host`]"]
 impl crate::DeviceLoader {
     #[inline]

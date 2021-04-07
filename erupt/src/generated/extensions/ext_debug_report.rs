@@ -277,7 +277,6 @@ impl<'a> std::ops::DerefMut for DebugReportCallbackCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DebugReportCallbackCreateInfoEXT> for DebugReportCallbackCreateInfoEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl crate::InstanceLoader {
     #[inline]

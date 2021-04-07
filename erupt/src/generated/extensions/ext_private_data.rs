@@ -130,7 +130,6 @@ impl<'a> std::ops::DerefMut for DevicePrivateDataCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DevicePrivateDataCreateInfoEXT> for DevicePrivateDataCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPrivateDataSlotCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -201,7 +200,6 @@ impl<'a> std::ops::DerefMut for PrivateDataSlotCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PrivateDataSlotCreateInfoEXT> for PrivateDataSlotCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePrivateDataFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePrivateDataFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -276,7 +274,6 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePrivateDataFeaturesEXT> for PhysicalDevicePrivateDataFeaturesEXTBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ext_private_data`]"]
 impl crate::DeviceLoader {
     #[inline]

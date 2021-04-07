@@ -78,7 +78,6 @@ impl<'a> std::ops::DerefMut for ImageViewASTCDecodeModeEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageViewASTCDecodeModeEXT> for ImageViewASTCDecodeModeEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceASTCDecodeFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -153,4 +152,3 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceASTCDecodeFeaturesEXT> for PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_> {}

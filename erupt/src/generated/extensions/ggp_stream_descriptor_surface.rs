@@ -116,7 +116,6 @@ impl<'a> std::ops::DerefMut for StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<StreamDescriptorSurfaceCreateInfoGGP> for StreamDescriptorSurfaceCreateInfoGGPBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::ggp_stream_descriptor_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

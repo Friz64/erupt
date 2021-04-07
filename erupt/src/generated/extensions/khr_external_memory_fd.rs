@@ -101,7 +101,6 @@ impl<'a> std::ops::DerefMut for ImportMemoryFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImportMemoryFdInfoKHR> for ImportMemoryFdInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Structure"]
 #[doc(alias = "VkMemoryFdPropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -176,7 +175,6 @@ impl<'a> std::ops::DerefMut for MemoryFdPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MemoryFdPropertiesKHR> for MemoryFdPropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkMemoryGetFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -259,7 +257,6 @@ impl<'a> std::ops::DerefMut for MemoryGetFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<MemoryGetFdInfoKHR> for MemoryGetFdInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_external_memory_fd`]"]
 impl crate::DeviceLoader {
     #[inline]

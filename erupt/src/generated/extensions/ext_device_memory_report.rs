@@ -126,7 +126,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuild
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceDeviceMemoryReportFeaturesEXT> for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDeviceDeviceMemoryReportCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -217,7 +216,6 @@ impl<'a> std::ops::DerefMut for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a>
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceDeviceMemoryReportCreateInfoEXT> for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Structure"]
 #[doc(alias = "VkDeviceMemoryReportCallbackDataEXT")]
 #[derive(Copy, Clone)]
@@ -340,4 +338,3 @@ impl<'a> std::ops::DerefMut for DeviceMemoryReportCallbackDataEXTBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceMemoryReportCallbackDataEXT> for DeviceMemoryReportCallbackDataEXTBuilder<'_> {}

@@ -98,7 +98,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceDepthClipEnableFeaturesEXT> for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationDepthClipStateCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -181,4 +180,3 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationDepthClipStateCreateInfoEXT
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PipelineRasterizationDepthClipStateCreateInfoEXT> for PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'_> {}

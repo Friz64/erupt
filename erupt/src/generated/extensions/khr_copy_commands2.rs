@@ -124,7 +124,6 @@ impl<'a> std::ops::DerefMut for BufferCopy2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<BufferCopy2KHR> for BufferCopy2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy2KHR.html) · Structure"]
 #[doc(alias = "VkImageCopy2KHR")]
 #[derive(Copy, Clone)]
@@ -231,7 +230,6 @@ impl<'a> std::ops::DerefMut for ImageCopy2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageCopy2KHR> for ImageCopy2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Structure"]
 #[doc(alias = "VkImageBlit2KHR")]
 #[derive(Copy, Clone)]
@@ -332,7 +330,6 @@ impl<'a> std::ops::DerefMut for ImageBlit2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageBlit2KHR> for ImageBlit2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Structure"]
 #[doc(alias = "VkBufferImageCopy2KHR")]
 #[derive(Copy, Clone)]
@@ -449,7 +446,6 @@ impl<'a> std::ops::DerefMut for BufferImageCopy2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<BufferImageCopy2KHR> for BufferImageCopy2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve2KHR.html) · Structure"]
 #[doc(alias = "VkImageResolve2KHR")]
 #[derive(Copy, Clone)]
@@ -556,7 +552,6 @@ impl<'a> std::ops::DerefMut for ImageResolve2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageResolve2KHR> for ImageResolve2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferInfo2KHR.html) · Structure"]
 #[doc(alias = "VkCopyBufferInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -619,7 +614,7 @@ impl<'a> CopyBufferInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::BufferCopy2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -651,7 +646,6 @@ impl<'a> std::ops::DerefMut for CopyBufferInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CopyBufferInfo2KHR> for CopyBufferInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageInfo2KHR.html) · Structure"]
 #[doc(alias = "VkCopyImageInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -730,7 +724,7 @@ impl<'a> CopyImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::ImageCopy2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -762,7 +756,6 @@ impl<'a> std::ops::DerefMut for CopyImageInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CopyImageInfo2KHR> for CopyImageInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlitImageInfo2KHR.html) · Structure"]
 #[doc(alias = "VkBlitImageInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -844,7 +837,7 @@ impl<'a> BlitImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::ImageBlit2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -881,7 +874,6 @@ impl<'a> std::ops::DerefMut for BlitImageInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<BlitImageInfo2KHR> for BlitImageInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyBufferToImageInfo2KHR.html) · Structure"]
 #[doc(alias = "VkCopyBufferToImageInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -952,7 +944,7 @@ impl<'a> CopyBufferToImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::BufferImageCopy2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -984,7 +976,6 @@ impl<'a> std::ops::DerefMut for CopyBufferToImageInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CopyBufferToImageInfo2KHR> for CopyBufferToImageInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyImageToBufferInfo2KHR.html) · Structure"]
 #[doc(alias = "VkCopyImageToBufferInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -1055,7 +1046,7 @@ impl<'a> CopyImageToBufferInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::BufferImageCopy2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -1087,7 +1078,6 @@ impl<'a> std::ops::DerefMut for CopyImageToBufferInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<CopyImageToBufferInfo2KHR> for CopyImageToBufferInfo2KHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveImageInfo2KHR.html) · Structure"]
 #[doc(alias = "VkResolveImageInfo2KHR")]
 #[derive(Copy, Clone)]
@@ -1166,7 +1156,7 @@ impl<'a> ResolveImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn regions(mut self, regions: &'a [impl crate::Repr<crate::extensions::khr_copy_commands2::ImageResolve2KHR>]) -> Self {
+    pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageResolve2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
@@ -1198,7 +1188,6 @@ impl<'a> std::ops::DerefMut for ResolveImageInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ResolveImageInfo2KHR> for ResolveImageInfo2KHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_copy_commands2`]"]
 impl crate::DeviceLoader {
     #[inline]

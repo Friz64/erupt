@@ -104,7 +104,6 @@ impl<'a> std::ops::DerefMut for ImageViewHandleInfoNVXBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageViewHandleInfoNVX> for ImageViewHandleInfoNVXBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Structure"]
 #[doc(alias = "VkImageViewAddressPropertiesNVX")]
 #[derive(Copy, Clone)]
@@ -187,7 +186,6 @@ impl<'a> std::ops::DerefMut for ImageViewAddressPropertiesNVXBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageViewAddressPropertiesNVX> for ImageViewAddressPropertiesNVXBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
 impl crate::DeviceLoader {
     #[inline]

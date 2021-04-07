@@ -233,7 +233,6 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RayTracingShaderGroupCreateInfoKHR> for RayTracingShaderGroupCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkRayTracingPipelineCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -317,13 +316,13 @@ impl<'a> RayTracingPipelineCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    pub fn stages(mut self, stages: &'a [impl crate::Repr<crate::vk1_0::PipelineShaderStageCreateInfo>]) -> Self {
+    pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
-    pub fn groups(mut self, groups: &'a [impl crate::Repr<crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupCreateInfoKHR>]) -> Self {
+    pub fn groups(mut self, groups: &'a [crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupCreateInfoKHRBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
@@ -390,7 +389,6 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RayTracingPipelineCreateInfoKHR> for RayTracingPipelineCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelineFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayTracingPipelineFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -497,7 +495,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelineFeaturesKHRBuild
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceRayTracingPipelineFeaturesKHR> for PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPipelinePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayTracingPipelinePropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -628,7 +625,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelinePropertiesKHRBui
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceRayTracingPipelinePropertiesKHR> for PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Structure"]
 #[doc(alias = "VkStridedDeviceAddressRegionKHR")]
 #[derive(Copy, Clone)]
@@ -713,7 +709,6 @@ impl<'a> std::ops::DerefMut for StridedDeviceAddressRegionKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<StridedDeviceAddressRegionKHR> for StridedDeviceAddressRegionKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Structure"]
 #[doc(alias = "VkTraceRaysIndirectCommandKHR")]
 #[derive(Copy, Clone)]
@@ -794,7 +789,6 @@ impl<'a> std::ops::DerefMut for TraceRaysIndirectCommandKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<TraceRaysIndirectCommandKHR> for TraceRaysIndirectCommandKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkRayTracingPipelineInterfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -877,7 +871,6 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineInterfaceCreateInfoKHRBuilder<
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RayTracingPipelineInterfaceCreateInfoKHR> for RayTracingPipelineInterfaceCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -930,7 +923,7 @@ impl crate::DeviceLoader {
         &self,
         deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
         pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos: &[impl crate::Repr<crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHR>],
+        create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_khr.expect("`create_ray_tracing_pipelines_khr` is not loaded");

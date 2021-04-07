@@ -319,7 +319,6 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RayTracingShaderGroupCreateInfoNV> for RayTracingShaderGroupCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkRayTracingPipelineCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -394,13 +393,13 @@ impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn stages(mut self, stages: &'a [impl crate::Repr<crate::vk1_0::PipelineShaderStageCreateInfo>]) -> Self {
+    pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
-    pub fn groups(mut self, groups: &'a [impl crate::Repr<crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNV>]) -> Self {
+    pub fn groups(mut self, groups: &'a [crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNVBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
@@ -452,7 +451,6 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<RayTracingPipelineCreateInfoNV> for RayTracingPipelineCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTrianglesNV.html) · Structure"]
 #[doc(alias = "VkGeometryTrianglesNV")]
 #[derive(Copy, Clone)]
@@ -607,7 +605,6 @@ impl<'a> std::ops::DerefMut for GeometryTrianglesNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<GeometryTrianglesNV> for GeometryTrianglesNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryAABBNV.html) · Structure"]
 #[doc(alias = "VkGeometryAABBNV")]
 #[derive(Copy, Clone)]
@@ -706,7 +703,6 @@ impl<'a> std::ops::DerefMut for GeometryAABBNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<GeometryAABBNV> for GeometryAABBNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryDataNV.html) · Structure"]
 #[doc(alias = "VkGeometryDataNV")]
 #[derive(Copy, Clone)]
@@ -780,7 +776,6 @@ impl<'a> std::ops::DerefMut for GeometryDataNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<GeometryDataNV> for GeometryDataNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryNV.html) · Structure"]
 #[doc(alias = "VkGeometryNV")]
 #[derive(Copy, Clone)]
@@ -871,7 +866,6 @@ impl<'a> std::ops::DerefMut for GeometryNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<GeometryNV> for GeometryNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInfoNV.html) · Structure"]
 #[doc(alias = "VkAccelerationStructureInfoNV")]
 #[derive(Copy, Clone)]
@@ -942,7 +936,7 @@ impl<'a> AccelerationStructureInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    pub fn geometries(mut self, geometries: &'a [impl crate::Repr<crate::extensions::nv_ray_tracing::GeometryNV>]) -> Self {
+    pub fn geometries(mut self, geometries: &'a [crate::extensions::nv_ray_tracing::GeometryNVBuilder]) -> Self {
         self.0.p_geometries = geometries.as_ptr() as _;
         self.0.geometry_count = geometries.len() as _;
         self
@@ -974,7 +968,6 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AccelerationStructureInfoNV> for AccelerationStructureInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkAccelerationStructureCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -1057,7 +1050,6 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AccelerationStructureCreateInfoNV> for AccelerationStructureCreateInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Structure"]
 #[doc(alias = "VkBindAccelerationStructureMemoryInfoNV")]
 #[derive(Copy, Clone)]
@@ -1160,7 +1152,6 @@ impl<'a> std::ops::DerefMut for BindAccelerationStructureMemoryInfoNVBuilder<'a>
         &mut self.0
     }
 }
-unsafe impl crate::Repr<BindAccelerationStructureMemoryInfoNV> for BindAccelerationStructureMemoryInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Structure"]
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureNV")]
 #[derive(Copy, Clone)]
@@ -1239,7 +1230,6 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetAccelerationStructureNVBuilder
         &mut self.0
     }
 }
-unsafe impl crate::Repr<WriteDescriptorSetAccelerationStructureNV> for WriteDescriptorSetAccelerationStructureNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Structure"]
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsInfoNV")]
 #[derive(Copy, Clone)]
@@ -1322,7 +1312,6 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMemoryRequirementsInfoNVBui
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AccelerationStructureMemoryRequirementsInfoNV> for AccelerationStructureMemoryRequirementsInfoNVBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayTracingPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -1453,7 +1442,6 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPropertiesNVBuilder<'a> 
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDeviceRayTracingPropertiesNV> for PhysicalDeviceRayTracingPropertiesNVBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -1515,7 +1503,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function"]
     #[doc(alias = "vkBindAccelerationStructureMemoryNV")]
-    pub unsafe fn bind_acceleration_structure_memory_nv(&self, bind_infos: &[impl crate::Repr<crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNV>]) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn bind_acceleration_structure_memory_nv(&self, bind_infos: &[crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNVBuilder]) -> crate::utils::VulkanResult<()> {
         let _function = self.bind_acceleration_structure_memory_nv.expect("`bind_acceleration_structure_memory_nv` is not loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
@@ -1650,7 +1638,7 @@ impl crate::DeviceLoader {
     pub unsafe fn create_ray_tracing_pipelines_nv(
         &self,
         pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos: &[impl crate::Repr<crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV>],
+        create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder],
         allocator: Option<&crate::vk1_0::AllocationCallbacks>,
     ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_nv.expect("`create_ray_tracing_pipelines_nv` is not loaded");

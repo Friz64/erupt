@@ -121,4 +121,3 @@ impl<'a> std::ops::DerefMut for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<Win32KeyedMutexAcquireReleaseInfoNV> for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_> {}

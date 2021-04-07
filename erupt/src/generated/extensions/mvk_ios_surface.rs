@@ -116,7 +116,6 @@ impl<'a> std::ops::DerefMut for IOSSurfaceCreateInfoMVKBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<IOSSurfaceCreateInfoMVK> for IOSSurfaceCreateInfoMVKBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::mvk_ios_surface`]"]
 impl crate::InstanceLoader {
     #[inline]

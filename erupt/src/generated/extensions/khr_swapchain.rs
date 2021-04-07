@@ -329,7 +329,6 @@ impl<'a> std::ops::DerefMut for SwapchainCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<SwapchainCreateInfoKHR> for SwapchainCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Structure"]
 #[doc(alias = "VkPresentInfoKHR")]
 #[derive(Copy, Clone)]
@@ -448,7 +447,6 @@ impl<'a> std::ops::DerefMut for PresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PresentInfoKHR> for PresentInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkDeviceGroupPresentCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -531,7 +529,6 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceGroupPresentCapabilitiesKHR> for DeviceGroupPresentCapabilitiesKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkImageSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -602,7 +599,6 @@ impl<'a> std::ops::DerefMut for ImageSwapchainCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<ImageSwapchainCreateInfoKHR> for ImageSwapchainCreateInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Structure"]
 #[doc(alias = "VkBindImageMemorySwapchainInfoKHR")]
 #[derive(Copy, Clone)]
@@ -685,7 +681,6 @@ impl<'a> std::ops::DerefMut for BindImageMemorySwapchainInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<BindImageMemorySwapchainInfoKHR> for BindImageMemorySwapchainInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Structure"]
 #[doc(alias = "VkAcquireNextImageInfoKHR")]
 #[derive(Copy, Clone)]
@@ -792,7 +787,6 @@ impl<'a> std::ops::DerefMut for AcquireNextImageInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<AcquireNextImageInfoKHR> for AcquireNextImageInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Structure"]
 #[doc(alias = "VkDeviceGroupPresentInfoKHR")]
 #[derive(Copy, Clone)]
@@ -879,7 +873,6 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceGroupPresentInfoKHR> for DeviceGroupPresentInfoKHRBuilder<'_> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkDeviceGroupSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -950,7 +943,6 @@ impl<'a> std::ops::DerefMut for DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-unsafe impl crate::Repr<DeviceGroupSwapchainCreateInfoKHR> for DeviceGroupSwapchainCreateInfoKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl crate::DeviceLoader {
     #[inline]

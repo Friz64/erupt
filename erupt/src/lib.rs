@@ -395,17 +395,6 @@ impl Debug for DeviceLoader {
     }
 }
 
-/// Any type implementing this trait may be safely transmuted/pointer-casted into `T`.
-///
-/// This is used to allow either builder or non-builder variants of Vulkan structs
-/// to be passed into APIs.
-///
-/// Please note that is *strongly* encouraged to pass the builder variants
-/// because they hold lifetime information. This helps prevent dangling pointer bugs.
-pub unsafe trait Repr<T> {}
-
-unsafe impl<T> Repr<T> for T {}
-
 /// Provides type-safe `*const` pointer chain support.
 pub trait ExtendableFromConst<'a, T> {
     /// Appends `other` (+ its pointer chain) to the end of this pointer chain.

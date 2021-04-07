@@ -96,7 +96,6 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePushDescriptorPropertiesKHRBuilder
         &mut self.0
     }
 }
-unsafe impl crate::Repr<PhysicalDevicePushDescriptorPropertiesKHR> for PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_> {}
 #[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl crate::DeviceLoader {
     #[inline]
@@ -108,7 +107,7 @@ impl crate::DeviceLoader {
         pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
         layout: crate::vk1_0::PipelineLayout,
         set: u32,
-        descriptor_writes: &[impl crate::Repr<crate::vk1_0::WriteDescriptorSet>],
+        descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder],
     ) -> () {
         let _function = self.cmd_push_descriptor_set_khr.expect("`cmd_push_descriptor_set_khr` is not loaded");
         let descriptor_write_count = descriptor_writes.len();

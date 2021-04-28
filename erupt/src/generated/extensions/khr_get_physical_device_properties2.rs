@@ -152,12 +152,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties2KHR")]
-    pub unsafe fn get_physical_device_image_format_properties2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2,
-        image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>,
-    ) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
+    pub unsafe fn get_physical_device_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2, image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
         let _function = self.get_physical_device_image_format_properties2_khr.expect("`get_physical_device_image_format_properties2_khr` is not loaded");
         let mut image_format_properties = match image_format_properties {
             Some(v) => v,
@@ -198,12 +193,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2KHR")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2,
-        property_count: Option<u32>,
-    ) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
         let _function = self.get_physical_device_sparse_image_format_properties2_khr.expect("`get_physical_device_sparse_image_format_properties2_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,

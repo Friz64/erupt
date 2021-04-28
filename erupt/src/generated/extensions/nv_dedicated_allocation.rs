@@ -15,20 +15,12 @@ pub struct DedicatedAllocationImageCreateInfoNV {
 }
 impl Default for DedicatedAllocationImageCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            dedicated_allocation: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationImageCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DedicatedAllocationImageCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
-            .finish()
+        f.debug_struct("DedicatedAllocationImageCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("dedicated_allocation", &(self.dedicated_allocation != 0)).finish()
     }
 }
 impl DedicatedAllocationImageCreateInfoNV {
@@ -89,20 +81,12 @@ pub struct DedicatedAllocationBufferCreateInfoNV {
 }
 impl Default for DedicatedAllocationBufferCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            dedicated_allocation: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationBufferCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DedicatedAllocationBufferCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dedicated_allocation", &(self.dedicated_allocation != 0))
-            .finish()
+        f.debug_struct("DedicatedAllocationBufferCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("dedicated_allocation", &(self.dedicated_allocation != 0)).finish()
     }
 }
 impl DedicatedAllocationBufferCreateInfoNV {
@@ -164,22 +148,12 @@ pub struct DedicatedAllocationMemoryAllocateInfoNV {
 }
 impl Default for DedicatedAllocationMemoryAllocateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV,
-            p_next: std::ptr::null(),
-            image: Default::default(),
-            buffer: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DedicatedAllocationMemoryAllocateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image", &self.image)
-            .field("buffer", &self.buffer)
-            .finish()
+        f.debug_struct("DedicatedAllocationMemoryAllocateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image", &self.image).field("buffer", &self.buffer).finish()
     }
 }
 impl DedicatedAllocationMemoryAllocateInfoNV {

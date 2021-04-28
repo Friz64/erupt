@@ -16,22 +16,12 @@ pub struct PipelineLibraryCreateInfoKHR {
 }
 impl Default for PipelineLibraryCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_LIBRARY_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            library_count: Default::default(),
-            p_libraries: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_LIBRARY_CREATE_INFO_KHR, p_next: std::ptr::null(), library_count: Default::default(), p_libraries: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineLibraryCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineLibraryCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("library_count", &self.library_count)
-            .field("p_libraries", &self.p_libraries)
-            .finish()
+        f.debug_struct("PipelineLibraryCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("library_count", &self.library_count).field("p_libraries", &self.p_libraries).finish()
     }
 }
 impl PipelineLibraryCreateInfoKHR {

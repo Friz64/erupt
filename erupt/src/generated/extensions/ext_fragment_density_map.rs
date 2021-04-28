@@ -17,24 +17,12 @@ pub struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMapFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            fragment_density_map: Default::default(),
-            fragment_density_map_dynamic: Default::default(),
-            fragment_density_map_non_subsampled_images: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map: Default::default(), fragment_density_map_dynamic: Default::default(), fragment_density_map_non_subsampled_images: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentDensityMapFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_density_map", &(self.fragment_density_map != 0))
-            .field("fragment_density_map_dynamic", &(self.fragment_density_map_dynamic != 0))
-            .field("fragment_density_map_non_subsampled_images", &(self.fragment_density_map_non_subsampled_images != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentDensityMapFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_density_map", &(self.fragment_density_map != 0)).field("fragment_density_map_dynamic", &(self.fragment_density_map_dynamic != 0)).field("fragment_density_map_non_subsampled_images", &(self.fragment_density_map_non_subsampled_images != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
@@ -107,24 +95,12 @@ pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            min_fragment_density_texel_size: Default::default(),
-            max_fragment_density_texel_size: Default::default(),
-            fragment_density_invocations: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_fragment_density_texel_size: Default::default(), max_fragment_density_texel_size: Default::default(), fragment_density_invocations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentDensityMapPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("min_fragment_density_texel_size", &self.min_fragment_density_texel_size)
-            .field("max_fragment_density_texel_size", &self.max_fragment_density_texel_size)
-            .field("fragment_density_invocations", &(self.fragment_density_invocations != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentDensityMapPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("min_fragment_density_texel_size", &self.min_fragment_density_texel_size).field("max_fragment_density_texel_size", &self.max_fragment_density_texel_size).field("fragment_density_invocations", &(self.fragment_density_invocations != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
@@ -195,20 +171,12 @@ pub struct RenderPassFragmentDensityMapCreateInfoEXT {
 }
 impl Default for RenderPassFragmentDensityMapCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            fragment_density_map_attachment: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT, p_next: std::ptr::null(), fragment_density_map_attachment: Default::default() }
     }
 }
 impl std::fmt::Debug for RenderPassFragmentDensityMapCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassFragmentDensityMapCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_density_map_attachment", &self.fragment_density_map_attachment)
-            .finish()
+        f.debug_struct("RenderPassFragmentDensityMapCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_density_map_attachment", &self.fragment_density_map_attachment).finish()
     }
 }
 impl RenderPassFragmentDensityMapCreateInfoEXT {

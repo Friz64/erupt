@@ -10,8 +10,7 @@ pub const FN_GET_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cs
 pub const FN_IMPORT_FENCE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetFenceWin32HandleKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetFenceWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_win32_handle_info: *const crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR) -> crate::vk1_0::Result;
@@ -30,28 +29,12 @@ pub struct ImportFenceWin32HandleInfoKHR {
 }
 impl Default for ImportFenceWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            fence: Default::default(),
-            flags: Default::default(),
-            handle_type: Default::default(),
-            handle: std::ptr::null_mut(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportFenceWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportFenceWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fence", &self.fence)
-            .field("flags", &self.flags)
-            .field("handle_type", &self.handle_type)
-            .field("handle", &self.handle)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ImportFenceWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fence", &self.fence).field("flags", &self.flags).field("handle_type", &self.handle_type).field("handle", &self.handle).field("name", &self.name).finish()
     }
 }
 impl ImportFenceWin32HandleInfoKHR {
@@ -134,24 +117,12 @@ pub struct ExportFenceWin32HandleInfoKHR {
 }
 impl Default for ExportFenceWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            p_attributes: std::ptr::null(),
-            dw_access: Default::default(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportFenceWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportFenceWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_attributes", &self.p_attributes)
-            .field("dw_access", &self.dw_access)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ExportFenceWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_attributes", &self.p_attributes).field("dw_access", &self.dw_access).field("name", &self.name).finish()
     }
 }
 impl ExportFenceWin32HandleInfoKHR {
@@ -223,22 +194,12 @@ pub struct FenceGetWin32HandleInfoKHR {
 }
 impl Default for FenceGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FENCE_GET_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            fence: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FENCE_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for FenceGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FenceGetWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fence", &self.fence)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("FenceGetWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fence", &self.fence).field("handle_type", &self.handle_type).finish()
     }
 }
 impl FenceGetWin32HandleInfoKHR {

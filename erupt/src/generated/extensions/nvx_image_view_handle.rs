@@ -27,24 +27,12 @@ pub struct ImageViewHandleInfoNVX {
 }
 impl Default for ImageViewHandleInfoNVX {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_VIEW_HANDLE_INFO_NVX,
-            p_next: std::ptr::null(),
-            image_view: Default::default(),
-            descriptor_type: Default::default(),
-            sampler: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_HANDLE_INFO_NVX, p_next: std::ptr::null(), image_view: Default::default(), descriptor_type: Default::default(), sampler: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewHandleInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageViewHandleInfoNVX")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image_view", &self.image_view)
-            .field("descriptor_type", &self.descriptor_type)
-            .field("sampler", &self.sampler)
-            .finish()
+        f.debug_struct("ImageViewHandleInfoNVX").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image_view", &self.image_view).field("descriptor_type", &self.descriptor_type).field("sampler", &self.sampler).finish()
     }
 }
 impl ImageViewHandleInfoNVX {
@@ -116,22 +104,12 @@ pub struct ImageViewAddressPropertiesNVX {
 }
 impl Default for ImageViewAddressPropertiesNVX {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX,
-            p_next: std::ptr::null_mut(),
-            device_address: Default::default(),
-            size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX, p_next: std::ptr::null_mut(), device_address: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewAddressPropertiesNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageViewAddressPropertiesNVX")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_address", &self.device_address)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("ImageViewAddressPropertiesNVX").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_address", &self.device_address).field("size", &self.size).finish()
     }
 }
 impl ImageViewAddressPropertiesNVX {
@@ -199,11 +177,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function"]
     #[doc(alias = "vkGetImageViewAddressNVX")]
-    pub unsafe fn get_image_view_address_nvx(
-        &self,
-        image_view: crate::vk1_0::ImageView,
-        properties: Option<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX>,
-    ) -> crate::utils::VulkanResult<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX> {
+    pub unsafe fn get_image_view_address_nvx(&self, image_view: crate::vk1_0::ImageView, properties: Option<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX>) -> crate::utils::VulkanResult<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX> {
         let _function = self.get_image_view_address_nvx.expect("`get_image_view_address_nvx` is not loaded");
         let mut properties = match properties {
             Some(v) => v,

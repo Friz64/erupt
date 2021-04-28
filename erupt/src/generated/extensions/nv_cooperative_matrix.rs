@@ -68,8 +68,7 @@ impl ComponentTypeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -82,22 +81,12 @@ pub struct PhysicalDeviceCooperativeMatrixFeaturesNV {
 }
 impl Default for PhysicalDeviceCooperativeMatrixFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            cooperative_matrix: Default::default(),
-            cooperative_matrix_robust_buffer_access: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV, p_next: std::ptr::null_mut(), cooperative_matrix: Default::default(), cooperative_matrix_robust_buffer_access: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCooperativeMatrixFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("cooperative_matrix", &(self.cooperative_matrix != 0))
-            .field("cooperative_matrix_robust_buffer_access", &(self.cooperative_matrix_robust_buffer_access != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceCooperativeMatrixFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("cooperative_matrix", &(self.cooperative_matrix != 0)).field("cooperative_matrix_robust_buffer_access", &(self.cooperative_matrix_robust_buffer_access != 0)).finish()
     }
 }
 impl PhysicalDeviceCooperativeMatrixFeaturesNV {
@@ -163,20 +152,12 @@ pub struct PhysicalDeviceCooperativeMatrixPropertiesNV {
 }
 impl Default for PhysicalDeviceCooperativeMatrixPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            cooperative_matrix_supported_stages: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV, p_next: std::ptr::null_mut(), cooperative_matrix_supported_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCooperativeMatrixPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("cooperative_matrix_supported_stages", &self.cooperative_matrix_supported_stages)
-            .finish()
+        f.debug_struct("PhysicalDeviceCooperativeMatrixPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("cooperative_matrix_supported_stages", &self.cooperative_matrix_supported_stages).finish()
     }
 }
 impl PhysicalDeviceCooperativeMatrixPropertiesNV {
@@ -244,34 +225,12 @@ pub struct CooperativeMatrixPropertiesNV {
 }
 impl Default for CooperativeMatrixPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COOPERATIVE_MATRIX_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            m_size: Default::default(),
-            n_size: Default::default(),
-            k_size: Default::default(),
-            a_type: Default::default(),
-            b_type: Default::default(),
-            c_type: Default::default(),
-            d_type: Default::default(),
-            scope: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COOPERATIVE_MATRIX_PROPERTIES_NV, p_next: std::ptr::null_mut(), m_size: Default::default(), n_size: Default::default(), k_size: Default::default(), a_type: Default::default(), b_type: Default::default(), c_type: Default::default(), d_type: Default::default(), scope: Default::default() }
     }
 }
 impl std::fmt::Debug for CooperativeMatrixPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CooperativeMatrixPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("m_size", &self.m_size)
-            .field("n_size", &self.n_size)
-            .field("k_size", &self.k_size)
-            .field("a_type", &self.a_type)
-            .field("b_type", &self.b_type)
-            .field("c_type", &self.c_type)
-            .field("d_type", &self.d_type)
-            .field("scope", &self.scope)
-            .finish()
+        f.debug_struct("CooperativeMatrixPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("m_size", &self.m_size).field("n_size", &self.n_size).field("k_size", &self.k_size).field("a_type", &self.a_type).field("b_type", &self.b_type).field("c_type", &self.c_type).field("d_type", &self.d_type).field("scope", &self.scope).finish()
     }
 }
 impl CooperativeMatrixPropertiesNV {
@@ -361,11 +320,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceCooperativeMatrixPropertiesNV")]
-    pub unsafe fn get_physical_device_cooperative_matrix_properties_nv(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>> {
+    pub unsafe fn get_physical_device_cooperative_matrix_properties_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>> {
         let _function = self.get_physical_device_cooperative_matrix_properties_nv.expect("`get_physical_device_cooperative_matrix_properties_nv` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,

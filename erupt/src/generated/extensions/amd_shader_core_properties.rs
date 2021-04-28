@@ -28,46 +28,12 @@ pub struct PhysicalDeviceShaderCorePropertiesAMD {
 }
 impl Default for PhysicalDeviceShaderCorePropertiesAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD,
-            p_next: std::ptr::null_mut(),
-            shader_engine_count: Default::default(),
-            shader_arrays_per_engine_count: Default::default(),
-            compute_units_per_shader_array: Default::default(),
-            simd_per_compute_unit: Default::default(),
-            wavefronts_per_simd: Default::default(),
-            wavefront_size: Default::default(),
-            sgprs_per_simd: Default::default(),
-            min_sgpr_allocation: Default::default(),
-            max_sgpr_allocation: Default::default(),
-            sgpr_allocation_granularity: Default::default(),
-            vgprs_per_simd: Default::default(),
-            min_vgpr_allocation: Default::default(),
-            max_vgpr_allocation: Default::default(),
-            vgpr_allocation_granularity: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD, p_next: std::ptr::null_mut(), shader_engine_count: Default::default(), shader_arrays_per_engine_count: Default::default(), compute_units_per_shader_array: Default::default(), simd_per_compute_unit: Default::default(), wavefronts_per_simd: Default::default(), wavefront_size: Default::default(), sgprs_per_simd: Default::default(), min_sgpr_allocation: Default::default(), max_sgpr_allocation: Default::default(), sgpr_allocation_granularity: Default::default(), vgprs_per_simd: Default::default(), min_vgpr_allocation: Default::default(), max_vgpr_allocation: Default::default(), vgpr_allocation_granularity: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCorePropertiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderCorePropertiesAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_engine_count", &self.shader_engine_count)
-            .field("shader_arrays_per_engine_count", &self.shader_arrays_per_engine_count)
-            .field("compute_units_per_shader_array", &self.compute_units_per_shader_array)
-            .field("simd_per_compute_unit", &self.simd_per_compute_unit)
-            .field("wavefronts_per_simd", &self.wavefronts_per_simd)
-            .field("wavefront_size", &self.wavefront_size)
-            .field("sgprs_per_simd", &self.sgprs_per_simd)
-            .field("min_sgpr_allocation", &self.min_sgpr_allocation)
-            .field("max_sgpr_allocation", &self.max_sgpr_allocation)
-            .field("sgpr_allocation_granularity", &self.sgpr_allocation_granularity)
-            .field("vgprs_per_simd", &self.vgprs_per_simd)
-            .field("min_vgpr_allocation", &self.min_vgpr_allocation)
-            .field("max_vgpr_allocation", &self.max_vgpr_allocation)
-            .field("vgpr_allocation_granularity", &self.vgpr_allocation_granularity)
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderCorePropertiesAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_engine_count", &self.shader_engine_count).field("shader_arrays_per_engine_count", &self.shader_arrays_per_engine_count).field("compute_units_per_shader_array", &self.compute_units_per_shader_array).field("simd_per_compute_unit", &self.simd_per_compute_unit).field("wavefronts_per_simd", &self.wavefronts_per_simd).field("wavefront_size", &self.wavefront_size).field("sgprs_per_simd", &self.sgprs_per_simd).field("min_sgpr_allocation", &self.min_sgpr_allocation).field("max_sgpr_allocation", &self.max_sgpr_allocation).field("sgpr_allocation_granularity", &self.sgpr_allocation_granularity).field("vgprs_per_simd", &self.vgprs_per_simd).field("min_vgpr_allocation", &self.min_vgpr_allocation).field("max_vgpr_allocation", &self.max_vgpr_allocation).field("vgpr_allocation_granularity", &self.vgpr_allocation_granularity).finish()
     }
 }
 impl PhysicalDeviceShaderCorePropertiesAMD {

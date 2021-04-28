@@ -19,11 +19,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Wayland(handle) => {
             use crate::extensions::khr_wayland_surface;
 
-            let create_info = khr_wayland_surface::WaylandSurfaceCreateInfoKHR {
-                display: handle.display,
-                surface: handle.surface,
-                ..Default::default()
-            };
+            let create_info = khr_wayland_surface::WaylandSurfaceCreateInfoKHR { display: handle.display, surface: handle.surface, ..Default::default() };
 
             instance.create_wayland_surface_khr(&create_info, allocation_callbacks)
         }
@@ -32,11 +28,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Xlib(handle) => {
             use crate::extensions::khr_xlib_surface;
 
-            let create_info = khr_xlib_surface::XlibSurfaceCreateInfoKHR {
-                dpy: handle.display as *mut _,
-                window: handle.window,
-                ..Default::default()
-            };
+            let create_info = khr_xlib_surface::XlibSurfaceCreateInfoKHR { dpy: handle.display as *mut _, window: handle.window, ..Default::default() };
 
             instance.create_xlib_surface_khr(&create_info, allocation_callbacks)
         }
@@ -45,11 +37,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Xcb(handle) => {
             use crate::extensions::khr_xcb_surface;
 
-            let create_info = khr_xcb_surface::XcbSurfaceCreateInfoKHR {
-                connection: handle.connection as *mut _,
-                window: handle.window,
-                ..Default::default()
-            };
+            let create_info = khr_xcb_surface::XcbSurfaceCreateInfoKHR { connection: handle.connection as *mut _, window: handle.window, ..Default::default() };
 
             instance.create_xcb_surface_khr(&create_info, allocation_callbacks)
         }
@@ -58,10 +46,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Android(handle) => {
             use crate::extensions::khr_android_surface;
 
-            let create_info = khr_android_surface::AndroidSurfaceCreateInfoKHR {
-                window: handle.a_native_window as _,
-                ..Default::default()
-            };
+            let create_info = khr_android_surface::AndroidSurfaceCreateInfoKHR { window: handle.a_native_window as _, ..Default::default() };
 
             instance.create_android_surface_khr(&create_info, allocation_callbacks)
         }
@@ -100,11 +85,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Windows(handle) => {
             use crate::extensions::khr_win32_surface;
 
-            let create_info = khr_win32_surface::Win32SurfaceCreateInfoKHR {
-                hinstance: handle.hinstance,
-                hwnd: handle.hwnd,
-                ..Default::default()
-            };
+            let create_info = khr_win32_surface::Win32SurfaceCreateInfoKHR { hinstance: handle.hinstance, hwnd: handle.hwnd, ..Default::default() };
 
             instance.create_win32_surface_khr(&create_info, allocation_callbacks)
         }

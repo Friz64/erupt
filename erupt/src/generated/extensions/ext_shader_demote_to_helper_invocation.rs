@@ -15,20 +15,12 @@ pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            shader_demote_to_helper_invocation: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_demote_to_helper_invocation: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_demote_to_helper_invocation", &(self.shader_demote_to_helper_invocation != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_demote_to_helper_invocation", &(self.shader_demote_to_helper_invocation != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {

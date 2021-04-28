@@ -14,27 +14,16 @@ pub const FN_GET_DISPLAY_MODE_PROPERTIES2_KHR: *const std::os::raw::c_char = cra
 pub const FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDisplayPlaneCapabilities2KHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDisplayProperties2KHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayProperties2KHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceDisplayProperties2KHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayProperties2KHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlaneProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModeProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDisplayModeProperties2KHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    display: crate::extensions::khr_display::DisplayKHR,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetDisplayModeProperties2KHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilities2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDisplayPlaneCapabilities2KHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_display_plane_info: *const crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR,
-    p_capabilities: *mut crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetDisplayPlaneCapabilities2KHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_display_plane_info: *const crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR, p_capabilities: *mut crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayProperties2KHR.html) · Structure"]
 #[doc(alias = "VkDisplayProperties2KHR")]
 #[derive(Copy, Clone)]
@@ -46,20 +35,12 @@ pub struct DisplayProperties2KHR {
 }
 impl Default for DisplayProperties2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_PROPERTIES_2_KHR,
-            p_next: std::ptr::null_mut(),
-            display_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayProperties2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("display_properties", &self.display_properties)
-            .finish()
+        f.debug_struct("DisplayProperties2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("display_properties", &self.display_properties).finish()
     }
 }
 impl DisplayProperties2KHR {
@@ -120,20 +101,12 @@ pub struct DisplayPlaneProperties2KHR {
 }
 impl Default for DisplayPlaneProperties2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_PROPERTIES_2_KHR,
-            p_next: std::ptr::null_mut(),
-            display_plane_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_plane_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayPlaneProperties2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("display_plane_properties", &self.display_plane_properties)
-            .finish()
+        f.debug_struct("DisplayPlaneProperties2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("display_plane_properties", &self.display_plane_properties).finish()
     }
 }
 impl DisplayPlaneProperties2KHR {
@@ -194,20 +167,12 @@ pub struct DisplayModeProperties2KHR {
 }
 impl Default for DisplayModeProperties2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_MODE_PROPERTIES_2_KHR,
-            p_next: std::ptr::null_mut(),
-            display_mode_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_MODE_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_mode_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayModeProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayModeProperties2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("display_mode_properties", &self.display_mode_properties)
-            .finish()
+        f.debug_struct("DisplayModeProperties2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("display_mode_properties", &self.display_mode_properties).finish()
     }
 }
 impl DisplayModeProperties2KHR {
@@ -269,22 +234,12 @@ pub struct DisplayPlaneInfo2KHR {
 }
 impl Default for DisplayPlaneInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            mode: Default::default(),
-            plane_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_INFO_2_KHR, p_next: std::ptr::null(), mode: Default::default(), plane_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayPlaneInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("mode", &self.mode)
-            .field("plane_index", &self.plane_index)
-            .finish()
+        f.debug_struct("DisplayPlaneInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("mode", &self.mode).field("plane_index", &self.plane_index).finish()
     }
 }
 impl DisplayPlaneInfo2KHR {
@@ -350,20 +305,12 @@ pub struct DisplayPlaneCapabilities2KHR {
 }
 impl Default for DisplayPlaneCapabilities2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_CAPABILITIES_2_KHR,
-            p_next: std::ptr::null_mut(),
-            capabilities: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_CAPABILITIES_2_KHR, p_next: std::ptr::null_mut(), capabilities: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneCapabilities2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayPlaneCapabilities2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("capabilities", &self.capabilities)
-            .finish()
+        f.debug_struct("DisplayPlaneCapabilities2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("capabilities", &self.capabilities).finish()
     }
 }
 impl DisplayPlaneCapabilities2KHR {
@@ -418,11 +365,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayProperties2KHR")]
-    pub unsafe fn get_physical_device_display_properties2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayProperties2KHR>> {
+    pub unsafe fn get_physical_device_display_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayProperties2KHR>> {
         let _function = self.get_physical_device_display_properties2_khr.expect("`get_physical_device_display_properties2_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -439,11 +382,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlaneProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlaneProperties2KHR")]
-    pub unsafe fn get_physical_device_display_plane_properties2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR>> {
+    pub unsafe fn get_physical_device_display_plane_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR>> {
         let _function = self.get_physical_device_display_plane_properties2_khr.expect("`get_physical_device_display_plane_properties2_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -460,12 +399,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModeProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetDisplayModeProperties2KHR")]
-    pub unsafe fn get_display_mode_properties2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        display: crate::extensions::khr_display::DisplayKHR,
-        property_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR>> {
+    pub unsafe fn get_display_mode_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR>> {
         let _function = self.get_display_mode_properties2_khr.expect("`get_display_mode_properties2_khr` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -482,12 +416,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilities2KHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneCapabilities2KHR")]
-    pub unsafe fn get_display_plane_capabilities2_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        display_plane_info: &crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR,
-        capabilities: Option<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR> {
+    pub unsafe fn get_display_plane_capabilities2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display_plane_info: &crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR, capabilities: Option<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR>) -> crate::utils::VulkanResult<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR> {
         let _function = self.get_display_plane_capabilities2_khr.expect("`get_display_plane_capabilities2_khr` is not loaded");
         let mut capabilities = match capabilities {
             Some(v) => v,

@@ -20,20 +20,12 @@ pub struct DisplayNativeHdrSurfaceCapabilitiesAMD {
 }
 impl Default for DisplayNativeHdrSurfaceCapabilitiesAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD,
-            p_next: std::ptr::null_mut(),
-            local_dimming_support: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD, p_next: std::ptr::null_mut(), local_dimming_support: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayNativeHdrSurfaceCapabilitiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayNativeHdrSurfaceCapabilitiesAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("local_dimming_support", &(self.local_dimming_support != 0))
-            .finish()
+        f.debug_struct("DisplayNativeHdrSurfaceCapabilitiesAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("local_dimming_support", &(self.local_dimming_support != 0)).finish()
     }
 }
 impl DisplayNativeHdrSurfaceCapabilitiesAMD {
@@ -94,20 +86,12 @@ pub struct SwapchainDisplayNativeHdrCreateInfoAMD {
 }
 impl Default for SwapchainDisplayNativeHdrCreateInfoAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD,
-            p_next: std::ptr::null(),
-            local_dimming_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD, p_next: std::ptr::null(), local_dimming_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for SwapchainDisplayNativeHdrCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SwapchainDisplayNativeHdrCreateInfoAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("local_dimming_enable", &(self.local_dimming_enable != 0))
-            .finish()
+        f.debug_struct("SwapchainDisplayNativeHdrCreateInfoAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("local_dimming_enable", &(self.local_dimming_enable != 0)).finish()
     }
 }
 impl SwapchainDisplayNativeHdrCreateInfoAMD {

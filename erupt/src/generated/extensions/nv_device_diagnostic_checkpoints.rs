@@ -25,20 +25,12 @@ pub struct QueueFamilyCheckpointPropertiesNV {
 }
 impl Default for QueueFamilyCheckpointPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            checkpoint_execution_stage_mask: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyCheckpointPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueueFamilyCheckpointPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("checkpoint_execution_stage_mask", &self.checkpoint_execution_stage_mask)
-            .finish()
+        f.debug_struct("QueueFamilyCheckpointPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("checkpoint_execution_stage_mask", &self.checkpoint_execution_stage_mask).finish()
     }
 }
 impl QueueFamilyCheckpointPropertiesNV {
@@ -100,22 +92,12 @@ pub struct CheckpointDataNV {
 }
 impl Default for CheckpointDataNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::CHECKPOINT_DATA_NV,
-            p_next: std::ptr::null_mut(),
-            stage: Default::default(),
-            p_checkpoint_marker: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::CHECKPOINT_DATA_NV, p_next: std::ptr::null_mut(), stage: Default::default(), p_checkpoint_marker: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for CheckpointDataNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CheckpointDataNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("stage", &self.stage)
-            .field("p_checkpoint_marker", &self.p_checkpoint_marker)
-            .finish()
+        f.debug_struct("CheckpointDataNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("stage", &self.stage).field("p_checkpoint_marker", &self.p_checkpoint_marker).finish()
     }
 }
 impl CheckpointDataNV {

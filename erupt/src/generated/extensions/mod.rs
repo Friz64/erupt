@@ -54,6 +54,8 @@ pub mod ext_blend_operation_advanced;
 pub mod ext_buffer_device_address;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_calibrated_timestamps.html) · Vulkan extension"]
 pub mod ext_calibrated_timestamps;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_color_write_enable.html) · Vulkan extension"]
+pub mod ext_color_write_enable;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_conditional_rendering.html) · Vulkan extension"]
 pub mod ext_conditional_rendering;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_conservative_rasterization.html) · Vulkan extension"]
@@ -86,6 +88,8 @@ pub mod ext_display_control;
 pub mod ext_display_surface_counter;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_extended_dynamic_state.html) · Vulkan extension"]
 pub mod ext_extended_dynamic_state;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_extended_dynamic_state2.html) · Vulkan extension"]
+pub mod ext_extended_dynamic_state2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_external_memory_dma_buf.html) · Vulkan extension"]
 pub mod ext_external_memory_dma_buf;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_external_memory_host.html) · Vulkan extension"]
@@ -134,6 +138,8 @@ pub mod ext_pipeline_creation_feedback;
 pub mod ext_post_depth_coverage;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_private_data.html) · Vulkan extension"]
 pub mod ext_private_data;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_provoking_vertex.html) · Vulkan extension"]
+pub mod ext_provoking_vertex;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_queue_family_foreign.html) · Vulkan extension"]
 pub mod ext_queue_family_foreign;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_robustness2.html) · Vulkan extension"]
@@ -180,6 +186,16 @@ pub mod ext_validation_features;
 pub mod ext_validation_flags;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_vertex_attribute_divisor.html) · Vulkan extension"]
 pub mod ext_vertex_attribute_divisor;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_vertex_input_dynamic_state.html) · Vulkan extension"]
+pub mod ext_vertex_input_dynamic_state;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_video_decode_h264.html) · Vulkan extension"]
+pub mod ext_video_decode_h264;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_video_decode_h265.html) · Vulkan extension"]
+pub mod ext_video_decode_h265;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_video_encode_h264.html) · Vulkan extension"]
+pub mod ext_video_encode_h264;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_2plane_444_formats.html) · Vulkan extension"]
+pub mod ext_ycbcr_2plane_444_formats;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_image_arrays.html) · Vulkan extension"]
 pub mod ext_ycbcr_image_arrays;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_external_memory.html) · Vulkan extension"]
@@ -352,6 +368,12 @@ pub mod khr_timeline_semaphore;
 pub mod khr_uniform_buffer_standard_layout;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_variable_pointers.html) · Vulkan extension"]
 pub mod khr_variable_pointers;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_video_decode_queue.html) · Vulkan extension"]
+pub mod khr_video_decode_queue;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_video_encode_queue.html) · Vulkan extension"]
+pub mod khr_video_encode_queue;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_video_queue.html) · Vulkan extension"]
+pub mod khr_video_queue;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_vulkan_memory_model.html) · Vulkan extension"]
 pub mod khr_vulkan_memory_model;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_wayland_surface.html) · Vulkan extension"]
@@ -416,6 +438,8 @@ pub mod nv_framebuffer_mixed_samples;
 pub mod nv_geometry_shader_passthrough;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_glsl_shader.html) · Vulkan extension"]
 pub mod nv_glsl_shader;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_inherited_viewport_scissor.html) · Vulkan extension"]
+pub mod nv_inherited_viewport_scissor;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_mesh_shader.html) · Vulkan extension"]
 pub mod nv_mesh_shader;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_ray_tracing.html) · Vulkan extension"]

@@ -28,12 +28,7 @@ impl std::fmt::Debug for ImagePipeSurfaceCreateFlagBitsFUCHSIA {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImagePipeSurfaceFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateImagePipeSurfaceFUCHSIA = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateImagePipeSurfaceFUCHSIA = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePipeSurfaceCreateInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImagePipeSurfaceCreateInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -46,22 +41,12 @@ pub struct ImagePipeSurfaceCreateInfoFUCHSIA {
 }
 impl Default for ImagePipeSurfaceCreateInfoFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            image_pipe_handle: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA, p_next: std::ptr::null(), flags: Default::default(), image_pipe_handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImagePipeSurfaceCreateInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImagePipeSurfaceCreateInfoFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("image_pipe_handle", &self.image_pipe_handle)
-            .finish()
+        f.debug_struct("ImagePipeSurfaceCreateInfoFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("image_pipe_handle", &self.image_pipe_handle).finish()
     }
 }
 impl ImagePipeSurfaceCreateInfoFUCHSIA {
@@ -121,11 +106,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImagePipeSurfaceFUCHSIA.html) · Function"]
     #[doc(alias = "vkCreateImagePipeSurfaceFUCHSIA")]
-    pub unsafe fn create_image_pipe_surface_fuchsia(
-        &self,
-        create_info: &crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_image_pipe_surface_fuchsia(&self, create_info: &crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_image_pipe_surface_fuchsia.expect("`create_image_pipe_surface_fuchsia` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

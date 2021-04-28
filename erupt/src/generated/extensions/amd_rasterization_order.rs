@@ -34,20 +34,12 @@ pub struct PipelineRasterizationStateRasterizationOrderAMD {
 }
 impl Default for PipelineRasterizationStateRasterizationOrderAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD,
-            p_next: std::ptr::null(),
-            rasterization_order: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD, p_next: std::ptr::null(), rasterization_order: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationStateRasterizationOrderAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineRasterizationStateRasterizationOrderAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("rasterization_order", &self.rasterization_order)
-            .finish()
+        f.debug_struct("PipelineRasterizationStateRasterizationOrderAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("rasterization_order", &self.rasterization_order).finish()
     }
 }
 impl PipelineRasterizationStateRasterizationOrderAMD {

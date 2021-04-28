@@ -14,10 +14,7 @@ pub struct VertexInputBindingDivisorDescriptionEXT {
 }
 impl Default for VertexInputBindingDivisorDescriptionEXT {
     fn default() -> Self {
-        Self {
-            binding: Default::default(),
-            divisor: Default::default(),
-        }
+        Self { binding: Default::default(), divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for VertexInputBindingDivisorDescriptionEXT {
@@ -89,22 +86,12 @@ pub struct PipelineVertexInputDivisorStateCreateInfoEXT {
 }
 impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            vertex_binding_divisor_count: Default::default(),
-            p_vertex_binding_divisors: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), vertex_binding_divisor_count: Default::default(), p_vertex_binding_divisors: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("vertex_binding_divisor_count", &self.vertex_binding_divisor_count)
-            .field("p_vertex_binding_divisors", &self.p_vertex_binding_divisors)
-            .finish()
+        f.debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("vertex_binding_divisor_count", &self.vertex_binding_divisor_count).field("p_vertex_binding_divisors", &self.p_vertex_binding_divisors).finish()
     }
 }
 impl PipelineVertexInputDivisorStateCreateInfoEXT {
@@ -166,20 +153,12 @@ pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
 }
 impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_vertex_attrib_divisor: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_vertex_attrib_divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_vertex_attrib_divisor", &self.max_vertex_attrib_divisor)
-            .finish()
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_vertex_attrib_divisor", &self.max_vertex_attrib_divisor).finish()
     }
 }
 impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
@@ -241,22 +220,12 @@ pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
 }
 impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            vertex_attribute_instance_rate_divisor: Default::default(),
-            vertex_attribute_instance_rate_zero_divisor: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT, p_next: std::ptr::null_mut(), vertex_attribute_instance_rate_divisor: Default::default(), vertex_attribute_instance_rate_zero_divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("vertex_attribute_instance_rate_divisor", &(self.vertex_attribute_instance_rate_divisor != 0))
-            .field("vertex_attribute_instance_rate_zero_divisor", &(self.vertex_attribute_instance_rate_zero_divisor != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("vertex_attribute_instance_rate_divisor", &(self.vertex_attribute_instance_rate_divisor != 0)).field("vertex_attribute_instance_rate_zero_divisor", &(self.vertex_attribute_instance_rate_zero_divisor != 0)).finish()
     }
 }
 impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {

@@ -13,8 +13,7 @@ pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw
 pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT) -> ();
+pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[doc(alias = "VkSampleLocationEXT")]
 #[derive(Copy, Clone)]
@@ -99,26 +98,12 @@ pub struct SampleLocationsInfoEXT {
 }
 impl Default for SampleLocationsInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLE_LOCATIONS_INFO_EXT,
-            p_next: std::ptr::null(),
-            sample_locations_per_pixel: Default::default(),
-            sample_location_grid_size: Default::default(),
-            sample_locations_count: Default::default(),
-            p_sample_locations: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLE_LOCATIONS_INFO_EXT, p_next: std::ptr::null(), sample_locations_per_pixel: Default::default(), sample_location_grid_size: Default::default(), sample_locations_count: Default::default(), p_sample_locations: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SampleLocationsInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SampleLocationsInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sample_locations_per_pixel", &self.sample_locations_per_pixel)
-            .field("sample_location_grid_size", &self.sample_location_grid_size)
-            .field("sample_locations_count", &self.sample_locations_count)
-            .field("p_sample_locations", &self.p_sample_locations)
-            .finish()
+        f.debug_struct("SampleLocationsInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sample_locations_per_pixel", &self.sample_locations_per_pixel).field("sample_location_grid_size", &self.sample_location_grid_size).field("sample_locations_count", &self.sample_locations_count).field("p_sample_locations", &self.p_sample_locations).finish()
     }
 }
 impl SampleLocationsInfoEXT {
@@ -189,18 +174,12 @@ pub struct AttachmentSampleLocationsEXT {
 }
 impl Default for AttachmentSampleLocationsEXT {
     fn default() -> Self {
-        Self {
-            attachment_index: Default::default(),
-            sample_locations_info: Default::default(),
-        }
+        Self { attachment_index: Default::default(), sample_locations_info: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentSampleLocationsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AttachmentSampleLocationsEXT")
-            .field("attachment_index", &self.attachment_index)
-            .field("sample_locations_info", &self.sample_locations_info)
-            .finish()
+        f.debug_struct("AttachmentSampleLocationsEXT").field("attachment_index", &self.attachment_index).field("sample_locations_info", &self.sample_locations_info).finish()
     }
 }
 impl AttachmentSampleLocationsEXT {
@@ -265,18 +244,12 @@ pub struct SubpassSampleLocationsEXT {
 }
 impl Default for SubpassSampleLocationsEXT {
     fn default() -> Self {
-        Self {
-            subpass_index: Default::default(),
-            sample_locations_info: Default::default(),
-        }
+        Self { subpass_index: Default::default(), sample_locations_info: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassSampleLocationsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubpassSampleLocationsEXT")
-            .field("subpass_index", &self.subpass_index)
-            .field("sample_locations_info", &self.sample_locations_info)
-            .finish()
+        f.debug_struct("SubpassSampleLocationsEXT").field("subpass_index", &self.subpass_index).field("sample_locations_info", &self.sample_locations_info).finish()
     }
 }
 impl SubpassSampleLocationsEXT {
@@ -345,26 +318,12 @@ pub struct RenderPassSampleLocationsBeginInfoEXT {
 }
 impl Default for RenderPassSampleLocationsBeginInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT,
-            p_next: std::ptr::null(),
-            attachment_initial_sample_locations_count: Default::default(),
-            p_attachment_initial_sample_locations: std::ptr::null(),
-            post_subpass_sample_locations_count: Default::default(),
-            p_post_subpass_sample_locations: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT, p_next: std::ptr::null(), attachment_initial_sample_locations_count: Default::default(), p_attachment_initial_sample_locations: std::ptr::null(), post_subpass_sample_locations_count: Default::default(), p_post_subpass_sample_locations: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassSampleLocationsBeginInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassSampleLocationsBeginInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("attachment_initial_sample_locations_count", &self.attachment_initial_sample_locations_count)
-            .field("p_attachment_initial_sample_locations", &self.p_attachment_initial_sample_locations)
-            .field("post_subpass_sample_locations_count", &self.post_subpass_sample_locations_count)
-            .field("p_post_subpass_sample_locations", &self.p_post_subpass_sample_locations)
-            .finish()
+        f.debug_struct("RenderPassSampleLocationsBeginInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("attachment_initial_sample_locations_count", &self.attachment_initial_sample_locations_count).field("p_attachment_initial_sample_locations", &self.p_attachment_initial_sample_locations).field("post_subpass_sample_locations_count", &self.post_subpass_sample_locations_count).field("p_post_subpass_sample_locations", &self.p_post_subpass_sample_locations).finish()
     }
 }
 impl RenderPassSampleLocationsBeginInfoEXT {
@@ -433,22 +392,12 @@ pub struct PipelineSampleLocationsStateCreateInfoEXT {
 }
 impl Default for PipelineSampleLocationsStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            sample_locations_enable: Default::default(),
-            sample_locations_info: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), sample_locations_enable: Default::default(), sample_locations_info: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineSampleLocationsStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineSampleLocationsStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sample_locations_enable", &(self.sample_locations_enable != 0))
-            .field("sample_locations_info", &self.sample_locations_info)
-            .finish()
+        f.debug_struct("PipelineSampleLocationsStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sample_locations_enable", &(self.sample_locations_enable != 0)).field("sample_locations_info", &self.sample_locations_info).finish()
     }
 }
 impl PipelineSampleLocationsStateCreateInfoEXT {
@@ -518,28 +467,12 @@ pub struct PhysicalDeviceSampleLocationsPropertiesEXT {
 }
 impl Default for PhysicalDeviceSampleLocationsPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            sample_location_sample_counts: Default::default(),
-            max_sample_location_grid_size: Default::default(),
-            sample_location_coordinate_range: unsafe { std::mem::zeroed() },
-            sample_location_sub_pixel_bits: Default::default(),
-            variable_sample_locations: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT, p_next: std::ptr::null_mut(), sample_location_sample_counts: Default::default(), max_sample_location_grid_size: Default::default(), sample_location_coordinate_range: unsafe { std::mem::zeroed() }, sample_location_sub_pixel_bits: Default::default(), variable_sample_locations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSampleLocationsPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSampleLocationsPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sample_location_sample_counts", &self.sample_location_sample_counts)
-            .field("max_sample_location_grid_size", &self.max_sample_location_grid_size)
-            .field("sample_location_coordinate_range", &self.sample_location_coordinate_range)
-            .field("sample_location_sub_pixel_bits", &self.sample_location_sub_pixel_bits)
-            .field("variable_sample_locations", &(self.variable_sample_locations != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceSampleLocationsPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sample_location_sample_counts", &self.sample_location_sample_counts).field("max_sample_location_grid_size", &self.max_sample_location_grid_size).field("sample_location_coordinate_range", &self.sample_location_coordinate_range).field("sample_location_sub_pixel_bits", &self.sample_location_sub_pixel_bits).field("variable_sample_locations", &(self.variable_sample_locations != 0)).finish()
     }
 }
 impl PhysicalDeviceSampleLocationsPropertiesEXT {
@@ -620,20 +553,12 @@ pub struct MultisamplePropertiesEXT {
 }
 impl Default for MultisamplePropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MULTISAMPLE_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_sample_location_grid_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MULTISAMPLE_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_sample_location_grid_size: Default::default() }
     }
 }
 impl std::fmt::Debug for MultisamplePropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MultisamplePropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_sample_location_grid_size", &self.max_sample_location_grid_size)
-            .finish()
+        f.debug_struct("MultisamplePropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_sample_location_grid_size", &self.max_sample_location_grid_size).finish()
     }
 }
 impl MultisamplePropertiesEXT {
@@ -699,12 +624,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceMultisamplePropertiesEXT")]
-    pub unsafe fn get_physical_device_multisample_properties_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        samples: crate::vk1_0::SampleCountFlagBits,
-        multisample_properties: Option<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>,
-    ) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
+    pub unsafe fn get_physical_device_multisample_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, multisample_properties: Option<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
         let _function = self.get_physical_device_multisample_properties_ext.expect("`get_physical_device_multisample_properties_ext` is not loaded");
         let mut multisample_properties = match multisample_properties {
             Some(v) => v,

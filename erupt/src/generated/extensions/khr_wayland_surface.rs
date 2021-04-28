@@ -30,12 +30,7 @@ impl std::fmt::Debug for WaylandSurfaceCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateWaylandSurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateWaylandSurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, display: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct WaylandSurfaceCreateInfoKHR {
 }
 impl Default for WaylandSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::WAYLAND_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            display: std::ptr::null_mut(),
-            surface: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::WAYLAND_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), display: std::ptr::null_mut(), surface: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for WaylandSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("WaylandSurfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("display", &self.display)
-            .field("surface", &self.surface)
-            .finish()
+        f.debug_struct("WaylandSurfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("display", &self.display).field("surface", &self.surface).finish()
     }
 }
 impl WaylandSurfaceCreateInfoKHR {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateWaylandSurfaceKHR")]
-    pub unsafe fn create_wayland_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_wayland_surface_khr(&self, create_info: &crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_wayland_surface_khr.expect("`create_wayland_surface_khr` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

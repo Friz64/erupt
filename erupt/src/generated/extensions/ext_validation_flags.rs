@@ -35,22 +35,12 @@ pub struct ValidationFlagsEXT {
 }
 impl Default for ValidationFlagsEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::VALIDATION_FLAGS_EXT,
-            p_next: std::ptr::null(),
-            disabled_validation_check_count: Default::default(),
-            p_disabled_validation_checks: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::VALIDATION_FLAGS_EXT, p_next: std::ptr::null(), disabled_validation_check_count: Default::default(), p_disabled_validation_checks: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ValidationFlagsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ValidationFlagsEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("disabled_validation_check_count", &self.disabled_validation_check_count)
-            .field("p_disabled_validation_checks", &self.p_disabled_validation_checks)
-            .finish()
+        f.debug_struct("ValidationFlagsEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("disabled_validation_check_count", &self.disabled_validation_check_count).field("p_disabled_validation_checks", &self.p_disabled_validation_checks).finish()
     }
 }
 impl ValidationFlagsEXT {

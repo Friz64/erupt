@@ -66,11 +66,7 @@ impl FragmentShadingRateTypeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV,
-    combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
-) -> ();
+pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -84,24 +80,12 @@ pub struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
 }
 impl Default for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            fragment_shading_rate_enums: Default::default(),
-            supersample_fragment_shading_rates: Default::default(),
-            no_invocation_fragment_shading_rates: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shading_rate_enums: Default::default(), supersample_fragment_shading_rates: Default::default(), no_invocation_fragment_shading_rates: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_shading_rate_enums", &(self.fragment_shading_rate_enums != 0))
-            .field("supersample_fragment_shading_rates", &(self.supersample_fragment_shading_rates != 0))
-            .field("no_invocation_fragment_shading_rates", &(self.no_invocation_fragment_shading_rates != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_shading_rate_enums", &(self.fragment_shading_rate_enums != 0)).field("supersample_fragment_shading_rates", &(self.supersample_fragment_shading_rates != 0)).field("no_invocation_fragment_shading_rates", &(self.no_invocation_fragment_shading_rates != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
@@ -172,20 +156,12 @@ pub struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
 }
 impl Default for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            max_fragment_shading_rate_invocation_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_fragment_shading_rate_invocation_count: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_fragment_shading_rate_invocation_count", &self.max_fragment_shading_rate_invocation_count)
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_fragment_shading_rate_invocation_count", &self.max_fragment_shading_rate_invocation_count).finish()
     }
 }
 impl PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
@@ -248,24 +224,12 @@ pub struct PipelineFragmentShadingRateEnumStateCreateInfoNV {
 }
 impl Default for PipelineFragmentShadingRateEnumStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            shading_rate_type: Default::default(),
-            shading_rate: Default::default(),
-            combiner_ops: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), shading_rate_type: Default::default(), shading_rate: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateEnumStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineFragmentShadingRateEnumStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shading_rate_type", &self.shading_rate_type)
-            .field("shading_rate", &self.shading_rate)
-            .field("combiner_ops", &self.combiner_ops)
-            .finish()
+        f.debug_struct("PipelineFragmentShadingRateEnumStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shading_rate_type", &self.shading_rate_type).field("shading_rate", &self.shading_rate).field("combiner_ops", &self.combiner_ops).finish()
     }
 }
 impl PipelineFragmentShadingRateEnumStateCreateInfoNV {
@@ -330,12 +294,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
     #[doc(alias = "vkCmdSetFragmentShadingRateEnumNV")]
-    pub unsafe fn cmd_set_fragment_shading_rate_enum_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV,
-        combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
-    ) -> () {
+    pub unsafe fn cmd_set_fragment_shading_rate_enum_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> () {
         let _function = self.cmd_set_fragment_shading_rate_enum_nv.expect("`cmd_set_fragment_shading_rate_enum_nv` is not loaded");
         let _return = _function(command_buffer as _, shading_rate as _, combiner_ops as _);
         ()

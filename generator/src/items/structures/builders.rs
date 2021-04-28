@@ -224,7 +224,7 @@ impl Structure {
         let doc = comment_gen.def(
             Some(&self.name.original),
             format!("Builder of [`{}`]", inner_ident),
-            None,
+            self.origin.as_ref(),
         );
 
         let mut field_kinds = FieldKind::generate_list(&self.fields);

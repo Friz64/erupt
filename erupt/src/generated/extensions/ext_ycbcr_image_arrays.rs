@@ -15,20 +15,12 @@ pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXT {
 }
 impl Default for PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            ycbcr_image_arrays: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT, p_next: std::ptr::null_mut(), ycbcr_image_arrays: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceYcbcrImageArraysFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("ycbcr_image_arrays", &(self.ycbcr_image_arrays != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceYcbcrImageArraysFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("ycbcr_image_arrays", &(self.ycbcr_image_arrays != 0)).finish()
     }
 }
 impl PhysicalDeviceYcbcrImageArraysFeaturesEXT {

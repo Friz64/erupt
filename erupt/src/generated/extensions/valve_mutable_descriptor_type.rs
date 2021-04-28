@@ -15,20 +15,12 @@ pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
 }
 impl Default for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE,
-            p_next: std::ptr::null_mut(),
-            mutable_descriptor_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE, p_next: std::ptr::null_mut(), mutable_descriptor_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMutableDescriptorTypeFeaturesVALVE")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("mutable_descriptor_type", &(self.mutable_descriptor_type != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceMutableDescriptorTypeFeaturesVALVE").field("s_type", &self.s_type).field("p_next", &self.p_next).field("mutable_descriptor_type", &(self.mutable_descriptor_type != 0)).finish()
     }
 }
 impl PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
@@ -88,18 +80,12 @@ pub struct MutableDescriptorTypeListVALVE {
 }
 impl Default for MutableDescriptorTypeListVALVE {
     fn default() -> Self {
-        Self {
-            descriptor_type_count: Default::default(),
-            p_descriptor_types: std::ptr::null(),
-        }
+        Self { descriptor_type_count: Default::default(), p_descriptor_types: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MutableDescriptorTypeListVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MutableDescriptorTypeListVALVE")
-            .field("descriptor_type_count", &self.descriptor_type_count)
-            .field("p_descriptor_types", &self.p_descriptor_types)
-            .finish()
+        f.debug_struct("MutableDescriptorTypeListVALVE").field("descriptor_type_count", &self.descriptor_type_count).field("p_descriptor_types", &self.p_descriptor_types).finish()
     }
 }
 impl MutableDescriptorTypeListVALVE {
@@ -162,22 +148,12 @@ pub struct MutableDescriptorTypeCreateInfoVALVE {
 }
 impl Default for MutableDescriptorTypeCreateInfoVALVE {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE,
-            p_next: std::ptr::null(),
-            mutable_descriptor_type_list_count: Default::default(),
-            p_mutable_descriptor_type_lists: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE, p_next: std::ptr::null(), mutable_descriptor_type_list_count: Default::default(), p_mutable_descriptor_type_lists: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MutableDescriptorTypeCreateInfoVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MutableDescriptorTypeCreateInfoVALVE")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("mutable_descriptor_type_list_count", &self.mutable_descriptor_type_list_count)
-            .field("p_mutable_descriptor_type_lists", &self.p_mutable_descriptor_type_lists)
-            .finish()
+        f.debug_struct("MutableDescriptorTypeCreateInfoVALVE").field("s_type", &self.s_type).field("p_next", &self.p_next).field("mutable_descriptor_type_list_count", &self.mutable_descriptor_type_list_count).field("p_mutable_descriptor_type_lists", &self.p_mutable_descriptor_type_lists).finish()
     }
 }
 impl MutableDescriptorTypeCreateInfoVALVE {

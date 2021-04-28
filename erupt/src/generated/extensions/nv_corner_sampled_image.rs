@@ -15,20 +15,12 @@ pub struct PhysicalDeviceCornerSampledImageFeaturesNV {
 }
 impl Default for PhysicalDeviceCornerSampledImageFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            corner_sampled_image: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), corner_sampled_image: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCornerSampledImageFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCornerSampledImageFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("corner_sampled_image", &(self.corner_sampled_image != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceCornerSampledImageFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("corner_sampled_image", &(self.corner_sampled_image != 0)).finish()
     }
 }
 impl PhysicalDeviceCornerSampledImageFeaturesNV {

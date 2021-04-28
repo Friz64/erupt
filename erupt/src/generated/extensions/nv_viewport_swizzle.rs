@@ -67,12 +67,7 @@ pub struct ViewportSwizzleNV {
 }
 impl Default for ViewportSwizzleNV {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-            z: Default::default(),
-            w: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default(), z: Default::default(), w: Default::default() }
     }
 }
 impl std::fmt::Debug for ViewportSwizzleNV {
@@ -155,24 +150,12 @@ pub struct PipelineViewportSwizzleStateCreateInfoNV {
 }
 impl Default for PipelineViewportSwizzleStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            viewport_count: Default::default(),
-            p_viewport_swizzles: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), viewport_count: Default::default(), p_viewport_swizzles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportSwizzleStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportSwizzleStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("viewport_count", &self.viewport_count)
-            .field("p_viewport_swizzles", &self.p_viewport_swizzles)
-            .finish()
+        f.debug_struct("PipelineViewportSwizzleStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("viewport_count", &self.viewport_count).field("p_viewport_swizzles", &self.p_viewport_swizzles).finish()
     }
 }
 impl PipelineViewportSwizzleStateCreateInfoNV {

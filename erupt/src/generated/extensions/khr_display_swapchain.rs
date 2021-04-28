@@ -8,13 +8,7 @@ pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char = cr
 pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateSharedSwapchainsKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain_count: u32,
-    p_create_infos: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_create_infos: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure"]
 #[doc(alias = "VkDisplayPresentInfoKHR")]
 #[derive(Copy, Clone)]
@@ -28,24 +22,12 @@ pub struct DisplayPresentInfoKHR {
 }
 impl Default for DisplayPresentInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR,
-            p_next: std::ptr::null(),
-            src_rect: Default::default(),
-            dst_rect: Default::default(),
-            persistent: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR, p_next: std::ptr::null(), src_rect: Default::default(), dst_rect: Default::default(), persistent: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DisplayPresentInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_rect", &self.src_rect)
-            .field("dst_rect", &self.dst_rect)
-            .field("persistent", &(self.persistent != 0))
-            .finish()
+        f.debug_struct("DisplayPresentInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_rect", &self.src_rect).field("dst_rect", &self.dst_rect).field("persistent", &(self.persistent != 0)).finish()
     }
 }
 impl DisplayPresentInfoKHR {
@@ -110,11 +92,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
     #[doc(alias = "vkCreateSharedSwapchainsKHR")]
-    pub unsafe fn create_shared_swapchains_khr(
-        &self,
-        create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
+    pub unsafe fn create_shared_swapchains_khr(&self, create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
         let _function = self.create_shared_swapchains_khr.expect("`create_shared_swapchains_khr` is not loaded");
         let swapchain_count = create_infos.len();
         let mut swapchains = vec![Default::default(); swapchain_count as _];

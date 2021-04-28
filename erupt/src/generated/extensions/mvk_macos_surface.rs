@@ -28,12 +28,7 @@ impl std::fmt::Debug for MacOSSurfaceCreateFlagBitsMVK {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateMacOSSurfaceMVK = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateMacOSSurfaceMVK = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Structure"]
 #[doc(alias = "VkMacOSSurfaceCreateInfoMVK")]
 #[derive(Copy, Clone)]
@@ -46,22 +41,12 @@ pub struct MacOSSurfaceCreateInfoMVK {
 }
 impl Default for MacOSSurfaceCreateInfoMVK {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MACOS_SURFACE_CREATE_INFO_MVK,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_view: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MACOS_SURFACE_CREATE_INFO_MVK, p_next: std::ptr::null(), flags: Default::default(), p_view: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MacOSSurfaceCreateInfoMVK {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MacOSSurfaceCreateInfoMVK")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_view", &self.p_view)
-            .finish()
+        f.debug_struct("MacOSSurfaceCreateInfoMVK").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_view", &self.p_view).finish()
     }
 }
 impl MacOSSurfaceCreateInfoMVK {
@@ -121,11 +106,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function"]
     #[doc(alias = "vkCreateMacOSSurfaceMVK")]
-    pub unsafe fn create_mac_os_surface_mvk(
-        &self,
-        create_info: &crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_mac_os_surface_mvk(&self, create_info: &crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_mac_os_surface_mvk.expect("`create_mac_os_surface_mvk` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

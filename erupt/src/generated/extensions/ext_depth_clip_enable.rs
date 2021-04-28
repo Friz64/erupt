@@ -35,20 +35,12 @@ pub struct PhysicalDeviceDepthClipEnableFeaturesEXT {
 }
 impl Default for PhysicalDeviceDepthClipEnableFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            depth_clip_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT, p_next: std::ptr::null_mut(), depth_clip_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDepthClipEnableFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDepthClipEnableFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("depth_clip_enable", &(self.depth_clip_enable != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceDepthClipEnableFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("depth_clip_enable", &(self.depth_clip_enable != 0)).finish()
     }
 }
 impl PhysicalDeviceDepthClipEnableFeaturesEXT {
@@ -110,22 +102,12 @@ pub struct PipelineRasterizationDepthClipStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationDepthClipStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            depth_clip_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), depth_clip_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationDepthClipStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineRasterizationDepthClipStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("depth_clip_enable", &(self.depth_clip_enable != 0))
-            .finish()
+        f.debug_struct("PipelineRasterizationDepthClipStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("depth_clip_enable", &(self.depth_clip_enable != 0)).finish()
     }
 }
 impl PipelineRasterizationDepthClipStateCreateInfoEXT {

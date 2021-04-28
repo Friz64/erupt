@@ -15,20 +15,12 @@ pub struct PhysicalDeviceMemoryPriorityFeaturesEXT {
 }
 impl Default for PhysicalDeviceMemoryPriorityFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            memory_priority: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT, p_next: std::ptr::null_mut(), memory_priority: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryPriorityFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_priority", &(self.memory_priority != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_priority", &(self.memory_priority != 0)).finish()
     }
 }
 impl PhysicalDeviceMemoryPriorityFeaturesEXT {
@@ -89,11 +81,7 @@ pub struct MemoryPriorityAllocateInfoEXT {
 }
 impl Default for MemoryPriorityAllocateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_PRIORITY_ALLOCATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            priority: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_PRIORITY_ALLOCATE_INFO_EXT, p_next: std::ptr::null(), priority: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryPriorityAllocateInfoEXT {

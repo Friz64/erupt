@@ -62,28 +62,12 @@ pub struct PipelineCoverageModulationStateCreateInfoNV {
 }
 impl Default for PipelineCoverageModulationStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            coverage_modulation_mode: Default::default(),
-            coverage_modulation_table_enable: Default::default(),
-            coverage_modulation_table_count: Default::default(),
-            p_coverage_modulation_table: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_modulation_mode: Default::default(), coverage_modulation_table_enable: Default::default(), coverage_modulation_table_count: Default::default(), p_coverage_modulation_table: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageModulationStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCoverageModulationStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("coverage_modulation_mode", &self.coverage_modulation_mode)
-            .field("coverage_modulation_table_enable", &(self.coverage_modulation_table_enable != 0))
-            .field("coverage_modulation_table_count", &self.coverage_modulation_table_count)
-            .field("p_coverage_modulation_table", &self.p_coverage_modulation_table)
-            .finish()
+        f.debug_struct("PipelineCoverageModulationStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("coverage_modulation_mode", &self.coverage_modulation_mode).field("coverage_modulation_table_enable", &(self.coverage_modulation_table_enable != 0)).field("coverage_modulation_table_count", &self.coverage_modulation_table_count).field("p_coverage_modulation_table", &self.p_coverage_modulation_table).finish()
     }
 }
 impl PipelineCoverageModulationStateCreateInfoNV {

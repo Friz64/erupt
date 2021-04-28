@@ -15,20 +15,12 @@ pub struct TextureLODGatherFormatPropertiesAMD {
 }
 impl Default for TextureLODGatherFormatPropertiesAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD,
-            p_next: std::ptr::null_mut(),
-            supports_texture_gather_lod_bias_amd: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD, p_next: std::ptr::null_mut(), supports_texture_gather_lod_bias_amd: Default::default() }
     }
 }
 impl std::fmt::Debug for TextureLODGatherFormatPropertiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("TextureLODGatherFormatPropertiesAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("supports_texture_gather_lod_bias_amd", &(self.supports_texture_gather_lod_bias_amd != 0))
-            .finish()
+        f.debug_struct("TextureLODGatherFormatPropertiesAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("supports_texture_gather_lod_bias_amd", &(self.supports_texture_gather_lod_bias_amd != 0)).finish()
     }
 }
 impl TextureLODGatherFormatPropertiesAMD {

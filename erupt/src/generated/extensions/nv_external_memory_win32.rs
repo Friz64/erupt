@@ -8,12 +8,7 @@ pub const NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char =
 pub const FN_GET_MEMORY_WIN32_HANDLE_NV: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandleNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandleNV = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    memory: crate::vk1_0::DeviceMemory,
-    handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
-    p_handle: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryWin32HandleNV = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Structure"]
 #[doc(alias = "VkImportMemoryWin32HandleInfoNV")]
 #[derive(Copy, Clone)]
@@ -26,22 +21,12 @@ pub struct ImportMemoryWin32HandleInfoNV {
 }
 impl Default for ImportMemoryWin32HandleInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-            handle: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportMemoryWin32HandleInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .field("handle", &self.handle)
-            .finish()
+        f.debug_struct("ImportMemoryWin32HandleInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).field("handle", &self.handle).finish()
     }
 }
 impl ImportMemoryWin32HandleInfoNV {
@@ -108,22 +93,12 @@ pub struct ExportMemoryWin32HandleInfoNV {
 }
 impl Default for ExportMemoryWin32HandleInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV,
-            p_next: std::ptr::null(),
-            p_attributes: std::ptr::null(),
-            dw_access: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportMemoryWin32HandleInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_attributes", &self.p_attributes)
-            .field("dw_access", &self.dw_access)
-            .finish()
+        f.debug_struct("ExportMemoryWin32HandleInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_attributes", &self.p_attributes).field("dw_access", &self.dw_access).finish()
     }
 }
 impl ExportMemoryWin32HandleInfoNV {
@@ -183,12 +158,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandleNV")]
-    pub unsafe fn get_memory_win32_handle_nv(
-        &self,
-        memory: crate::vk1_0::DeviceMemory,
-        handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
-        handle: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_memory_win32_handle_nv(&self, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_memory_win32_handle_nv.expect("`get_memory_win32_handle_nv` is not loaded");
         let _return = _function(self.handle, memory as _, handle_type as _, handle);
         crate::utils::VulkanResult::new(_return, ())

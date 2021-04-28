@@ -15,20 +15,12 @@ pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
 }
 impl Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            shader_zero_initialize_workgroup_memory: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_zero_initialize_workgroup_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_zero_initialize_workgroup_memory", &(self.shader_zero_initialize_workgroup_memory != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_zero_initialize_workgroup_memory", &(self.shader_zero_initialize_workgroup_memory != 0)).finish()
     }
 }
 impl PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {

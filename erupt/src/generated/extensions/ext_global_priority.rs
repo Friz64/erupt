@@ -38,20 +38,12 @@ pub struct DeviceQueueGlobalPriorityCreateInfoEXT {
 }
 impl Default for DeviceQueueGlobalPriorityCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            global_priority: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT, p_next: std::ptr::null(), global_priority: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceQueueGlobalPriorityCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("global_priority", &self.global_priority)
-            .finish()
+        f.debug_struct("DeviceQueueGlobalPriorityCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("global_priority", &self.global_priority).finish()
     }
 }
 impl DeviceQueueGlobalPriorityCreateInfoEXT {

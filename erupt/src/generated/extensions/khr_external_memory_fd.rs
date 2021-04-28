@@ -13,12 +13,7 @@ pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char = crate::
 pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    fd: std::os::raw::c_int,
-    p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, fd: std::os::raw::c_int, p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -31,22 +26,12 @@ pub struct ImportMemoryFdInfoKHR {
 }
 impl Default for ImportMemoryFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-            fd: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_FD_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), fd: Default::default() }
     }
 }
 impl std::fmt::Debug for ImportMemoryFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportMemoryFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .field("fd", &self.fd)
-            .finish()
+        f.debug_struct("ImportMemoryFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).field("fd", &self.fd).finish()
     }
 }
 impl ImportMemoryFdInfoKHR {
@@ -112,20 +97,12 @@ pub struct MemoryFdPropertiesKHR {
 }
 impl Default for MemoryFdPropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_FD_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            memory_type_bits: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_FD_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryFdPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryFdPropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_type_bits", &self.memory_type_bits)
-            .finish()
+        f.debug_struct("MemoryFdPropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_type_bits", &self.memory_type_bits).finish()
     }
 }
 impl MemoryFdPropertiesKHR {
@@ -187,22 +164,12 @@ pub struct MemoryGetFdInfoKHR {
 }
 impl Default for MemoryGetFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_GET_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            memory: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_FD_INFO_KHR, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryGetFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory", &self.memory)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("MemoryGetFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory", &self.memory).field("handle_type", &self.handle_type).finish()
     }
 }
 impl MemoryGetFdInfoKHR {
@@ -271,12 +238,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryFdPropertiesKHR")]
-    pub unsafe fn get_memory_fd_properties_khr(
-        &self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-        fd: std::os::raw::c_int,
-        memory_fd_properties: Option<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR> {
+    pub unsafe fn get_memory_fd_properties_khr(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, fd: std::os::raw::c_int, memory_fd_properties: Option<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR> {
         let _function = self.get_memory_fd_properties_khr.expect("`get_memory_fd_properties_khr` is not loaded");
         let mut memory_fd_properties = match memory_fd_properties {
             Some(v) => v,

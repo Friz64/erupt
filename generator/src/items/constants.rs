@@ -63,7 +63,7 @@ impl Constant {
 
         let value = self.value.value();
         let ty = self.value.ty();
-        let doc = comment_gen.def(None, "Constant", None);
+        let doc = comment_gen.def(None, "Constant", self.origin.as_ref());
 
         quote! {
             #[doc = #doc]

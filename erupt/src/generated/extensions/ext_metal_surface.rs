@@ -30,12 +30,7 @@ impl std::fmt::Debug for MetalSurfaceCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateMetalSurfaceEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateMetalSurfaceEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkMetalSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -48,22 +43,12 @@ pub struct MetalSurfaceCreateInfoEXT {
 }
 impl Default for MetalSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::METAL_SURFACE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_layer: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::METAL_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), p_layer: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MetalSurfaceCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MetalSurfaceCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_layer", &self.p_layer)
-            .finish()
+        f.debug_struct("MetalSurfaceCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_layer", &self.p_layer).finish()
     }
 }
 impl MetalSurfaceCreateInfoEXT {
@@ -123,11 +108,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateMetalSurfaceEXT")]
-    pub unsafe fn create_metal_surface_ext(
-        &self,
-        create_info: &crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_metal_surface_ext(&self, create_info: &crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_metal_surface_ext.expect("`create_metal_surface_ext` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

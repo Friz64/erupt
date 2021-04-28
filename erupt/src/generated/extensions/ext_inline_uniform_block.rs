@@ -16,22 +16,12 @@ pub struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
 }
 impl Default for PhysicalDeviceInlineUniformBlockFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            inline_uniform_block: Default::default(),
-            descriptor_binding_inline_uniform_block_update_after_bind: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT, p_next: std::ptr::null_mut(), inline_uniform_block: Default::default(), descriptor_binding_inline_uniform_block_update_after_bind: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceInlineUniformBlockFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("inline_uniform_block", &(self.inline_uniform_block != 0))
-            .field("descriptor_binding_inline_uniform_block_update_after_bind", &(self.descriptor_binding_inline_uniform_block_update_after_bind != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceInlineUniformBlockFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("inline_uniform_block", &(self.inline_uniform_block != 0)).field("descriptor_binding_inline_uniform_block_update_after_bind", &(self.descriptor_binding_inline_uniform_block_update_after_bind != 0)).finish()
     }
 }
 impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
@@ -101,28 +91,12 @@ pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
 }
 impl Default for PhysicalDeviceInlineUniformBlockPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_inline_uniform_block_size: Default::default(),
-            max_per_stage_descriptor_inline_uniform_blocks: Default::default(),
-            max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: Default::default(),
-            max_descriptor_set_inline_uniform_blocks: Default::default(),
-            max_descriptor_set_update_after_bind_inline_uniform_blocks: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_inline_uniform_block_size: Default::default(), max_per_stage_descriptor_inline_uniform_blocks: Default::default(), max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: Default::default(), max_descriptor_set_inline_uniform_blocks: Default::default(), max_descriptor_set_update_after_bind_inline_uniform_blocks: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceInlineUniformBlockPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_inline_uniform_block_size", &self.max_inline_uniform_block_size)
-            .field("max_per_stage_descriptor_inline_uniform_blocks", &self.max_per_stage_descriptor_inline_uniform_blocks)
-            .field("max_per_stage_descriptor_update_after_bind_inline_uniform_blocks", &self.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks)
-            .field("max_descriptor_set_inline_uniform_blocks", &self.max_descriptor_set_inline_uniform_blocks)
-            .field("max_descriptor_set_update_after_bind_inline_uniform_blocks", &self.max_descriptor_set_update_after_bind_inline_uniform_blocks)
-            .finish()
+        f.debug_struct("PhysicalDeviceInlineUniformBlockPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_inline_uniform_block_size", &self.max_inline_uniform_block_size).field("max_per_stage_descriptor_inline_uniform_blocks", &self.max_per_stage_descriptor_inline_uniform_blocks).field("max_per_stage_descriptor_update_after_bind_inline_uniform_blocks", &self.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks).field("max_descriptor_set_inline_uniform_blocks", &self.max_descriptor_set_inline_uniform_blocks).field("max_descriptor_set_update_after_bind_inline_uniform_blocks", &self.max_descriptor_set_update_after_bind_inline_uniform_blocks).finish()
     }
 }
 impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
@@ -204,22 +178,12 @@ pub struct WriteDescriptorSetInlineUniformBlockEXT {
 }
 impl Default for WriteDescriptorSetInlineUniformBlockEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT,
-            p_next: std::ptr::null(),
-            data_size: Default::default(),
-            p_data: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT, p_next: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for WriteDescriptorSetInlineUniformBlockEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("WriteDescriptorSetInlineUniformBlockEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("data_size", &self.data_size)
-            .field("p_data", &self.p_data)
-            .finish()
+        f.debug_struct("WriteDescriptorSetInlineUniformBlockEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("data_size", &self.data_size).field("p_data", &self.p_data).finish()
     }
 }
 impl WriteDescriptorSetInlineUniformBlockEXT {
@@ -285,20 +249,12 @@ pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
 }
 impl Default for DescriptorPoolInlineUniformBlockCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            max_inline_uniform_block_bindings: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT, p_next: std::ptr::null(), max_inline_uniform_block_bindings: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorPoolInlineUniformBlockCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorPoolInlineUniformBlockCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_inline_uniform_block_bindings", &self.max_inline_uniform_block_bindings)
-            .finish()
+        f.debug_struct("DescriptorPoolInlineUniformBlockCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_inline_uniform_block_bindings", &self.max_inline_uniform_block_bindings).finish()
     }
 }
 impl DescriptorPoolInlineUniformBlockCreateInfoEXT {

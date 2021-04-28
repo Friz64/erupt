@@ -30,12 +30,7 @@ impl std::fmt::Debug for Win32SurfaceCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateWin32SurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateWin32SurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct Win32SurfaceCreateInfoKHR {
 }
 impl Default for Win32SurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::WIN32_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            hinstance: std::ptr::null_mut(),
-            hwnd: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::WIN32_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), hinstance: std::ptr::null_mut(), hwnd: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for Win32SurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("Win32SurfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("hinstance", &self.hinstance)
-            .field("hwnd", &self.hwnd)
-            .finish()
+        f.debug_struct("Win32SurfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("hinstance", &self.hinstance).field("hwnd", &self.hwnd).finish()
     }
 }
 impl Win32SurfaceCreateInfoKHR {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateWin32SurfaceKHR")]
-    pub unsafe fn create_win32_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_win32_surface_khr(&self, create_info: &crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_win32_surface_khr.expect("`create_win32_surface_khr` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

@@ -30,12 +30,7 @@ impl std::fmt::Debug for XlibSurfaceCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dpy: *mut std::ffi::c_void, visual_id: u64) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct XlibSurfaceCreateInfoKHR {
 }
 impl Default for XlibSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            dpy: std::ptr::null_mut(),
-            window: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), dpy: std::ptr::null_mut(), window: Default::default() }
     }
 }
 impl std::fmt::Debug for XlibSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("XlibSurfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("dpy", &self.dpy)
-            .field("window", &self.window)
-            .finish()
+        f.debug_struct("XlibSurfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("dpy", &self.dpy).field("window", &self.window).finish()
     }
 }
 impl XlibSurfaceCreateInfoKHR {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateXlibSurfaceKHR")]
-    pub unsafe fn create_xlib_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_xlib_surface_khr(&self, create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_xlib_surface_khr.expect("`create_xlib_surface_khr` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

@@ -14,12 +14,7 @@ pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES_KHR: *const std::os::raw::
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfaceFormatsKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfacePresentModesKHR");
-crate::non_dispatchable_handle!(
-    SurfaceKHR,
-    SURFACE_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle",
-    "VkSurfaceKHR"
-);
+crate::non_dispatchable_handle!(SurfaceKHR, SURFACE_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle", "VkSurfaceKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorSpaceKHR.html) · Enum"]
 #[doc(alias = "VkColorSpaceKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -182,28 +177,16 @@ impl SurfaceTransformFlagBitsKHR {
 pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, surface: crate::extensions::khr_surface::SurfaceKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, surface: crate::extensions::khr_surface::SurfaceKHR, p_supported: *mut crate::vk1_0::Bool32) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, surface: crate::extensions::khr_surface::SurfaceKHR, p_supported: *mut crate::vk1_0::Bool32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_surface_format_count: *mut u32,
-    p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_surface_format_count: *mut u32, p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_present_mode_count: *mut u32,
-    p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_present_mode_count: *mut u32, p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -222,34 +205,12 @@ pub struct SurfaceCapabilitiesKHR {
 }
 impl Default for SurfaceCapabilitiesKHR {
     fn default() -> Self {
-        Self {
-            min_image_count: Default::default(),
-            max_image_count: Default::default(),
-            current_extent: Default::default(),
-            min_image_extent: Default::default(),
-            max_image_extent: Default::default(),
-            max_image_array_layers: Default::default(),
-            supported_transforms: Default::default(),
-            current_transform: Default::default(),
-            supported_composite_alpha: Default::default(),
-            supported_usage_flags: Default::default(),
-        }
+        Self { min_image_count: Default::default(), max_image_count: Default::default(), current_extent: Default::default(), min_image_extent: Default::default(), max_image_extent: Default::default(), max_image_array_layers: Default::default(), supported_transforms: Default::default(), current_transform: Default::default(), supported_composite_alpha: Default::default(), supported_usage_flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceCapabilitiesKHR")
-            .field("min_image_count", &self.min_image_count)
-            .field("max_image_count", &self.max_image_count)
-            .field("current_extent", &self.current_extent)
-            .field("min_image_extent", &self.min_image_extent)
-            .field("max_image_extent", &self.max_image_extent)
-            .field("max_image_array_layers", &self.max_image_array_layers)
-            .field("supported_transforms", &self.supported_transforms)
-            .field("current_transform", &self.current_transform)
-            .field("supported_composite_alpha", &self.supported_composite_alpha)
-            .field("supported_usage_flags", &self.supported_usage_flags)
-            .finish()
+        f.debug_struct("SurfaceCapabilitiesKHR").field("min_image_count", &self.min_image_count).field("max_image_count", &self.max_image_count).field("current_extent", &self.current_extent).field("min_image_extent", &self.min_image_extent).field("max_image_extent", &self.max_image_extent).field("max_image_array_layers", &self.max_image_array_layers).field("supported_transforms", &self.supported_transforms).field("current_transform", &self.current_transform).field("supported_composite_alpha", &self.supported_composite_alpha).field("supported_usage_flags", &self.supported_usage_flags).finish()
     }
 }
 impl SurfaceCapabilitiesKHR {
@@ -354,10 +315,7 @@ pub struct SurfaceFormatKHR {
 }
 impl Default for SurfaceFormatKHR {
     fn default() -> Self {
-        Self {
-            format: Default::default(),
-            color_space: Default::default(),
-        }
+        Self { format: Default::default(), color_space: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceFormatKHR {
@@ -449,11 +407,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilitiesKHR")]
-    pub unsafe fn get_physical_device_surface_capabilities_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
+    pub unsafe fn get_physical_device_surface_capabilities_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
         let _function = self.get_physical_device_surface_capabilities_khr.expect("`get_physical_device_surface_capabilities_khr` is not loaded");
         let mut surface_capabilities = Default::default();
         let _return = _function(physical_device as _, surface as _, &mut surface_capabilities);
@@ -462,12 +416,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormatsKHR")]
-    pub unsafe fn get_physical_device_surface_formats_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_format_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
+    pub unsafe fn get_physical_device_surface_formats_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
         let _function = self.get_physical_device_surface_formats_khr.expect("`get_physical_device_surface_formats_khr` is not loaded");
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
@@ -484,12 +433,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModesKHR")]
-    pub unsafe fn get_physical_device_surface_present_modes_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        present_mode_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
+    pub unsafe fn get_physical_device_surface_present_modes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
         let _function = self.get_physical_device_surface_present_modes_khr.expect("`get_physical_device_surface_present_modes_khr` is not loaded");
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,

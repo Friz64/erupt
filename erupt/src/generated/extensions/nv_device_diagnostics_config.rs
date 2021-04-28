@@ -44,20 +44,12 @@ pub struct PhysicalDeviceDiagnosticsConfigFeaturesNV {
 }
 impl Default for PhysicalDeviceDiagnosticsConfigFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            diagnostics_config: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV, p_next: std::ptr::null_mut(), diagnostics_config: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDiagnosticsConfigFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDiagnosticsConfigFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("diagnostics_config", &(self.diagnostics_config != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceDiagnosticsConfigFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("diagnostics_config", &(self.diagnostics_config != 0)).finish()
     }
 }
 impl PhysicalDeviceDiagnosticsConfigFeaturesNV {
@@ -118,11 +110,7 @@ pub struct DeviceDiagnosticsConfigCreateInfoNV {
 }
 impl Default for DeviceDiagnosticsConfigCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceDiagnosticsConfigCreateInfoNV {

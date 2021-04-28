@@ -52,11 +52,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Function"]
     #[doc(alias = "vkCreateDescriptorUpdateTemplateKHR")]
-    pub unsafe fn create_descriptor_update_template_khr(
-        &self,
-        create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
+    pub unsafe fn create_descriptor_update_template_khr(&self, create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
         let _function = self.create_descriptor_update_template_khr.expect("`create_descriptor_update_template_khr` is not loaded");
         let mut descriptor_update_template = Default::default();
         let _return = _function(

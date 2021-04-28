@@ -15,20 +15,12 @@ pub struct PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
 }
 impl Default for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            pipeline_creation_cache_control: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT, p_next: std::ptr::null_mut(), pipeline_creation_cache_control: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePipelineCreationCacheControlFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline_creation_cache_control", &(self.pipeline_creation_cache_control != 0))
-            .finish()
+        f.debug_struct("PhysicalDevicePipelineCreationCacheControlFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline_creation_cache_control", &(self.pipeline_creation_cache_control != 0)).finish()
     }
 }
 impl PhysicalDevicePipelineCreationCacheControlFeaturesEXT {

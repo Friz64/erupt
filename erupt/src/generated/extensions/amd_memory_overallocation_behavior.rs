@@ -36,20 +36,12 @@ pub struct DeviceMemoryOverallocationCreateInfoAMD {
 }
 impl Default for DeviceMemoryOverallocationCreateInfoAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD,
-            p_next: std::ptr::null(),
-            overallocation_behavior: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD, p_next: std::ptr::null(), overallocation_behavior: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceMemoryOverallocationCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceMemoryOverallocationCreateInfoAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("overallocation_behavior", &self.overallocation_behavior)
-            .finish()
+        f.debug_struct("DeviceMemoryOverallocationCreateInfoAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("overallocation_behavior", &self.overallocation_behavior).finish()
     }
 }
 impl DeviceMemoryOverallocationCreateInfoAMD {

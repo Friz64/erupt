@@ -30,12 +30,7 @@ impl std::fmt::Debug for ScreenSurfaceCreateFlagBitsQNX {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateScreenSurfaceQNX = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateScreenSurfaceQNX = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, window: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct ScreenSurfaceCreateInfoQNX {
 }
 impl Default for ScreenSurfaceCreateInfoQNX {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SCREEN_SURFACE_CREATE_INFO_QNX,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            context: std::ptr::null_mut(),
-            window: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SCREEN_SURFACE_CREATE_INFO_QNX, p_next: std::ptr::null(), flags: Default::default(), context: std::ptr::null_mut(), window: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ScreenSurfaceCreateInfoQNX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ScreenSurfaceCreateInfoQNX")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("context", &self.context)
-            .field("window", &self.window)
-            .finish()
+        f.debug_struct("ScreenSurfaceCreateInfoQNX").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("context", &self.context).field("window", &self.window).finish()
     }
 }
 impl ScreenSurfaceCreateInfoQNX {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function"]
     #[doc(alias = "vkCreateScreenSurfaceQNX")]
-    pub unsafe fn create_screen_surface_qnx(
-        &self,
-        create_info: &crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_screen_surface_qnx(&self, create_info: &crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_screen_surface_qnx.expect("`create_screen_surface_qnx` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

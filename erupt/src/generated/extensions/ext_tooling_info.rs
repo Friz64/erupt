@@ -45,8 +45,7 @@ impl ToolPurposeFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_tool_count: *mut u32, p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceToolPropertiesEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_tool_count: *mut u32, p_tool_properties: *mut crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceToolPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceToolPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -62,28 +61,12 @@ pub struct PhysicalDeviceToolPropertiesEXT {
 }
 impl Default for PhysicalDeviceToolPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            name: unsafe { std::mem::zeroed() },
-            version: unsafe { std::mem::zeroed() },
-            purposes: Default::default(),
-            description: unsafe { std::mem::zeroed() },
-            layer: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, version: unsafe { std::mem::zeroed() }, purposes: Default::default(), description: unsafe { std::mem::zeroed() }, layer: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceToolPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceToolPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
-            .field("version", unsafe { &std::ffi::CStr::from_ptr(self.version.as_ptr()) })
-            .field("purposes", &self.purposes)
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .field("layer", unsafe { &std::ffi::CStr::from_ptr(self.layer.as_ptr()) })
-            .finish()
+        f.debug_struct("PhysicalDeviceToolPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) }).field("version", unsafe { &std::ffi::CStr::from_ptr(self.version.as_ptr()) }).field("purposes", &self.purposes).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).field("layer", unsafe { &std::ffi::CStr::from_ptr(self.layer.as_ptr()) }).finish()
     }
 }
 impl PhysicalDeviceToolPropertiesEXT {

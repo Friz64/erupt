@@ -30,12 +30,7 @@ impl std::fmt::Debug for DirectFBSurfaceCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDirectFBSurfaceEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDirectFBSurfaceEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDirectFBSurfaceEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceDirectFBPresentationSupportEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct DirectFBSurfaceCreateInfoEXT {
 }
 impl Default for DirectFBSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DIRECTFB_SURFACE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            dfb: std::ptr::null_mut(),
-            surface: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DIRECTFB_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), dfb: std::ptr::null_mut(), surface: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DirectFBSurfaceCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DirectFBSurfaceCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("dfb", &self.dfb)
-            .field("surface", &self.surface)
-            .finish()
+        f.debug_struct("DirectFBSurfaceCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("dfb", &self.dfb).field("surface", &self.surface).finish()
     }
 }
 impl DirectFBSurfaceCreateInfoEXT {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDirectFBSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateDirectFBSurfaceEXT")]
-    pub unsafe fn create_direct_fb_surface_ext(
-        &self,
-        create_info: &crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_direct_fb_surface_ext(&self, create_info: &crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_direct_fb_surface_ext.expect("`create_direct_fb_surface_ext` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

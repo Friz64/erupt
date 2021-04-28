@@ -16,22 +16,12 @@ pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
 }
 impl Default for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            subgroup_size_control: Default::default(),
-            compute_full_subgroups: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT, p_next: std::ptr::null_mut(), subgroup_size_control: Default::default(), compute_full_subgroups: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSubgroupSizeControlFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("subgroup_size_control", &(self.subgroup_size_control != 0))
-            .field("compute_full_subgroups", &(self.compute_full_subgroups != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceSubgroupSizeControlFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("subgroup_size_control", &(self.subgroup_size_control != 0)).field("compute_full_subgroups", &(self.compute_full_subgroups != 0)).finish()
     }
 }
 impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
@@ -100,26 +90,12 @@ pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 }
 impl Default for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            min_subgroup_size: Default::default(),
-            max_subgroup_size: Default::default(),
-            max_compute_workgroup_subgroups: Default::default(),
-            required_subgroup_size_stages: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_subgroup_size: Default::default(), max_subgroup_size: Default::default(), max_compute_workgroup_subgroups: Default::default(), required_subgroup_size_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSubgroupSizeControlPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("min_subgroup_size", &self.min_subgroup_size)
-            .field("max_subgroup_size", &self.max_subgroup_size)
-            .field("max_compute_workgroup_subgroups", &self.max_compute_workgroup_subgroups)
-            .field("required_subgroup_size_stages", &self.required_subgroup_size_stages)
-            .finish()
+        f.debug_struct("PhysicalDeviceSubgroupSizeControlPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("min_subgroup_size", &self.min_subgroup_size).field("max_subgroup_size", &self.max_subgroup_size).field("max_compute_workgroup_subgroups", &self.max_compute_workgroup_subgroups).field("required_subgroup_size_stages", &self.required_subgroup_size_stages).finish()
     }
 }
 impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
@@ -195,20 +171,12 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 }
 impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT,
-            p_next: std::ptr::null_mut(),
-            required_subgroup_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT, p_next: std::ptr::null_mut(), required_subgroup_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("required_subgroup_size", &self.required_subgroup_size)
-            .finish()
+        f.debug_struct("PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("required_subgroup_size", &self.required_subgroup_size).finish()
     }
 }
 impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {

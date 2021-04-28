@@ -16,22 +16,12 @@ pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
 }
 impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            shader_sm_count: Default::default(),
-            shader_warps_per_sm: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV, p_next: std::ptr::null_mut(), shader_sm_count: Default::default(), shader_warps_per_sm: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_sm_count", &self.shader_sm_count)
-            .field("shader_warps_per_sm", &self.shader_warps_per_sm)
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_sm_count", &self.shader_sm_count).field("shader_warps_per_sm", &self.shader_warps_per_sm).finish()
     }
 }
 impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
@@ -97,20 +87,12 @@ pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
 }
 impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            shader_sm_builtins: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV, p_next: std::ptr::null_mut(), shader_sm_builtins: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_sm_builtins", &(self.shader_sm_builtins != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_sm_builtins", &(self.shader_sm_builtins != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {

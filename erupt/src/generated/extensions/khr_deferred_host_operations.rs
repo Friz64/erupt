@@ -14,16 +14,10 @@ pub const FN_GET_DEFERRED_OPERATION_MAX_CONCURRENCY_KHR: *const std::os::raw::c_
 pub const FN_GET_DEFERRED_OPERATION_RESULT_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDeferredOperationResultKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DEFERRED_OPERATION_JOIN_KHR: *const std::os::raw::c_char = crate::cstr!("vkDeferredOperationJoinKHR");
-crate::non_dispatchable_handle!(
-    DeferredOperationKHR,
-    DEFERRED_OPERATION_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle",
-    "VkDeferredOperationKHR"
-);
+crate::non_dispatchable_handle!(DeferredOperationKHR, DEFERRED_OPERATION_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle", "VkDeferredOperationKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDeferredOperationKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_deferred_operation: *mut crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDeferredOperationKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_deferred_operation: *mut crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDeferredOperationKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();

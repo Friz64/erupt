@@ -15,20 +15,12 @@ pub struct ImageViewASTCDecodeModeEXT {
 }
 impl Default for ImageViewASTCDecodeModeEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ASTC_DECODE_MODE_EXT,
-            p_next: std::ptr::null(),
-            decode_mode: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ASTC_DECODE_MODE_EXT, p_next: std::ptr::null(), decode_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewASTCDecodeModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageViewASTCDecodeModeEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("decode_mode", &self.decode_mode)
-            .finish()
+        f.debug_struct("ImageViewASTCDecodeModeEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("decode_mode", &self.decode_mode).finish()
     }
 }
 impl ImageViewASTCDecodeModeEXT {
@@ -89,20 +81,12 @@ pub struct PhysicalDeviceASTCDecodeFeaturesEXT {
 }
 impl Default for PhysicalDeviceASTCDecodeFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            decode_mode_shared_exponent: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT, p_next: std::ptr::null_mut(), decode_mode_shared_exponent: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceASTCDecodeFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceASTCDecodeFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("decode_mode_shared_exponent", &(self.decode_mode_shared_exponent != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceASTCDecodeFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("decode_mode_shared_exponent", &(self.decode_mode_shared_exponent != 0)).finish()
     }
 }
 impl PhysicalDeviceASTCDecodeFeaturesEXT {

@@ -8,8 +8,7 @@ pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetHdrMetadataEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSetHdrMetadataEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR, p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT) -> ();
+pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR, p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Structure"]
 #[doc(alias = "VkXYColorEXT")]
 #[derive(Copy, Clone)]
@@ -98,34 +97,12 @@ pub struct HdrMetadataEXT {
 }
 impl Default for HdrMetadataEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::HDR_METADATA_EXT,
-            p_next: std::ptr::null(),
-            display_primary_red: Default::default(),
-            display_primary_green: Default::default(),
-            display_primary_blue: Default::default(),
-            white_point: Default::default(),
-            max_luminance: Default::default(),
-            min_luminance: Default::default(),
-            max_content_light_level: Default::default(),
-            max_frame_average_light_level: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::HDR_METADATA_EXT, p_next: std::ptr::null(), display_primary_red: Default::default(), display_primary_green: Default::default(), display_primary_blue: Default::default(), white_point: Default::default(), max_luminance: Default::default(), min_luminance: Default::default(), max_content_light_level: Default::default(), max_frame_average_light_level: Default::default() }
     }
 }
 impl std::fmt::Debug for HdrMetadataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("HdrMetadataEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("display_primary_red", &self.display_primary_red)
-            .field("display_primary_green", &self.display_primary_green)
-            .field("display_primary_blue", &self.display_primary_blue)
-            .field("white_point", &self.white_point)
-            .field("max_luminance", &self.max_luminance)
-            .field("min_luminance", &self.min_luminance)
-            .field("max_content_light_level", &self.max_content_light_level)
-            .field("max_frame_average_light_level", &self.max_frame_average_light_level)
-            .finish()
+        f.debug_struct("HdrMetadataEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("display_primary_red", &self.display_primary_red).field("display_primary_green", &self.display_primary_green).field("display_primary_blue", &self.display_primary_blue).field("white_point", &self.white_point).field("max_luminance", &self.max_luminance).field("min_luminance", &self.min_luminance).field("max_content_light_level", &self.max_content_light_level).field("max_frame_average_light_level", &self.max_frame_average_light_level).finish()
     }
 }
 impl HdrMetadataEXT {

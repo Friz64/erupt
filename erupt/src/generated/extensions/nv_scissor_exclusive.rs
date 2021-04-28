@@ -20,20 +20,12 @@ pub struct PhysicalDeviceExclusiveScissorFeaturesNV {
 }
 impl Default for PhysicalDeviceExclusiveScissorFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            exclusive_scissor: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV, p_next: std::ptr::null_mut(), exclusive_scissor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExclusiveScissorFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExclusiveScissorFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("exclusive_scissor", &(self.exclusive_scissor != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceExclusiveScissorFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("exclusive_scissor", &(self.exclusive_scissor != 0)).finish()
     }
 }
 impl PhysicalDeviceExclusiveScissorFeaturesNV {
@@ -95,22 +87,12 @@ pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
 }
 impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            exclusive_scissor_count: Default::default(),
-            p_exclusive_scissors: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), exclusive_scissor_count: Default::default(), p_exclusive_scissors: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportExclusiveScissorStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("exclusive_scissor_count", &self.exclusive_scissor_count)
-            .field("p_exclusive_scissors", &self.p_exclusive_scissors)
-            .finish()
+        f.debug_struct("PipelineViewportExclusiveScissorStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("exclusive_scissor_count", &self.exclusive_scissor_count).field("p_exclusive_scissors", &self.p_exclusive_scissors).finish()
     }
 }
 impl PipelineViewportExclusiveScissorStateCreateInfoNV {

@@ -15,20 +15,12 @@ pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
 }
 impl Default for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            fragment_shader_barycentric: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shader_barycentric: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShaderBarycentricFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_shader_barycentric", &(self.fragment_shader_barycentric != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShaderBarycentricFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_shader_barycentric", &(self.fragment_shader_barycentric != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {

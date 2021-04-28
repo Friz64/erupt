@@ -37,19 +37,10 @@ impl FullScreenExclusiveEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-    p_present_mode_count: *mut u32,
-    p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, p_present_mode_count: *mut u32, p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-    p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetDeviceGroupSurfacePresentModes2EXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireFullScreenExclusiveModeEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
@@ -67,20 +58,12 @@ pub struct SurfaceFullScreenExclusiveInfoEXT {
 }
 impl Default for SurfaceFullScreenExclusiveInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT,
-            p_next: std::ptr::null_mut(),
-            full_screen_exclusive: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT, p_next: std::ptr::null_mut(), full_screen_exclusive: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceFullScreenExclusiveInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("full_screen_exclusive", &self.full_screen_exclusive)
-            .finish()
+        f.debug_struct("SurfaceFullScreenExclusiveInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("full_screen_exclusive", &self.full_screen_exclusive).finish()
     }
 }
 impl SurfaceFullScreenExclusiveInfoEXT {
@@ -141,20 +124,12 @@ pub struct SurfaceFullScreenExclusiveWin32InfoEXT {
 }
 impl Default for SurfaceFullScreenExclusiveWin32InfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT,
-            p_next: std::ptr::null(),
-            hmonitor: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT, p_next: std::ptr::null(), hmonitor: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveWin32InfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceFullScreenExclusiveWin32InfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("hmonitor", &self.hmonitor)
-            .finish()
+        f.debug_struct("SurfaceFullScreenExclusiveWin32InfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("hmonitor", &self.hmonitor).finish()
     }
 }
 impl SurfaceFullScreenExclusiveWin32InfoEXT {
@@ -215,20 +190,12 @@ pub struct SurfaceCapabilitiesFullScreenExclusiveEXT {
 }
 impl Default for SurfaceCapabilitiesFullScreenExclusiveEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT,
-            p_next: std::ptr::null_mut(),
-            full_screen_exclusive_supported: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT, p_next: std::ptr::null_mut(), full_screen_exclusive_supported: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilitiesFullScreenExclusiveEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceCapabilitiesFullScreenExclusiveEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("full_screen_exclusive_supported", &(self.full_screen_exclusive_supported != 0))
-            .finish()
+        f.debug_struct("SurfaceCapabilitiesFullScreenExclusiveEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("full_screen_exclusive_supported", &(self.full_screen_exclusive_supported != 0)).finish()
     }
 }
 impl SurfaceCapabilitiesFullScreenExclusiveEXT {
@@ -283,12 +250,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModes2EXT")]
-    pub unsafe fn get_physical_device_surface_present_modes2_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-        present_mode_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
+    pub unsafe fn get_physical_device_surface_present_modes2_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
         let _function = self.get_physical_device_surface_present_modes2_ext.expect("`get_physical_device_surface_present_modes2_ext` is not loaded");
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
@@ -308,11 +270,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModes2EXT")]
-    pub unsafe fn get_device_group_surface_present_modes2_ext(
-        &self,
-        surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-        modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_device_group_surface_present_modes2_ext(&self, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::utils::VulkanResult<()> {
         let _function = self.get_device_group_surface_present_modes2_ext.expect("`get_device_group_surface_present_modes2_ext` is not loaded");
         let _return = _function(self.handle, surface_info as _, modes as _);
         crate::utils::VulkanResult::new(_return, ())

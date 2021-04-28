@@ -15,20 +15,12 @@ pub struct PhysicalDeviceImageRobustnessFeaturesEXT {
 }
 impl Default for PhysicalDeviceImageRobustnessFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            robust_image_access: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT, p_next: std::ptr::null_mut(), robust_image_access: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageRobustnessFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceImageRobustnessFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("robust_image_access", &(self.robust_image_access != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceImageRobustnessFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("robust_image_access", &(self.robust_image_access != 0)).finish()
     }
 }
 impl PhysicalDeviceImageRobustnessFeaturesEXT {

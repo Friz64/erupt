@@ -18,15 +18,7 @@ pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(command_buffer: cr
 pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    buffer: crate::vk1_0::Buffer,
-    offset: crate::vk1_0::DeviceSize,
-    count_buffer: crate::vk1_0::Buffer,
-    count_buffer_offset: crate::vk1_0::DeviceSize,
-    max_draw_count: u32,
-    stride: u32,
-) -> ();
+pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMeshShaderFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -39,22 +31,12 @@ pub struct PhysicalDeviceMeshShaderFeaturesNV {
 }
 impl Default for PhysicalDeviceMeshShaderFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            task_shader: Default::default(),
-            mesh_shader: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV, p_next: std::ptr::null_mut(), task_shader: Default::default(), mesh_shader: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMeshShaderFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("task_shader", &(self.task_shader != 0))
-            .field("mesh_shader", &(self.mesh_shader != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceMeshShaderFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("task_shader", &(self.task_shader != 0)).field("mesh_shader", &(self.mesh_shader != 0)).finish()
     }
 }
 impl PhysicalDeviceMeshShaderFeaturesNV {
@@ -132,44 +114,12 @@ pub struct PhysicalDeviceMeshShaderPropertiesNV {
 }
 impl Default for PhysicalDeviceMeshShaderPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            max_draw_mesh_tasks_count: Default::default(),
-            max_task_work_group_invocations: Default::default(),
-            max_task_work_group_size: unsafe { std::mem::zeroed() },
-            max_task_total_memory_size: Default::default(),
-            max_task_output_count: Default::default(),
-            max_mesh_work_group_invocations: Default::default(),
-            max_mesh_work_group_size: unsafe { std::mem::zeroed() },
-            max_mesh_total_memory_size: Default::default(),
-            max_mesh_output_vertices: Default::default(),
-            max_mesh_output_primitives: Default::default(),
-            max_mesh_multiview_view_count: Default::default(),
-            mesh_output_per_vertex_granularity: Default::default(),
-            mesh_output_per_primitive_granularity: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_draw_mesh_tasks_count: Default::default(), max_task_work_group_invocations: Default::default(), max_task_work_group_size: unsafe { std::mem::zeroed() }, max_task_total_memory_size: Default::default(), max_task_output_count: Default::default(), max_mesh_work_group_invocations: Default::default(), max_mesh_work_group_size: unsafe { std::mem::zeroed() }, max_mesh_total_memory_size: Default::default(), max_mesh_output_vertices: Default::default(), max_mesh_output_primitives: Default::default(), max_mesh_multiview_view_count: Default::default(), mesh_output_per_vertex_granularity: Default::default(), mesh_output_per_primitive_granularity: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMeshShaderPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_draw_mesh_tasks_count", &self.max_draw_mesh_tasks_count)
-            .field("max_task_work_group_invocations", &self.max_task_work_group_invocations)
-            .field("max_task_work_group_size", &self.max_task_work_group_size)
-            .field("max_task_total_memory_size", &self.max_task_total_memory_size)
-            .field("max_task_output_count", &self.max_task_output_count)
-            .field("max_mesh_work_group_invocations", &self.max_mesh_work_group_invocations)
-            .field("max_mesh_work_group_size", &self.max_mesh_work_group_size)
-            .field("max_mesh_total_memory_size", &self.max_mesh_total_memory_size)
-            .field("max_mesh_output_vertices", &self.max_mesh_output_vertices)
-            .field("max_mesh_output_primitives", &self.max_mesh_output_primitives)
-            .field("max_mesh_multiview_view_count", &self.max_mesh_multiview_view_count)
-            .field("mesh_output_per_vertex_granularity", &self.mesh_output_per_vertex_granularity)
-            .field("mesh_output_per_primitive_granularity", &self.mesh_output_per_primitive_granularity)
-            .finish()
+        f.debug_struct("PhysicalDeviceMeshShaderPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_draw_mesh_tasks_count", &self.max_draw_mesh_tasks_count).field("max_task_work_group_invocations", &self.max_task_work_group_invocations).field("max_task_work_group_size", &self.max_task_work_group_size).field("max_task_total_memory_size", &self.max_task_total_memory_size).field("max_task_output_count", &self.max_task_output_count).field("max_mesh_work_group_invocations", &self.max_mesh_work_group_invocations).field("max_mesh_work_group_size", &self.max_mesh_work_group_size).field("max_mesh_total_memory_size", &self.max_mesh_total_memory_size).field("max_mesh_output_vertices", &self.max_mesh_output_vertices).field("max_mesh_output_primitives", &self.max_mesh_output_primitives).field("max_mesh_multiview_view_count", &self.max_mesh_multiview_view_count).field("mesh_output_per_vertex_granularity", &self.mesh_output_per_vertex_granularity).field("mesh_output_per_primitive_granularity", &self.mesh_output_per_primitive_granularity).finish()
     }
 }
 impl PhysicalDeviceMeshShaderPropertiesNV {
@@ -289,10 +239,7 @@ pub struct DrawMeshTasksIndirectCommandNV {
 }
 impl Default for DrawMeshTasksIndirectCommandNV {
     fn default() -> Self {
-        Self {
-            task_count: Default::default(),
-            first_task: Default::default(),
-        }
+        Self { task_count: Default::default(), first_task: Default::default() }
     }
 }
 impl std::fmt::Debug for DrawMeshTasksIndirectCommandNV {
@@ -373,16 +320,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksIndirectCountNV")]
-    pub unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        buffer: crate::vk1_0::Buffer,
-        offset: crate::vk1_0::DeviceSize,
-        count_buffer: crate::vk1_0::Buffer,
-        count_buffer_offset: crate::vk1_0::DeviceSize,
-        max_draw_count: u32,
-        stride: u32,
-    ) -> () {
+    pub unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
         let _function = self.cmd_draw_mesh_tasks_indirect_count_nv.expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()

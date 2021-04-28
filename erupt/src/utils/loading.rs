@@ -90,10 +90,6 @@ impl DefaultEntryLoader {
             library.get(bytes).ok().map(|symbol| *symbol)
         };
 
-        Ok(unsafe {
-            EntryEnabled::new(&mut library, symbol)
-                .and_then(|entry_enabled| EntryLoader::custom(library, symbol, entry_enabled))
-                .map_err(EntryLoaderError::EntryLoad)?
-        })
+        Ok(unsafe { EntryEnabled::new(&mut library, symbol).and_then(|entry_enabled| EntryLoader::custom(library, symbol, entry_enabled)).map_err(EntryLoaderError::EntryLoad)? })
     }
 }

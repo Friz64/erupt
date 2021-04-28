@@ -15,20 +15,12 @@ pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            fragment_density_map_deferred: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map_deferred: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentDensityMap2FeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_density_map_deferred", &(self.fragment_density_map_deferred != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentDensityMap2FeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_density_map_deferred", &(self.fragment_density_map_deferred != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentDensityMap2FeaturesEXT {
@@ -92,26 +84,12 @@ pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            subsampled_loads: Default::default(),
-            subsampled_coarse_reconstruction_early_access: Default::default(),
-            max_subsampled_array_layers: Default::default(),
-            max_descriptor_set_subsampled_samplers: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT, p_next: std::ptr::null_mut(), subsampled_loads: Default::default(), subsampled_coarse_reconstruction_early_access: Default::default(), max_subsampled_array_layers: Default::default(), max_descriptor_set_subsampled_samplers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentDensityMap2PropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("subsampled_loads", &(self.subsampled_loads != 0))
-            .field("subsampled_coarse_reconstruction_early_access", &(self.subsampled_coarse_reconstruction_early_access != 0))
-            .field("max_subsampled_array_layers", &self.max_subsampled_array_layers)
-            .field("max_descriptor_set_subsampled_samplers", &self.max_descriptor_set_subsampled_samplers)
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentDensityMap2PropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("subsampled_loads", &(self.subsampled_loads != 0)).field("subsampled_coarse_reconstruction_early_access", &(self.subsampled_coarse_reconstruction_early_access != 0)).field("max_subsampled_array_layers", &self.max_subsampled_array_layers).field("max_descriptor_set_subsampled_samplers", &self.max_descriptor_set_subsampled_samplers).finish()
     }
 }
 impl PhysicalDeviceFragmentDensityMap2PropertiesEXT {

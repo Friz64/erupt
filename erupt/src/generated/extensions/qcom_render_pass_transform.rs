@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION")]
-pub const QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION: u32 = 1;
+pub const QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME")]
 pub const QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_QCOM_render_pass_transform");
@@ -15,20 +15,12 @@ pub struct RenderPassTransformBeginInfoQCOM {
 }
 impl Default for RenderPassTransformBeginInfoQCOM {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM,
-            p_next: std::ptr::null_mut(),
-            transform: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM, p_next: std::ptr::null_mut(), transform: Default::default() }
     }
 }
 impl std::fmt::Debug for RenderPassTransformBeginInfoQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassTransformBeginInfoQCOM")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("transform", &self.transform)
-            .finish()
+        f.debug_struct("RenderPassTransformBeginInfoQCOM").field("s_type", &self.s_type).field("p_next", &self.p_next).field("transform", &self.transform).finish()
     }
 }
 impl RenderPassTransformBeginInfoQCOM {
@@ -90,22 +82,12 @@ pub struct CommandBufferInheritanceRenderPassTransformInfoQCOM {
 }
 impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM,
-            p_next: std::ptr::null_mut(),
-            transform: Default::default(),
-            render_area: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM, p_next: std::ptr::null_mut(), transform: Default::default(), render_area: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandBufferInheritanceRenderPassTransformInfoQCOM")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("transform", &self.transform)
-            .field("render_area", &self.render_area)
-            .finish()
+        f.debug_struct("CommandBufferInheritanceRenderPassTransformInfoQCOM").field("s_type", &self.s_type).field("p_next", &self.p_next).field("transform", &self.transform).field("render_area", &self.render_area).finish()
     }
 }
 impl CommandBufferInheritanceRenderPassTransformInfoQCOM {

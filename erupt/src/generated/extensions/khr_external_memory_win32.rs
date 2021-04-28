@@ -10,16 +10,10 @@ pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::c
 pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandleKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    handle: *mut std::ffi::c_void,
-    p_memory_win32_handle_properties: *mut crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, handle: *mut std::ffi::c_void, p_memory_win32_handle_properties: *mut crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -33,24 +27,12 @@ pub struct ImportMemoryWin32HandleInfoKHR {
 }
 impl Default for ImportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-            handle: std::ptr::null_mut(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportMemoryWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .field("handle", &self.handle)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ImportMemoryWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).field("handle", &self.handle).field("name", &self.name).finish()
     }
 }
 impl ImportMemoryWin32HandleInfoKHR {
@@ -123,24 +105,12 @@ pub struct ExportMemoryWin32HandleInfoKHR {
 }
 impl Default for ExportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            p_attributes: std::ptr::null(),
-            dw_access: Default::default(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportMemoryWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_attributes", &self.p_attributes)
-            .field("dw_access", &self.dw_access)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ExportMemoryWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_attributes", &self.p_attributes).field("dw_access", &self.dw_access).field("name", &self.name).finish()
     }
 }
 impl ExportMemoryWin32HandleInfoKHR {
@@ -211,20 +181,12 @@ pub struct MemoryWin32HandlePropertiesKHR {
 }
 impl Default for MemoryWin32HandlePropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_WIN32_HANDLE_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            memory_type_bits: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_WIN32_HANDLE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryWin32HandlePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryWin32HandlePropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_type_bits", &self.memory_type_bits)
-            .finish()
+        f.debug_struct("MemoryWin32HandlePropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_type_bits", &self.memory_type_bits).finish()
     }
 }
 impl MemoryWin32HandlePropertiesKHR {
@@ -286,22 +248,12 @@ pub struct MemoryGetWin32HandleInfoKHR {
 }
 impl Default for MemoryGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_GET_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            memory: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryGetWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory", &self.memory)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("MemoryGetWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory", &self.memory).field("handle_type", &self.handle_type).finish()
     }
 }
 impl MemoryGetWin32HandleInfoKHR {
@@ -369,12 +321,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandlePropertiesKHR")]
-    pub unsafe fn get_memory_win32_handle_properties_khr(
-        &self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-        handle: *mut std::ffi::c_void,
-        memory_win32_handle_properties: Option<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR> {
+    pub unsafe fn get_memory_win32_handle_properties_khr(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, handle: *mut std::ffi::c_void, memory_win32_handle_properties: Option<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR> {
         let _function = self.get_memory_win32_handle_properties_khr.expect("`get_memory_win32_handle_properties_khr` is not loaded");
         let mut memory_win32_handle_properties = match memory_win32_handle_properties {
             Some(v) => v,

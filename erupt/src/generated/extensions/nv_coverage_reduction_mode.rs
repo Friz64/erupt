@@ -47,8 +47,7 @@ impl CoverageReductionModeNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_combination_count: *mut u32, p_combinations: *mut crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_combination_count: *mut u32, p_combinations: *mut crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCoverageReductionModeFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -60,20 +59,12 @@ pub struct PhysicalDeviceCoverageReductionModeFeaturesNV {
 }
 impl Default for PhysicalDeviceCoverageReductionModeFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            coverage_reduction_mode: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCoverageReductionModeFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCoverageReductionModeFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("coverage_reduction_mode", &(self.coverage_reduction_mode != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceCoverageReductionModeFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("coverage_reduction_mode", &(self.coverage_reduction_mode != 0)).finish()
     }
 }
 impl PhysicalDeviceCoverageReductionModeFeaturesNV {
@@ -135,22 +126,12 @@ pub struct PipelineCoverageReductionStateCreateInfoNV {
 }
 impl Default for PipelineCoverageReductionStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            coverage_reduction_mode: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_reduction_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageReductionStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCoverageReductionStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("coverage_reduction_mode", &self.coverage_reduction_mode)
-            .finish()
+        f.debug_struct("PipelineCoverageReductionStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("coverage_reduction_mode", &self.coverage_reduction_mode).finish()
     }
 }
 impl PipelineCoverageReductionStateCreateInfoNV {
@@ -219,26 +200,12 @@ pub struct FramebufferMixedSamplesCombinationNV {
 }
 impl Default for FramebufferMixedSamplesCombinationNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV,
-            p_next: std::ptr::null_mut(),
-            coverage_reduction_mode: Default::default(),
-            rasterization_samples: Default::default(),
-            depth_stencil_samples: Default::default(),
-            color_samples: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default(), rasterization_samples: Default::default(), depth_stencil_samples: Default::default(), color_samples: Default::default() }
     }
 }
 impl std::fmt::Debug for FramebufferMixedSamplesCombinationNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FramebufferMixedSamplesCombinationNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("coverage_reduction_mode", &self.coverage_reduction_mode)
-            .field("rasterization_samples", &self.rasterization_samples)
-            .field("depth_stencil_samples", &self.depth_stencil_samples)
-            .field("color_samples", &self.color_samples)
-            .finish()
+        f.debug_struct("FramebufferMixedSamplesCombinationNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("coverage_reduction_mode", &self.coverage_reduction_mode).field("rasterization_samples", &self.rasterization_samples).field("depth_stencil_samples", &self.depth_stencil_samples).field("color_samples", &self.color_samples).finish()
     }
 }
 impl FramebufferMixedSamplesCombinationNV {
@@ -308,14 +275,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV")]
-    pub unsafe fn get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        combination_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>> {
-        let _function = self
-            .get_physical_device_supported_framebuffer_mixed_samples_combinations_nv
-            .expect("`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` is not loaded");
+    pub unsafe fn get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, combination_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>> {
+        let _function = self.get_physical_device_supported_framebuffer_mixed_samples_combinations_nv.expect("`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` is not loaded");
         let mut combination_count = match combination_count {
             Some(v) => v,
             None => {

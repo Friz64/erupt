@@ -28,26 +28,12 @@ pub struct ImportFenceFdInfoKHR {
 }
 impl Default for ImportFenceFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_FENCE_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            fence: Default::default(),
-            flags: Default::default(),
-            handle_type: Default::default(),
-            fd: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_FENCE_FD_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
     }
 }
 impl std::fmt::Debug for ImportFenceFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportFenceFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fence", &self.fence)
-            .field("flags", &self.flags)
-            .field("handle_type", &self.handle_type)
-            .field("fd", &self.fd)
-            .finish()
+        f.debug_struct("ImportFenceFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fence", &self.fence).field("flags", &self.flags).field("handle_type", &self.handle_type).field("fd", &self.fd).finish()
     }
 }
 impl ImportFenceFdInfoKHR {
@@ -124,22 +110,12 @@ pub struct FenceGetFdInfoKHR {
 }
 impl Default for FenceGetFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FENCE_GET_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            fence: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FENCE_GET_FD_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for FenceGetFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FenceGetFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fence", &self.fence)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("FenceGetFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fence", &self.fence).field("handle_type", &self.handle_type).finish()
     }
 }
 impl FenceGetFdInfoKHR {

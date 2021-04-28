@@ -21,32 +21,12 @@ pub struct Win32KeyedMutexAcquireReleaseInfoKHR {
 }
 impl Default for Win32KeyedMutexAcquireReleaseInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR,
-            p_next: std::ptr::null(),
-            acquire_count: Default::default(),
-            p_acquire_syncs: std::ptr::null(),
-            p_acquire_keys: std::ptr::null(),
-            p_acquire_timeouts: std::ptr::null(),
-            release_count: Default::default(),
-            p_release_syncs: std::ptr::null(),
-            p_release_keys: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR, p_next: std::ptr::null(), acquire_count: Default::default(), p_acquire_syncs: std::ptr::null(), p_acquire_keys: std::ptr::null(), p_acquire_timeouts: std::ptr::null(), release_count: Default::default(), p_release_syncs: std::ptr::null(), p_release_keys: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for Win32KeyedMutexAcquireReleaseInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("Win32KeyedMutexAcquireReleaseInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("acquire_count", &self.acquire_count)
-            .field("p_acquire_syncs", &self.p_acquire_syncs)
-            .field("p_acquire_keys", &self.p_acquire_keys)
-            .field("p_acquire_timeouts", &self.p_acquire_timeouts)
-            .field("release_count", &self.release_count)
-            .field("p_release_syncs", &self.p_release_syncs)
-            .field("p_release_keys", &self.p_release_keys)
-            .finish()
+        f.debug_struct("Win32KeyedMutexAcquireReleaseInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("acquire_count", &self.acquire_count).field("p_acquire_syncs", &self.p_acquire_syncs).field("p_acquire_keys", &self.p_acquire_keys).field("p_acquire_timeouts", &self.p_acquire_timeouts).field("release_count", &self.release_count).field("p_release_syncs", &self.p_release_syncs).field("p_release_keys", &self.p_release_keys).finish()
     }
 }
 impl Win32KeyedMutexAcquireReleaseInfoKHR {

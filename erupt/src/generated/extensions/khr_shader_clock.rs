@@ -16,22 +16,12 @@ pub struct PhysicalDeviceShaderClockFeaturesKHR {
 }
 impl Default for PhysicalDeviceShaderClockFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            shader_subgroup_clock: Default::default(),
-            shader_device_clock: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_subgroup_clock: Default::default(), shader_device_clock: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderClockFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderClockFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_subgroup_clock", &(self.shader_subgroup_clock != 0))
-            .field("shader_device_clock", &(self.shader_device_clock != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderClockFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_subgroup_clock", &(self.shader_subgroup_clock != 0)).field("shader_device_clock", &(self.shader_device_clock != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderClockFeaturesKHR {

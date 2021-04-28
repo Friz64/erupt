@@ -72,26 +72,12 @@ pub struct ValidationFeaturesEXT {
 }
 impl Default for ValidationFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::VALIDATION_FEATURES_EXT,
-            p_next: std::ptr::null(),
-            enabled_validation_feature_count: Default::default(),
-            p_enabled_validation_features: std::ptr::null(),
-            disabled_validation_feature_count: Default::default(),
-            p_disabled_validation_features: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::VALIDATION_FEATURES_EXT, p_next: std::ptr::null(), enabled_validation_feature_count: Default::default(), p_enabled_validation_features: std::ptr::null(), disabled_validation_feature_count: Default::default(), p_disabled_validation_features: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ValidationFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ValidationFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("enabled_validation_feature_count", &self.enabled_validation_feature_count)
-            .field("p_enabled_validation_features", &self.p_enabled_validation_features)
-            .field("disabled_validation_feature_count", &self.disabled_validation_feature_count)
-            .field("p_disabled_validation_features", &self.p_disabled_validation_features)
-            .finish()
+        f.debug_struct("ValidationFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("enabled_validation_feature_count", &self.enabled_validation_feature_count).field("p_enabled_validation_features", &self.p_enabled_validation_features).field("disabled_validation_feature_count", &self.disabled_validation_feature_count).field("p_disabled_validation_features", &self.p_disabled_validation_features).finish()
     }
 }
 impl ValidationFeaturesEXT {

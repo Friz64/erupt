@@ -43,10 +43,7 @@ pub struct PipelineCreationFeedbackEXT {
 }
 impl Default for PipelineCreationFeedbackEXT {
     fn default() -> Self {
-        Self {
-            flags: Default::default(),
-            duration: Default::default(),
-        }
+        Self { flags: Default::default(), duration: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCreationFeedbackEXT {
@@ -119,24 +116,12 @@ pub struct PipelineCreationFeedbackCreateInfoEXT {
 }
 impl Default for PipelineCreationFeedbackCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            p_pipeline_creation_feedback: std::ptr::null_mut(),
-            pipeline_stage_creation_feedback_count: Default::default(),
-            p_pipeline_stage_creation_feedbacks: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT, p_next: std::ptr::null(), p_pipeline_creation_feedback: std::ptr::null_mut(), pipeline_stage_creation_feedback_count: Default::default(), p_pipeline_stage_creation_feedbacks: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PipelineCreationFeedbackCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCreationFeedbackCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_pipeline_creation_feedback", &self.p_pipeline_creation_feedback)
-            .field("pipeline_stage_creation_feedback_count", &self.pipeline_stage_creation_feedback_count)
-            .field("p_pipeline_stage_creation_feedbacks", &self.p_pipeline_stage_creation_feedbacks)
-            .finish()
+        f.debug_struct("PipelineCreationFeedbackCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_pipeline_creation_feedback", &self.p_pipeline_creation_feedback).field("pipeline_stage_creation_feedback_count", &self.pipeline_stage_creation_feedback_count).field("p_pipeline_stage_creation_feedbacks", &self.p_pipeline_stage_creation_feedbacks).finish()
     }
 }
 impl PipelineCreationFeedbackCreateInfoEXT {

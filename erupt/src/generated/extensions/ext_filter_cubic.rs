@@ -15,20 +15,12 @@ pub struct PhysicalDeviceImageViewImageFormatInfoEXT {
 }
 impl Default for PhysicalDeviceImageViewImageFormatInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT,
-            p_next: std::ptr::null_mut(),
-            image_view_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT, p_next: std::ptr::null_mut(), image_view_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageViewImageFormatInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceImageViewImageFormatInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image_view_type", &self.image_view_type)
-            .finish()
+        f.debug_struct("PhysicalDeviceImageViewImageFormatInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image_view_type", &self.image_view_type).finish()
     }
 }
 impl PhysicalDeviceImageViewImageFormatInfoEXT {
@@ -90,22 +82,12 @@ pub struct FilterCubicImageViewImageFormatPropertiesEXT {
 }
 impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            filter_cubic: Default::default(),
-            filter_cubic_minmax: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT, p_next: std::ptr::null_mut(), filter_cubic: Default::default(), filter_cubic_minmax: Default::default() }
     }
 }
 impl std::fmt::Debug for FilterCubicImageViewImageFormatPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FilterCubicImageViewImageFormatPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("filter_cubic", &(self.filter_cubic != 0))
-            .field("filter_cubic_minmax", &(self.filter_cubic_minmax != 0))
-            .finish()
+        f.debug_struct("FilterCubicImageViewImageFormatPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("filter_cubic", &(self.filter_cubic != 0)).field("filter_cubic_minmax", &(self.filter_cubic_minmax != 0)).finish()
     }
 }
 impl FilterCubicImageViewImageFormatPropertiesEXT {

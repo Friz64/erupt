@@ -17,6 +17,7 @@ use std::{
     error::Error,
     fmt::{self, Debug, Display},
     fs,
+    path::Path,
 };
 
 #[derive(Debug)]
@@ -41,6 +42,7 @@ pub struct Source {
     pub basetypes: Vec<Basetype>,
     pub enums: Vec<Enum>,
     pub latest_vulkan_version: (u32, u32),
+    pub header_version: u32,
 }
 
 impl Source {
@@ -75,22 +77,45 @@ impl Source {
                     .and_then(|_| ty.children().filter_map(|n| n.text()).last())
             })
             .expect("Can't find header version element")
-            .trim();
+            .trim()
+            .parse()
+            .expect("Failed to parse Header version");
         log::info!("Generating against header version {}", header_version);
 
-        let mut header = HeaderSource::new(registry);
-        let constants = header.take_constants();
+        let headers_include = Path::new("generator/Vulkan-Headers/include");
+        let include_vulkan = headers_include.join("vulkan");
+        let other_includes_headers: Vec<_> = fs::read_dir(headers_include)
+            .expect("Failed to read include dir")
+            .map(|entry| entry.expect("Failed to read include dir entry"))
+            .filter(|entry| entry.file_type().unwrap().is_dir())
+            .map(|entry| entry.path())
+            .filter(|path| path != &include_vulkan)
+            .flat_map(|include| {
+                fs::read_dir(include)
+                    .expect("Failed to read inner include dir")
+                    .map(|entry| entry.unwrap().path())
+            })
+            .collect();
+
+        let mut header = HeaderSource::new(
+            registry,
+            &headers_include,
+            &include_vulkan,
+            &other_includes_headers,
+        );
+
         let mut source = Source {
+            constants: header.take_constants(),
             header,
             aliases: Vec::new(),
             structures: Vec::new(),
             functions: Vec::new(),
             func_pointers: Vec::new(),
             handles: Vec::new(),
-            constants,
             basetypes: Vec::new(),
             enums: Vec::new(),
             latest_vulkan_version,
+            header_version,
         };
 
         for registry_child in registry.children().filter(|n| n.is_element()) {
@@ -104,7 +129,9 @@ impl Source {
                                 Some("funcpointer") => source.collect_funcpointer(element),
                                 Some("basetype") => source.collect_basetype(element),
                                 Some("bitmask") | Some("enum") => source.collect_enum_type(element),
-                                _ => (),
+                                _ => {
+                                    source.assign_external_origin(element, &other_includes_headers);
+                                }
                             }
                         }
                     }

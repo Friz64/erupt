@@ -63,20 +63,12 @@ pub struct PhysicalDeviceDeviceMemoryReportFeaturesEXT {
 }
 impl Default for PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            device_memory_report: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT, p_next: std::ptr::null_mut(), device_memory_report: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDeviceMemoryReportFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_memory_report", &(self.device_memory_report != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceDeviceMemoryReportFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_memory_report", &(self.device_memory_report != 0)).finish()
     }
 }
 impl PhysicalDeviceDeviceMemoryReportFeaturesEXT {
@@ -139,24 +131,12 @@ pub struct DeviceDeviceMemoryReportCreateInfoEXT {
 }
 impl Default for DeviceDeviceMemoryReportCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            pfn_user_callback: Default::default(),
-            p_user_data: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), pfn_user_callback: Default::default(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DeviceDeviceMemoryReportCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceDeviceMemoryReportCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("pfn_user_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_user_callback) })
-            .field("p_user_data", &self.p_user_data)
-            .finish()
+        f.debug_struct("DeviceDeviceMemoryReportCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("pfn_user_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_user_callback) }).field("p_user_data", &self.p_user_data).finish()
     }
 }
 impl DeviceDeviceMemoryReportCreateInfoEXT {
@@ -233,32 +213,12 @@ pub struct DeviceMemoryReportCallbackDataEXT {
 }
 impl Default for DeviceMemoryReportCallbackDataEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            _type: Default::default(),
-            memory_object_id: Default::default(),
-            size: Default::default(),
-            object_type: Default::default(),
-            object_handle: Default::default(),
-            heap_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT, p_next: std::ptr::null(), flags: Default::default(), _type: Default::default(), memory_object_id: Default::default(), size: Default::default(), object_type: Default::default(), object_handle: Default::default(), heap_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceMemoryReportCallbackDataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceMemoryReportCallbackDataEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("_type", &self._type)
-            .field("memory_object_id", &self.memory_object_id)
-            .field("size", &self.size)
-            .field("object_type", &self.object_type)
-            .field("object_handle", &self.object_handle)
-            .field("heap_index", &self.heap_index)
-            .finish()
+        f.debug_struct("DeviceMemoryReportCallbackDataEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("_type", &self._type).field("memory_object_id", &self.memory_object_id).field("size", &self.size).field("object_type", &self.object_type).field("object_handle", &self.object_handle).field("heap_index", &self.heap_index).finish()
     }
 }
 impl DeviceMemoryReportCallbackDataEXT {

@@ -26,12 +26,7 @@ pub const FN_CREATE_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char = cra
 pub const FN_DESTROY_DEBUG_UTILS_MESSENGER_EXT: *const std::os::raw::c_char = crate::cstr!("vkDestroyDebugUtilsMessengerEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_SUBMIT_DEBUG_UTILS_MESSAGE_EXT: *const std::os::raw::c_char = crate::cstr!("vkSubmitDebugUtilsMessageEXT");
-crate::non_dispatchable_handle!(
-    DebugUtilsMessengerEXT,
-    DEBUG_UTILS_MESSENGER_EXT,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle",
-    "VkDebugUtilsMessengerEXT"
-);
+crate::non_dispatchable_handle!(DebugUtilsMessengerEXT, DEBUG_UTILS_MESSENGER_EXT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerEXT.html) · Non-dispatchable Handle", "VkDebugUtilsMessengerEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessengerCreateFlagsEXT.html) · Bitmask of [`DebugUtilsMessengerCreateFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessengerCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessengerCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DebugUtilsMessengerCreateFlagsEXT`]"]
 #[doc(alias = "VkDebugUtilsMessengerCreateFlagBitsEXT")]
@@ -158,31 +153,16 @@ pub type PFN_vkCmdEndDebugUtilsLabelEXT = unsafe extern "system" fn(command_buff
 pub type PFN_vkCmdInsertDebugUtilsLabelEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_label_info: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_messenger: *mut crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDebugUtilsMessengerEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_messenger: *mut crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDebugUtilsMessengerEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT,
-    message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
-    p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
-) -> ();
+pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugUtilsMessengerCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(
-    message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT,
-    message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
-    p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
-    p_user_data: *mut std::ffi::c_void,
-) -> crate::vk1_0::Bool32;
+pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
 #[derive(Copy, Clone)]
@@ -196,24 +176,12 @@ pub struct DebugUtilsObjectNameInfoEXT {
 }
 impl Default for DebugUtilsObjectNameInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_NAME_INFO_EXT,
-            p_next: std::ptr::null(),
-            object_type: Default::default(),
-            object_handle: Default::default(),
-            p_object_name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), p_object_name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsObjectNameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugUtilsObjectNameInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("object_type", &self.object_type)
-            .field("object_handle", &self.object_handle)
-            .field("p_object_name", &self.p_object_name)
-            .finish()
+        f.debug_struct("DebugUtilsObjectNameInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("object_type", &self.object_type).field("object_handle", &self.object_handle).field("p_object_name", &self.p_object_name).finish()
     }
 }
 impl DebugUtilsObjectNameInfoEXT {
@@ -288,28 +256,12 @@ pub struct DebugUtilsObjectTagInfoEXT {
 }
 impl Default for DebugUtilsObjectTagInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_TAG_INFO_EXT,
-            p_next: std::ptr::null(),
-            object_type: Default::default(),
-            object_handle: Default::default(),
-            tag_name: Default::default(),
-            tag_size: Default::default(),
-            p_tag: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_TAG_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsObjectTagInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugUtilsObjectTagInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("object_type", &self.object_type)
-            .field("object_handle", &self.object_handle)
-            .field("tag_name", &self.tag_name)
-            .field("tag_size", &self.tag_size)
-            .field("p_tag", &self.p_tag)
-            .finish()
+        f.debug_struct("DebugUtilsObjectTagInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("object_type", &self.object_type).field("object_handle", &self.object_handle).field("tag_name", &self.tag_name).field("tag_size", &self.tag_size).field("p_tag", &self.p_tag).finish()
     }
 }
 impl DebugUtilsObjectTagInfoEXT {
@@ -391,22 +343,12 @@ pub struct DebugUtilsLabelEXT {
 }
 impl Default for DebugUtilsLabelEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_UTILS_LABEL_EXT,
-            p_next: std::ptr::null(),
-            p_label_name: std::ptr::null(),
-            color: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_LABEL_EXT, p_next: std::ptr::null(), p_label_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for DebugUtilsLabelEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugUtilsLabelEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_label_name", &self.p_label_name)
-            .field("color", &self.color)
-            .finish()
+        f.debug_struct("DebugUtilsLabelEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_label_name", &self.p_label_name).field("color", &self.color).finish()
     }
 }
 impl DebugUtilsLabelEXT {
@@ -476,28 +418,12 @@ pub struct DebugUtilsMessengerCreateInfoEXT {
 }
 impl Default for DebugUtilsMessengerCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            message_severity: Default::default(),
-            message_type: Default::default(),
-            pfn_user_callback: Default::default(),
-            p_user_data: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), message_severity: Default::default(), message_type: Default::default(), pfn_user_callback: Default::default(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DebugUtilsMessengerCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugUtilsMessengerCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("message_severity", &self.message_severity)
-            .field("message_type", &self.message_type)
-            .field("pfn_user_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_user_callback) })
-            .field("p_user_data", &self.p_user_data)
-            .finish()
+        f.debug_struct("DebugUtilsMessengerCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("message_severity", &self.message_severity).field("message_type", &self.message_type).field("pfn_user_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_user_callback) }).field("p_user_data", &self.p_user_data).finish()
     }
 }
 impl DebugUtilsMessengerCreateInfoEXT {
@@ -587,38 +513,12 @@ pub struct DebugUtilsMessengerCallbackDataEXT {
 }
 impl Default for DebugUtilsMessengerCallbackDataEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_message_id_name: std::ptr::null(),
-            message_id_number: Default::default(),
-            p_message: std::ptr::null(),
-            queue_label_count: Default::default(),
-            p_queue_labels: std::ptr::null(),
-            cmd_buf_label_count: Default::default(),
-            p_cmd_buf_labels: std::ptr::null(),
-            object_count: Default::default(),
-            p_objects: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT, p_next: std::ptr::null(), flags: Default::default(), p_message_id_name: std::ptr::null(), message_id_number: Default::default(), p_message: std::ptr::null(), queue_label_count: Default::default(), p_queue_labels: std::ptr::null(), cmd_buf_label_count: Default::default(), p_cmd_buf_labels: std::ptr::null(), object_count: Default::default(), p_objects: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugUtilsMessengerCallbackDataEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_message_id_name", &self.p_message_id_name)
-            .field("message_id_number", &self.message_id_number)
-            .field("p_message", &self.p_message)
-            .field("queue_label_count", &self.queue_label_count)
-            .field("p_queue_labels", &self.p_queue_labels)
-            .field("cmd_buf_label_count", &self.cmd_buf_label_count)
-            .field("p_cmd_buf_labels", &self.p_cmd_buf_labels)
-            .field("object_count", &self.object_count)
-            .field("p_objects", &self.p_objects)
-            .finish()
+        f.debug_struct("DebugUtilsMessengerCallbackDataEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_message_id_name", &self.p_message_id_name).field("message_id_number", &self.message_id_number).field("p_message", &self.p_message).field("queue_label_count", &self.queue_label_count).field("p_queue_labels", &self.p_queue_labels).field("cmd_buf_label_count", &self.cmd_buf_label_count).field("p_cmd_buf_labels", &self.p_cmd_buf_labels).field("object_count", &self.object_count).field("p_objects", &self.p_objects).finish()
     }
 }
 impl DebugUtilsMessengerCallbackDataEXT {
@@ -773,11 +673,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
     #[doc(alias = "vkCreateDebugUtilsMessengerEXT")]
-    pub unsafe fn create_debug_utils_messenger_ext(
-        &self,
-        create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT> {
+    pub unsafe fn create_debug_utils_messenger_ext(&self, create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT> {
         let _function = self.create_debug_utils_messenger_ext.expect("`create_debug_utils_messenger_ext` is not loaded");
         let mut messenger = Default::default();
         let _return = _function(
@@ -812,12 +708,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
     #[doc(alias = "vkSubmitDebugUtilsMessageEXT")]
-    pub unsafe fn submit_debug_utils_message_ext(
-        &self,
-        message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT,
-        message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
-        callback_data: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT,
-    ) -> () {
+    pub unsafe fn submit_debug_utils_message_ext(&self, message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, callback_data: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT) -> () {
         let _function = self.submit_debug_utils_message_ext.expect("`submit_debug_utils_message_ext` is not loaded");
         let _return = _function(self.handle, message_severity as _, message_types as _, callback_data as _);
         ()

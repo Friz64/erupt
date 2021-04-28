@@ -28,12 +28,7 @@ impl std::fmt::Debug for IOSSurfaceCreateFlagBitsMVK {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateIOSSurfaceMVK = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateIOSSurfaceMVK = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Structure"]
 #[doc(alias = "VkIOSSurfaceCreateInfoMVK")]
 #[derive(Copy, Clone)]
@@ -46,22 +41,12 @@ pub struct IOSSurfaceCreateInfoMVK {
 }
 impl Default for IOSSurfaceCreateInfoMVK {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IOS_SURFACE_CREATE_INFO_MVK,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_view: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IOS_SURFACE_CREATE_INFO_MVK, p_next: std::ptr::null(), flags: Default::default(), p_view: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for IOSSurfaceCreateInfoMVK {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("IOSSurfaceCreateInfoMVK")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_view", &self.p_view)
-            .finish()
+        f.debug_struct("IOSSurfaceCreateInfoMVK").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_view", &self.p_view).finish()
     }
 }
 impl IOSSurfaceCreateInfoMVK {
@@ -121,11 +106,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function"]
     #[doc(alias = "vkCreateIOSSurfaceMVK")]
-    pub unsafe fn create_ios_surface_mvk(
-        &self,
-        create_info: &crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_ios_surface_mvk(&self, create_info: &crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_ios_surface_mvk.expect("`create_ios_surface_mvk` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

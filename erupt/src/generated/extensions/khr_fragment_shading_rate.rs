@@ -35,15 +35,10 @@ impl FragmentShadingRateCombinerOpKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetFragmentShadingRateKHR =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_fragment_size: *const crate::vk1_0::Extent2D, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
+pub type PFN_vkCmdSetFragmentShadingRateKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_fragment_size: *const crate::vk1_0::Extent2D, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    p_fragment_shading_rate_count: *mut u32,
-    p_fragment_shading_rates: *mut crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_fragment_shading_rate_count: *mut u32, p_fragment_shading_rates: *mut crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Structure"]
 #[doc(alias = "VkFragmentShadingRateAttachmentInfoKHR")]
 #[derive(Copy, Clone)]
@@ -56,22 +51,12 @@ pub struct FragmentShadingRateAttachmentInfoKHR {
 }
 impl Default for FragmentShadingRateAttachmentInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR,
-            p_next: std::ptr::null(),
-            p_fragment_shading_rate_attachment: std::ptr::null(),
-            shading_rate_attachment_texel_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR, p_next: std::ptr::null(), p_fragment_shading_rate_attachment: std::ptr::null(), shading_rate_attachment_texel_size: Default::default() }
     }
 }
 impl std::fmt::Debug for FragmentShadingRateAttachmentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FragmentShadingRateAttachmentInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_fragment_shading_rate_attachment", &self.p_fragment_shading_rate_attachment)
-            .field("shading_rate_attachment_texel_size", &self.shading_rate_attachment_texel_size)
-            .finish()
+        f.debug_struct("FragmentShadingRateAttachmentInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_fragment_shading_rate_attachment", &self.p_fragment_shading_rate_attachment).field("shading_rate_attachment_texel_size", &self.shading_rate_attachment_texel_size).finish()
     }
 }
 impl FragmentShadingRateAttachmentInfoKHR {
@@ -138,22 +123,12 @@ pub struct PipelineFragmentShadingRateStateCreateInfoKHR {
 }
 impl Default for PipelineFragmentShadingRateStateCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            fragment_size: Default::default(),
-            combiner_ops: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR, p_next: std::ptr::null(), fragment_size: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateStateCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineFragmentShadingRateStateCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("fragment_size", &self.fragment_size)
-            .field("combiner_ops", &self.combiner_ops)
-            .finish()
+        f.debug_struct("PipelineFragmentShadingRateStateCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("fragment_size", &self.fragment_size).field("combiner_ops", &self.combiner_ops).finish()
     }
 }
 impl PipelineFragmentShadingRateStateCreateInfoKHR {
@@ -221,24 +196,12 @@ pub struct PhysicalDeviceFragmentShadingRateFeaturesKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRateFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            pipeline_fragment_shading_rate: Default::default(),
-            primitive_fragment_shading_rate: Default::default(),
-            attachment_fragment_shading_rate: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR, p_next: std::ptr::null_mut(), pipeline_fragment_shading_rate: Default::default(), primitive_fragment_shading_rate: Default::default(), attachment_fragment_shading_rate: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShadingRateFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline_fragment_shading_rate", &(self.pipeline_fragment_shading_rate != 0))
-            .field("primitive_fragment_shading_rate", &(self.primitive_fragment_shading_rate != 0))
-            .field("attachment_fragment_shading_rate", &(self.attachment_fragment_shading_rate != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShadingRateFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline_fragment_shading_rate", &(self.pipeline_fragment_shading_rate != 0)).field("primitive_fragment_shading_rate", &(self.primitive_fragment_shading_rate != 0)).field("attachment_fragment_shading_rate", &(self.attachment_fragment_shading_rate != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentShadingRateFeaturesKHR {
@@ -325,52 +288,12 @@ pub struct PhysicalDeviceFragmentShadingRatePropertiesKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRatePropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            min_fragment_shading_rate_attachment_texel_size: Default::default(),
-            max_fragment_shading_rate_attachment_texel_size: Default::default(),
-            max_fragment_shading_rate_attachment_texel_size_aspect_ratio: Default::default(),
-            primitive_fragment_shading_rate_with_multiple_viewports: Default::default(),
-            layered_shading_rate_attachments: Default::default(),
-            fragment_shading_rate_non_trivial_combiner_ops: Default::default(),
-            max_fragment_size: Default::default(),
-            max_fragment_size_aspect_ratio: Default::default(),
-            max_fragment_shading_rate_coverage_samples: Default::default(),
-            max_fragment_shading_rate_rasterization_samples: Default::default(),
-            fragment_shading_rate_with_shader_depth_stencil_writes: Default::default(),
-            fragment_shading_rate_with_sample_mask: Default::default(),
-            fragment_shading_rate_with_shader_sample_mask: Default::default(),
-            fragment_shading_rate_with_conservative_rasterization: Default::default(),
-            fragment_shading_rate_with_fragment_shader_interlock: Default::default(),
-            fragment_shading_rate_with_custom_sample_locations: Default::default(),
-            fragment_shading_rate_strict_multiply_combiner: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), min_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size_aspect_ratio: Default::default(), primitive_fragment_shading_rate_with_multiple_viewports: Default::default(), layered_shading_rate_attachments: Default::default(), fragment_shading_rate_non_trivial_combiner_ops: Default::default(), max_fragment_size: Default::default(), max_fragment_size_aspect_ratio: Default::default(), max_fragment_shading_rate_coverage_samples: Default::default(), max_fragment_shading_rate_rasterization_samples: Default::default(), fragment_shading_rate_with_shader_depth_stencil_writes: Default::default(), fragment_shading_rate_with_sample_mask: Default::default(), fragment_shading_rate_with_shader_sample_mask: Default::default(), fragment_shading_rate_with_conservative_rasterization: Default::default(), fragment_shading_rate_with_fragment_shader_interlock: Default::default(), fragment_shading_rate_with_custom_sample_locations: Default::default(), fragment_shading_rate_strict_multiply_combiner: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRatePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShadingRatePropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("min_fragment_shading_rate_attachment_texel_size", &self.min_fragment_shading_rate_attachment_texel_size)
-            .field("max_fragment_shading_rate_attachment_texel_size", &self.max_fragment_shading_rate_attachment_texel_size)
-            .field("max_fragment_shading_rate_attachment_texel_size_aspect_ratio", &self.max_fragment_shading_rate_attachment_texel_size_aspect_ratio)
-            .field("primitive_fragment_shading_rate_with_multiple_viewports", &(self.primitive_fragment_shading_rate_with_multiple_viewports != 0))
-            .field("layered_shading_rate_attachments", &(self.layered_shading_rate_attachments != 0))
-            .field("fragment_shading_rate_non_trivial_combiner_ops", &(self.fragment_shading_rate_non_trivial_combiner_ops != 0))
-            .field("max_fragment_size", &self.max_fragment_size)
-            .field("max_fragment_size_aspect_ratio", &self.max_fragment_size_aspect_ratio)
-            .field("max_fragment_shading_rate_coverage_samples", &self.max_fragment_shading_rate_coverage_samples)
-            .field("max_fragment_shading_rate_rasterization_samples", &self.max_fragment_shading_rate_rasterization_samples)
-            .field("fragment_shading_rate_with_shader_depth_stencil_writes", &(self.fragment_shading_rate_with_shader_depth_stencil_writes != 0))
-            .field("fragment_shading_rate_with_sample_mask", &(self.fragment_shading_rate_with_sample_mask != 0))
-            .field("fragment_shading_rate_with_shader_sample_mask", &(self.fragment_shading_rate_with_shader_sample_mask != 0))
-            .field("fragment_shading_rate_with_conservative_rasterization", &(self.fragment_shading_rate_with_conservative_rasterization != 0))
-            .field("fragment_shading_rate_with_fragment_shader_interlock", &(self.fragment_shading_rate_with_fragment_shader_interlock != 0))
-            .field("fragment_shading_rate_with_custom_sample_locations", &(self.fragment_shading_rate_with_custom_sample_locations != 0))
-            .field("fragment_shading_rate_strict_multiply_combiner", &(self.fragment_shading_rate_strict_multiply_combiner != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShadingRatePropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("min_fragment_shading_rate_attachment_texel_size", &self.min_fragment_shading_rate_attachment_texel_size).field("max_fragment_shading_rate_attachment_texel_size", &self.max_fragment_shading_rate_attachment_texel_size).field("max_fragment_shading_rate_attachment_texel_size_aspect_ratio", &self.max_fragment_shading_rate_attachment_texel_size_aspect_ratio).field("primitive_fragment_shading_rate_with_multiple_viewports", &(self.primitive_fragment_shading_rate_with_multiple_viewports != 0)).field("layered_shading_rate_attachments", &(self.layered_shading_rate_attachments != 0)).field("fragment_shading_rate_non_trivial_combiner_ops", &(self.fragment_shading_rate_non_trivial_combiner_ops != 0)).field("max_fragment_size", &self.max_fragment_size).field("max_fragment_size_aspect_ratio", &self.max_fragment_size_aspect_ratio).field("max_fragment_shading_rate_coverage_samples", &self.max_fragment_shading_rate_coverage_samples).field("max_fragment_shading_rate_rasterization_samples", &self.max_fragment_shading_rate_rasterization_samples).field("fragment_shading_rate_with_shader_depth_stencil_writes", &(self.fragment_shading_rate_with_shader_depth_stencil_writes != 0)).field("fragment_shading_rate_with_sample_mask", &(self.fragment_shading_rate_with_sample_mask != 0)).field("fragment_shading_rate_with_shader_sample_mask", &(self.fragment_shading_rate_with_shader_sample_mask != 0)).field("fragment_shading_rate_with_conservative_rasterization", &(self.fragment_shading_rate_with_conservative_rasterization != 0)).field("fragment_shading_rate_with_fragment_shader_interlock", &(self.fragment_shading_rate_with_fragment_shader_interlock != 0)).field("fragment_shading_rate_with_custom_sample_locations", &(self.fragment_shading_rate_with_custom_sample_locations != 0)).field("fragment_shading_rate_strict_multiply_combiner", &(self.fragment_shading_rate_strict_multiply_combiner != 0)).finish()
     }
 }
 impl PhysicalDeviceFragmentShadingRatePropertiesKHR {
@@ -512,22 +435,12 @@ pub struct PhysicalDeviceFragmentShadingRateKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRateKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR,
-            p_next: std::ptr::null_mut(),
-            sample_counts: Default::default(),
-            fragment_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR, p_next: std::ptr::null_mut(), sample_counts: Default::default(), fragment_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFragmentShadingRateKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sample_counts", &self.sample_counts)
-            .field("fragment_size", &self.fragment_size)
-            .finish()
+        f.debug_struct("PhysicalDeviceFragmentShadingRateKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sample_counts", &self.sample_counts).field("fragment_size", &self.fragment_size).finish()
     }
 }
 impl PhysicalDeviceFragmentShadingRateKHR {
@@ -598,11 +511,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFragmentShadingRatesKHR")]
-    pub unsafe fn get_physical_device_fragment_shading_rates_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        fragment_shading_rate_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
+    pub unsafe fn get_physical_device_fragment_shading_rates_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, fragment_shading_rate_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
         let _function = self.get_physical_device_fragment_shading_rates_khr.expect("`get_physical_device_fragment_shading_rates_khr` is not loaded");
         let mut fragment_shading_rate_count = match fragment_shading_rate_count {
             Some(v) => v,

@@ -37,24 +37,12 @@ pub struct PipelineCoverageToColorStateCreateInfoNV {
 }
 impl Default for PipelineCoverageToColorStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            coverage_to_color_enable: Default::default(),
-            coverage_to_color_location: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_to_color_enable: Default::default(), coverage_to_color_location: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageToColorStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCoverageToColorStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("coverage_to_color_enable", &(self.coverage_to_color_enable != 0))
-            .field("coverage_to_color_location", &self.coverage_to_color_location)
-            .finish()
+        f.debug_struct("PipelineCoverageToColorStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("coverage_to_color_enable", &(self.coverage_to_color_enable != 0)).field("coverage_to_color_location", &self.coverage_to_color_location).finish()
     }
 }
 impl PipelineCoverageToColorStateCreateInfoNV {

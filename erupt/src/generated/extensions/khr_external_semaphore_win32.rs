@@ -10,12 +10,10 @@ pub const FN_GET_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate
 pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreWin32HandleKHR");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreWin32HandleKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreWin32HandleKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR) -> crate::vk1_0::Result;
+pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -31,28 +29,12 @@ pub struct ImportSemaphoreWin32HandleInfoKHR {
 }
 impl Default for ImportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            flags: Default::default(),
-            handle_type: Default::default(),
-            handle: std::ptr::null_mut(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportSemaphoreWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("flags", &self.flags)
-            .field("handle_type", &self.handle_type)
-            .field("handle", &self.handle)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ImportSemaphoreWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("flags", &self.flags).field("handle_type", &self.handle_type).field("handle", &self.handle).field("name", &self.name).finish()
     }
 }
 impl ImportSemaphoreWin32HandleInfoKHR {
@@ -135,24 +117,12 @@ pub struct ExportSemaphoreWin32HandleInfoKHR {
 }
 impl Default for ExportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            p_attributes: std::ptr::null(),
-            dw_access: Default::default(),
-            name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportSemaphoreWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportSemaphoreWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_attributes", &self.p_attributes)
-            .field("dw_access", &self.dw_access)
-            .field("name", &self.name)
-            .finish()
+        f.debug_struct("ExportSemaphoreWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_attributes", &self.p_attributes).field("dw_access", &self.dw_access).field("name", &self.name).finish()
     }
 }
 impl ExportSemaphoreWin32HandleInfoKHR {
@@ -226,26 +196,12 @@ pub struct D3D12FenceSubmitInfoKHR {
 }
 impl Default for D3D12FenceSubmitInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::D3D12_FENCE_SUBMIT_INFO_KHR,
-            p_next: std::ptr::null(),
-            wait_semaphore_values_count: Default::default(),
-            p_wait_semaphore_values: std::ptr::null(),
-            signal_semaphore_values_count: Default::default(),
-            p_signal_semaphore_values: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::D3D12_FENCE_SUBMIT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_values_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_values_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for D3D12FenceSubmitInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("D3D12FenceSubmitInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("wait_semaphore_values_count", &self.wait_semaphore_values_count)
-            .field("p_wait_semaphore_values", &self.p_wait_semaphore_values)
-            .field("signal_semaphore_values_count", &self.signal_semaphore_values_count)
-            .field("p_signal_semaphore_values", &self.p_signal_semaphore_values)
-            .finish()
+        f.debug_struct("D3D12FenceSubmitInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("wait_semaphore_values_count", &self.wait_semaphore_values_count).field("p_wait_semaphore_values", &self.p_wait_semaphore_values).field("signal_semaphore_values_count", &self.signal_semaphore_values_count).field("p_signal_semaphore_values", &self.p_signal_semaphore_values).finish()
     }
 }
 impl D3D12FenceSubmitInfoKHR {
@@ -314,22 +270,12 @@ pub struct SemaphoreGetWin32HandleInfoKHR {
 }
 impl Default for SemaphoreGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SemaphoreGetWin32HandleInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("SemaphoreGetWin32HandleInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("handle_type", &self.handle_type).finish()
     }
 }
 impl SemaphoreGetWin32HandleInfoKHR {

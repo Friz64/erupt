@@ -16,22 +16,12 @@ pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            shader_image_int64_atomics: Default::default(),
-            sparse_image_int64_atomics: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_image_int64_atomics: Default::default(), sparse_image_int64_atomics: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderImageAtomicInt64FeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_image_int64_atomics", &(self.shader_image_int64_atomics != 0))
-            .field("sparse_image_int64_atomics", &(self.sparse_image_int64_atomics != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderImageAtomicInt64FeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_image_int64_atomics", &(self.shader_image_int64_atomics != 0)).field("sparse_image_int64_atomics", &(self.sparse_image_int64_atomics != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {

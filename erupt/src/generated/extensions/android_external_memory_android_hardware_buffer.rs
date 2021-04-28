@@ -12,18 +12,10 @@ pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_
 pub type AHardwareBuffer = std::ffi::c_void;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-    p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer, p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
-    p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID, p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure"]
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone)]
@@ -35,20 +27,12 @@ pub struct ImportAndroidHardwareBufferInfoANDROID {
 }
 impl Default for ImportAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID,
-            p_next: std::ptr::null(),
-            buffer: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), buffer: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportAndroidHardwareBufferInfoANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportAndroidHardwareBufferInfoANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer", &self.buffer)
-            .finish()
+        f.debug_struct("ImportAndroidHardwareBufferInfoANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer", &self.buffer).finish()
     }
 }
 impl ImportAndroidHardwareBufferInfoANDROID {
@@ -109,20 +93,12 @@ pub struct AndroidHardwareBufferUsageANDROID {
 }
 impl Default for AndroidHardwareBufferUsageANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID,
-            p_next: std::ptr::null_mut(),
-            android_hardware_buffer_usage: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID, p_next: std::ptr::null_mut(), android_hardware_buffer_usage: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferUsageANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AndroidHardwareBufferUsageANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("android_hardware_buffer_usage", &self.android_hardware_buffer_usage)
-            .finish()
+        f.debug_struct("AndroidHardwareBufferUsageANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("android_hardware_buffer_usage", &self.android_hardware_buffer_usage).finish()
     }
 }
 impl AndroidHardwareBufferUsageANDROID {
@@ -184,22 +160,12 @@ pub struct AndroidHardwareBufferPropertiesANDROID {
 }
 impl Default for AndroidHardwareBufferPropertiesANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID,
-            p_next: std::ptr::null_mut(),
-            allocation_size: Default::default(),
-            memory_type_bits: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID, p_next: std::ptr::null_mut(), allocation_size: Default::default(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferPropertiesANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AndroidHardwareBufferPropertiesANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("allocation_size", &self.allocation_size)
-            .field("memory_type_bits", &self.memory_type_bits)
-            .finish()
+        f.debug_struct("AndroidHardwareBufferPropertiesANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("allocation_size", &self.allocation_size).field("memory_type_bits", &self.memory_type_bits).finish()
     }
 }
 impl AndroidHardwareBufferPropertiesANDROID {
@@ -267,20 +233,12 @@ pub struct MemoryGetAndroidHardwareBufferInfoANDROID {
 }
 impl Default for MemoryGetAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID,
-            p_next: std::ptr::null(),
-            memory: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), memory: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetAndroidHardwareBufferInfoANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryGetAndroidHardwareBufferInfoANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory", &self.memory)
-            .finish()
+        f.debug_struct("MemoryGetAndroidHardwareBufferInfoANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory", &self.memory).finish()
     }
 }
 impl MemoryGetAndroidHardwareBufferInfoANDROID {
@@ -348,34 +306,12 @@ pub struct AndroidHardwareBufferFormatPropertiesANDROID {
 }
 impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID,
-            p_next: std::ptr::null_mut(),
-            format: Default::default(),
-            external_format: Default::default(),
-            format_features: Default::default(),
-            sampler_ycbcr_conversion_components: Default::default(),
-            suggested_ycbcr_model: Default::default(),
-            suggested_ycbcr_range: Default::default(),
-            suggested_x_chroma_offset: Default::default(),
-            suggested_y_chroma_offset: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID, p_next: std::ptr::null_mut(), format: Default::default(), external_format: Default::default(), format_features: Default::default(), sampler_ycbcr_conversion_components: Default::default(), suggested_ycbcr_model: Default::default(), suggested_ycbcr_range: Default::default(), suggested_x_chroma_offset: Default::default(), suggested_y_chroma_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferFormatPropertiesANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AndroidHardwareBufferFormatPropertiesANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("format", &self.format)
-            .field("external_format", &self.external_format)
-            .field("format_features", &self.format_features)
-            .field("sampler_ycbcr_conversion_components", &self.sampler_ycbcr_conversion_components)
-            .field("suggested_ycbcr_model", &self.suggested_ycbcr_model)
-            .field("suggested_ycbcr_range", &self.suggested_ycbcr_range)
-            .field("suggested_x_chroma_offset", &self.suggested_x_chroma_offset)
-            .field("suggested_y_chroma_offset", &self.suggested_y_chroma_offset)
-            .finish()
+        f.debug_struct("AndroidHardwareBufferFormatPropertiesANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format", &self.format).field("external_format", &self.external_format).field("format_features", &self.format_features).field("sampler_ycbcr_conversion_components", &self.sampler_ycbcr_conversion_components).field("suggested_ycbcr_model", &self.suggested_ycbcr_model).field("suggested_ycbcr_range", &self.suggested_ycbcr_range).field("suggested_x_chroma_offset", &self.suggested_x_chroma_offset).field("suggested_y_chroma_offset", &self.suggested_y_chroma_offset).finish()
     }
 }
 impl AndroidHardwareBufferFormatPropertiesANDROID {
@@ -471,20 +407,12 @@ pub struct ExternalFormatANDROID {
 }
 impl Default for ExternalFormatANDROID {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_FORMAT_ANDROID,
-            p_next: std::ptr::null_mut(),
-            external_format: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_FORMAT_ANDROID, p_next: std::ptr::null_mut(), external_format: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalFormatANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalFormatANDROID")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("external_format", &self.external_format)
-            .finish()
+        f.debug_struct("ExternalFormatANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("external_format", &self.external_format).finish()
     }
 }
 impl ExternalFormatANDROID {
@@ -539,11 +467,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
     #[doc(alias = "vkGetAndroidHardwareBufferPropertiesANDROID")]
-    pub unsafe fn get_android_hardware_buffer_properties_android(
-        &self,
-        buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-        properties: Option<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>,
-    ) -> crate::utils::VulkanResult<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID> {
+    pub unsafe fn get_android_hardware_buffer_properties_android(&self, buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer, properties: Option<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>) -> crate::utils::VulkanResult<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID> {
         let _function = self.get_android_hardware_buffer_properties_android.expect("`get_android_hardware_buffer_properties_android` is not loaded");
         let mut properties = match properties {
             Some(v) => v,
@@ -555,10 +479,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
     #[doc(alias = "vkGetMemoryAndroidHardwareBufferANDROID")]
-    pub unsafe fn get_memory_android_hardware_buffer_android(
-        &self,
-        info: &crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
-    ) -> crate::utils::VulkanResult<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer> {
+    pub unsafe fn get_memory_android_hardware_buffer_android(&self, info: &crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID) -> crate::utils::VulkanResult<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer> {
         let _function = self.get_memory_android_hardware_buffer_android.expect("`get_memory_android_hardware_buffer_android` is not loaded");
         let mut buffer = std::ptr::null_mut();
         let _return = _function(self.handle, info as _, &mut buffer);

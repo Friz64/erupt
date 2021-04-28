@@ -26,7 +26,12 @@ use lang_c::{
     span::Node,
     visit::Visit,
 };
-use std::{convert::TryFrom, fmt::Debug, fs, mem, path::Path};
+use std::{
+    convert::TryFrom,
+    fmt::Debug,
+    fs, mem,
+    path::{Path, PathBuf},
+};
 
 #[derive(Debug, Clone)]
 pub enum BitWidth {
@@ -299,21 +304,30 @@ pub struct HeaderSource {
 }
 
 impl HeaderSource {
-    pub fn new(registry: XmlNode) -> HeaderSource {
-        let include_vulkan = "generator/Vulkan-Headers/include/vulkan";
-
+    pub fn new(
+        registry: XmlNode,
+        headers_include: &Path,
+        include_vulkan: &Path,
+        other_includes_headers: &[PathBuf],
+    ) -> HeaderSource {
         let header_config = Config {
             cpp_options: vec![
                 "-DVK_NO_PROTOTYPES".into(),
                 "-DVK_ENABLE_BETA_EXTENSIONS".into(),
-                format!("-I{}", include_vulkan),
+                format!("-I{}", headers_include.display()),
+                format!("-I{}", include_vulkan.display()),
                 "-E".into(),
             ],
             ..Config::with_clang()
         };
 
         let root_header_path = Path::new("generator/root.h");
-        root_gen::generate(&root_header_path, include_vulkan.as_ref(), registry);
+        root_gen::generate(
+            &root_header_path,
+            include_vulkan.as_ref(),
+            &other_includes_headers,
+            registry,
+        );
 
         let unit = &driver::parse(&header_config, root_header_path)
             .expect("Failed to parse header")

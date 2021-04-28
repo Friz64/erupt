@@ -16,22 +16,12 @@ pub struct SamplerCustomBorderColorCreateInfoEXT {
 }
 impl Default for SamplerCustomBorderColorCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            custom_border_color: Default::default(),
-            format: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT, p_next: std::ptr::null(), custom_border_color: Default::default(), format: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerCustomBorderColorCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SamplerCustomBorderColorCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("custom_border_color", &self.custom_border_color)
-            .field("format", &self.format)
-            .finish()
+        f.debug_struct("SamplerCustomBorderColorCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("custom_border_color", &self.custom_border_color).field("format", &self.format).finish()
     }
 }
 impl SamplerCustomBorderColorCreateInfoEXT {
@@ -97,20 +87,12 @@ pub struct PhysicalDeviceCustomBorderColorPropertiesEXT {
 }
 impl Default for PhysicalDeviceCustomBorderColorPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_custom_border_color_samplers: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_custom_border_color_samplers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCustomBorderColorPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_custom_border_color_samplers", &self.max_custom_border_color_samplers)
-            .finish()
+        f.debug_struct("PhysicalDeviceCustomBorderColorPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_custom_border_color_samplers", &self.max_custom_border_color_samplers).finish()
     }
 }
 impl PhysicalDeviceCustomBorderColorPropertiesEXT {
@@ -172,22 +154,12 @@ pub struct PhysicalDeviceCustomBorderColorFeaturesEXT {
 }
 impl Default for PhysicalDeviceCustomBorderColorFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            custom_border_colors: Default::default(),
-            custom_border_color_without_format: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT, p_next: std::ptr::null_mut(), custom_border_colors: Default::default(), custom_border_color_without_format: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCustomBorderColorFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("custom_border_colors", &(self.custom_border_colors != 0))
-            .field("custom_border_color_without_format", &(self.custom_border_color_without_format != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceCustomBorderColorFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("custom_border_colors", &(self.custom_border_colors != 0)).field("custom_border_color_without_format", &(self.custom_border_color_without_format != 0)).finish()
     }
 }
 impl PhysicalDeviceCustomBorderColorFeaturesEXT {

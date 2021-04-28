@@ -42,24 +42,12 @@ pub struct DebugMarkerObjectNameInfoEXT {
 }
 impl Default for DebugMarkerObjectNameInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_NAME_INFO_EXT,
-            p_next: std::ptr::null(),
-            object_type: Default::default(),
-            object: Default::default(),
-            p_object_name: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), p_object_name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugMarkerObjectNameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugMarkerObjectNameInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("object_type", &self.object_type)
-            .field("object", &self.object)
-            .field("p_object_name", &self.p_object_name)
-            .finish()
+        f.debug_struct("DebugMarkerObjectNameInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("object_type", &self.object_type).field("object", &self.object).field("p_object_name", &self.p_object_name).finish()
     }
 }
 impl DebugMarkerObjectNameInfoEXT {
@@ -134,28 +122,12 @@ pub struct DebugMarkerObjectTagInfoEXT {
 }
 impl Default for DebugMarkerObjectTagInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_TAG_INFO_EXT,
-            p_next: std::ptr::null(),
-            object_type: Default::default(),
-            object: Default::default(),
-            tag_name: Default::default(),
-            tag_size: Default::default(),
-            p_tag: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_TAG_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugMarkerObjectTagInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugMarkerObjectTagInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("object_type", &self.object_type)
-            .field("object", &self.object)
-            .field("tag_name", &self.tag_name)
-            .field("tag_size", &self.tag_size)
-            .field("p_tag", &self.p_tag)
-            .finish()
+        f.debug_struct("DebugMarkerObjectTagInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("object_type", &self.object_type).field("object", &self.object).field("tag_name", &self.tag_name).field("tag_size", &self.tag_size).field("p_tag", &self.p_tag).finish()
     }
 }
 impl DebugMarkerObjectTagInfoEXT {
@@ -237,22 +209,12 @@ pub struct DebugMarkerMarkerInfoEXT {
 }
 impl Default for DebugMarkerMarkerInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_MARKER_MARKER_INFO_EXT,
-            p_next: std::ptr::null(),
-            p_marker_name: std::ptr::null(),
-            color: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_MARKER_INFO_EXT, p_next: std::ptr::null(), p_marker_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for DebugMarkerMarkerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugMarkerMarkerInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_marker_name", &self.p_marker_name)
-            .field("color", &self.color)
-            .finish()
+        f.debug_struct("DebugMarkerMarkerInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_marker_name", &self.p_marker_name).field("color", &self.color).finish()
     }
 }
 impl DebugMarkerMarkerInfoEXT {

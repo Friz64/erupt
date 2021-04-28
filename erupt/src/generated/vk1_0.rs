@@ -332,156 +332,31 @@ pub type DeviceSize = u64;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceAddress.html) · Basetype"]
 #[doc(alias = "VkDeviceAddress")]
 pub type DeviceAddress = u64;
-crate::dispatchable_handle!(
-    Instance,
-    INSTANCE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstance.html) · Dispatchable Handle",
-    "VkInstance"
-);
-crate::dispatchable_handle!(
-    PhysicalDevice,
-    PHYSICAL_DEVICE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice.html) · Dispatchable Handle",
-    "VkPhysicalDevice"
-);
-crate::dispatchable_handle!(
-    Device,
-    DEVICE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevice.html) · Dispatchable Handle",
-    "VkDevice"
-);
-crate::dispatchable_handle!(
-    Queue,
-    QUEUE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueue.html) · Dispatchable Handle",
-    "VkQueue"
-);
-crate::dispatchable_handle!(
-    CommandBuffer,
-    COMMAND_BUFFER,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBuffer.html) · Dispatchable Handle",
-    "VkCommandBuffer"
-);
-crate::non_dispatchable_handle!(
-    DeviceMemory,
-    DEVICE_MEMORY,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemory.html) · Non-dispatchable Handle",
-    "VkDeviceMemory"
-);
-crate::non_dispatchable_handle!(
-    CommandPool,
-    COMMAND_POOL,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPool.html) · Non-dispatchable Handle",
-    "VkCommandPool"
-);
-crate::non_dispatchable_handle!(
-    Buffer,
-    BUFFER,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuffer.html) · Non-dispatchable Handle",
-    "VkBuffer"
-);
-crate::non_dispatchable_handle!(
-    BufferView,
-    BUFFER_VIEW,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferView.html) · Non-dispatchable Handle",
-    "VkBufferView"
-);
-crate::non_dispatchable_handle!(
-    Image,
-    IMAGE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImage.html) · Non-dispatchable Handle",
-    "VkImage"
-);
-crate::non_dispatchable_handle!(
-    ImageView,
-    IMAGE_VIEW,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageView.html) · Non-dispatchable Handle",
-    "VkImageView"
-);
-crate::non_dispatchable_handle!(
-    ShaderModule,
-    SHADER_MODULE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModule.html) · Non-dispatchable Handle",
-    "VkShaderModule"
-);
-crate::non_dispatchable_handle!(
-    Pipeline,
-    PIPELINE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipeline.html) · Non-dispatchable Handle",
-    "VkPipeline"
-);
-crate::non_dispatchable_handle!(
-    PipelineLayout,
-    PIPELINE_LAYOUT,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayout.html) · Non-dispatchable Handle",
-    "VkPipelineLayout"
-);
-crate::non_dispatchable_handle!(
-    Sampler,
-    SAMPLER,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampler.html) · Non-dispatchable Handle",
-    "VkSampler"
-);
-crate::non_dispatchable_handle!(
-    DescriptorSet,
-    DESCRIPTOR_SET,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSet.html) · Non-dispatchable Handle",
-    "VkDescriptorSet"
-);
-crate::non_dispatchable_handle!(
-    DescriptorSetLayout,
-    DESCRIPTOR_SET_LAYOUT,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayout.html) · Non-dispatchable Handle",
-    "VkDescriptorSetLayout"
-);
-crate::non_dispatchable_handle!(
-    DescriptorPool,
-    DESCRIPTOR_POOL,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPool.html) · Non-dispatchable Handle",
-    "VkDescriptorPool"
-);
-crate::non_dispatchable_handle!(
-    Fence,
-    FENCE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFence.html) · Non-dispatchable Handle",
-    "VkFence"
-);
-crate::non_dispatchable_handle!(
-    Semaphore,
-    SEMAPHORE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphore.html) · Non-dispatchable Handle",
-    "VkSemaphore"
-);
-crate::non_dispatchable_handle!(
-    Event,
-    EVENT,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEvent.html) · Non-dispatchable Handle",
-    "VkEvent"
-);
-crate::non_dispatchable_handle!(
-    QueryPool,
-    QUERY_POOL,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPool.html) · Non-dispatchable Handle",
-    "VkQueryPool"
-);
-crate::non_dispatchable_handle!(
-    Framebuffer,
-    FRAMEBUFFER,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebuffer.html) · Non-dispatchable Handle",
-    "VkFramebuffer"
-);
-crate::non_dispatchable_handle!(
-    RenderPass,
-    RENDER_PASS,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPass.html) · Non-dispatchable Handle",
-    "VkRenderPass"
-);
-crate::non_dispatchable_handle!(
-    PipelineCache,
-    PIPELINE_CACHE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCache.html) · Non-dispatchable Handle",
-    "VkPipelineCache"
-);
+crate::dispatchable_handle!(Instance, INSTANCE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInstance.html) · Dispatchable Handle", "VkInstance");
+crate::dispatchable_handle!(PhysicalDevice, PHYSICAL_DEVICE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice.html) · Dispatchable Handle", "VkPhysicalDevice");
+crate::dispatchable_handle!(Device, DEVICE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevice.html) · Dispatchable Handle", "VkDevice");
+crate::dispatchable_handle!(Queue, QUEUE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueue.html) · Dispatchable Handle", "VkQueue");
+crate::dispatchable_handle!(CommandBuffer, COMMAND_BUFFER, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBuffer.html) · Dispatchable Handle", "VkCommandBuffer");
+crate::non_dispatchable_handle!(DeviceMemory, DEVICE_MEMORY, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemory.html) · Non-dispatchable Handle", "VkDeviceMemory");
+crate::non_dispatchable_handle!(CommandPool, COMMAND_POOL, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPool.html) · Non-dispatchable Handle", "VkCommandPool");
+crate::non_dispatchable_handle!(Buffer, BUFFER, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuffer.html) · Non-dispatchable Handle", "VkBuffer");
+crate::non_dispatchable_handle!(BufferView, BUFFER_VIEW, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferView.html) · Non-dispatchable Handle", "VkBufferView");
+crate::non_dispatchable_handle!(Image, IMAGE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImage.html) · Non-dispatchable Handle", "VkImage");
+crate::non_dispatchable_handle!(ImageView, IMAGE_VIEW, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageView.html) · Non-dispatchable Handle", "VkImageView");
+crate::non_dispatchable_handle!(ShaderModule, SHADER_MODULE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModule.html) · Non-dispatchable Handle", "VkShaderModule");
+crate::non_dispatchable_handle!(Pipeline, PIPELINE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipeline.html) · Non-dispatchable Handle", "VkPipeline");
+crate::non_dispatchable_handle!(PipelineLayout, PIPELINE_LAYOUT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLayout.html) · Non-dispatchable Handle", "VkPipelineLayout");
+crate::non_dispatchable_handle!(Sampler, SAMPLER, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampler.html) · Non-dispatchable Handle", "VkSampler");
+crate::non_dispatchable_handle!(DescriptorSet, DESCRIPTOR_SET, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSet.html) · Non-dispatchable Handle", "VkDescriptorSet");
+crate::non_dispatchable_handle!(DescriptorSetLayout, DESCRIPTOR_SET_LAYOUT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayout.html) · Non-dispatchable Handle", "VkDescriptorSetLayout");
+crate::non_dispatchable_handle!(DescriptorPool, DESCRIPTOR_POOL, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPool.html) · Non-dispatchable Handle", "VkDescriptorPool");
+crate::non_dispatchable_handle!(Fence, FENCE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFence.html) · Non-dispatchable Handle", "VkFence");
+crate::non_dispatchable_handle!(Semaphore, SEMAPHORE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphore.html) · Non-dispatchable Handle", "VkSemaphore");
+crate::non_dispatchable_handle!(Event, EVENT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEvent.html) · Non-dispatchable Handle", "VkEvent");
+crate::non_dispatchable_handle!(QueryPool, QUERY_POOL, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPool.html) · Non-dispatchable Handle", "VkQueryPool");
+crate::non_dispatchable_handle!(Framebuffer, FRAMEBUFFER, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebuffer.html) · Non-dispatchable Handle", "VkFramebuffer");
+crate::non_dispatchable_handle!(RenderPass, RENDER_PASS, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPass.html) · Non-dispatchable Handle", "VkRenderPass");
+crate::non_dispatchable_handle!(PipelineCache, PIPELINE_CACHE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCache.html) · Non-dispatchable Handle", "VkPipelineCache");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateFlags.html) · Bitmask of [`QueryPoolCreateFlagBits`]"] # [doc (alias = "VkQueryPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryPoolCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`QueryPoolCreateFlags`]"]
 #[doc(alias = "VkQueryPoolCreateFlagBits")]
@@ -1335,7 +1210,7 @@ impl BufferCreateFlagBits {
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const VIDEO_DECODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DST_KHR = BufferUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`]"]
 #[doc(alias = "VkBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1361,6 +1236,10 @@ impl std::fmt::Debug for BufferUsageFlagBits {
             &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
             &Self::INDIRECT_BUFFER => "INDIRECT_BUFFER",
             &Self::SHADER_DEVICE_ADDRESS => "SHADER_DEVICE_ADDRESS",
+            &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
             &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT",
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
@@ -1386,6 +1265,16 @@ impl BufferUsageFlagBits {
 #[doc = "Provided by [`crate::vk1_2`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_DEVICE_ADDRESS: Self = Self(131072);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl BufferUsageFlagBits {
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(8192);
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(16384);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl BufferUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(32768);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(65536);
 }
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl BufferUsageFlagBits {
@@ -1764,6 +1653,13 @@ impl std::fmt::Debug for DynamicState {
             &Self::DEPTH_BOUNDS_TEST_ENABLE_EXT => "DEPTH_BOUNDS_TEST_ENABLE_EXT",
             &Self::STENCIL_TEST_ENABLE_EXT => "STENCIL_TEST_ENABLE_EXT",
             &Self::STENCIL_OP_EXT => "STENCIL_OP_EXT",
+            &Self::VERTEX_INPUT_EXT => "VERTEX_INPUT_EXT",
+            &Self::PATCH_CONTROL_POINTS_EXT => "PATCH_CONTROL_POINTS_EXT",
+            &Self::RASTERIZER_DISCARD_ENABLE_EXT => "RASTERIZER_DISCARD_ENABLE_EXT",
+            &Self::DEPTH_BIAS_ENABLE_EXT => "DEPTH_BIAS_ENABLE_EXT",
+            &Self::LOGIC_OP_EXT => "LOGIC_OP_EXT",
+            &Self::PRIMITIVE_RESTART_ENABLE_EXT => "PRIMITIVE_RESTART_ENABLE_EXT",
+            &Self::COLOR_WRITE_ENABLE_EXT => "COLOR_WRITE_ENABLE_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -1827,6 +1723,22 @@ impl DynamicState {
     pub const DEPTH_BOUNDS_TEST_ENABLE_EXT: Self = Self(1000267009);
     pub const STENCIL_TEST_ENABLE_EXT: Self = Self(1000267010);
     pub const STENCIL_OP_EXT: Self = Self(1000267011);
+}
+#[doc = "Provided by [`crate::extensions::ext_vertex_input_dynamic_state`]"]
+impl DynamicState {
+    pub const VERTEX_INPUT_EXT: Self = Self(1000352000);
+}
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state2`]"]
+impl DynamicState {
+    pub const PATCH_CONTROL_POINTS_EXT: Self = Self(1000377000);
+    pub const RASTERIZER_DISCARD_ENABLE_EXT: Self = Self(1000377001);
+    pub const DEPTH_BIAS_ENABLE_EXT: Self = Self(1000377002);
+    pub const LOGIC_OP_EXT: Self = Self(1000377003);
+    pub const PRIMITIVE_RESTART_ENABLE_EXT: Self = Self(1000377004);
+}
+#[doc = "Provided by [`crate::extensions::ext_color_write_enable`]"]
+impl DynamicState {
+    pub const COLOR_WRITE_ENABLE_EXT: Self = Self(1000381000);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlags.html) · Bitmask of [`FenceCreateFlagBits`]"] # [doc (alias = "VkFenceCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceCreateFlags : u32 { const SIGNALED = FenceCreateFlagBits :: SIGNALED . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceCreateFlagBits.html) · Bits enum of [`FenceCreateFlags`]"]
@@ -2128,6 +2040,10 @@ impl std::fmt::Debug for Format {
             &Self::ASTC_10X10_SFLOAT_BLOCK_EXT => "ASTC_10X10_SFLOAT_BLOCK_EXT",
             &Self::ASTC_12X10_SFLOAT_BLOCK_EXT => "ASTC_12X10_SFLOAT_BLOCK_EXT",
             &Self::ASTC_12X12_SFLOAT_BLOCK_EXT => "ASTC_12X12_SFLOAT_BLOCK_EXT",
+            &Self::G8_B8R8_2PLANE_444_UNORM_EXT => "G8_B8R8_2PLANE_444_UNORM_EXT",
+            &Self::G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT => "G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT",
+            &Self::G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT => "G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT",
+            &Self::G16_B16R16_2PLANE_444_UNORM_EXT => "G16_B16R16_2PLANE_444_UNORM_EXT",
             &Self::A4R4G4B4_UNORM_PACK16_EXT => "A4R4G4B4_UNORM_PACK16_EXT",
             &Self::A4B4G4R4_UNORM_PACK16_EXT => "A4B4G4R4_UNORM_PACK16_EXT",
             _ => "(unknown variant)",
@@ -2387,6 +2303,13 @@ impl Format {
     pub const ASTC_12X10_SFLOAT_BLOCK_EXT: Self = Self(1000066012);
     pub const ASTC_12X12_SFLOAT_BLOCK_EXT: Self = Self(1000066013);
 }
+#[doc = "Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]"]
+impl Format {
+    pub const G8_B8R8_2PLANE_444_UNORM_EXT: Self = Self(1000330000);
+    pub const G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330001);
+    pub const G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330002);
+    pub const G16_B16R16_2PLANE_444_UNORM_EXT: Self = Self(1000330003);
+}
 #[doc = "Provided by [`crate::extensions::ext_4444_formats`]"]
 impl Format {
     pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self(1000340000);
@@ -2429,7 +2352,7 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
     pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_OUTPUT_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const VIDEO_ENCODE_INPUT_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_INPUT_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`]"]
 #[doc(alias = "VkFormatFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2469,6 +2392,10 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
             &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
             &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
             &Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG => "SAMPLED_IMAGE_FILTER_CUBIC_IMG",
+            &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
+            &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
+            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR",
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
@@ -2511,6 +2438,16 @@ impl FormatFeatureFlagBits {
 #[doc = "Provided by [`crate::extensions::img_filter_cubic`]"]
 impl FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_CUBIC_IMG: Self = Self(8192);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl FormatFeatureFlagBits {
+    pub const VIDEO_DECODE_OUTPUT_KHR: Self = Self(33554432);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(67108864);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl FormatFeatureFlagBits {
+    pub const VIDEO_ENCODE_INPUT_KHR: Self = Self(134217728);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(268435456);
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl FormatFeatureFlagBits {
@@ -2733,6 +2670,12 @@ impl std::fmt::Debug for ImageLayout {
             &Self::STENCIL_ATTACHMENT_OPTIMAL => "STENCIL_ATTACHMENT_OPTIMAL",
             &Self::STENCIL_READ_ONLY_OPTIMAL => "STENCIL_READ_ONLY_OPTIMAL",
             &Self::PRESENT_SRC_KHR => "PRESENT_SRC_KHR",
+            &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
             &Self::SHADING_RATE_OPTIMAL_NV => "SHADING_RATE_OPTIMAL_NV",
             &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT",
@@ -2769,6 +2712,18 @@ impl ImageLayout {
 #[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
 impl ImageLayout {
     pub const PRESENT_SRC_KHR: Self = Self(1000001002);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl ImageLayout {
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(1000024000);
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(1000024001);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(1000024002);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl ImageLayout {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(1000299001);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(1000299002);
 }
 #[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl ImageLayout {
@@ -2848,7 +2803,7 @@ impl ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2872,6 +2827,12 @@ impl std::fmt::Debug for ImageUsageFlagBits {
             &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
             &Self::TRANSIENT_ATTACHMENT => "TRANSIENT_ATTACHMENT",
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
+            &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             _ => "(unknown variant)",
@@ -2888,6 +2849,18 @@ impl ImageUsageFlagBits {
     pub const DEPTH_STENCIL_ATTACHMENT: Self = Self(32);
     pub const TRANSIENT_ATTACHMENT: Self = Self(64);
     pub const INPUT_ATTACHMENT: Self = Self(128);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl ImageUsageFlagBits {
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(1024);
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(2048);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(4096);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl ImageUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(8192);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(16384);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(32768);
 }
 #[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl ImageUsageFlagBits {
@@ -3499,7 +3472,7 @@ impl QueryPipelineStatisticFlagBits {
     pub const TESSELLATION_EVALUATION_SHADER_INVOCATIONS: Self = Self(512);
     pub const COMPUTE_SHADER_INVOCATIONS: Self = Self(1024);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; const WITH_STATUS_KHR = QueryResultFlagBits :: WITH_STATUS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlagBits.html) · Bits enum of [`QueryResultFlags`]"]
 #[doc(alias = "VkQueryResultFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3519,6 +3492,7 @@ impl std::fmt::Debug for QueryResultFlagBits {
             &Self::WAIT => "WAIT",
             &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
             &Self::PARTIAL => "PARTIAL",
+            &Self::WITH_STATUS_KHR => "WITH_STATUS_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -3529,6 +3503,10 @@ impl QueryResultFlagBits {
     pub const WAIT: Self = Self(2);
     pub const WITH_AVAILABILITY: Self = Self(4);
     pub const PARTIAL: Self = Self(8);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
+impl QueryResultFlagBits {
+    pub const WITH_STATUS_KHR: Self = Self(16);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryType.html) · Enum"]
 #[doc(alias = "VkQueryType")]
@@ -3541,6 +3519,8 @@ impl std::fmt::Debug for QueryType {
             &Self::OCCLUSION => "OCCLUSION",
             &Self::PIPELINE_STATISTICS => "PIPELINE_STATISTICS",
             &Self::TIMESTAMP => "TIMESTAMP",
+            &Self::RESULT_STATUS_ONLY_KHR => "RESULT_STATUS_ONLY_KHR",
+            &Self::VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR",
             &Self::TRANSFORM_FEEDBACK_STREAM_EXT => "TRANSFORM_FEEDBACK_STREAM_EXT",
             &Self::PERFORMANCE_QUERY_KHR => "PERFORMANCE_QUERY_KHR",
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR",
@@ -3556,6 +3536,14 @@ impl QueryType {
     pub const OCCLUSION: Self = Self(0);
     pub const PIPELINE_STATISTICS: Self = Self(1);
     pub const TIMESTAMP: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
+impl QueryType {
+    pub const RESULT_STATUS_ONLY_KHR: Self = Self(1000023000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl QueryType {
+    pub const VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
 }
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl QueryType {
@@ -3578,7 +3566,7 @@ impl QueryType {
 impl QueryType {
     pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; const VIDEO_DECODE_KHR = QueueFlagBits :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = QueueFlagBits :: VIDEO_ENCODE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]"]
 #[doc(alias = "VkQueueFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3599,6 +3587,8 @@ impl std::fmt::Debug for QueueFlagBits {
             &Self::TRANSFER => "TRANSFER",
             &Self::SPARSE_BINDING => "SPARSE_BINDING",
             &Self::PROTECTED => "PROTECTED",
+            &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
+            &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -3613,6 +3603,14 @@ impl QueueFlagBits {
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl QueueFlagBits {
     pub const PROTECTED: Self = Self(16);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl QueueFlagBits {
+    pub const VIDEO_DECODE_KHR: Self = Self(32);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl QueueFlagBits {
+    pub const VIDEO_ENCODE_KHR: Self = Self(64);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassContents.html) · Enum"]
 #[doc(alias = "VkSubpassContents")]
@@ -4130,6 +4128,25 @@ impl std::fmt::Debug for StructureType {
             &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => "DEBUG_MARKER_OBJECT_NAME_INFO_EXT",
             &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => "DEBUG_MARKER_OBJECT_TAG_INFO_EXT",
             &Self::DEBUG_MARKER_MARKER_INFO_EXT => "DEBUG_MARKER_MARKER_INFO_EXT",
+            &Self::VIDEO_PROFILE_KHR => "VIDEO_PROFILE_KHR",
+            &Self::VIDEO_CAPABILITIES_KHR => "VIDEO_CAPABILITIES_KHR",
+            &Self::VIDEO_PICTURE_RESOURCE_KHR => "VIDEO_PICTURE_RESOURCE_KHR",
+            &Self::VIDEO_GET_MEMORY_PROPERTIES_KHR => "VIDEO_GET_MEMORY_PROPERTIES_KHR",
+            &Self::VIDEO_BIND_MEMORY_KHR => "VIDEO_BIND_MEMORY_KHR",
+            &Self::VIDEO_SESSION_CREATE_INFO_KHR => "VIDEO_SESSION_CREATE_INFO_KHR",
+            &Self::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR => "VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR",
+            &Self::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR => "VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR",
+            &Self::VIDEO_BEGIN_CODING_INFO_KHR => "VIDEO_BEGIN_CODING_INFO_KHR",
+            &Self::VIDEO_END_CODING_INFO_KHR => "VIDEO_END_CODING_INFO_KHR",
+            &Self::VIDEO_CODING_CONTROL_INFO_KHR => "VIDEO_CODING_CONTROL_INFO_KHR",
+            &Self::VIDEO_REFERENCE_SLOT_KHR => "VIDEO_REFERENCE_SLOT_KHR",
+            &Self::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR => "VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR",
+            &Self::VIDEO_PROFILES_KHR => "VIDEO_PROFILES_KHR",
+            &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => "PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR",
+            &Self::VIDEO_FORMAT_PROPERTIES_KHR => "VIDEO_FORMAT_PROPERTIES_KHR",
+            &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
+            &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
+            &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR",
             &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV",
             &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => "DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV",
             &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => "DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV",
@@ -4138,6 +4155,23 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT",
             &Self::IMAGE_VIEW_HANDLE_INFO_NVX => "IMAGE_VIEW_HANDLE_INFO_NVX",
             &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => "IMAGE_VIEW_ADDRESS_PROPERTIES_NVX",
+            &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => "VIDEO_ENCODE_H264_CAPABILITIES_EXT",
+            &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT",
+            &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT",
+            &Self::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT => "VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT",
+            &Self::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT => "VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT",
+            &Self::VIDEO_ENCODE_H264_NALU_SLICE_EXT => "VIDEO_ENCODE_H264_NALU_SLICE_EXT",
+            &Self::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT => "VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT",
+            &Self::VIDEO_ENCODE_H264_PROFILE_EXT => "VIDEO_ENCODE_H264_PROFILE_EXT",
+            &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => "VIDEO_DECODE_H264_CAPABILITIES_EXT",
+            &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => "VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT",
+            &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => "VIDEO_DECODE_H264_PICTURE_INFO_EXT",
+            &Self::VIDEO_DECODE_H264_MVC_EXT => "VIDEO_DECODE_H264_MVC_EXT",
+            &Self::VIDEO_DECODE_H264_PROFILE_EXT => "VIDEO_DECODE_H264_PROFILE_EXT",
+            &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT",
+            &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => "VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT",
             &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => "TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD",
             &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => "STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP",
             &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => "PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV",
@@ -4293,6 +4327,13 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD => "PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD",
             &Self::CALIBRATED_TIMESTAMP_INFO_EXT => "CALIBRATED_TIMESTAMP_INFO_EXT",
             &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD => "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD",
+            &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => "VIDEO_DECODE_H265_CAPABILITIES_EXT",
+            &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => "VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT",
+            &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT",
+            &Self::VIDEO_DECODE_H265_PROFILE_EXT => "VIDEO_DECODE_H265_PROFILE_EXT",
+            &Self::VIDEO_DECODE_H265_PICTURE_INFO_EXT => "VIDEO_DECODE_H265_PICTURE_INFO_EXT",
+            &Self::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT => "VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT",
             &Self::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD => "DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD",
             &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT => "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT",
             &Self::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT => "PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT",
@@ -4352,6 +4393,9 @@ impl std::fmt::Debug for StructureType {
             &Self::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV => "FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV",
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => "PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => "PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT",
+            &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => "PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT",
+            &Self::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT",
+            &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT => "PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT",
             &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT => "SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT",
             &Self::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT => "SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT",
             &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT => "SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT",
@@ -4377,6 +4421,8 @@ impl std::fmt::Debug for StructureType {
             &Self::GENERATED_COMMANDS_INFO_NV => "GENERATED_COMMANDS_INFO_NV",
             &Self::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV => "GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV",
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV",
+            &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => "PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV",
+            &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => "COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV",
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT",
             &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM",
@@ -4410,6 +4456,7 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV",
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV",
             &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => "PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV",
+            &Self::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => "PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT",
             &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => "COPY_COMMAND_TRANSFORM_INFO_QCOM",
@@ -4430,12 +4477,18 @@ impl std::fmt::Debug for StructureType {
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE",
             &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE",
+            &Self::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => "PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT",
+            &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT",
+            &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT",
             &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA",
             &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
+            &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT",
             &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
+            &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => "PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT",
+            &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => "PIPELINE_COLOR_WRITE_CREATE_INFO_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -4670,6 +4723,34 @@ impl StructureType {
     pub const DEBUG_MARKER_OBJECT_TAG_INFO_EXT: Self = Self(1000022001);
     pub const DEBUG_MARKER_MARKER_INFO_EXT: Self = Self(1000022002);
 }
+#[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
+impl StructureType {
+    pub const VIDEO_PROFILE_KHR: Self = Self(1000023000);
+    pub const VIDEO_CAPABILITIES_KHR: Self = Self(1000023001);
+    pub const VIDEO_PICTURE_RESOURCE_KHR: Self = Self(1000023002);
+    pub const VIDEO_GET_MEMORY_PROPERTIES_KHR: Self = Self(1000023003);
+    pub const VIDEO_BIND_MEMORY_KHR: Self = Self(1000023004);
+    pub const VIDEO_SESSION_CREATE_INFO_KHR: Self = Self(1000023005);
+    pub const VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR: Self = Self(1000023006);
+    pub const VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR: Self = Self(1000023007);
+    pub const VIDEO_BEGIN_CODING_INFO_KHR: Self = Self(1000023008);
+    pub const VIDEO_END_CODING_INFO_KHR: Self = Self(1000023009);
+    pub const VIDEO_CODING_CONTROL_INFO_KHR: Self = Self(1000023010);
+    pub const VIDEO_REFERENCE_SLOT_KHR: Self = Self(1000023011);
+    pub const VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR: Self = Self(1000023012);
+    pub const VIDEO_PROFILES_KHR: Self = Self(1000023013);
+    pub const PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR: Self = Self(1000023014);
+    pub const VIDEO_FORMAT_PROPERTIES_KHR: Self = Self(1000023015);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl StructureType {
+    pub const VIDEO_DECODE_INFO_KHR: Self = Self(1000024000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl StructureType {
+    pub const VIDEO_ENCODE_INFO_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: Self = Self(1000299001);
+}
 #[doc = "Provided by [`crate::extensions::nv_dedicated_allocation`]"]
 impl StructureType {
     pub const DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV: Self = Self(1000026000);
@@ -4686,6 +4767,29 @@ impl StructureType {
 impl StructureType {
     pub const IMAGE_VIEW_HANDLE_INFO_NVX: Self = Self(1000030000);
     pub const IMAGE_VIEW_ADDRESS_PROPERTIES_NVX: Self = Self(1000030001);
+}
+#[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
+impl StructureType {
+    pub const VIDEO_ENCODE_H264_CAPABILITIES_EXT: Self = Self(1000038000);
+    pub const VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT: Self = Self(1000038001);
+    pub const VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000038002);
+    pub const VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000038003);
+    pub const VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT: Self = Self(1000038004);
+    pub const VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000038005);
+    pub const VIDEO_ENCODE_H264_NALU_SLICE_EXT: Self = Self(1000038006);
+    pub const VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT: Self = Self(1000038007);
+    pub const VIDEO_ENCODE_H264_PROFILE_EXT: Self = Self(1000038008);
+}
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h264`]"]
+impl StructureType {
+    pub const VIDEO_DECODE_H264_CAPABILITIES_EXT: Self = Self(1000040000);
+    pub const VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT: Self = Self(1000040001);
+    pub const VIDEO_DECODE_H264_PICTURE_INFO_EXT: Self = Self(1000040002);
+    pub const VIDEO_DECODE_H264_MVC_EXT: Self = Self(1000040003);
+    pub const VIDEO_DECODE_H264_PROFILE_EXT: Self = Self(1000040004);
+    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000040005);
+    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000040006);
+    pub const VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000040007);
 }
 #[doc = "Provided by [`crate::extensions::amd_texture_gather_bias_lod`]"]
 impl StructureType {
@@ -5023,6 +5127,16 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD: Self = Self(1000185000);
 }
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h265`]"]
+impl StructureType {
+    pub const VIDEO_DECODE_H265_CAPABILITIES_EXT: Self = Self(1000187000);
+    pub const VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT: Self = Self(1000187001);
+    pub const VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000187002);
+    pub const VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000187003);
+    pub const VIDEO_DECODE_H265_PROFILE_EXT: Self = Self(1000187004);
+    pub const VIDEO_DECODE_H265_PICTURE_INFO_EXT: Self = Self(1000187005);
+    pub const VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT: Self = Self(1000187006);
+}
 #[doc = "Provided by [`crate::extensions::amd_memory_overallocation_behavior`]"]
 impl StructureType {
     pub const DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD: Self = Self(1000189000);
@@ -5187,6 +5301,12 @@ impl StructureType {
 impl StructureType {
     pub const PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT: Self = Self(1000252000);
 }
+#[doc = "Provided by [`crate::extensions::ext_provoking_vertex`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT: Self = Self(1000254000);
+    pub const PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT: Self = Self(1000254001);
+    pub const PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT: Self = Self(1000254002);
+}
 #[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl StructureType {
     pub const SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT: Self = Self(1000255000);
@@ -5238,6 +5358,11 @@ impl StructureType {
     pub const GENERATED_COMMANDS_INFO_NV: Self = Self(1000277005);
     pub const GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV: Self = Self(1000277006);
     pub const PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV: Self = Self(1000277007);
+}
+#[doc = "Provided by [`crate::extensions::nv_inherited_viewport_scissor`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV: Self = Self(1000278000);
+    pub const COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV: Self = Self(1000278001);
 }
 #[doc = "Provided by [`crate::extensions::ext_texel_buffer_alignment`]"]
 impl StructureType {
@@ -5308,6 +5433,10 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV: Self = Self(1000326001);
     pub const PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV: Self = Self(1000326002);
 }
+#[doc = "Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT: Self = Self(1000330000);
+}
 #[doc = "Provided by [`crate::extensions::ext_fragment_density_map2`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT: Self = Self(1000332000);
@@ -5352,6 +5481,12 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE: Self = Self(1000351000);
     pub const MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE: Self = Self(1000351002);
 }
+#[doc = "Provided by [`crate::extensions::ext_vertex_input_dynamic_state`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000352000);
+    pub const VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT: Self = Self(1000352001);
+    pub const VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT: Self = Self(1000352002);
+}
 #[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
 impl StructureType {
     pub const IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000364000);
@@ -5363,9 +5498,18 @@ impl StructureType {
     pub const IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365000);
     pub const SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365001);
 }
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state2`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT: Self = Self(1000377000);
+}
 #[doc = "Provided by [`crate::extensions::qnx_screen_surface`]"]
 impl StructureType {
     pub const SCREEN_SURFACE_CREATE_INFO_QNX: Self = Self(1000378000);
+}
+#[doc = "Provided by [`crate::extensions::ext_color_write_enable`]"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT: Self = Self(1000381000);
+    pub const PIPELINE_COLOR_WRITE_CREATE_INFO_EXT: Self = Self(1000381001);
 }
 #[doc = "Provided by [`crate::extensions::khr_multiview`]"]
 impl StructureType {
@@ -6055,6 +6199,8 @@ impl std::fmt::Debug for ObjectType {
             &Self::DISPLAY_KHR => "DISPLAY_KHR",
             &Self::DISPLAY_MODE_KHR => "DISPLAY_MODE_KHR",
             &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
+            &Self::VIDEO_SESSION_KHR => "VIDEO_SESSION_KHR",
+            &Self::VIDEO_SESSION_PARAMETERS_KHR => "VIDEO_SESSION_PARAMETERS_KHR",
             &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
             &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
@@ -6117,6 +6263,11 @@ impl ObjectType {
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl ObjectType {
     pub const DEBUG_REPORT_CALLBACK_EXT: Self = Self(1000011000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
+impl ObjectType {
+    pub const VIDEO_SESSION_KHR: Self = Self(1000023000);
+    pub const VIDEO_SESSION_PARAMETERS_KHR: Self = Self(1000023001);
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
 impl ObjectType {
@@ -6296,19 +6447,10 @@ pub type PFN_vkGetPhysicalDeviceFeatures = unsafe extern "system" fn(physical_de
 pub type PFN_vkGetPhysicalDeviceFormatProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, p_format_properties: *mut crate::vk1_0::FormatProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceImageFormatProperties = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    format: crate::vk1_0::Format,
-    _type: crate::vk1_0::ImageType,
-    tiling: crate::vk1_0::ImageTiling,
-    usage: crate::vk1_0::ImageUsageFlags,
-    flags: crate::vk1_0::ImageCreateFlags,
-    p_image_format_properties: *mut crate::vk1_0::ImageFormatProperties,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceImageFormatProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: crate::vk1_0::ImageCreateFlags, p_image_format_properties: *mut crate::vk1_0::ImageFormatProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDevice.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDevice =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_create_info: *const crate::vk1_0::DeviceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_device: *mut crate::vk1_0::Device) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDevice = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_create_info: *const crate::vk1_0::DeviceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_device: *mut crate::vk1_0::Device) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDevice.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDevice = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6323,8 +6465,7 @@ pub type PFN_vkEnumerateInstanceExtensionProperties = unsafe extern "system" fn(
 pub type PFN_vkEnumerateDeviceLayerProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::LayerProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceExtensionProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumerateDeviceExtensionProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_layer_name: *const std::os::raw::c_char, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::ExtensionProperties) -> crate::vk1_0::Result;
+pub type PFN_vkEnumerateDeviceExtensionProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_layer_name: *const std::os::raw::c_char, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::ExtensionProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceQueue = unsafe extern "system" fn(device: crate::vk1_0::Device, queue_family_index: u32, queue_index: u32, p_queue: *mut crate::vk1_0::Queue) -> ();
@@ -6339,21 +6480,13 @@ pub type PFN_vkQueueWaitIdle = unsafe extern "system" fn(queue: crate::vk1_0::Qu
 pub type PFN_vkDeviceWaitIdle = unsafe extern "system" fn(device: crate::vk1_0::Device) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateMemory.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAllocateMemory =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocate_info: *const crate::vk1_0::MemoryAllocateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_memory: *mut crate::vk1_0::DeviceMemory) -> crate::vk1_0::Result;
+pub type PFN_vkAllocateMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocate_info: *const crate::vk1_0::MemoryAllocateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_memory: *mut crate::vk1_0::DeviceMemory) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFreeMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkFreeMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkMapMemory = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    memory: crate::vk1_0::DeviceMemory,
-    offset: crate::vk1_0::DeviceSize,
-    size: crate::vk1_0::DeviceSize,
-    flags: crate::vk1_0::MemoryMapFlags,
-    pp_data: *mut *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkMapMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: crate::vk1_0::MemoryMapFlags, pp_data: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUnmapMemory.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkUnmapMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory) -> ();
@@ -6380,27 +6513,16 @@ pub type PFN_vkGetImageMemoryRequirements = unsafe extern "system" fn(device: cr
 pub type PFN_vkBindImageMemory = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, memory: crate::vk1_0::DeviceMemory, memory_offset: crate::vk1_0::DeviceSize) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageSparseMemoryRequirements =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_sparse_memory_requirement_count: *mut u32, p_sparse_memory_requirements: *mut crate::vk1_0::SparseImageMemoryRequirements) -> ();
+pub type PFN_vkGetImageSparseMemoryRequirements = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_sparse_memory_requirement_count: *mut u32, p_sparse_memory_requirements: *mut crate::vk1_0::SparseImageMemoryRequirements) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    format: crate::vk1_0::Format,
-    _type: crate::vk1_0::ImageType,
-    samples: crate::vk1_0::SampleCountFlagBits,
-    usage: crate::vk1_0::ImageUsageFlags,
-    tiling: crate::vk1_0::ImageTiling,
-    p_property_count: *mut u32,
-    p_properties: *mut crate::vk1_0::SparseImageFormatProperties,
-) -> ();
+pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, samples: crate::vk1_0::SampleCountFlagBits, usage: crate::vk1_0::ImageUsageFlags, tiling: crate::vk1_0::ImageTiling, p_property_count: *mut u32, p_properties: *mut crate::vk1_0::SparseImageFormatProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBindSparse.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueueBindSparse = unsafe extern "system" fn(queue: crate::vk1_0::Queue, bind_info_count: u32, p_bind_info: *const crate::vk1_0::BindSparseInfo, fence: crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFence.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateFence =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FenceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_fence: *mut crate::vk1_0::Fence) -> crate::vk1_0::Result;
+pub type PFN_vkCreateFence = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FenceCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_fence: *mut crate::vk1_0::Fence) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFence.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyFence = unsafe extern "system" fn(device: crate::vk1_0::Device, fence: crate::vk1_0::Fence, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6415,15 +6537,13 @@ pub type PFN_vkGetFenceStatus = unsafe extern "system" fn(device: crate::vk1_0::
 pub type PFN_vkWaitForFences = unsafe extern "system" fn(device: crate::vk1_0::Device, fence_count: u32, p_fences: *const crate::vk1_0::Fence, wait_all: crate::vk1_0::Bool32, timeout: u64) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSemaphore.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSemaphore =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SemaphoreCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_semaphore: *mut crate::vk1_0::Semaphore) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSemaphore = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SemaphoreCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_semaphore: *mut crate::vk1_0::Semaphore) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySemaphore.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySemaphore = unsafe extern "system" fn(device: crate::vk1_0::Device, semaphore: crate::vk1_0::Semaphore, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateEvent.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateEvent =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::EventCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_event: *mut crate::vk1_0::Event) -> crate::vk1_0::Result;
+pub type PFN_vkCreateEvent = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::EventCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_event: *mut crate::vk1_0::Event) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyEvent = unsafe extern "system" fn(device: crate::vk1_0::Device, event: crate::vk1_0::Event, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6438,41 +6558,28 @@ pub type PFN_vkSetEvent = unsafe extern "system" fn(device: crate::vk1_0::Device
 pub type PFN_vkResetEvent = unsafe extern "system" fn(device: crate::vk1_0::Device, event: crate::vk1_0::Event) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateQueryPool =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::QueryPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_query_pool: *mut crate::vk1_0::QueryPool) -> crate::vk1_0::Result;
+pub type PFN_vkCreateQueryPool = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::QueryPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_query_pool: *mut crate::vk1_0::QueryPool) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyQueryPool = unsafe extern "system" fn(device: crate::vk1_0::Device, query_pool: crate::vk1_0::QueryPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueryPoolResults.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetQueryPoolResults = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    query_pool: crate::vk1_0::QueryPool,
-    first_query: u32,
-    query_count: u32,
-    data_size: usize,
-    p_data: *mut std::ffi::c_void,
-    stride: crate::vk1_0::DeviceSize,
-    flags: crate::vk1_0::QueryResultFlags,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetQueryPoolResults = unsafe extern "system" fn(device: crate::vk1_0::Device, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, data_size: usize, p_data: *mut std::ffi::c_void, stride: crate::vk1_0::DeviceSize, flags: crate::vk1_0::QueryResultFlags) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateBuffer =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_buffer: *mut crate::vk1_0::Buffer) -> crate::vk1_0::Result;
+pub type PFN_vkCreateBuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_buffer: *mut crate::vk1_0::Buffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyBuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: crate::vk1_0::Buffer, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferView.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateBufferView =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::BufferView) -> crate::vk1_0::Result;
+pub type PFN_vkCreateBufferView = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::BufferViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::BufferView) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBufferView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyBufferView = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer_view: crate::vk1_0::BufferView, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateImage =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_image: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
+pub type PFN_vkCreateImage = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_image: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImage.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyImage = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6481,26 +6588,19 @@ pub type PFN_vkDestroyImage = unsafe extern "system" fn(device: crate::vk1_0::De
 pub type PFN_vkGetImageSubresourceLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_subresource: *const crate::vk1_0::ImageSubresource, p_layout: *mut crate::vk1_0::SubresourceLayout) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImageView.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateImageView =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::ImageView) -> crate::vk1_0::Result;
+pub type PFN_vkCreateImageView = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ImageViewCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_view: *mut crate::vk1_0::ImageView) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImageView.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyImageView = unsafe extern "system" fn(device: crate::vk1_0::Device, image_view: crate::vk1_0::ImageView, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateShaderModule.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateShaderModule =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ShaderModuleCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_shader_module: *mut crate::vk1_0::ShaderModule) -> crate::vk1_0::Result;
+pub type PFN_vkCreateShaderModule = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::ShaderModuleCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_shader_module: *mut crate::vk1_0::ShaderModule) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyShaderModule.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyShaderModule = unsafe extern "system" fn(device: crate::vk1_0::Device, shader_module: crate::vk1_0::ShaderModule, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineCache.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreatePipelineCache = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::PipelineCacheCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_pipeline_cache: *mut crate::vk1_0::PipelineCache,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreatePipelineCache = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::PipelineCacheCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipeline_cache: *mut crate::vk1_0::PipelineCache) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipelineCache.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyPipelineCache = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6512,64 +6612,34 @@ pub type PFN_vkGetPipelineCacheData = unsafe extern "system" fn(device: crate::v
 pub type PFN_vkMergePipelineCaches = unsafe extern "system" fn(device: crate::vk1_0::Device, dst_cache: crate::vk1_0::PipelineCache, src_cache_count: u32, p_src_caches: *const crate::vk1_0::PipelineCache) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateGraphicsPipelines.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateGraphicsPipelines = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline_cache: crate::vk1_0::PipelineCache,
-    create_info_count: u32,
-    p_create_infos: *const crate::vk1_0::GraphicsPipelineCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_pipelines: *mut crate::vk1_0::Pipeline,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateGraphicsPipelines = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, create_info_count: u32, p_create_infos: *const crate::vk1_0::GraphicsPipelineCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipelines: *mut crate::vk1_0::Pipeline) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateComputePipelines.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateComputePipelines = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline_cache: crate::vk1_0::PipelineCache,
-    create_info_count: u32,
-    p_create_infos: *const crate::vk1_0::ComputePipelineCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_pipelines: *mut crate::vk1_0::Pipeline,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateComputePipelines = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, create_info_count: u32, p_create_infos: *const crate::vk1_0::ComputePipelineCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipelines: *mut crate::vk1_0::Pipeline) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipeline.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyPipeline = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePipelineLayout.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreatePipelineLayout = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::PipelineLayoutCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_pipeline_layout: *mut crate::vk1_0::PipelineLayout,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreatePipelineLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::PipelineLayoutCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipeline_layout: *mut crate::vk1_0::PipelineLayout) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipelineLayout.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyPipelineLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_layout: crate::vk1_0::PipelineLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSampler.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSampler =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SamplerCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_sampler: *mut crate::vk1_0::Sampler) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSampler = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::SamplerCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_sampler: *mut crate::vk1_0::Sampler) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySampler.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySampler = unsafe extern "system" fn(device: crate::vk1_0::Device, sampler: crate::vk1_0::Sampler, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorSetLayout.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDescriptorSetLayout = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_set_layout: *mut crate::vk1_0::DescriptorSetLayout,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDescriptorSetLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_set_layout: *mut crate::vk1_0::DescriptorSetLayout) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorSetLayout.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDescriptorSetLayout = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDescriptorPool = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_0::DescriptorPoolCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_descriptor_pool: *mut crate::vk1_0::DescriptorPool,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDescriptorPool = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::DescriptorPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_descriptor_pool: *mut crate::vk1_0::DescriptorPool) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDescriptorPool = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6584,19 +6654,16 @@ pub type PFN_vkAllocateDescriptorSets = unsafe extern "system" fn(device: crate:
 pub type PFN_vkFreeDescriptorSets = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_pool: crate::vk1_0::DescriptorPool, descriptor_set_count: u32, p_descriptor_sets: *const crate::vk1_0::DescriptorSet) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkUpdateDescriptorSets =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_write_count: u32, p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet, descriptor_copy_count: u32, p_descriptor_copies: *const crate::vk1_0::CopyDescriptorSet) -> ();
+pub type PFN_vkUpdateDescriptorSets = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_write_count: u32, p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet, descriptor_copy_count: u32, p_descriptor_copies: *const crate::vk1_0::CopyDescriptorSet) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateFramebuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateFramebuffer =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FramebufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_framebuffer: *mut crate::vk1_0::Framebuffer) -> crate::vk1_0::Result;
+pub type PFN_vkCreateFramebuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::FramebufferCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_framebuffer: *mut crate::vk1_0::Framebuffer) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFramebuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyFramebuffer = unsafe extern "system" fn(device: crate::vk1_0::Device, framebuffer: crate::vk1_0::Framebuffer, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateRenderPass =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::RenderPassCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_render_pass: *mut crate::vk1_0::RenderPass) -> crate::vk1_0::Result;
+pub type PFN_vkCreateRenderPass = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::RenderPassCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_render_pass: *mut crate::vk1_0::RenderPass) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyRenderPass = unsafe extern "system" fn(device: crate::vk1_0::Device, render_pass: crate::vk1_0::RenderPass, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6605,8 +6672,7 @@ pub type PFN_vkDestroyRenderPass = unsafe extern "system" fn(device: crate::vk1_
 pub type PFN_vkGetRenderAreaGranularity = unsafe extern "system" fn(device: crate::vk1_0::Device, render_pass: crate::vk1_0::RenderPass, p_granularity: *mut crate::vk1_0::Extent2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateCommandPool =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::CommandPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_command_pool: *mut crate::vk1_0::CommandPool) -> crate::vk1_0::Result;
+pub type PFN_vkCreateCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::CommandPoolCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_command_pool: *mut crate::vk1_0::CommandPool) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -6660,16 +6726,7 @@ pub type PFN_vkCmdSetStencilWriteMask = unsafe extern "system" fn(command_buffer
 pub type PFN_vkCmdSetStencilReference = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, reference: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindDescriptorSets.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindDescriptorSets = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-    layout: crate::vk1_0::PipelineLayout,
-    first_set: u32,
-    descriptor_set_count: u32,
-    p_descriptor_sets: *const crate::vk1_0::DescriptorSet,
-    dynamic_offset_count: u32,
-    p_dynamic_offsets: *const u32,
-) -> ();
+pub type PFN_vkCmdBindDescriptorSets = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, layout: crate::vk1_0::PipelineLayout, first_set: u32, descriptor_set_count: u32, p_descriptor_sets: *const crate::vk1_0::DescriptorSet, dynamic_offset_count: u32, p_dynamic_offsets: *const u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindIndexBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindIndexBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, index_type: crate::vk1_0::IndexType) -> ();
@@ -6699,88 +6756,34 @@ pub type PFN_vkCmdDispatchIndirect = unsafe extern "system" fn(command_buffer: c
 pub type PFN_vkCmdCopyBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_buffer: crate::vk1_0::Buffer, dst_buffer: crate::vk1_0::Buffer, region_count: u32, p_regions: *const crate::vk1_0::BufferCopy) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_image: crate::vk1_0::Image,
-    src_image_layout: crate::vk1_0::ImageLayout,
-    dst_image: crate::vk1_0::Image,
-    dst_image_layout: crate::vk1_0::ImageLayout,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::ImageCopy,
-) -> ();
+pub type PFN_vkCmdCopyImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, region_count: u32, p_regions: *const crate::vk1_0::ImageCopy) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBlitImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBlitImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_image: crate::vk1_0::Image,
-    src_image_layout: crate::vk1_0::ImageLayout,
-    dst_image: crate::vk1_0::Image,
-    dst_image_layout: crate::vk1_0::ImageLayout,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::ImageBlit,
-    filter: crate::vk1_0::Filter,
-) -> ();
+pub type PFN_vkCmdBlitImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, region_count: u32, p_regions: *const crate::vk1_0::ImageBlit, filter: crate::vk1_0::Filter) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyBufferToImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_buffer: crate::vk1_0::Buffer,
-    dst_image: crate::vk1_0::Image,
-    dst_image_layout: crate::vk1_0::ImageLayout,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::BufferImageCopy,
-) -> ();
+pub type PFN_vkCmdCopyBufferToImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_buffer: crate::vk1_0::Buffer, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, region_count: u32, p_regions: *const crate::vk1_0::BufferImageCopy) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyImageToBuffer = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_image: crate::vk1_0::Image,
-    src_image_layout: crate::vk1_0::ImageLayout,
-    dst_buffer: crate::vk1_0::Buffer,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::BufferImageCopy,
-) -> ();
+pub type PFN_vkCmdCopyImageToBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_buffer: crate::vk1_0::Buffer, region_count: u32, p_regions: *const crate::vk1_0::BufferImageCopy) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdUpdateBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdUpdateBuffer =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, data_size: crate::vk1_0::DeviceSize, p_data: *const std::ffi::c_void) -> ();
+pub type PFN_vkCmdUpdateBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, data_size: crate::vk1_0::DeviceSize, p_data: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdFillBuffer.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdFillBuffer = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, data: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearColorImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdClearColorImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    image: crate::vk1_0::Image,
-    image_layout: crate::vk1_0::ImageLayout,
-    p_color: *const crate::vk1_0::ClearColorValue,
-    range_count: u32,
-    p_ranges: *const crate::vk1_0::ImageSubresourceRange,
-) -> ();
+pub type PFN_vkCmdClearColorImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, image: crate::vk1_0::Image, image_layout: crate::vk1_0::ImageLayout, p_color: *const crate::vk1_0::ClearColorValue, range_count: u32, p_ranges: *const crate::vk1_0::ImageSubresourceRange) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearDepthStencilImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdClearDepthStencilImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    image: crate::vk1_0::Image,
-    image_layout: crate::vk1_0::ImageLayout,
-    p_depth_stencil: *const crate::vk1_0::ClearDepthStencilValue,
-    range_count: u32,
-    p_ranges: *const crate::vk1_0::ImageSubresourceRange,
-) -> ();
+pub type PFN_vkCmdClearDepthStencilImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, image: crate::vk1_0::Image, image_layout: crate::vk1_0::ImageLayout, p_depth_stencil: *const crate::vk1_0::ClearDepthStencilValue, range_count: u32, p_ranges: *const crate::vk1_0::ImageSubresourceRange) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearAttachments.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdClearAttachments = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, attachment_count: u32, p_attachments: *const crate::vk1_0::ClearAttachment, rect_count: u32, p_rects: *const crate::vk1_0::ClearRect) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdResolveImage = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_image: crate::vk1_0::Image,
-    src_image_layout: crate::vk1_0::ImageLayout,
-    dst_image: crate::vk1_0::Image,
-    dst_image_layout: crate::vk1_0::ImageLayout,
-    region_count: u32,
-    p_regions: *const crate::vk1_0::ImageResolve,
-) -> ();
+pub type PFN_vkCmdResolveImage = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, region_count: u32, p_regions: *const crate::vk1_0::ImageResolve) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetEvent = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> ();
@@ -6789,33 +6792,10 @@ pub type PFN_vkCmdSetEvent = unsafe extern "system" fn(command_buffer: crate::vk
 pub type PFN_vkCmdResetEvent = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdWaitEvents = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    event_count: u32,
-    p_events: *const crate::vk1_0::Event,
-    src_stage_mask: crate::vk1_0::PipelineStageFlags,
-    dst_stage_mask: crate::vk1_0::PipelineStageFlags,
-    memory_barrier_count: u32,
-    p_memory_barriers: *const crate::vk1_0::MemoryBarrier,
-    buffer_memory_barrier_count: u32,
-    p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier,
-    image_memory_barrier_count: u32,
-    p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier,
-) -> ();
+pub type PFN_vkCmdWaitEvents = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, event_count: u32, p_events: *const crate::vk1_0::Event, src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, memory_barrier_count: u32, p_memory_barriers: *const crate::vk1_0::MemoryBarrier, buffer_memory_barrier_count: u32, p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier, image_memory_barrier_count: u32, p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPipelineBarrier = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    src_stage_mask: crate::vk1_0::PipelineStageFlags,
-    dst_stage_mask: crate::vk1_0::PipelineStageFlags,
-    dependency_flags: crate::vk1_0::DependencyFlags,
-    memory_barrier_count: u32,
-    p_memory_barriers: *const crate::vk1_0::MemoryBarrier,
-    buffer_memory_barrier_count: u32,
-    p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier,
-    image_memory_barrier_count: u32,
-    p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier,
-) -> ();
+pub type PFN_vkCmdPipelineBarrier = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, dependency_flags: crate::vk1_0::DependencyFlags, memory_barrier_count: u32, p_memory_barriers: *const crate::vk1_0::MemoryBarrier, buffer_memory_barrier_count: u32, p_buffer_memory_barriers: *const crate::vk1_0::BufferMemoryBarrier, image_memory_barrier_count: u32, p_image_memory_barriers: *const crate::vk1_0::ImageMemoryBarrier) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQuery.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginQuery = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags) -> ();
@@ -6830,20 +6810,10 @@ pub type PFN_vkCmdResetQueryPool = unsafe extern "system" fn(command_buffer: cra
 pub type PFN_vkCmdWriteTimestamp = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: crate::vk1_0::PipelineStageFlagBits, query_pool: crate::vk1_0::QueryPool, query: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyQueryPoolResults.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    query_pool: crate::vk1_0::QueryPool,
-    first_query: u32,
-    query_count: u32,
-    dst_buffer: crate::vk1_0::Buffer,
-    dst_offset: crate::vk1_0::DeviceSize,
-    stride: crate::vk1_0::DeviceSize,
-    flags: crate::vk1_0::QueryResultFlags,
-) -> ();
+pub type PFN_vkCmdCopyQueryPoolResults = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, stride: crate::vk1_0::DeviceSize, flags: crate::vk1_0::QueryResultFlags) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushConstants.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdPushConstants =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, layout: crate::vk1_0::PipelineLayout, stage_flags: crate::vk1_0::ShaderStageFlags, offset: u32, size: u32, p_values: *const std::ffi::c_void) -> ();
+pub type PFN_vkCmdPushConstants = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, layout: crate::vk1_0::PipelineLayout, stage_flags: crate::vk1_0::ShaderStageFlags, offset: u32, size: u32, p_values: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginRenderPass = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_render_pass_begin: *const crate::vk1_0::RenderPassBeginInfo, contents: crate::vk1_0::SubpassContents) -> ();
@@ -6884,10 +6854,7 @@ pub struct BaseOutStructure {
 }
 impl Default for BaseOutStructure {
     fn default() -> Self {
-        Self {
-            s_type: Default::default(),
-            p_next: std::ptr::null_mut(),
-        }
+        Self { s_type: Default::default(), p_next: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for BaseOutStructure {
@@ -6952,10 +6919,7 @@ pub struct BaseInStructure {
 }
 impl Default for BaseInStructure {
     fn default() -> Self {
-        Self {
-            s_type: Default::default(),
-            p_next: std::ptr::null(),
-        }
+        Self { s_type: Default::default(), p_next: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BaseInStructure {
@@ -7091,11 +7055,7 @@ pub struct Offset3D {
 }
 impl Default for Offset3D {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-            z: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default(), z: Default::default() }
     }
 }
 impl std::fmt::Debug for Offset3D {
@@ -7170,10 +7130,7 @@ pub struct Extent2D {
 }
 impl Default for Extent2D {
     fn default() -> Self {
-        Self {
-            width: Default::default(),
-            height: Default::default(),
-        }
+        Self { width: Default::default(), height: Default::default() }
     }
 }
 impl std::fmt::Debug for Extent2D {
@@ -7244,11 +7201,7 @@ pub struct Extent3D {
 }
 impl Default for Extent3D {
     fn default() -> Self {
-        Self {
-            width: Default::default(),
-            height: Default::default(),
-            depth: Default::default(),
-        }
+        Self { width: Default::default(), height: Default::default(), depth: Default::default() }
     }
 }
 impl std::fmt::Debug for Extent3D {
@@ -7327,26 +7280,12 @@ pub struct Viewport {
 }
 impl Default for Viewport {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-            width: Default::default(),
-            height: Default::default(),
-            min_depth: Default::default(),
-            max_depth: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default(), width: Default::default(), height: Default::default(), min_depth: Default::default(), max_depth: Default::default() }
     }
 }
 impl std::fmt::Debug for Viewport {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("Viewport")
-            .field("x", &self.x)
-            .field("y", &self.y)
-            .field("width", &self.width)
-            .field("height", &self.height)
-            .field("min_depth", &self.min_depth)
-            .field("max_depth", &self.max_depth)
-            .finish()
+        f.debug_struct("Viewport").field("x", &self.x).field("y", &self.y).field("width", &self.width).field("height", &self.height).field("min_depth", &self.min_depth).field("max_depth", &self.max_depth).finish()
     }
 }
 impl Viewport {
@@ -7431,10 +7370,7 @@ pub struct Rect2D {
 }
 impl Default for Rect2D {
     fn default() -> Self {
-        Self {
-            offset: Default::default(),
-            extent: Default::default(),
-        }
+        Self { offset: Default::default(), extent: Default::default() }
     }
 }
 impl std::fmt::Debug for Rect2D {
@@ -7505,20 +7441,12 @@ pub struct ClearRect {
 }
 impl Default for ClearRect {
     fn default() -> Self {
-        Self {
-            rect: Default::default(),
-            base_array_layer: Default::default(),
-            layer_count: Default::default(),
-        }
+        Self { rect: Default::default(), base_array_layer: Default::default(), layer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for ClearRect {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ClearRect")
-            .field("rect", &self.rect)
-            .field("base_array_layer", &self.base_array_layer)
-            .field("layer_count", &self.layer_count)
-            .finish()
+        f.debug_struct("ClearRect").field("rect", &self.rect).field("base_array_layer", &self.base_array_layer).field("layer_count", &self.layer_count).finish()
     }
 }
 impl ClearRect {
@@ -7590,12 +7518,7 @@ pub struct ComponentMapping {
 }
 impl Default for ComponentMapping {
     fn default() -> Self {
-        Self {
-            r: Default::default(),
-            g: Default::default(),
-            b: Default::default(),
-            a: Default::default(),
-        }
+        Self { r: Default::default(), g: Default::default(), b: Default::default(), a: Default::default() }
     }
 }
 impl std::fmt::Debug for ComponentMapping {
@@ -7682,32 +7605,12 @@ pub struct PhysicalDeviceProperties {
 }
 impl Default for PhysicalDeviceProperties {
     fn default() -> Self {
-        Self {
-            api_version: Default::default(),
-            driver_version: Default::default(),
-            vendor_id: Default::default(),
-            device_id: Default::default(),
-            device_type: Default::default(),
-            device_name: unsafe { std::mem::zeroed() },
-            pipeline_cache_uuid: unsafe { std::mem::zeroed() },
-            limits: Default::default(),
-            sparse_properties: Default::default(),
-        }
+        Self { api_version: Default::default(), driver_version: Default::default(), vendor_id: Default::default(), device_id: Default::default(), device_type: Default::default(), device_name: unsafe { std::mem::zeroed() }, pipeline_cache_uuid: unsafe { std::mem::zeroed() }, limits: Default::default(), sparse_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceProperties")
-            .field("api_version", &self.api_version)
-            .field("driver_version", &self.driver_version)
-            .field("vendor_id", &self.vendor_id)
-            .field("device_id", &self.device_id)
-            .field("device_type", &self.device_type)
-            .field("device_name", unsafe { &std::ffi::CStr::from_ptr(self.device_name.as_ptr()) })
-            .field("pipeline_cache_uuid", &self.pipeline_cache_uuid)
-            .field("limits", &self.limits)
-            .field("sparse_properties", &self.sparse_properties)
-            .finish()
+        f.debug_struct("PhysicalDeviceProperties").field("api_version", &self.api_version).field("driver_version", &self.driver_version).field("vendor_id", &self.vendor_id).field("device_id", &self.device_id).field("device_type", &self.device_type).field("device_name", unsafe { &std::ffi::CStr::from_ptr(self.device_name.as_ptr()) }).field("pipeline_cache_uuid", &self.pipeline_cache_uuid).field("limits", &self.limits).field("sparse_properties", &self.sparse_properties).finish()
     }
 }
 impl PhysicalDeviceProperties {
@@ -7807,18 +7710,12 @@ pub struct ExtensionProperties {
 }
 impl Default for ExtensionProperties {
     fn default() -> Self {
-        Self {
-            extension_name: unsafe { std::mem::zeroed() },
-            spec_version: Default::default(),
-        }
+        Self { extension_name: unsafe { std::mem::zeroed() }, spec_version: Default::default() }
     }
 }
 impl std::fmt::Debug for ExtensionProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExtensionProperties")
-            .field("extension_name", unsafe { &std::ffi::CStr::from_ptr(self.extension_name.as_ptr()) })
-            .field("spec_version", &self.spec_version)
-            .finish()
+        f.debug_struct("ExtensionProperties").field("extension_name", unsafe { &std::ffi::CStr::from_ptr(self.extension_name.as_ptr()) }).field("spec_version", &self.spec_version).finish()
     }
 }
 impl ExtensionProperties {
@@ -7885,22 +7782,12 @@ pub struct LayerProperties {
 }
 impl Default for LayerProperties {
     fn default() -> Self {
-        Self {
-            layer_name: unsafe { std::mem::zeroed() },
-            spec_version: Default::default(),
-            implementation_version: Default::default(),
-            description: unsafe { std::mem::zeroed() },
-        }
+        Self { layer_name: unsafe { std::mem::zeroed() }, spec_version: Default::default(), implementation_version: Default::default(), description: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for LayerProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("LayerProperties")
-            .field("layer_name", unsafe { &std::ffi::CStr::from_ptr(self.layer_name.as_ptr()) })
-            .field("spec_version", &self.spec_version)
-            .field("implementation_version", &self.implementation_version)
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .finish()
+        f.debug_struct("LayerProperties").field("layer_name", unsafe { &std::ffi::CStr::from_ptr(self.layer_name.as_ptr()) }).field("spec_version", &self.spec_version).field("implementation_version", &self.implementation_version).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).finish()
     }
 }
 impl LayerProperties {
@@ -7980,28 +7867,12 @@ pub struct ApplicationInfo {
 }
 impl Default for ApplicationInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::APPLICATION_INFO,
-            p_next: std::ptr::null(),
-            p_application_name: std::ptr::null(),
-            application_version: Default::default(),
-            p_engine_name: std::ptr::null(),
-            engine_version: Default::default(),
-            api_version: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::APPLICATION_INFO, p_next: std::ptr::null(), p_application_name: std::ptr::null(), application_version: Default::default(), p_engine_name: std::ptr::null(), engine_version: Default::default(), api_version: Default::default() }
     }
 }
 impl std::fmt::Debug for ApplicationInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ApplicationInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_application_name", &self.p_application_name)
-            .field("application_version", &self.application_version)
-            .field("p_engine_name", &self.p_engine_name)
-            .field("engine_version", &self.engine_version)
-            .field("api_version", &self.api_version)
-            .finish()
+        f.debug_struct("ApplicationInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_application_name", &self.p_application_name).field("application_version", &self.application_version).field("p_engine_name", &self.p_engine_name).field("engine_version", &self.engine_version).field("api_version", &self.api_version).finish()
     }
 }
 impl ApplicationInfo {
@@ -8085,26 +7956,12 @@ pub struct AllocationCallbacks {
 }
 impl Default for AllocationCallbacks {
     fn default() -> Self {
-        Self {
-            p_user_data: std::ptr::null_mut(),
-            pfn_allocation: Default::default(),
-            pfn_reallocation: Default::default(),
-            pfn_free: Default::default(),
-            pfn_internal_allocation: Default::default(),
-            pfn_internal_free: Default::default(),
-        }
+        Self { p_user_data: std::ptr::null_mut(), pfn_allocation: Default::default(), pfn_reallocation: Default::default(), pfn_free: Default::default(), pfn_internal_allocation: Default::default(), pfn_internal_free: Default::default() }
     }
 }
 impl std::fmt::Debug for AllocationCallbacks {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AllocationCallbacks")
-            .field("p_user_data", &self.p_user_data)
-            .field("pfn_allocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_allocation) })
-            .field("pfn_reallocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_reallocation) })
-            .field("pfn_free", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_free) })
-            .field("pfn_internal_allocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_internal_allocation) })
-            .field("pfn_internal_free", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_internal_free) })
-            .finish()
+        f.debug_struct("AllocationCallbacks").field("p_user_data", &self.p_user_data).field("pfn_allocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_allocation) }).field("pfn_reallocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_reallocation) }).field("pfn_free", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_free) }).field("pfn_internal_allocation", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_internal_allocation) }).field("pfn_internal_free", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_internal_free) }).finish()
     }
 }
 impl AllocationCallbacks {
@@ -8193,26 +8050,12 @@ pub struct DeviceQueueCreateInfo {
 }
 impl Default for DeviceQueueCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            queue_family_index: Default::default(),
-            queue_count: Default::default(),
-            p_queue_priorities: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_count: Default::default(), p_queue_priorities: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceQueueCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceQueueCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("queue_family_index", &self.queue_family_index)
-            .field("queue_count", &self.queue_count)
-            .field("p_queue_priorities", &self.p_queue_priorities)
-            .finish()
+        f.debug_struct("DeviceQueueCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("queue_family_index", &self.queue_family_index).field("queue_count", &self.queue_count).field("p_queue_priorities", &self.p_queue_priorities).finish()
     }
 }
 impl DeviceQueueCreateInfo {
@@ -8293,34 +8136,12 @@ pub struct DeviceCreateInfo {
 }
 impl Default for DeviceCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            queue_create_info_count: Default::default(),
-            p_queue_create_infos: std::ptr::null(),
-            enabled_layer_count: Default::default(),
-            pp_enabled_layer_names: std::ptr::null(),
-            enabled_extension_count: Default::default(),
-            pp_enabled_extension_names: std::ptr::null(),
-            p_enabled_features: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_create_info_count: Default::default(), p_queue_create_infos: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null(), p_enabled_features: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("queue_create_info_count", &self.queue_create_info_count)
-            .field("p_queue_create_infos", &self.p_queue_create_infos)
-            .field("enabled_layer_count", &self.enabled_layer_count)
-            .field("pp_enabled_layer_names", &self.pp_enabled_layer_names)
-            .field("enabled_extension_count", &self.enabled_extension_count)
-            .field("pp_enabled_extension_names", &self.pp_enabled_extension_names)
-            .field("p_enabled_features", &self.p_enabled_features)
-            .finish()
+        f.debug_struct("DeviceCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("queue_create_info_count", &self.queue_create_info_count).field("p_queue_create_infos", &self.p_queue_create_infos).field("enabled_layer_count", &self.enabled_layer_count).field("pp_enabled_layer_names", &self.pp_enabled_layer_names).field("enabled_extension_count", &self.enabled_extension_count).field("pp_enabled_extension_names", &self.pp_enabled_extension_names).field("p_enabled_features", &self.p_enabled_features).finish()
     }
 }
 impl DeviceCreateInfo {
@@ -8473,6 +8294,8 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_col
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNV> for DeviceCreateInfoBuilder<'a> {}
@@ -8499,8 +8322,18 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_r
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNV> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXT> for DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for DeviceCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceCreateInfo.html) · Builder of [`DeviceCreateInfo`]"]
 #[repr(transparent)]
@@ -8581,30 +8414,12 @@ pub struct InstanceCreateInfo {
 }
 impl Default for InstanceCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::INSTANCE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_application_info: std::ptr::null(),
-            enabled_layer_count: Default::default(),
-            pp_enabled_layer_names: std::ptr::null(),
-            enabled_extension_count: Default::default(),
-            pp_enabled_extension_names: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::INSTANCE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), p_application_info: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for InstanceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("InstanceCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_application_info", &self.p_application_info)
-            .field("enabled_layer_count", &self.enabled_layer_count)
-            .field("pp_enabled_layer_names", &self.pp_enabled_layer_names)
-            .field("enabled_extension_count", &self.enabled_extension_count)
-            .field("pp_enabled_extension_names", &self.pp_enabled_extension_names)
-            .finish()
+        f.debug_struct("InstanceCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_application_info", &self.p_application_info).field("enabled_layer_count", &self.enabled_layer_count).field("pp_enabled_layer_names", &self.pp_enabled_layer_names).field("enabled_extension_count", &self.enabled_extension_count).field("pp_enabled_extension_names", &self.pp_enabled_extension_names).finish()
     }
 }
 impl InstanceCreateInfo {
@@ -8691,22 +8506,12 @@ pub struct QueueFamilyProperties {
 }
 impl Default for QueueFamilyProperties {
     fn default() -> Self {
-        Self {
-            queue_flags: Default::default(),
-            queue_count: Default::default(),
-            timestamp_valid_bits: Default::default(),
-            min_image_transfer_granularity: Default::default(),
-        }
+        Self { queue_flags: Default::default(), queue_count: Default::default(), timestamp_valid_bits: Default::default(), min_image_transfer_granularity: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueueFamilyProperties")
-            .field("queue_flags", &self.queue_flags)
-            .field("queue_count", &self.queue_count)
-            .field("timestamp_valid_bits", &self.timestamp_valid_bits)
-            .field("min_image_transfer_granularity", &self.min_image_transfer_granularity)
-            .finish()
+        f.debug_struct("QueueFamilyProperties").field("queue_flags", &self.queue_flags).field("queue_count", &self.queue_count).field("timestamp_valid_bits", &self.timestamp_valid_bits).field("min_image_transfer_granularity", &self.min_image_transfer_granularity).finish()
     }
 }
 impl QueueFamilyProperties {
@@ -8783,22 +8588,12 @@ pub struct PhysicalDeviceMemoryProperties {
 }
 impl Default for PhysicalDeviceMemoryProperties {
     fn default() -> Self {
-        Self {
-            memory_type_count: Default::default(),
-            memory_types: unsafe { std::mem::zeroed() },
-            memory_heap_count: Default::default(),
-            memory_heaps: unsafe { std::mem::zeroed() },
-        }
+        Self { memory_type_count: Default::default(), memory_types: unsafe { std::mem::zeroed() }, memory_heap_count: Default::default(), memory_heaps: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMemoryProperties")
-            .field("memory_type_count", &self.memory_type_count)
-            .field("memory_types", &self.memory_types)
-            .field("memory_heap_count", &self.memory_heap_count)
-            .field("memory_heaps", &self.memory_heaps)
-            .finish()
+        f.debug_struct("PhysicalDeviceMemoryProperties").field("memory_type_count", &self.memory_type_count).field("memory_types", &self.memory_types).field("memory_heap_count", &self.memory_heap_count).field("memory_heaps", &self.memory_heaps).finish()
     }
 }
 impl PhysicalDeviceMemoryProperties {
@@ -8875,22 +8670,12 @@ pub struct MemoryAllocateInfo {
 }
 impl Default for MemoryAllocateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_INFO,
-            p_next: std::ptr::null(),
-            allocation_size: Default::default(),
-            memory_type_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_INFO, p_next: std::ptr::null(), allocation_size: Default::default(), memory_type_index: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryAllocateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("allocation_size", &self.allocation_size)
-            .field("memory_type_index", &self.memory_type_index)
-            .finish()
+        f.debug_struct("MemoryAllocateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("allocation_size", &self.allocation_size).field("memory_type_index", &self.memory_type_index).finish()
     }
 }
 impl MemoryAllocateInfo {
@@ -8986,20 +8771,12 @@ pub struct MemoryRequirements {
 }
 impl Default for MemoryRequirements {
     fn default() -> Self {
-        Self {
-            size: Default::default(),
-            alignment: Default::default(),
-            memory_type_bits: Default::default(),
-        }
+        Self { size: Default::default(), alignment: Default::default(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryRequirements")
-            .field("size", &self.size)
-            .field("alignment", &self.alignment)
-            .field("memory_type_bits", &self.memory_type_bits)
-            .finish()
+        f.debug_struct("MemoryRequirements").field("size", &self.size).field("alignment", &self.alignment).field("memory_type_bits", &self.memory_type_bits).finish()
     }
 }
 impl MemoryRequirements {
@@ -9070,20 +8847,12 @@ pub struct SparseImageFormatProperties {
 }
 impl Default for SparseImageFormatProperties {
     fn default() -> Self {
-        Self {
-            aspect_mask: Default::default(),
-            image_granularity: Default::default(),
-            flags: Default::default(),
-        }
+        Self { aspect_mask: Default::default(), image_granularity: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageFormatProperties")
-            .field("aspect_mask", &self.aspect_mask)
-            .field("image_granularity", &self.image_granularity)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("SparseImageFormatProperties").field("aspect_mask", &self.aspect_mask).field("image_granularity", &self.image_granularity).field("flags", &self.flags).finish()
     }
 }
 impl SparseImageFormatProperties {
@@ -9156,24 +8925,12 @@ pub struct SparseImageMemoryRequirements {
 }
 impl Default for SparseImageMemoryRequirements {
     fn default() -> Self {
-        Self {
-            format_properties: Default::default(),
-            image_mip_tail_first_lod: Default::default(),
-            image_mip_tail_size: Default::default(),
-            image_mip_tail_offset: Default::default(),
-            image_mip_tail_stride: Default::default(),
-        }
+        Self { format_properties: Default::default(), image_mip_tail_first_lod: Default::default(), image_mip_tail_size: Default::default(), image_mip_tail_offset: Default::default(), image_mip_tail_stride: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageMemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageMemoryRequirements")
-            .field("format_properties", &self.format_properties)
-            .field("image_mip_tail_first_lod", &self.image_mip_tail_first_lod)
-            .field("image_mip_tail_size", &self.image_mip_tail_size)
-            .field("image_mip_tail_offset", &self.image_mip_tail_offset)
-            .field("image_mip_tail_stride", &self.image_mip_tail_stride)
-            .finish()
+        f.debug_struct("SparseImageMemoryRequirements").field("format_properties", &self.format_properties).field("image_mip_tail_first_lod", &self.image_mip_tail_first_lod).field("image_mip_tail_size", &self.image_mip_tail_size).field("image_mip_tail_offset", &self.image_mip_tail_offset).field("image_mip_tail_stride", &self.image_mip_tail_stride).finish()
     }
 }
 impl SparseImageMemoryRequirements {
@@ -9253,10 +9010,7 @@ pub struct MemoryType {
 }
 impl Default for MemoryType {
     fn default() -> Self {
-        Self {
-            property_flags: Default::default(),
-            heap_index: Default::default(),
-        }
+        Self { property_flags: Default::default(), heap_index: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryType {
@@ -9326,10 +9080,7 @@ pub struct MemoryHeap {
 }
 impl Default for MemoryHeap {
     fn default() -> Self {
-        Self {
-            size: Default::default(),
-            flags: Default::default(),
-        }
+        Self { size: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryHeap {
@@ -9402,24 +9153,12 @@ pub struct MappedMemoryRange {
 }
 impl Default for MappedMemoryRange {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MAPPED_MEMORY_RANGE,
-            p_next: std::ptr::null(),
-            memory: Default::default(),
-            offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MAPPED_MEMORY_RANGE, p_next: std::ptr::null(), memory: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for MappedMemoryRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MappedMemoryRange")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory", &self.memory)
-            .field("offset", &self.offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("MappedMemoryRange").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory", &self.memory).field("offset", &self.offset).field("size", &self.size).finish()
     }
 }
 impl MappedMemoryRange {
@@ -9490,20 +9229,12 @@ pub struct FormatProperties {
 }
 impl Default for FormatProperties {
     fn default() -> Self {
-        Self {
-            linear_tiling_features: Default::default(),
-            optimal_tiling_features: Default::default(),
-            buffer_features: Default::default(),
-        }
+        Self { linear_tiling_features: Default::default(), optimal_tiling_features: Default::default(), buffer_features: Default::default() }
     }
 }
 impl std::fmt::Debug for FormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FormatProperties")
-            .field("linear_tiling_features", &self.linear_tiling_features)
-            .field("optimal_tiling_features", &self.optimal_tiling_features)
-            .field("buffer_features", &self.buffer_features)
-            .finish()
+        f.debug_struct("FormatProperties").field("linear_tiling_features", &self.linear_tiling_features).field("optimal_tiling_features", &self.optimal_tiling_features).field("buffer_features", &self.buffer_features).finish()
     }
 }
 impl FormatProperties {
@@ -9576,24 +9307,12 @@ pub struct ImageFormatProperties {
 }
 impl Default for ImageFormatProperties {
     fn default() -> Self {
-        Self {
-            max_extent: Default::default(),
-            max_mip_levels: Default::default(),
-            max_array_layers: Default::default(),
-            sample_counts: Default::default(),
-            max_resource_size: Default::default(),
-        }
+        Self { max_extent: Default::default(), max_mip_levels: Default::default(), max_array_layers: Default::default(), sample_counts: Default::default(), max_resource_size: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageFormatProperties")
-            .field("max_extent", &self.max_extent)
-            .field("max_mip_levels", &self.max_mip_levels)
-            .field("max_array_layers", &self.max_array_layers)
-            .field("sample_counts", &self.sample_counts)
-            .field("max_resource_size", &self.max_resource_size)
-            .finish()
+        f.debug_struct("ImageFormatProperties").field("max_extent", &self.max_extent).field("max_mip_levels", &self.max_mip_levels).field("max_array_layers", &self.max_array_layers).field("sample_counts", &self.sample_counts).field("max_resource_size", &self.max_resource_size).finish()
     }
 }
 impl ImageFormatProperties {
@@ -9674,11 +9393,7 @@ pub struct DescriptorBufferInfo {
 }
 impl Default for DescriptorBufferInfo {
     fn default() -> Self {
-        Self {
-            buffer: Default::default(),
-            offset: Default::default(),
-            range: Default::default(),
-        }
+        Self { buffer: Default::default(), offset: Default::default(), range: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorBufferInfo {
@@ -9754,20 +9469,12 @@ pub struct DescriptorImageInfo {
 }
 impl Default for DescriptorImageInfo {
     fn default() -> Self {
-        Self {
-            sampler: Default::default(),
-            image_view: Default::default(),
-            image_layout: Default::default(),
-        }
+        Self { sampler: Default::default(), image_view: Default::default(), image_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorImageInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorImageInfo")
-            .field("sampler", &self.sampler)
-            .field("image_view", &self.image_view)
-            .field("image_layout", &self.image_layout)
-            .finish()
+        f.debug_struct("DescriptorImageInfo").field("sampler", &self.sampler).field("image_view", &self.image_view).field("image_layout", &self.image_layout).finish()
     }
 }
 impl DescriptorImageInfo {
@@ -9845,34 +9552,12 @@ pub struct WriteDescriptorSet {
 }
 impl Default for WriteDescriptorSet {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET,
-            p_next: std::ptr::null(),
-            dst_set: Default::default(),
-            dst_binding: Default::default(),
-            dst_array_element: Default::default(),
-            descriptor_count: Default::default(),
-            descriptor_type: Default::default(),
-            p_image_info: std::ptr::null(),
-            p_buffer_info: std::ptr::null(),
-            p_texel_buffer_view: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET, p_next: std::ptr::null(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default(), descriptor_type: Default::default(), p_image_info: std::ptr::null(), p_buffer_info: std::ptr::null(), p_texel_buffer_view: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for WriteDescriptorSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("WriteDescriptorSet")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dst_set", &self.dst_set)
-            .field("dst_binding", &self.dst_binding)
-            .field("dst_array_element", &self.dst_array_element)
-            .field("descriptor_count", &self.descriptor_count)
-            .field("descriptor_type", &self.descriptor_type)
-            .field("p_image_info", &self.p_image_info)
-            .field("p_buffer_info", &self.p_buffer_info)
-            .field("p_texel_buffer_view", &self.p_texel_buffer_view)
-            .finish()
+        f.debug_struct("WriteDescriptorSet").field("s_type", &self.s_type).field("p_next", &self.p_next).field("dst_set", &self.dst_set).field("dst_binding", &self.dst_binding).field("dst_array_element", &self.dst_array_element).field("descriptor_count", &self.descriptor_count).field("descriptor_type", &self.descriptor_type).field("p_image_info", &self.p_image_info).field("p_buffer_info", &self.p_buffer_info).field("p_texel_buffer_view", &self.p_texel_buffer_view).finish()
     }
 }
 impl WriteDescriptorSet {
@@ -9978,32 +9663,12 @@ pub struct CopyDescriptorSet {
 }
 impl Default for CopyDescriptorSet {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COPY_DESCRIPTOR_SET,
-            p_next: std::ptr::null(),
-            src_set: Default::default(),
-            src_binding: Default::default(),
-            src_array_element: Default::default(),
-            dst_set: Default::default(),
-            dst_binding: Default::default(),
-            dst_array_element: Default::default(),
-            descriptor_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COPY_DESCRIPTOR_SET, p_next: std::ptr::null(), src_set: Default::default(), src_binding: Default::default(), src_array_element: Default::default(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyDescriptorSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CopyDescriptorSet")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_set", &self.src_set)
-            .field("src_binding", &self.src_binding)
-            .field("src_array_element", &self.src_array_element)
-            .field("dst_set", &self.dst_set)
-            .field("dst_binding", &self.dst_binding)
-            .field("dst_array_element", &self.dst_array_element)
-            .field("descriptor_count", &self.descriptor_count)
-            .finish()
+        f.debug_struct("CopyDescriptorSet").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_set", &self.src_set).field("src_binding", &self.src_binding).field("src_array_element", &self.src_array_element).field("dst_set", &self.dst_set).field("dst_binding", &self.dst_binding).field("dst_array_element", &self.dst_array_element).field("descriptor_count", &self.descriptor_count).finish()
     }
 }
 impl CopyDescriptorSet {
@@ -10099,30 +9764,12 @@ pub struct BufferCreateInfo {
 }
 impl Default for BufferCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            size: Default::default(),
-            usage: Default::default(),
-            sharing_mode: Default::default(),
-            queue_family_index_count: Default::default(),
-            p_queue_family_indices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), size: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("size", &self.size)
-            .field("usage", &self.usage)
-            .field("sharing_mode", &self.sharing_mode)
-            .field("queue_family_index_count", &self.queue_family_index_count)
-            .field("p_queue_family_indices", &self.p_queue_family_indices)
-            .finish()
+        f.debug_struct("BufferCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("size", &self.size).field("usage", &self.usage).field("sharing_mode", &self.sharing_mode).field("queue_family_index_count", &self.queue_family_index_count).field("p_queue_family_indices", &self.p_queue_family_indices).finish()
     }
 }
 impl BufferCreateInfo {
@@ -10139,6 +9786,10 @@ impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::BufferOpaqueCaptureAddress
 impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::BufferOpaqueCaptureAddressCreateInfoBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXT> for BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXTBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHR> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHRBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for BufferCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateInfo.html) · Builder of [`BufferCreateInfo`]"]
 #[repr(transparent)]
@@ -10216,28 +9867,12 @@ pub struct BufferViewCreateInfo {
 }
 impl Default for BufferViewCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_VIEW_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            buffer: Default::default(),
-            format: Default::default(),
-            offset: Default::default(),
-            range: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_VIEW_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), buffer: Default::default(), format: Default::default(), offset: Default::default(), range: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferViewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferViewCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("buffer", &self.buffer)
-            .field("format", &self.format)
-            .field("offset", &self.offset)
-            .field("range", &self.range)
-            .finish()
+        f.debug_struct("BufferViewCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("buffer", &self.buffer).field("format", &self.format).field("offset", &self.offset).field("range", &self.range).finish()
     }
 }
 impl BufferViewCreateInfo {
@@ -10318,20 +9953,12 @@ pub struct ImageSubresource {
 }
 impl Default for ImageSubresource {
     fn default() -> Self {
-        Self {
-            aspect_mask: Default::default(),
-            mip_level: Default::default(),
-            array_layer: Default::default(),
-        }
+        Self { aspect_mask: Default::default(), mip_level: Default::default(), array_layer: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSubresource {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageSubresource")
-            .field("aspect_mask", &self.aspect_mask)
-            .field("mip_level", &self.mip_level)
-            .field("array_layer", &self.array_layer)
-            .finish()
+        f.debug_struct("ImageSubresource").field("aspect_mask", &self.aspect_mask).field("mip_level", &self.mip_level).field("array_layer", &self.array_layer).finish()
     }
 }
 impl ImageSubresource {
@@ -10403,22 +10030,12 @@ pub struct ImageSubresourceLayers {
 }
 impl Default for ImageSubresourceLayers {
     fn default() -> Self {
-        Self {
-            aspect_mask: Default::default(),
-            mip_level: Default::default(),
-            base_array_layer: Default::default(),
-            layer_count: Default::default(),
-        }
+        Self { aspect_mask: Default::default(), mip_level: Default::default(), base_array_layer: Default::default(), layer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSubresourceLayers {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageSubresourceLayers")
-            .field("aspect_mask", &self.aspect_mask)
-            .field("mip_level", &self.mip_level)
-            .field("base_array_layer", &self.base_array_layer)
-            .field("layer_count", &self.layer_count)
-            .finish()
+        f.debug_struct("ImageSubresourceLayers").field("aspect_mask", &self.aspect_mask).field("mip_level", &self.mip_level).field("base_array_layer", &self.base_array_layer).field("layer_count", &self.layer_count).finish()
     }
 }
 impl ImageSubresourceLayers {
@@ -10496,24 +10113,12 @@ pub struct ImageSubresourceRange {
 }
 impl Default for ImageSubresourceRange {
     fn default() -> Self {
-        Self {
-            aspect_mask: Default::default(),
-            base_mip_level: Default::default(),
-            level_count: Default::default(),
-            base_array_layer: Default::default(),
-            layer_count: Default::default(),
-        }
+        Self { aspect_mask: Default::default(), base_mip_level: Default::default(), level_count: Default::default(), base_array_layer: Default::default(), layer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSubresourceRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageSubresourceRange")
-            .field("aspect_mask", &self.aspect_mask)
-            .field("base_mip_level", &self.base_mip_level)
-            .field("level_count", &self.level_count)
-            .field("base_array_layer", &self.base_array_layer)
-            .field("layer_count", &self.layer_count)
-            .finish()
+        f.debug_struct("ImageSubresourceRange").field("aspect_mask", &self.aspect_mask).field("base_mip_level", &self.base_mip_level).field("level_count", &self.level_count).field("base_array_layer", &self.base_array_layer).field("layer_count", &self.layer_count).finish()
     }
 }
 impl ImageSubresourceRange {
@@ -10595,22 +10200,12 @@ pub struct MemoryBarrier {
 }
 impl Default for MemoryBarrier {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_BARRIER,
-            p_next: std::ptr::null(),
-            src_access_mask: Default::default(),
-            dst_access_mask: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryBarrier")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_access_mask", &self.src_access_mask)
-            .field("dst_access_mask", &self.dst_access_mask)
-            .finish()
+        f.debug_struct("MemoryBarrier").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_access_mask", &self.src_access_mask).field("dst_access_mask", &self.dst_access_mask).finish()
     }
 }
 impl MemoryBarrier {
@@ -10682,32 +10277,12 @@ pub struct BufferMemoryBarrier {
 }
 impl Default for BufferMemoryBarrier {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER,
-            p_next: std::ptr::null(),
-            src_access_mask: Default::default(),
-            dst_access_mask: Default::default(),
-            src_queue_family_index: Default::default(),
-            dst_queue_family_index: Default::default(),
-            buffer: Default::default(),
-            offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferMemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferMemoryBarrier")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_access_mask", &self.src_access_mask)
-            .field("dst_access_mask", &self.dst_access_mask)
-            .field("src_queue_family_index", &self.src_queue_family_index)
-            .field("dst_queue_family_index", &self.dst_queue_family_index)
-            .field("buffer", &self.buffer)
-            .field("offset", &self.offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("BufferMemoryBarrier").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_access_mask", &self.src_access_mask).field("dst_access_mask", &self.dst_access_mask).field("src_queue_family_index", &self.src_queue_family_index).field("dst_queue_family_index", &self.dst_queue_family_index).field("buffer", &self.buffer).field("offset", &self.offset).field("size", &self.size).finish()
     }
 }
 impl BufferMemoryBarrier {
@@ -10805,34 +10380,12 @@ pub struct ImageMemoryBarrier {
 }
 impl Default for ImageMemoryBarrier {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER,
-            p_next: std::ptr::null(),
-            src_access_mask: Default::default(),
-            dst_access_mask: Default::default(),
-            old_layout: Default::default(),
-            new_layout: Default::default(),
-            src_queue_family_index: Default::default(),
-            dst_queue_family_index: Default::default(),
-            image: Default::default(),
-            subresource_range: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), old_layout: Default::default(), new_layout: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), image: Default::default(), subresource_range: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageMemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageMemoryBarrier")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_access_mask", &self.src_access_mask)
-            .field("dst_access_mask", &self.dst_access_mask)
-            .field("old_layout", &self.old_layout)
-            .field("new_layout", &self.new_layout)
-            .field("src_queue_family_index", &self.src_queue_family_index)
-            .field("dst_queue_family_index", &self.dst_queue_family_index)
-            .field("image", &self.image)
-            .field("subresource_range", &self.subresource_range)
-            .finish()
+        f.debug_struct("ImageMemoryBarrier").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_access_mask", &self.src_access_mask).field("dst_access_mask", &self.dst_access_mask).field("old_layout", &self.old_layout).field("new_layout", &self.new_layout).field("src_queue_family_index", &self.src_queue_family_index).field("dst_queue_family_index", &self.dst_queue_family_index).field("image", &self.image).field("subresource_range", &self.subresource_range).finish()
     }
 }
 impl ImageMemoryBarrier {
@@ -10942,44 +10495,12 @@ pub struct ImageCreateInfo {
 }
 impl Default for ImageCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            image_type: Default::default(),
-            format: Default::default(),
-            extent: Default::default(),
-            mip_levels: Default::default(),
-            array_layers: Default::default(),
-            samples: Default::default(),
-            tiling: Default::default(),
-            usage: Default::default(),
-            sharing_mode: Default::default(),
-            queue_family_index_count: Default::default(),
-            p_queue_family_indices: std::ptr::null(),
-            initial_layout: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), image_type: Default::default(), format: Default::default(), extent: Default::default(), mip_levels: Default::default(), array_layers: Default::default(), samples: Default::default(), tiling: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), initial_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("image_type", &self.image_type)
-            .field("format", &self.format)
-            .field("extent", &self.extent)
-            .field("mip_levels", &self.mip_levels)
-            .field("array_layers", &self.array_layers)
-            .field("samples", &self.samples)
-            .field("tiling", &self.tiling)
-            .field("usage", &self.usage)
-            .field("sharing_mode", &self.sharing_mode)
-            .field("queue_family_index_count", &self.queue_family_index_count)
-            .field("p_queue_family_indices", &self.p_queue_family_indices)
-            .field("initial_layout", &self.initial_layout)
-            .finish()
+        f.debug_struct("ImageCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("image_type", &self.image_type).field("format", &self.format).field("extent", &self.extent).field("mip_levels", &self.mip_levels).field("array_layers", &self.array_layers).field("samples", &self.samples).field("tiling", &self.tiling).field("usage", &self.usage).field("sharing_mode", &self.sharing_mode).field("queue_family_index_count", &self.queue_family_index_count).field("p_queue_family_indices", &self.p_queue_family_indices).field("initial_layout", &self.initial_layout).finish()
     }
 }
 impl ImageCreateInfo {
@@ -11006,6 +10527,10 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfo> for ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHR> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHRBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for ImageCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateInfo.html) · Builder of [`ImageCreateInfo`]"]
 #[repr(transparent)]
@@ -11116,24 +10641,12 @@ pub struct SubresourceLayout {
 }
 impl Default for SubresourceLayout {
     fn default() -> Self {
-        Self {
-            offset: Default::default(),
-            size: Default::default(),
-            row_pitch: Default::default(),
-            array_pitch: Default::default(),
-            depth_pitch: Default::default(),
-        }
+        Self { offset: Default::default(), size: Default::default(), row_pitch: Default::default(), array_pitch: Default::default(), depth_pitch: Default::default() }
     }
 }
 impl std::fmt::Debug for SubresourceLayout {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubresourceLayout")
-            .field("offset", &self.offset)
-            .field("size", &self.size)
-            .field("row_pitch", &self.row_pitch)
-            .field("array_pitch", &self.array_pitch)
-            .field("depth_pitch", &self.depth_pitch)
-            .finish()
+        f.debug_struct("SubresourceLayout").field("offset", &self.offset).field("size", &self.size).field("row_pitch", &self.row_pitch).field("array_pitch", &self.array_pitch).field("depth_pitch", &self.depth_pitch).finish()
     }
 }
 impl SubresourceLayout {
@@ -11219,30 +10732,12 @@ pub struct ImageViewCreateInfo {
 }
 impl Default for ImageViewCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_VIEW_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            image: Default::default(),
-            view_type: Default::default(),
-            format: Default::default(),
-            components: Default::default(),
-            subresource_range: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), image: Default::default(), view_type: Default::default(), format: Default::default(), components: Default::default(), subresource_range: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageViewCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("image", &self.image)
-            .field("view_type", &self.view_type)
-            .field("format", &self.format)
-            .field("components", &self.components)
-            .field("subresource_range", &self.subresource_range)
-            .finish()
+        f.debug_struct("ImageViewCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("image", &self.image).field("view_type", &self.view_type).field("format", &self.format).field("components", &self.components).field("subresource_range", &self.subresource_range).finish()
     }
 }
 impl ImageViewCreateInfo {
@@ -11257,6 +10752,10 @@ impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfo
 impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::SamplerYcbcrConversionInfoBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXT> for ImageViewCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXTBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHR> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfilesKHRBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for ImageViewCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateInfo.html) · Builder of [`ImageViewCreateInfo`]"]
 #[repr(transparent)]
@@ -11334,11 +10833,7 @@ pub struct BufferCopy {
 }
 impl Default for BufferCopy {
     fn default() -> Self {
-        Self {
-            src_offset: Default::default(),
-            dst_offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { src_offset: Default::default(), dst_offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferCopy {
@@ -11416,24 +10911,12 @@ pub struct SparseMemoryBind {
 }
 impl Default for SparseMemoryBind {
     fn default() -> Self {
-        Self {
-            resource_offset: Default::default(),
-            size: Default::default(),
-            memory: Default::default(),
-            memory_offset: Default::default(),
-            flags: Default::default(),
-        }
+        Self { resource_offset: Default::default(), size: Default::default(), memory: Default::default(), memory_offset: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseMemoryBind {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseMemoryBind")
-            .field("resource_offset", &self.resource_offset)
-            .field("size", &self.size)
-            .field("memory", &self.memory)
-            .field("memory_offset", &self.memory_offset)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("SparseMemoryBind").field("resource_offset", &self.resource_offset).field("size", &self.size).field("memory", &self.memory).field("memory_offset", &self.memory_offset).field("flags", &self.flags).finish()
     }
 }
 impl SparseMemoryBind {
@@ -11517,26 +11000,12 @@ pub struct SparseImageMemoryBind {
 }
 impl Default for SparseImageMemoryBind {
     fn default() -> Self {
-        Self {
-            subresource: Default::default(),
-            offset: Default::default(),
-            extent: Default::default(),
-            memory: Default::default(),
-            memory_offset: Default::default(),
-            flags: Default::default(),
-        }
+        Self { subresource: Default::default(), offset: Default::default(), extent: Default::default(), memory: Default::default(), memory_offset: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageMemoryBind {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageMemoryBind")
-            .field("subresource", &self.subresource)
-            .field("offset", &self.offset)
-            .field("extent", &self.extent)
-            .field("memory", &self.memory)
-            .field("memory_offset", &self.memory_offset)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("SparseImageMemoryBind").field("subresource", &self.subresource).field("offset", &self.offset).field("extent", &self.extent).field("memory", &self.memory).field("memory_offset", &self.memory_offset).field("flags", &self.flags).finish()
     }
 }
 impl SparseImageMemoryBind {
@@ -11622,20 +11091,12 @@ pub struct SparseBufferMemoryBindInfo {
 }
 impl Default for SparseBufferMemoryBindInfo {
     fn default() -> Self {
-        Self {
-            buffer: Default::default(),
-            bind_count: Default::default(),
-            p_binds: std::ptr::null(),
-        }
+        Self { buffer: Default::default(), bind_count: Default::default(), p_binds: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SparseBufferMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseBufferMemoryBindInfo")
-            .field("buffer", &self.buffer)
-            .field("bind_count", &self.bind_count)
-            .field("p_binds", &self.p_binds)
-            .finish()
+        f.debug_struct("SparseBufferMemoryBindInfo").field("buffer", &self.buffer).field("bind_count", &self.bind_count).field("p_binds", &self.p_binds).finish()
     }
 }
 impl SparseBufferMemoryBindInfo {
@@ -11702,20 +11163,12 @@ pub struct SparseImageOpaqueMemoryBindInfo {
 }
 impl Default for SparseImageOpaqueMemoryBindInfo {
     fn default() -> Self {
-        Self {
-            image: Default::default(),
-            bind_count: Default::default(),
-            p_binds: std::ptr::null(),
-        }
+        Self { image: Default::default(), bind_count: Default::default(), p_binds: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SparseImageOpaqueMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageOpaqueMemoryBindInfo")
-            .field("image", &self.image)
-            .field("bind_count", &self.bind_count)
-            .field("p_binds", &self.p_binds)
-            .finish()
+        f.debug_struct("SparseImageOpaqueMemoryBindInfo").field("image", &self.image).field("bind_count", &self.bind_count).field("p_binds", &self.p_binds).finish()
     }
 }
 impl SparseImageOpaqueMemoryBindInfo {
@@ -11782,11 +11235,7 @@ pub struct SparseImageMemoryBindInfo {
 }
 impl Default for SparseImageMemoryBindInfo {
     fn default() -> Self {
-        Self {
-            image: Default::default(),
-            bind_count: Default::default(),
-            p_binds: std::ptr::null(),
-        }
+        Self { image: Default::default(), bind_count: Default::default(), p_binds: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SparseImageMemoryBindInfo {
@@ -11867,38 +11316,12 @@ pub struct BindSparseInfo {
 }
 impl Default for BindSparseInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_SPARSE_INFO,
-            p_next: std::ptr::null(),
-            wait_semaphore_count: Default::default(),
-            p_wait_semaphores: std::ptr::null(),
-            buffer_bind_count: Default::default(),
-            p_buffer_binds: std::ptr::null(),
-            image_opaque_bind_count: Default::default(),
-            p_image_opaque_binds: std::ptr::null(),
-            image_bind_count: Default::default(),
-            p_image_binds: std::ptr::null(),
-            signal_semaphore_count: Default::default(),
-            p_signal_semaphores: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_SPARSE_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), buffer_bind_count: Default::default(), p_buffer_binds: std::ptr::null(), image_opaque_bind_count: Default::default(), p_image_opaque_binds: std::ptr::null(), image_bind_count: Default::default(), p_image_binds: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindSparseInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindSparseInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("wait_semaphore_count", &self.wait_semaphore_count)
-            .field("p_wait_semaphores", &self.p_wait_semaphores)
-            .field("buffer_bind_count", &self.buffer_bind_count)
-            .field("p_buffer_binds", &self.p_buffer_binds)
-            .field("image_opaque_bind_count", &self.image_opaque_bind_count)
-            .field("p_image_opaque_binds", &self.p_image_opaque_binds)
-            .field("image_bind_count", &self.image_bind_count)
-            .field("p_image_binds", &self.p_image_binds)
-            .field("signal_semaphore_count", &self.signal_semaphore_count)
-            .field("p_signal_semaphores", &self.p_signal_semaphores)
-            .finish()
+        f.debug_struct("BindSparseInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("wait_semaphore_count", &self.wait_semaphore_count).field("p_wait_semaphores", &self.p_wait_semaphores).field("buffer_bind_count", &self.buffer_bind_count).field("p_buffer_binds", &self.p_buffer_binds).field("image_opaque_bind_count", &self.image_opaque_bind_count).field("p_image_opaque_binds", &self.p_image_opaque_binds).field("image_bind_count", &self.image_bind_count).field("p_image_binds", &self.p_image_binds).field("signal_semaphore_count", &self.signal_semaphore_count).field("p_signal_semaphores", &self.p_signal_semaphores).finish()
     }
 }
 impl BindSparseInfo {
@@ -11990,24 +11413,12 @@ pub struct ImageCopy {
 }
 impl Default for ImageCopy {
     fn default() -> Self {
-        Self {
-            src_subresource: Default::default(),
-            src_offset: Default::default(),
-            dst_subresource: Default::default(),
-            dst_offset: Default::default(),
-            extent: Default::default(),
-        }
+        Self { src_subresource: Default::default(), src_offset: Default::default(), dst_subresource: Default::default(), dst_offset: Default::default(), extent: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageCopy")
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offset", &self.src_offset)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offset", &self.dst_offset)
-            .field("extent", &self.extent)
-            .finish()
+        f.debug_struct("ImageCopy").field("src_subresource", &self.src_subresource).field("src_offset", &self.src_offset).field("dst_subresource", &self.dst_subresource).field("dst_offset", &self.dst_offset).field("extent", &self.extent).finish()
     }
 }
 impl ImageCopy {
@@ -12089,22 +11500,12 @@ pub struct ImageBlit {
 }
 impl Default for ImageBlit {
     fn default() -> Self {
-        Self {
-            src_subresource: Default::default(),
-            src_offsets: unsafe { std::mem::zeroed() },
-            dst_subresource: Default::default(),
-            dst_offsets: unsafe { std::mem::zeroed() },
-        }
+        Self { src_subresource: Default::default(), src_offsets: unsafe { std::mem::zeroed() }, dst_subresource: Default::default(), dst_offsets: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for ImageBlit {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageBlit")
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offsets", &self.src_offsets)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offsets", &self.dst_offsets)
-            .finish()
+        f.debug_struct("ImageBlit").field("src_subresource", &self.src_subresource).field("src_offsets", &self.src_offsets).field("dst_subresource", &self.dst_subresource).field("dst_offsets", &self.dst_offsets).finish()
     }
 }
 impl ImageBlit {
@@ -12183,26 +11584,12 @@ pub struct BufferImageCopy {
 }
 impl Default for BufferImageCopy {
     fn default() -> Self {
-        Self {
-            buffer_offset: Default::default(),
-            buffer_row_length: Default::default(),
-            buffer_image_height: Default::default(),
-            image_subresource: Default::default(),
-            image_offset: Default::default(),
-            image_extent: Default::default(),
-        }
+        Self { buffer_offset: Default::default(), buffer_row_length: Default::default(), buffer_image_height: Default::default(), image_subresource: Default::default(), image_offset: Default::default(), image_extent: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferImageCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferImageCopy")
-            .field("buffer_offset", &self.buffer_offset)
-            .field("buffer_row_length", &self.buffer_row_length)
-            .field("buffer_image_height", &self.buffer_image_height)
-            .field("image_subresource", &self.image_subresource)
-            .field("image_offset", &self.image_offset)
-            .field("image_extent", &self.image_extent)
-            .finish()
+        f.debug_struct("BufferImageCopy").field("buffer_offset", &self.buffer_offset).field("buffer_row_length", &self.buffer_row_length).field("buffer_image_height", &self.buffer_image_height).field("image_subresource", &self.image_subresource).field("image_offset", &self.image_offset).field("image_extent", &self.image_extent).finish()
     }
 }
 impl BufferImageCopy {
@@ -12290,24 +11677,12 @@ pub struct ImageResolve {
 }
 impl Default for ImageResolve {
     fn default() -> Self {
-        Self {
-            src_subresource: Default::default(),
-            src_offset: Default::default(),
-            dst_subresource: Default::default(),
-            dst_offset: Default::default(),
-            extent: Default::default(),
-        }
+        Self { src_subresource: Default::default(), src_offset: Default::default(), dst_subresource: Default::default(), dst_offset: Default::default(), extent: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageResolve {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageResolve")
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offset", &self.src_offset)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offset", &self.dst_offset)
-            .field("extent", &self.extent)
-            .finish()
+        f.debug_struct("ImageResolve").field("src_subresource", &self.src_subresource).field("src_offset", &self.src_offset).field("dst_subresource", &self.dst_subresource).field("dst_offset", &self.dst_offset).field("extent", &self.extent).finish()
     }
 }
 impl ImageResolve {
@@ -12390,24 +11765,12 @@ pub struct ShaderModuleCreateInfo {
 }
 impl Default for ShaderModuleCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SHADER_MODULE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            code_size: Default::default(),
-            p_code: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SHADER_MODULE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), code_size: Default::default(), p_code: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ShaderModuleCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ShaderModuleCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("code_size", &self.code_size)
-            .field("p_code", &self.p_code)
-            .finish()
+        f.debug_struct("ShaderModuleCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("code_size", &self.code_size).field("p_code", &self.p_code).finish()
     }
 }
 impl ShaderModuleCreateInfo {
@@ -12478,24 +11841,12 @@ pub struct DescriptorSetLayoutBinding {
 }
 impl Default for DescriptorSetLayoutBinding {
     fn default() -> Self {
-        Self {
-            binding: Default::default(),
-            descriptor_type: Default::default(),
-            descriptor_count: Default::default(),
-            stage_flags: Default::default(),
-            p_immutable_samplers: std::ptr::null(),
-        }
+        Self { binding: Default::default(), descriptor_type: Default::default(), descriptor_count: Default::default(), stage_flags: Default::default(), p_immutable_samplers: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutBinding {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorSetLayoutBinding")
-            .field("binding", &self.binding)
-            .field("descriptor_type", &self.descriptor_type)
-            .field("descriptor_count", &self.descriptor_count)
-            .field("stage_flags", &self.stage_flags)
-            .field("p_immutable_samplers", &self.p_immutable_samplers)
-            .finish()
+        f.debug_struct("DescriptorSetLayoutBinding").field("binding", &self.binding).field("descriptor_type", &self.descriptor_type).field("descriptor_count", &self.descriptor_count).field("stage_flags", &self.stage_flags).field("p_immutable_samplers", &self.p_immutable_samplers).finish()
     }
 }
 impl DescriptorSetLayoutBinding {
@@ -12579,24 +11930,12 @@ pub struct DescriptorSetLayoutCreateInfo {
 }
 impl Default for DescriptorSetLayoutCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            binding_count: Default::default(),
-            p_bindings: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), binding_count: Default::default(), p_bindings: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorSetLayoutCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("binding_count", &self.binding_count)
-            .field("p_bindings", &self.p_bindings)
-            .finish()
+        f.debug_struct("DescriptorSetLayoutCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("binding_count", &self.binding_count).field("p_bindings", &self.p_bindings).finish()
     }
 }
 impl DescriptorSetLayoutCreateInfo {
@@ -12666,10 +12005,7 @@ pub struct DescriptorPoolSize {
 }
 impl Default for DescriptorPoolSize {
     fn default() -> Self {
-        Self {
-            _type: Default::default(),
-            descriptor_count: Default::default(),
-        }
+        Self { _type: Default::default(), descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorPoolSize {
@@ -12743,26 +12079,12 @@ pub struct DescriptorPoolCreateInfo {
 }
 impl Default for DescriptorPoolCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            max_sets: Default::default(),
-            pool_size_count: Default::default(),
-            p_pool_sizes: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), max_sets: Default::default(), pool_size_count: Default::default(), p_pool_sizes: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorPoolCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("max_sets", &self.max_sets)
-            .field("pool_size_count", &self.pool_size_count)
-            .field("p_pool_sizes", &self.p_pool_sizes)
-            .finish()
+        f.debug_struct("DescriptorPoolCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("max_sets", &self.max_sets).field("pool_size_count", &self.pool_size_count).field("p_pool_sizes", &self.p_pool_sizes).finish()
     }
 }
 impl DescriptorPoolCreateInfo {
@@ -12840,24 +12162,12 @@ pub struct DescriptorSetAllocateInfo {
 }
 impl Default for DescriptorSetAllocateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_ALLOCATE_INFO,
-            p_next: std::ptr::null(),
-            descriptor_pool: Default::default(),
-            descriptor_set_count: Default::default(),
-            p_set_layouts: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_ALLOCATE_INFO, p_next: std::ptr::null(), descriptor_pool: Default::default(), descriptor_set_count: Default::default(), p_set_layouts: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorSetAllocateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("descriptor_pool", &self.descriptor_pool)
-            .field("descriptor_set_count", &self.descriptor_set_count)
-            .field("p_set_layouts", &self.p_set_layouts)
-            .finish()
+        f.debug_struct("DescriptorSetAllocateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("descriptor_pool", &self.descriptor_pool).field("descriptor_set_count", &self.descriptor_set_count).field("p_set_layouts", &self.p_set_layouts).finish()
     }
 }
 impl DescriptorSetAllocateInfo {
@@ -12926,11 +12236,7 @@ pub struct SpecializationMapEntry {
 }
 impl Default for SpecializationMapEntry {
     fn default() -> Self {
-        Self {
-            constant_id: Default::default(),
-            offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { constant_id: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for SpecializationMapEntry {
@@ -13007,22 +12313,12 @@ pub struct SpecializationInfo {
 }
 impl Default for SpecializationInfo {
     fn default() -> Self {
-        Self {
-            map_entry_count: Default::default(),
-            p_map_entries: std::ptr::null(),
-            data_size: Default::default(),
-            p_data: std::ptr::null(),
-        }
+        Self { map_entry_count: Default::default(), p_map_entries: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SpecializationInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SpecializationInfo")
-            .field("map_entry_count", &self.map_entry_count)
-            .field("p_map_entries", &self.p_map_entries)
-            .field("data_size", &self.data_size)
-            .field("p_data", &self.p_data)
-            .finish()
+        f.debug_struct("SpecializationInfo").field("map_entry_count", &self.map_entry_count).field("p_map_entries", &self.p_map_entries).field("data_size", &self.data_size).field("p_data", &self.p_data).finish()
     }
 }
 impl SpecializationInfo {
@@ -13098,28 +12394,12 @@ pub struct PipelineShaderStageCreateInfo {
 }
 impl Default for PipelineShaderStageCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            stage: Default::default(),
-            module: Default::default(),
-            p_name: std::ptr::null(),
-            p_specialization_info: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), module: Default::default(), p_name: std::ptr::null(), p_specialization_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineShaderStageCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("stage", &self.stage)
-            .field("module", &self.module)
-            .field("p_name", &self.p_name)
-            .field("p_specialization_info", &self.p_specialization_info)
-            .finish()
+        f.debug_struct("PipelineShaderStageCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("stage", &self.stage).field("module", &self.module).field("p_name", &self.p_name).field("p_specialization_info", &self.p_specialization_info).finish()
     }
 }
 impl PipelineShaderStageCreateInfo {
@@ -13206,28 +12486,12 @@ pub struct ComputePipelineCreateInfo {
 }
 impl Default for ComputePipelineCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMPUTE_PIPELINE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            stage: Default::default(),
-            layout: Default::default(),
-            base_pipeline_handle: Default::default(),
-            base_pipeline_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMPUTE_PIPELINE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for ComputePipelineCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ComputePipelineCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("stage", &self.stage)
-            .field("layout", &self.layout)
-            .field("base_pipeline_handle", &self.base_pipeline_handle)
-            .field("base_pipeline_index", &self.base_pipeline_index)
-            .finish()
+        f.debug_struct("ComputePipelineCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("stage", &self.stage).field("layout", &self.layout).field("base_pipeline_handle", &self.base_pipeline_handle).field("base_pipeline_index", &self.base_pipeline_index).finish()
     }
 }
 impl ComputePipelineCreateInfo {
@@ -13312,20 +12576,12 @@ pub struct VertexInputBindingDescription {
 }
 impl Default for VertexInputBindingDescription {
     fn default() -> Self {
-        Self {
-            binding: Default::default(),
-            stride: Default::default(),
-            input_rate: Default::default(),
-        }
+        Self { binding: Default::default(), stride: Default::default(), input_rate: Default::default() }
     }
 }
 impl std::fmt::Debug for VertexInputBindingDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VertexInputBindingDescription")
-            .field("binding", &self.binding)
-            .field("stride", &self.stride)
-            .field("input_rate", &self.input_rate)
-            .finish()
+        f.debug_struct("VertexInputBindingDescription").field("binding", &self.binding).field("stride", &self.stride).field("input_rate", &self.input_rate).finish()
     }
 }
 impl VertexInputBindingDescription {
@@ -13397,22 +12653,12 @@ pub struct VertexInputAttributeDescription {
 }
 impl Default for VertexInputAttributeDescription {
     fn default() -> Self {
-        Self {
-            location: Default::default(),
-            binding: Default::default(),
-            format: Default::default(),
-            offset: Default::default(),
-        }
+        Self { location: Default::default(), binding: Default::default(), format: Default::default(), offset: Default::default() }
     }
 }
 impl std::fmt::Debug for VertexInputAttributeDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VertexInputAttributeDescription")
-            .field("location", &self.location)
-            .field("binding", &self.binding)
-            .field("format", &self.format)
-            .field("offset", &self.offset)
-            .finish()
+        f.debug_struct("VertexInputAttributeDescription").field("location", &self.location).field("binding", &self.binding).field("format", &self.format).field("offset", &self.offset).finish()
     }
 }
 impl VertexInputAttributeDescription {
@@ -13492,28 +12738,12 @@ pub struct PipelineVertexInputStateCreateInfo {
 }
 impl Default for PipelineVertexInputStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            vertex_binding_description_count: Default::default(),
-            p_vertex_binding_descriptions: std::ptr::null(),
-            vertex_attribute_description_count: Default::default(),
-            p_vertex_attribute_descriptions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), vertex_binding_description_count: Default::default(), p_vertex_binding_descriptions: std::ptr::null(), vertex_attribute_description_count: Default::default(), p_vertex_attribute_descriptions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineVertexInputStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineVertexInputStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("vertex_binding_description_count", &self.vertex_binding_description_count)
-            .field("p_vertex_binding_descriptions", &self.p_vertex_binding_descriptions)
-            .field("vertex_attribute_description_count", &self.vertex_attribute_description_count)
-            .field("p_vertex_attribute_descriptions", &self.p_vertex_attribute_descriptions)
-            .finish()
+        f.debug_struct("PipelineVertexInputStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("vertex_binding_description_count", &self.vertex_binding_description_count).field("p_vertex_binding_descriptions", &self.p_vertex_binding_descriptions).field("vertex_attribute_description_count", &self.vertex_attribute_description_count).field("p_vertex_attribute_descriptions", &self.p_vertex_attribute_descriptions).finish()
     }
 }
 impl PipelineVertexInputStateCreateInfo {
@@ -13590,24 +12820,12 @@ pub struct PipelineInputAssemblyStateCreateInfo {
 }
 impl Default for PipelineInputAssemblyStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            topology: Default::default(),
-            primitive_restart_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), topology: Default::default(), primitive_restart_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineInputAssemblyStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineInputAssemblyStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("topology", &self.topology)
-            .field("primitive_restart_enable", &(self.primitive_restart_enable != 0))
-            .finish()
+        f.debug_struct("PipelineInputAssemblyStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("topology", &self.topology).field("primitive_restart_enable", &(self.primitive_restart_enable != 0)).finish()
     }
 }
 impl PipelineInputAssemblyStateCreateInfo {
@@ -13679,22 +12897,12 @@ pub struct PipelineTessellationStateCreateInfo {
 }
 impl Default for PipelineTessellationStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            patch_control_points: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), patch_control_points: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineTessellationStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineTessellationStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("patch_control_points", &self.patch_control_points)
-            .finish()
+        f.debug_struct("PipelineTessellationStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("patch_control_points", &self.patch_control_points).finish()
     }
 }
 impl PipelineTessellationStateCreateInfo {
@@ -13766,28 +12974,12 @@ pub struct PipelineViewportStateCreateInfo {
 }
 impl Default for PipelineViewportStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            viewport_count: Default::default(),
-            p_viewports: std::ptr::null(),
-            scissor_count: Default::default(),
-            p_scissors: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), viewport_count: Default::default(), p_viewports: std::ptr::null(), scissor_count: Default::default(), p_scissors: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("viewport_count", &self.viewport_count)
-            .field("p_viewports", &self.p_viewports)
-            .field("scissor_count", &self.scissor_count)
-            .field("p_scissors", &self.p_scissors)
-            .finish()
+        f.debug_struct("PipelineViewportStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("viewport_count", &self.viewport_count).field("p_viewports", &self.p_viewports).field("scissor_count", &self.scissor_count).field("p_scissors", &self.p_scissors).finish()
     }
 }
 impl PipelineViewportStateCreateInfo {
@@ -13890,40 +13082,12 @@ pub struct PipelineRasterizationStateCreateInfo {
 }
 impl Default for PipelineRasterizationStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            depth_clamp_enable: Default::default(),
-            rasterizer_discard_enable: Default::default(),
-            polygon_mode: Default::default(),
-            cull_mode: Default::default(),
-            front_face: Default::default(),
-            depth_bias_enable: Default::default(),
-            depth_bias_constant_factor: Default::default(),
-            depth_bias_clamp: Default::default(),
-            depth_bias_slope_factor: Default::default(),
-            line_width: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), depth_clamp_enable: Default::default(), rasterizer_discard_enable: Default::default(), polygon_mode: Default::default(), cull_mode: Default::default(), front_face: Default::default(), depth_bias_enable: Default::default(), depth_bias_constant_factor: Default::default(), depth_bias_clamp: Default::default(), depth_bias_slope_factor: Default::default(), line_width: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineRasterizationStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("depth_clamp_enable", &(self.depth_clamp_enable != 0))
-            .field("rasterizer_discard_enable", &(self.rasterizer_discard_enable != 0))
-            .field("polygon_mode", &self.polygon_mode)
-            .field("cull_mode", &self.cull_mode)
-            .field("front_face", &self.front_face)
-            .field("depth_bias_enable", &(self.depth_bias_enable != 0))
-            .field("depth_bias_constant_factor", &self.depth_bias_constant_factor)
-            .field("depth_bias_clamp", &self.depth_bias_clamp)
-            .field("depth_bias_slope_factor", &self.depth_bias_slope_factor)
-            .field("line_width", &self.line_width)
-            .finish()
+        f.debug_struct("PipelineRasterizationStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("depth_clamp_enable", &(self.depth_clamp_enable != 0)).field("rasterizer_discard_enable", &(self.rasterizer_discard_enable != 0)).field("polygon_mode", &self.polygon_mode).field("cull_mode", &self.cull_mode).field("front_face", &self.front_face).field("depth_bias_enable", &(self.depth_bias_enable != 0)).field("depth_bias_constant_factor", &self.depth_bias_constant_factor).field("depth_bias_clamp", &self.depth_bias_clamp).field("depth_bias_slope_factor", &self.depth_bias_slope_factor).field("line_width", &self.line_width).finish()
     }
 }
 impl PipelineRasterizationStateCreateInfo {
@@ -13942,6 +13106,8 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_provoking_vertex::PipelineRasterizationProvokingVertexStateCreateInfoEXT> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_provoking_vertex::PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'_>> for PipelineRasterizationStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Builder of [`PipelineRasterizationStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14050,32 +13216,12 @@ pub struct PipelineMultisampleStateCreateInfo {
 }
 impl Default for PipelineMultisampleStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            rasterization_samples: Default::default(),
-            sample_shading_enable: Default::default(),
-            min_sample_shading: Default::default(),
-            p_sample_mask: std::ptr::null(),
-            alpha_to_coverage_enable: Default::default(),
-            alpha_to_one_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), rasterization_samples: Default::default(), sample_shading_enable: Default::default(), min_sample_shading: Default::default(), p_sample_mask: std::ptr::null(), alpha_to_coverage_enable: Default::default(), alpha_to_one_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineMultisampleStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineMultisampleStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("rasterization_samples", &self.rasterization_samples)
-            .field("sample_shading_enable", &(self.sample_shading_enable != 0))
-            .field("min_sample_shading", &self.min_sample_shading)
-            .field("p_sample_mask", &self.p_sample_mask)
-            .field("alpha_to_coverage_enable", &(self.alpha_to_coverage_enable != 0))
-            .field("alpha_to_one_enable", &(self.alpha_to_one_enable != 0))
-            .finish()
+        f.debug_struct("PipelineMultisampleStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("rasterization_samples", &self.rasterization_samples).field("sample_shading_enable", &(self.sample_shading_enable != 0)).field("min_sample_shading", &self.min_sample_shading).field("p_sample_mask", &self.p_sample_mask).field("alpha_to_coverage_enable", &(self.alpha_to_coverage_enable != 0)).field("alpha_to_one_enable", &(self.alpha_to_one_enable != 0)).finish()
     }
 }
 impl PipelineMultisampleStateCreateInfo {
@@ -14179,30 +13325,12 @@ pub struct PipelineColorBlendAttachmentState {
 }
 impl Default for PipelineColorBlendAttachmentState {
     fn default() -> Self {
-        Self {
-            blend_enable: Default::default(),
-            src_color_blend_factor: Default::default(),
-            dst_color_blend_factor: Default::default(),
-            color_blend_op: Default::default(),
-            src_alpha_blend_factor: Default::default(),
-            dst_alpha_blend_factor: Default::default(),
-            alpha_blend_op: Default::default(),
-            color_write_mask: Default::default(),
-        }
+        Self { blend_enable: Default::default(), src_color_blend_factor: Default::default(), dst_color_blend_factor: Default::default(), color_blend_op: Default::default(), src_alpha_blend_factor: Default::default(), dst_alpha_blend_factor: Default::default(), alpha_blend_op: Default::default(), color_write_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineColorBlendAttachmentState {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineColorBlendAttachmentState")
-            .field("blend_enable", &(self.blend_enable != 0))
-            .field("src_color_blend_factor", &self.src_color_blend_factor)
-            .field("dst_color_blend_factor", &self.dst_color_blend_factor)
-            .field("color_blend_op", &self.color_blend_op)
-            .field("src_alpha_blend_factor", &self.src_alpha_blend_factor)
-            .field("dst_alpha_blend_factor", &self.dst_alpha_blend_factor)
-            .field("alpha_blend_op", &self.alpha_blend_op)
-            .field("color_write_mask", &self.color_write_mask)
-            .finish()
+        f.debug_struct("PipelineColorBlendAttachmentState").field("blend_enable", &(self.blend_enable != 0)).field("src_color_blend_factor", &self.src_color_blend_factor).field("dst_color_blend_factor", &self.dst_color_blend_factor).field("color_blend_op", &self.color_blend_op).field("src_alpha_blend_factor", &self.src_alpha_blend_factor).field("dst_alpha_blend_factor", &self.dst_alpha_blend_factor).field("alpha_blend_op", &self.alpha_blend_op).field("color_write_mask", &self.color_write_mask).finish()
     }
 }
 impl PipelineColorBlendAttachmentState {
@@ -14303,30 +13431,12 @@ pub struct PipelineColorBlendStateCreateInfo {
 }
 impl Default for PipelineColorBlendStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            logic_op_enable: Default::default(),
-            logic_op: Default::default(),
-            attachment_count: Default::default(),
-            p_attachments: std::ptr::null(),
-            blend_constants: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), logic_op_enable: Default::default(), logic_op: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), blend_constants: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineColorBlendStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineColorBlendStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("logic_op_enable", &(self.logic_op_enable != 0))
-            .field("logic_op", &self.logic_op)
-            .field("attachment_count", &self.attachment_count)
-            .field("p_attachments", &self.p_attachments)
-            .field("blend_constants", &self.blend_constants)
-            .finish()
+        f.debug_struct("PipelineColorBlendStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("logic_op_enable", &(self.logic_op_enable != 0)).field("logic_op", &self.logic_op).field("attachment_count", &self.attachment_count).field("p_attachments", &self.p_attachments).field("blend_constants", &self.blend_constants).finish()
     }
 }
 impl PipelineColorBlendStateCreateInfo {
@@ -14337,6 +13447,8 @@ impl PipelineColorBlendStateCreateInfo {
 }
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXT> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_color_write_enable::PipelineColorWriteCreateInfoEXT> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_color_write_enable::PipelineColorWriteCreateInfoEXTBuilder<'_>> for PipelineColorBlendStateCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Builder of [`PipelineColorBlendStateCreateInfo`]"]
 #[repr(transparent)]
@@ -14412,24 +13524,12 @@ pub struct PipelineDynamicStateCreateInfo {
 }
 impl Default for PipelineDynamicStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_DYNAMIC_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            dynamic_state_count: Default::default(),
-            p_dynamic_states: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_DYNAMIC_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), dynamic_state_count: Default::default(), p_dynamic_states: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineDynamicStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineDynamicStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("dynamic_state_count", &self.dynamic_state_count)
-            .field("p_dynamic_states", &self.p_dynamic_states)
-            .finish()
+        f.debug_struct("PipelineDynamicStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("dynamic_state_count", &self.dynamic_state_count).field("p_dynamic_states", &self.p_dynamic_states).finish()
     }
 }
 impl PipelineDynamicStateCreateInfo {
@@ -14500,28 +13600,12 @@ pub struct StencilOpState {
 }
 impl Default for StencilOpState {
     fn default() -> Self {
-        Self {
-            fail_op: Default::default(),
-            pass_op: Default::default(),
-            depth_fail_op: Default::default(),
-            compare_op: Default::default(),
-            compare_mask: Default::default(),
-            write_mask: Default::default(),
-            reference: Default::default(),
-        }
+        Self { fail_op: Default::default(), pass_op: Default::default(), depth_fail_op: Default::default(), compare_op: Default::default(), compare_mask: Default::default(), write_mask: Default::default(), reference: Default::default() }
     }
 }
 impl std::fmt::Debug for StencilOpState {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StencilOpState")
-            .field("fail_op", &self.fail_op)
-            .field("pass_op", &self.pass_op)
-            .field("depth_fail_op", &self.depth_fail_op)
-            .field("compare_op", &self.compare_op)
-            .field("compare_mask", &self.compare_mask)
-            .field("write_mask", &self.write_mask)
-            .field("reference", &self.reference)
-            .finish()
+        f.debug_struct("StencilOpState").field("fail_op", &self.fail_op).field("pass_op", &self.pass_op).field("depth_fail_op", &self.depth_fail_op).field("compare_op", &self.compare_op).field("compare_mask", &self.compare_mask).field("write_mask", &self.write_mask).field("reference", &self.reference).finish()
     }
 }
 impl StencilOpState {
@@ -14621,38 +13705,12 @@ pub struct PipelineDepthStencilStateCreateInfo {
 }
 impl Default for PipelineDepthStencilStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            depth_test_enable: Default::default(),
-            depth_write_enable: Default::default(),
-            depth_compare_op: Default::default(),
-            depth_bounds_test_enable: Default::default(),
-            stencil_test_enable: Default::default(),
-            front: Default::default(),
-            back: Default::default(),
-            min_depth_bounds: Default::default(),
-            max_depth_bounds: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), depth_test_enable: Default::default(), depth_write_enable: Default::default(), depth_compare_op: Default::default(), depth_bounds_test_enable: Default::default(), stencil_test_enable: Default::default(), front: Default::default(), back: Default::default(), min_depth_bounds: Default::default(), max_depth_bounds: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineDepthStencilStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineDepthStencilStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("depth_test_enable", &(self.depth_test_enable != 0))
-            .field("depth_write_enable", &(self.depth_write_enable != 0))
-            .field("depth_compare_op", &self.depth_compare_op)
-            .field("depth_bounds_test_enable", &(self.depth_bounds_test_enable != 0))
-            .field("stencil_test_enable", &(self.stencil_test_enable != 0))
-            .field("front", &self.front)
-            .field("back", &self.back)
-            .field("min_depth_bounds", &self.min_depth_bounds)
-            .field("max_depth_bounds", &self.max_depth_bounds)
-            .finish()
+        f.debug_struct("PipelineDepthStencilStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("depth_test_enable", &(self.depth_test_enable != 0)).field("depth_write_enable", &(self.depth_write_enable != 0)).field("depth_compare_op", &self.depth_compare_op).field("depth_bounds_test_enable", &(self.depth_bounds_test_enable != 0)).field("stencil_test_enable", &(self.stencil_test_enable != 0)).field("front", &self.front).field("back", &self.back).field("min_depth_bounds", &self.min_depth_bounds).field("max_depth_bounds", &self.max_depth_bounds).finish()
     }
 }
 impl PipelineDepthStencilStateCreateInfo {
@@ -14774,52 +13832,12 @@ pub struct GraphicsPipelineCreateInfo {
 }
 impl Default for GraphicsPipelineCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            stage_count: Default::default(),
-            p_stages: std::ptr::null(),
-            p_vertex_input_state: std::ptr::null(),
-            p_input_assembly_state: std::ptr::null(),
-            p_tessellation_state: std::ptr::null(),
-            p_viewport_state: std::ptr::null(),
-            p_rasterization_state: std::ptr::null(),
-            p_multisample_state: std::ptr::null(),
-            p_depth_stencil_state: std::ptr::null(),
-            p_color_blend_state: std::ptr::null(),
-            p_dynamic_state: std::ptr::null(),
-            layout: Default::default(),
-            render_pass: Default::default(),
-            subpass: Default::default(),
-            base_pipeline_handle: Default::default(),
-            base_pipeline_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_input_assembly_state: std::ptr::null(), p_tessellation_state: std::ptr::null(), p_viewport_state: std::ptr::null(), p_rasterization_state: std::ptr::null(), p_multisample_state: std::ptr::null(), p_depth_stencil_state: std::ptr::null(), p_color_blend_state: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), render_pass: Default::default(), subpass: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for GraphicsPipelineCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GraphicsPipelineCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("stage_count", &self.stage_count)
-            .field("p_stages", &self.p_stages)
-            .field("p_vertex_input_state", &self.p_vertex_input_state)
-            .field("p_input_assembly_state", &self.p_input_assembly_state)
-            .field("p_tessellation_state", &self.p_tessellation_state)
-            .field("p_viewport_state", &self.p_viewport_state)
-            .field("p_rasterization_state", &self.p_rasterization_state)
-            .field("p_multisample_state", &self.p_multisample_state)
-            .field("p_depth_stencil_state", &self.p_depth_stencil_state)
-            .field("p_color_blend_state", &self.p_color_blend_state)
-            .field("p_dynamic_state", &self.p_dynamic_state)
-            .field("layout", &self.layout)
-            .field("render_pass", &self.render_pass)
-            .field("subpass", &self.subpass)
-            .field("base_pipeline_handle", &self.base_pipeline_handle)
-            .field("base_pipeline_index", &self.base_pipeline_index)
-            .finish()
+        f.debug_struct("GraphicsPipelineCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("stage_count", &self.stage_count).field("p_stages", &self.p_stages).field("p_vertex_input_state", &self.p_vertex_input_state).field("p_input_assembly_state", &self.p_input_assembly_state).field("p_tessellation_state", &self.p_tessellation_state).field("p_viewport_state", &self.p_viewport_state).field("p_rasterization_state", &self.p_rasterization_state).field("p_multisample_state", &self.p_multisample_state).field("p_depth_stencil_state", &self.p_depth_stencil_state).field("p_color_blend_state", &self.p_color_blend_state).field("p_dynamic_state", &self.p_dynamic_state).field("layout", &self.layout).field("render_pass", &self.render_pass).field("subpass", &self.subpass).field("base_pipeline_handle", &self.base_pipeline_handle).field("base_pipeline_index", &self.base_pipeline_index).finish()
     }
 }
 impl GraphicsPipelineCreateInfo {
@@ -14972,24 +13990,12 @@ pub struct PipelineCacheCreateInfo {
 }
 impl Default for PipelineCacheCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_CACHE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            initial_data_size: Default::default(),
-            p_initial_data: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_CACHE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineCacheCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCacheCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("initial_data_size", &self.initial_data_size)
-            .field("p_initial_data", &self.p_initial_data)
-            .finish()
+        f.debug_struct("PipelineCacheCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("initial_data_size", &self.initial_data_size).field("p_initial_data", &self.p_initial_data).finish()
     }
 }
 impl PipelineCacheCreateInfo {
@@ -15060,11 +14066,7 @@ pub struct PushConstantRange {
 }
 impl Default for PushConstantRange {
     fn default() -> Self {
-        Self {
-            stage_flags: Default::default(),
-            offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { stage_flags: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for PushConstantRange {
@@ -15144,28 +14146,12 @@ pub struct PipelineLayoutCreateInfo {
 }
 impl Default for PipelineLayoutCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_LAYOUT_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            set_layout_count: Default::default(),
-            p_set_layouts: std::ptr::null(),
-            push_constant_range_count: Default::default(),
-            p_push_constant_ranges: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), set_layout_count: Default::default(), p_set_layouts: std::ptr::null(), push_constant_range_count: Default::default(), p_push_constant_ranges: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineLayoutCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineLayoutCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("set_layout_count", &self.set_layout_count)
-            .field("p_set_layouts", &self.p_set_layouts)
-            .field("push_constant_range_count", &self.push_constant_range_count)
-            .field("p_push_constant_ranges", &self.p_push_constant_ranges)
-            .finish()
+        f.debug_struct("PipelineLayoutCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("set_layout_count", &self.set_layout_count).field("p_set_layouts", &self.p_set_layouts).field("push_constant_range_count", &self.push_constant_range_count).field("p_push_constant_ranges", &self.p_push_constant_ranges).finish()
     }
 }
 impl PipelineLayoutCreateInfo {
@@ -15253,50 +14239,12 @@ pub struct SamplerCreateInfo {
 }
 impl Default for SamplerCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLER_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            mag_filter: Default::default(),
-            min_filter: Default::default(),
-            mipmap_mode: Default::default(),
-            address_mode_u: Default::default(),
-            address_mode_v: Default::default(),
-            address_mode_w: Default::default(),
-            mip_lod_bias: Default::default(),
-            anisotropy_enable: Default::default(),
-            max_anisotropy: Default::default(),
-            compare_enable: Default::default(),
-            compare_op: Default::default(),
-            min_lod: Default::default(),
-            max_lod: Default::default(),
-            border_color: Default::default(),
-            unnormalized_coordinates: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), mag_filter: Default::default(), min_filter: Default::default(), mipmap_mode: Default::default(), address_mode_u: Default::default(), address_mode_v: Default::default(), address_mode_w: Default::default(), mip_lod_bias: Default::default(), anisotropy_enable: Default::default(), max_anisotropy: Default::default(), compare_enable: Default::default(), compare_op: Default::default(), min_lod: Default::default(), max_lod: Default::default(), border_color: Default::default(), unnormalized_coordinates: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SamplerCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("mag_filter", &self.mag_filter)
-            .field("min_filter", &self.min_filter)
-            .field("mipmap_mode", &self.mipmap_mode)
-            .field("address_mode_u", &self.address_mode_u)
-            .field("address_mode_v", &self.address_mode_v)
-            .field("address_mode_w", &self.address_mode_w)
-            .field("mip_lod_bias", &self.mip_lod_bias)
-            .field("anisotropy_enable", &(self.anisotropy_enable != 0))
-            .field("max_anisotropy", &self.max_anisotropy)
-            .field("compare_enable", &(self.compare_enable != 0))
-            .field("compare_op", &self.compare_op)
-            .field("min_lod", &self.min_lod)
-            .field("max_lod", &self.max_lod)
-            .field("border_color", &self.border_color)
-            .field("unnormalized_coordinates", &(self.unnormalized_coordinates != 0))
-            .finish()
+        f.debug_struct("SamplerCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("mag_filter", &self.mag_filter).field("min_filter", &self.min_filter).field("mipmap_mode", &self.mipmap_mode).field("address_mode_u", &self.address_mode_u).field("address_mode_v", &self.address_mode_v).field("address_mode_w", &self.address_mode_w).field("mip_lod_bias", &self.mip_lod_bias).field("anisotropy_enable", &(self.anisotropy_enable != 0)).field("max_anisotropy", &self.max_anisotropy).field("compare_enable", &(self.compare_enable != 0)).field("compare_op", &self.compare_op).field("min_lod", &self.min_lod).field("max_lod", &self.max_lod).field("border_color", &self.border_color).field("unnormalized_coordinates", &(self.unnormalized_coordinates != 0)).finish()
     }
 }
 impl SamplerCreateInfo {
@@ -15439,22 +14387,12 @@ pub struct CommandPoolCreateInfo {
 }
 impl Default for CommandPoolCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_POOL_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            queue_family_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandPoolCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("queue_family_index", &self.queue_family_index)
-            .finish()
+        f.debug_struct("CommandPoolCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("queue_family_index", &self.queue_family_index).finish()
     }
 }
 impl CommandPoolCreateInfo {
@@ -15522,24 +14460,12 @@ pub struct CommandBufferAllocateInfo {
 }
 impl Default for CommandBufferAllocateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_ALLOCATE_INFO,
-            p_next: std::ptr::null(),
-            command_pool: Default::default(),
-            level: Default::default(),
-            command_buffer_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_ALLOCATE_INFO, p_next: std::ptr::null(), command_pool: Default::default(), level: Default::default(), command_buffer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandBufferAllocateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("command_pool", &self.command_pool)
-            .field("level", &self.level)
-            .field("command_buffer_count", &self.command_buffer_count)
-            .finish()
+        f.debug_struct("CommandBufferAllocateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("command_pool", &self.command_pool).field("level", &self.level).field("command_buffer_count", &self.command_buffer_count).finish()
     }
 }
 impl CommandBufferAllocateInfo {
@@ -15615,30 +14541,12 @@ pub struct CommandBufferInheritanceInfo {
 }
 impl Default for CommandBufferInheritanceInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_INFO,
-            p_next: std::ptr::null(),
-            render_pass: Default::default(),
-            subpass: Default::default(),
-            framebuffer: Default::default(),
-            occlusion_query_enable: Default::default(),
-            query_flags: Default::default(),
-            pipeline_statistics: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_INFO, p_next: std::ptr::null(), render_pass: Default::default(), subpass: Default::default(), framebuffer: Default::default(), occlusion_query_enable: Default::default(), query_flags: Default::default(), pipeline_statistics: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandBufferInheritanceInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("render_pass", &self.render_pass)
-            .field("subpass", &self.subpass)
-            .field("framebuffer", &self.framebuffer)
-            .field("occlusion_query_enable", &(self.occlusion_query_enable != 0))
-            .field("query_flags", &self.query_flags)
-            .field("pipeline_statistics", &self.pipeline_statistics)
-            .finish()
+        f.debug_struct("CommandBufferInheritanceInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("render_pass", &self.render_pass).field("subpass", &self.subpass).field("framebuffer", &self.framebuffer).field("occlusion_query_enable", &(self.occlusion_query_enable != 0)).field("query_flags", &self.query_flags).field("pipeline_statistics", &self.pipeline_statistics).finish()
     }
 }
 impl CommandBufferInheritanceInfo {
@@ -15651,6 +14559,8 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rende
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOM> for CommandBufferInheritanceInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_inherited_viewport_scissor::CommandBufferInheritanceViewportScissorInfoNV> for CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_inherited_viewport_scissor::CommandBufferInheritanceViewportScissorInfoNVBuilder<'_>> for CommandBufferInheritanceInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Builder of [`CommandBufferInheritanceInfo`]"]
 #[repr(transparent)]
@@ -15729,22 +14639,12 @@ pub struct CommandBufferBeginInfo {
 }
 impl Default for CommandBufferBeginInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_BEGIN_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_inheritance_info: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_BEGIN_INFO, p_next: std::ptr::null(), flags: Default::default(), p_inheritance_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CommandBufferBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandBufferBeginInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_inheritance_info", &self.p_inheritance_info)
-            .finish()
+        f.debug_struct("CommandBufferBeginInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("p_inheritance_info", &self.p_inheritance_info).finish()
     }
 }
 impl CommandBufferBeginInfo {
@@ -15816,28 +14716,12 @@ pub struct RenderPassBeginInfo {
 }
 impl Default for RenderPassBeginInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_BEGIN_INFO,
-            p_next: std::ptr::null(),
-            render_pass: Default::default(),
-            framebuffer: Default::default(),
-            render_area: Default::default(),
-            clear_value_count: Default::default(),
-            p_clear_values: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_BEGIN_INFO, p_next: std::ptr::null(), render_pass: Default::default(), framebuffer: Default::default(), render_area: Default::default(), clear_value_count: Default::default(), p_clear_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassBeginInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("render_pass", &self.render_pass)
-            .field("framebuffer", &self.framebuffer)
-            .field("render_area", &self.render_area)
-            .field("clear_value_count", &self.clear_value_count)
-            .field("p_clear_values", &self.p_clear_values)
-            .finish()
+        f.debug_struct("RenderPassBeginInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("render_pass", &self.render_pass).field("framebuffer", &self.framebuffer).field("render_area", &self.render_area).field("clear_value_count", &self.clear_value_count).field("p_clear_values", &self.p_clear_values).finish()
     }
 }
 impl RenderPassBeginInfo {
@@ -15940,10 +14824,7 @@ pub struct ClearDepthStencilValue {
 }
 impl Default for ClearDepthStencilValue {
     fn default() -> Self {
-        Self {
-            depth: Default::default(),
-            stencil: Default::default(),
-        }
+        Self { depth: Default::default(), stencil: Default::default() }
     }
 }
 impl std::fmt::Debug for ClearDepthStencilValue {
@@ -16032,20 +14913,12 @@ pub struct ClearAttachment {
 }
 impl Default for ClearAttachment {
     fn default() -> Self {
-        Self {
-            aspect_mask: Default::default(),
-            color_attachment: Default::default(),
-            clear_value: Default::default(),
-        }
+        Self { aspect_mask: Default::default(), color_attachment: Default::default(), clear_value: Default::default() }
     }
 }
 impl std::fmt::Debug for ClearAttachment {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ClearAttachment")
-            .field("aspect_mask", &self.aspect_mask)
-            .field("color_attachment", &self.color_attachment)
-            .field("clear_value", &self.clear_value)
-            .finish()
+        f.debug_struct("ClearAttachment").field("aspect_mask", &self.aspect_mask).field("color_attachment", &self.color_attachment).field("clear_value", &self.clear_value).finish()
     }
 }
 impl ClearAttachment {
@@ -16122,32 +14995,12 @@ pub struct AttachmentDescription {
 }
 impl Default for AttachmentDescription {
     fn default() -> Self {
-        Self {
-            flags: Default::default(),
-            format: Default::default(),
-            samples: Default::default(),
-            load_op: Default::default(),
-            store_op: Default::default(),
-            stencil_load_op: Default::default(),
-            stencil_store_op: Default::default(),
-            initial_layout: Default::default(),
-            final_layout: Default::default(),
-        }
+        Self { flags: Default::default(), format: Default::default(), samples: Default::default(), load_op: Default::default(), store_op: Default::default(), stencil_load_op: Default::default(), stencil_store_op: Default::default(), initial_layout: Default::default(), final_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AttachmentDescription")
-            .field("flags", &self.flags)
-            .field("format", &self.format)
-            .field("samples", &self.samples)
-            .field("load_op", &self.load_op)
-            .field("store_op", &self.store_op)
-            .field("stencil_load_op", &self.stencil_load_op)
-            .field("stencil_store_op", &self.stencil_store_op)
-            .field("initial_layout", &self.initial_layout)
-            .field("final_layout", &self.final_layout)
-            .finish()
+        f.debug_struct("AttachmentDescription").field("flags", &self.flags).field("format", &self.format).field("samples", &self.samples).field("load_op", &self.load_op).field("store_op", &self.store_op).field("stencil_load_op", &self.stencil_load_op).field("stencil_store_op", &self.stencil_store_op).field("initial_layout", &self.initial_layout).field("final_layout", &self.final_layout).finish()
     }
 }
 impl AttachmentDescription {
@@ -16247,10 +15100,7 @@ pub struct AttachmentReference {
 }
 impl Default for AttachmentReference {
     fn default() -> Self {
-        Self {
-            attachment: Default::default(),
-            layout: Default::default(),
-        }
+        Self { attachment: Default::default(), layout: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentReference {
@@ -16328,34 +15178,12 @@ pub struct SubpassDescription {
 }
 impl Default for SubpassDescription {
     fn default() -> Self {
-        Self {
-            flags: Default::default(),
-            pipeline_bind_point: Default::default(),
-            input_attachment_count: Default::default(),
-            p_input_attachments: std::ptr::null(),
-            color_attachment_count: Default::default(),
-            p_color_attachments: std::ptr::null(),
-            p_resolve_attachments: std::ptr::null(),
-            p_depth_stencil_attachment: std::ptr::null(),
-            preserve_attachment_count: Default::default(),
-            p_preserve_attachments: std::ptr::null(),
-        }
+        Self { flags: Default::default(), pipeline_bind_point: Default::default(), input_attachment_count: Default::default(), p_input_attachments: std::ptr::null(), color_attachment_count: Default::default(), p_color_attachments: std::ptr::null(), p_resolve_attachments: std::ptr::null(), p_depth_stencil_attachment: std::ptr::null(), preserve_attachment_count: Default::default(), p_preserve_attachments: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubpassDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubpassDescription")
-            .field("flags", &self.flags)
-            .field("pipeline_bind_point", &self.pipeline_bind_point)
-            .field("input_attachment_count", &self.input_attachment_count)
-            .field("p_input_attachments", &self.p_input_attachments)
-            .field("color_attachment_count", &self.color_attachment_count)
-            .field("p_color_attachments", &self.p_color_attachments)
-            .field("p_resolve_attachments", &self.p_resolve_attachments)
-            .field("p_depth_stencil_attachment", &self.p_depth_stencil_attachment)
-            .field("preserve_attachment_count", &self.preserve_attachment_count)
-            .field("p_preserve_attachments", &self.p_preserve_attachments)
-            .finish()
+        f.debug_struct("SubpassDescription").field("flags", &self.flags).field("pipeline_bind_point", &self.pipeline_bind_point).field("input_attachment_count", &self.input_attachment_count).field("p_input_attachments", &self.p_input_attachments).field("color_attachment_count", &self.color_attachment_count).field("p_color_attachments", &self.p_color_attachments).field("p_resolve_attachments", &self.p_resolve_attachments).field("p_depth_stencil_attachment", &self.p_depth_stencil_attachment).field("preserve_attachment_count", &self.preserve_attachment_count).field("p_preserve_attachments", &self.p_preserve_attachments).finish()
     }
 }
 impl SubpassDescription {
@@ -16454,28 +15282,12 @@ pub struct SubpassDependency {
 }
 impl Default for SubpassDependency {
     fn default() -> Self {
-        Self {
-            src_subpass: Default::default(),
-            dst_subpass: Default::default(),
-            src_stage_mask: Default::default(),
-            dst_stage_mask: Default::default(),
-            src_access_mask: Default::default(),
-            dst_access_mask: Default::default(),
-            dependency_flags: Default::default(),
-        }
+        Self { src_subpass: Default::default(), dst_subpass: Default::default(), src_stage_mask: Default::default(), dst_stage_mask: Default::default(), src_access_mask: Default::default(), dst_access_mask: Default::default(), dependency_flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassDependency {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubpassDependency")
-            .field("src_subpass", &self.src_subpass)
-            .field("dst_subpass", &self.dst_subpass)
-            .field("src_stage_mask", &self.src_stage_mask)
-            .field("dst_stage_mask", &self.dst_stage_mask)
-            .field("src_access_mask", &self.src_access_mask)
-            .field("dst_access_mask", &self.dst_access_mask)
-            .field("dependency_flags", &self.dependency_flags)
-            .finish()
+        f.debug_struct("SubpassDependency").field("src_subpass", &self.src_subpass).field("dst_subpass", &self.dst_subpass).field("src_stage_mask", &self.src_stage_mask).field("dst_stage_mask", &self.dst_stage_mask).field("src_access_mask", &self.src_access_mask).field("dst_access_mask", &self.dst_access_mask).field("dependency_flags", &self.dependency_flags).finish()
     }
 }
 impl SubpassDependency {
@@ -16572,32 +15384,12 @@ pub struct RenderPassCreateInfo {
 }
 impl Default for RenderPassCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            attachment_count: Default::default(),
-            p_attachments: std::ptr::null(),
-            subpass_count: Default::default(),
-            p_subpasses: std::ptr::null(),
-            dependency_count: Default::default(),
-            p_dependencies: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("attachment_count", &self.attachment_count)
-            .field("p_attachments", &self.p_attachments)
-            .field("subpass_count", &self.subpass_count)
-            .field("p_subpasses", &self.p_subpasses)
-            .field("dependency_count", &self.dependency_count)
-            .field("p_dependencies", &self.p_dependencies)
-            .finish()
+        f.debug_struct("RenderPassCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("attachment_count", &self.attachment_count).field("p_attachments", &self.p_attachments).field("subpass_count", &self.subpass_count).field("p_subpasses", &self.p_subpasses).field("dependency_count", &self.dependency_count).field("p_dependencies", &self.p_dependencies).finish()
     }
 }
 impl RenderPassCreateInfo {
@@ -16682,11 +15474,7 @@ pub struct EventCreateInfo {
 }
 impl Default for EventCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EVENT_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EVENT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for EventCreateInfo {
@@ -16752,11 +15540,7 @@ pub struct FenceCreateInfo {
 }
 impl Default for FenceCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FENCE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FENCE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for FenceCreateInfo {
@@ -16939,63 +15723,7 @@ impl Default for PhysicalDeviceFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceFeatures")
-            .field("robust_buffer_access", &(self.robust_buffer_access != 0))
-            .field("full_draw_index_uint32", &(self.full_draw_index_uint32 != 0))
-            .field("image_cube_array", &(self.image_cube_array != 0))
-            .field("independent_blend", &(self.independent_blend != 0))
-            .field("geometry_shader", &(self.geometry_shader != 0))
-            .field("tessellation_shader", &(self.tessellation_shader != 0))
-            .field("sample_rate_shading", &(self.sample_rate_shading != 0))
-            .field("dual_src_blend", &(self.dual_src_blend != 0))
-            .field("logic_op", &(self.logic_op != 0))
-            .field("multi_draw_indirect", &(self.multi_draw_indirect != 0))
-            .field("draw_indirect_first_instance", &(self.draw_indirect_first_instance != 0))
-            .field("depth_clamp", &(self.depth_clamp != 0))
-            .field("depth_bias_clamp", &(self.depth_bias_clamp != 0))
-            .field("fill_mode_non_solid", &(self.fill_mode_non_solid != 0))
-            .field("depth_bounds", &(self.depth_bounds != 0))
-            .field("wide_lines", &(self.wide_lines != 0))
-            .field("large_points", &(self.large_points != 0))
-            .field("alpha_to_one", &(self.alpha_to_one != 0))
-            .field("multi_viewport", &(self.multi_viewport != 0))
-            .field("sampler_anisotropy", &(self.sampler_anisotropy != 0))
-            .field("texture_compression_etc2", &(self.texture_compression_etc2 != 0))
-            .field("texture_compression_astc_ldr", &(self.texture_compression_astc_ldr != 0))
-            .field("texture_compression_bc", &(self.texture_compression_bc != 0))
-            .field("occlusion_query_precise", &(self.occlusion_query_precise != 0))
-            .field("pipeline_statistics_query", &(self.pipeline_statistics_query != 0))
-            .field("vertex_pipeline_stores_and_atomics", &(self.vertex_pipeline_stores_and_atomics != 0))
-            .field("fragment_stores_and_atomics", &(self.fragment_stores_and_atomics != 0))
-            .field("shader_tessellation_and_geometry_point_size", &(self.shader_tessellation_and_geometry_point_size != 0))
-            .field("shader_image_gather_extended", &(self.shader_image_gather_extended != 0))
-            .field("shader_storage_image_extended_formats", &(self.shader_storage_image_extended_formats != 0))
-            .field("shader_storage_image_multisample", &(self.shader_storage_image_multisample != 0))
-            .field("shader_storage_image_read_without_format", &(self.shader_storage_image_read_without_format != 0))
-            .field("shader_storage_image_write_without_format", &(self.shader_storage_image_write_without_format != 0))
-            .field("shader_uniform_buffer_array_dynamic_indexing", &(self.shader_uniform_buffer_array_dynamic_indexing != 0))
-            .field("shader_sampled_image_array_dynamic_indexing", &(self.shader_sampled_image_array_dynamic_indexing != 0))
-            .field("shader_storage_buffer_array_dynamic_indexing", &(self.shader_storage_buffer_array_dynamic_indexing != 0))
-            .field("shader_storage_image_array_dynamic_indexing", &(self.shader_storage_image_array_dynamic_indexing != 0))
-            .field("shader_clip_distance", &(self.shader_clip_distance != 0))
-            .field("shader_cull_distance", &(self.shader_cull_distance != 0))
-            .field("shader_float64", &(self.shader_float64 != 0))
-            .field("shader_int64", &(self.shader_int64 != 0))
-            .field("shader_int16", &(self.shader_int16 != 0))
-            .field("shader_resource_residency", &(self.shader_resource_residency != 0))
-            .field("shader_resource_min_lod", &(self.shader_resource_min_lod != 0))
-            .field("sparse_binding", &(self.sparse_binding != 0))
-            .field("sparse_residency_buffer", &(self.sparse_residency_buffer != 0))
-            .field("sparse_residency_image2_d", &(self.sparse_residency_image2_d != 0))
-            .field("sparse_residency_image3_d", &(self.sparse_residency_image3_d != 0))
-            .field("sparse_residency2_samples", &(self.sparse_residency2_samples != 0))
-            .field("sparse_residency4_samples", &(self.sparse_residency4_samples != 0))
-            .field("sparse_residency8_samples", &(self.sparse_residency8_samples != 0))
-            .field("sparse_residency16_samples", &(self.sparse_residency16_samples != 0))
-            .field("sparse_residency_aliased", &(self.sparse_residency_aliased != 0))
-            .field("variable_multisample_rate", &(self.variable_multisample_rate != 0))
-            .field("inherited_queries", &(self.inherited_queries != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceFeatures").field("robust_buffer_access", &(self.robust_buffer_access != 0)).field("full_draw_index_uint32", &(self.full_draw_index_uint32 != 0)).field("image_cube_array", &(self.image_cube_array != 0)).field("independent_blend", &(self.independent_blend != 0)).field("geometry_shader", &(self.geometry_shader != 0)).field("tessellation_shader", &(self.tessellation_shader != 0)).field("sample_rate_shading", &(self.sample_rate_shading != 0)).field("dual_src_blend", &(self.dual_src_blend != 0)).field("logic_op", &(self.logic_op != 0)).field("multi_draw_indirect", &(self.multi_draw_indirect != 0)).field("draw_indirect_first_instance", &(self.draw_indirect_first_instance != 0)).field("depth_clamp", &(self.depth_clamp != 0)).field("depth_bias_clamp", &(self.depth_bias_clamp != 0)).field("fill_mode_non_solid", &(self.fill_mode_non_solid != 0)).field("depth_bounds", &(self.depth_bounds != 0)).field("wide_lines", &(self.wide_lines != 0)).field("large_points", &(self.large_points != 0)).field("alpha_to_one", &(self.alpha_to_one != 0)).field("multi_viewport", &(self.multi_viewport != 0)).field("sampler_anisotropy", &(self.sampler_anisotropy != 0)).field("texture_compression_etc2", &(self.texture_compression_etc2 != 0)).field("texture_compression_astc_ldr", &(self.texture_compression_astc_ldr != 0)).field("texture_compression_bc", &(self.texture_compression_bc != 0)).field("occlusion_query_precise", &(self.occlusion_query_precise != 0)).field("pipeline_statistics_query", &(self.pipeline_statistics_query != 0)).field("vertex_pipeline_stores_and_atomics", &(self.vertex_pipeline_stores_and_atomics != 0)).field("fragment_stores_and_atomics", &(self.fragment_stores_and_atomics != 0)).field("shader_tessellation_and_geometry_point_size", &(self.shader_tessellation_and_geometry_point_size != 0)).field("shader_image_gather_extended", &(self.shader_image_gather_extended != 0)).field("shader_storage_image_extended_formats", &(self.shader_storage_image_extended_formats != 0)).field("shader_storage_image_multisample", &(self.shader_storage_image_multisample != 0)).field("shader_storage_image_read_without_format", &(self.shader_storage_image_read_without_format != 0)).field("shader_storage_image_write_without_format", &(self.shader_storage_image_write_without_format != 0)).field("shader_uniform_buffer_array_dynamic_indexing", &(self.shader_uniform_buffer_array_dynamic_indexing != 0)).field("shader_sampled_image_array_dynamic_indexing", &(self.shader_sampled_image_array_dynamic_indexing != 0)).field("shader_storage_buffer_array_dynamic_indexing", &(self.shader_storage_buffer_array_dynamic_indexing != 0)).field("shader_storage_image_array_dynamic_indexing", &(self.shader_storage_image_array_dynamic_indexing != 0)).field("shader_clip_distance", &(self.shader_clip_distance != 0)).field("shader_cull_distance", &(self.shader_cull_distance != 0)).field("shader_float64", &(self.shader_float64 != 0)).field("shader_int64", &(self.shader_int64 != 0)).field("shader_int16", &(self.shader_int16 != 0)).field("shader_resource_residency", &(self.shader_resource_residency != 0)).field("shader_resource_min_lod", &(self.shader_resource_min_lod != 0)).field("sparse_binding", &(self.sparse_binding != 0)).field("sparse_residency_buffer", &(self.sparse_residency_buffer != 0)).field("sparse_residency_image2_d", &(self.sparse_residency_image2_d != 0)).field("sparse_residency_image3_d", &(self.sparse_residency_image3_d != 0)).field("sparse_residency2_samples", &(self.sparse_residency2_samples != 0)).field("sparse_residency4_samples", &(self.sparse_residency4_samples != 0)).field("sparse_residency8_samples", &(self.sparse_residency8_samples != 0)).field("sparse_residency16_samples", &(self.sparse_residency16_samples != 0)).field("sparse_residency_aliased", &(self.sparse_residency_aliased != 0)).field("variable_multisample_rate", &(self.variable_multisample_rate != 0)).field("inherited_queries", &(self.inherited_queries != 0)).finish()
     }
 }
 impl PhysicalDeviceFeatures {
@@ -17328,24 +16056,12 @@ pub struct PhysicalDeviceSparseProperties {
 }
 impl Default for PhysicalDeviceSparseProperties {
     fn default() -> Self {
-        Self {
-            residency_standard2_d_block_shape: Default::default(),
-            residency_standard2_d_multisample_block_shape: Default::default(),
-            residency_standard3_d_block_shape: Default::default(),
-            residency_aligned_mip_size: Default::default(),
-            residency_non_resident_strict: Default::default(),
-        }
+        Self { residency_standard2_d_block_shape: Default::default(), residency_standard2_d_multisample_block_shape: Default::default(), residency_standard3_d_block_shape: Default::default(), residency_aligned_mip_size: Default::default(), residency_non_resident_strict: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSparseProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSparseProperties")
-            .field("residency_standard2_d_block_shape", &(self.residency_standard2_d_block_shape != 0))
-            .field("residency_standard2_d_multisample_block_shape", &(self.residency_standard2_d_multisample_block_shape != 0))
-            .field("residency_standard3_d_block_shape", &(self.residency_standard3_d_block_shape != 0))
-            .field("residency_aligned_mip_size", &(self.residency_aligned_mip_size != 0))
-            .field("residency_non_resident_strict", &(self.residency_non_resident_strict != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceSparseProperties").field("residency_standard2_d_block_shape", &(self.residency_standard2_d_block_shape != 0)).field("residency_standard2_d_multisample_block_shape", &(self.residency_standard2_d_multisample_block_shape != 0)).field("residency_standard3_d_block_shape", &(self.residency_standard3_d_block_shape != 0)).field("residency_aligned_mip_size", &(self.residency_aligned_mip_size != 0)).field("residency_non_resident_strict", &(self.residency_non_resident_strict != 0)).finish()
     }
 }
 impl PhysicalDeviceSparseProperties {
@@ -18334,11 +17050,7 @@ pub struct SemaphoreCreateInfo {
 }
 impl Default for SemaphoreCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SEMAPHORE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreCreateInfo {
@@ -18413,26 +17125,12 @@ pub struct QueryPoolCreateInfo {
 }
 impl Default for QueryPoolCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::QUERY_POOL_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            query_type: Default::default(),
-            query_count: Default::default(),
-            pipeline_statistics: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), query_type: Default::default(), query_count: Default::default(), pipeline_statistics: Default::default() }
     }
 }
 impl std::fmt::Debug for QueryPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueryPoolCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("query_type", &self.query_type)
-            .field("query_count", &self.query_count)
-            .field("pipeline_statistics", &self.pipeline_statistics)
-            .finish()
+        f.debug_struct("QueryPoolCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("query_type", &self.query_type).field("query_count", &self.query_count).field("pipeline_statistics", &self.pipeline_statistics).finish()
     }
 }
 impl QueryPoolCreateInfo {
@@ -18445,6 +17143,8 @@ impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHRBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTEL> for QueryPoolCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for QueryPoolCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolCreateInfo.html) · Builder of [`QueryPoolCreateInfo`]"]
 #[repr(transparent)]
@@ -18518,32 +17218,12 @@ pub struct FramebufferCreateInfo {
 }
 impl Default for FramebufferCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FRAMEBUFFER_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            render_pass: Default::default(),
-            attachment_count: Default::default(),
-            p_attachments: std::ptr::null(),
-            width: Default::default(),
-            height: Default::default(),
-            layers: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), render_pass: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), width: Default::default(), height: Default::default(), layers: Default::default() }
     }
 }
 impl std::fmt::Debug for FramebufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FramebufferCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("render_pass", &self.render_pass)
-            .field("attachment_count", &self.attachment_count)
-            .field("p_attachments", &self.p_attachments)
-            .field("width", &self.width)
-            .field("height", &self.height)
-            .field("layers", &self.layers)
-            .finish()
+        f.debug_struct("FramebufferCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("render_pass", &self.render_pass).field("attachment_count", &self.attachment_count).field("p_attachments", &self.p_attachments).field("width", &self.width).field("height", &self.height).field("layers", &self.layers).finish()
     }
 }
 impl FramebufferCreateInfo {
@@ -18633,22 +17313,12 @@ pub struct DrawIndirectCommand {
 }
 impl Default for DrawIndirectCommand {
     fn default() -> Self {
-        Self {
-            vertex_count: Default::default(),
-            instance_count: Default::default(),
-            first_vertex: Default::default(),
-            first_instance: Default::default(),
-        }
+        Self { vertex_count: Default::default(), instance_count: Default::default(), first_vertex: Default::default(), first_instance: Default::default() }
     }
 }
 impl std::fmt::Debug for DrawIndirectCommand {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DrawIndirectCommand")
-            .field("vertex_count", &self.vertex_count)
-            .field("instance_count", &self.instance_count)
-            .field("first_vertex", &self.first_vertex)
-            .field("first_instance", &self.first_instance)
-            .finish()
+        f.debug_struct("DrawIndirectCommand").field("vertex_count", &self.vertex_count).field("instance_count", &self.instance_count).field("first_vertex", &self.first_vertex).field("first_instance", &self.first_instance).finish()
     }
 }
 impl DrawIndirectCommand {
@@ -18726,24 +17396,12 @@ pub struct DrawIndexedIndirectCommand {
 }
 impl Default for DrawIndexedIndirectCommand {
     fn default() -> Self {
-        Self {
-            index_count: Default::default(),
-            instance_count: Default::default(),
-            first_index: Default::default(),
-            vertex_offset: Default::default(),
-            first_instance: Default::default(),
-        }
+        Self { index_count: Default::default(), instance_count: Default::default(), first_index: Default::default(), vertex_offset: Default::default(), first_instance: Default::default() }
     }
 }
 impl std::fmt::Debug for DrawIndexedIndirectCommand {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DrawIndexedIndirectCommand")
-            .field("index_count", &self.index_count)
-            .field("instance_count", &self.instance_count)
-            .field("first_index", &self.first_index)
-            .field("vertex_offset", &self.vertex_offset)
-            .field("first_instance", &self.first_instance)
-            .finish()
+        f.debug_struct("DrawIndexedIndirectCommand").field("index_count", &self.index_count).field("instance_count", &self.instance_count).field("first_index", &self.first_index).field("vertex_offset", &self.vertex_offset).field("first_instance", &self.first_instance).finish()
     }
 }
 impl DrawIndexedIndirectCommand {
@@ -18824,11 +17482,7 @@ pub struct DispatchIndirectCommand {
 }
 impl Default for DispatchIndirectCommand {
     fn default() -> Self {
-        Self {
-            x: Default::default(),
-            y: Default::default(),
-            z: Default::default(),
-        }
+        Self { x: Default::default(), y: Default::default(), z: Default::default() }
     }
 }
 impl std::fmt::Debug for DispatchIndirectCommand {
@@ -18910,32 +17564,12 @@ pub struct SubmitInfo {
 }
 impl Default for SubmitInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SUBMIT_INFO,
-            p_next: std::ptr::null(),
-            wait_semaphore_count: Default::default(),
-            p_wait_semaphores: std::ptr::null(),
-            p_wait_dst_stage_mask: std::ptr::null(),
-            command_buffer_count: Default::default(),
-            p_command_buffers: std::ptr::null(),
-            signal_semaphore_count: Default::default(),
-            p_signal_semaphores: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SUBMIT_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), p_wait_dst_stage_mask: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffers: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SubmitInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("wait_semaphore_count", &self.wait_semaphore_count)
-            .field("p_wait_semaphores", &self.p_wait_semaphores)
-            .field("p_wait_dst_stage_mask", &self.p_wait_dst_stage_mask)
-            .field("command_buffer_count", &self.command_buffer_count)
-            .field("p_command_buffers", &self.p_command_buffers)
-            .field("signal_semaphore_count", &self.signal_semaphore_count)
-            .field("p_signal_semaphores", &self.p_signal_semaphores)
-            .finish()
+        f.debug_struct("SubmitInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("wait_semaphore_count", &self.wait_semaphore_count).field("p_wait_semaphores", &self.p_wait_semaphores).field("p_wait_dst_stage_mask", &self.p_wait_dst_stage_mask).field("command_buffer_count", &self.command_buffer_count).field("p_command_buffers", &self.p_command_buffers).field("signal_semaphore_count", &self.signal_semaphore_count).field("p_signal_semaphores", &self.p_signal_semaphores).finish()
     }
 }
 impl SubmitInfo {
@@ -19019,21 +17653,69 @@ impl<'a> std::ops::DerefMut for SubmitInfoBuilder<'a> {
     }
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_MAKE_VERSION.html) · Define"]
+#[doc(alias = "VK_MAKE_VERSION")]
+#[deprecated = "VK_MAKE_API_VERSION should be used instead."]
 pub const fn make_version(major: u32, minor: u32, patch: u32) -> u32 {
     (major << 22) | (minor << 12) | patch
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_VERSION_MAJOR.html) · Define"]
+#[doc(alias = "VK_VERSION_MAJOR")]
+#[deprecated = "VK_API_VERSION_MAJOR should be used instead."]
 pub const fn version_major(version: u32) -> u32 {
     version >> 22
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_VERSION_MINOR.html) · Define"]
+#[doc(alias = "VK_VERSION_MINOR")]
+#[deprecated = "VK_API_VERSION_MINOR should be used instead."]
 pub const fn version_minor(version: u32) -> u32 {
     (version >> 12) & 0x3ff
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_VERSION_PATCH.html) · Define"]
+#[doc(alias = "VK_VERSION_PATCH")]
+#[deprecated = "VK_API_VERSION_PATCH should be used instead."]
 pub const fn version_patch(version: u32) -> u32 {
     version & 0xfff
 }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_MAKE_API_VERSION.html) · Define"]
+#[doc(alias = "VK_MAKE_API_VERSION")]
+pub const fn make_api_version(variant: u32, major: u32, minor: u32, patch: u32) -> u32 {
+    (variant << 29) | (major << 22) | (minor << 12) | patch
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_VARIANT.html) · Define"]
+#[doc(alias = "VK_API_VERSION_VARIANT")]
+pub const fn api_version_variant(version: u32) -> u32 {
+    version >> 29
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_MAJOR.html) · Define"]
+#[doc(alias = "VK_API_VERSION_MAJOR")]
+pub const fn api_version_major(version: u32) -> u32 {
+    (version >> 22) & 0x7f
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_MINOR.html) · Define"]
+#[doc(alias = "VK_API_VERSION_MINOR")]
+pub const fn api_version_minor(version: u32) -> u32 {
+    (version >> 12) & 0x3ff
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_PATCH.html) · Define"]
+#[doc(alias = "VK_API_VERSION_PATCH")]
+pub const fn api_version_patch(version: u32) -> u32 {
+    version & 0xfff
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_1_0.html) · Define"]
+#[doc(alias = "VK_API_VERSION_1_0")]
+pub const API_VERSION_1_0: u32 = make_api_version(0, 1, 0, 0);
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_1_1.html) · Define"]
+#[doc(alias = "VK_API_VERSION_1_1")]
+pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_API_VERSION_1_2.html) · Define"]
+#[doc(alias = "VK_API_VERSION_1_2")]
+pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
+#[doc(alias = "VK_HEADER_VERSION")]
+pub const HEADER_VERSION: u32 = 177u32;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
+#[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 177u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]
@@ -19204,15 +17886,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties")]
-    pub unsafe fn get_physical_device_image_format_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format: crate::vk1_0::Format,
-        _type: crate::vk1_0::ImageType,
-        tiling: crate::vk1_0::ImageTiling,
-        usage: crate::vk1_0::ImageUsageFlags,
-        flags: Option<crate::vk1_0::ImageCreateFlags>,
-    ) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
+    pub unsafe fn get_physical_device_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: Option<crate::vk1_0::ImageCreateFlags>) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
         let _function = self.get_physical_device_image_format_properties.expect("`get_physical_device_image_format_properties` is not loaded");
         let mut image_format_properties = Default::default();
         let _return = _function(
@@ -19299,16 +17973,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format: crate::vk1_0::Format,
-        _type: crate::vk1_0::ImageType,
-        samples: crate::vk1_0::SampleCountFlagBits,
-        usage: crate::vk1_0::ImageUsageFlags,
-        tiling: crate::vk1_0::ImageTiling,
-        property_count: Option<u32>,
-    ) -> Vec<crate::vk1_0::SparseImageFormatProperties> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, samples: crate::vk1_0::SampleCountFlagBits, usage: crate::vk1_0::ImageUsageFlags, tiling: crate::vk1_0::ImageTiling, property_count: Option<u32>) -> Vec<crate::vk1_0::SparseImageFormatProperties> {
         let _function = self.get_physical_device_sparse_image_format_properties.expect("`get_physical_device_sparse_image_format_properties` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -19433,14 +18098,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html) · Function"]
     #[doc(alias = "vkMapMemory")]
-    pub unsafe fn map_memory(
-        &self,
-        memory: crate::vk1_0::DeviceMemory,
-        offset: crate::vk1_0::DeviceSize,
-        size: crate::vk1_0::DeviceSize,
-        flags: Option<crate::vk1_0::MemoryMapFlags>,
-        data: *mut *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn map_memory(&self, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::MemoryMapFlags>, data: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.map_memory.expect("`map_memory` is not loaded");
         let _return = _function(
             self.handle,
@@ -19751,16 +18409,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueryPoolResults.html) · Function"]
     #[doc(alias = "vkGetQueryPoolResults")]
-    pub unsafe fn get_query_pool_results(
-        &self,
-        query_pool: crate::vk1_0::QueryPool,
-        first_query: u32,
-        query_count: u32,
-        data_size: usize,
-        data: *mut std::ffi::c_void,
-        stride: crate::vk1_0::DeviceSize,
-        flags: Option<crate::vk1_0::QueryResultFlags>,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_query_pool_results(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, data_size: usize, data: *mut std::ffi::c_void, stride: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::QueryResultFlags>) -> crate::utils::VulkanResult<()> {
         let _function = self.get_query_pool_results.expect("`get_query_pool_results` is not loaded");
         let _return = _function(
             self.handle,
@@ -20016,12 +18665,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateGraphicsPipelines.html) · Function"]
     #[doc(alias = "vkCreateGraphicsPipelines")]
-    pub unsafe fn create_graphics_pipelines(
-        &self,
-        pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_graphics_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self.create_graphics_pipelines.expect("`create_graphics_pipelines` is not loaded");
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
@@ -20044,12 +18688,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateComputePipelines.html) · Function"]
     #[doc(alias = "vkCreateComputePipelines")]
-    pub unsafe fn create_compute_pipelines(
-        &self,
-        pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_compute_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self.create_compute_pipelines.expect("`create_compute_pipelines` is not loaded");
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
@@ -20532,28 +19171,11 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindDescriptorSets.html) · Function"]
     #[doc(alias = "vkCmdBindDescriptorSets")]
-    pub unsafe fn cmd_bind_descriptor_sets(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-        layout: crate::vk1_0::PipelineLayout,
-        first_set: u32,
-        descriptor_sets: &[crate::vk1_0::DescriptorSet],
-        dynamic_offsets: &[u32],
-    ) -> () {
+    pub unsafe fn cmd_bind_descriptor_sets(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, layout: crate::vk1_0::PipelineLayout, first_set: u32, descriptor_sets: &[crate::vk1_0::DescriptorSet], dynamic_offsets: &[u32]) -> () {
         let _function = self.cmd_bind_descriptor_sets.expect("`cmd_bind_descriptor_sets` is not loaded");
         let descriptor_set_count = descriptor_sets.len();
         let dynamic_offset_count = dynamic_offsets.len();
-        let _return = _function(
-            command_buffer as _,
-            pipeline_bind_point as _,
-            layout as _,
-            first_set as _,
-            descriptor_set_count as _,
-            descriptor_sets.as_ptr() as _,
-            dynamic_offset_count as _,
-            dynamic_offsets.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, pipeline_bind_point as _, layout as _, first_set as _, descriptor_set_count as _, descriptor_sets.as_ptr() as _, dynamic_offset_count as _, dynamic_offsets.as_ptr() as _);
         ()
     }
     #[inline]
@@ -20633,15 +19255,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage.html) · Function"]
     #[doc(alias = "vkCmdCopyImage")]
-    pub unsafe fn cmd_copy_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_image: crate::vk1_0::Image,
-        src_image_layout: crate::vk1_0::ImageLayout,
-        dst_image: crate::vk1_0::Image,
-        dst_image_layout: crate::vk1_0::ImageLayout,
-        regions: &[crate::vk1_0::ImageCopyBuilder],
-    ) -> () {
+    pub unsafe fn cmd_copy_image(&self, command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, regions: &[crate::vk1_0::ImageCopyBuilder]) -> () {
         let _function = self.cmd_copy_image.expect("`cmd_copy_image` is not loaded");
         let region_count = regions.len();
         let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _);
@@ -20650,41 +19264,16 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBlitImage.html) · Function"]
     #[doc(alias = "vkCmdBlitImage")]
-    pub unsafe fn cmd_blit_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_image: crate::vk1_0::Image,
-        src_image_layout: crate::vk1_0::ImageLayout,
-        dst_image: crate::vk1_0::Image,
-        dst_image_layout: crate::vk1_0::ImageLayout,
-        regions: &[crate::vk1_0::ImageBlitBuilder],
-        filter: crate::vk1_0::Filter,
-    ) -> () {
+    pub unsafe fn cmd_blit_image(&self, command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, regions: &[crate::vk1_0::ImageBlitBuilder], filter: crate::vk1_0::Filter) -> () {
         let _function = self.cmd_blit_image.expect("`cmd_blit_image` is not loaded");
         let region_count = regions.len();
-        let _return = _function(
-            command_buffer as _,
-            src_image as _,
-            src_image_layout as _,
-            dst_image as _,
-            dst_image_layout as _,
-            region_count as _,
-            regions.as_ptr() as _,
-            filter as _,
-        );
+        let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _, filter as _);
         ()
     }
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage.html) · Function"]
     #[doc(alias = "vkCmdCopyBufferToImage")]
-    pub unsafe fn cmd_copy_buffer_to_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_buffer: crate::vk1_0::Buffer,
-        dst_image: crate::vk1_0::Image,
-        dst_image_layout: crate::vk1_0::ImageLayout,
-        regions: &[crate::vk1_0::BufferImageCopyBuilder],
-    ) -> () {
+    pub unsafe fn cmd_copy_buffer_to_image(&self, command_buffer: crate::vk1_0::CommandBuffer, src_buffer: crate::vk1_0::Buffer, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, regions: &[crate::vk1_0::BufferImageCopyBuilder]) -> () {
         let _function = self.cmd_copy_buffer_to_image.expect("`cmd_copy_buffer_to_image` is not loaded");
         let region_count = regions.len();
         let _return = _function(command_buffer as _, src_buffer as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _);
@@ -20693,14 +19282,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer.html) · Function"]
     #[doc(alias = "vkCmdCopyImageToBuffer")]
-    pub unsafe fn cmd_copy_image_to_buffer(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_image: crate::vk1_0::Image,
-        src_image_layout: crate::vk1_0::ImageLayout,
-        dst_buffer: crate::vk1_0::Buffer,
-        regions: &[crate::vk1_0::BufferImageCopyBuilder],
-    ) -> () {
+    pub unsafe fn cmd_copy_image_to_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_buffer: crate::vk1_0::Buffer, regions: &[crate::vk1_0::BufferImageCopyBuilder]) -> () {
         let _function = self.cmd_copy_image_to_buffer.expect("`cmd_copy_image_to_buffer` is not loaded");
         let region_count = regions.len();
         let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_buffer as _, region_count as _, regions.as_ptr() as _);
@@ -20725,14 +19307,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearColorImage.html) · Function"]
     #[doc(alias = "vkCmdClearColorImage")]
-    pub unsafe fn cmd_clear_color_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        image: crate::vk1_0::Image,
-        image_layout: crate::vk1_0::ImageLayout,
-        color: &crate::vk1_0::ClearColorValue,
-        ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder],
-    ) -> () {
+    pub unsafe fn cmd_clear_color_image(&self, command_buffer: crate::vk1_0::CommandBuffer, image: crate::vk1_0::Image, image_layout: crate::vk1_0::ImageLayout, color: &crate::vk1_0::ClearColorValue, ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder]) -> () {
         let _function = self.cmd_clear_color_image.expect("`cmd_clear_color_image` is not loaded");
         let range_count = ranges.len();
         let _return = _function(command_buffer as _, image as _, image_layout as _, color as _, range_count as _, ranges.as_ptr() as _);
@@ -20741,14 +19316,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdClearDepthStencilImage.html) · Function"]
     #[doc(alias = "vkCmdClearDepthStencilImage")]
-    pub unsafe fn cmd_clear_depth_stencil_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        image: crate::vk1_0::Image,
-        image_layout: crate::vk1_0::ImageLayout,
-        depth_stencil: &crate::vk1_0::ClearDepthStencilValue,
-        ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder],
-    ) -> () {
+    pub unsafe fn cmd_clear_depth_stencil_image(&self, command_buffer: crate::vk1_0::CommandBuffer, image: crate::vk1_0::Image, image_layout: crate::vk1_0::ImageLayout, depth_stencil: &crate::vk1_0::ClearDepthStencilValue, ranges: &[crate::vk1_0::ImageSubresourceRangeBuilder]) -> () {
         let _function = self.cmd_clear_depth_stencil_image.expect("`cmd_clear_depth_stencil_image` is not loaded");
         let range_count = ranges.len();
         let _return = _function(command_buffer as _, image as _, image_layout as _, depth_stencil as _, range_count as _, ranges.as_ptr() as _);
@@ -20767,15 +19335,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage.html) · Function"]
     #[doc(alias = "vkCmdResolveImage")]
-    pub unsafe fn cmd_resolve_image(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_image: crate::vk1_0::Image,
-        src_image_layout: crate::vk1_0::ImageLayout,
-        dst_image: crate::vk1_0::Image,
-        dst_image_layout: crate::vk1_0::ImageLayout,
-        regions: &[crate::vk1_0::ImageResolveBuilder],
-    ) -> () {
+    pub unsafe fn cmd_resolve_image(&self, command_buffer: crate::vk1_0::CommandBuffer, src_image: crate::vk1_0::Image, src_image_layout: crate::vk1_0::ImageLayout, dst_image: crate::vk1_0::Image, dst_image_layout: crate::vk1_0::ImageLayout, regions: &[crate::vk1_0::ImageResolveBuilder]) -> () {
         let _function = self.cmd_resolve_image.expect("`cmd_resolve_image` is not loaded");
         let region_count = regions.len();
         let _return = _function(command_buffer as _, src_image as _, src_image_layout as _, dst_image as _, dst_image_layout as _, region_count as _, regions.as_ptr() as _);
@@ -20800,16 +19360,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents.html) · Function"]
     #[doc(alias = "vkCmdWaitEvents")]
-    pub unsafe fn cmd_wait_events(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        events: &[crate::vk1_0::Event],
-        src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>,
-        dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>,
-        memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder],
-        buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder],
-        image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder],
-    ) -> () {
+    pub unsafe fn cmd_wait_events(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
         let _function = self.cmd_wait_events.expect("`cmd_wait_events` is not loaded");
         let event_count = events.len();
         let memory_barrier_count = memory_barriers.len();
@@ -20839,16 +19390,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier")]
-    pub unsafe fn cmd_pipeline_barrier(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        src_stage_mask: crate::vk1_0::PipelineStageFlags,
-        dst_stage_mask: crate::vk1_0::PipelineStageFlags,
-        dependency_flags: Option<crate::vk1_0::DependencyFlags>,
-        memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder],
-        buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder],
-        image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder],
-    ) -> () {
+    pub unsafe fn cmd_pipeline_barrier(&self, command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, dependency_flags: Option<crate::vk1_0::DependencyFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
         let _function = self.cmd_pipeline_barrier.expect("`cmd_pipeline_barrier` is not loaded");
         let memory_barrier_count = memory_barriers.len();
         let buffer_memory_barrier_count = buffer_memory_barriers.len();
@@ -20913,17 +19455,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyQueryPoolResults.html) · Function"]
     #[doc(alias = "vkCmdCopyQueryPoolResults")]
-    pub unsafe fn cmd_copy_query_pool_results(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        query_pool: crate::vk1_0::QueryPool,
-        first_query: u32,
-        query_count: u32,
-        dst_buffer: crate::vk1_0::Buffer,
-        dst_offset: crate::vk1_0::DeviceSize,
-        stride: crate::vk1_0::DeviceSize,
-        flags: Option<crate::vk1_0::QueryResultFlags>,
-    ) -> () {
+    pub unsafe fn cmd_copy_query_pool_results(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, stride: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::QueryResultFlags>) -> () {
         let _function = self.cmd_copy_query_pool_results.expect("`cmd_copy_query_pool_results` is not loaded");
         let _return = _function(
             command_buffer as _,

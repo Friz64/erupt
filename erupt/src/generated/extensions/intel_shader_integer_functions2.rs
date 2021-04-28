@@ -15,20 +15,12 @@ pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 }
 impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL,
-            p_next: std::ptr::null_mut(),
-            shader_integer_functions2: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL, p_next: std::ptr::null_mut(), shader_integer_functions2: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_integer_functions2", &(self.shader_integer_functions2 != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_integer_functions2", &(self.shader_integer_functions2 != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {

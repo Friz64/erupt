@@ -81,12 +81,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalBufferPropertiesKHR")]
-    pub unsafe fn get_physical_device_external_buffer_properties_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo,
-        external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>,
-    ) -> crate::vk1_1::ExternalBufferProperties {
+    pub unsafe fn get_physical_device_external_buffer_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo, external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>) -> crate::vk1_1::ExternalBufferProperties {
         let _function = self.get_physical_device_external_buffer_properties_khr.expect("`get_physical_device_external_buffer_properties_khr` is not loaded");
         let mut external_buffer_properties = match external_buffer_properties {
             Some(v) => v,

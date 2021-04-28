@@ -15,20 +15,12 @@ pub struct PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
 }
 impl Default for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            dedicated_allocation_image_aliasing: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV, p_next: std::ptr::null_mut(), dedicated_allocation_image_aliasing: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("dedicated_allocation_image_aliasing", &(self.dedicated_allocation_image_aliasing != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("dedicated_allocation_image_aliasing", &(self.dedicated_allocation_image_aliasing != 0)).finish()
     }
 }
 impl PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {

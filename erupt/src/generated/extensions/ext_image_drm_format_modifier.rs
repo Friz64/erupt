@@ -8,8 +8,7 @@ pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_c
 pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT) -> crate::vk1_0::Result;
+pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]
@@ -22,22 +21,12 @@ pub struct DrmFormatModifierPropertiesListEXT {
 }
 impl Default for DrmFormatModifierPropertiesListEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT,
-            p_next: std::ptr::null_mut(),
-            drm_format_modifier_count: Default::default(),
-            p_drm_format_modifier_properties: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT, p_next: std::ptr::null_mut(), drm_format_modifier_count: Default::default(), p_drm_format_modifier_properties: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesListEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DrmFormatModifierPropertiesListEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("drm_format_modifier_count", &self.drm_format_modifier_count)
-            .field("p_drm_format_modifier_properties", &self.p_drm_format_modifier_properties)
-            .finish()
+        f.debug_struct("DrmFormatModifierPropertiesListEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("drm_format_modifier_count", &self.drm_format_modifier_count).field("p_drm_format_modifier_properties", &self.p_drm_format_modifier_properties).finish()
     }
 }
 impl DrmFormatModifierPropertiesListEXT {
@@ -99,20 +88,12 @@ pub struct DrmFormatModifierPropertiesEXT {
 }
 impl Default for DrmFormatModifierPropertiesEXT {
     fn default() -> Self {
-        Self {
-            drm_format_modifier: Default::default(),
-            drm_format_modifier_plane_count: Default::default(),
-            drm_format_modifier_tiling_features: Default::default(),
-        }
+        Self { drm_format_modifier: Default::default(), drm_format_modifier_plane_count: Default::default(), drm_format_modifier_tiling_features: Default::default() }
     }
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DrmFormatModifierPropertiesEXT")
-            .field("drm_format_modifier", &self.drm_format_modifier)
-            .field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count)
-            .field("drm_format_modifier_tiling_features", &self.drm_format_modifier_tiling_features)
-            .finish()
+        f.debug_struct("DrmFormatModifierPropertiesEXT").field("drm_format_modifier", &self.drm_format_modifier).field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count).field("drm_format_modifier_tiling_features", &self.drm_format_modifier_tiling_features).finish()
     }
 }
 impl DrmFormatModifierPropertiesEXT {
@@ -186,26 +167,12 @@ pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
 }
 impl Default for PhysicalDeviceImageDrmFormatModifierInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT,
-            p_next: std::ptr::null(),
-            drm_format_modifier: Default::default(),
-            sharing_mode: Default::default(),
-            queue_family_index_count: Default::default(),
-            p_queue_family_indices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageDrmFormatModifierInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceImageDrmFormatModifierInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("drm_format_modifier", &self.drm_format_modifier)
-            .field("sharing_mode", &self.sharing_mode)
-            .field("queue_family_index_count", &self.queue_family_index_count)
-            .field("p_queue_family_indices", &self.p_queue_family_indices)
-            .finish()
+        f.debug_struct("PhysicalDeviceImageDrmFormatModifierInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("drm_format_modifier", &self.drm_format_modifier).field("sharing_mode", &self.sharing_mode).field("queue_family_index_count", &self.queue_family_index_count).field("p_queue_family_indices", &self.p_queue_family_indices).finish()
     }
 }
 impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
@@ -278,22 +245,12 @@ pub struct ImageDrmFormatModifierListCreateInfoEXT {
 }
 impl Default for ImageDrmFormatModifierListCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            drm_format_modifier_count: Default::default(),
-            p_drm_format_modifiers: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier_count: Default::default(), p_drm_format_modifiers: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierListCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageDrmFormatModifierListCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("drm_format_modifier_count", &self.drm_format_modifier_count)
-            .field("p_drm_format_modifiers", &self.p_drm_format_modifiers)
-            .finish()
+        f.debug_struct("ImageDrmFormatModifierListCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("drm_format_modifier_count", &self.drm_format_modifier_count).field("p_drm_format_modifiers", &self.p_drm_format_modifiers).finish()
     }
 }
 impl ImageDrmFormatModifierListCreateInfoEXT {
@@ -357,24 +314,12 @@ pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
 }
 impl Default for ImageDrmFormatModifierExplicitCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            drm_format_modifier: Default::default(),
-            drm_format_modifier_plane_count: Default::default(),
-            p_plane_layouts: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier: Default::default(), drm_format_modifier_plane_count: Default::default(), p_plane_layouts: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierExplicitCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageDrmFormatModifierExplicitCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("drm_format_modifier", &self.drm_format_modifier)
-            .field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count)
-            .field("p_plane_layouts", &self.p_plane_layouts)
-            .finish()
+        f.debug_struct("ImageDrmFormatModifierExplicitCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("drm_format_modifier", &self.drm_format_modifier).field("drm_format_modifier_plane_count", &self.drm_format_modifier_plane_count).field("p_plane_layouts", &self.p_plane_layouts).finish()
     }
 }
 impl ImageDrmFormatModifierExplicitCreateInfoEXT {
@@ -441,20 +386,12 @@ pub struct ImageDrmFormatModifierPropertiesEXT {
 }
 impl Default for ImageDrmFormatModifierPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            drm_format_modifier: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT, p_next: std::ptr::null_mut(), drm_format_modifier: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageDrmFormatModifierPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("drm_format_modifier", &self.drm_format_modifier)
-            .finish()
+        f.debug_struct("ImageDrmFormatModifierPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("drm_format_modifier", &self.drm_format_modifier).finish()
     }
 }
 impl ImageDrmFormatModifierPropertiesEXT {
@@ -509,11 +446,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetImageDrmFormatModifierPropertiesEXT")]
-    pub unsafe fn get_image_drm_format_modifier_properties_ext(
-        &self,
-        image: crate::vk1_0::Image,
-        properties: Option<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT> {
+    pub unsafe fn get_image_drm_format_modifier_properties_ext(&self, image: crate::vk1_0::Image, properties: Option<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT>) -> crate::utils::VulkanResult<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT> {
         let _function = self.get_image_drm_format_modifier_properties_ext.expect("`get_image_drm_format_modifier_properties_ext` is not loaded");
         let mut properties = match properties {
             Some(v) => v,

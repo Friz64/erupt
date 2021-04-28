@@ -307,7 +307,7 @@ impl InstanceLoader {
     pub unsafe fn new<T>(entry_loader: &EntryLoader<T>, create_info: &crate::vk1_0::InstanceCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
         let instance = entry_loader.create_instance(create_info, allocator).result().map_err(LoaderError::VulkanError)?;
 
-        let mut version = crate::vk1_0::make_version(1, 0, 0);
+        let mut version = crate::vk1_0::make_api_version(0, 1, 0, 0);
         if !create_info.p_application_info.is_null() {
             let user_version = (*create_info.p_application_info).api_version;
             if user_version != 0 {

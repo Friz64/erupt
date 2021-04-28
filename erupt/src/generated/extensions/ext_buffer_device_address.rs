@@ -38,24 +38,12 @@ pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXT {
 }
 impl Default for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            buffer_device_address: Default::default(),
-            buffer_device_address_capture_replay: Default::default(),
-            buffer_device_address_multi_device: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceBufferDeviceAddressFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer_device_address", &(self.buffer_device_address != 0))
-            .field("buffer_device_address_capture_replay", &(self.buffer_device_address_capture_replay != 0))
-            .field("buffer_device_address_multi_device", &(self.buffer_device_address_multi_device != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceBufferDeviceAddressFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer_device_address", &(self.buffer_device_address != 0)).field("buffer_device_address_capture_replay", &(self.buffer_device_address_capture_replay != 0)).field("buffer_device_address_multi_device", &(self.buffer_device_address_multi_device != 0)).finish()
     }
 }
 impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
@@ -126,20 +114,12 @@ pub struct BufferDeviceAddressCreateInfoEXT {
 }
 impl Default for BufferDeviceAddressCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            device_address: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT, p_next: std::ptr::null(), device_address: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferDeviceAddressCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferDeviceAddressCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_address", &self.device_address)
-            .finish()
+        f.debug_struct("BufferDeviceAddressCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_address", &self.device_address).finish()
     }
 }
 impl BufferDeviceAddressCreateInfoEXT {

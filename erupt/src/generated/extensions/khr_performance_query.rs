@@ -149,17 +149,10 @@ impl std::fmt::Debug for AcquireProfilingLockFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    queue_family_index: u32,
-    p_counter_count: *mut u32,
-    p_counters: *mut crate::extensions::khr_performance_query::PerformanceCounterKHR,
-    p_counter_descriptions: *mut crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, p_counter_count: *mut u32, p_counters: *mut crate::extensions::khr_performance_query::PerformanceCounterKHR, p_counter_descriptions: *mut crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_performance_query_create_info: *const crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR, p_num_passes: *mut u32) -> ();
+pub type PFN_vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_performance_query_create_info: *const crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR, p_num_passes: *mut u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR) -> crate::vk1_0::Result;
@@ -178,22 +171,12 @@ pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
 }
 impl Default for PhysicalDevicePerformanceQueryFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            performance_counter_query_pools: Default::default(),
-            performance_counter_multiple_query_pools: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR, p_next: std::ptr::null_mut(), performance_counter_query_pools: Default::default(), performance_counter_multiple_query_pools: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePerformanceQueryFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("performance_counter_query_pools", &(self.performance_counter_query_pools != 0))
-            .field("performance_counter_multiple_query_pools", &(self.performance_counter_multiple_query_pools != 0))
-            .finish()
+        f.debug_struct("PhysicalDevicePerformanceQueryFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("performance_counter_query_pools", &(self.performance_counter_query_pools != 0)).field("performance_counter_multiple_query_pools", &(self.performance_counter_multiple_query_pools != 0)).finish()
     }
 }
 impl PhysicalDevicePerformanceQueryFeaturesKHR {
@@ -259,20 +242,12 @@ pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
 }
 impl Default for PhysicalDevicePerformanceQueryPropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            allow_command_buffer_query_copies: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR, p_next: std::ptr::null_mut(), allow_command_buffer_query_copies: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePerformanceQueryPropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("allow_command_buffer_query_copies", &(self.allow_command_buffer_query_copies != 0))
-            .finish()
+        f.debug_struct("PhysicalDevicePerformanceQueryPropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("allow_command_buffer_query_copies", &(self.allow_command_buffer_query_copies != 0)).finish()
     }
 }
 impl PhysicalDevicePerformanceQueryPropertiesKHR {
@@ -336,26 +311,12 @@ pub struct PerformanceCounterKHR {
 }
 impl Default for PerformanceCounterKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR,
-            p_next: std::ptr::null(),
-            unit: Default::default(),
-            scope: Default::default(),
-            storage: Default::default(),
-            uuid: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR, p_next: std::ptr::null(), unit: Default::default(), scope: Default::default(), storage: Default::default(), uuid: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PerformanceCounterKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("unit", &self.unit)
-            .field("scope", &self.scope)
-            .field("storage", &self.storage)
-            .field("uuid", &self.uuid)
-            .finish()
+        f.debug_struct("PerformanceCounterKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("unit", &self.unit).field("scope", &self.scope).field("storage", &self.storage).field("uuid", &self.uuid).finish()
     }
 }
 impl PerformanceCounterKHR {
@@ -434,26 +395,12 @@ pub struct PerformanceCounterDescriptionKHR {
 }
 impl Default for PerformanceCounterDescriptionKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            name: unsafe { std::mem::zeroed() },
-            category: unsafe { std::mem::zeroed() },
-            description: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR, p_next: std::ptr::null(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterDescriptionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PerformanceCounterDescriptionKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
-            .field("category", unsafe { &std::ffi::CStr::from_ptr(self.category.as_ptr()) })
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .finish()
+        f.debug_struct("PerformanceCounterDescriptionKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) }).field("category", unsafe { &std::ffi::CStr::from_ptr(self.category.as_ptr()) }).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).finish()
     }
 }
 impl PerformanceCounterDescriptionKHR {
@@ -531,24 +478,12 @@ pub struct QueryPoolPerformanceCreateInfoKHR {
 }
 impl Default for QueryPoolPerformanceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            queue_family_index: Default::default(),
-            counter_index_count: Default::default(),
-            p_counter_indices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR, p_next: std::ptr::null(), queue_family_index: Default::default(), counter_index_count: Default::default(), p_counter_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for QueryPoolPerformanceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueryPoolPerformanceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("queue_family_index", &self.queue_family_index)
-            .field("counter_index_count", &self.counter_index_count)
-            .field("p_counter_indices", &self.p_counter_indices)
-            .finish()
+        f.debug_struct("QueryPoolPerformanceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("queue_family_index", &self.queue_family_index).field("counter_index_count", &self.counter_index_count).field("p_counter_indices", &self.p_counter_indices).finish()
     }
 }
 impl QueryPoolPerformanceCreateInfoKHR {
@@ -638,22 +573,12 @@ pub struct AcquireProfilingLockInfoKHR {
 }
 impl Default for AcquireProfilingLockInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ACQUIRE_PROFILING_LOCK_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            timeout: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ACQUIRE_PROFILING_LOCK_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), timeout: Default::default() }
     }
 }
 impl std::fmt::Debug for AcquireProfilingLockInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AcquireProfilingLockInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("timeout", &self.timeout)
-            .finish()
+        f.debug_struct("AcquireProfilingLockInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("timeout", &self.timeout).finish()
     }
 }
 impl AcquireProfilingLockInfoKHR {
@@ -719,20 +644,12 @@ pub struct PerformanceQuerySubmitInfoKHR {
 }
 impl Default for PerformanceQuerySubmitInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_QUERY_SUBMIT_INFO_KHR,
-            p_next: std::ptr::null(),
-            counter_pass_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_QUERY_SUBMIT_INFO_KHR, p_next: std::ptr::null(), counter_pass_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceQuerySubmitInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PerformanceQuerySubmitInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("counter_pass_index", &self.counter_pass_index)
-            .finish()
+        f.debug_struct("PerformanceQuerySubmitInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("counter_pass_index", &self.counter_pass_index).finish()
     }
 }
 impl PerformanceQuerySubmitInfoKHR {
@@ -787,15 +704,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR")]
-    pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        counter_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<(Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
-        let _function = self
-            .enumerate_physical_device_queue_family_performance_query_counters_khr
-            .expect("`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded");
+    pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, counter_count: Option<u32>) -> crate::utils::VulkanResult<(Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
+        let _function = self.enumerate_physical_device_queue_family_performance_query_counters_khr.expect("`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded");
         let mut counter_count = match counter_count {
             Some(v) => v,
             None => {
@@ -812,14 +722,8 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR")]
-    pub unsafe fn get_physical_device_queue_family_performance_query_passes_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        performance_query_create_info: &crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR,
-    ) -> u32 {
-        let _function = self
-            .get_physical_device_queue_family_performance_query_passes_khr
-            .expect("`get_physical_device_queue_family_performance_query_passes_khr` is not loaded");
+    pub unsafe fn get_physical_device_queue_family_performance_query_passes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, performance_query_create_info: &crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR) -> u32 {
+        let _function = self.get_physical_device_queue_family_performance_query_passes_khr.expect("`get_physical_device_queue_family_performance_query_passes_khr` is not loaded");
         let mut num_passes = Default::default();
         let _return = _function(physical_device as _, performance_query_create_info as _, &mut num_passes);
         num_passes

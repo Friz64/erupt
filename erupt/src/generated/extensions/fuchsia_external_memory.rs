@@ -10,16 +10,10 @@ pub const FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = cra
 pub const FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryZirconHandlePropertiesFUCHSIA");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryZirconHandleFUCHSIA =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryZirconHandleFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-    zircon_handle: *mut std::ffi::c_void,
-    p_memory_zircon_handle_properties: *mut crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, zircon_handle: *mut std::ffi::c_void, p_memory_zircon_handle_properties: *mut crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportMemoryZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -32,22 +26,12 @@ pub struct ImportMemoryZirconHandleInfoFUCHSIA {
 }
 impl Default for ImportMemoryZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-            handle: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportMemoryZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportMemoryZirconHandleInfoFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .field("handle", &self.handle)
-            .finish()
+        f.debug_struct("ImportMemoryZirconHandleInfoFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).field("handle", &self.handle).finish()
     }
 }
 impl ImportMemoryZirconHandleInfoFUCHSIA {
@@ -113,20 +97,12 @@ pub struct MemoryZirconHandlePropertiesFUCHSIA {
 }
 impl Default for MemoryZirconHandlePropertiesFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA,
-            p_next: std::ptr::null_mut(),
-            memory_type_bits: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryZirconHandlePropertiesFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryZirconHandlePropertiesFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_type_bits", &self.memory_type_bits)
-            .finish()
+        f.debug_struct("MemoryZirconHandlePropertiesFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_type_bits", &self.memory_type_bits).finish()
     }
 }
 impl MemoryZirconHandlePropertiesFUCHSIA {
@@ -188,22 +164,12 @@ pub struct MemoryGetZirconHandleInfoFUCHSIA {
 }
 impl Default for MemoryGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA,
-            p_next: std::ptr::null(),
-            memory: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryGetZirconHandleInfoFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory", &self.memory)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("MemoryGetZirconHandleInfoFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory", &self.memory).field("handle_type", &self.handle_type).finish()
     }
 }
 impl MemoryGetZirconHandleInfoFUCHSIA {
@@ -271,12 +237,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetMemoryZirconHandlePropertiesFUCHSIA")]
-    pub unsafe fn get_memory_zircon_handle_properties_fuchsia(
-        &self,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-        zircon_handle: *mut std::ffi::c_void,
-        memory_zircon_handle_properties: Option<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA>,
-    ) -> crate::utils::VulkanResult<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA> {
+    pub unsafe fn get_memory_zircon_handle_properties_fuchsia(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, zircon_handle: *mut std::ffi::c_void, memory_zircon_handle_properties: Option<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA>) -> crate::utils::VulkanResult<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA> {
         let _function = self.get_memory_zircon_handle_properties_fuchsia.expect("`get_memory_zircon_handle_properties_fuchsia` is not loaded");
         let mut memory_zircon_handle_properties = match memory_zircon_handle_properties {
             Some(v) => v,

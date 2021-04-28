@@ -10,12 +10,10 @@ pub const FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = 
 pub const FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreZirconHandleFUCHSIA");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA) -> crate::vk1_0::Result;
+pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -30,26 +28,12 @@ pub struct ImportSemaphoreZirconHandleInfoFUCHSIA {
 }
 impl Default for ImportSemaphoreZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            flags: Default::default(),
-            handle_type: Default::default(),
-            zircon_handle: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), zircon_handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportSemaphoreZirconHandleInfoFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("flags", &self.flags)
-            .field("handle_type", &self.handle_type)
-            .field("zircon_handle", &self.zircon_handle)
-            .finish()
+        f.debug_struct("ImportSemaphoreZirconHandleInfoFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("flags", &self.flags).field("handle_type", &self.handle_type).field("zircon_handle", &self.zircon_handle).finish()
     }
 }
 impl ImportSemaphoreZirconHandleInfoFUCHSIA {
@@ -126,22 +110,12 @@ pub struct SemaphoreGetZirconHandleInfoFUCHSIA {
 }
 impl Default for SemaphoreGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SemaphoreGetZirconHandleInfoFUCHSIA")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("SemaphoreGetZirconHandleInfoFUCHSIA").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("handle_type", &self.handle_type).finish()
     }
 }
 impl SemaphoreGetZirconHandleInfoFUCHSIA {

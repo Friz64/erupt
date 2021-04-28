@@ -16,22 +16,12 @@ pub struct PhysicalDeviceMemoryBudgetPropertiesEXT {
 }
 impl Default for PhysicalDeviceMemoryBudgetPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            heap_budget: unsafe { std::mem::zeroed() },
-            heap_usage: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT, p_next: std::ptr::null_mut(), heap_budget: unsafe { std::mem::zeroed() }, heap_usage: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryBudgetPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMemoryBudgetPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("heap_budget", &self.heap_budget)
-            .field("heap_usage", &self.heap_usage)
-            .finish()
+        f.debug_struct("PhysicalDeviceMemoryBudgetPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("heap_budget", &self.heap_budget).field("heap_usage", &self.heap_usage).finish()
     }
 }
 impl PhysicalDeviceMemoryBudgetPropertiesEXT {

@@ -162,7 +162,7 @@ impl EnabledData {
                 let major = Literal::u32_unsuffixed(*major);
                 let minor = Literal::u32_unsuffixed(*minor);
 
-                quote! { version >= crate::vk1_0::make_version(#major, #minor, 0) }
+                quote! { version >= crate::vk1_0::make_api_version(0, #major, #minor, 0) }
             }
             (origin @ Origin::Extension { .. }, enabled_kind) => {
                 let module_path = origin.module_path();
@@ -370,7 +370,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
             ) -> Result<EntryEnabled, crate::LoaderError> {
-                let mut version = crate::vk1_0::make_version(1, 0, 0);
+                let mut version = crate::vk1_0::make_api_version(0, 1, 2, 0);
                 if let Some(function) = symbol(loader, crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION) {
                     let function: crate::vk1_1::PFN_vkEnumerateInstanceVersion =
                         std::mem::transmute(function);

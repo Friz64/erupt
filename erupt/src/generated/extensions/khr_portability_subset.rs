@@ -29,48 +29,12 @@ pub struct PhysicalDevicePortabilitySubsetFeaturesKHR {
 }
 impl Default for PhysicalDevicePortabilitySubsetFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            constant_alpha_color_blend_factors: Default::default(),
-            events: Default::default(),
-            image_view_format_reinterpretation: Default::default(),
-            image_view_format_swizzle: Default::default(),
-            image_view2_d_on3_d_image: Default::default(),
-            multisample_array_image: Default::default(),
-            mutable_comparison_samplers: Default::default(),
-            point_polygons: Default::default(),
-            sampler_mip_lod_bias: Default::default(),
-            separate_stencil_mask_ref: Default::default(),
-            shader_sample_rate_interpolation_functions: Default::default(),
-            tessellation_isolines: Default::default(),
-            tessellation_point_mode: Default::default(),
-            triangle_fans: Default::default(),
-            vertex_attribute_access_beyond_stride: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR, p_next: std::ptr::null_mut(), constant_alpha_color_blend_factors: Default::default(), events: Default::default(), image_view_format_reinterpretation: Default::default(), image_view_format_swizzle: Default::default(), image_view2_d_on3_d_image: Default::default(), multisample_array_image: Default::default(), mutable_comparison_samplers: Default::default(), point_polygons: Default::default(), sampler_mip_lod_bias: Default::default(), separate_stencil_mask_ref: Default::default(), shader_sample_rate_interpolation_functions: Default::default(), tessellation_isolines: Default::default(), tessellation_point_mode: Default::default(), triangle_fans: Default::default(), vertex_attribute_access_beyond_stride: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePortabilitySubsetFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("constant_alpha_color_blend_factors", &(self.constant_alpha_color_blend_factors != 0))
-            .field("events", &(self.events != 0))
-            .field("image_view_format_reinterpretation", &(self.image_view_format_reinterpretation != 0))
-            .field("image_view_format_swizzle", &(self.image_view_format_swizzle != 0))
-            .field("image_view2_d_on3_d_image", &(self.image_view2_d_on3_d_image != 0))
-            .field("multisample_array_image", &(self.multisample_array_image != 0))
-            .field("mutable_comparison_samplers", &(self.mutable_comparison_samplers != 0))
-            .field("point_polygons", &(self.point_polygons != 0))
-            .field("sampler_mip_lod_bias", &(self.sampler_mip_lod_bias != 0))
-            .field("separate_stencil_mask_ref", &(self.separate_stencil_mask_ref != 0))
-            .field("shader_sample_rate_interpolation_functions", &(self.shader_sample_rate_interpolation_functions != 0))
-            .field("tessellation_isolines", &(self.tessellation_isolines != 0))
-            .field("tessellation_point_mode", &(self.tessellation_point_mode != 0))
-            .field("triangle_fans", &(self.triangle_fans != 0))
-            .field("vertex_attribute_access_beyond_stride", &(self.vertex_attribute_access_beyond_stride != 0))
-            .finish()
+        f.debug_struct("PhysicalDevicePortabilitySubsetFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("constant_alpha_color_blend_factors", &(self.constant_alpha_color_blend_factors != 0)).field("events", &(self.events != 0)).field("image_view_format_reinterpretation", &(self.image_view_format_reinterpretation != 0)).field("image_view_format_swizzle", &(self.image_view_format_swizzle != 0)).field("image_view2_d_on3_d_image", &(self.image_view2_d_on3_d_image != 0)).field("multisample_array_image", &(self.multisample_array_image != 0)).field("mutable_comparison_samplers", &(self.mutable_comparison_samplers != 0)).field("point_polygons", &(self.point_polygons != 0)).field("sampler_mip_lod_bias", &(self.sampler_mip_lod_bias != 0)).field("separate_stencil_mask_ref", &(self.separate_stencil_mask_ref != 0)).field("shader_sample_rate_interpolation_functions", &(self.shader_sample_rate_interpolation_functions != 0)).field("tessellation_isolines", &(self.tessellation_isolines != 0)).field("tessellation_point_mode", &(self.tessellation_point_mode != 0)).field("triangle_fans", &(self.triangle_fans != 0)).field("vertex_attribute_access_beyond_stride", &(self.vertex_attribute_access_beyond_stride != 0)).finish()
     }
 }
 impl PhysicalDevicePortabilitySubsetFeaturesKHR {
@@ -201,20 +165,12 @@ pub struct PhysicalDevicePortabilitySubsetPropertiesKHR {
 }
 impl Default for PhysicalDevicePortabilitySubsetPropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            min_vertex_input_binding_stride_alignment: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR, p_next: std::ptr::null_mut(), min_vertex_input_binding_stride_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePortabilitySubsetPropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("min_vertex_input_binding_stride_alignment", &self.min_vertex_input_binding_stride_alignment)
-            .finish()
+        f.debug_struct("PhysicalDevicePortabilitySubsetPropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("min_vertex_input_binding_stride_alignment", &self.min_vertex_input_binding_stride_alignment).finish()
     }
 }
 impl PhysicalDevicePortabilitySubsetPropertiesKHR {

@@ -38,16 +38,13 @@ impl std::fmt::Debug for PipelineRasterizationStateStreamCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindTransformFeedbackBuffersEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize, p_sizes: *const crate::vk1_0::DeviceSize) -> ();
+pub type PFN_vkCmdBindTransformFeedbackBuffersEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize, p_sizes: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBeginTransformFeedbackEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
+pub type PFN_vkCmdBeginTransformFeedbackEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdEndTransformFeedbackEXT =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
+pub type PFN_vkCmdEndTransformFeedbackEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffer_count: u32, p_counter_buffers: *const crate::vk1_0::Buffer, p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags, index: u32) -> ();
@@ -56,15 +53,7 @@ pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(command_buffe
 pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, index: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    instance_count: u32,
-    first_instance: u32,
-    counter_buffer: crate::vk1_0::Buffer,
-    counter_buffer_offset: crate::vk1_0::DeviceSize,
-    counter_offset: u32,
-    vertex_stride: u32,
-) -> ();
+pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, instance_count: u32, first_instance: u32, counter_buffer: crate::vk1_0::Buffer, counter_buffer_offset: crate::vk1_0::DeviceSize, counter_offset: u32, vertex_stride: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -77,22 +66,12 @@ pub struct PhysicalDeviceTransformFeedbackFeaturesEXT {
 }
 impl Default for PhysicalDeviceTransformFeedbackFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            transform_feedback: Default::default(),
-            geometry_streams: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT, p_next: std::ptr::null_mut(), transform_feedback: Default::default(), geometry_streams: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTransformFeedbackFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceTransformFeedbackFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("transform_feedback", &(self.transform_feedback != 0))
-            .field("geometry_streams", &(self.geometry_streams != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceTransformFeedbackFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("transform_feedback", &(self.transform_feedback != 0)).field("geometry_streams", &(self.geometry_streams != 0)).finish()
     }
 }
 impl PhysicalDeviceTransformFeedbackFeaturesEXT {
@@ -167,38 +146,12 @@ pub struct PhysicalDeviceTransformFeedbackPropertiesEXT {
 }
 impl Default for PhysicalDeviceTransformFeedbackPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_transform_feedback_streams: Default::default(),
-            max_transform_feedback_buffers: Default::default(),
-            max_transform_feedback_buffer_size: Default::default(),
-            max_transform_feedback_stream_data_size: Default::default(),
-            max_transform_feedback_buffer_data_size: Default::default(),
-            max_transform_feedback_buffer_data_stride: Default::default(),
-            transform_feedback_queries: Default::default(),
-            transform_feedback_streams_lines_triangles: Default::default(),
-            transform_feedback_rasterization_stream_select: Default::default(),
-            transform_feedback_draw: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_transform_feedback_streams: Default::default(), max_transform_feedback_buffers: Default::default(), max_transform_feedback_buffer_size: Default::default(), max_transform_feedback_stream_data_size: Default::default(), max_transform_feedback_buffer_data_size: Default::default(), max_transform_feedback_buffer_data_stride: Default::default(), transform_feedback_queries: Default::default(), transform_feedback_streams_lines_triangles: Default::default(), transform_feedback_rasterization_stream_select: Default::default(), transform_feedback_draw: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTransformFeedbackPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceTransformFeedbackPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_transform_feedback_streams", &self.max_transform_feedback_streams)
-            .field("max_transform_feedback_buffers", &self.max_transform_feedback_buffers)
-            .field("max_transform_feedback_buffer_size", &self.max_transform_feedback_buffer_size)
-            .field("max_transform_feedback_stream_data_size", &self.max_transform_feedback_stream_data_size)
-            .field("max_transform_feedback_buffer_data_size", &self.max_transform_feedback_buffer_data_size)
-            .field("max_transform_feedback_buffer_data_stride", &self.max_transform_feedback_buffer_data_stride)
-            .field("transform_feedback_queries", &(self.transform_feedback_queries != 0))
-            .field("transform_feedback_streams_lines_triangles", &(self.transform_feedback_streams_lines_triangles != 0))
-            .field("transform_feedback_rasterization_stream_select", &(self.transform_feedback_rasterization_stream_select != 0))
-            .field("transform_feedback_draw", &(self.transform_feedback_draw != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceTransformFeedbackPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_transform_feedback_streams", &self.max_transform_feedback_streams).field("max_transform_feedback_buffers", &self.max_transform_feedback_buffers).field("max_transform_feedback_buffer_size", &self.max_transform_feedback_buffer_size).field("max_transform_feedback_stream_data_size", &self.max_transform_feedback_stream_data_size).field("max_transform_feedback_buffer_data_size", &self.max_transform_feedback_buffer_data_size).field("max_transform_feedback_buffer_data_stride", &self.max_transform_feedback_buffer_data_stride).field("transform_feedback_queries", &(self.transform_feedback_queries != 0)).field("transform_feedback_streams_lines_triangles", &(self.transform_feedback_streams_lines_triangles != 0)).field("transform_feedback_rasterization_stream_select", &(self.transform_feedback_rasterization_stream_select != 0)).field("transform_feedback_draw", &(self.transform_feedback_draw != 0)).finish()
     }
 }
 impl PhysicalDeviceTransformFeedbackPropertiesEXT {
@@ -305,22 +258,12 @@ pub struct PipelineRasterizationStateStreamCreateInfoEXT {
 }
 impl Default for PipelineRasterizationStateStreamCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            rasterization_stream: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), rasterization_stream: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationStateStreamCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineRasterizationStateStreamCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("rasterization_stream", &self.rasterization_stream)
-            .finish()
+        f.debug_struct("PipelineRasterizationStateStreamCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("rasterization_stream", &self.rasterization_stream).finish()
     }
 }
 impl PipelineRasterizationStateStreamCreateInfoEXT {
@@ -432,26 +375,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
     #[doc(alias = "vkCmdDrawIndirectByteCountEXT")]
-    pub unsafe fn cmd_draw_indirect_byte_count_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        instance_count: u32,
-        first_instance: u32,
-        counter_buffer: crate::vk1_0::Buffer,
-        counter_buffer_offset: crate::vk1_0::DeviceSize,
-        counter_offset: u32,
-        vertex_stride: u32,
-    ) -> () {
+    pub unsafe fn cmd_draw_indirect_byte_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, instance_count: u32, first_instance: u32, counter_buffer: crate::vk1_0::Buffer, counter_buffer_offset: crate::vk1_0::DeviceSize, counter_offset: u32, vertex_stride: u32) -> () {
         let _function = self.cmd_draw_indirect_byte_count_ext.expect("`cmd_draw_indirect_byte_count_ext` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            instance_count as _,
-            first_instance as _,
-            counter_buffer as _,
-            counter_buffer_offset as _,
-            counter_offset as _,
-            vertex_stride as _,
-        );
+        let _return = _function(command_buffer as _, instance_count as _, first_instance as _, counter_buffer as _, counter_buffer_offset as _, counter_offset as _, vertex_stride as _);
         ()
     }
 }

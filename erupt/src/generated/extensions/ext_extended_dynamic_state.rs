@@ -45,15 +45,7 @@ pub type PFN_vkCmdSetViewportWithCountEXT = unsafe extern "system" fn(command_bu
 pub type PFN_vkCmdSetScissorWithCountEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, scissor_count: u32, p_scissors: *const crate::vk1_0::Rect2D) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdBindVertexBuffers2EXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    first_binding: u32,
-    binding_count: u32,
-    p_buffers: *const crate::vk1_0::Buffer,
-    p_offsets: *const crate::vk1_0::DeviceSize,
-    p_sizes: *const crate::vk1_0::DeviceSize,
-    p_strides: *const crate::vk1_0::DeviceSize,
-) -> ();
+pub type PFN_vkCmdBindVertexBuffers2EXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize, p_sizes: *const crate::vk1_0::DeviceSize, p_strides: *const crate::vk1_0::DeviceSize) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthTestEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDepthTestEnableEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, depth_test_enable: crate::vk1_0::Bool32) -> ();
@@ -71,14 +63,7 @@ pub type PFN_vkCmdSetDepthBoundsTestEnableEXT = unsafe extern "system" fn(comman
 pub type PFN_vkCmdSetStencilTestEnableEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, stencil_test_enable: crate::vk1_0::Bool32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    face_mask: crate::vk1_0::StencilFaceFlags,
-    fail_op: crate::vk1_0::StencilOp,
-    pass_op: crate::vk1_0::StencilOp,
-    depth_fail_op: crate::vk1_0::StencilOp,
-    compare_op: crate::vk1_0::CompareOp,
-) -> ();
+pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, fail_op: crate::vk1_0::StencilOp, pass_op: crate::vk1_0::StencilOp, depth_fail_op: crate::vk1_0::StencilOp, compare_op: crate::vk1_0::CompareOp) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExtendedDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -90,20 +75,12 @@ pub struct PhysicalDeviceExtendedDynamicStateFeaturesEXT {
 }
 impl Default for PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            extended_dynamic_state: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT, p_next: std::ptr::null_mut(), extended_dynamic_state: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExtendedDynamicStateFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("extended_dynamic_state", &(self.extended_dynamic_state != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceExtendedDynamicStateFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("extended_dynamic_state", &(self.extended_dynamic_state != 0)).finish()
     }
 }
 impl PhysicalDeviceExtendedDynamicStateFeaturesEXT {
@@ -206,15 +183,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers2EXT.html) · Function"]
     #[doc(alias = "vkCmdBindVertexBuffers2EXT")]
-    pub unsafe fn cmd_bind_vertex_buffers2_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_binding: u32,
-        buffers: &[crate::vk1_0::Buffer],
-        offsets: &[crate::vk1_0::DeviceSize],
-        sizes: &[crate::vk1_0::DeviceSize],
-        strides: &[crate::vk1_0::DeviceSize],
-    ) -> () {
+    pub unsafe fn cmd_bind_vertex_buffers2_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, buffers: &[crate::vk1_0::Buffer], offsets: &[crate::vk1_0::DeviceSize], sizes: &[crate::vk1_0::DeviceSize], strides: &[crate::vk1_0::DeviceSize]) -> () {
         let _function = self.cmd_bind_vertex_buffers2_ext.expect("`cmd_bind_vertex_buffers2_ext` is not loaded");
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len()).min(strides.len());
         let _return = _function(command_buffer as _, first_binding as _, binding_count as _, buffers.as_ptr() as _, offsets.as_ptr() as _, sizes.as_ptr() as _, strides.as_ptr() as _);
@@ -263,15 +232,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
     #[doc(alias = "vkCmdSetStencilOpEXT")]
-    pub unsafe fn cmd_set_stencil_op_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        face_mask: crate::vk1_0::StencilFaceFlags,
-        fail_op: crate::vk1_0::StencilOp,
-        pass_op: crate::vk1_0::StencilOp,
-        depth_fail_op: crate::vk1_0::StencilOp,
-        compare_op: crate::vk1_0::CompareOp,
-    ) -> () {
+    pub unsafe fn cmd_set_stencil_op_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, fail_op: crate::vk1_0::StencilOp, pass_op: crate::vk1_0::StencilOp, depth_fail_op: crate::vk1_0::StencilOp, compare_op: crate::vk1_0::CompareOp) -> () {
         let _function = self.cmd_set_stencil_op_ext.expect("`cmd_set_stencil_op_ext` is not loaded");
         let _return = _function(command_buffer as _, face_mask as _, fail_op as _, pass_op as _, depth_fail_op as _, compare_op as _);
         ()

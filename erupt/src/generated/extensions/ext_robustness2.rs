@@ -17,24 +17,12 @@ pub struct PhysicalDeviceRobustness2FeaturesEXT {
 }
 impl Default for PhysicalDeviceRobustness2FeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            robust_buffer_access2: Default::default(),
-            robust_image_access2: Default::default(),
-            null_descriptor: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT, p_next: std::ptr::null_mut(), robust_buffer_access2: Default::default(), robust_image_access2: Default::default(), null_descriptor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRobustness2FeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceRobustness2FeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("robust_buffer_access2", &(self.robust_buffer_access2 != 0))
-            .field("robust_image_access2", &(self.robust_image_access2 != 0))
-            .field("null_descriptor", &(self.null_descriptor != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceRobustness2FeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("robust_buffer_access2", &(self.robust_buffer_access2 != 0)).field("robust_image_access2", &(self.robust_image_access2 != 0)).field("null_descriptor", &(self.null_descriptor != 0)).finish()
     }
 }
 impl PhysicalDeviceRobustness2FeaturesEXT {
@@ -106,22 +94,12 @@ pub struct PhysicalDeviceRobustness2PropertiesEXT {
 }
 impl Default for PhysicalDeviceRobustness2PropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            robust_storage_buffer_access_size_alignment: Default::default(),
-            robust_uniform_buffer_access_size_alignment: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT, p_next: std::ptr::null_mut(), robust_storage_buffer_access_size_alignment: Default::default(), robust_uniform_buffer_access_size_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceRobustness2PropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("robust_storage_buffer_access_size_alignment", &self.robust_storage_buffer_access_size_alignment)
-            .field("robust_uniform_buffer_access_size_alignment", &self.robust_uniform_buffer_access_size_alignment)
-            .finish()
+        f.debug_struct("PhysicalDeviceRobustness2PropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("robust_storage_buffer_access_size_alignment", &self.robust_storage_buffer_access_size_alignment).field("robust_uniform_buffer_access_size_alignment", &self.robust_uniform_buffer_access_size_alignment).finish()
     }
 }
 impl PhysicalDeviceRobustness2PropertiesEXT {

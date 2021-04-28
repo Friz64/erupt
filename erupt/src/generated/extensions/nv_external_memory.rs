@@ -15,20 +15,12 @@ pub struct ExternalMemoryImageCreateInfoNV {
 }
 impl Default for ExternalMemoryImageCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryImageCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalMemoryImageCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExternalMemoryImageCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExternalMemoryImageCreateInfoNV {
@@ -89,20 +81,12 @@ pub struct ExportMemoryAllocateInfoNV {
 }
 impl Default for ExportMemoryAllocateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO_NV,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO_NV, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportMemoryAllocateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportMemoryAllocateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExportMemoryAllocateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExportMemoryAllocateInfoNV {

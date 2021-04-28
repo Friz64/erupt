@@ -47,24 +47,12 @@ pub struct BufferCopy2KHR {
 }
 impl Default for BufferCopy2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_COPY_2_KHR,
-            p_next: std::ptr::null(),
-            src_offset: Default::default(),
-            dst_offset: Default::default(),
-            size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_COPY_2_KHR, p_next: std::ptr::null(), src_offset: Default::default(), dst_offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferCopy2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferCopy2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_offset", &self.src_offset)
-            .field("dst_offset", &self.dst_offset)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("BufferCopy2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_offset", &self.src_offset).field("dst_offset", &self.dst_offset).field("size", &self.size).finish()
     }
 }
 impl BufferCopy2KHR {
@@ -139,28 +127,12 @@ pub struct ImageCopy2KHR {
 }
 impl Default for ImageCopy2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_COPY_2_KHR,
-            p_next: std::ptr::null(),
-            src_subresource: Default::default(),
-            src_offset: Default::default(),
-            dst_subresource: Default::default(),
-            dst_offset: Default::default(),
-            extent: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_COPY_2_KHR, p_next: std::ptr::null(), src_subresource: Default::default(), src_offset: Default::default(), dst_subresource: Default::default(), dst_offset: Default::default(), extent: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageCopy2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageCopy2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offset", &self.src_offset)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offset", &self.dst_offset)
-            .field("extent", &self.extent)
-            .finish()
+        f.debug_struct("ImageCopy2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_subresource", &self.src_subresource).field("src_offset", &self.src_offset).field("dst_subresource", &self.dst_subresource).field("dst_offset", &self.dst_offset).field("extent", &self.extent).finish()
     }
 }
 impl ImageCopy2KHR {
@@ -244,26 +216,12 @@ pub struct ImageBlit2KHR {
 }
 impl Default for ImageBlit2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_BLIT_2_KHR,
-            p_next: std::ptr::null(),
-            src_subresource: Default::default(),
-            src_offsets: unsafe { std::mem::zeroed() },
-            dst_subresource: Default::default(),
-            dst_offsets: unsafe { std::mem::zeroed() },
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_BLIT_2_KHR, p_next: std::ptr::null(), src_subresource: Default::default(), src_offsets: unsafe { std::mem::zeroed() }, dst_subresource: Default::default(), dst_offsets: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for ImageBlit2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageBlit2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offsets", &self.src_offsets)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offsets", &self.dst_offsets)
-            .finish()
+        f.debug_struct("ImageBlit2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_subresource", &self.src_subresource).field("src_offsets", &self.src_offsets).field("dst_subresource", &self.dst_subresource).field("dst_offsets", &self.dst_offsets).finish()
     }
 }
 impl ImageBlit2KHR {
@@ -346,30 +304,12 @@ pub struct BufferImageCopy2KHR {
 }
 impl Default for BufferImageCopy2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_IMAGE_COPY_2_KHR,
-            p_next: std::ptr::null(),
-            buffer_offset: Default::default(),
-            buffer_row_length: Default::default(),
-            buffer_image_height: Default::default(),
-            image_subresource: Default::default(),
-            image_offset: Default::default(),
-            image_extent: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_IMAGE_COPY_2_KHR, p_next: std::ptr::null(), buffer_offset: Default::default(), buffer_row_length: Default::default(), buffer_image_height: Default::default(), image_subresource: Default::default(), image_offset: Default::default(), image_extent: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferImageCopy2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BufferImageCopy2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer_offset", &self.buffer_offset)
-            .field("buffer_row_length", &self.buffer_row_length)
-            .field("buffer_image_height", &self.buffer_image_height)
-            .field("image_subresource", &self.image_subresource)
-            .field("image_offset", &self.image_offset)
-            .field("image_extent", &self.image_extent)
-            .finish()
+        f.debug_struct("BufferImageCopy2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer_offset", &self.buffer_offset).field("buffer_row_length", &self.buffer_row_length).field("buffer_image_height", &self.buffer_image_height).field("image_subresource", &self.image_subresource).field("image_offset", &self.image_offset).field("image_extent", &self.image_extent).finish()
     }
 }
 impl BufferImageCopy2KHR {
@@ -461,28 +401,12 @@ pub struct ImageResolve2KHR {
 }
 impl Default for ImageResolve2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_RESOLVE_2_KHR,
-            p_next: std::ptr::null(),
-            src_subresource: Default::default(),
-            src_offset: Default::default(),
-            dst_subresource: Default::default(),
-            dst_offset: Default::default(),
-            extent: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_RESOLVE_2_KHR, p_next: std::ptr::null(), src_subresource: Default::default(), src_offset: Default::default(), dst_subresource: Default::default(), dst_offset: Default::default(), extent: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageResolve2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageResolve2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_subresource", &self.src_subresource)
-            .field("src_offset", &self.src_offset)
-            .field("dst_subresource", &self.dst_subresource)
-            .field("dst_offset", &self.dst_offset)
-            .field("extent", &self.extent)
-            .finish()
+        f.debug_struct("ImageResolve2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_subresource", &self.src_subresource).field("src_offset", &self.src_offset).field("dst_subresource", &self.dst_subresource).field("dst_offset", &self.dst_offset).field("extent", &self.extent).finish()
     }
 }
 impl ImageResolve2KHR {
@@ -566,26 +490,12 @@ pub struct CopyBufferInfo2KHR {
 }
 impl Default for CopyBufferInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COPY_BUFFER_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_buffer: Default::default(),
-            dst_buffer: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COPY_BUFFER_INFO_2_KHR, p_next: std::ptr::null(), src_buffer: Default::default(), dst_buffer: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CopyBufferInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CopyBufferInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_buffer", &self.src_buffer)
-            .field("dst_buffer", &self.dst_buffer)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("CopyBufferInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_buffer", &self.src_buffer).field("dst_buffer", &self.dst_buffer).field("region_count", &self.region_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl CopyBufferInfo2KHR {
@@ -662,30 +572,12 @@ pub struct CopyImageInfo2KHR {
 }
 impl Default for CopyImageInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COPY_IMAGE_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_image: Default::default(),
-            src_image_layout: Default::default(),
-            dst_image: Default::default(),
-            dst_image_layout: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COPY_IMAGE_INFO_2_KHR, p_next: std::ptr::null(), src_image: Default::default(), src_image_layout: Default::default(), dst_image: Default::default(), dst_image_layout: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CopyImageInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CopyImageInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_image", &self.src_image)
-            .field("src_image_layout", &self.src_image_layout)
-            .field("dst_image", &self.dst_image)
-            .field("dst_image_layout", &self.dst_image_layout)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("CopyImageInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_image", &self.src_image).field("src_image_layout", &self.src_image_layout).field("dst_image", &self.dst_image).field("dst_image_layout", &self.dst_image_layout).field("region_count", &self.region_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl CopyImageInfo2KHR {
@@ -773,32 +665,12 @@ pub struct BlitImageInfo2KHR {
 }
 impl Default for BlitImageInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BLIT_IMAGE_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_image: Default::default(),
-            src_image_layout: Default::default(),
-            dst_image: Default::default(),
-            dst_image_layout: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-            filter: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BLIT_IMAGE_INFO_2_KHR, p_next: std::ptr::null(), src_image: Default::default(), src_image_layout: Default::default(), dst_image: Default::default(), dst_image_layout: Default::default(), region_count: Default::default(), p_regions: std::ptr::null(), filter: Default::default() }
     }
 }
 impl std::fmt::Debug for BlitImageInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BlitImageInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_image", &self.src_image)
-            .field("src_image_layout", &self.src_image_layout)
-            .field("dst_image", &self.dst_image)
-            .field("dst_image_layout", &self.dst_image_layout)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .field("filter", &self.filter)
-            .finish()
+        f.debug_struct("BlitImageInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_image", &self.src_image).field("src_image_layout", &self.src_image_layout).field("dst_image", &self.dst_image).field("dst_image_layout", &self.dst_image_layout).field("region_count", &self.region_count).field("p_regions", &self.p_regions).field("filter", &self.filter).finish()
     }
 }
 impl BlitImageInfo2KHR {
@@ -889,28 +761,12 @@ pub struct CopyBufferToImageInfo2KHR {
 }
 impl Default for CopyBufferToImageInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COPY_BUFFER_TO_IMAGE_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_buffer: Default::default(),
-            dst_image: Default::default(),
-            dst_image_layout: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COPY_BUFFER_TO_IMAGE_INFO_2_KHR, p_next: std::ptr::null(), src_buffer: Default::default(), dst_image: Default::default(), dst_image_layout: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CopyBufferToImageInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CopyBufferToImageInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_buffer", &self.src_buffer)
-            .field("dst_image", &self.dst_image)
-            .field("dst_image_layout", &self.dst_image_layout)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("CopyBufferToImageInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_buffer", &self.src_buffer).field("dst_image", &self.dst_image).field("dst_image_layout", &self.dst_image_layout).field("region_count", &self.region_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl CopyBufferToImageInfo2KHR {
@@ -991,28 +847,12 @@ pub struct CopyImageToBufferInfo2KHR {
 }
 impl Default for CopyImageToBufferInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COPY_IMAGE_TO_BUFFER_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_image: Default::default(),
-            src_image_layout: Default::default(),
-            dst_buffer: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COPY_IMAGE_TO_BUFFER_INFO_2_KHR, p_next: std::ptr::null(), src_image: Default::default(), src_image_layout: Default::default(), dst_buffer: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CopyImageToBufferInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CopyImageToBufferInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_image", &self.src_image)
-            .field("src_image_layout", &self.src_image_layout)
-            .field("dst_buffer", &self.dst_buffer)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("CopyImageToBufferInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_image", &self.src_image).field("src_image_layout", &self.src_image_layout).field("dst_buffer", &self.dst_buffer).field("region_count", &self.region_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl CopyImageToBufferInfo2KHR {
@@ -1094,30 +934,12 @@ pub struct ResolveImageInfo2KHR {
 }
 impl Default for ResolveImageInfo2KHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RESOLVE_IMAGE_INFO_2_KHR,
-            p_next: std::ptr::null(),
-            src_image: Default::default(),
-            src_image_layout: Default::default(),
-            dst_image: Default::default(),
-            dst_image_layout: Default::default(),
-            region_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RESOLVE_IMAGE_INFO_2_KHR, p_next: std::ptr::null(), src_image: Default::default(), src_image_layout: Default::default(), dst_image: Default::default(), dst_image_layout: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ResolveImageInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ResolveImageInfo2KHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_image", &self.src_image)
-            .field("src_image_layout", &self.src_image_layout)
-            .field("dst_image", &self.dst_image)
-            .field("dst_image_layout", &self.dst_image_layout)
-            .field("region_count", &self.region_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("ResolveImageInfo2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_image", &self.src_image).field("src_image_layout", &self.src_image_layout).field("dst_image", &self.dst_image).field("dst_image_layout", &self.dst_image_layout).field("region_count", &self.region_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl ResolveImageInfo2KHR {

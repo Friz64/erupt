@@ -10,16 +10,10 @@ pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char = cr
 pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetPastPresentationTimingGOOGLE");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRefreshCycleDurationGOOGLE =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE) -> crate::vk1_0::Result;
+pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    p_presentation_timing_count: *mut u32,
-    p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_presentation_timing_count: *mut u32, p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure"]
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
 #[derive(Copy, Clone)]
@@ -97,24 +91,12 @@ pub struct PastPresentationTimingGOOGLE {
 }
 impl Default for PastPresentationTimingGOOGLE {
     fn default() -> Self {
-        Self {
-            present_id: Default::default(),
-            desired_present_time: Default::default(),
-            actual_present_time: Default::default(),
-            earliest_present_time: Default::default(),
-            present_margin: Default::default(),
-        }
+        Self { present_id: Default::default(), desired_present_time: Default::default(), actual_present_time: Default::default(), earliest_present_time: Default::default(), present_margin: Default::default() }
     }
 }
 impl std::fmt::Debug for PastPresentationTimingGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PastPresentationTimingGOOGLE")
-            .field("present_id", &self.present_id)
-            .field("desired_present_time", &self.desired_present_time)
-            .field("actual_present_time", &self.actual_present_time)
-            .field("earliest_present_time", &self.earliest_present_time)
-            .field("present_margin", &self.present_margin)
-            .finish()
+        f.debug_struct("PastPresentationTimingGOOGLE").field("present_id", &self.present_id).field("desired_present_time", &self.desired_present_time).field("actual_present_time", &self.actual_present_time).field("earliest_present_time", &self.earliest_present_time).field("present_margin", &self.present_margin).finish()
     }
 }
 impl PastPresentationTimingGOOGLE {
@@ -196,22 +178,12 @@ pub struct PresentTimesInfoGOOGLE {
 }
 impl Default for PresentTimesInfoGOOGLE {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PRESENT_TIMES_INFO_GOOGLE,
-            p_next: std::ptr::null(),
-            swapchain_count: Default::default(),
-            p_times: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PRESENT_TIMES_INFO_GOOGLE, p_next: std::ptr::null(), swapchain_count: Default::default(), p_times: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PresentTimesInfoGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PresentTimesInfoGOOGLE")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain_count", &self.swapchain_count)
-            .field("p_times", &self.p_times)
-            .finish()
+        f.debug_struct("PresentTimesInfoGOOGLE").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain_count", &self.swapchain_count).field("p_times", &self.p_times).finish()
     }
 }
 impl PresentTimesInfoGOOGLE {
@@ -272,10 +244,7 @@ pub struct PresentTimeGOOGLE {
 }
 impl Default for PresentTimeGOOGLE {
     fn default() -> Self {
-        Self {
-            present_id: Default::default(),
-            desired_present_time: Default::default(),
-        }
+        Self { present_id: Default::default(), desired_present_time: Default::default() }
     }
 }
 impl std::fmt::Debug for PresentTimeGOOGLE {
@@ -349,11 +318,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
     #[doc(alias = "vkGetPastPresentationTimingGOOGLE")]
-    pub unsafe fn get_past_presentation_timing_google(
-        &self,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        presentation_timing_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>> {
+    pub unsafe fn get_past_presentation_timing_google(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, presentation_timing_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>> {
         let _function = self.get_past_presentation_timing_google.expect("`get_past_presentation_timing_google` is not loaded");
         let mut presentation_timing_count = match presentation_timing_count {
             Some(v) => v,

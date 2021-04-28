@@ -28,26 +28,12 @@ pub struct ImportSemaphoreFdInfoKHR {
 }
 impl Default for ImportSemaphoreFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            flags: Default::default(),
-            handle_type: Default::default(),
-            fd: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_FD_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImportSemaphoreFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("flags", &self.flags)
-            .field("handle_type", &self.handle_type)
-            .field("fd", &self.fd)
-            .finish()
+        f.debug_struct("ImportSemaphoreFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("flags", &self.flags).field("handle_type", &self.handle_type).field("fd", &self.fd).finish()
     }
 }
 impl ImportSemaphoreFdInfoKHR {
@@ -124,22 +110,12 @@ pub struct SemaphoreGetFdInfoKHR {
 }
 impl Default for SemaphoreGetFdInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_FD_INFO_KHR,
-            p_next: std::ptr::null(),
-            semaphore: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_FD_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SemaphoreGetFdInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("semaphore", &self.semaphore)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("SemaphoreGetFdInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("semaphore", &self.semaphore).field("handle_type", &self.handle_type).finish()
     }
 }
 impl SemaphoreGetFdInfoKHR {

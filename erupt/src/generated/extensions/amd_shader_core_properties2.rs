@@ -36,22 +36,12 @@ pub struct PhysicalDeviceShaderCoreProperties2AMD {
 }
 impl Default for PhysicalDeviceShaderCoreProperties2AMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD,
-            p_next: std::ptr::null_mut(),
-            shader_core_features: Default::default(),
-            active_compute_unit_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD, p_next: std::ptr::null_mut(), shader_core_features: Default::default(), active_compute_unit_count: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCoreProperties2AMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderCoreProperties2AMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_core_features", &self.shader_core_features)
-            .field("active_compute_unit_count", &self.active_compute_unit_count)
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderCoreProperties2AMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_core_features", &self.shader_core_features).field("active_compute_unit_count", &self.active_compute_unit_count).finish()
     }
 }
 impl PhysicalDeviceShaderCoreProperties2AMD {

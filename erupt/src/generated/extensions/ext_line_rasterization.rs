@@ -48,30 +48,12 @@ pub struct PhysicalDeviceLineRasterizationFeaturesEXT {
 }
 impl Default for PhysicalDeviceLineRasterizationFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            rectangular_lines: Default::default(),
-            bresenham_lines: Default::default(),
-            smooth_lines: Default::default(),
-            stippled_rectangular_lines: Default::default(),
-            stippled_bresenham_lines: Default::default(),
-            stippled_smooth_lines: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT, p_next: std::ptr::null_mut(), rectangular_lines: Default::default(), bresenham_lines: Default::default(), smooth_lines: Default::default(), stippled_rectangular_lines: Default::default(), stippled_bresenham_lines: Default::default(), stippled_smooth_lines: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceLineRasterizationFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("rectangular_lines", &(self.rectangular_lines != 0))
-            .field("bresenham_lines", &(self.bresenham_lines != 0))
-            .field("smooth_lines", &(self.smooth_lines != 0))
-            .field("stippled_rectangular_lines", &(self.stippled_rectangular_lines != 0))
-            .field("stippled_bresenham_lines", &(self.stippled_bresenham_lines != 0))
-            .field("stippled_smooth_lines", &(self.stippled_smooth_lines != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceLineRasterizationFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("rectangular_lines", &(self.rectangular_lines != 0)).field("bresenham_lines", &(self.bresenham_lines != 0)).field("smooth_lines", &(self.smooth_lines != 0)).field("stippled_rectangular_lines", &(self.stippled_rectangular_lines != 0)).field("stippled_bresenham_lines", &(self.stippled_bresenham_lines != 0)).field("stippled_smooth_lines", &(self.stippled_smooth_lines != 0)).finish()
     }
 }
 impl PhysicalDeviceLineRasterizationFeaturesEXT {
@@ -157,20 +139,12 @@ pub struct PhysicalDeviceLineRasterizationPropertiesEXT {
 }
 impl Default for PhysicalDeviceLineRasterizationPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            line_sub_pixel_precision_bits: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT, p_next: std::ptr::null_mut(), line_sub_pixel_precision_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceLineRasterizationPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("line_sub_pixel_precision_bits", &self.line_sub_pixel_precision_bits)
-            .finish()
+        f.debug_struct("PhysicalDeviceLineRasterizationPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("line_sub_pixel_precision_bits", &self.line_sub_pixel_precision_bits).finish()
     }
 }
 impl PhysicalDeviceLineRasterizationPropertiesEXT {
@@ -234,26 +208,12 @@ pub struct PipelineRasterizationLineStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationLineStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            line_rasterization_mode: Default::default(),
-            stippled_line_enable: Default::default(),
-            line_stipple_factor: Default::default(),
-            line_stipple_pattern: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), line_rasterization_mode: Default::default(), stippled_line_enable: Default::default(), line_stipple_factor: Default::default(), line_stipple_pattern: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationLineStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineRasterizationLineStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("line_rasterization_mode", &self.line_rasterization_mode)
-            .field("stippled_line_enable", &(self.stippled_line_enable != 0))
-            .field("line_stipple_factor", &self.line_stipple_factor)
-            .field("line_stipple_pattern", &self.line_stipple_pattern)
-            .finish()
+        f.debug_struct("PipelineRasterizationLineStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("line_rasterization_mode", &self.line_rasterization_mode).field("stippled_line_enable", &(self.stippled_line_enable != 0)).field("line_stipple_factor", &self.line_stipple_factor).field("line_stipple_pattern", &self.line_stipple_pattern).finish()
     }
 }
 impl PipelineRasterizationLineStateCreateInfoEXT {

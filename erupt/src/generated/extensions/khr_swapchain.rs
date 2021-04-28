@@ -22,12 +22,7 @@ pub const FN_GET_DEVICE_GROUP_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_
 pub const FN_ACQUIRE_NEXT_IMAGE2_KHR: *const std::os::raw::c_char = crate::cstr!("vkAcquireNextImage2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDevicePresentRectanglesKHR");
-crate::non_dispatchable_handle!(
-    SwapchainKHR,
-    SWAPCHAIN_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle",
-    "VkSwapchainKHR"
-);
+crate::non_dispatchable_handle!(SwapchainKHR, SWAPCHAIN_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle", "VkSwapchainKHR");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagsKHR.html) · Bitmask of [`DeviceGroupPresentModeFlagBitsKHR`]"] # [doc (alias = "VkDeviceGroupPresentModeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DeviceGroupPresentModeFlagsKHR : u32 { const LOCAL_KHR = DeviceGroupPresentModeFlagBitsKHR :: LOCAL_KHR . 0 ; const REMOTE_KHR = DeviceGroupPresentModeFlagBitsKHR :: REMOTE_KHR . 0 ; const SUM_KHR = DeviceGroupPresentModeFlagBitsKHR :: SUM_KHR . 0 ; const LOCAL_MULTI_DEVICE_KHR = DeviceGroupPresentModeFlagBitsKHR :: LOCAL_MULTI_DEVICE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagBitsKHR.html) · Bits enum of [`DeviceGroupPresentModeFlagsKHR`]"]
 #[doc(alias = "VkDeviceGroupPresentModeFlagBitsKHR")]
@@ -93,23 +88,16 @@ impl SwapchainCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSwapchainKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_swapchain: *mut crate::extensions::khr_swapchain::SwapchainKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSwapchainKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_swapchain: *mut crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySwapchainKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetSwapchainImagesKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_swapchain_image_count: *mut u32, p_swapchain_images: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
+pub type PFN_vkGetSwapchainImagesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_swapchain_image_count: *mut u32, p_swapchain_images: *mut crate::vk1_0::Image) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquireNextImageKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: crate::vk1_0::Semaphore, fence: crate::vk1_0::Fence, p_image_index: *mut u32) -> crate::vk1_0::Result;
+pub type PFN_vkAcquireNextImageKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: crate::vk1_0::Semaphore, fence: crate::vk1_0::Fence, p_image_index: *mut u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueuePresentKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueuePresentKHR = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_present_info: *const crate::extensions::khr_swapchain::PresentInfoKHR) -> crate::vk1_0::Result;
@@ -118,15 +106,13 @@ pub type PFN_vkQueuePresentKHR = unsafe extern "system" fn(queue: crate::vk1_0::
 pub type PFN_vkGetDeviceGroupPresentCapabilitiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_device_group_present_capabilities: *mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetDeviceGroupSurfacePresentModesKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, surface: crate::extensions::khr_surface::SurfaceKHR, p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::vk1_0::Result;
+pub type PFN_vkGetDeviceGroupSurfacePresentModesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, surface: crate::extensions::khr_surface::SurfaceKHR, p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_acquire_info: *const crate::extensions::khr_swapchain::AcquireNextImageInfoKHR, p_image_index: *mut u32) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_rect_count: *mut u32, p_rects: *mut crate::vk1_0::Rect2D) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_rect_count: *mut u32, p_rects: *mut crate::vk1_0::Rect2D) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -153,50 +139,12 @@ pub struct SwapchainCreateInfoKHR {
 }
 impl Default for SwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SWAPCHAIN_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            surface: Default::default(),
-            min_image_count: Default::default(),
-            image_format: Default::default(),
-            image_color_space: Default::default(),
-            image_extent: Default::default(),
-            image_array_layers: Default::default(),
-            image_usage: Default::default(),
-            image_sharing_mode: Default::default(),
-            queue_family_index_count: Default::default(),
-            p_queue_family_indices: std::ptr::null(),
-            pre_transform: Default::default(),
-            composite_alpha: Default::default(),
-            present_mode: Default::default(),
-            clipped: Default::default(),
-            old_swapchain: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), surface: Default::default(), min_image_count: Default::default(), image_format: Default::default(), image_color_space: Default::default(), image_extent: Default::default(), image_array_layers: Default::default(), image_usage: Default::default(), image_sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), pre_transform: Default::default(), composite_alpha: Default::default(), present_mode: Default::default(), clipped: Default::default(), old_swapchain: Default::default() }
     }
 }
 impl std::fmt::Debug for SwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SwapchainCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("surface", &self.surface)
-            .field("min_image_count", &self.min_image_count)
-            .field("image_format", &self.image_format)
-            .field("image_color_space", &self.image_color_space)
-            .field("image_extent", &self.image_extent)
-            .field("image_array_layers", &self.image_array_layers)
-            .field("image_usage", &self.image_usage)
-            .field("image_sharing_mode", &self.image_sharing_mode)
-            .field("queue_family_index_count", &self.queue_family_index_count)
-            .field("p_queue_family_indices", &self.p_queue_family_indices)
-            .field("pre_transform", &self.pre_transform)
-            .field("composite_alpha", &self.composite_alpha)
-            .field("present_mode", &self.present_mode)
-            .field("clipped", &(self.clipped != 0))
-            .field("old_swapchain", &self.old_swapchain)
-            .finish()
+        f.debug_struct("SwapchainCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("surface", &self.surface).field("min_image_count", &self.min_image_count).field("image_format", &self.image_format).field("image_color_space", &self.image_color_space).field("image_extent", &self.image_extent).field("image_array_layers", &self.image_array_layers).field("image_usage", &self.image_usage).field("image_sharing_mode", &self.image_sharing_mode).field("queue_family_index_count", &self.queue_family_index_count).field("p_queue_family_indices", &self.p_queue_family_indices).field("pre_transform", &self.pre_transform).field("composite_alpha", &self.composite_alpha).field("present_mode", &self.present_mode).field("clipped", &(self.clipped != 0)).field("old_swapchain", &self.old_swapchain).finish()
     }
 }
 impl SwapchainCreateInfoKHR {
@@ -345,30 +293,12 @@ pub struct PresentInfoKHR {
 }
 impl Default for PresentInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PRESENT_INFO_KHR,
-            p_next: std::ptr::null(),
-            wait_semaphore_count: Default::default(),
-            p_wait_semaphores: std::ptr::null(),
-            swapchain_count: Default::default(),
-            p_swapchains: std::ptr::null(),
-            p_image_indices: std::ptr::null(),
-            p_results: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PRESENT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), swapchain_count: Default::default(), p_swapchains: std::ptr::null(), p_image_indices: std::ptr::null(), p_results: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PresentInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("wait_semaphore_count", &self.wait_semaphore_count)
-            .field("p_wait_semaphores", &self.p_wait_semaphores)
-            .field("swapchain_count", &self.swapchain_count)
-            .field("p_swapchains", &self.p_swapchains)
-            .field("p_image_indices", &self.p_image_indices)
-            .field("p_results", &self.p_results)
-            .finish()
+        f.debug_struct("PresentInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("wait_semaphore_count", &self.wait_semaphore_count).field("p_wait_semaphores", &self.p_wait_semaphores).field("swapchain_count", &self.swapchain_count).field("p_swapchains", &self.p_swapchains).field("p_image_indices", &self.p_image_indices).field("p_results", &self.p_results).finish()
     }
 }
 impl PresentInfoKHR {
@@ -459,22 +389,12 @@ pub struct DeviceGroupPresentCapabilitiesKHR {
 }
 impl Default for DeviceGroupPresentCapabilitiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR,
-            p_next: std::ptr::null(),
-            present_mask: unsafe { std::mem::zeroed() },
-            modes: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR, p_next: std::ptr::null(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupPresentCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupPresentCapabilitiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("present_mask", &self.present_mask)
-            .field("modes", &self.modes)
-            .finish()
+        f.debug_struct("DeviceGroupPresentCapabilitiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("present_mask", &self.present_mask).field("modes", &self.modes).finish()
     }
 }
 impl DeviceGroupPresentCapabilitiesKHR {
@@ -540,11 +460,7 @@ pub struct ImageSwapchainCreateInfoKHR {
 }
 impl Default for ImageSwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_SWAPCHAIN_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            swapchain: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSwapchainCreateInfoKHR {
@@ -611,22 +527,12 @@ pub struct BindImageMemorySwapchainInfoKHR {
 }
 impl Default for BindImageMemorySwapchainInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR,
-            p_next: std::ptr::null(),
-            swapchain: Default::default(),
-            image_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default(), image_index: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImageMemorySwapchainInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindImageMemorySwapchainInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain", &self.swapchain)
-            .field("image_index", &self.image_index)
-            .finish()
+        f.debug_struct("BindImageMemorySwapchainInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain", &self.swapchain).field("image_index", &self.image_index).finish()
     }
 }
 impl BindImageMemorySwapchainInfoKHR {
@@ -696,28 +602,12 @@ pub struct AcquireNextImageInfoKHR {
 }
 impl Default for AcquireNextImageInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ACQUIRE_NEXT_IMAGE_INFO_KHR,
-            p_next: std::ptr::null(),
-            swapchain: Default::default(),
-            timeout: Default::default(),
-            semaphore: Default::default(),
-            fence: Default::default(),
-            device_mask: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ACQUIRE_NEXT_IMAGE_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default(), timeout: Default::default(), semaphore: Default::default(), fence: Default::default(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for AcquireNextImageInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AcquireNextImageInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain", &self.swapchain)
-            .field("timeout", &self.timeout)
-            .field("semaphore", &self.semaphore)
-            .field("fence", &self.fence)
-            .field("device_mask", &self.device_mask)
-            .finish()
+        f.debug_struct("AcquireNextImageInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain", &self.swapchain).field("timeout", &self.timeout).field("semaphore", &self.semaphore).field("fence", &self.fence).field("device_mask", &self.device_mask).finish()
     }
 }
 impl AcquireNextImageInfoKHR {
@@ -800,24 +690,12 @@ pub struct DeviceGroupPresentInfoKHR {
 }
 impl Default for DeviceGroupPresentInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_INFO_KHR,
-            p_next: std::ptr::null(),
-            swapchain_count: Default::default(),
-            p_device_masks: std::ptr::null(),
-            mode: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_INFO_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_device_masks: std::ptr::null(), mode: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupPresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupPresentInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain_count", &self.swapchain_count)
-            .field("p_device_masks", &self.p_device_masks)
-            .field("mode", &self.mode)
-            .finish()
+        f.debug_struct("DeviceGroupPresentInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain_count", &self.swapchain_count).field("p_device_masks", &self.p_device_masks).field("mode", &self.mode).finish()
     }
 }
 impl DeviceGroupPresentInfoKHR {
@@ -884,11 +762,7 @@ pub struct DeviceGroupSwapchainCreateInfoKHR {
 }
 impl Default for DeviceGroupSwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            modes: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), modes: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupSwapchainCreateInfoKHR {
@@ -948,11 +822,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function"]
     #[doc(alias = "vkCreateSwapchainKHR")]
-    pub unsafe fn create_swapchain_khr(
-        &self,
-        create_info: &crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::SwapchainKHR> {
+    pub unsafe fn create_swapchain_khr(&self, create_info: &crate::extensions::khr_swapchain::SwapchainCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::SwapchainKHR> {
         let _function = self.create_swapchain_khr.expect("`create_swapchain_khr` is not loaded");
         let mut swapchain = Default::default();
         let _return = _function(
@@ -1063,12 +933,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDevicePresentRectanglesKHR")]
-    pub unsafe fn get_physical_device_present_rectangles_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        rect_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
+    pub unsafe fn get_physical_device_present_rectangles_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, rect_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
         let _function = self.get_physical_device_present_rectangles_khr.expect("`get_physical_device_present_rectangles_khr` is not loaded");
         let mut rect_count = match rect_count {
             Some(v) => v,

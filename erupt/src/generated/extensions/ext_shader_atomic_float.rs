@@ -26,42 +26,12 @@ pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderAtomicFloatFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            shader_buffer_float32_atomics: Default::default(),
-            shader_buffer_float32_atomic_add: Default::default(),
-            shader_buffer_float64_atomics: Default::default(),
-            shader_buffer_float64_atomic_add: Default::default(),
-            shader_shared_float32_atomics: Default::default(),
-            shader_shared_float32_atomic_add: Default::default(),
-            shader_shared_float64_atomics: Default::default(),
-            shader_shared_float64_atomic_add: Default::default(),
-            shader_image_float32_atomics: Default::default(),
-            shader_image_float32_atomic_add: Default::default(),
-            sparse_image_float32_atomics: Default::default(),
-            sparse_image_float32_atomic_add: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_buffer_float32_atomics: Default::default(), shader_buffer_float32_atomic_add: Default::default(), shader_buffer_float64_atomics: Default::default(), shader_buffer_float64_atomic_add: Default::default(), shader_shared_float32_atomics: Default::default(), shader_shared_float32_atomic_add: Default::default(), shader_shared_float64_atomics: Default::default(), shader_shared_float64_atomic_add: Default::default(), shader_image_float32_atomics: Default::default(), shader_image_float32_atomic_add: Default::default(), sparse_image_float32_atomics: Default::default(), sparse_image_float32_atomic_add: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderAtomicFloatFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderAtomicFloatFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_buffer_float32_atomics", &(self.shader_buffer_float32_atomics != 0))
-            .field("shader_buffer_float32_atomic_add", &(self.shader_buffer_float32_atomic_add != 0))
-            .field("shader_buffer_float64_atomics", &(self.shader_buffer_float64_atomics != 0))
-            .field("shader_buffer_float64_atomic_add", &(self.shader_buffer_float64_atomic_add != 0))
-            .field("shader_shared_float32_atomics", &(self.shader_shared_float32_atomics != 0))
-            .field("shader_shared_float32_atomic_add", &(self.shader_shared_float32_atomic_add != 0))
-            .field("shader_shared_float64_atomics", &(self.shader_shared_float64_atomics != 0))
-            .field("shader_shared_float64_atomic_add", &(self.shader_shared_float64_atomic_add != 0))
-            .field("shader_image_float32_atomics", &(self.shader_image_float32_atomics != 0))
-            .field("shader_image_float32_atomic_add", &(self.shader_image_float32_atomic_add != 0))
-            .field("sparse_image_float32_atomics", &(self.sparse_image_float32_atomics != 0))
-            .field("sparse_image_float32_atomic_add", &(self.sparse_image_float32_atomic_add != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderAtomicFloatFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_buffer_float32_atomics", &(self.shader_buffer_float32_atomics != 0)).field("shader_buffer_float32_atomic_add", &(self.shader_buffer_float32_atomic_add != 0)).field("shader_buffer_float64_atomics", &(self.shader_buffer_float64_atomics != 0)).field("shader_buffer_float64_atomic_add", &(self.shader_buffer_float64_atomic_add != 0)).field("shader_shared_float32_atomics", &(self.shader_shared_float32_atomics != 0)).field("shader_shared_float32_atomic_add", &(self.shader_shared_float32_atomic_add != 0)).field("shader_shared_float64_atomics", &(self.shader_shared_float64_atomics != 0)).field("shader_shared_float64_atomic_add", &(self.shader_shared_float64_atomic_add != 0)).field("shader_image_float32_atomics", &(self.shader_image_float32_atomics != 0)).field("shader_image_float32_atomic_add", &(self.shader_image_float32_atomic_add != 0)).field("sparse_image_float32_atomics", &(self.sparse_image_float32_atomics != 0)).field("sparse_image_float32_atomic_add", &(self.sparse_image_float32_atomic_add != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderAtomicFloatFeaturesEXT {

@@ -15,20 +15,12 @@ pub struct PhysicalDeviceCoherentMemoryFeaturesAMD {
 }
 impl Default for PhysicalDeviceCoherentMemoryFeaturesAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD,
-            p_next: std::ptr::null_mut(),
-            device_coherent_memory: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD, p_next: std::ptr::null_mut(), device_coherent_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCoherentMemoryFeaturesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceCoherentMemoryFeaturesAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_coherent_memory", &(self.device_coherent_memory != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceCoherentMemoryFeaturesAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_coherent_memory", &(self.device_coherent_memory != 0)).finish()
     }
 }
 impl PhysicalDeviceCoherentMemoryFeaturesAMD {

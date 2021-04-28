@@ -79,18 +79,8 @@ pub type PhysicalDeviceShaderDrawParameterFeatures = crate::vk1_1::PhysicalDevic
 #[doc(alias = "VkPhysicalDeviceShaderDrawParameterFeatures")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderDrawParameterFeaturesBuilder<'a> = crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a>;
-crate::non_dispatchable_handle!(
-    DescriptorUpdateTemplate,
-    DESCRIPTOR_UPDATE_TEMPLATE,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplate.html) · Non-dispatchable Handle",
-    "VkDescriptorUpdateTemplate"
-);
-crate::non_dispatchable_handle!(
-    SamplerYcbcrConversion,
-    SAMPLER_YCBCR_CONVERSION,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversion.html) · Non-dispatchable Handle",
-    "VkSamplerYcbcrConversion"
-);
+crate::non_dispatchable_handle!(DescriptorUpdateTemplate, DESCRIPTOR_UPDATE_TEMPLATE, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplate.html) · Non-dispatchable Handle", "VkDescriptorUpdateTemplate");
+crate::non_dispatchable_handle!(SamplerYcbcrConversion, SAMPLER_YCBCR_CONVERSION, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversion.html) · Non-dispatchable Handle", "VkSamplerYcbcrConversion");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateFlags.html) · Bitmask of [`DescriptorUpdateTemplateCreateFlagBits`]"] # [doc (alias = "VkDescriptorUpdateTemplateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorUpdateTemplateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`DescriptorUpdateTemplateCreateFlags`]"]
 #[doc(alias = "VkDescriptorUpdateTemplateCreateFlagBits")]
@@ -734,8 +724,7 @@ pub type PFN_vkGetPhysicalDeviceProperties2 = unsafe extern "system" fn(physical
 pub type PFN_vkGetPhysicalDeviceFormatProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, p_format_properties: *mut crate::vk1_1::FormatProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_image_format_info: *const crate::vk1_1::PhysicalDeviceImageFormatInfo2, p_image_format_properties: *mut crate::vk1_1::ImageFormatProperties2) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceImageFormatProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_image_format_info: *const crate::vk1_1::PhysicalDeviceImageFormatInfo2, p_image_format_properties: *mut crate::vk1_1::ImageFormatProperties2) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_queue_family_property_count: *mut u32, p_queue_family_properties: *mut crate::vk1_1::QueueFamilyProperties2) -> ();
@@ -744,27 +733,22 @@ pub type PFN_vkGetPhysicalDeviceQueueFamilyProperties2 = unsafe extern "system" 
 pub type PFN_vkGetPhysicalDeviceMemoryProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_memory_properties: *mut crate::vk1_1::PhysicalDeviceMemoryProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_format_info: *const crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, p_property_count: *mut u32, p_properties: *mut crate::vk1_1::SparseImageFormatProperties2) -> ();
+pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_format_info: *const crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, p_property_count: *mut u32, p_properties: *mut crate::vk1_1::SparseImageFormatProperties2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPool.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPool = unsafe extern "system" fn(device: crate::vk1_0::Device, command_pool: crate::vk1_0::CommandPool, flags: crate::vk1_1::CommandPoolTrimFlags) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalBufferProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_buffer_info: *const crate::vk1_1::PhysicalDeviceExternalBufferInfo, p_external_buffer_properties: *mut crate::vk1_1::ExternalBufferProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceExternalBufferProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_buffer_info: *const crate::vk1_1::PhysicalDeviceExternalBufferInfo, p_external_buffer_properties: *mut crate::vk1_1::ExternalBufferProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphoreProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalSemaphoreProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_semaphore_info: *const crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo, p_external_semaphore_properties: *mut crate::vk1_1::ExternalSemaphoreProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceExternalSemaphoreProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_semaphore_info: *const crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo, p_external_semaphore_properties: *mut crate::vk1_1::ExternalSemaphoreProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFenceProperties.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceExternalFenceProperties =
-    unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_fence_info: *const crate::vk1_1::PhysicalDeviceExternalFenceInfo, p_external_fence_properties: *mut crate::vk1_1::ExternalFenceProperties) -> ();
+pub type PFN_vkGetPhysicalDeviceExternalFenceProperties = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_external_fence_info: *const crate::vk1_1::PhysicalDeviceExternalFenceInfo, p_external_fence_properties: *mut crate::vk1_1::ExternalFenceProperties) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroups.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkEnumeratePhysicalDeviceGroups =
-    unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_physical_device_group_count: *mut u32, p_physical_device_group_properties: *mut crate::vk1_1::PhysicalDeviceGroupProperties) -> crate::vk1_0::Result;
+pub type PFN_vkEnumeratePhysicalDeviceGroups = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_physical_device_group_count: *mut u32, p_physical_device_group_properties: *mut crate::vk1_1::PhysicalDeviceGroupProperties) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeatures.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceGroupPeerMemoryFeatures = unsafe extern "system" fn(device: crate::vk1_0::Device, heap_index: u32, local_device_index: u32, remote_device_index: u32, p_peer_memory_features: *mut crate::vk1_1::PeerMemoryFeatureFlags) -> ();
@@ -782,19 +766,13 @@ pub type PFN_vkCmdSetDeviceMask = unsafe extern "system" fn(command_buffer: crat
 pub type PFN_vkCmdDispatchBase = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, base_group_x: u32, base_group_y: u32, base_group_z: u32, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDescriptorUpdateTemplate = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_1::DescriptorUpdateTemplateCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_descriptor_update_template: *mut crate::vk1_1::DescriptorUpdateTemplate,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDescriptorUpdateTemplate = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_1::DescriptorUpdateTemplateCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_descriptor_update_template: *mut crate::vk1_1::DescriptorUpdateTemplate) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDescriptorUpdateTemplate = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplate.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkUpdateDescriptorSetWithTemplate =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_set: crate::vk1_0::DescriptorSet, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, p_data: *const std::ffi::c_void) -> ();
+pub type PFN_vkUpdateDescriptorSetWithTemplate = unsafe extern "system" fn(device: crate::vk1_0::Device, descriptor_set: crate::vk1_0::DescriptorSet, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, p_data: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferMemoryRequirements2 = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_1::BufferMemoryRequirementsInfo2, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
@@ -803,20 +781,10 @@ pub type PFN_vkGetBufferMemoryRequirements2 = unsafe extern "system" fn(device: 
 pub type PFN_vkGetImageMemoryRequirements2 = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_1::ImageMemoryRequirementsInfo2, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetImageSparseMemoryRequirements2 = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_info: *const crate::vk1_1::ImageSparseMemoryRequirementsInfo2,
-    p_sparse_memory_requirement_count: *mut u32,
-    p_sparse_memory_requirements: *mut crate::vk1_1::SparseImageMemoryRequirements2,
-) -> ();
+pub type PFN_vkGetImageSparseMemoryRequirements2 = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_1::ImageSparseMemoryRequirementsInfo2, p_sparse_memory_requirement_count: *mut u32, p_sparse_memory_requirements: *mut crate::vk1_1::SparseImageMemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversion.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateSamplerYcbcrConversion = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::vk1_1::SamplerYcbcrConversionCreateInfo,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_ycbcr_conversion: *mut crate::vk1_1::SamplerYcbcrConversion,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateSamplerYcbcrConversion = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_1::SamplerYcbcrConversionCreateInfo, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_ycbcr_conversion: *mut crate::vk1_1::SamplerYcbcrConversion) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversion.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySamplerYcbcrConversion = unsafe extern "system" fn(device: crate::vk1_0::Device, ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
@@ -837,11 +805,7 @@ pub struct PhysicalDeviceFeatures2 {
 }
 impl Default for PhysicalDeviceFeatures2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FEATURES_2,
-            p_next: std::ptr::null_mut(),
-            features: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FEATURES_2, p_next: std::ptr::null_mut(), features: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFeatures2 {
@@ -989,6 +953,8 @@ impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
@@ -1013,8 +979,18 @@ impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rat
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`]"]
 #[repr(transparent)]
@@ -1067,11 +1043,7 @@ pub struct PhysicalDeviceProperties2 {
 }
 impl Default for PhysicalDeviceProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROPERTIES_2, p_next: std::ptr::null_mut(), properties: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProperties2 {
@@ -1177,6 +1149,8 @@ impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_ra
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties2.html) · Builder of [`PhysicalDeviceProperties2`]"]
 #[repr(transparent)]
@@ -1229,20 +1203,12 @@ pub struct FormatProperties2 {
 }
 impl Default for FormatProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::FORMAT_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            format_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), format_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for FormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("FormatProperties2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("format_properties", &self.format_properties)
-            .finish()
+        f.debug_struct("FormatProperties2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format_properties", &self.format_properties).finish()
     }
 }
 impl FormatProperties2 {
@@ -1253,6 +1219,10 @@ impl FormatProperties2 {
 }
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXT> for FormatProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXTBuilder<'_>> for FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfilesKHR> for FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfilesKHRBuilder<'_>> for FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for FormatProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties2.html) · Builder of [`FormatProperties2`]"]
 #[repr(transparent)]
@@ -1305,20 +1275,12 @@ pub struct ImageFormatProperties2 {
 }
 impl Default for ImageFormatProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_FORMAT_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            image_format_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), image_format_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageFormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImageFormatProperties2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image_format_properties", &self.image_format_properties)
-            .finish()
+        f.debug_struct("ImageFormatProperties2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image_format_properties", &self.image_format_properties).finish()
     }
 }
 impl ImageFormatProperties2 {
@@ -1393,28 +1355,12 @@ pub struct PhysicalDeviceImageFormatInfo2 {
 }
 impl Default for PhysicalDeviceImageFormatInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2,
-            p_next: std::ptr::null(),
-            format: Default::default(),
-            _type: Default::default(),
-            tiling: Default::default(),
-            usage: Default::default(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), tiling: Default::default(), usage: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageFormatInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceImageFormatInfo2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("format", &self.format)
-            .field("_type", &self._type)
-            .field("tiling", &self.tiling)
-            .field("usage", &self.usage)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("PhysicalDeviceImageFormatInfo2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format", &self.format).field("_type", &self._type).field("tiling", &self.tiling).field("usage", &self.usage).field("flags", &self.flags).finish()
     }
 }
 impl PhysicalDeviceImageFormatInfo2 {
@@ -1505,20 +1451,12 @@ pub struct QueueFamilyProperties2 {
 }
 impl Default for QueueFamilyProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            queue_family_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_PROPERTIES_2, p_next: std::ptr::null_mut(), queue_family_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueueFamilyProperties2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("queue_family_properties", &self.queue_family_properties)
-            .finish()
+        f.debug_struct("QueueFamilyProperties2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("queue_family_properties", &self.queue_family_properties).finish()
     }
 }
 impl QueueFamilyProperties2 {
@@ -1531,6 +1469,8 @@ impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostic_ch
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV> for QueueFamilyProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoQueueFamilyProperties2KHR> for QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoQueueFamilyProperties2KHRBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties2.html) · Builder of [`QueueFamilyProperties2`]"]
 #[repr(transparent)]
@@ -1583,20 +1523,12 @@ pub struct PhysicalDeviceMemoryProperties2 {
 }
 impl Default for PhysicalDeviceMemoryProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            memory_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2, p_next: std::ptr::null_mut(), memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMemoryProperties2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_properties", &self.memory_properties)
-            .finish()
+        f.debug_struct("PhysicalDeviceMemoryProperties2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_properties", &self.memory_properties).finish()
     }
 }
 impl PhysicalDeviceMemoryProperties2 {
@@ -1659,20 +1591,12 @@ pub struct SparseImageFormatProperties2 {
 }
 impl Default for SparseImageFormatProperties2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_FORMAT_PROPERTIES_2,
-            p_next: std::ptr::null_mut(),
-            properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), properties: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageFormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageFormatProperties2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("properties", &self.properties)
-            .finish()
+        f.debug_struct("SparseImageFormatProperties2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("properties", &self.properties).finish()
     }
 }
 impl SparseImageFormatProperties2 {
@@ -1737,28 +1661,12 @@ pub struct PhysicalDeviceSparseImageFormatInfo2 {
 }
 impl Default for PhysicalDeviceSparseImageFormatInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2,
-            p_next: std::ptr::null(),
-            format: Default::default(),
-            _type: Default::default(),
-            samples: Default::default(),
-            usage: Default::default(),
-            tiling: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), samples: Default::default(), usage: Default::default(), tiling: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSparseImageFormatInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSparseImageFormatInfo2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("format", &self.format)
-            .field("_type", &self._type)
-            .field("samples", &self.samples)
-            .field("usage", &self.usage)
-            .field("tiling", &self.tiling)
-            .finish()
+        f.debug_struct("PhysicalDeviceSparseImageFormatInfo2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format", &self.format).field("_type", &self._type).field("samples", &self.samples).field("usage", &self.usage).field("tiling", &self.tiling).finish()
     }
 }
 impl PhysicalDeviceSparseImageFormatInfo2 {
@@ -1840,22 +1748,12 @@ pub struct PhysicalDeviceVariablePointersFeatures {
 }
 impl Default for PhysicalDeviceVariablePointersFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES,
-            p_next: std::ptr::null_mut(),
-            variable_pointers_storage_buffer: Default::default(),
-            variable_pointers: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES, p_next: std::ptr::null_mut(), variable_pointers_storage_buffer: Default::default(), variable_pointers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVariablePointersFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceVariablePointersFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("variable_pointers_storage_buffer", &(self.variable_pointers_storage_buffer != 0))
-            .field("variable_pointers", &(self.variable_pointers != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceVariablePointersFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("variable_pointers_storage_buffer", &(self.variable_pointers_storage_buffer != 0)).field("variable_pointers", &(self.variable_pointers != 0)).finish()
     }
 }
 impl PhysicalDeviceVariablePointersFeatures {
@@ -1921,20 +1819,12 @@ pub struct ExternalMemoryProperties {
 }
 impl Default for ExternalMemoryProperties {
     fn default() -> Self {
-        Self {
-            external_memory_features: Default::default(),
-            export_from_imported_handle_types: Default::default(),
-            compatible_handle_types: Default::default(),
-        }
+        Self { external_memory_features: Default::default(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalMemoryProperties")
-            .field("external_memory_features", &self.external_memory_features)
-            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
-            .field("compatible_handle_types", &self.compatible_handle_types)
-            .finish()
+        f.debug_struct("ExternalMemoryProperties").field("external_memory_features", &self.external_memory_features).field("export_from_imported_handle_types", &self.export_from_imported_handle_types).field("compatible_handle_types", &self.compatible_handle_types).finish()
     }
 }
 impl ExternalMemoryProperties {
@@ -2005,20 +1895,12 @@ pub struct PhysicalDeviceExternalImageFormatInfo {
 }
 impl Default for PhysicalDeviceExternalImageFormatInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalImageFormatInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExternalImageFormatInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("PhysicalDeviceExternalImageFormatInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).finish()
     }
 }
 impl PhysicalDeviceExternalImageFormatInfo {
@@ -2079,20 +1961,12 @@ pub struct ExternalImageFormatProperties {
 }
 impl Default for ExternalImageFormatProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_IMAGE_FORMAT_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            external_memory_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_IMAGE_FORMAT_PROPERTIES, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalImageFormatProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("external_memory_properties", &self.external_memory_properties)
-            .finish()
+        f.debug_struct("ExternalImageFormatProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("external_memory_properties", &self.external_memory_properties).finish()
     }
 }
 impl ExternalImageFormatProperties {
@@ -2155,24 +2029,12 @@ pub struct PhysicalDeviceExternalBufferInfo {
 }
 impl Default for PhysicalDeviceExternalBufferInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            usage: Default::default(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO, p_next: std::ptr::null(), flags: Default::default(), usage: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalBufferInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExternalBufferInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("usage", &self.usage)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("PhysicalDeviceExternalBufferInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("usage", &self.usage).field("handle_type", &self.handle_type).finish()
     }
 }
 impl PhysicalDeviceExternalBufferInfo {
@@ -2243,20 +2105,12 @@ pub struct ExternalBufferProperties {
 }
 impl Default for ExternalBufferProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_BUFFER_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            external_memory_properties: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_BUFFER_PROPERTIES, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalBufferProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalBufferProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("external_memory_properties", &self.external_memory_properties)
-            .finish()
+        f.debug_struct("ExternalBufferProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("external_memory_properties", &self.external_memory_properties).finish()
     }
 }
 impl ExternalBufferProperties {
@@ -2321,28 +2175,12 @@ pub struct PhysicalDeviceIDProperties {
 }
 impl Default for PhysicalDeviceIDProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ID_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            device_uuid: unsafe { std::mem::zeroed() },
-            driver_uuid: unsafe { std::mem::zeroed() },
-            device_luid: unsafe { std::mem::zeroed() },
-            device_node_mask: Default::default(),
-            device_luid_valid: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ID_PROPERTIES, p_next: std::ptr::null_mut(), device_uuid: unsafe { std::mem::zeroed() }, driver_uuid: unsafe { std::mem::zeroed() }, device_luid: unsafe { std::mem::zeroed() }, device_node_mask: Default::default(), device_luid_valid: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceIDProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceIDProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_uuid", &self.device_uuid)
-            .field("driver_uuid", &self.driver_uuid)
-            .field("device_luid", &self.device_luid)
-            .field("device_node_mask", &self.device_node_mask)
-            .field("device_luid_valid", &(self.device_luid_valid != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceIDProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_uuid", &self.device_uuid).field("driver_uuid", &self.driver_uuid).field("device_luid", &self.device_luid).field("device_node_mask", &self.device_node_mask).field("device_luid_valid", &(self.device_luid_valid != 0)).finish()
     }
 }
 impl PhysicalDeviceIDProperties {
@@ -2423,20 +2261,12 @@ pub struct ExternalMemoryImageCreateInfo {
 }
 impl Default for ExternalMemoryImageCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryImageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalMemoryImageCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExternalMemoryImageCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExternalMemoryImageCreateInfo {
@@ -2497,20 +2327,12 @@ pub struct ExternalMemoryBufferCreateInfo {
 }
 impl Default for ExternalMemoryBufferCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_BUFFER_CREATE_INFO,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_BUFFER_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryBufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalMemoryBufferCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExternalMemoryBufferCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExternalMemoryBufferCreateInfo {
@@ -2571,20 +2393,12 @@ pub struct ExportMemoryAllocateInfo {
 }
 impl Default for ExportMemoryAllocateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportMemoryAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportMemoryAllocateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExportMemoryAllocateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExportMemoryAllocateInfo {
@@ -2645,20 +2459,12 @@ pub struct PhysicalDeviceExternalSemaphoreInfo {
 }
 impl Default for PhysicalDeviceExternalSemaphoreInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalSemaphoreInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExternalSemaphoreInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("PhysicalDeviceExternalSemaphoreInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).finish()
     }
 }
 impl PhysicalDeviceExternalSemaphoreInfo {
@@ -2723,24 +2529,12 @@ pub struct ExternalSemaphoreProperties {
 }
 impl Default for ExternalSemaphoreProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_SEMAPHORE_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            export_from_imported_handle_types: Default::default(),
-            compatible_handle_types: Default::default(),
-            external_semaphore_features: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_SEMAPHORE_PROPERTIES, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_semaphore_features: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalSemaphoreProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalSemaphoreProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
-            .field("compatible_handle_types", &self.compatible_handle_types)
-            .field("external_semaphore_features", &self.external_semaphore_features)
-            .finish()
+        f.debug_struct("ExternalSemaphoreProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("export_from_imported_handle_types", &self.export_from_imported_handle_types).field("compatible_handle_types", &self.compatible_handle_types).field("external_semaphore_features", &self.external_semaphore_features).finish()
     }
 }
 impl ExternalSemaphoreProperties {
@@ -2811,20 +2605,12 @@ pub struct ExportSemaphoreCreateInfo {
 }
 impl Default for ExportSemaphoreCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportSemaphoreCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExportSemaphoreCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_types", &self.handle_types)
-            .finish()
+        f.debug_struct("ExportSemaphoreCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_types", &self.handle_types).finish()
     }
 }
 impl ExportSemaphoreCreateInfo {
@@ -2885,20 +2671,12 @@ pub struct PhysicalDeviceExternalFenceInfo {
 }
 impl Default for PhysicalDeviceExternalFenceInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO,
-            p_next: std::ptr::null(),
-            handle_type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalFenceInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceExternalFenceInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("handle_type", &self.handle_type)
-            .finish()
+        f.debug_struct("PhysicalDeviceExternalFenceInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("handle_type", &self.handle_type).finish()
     }
 }
 impl PhysicalDeviceExternalFenceInfo {
@@ -2961,24 +2739,12 @@ pub struct ExternalFenceProperties {
 }
 impl Default for ExternalFenceProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXTERNAL_FENCE_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            export_from_imported_handle_types: Default::default(),
-            compatible_handle_types: Default::default(),
-            external_fence_features: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_FENCE_PROPERTIES, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_fence_features: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalFenceProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ExternalFenceProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("export_from_imported_handle_types", &self.export_from_imported_handle_types)
-            .field("compatible_handle_types", &self.compatible_handle_types)
-            .field("external_fence_features", &self.external_fence_features)
-            .finish()
+        f.debug_struct("ExternalFenceProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("export_from_imported_handle_types", &self.export_from_imported_handle_types).field("compatible_handle_types", &self.compatible_handle_types).field("external_fence_features", &self.external_fence_features).finish()
     }
 }
 impl ExternalFenceProperties {
@@ -3049,11 +2815,7 @@ pub struct ExportFenceCreateInfo {
 }
 impl Default for ExportFenceCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::EXPORT_FENCE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            handle_types: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::EXPORT_FENCE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportFenceCreateInfo {
@@ -3121,24 +2883,12 @@ pub struct PhysicalDeviceMultiviewFeatures {
 }
 impl Default for PhysicalDeviceMultiviewFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_FEATURES,
-            p_next: std::ptr::null_mut(),
-            multiview: Default::default(),
-            multiview_geometry_shader: Default::default(),
-            multiview_tessellation_shader: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_FEATURES, p_next: std::ptr::null_mut(), multiview: Default::default(), multiview_geometry_shader: Default::default(), multiview_tessellation_shader: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMultiviewFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("multiview", &(self.multiview != 0))
-            .field("multiview_geometry_shader", &(self.multiview_geometry_shader != 0))
-            .field("multiview_tessellation_shader", &(self.multiview_tessellation_shader != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceMultiviewFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("multiview", &(self.multiview != 0)).field("multiview_geometry_shader", &(self.multiview_geometry_shader != 0)).field("multiview_tessellation_shader", &(self.multiview_tessellation_shader != 0)).finish()
     }
 }
 impl PhysicalDeviceMultiviewFeatures {
@@ -3210,22 +2960,12 @@ pub struct PhysicalDeviceMultiviewProperties {
 }
 impl Default for PhysicalDeviceMultiviewProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            max_multiview_view_count: Default::default(),
-            max_multiview_instance_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES, p_next: std::ptr::null_mut(), max_multiview_view_count: Default::default(), max_multiview_instance_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMultiviewProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_multiview_view_count", &self.max_multiview_view_count)
-            .field("max_multiview_instance_index", &self.max_multiview_instance_index)
-            .finish()
+        f.debug_struct("PhysicalDeviceMultiviewProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_multiview_view_count", &self.max_multiview_view_count).field("max_multiview_instance_index", &self.max_multiview_instance_index).finish()
     }
 }
 impl PhysicalDeviceMultiviewProperties {
@@ -3296,30 +3036,12 @@ pub struct RenderPassMultiviewCreateInfo {
 }
 impl Default for RenderPassMultiviewCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_MULTIVIEW_CREATE_INFO,
-            p_next: std::ptr::null(),
-            subpass_count: Default::default(),
-            p_view_masks: std::ptr::null(),
-            dependency_count: Default::default(),
-            p_view_offsets: std::ptr::null(),
-            correlation_mask_count: Default::default(),
-            p_correlation_masks: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_MULTIVIEW_CREATE_INFO, p_next: std::ptr::null(), subpass_count: Default::default(), p_view_masks: std::ptr::null(), dependency_count: Default::default(), p_view_offsets: std::ptr::null(), correlation_mask_count: Default::default(), p_correlation_masks: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassMultiviewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassMultiviewCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("subpass_count", &self.subpass_count)
-            .field("p_view_masks", &self.p_view_masks)
-            .field("dependency_count", &self.dependency_count)
-            .field("p_view_offsets", &self.p_view_offsets)
-            .field("correlation_mask_count", &self.correlation_mask_count)
-            .field("p_correlation_masks", &self.p_correlation_masks)
-            .finish()
+        f.debug_struct("RenderPassMultiviewCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("subpass_count", &self.subpass_count).field("p_view_masks", &self.p_view_masks).field("dependency_count", &self.dependency_count).field("p_view_offsets", &self.p_view_offsets).field("correlation_mask_count", &self.correlation_mask_count).field("p_correlation_masks", &self.p_correlation_masks).finish()
     }
 }
 impl RenderPassMultiviewCreateInfo {
@@ -3395,24 +3117,12 @@ pub struct PhysicalDeviceGroupProperties {
 }
 impl Default for PhysicalDeviceGroupProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_GROUP_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            physical_device_count: Default::default(),
-            physical_devices: unsafe { std::mem::zeroed() },
-            subset_allocation: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_GROUP_PROPERTIES, p_next: std::ptr::null_mut(), physical_device_count: Default::default(), physical_devices: unsafe { std::mem::zeroed() }, subset_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceGroupProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceGroupProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("physical_device_count", &self.physical_device_count)
-            .field("physical_devices", &self.physical_devices)
-            .field("subset_allocation", &(self.subset_allocation != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceGroupProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("physical_device_count", &self.physical_device_count).field("physical_devices", &self.physical_devices).field("subset_allocation", &(self.subset_allocation != 0)).finish()
     }
 }
 impl PhysicalDeviceGroupProperties {
@@ -3484,22 +3194,12 @@ pub struct MemoryAllocateFlagsInfo {
 }
 impl Default for MemoryAllocateFlagsInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_FLAGS_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            device_mask: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_FLAGS_INFO, p_next: std::ptr::null(), flags: Default::default(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryAllocateFlagsInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryAllocateFlagsInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("device_mask", &self.device_mask)
-            .finish()
+        f.debug_struct("MemoryAllocateFlagsInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("device_mask", &self.device_mask).finish()
     }
 }
 impl MemoryAllocateFlagsInfo {
@@ -3567,24 +3267,12 @@ pub struct BindBufferMemoryInfo {
 }
 impl Default for BindBufferMemoryInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_INFO,
-            p_next: std::ptr::null(),
-            buffer: Default::default(),
-            memory: Default::default(),
-            memory_offset: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_INFO, p_next: std::ptr::null(), buffer: Default::default(), memory: Default::default(), memory_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for BindBufferMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindBufferMemoryInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer", &self.buffer)
-            .field("memory", &self.memory)
-            .field("memory_offset", &self.memory_offset)
-            .finish()
+        f.debug_struct("BindBufferMemoryInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer", &self.buffer).field("memory", &self.memory).field("memory_offset", &self.memory_offset).finish()
     }
 }
 impl BindBufferMemoryInfo {
@@ -3658,22 +3346,12 @@ pub struct BindBufferMemoryDeviceGroupInfo {
 }
 impl Default for BindBufferMemoryDeviceGroupInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO,
-            p_next: std::ptr::null(),
-            device_index_count: Default::default(),
-            p_device_indices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindBufferMemoryDeviceGroupInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindBufferMemoryDeviceGroupInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_index_count", &self.device_index_count)
-            .field("p_device_indices", &self.p_device_indices)
-            .finish()
+        f.debug_struct("BindBufferMemoryDeviceGroupInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_index_count", &self.device_index_count).field("p_device_indices", &self.p_device_indices).finish()
     }
 }
 impl BindBufferMemoryDeviceGroupInfo {
@@ -3737,24 +3415,12 @@ pub struct BindImageMemoryInfo {
 }
 impl Default for BindImageMemoryInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_INFO,
-            p_next: std::ptr::null(),
-            image: Default::default(),
-            memory: Default::default(),
-            memory_offset: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_INFO, p_next: std::ptr::null(), image: Default::default(), memory: Default::default(), memory_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImageMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindImageMemoryInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image", &self.image)
-            .field("memory", &self.memory)
-            .field("memory_offset", &self.memory_offset)
-            .finish()
+        f.debug_struct("BindImageMemoryInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image", &self.image).field("memory", &self.memory).field("memory_offset", &self.memory_offset).finish()
     }
 }
 impl BindImageMemoryInfo {
@@ -3834,26 +3500,12 @@ pub struct BindImageMemoryDeviceGroupInfo {
 }
 impl Default for BindImageMemoryDeviceGroupInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO,
-            p_next: std::ptr::null(),
-            device_index_count: Default::default(),
-            p_device_indices: std::ptr::null(),
-            split_instance_bind_region_count: Default::default(),
-            p_split_instance_bind_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null(), split_instance_bind_region_count: Default::default(), p_split_instance_bind_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindImageMemoryDeviceGroupInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindImageMemoryDeviceGroupInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_index_count", &self.device_index_count)
-            .field("p_device_indices", &self.p_device_indices)
-            .field("split_instance_bind_region_count", &self.split_instance_bind_region_count)
-            .field("p_split_instance_bind_regions", &self.p_split_instance_bind_regions)
-            .finish()
+        f.debug_struct("BindImageMemoryDeviceGroupInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_index_count", &self.device_index_count).field("p_device_indices", &self.p_device_indices).field("split_instance_bind_region_count", &self.split_instance_bind_region_count).field("p_split_instance_bind_regions", &self.p_split_instance_bind_regions).finish()
     }
 }
 impl BindImageMemoryDeviceGroupInfo {
@@ -3923,24 +3575,12 @@ pub struct DeviceGroupRenderPassBeginInfo {
 }
 impl Default for DeviceGroupRenderPassBeginInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO,
-            p_next: std::ptr::null(),
-            device_mask: Default::default(),
-            device_render_area_count: Default::default(),
-            p_device_render_areas: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO, p_next: std::ptr::null(), device_mask: Default::default(), device_render_area_count: Default::default(), p_device_render_areas: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupRenderPassBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupRenderPassBeginInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_mask", &self.device_mask)
-            .field("device_render_area_count", &self.device_render_area_count)
-            .field("p_device_render_areas", &self.p_device_render_areas)
-            .finish()
+        f.debug_struct("DeviceGroupRenderPassBeginInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_mask", &self.device_mask).field("device_render_area_count", &self.device_render_area_count).field("p_device_render_areas", &self.p_device_render_areas).finish()
     }
 }
 impl DeviceGroupRenderPassBeginInfo {
@@ -4007,20 +3647,12 @@ pub struct DeviceGroupCommandBufferBeginInfo {
 }
 impl Default for DeviceGroupCommandBufferBeginInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO,
-            p_next: std::ptr::null(),
-            device_mask: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO, p_next: std::ptr::null(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupCommandBufferBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupCommandBufferBeginInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_mask", &self.device_mask)
-            .finish()
+        f.debug_struct("DeviceGroupCommandBufferBeginInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_mask", &self.device_mask).finish()
     }
 }
 impl DeviceGroupCommandBufferBeginInfo {
@@ -4086,30 +3718,12 @@ pub struct DeviceGroupSubmitInfo {
 }
 impl Default for DeviceGroupSubmitInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SUBMIT_INFO,
-            p_next: std::ptr::null(),
-            wait_semaphore_count: Default::default(),
-            p_wait_semaphore_device_indices: std::ptr::null(),
-            command_buffer_count: Default::default(),
-            p_command_buffer_device_masks: std::ptr::null(),
-            signal_semaphore_count: Default::default(),
-            p_signal_semaphore_device_indices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SUBMIT_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphore_device_indices: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffer_device_masks: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphore_device_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupSubmitInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("wait_semaphore_count", &self.wait_semaphore_count)
-            .field("p_wait_semaphore_device_indices", &self.p_wait_semaphore_device_indices)
-            .field("command_buffer_count", &self.command_buffer_count)
-            .field("p_command_buffer_device_masks", &self.p_command_buffer_device_masks)
-            .field("signal_semaphore_count", &self.signal_semaphore_count)
-            .field("p_signal_semaphore_device_indices", &self.p_signal_semaphore_device_indices)
-            .finish()
+        f.debug_struct("DeviceGroupSubmitInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("wait_semaphore_count", &self.wait_semaphore_count).field("p_wait_semaphore_device_indices", &self.p_wait_semaphore_device_indices).field("command_buffer_count", &self.command_buffer_count).field("p_command_buffer_device_masks", &self.p_command_buffer_device_masks).field("signal_semaphore_count", &self.signal_semaphore_count).field("p_signal_semaphore_device_indices", &self.p_signal_semaphore_device_indices).finish()
     }
 }
 impl DeviceGroupSubmitInfo {
@@ -4184,22 +3798,12 @@ pub struct DeviceGroupBindSparseInfo {
 }
 impl Default for DeviceGroupBindSparseInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_BIND_SPARSE_INFO,
-            p_next: std::ptr::null(),
-            resource_device_index: Default::default(),
-            memory_device_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_BIND_SPARSE_INFO, p_next: std::ptr::null(), resource_device_index: Default::default(), memory_device_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupBindSparseInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupBindSparseInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("resource_device_index", &self.resource_device_index)
-            .field("memory_device_index", &self.memory_device_index)
-            .finish()
+        f.debug_struct("DeviceGroupBindSparseInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("resource_device_index", &self.resource_device_index).field("memory_device_index", &self.memory_device_index).finish()
     }
 }
 impl DeviceGroupBindSparseInfo {
@@ -4266,22 +3870,12 @@ pub struct DeviceGroupDeviceCreateInfo {
 }
 impl Default for DeviceGroupDeviceCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_GROUP_DEVICE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            physical_device_count: Default::default(),
-            p_physical_devices: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_DEVICE_CREATE_INFO, p_next: std::ptr::null(), physical_device_count: Default::default(), p_physical_devices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupDeviceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceGroupDeviceCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("physical_device_count", &self.physical_device_count)
-            .field("p_physical_devices", &self.p_physical_devices)
-            .finish()
+        f.debug_struct("DeviceGroupDeviceCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("physical_device_count", &self.physical_device_count).field("p_physical_devices", &self.p_physical_devices).finish()
     }
 }
 impl DeviceGroupDeviceCreateInfo {
@@ -4346,26 +3940,12 @@ pub struct DescriptorUpdateTemplateEntry {
 }
 impl Default for DescriptorUpdateTemplateEntry {
     fn default() -> Self {
-        Self {
-            dst_binding: Default::default(),
-            dst_array_element: Default::default(),
-            descriptor_count: Default::default(),
-            descriptor_type: Default::default(),
-            offset: Default::default(),
-            stride: Default::default(),
-        }
+        Self { dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default(), descriptor_type: Default::default(), offset: Default::default(), stride: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateEntry {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorUpdateTemplateEntry")
-            .field("dst_binding", &self.dst_binding)
-            .field("dst_array_element", &self.dst_array_element)
-            .field("descriptor_count", &self.descriptor_count)
-            .field("descriptor_type", &self.descriptor_type)
-            .field("offset", &self.offset)
-            .field("stride", &self.stride)
-            .finish()
+        f.debug_struct("DescriptorUpdateTemplateEntry").field("dst_binding", &self.dst_binding).field("dst_array_element", &self.dst_array_element).field("descriptor_count", &self.descriptor_count).field("descriptor_type", &self.descriptor_type).field("offset", &self.offset).field("stride", &self.stride).finish()
     }
 }
 impl DescriptorUpdateTemplateEntry {
@@ -4458,34 +4038,12 @@ pub struct DescriptorUpdateTemplateCreateInfo {
 }
 impl Default for DescriptorUpdateTemplateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            descriptor_update_entry_count: Default::default(),
-            p_descriptor_update_entries: std::ptr::null(),
-            template_type: Default::default(),
-            descriptor_set_layout: Default::default(),
-            pipeline_bind_point: Default::default(),
-            pipeline_layout: Default::default(),
-            set: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), descriptor_update_entry_count: Default::default(), p_descriptor_update_entries: std::ptr::null(), template_type: Default::default(), descriptor_set_layout: Default::default(), pipeline_bind_point: Default::default(), pipeline_layout: Default::default(), set: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorUpdateTemplateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("descriptor_update_entry_count", &self.descriptor_update_entry_count)
-            .field("p_descriptor_update_entries", &self.p_descriptor_update_entries)
-            .field("template_type", &self.template_type)
-            .field("descriptor_set_layout", &self.descriptor_set_layout)
-            .field("pipeline_bind_point", &self.pipeline_bind_point)
-            .field("pipeline_layout", &self.pipeline_layout)
-            .field("set", &self.set)
-            .finish()
+        f.debug_struct("DescriptorUpdateTemplateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("descriptor_update_entry_count", &self.descriptor_update_entry_count).field("p_descriptor_update_entries", &self.p_descriptor_update_entries).field("template_type", &self.template_type).field("descriptor_set_layout", &self.descriptor_set_layout).field("pipeline_bind_point", &self.pipeline_bind_point).field("pipeline_layout", &self.pipeline_layout).field("set", &self.set).finish()
     }
 }
 impl DescriptorUpdateTemplateCreateInfo {
@@ -4577,20 +4135,12 @@ pub struct InputAttachmentAspectReference {
 }
 impl Default for InputAttachmentAspectReference {
     fn default() -> Self {
-        Self {
-            subpass: Default::default(),
-            input_attachment_index: Default::default(),
-            aspect_mask: Default::default(),
-        }
+        Self { subpass: Default::default(), input_attachment_index: Default::default(), aspect_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for InputAttachmentAspectReference {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("InputAttachmentAspectReference")
-            .field("subpass", &self.subpass)
-            .field("input_attachment_index", &self.input_attachment_index)
-            .field("aspect_mask", &self.aspect_mask)
-            .finish()
+        f.debug_struct("InputAttachmentAspectReference").field("subpass", &self.subpass).field("input_attachment_index", &self.input_attachment_index).field("aspect_mask", &self.aspect_mask).finish()
     }
 }
 impl InputAttachmentAspectReference {
@@ -4662,22 +4212,12 @@ pub struct RenderPassInputAttachmentAspectCreateInfo {
 }
 impl Default for RenderPassInputAttachmentAspectCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO,
-            p_next: std::ptr::null(),
-            aspect_reference_count: Default::default(),
-            p_aspect_references: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO, p_next: std::ptr::null(), aspect_reference_count: Default::default(), p_aspect_references: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassInputAttachmentAspectCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RenderPassInputAttachmentAspectCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("aspect_reference_count", &self.aspect_reference_count)
-            .field("p_aspect_references", &self.p_aspect_references)
-            .finish()
+        f.debug_struct("RenderPassInputAttachmentAspectCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("aspect_reference_count", &self.aspect_reference_count).field("p_aspect_references", &self.p_aspect_references).finish()
     }
 }
 impl RenderPassInputAttachmentAspectCreateInfo {
@@ -4742,26 +4282,12 @@ pub struct PhysicalDevice16BitStorageFeatures {
 }
 impl Default for PhysicalDevice16BitStorageFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES,
-            p_next: std::ptr::null_mut(),
-            storage_buffer16_bit_access: Default::default(),
-            uniform_and_storage_buffer16_bit_access: Default::default(),
-            storage_push_constant16: Default::default(),
-            storage_input_output16: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES, p_next: std::ptr::null_mut(), storage_buffer16_bit_access: Default::default(), uniform_and_storage_buffer16_bit_access: Default::default(), storage_push_constant16: Default::default(), storage_input_output16: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevice16BitStorageFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevice16BitStorageFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("storage_buffer16_bit_access", &(self.storage_buffer16_bit_access != 0))
-            .field("uniform_and_storage_buffer16_bit_access", &(self.uniform_and_storage_buffer16_bit_access != 0))
-            .field("storage_push_constant16", &(self.storage_push_constant16 != 0))
-            .field("storage_input_output16", &(self.storage_input_output16 != 0))
-            .finish()
+        f.debug_struct("PhysicalDevice16BitStorageFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("storage_buffer16_bit_access", &(self.storage_buffer16_bit_access != 0)).field("uniform_and_storage_buffer16_bit_access", &(self.uniform_and_storage_buffer16_bit_access != 0)).field("storage_push_constant16", &(self.storage_push_constant16 != 0)).field("storage_input_output16", &(self.storage_input_output16 != 0)).finish()
     }
 }
 impl PhysicalDevice16BitStorageFeatures {
@@ -4840,26 +4366,12 @@ pub struct PhysicalDeviceSubgroupProperties {
 }
 impl Default for PhysicalDeviceSubgroupProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            subgroup_size: Default::default(),
-            supported_stages: Default::default(),
-            supported_operations: Default::default(),
-            quad_operations_in_all_stages: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES, p_next: std::ptr::null_mut(), subgroup_size: Default::default(), supported_stages: Default::default(), supported_operations: Default::default(), quad_operations_in_all_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSubgroupProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("subgroup_size", &self.subgroup_size)
-            .field("supported_stages", &self.supported_stages)
-            .field("supported_operations", &self.supported_operations)
-            .field("quad_operations_in_all_stages", &(self.quad_operations_in_all_stages != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceSubgroupProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("subgroup_size", &self.subgroup_size).field("supported_stages", &self.supported_stages).field("supported_operations", &self.supported_operations).field("quad_operations_in_all_stages", &(self.quad_operations_in_all_stages != 0)).finish()
     }
 }
 impl PhysicalDeviceSubgroupProperties {
@@ -4935,11 +4447,7 @@ pub struct BufferMemoryRequirementsInfo2 {
 }
 impl Default for BufferMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_REQUIREMENTS_INFO_2,
-            p_next: std::ptr::null(),
-            buffer: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferMemoryRequirementsInfo2 {
@@ -5005,11 +4513,7 @@ pub struct ImageMemoryRequirementsInfo2 {
 }
 impl Default for ImageMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_REQUIREMENTS_INFO_2,
-            p_next: std::ptr::null(),
-            image: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), image: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageMemoryRequirementsInfo2 {
@@ -5077,11 +4581,7 @@ pub struct ImageSparseMemoryRequirementsInfo2 {
 }
 impl Default for ImageSparseMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2,
-            p_next: std::ptr::null(),
-            image: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), image: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSparseMemoryRequirementsInfo2 {
@@ -5147,20 +4647,12 @@ pub struct MemoryRequirements2 {
 }
 impl Default for MemoryRequirements2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_REQUIREMENTS_2,
-            p_next: std::ptr::null_mut(),
-            memory_requirements: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_REQUIREMENTS_2, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryRequirements2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryRequirements2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_requirements", &self.memory_requirements)
-            .finish()
+        f.debug_struct("MemoryRequirements2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_requirements", &self.memory_requirements).finish()
     }
 }
 impl MemoryRequirements2 {
@@ -5223,20 +4715,12 @@ pub struct SparseImageMemoryRequirements2 {
 }
 impl Default for SparseImageMemoryRequirements2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2,
-            p_next: std::ptr::null_mut(),
-            memory_requirements: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageMemoryRequirements2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SparseImageMemoryRequirements2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("memory_requirements", &self.memory_requirements)
-            .finish()
+        f.debug_struct("SparseImageMemoryRequirements2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("memory_requirements", &self.memory_requirements).finish()
     }
 }
 impl SparseImageMemoryRequirements2 {
@@ -5297,20 +4781,12 @@ pub struct PhysicalDevicePointClippingProperties {
 }
 impl Default for PhysicalDevicePointClippingProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            point_clipping_behavior: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES, p_next: std::ptr::null_mut(), point_clipping_behavior: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePointClippingProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePointClippingProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("point_clipping_behavior", &self.point_clipping_behavior)
-            .finish()
+        f.debug_struct("PhysicalDevicePointClippingProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("point_clipping_behavior", &self.point_clipping_behavior).finish()
     }
 }
 impl PhysicalDevicePointClippingProperties {
@@ -5372,22 +4848,12 @@ pub struct MemoryDedicatedRequirements {
 }
 impl Default for MemoryDedicatedRequirements {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_REQUIREMENTS,
-            p_next: std::ptr::null_mut(),
-            prefers_dedicated_allocation: Default::default(),
-            requires_dedicated_allocation: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_REQUIREMENTS, p_next: std::ptr::null_mut(), prefers_dedicated_allocation: Default::default(), requires_dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryDedicatedRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryDedicatedRequirements")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("prefers_dedicated_allocation", &(self.prefers_dedicated_allocation != 0))
-            .field("requires_dedicated_allocation", &(self.requires_dedicated_allocation != 0))
-            .finish()
+        f.debug_struct("MemoryDedicatedRequirements").field("s_type", &self.s_type).field("p_next", &self.p_next).field("prefers_dedicated_allocation", &(self.prefers_dedicated_allocation != 0)).field("requires_dedicated_allocation", &(self.requires_dedicated_allocation != 0)).finish()
     }
 }
 impl MemoryDedicatedRequirements {
@@ -5454,22 +4920,12 @@ pub struct MemoryDedicatedAllocateInfo {
 }
 impl Default for MemoryDedicatedAllocateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_ALLOCATE_INFO,
-            p_next: std::ptr::null(),
-            image: Default::default(),
-            buffer: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_ALLOCATE_INFO, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryDedicatedAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("MemoryDedicatedAllocateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("image", &self.image)
-            .field("buffer", &self.buffer)
-            .finish()
+        f.debug_struct("MemoryDedicatedAllocateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("image", &self.image).field("buffer", &self.buffer).finish()
     }
 }
 impl MemoryDedicatedAllocateInfo {
@@ -5535,11 +4991,7 @@ pub struct ImageViewUsageCreateInfo {
 }
 impl Default for ImageViewUsageCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_VIEW_USAGE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            usage: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_USAGE_CREATE_INFO, p_next: std::ptr::null(), usage: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewUsageCreateInfo {
@@ -5605,20 +5057,12 @@ pub struct PipelineTessellationDomainOriginStateCreateInfo {
 }
 impl Default for PipelineTessellationDomainOriginStateCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO,
-            p_next: std::ptr::null(),
-            domain_origin: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO, p_next: std::ptr::null(), domain_origin: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineTessellationDomainOriginStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineTessellationDomainOriginStateCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("domain_origin", &self.domain_origin)
-            .finish()
+        f.debug_struct("PipelineTessellationDomainOriginStateCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("domain_origin", &self.domain_origin).finish()
     }
 }
 impl PipelineTessellationDomainOriginStateCreateInfo {
@@ -5679,20 +5123,12 @@ pub struct SamplerYcbcrConversionInfo {
 }
 impl Default for SamplerYcbcrConversionInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_INFO,
-            p_next: std::ptr::null(),
-            conversion: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_INFO, p_next: std::ptr::null(), conversion: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SamplerYcbcrConversionInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("conversion", &self.conversion)
-            .finish()
+        f.debug_struct("SamplerYcbcrConversionInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("conversion", &self.conversion).finish()
     }
 }
 impl SamplerYcbcrConversionInfo {
@@ -5760,34 +5196,12 @@ pub struct SamplerYcbcrConversionCreateInfo {
 }
 impl Default for SamplerYcbcrConversionCreateInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_CREATE_INFO,
-            p_next: std::ptr::null(),
-            format: Default::default(),
-            ycbcr_model: Default::default(),
-            ycbcr_range: Default::default(),
-            components: Default::default(),
-            x_chroma_offset: Default::default(),
-            y_chroma_offset: Default::default(),
-            chroma_filter: Default::default(),
-            force_explicit_reconstruction: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_CREATE_INFO, p_next: std::ptr::null(), format: Default::default(), ycbcr_model: Default::default(), ycbcr_range: Default::default(), components: Default::default(), x_chroma_offset: Default::default(), y_chroma_offset: Default::default(), chroma_filter: Default::default(), force_explicit_reconstruction: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SamplerYcbcrConversionCreateInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("format", &self.format)
-            .field("ycbcr_model", &self.ycbcr_model)
-            .field("ycbcr_range", &self.ycbcr_range)
-            .field("components", &self.components)
-            .field("x_chroma_offset", &self.x_chroma_offset)
-            .field("y_chroma_offset", &self.y_chroma_offset)
-            .field("chroma_filter", &self.chroma_filter)
-            .field("force_explicit_reconstruction", &(self.force_explicit_reconstruction != 0))
-            .finish()
+        f.debug_struct("SamplerYcbcrConversionCreateInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format", &self.format).field("ycbcr_model", &self.ycbcr_model).field("ycbcr_range", &self.ycbcr_range).field("components", &self.components).field("x_chroma_offset", &self.x_chroma_offset).field("y_chroma_offset", &self.y_chroma_offset).field("chroma_filter", &self.chroma_filter).field("force_explicit_reconstruction", &(self.force_explicit_reconstruction != 0)).finish()
     }
 }
 impl SamplerYcbcrConversionCreateInfo {
@@ -5885,20 +5299,12 @@ pub struct BindImagePlaneMemoryInfo {
 }
 impl Default for BindImagePlaneMemoryInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::BIND_IMAGE_PLANE_MEMORY_INFO,
-            p_next: std::ptr::null(),
-            plane_aspect: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_PLANE_MEMORY_INFO, p_next: std::ptr::null(), plane_aspect: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImagePlaneMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindImagePlaneMemoryInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("plane_aspect", &self.plane_aspect)
-            .finish()
+        f.debug_struct("BindImagePlaneMemoryInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("plane_aspect", &self.plane_aspect).finish()
     }
 }
 impl BindImagePlaneMemoryInfo {
@@ -5959,20 +5365,12 @@ pub struct ImagePlaneMemoryRequirementsInfo {
 }
 impl Default for ImagePlaneMemoryRequirementsInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO,
-            p_next: std::ptr::null(),
-            plane_aspect: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO, p_next: std::ptr::null(), plane_aspect: Default::default() }
     }
 }
 impl std::fmt::Debug for ImagePlaneMemoryRequirementsInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ImagePlaneMemoryRequirementsInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("plane_aspect", &self.plane_aspect)
-            .finish()
+        f.debug_struct("ImagePlaneMemoryRequirementsInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("plane_aspect", &self.plane_aspect).finish()
     }
 }
 impl ImagePlaneMemoryRequirementsInfo {
@@ -6033,20 +5431,12 @@ pub struct PhysicalDeviceSamplerYcbcrConversionFeatures {
 }
 impl Default for PhysicalDeviceSamplerYcbcrConversionFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES,
-            p_next: std::ptr::null_mut(),
-            sampler_ycbcr_conversion: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES, p_next: std::ptr::null_mut(), sampler_ycbcr_conversion: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSamplerYcbcrConversionFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceSamplerYcbcrConversionFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sampler_ycbcr_conversion", &(self.sampler_ycbcr_conversion != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceSamplerYcbcrConversionFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sampler_ycbcr_conversion", &(self.sampler_ycbcr_conversion != 0)).finish()
     }
 }
 impl PhysicalDeviceSamplerYcbcrConversionFeatures {
@@ -6107,20 +5497,12 @@ pub struct SamplerYcbcrConversionImageFormatProperties {
 }
 impl Default for SamplerYcbcrConversionImageFormatProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            combined_image_sampler_descriptor_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES, p_next: std::ptr::null_mut(), combined_image_sampler_descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SamplerYcbcrConversionImageFormatProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("combined_image_sampler_descriptor_count", &self.combined_image_sampler_descriptor_count)
-            .finish()
+        f.debug_struct("SamplerYcbcrConversionImageFormatProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("combined_image_sampler_descriptor_count", &self.combined_image_sampler_descriptor_count).finish()
     }
 }
 impl SamplerYcbcrConversionImageFormatProperties {
@@ -6181,20 +5563,12 @@ pub struct ProtectedSubmitInfo {
 }
 impl Default for ProtectedSubmitInfo {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PROTECTED_SUBMIT_INFO,
-            p_next: std::ptr::null(),
-            protected_submit: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PROTECTED_SUBMIT_INFO, p_next: std::ptr::null(), protected_submit: Default::default() }
     }
 }
 impl std::fmt::Debug for ProtectedSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ProtectedSubmitInfo")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("protected_submit", &(self.protected_submit != 0))
-            .finish()
+        f.debug_struct("ProtectedSubmitInfo").field("s_type", &self.s_type).field("p_next", &self.p_next).field("protected_submit", &(self.protected_submit != 0)).finish()
     }
 }
 impl ProtectedSubmitInfo {
@@ -6255,20 +5629,12 @@ pub struct PhysicalDeviceProtectedMemoryFeatures {
 }
 impl Default for PhysicalDeviceProtectedMemoryFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES,
-            p_next: std::ptr::null_mut(),
-            protected_memory: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES, p_next: std::ptr::null_mut(), protected_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceProtectedMemoryFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("protected_memory", &(self.protected_memory != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceProtectedMemoryFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("protected_memory", &(self.protected_memory != 0)).finish()
     }
 }
 impl PhysicalDeviceProtectedMemoryFeatures {
@@ -6329,20 +5695,12 @@ pub struct PhysicalDeviceProtectedMemoryProperties {
 }
 impl Default for PhysicalDeviceProtectedMemoryProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            protected_no_fault: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES, p_next: std::ptr::null_mut(), protected_no_fault: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceProtectedMemoryProperties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("protected_no_fault", &(self.protected_no_fault != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceProtectedMemoryProperties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("protected_no_fault", &(self.protected_no_fault != 0)).finish()
     }
 }
 impl PhysicalDeviceProtectedMemoryProperties {
@@ -6405,24 +5763,12 @@ pub struct DeviceQueueInfo2 {
 }
 impl Default for DeviceQueueInfo2 {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_INFO_2,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            queue_family_index: Default::default(),
-            queue_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_INFO_2, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceQueueInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DeviceQueueInfo2")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("queue_family_index", &self.queue_family_index)
-            .field("queue_index", &self.queue_index)
-            .finish()
+        f.debug_struct("DeviceQueueInfo2").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("queue_family_index", &self.queue_family_index).field("queue_index", &self.queue_index).finish()
     }
 }
 impl DeviceQueueInfo2 {
@@ -6494,22 +5840,12 @@ pub struct PhysicalDeviceMaintenance3Properties {
 }
 impl Default for PhysicalDeviceMaintenance3Properties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            max_per_set_descriptors: Default::default(),
-            max_memory_allocation_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES, p_next: std::ptr::null_mut(), max_per_set_descriptors: Default::default(), max_memory_allocation_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMaintenance3Properties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceMaintenance3Properties")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_per_set_descriptors", &self.max_per_set_descriptors)
-            .field("max_memory_allocation_size", &self.max_memory_allocation_size)
-            .finish()
+        f.debug_struct("PhysicalDeviceMaintenance3Properties").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_per_set_descriptors", &self.max_per_set_descriptors).field("max_memory_allocation_size", &self.max_memory_allocation_size).finish()
     }
 }
 impl PhysicalDeviceMaintenance3Properties {
@@ -6575,20 +5911,12 @@ pub struct DescriptorSetLayoutSupport {
 }
 impl Default for DescriptorSetLayoutSupport {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_SUPPORT,
-            p_next: std::ptr::null_mut(),
-            supported: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_SUPPORT, p_next: std::ptr::null_mut(), supported: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutSupport {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DescriptorSetLayoutSupport")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("supported", &(self.supported != 0))
-            .finish()
+        f.debug_struct("DescriptorSetLayoutSupport").field("s_type", &self.s_type).field("p_next", &self.p_next).field("supported", &(self.supported != 0)).finish()
     }
 }
 impl DescriptorSetLayoutSupport {
@@ -6651,20 +5979,12 @@ pub struct PhysicalDeviceShaderDrawParametersFeatures {
 }
 impl Default for PhysicalDeviceShaderDrawParametersFeatures {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES,
-            p_next: std::ptr::null_mut(),
-            shader_draw_parameters: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES, p_next: std::ptr::null_mut(), shader_draw_parameters: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDrawParametersFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShaderDrawParametersFeatures")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_draw_parameters", &(self.shader_draw_parameters != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShaderDrawParametersFeatures").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_draw_parameters", &(self.shader_draw_parameters != 0)).finish()
     }
 }
 impl PhysicalDeviceShaderDrawParametersFeatures {
@@ -6767,12 +6087,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties2")]
-    pub unsafe fn get_physical_device_image_format_properties2(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2,
-        image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>,
-    ) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
+    pub unsafe fn get_physical_device_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2, image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
         let _function = self.get_physical_device_image_format_properties2.expect("`get_physical_device_image_format_properties2` is not loaded");
         let mut image_format_properties = match image_format_properties {
             Some(v) => v,
@@ -6813,12 +6128,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties2(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2,
-        property_count: Option<u32>,
-    ) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
         let _function = self.get_physical_device_sparse_image_format_properties2.expect("`get_physical_device_sparse_image_format_properties2` is not loaded");
         let mut property_count = match property_count {
             Some(v) => v,
@@ -6835,12 +6145,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalBufferProperties")]
-    pub unsafe fn get_physical_device_external_buffer_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo,
-        external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>,
-    ) -> crate::vk1_1::ExternalBufferProperties {
+    pub unsafe fn get_physical_device_external_buffer_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo, external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>) -> crate::vk1_1::ExternalBufferProperties {
         let _function = self.get_physical_device_external_buffer_properties.expect("`get_physical_device_external_buffer_properties` is not loaded");
         let mut external_buffer_properties = match external_buffer_properties {
             Some(v) => v,
@@ -6852,12 +6157,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphoreProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalSemaphoreProperties")]
-    pub unsafe fn get_physical_device_external_semaphore_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
-        external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
-    ) -> crate::vk1_1::ExternalSemaphoreProperties {
+    pub unsafe fn get_physical_device_external_semaphore_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo, external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>) -> crate::vk1_1::ExternalSemaphoreProperties {
         let _function = self.get_physical_device_external_semaphore_properties.expect("`get_physical_device_external_semaphore_properties` is not loaded");
         let mut external_semaphore_properties = match external_semaphore_properties {
             Some(v) => v,
@@ -6869,12 +6169,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFenceProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalFenceProperties")]
-    pub unsafe fn get_physical_device_external_fence_properties(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo,
-        external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>,
-    ) -> crate::vk1_1::ExternalFenceProperties {
+    pub unsafe fn get_physical_device_external_fence_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo, external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>) -> crate::vk1_1::ExternalFenceProperties {
         let _function = self.get_physical_device_external_fence_properties.expect("`get_physical_device_external_fence_properties` is not loaded");
         let mut external_fence_properties = match external_fence_properties {
             Some(v) => v,

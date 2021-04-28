@@ -68,6 +68,14 @@ impl EnumKind {
         }
     }
 
+    pub fn guess_from_name(name: &str) -> Self {
+        if name.contains("FlagBits") {
+            EnumKind::from_flagbits_name(&name, FlagBitWidth::Unknown)
+        } else {
+            EnumKind::from_enum_name(&name)
+        }
+    }
+
     pub fn from_enum_name(enum_name: &str) -> Self {
         EnumKind::Enum {
             name: TypeName::new(enum_name),
@@ -273,12 +281,12 @@ impl Enum {
         let mut stream = match &self.kind {
             EnumKind::Enum { name } => {
                 let ident = name.ident();
-                let doc_alias = &name.original;
-                let doc = comment_gen.def(Some(&name.original), "Enum", None);
+                let doc_alias = name.doc_alias();
+                let doc = comment_gen.def(Some(&name.original), "Enum", self.origin.as_ref());
 
                 quote! {
                     #[doc = #doc]
-                    #[doc(alias = #doc_alias)]
+                    #doc_alias
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                     #[repr(transparent)]
                     pub struct #ident(pub i32);
@@ -292,20 +300,20 @@ impl Enum {
                 let bitbase = bitwidth.bitbase();
 
                 let flags_ident = flags_name.ident();
-                let flags_doc_alias = &flags_name.original;
+                let flags_doc_alias = flags_name.doc_alias();
                 let flagbits_ident = flagbits_name.ident();
-                let flagbits_doc_alias = &flagbits_name.original;
+                let flagbits_doc_alias = flagbits_name.doc_alias();
 
                 let flags_doc = comment_gen.def(
                     Some(&flags_name.original),
                     format!("Bitmask of [`{}`]", flagbits_ident),
-                    None,
+                    self.origin.as_ref(),
                 );
 
                 let flagbits_doc = comment_gen.def(
                     (!self.variants.is_empty()).then(|| &*flagbits_name.original),
                     format!("Bits enum of [`{}`]", flags_ident),
-                    None,
+                    self.origin.as_ref(),
                 );
 
                 let flagbits_variants = self.variants.iter().map(|variant| variant.name.ident());
@@ -319,7 +327,7 @@ impl Enum {
                 quote! {
                     bitflags::bitflags! {
                         #[doc = #flags_doc]
-                        #[doc(alias = #flags_doc_alias)]
+                        #flags_doc_alias
                         #[derive(Default)]
                         #[repr(transparent)]
                         pub struct #flags_ident: #bitbase {
@@ -329,7 +337,7 @@ impl Enum {
                     }
 
                     #[doc = #flagbits_doc]
-                    #[doc(alias = #flagbits_doc_alias)]
+                    #flagbits_doc_alias
                     #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
                     #[repr(transparent)]
                     pub struct #flagbits_ident(pub #bitbase);
@@ -427,13 +435,7 @@ impl Source {
 
                                 EnumKind::from_flags_name(&name, bitwidth)
                             }
-                            Some("enum") => {
-                                if name.contains("FlagBits") {
-                                    EnumKind::from_flagbits_name(&name, FlagBitWidth::Unknown)
-                                } else {
-                                    EnumKind::from_enum_name(&name)
-                                }
-                            }
+                            Some("enum") => EnumKind::guess_from_name(name),
                             invalid => {
                                 panic!("Invalid enum type category: {:?} from {:?}", invalid, node)
                             }

@@ -55,6 +55,8 @@ pub use crate::extensions::ext_buffer_device_address::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_calibrated_timestamps::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_color_write_enable::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_conditional_rendering::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_conservative_rasterization::*;
@@ -86,6 +88,8 @@ pub use crate::extensions::ext_display_control::*;
 pub use crate::extensions::ext_display_surface_counter::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_extended_dynamic_state::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_extended_dynamic_state2::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_external_memory_dma_buf::*;
 #[doc(no_inline)]
@@ -135,6 +139,8 @@ pub use crate::extensions::ext_post_depth_coverage::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_private_data::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_provoking_vertex::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_queue_family_foreign::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_robustness2::*;
@@ -180,6 +186,16 @@ pub use crate::extensions::ext_validation_features::*;
 pub use crate::extensions::ext_validation_flags::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_vertex_attribute_divisor::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_vertex_input_dynamic_state::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_video_decode_h264::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_video_decode_h265::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_video_encode_h264::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_ycbcr_2plane_444_formats::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_ycbcr_image_arrays::*;
 #[doc(no_inline)]
@@ -353,6 +369,12 @@ pub use crate::extensions::khr_uniform_buffer_standard_layout::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_variable_pointers::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_video_decode_queue::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_video_encode_queue::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_video_queue::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_vulkan_memory_model::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_wayland_surface::*;
@@ -416,6 +438,8 @@ pub use crate::extensions::nv_framebuffer_mixed_samples::*;
 pub use crate::extensions::nv_geometry_shader_passthrough::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_glsl_shader::*;
+#[doc(no_inline)]
+pub use crate::extensions::nv_inherited_viewport_scissor::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_mesh_shader::*;
 #[doc(no_inline)]

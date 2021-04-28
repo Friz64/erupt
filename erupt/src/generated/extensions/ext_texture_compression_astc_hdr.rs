@@ -15,20 +15,12 @@ pub struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
 }
 impl Default for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            texture_compression_astc_hdr: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT, p_next: std::ptr::null_mut(), texture_compression_astc_hdr: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("texture_compression_astc_hdr", &(self.texture_compression_astc_hdr != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("texture_compression_astc_hdr", &(self.texture_compression_astc_hdr != 0)).finish()
     }
 }
 impl PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {

@@ -46,12 +46,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalSemaphorePropertiesKHR")]
-    pub unsafe fn get_physical_device_external_semaphore_properties_khr(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo,
-        external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>,
-    ) -> crate::vk1_1::ExternalSemaphoreProperties {
+    pub unsafe fn get_physical_device_external_semaphore_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo, external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>) -> crate::vk1_1::ExternalSemaphoreProperties {
         let _function = self.get_physical_device_external_semaphore_properties_khr.expect("`get_physical_device_external_semaphore_properties_khr` is not loaded");
         let mut external_semaphore_properties = match external_semaphore_properties {
             Some(v) => v,

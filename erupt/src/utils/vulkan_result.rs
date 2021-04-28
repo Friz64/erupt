@@ -54,10 +54,7 @@ impl<T> VulkanResult<T> {
     /// Clones `self.raw`
     #[inline]
     pub fn as_ref(&self) -> VulkanResult<&T> {
-        VulkanResult {
-            raw: self.raw.clone(),
-            value: self.value.as_ref(),
-        }
+        VulkanResult { raw: self.raw.clone(), value: self.value.as_ref() }
     }
 
     /// Converts from `&mut VulkanResult<T>` to `VulkanResult<&mut T>`
@@ -65,10 +62,7 @@ impl<T> VulkanResult<T> {
     /// Clones `self.raw`
     #[inline]
     pub fn as_mut(&mut self) -> VulkanResult<&mut T> {
-        VulkanResult {
-            raw: self.raw.clone(),
-            value: self.value.as_mut(),
-        }
+        VulkanResult { raw: self.raw.clone(), value: self.value.as_mut() }
     }
 
     /// Constructs a new `VulkanResult` from `value`

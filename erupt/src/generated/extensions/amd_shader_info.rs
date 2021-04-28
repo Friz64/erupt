@@ -29,14 +29,7 @@ impl ShaderInfoTypeAMD {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    pipeline: crate::vk1_0::Pipeline,
-    shader_stage: crate::vk1_0::ShaderStageFlagBits,
-    info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD,
-    p_info_size: *mut usize,
-    p_info: *mut std::ffi::c_void,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, shader_stage: crate::vk1_0::ShaderStageFlagBits, info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD, p_info_size: *mut usize, p_info: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure"]
 #[doc(alias = "VkShaderResourceUsageAMD")]
 #[derive(Copy, Clone)]
@@ -50,24 +43,12 @@ pub struct ShaderResourceUsageAMD {
 }
 impl Default for ShaderResourceUsageAMD {
     fn default() -> Self {
-        Self {
-            num_used_vgprs: Default::default(),
-            num_used_sgprs: Default::default(),
-            lds_size_per_local_work_group: Default::default(),
-            lds_usage_size_in_bytes: Default::default(),
-            scratch_mem_usage_in_bytes: Default::default(),
-        }
+        Self { num_used_vgprs: Default::default(), num_used_sgprs: Default::default(), lds_size_per_local_work_group: Default::default(), lds_usage_size_in_bytes: Default::default(), scratch_mem_usage_in_bytes: Default::default() }
     }
 }
 impl std::fmt::Debug for ShaderResourceUsageAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ShaderResourceUsageAMD")
-            .field("num_used_vgprs", &self.num_used_vgprs)
-            .field("num_used_sgprs", &self.num_used_sgprs)
-            .field("lds_size_per_local_work_group", &self.lds_size_per_local_work_group)
-            .field("lds_usage_size_in_bytes", &self.lds_usage_size_in_bytes)
-            .field("scratch_mem_usage_in_bytes", &self.scratch_mem_usage_in_bytes)
-            .finish()
+        f.debug_struct("ShaderResourceUsageAMD").field("num_used_vgprs", &self.num_used_vgprs).field("num_used_sgprs", &self.num_used_sgprs).field("lds_size_per_local_work_group", &self.lds_size_per_local_work_group).field("lds_usage_size_in_bytes", &self.lds_usage_size_in_bytes).field("scratch_mem_usage_in_bytes", &self.scratch_mem_usage_in_bytes).finish()
     }
 }
 impl ShaderResourceUsageAMD {
@@ -152,28 +133,12 @@ pub struct ShaderStatisticsInfoAMD {
 }
 impl Default for ShaderStatisticsInfoAMD {
     fn default() -> Self {
-        Self {
-            shader_stage_mask: Default::default(),
-            resource_usage: Default::default(),
-            num_physical_vgprs: Default::default(),
-            num_physical_sgprs: Default::default(),
-            num_available_vgprs: Default::default(),
-            num_available_sgprs: Default::default(),
-            compute_work_group_size: unsafe { std::mem::zeroed() },
-        }
+        Self { shader_stage_mask: Default::default(), resource_usage: Default::default(), num_physical_vgprs: Default::default(), num_physical_sgprs: Default::default(), num_available_vgprs: Default::default(), num_available_sgprs: Default::default(), compute_work_group_size: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for ShaderStatisticsInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ShaderStatisticsInfoAMD")
-            .field("shader_stage_mask", &self.shader_stage_mask)
-            .field("resource_usage", &self.resource_usage)
-            .field("num_physical_vgprs", &self.num_physical_vgprs)
-            .field("num_physical_sgprs", &self.num_physical_sgprs)
-            .field("num_available_vgprs", &self.num_available_vgprs)
-            .field("num_available_sgprs", &self.num_available_sgprs)
-            .field("compute_work_group_size", &self.compute_work_group_size)
-            .finish()
+        f.debug_struct("ShaderStatisticsInfoAMD").field("shader_stage_mask", &self.shader_stage_mask).field("resource_usage", &self.resource_usage).field("num_physical_vgprs", &self.num_physical_vgprs).field("num_physical_sgprs", &self.num_physical_sgprs).field("num_available_vgprs", &self.num_available_vgprs).field("num_available_sgprs", &self.num_available_sgprs).field("compute_work_group_size", &self.compute_work_group_size).finish()
     }
 }
 impl ShaderStatisticsInfoAMD {
@@ -258,14 +223,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function"]
     #[doc(alias = "vkGetShaderInfoAMD")]
-    pub unsafe fn get_shader_info_amd(
-        &self,
-        pipeline: crate::vk1_0::Pipeline,
-        shader_stage: crate::vk1_0::ShaderStageFlagBits,
-        info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD,
-        info_size: *mut usize,
-        info: *mut std::ffi::c_void,
-    ) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_shader_info_amd(&self, pipeline: crate::vk1_0::Pipeline, shader_stage: crate::vk1_0::ShaderStageFlagBits, info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD, info_size: *mut usize, info: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.get_shader_info_amd.expect("`get_shader_info_amd` is not loaded");
         let _return = _function(self.handle, pipeline as _, shader_stage as _, info_type as _, info_size, info);
         crate::utils::VulkanResult::new(_return, ())

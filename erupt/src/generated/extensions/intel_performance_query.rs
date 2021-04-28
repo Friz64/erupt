@@ -30,12 +30,7 @@ pub type QueryPoolCreateInfoINTEL = crate::extensions::intel_performance_query::
 #[doc(alias = "VkQueryPoolCreateInfoINTEL")]
 #[allow(non_camel_case_types)]
 pub type QueryPoolCreateInfoINTELBuilder<'a> = crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a>;
-crate::non_dispatchable_handle!(
-    PerformanceConfigurationINTEL,
-    PERFORMANCE_CONFIGURATION_INTEL,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle",
-    "VkPerformanceConfigurationINTEL"
-);
+crate::non_dispatchable_handle!(PerformanceConfigurationINTEL, PERFORMANCE_CONFIGURATION_INTEL, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle", "VkPerformanceConfigurationINTEL");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
 #[doc(alias = "VkPerformanceConfigurationTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -150,11 +145,7 @@ pub type PFN_vkCmdSetPerformanceStreamMarkerINTEL = unsafe extern "system" fn(co
 pub type PFN_vkCmdSetPerformanceOverrideINTEL = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_override_info: *const crate::extensions::intel_performance_query::PerformanceOverrideInfoINTEL) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkAcquirePerformanceConfigurationINTEL = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_acquire_info: *const crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL,
-    p_configuration: *mut crate::extensions::intel_performance_query::PerformanceConfigurationINTEL,
-) -> crate::vk1_0::Result;
+pub type PFN_vkAcquirePerformanceConfigurationINTEL = unsafe extern "system" fn(device: crate::vk1_0::Device, p_acquire_info: *const crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL, p_configuration: *mut crate::extensions::intel_performance_query::PerformanceConfigurationINTEL) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleasePerformanceConfigurationINTEL = unsafe extern "system" fn(device: crate::vk1_0::Device, configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL) -> crate::vk1_0::Result;
@@ -163,11 +154,7 @@ pub type PFN_vkReleasePerformanceConfigurationINTEL = unsafe extern "system" fn(
 pub type PFN_vkQueueSetPerformanceConfigurationINTEL = unsafe extern "system" fn(queue: crate::vk1_0::Queue, configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPerformanceParameterINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL,
-    p_value: *mut crate::extensions::intel_performance_query::PerformanceValueINTEL,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(device: crate::vk1_0::Device, parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL, p_value: *mut crate::extensions::intel_performance_query::PerformanceValueINTEL) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueDataINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceValueDataINTEL")]
 #[derive(Copy, Clone)]
@@ -199,10 +186,7 @@ pub struct PerformanceValueINTEL {
 }
 impl Default for PerformanceValueINTEL {
     fn default() -> Self {
-        Self {
-            _type: Default::default(),
-            data: Default::default(),
-        }
+        Self { _type: Default::default(), data: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceValueINTEL {
@@ -273,20 +257,12 @@ pub struct InitializePerformanceApiInfoINTEL {
 }
 impl Default for InitializePerformanceApiInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::INITIALIZE_PERFORMANCE_API_INFO_INTEL,
-            p_next: std::ptr::null(),
-            p_user_data: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::INITIALIZE_PERFORMANCE_API_INFO_INTEL, p_next: std::ptr::null(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for InitializePerformanceApiInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("InitializePerformanceApiInfoINTEL")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("p_user_data", &self.p_user_data)
-            .finish()
+        f.debug_struct("InitializePerformanceApiInfoINTEL").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_user_data", &self.p_user_data).finish()
     }
 }
 impl InitializePerformanceApiInfoINTEL {
@@ -347,20 +323,12 @@ pub struct QueryPoolPerformanceQueryCreateInfoINTEL {
 }
 impl Default for QueryPoolPerformanceQueryCreateInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL,
-            p_next: std::ptr::null(),
-            performance_counters_sampling: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL, p_next: std::ptr::null(), performance_counters_sampling: Default::default() }
     }
 }
 impl std::fmt::Debug for QueryPoolPerformanceQueryCreateInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("QueryPoolPerformanceQueryCreateInfoINTEL")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("performance_counters_sampling", &self.performance_counters_sampling)
-            .finish()
+        f.debug_struct("QueryPoolPerformanceQueryCreateInfoINTEL").field("s_type", &self.s_type).field("p_next", &self.p_next).field("performance_counters_sampling", &self.performance_counters_sampling).finish()
     }
 }
 impl QueryPoolPerformanceQueryCreateInfoINTEL {
@@ -421,11 +389,7 @@ pub struct PerformanceMarkerInfoINTEL {
 }
 impl Default for PerformanceMarkerInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_MARKER_INFO_INTEL,
-            p_next: std::ptr::null(),
-            marker: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_MARKER_INFO_INTEL, p_next: std::ptr::null(), marker: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceMarkerInfoINTEL {
@@ -491,11 +455,7 @@ pub struct PerformanceStreamMarkerInfoINTEL {
 }
 impl Default for PerformanceStreamMarkerInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_STREAM_MARKER_INFO_INTEL,
-            p_next: std::ptr::null(),
-            marker: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_STREAM_MARKER_INFO_INTEL, p_next: std::ptr::null(), marker: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceStreamMarkerInfoINTEL {
@@ -563,24 +523,12 @@ pub struct PerformanceOverrideInfoINTEL {
 }
 impl Default for PerformanceOverrideInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_OVERRIDE_INFO_INTEL,
-            p_next: std::ptr::null(),
-            _type: Default::default(),
-            enable: Default::default(),
-            parameter: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_OVERRIDE_INFO_INTEL, p_next: std::ptr::null(), _type: Default::default(), enable: Default::default(), parameter: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceOverrideInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PerformanceOverrideInfoINTEL")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("_type", &self._type)
-            .field("enable", &(self.enable != 0))
-            .field("parameter", &self.parameter)
-            .finish()
+        f.debug_struct("PerformanceOverrideInfoINTEL").field("s_type", &self.s_type).field("p_next", &self.p_next).field("_type", &self._type).field("enable", &(self.enable != 0)).field("parameter", &self.parameter).finish()
     }
 }
 impl PerformanceOverrideInfoINTEL {
@@ -651,20 +599,12 @@ pub struct PerformanceConfigurationAcquireInfoINTEL {
 }
 impl Default for PerformanceConfigurationAcquireInfoINTEL {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL,
-            p_next: std::ptr::null(),
-            _type: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL, p_next: std::ptr::null(), _type: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceConfigurationAcquireInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PerformanceConfigurationAcquireInfoINTEL")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("_type", &self._type)
-            .finish()
+        f.debug_struct("PerformanceConfigurationAcquireInfoINTEL").field("s_type", &self.s_type).field("p_next", &self.p_next).field("_type", &self._type).finish()
     }
 }
 impl PerformanceConfigurationAcquireInfoINTEL {
@@ -759,10 +699,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html) · Function"]
     #[doc(alias = "vkAcquirePerformanceConfigurationINTEL")]
-    pub unsafe fn acquire_performance_configuration_intel(
-        &self,
-        acquire_info: &crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL,
-    ) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL> {
+    pub unsafe fn acquire_performance_configuration_intel(&self, acquire_info: &crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL> {
         let _function = self.acquire_performance_configuration_intel.expect("`acquire_performance_configuration_intel` is not loaded");
         let mut configuration = Default::default();
         let _return = _function(self.handle, acquire_info as _, &mut configuration);

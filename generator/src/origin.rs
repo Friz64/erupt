@@ -1,4 +1,5 @@
 use crate::{
+    items::enums::{Enum, EnumKind},
     name::{FunctionName, Name, TypeName},
     source::Source,
     XmlNode,
@@ -28,6 +29,11 @@ const TYPES_SKIPPED: &[&str] = &[
     "VK_VERSION_MAJOR",
     "VK_VERSION_MINOR",
     "VK_VERSION_PATCH",
+    "VK_MAKE_API_VERSION",
+    "VK_API_VERSION_VARIANT",
+    "VK_API_VERSION_MAJOR",
+    "VK_API_VERSION_MINOR",
+    "VK_API_VERSION_PATCH",
     "VK_NULL_HANDLE",
     "VK_API_VERSION_1_1",
     "VK_API_VERSION_1_2",
@@ -40,6 +46,7 @@ pub enum Origin {
     Root,
     Feature { major: u32, minor: u32 },
     Extension { full: String },
+    External { lib_name: String },
 }
 
 impl Origin {
@@ -77,6 +84,7 @@ impl Origin {
             ],
             Origin::Feature { major, minor } => vec![format!("vk{}_{}", major, minor)],
             Origin::Root => vec![],
+            Origin::External { lib_name } => vec!["external".into(), lib_name],
         }
     }
 
@@ -108,9 +116,10 @@ impl Origin {
 impl Debug for Origin {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            Origin::Root => f.write_str("(root)"),
-            Origin::Feature { major, minor } => f.write_str(&format!("{}.{}", major, minor)),
-            Origin::Extension { full } => f.write_str(&full),
+            Origin::Root => write!(f, "(root)"),
+            Origin::Feature { major, minor } => write!(f, "{}.{}", major, minor),
+            Origin::Extension { full } => write!(f, "{}", full),
+            Origin::External { lib_name } => write!(f, "(external) {}", lib_name),
         }
     }
 }
@@ -207,6 +216,36 @@ impl Source {
                             panic!("Unsupported item name: {:?} from {:?}", unsupported, node)
                         }
                     }
+                }
+            }
+        }
+    }
+
+    pub fn assign_external_origin(&mut self, element: XmlNode, other_includes_headers: &[PathBuf]) {
+        if let (Some(name), Some(requires)) =
+            (element.attribute("name"), element.attribute("requires"))
+        {
+            let is_external = other_includes_headers
+                .iter()
+                .any(|include| include.ends_with(requires));
+
+            if is_external {
+                let origin = Origin::External {
+                    lib_name: requires[..requires.find('/').unwrap()].into(),
+                };
+
+                if let Some(mut structure) = self.header.take_structure(name) {
+                    structure.origin = Some(origin);
+                    self.structures.push(structure);
+                } else {
+                    let enum_kind = EnumKind::guess_from_name(name);
+                    let enum_variants = self.header.take_enum_variants(&enum_kind);
+
+                    self.enums.push(Enum {
+                        origin: Some(origin),
+                        kind: enum_kind,
+                        variants: enum_variants,
+                    });
                 }
             }
         }

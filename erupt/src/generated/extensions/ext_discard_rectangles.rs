@@ -59,20 +59,12 @@ pub struct PhysicalDeviceDiscardRectanglePropertiesEXT {
 }
 impl Default for PhysicalDeviceDiscardRectanglePropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            max_discard_rectangles: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_discard_rectangles: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDiscardRectanglePropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDiscardRectanglePropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_discard_rectangles", &self.max_discard_rectangles)
-            .finish()
+        f.debug_struct("PhysicalDeviceDiscardRectanglePropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_discard_rectangles", &self.max_discard_rectangles).finish()
     }
 }
 impl PhysicalDeviceDiscardRectanglePropertiesEXT {
@@ -136,26 +128,12 @@ pub struct PipelineDiscardRectangleStateCreateInfoEXT {
 }
 impl Default for PipelineDiscardRectangleStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            discard_rectangle_mode: Default::default(),
-            discard_rectangle_count: Default::default(),
-            p_discard_rectangles: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), discard_rectangle_mode: Default::default(), discard_rectangle_count: Default::default(), p_discard_rectangles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineDiscardRectangleStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineDiscardRectangleStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("discard_rectangle_mode", &self.discard_rectangle_mode)
-            .field("discard_rectangle_count", &self.discard_rectangle_count)
-            .field("p_discard_rectangles", &self.p_discard_rectangles)
-            .finish()
+        f.debug_struct("PipelineDiscardRectangleStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("discard_rectangle_mode", &self.discard_rectangle_mode).field("discard_rectangle_count", &self.discard_rectangle_count).field("p_discard_rectangles", &self.p_discard_rectangles).finish()
     }
 }
 impl PipelineDiscardRectangleStateCreateInfoEXT {

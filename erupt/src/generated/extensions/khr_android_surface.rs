@@ -30,12 +30,7 @@ impl std::fmt::Debug for AndroidSurfaceCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidSurfaceCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkAndroidSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -48,22 +43,12 @@ pub struct AndroidSurfaceCreateInfoKHR {
 }
 impl Default for AndroidSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            window: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), window: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for AndroidSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("AndroidSurfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("window", &self.window)
-            .finish()
+        f.debug_struct("AndroidSurfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("window", &self.window).finish()
     }
 }
 impl AndroidSurfaceCreateInfoKHR {
@@ -123,11 +108,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateAndroidSurfaceKHR")]
-    pub unsafe fn create_android_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_android_surface_khr(&self, create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_android_surface_khr.expect("`create_android_surface_khr` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

@@ -18,26 +18,12 @@ pub struct PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
 }
 impl Default for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            workgroup_memory_explicit_layout: Default::default(),
-            workgroup_memory_explicit_layout_scalar_block_layout: Default::default(),
-            workgroup_memory_explicit_layout8_bit_access: Default::default(),
-            workgroup_memory_explicit_layout16_bit_access: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR, p_next: std::ptr::null_mut(), workgroup_memory_explicit_layout: Default::default(), workgroup_memory_explicit_layout_scalar_block_layout: Default::default(), workgroup_memory_explicit_layout8_bit_access: Default::default(), workgroup_memory_explicit_layout16_bit_access: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("workgroup_memory_explicit_layout", &(self.workgroup_memory_explicit_layout != 0))
-            .field("workgroup_memory_explicit_layout_scalar_block_layout", &(self.workgroup_memory_explicit_layout_scalar_block_layout != 0))
-            .field("workgroup_memory_explicit_layout8_bit_access", &(self.workgroup_memory_explicit_layout8_bit_access != 0))
-            .field("workgroup_memory_explicit_layout16_bit_access", &(self.workgroup_memory_explicit_layout16_bit_access != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("workgroup_memory_explicit_layout", &(self.workgroup_memory_explicit_layout != 0)).field("workgroup_memory_explicit_layout_scalar_block_layout", &(self.workgroup_memory_explicit_layout_scalar_block_layout != 0)).field("workgroup_memory_explicit_layout8_bit_access", &(self.workgroup_memory_explicit_layout8_bit_access != 0)).field("workgroup_memory_explicit_layout16_bit_access", &(self.workgroup_memory_explicit_layout16_bit_access != 0)).finish()
     }
 }
 impl PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {

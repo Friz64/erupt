@@ -33,11 +33,7 @@ impl SurfaceCounterFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn(
-    physical_device: crate::vk1_0::PhysicalDevice,
-    surface: crate::extensions::khr_surface::SurfaceKHR,
-    p_surface_capabilities: *mut crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_surface_capabilities: *mut crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilities2EXT")]
 #[derive(Copy, Clone)]
@@ -59,40 +55,12 @@ pub struct SurfaceCapabilities2EXT {
 }
 impl Default for SurfaceCapabilities2EXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_EXT,
-            p_next: std::ptr::null_mut(),
-            min_image_count: Default::default(),
-            max_image_count: Default::default(),
-            current_extent: Default::default(),
-            min_image_extent: Default::default(),
-            max_image_extent: Default::default(),
-            max_image_array_layers: Default::default(),
-            supported_transforms: Default::default(),
-            current_transform: Default::default(),
-            supported_composite_alpha: Default::default(),
-            supported_usage_flags: Default::default(),
-            supported_surface_counters: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_EXT, p_next: std::ptr::null_mut(), min_image_count: Default::default(), max_image_count: Default::default(), current_extent: Default::default(), min_image_extent: Default::default(), max_image_extent: Default::default(), max_image_array_layers: Default::default(), supported_transforms: Default::default(), current_transform: Default::default(), supported_composite_alpha: Default::default(), supported_usage_flags: Default::default(), supported_surface_counters: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilities2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceCapabilities2EXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("min_image_count", &self.min_image_count)
-            .field("max_image_count", &self.max_image_count)
-            .field("current_extent", &self.current_extent)
-            .field("min_image_extent", &self.min_image_extent)
-            .field("max_image_extent", &self.max_image_extent)
-            .field("max_image_array_layers", &self.max_image_array_layers)
-            .field("supported_transforms", &self.supported_transforms)
-            .field("current_transform", &self.current_transform)
-            .field("supported_composite_alpha", &self.supported_composite_alpha)
-            .field("supported_usage_flags", &self.supported_usage_flags)
-            .field("supported_surface_counters", &self.supported_surface_counters)
-            .finish()
+        f.debug_struct("SurfaceCapabilities2EXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("min_image_count", &self.min_image_count).field("max_image_count", &self.max_image_count).field("current_extent", &self.current_extent).field("min_image_extent", &self.min_image_extent).field("max_image_extent", &self.max_image_extent).field("max_image_array_layers", &self.max_image_array_layers).field("supported_transforms", &self.supported_transforms).field("current_transform", &self.current_transform).field("supported_composite_alpha", &self.supported_composite_alpha).field("supported_usage_flags", &self.supported_usage_flags).field("supported_surface_counters", &self.supported_surface_counters).finish()
     }
 }
 impl SurfaceCapabilities2EXT {
@@ -197,12 +165,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilities2EXT")]
-    pub unsafe fn get_physical_device_surface_capabilities2_ext(
-        &self,
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT> {
+    pub unsafe fn get_physical_device_surface_capabilities2_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_capabilities: Option<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>) -> crate::utils::VulkanResult<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT> {
         let _function = self.get_physical_device_surface_capabilities2_ext.expect("`get_physical_device_surface_capabilities2_ext` is not loaded");
         let mut surface_capabilities = match surface_capabilities {
             Some(v) => v,

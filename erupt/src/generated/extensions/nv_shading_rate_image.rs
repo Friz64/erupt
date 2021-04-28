@@ -77,16 +77,10 @@ impl CoarseSampleOrderTypeNV {
 pub type PFN_vkCmdBindShadingRateImageNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, image_view: crate::vk1_0::ImageView, image_layout: crate::vk1_0::ImageLayout) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetViewportShadingRatePaletteNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV) -> ();
+pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-    custom_sample_order_count: u32,
-    p_custom_sample_orders: *const crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV,
-) -> ();
+pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV, custom_sample_order_count: u32, p_custom_sample_orders: *const crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
 #[doc(alias = "VkShadingRatePaletteNV")]
 #[derive(Copy, Clone)]
@@ -97,18 +91,12 @@ pub struct ShadingRatePaletteNV {
 }
 impl Default for ShadingRatePaletteNV {
     fn default() -> Self {
-        Self {
-            shading_rate_palette_entry_count: Default::default(),
-            p_shading_rate_palette_entries: std::ptr::null(),
-        }
+        Self { shading_rate_palette_entry_count: Default::default(), p_shading_rate_palette_entries: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ShadingRatePaletteNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ShadingRatePaletteNV")
-            .field("shading_rate_palette_entry_count", &self.shading_rate_palette_entry_count)
-            .field("p_shading_rate_palette_entries", &self.p_shading_rate_palette_entries)
-            .finish()
+        f.debug_struct("ShadingRatePaletteNV").field("shading_rate_palette_entry_count", &self.shading_rate_palette_entry_count).field("p_shading_rate_palette_entries", &self.p_shading_rate_palette_entries).finish()
     }
 }
 impl ShadingRatePaletteNV {
@@ -172,24 +160,12 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
 }
 impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            shading_rate_image_enable: Default::default(),
-            viewport_count: Default::default(),
-            p_shading_rate_palettes: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), shading_rate_image_enable: Default::default(), viewport_count: Default::default(), p_shading_rate_palettes: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportShadingRateImageStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shading_rate_image_enable", &(self.shading_rate_image_enable != 0))
-            .field("viewport_count", &self.viewport_count)
-            .field("p_shading_rate_palettes", &self.p_shading_rate_palettes)
-            .finish()
+        f.debug_struct("PipelineViewportShadingRateImageStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shading_rate_image_enable", &(self.shading_rate_image_enable != 0)).field("viewport_count", &self.viewport_count).field("p_shading_rate_palettes", &self.p_shading_rate_palettes).finish()
     }
 }
 impl PipelineViewportShadingRateImageStateCreateInfoNV {
@@ -257,22 +233,12 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNV {
 }
 impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            shading_rate_image: Default::default(),
-            shading_rate_coarse_sample_order: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), shading_rate_image: Default::default(), shading_rate_coarse_sample_order: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImageFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShadingRateImageFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shading_rate_image", &(self.shading_rate_image != 0))
-            .field("shading_rate_coarse_sample_order", &(self.shading_rate_coarse_sample_order != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceShadingRateImageFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shading_rate_image", &(self.shading_rate_image != 0)).field("shading_rate_coarse_sample_order", &(self.shading_rate_coarse_sample_order != 0)).finish()
     }
 }
 impl PhysicalDeviceShadingRateImageFeaturesNV {
@@ -340,24 +306,12 @@ pub struct PhysicalDeviceShadingRateImagePropertiesNV {
 }
 impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            shading_rate_texel_size: Default::default(),
-            shading_rate_palette_size: Default::default(),
-            shading_rate_max_coarse_samples: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV, p_next: std::ptr::null_mut(), shading_rate_texel_size: Default::default(), shading_rate_palette_size: Default::default(), shading_rate_max_coarse_samples: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImagePropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceShadingRateImagePropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shading_rate_texel_size", &self.shading_rate_texel_size)
-            .field("shading_rate_palette_size", &self.shading_rate_palette_size)
-            .field("shading_rate_max_coarse_samples", &self.shading_rate_max_coarse_samples)
-            .finish()
+        f.debug_struct("PhysicalDeviceShadingRateImagePropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shading_rate_texel_size", &self.shading_rate_texel_size).field("shading_rate_palette_size", &self.shading_rate_palette_size).field("shading_rate_max_coarse_samples", &self.shading_rate_max_coarse_samples).finish()
     }
 }
 impl PhysicalDeviceShadingRateImagePropertiesNV {
@@ -428,11 +382,7 @@ pub struct CoarseSampleLocationNV {
 }
 impl Default for CoarseSampleLocationNV {
     fn default() -> Self {
-        Self {
-            pixel_x: Default::default(),
-            pixel_y: Default::default(),
-            sample: Default::default(),
-        }
+        Self { pixel_x: Default::default(), pixel_y: Default::default(), sample: Default::default() }
     }
 }
 impl std::fmt::Debug for CoarseSampleLocationNV {
@@ -509,22 +459,12 @@ pub struct CoarseSampleOrderCustomNV {
 }
 impl Default for CoarseSampleOrderCustomNV {
     fn default() -> Self {
-        Self {
-            shading_rate: Default::default(),
-            sample_count: Default::default(),
-            sample_location_count: Default::default(),
-            p_sample_locations: std::ptr::null(),
-        }
+        Self { shading_rate: Default::default(), sample_count: Default::default(), sample_location_count: Default::default(), p_sample_locations: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CoarseSampleOrderCustomNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CoarseSampleOrderCustomNV")
-            .field("shading_rate", &self.shading_rate)
-            .field("sample_count", &self.sample_count)
-            .field("sample_location_count", &self.sample_location_count)
-            .field("p_sample_locations", &self.p_sample_locations)
-            .finish()
+        f.debug_struct("CoarseSampleOrderCustomNV").field("shading_rate", &self.shading_rate).field("sample_count", &self.sample_count).field("sample_location_count", &self.sample_location_count).field("p_sample_locations", &self.p_sample_locations).finish()
     }
 }
 impl CoarseSampleOrderCustomNV {
@@ -598,24 +538,12 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
 }
 impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            sample_order_type: Default::default(),
-            custom_sample_order_count: Default::default(),
-            p_custom_sample_orders: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), sample_order_type: Default::default(), custom_sample_order_count: Default::default(), p_custom_sample_orders: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportCoarseSampleOrderStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("sample_order_type", &self.sample_order_type)
-            .field("custom_sample_order_count", &self.custom_sample_order_count)
-            .field("p_custom_sample_orders", &self.p_custom_sample_orders)
-            .finish()
+        f.debug_struct("PipelineViewportCoarseSampleOrderStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("sample_order_type", &self.sample_order_type).field("custom_sample_order_count", &self.custom_sample_order_count).field("p_custom_sample_orders", &self.p_custom_sample_orders).finish()
     }
 }
 impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
@@ -700,12 +628,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
     #[doc(alias = "vkCmdSetCoarseSampleOrderNV")]
-    pub unsafe fn cmd_set_coarse_sample_order_nv(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
-        custom_sample_orders: &[crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder],
-    ) -> () {
+    pub unsafe fn cmd_set_coarse_sample_order_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV, custom_sample_orders: &[crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder]) -> () {
         let _function = self.cmd_set_coarse_sample_order_nv.expect("`cmd_set_coarse_sample_order_nv` is not loaded");
         let custom_sample_order_count = custom_sample_orders.len();
         let _return = _function(command_buffer as _, sample_order_type as _, custom_sample_order_count as _, custom_sample_orders.as_ptr() as _);

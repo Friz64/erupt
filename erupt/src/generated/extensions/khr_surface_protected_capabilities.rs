@@ -15,20 +15,12 @@ pub struct SurfaceProtectedCapabilitiesKHR {
 }
 impl Default for SurfaceProtectedCapabilitiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::SURFACE_PROTECTED_CAPABILITIES_KHR,
-            p_next: std::ptr::null(),
-            supports_protected: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::SURFACE_PROTECTED_CAPABILITIES_KHR, p_next: std::ptr::null(), supports_protected: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceProtectedCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("SurfaceProtectedCapabilitiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("supports_protected", &(self.supports_protected != 0))
-            .finish()
+        f.debug_struct("SurfaceProtectedCapabilitiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("supports_protected", &(self.supports_protected != 0)).finish()
     }
 }
 impl SurfaceProtectedCapabilitiesKHR {

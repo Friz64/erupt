@@ -28,12 +28,7 @@ impl std::fmt::Debug for ViSurfaceCreateFlagBitsNN {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateViSurfaceNN = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateViSurfaceNN = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Structure"]
 #[doc(alias = "VkViSurfaceCreateInfoNN")]
 #[derive(Copy, Clone)]
@@ -46,22 +41,12 @@ pub struct ViSurfaceCreateInfoNN {
 }
 impl Default for ViSurfaceCreateInfoNN {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::VI_SURFACE_CREATE_INFO_NN,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            window: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::VI_SURFACE_CREATE_INFO_NN, p_next: std::ptr::null(), flags: Default::default(), window: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ViSurfaceCreateInfoNN {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ViSurfaceCreateInfoNN")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("window", &self.window)
-            .finish()
+        f.debug_struct("ViSurfaceCreateInfoNN").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("window", &self.window).finish()
     }
 }
 impl ViSurfaceCreateInfoNN {

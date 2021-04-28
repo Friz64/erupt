@@ -144,7 +144,7 @@ impl Function {
                 &self.name.no_pfn
             }),
             "Function",
-            None,
+            self.origin.as_ref(),
         )
     }
 

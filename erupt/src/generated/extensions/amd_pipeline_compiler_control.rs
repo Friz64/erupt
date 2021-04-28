@@ -35,20 +35,12 @@ pub struct PipelineCompilerControlCreateInfoAMD {
 }
 impl Default for PipelineCompilerControlCreateInfoAMD {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD,
-            p_next: std::ptr::null(),
-            compiler_control_flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD, p_next: std::ptr::null(), compiler_control_flags: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCompilerControlCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineCompilerControlCreateInfoAMD")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("compiler_control_flags", &self.compiler_control_flags)
-            .finish()
+        f.debug_struct("PipelineCompilerControlCreateInfoAMD").field("s_type", &self.s_type).field("p_next", &self.p_next).field("compiler_control_flags", &self.compiler_control_flags).finish()
     }
 }
 impl PipelineCompilerControlCreateInfoAMD {

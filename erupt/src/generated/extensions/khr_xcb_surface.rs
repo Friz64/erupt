@@ -30,12 +30,7 @@ impl std::fmt::Debug for XcbSurfaceCreateFlagBitsKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, connection: *mut std::ffi::c_void, visual_id: u32) -> crate::vk1_0::Bool32;
@@ -52,24 +47,12 @@ pub struct XcbSurfaceCreateInfoKHR {
 }
 impl Default for XcbSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::XCB_SURFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            connection: std::ptr::null_mut(),
-            window: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::XCB_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), connection: std::ptr::null_mut(), window: Default::default() }
     }
 }
 impl std::fmt::Debug for XcbSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("XcbSurfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("connection", &self.connection)
-            .field("window", &self.window)
-            .finish()
+        f.debug_struct("XcbSurfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("connection", &self.connection).field("window", &self.window).finish()
     }
 }
 impl XcbSurfaceCreateInfoKHR {
@@ -134,11 +117,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateXcbSurfaceKHR")]
-    pub unsafe fn create_xcb_surface_khr(
-        &self,
-        create_info: &crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_xcb_surface_khr(&self, create_info: &crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_xcb_surface_khr.expect("`create_xcb_surface_khr` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

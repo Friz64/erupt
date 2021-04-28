@@ -208,9 +208,11 @@ impl Structure {
 
     pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
         let ident = self.name.ident();
-        let doc_alias = &self.name.original;
+
+        let doc_alias = self.name.doc_alias();
+
         let keyword = self.kind.keyword();
-        let doc = comment_gen.def(Some(&self.name.original), "Structure", None);
+        let doc = comment_gen.def(Some(&self.name.original), "Structure", self.origin.as_ref());
 
         let field_idents: Vec<_> = self.fields.iter().map(|field| field.ident()).collect();
         let field_types = self
@@ -254,7 +256,7 @@ impl Structure {
         let builder = self.builder(source, comment_gen);
         quote! {
             #[doc = #doc]
-            #[doc(alias = #doc_alias)]
+            #doc_alias
             #[derive(Copy, Clone)]
             #[repr(C)]
             pub #keyword #ident {

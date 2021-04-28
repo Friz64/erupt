@@ -28,12 +28,7 @@ impl std::fmt::Debug for HeadlessSurfaceCreateFlagBitsEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateHeadlessSurfaceEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHeadlessSurfaceCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkHeadlessSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -45,11 +40,7 @@ pub struct HeadlessSurfaceCreateInfoEXT {
 }
 impl Default for HeadlessSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::HEADLESS_SURFACE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::HEADLESS_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for HeadlessSurfaceCreateInfoEXT {
@@ -109,11 +100,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateHeadlessSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateHeadlessSurfaceEXT")]
-    pub unsafe fn create_headless_surface_ext(
-        &self,
-        create_info: &crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
+    pub unsafe fn create_headless_surface_ext(&self, create_info: &crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
         let _function = self.create_headless_surface_ext.expect("`create_headless_surface_ext` is not loaded");
         let mut surface = Default::default();
         let _return = _function(

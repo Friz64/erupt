@@ -18,26 +18,12 @@ pub struct PhysicalDevicePCIBusInfoPropertiesEXT {
 }
 impl Default for PhysicalDevicePCIBusInfoPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            pci_domain: Default::default(),
-            pci_bus: Default::default(),
-            pci_device: Default::default(),
-            pci_function: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT, p_next: std::ptr::null_mut(), pci_domain: Default::default(), pci_bus: Default::default(), pci_device: Default::default(), pci_function: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePCIBusInfoPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePCIBusInfoPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pci_domain", &self.pci_domain)
-            .field("pci_bus", &self.pci_bus)
-            .field("pci_device", &self.pci_device)
-            .field("pci_function", &self.pci_function)
-            .finish()
+        f.debug_struct("PhysicalDevicePCIBusInfoPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pci_domain", &self.pci_domain).field("pci_bus", &self.pci_bus).field("pci_device", &self.pci_device).field("pci_function", &self.pci_function).finish()
     }
 }
 impl PhysicalDevicePCIBusInfoPropertiesEXT {

@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION")]
-pub const KHR_INCREMENTAL_PRESENT_SPEC_VERSION: u32 = 1;
+pub const KHR_INCREMENTAL_PRESENT_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME")]
 pub const KHR_INCREMENTAL_PRESENT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_incremental_present");
@@ -16,22 +16,12 @@ pub struct PresentRegionsKHR {
 }
 impl Default for PresentRegionsKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PRESENT_REGIONS_KHR,
-            p_next: std::ptr::null(),
-            swapchain_count: Default::default(),
-            p_regions: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PRESENT_REGIONS_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PresentRegionsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PresentRegionsKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("swapchain_count", &self.swapchain_count)
-            .field("p_regions", &self.p_regions)
-            .finish()
+        f.debug_struct("PresentRegionsKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("swapchain_count", &self.swapchain_count).field("p_regions", &self.p_regions).finish()
     }
 }
 impl PresentRegionsKHR {
@@ -92,10 +82,7 @@ pub struct PresentRegionKHR {
 }
 impl Default for PresentRegionKHR {
     fn default() -> Self {
-        Self {
-            rectangle_count: Default::default(),
-            p_rectangles: std::ptr::null(),
-        }
+        Self { rectangle_count: Default::default(), p_rectangles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PresentRegionKHR {
@@ -162,11 +149,7 @@ pub struct RectLayerKHR {
 }
 impl Default for RectLayerKHR {
     fn default() -> Self {
-        Self {
-            offset: Default::default(),
-            extent: Default::default(),
-            layer: Default::default(),
-        }
+        Self { offset: Default::default(), extent: Default::default(), layer: Default::default() }
     }
 }
 impl std::fmt::Debug for RectLayerKHR {

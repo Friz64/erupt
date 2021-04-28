@@ -35,28 +35,13 @@ impl PipelineExecutableStatisticFormatKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutablePropertiesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_pipeline_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR,
-    p_executable_count: *mut u32,
-    p_properties: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPipelineExecutablePropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_pipeline_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR, p_executable_count: *mut u32, p_properties: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR,
-    p_statistic_count: *mut u32,
-    p_statistics: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, p_statistic_count: *mut u32, p_statistics: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR,
-    p_internal_representation_count: *mut u32,
-    p_internal_representations: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR,
-) -> crate::vk1_0::Result;
+pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, p_internal_representation_count: *mut u32, p_internal_representations: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -68,20 +53,12 @@ pub struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
 }
 impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            pipeline_executable_info: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR, p_next: std::ptr::null_mut(), pipeline_executable_info: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDevicePipelineExecutablePropertiesFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline_executable_info", &(self.pipeline_executable_info != 0))
-            .finish()
+        f.debug_struct("PhysicalDevicePipelineExecutablePropertiesFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline_executable_info", &(self.pipeline_executable_info != 0)).finish()
     }
 }
 impl PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
@@ -142,11 +119,7 @@ pub struct PipelineInfoKHR {
 }
 impl Default for PipelineInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_INFO_KHR,
-            p_next: std::ptr::null(),
-            pipeline: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_INFO_KHR, p_next: std::ptr::null(), pipeline: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineInfoKHR {
@@ -215,26 +188,12 @@ pub struct PipelineExecutablePropertiesKHR {
 }
 impl Default for PipelineExecutablePropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            stages: Default::default(),
-            name: unsafe { std::mem::zeroed() },
-            description: unsafe { std::mem::zeroed() },
-            subgroup_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), stages: Default::default(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, subgroup_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutablePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineExecutablePropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("stages", &self.stages)
-            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .field("subgroup_size", &self.subgroup_size)
-            .finish()
+        f.debug_struct("PipelineExecutablePropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("stages", &self.stages).field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) }).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).field("subgroup_size", &self.subgroup_size).finish()
     }
 }
 impl PipelineExecutablePropertiesKHR {
@@ -311,22 +270,12 @@ pub struct PipelineExecutableInfoKHR {
 }
 impl Default for PipelineExecutableInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INFO_KHR,
-            p_next: std::ptr::null(),
-            pipeline: Default::default(),
-            executable_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INFO_KHR, p_next: std::ptr::null(), pipeline: Default::default(), executable_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineExecutableInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline", &self.pipeline)
-            .field("executable_index", &self.executable_index)
-            .finish()
+        f.debug_struct("PipelineExecutableInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline", &self.pipeline).field("executable_index", &self.executable_index).finish()
     }
 }
 impl PipelineExecutableInfoKHR {
@@ -415,26 +364,12 @@ pub struct PipelineExecutableStatisticKHR {
 }
 impl Default for PipelineExecutableStatisticKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_STATISTIC_KHR,
-            p_next: std::ptr::null_mut(),
-            name: unsafe { std::mem::zeroed() },
-            description: unsafe { std::mem::zeroed() },
-            format: Default::default(),
-            value: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_STATISTIC_KHR, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, format: Default::default(), value: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableStatisticKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineExecutableStatisticKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .field("format", &self.format)
-            .field("value", &self.value)
-            .finish()
+        f.debug_struct("PipelineExecutableStatisticKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) }).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).field("format", &self.format).field("value", &self.value).finish()
     }
 }
 impl PipelineExecutableStatisticKHR {
@@ -514,28 +449,12 @@ pub struct PipelineExecutableInternalRepresentationKHR {
 }
 impl Default for PipelineExecutableInternalRepresentationKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR,
-            p_next: std::ptr::null_mut(),
-            name: unsafe { std::mem::zeroed() },
-            description: unsafe { std::mem::zeroed() },
-            is_text: Default::default(),
-            data_size: Default::default(),
-            p_data: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, is_text: Default::default(), data_size: Default::default(), p_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableInternalRepresentationKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineExecutableInternalRepresentationKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
-            .field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) })
-            .field("is_text", &(self.is_text != 0))
-            .field("data_size", &self.data_size)
-            .field("p_data", &self.p_data)
-            .finish()
+        f.debug_struct("PipelineExecutableInternalRepresentationKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) }).field("description", unsafe { &std::ffi::CStr::from_ptr(self.description.as_ptr()) }).field("is_text", &(self.is_text != 0)).field("data_size", &self.data_size).field("p_data", &self.p_data).finish()
     }
 }
 impl PipelineExecutableInternalRepresentationKHR {
@@ -610,11 +529,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutablePropertiesKHR")]
-    pub unsafe fn get_pipeline_executable_properties_khr(
-        &self,
-        pipeline_info: &crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR,
-        executable_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>> {
+    pub unsafe fn get_pipeline_executable_properties_khr(&self, pipeline_info: &crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR, executable_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>> {
         let _function = self.get_pipeline_executable_properties_khr.expect("`get_pipeline_executable_properties_khr` is not loaded");
         let mut executable_count = match executable_count {
             Some(v) => v,
@@ -631,11 +546,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableStatisticsKHR")]
-    pub unsafe fn get_pipeline_executable_statistics_khr(
-        &self,
-        executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR,
-        statistic_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>> {
+    pub unsafe fn get_pipeline_executable_statistics_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, statistic_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>> {
         let _function = self.get_pipeline_executable_statistics_khr.expect("`get_pipeline_executable_statistics_khr` is not loaded");
         let mut statistic_count = match statistic_count {
             Some(v) => v,
@@ -652,11 +563,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableInternalRepresentationsKHR")]
-    pub unsafe fn get_pipeline_executable_internal_representations_khr(
-        &self,
-        executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR,
-        internal_representation_count: Option<u32>,
-    ) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
+    pub unsafe fn get_pipeline_executable_internal_representations_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, internal_representation_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
         let _function = self.get_pipeline_executable_internal_representations_khr.expect("`get_pipeline_executable_internal_representations_khr` is not loaded");
         let mut internal_representation_count = match internal_representation_count {
             Some(v) => v,

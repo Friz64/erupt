@@ -8,8 +8,7 @@ pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char = 
 pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewportWScalingNV");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetViewportWScalingNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV) -> ();
+pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Structure"]
 #[doc(alias = "VkViewportWScalingNV")]
 #[derive(Copy, Clone)]
@@ -20,10 +19,7 @@ pub struct ViewportWScalingNV {
 }
 impl Default for ViewportWScalingNV {
     fn default() -> Self {
-        Self {
-            xcoeff: Default::default(),
-            ycoeff: Default::default(),
-        }
+        Self { xcoeff: Default::default(), ycoeff: Default::default() }
     }
 }
 impl std::fmt::Debug for ViewportWScalingNV {
@@ -96,24 +92,12 @@ pub struct PipelineViewportWScalingStateCreateInfoNV {
 }
 impl Default for PipelineViewportWScalingStateCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            viewport_w_scaling_enable: Default::default(),
-            viewport_count: Default::default(),
-            p_viewport_w_scalings: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), viewport_w_scaling_enable: Default::default(), viewport_count: Default::default(), p_viewport_w_scalings: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportWScalingStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineViewportWScalingStateCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("viewport_w_scaling_enable", &(self.viewport_w_scaling_enable != 0))
-            .field("viewport_count", &self.viewport_count)
-            .field("p_viewport_w_scalings", &self.p_viewport_w_scalings)
-            .finish()
+        f.debug_struct("PipelineViewportWScalingStateCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("viewport_w_scaling_enable", &(self.viewport_w_scaling_enable != 0)).field("viewport_count", &self.viewport_count).field("p_viewport_w_scalings", &self.p_viewport_w_scalings).finish()
     }
 }
 impl PipelineViewportWScalingStateCreateInfoNV {

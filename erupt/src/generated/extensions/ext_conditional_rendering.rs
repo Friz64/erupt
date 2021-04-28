@@ -52,24 +52,12 @@ pub struct ConditionalRenderingBeginInfoEXT {
 }
 impl Default for ConditionalRenderingBeginInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::CONDITIONAL_RENDERING_BEGIN_INFO_EXT,
-            p_next: std::ptr::null(),
-            buffer: Default::default(),
-            offset: Default::default(),
-            flags: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::CONDITIONAL_RENDERING_BEGIN_INFO_EXT, p_next: std::ptr::null(), buffer: Default::default(), offset: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for ConditionalRenderingBeginInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("ConditionalRenderingBeginInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("buffer", &self.buffer)
-            .field("offset", &self.offset)
-            .field("flags", &self.flags)
-            .finish()
+        f.debug_struct("ConditionalRenderingBeginInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("buffer", &self.buffer).field("offset", &self.offset).field("flags", &self.flags).finish()
     }
 }
 impl ConditionalRenderingBeginInfoEXT {
@@ -140,20 +128,12 @@ pub struct CommandBufferInheritanceConditionalRenderingInfoEXT {
 }
 impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT,
-            p_next: std::ptr::null(),
-            conditional_rendering_enable: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT, p_next: std::ptr::null(), conditional_rendering_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("CommandBufferInheritanceConditionalRenderingInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("conditional_rendering_enable", &(self.conditional_rendering_enable != 0))
-            .finish()
+        f.debug_struct("CommandBufferInheritanceConditionalRenderingInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("conditional_rendering_enable", &(self.conditional_rendering_enable != 0)).finish()
     }
 }
 impl CommandBufferInheritanceConditionalRenderingInfoEXT {
@@ -215,22 +195,12 @@ pub struct PhysicalDeviceConditionalRenderingFeaturesEXT {
 }
 impl Default for PhysicalDeviceConditionalRenderingFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            conditional_rendering: Default::default(),
-            inherited_conditional_rendering: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT, p_next: std::ptr::null_mut(), conditional_rendering: Default::default(), inherited_conditional_rendering: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceConditionalRenderingFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceConditionalRenderingFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("conditional_rendering", &(self.conditional_rendering != 0))
-            .field("inherited_conditional_rendering", &(self.inherited_conditional_rendering != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceConditionalRenderingFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("conditional_rendering", &(self.conditional_rendering != 0)).field("inherited_conditional_rendering", &(self.inherited_conditional_rendering != 0)).finish()
     }
 }
 impl PhysicalDeviceConditionalRenderingFeaturesEXT {

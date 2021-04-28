@@ -15,20 +15,12 @@ pub struct PhysicalDeviceRayQueryFeaturesKHR {
 }
 impl Default for PhysicalDeviceRayQueryFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            ray_query: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR, p_next: std::ptr::null_mut(), ray_query: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayQueryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceRayQueryFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("ray_query", &(self.ray_query != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceRayQueryFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("ray_query", &(self.ray_query != 0)).finish()
     }
 }
 impl PhysicalDeviceRayQueryFeaturesKHR {

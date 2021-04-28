@@ -16,22 +16,12 @@ pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNV {
 }
 impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            compute_derivative_group_quads: Default::default(),
-            compute_derivative_group_linear: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV, p_next: std::ptr::null_mut(), compute_derivative_group_quads: Default::default(), compute_derivative_group_linear: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceComputeShaderDerivativesFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("compute_derivative_group_quads", &(self.compute_derivative_group_quads != 0))
-            .field("compute_derivative_group_linear", &(self.compute_derivative_group_linear != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceComputeShaderDerivativesFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("compute_derivative_group_quads", &(self.compute_derivative_group_quads != 0)).field("compute_derivative_group_linear", &(self.compute_derivative_group_linear != 0)).finish()
     }
 }
 impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {

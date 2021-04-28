@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEBUG_REPORT_SPEC_VERSION")]
-pub const EXT_DEBUG_REPORT_SPEC_VERSION: u32 = 9;
+pub const EXT_DEBUG_REPORT_SPEC_VERSION: u32 = 10;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_DEBUG_REPORT_EXTENSION_NAME")]
 pub const EXT_DEBUG_REPORT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_debug_report");
@@ -10,12 +10,7 @@ pub const FN_CREATE_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char = cra
 pub const FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char = crate::cstr!("vkDestroyDebugReportCallbackEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DEBUG_REPORT_MESSAGE_EXT: *const std::os::raw::c_char = crate::cstr!("vkDebugReportMessageEXT");
-crate::non_dispatchable_handle!(
-    DebugReportCallbackEXT,
-    DEBUG_REPORT_CALLBACK_EXT,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackEXT.html) · Non-dispatchable Handle",
-    "VkDebugReportCallbackEXT"
-);
+crate::non_dispatchable_handle!(DebugReportCallbackEXT, DEBUG_REPORT_CALLBACK_EXT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackEXT.html) · Non-dispatchable Handle", "VkDebugReportCallbackEXT");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`]"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Bits enum of [`DebugReportFlagsEXT`]"]
 #[doc(alias = "VkDebugReportFlagBitsEXT")]
@@ -154,39 +149,16 @@ impl DebugReportObjectTypeEXT {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateDebugReportCallbackEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    p_create_info: *const crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_callback: *mut crate::extensions::ext_debug_report::DebugReportCallbackEXT,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateDebugReportCallbackEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_callback: *mut crate::extensions::ext_debug_report::DebugReportCallbackEXT) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDebugReportCallbackEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, callback: crate::extensions::ext_debug_report::DebugReportCallbackEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugReportMessageEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(
-    instance: crate::vk1_0::Instance,
-    flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT,
-    object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT,
-    object: u64,
-    location: usize,
-    message_code: i32,
-    p_layer_prefix: *const std::os::raw::c_char,
-    p_message: *const std::os::raw::c_char,
-) -> ();
+pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, p_layer_prefix: *const std::os::raw::c_char, p_message: *const std::os::raw::c_char) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(
-    flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT,
-    object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT,
-    object: u64,
-    location: usize,
-    message_code: i32,
-    p_layer_prefix: *const std::os::raw::c_char,
-    p_message: *const std::os::raw::c_char,
-    p_user_data: *mut std::ffi::c_void,
-) -> crate::vk1_0::Bool32;
+pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, p_layer_prefix: *const std::os::raw::c_char, p_message: *const std::os::raw::c_char, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugReportCallbackCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -200,24 +172,12 @@ pub struct DebugReportCallbackCreateInfoEXT {
 }
 impl Default for DebugReportCallbackCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            pfn_callback: Default::default(),
-            p_user_data: std::ptr::null_mut(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), pfn_callback: Default::default(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DebugReportCallbackCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("DebugReportCallbackCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("pfn_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_callback) })
-            .field("p_user_data", &self.p_user_data)
-            .finish()
+        f.debug_struct("DebugReportCallbackCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("pfn_callback", unsafe { &std::mem::transmute::<_, *const ()>(self.pfn_callback) }).field("p_user_data", &self.p_user_data).finish()
     }
 }
 impl DebugReportCallbackCreateInfoEXT {
@@ -282,11 +242,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]
     #[doc(alias = "vkCreateDebugReportCallbackEXT")]
-    pub unsafe fn create_debug_report_callback_ext(
-        &self,
-        create_info: &crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::ext_debug_report::DebugReportCallbackEXT> {
+    pub unsafe fn create_debug_report_callback_ext(&self, create_info: &crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_debug_report::DebugReportCallbackEXT> {
         let _function = self.create_debug_report_callback_ext.expect("`create_debug_report_callback_ext` is not loaded");
         let mut callback = Default::default();
         let _return = _function(
@@ -321,16 +277,7 @@ impl crate::InstanceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugReportMessageEXT.html) · Function"]
     #[doc(alias = "vkDebugReportMessageEXT")]
-    pub unsafe fn debug_report_message_ext(
-        &self,
-        flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT,
-        object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT,
-        object: u64,
-        location: usize,
-        message_code: i32,
-        layer_prefix: Option<&std::ffi::CStr>,
-        message: Option<&std::ffi::CStr>,
-    ) -> () {
+    pub unsafe fn debug_report_message_ext(&self, flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, layer_prefix: Option<&std::ffi::CStr>, message: Option<&std::ffi::CStr>) -> () {
         let _function = self.debug_report_message_ext.expect("`debug_report_message_ext` is not loaded");
         let _return = _function(
             self.handle,

@@ -152,6 +152,13 @@ impl TypeName {
         )
     }
 
+    pub fn doc_alias(&self) -> Option<TokenStream> {
+        let ident = self.ident();
+        let doc_alias = &self.original;
+
+        (&ident.to_string() != &**doc_alias).then(|| quote! { #[doc(alias = #doc_alias)] })
+    }
+
     pub fn is_flags(&self) -> bool {
         self.no_tag.ends_with("Flags")
     }

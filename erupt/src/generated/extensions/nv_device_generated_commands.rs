@@ -16,12 +16,7 @@ pub const FN_GET_GENERATED_COMMANDS_MEMORY_REQUIREMENTS_NV: *const std::os::raw:
 pub const FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char = crate::cstr!("vkCreateIndirectCommandsLayoutNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char = crate::cstr!("vkDestroyIndirectCommandsLayoutNV");
-crate::non_dispatchable_handle!(
-    IndirectCommandsLayoutNV,
-    INDIRECT_COMMANDS_LAYOUT_NV,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle",
-    "VkIndirectCommandsLayoutNV"
-);
+crate::non_dispatchable_handle!(IndirectCommandsLayoutNV, INDIRECT_COMMANDS_LAYOUT_NV, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle", "VkIndirectCommandsLayoutNV");
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]"]
 #[doc(alias = "VkIndirectCommandsLayoutUsageFlagBitsNV")]
@@ -109,8 +104,7 @@ impl IndirectStateFlagBitsNV {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdExecuteGeneratedCommandsNV =
-    unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, is_preprocessed: crate::vk1_0::Bool32, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
+pub type PFN_vkCmdExecuteGeneratedCommandsNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, is_preprocessed: crate::vk1_0::Bool32, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV) -> ();
@@ -119,20 +113,13 @@ pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn(comm
 pub type PFN_vkCmdBindPipelineShaderGroupNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, pipeline: crate::vk1_0::Pipeline, group_index: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
+pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV, p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    p_create_info: *const crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_indirect_commands_layout: *mut crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_indirect_commands_layout: *mut crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkDestroyIndirectCommandsLayoutNV =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn(device: crate::vk1_0::Device, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -144,20 +131,12 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
 }
 impl Default for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV,
-            p_next: std::ptr::null_mut(),
-            device_generated_commands: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV, p_next: std::ptr::null_mut(), device_generated_commands: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsFeaturesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("device_generated_commands", &(self.device_generated_commands != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsFeaturesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("device_generated_commands", &(self.device_generated_commands != 0)).finish()
     }
 }
 impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
@@ -226,36 +205,12 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
 }
 impl Default for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV,
-            p_next: std::ptr::null_mut(),
-            max_graphics_shader_group_count: Default::default(),
-            max_indirect_sequence_count: Default::default(),
-            max_indirect_commands_token_count: Default::default(),
-            max_indirect_commands_stream_count: Default::default(),
-            max_indirect_commands_token_offset: Default::default(),
-            max_indirect_commands_stream_stride: Default::default(),
-            min_sequences_count_buffer_offset_alignment: Default::default(),
-            min_sequences_index_buffer_offset_alignment: Default::default(),
-            min_indirect_commands_buffer_offset_alignment: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_graphics_shader_group_count: Default::default(), max_indirect_sequence_count: Default::default(), max_indirect_commands_token_count: Default::default(), max_indirect_commands_stream_count: Default::default(), max_indirect_commands_token_offset: Default::default(), max_indirect_commands_stream_stride: Default::default(), min_sequences_count_buffer_offset_alignment: Default::default(), min_sequences_index_buffer_offset_alignment: Default::default(), min_indirect_commands_buffer_offset_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsPropertiesNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_graphics_shader_group_count", &self.max_graphics_shader_group_count)
-            .field("max_indirect_sequence_count", &self.max_indirect_sequence_count)
-            .field("max_indirect_commands_token_count", &self.max_indirect_commands_token_count)
-            .field("max_indirect_commands_stream_count", &self.max_indirect_commands_stream_count)
-            .field("max_indirect_commands_token_offset", &self.max_indirect_commands_token_offset)
-            .field("max_indirect_commands_stream_stride", &self.max_indirect_commands_stream_stride)
-            .field("min_sequences_count_buffer_offset_alignment", &self.min_sequences_count_buffer_offset_alignment)
-            .field("min_sequences_index_buffer_offset_alignment", &self.min_sequences_index_buffer_offset_alignment)
-            .field("min_indirect_commands_buffer_offset_alignment", &self.min_indirect_commands_buffer_offset_alignment)
-            .finish()
+        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsPropertiesNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_graphics_shader_group_count", &self.max_graphics_shader_group_count).field("max_indirect_sequence_count", &self.max_indirect_sequence_count).field("max_indirect_commands_token_count", &self.max_indirect_commands_token_count).field("max_indirect_commands_stream_count", &self.max_indirect_commands_stream_count).field("max_indirect_commands_token_offset", &self.max_indirect_commands_token_offset).field("max_indirect_commands_stream_stride", &self.max_indirect_commands_stream_stride).field("min_sequences_count_buffer_offset_alignment", &self.min_sequences_count_buffer_offset_alignment).field("min_sequences_index_buffer_offset_alignment", &self.min_sequences_index_buffer_offset_alignment).field("min_indirect_commands_buffer_offset_alignment", &self.min_indirect_commands_buffer_offset_alignment).finish()
     }
 }
 impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
@@ -359,26 +314,12 @@ pub struct GraphicsShaderGroupCreateInfoNV {
 }
 impl Default for GraphicsShaderGroupCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            stage_count: Default::default(),
-            p_stages: std::ptr::null(),
-            p_vertex_input_state: std::ptr::null(),
-            p_tessellation_state: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV, p_next: std::ptr::null(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_tessellation_state: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for GraphicsShaderGroupCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GraphicsShaderGroupCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("stage_count", &self.stage_count)
-            .field("p_stages", &self.p_stages)
-            .field("p_vertex_input_state", &self.p_vertex_input_state)
-            .field("p_tessellation_state", &self.p_tessellation_state)
-            .finish()
+        f.debug_struct("GraphicsShaderGroupCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("stage_count", &self.stage_count).field("p_stages", &self.p_stages).field("p_vertex_input_state", &self.p_vertex_input_state).field("p_tessellation_state", &self.p_tessellation_state).finish()
     }
 }
 impl GraphicsShaderGroupCreateInfoNV {
@@ -453,26 +394,12 @@ pub struct GraphicsPipelineShaderGroupsCreateInfoNV {
 }
 impl Default for GraphicsPipelineShaderGroupsCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            group_count: Default::default(),
-            p_groups: std::ptr::null(),
-            pipeline_count: Default::default(),
-            p_pipelines: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV, p_next: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), pipeline_count: Default::default(), p_pipelines: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for GraphicsPipelineShaderGroupsCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GraphicsPipelineShaderGroupsCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("group_count", &self.group_count)
-            .field("p_groups", &self.p_groups)
-            .field("pipeline_count", &self.pipeline_count)
-            .field("p_pipelines", &self.p_pipelines)
-            .finish()
+        f.debug_struct("GraphicsPipelineShaderGroupsCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("group_count", &self.group_count).field("p_groups", &self.p_groups).field("pipeline_count", &self.pipeline_count).field("p_pipelines", &self.p_pipelines).finish()
     }
 }
 impl GraphicsPipelineShaderGroupsCreateInfoNV {
@@ -604,20 +531,12 @@ pub struct BindIndexBufferIndirectCommandNV {
 }
 impl Default for BindIndexBufferIndirectCommandNV {
     fn default() -> Self {
-        Self {
-            buffer_address: Default::default(),
-            size: Default::default(),
-            index_type: Default::default(),
-        }
+        Self { buffer_address: Default::default(), size: Default::default(), index_type: Default::default() }
     }
 }
 impl std::fmt::Debug for BindIndexBufferIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindIndexBufferIndirectCommandNV")
-            .field("buffer_address", &self.buffer_address)
-            .field("size", &self.size)
-            .field("index_type", &self.index_type)
-            .finish()
+        f.debug_struct("BindIndexBufferIndirectCommandNV").field("buffer_address", &self.buffer_address).field("size", &self.size).field("index_type", &self.index_type).finish()
     }
 }
 impl BindIndexBufferIndirectCommandNV {
@@ -688,20 +607,12 @@ pub struct BindVertexBufferIndirectCommandNV {
 }
 impl Default for BindVertexBufferIndirectCommandNV {
     fn default() -> Self {
-        Self {
-            buffer_address: Default::default(),
-            size: Default::default(),
-            stride: Default::default(),
-        }
+        Self { buffer_address: Default::default(), size: Default::default(), stride: Default::default() }
     }
 }
 impl std::fmt::Debug for BindVertexBufferIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("BindVertexBufferIndirectCommandNV")
-            .field("buffer_address", &self.buffer_address)
-            .field("size", &self.size)
-            .field("stride", &self.stride)
-            .finish()
+        f.debug_struct("BindVertexBufferIndirectCommandNV").field("buffer_address", &self.buffer_address).field("size", &self.size).field("stride", &self.stride).finish()
     }
 }
 impl BindVertexBufferIndirectCommandNV {
@@ -835,10 +746,7 @@ pub struct IndirectCommandsStreamNV {
 }
 impl Default for IndirectCommandsStreamNV {
     fn default() -> Self {
-        Self {
-            buffer: Default::default(),
-            offset: Default::default(),
-        }
+        Self { buffer: Default::default(), offset: Default::default() }
     }
 }
 impl std::fmt::Debug for IndirectCommandsStreamNV {
@@ -921,44 +829,12 @@ pub struct IndirectCommandsLayoutTokenNV {
 }
 impl Default for IndirectCommandsLayoutTokenNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV,
-            p_next: std::ptr::null(),
-            token_type: Default::default(),
-            stream: Default::default(),
-            offset: Default::default(),
-            vertex_binding_unit: Default::default(),
-            vertex_dynamic_stride: Default::default(),
-            pushconstant_pipeline_layout: Default::default(),
-            pushconstant_shader_stage_flags: Default::default(),
-            pushconstant_offset: Default::default(),
-            pushconstant_size: Default::default(),
-            indirect_state_flags: Default::default(),
-            index_type_count: Default::default(),
-            p_index_types: std::ptr::null(),
-            p_index_type_values: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV, p_next: std::ptr::null(), token_type: Default::default(), stream: Default::default(), offset: Default::default(), vertex_binding_unit: Default::default(), vertex_dynamic_stride: Default::default(), pushconstant_pipeline_layout: Default::default(), pushconstant_shader_stage_flags: Default::default(), pushconstant_offset: Default::default(), pushconstant_size: Default::default(), indirect_state_flags: Default::default(), index_type_count: Default::default(), p_index_types: std::ptr::null(), p_index_type_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for IndirectCommandsLayoutTokenNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("IndirectCommandsLayoutTokenNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("token_type", &self.token_type)
-            .field("stream", &self.stream)
-            .field("offset", &self.offset)
-            .field("vertex_binding_unit", &self.vertex_binding_unit)
-            .field("vertex_dynamic_stride", &(self.vertex_dynamic_stride != 0))
-            .field("pushconstant_pipeline_layout", &self.pushconstant_pipeline_layout)
-            .field("pushconstant_shader_stage_flags", &self.pushconstant_shader_stage_flags)
-            .field("pushconstant_offset", &self.pushconstant_offset)
-            .field("pushconstant_size", &self.pushconstant_size)
-            .field("indirect_state_flags", &self.indirect_state_flags)
-            .field("index_type_count", &self.index_type_count)
-            .field("p_index_types", &self.p_index_types)
-            .field("p_index_type_values", &self.p_index_type_values)
-            .finish()
+        f.debug_struct("IndirectCommandsLayoutTokenNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("token_type", &self.token_type).field("stream", &self.stream).field("offset", &self.offset).field("vertex_binding_unit", &self.vertex_binding_unit).field("vertex_dynamic_stride", &(self.vertex_dynamic_stride != 0)).field("pushconstant_pipeline_layout", &self.pushconstant_pipeline_layout).field("pushconstant_shader_stage_flags", &self.pushconstant_shader_stage_flags).field("pushconstant_offset", &self.pushconstant_offset).field("pushconstant_size", &self.pushconstant_size).field("indirect_state_flags", &self.indirect_state_flags).field("index_type_count", &self.index_type_count).field("p_index_types", &self.p_index_types).field("p_index_type_values", &self.p_index_type_values).finish()
     }
 }
 impl IndirectCommandsLayoutTokenNV {
@@ -1081,30 +957,12 @@ pub struct IndirectCommandsLayoutCreateInfoNV {
 }
 impl Default for IndirectCommandsLayoutCreateInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            pipeline_bind_point: Default::default(),
-            token_count: Default::default(),
-            p_tokens: std::ptr::null(),
-            stream_count: Default::default(),
-            p_stream_strides: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), token_count: Default::default(), p_tokens: std::ptr::null(), stream_count: Default::default(), p_stream_strides: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for IndirectCommandsLayoutCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("IndirectCommandsLayoutCreateInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("pipeline_bind_point", &self.pipeline_bind_point)
-            .field("token_count", &self.token_count)
-            .field("p_tokens", &self.p_tokens)
-            .field("stream_count", &self.stream_count)
-            .field("p_stream_strides", &self.p_stream_strides)
-            .finish()
+        f.debug_struct("IndirectCommandsLayoutCreateInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("pipeline_bind_point", &self.pipeline_bind_point).field("token_count", &self.token_count).field("p_tokens", &self.p_tokens).field("stream_count", &self.stream_count).field("p_stream_strides", &self.p_stream_strides).finish()
     }
 }
 impl IndirectCommandsLayoutCreateInfoNV {
@@ -1194,44 +1052,12 @@ pub struct GeneratedCommandsInfoNV {
 }
 impl Default for GeneratedCommandsInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_INFO_NV,
-            p_next: std::ptr::null(),
-            pipeline_bind_point: Default::default(),
-            pipeline: Default::default(),
-            indirect_commands_layout: Default::default(),
-            stream_count: Default::default(),
-            p_streams: std::ptr::null(),
-            sequences_count: Default::default(),
-            preprocess_buffer: Default::default(),
-            preprocess_offset: Default::default(),
-            preprocess_size: Default::default(),
-            sequences_count_buffer: Default::default(),
-            sequences_count_offset: Default::default(),
-            sequences_index_buffer: Default::default(),
-            sequences_index_offset: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_INFO_NV, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), stream_count: Default::default(), p_streams: std::ptr::null(), sequences_count: Default::default(), preprocess_buffer: Default::default(), preprocess_offset: Default::default(), preprocess_size: Default::default(), sequences_count_buffer: Default::default(), sequences_count_offset: Default::default(), sequences_index_buffer: Default::default(), sequences_index_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for GeneratedCommandsInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GeneratedCommandsInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline_bind_point", &self.pipeline_bind_point)
-            .field("pipeline", &self.pipeline)
-            .field("indirect_commands_layout", &self.indirect_commands_layout)
-            .field("stream_count", &self.stream_count)
-            .field("p_streams", &self.p_streams)
-            .field("sequences_count", &self.sequences_count)
-            .field("preprocess_buffer", &self.preprocess_buffer)
-            .field("preprocess_offset", &self.preprocess_offset)
-            .field("preprocess_size", &self.preprocess_size)
-            .field("sequences_count_buffer", &self.sequences_count_buffer)
-            .field("sequences_count_offset", &self.sequences_count_offset)
-            .field("sequences_index_buffer", &self.sequences_index_buffer)
-            .field("sequences_index_offset", &self.sequences_index_offset)
-            .finish()
+        f.debug_struct("GeneratedCommandsInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline_bind_point", &self.pipeline_bind_point).field("pipeline", &self.pipeline).field("indirect_commands_layout", &self.indirect_commands_layout).field("stream_count", &self.stream_count).field("p_streams", &self.p_streams).field("sequences_count", &self.sequences_count).field("preprocess_buffer", &self.preprocess_buffer).field("preprocess_offset", &self.preprocess_offset).field("preprocess_size", &self.preprocess_size).field("sequences_count_buffer", &self.sequences_count_buffer).field("sequences_count_offset", &self.sequences_count_offset).field("sequences_index_buffer", &self.sequences_index_buffer).field("sequences_index_offset", &self.sequences_index_offset).finish()
     }
 }
 impl GeneratedCommandsInfoNV {
@@ -1351,26 +1177,12 @@ pub struct GeneratedCommandsMemoryRequirementsInfoNV {
 }
 impl Default for GeneratedCommandsMemoryRequirementsInfoNV {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV,
-            p_next: std::ptr::null(),
-            pipeline_bind_point: Default::default(),
-            pipeline: Default::default(),
-            indirect_commands_layout: Default::default(),
-            max_sequences_count: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), max_sequences_count: Default::default() }
     }
 }
 impl std::fmt::Debug for GeneratedCommandsMemoryRequirementsInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("GeneratedCommandsMemoryRequirementsInfoNV")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("pipeline_bind_point", &self.pipeline_bind_point)
-            .field("pipeline", &self.pipeline)
-            .field("indirect_commands_layout", &self.indirect_commands_layout)
-            .field("max_sequences_count", &self.max_sequences_count)
-            .finish()
+        f.debug_struct("GeneratedCommandsMemoryRequirementsInfoNV").field("s_type", &self.s_type).field("p_next", &self.p_next).field("pipeline_bind_point", &self.pipeline_bind_point).field("pipeline", &self.pipeline).field("indirect_commands_layout", &self.indirect_commands_layout).field("max_sequences_count", &self.max_sequences_count).finish()
     }
 }
 impl GeneratedCommandsMemoryRequirementsInfoNV {
@@ -1464,11 +1276,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function"]
     #[doc(alias = "vkGetGeneratedCommandsMemoryRequirementsNV")]
-    pub unsafe fn get_generated_commands_memory_requirements_nv(
-        &self,
-        info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
-    ) -> crate::vk1_1::MemoryRequirements2 {
+    pub unsafe fn get_generated_commands_memory_requirements_nv(&self, info: &crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV, memory_requirements: Option<crate::vk1_1::MemoryRequirements2>) -> crate::vk1_1::MemoryRequirements2 {
         let _function = self.get_generated_commands_memory_requirements_nv.expect("`get_generated_commands_memory_requirements_nv` is not loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
@@ -1480,11 +1288,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function"]
     #[doc(alias = "vkCreateIndirectCommandsLayoutNV")]
-    pub unsafe fn create_indirect_commands_layout_nv(
-        &self,
-        create_info: &crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV,
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV> {
+    pub unsafe fn create_indirect_commands_layout_nv(&self, create_info: &crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV> {
         let _function = self.create_indirect_commands_layout_nv.expect("`create_indirect_commands_layout_nv` is not loaded");
         let mut indirect_commands_layout = Default::default();
         let _return = _function(

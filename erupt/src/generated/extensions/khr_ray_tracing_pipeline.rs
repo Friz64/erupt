@@ -73,49 +73,22 @@ impl ShaderGroupShaderKHR {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdTraceRaysKHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_raygen_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_miss_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_hit_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_callable_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    width: u32,
-    height: u32,
-    depth: u32,
-) -> ();
+pub type PFN_vkCmdTraceRaysKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_raygen_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_miss_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_hit_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_callable_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, width: u32, height: u32, depth: u32) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingShaderGroupHandlesKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetRayTracingShaderGroupHandlesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
+pub type PFN_vkGetRayTracingCaptureReplayShaderGroupHandlesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, p_data: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCreateRayTracingPipelinesKHR = unsafe extern "system" fn(
-    device: crate::vk1_0::Device,
-    deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR,
-    pipeline_cache: crate::vk1_0::PipelineCache,
-    create_info_count: u32,
-    p_create_infos: *const crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHR,
-    p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    p_pipelines: *mut crate::vk1_0::Pipeline,
-) -> crate::vk1_0::Result;
+pub type PFN_vkCreateRayTracingPipelinesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, pipeline_cache: crate::vk1_0::PipelineCache, create_info_count: u32, p_create_infos: *const crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipelines: *mut crate::vk1_0::Pipeline) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysIndirectKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkCmdTraceRaysIndirectKHR = unsafe extern "system" fn(
-    command_buffer: crate::vk1_0::CommandBuffer,
-    p_raygen_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_miss_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_hit_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    p_callable_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-    indirect_device_address: crate::vk1_0::DeviceAddress,
-) -> ();
+pub type PFN_vkCmdTraceRaysIndirectKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_raygen_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_miss_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_hit_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, p_callable_shader_binding_table: *const crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, indirect_device_address: crate::vk1_0::DeviceAddress) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupStackSizeKHR.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetRayTracingShaderGroupStackSizeKHR =
-    unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, group: u32, group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR) -> crate::vk1_0::DeviceSize;
+pub type PFN_vkGetRayTracingShaderGroupStackSizeKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, group: u32, group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR) -> crate::vk1_0::DeviceSize;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetRayTracingPipelineStackSizeKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stack_size: u32) -> ();
@@ -135,30 +108,12 @@ pub struct RayTracingShaderGroupCreateInfoKHR {
 }
 impl Default for RayTracingShaderGroupCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            _type: Default::default(),
-            general_shader: Default::default(),
-            closest_hit_shader: Default::default(),
-            any_hit_shader: Default::default(),
-            intersection_shader: Default::default(),
-            p_shader_group_capture_replay_handle: std::ptr::null(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default(), p_shader_group_capture_replay_handle: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RayTracingShaderGroupCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RayTracingShaderGroupCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("_type", &self._type)
-            .field("general_shader", &self.general_shader)
-            .field("closest_hit_shader", &self.closest_hit_shader)
-            .field("any_hit_shader", &self.any_hit_shader)
-            .field("intersection_shader", &self.intersection_shader)
-            .field("p_shader_group_capture_replay_handle", &self.p_shader_group_capture_replay_handle)
-            .finish()
+        f.debug_struct("RayTracingShaderGroupCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("_type", &self._type).field("general_shader", &self.general_shader).field("closest_hit_shader", &self.closest_hit_shader).field("any_hit_shader", &self.any_hit_shader).field("intersection_shader", &self.intersection_shader).field("p_shader_group_capture_replay_handle", &self.p_shader_group_capture_replay_handle).finish()
     }
 }
 impl RayTracingShaderGroupCreateInfoKHR {
@@ -255,42 +210,12 @@ pub struct RayTracingPipelineCreateInfoKHR {
 }
 impl Default for RayTracingPipelineCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            stage_count: Default::default(),
-            p_stages: std::ptr::null(),
-            group_count: Default::default(),
-            p_groups: std::ptr::null(),
-            max_pipeline_ray_recursion_depth: Default::default(),
-            p_library_info: std::ptr::null(),
-            p_library_interface: std::ptr::null(),
-            p_dynamic_state: std::ptr::null(),
-            layout: Default::default(),
-            base_pipeline_handle: Default::default(),
-            base_pipeline_index: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), max_pipeline_ray_recursion_depth: Default::default(), p_library_info: std::ptr::null(), p_library_interface: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingPipelineCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RayTracingPipelineCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("stage_count", &self.stage_count)
-            .field("p_stages", &self.p_stages)
-            .field("group_count", &self.group_count)
-            .field("p_groups", &self.p_groups)
-            .field("max_pipeline_ray_recursion_depth", &self.max_pipeline_ray_recursion_depth)
-            .field("p_library_info", &self.p_library_info)
-            .field("p_library_interface", &self.p_library_interface)
-            .field("p_dynamic_state", &self.p_dynamic_state)
-            .field("layout", &self.layout)
-            .field("base_pipeline_handle", &self.base_pipeline_handle)
-            .field("base_pipeline_index", &self.base_pipeline_index)
-            .finish()
+        f.debug_struct("RayTracingPipelineCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("flags", &self.flags).field("stage_count", &self.stage_count).field("p_stages", &self.p_stages).field("group_count", &self.group_count).field("p_groups", &self.p_groups).field("max_pipeline_ray_recursion_depth", &self.max_pipeline_ray_recursion_depth).field("p_library_info", &self.p_library_info).field("p_library_interface", &self.p_library_interface).field("p_dynamic_state", &self.p_dynamic_state).field("layout", &self.layout).field("base_pipeline_handle", &self.base_pipeline_handle).field("base_pipeline_index", &self.base_pipeline_index).finish()
     }
 }
 impl RayTracingPipelineCreateInfoKHR {
@@ -404,28 +329,12 @@ pub struct PhysicalDeviceRayTracingPipelineFeaturesKHR {
 }
 impl Default for PhysicalDeviceRayTracingPipelineFeaturesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR,
-            p_next: std::ptr::null_mut(),
-            ray_tracing_pipeline: Default::default(),
-            ray_tracing_pipeline_shader_group_handle_capture_replay: Default::default(),
-            ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: Default::default(),
-            ray_tracing_pipeline_trace_rays_indirect: Default::default(),
-            ray_traversal_primitive_culling: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR, p_next: std::ptr::null_mut(), ray_tracing_pipeline: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: Default::default(), ray_tracing_pipeline_trace_rays_indirect: Default::default(), ray_traversal_primitive_culling: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelineFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceRayTracingPipelineFeaturesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("ray_tracing_pipeline", &(self.ray_tracing_pipeline != 0))
-            .field("ray_tracing_pipeline_shader_group_handle_capture_replay", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay != 0))
-            .field("ray_tracing_pipeline_shader_group_handle_capture_replay_mixed", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay_mixed != 0))
-            .field("ray_tracing_pipeline_trace_rays_indirect", &(self.ray_tracing_pipeline_trace_rays_indirect != 0))
-            .field("ray_traversal_primitive_culling", &(self.ray_traversal_primitive_culling != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceRayTracingPipelineFeaturesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("ray_tracing_pipeline", &(self.ray_tracing_pipeline != 0)).field("ray_tracing_pipeline_shader_group_handle_capture_replay", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay != 0)).field("ray_tracing_pipeline_shader_group_handle_capture_replay_mixed", &(self.ray_tracing_pipeline_shader_group_handle_capture_replay_mixed != 0)).field("ray_tracing_pipeline_trace_rays_indirect", &(self.ray_tracing_pipeline_trace_rays_indirect != 0)).field("ray_traversal_primitive_culling", &(self.ray_traversal_primitive_culling != 0)).finish()
     }
 }
 impl PhysicalDeviceRayTracingPipelineFeaturesKHR {
@@ -513,34 +422,12 @@ pub struct PhysicalDeviceRayTracingPipelinePropertiesKHR {
 }
 impl Default for PhysicalDeviceRayTracingPipelinePropertiesKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR,
-            p_next: std::ptr::null_mut(),
-            shader_group_handle_size: Default::default(),
-            max_ray_recursion_depth: Default::default(),
-            max_shader_group_stride: Default::default(),
-            shader_group_base_alignment: Default::default(),
-            shader_group_handle_capture_replay_size: Default::default(),
-            max_ray_dispatch_invocation_count: Default::default(),
-            shader_group_handle_alignment: Default::default(),
-            max_ray_hit_attribute_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), shader_group_handle_size: Default::default(), max_ray_recursion_depth: Default::default(), max_shader_group_stride: Default::default(), shader_group_base_alignment: Default::default(), shader_group_handle_capture_replay_size: Default::default(), max_ray_dispatch_invocation_count: Default::default(), shader_group_handle_alignment: Default::default(), max_ray_hit_attribute_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelinePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceRayTracingPipelinePropertiesKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("shader_group_handle_size", &self.shader_group_handle_size)
-            .field("max_ray_recursion_depth", &self.max_ray_recursion_depth)
-            .field("max_shader_group_stride", &self.max_shader_group_stride)
-            .field("shader_group_base_alignment", &self.shader_group_base_alignment)
-            .field("shader_group_handle_capture_replay_size", &self.shader_group_handle_capture_replay_size)
-            .field("max_ray_dispatch_invocation_count", &self.max_ray_dispatch_invocation_count)
-            .field("shader_group_handle_alignment", &self.shader_group_handle_alignment)
-            .field("max_ray_hit_attribute_size", &self.max_ray_hit_attribute_size)
-            .finish()
+        f.debug_struct("PhysicalDeviceRayTracingPipelinePropertiesKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("shader_group_handle_size", &self.shader_group_handle_size).field("max_ray_recursion_depth", &self.max_ray_recursion_depth).field("max_shader_group_stride", &self.max_shader_group_stride).field("shader_group_base_alignment", &self.shader_group_base_alignment).field("shader_group_handle_capture_replay_size", &self.shader_group_handle_capture_replay_size).field("max_ray_dispatch_invocation_count", &self.max_ray_dispatch_invocation_count).field("shader_group_handle_alignment", &self.shader_group_handle_alignment).field("max_ray_hit_attribute_size", &self.max_ray_hit_attribute_size).finish()
     }
 }
 impl PhysicalDeviceRayTracingPipelinePropertiesKHR {
@@ -636,20 +523,12 @@ pub struct StridedDeviceAddressRegionKHR {
 }
 impl Default for StridedDeviceAddressRegionKHR {
     fn default() -> Self {
-        Self {
-            device_address: Default::default(),
-            stride: Default::default(),
-            size: Default::default(),
-        }
+        Self { device_address: Default::default(), stride: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for StridedDeviceAddressRegionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StridedDeviceAddressRegionKHR")
-            .field("device_address", &self.device_address)
-            .field("stride", &self.stride)
-            .field("size", &self.size)
-            .finish()
+        f.debug_struct("StridedDeviceAddressRegionKHR").field("device_address", &self.device_address).field("stride", &self.stride).field("size", &self.size).finish()
     }
 }
 impl StridedDeviceAddressRegionKHR {
@@ -720,11 +599,7 @@ pub struct TraceRaysIndirectCommandKHR {
 }
 impl Default for TraceRaysIndirectCommandKHR {
     fn default() -> Self {
-        Self {
-            width: Default::default(),
-            height: Default::default(),
-            depth: Default::default(),
-        }
+        Self { width: Default::default(), height: Default::default(), depth: Default::default() }
     }
 }
 impl std::fmt::Debug for TraceRaysIndirectCommandKHR {
@@ -801,22 +676,12 @@ pub struct RayTracingPipelineInterfaceCreateInfoKHR {
 }
 impl Default for RayTracingPipelineInterfaceCreateInfoKHR {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR,
-            p_next: std::ptr::null(),
-            max_pipeline_ray_payload_size: Default::default(),
-            max_pipeline_ray_hit_attribute_size: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), max_pipeline_ray_payload_size: Default::default(), max_pipeline_ray_hit_attribute_size: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingPipelineInterfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("RayTracingPipelineInterfaceCreateInfoKHR")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("max_pipeline_ray_payload_size", &self.max_pipeline_ray_payload_size)
-            .field("max_pipeline_ray_hit_attribute_size", &self.max_pipeline_ray_hit_attribute_size)
-            .finish()
+        f.debug_struct("RayTracingPipelineInterfaceCreateInfoKHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("max_pipeline_ray_payload_size", &self.max_pipeline_ray_payload_size).field("max_pipeline_ray_hit_attribute_size", &self.max_pipeline_ray_hit_attribute_size).finish()
     }
 }
 impl RayTracingPipelineInterfaceCreateInfoKHR {
@@ -876,28 +741,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysKHR")]
-    pub unsafe fn cmd_trace_rays_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        width: u32,
-        height: u32,
-        depth: u32,
-    ) -> () {
+    pub unsafe fn cmd_trace_rays_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, width: u32, height: u32, depth: u32) -> () {
         let _function = self.cmd_trace_rays_khr.expect("`cmd_trace_rays_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            raygen_shader_binding_table as _,
-            miss_shader_binding_table as _,
-            hit_shader_binding_table as _,
-            callable_shader_binding_table as _,
-            width as _,
-            height as _,
-            depth as _,
-        );
+        let _return = _function(command_buffer as _, raygen_shader_binding_table as _, miss_shader_binding_table as _, hit_shader_binding_table as _, callable_shader_binding_table as _, width as _, height as _, depth as _);
         ()
     }
     #[inline]
@@ -919,13 +765,7 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesKHR")]
-    pub unsafe fn create_ray_tracing_pipelines_khr(
-        &self,
-        deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>,
-        pipeline_cache: Option<crate::vk1_0::PipelineCache>,
-        create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder],
-        allocator: Option<&crate::vk1_0::AllocationCallbacks>,
-    ) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_ray_tracing_pipelines_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_khr.expect("`create_ray_tracing_pipelines_khr` is not loaded");
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
@@ -952,24 +792,9 @@ impl crate::DeviceLoader {
     #[inline]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysIndirectKHR.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysIndirectKHR")]
-    pub unsafe fn cmd_trace_rays_indirect_khr(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR,
-        indirect_device_address: crate::vk1_0::DeviceAddress,
-    ) -> () {
+    pub unsafe fn cmd_trace_rays_indirect_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, indirect_device_address: crate::vk1_0::DeviceAddress) -> () {
         let _function = self.cmd_trace_rays_indirect_khr.expect("`cmd_trace_rays_indirect_khr` is not loaded");
-        let _return = _function(
-            command_buffer as _,
-            raygen_shader_binding_table as _,
-            miss_shader_binding_table as _,
-            hit_shader_binding_table as _,
-            callable_shader_binding_table as _,
-            indirect_device_address as _,
-        );
+        let _return = _function(command_buffer as _, raygen_shader_binding_table as _, miss_shader_binding_table as _, hit_shader_binding_table as _, callable_shader_binding_table as _, indirect_device_address as _);
         ()
     }
     #[inline]

@@ -36,20 +36,12 @@ pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 }
 impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT,
-            p_next: std::ptr::null_mut(),
-            advanced_blend_coherent_operations: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT, p_next: std::ptr::null_mut(), advanced_blend_coherent_operations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceBlendOperationAdvancedFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("advanced_blend_coherent_operations", &(self.advanced_blend_coherent_operations != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceBlendOperationAdvancedFeaturesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("advanced_blend_coherent_operations", &(self.advanced_blend_coherent_operations != 0)).finish()
     }
 }
 impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
@@ -115,30 +107,12 @@ pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 }
 impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT,
-            p_next: std::ptr::null_mut(),
-            advanced_blend_max_color_attachments: Default::default(),
-            advanced_blend_independent_blend: Default::default(),
-            advanced_blend_non_premultiplied_src_color: Default::default(),
-            advanced_blend_non_premultiplied_dst_color: Default::default(),
-            advanced_blend_correlated_overlap: Default::default(),
-            advanced_blend_all_operations: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT, p_next: std::ptr::null_mut(), advanced_blend_max_color_attachments: Default::default(), advanced_blend_independent_blend: Default::default(), advanced_blend_non_premultiplied_src_color: Default::default(), advanced_blend_non_premultiplied_dst_color: Default::default(), advanced_blend_correlated_overlap: Default::default(), advanced_blend_all_operations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PhysicalDeviceBlendOperationAdvancedPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("advanced_blend_max_color_attachments", &self.advanced_blend_max_color_attachments)
-            .field("advanced_blend_independent_blend", &(self.advanced_blend_independent_blend != 0))
-            .field("advanced_blend_non_premultiplied_src_color", &(self.advanced_blend_non_premultiplied_src_color != 0))
-            .field("advanced_blend_non_premultiplied_dst_color", &(self.advanced_blend_non_premultiplied_dst_color != 0))
-            .field("advanced_blend_correlated_overlap", &(self.advanced_blend_correlated_overlap != 0))
-            .field("advanced_blend_all_operations", &(self.advanced_blend_all_operations != 0))
-            .finish()
+        f.debug_struct("PhysicalDeviceBlendOperationAdvancedPropertiesEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("advanced_blend_max_color_attachments", &self.advanced_blend_max_color_attachments).field("advanced_blend_independent_blend", &(self.advanced_blend_independent_blend != 0)).field("advanced_blend_non_premultiplied_src_color", &(self.advanced_blend_non_premultiplied_src_color != 0)).field("advanced_blend_non_premultiplied_dst_color", &(self.advanced_blend_non_premultiplied_dst_color != 0)).field("advanced_blend_correlated_overlap", &(self.advanced_blend_correlated_overlap != 0)).field("advanced_blend_all_operations", &(self.advanced_blend_all_operations != 0)).finish()
     }
 }
 impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
@@ -226,24 +200,12 @@ pub struct PipelineColorBlendAdvancedStateCreateInfoEXT {
 }
 impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT,
-            p_next: std::ptr::null(),
-            src_premultiplied: Default::default(),
-            dst_premultiplied: Default::default(),
-            blend_overlap: Default::default(),
-        }
+        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), src_premultiplied: Default::default(), dst_premultiplied: Default::default(), blend_overlap: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("PipelineColorBlendAdvancedStateCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("src_premultiplied", &(self.src_premultiplied != 0))
-            .field("dst_premultiplied", &(self.dst_premultiplied != 0))
-            .field("blend_overlap", &self.blend_overlap)
-            .finish()
+        f.debug_struct("PipelineColorBlendAdvancedStateCreateInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("src_premultiplied", &(self.src_premultiplied != 0)).field("dst_premultiplied", &(self.dst_premultiplied != 0)).field("blend_overlap", &self.blend_overlap).finish()
     }
 }
 impl PipelineColorBlendAdvancedStateCreateInfoEXT {

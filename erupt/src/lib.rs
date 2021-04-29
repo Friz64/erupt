@@ -1,5 +1,5 @@
 #![allow(clippy::all, unreachable_patterns)]
-#![doc(html_logo_url = "https://gitlab.com/Friz64/erupt/-/raw/master/logo.png")]
+#![doc(html_logo_url = "https://gitlab.com/Friz64/erupt/-/raw/master/logo.svg")]
 /*!
 Vulkan API bindings
 

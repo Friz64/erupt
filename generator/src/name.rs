@@ -229,7 +229,10 @@ pub struct EnumVariantName {
 
 impl EnumVariantName {
     pub fn new(src: &str, enum_type: &TypeName) -> Result<EnumVariantName, NotApplicable> {
-        let trimmed = src.trim_start_matches("VK_").replace("_BIT", "");
+        let trimmed = src
+            .trim_start_matches("VK_")
+            .replace("_BIT", "")
+            .to_uppercase();
 
         let mut enum_type_prefix = enum_type
             .no_tag

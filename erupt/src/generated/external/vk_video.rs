@@ -5,22 +5,22 @@ pub struct StdVideoH264ProfileIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264ProfileIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_PROFILE_IDC_BASELINE => "STD_VIDEO_H264_PROFILE_IDC_BASELINE",
-            &Self::STD_VIDEO_H264_PROFILE_IDC_MAIN => "STD_VIDEO_H264_PROFILE_IDC_MAIN",
-            &Self::STD_VIDEO_H264_PROFILE_IDC_HIGH => "STD_VIDEO_H264_PROFILE_IDC_HIGH",
-            &Self::STD_VIDEO_H264_PROFILE_IDC_HIGH_444_PREDICTIVE => "STD_VIDEO_H264_PROFILE_IDC_HIGH_444_PREDICTIVE",
-            &Self::STD_VIDEO_H264_PROFILE_IDC_INVALID => "STD_VIDEO_H264_PROFILE_IDC_INVALID",
+            &Self::BASELINE => "BASELINE",
+            &Self::MAIN => "MAIN",
+            &Self::HIGH => "HIGH",
+            &Self::HIGH_444_PREDICTIVE => "HIGH_444_PREDICTIVE",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264ProfileIdc {
-    pub const STD_VIDEO_H264_PROFILE_IDC_BASELINE: Self = Self(66);
-    pub const STD_VIDEO_H264_PROFILE_IDC_MAIN: Self = Self(77);
-    pub const STD_VIDEO_H264_PROFILE_IDC_HIGH: Self = Self(100);
-    pub const STD_VIDEO_H264_PROFILE_IDC_HIGH_444_PREDICTIVE: Self = Self(244);
-    pub const STD_VIDEO_H264_PROFILE_IDC_INVALID: Self = Self(2147483647);
+    pub const BASELINE: Self = Self(66);
+    pub const MAIN: Self = Self(77);
+    pub const HIGH: Self = Self(100);
+    pub const HIGH_444_PREDICTIVE: Self = Self(244);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -29,52 +29,52 @@ pub struct StdVideoH264Level(pub i32);
 impl std::fmt::Debug for StdVideoH264Level {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_LEVEL_1_0 => "STD_VIDEO_H264_LEVEL_1_0",
-            &Self::STD_VIDEO_H264_LEVEL_1_1 => "STD_VIDEO_H264_LEVEL_1_1",
-            &Self::STD_VIDEO_H264_LEVEL_1_2 => "STD_VIDEO_H264_LEVEL_1_2",
-            &Self::STD_VIDEO_H264_LEVEL_1_3 => "STD_VIDEO_H264_LEVEL_1_3",
-            &Self::STD_VIDEO_H264_LEVEL_2_0 => "STD_VIDEO_H264_LEVEL_2_0",
-            &Self::STD_VIDEO_H264_LEVEL_2_1 => "STD_VIDEO_H264_LEVEL_2_1",
-            &Self::STD_VIDEO_H264_LEVEL_2_2 => "STD_VIDEO_H264_LEVEL_2_2",
-            &Self::STD_VIDEO_H264_LEVEL_3_0 => "STD_VIDEO_H264_LEVEL_3_0",
-            &Self::STD_VIDEO_H264_LEVEL_3_1 => "STD_VIDEO_H264_LEVEL_3_1",
-            &Self::STD_VIDEO_H264_LEVEL_3_2 => "STD_VIDEO_H264_LEVEL_3_2",
-            &Self::STD_VIDEO_H264_LEVEL_4_0 => "STD_VIDEO_H264_LEVEL_4_0",
-            &Self::STD_VIDEO_H264_LEVEL_4_1 => "STD_VIDEO_H264_LEVEL_4_1",
-            &Self::STD_VIDEO_H264_LEVEL_4_2 => "STD_VIDEO_H264_LEVEL_4_2",
-            &Self::STD_VIDEO_H264_LEVEL_5_0 => "STD_VIDEO_H264_LEVEL_5_0",
-            &Self::STD_VIDEO_H264_LEVEL_5_1 => "STD_VIDEO_H264_LEVEL_5_1",
-            &Self::STD_VIDEO_H264_LEVEL_5_2 => "STD_VIDEO_H264_LEVEL_5_2",
-            &Self::STD_VIDEO_H264_LEVEL_6_0 => "STD_VIDEO_H264_LEVEL_6_0",
-            &Self::STD_VIDEO_H264_LEVEL_6_1 => "STD_VIDEO_H264_LEVEL_6_1",
-            &Self::STD_VIDEO_H264_LEVEL_6_2 => "STD_VIDEO_H264_LEVEL_6_2",
-            &Self::STD_VIDEO_H264_LEVEL_INVALID => "STD_VIDEO_H264_LEVEL_INVALID",
+            &Self::_1_0 => "_1_0",
+            &Self::_1_1 => "_1_1",
+            &Self::_1_2 => "_1_2",
+            &Self::_1_3 => "_1_3",
+            &Self::_2_0 => "_2_0",
+            &Self::_2_1 => "_2_1",
+            &Self::_2_2 => "_2_2",
+            &Self::_3_0 => "_3_0",
+            &Self::_3_1 => "_3_1",
+            &Self::_3_2 => "_3_2",
+            &Self::_4_0 => "_4_0",
+            &Self::_4_1 => "_4_1",
+            &Self::_4_2 => "_4_2",
+            &Self::_5_0 => "_5_0",
+            &Self::_5_1 => "_5_1",
+            &Self::_5_2 => "_5_2",
+            &Self::_6_0 => "_6_0",
+            &Self::_6_1 => "_6_1",
+            &Self::_6_2 => "_6_2",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264Level {
-    pub const STD_VIDEO_H264_LEVEL_1_0: Self = Self(0);
-    pub const STD_VIDEO_H264_LEVEL_1_1: Self = Self(1);
-    pub const STD_VIDEO_H264_LEVEL_1_2: Self = Self(2);
-    pub const STD_VIDEO_H264_LEVEL_1_3: Self = Self(3);
-    pub const STD_VIDEO_H264_LEVEL_2_0: Self = Self(4);
-    pub const STD_VIDEO_H264_LEVEL_2_1: Self = Self(5);
-    pub const STD_VIDEO_H264_LEVEL_2_2: Self = Self(6);
-    pub const STD_VIDEO_H264_LEVEL_3_0: Self = Self(7);
-    pub const STD_VIDEO_H264_LEVEL_3_1: Self = Self(8);
-    pub const STD_VIDEO_H264_LEVEL_3_2: Self = Self(9);
-    pub const STD_VIDEO_H264_LEVEL_4_0: Self = Self(10);
-    pub const STD_VIDEO_H264_LEVEL_4_1: Self = Self(11);
-    pub const STD_VIDEO_H264_LEVEL_4_2: Self = Self(12);
-    pub const STD_VIDEO_H264_LEVEL_5_0: Self = Self(13);
-    pub const STD_VIDEO_H264_LEVEL_5_1: Self = Self(14);
-    pub const STD_VIDEO_H264_LEVEL_5_2: Self = Self(15);
-    pub const STD_VIDEO_H264_LEVEL_6_0: Self = Self(16);
-    pub const STD_VIDEO_H264_LEVEL_6_1: Self = Self(17);
-    pub const STD_VIDEO_H264_LEVEL_6_2: Self = Self(18);
-    pub const STD_VIDEO_H264_LEVEL_INVALID: Self = Self(2147483647);
+    pub const _1_0: Self = Self(0);
+    pub const _1_1: Self = Self(1);
+    pub const _1_2: Self = Self(2);
+    pub const _1_3: Self = Self(3);
+    pub const _2_0: Self = Self(4);
+    pub const _2_1: Self = Self(5);
+    pub const _2_2: Self = Self(6);
+    pub const _3_0: Self = Self(7);
+    pub const _3_1: Self = Self(8);
+    pub const _3_2: Self = Self(9);
+    pub const _4_0: Self = Self(10);
+    pub const _4_1: Self = Self(11);
+    pub const _4_2: Self = Self(12);
+    pub const _5_0: Self = Self(13);
+    pub const _5_1: Self = Self(14);
+    pub const _5_2: Self = Self(15);
+    pub const _6_0: Self = Self(16);
+    pub const _6_1: Self = Self(17);
+    pub const _6_2: Self = Self(18);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -83,20 +83,20 @@ pub struct StdVideoH264ChromaFormatIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264ChromaFormatIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_CHROMA_FORMAT_IDC_MONOCHROME => "STD_VIDEO_H264_CHROMA_FORMAT_IDC_MONOCHROME",
-            &Self::STD_VIDEO_H264_CHROMA_FORMAT_IDC_420 => "STD_VIDEO_H264_CHROMA_FORMAT_IDC_420",
-            &Self::STD_VIDEO_H264_CHROMA_FORMAT_IDC_422 => "STD_VIDEO_H264_CHROMA_FORMAT_IDC_422",
-            &Self::STD_VIDEO_H264_CHROMA_FORMAT_IDC_444 => "STD_VIDEO_H264_CHROMA_FORMAT_IDC_444",
+            &Self::MONOCHROME => "MONOCHROME",
+            &Self::_420 => "_420",
+            &Self::_422 => "_422",
+            &Self::_444 => "_444",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264ChromaFormatIdc {
-    pub const STD_VIDEO_H264_CHROMA_FORMAT_IDC_MONOCHROME: Self = Self(0);
-    pub const STD_VIDEO_H264_CHROMA_FORMAT_IDC_420: Self = Self(1);
-    pub const STD_VIDEO_H264_CHROMA_FORMAT_IDC_422: Self = Self(2);
-    pub const STD_VIDEO_H264_CHROMA_FORMAT_IDC_444: Self = Self(3);
+    pub const MONOCHROME: Self = Self(0);
+    pub const _420: Self = Self(1);
+    pub const _422: Self = Self(2);
+    pub const _444: Self = Self(3);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -105,20 +105,20 @@ pub struct StdVideoH264PocType(pub i32);
 impl std::fmt::Debug for StdVideoH264PocType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_POC_TYPE_0 => "STD_VIDEO_H264_POC_TYPE_0",
-            &Self::STD_VIDEO_H264_POC_TYPE_1 => "STD_VIDEO_H264_POC_TYPE_1",
-            &Self::STD_VIDEO_H264_POC_TYPE_2 => "STD_VIDEO_H264_POC_TYPE_2",
-            &Self::STD_VIDEO_H264_POC_TYPE_INVALID => "STD_VIDEO_H264_POC_TYPE_INVALID",
+            &Self::_0 => "_0",
+            &Self::_1 => "_1",
+            &Self::_2 => "_2",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264PocType {
-    pub const STD_VIDEO_H264_POC_TYPE_0: Self = Self(0);
-    pub const STD_VIDEO_H264_POC_TYPE_1: Self = Self(1);
-    pub const STD_VIDEO_H264_POC_TYPE_2: Self = Self(2);
-    pub const STD_VIDEO_H264_POC_TYPE_INVALID: Self = Self(2147483647);
+    pub const _0: Self = Self(0);
+    pub const _1: Self = Self(1);
+    pub const _2: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -127,50 +127,50 @@ pub struct StdVideoH264AspectRatioIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264AspectRatioIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_UNSPECIFIED => "STD_VIDEO_H264_ASPECT_RATIO_IDC_UNSPECIFIED",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_SQUARE => "STD_VIDEO_H264_ASPECT_RATIO_IDC_SQUARE",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_12_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_12_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_10_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_10_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_16_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_16_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_40_33 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_40_33",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_24_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_24_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_20_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_20_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_32_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_32_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_80_33 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_80_33",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_18_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_18_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_15_11 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_15_11",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_64_33 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_64_33",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_160_99 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_160_99",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_4_3 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_4_3",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_3_2 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_3_2",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_2_1 => "STD_VIDEO_H264_ASPECT_RATIO_IDC_2_1",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_EXTENDED_SAR => "STD_VIDEO_H264_ASPECT_RATIO_IDC_EXTENDED_SAR",
-            &Self::STD_VIDEO_H264_ASPECT_RATIO_IDC_INVALID => "STD_VIDEO_H264_ASPECT_RATIO_IDC_INVALID",
+            &Self::UNSPECIFIED => "UNSPECIFIED",
+            &Self::SQUARE => "SQUARE",
+            &Self::_12_11 => "_12_11",
+            &Self::_10_11 => "_10_11",
+            &Self::_16_11 => "_16_11",
+            &Self::_40_33 => "_40_33",
+            &Self::_24_11 => "_24_11",
+            &Self::_20_11 => "_20_11",
+            &Self::_32_11 => "_32_11",
+            &Self::_80_33 => "_80_33",
+            &Self::_18_11 => "_18_11",
+            &Self::_15_11 => "_15_11",
+            &Self::_64_33 => "_64_33",
+            &Self::_160_99 => "_160_99",
+            &Self::_4_3 => "_4_3",
+            &Self::_3_2 => "_3_2",
+            &Self::_2_1 => "_2_1",
+            &Self::EXTENDED_SAR => "EXTENDED_SAR",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264AspectRatioIdc {
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_UNSPECIFIED: Self = Self(0);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_SQUARE: Self = Self(1);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_12_11: Self = Self(2);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_10_11: Self = Self(3);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_16_11: Self = Self(4);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_40_33: Self = Self(5);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_24_11: Self = Self(6);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_20_11: Self = Self(7);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_32_11: Self = Self(8);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_80_33: Self = Self(9);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_18_11: Self = Self(10);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_15_11: Self = Self(11);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_64_33: Self = Self(12);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_160_99: Self = Self(13);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_4_3: Self = Self(14);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_3_2: Self = Self(15);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_2_1: Self = Self(16);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_EXTENDED_SAR: Self = Self(255);
-    pub const STD_VIDEO_H264_ASPECT_RATIO_IDC_INVALID: Self = Self(2147483647);
+    pub const UNSPECIFIED: Self = Self(0);
+    pub const SQUARE: Self = Self(1);
+    pub const _12_11: Self = Self(2);
+    pub const _10_11: Self = Self(3);
+    pub const _16_11: Self = Self(4);
+    pub const _40_33: Self = Self(5);
+    pub const _24_11: Self = Self(6);
+    pub const _20_11: Self = Self(7);
+    pub const _32_11: Self = Self(8);
+    pub const _80_33: Self = Self(9);
+    pub const _18_11: Self = Self(10);
+    pub const _15_11: Self = Self(11);
+    pub const _64_33: Self = Self(12);
+    pub const _160_99: Self = Self(13);
+    pub const _4_3: Self = Self(14);
+    pub const _3_2: Self = Self(15);
+    pub const _2_1: Self = Self(16);
+    pub const EXTENDED_SAR: Self = Self(255);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -201,20 +201,20 @@ pub struct StdVideoH264SliceType(pub i32);
 impl std::fmt::Debug for StdVideoH264SliceType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_SLICE_TYPE_I => "STD_VIDEO_H264_SLICE_TYPE_I",
-            &Self::STD_VIDEO_H264_SLICE_TYPE_P => "STD_VIDEO_H264_SLICE_TYPE_P",
-            &Self::STD_VIDEO_H264_SLICE_TYPE_B => "STD_VIDEO_H264_SLICE_TYPE_B",
-            &Self::STD_VIDEO_H264_SLICE_TYPE_INVALID => "STD_VIDEO_H264_SLICE_TYPE_INVALID",
+            &Self::I => "I",
+            &Self::P => "P",
+            &Self::B => "B",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264SliceType {
-    pub const STD_VIDEO_H264_SLICE_TYPE_I: Self = Self(0);
-    pub const STD_VIDEO_H264_SLICE_TYPE_P: Self = Self(1);
-    pub const STD_VIDEO_H264_SLICE_TYPE_B: Self = Self(2);
-    pub const STD_VIDEO_H264_SLICE_TYPE_INVALID: Self = Self(2147483647);
+    pub const I: Self = Self(0);
+    pub const P: Self = Self(1);
+    pub const B: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -223,20 +223,20 @@ pub struct StdVideoH264CabacInitIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264CabacInitIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_CABAC_INIT_IDC_0 => "STD_VIDEO_H264_CABAC_INIT_IDC_0",
-            &Self::STD_VIDEO_H264_CABAC_INIT_IDC_1 => "STD_VIDEO_H264_CABAC_INIT_IDC_1",
-            &Self::STD_VIDEO_H264_CABAC_INIT_IDC_2 => "STD_VIDEO_H264_CABAC_INIT_IDC_2",
-            &Self::STD_VIDEO_H264_CABAC_INIT_IDC_INVALID => "STD_VIDEO_H264_CABAC_INIT_IDC_INVALID",
+            &Self::_0 => "_0",
+            &Self::_1 => "_1",
+            &Self::_2 => "_2",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264CabacInitIdc {
-    pub const STD_VIDEO_H264_CABAC_INIT_IDC_0: Self = Self(0);
-    pub const STD_VIDEO_H264_CABAC_INIT_IDC_1: Self = Self(1);
-    pub const STD_VIDEO_H264_CABAC_INIT_IDC_2: Self = Self(2);
-    pub const STD_VIDEO_H264_CABAC_INIT_IDC_INVALID: Self = Self(2147483647);
+    pub const _0: Self = Self(0);
+    pub const _1: Self = Self(1);
+    pub const _2: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -245,20 +245,20 @@ pub struct StdVideoH264DisableDeblockingFilterIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264DisableDeblockingFilterIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_DISABLED => "STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_DISABLED",
-            &Self::STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_ENABLED => "STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_ENABLED",
-            &Self::STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_PARTIAL => "STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_PARTIAL",
-            &Self::STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_INVALID => "STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_INVALID",
+            &Self::DISABLED => "DISABLED",
+            &Self::ENABLED => "ENABLED",
+            &Self::PARTIAL => "PARTIAL",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264DisableDeblockingFilterIdc {
-    pub const STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_DISABLED: Self = Self(0);
-    pub const STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_ENABLED: Self = Self(1);
-    pub const STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_PARTIAL: Self = Self(2);
-    pub const STD_VIDEO_H264_DISABLE_DEBLOCKING_FILTER_IDC_INVALID: Self = Self(2147483647);
+    pub const DISABLED: Self = Self(0);
+    pub const ENABLED: Self = Self(1);
+    pub const PARTIAL: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -267,20 +267,20 @@ pub struct StdVideoH264PictureType(pub i32);
 impl std::fmt::Debug for StdVideoH264PictureType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_PICTURE_TYPE_I => "STD_VIDEO_H264_PICTURE_TYPE_I",
-            &Self::STD_VIDEO_H264_PICTURE_TYPE_P => "STD_VIDEO_H264_PICTURE_TYPE_P",
-            &Self::STD_VIDEO_H264_PICTURE_TYPE_B => "STD_VIDEO_H264_PICTURE_TYPE_B",
-            &Self::STD_VIDEO_H264_PICTURE_TYPE_INVALID => "STD_VIDEO_H264_PICTURE_TYPE_INVALID",
+            &Self::I => "I",
+            &Self::P => "P",
+            &Self::B => "B",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264PictureType {
-    pub const STD_VIDEO_H264_PICTURE_TYPE_I: Self = Self(0);
-    pub const STD_VIDEO_H264_PICTURE_TYPE_P: Self = Self(1);
-    pub const STD_VIDEO_H264_PICTURE_TYPE_B: Self = Self(2);
-    pub const STD_VIDEO_H264_PICTURE_TYPE_INVALID: Self = Self(2147483647);
+    pub const I: Self = Self(0);
+    pub const P: Self = Self(1);
+    pub const B: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -289,22 +289,22 @@ pub struct StdVideoH264ModificationOfPicNumsIdc(pub i32);
 impl std::fmt::Debug for StdVideoH264ModificationOfPicNumsIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_SUBTRACT => "STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_SUBTRACT",
-            &Self::STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_ADD => "STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_ADD",
-            &Self::STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_LONG_TERM => "STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_LONG_TERM",
-            &Self::STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_END => "STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_END",
-            &Self::STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_INVALID => "STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_INVALID",
+            &Self::SHORT_TERM_SUBTRACT => "SHORT_TERM_SUBTRACT",
+            &Self::SHORT_TERM_ADD => "SHORT_TERM_ADD",
+            &Self::LONG_TERM => "LONG_TERM",
+            &Self::END => "END",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264ModificationOfPicNumsIdc {
-    pub const STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_SUBTRACT: Self = Self(0);
-    pub const STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_SHORT_TERM_ADD: Self = Self(1);
-    pub const STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_LONG_TERM: Self = Self(2);
-    pub const STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_END: Self = Self(3);
-    pub const STD_VIDEO_H264_MODIFICATION_OF_PIC_NUMS_IDC_INVALID: Self = Self(2147483647);
+    pub const SHORT_TERM_SUBTRACT: Self = Self(0);
+    pub const SHORT_TERM_ADD: Self = Self(1);
+    pub const LONG_TERM: Self = Self(2);
+    pub const END: Self = Self(3);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -313,28 +313,28 @@ pub struct StdVideoH264MemMgmtControlOp(pub i32);
 impl std::fmt::Debug for StdVideoH264MemMgmtControlOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_END => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_END",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_SHORT_TERM => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_SHORT_TERM",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_LONG_TERM => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_LONG_TERM",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_LONG_TERM => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_LONG_TERM",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_SET_MAX_LONG_TERM_INDEX => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_SET_MAX_LONG_TERM_INDEX",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_ALL => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_ALL",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_CURRENT_AS_LONG_TERM => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_CURRENT_AS_LONG_TERM",
-            &Self::STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_INVALID => "STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_INVALID",
+            &Self::END => "END",
+            &Self::UNMARK_SHORT_TERM => "UNMARK_SHORT_TERM",
+            &Self::UNMARK_LONG_TERM => "UNMARK_LONG_TERM",
+            &Self::MARK_LONG_TERM => "MARK_LONG_TERM",
+            &Self::SET_MAX_LONG_TERM_INDEX => "SET_MAX_LONG_TERM_INDEX",
+            &Self::UNMARK_ALL => "UNMARK_ALL",
+            &Self::MARK_CURRENT_AS_LONG_TERM => "MARK_CURRENT_AS_LONG_TERM",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH264MemMgmtControlOp {
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_END: Self = Self(0);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_SHORT_TERM: Self = Self(1);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_LONG_TERM: Self = Self(2);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_LONG_TERM: Self = Self(3);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_SET_MAX_LONG_TERM_INDEX: Self = Self(4);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_UNMARK_ALL: Self = Self(5);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_MARK_CURRENT_AS_LONG_TERM: Self = Self(6);
-    pub const STD_VIDEO_H264_MEM_MGMT_CONTROL_OP_INVALID: Self = Self(2147483647);
+    pub const END: Self = Self(0);
+    pub const UNMARK_SHORT_TERM: Self = Self(1);
+    pub const UNMARK_LONG_TERM: Self = Self(2);
+    pub const MARK_LONG_TERM: Self = Self(3);
+    pub const SET_MAX_LONG_TERM_INDEX: Self = Self(4);
+    pub const UNMARK_ALL: Self = Self(5);
+    pub const MARK_CURRENT_AS_LONG_TERM: Self = Self(6);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -343,24 +343,24 @@ pub struct StdVideoH265ProfileIdc(pub i32);
 impl std::fmt::Debug for StdVideoH265ProfileIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H265_PROFILE_IDC_MAIN => "STD_VIDEO_H265_PROFILE_IDC_MAIN",
-            &Self::STD_VIDEO_H265_PROFILE_IDC_MAIN_10 => "STD_VIDEO_H265_PROFILE_IDC_MAIN_10",
-            &Self::STD_VIDEO_H265_PROFILE_IDC_MAIN_STILL_PICTURE => "STD_VIDEO_H265_PROFILE_IDC_MAIN_STILL_PICTURE",
-            &Self::STD_VIDEO_H265_PROFILE_IDC_FORMAT_RANGE_EXTENSIONS => "STD_VIDEO_H265_PROFILE_IDC_FORMAT_RANGE_EXTENSIONS",
-            &Self::STD_VIDEO_H265_PROFILE_IDC_SCC_EXTENSIONS => "STD_VIDEO_H265_PROFILE_IDC_SCC_EXTENSIONS",
-            &Self::STD_VIDEO_H265_PROFILE_IDC_INVALID => "STD_VIDEO_H265_PROFILE_IDC_INVALID",
+            &Self::MAIN => "MAIN",
+            &Self::MAIN_10 => "MAIN_10",
+            &Self::MAIN_STILL_PICTURE => "MAIN_STILL_PICTURE",
+            &Self::FORMAT_RANGE_EXTENSIONS => "FORMAT_RANGE_EXTENSIONS",
+            &Self::SCC_EXTENSIONS => "SCC_EXTENSIONS",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH265ProfileIdc {
-    pub const STD_VIDEO_H265_PROFILE_IDC_MAIN: Self = Self(1);
-    pub const STD_VIDEO_H265_PROFILE_IDC_MAIN_10: Self = Self(2);
-    pub const STD_VIDEO_H265_PROFILE_IDC_MAIN_STILL_PICTURE: Self = Self(3);
-    pub const STD_VIDEO_H265_PROFILE_IDC_FORMAT_RANGE_EXTENSIONS: Self = Self(4);
-    pub const STD_VIDEO_H265_PROFILE_IDC_SCC_EXTENSIONS: Self = Self(9);
-    pub const STD_VIDEO_H265_PROFILE_IDC_INVALID: Self = Self(2147483647);
+    pub const MAIN: Self = Self(1);
+    pub const MAIN_10: Self = Self(2);
+    pub const MAIN_STILL_PICTURE: Self = Self(3);
+    pub const FORMAT_RANGE_EXTENSIONS: Self = Self(4);
+    pub const SCC_EXTENSIONS: Self = Self(9);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -369,40 +369,40 @@ pub struct StdVideoH265Level(pub i32);
 impl std::fmt::Debug for StdVideoH265Level {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H265_LEVEL_1_0 => "STD_VIDEO_H265_LEVEL_1_0",
-            &Self::STD_VIDEO_H265_LEVEL_2_0 => "STD_VIDEO_H265_LEVEL_2_0",
-            &Self::STD_VIDEO_H265_LEVEL_2_1 => "STD_VIDEO_H265_LEVEL_2_1",
-            &Self::STD_VIDEO_H265_LEVEL_3_0 => "STD_VIDEO_H265_LEVEL_3_0",
-            &Self::STD_VIDEO_H265_LEVEL_3_1 => "STD_VIDEO_H265_LEVEL_3_1",
-            &Self::STD_VIDEO_H265_LEVEL_4_0 => "STD_VIDEO_H265_LEVEL_4_0",
-            &Self::STD_VIDEO_H265_LEVEL_4_1 => "STD_VIDEO_H265_LEVEL_4_1",
-            &Self::STD_VIDEO_H265_LEVEL_5_0 => "STD_VIDEO_H265_LEVEL_5_0",
-            &Self::STD_VIDEO_H265_LEVEL_5_1 => "STD_VIDEO_H265_LEVEL_5_1",
-            &Self::STD_VIDEO_H265_LEVEL_5_2 => "STD_VIDEO_H265_LEVEL_5_2",
-            &Self::STD_VIDEO_H265_LEVEL_6_0 => "STD_VIDEO_H265_LEVEL_6_0",
-            &Self::STD_VIDEO_H265_LEVEL_6_1 => "STD_VIDEO_H265_LEVEL_6_1",
-            &Self::STD_VIDEO_H265_LEVEL_6_2 => "STD_VIDEO_H265_LEVEL_6_2",
-            &Self::STD_VIDEO_H265_LEVEL_INVALID => "STD_VIDEO_H265_LEVEL_INVALID",
+            &Self::_1_0 => "_1_0",
+            &Self::_2_0 => "_2_0",
+            &Self::_2_1 => "_2_1",
+            &Self::_3_0 => "_3_0",
+            &Self::_3_1 => "_3_1",
+            &Self::_4_0 => "_4_0",
+            &Self::_4_1 => "_4_1",
+            &Self::_5_0 => "_5_0",
+            &Self::_5_1 => "_5_1",
+            &Self::_5_2 => "_5_2",
+            &Self::_6_0 => "_6_0",
+            &Self::_6_1 => "_6_1",
+            &Self::_6_2 => "_6_2",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl StdVideoH265Level {
-    pub const STD_VIDEO_H265_LEVEL_1_0: Self = Self(0);
-    pub const STD_VIDEO_H265_LEVEL_2_0: Self = Self(1);
-    pub const STD_VIDEO_H265_LEVEL_2_1: Self = Self(2);
-    pub const STD_VIDEO_H265_LEVEL_3_0: Self = Self(3);
-    pub const STD_VIDEO_H265_LEVEL_3_1: Self = Self(4);
-    pub const STD_VIDEO_H265_LEVEL_4_0: Self = Self(5);
-    pub const STD_VIDEO_H265_LEVEL_4_1: Self = Self(6);
-    pub const STD_VIDEO_H265_LEVEL_5_0: Self = Self(7);
-    pub const STD_VIDEO_H265_LEVEL_5_1: Self = Self(8);
-    pub const STD_VIDEO_H265_LEVEL_5_2: Self = Self(9);
-    pub const STD_VIDEO_H265_LEVEL_6_0: Self = Self(10);
-    pub const STD_VIDEO_H265_LEVEL_6_1: Self = Self(11);
-    pub const STD_VIDEO_H265_LEVEL_6_2: Self = Self(12);
-    pub const STD_VIDEO_H265_LEVEL_INVALID: Self = Self(2147483647);
+    pub const _1_0: Self = Self(0);
+    pub const _2_0: Self = Self(1);
+    pub const _2_1: Self = Self(2);
+    pub const _3_0: Self = Self(3);
+    pub const _3_1: Self = Self(4);
+    pub const _4_0: Self = Self(5);
+    pub const _4_1: Self = Self(6);
+    pub const _5_0: Self = Self(7);
+    pub const _5_1: Self = Self(8);
+    pub const _5_2: Self = Self(9);
+    pub const _6_0: Self = Self(10);
+    pub const _6_1: Self = Self(11);
+    pub const _6_2: Self = Self(12);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
 #[derive(Copy, Clone)]

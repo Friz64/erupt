@@ -14,6 +14,7 @@ use crate::{
 };
 use roxmltree::Document;
 use std::{
+    collections::HashSet,
     error::Error,
     fmt::{self, Debug, Display},
     fs,
@@ -43,6 +44,7 @@ pub struct Source {
     pub enums: Vec<Enum>,
     pub latest_vulkan_version: (u32, u32),
     pub header_version: u32,
+    pub provisional_extensions: HashSet<String>,
 }
 
 impl Source {
@@ -116,6 +118,7 @@ impl Source {
             enums: Vec::new(),
             latest_vulkan_version,
             header_version,
+            provisional_extensions: HashSet::new(),
         };
 
         for registry_child in registry.children().filter(|n| n.is_element()) {
@@ -155,6 +158,14 @@ impl Source {
                         // Skip disabled extensions
                         if extension.attribute("supported") == Some("disabled") {
                             continue;
+                        }
+
+                        if extension.attribute("provisional") == Some("true") {
+                            let name = extension
+                                .attribute("name")
+                                .expect("Extension is missing name");
+
+                            source.provisional_extensions.insert(name.into());
                         }
 
                         source.assign_origins(extension);

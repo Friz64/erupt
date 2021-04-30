@@ -1,7 +1,11 @@
 use crate::{comment_gen::DocCommentGen, items::defines, loaders, origin::Origin, source::Source};
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
-use std::{collections::HashMap, fs, path::Path};
+use std::{
+    collections::{HashMap, HashSet},
+    fs,
+    path::Path,
+};
 
 struct CodeMap {
     map: HashMap<Origin, TokenStream>,
@@ -23,8 +27,12 @@ impl CodeMap {
         }
     }
 
-    fn write<P>(&self, output_dir: P, comment_gen: &DocCommentGen)
-    where
+    fn write<P>(
+        &self,
+        output_dir: P,
+        comment_gen: &DocCommentGen,
+        provisional_extensions: &HashSet<String>,
+    ) where
         P: AsRef<Path>,
     {
         log::info!("Writing generated code...");
@@ -106,7 +114,22 @@ impl CodeMap {
                 continue;
             }
 
-            fs::write(output_dir.join(origin.file_path()), tokens.to_string())
+            let head = match origin {
+                Origin::Extension { full } if provisional_extensions.contains(full) => {
+                    "\
+                    //! ## Versioning Warning ⚠️
+                    //!
+                    //! This is a Vulkan **provisional/beta** extension and **must** be used with
+                    //! caution. Its API/behaviour has not been finalized yet and _may_ therefore
+                    //! change in ways that break backwards compatibility between revisions, and
+                    //! before final release of a non-provisional version of this extension.
+                    "
+                }
+                _ => "",
+            };
+
+            let contents = head.to_string() + &tokens.to_string();
+            fs::write(output_dir.join(origin.file_path()), contents)
                 .expect("Failed to write generated module");
         }
     }
@@ -167,5 +190,9 @@ pub fn generate(source: &Source) {
         codemap.extend(Some(origin), || stream);
     }
 
-    codemap.write("erupt/src/generated/", &comment_gen);
+    codemap.write(
+        "erupt/src/generated/",
+        &comment_gen,
+        &source.provisional_extensions,
+    );
 }

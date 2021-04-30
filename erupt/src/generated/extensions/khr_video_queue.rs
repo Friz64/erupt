@@ -1,3 +1,9 @@
+//! ## Versioning Warning ⚠️
+//!
+//! This is a Vulkan **provisional/beta** extension and **must** be used with
+//! caution. Its API/behaviour has not been finalized yet and _may_ therefore
+//! change in ways that break backwards compatibility between revisions, and
+//! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_VIDEO_QUEUE_SPEC_VERSION")]
 pub const KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 1;

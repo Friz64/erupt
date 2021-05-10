@@ -464,6 +464,8 @@ pub mod nv_viewport_array2;
 pub mod nv_viewport_swizzle;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_win32_keyed_mutex.html) · Vulkan extension"]
 pub mod nv_win32_keyed_mutex;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NVX_binary_import.html) · Vulkan extension"]
+pub mod nvx_binary_import;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NVX_image_view_handle.html) · Vulkan extension"]
 pub mod nvx_image_view_handle;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NVX_multiview_per_view_attributes.html) · Vulkan extension"]

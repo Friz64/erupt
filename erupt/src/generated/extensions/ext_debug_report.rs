@@ -86,6 +86,8 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
             &Self::VALIDATION_CACHE_EXT_EXT => "VALIDATION_CACHE_EXT_EXT",
             &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
             &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => "DESCRIPTOR_UPDATE_TEMPLATE_EXT",
+            &Self::CU_MODULE_NVX_EXT => "CU_MODULE_NVX_EXT",
+            &Self::CU_FUNCTION_NVX_EXT => "CU_FUNCTION_NVX_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
             &Self::ACCELERATION_STRUCTURE_NV_EXT => "ACCELERATION_STRUCTURE_NV_EXT",
             _ => "(unknown variant)",
@@ -130,6 +132,11 @@ impl DebugReportObjectTypeEXT {
     pub const DESCRIPTOR_UPDATE_TEMPLATE_EXT: Self = Self(1000085000);
     pub const DEBUG_REPORT_EXT: Self = Self::DEBUG_REPORT_CALLBACK_EXT_EXT;
     pub const VALIDATION_CACHE_EXT: Self = Self::VALIDATION_CACHE_EXT_EXT;
+}
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl DebugReportObjectTypeEXT {
+    pub const CU_MODULE_NVX_EXT: Self = Self(1000029000);
+    pub const CU_FUNCTION_NVX_EXT: Self = Self(1000029001);
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl DebugReportObjectTypeEXT {

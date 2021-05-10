@@ -1210,7 +1210,7 @@ impl BufferCreateFlagBits {
 impl BufferCreateFlagBits {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const VIDEO_DECODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DST_KHR = BufferUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const VIDEO_DECODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DST_KHR = BufferUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`]"]
 #[doc(alias = "VkBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1238,14 +1238,14 @@ impl std::fmt::Debug for BufferUsageFlagBits {
             &Self::SHADER_DEVICE_ADDRESS => "SHADER_DEVICE_ADDRESS",
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
-            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
-            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
             &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT",
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
             &Self::ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR => "ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR",
             &Self::ACCELERATION_STRUCTURE_STORAGE_KHR => "ACCELERATION_STRUCTURE_STORAGE_KHR",
             &Self::SHADER_BINDING_TABLE_KHR => "SHADER_BINDING_TABLE_KHR",
+            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -1271,11 +1271,6 @@ impl BufferUsageFlagBits {
     pub const VIDEO_DECODE_SRC_KHR: Self = Self(8192);
     pub const VIDEO_DECODE_DST_KHR: Self = Self(16384);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl BufferUsageFlagBits {
-    pub const VIDEO_ENCODE_DST_KHR: Self = Self(32768);
-    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(65536);
-}
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl BufferUsageFlagBits {
     pub const TRANSFORM_FEEDBACK_BUFFER_EXT: Self = Self(2048);
@@ -1293,6 +1288,11 @@ impl BufferUsageFlagBits {
 #[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl BufferUsageFlagBits {
     pub const SHADER_BINDING_TABLE_KHR: Self = Self(1024);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl BufferUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(32768);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(65536);
 }
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
 impl BufferUsageFlagBits {
@@ -2352,7 +2352,7 @@ impl Format {
     pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
     pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_OUTPUT_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const VIDEO_ENCODE_INPUT_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_INPUT_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_OUTPUT_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const VIDEO_ENCODE_INPUT_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_INPUT_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`]"]
 #[doc(alias = "VkFormatFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2394,11 +2394,11 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
             &Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG => "SAMPLED_IMAGE_FILTER_CUBIC_IMG",
             &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-            &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
-            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR",
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
+            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -2444,11 +2444,6 @@ impl FormatFeatureFlagBits {
     pub const VIDEO_DECODE_OUTPUT_KHR: Self = Self(33554432);
     pub const VIDEO_DECODE_DPB_KHR: Self = Self(67108864);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl FormatFeatureFlagBits {
-    pub const VIDEO_ENCODE_INPUT_KHR: Self = Self(134217728);
-    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(268435456);
-}
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl FormatFeatureFlagBits {
     pub const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR: Self = Self(536870912);
@@ -2460,6 +2455,11 @@ impl FormatFeatureFlagBits {
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl FormatFeatureFlagBits {
     pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(1073741824);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl FormatFeatureFlagBits {
+    pub const VIDEO_ENCODE_INPUT_KHR: Self = Self(134217728);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(268435456);
 }
 #[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl FormatFeatureFlagBits {
@@ -2673,12 +2673,12 @@ impl std::fmt::Debug for ImageLayout {
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
-            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
-            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
             &Self::SHADING_RATE_OPTIMAL_NV => "SHADING_RATE_OPTIMAL_NV",
             &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT",
+            &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+            &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             &Self::READ_ONLY_OPTIMAL_KHR => "READ_ONLY_OPTIMAL_KHR",
             &Self::ATTACHMENT_OPTIMAL_KHR => "ATTACHMENT_OPTIMAL_KHR",
             _ => "(unknown variant)",
@@ -2719,12 +2719,6 @@ impl ImageLayout {
     pub const VIDEO_DECODE_SRC_KHR: Self = Self(1000024001);
     pub const VIDEO_DECODE_DPB_KHR: Self = Self(1000024002);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl ImageLayout {
-    pub const VIDEO_ENCODE_DST_KHR: Self = Self(1000299000);
-    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(1000299001);
-    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(1000299002);
-}
 #[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl ImageLayout {
     pub const SHARED_PRESENT_KHR: Self = Self(1000111000);
@@ -2736,6 +2730,12 @@ impl ImageLayout {
 #[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageLayout {
     pub const FRAGMENT_DENSITY_MAP_OPTIMAL_EXT: Self = Self(1000218000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl ImageLayout {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(1000299001);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(1000299002);
 }
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
 impl ImageLayout {
@@ -2803,7 +2803,7 @@ impl ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2830,11 +2830,11 @@ impl std::fmt::Debug for ImageUsageFlagBits {
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
+            &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
             &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
-            &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
-            &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -2856,12 +2856,6 @@ impl ImageUsageFlagBits {
     pub const VIDEO_DECODE_SRC_KHR: Self = Self(2048);
     pub const VIDEO_DECODE_DPB_KHR: Self = Self(4096);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl ImageUsageFlagBits {
-    pub const VIDEO_ENCODE_DST_KHR: Self = Self(8192);
-    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(16384);
-    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(32768);
-}
 #[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
 impl ImageUsageFlagBits {
     pub const SHADING_RATE_IMAGE_NV: Self = Self(256);
@@ -2869,6 +2863,12 @@ impl ImageUsageFlagBits {
 #[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl ImageUsageFlagBits {
     pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(512);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl ImageUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(8192);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(16384);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(32768);
 }
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl ImageUsageFlagBits {
@@ -3520,13 +3520,13 @@ impl std::fmt::Debug for QueryType {
             &Self::PIPELINE_STATISTICS => "PIPELINE_STATISTICS",
             &Self::TIMESTAMP => "TIMESTAMP",
             &Self::RESULT_STATUS_ONLY_KHR => "RESULT_STATUS_ONLY_KHR",
-            &Self::VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR",
             &Self::TRANSFORM_FEEDBACK_STREAM_EXT => "TRANSFORM_FEEDBACK_STREAM_EXT",
             &Self::PERFORMANCE_QUERY_KHR => "PERFORMANCE_QUERY_KHR",
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR",
             &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR",
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV",
             &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
+            &Self::VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -3540,10 +3540,6 @@ impl QueryType {
 #[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
 impl QueryType {
     pub const RESULT_STATUS_ONLY_KHR: Self = Self(1000023000);
-}
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl QueryType {
-    pub const VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
 }
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl QueryType {
@@ -3565,6 +3561,10 @@ impl QueryType {
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl QueryType {
     pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl QueryType {
+    pub const VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; const VIDEO_DECODE_KHR = QueueFlagBits :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = QueueFlagBits :: VIDEO_ENCODE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]"]
@@ -4145,14 +4145,15 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => "PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR",
             &Self::VIDEO_FORMAT_PROPERTIES_KHR => "VIDEO_FORMAT_PROPERTIES_KHR",
             &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
-            &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
-            &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR",
             &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV",
             &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => "DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV",
             &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => "DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV",
             &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT => "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT",
             &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT",
+            &Self::CU_MODULE_CREATE_INFO_NVX => "CU_MODULE_CREATE_INFO_NVX",
+            &Self::CU_FUNCTION_CREATE_INFO_NVX => "CU_FUNCTION_CREATE_INFO_NVX",
+            &Self::CU_LAUNCH_INFO_NVX => "CU_LAUNCH_INFO_NVX",
             &Self::IMAGE_VIEW_HANDLE_INFO_NVX => "IMAGE_VIEW_HANDLE_INFO_NVX",
             &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => "IMAGE_VIEW_ADDRESS_PROPERTIES_NVX",
             &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => "VIDEO_ENCODE_H264_CAPABILITIES_EXT",
@@ -4440,6 +4441,8 @@ impl std::fmt::Debug for StructureType {
             &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => "DEVICE_PRIVATE_DATA_CREATE_INFO_EXT",
             &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => "PRIVATE_DATA_SLOT_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT => "PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT",
+            &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
+            &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR",
             &Self::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => "PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV",
             &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV",
             &Self::MEMORY_BARRIER_2_KHR => "MEMORY_BARRIER_2_KHR",
@@ -4746,11 +4749,6 @@ impl StructureType {
 impl StructureType {
     pub const VIDEO_DECODE_INFO_KHR: Self = Self(1000024000);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl StructureType {
-    pub const VIDEO_ENCODE_INFO_KHR: Self = Self(1000299000);
-    pub const VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: Self = Self(1000299001);
-}
 #[doc = "Provided by [`crate::extensions::nv_dedicated_allocation`]"]
 impl StructureType {
     pub const DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV: Self = Self(1000026000);
@@ -4762,6 +4760,12 @@ impl StructureType {
     pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT: Self = Self(1000028000);
     pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT: Self = Self(1000028001);
     pub const PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT: Self = Self(1000028002);
+}
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl StructureType {
+    pub const CU_MODULE_CREATE_INFO_NVX: Self = Self(1000029000);
+    pub const CU_FUNCTION_CREATE_INFO_NVX: Self = Self(1000029001);
+    pub const CU_LAUNCH_INFO_NVX: Self = Self(1000029002);
 }
 #[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
 impl StructureType {
@@ -5404,6 +5408,11 @@ impl StructureType {
 #[doc = "Provided by [`crate::extensions::ext_pipeline_creation_cache_control`]"]
 impl StructureType {
     pub const PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT: Self = Self(1000297000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl StructureType {
+    pub const VIDEO_ENCODE_INFO_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: Self = Self(1000299001);
 }
 #[doc = "Provided by [`crate::extensions::nv_device_diagnostics_config`]"]
 impl StructureType {
@@ -6201,6 +6210,8 @@ impl std::fmt::Debug for ObjectType {
             &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
             &Self::VIDEO_SESSION_KHR => "VIDEO_SESSION_KHR",
             &Self::VIDEO_SESSION_PARAMETERS_KHR => "VIDEO_SESSION_PARAMETERS_KHR",
+            &Self::CU_MODULE_NVX => "CU_MODULE_NVX",
+            &Self::CU_FUNCTION_NVX => "CU_FUNCTION_NVX",
             &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
             &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
@@ -6268,6 +6279,11 @@ impl ObjectType {
 impl ObjectType {
     pub const VIDEO_SESSION_KHR: Self = Self(1000023000);
     pub const VIDEO_SESSION_PARAMETERS_KHR: Self = Self(1000023001);
+}
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl ObjectType {
+    pub const CU_MODULE_NVX: Self = Self(1000029000);
+    pub const CU_FUNCTION_NVX: Self = Self(1000029001);
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
 impl ObjectType {
@@ -17712,10 +17728,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 177u32;
+pub const HEADER_VERSION: u32 = 178u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 177u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 178u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]

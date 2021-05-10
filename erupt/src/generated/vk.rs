@@ -465,6 +465,8 @@ pub use crate::extensions::nv_viewport_swizzle::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_win32_keyed_mutex::*;
 #[doc(no_inline)]
+pub use crate::extensions::nvx_binary_import::*;
+#[doc(no_inline)]
 pub use crate::extensions::nvx_image_view_handle::*;
 #[doc(no_inline)]
 pub use crate::extensions::nvx_multiview_per_view_attributes::*;

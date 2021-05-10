@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 177
+- Update Vulkan Headers to version 178
 - Mark `{Instance,Device}Loader::new` functions unsafe
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants

@@ -239,6 +239,7 @@ impl std::fmt::Debug for DriverId {
             &Self::MESA_LLVMPIPE => "MESA_LLVMPIPE",
             &Self::MOLTENVK => "MOLTENVK",
             &Self::COREAVI_PROPRIETARY => "COREAVI_PROPRIETARY",
+            &Self::JUICE_PROPRIETARY => "JUICE_PROPRIETARY",
             _ => "(unknown variant)",
         })
     }
@@ -260,6 +261,7 @@ impl DriverId {
     pub const MESA_LLVMPIPE: Self = Self(13);
     pub const MOLTENVK: Self = Self(14);
     pub const COREAVI_PROPRIETARY: Self = Self(15);
+    pub const JUICE_PROPRIETARY: Self = Self(16);
 }
 #[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
 impl DriverId {

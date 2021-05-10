@@ -51,7 +51,11 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
                     lifetime: Some(lifetime_a.clone()),
                 },
                 body: quote! {
-                    self.0.p_sample_mask = sample_mask.as_ptr() as _;
+                    self.0.p_sample_mask = if sample_mask.is_empty() {
+                        std::ptr::null()
+                    } else {
+                        sample_mask.as_ptr() as _
+                    };
                 },
             },
         }],

@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants
 
+### Fixed
+
+- Fix possible violation of spec (`pSampleMask`)
+
 ## [0.18.0+174] - 2021-03-29
 
 ### Added

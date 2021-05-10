@@ -13285,7 +13285,7 @@ impl<'a> PipelineMultisampleStateCreateInfoBuilder<'a> {
     }
     #[inline]
     pub fn sample_mask(mut self, sample_mask: &'a [crate::vk1_0::SampleMask]) -> Self {
-        self.0.p_sample_mask = sample_mask.as_ptr() as _;
+        self.0.p_sample_mask = if sample_mask.is_empty() { std::ptr::null() } else { sample_mask.as_ptr() as _ };
         self
     }
     #[inline]

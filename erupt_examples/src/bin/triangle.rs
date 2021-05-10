@@ -59,9 +59,9 @@ fn main() {
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
-        vk::version_major(entry.instance_version()),
-        vk::version_minor(entry.instance_version()),
-        vk::version_patch(entry.instance_version())
+        vk::api_version_major(entry.instance_version()),
+        vk::api_version_minor(entry.instance_version()),
+        vk::api_version_patch(entry.instance_version())
     );
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Instance
@@ -69,10 +69,10 @@ fn main() {
     let engine_name = CString::new("No Engine").unwrap();
     let app_info = vk::ApplicationInfoBuilder::new()
         .application_name(&application_name)
-        .application_version(vk::make_version(1, 0, 0))
+        .application_version(vk::make_api_version(0, 1, 0, 0))
         .engine_name(&engine_name)
-        .engine_version(vk::make_version(1, 0, 0))
-        .api_version(vk::make_version(1, 0, 0));
+        .engine_version(vk::make_api_version(0, 1, 0, 0))
+        .api_version(vk::make_api_version(0, 1, 0, 0));
 
     let mut instance_extensions = surface::enumerate_required_extensions(&window).unwrap();
     if opt.validation_layers {

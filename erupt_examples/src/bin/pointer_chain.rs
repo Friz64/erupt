@@ -8,12 +8,12 @@ fn main() {
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
-        vk::version_major(entry.instance_version()),
-        vk::version_minor(entry.instance_version()),
-        vk::version_patch(entry.instance_version())
+        vk::api_version_major(entry.instance_version()),
+        vk::api_version_minor(entry.instance_version()),
+        vk::api_version_patch(entry.instance_version())
     );
 
-    let info = vk::ApplicationInfoBuilder::new().api_version(vk::make_version(1, 1, 0));
+    let info = vk::ApplicationInfoBuilder::new().api_version(vk::make_api_version(0, 1, 1, 0));
     let instance_info = vk::InstanceCreateInfoBuilder::new().application_info(&info);
     let instance = unsafe { InstanceLoader::new(&entry, &instance_info, None) }.unwrap();
 
@@ -24,8 +24,8 @@ fn main() {
             CStr::from_ptr(device_properties.device_name.as_ptr())
         });
 
-        let vk1_1 = device_properties.api_version >= vk::make_version(1, 1, 0);
-        let vk1_2 = device_properties.api_version >= vk::make_version(1, 2, 0);
+        let vk1_1 = device_properties.api_version >= vk::make_api_version(0, 1, 1, 0);
+        let vk1_2 = device_properties.api_version >= vk::make_api_version(0, 1, 2, 0);
 
         if vk1_1 {
             let mut vk1_1features = vk::PhysicalDeviceVulkan11FeaturesBuilder::new();

@@ -310,9 +310,13 @@ impl Function {
                                 _ => quote! { .min(#ident.len()) },
                             }
                         });
+                    let length_expr = quote! { #(#length_exprs)* };
+                    if length_expr.is_empty() {
+                        panic!("Empty LengthByArray expr in {:?}", self.name.no_pfn);
+                    }
 
                     length_init.extend(quote! {
-                        let #cleaned_ident = #(#length_exprs)*;
+                        let #cleaned_ident = #length_expr;
                     });
 
                     quote! { #cleaned_ident as _ }

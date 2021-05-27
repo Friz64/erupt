@@ -1,4 +1,4 @@
-<img src="https://gitlab.com/Friz64/erupt/-/raw/master/logo.svg" height=200>
+<img src="https://gitlab.com/Friz64/erupt/-/raw/main/logo.svg" height=200>
 
 # erupt
 
@@ -43,9 +43,9 @@ instance.destroy_instance(None);
 
 ## Additional examples
 
-- [triangle](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/triangle.rs)
-- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/pointer_chain.rs)
-- [version](https://gitlab.com/Friz64/erupt/-/blob/master/erupt_examples/src/bin/version.rs)
+- [triangle](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/triangle.rs)
+- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/pointer_chain.rs)
+- [version](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/version.rs)
 
 ## Cargo Features
 
@@ -93,7 +93,7 @@ Rust 1.48 or higher.
 
 The logo is the Volcano Emoji of [Twemoji](https://twemoji.twitter.com/) ([License](https://creativecommons.org/licenses/by/4.0/)). The name "erupt" was added on top of it.
 
-This project is licensed under the [zlib License](https://gitlab.com/Friz64/erupt/-/blob/master/LICENSE).
+This project is licensed under the [zlib License](https://gitlab.com/Friz64/erupt/-/blob/main/LICENSE).
 
 [utility module]: https://docs.rs/erupt/%2A/erupt/utils/index.html
 [`vulkanresult`]: https://docs.rs/erupt/%2A/erupt/utils/struct.VulkanResult.html

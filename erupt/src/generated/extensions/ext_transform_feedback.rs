@@ -321,37 +321,41 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateStreamCreateInfoEXTBui
 #[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
     #[doc(alias = "vkCmdBindTransformFeedbackBuffersEXT")]
     pub unsafe fn cmd_bind_transform_feedback_buffers_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, buffers: &[crate::vk1_0::Buffer], offsets: &[crate::vk1_0::DeviceSize], sizes: &[crate::vk1_0::DeviceSize]) -> () {
-        let _function = self.cmd_bind_transform_feedback_buffers_ext.expect("`cmd_bind_transform_feedback_buffers_ext` is not loaded");
+        let _function = self.cmd_bind_transform_feedback_buffers_ext.expect("tried to call a function that isn't loaded");
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len());
         let _return = _function(command_buffer as _, first_binding as _, binding_count as _, buffers.as_ptr() as _, offsets.as_ptr() as _, sizes.as_ptr() as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginTransformFeedbackEXT")]
     pub unsafe fn cmd_begin_transform_feedback_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffers: &[crate::vk1_0::Buffer], counter_buffer_offsets: &[crate::vk1_0::DeviceSize]) -> () {
-        let _function = self.cmd_begin_transform_feedback_ext.expect("`cmd_begin_transform_feedback_ext` is not loaded");
+        let _function = self.cmd_begin_transform_feedback_ext.expect("tried to call a function that isn't loaded");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len());
         let _return = _function(command_buffer as _, first_counter_buffer as _, counter_buffer_count as _, counter_buffers.as_ptr() as _, counter_buffer_offsets.as_ptr() as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function"]
     #[doc(alias = "vkCmdEndTransformFeedbackEXT")]
     pub unsafe fn cmd_end_transform_feedback_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_counter_buffer: u32, counter_buffers: &[crate::vk1_0::Buffer], counter_buffer_offsets: &[crate::vk1_0::DeviceSize]) -> () {
-        let _function = self.cmd_end_transform_feedback_ext.expect("`cmd_end_transform_feedback_ext` is not loaded");
+        let _function = self.cmd_end_transform_feedback_ext.expect("tried to call a function that isn't loaded");
         let counter_buffer_count = counter_buffers.len().min(counter_buffer_offsets.len());
         let _return = _function(command_buffer as _, first_counter_buffer as _, counter_buffer_count as _, counter_buffers.as_ptr() as _, counter_buffer_offsets.as_ptr() as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginQueryIndexedEXT")]
     pub unsafe fn cmd_begin_query_indexed_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: Option<crate::vk1_0::QueryControlFlags>, index: u32) -> () {
-        let _function = self.cmd_begin_query_indexed_ext.expect("`cmd_begin_query_indexed_ext` is not loaded");
+        let _function = self.cmd_begin_query_indexed_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(
             command_buffer as _,
             query_pool as _,
@@ -365,18 +369,20 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function"]
     #[doc(alias = "vkCmdEndQueryIndexedEXT")]
     pub unsafe fn cmd_end_query_indexed_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, index: u32) -> () {
-        let _function = self.cmd_end_query_indexed_ext.expect("`cmd_end_query_indexed_ext` is not loaded");
+        let _function = self.cmd_end_query_indexed_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, query_pool as _, query as _, index as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
     #[doc(alias = "vkCmdDrawIndirectByteCountEXT")]
     pub unsafe fn cmd_draw_indirect_byte_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, instance_count: u32, first_instance: u32, counter_buffer: crate::vk1_0::Buffer, counter_buffer_offset: crate::vk1_0::DeviceSize, counter_offset: u32, vertex_stride: u32) -> () {
-        let _function = self.cmd_draw_indirect_byte_count_ext.expect("`cmd_draw_indirect_byte_count_ext` is not loaded");
+        let _function = self.cmd_draw_indirect_byte_count_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, instance_count as _, first_instance as _, counter_buffer as _, counter_buffer_offset as _, counter_offset as _, vertex_stride as _);
         ()
     }

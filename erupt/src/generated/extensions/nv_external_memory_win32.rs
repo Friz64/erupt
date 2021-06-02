@@ -156,10 +156,11 @@ impl<'a> std::ops::DerefMut for ExportMemoryWin32HandleInfoNVBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::nv_external_memory_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandleNV")]
     pub unsafe fn get_memory_win32_handle_nv(&self, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_memory_win32_handle_nv.expect("`get_memory_win32_handle_nv` is not loaded");
+        let _function = self.get_memory_win32_handle_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, memory as _, handle_type as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }

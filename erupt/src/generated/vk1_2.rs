@@ -5283,18 +5283,20 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVulkan12PropertiesBuilder<'a> {
 #[doc = "Provided by [`crate::vk1_2`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]
     #[doc(alias = "vkResetQueryPool")]
     pub unsafe fn reset_query_pool(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> () {
-        let _function = self.reset_query_pool.expect("`reset_query_pool` is not loaded");
+        let _function = self.reset_query_pool.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, query_pool as _, first_query as _, query_count as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRenderPass2.html) · Function"]
     #[doc(alias = "vkCreateRenderPass2")]
     pub unsafe fn create_render_pass2(&self, create_info: &crate::vk1_2::RenderPassCreateInfo2, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::RenderPass> {
-        let _function = self.create_render_pass2.expect("`create_render_pass2` is not loaded");
+        let _function = self.create_render_pass2.expect("tried to call a function that isn't loaded");
         let mut render_pass = Default::default();
         let _return = _function(
             self.handle,
@@ -5308,91 +5310,102 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, render_pass)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginRenderPass2.html) · Function"]
     #[doc(alias = "vkCmdBeginRenderPass2")]
     pub unsafe fn cmd_begin_render_pass2(&self, command_buffer: crate::vk1_0::CommandBuffer, render_pass_begin: &crate::vk1_0::RenderPassBeginInfo, subpass_begin_info: &crate::vk1_2::SubpassBeginInfo) -> () {
-        let _function = self.cmd_begin_render_pass2.expect("`cmd_begin_render_pass2` is not loaded");
+        let _function = self.cmd_begin_render_pass2.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, render_pass_begin as _, subpass_begin_info as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdNextSubpass2.html) · Function"]
     #[doc(alias = "vkCmdNextSubpass2")]
     pub unsafe fn cmd_next_subpass2(&self, command_buffer: crate::vk1_0::CommandBuffer, subpass_begin_info: &crate::vk1_2::SubpassBeginInfo, subpass_end_info: &crate::vk1_2::SubpassEndInfo) -> () {
-        let _function = self.cmd_next_subpass2.expect("`cmd_next_subpass2` is not loaded");
+        let _function = self.cmd_next_subpass2.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, subpass_begin_info as _, subpass_end_info as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndRenderPass2.html) · Function"]
     #[doc(alias = "vkCmdEndRenderPass2")]
     pub unsafe fn cmd_end_render_pass2(&self, command_buffer: crate::vk1_0::CommandBuffer, subpass_end_info: &crate::vk1_2::SubpassEndInfo) -> () {
-        let _function = self.cmd_end_render_pass2.expect("`cmd_end_render_pass2` is not loaded");
+        let _function = self.cmd_end_render_pass2.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, subpass_end_info as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValue.html) · Function"]
     #[doc(alias = "vkGetSemaphoreCounterValue")]
     pub unsafe fn get_semaphore_counter_value(&self, semaphore: crate::vk1_0::Semaphore) -> crate::utils::VulkanResult<u64> {
-        let _function = self.get_semaphore_counter_value.expect("`get_semaphore_counter_value` is not loaded");
+        let _function = self.get_semaphore_counter_value.expect("tried to call a function that isn't loaded");
         let mut value = Default::default();
         let _return = _function(self.handle, semaphore as _, &mut value);
         crate::utils::VulkanResult::new(_return, value)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphores.html) · Function"]
     #[doc(alias = "vkWaitSemaphores")]
     pub unsafe fn wait_semaphores(&self, wait_info: &crate::vk1_2::SemaphoreWaitInfo, timeout: u64) -> crate::utils::VulkanResult<()> {
-        let _function = self.wait_semaphores.expect("`wait_semaphores` is not loaded");
+        let _function = self.wait_semaphores.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, wait_info as _, timeout as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphore.html) · Function"]
     #[doc(alias = "vkSignalSemaphore")]
     pub unsafe fn signal_semaphore(&self, signal_info: &crate::vk1_2::SemaphoreSignalInfo) -> crate::utils::VulkanResult<()> {
-        let _function = self.signal_semaphore.expect("`signal_semaphore` is not loaded");
+        let _function = self.signal_semaphore.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, signal_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCount.html) · Function"]
     #[doc(alias = "vkCmdDrawIndirectCount")]
     pub unsafe fn cmd_draw_indirect_count(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_indirect_count.expect("`cmd_draw_indirect_count` is not loaded");
+        let _function = self.cmd_draw_indirect_count.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCount.html) · Function"]
     #[doc(alias = "vkCmdDrawIndexedIndirectCount")]
     pub unsafe fn cmd_draw_indexed_indirect_count(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_indexed_indirect_count.expect("`cmd_draw_indexed_indirect_count` is not loaded");
+        let _function = self.cmd_draw_indexed_indirect_count.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddress.html) · Function"]
     #[doc(alias = "vkGetBufferOpaqueCaptureAddress")]
     pub unsafe fn get_buffer_opaque_capture_address(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> u64 {
-        let _function = self.get_buffer_opaque_capture_address.expect("`get_buffer_opaque_capture_address` is not loaded");
+        let _function = self.get_buffer_opaque_capture_address.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddress.html) · Function"]
     #[doc(alias = "vkGetBufferDeviceAddress")]
     pub unsafe fn get_buffer_device_address(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> crate::vk1_0::DeviceAddress {
-        let _function = self.get_buffer_device_address.expect("`get_buffer_device_address` is not loaded");
+        let _function = self.get_buffer_device_address.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html) · Function"]
     #[doc(alias = "vkGetDeviceMemoryOpaqueCaptureAddress")]
     pub unsafe fn get_device_memory_opaque_capture_address(&self, info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo) -> u64 {
-        let _function = self.get_device_memory_opaque_capture_address.expect("`get_device_memory_opaque_capture_address` is not loaded");
+        let _function = self.get_device_memory_opaque_capture_address.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         _return
     }

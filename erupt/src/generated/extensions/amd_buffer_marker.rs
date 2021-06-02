@@ -12,10 +12,11 @@ pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(command_buffe
 #[doc = "Provided by [`crate::extensions::amd_buffer_marker`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function"]
     #[doc(alias = "vkCmdWriteBufferMarkerAMD")]
     pub unsafe fn cmd_write_buffer_marker_amd(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: crate::vk1_0::PipelineStageFlagBits, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> () {
-        let _function = self.cmd_write_buffer_marker_amd.expect("`cmd_write_buffer_marker_amd` is not loaded");
+        let _function = self.cmd_write_buffer_marker_amd.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, pipeline_stage as _, dst_buffer as _, dst_offset as _, marker as _);
         ()
     }

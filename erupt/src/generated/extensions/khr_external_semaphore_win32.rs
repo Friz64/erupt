@@ -333,18 +333,20 @@ impl<'a> std::ops::DerefMut for SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_external_semaphore_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreWin32HandleKHR")]
     pub unsafe fn get_semaphore_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_semaphore_win32_handle_khr.expect("`get_semaphore_win32_handle_khr` is not loaded");
+        let _function = self.get_semaphore_win32_handle_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkImportSemaphoreWin32HandleKHR")]
     pub unsafe fn import_semaphore_win32_handle_khr(&self, import_semaphore_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.import_semaphore_win32_handle_khr.expect("`import_semaphore_win32_handle_khr` is not loaded");
+        let _function = self.import_semaphore_win32_handle_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, import_semaphore_win32_handle_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

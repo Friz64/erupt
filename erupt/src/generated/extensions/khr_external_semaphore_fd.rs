@@ -173,19 +173,21 @@ impl<'a> std::ops::DerefMut for SemaphoreGetFdInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_external_semaphore_fd`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreFdKHR")]
     pub unsafe fn get_semaphore_fd_khr(&self, get_fd_info: &crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self.get_semaphore_fd_khr.expect("`get_semaphore_fd_khr` is not loaded");
+        let _function = self.get_semaphore_fd_khr.expect("tried to call a function that isn't loaded");
         let mut fd = Default::default();
         let _return = _function(self.handle, get_fd_info as _, &mut fd);
         crate::utils::VulkanResult::new(_return, fd)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreFdKHR.html) · Function"]
     #[doc(alias = "vkImportSemaphoreFdKHR")]
     pub unsafe fn import_semaphore_fd_khr(&self, import_semaphore_fd_info: &crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.import_semaphore_fd_khr.expect("`import_semaphore_fd_khr` is not loaded");
+        let _function = self.import_semaphore_fd_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, import_semaphore_fd_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

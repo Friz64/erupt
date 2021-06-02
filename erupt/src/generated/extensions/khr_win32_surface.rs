@@ -115,10 +115,11 @@ impl<'a> std::ops::DerefMut for Win32SurfaceCreateInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_win32_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateWin32SurfaceKHR")]
     pub unsafe fn create_win32_surface_khr(&self, create_info: &crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_win32_surface_khr.expect("`create_win32_surface_khr` is not loaded");
+        let _function = self.create_win32_surface_khr.expect("tried to call a function that isn't loaded");
         let mut surface = Default::default();
         let _return = _function(
             self.handle,
@@ -132,10 +133,11 @@ impl crate::InstanceLoader {
         crate::utils::VulkanResult::new(_return, surface)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
     pub unsafe fn get_physical_device_win32_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32) -> bool {
-        let _function = self.get_physical_device_win32_presentation_support_khr.expect("`get_physical_device_win32_presentation_support_khr` is not loaded");
+        let _function = self.get_physical_device_win32_presentation_support_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(physical_device as _, queue_family_index as _);
         _return != 0
     }

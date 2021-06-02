@@ -172,10 +172,11 @@ impl<'a> std::ops::DerefMut for BufferDeviceAddressCreateInfoEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_buffer_device_address`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Function"]
     #[doc(alias = "vkGetBufferDeviceAddressEXT")]
     pub unsafe fn get_buffer_device_address_ext(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> crate::vk1_0::DeviceAddress {
-        let _function = self.get_buffer_device_address_ext.expect("`get_buffer_device_address_ext` is not loaded");
+        let _function = self.get_buffer_device_address_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         _return
     }

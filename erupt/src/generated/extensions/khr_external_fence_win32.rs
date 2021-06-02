@@ -257,18 +257,20 @@ impl<'a> std::ops::DerefMut for FenceGetWin32HandleInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_external_fence_win32`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetFenceWin32HandleKHR")]
     pub unsafe fn get_fence_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_fence_win32_handle_khr.expect("`get_fence_win32_handle_khr` is not loaded");
+        let _function = self.get_fence_win32_handle_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkImportFenceWin32HandleKHR")]
     pub unsafe fn import_fence_win32_handle_khr(&self, import_fence_win32_handle_info: &crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.import_fence_win32_handle_khr.expect("`import_fence_win32_handle_khr` is not loaded");
+        let _function = self.import_fence_win32_handle_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, import_fence_win32_handle_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

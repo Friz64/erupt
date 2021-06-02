@@ -106,10 +106,11 @@ impl<'a> std::ops::DerefMut for CalibratedTimestampInfoEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCalibrateableTimeDomainsEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceCalibrateableTimeDomainsEXT")]
     pub unsafe fn get_physical_device_calibrateable_time_domains_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, time_domain_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_calibrated_timestamps::TimeDomainEXT>> {
-        let _function = self.get_physical_device_calibrateable_time_domains_ext.expect("`get_physical_device_calibrateable_time_domains_ext` is not loaded");
+        let _function = self.get_physical_device_calibrateable_time_domains_ext.expect("tried to call a function that isn't loaded");
         let mut time_domain_count = match time_domain_count {
             Some(v) => v,
             None => {
@@ -126,10 +127,11 @@ impl crate::InstanceLoader {
 #[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetCalibratedTimestampsEXT.html) · Function"]
     #[doc(alias = "vkGetCalibratedTimestampsEXT")]
     pub unsafe fn get_calibrated_timestamps_ext(&self, timestamp_infos: &[crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXTBuilder]) -> crate::utils::VulkanResult<(Vec<u64>, u64)> {
-        let _function = self.get_calibrated_timestamps_ext.expect("`get_calibrated_timestamps_ext` is not loaded");
+        let _function = self.get_calibrated_timestamps_ext.expect("tried to call a function that isn't loaded");
         let timestamp_count = timestamp_infos.len();
         let mut timestamps = vec![Default::default(); timestamp_count as _];
         let mut max_deviation = Default::default();

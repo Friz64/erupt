@@ -6037,10 +6037,11 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderDrawParametersFeaturesBuilde
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceVersion")]
     pub unsafe fn enumerate_instance_version(&self) -> crate::utils::VulkanResult<u32> {
-        let _function = self.enumerate_instance_version.expect("`enumerate_instance_version` is not loaded");
+        let _function = self.enumerate_instance_version.expect("tried to call a function that isn't loaded");
         let mut api_version = Default::default();
         let _return = _function(&mut api_version);
         crate::utils::VulkanResult::new(_return, api_version)
@@ -6049,10 +6050,11 @@ impl<T> crate::EntryLoader<T> {
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFeatures2")]
     pub unsafe fn get_physical_device_features2(&self, physical_device: crate::vk1_0::PhysicalDevice, features: Option<crate::vk1_1::PhysicalDeviceFeatures2>) -> crate::vk1_1::PhysicalDeviceFeatures2 {
-        let _function = self.get_physical_device_features2.expect("`get_physical_device_features2` is not loaded");
+        let _function = self.get_physical_device_features2.expect("tried to call a function that isn't loaded");
         let mut features = match features {
             Some(v) => v,
             None => Default::default(),
@@ -6061,10 +6063,11 @@ impl crate::InstanceLoader {
         features
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceProperties2")]
     pub unsafe fn get_physical_device_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, properties: Option<crate::vk1_1::PhysicalDeviceProperties2>) -> crate::vk1_1::PhysicalDeviceProperties2 {
-        let _function = self.get_physical_device_properties2.expect("`get_physical_device_properties2` is not loaded");
+        let _function = self.get_physical_device_properties2.expect("tried to call a function that isn't loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),
@@ -6073,10 +6076,11 @@ impl crate::InstanceLoader {
         properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFormatProperties2")]
     pub unsafe fn get_physical_device_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, format_properties: Option<crate::vk1_1::FormatProperties2>) -> crate::vk1_1::FormatProperties2 {
-        let _function = self.get_physical_device_format_properties2.expect("`get_physical_device_format_properties2` is not loaded");
+        let _function = self.get_physical_device_format_properties2.expect("tried to call a function that isn't loaded");
         let mut format_properties = match format_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6085,10 +6089,11 @@ impl crate::InstanceLoader {
         format_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties2")]
     pub unsafe fn get_physical_device_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2, image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
-        let _function = self.get_physical_device_image_format_properties2.expect("`get_physical_device_image_format_properties2` is not loaded");
+        let _function = self.get_physical_device_image_format_properties2.expect("tried to call a function that isn't loaded");
         let mut image_format_properties = match image_format_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6097,10 +6102,11 @@ impl crate::InstanceLoader {
         crate::utils::VulkanResult::new(_return, image_format_properties)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties2")]
     pub unsafe fn get_physical_device_queue_family_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> Vec<crate::vk1_1::QueueFamilyProperties2> {
-        let _function = self.get_physical_device_queue_family_properties2.expect("`get_physical_device_queue_family_properties2` is not loaded");
+        let _function = self.get_physical_device_queue_family_properties2.expect("tried to call a function that isn't loaded");
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
             None => {
@@ -6114,10 +6120,11 @@ impl crate::InstanceLoader {
         queue_family_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceMemoryProperties2")]
     pub unsafe fn get_physical_device_memory_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, memory_properties: Option<crate::vk1_1::PhysicalDeviceMemoryProperties2>) -> crate::vk1_1::PhysicalDeviceMemoryProperties2 {
-        let _function = self.get_physical_device_memory_properties2.expect("`get_physical_device_memory_properties2` is not loaded");
+        let _function = self.get_physical_device_memory_properties2.expect("tried to call a function that isn't loaded");
         let mut memory_properties = match memory_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6126,10 +6133,11 @@ impl crate::InstanceLoader {
         memory_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2")]
     pub unsafe fn get_physical_device_sparse_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
-        let _function = self.get_physical_device_sparse_image_format_properties2.expect("`get_physical_device_sparse_image_format_properties2` is not loaded");
+        let _function = self.get_physical_device_sparse_image_format_properties2.expect("tried to call a function that isn't loaded");
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -6143,10 +6151,11 @@ impl crate::InstanceLoader {
         properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalBufferProperties")]
     pub unsafe fn get_physical_device_external_buffer_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_buffer_info: &crate::vk1_1::PhysicalDeviceExternalBufferInfo, external_buffer_properties: Option<crate::vk1_1::ExternalBufferProperties>) -> crate::vk1_1::ExternalBufferProperties {
-        let _function = self.get_physical_device_external_buffer_properties.expect("`get_physical_device_external_buffer_properties` is not loaded");
+        let _function = self.get_physical_device_external_buffer_properties.expect("tried to call a function that isn't loaded");
         let mut external_buffer_properties = match external_buffer_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6155,10 +6164,11 @@ impl crate::InstanceLoader {
         external_buffer_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalSemaphoreProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalSemaphoreProperties")]
     pub unsafe fn get_physical_device_external_semaphore_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_semaphore_info: &crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo, external_semaphore_properties: Option<crate::vk1_1::ExternalSemaphoreProperties>) -> crate::vk1_1::ExternalSemaphoreProperties {
-        let _function = self.get_physical_device_external_semaphore_properties.expect("`get_physical_device_external_semaphore_properties` is not loaded");
+        let _function = self.get_physical_device_external_semaphore_properties.expect("tried to call a function that isn't loaded");
         let mut external_semaphore_properties = match external_semaphore_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6167,10 +6177,11 @@ impl crate::InstanceLoader {
         external_semaphore_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFenceProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalFenceProperties")]
     pub unsafe fn get_physical_device_external_fence_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo, external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>) -> crate::vk1_1::ExternalFenceProperties {
-        let _function = self.get_physical_device_external_fence_properties.expect("`get_physical_device_external_fence_properties` is not loaded");
+        let _function = self.get_physical_device_external_fence_properties.expect("tried to call a function that isn't loaded");
         let mut external_fence_properties = match external_fence_properties {
             Some(v) => v,
             None => Default::default(),
@@ -6179,10 +6190,11 @@ impl crate::InstanceLoader {
         external_fence_properties
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroups.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceGroups")]
     pub unsafe fn enumerate_physical_device_groups(&self, physical_device_group_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
-        let _function = self.enumerate_physical_device_groups.expect("`enumerate_physical_device_groups` is not loaded");
+        let _function = self.enumerate_physical_device_groups.expect("tried to call a function that isn't loaded");
         let mut physical_device_group_count = match physical_device_group_count {
             Some(v) => v,
             None => {
@@ -6199,10 +6211,11 @@ impl crate::InstanceLoader {
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPool.html) · Function"]
     #[doc(alias = "vkTrimCommandPool")]
     pub unsafe fn trim_command_pool(&self, command_pool: crate::vk1_0::CommandPool, flags: Option<crate::vk1_1::CommandPoolTrimFlags>) -> () {
-        let _function = self.trim_command_pool.expect("`trim_command_pool` is not loaded");
+        let _function = self.trim_command_pool.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             command_pool as _,
@@ -6214,53 +6227,59 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeatures.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPeerMemoryFeatures")]
     pub unsafe fn get_device_group_peer_memory_features(&self, heap_index: u32, local_device_index: u32, remote_device_index: u32) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let _function = self.get_device_group_peer_memory_features.expect("`get_device_group_peer_memory_features` is not loaded");
+        let _function = self.get_device_group_peer_memory_features.expect("tried to call a function that isn't loaded");
         let mut peer_memory_features = Default::default();
         let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2.html) · Function"]
     #[doc(alias = "vkBindBufferMemory2")]
     pub unsafe fn bind_buffer_memory2(&self, bind_infos: &[crate::vk1_1::BindBufferMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
-        let _function = self.bind_buffer_memory2.expect("`bind_buffer_memory2` is not loaded");
+        let _function = self.bind_buffer_memory2.expect("tried to call a function that isn't loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2.html) · Function"]
     #[doc(alias = "vkBindImageMemory2")]
     pub unsafe fn bind_image_memory2(&self, bind_infos: &[crate::vk1_1::BindImageMemoryInfoBuilder]) -> crate::utils::VulkanResult<()> {
-        let _function = self.bind_image_memory2.expect("`bind_image_memory2` is not loaded");
+        let _function = self.bind_image_memory2.expect("tried to call a function that isn't loaded");
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMask.html) · Function"]
     #[doc(alias = "vkCmdSetDeviceMask")]
     pub unsafe fn cmd_set_device_mask(&self, command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> () {
-        let _function = self.cmd_set_device_mask.expect("`cmd_set_device_mask` is not loaded");
+        let _function = self.cmd_set_device_mask.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, device_mask as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBase.html) · Function"]
     #[doc(alias = "vkCmdDispatchBase")]
     pub unsafe fn cmd_dispatch_base(&self, command_buffer: crate::vk1_0::CommandBuffer, base_group_x: u32, base_group_y: u32, base_group_z: u32, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> () {
-        let _function = self.cmd_dispatch_base.expect("`cmd_dispatch_base` is not loaded");
+        let _function = self.cmd_dispatch_base.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, base_group_x as _, base_group_y as _, base_group_z as _, group_count_x as _, group_count_y as _, group_count_z as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplate.html) · Function"]
     #[doc(alias = "vkCreateDescriptorUpdateTemplate")]
     pub unsafe fn create_descriptor_update_template(&self, create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let _function = self.create_descriptor_update_template.expect("`create_descriptor_update_template` is not loaded");
+        let _function = self.create_descriptor_update_template.expect("tried to call a function that isn't loaded");
         let mut descriptor_update_template = Default::default();
         let _return = _function(
             self.handle,
@@ -6274,10 +6293,11 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, descriptor_update_template)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplate.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplate")]
     pub unsafe fn destroy_descriptor_update_template(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_descriptor_update_template.expect("`destroy_descriptor_update_template` is not loaded");
+        let _function = self.destroy_descriptor_update_template.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             match descriptor_update_template {
@@ -6292,18 +6312,20 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplate.html) · Function"]
     #[doc(alias = "vkUpdateDescriptorSetWithTemplate")]
     pub unsafe fn update_descriptor_set_with_template(&self, descriptor_set: crate::vk1_0::DescriptorSet, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, data: *const std::ffi::c_void) -> () {
-        let _function = self.update_descriptor_set_with_template.expect("`update_descriptor_set_with_template` is not loaded");
+        let _function = self.update_descriptor_set_with_template.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, descriptor_set as _, descriptor_update_template as _, data);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferMemoryRequirements2.html) · Function"]
     #[doc(alias = "vkGetBufferMemoryRequirements2")]
     pub unsafe fn get_buffer_memory_requirements2(&self, info: &crate::vk1_1::BufferMemoryRequirementsInfo2, memory_requirements: Option<crate::vk1_1::MemoryRequirements2>) -> crate::vk1_1::MemoryRequirements2 {
-        let _function = self.get_buffer_memory_requirements2.expect("`get_buffer_memory_requirements2` is not loaded");
+        let _function = self.get_buffer_memory_requirements2.expect("tried to call a function that isn't loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
             None => Default::default(),
@@ -6312,10 +6334,11 @@ impl crate::DeviceLoader {
         memory_requirements
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageMemoryRequirements2.html) · Function"]
     #[doc(alias = "vkGetImageMemoryRequirements2")]
     pub unsafe fn get_image_memory_requirements2(&self, info: &crate::vk1_1::ImageMemoryRequirementsInfo2, memory_requirements: Option<crate::vk1_1::MemoryRequirements2>) -> crate::vk1_1::MemoryRequirements2 {
-        let _function = self.get_image_memory_requirements2.expect("`get_image_memory_requirements2` is not loaded");
+        let _function = self.get_image_memory_requirements2.expect("tried to call a function that isn't loaded");
         let mut memory_requirements = match memory_requirements {
             Some(v) => v,
             None => Default::default(),
@@ -6324,10 +6347,11 @@ impl crate::DeviceLoader {
         memory_requirements
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2.html) · Function"]
     #[doc(alias = "vkGetImageSparseMemoryRequirements2")]
     pub unsafe fn get_image_sparse_memory_requirements2(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
-        let _function = self.get_image_sparse_memory_requirements2.expect("`get_image_sparse_memory_requirements2` is not loaded");
+        let _function = self.get_image_sparse_memory_requirements2.expect("tried to call a function that isn't loaded");
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,
             None => {
@@ -6341,10 +6365,11 @@ impl crate::DeviceLoader {
         sparse_memory_requirements
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversion.html) · Function"]
     #[doc(alias = "vkCreateSamplerYcbcrConversion")]
     pub unsafe fn create_sampler_ycbcr_conversion(&self, create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
-        let _function = self.create_sampler_ycbcr_conversion.expect("`create_sampler_ycbcr_conversion` is not loaded");
+        let _function = self.create_sampler_ycbcr_conversion.expect("tried to call a function that isn't loaded");
         let mut ycbcr_conversion = Default::default();
         let _return = _function(
             self.handle,
@@ -6358,10 +6383,11 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, ycbcr_conversion)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversion.html) · Function"]
     #[doc(alias = "vkDestroySamplerYcbcrConversion")]
     pub unsafe fn destroy_sampler_ycbcr_conversion(&self, ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_sampler_ycbcr_conversion.expect("`destroy_sampler_ycbcr_conversion` is not loaded");
+        let _function = self.destroy_sampler_ycbcr_conversion.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             match ycbcr_conversion {
@@ -6376,19 +6402,21 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceQueue2.html) · Function"]
     #[doc(alias = "vkGetDeviceQueue2")]
     pub unsafe fn get_device_queue2(&self, queue_info: &crate::vk1_1::DeviceQueueInfo2) -> crate::vk1_0::Queue {
-        let _function = self.get_device_queue2.expect("`get_device_queue2` is not loaded");
+        let _function = self.get_device_queue2.expect("tried to call a function that isn't loaded");
         let mut queue = Default::default();
         let _return = _function(self.handle, queue_info as _, &mut queue);
         queue
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupport.html) · Function"]
     #[doc(alias = "vkGetDescriptorSetLayoutSupport")]
     pub unsafe fn get_descriptor_set_layout_support(&self, create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo, support: Option<crate::vk1_1::DescriptorSetLayoutSupport>) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let _function = self.get_descriptor_set_layout_support.expect("`get_descriptor_set_layout_support` is not loaded");
+        let _function = self.get_descriptor_set_layout_support.expect("tried to call a function that isn't loaded");
         let mut support = match support {
             Some(v) => v,
             None => Default::default(),

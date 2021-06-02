@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Mark `{Instance,Device}Loader::new` functions unsafe
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants
+- Remove specific function-not-loaded errors
 
 ### Fixed
 

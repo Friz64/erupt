@@ -702,10 +702,11 @@ impl<'a> std::ops::DerefMut for PerformanceQuerySubmitInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR")]
     pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, counter_count: Option<u32>) -> crate::utils::VulkanResult<(Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
-        let _function = self.enumerate_physical_device_queue_family_performance_query_counters_khr.expect("`enumerate_physical_device_queue_family_performance_query_counters_khr` is not loaded");
+        let _function = self.enumerate_physical_device_queue_family_performance_query_counters_khr.expect("tried to call a function that isn't loaded");
         let mut counter_count = match counter_count {
             Some(v) => v,
             None => {
@@ -720,10 +721,11 @@ impl crate::InstanceLoader {
         crate::utils::VulkanResult::new(_return, (counters, counter_descriptions))
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR")]
     pub unsafe fn get_physical_device_queue_family_performance_query_passes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, performance_query_create_info: &crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR) -> u32 {
-        let _function = self.get_physical_device_queue_family_performance_query_passes_khr.expect("`get_physical_device_queue_family_performance_query_passes_khr` is not loaded");
+        let _function = self.get_physical_device_queue_family_performance_query_passes_khr.expect("tried to call a function that isn't loaded");
         let mut num_passes = Default::default();
         let _return = _function(physical_device as _, performance_query_create_info as _, &mut num_passes);
         num_passes
@@ -732,18 +734,20 @@ impl crate::InstanceLoader {
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireProfilingLockKHR.html) · Function"]
     #[doc(alias = "vkAcquireProfilingLockKHR")]
     pub unsafe fn acquire_profiling_lock_khr(&self, info: &crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.acquire_profiling_lock_khr.expect("`acquire_profiling_lock_khr` is not loaded");
+        let _function = self.acquire_profiling_lock_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Function"]
     #[doc(alias = "vkReleaseProfilingLockKHR")]
     pub unsafe fn release_profiling_lock_khr(&self) -> () {
-        let _function = self.release_profiling_lock_khr.expect("`release_profiling_lock_khr` is not loaded");
+        let _function = self.release_profiling_lock_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle);
         ()
     }

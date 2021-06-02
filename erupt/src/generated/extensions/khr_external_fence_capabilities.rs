@@ -44,10 +44,11 @@ pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR = crate::vk1_1::PFN_v
 #[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalFencePropertiesKHR")]
     pub unsafe fn get_physical_device_external_fence_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, external_fence_info: &crate::vk1_1::PhysicalDeviceExternalFenceInfo, external_fence_properties: Option<crate::vk1_1::ExternalFenceProperties>) -> crate::vk1_1::ExternalFenceProperties {
-        let _function = self.get_physical_device_external_fence_properties_khr.expect("`get_physical_device_external_fence_properties_khr` is not loaded");
+        let _function = self.get_physical_device_external_fence_properties_khr.expect("tried to call a function that isn't loaded");
         let mut external_fence_properties = match external_fence_properties {
             Some(v) => v,
             None => Default::default(),

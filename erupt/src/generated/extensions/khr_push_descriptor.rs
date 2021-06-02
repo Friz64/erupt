@@ -83,19 +83,21 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePushDescriptorPropertiesKHRBuilder
 #[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
     #[doc(alias = "vkCmdPushDescriptorSetKHR")]
     pub unsafe fn cmd_push_descriptor_set_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, layout: crate::vk1_0::PipelineLayout, set: u32, descriptor_writes: &[crate::vk1_0::WriteDescriptorSetBuilder]) -> () {
-        let _function = self.cmd_push_descriptor_set_khr.expect("`cmd_push_descriptor_set_khr` is not loaded");
+        let _function = self.cmd_push_descriptor_set_khr.expect("tried to call a function that isn't loaded");
         let descriptor_write_count = descriptor_writes.len();
         let _return = _function(command_buffer as _, pipeline_bind_point as _, layout as _, set as _, descriptor_write_count as _, descriptor_writes.as_ptr() as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
     #[doc(alias = "vkCmdPushDescriptorSetWithTemplateKHR")]
     pub unsafe fn cmd_push_descriptor_set_with_template_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, layout: crate::vk1_0::PipelineLayout, set: u32, data: *const std::ffi::c_void) -> () {
-        let _function = self.cmd_push_descriptor_set_with_template_khr.expect("`cmd_push_descriptor_set_with_template_khr` is not loaded");
+        let _function = self.cmd_push_descriptor_set_with_template_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, descriptor_update_template as _, layout as _, set as _, data);
         ()
     }

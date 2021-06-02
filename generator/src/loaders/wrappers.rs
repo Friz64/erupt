@@ -375,7 +375,6 @@ impl Function {
         });
 
         let doc = self.doc(comment_gen);
-        let error = format!("`{}` is not loaded", ident);
         let param_idents = user_params.iter().map(|param| param.cleaned_ident());
         let param_types = user_params.iter().map(|param| param.ty.rust_type(source));
         let (return_expr, return_type) = match &self.return_type {
@@ -395,10 +394,11 @@ impl Function {
         let doc_alias = &self.name.no_pfn;
         quote! {
             #[inline]
+            #[track_caller]
             #[doc = #doc]
             #[doc(alias = #doc_alias)]
             pub unsafe fn #ident(&self, #(#param_idents: #param_types),*) -> #return_type {
-                let _function = self.#ident.expect(#error);
+                let _function = self.#ident.expect("tried to call a function that isn't loaded");
                 #extra_call
                 #length_init
                 #return_init

@@ -739,34 +739,38 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineInterfaceCreateInfoKHRBuilder<
 #[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysKHR.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysKHR")]
     pub unsafe fn cmd_trace_rays_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, width: u32, height: u32, depth: u32) -> () {
-        let _function = self.cmd_trace_rays_khr.expect("`cmd_trace_rays_khr` is not loaded");
+        let _function = self.cmd_trace_rays_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, raygen_shader_binding_table as _, miss_shader_binding_table as _, hit_shader_binding_table as _, callable_shader_binding_table as _, width as _, height as _, depth as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingShaderGroupHandlesKHR")]
     pub unsafe fn get_ray_tracing_shader_group_handles_khr(&self, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_ray_tracing_shader_group_handles_khr.expect("`get_ray_tracing_shader_group_handles_khr` is not loaded");
+        let _function = self.get_ray_tracing_shader_group_handles_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingCaptureReplayShaderGroupHandlesKHR")]
     pub unsafe fn get_ray_tracing_capture_replay_shader_group_handles_khr(&self, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_ray_tracing_capture_replay_shader_group_handles_khr.expect("`get_ray_tracing_capture_replay_shader_group_handles_khr` is not loaded");
+        let _function = self.get_ray_tracing_capture_replay_shader_group_handles_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesKHR")]
     pub unsafe fn create_ray_tracing_pipelines_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let _function = self.create_ray_tracing_pipelines_khr.expect("`create_ray_tracing_pipelines_khr` is not loaded");
+        let _function = self.create_ray_tracing_pipelines_khr.expect("tried to call a function that isn't loaded");
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _return = _function(
@@ -790,26 +794,29 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, pipelines)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysIndirectKHR.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysIndirectKHR")]
     pub unsafe fn cmd_trace_rays_indirect_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, miss_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, hit_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, callable_shader_binding_table: &crate::extensions::khr_ray_tracing_pipeline::StridedDeviceAddressRegionKHR, indirect_device_address: crate::vk1_0::DeviceAddress) -> () {
-        let _function = self.cmd_trace_rays_indirect_khr.expect("`cmd_trace_rays_indirect_khr` is not loaded");
+        let _function = self.cmd_trace_rays_indirect_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, raygen_shader_binding_table as _, miss_shader_binding_table as _, hit_shader_binding_table as _, callable_shader_binding_table as _, indirect_device_address as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupStackSizeKHR.html) · Function"]
     #[doc(alias = "vkGetRayTracingShaderGroupStackSizeKHR")]
     pub unsafe fn get_ray_tracing_shader_group_stack_size_khr(&self, pipeline: crate::vk1_0::Pipeline, group: u32, group_shader: crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR) -> crate::vk1_0::DeviceSize {
-        let _function = self.get_ray_tracing_shader_group_stack_size_khr.expect("`get_ray_tracing_shader_group_stack_size_khr` is not loaded");
+        let _function = self.get_ray_tracing_shader_group_stack_size_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, pipeline as _, group as _, group_shader as _);
         _return
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html) · Function"]
     #[doc(alias = "vkCmdSetRayTracingPipelineStackSizeKHR")]
     pub unsafe fn cmd_set_ray_tracing_pipeline_stack_size_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_stack_size: u32) -> () {
-        let _function = self.cmd_set_ray_tracing_pipeline_stack_size_khr.expect("`cmd_set_ray_tracing_pipeline_stack_size_khr` is not loaded");
+        let _function = self.cmd_set_ray_tracing_pipeline_stack_size_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, pipeline_stack_size as _);
         ()
     }

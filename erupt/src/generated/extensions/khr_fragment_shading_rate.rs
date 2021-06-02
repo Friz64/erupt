@@ -498,10 +498,11 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateKHRBuilder<'a> 
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html) · Function"]
     #[doc(alias = "vkCmdSetFragmentShadingRateKHR")]
     pub unsafe fn cmd_set_fragment_shading_rate_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, fragment_size: &crate::vk1_0::Extent2D, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> () {
-        let _function = self.cmd_set_fragment_shading_rate_khr.expect("`cmd_set_fragment_shading_rate_khr` is not loaded");
+        let _function = self.cmd_set_fragment_shading_rate_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, fragment_size as _, combiner_ops as _);
         ()
     }
@@ -509,10 +510,11 @@ impl crate::DeviceLoader {
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFragmentShadingRatesKHR")]
     pub unsafe fn get_physical_device_fragment_shading_rates_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, fragment_shading_rate_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
-        let _function = self.get_physical_device_fragment_shading_rates_khr.expect("`get_physical_device_fragment_shading_rates_khr` is not loaded");
+        let _function = self.get_physical_device_fragment_shading_rates_khr.expect("tried to call a function that isn't loaded");
         let mut fragment_shading_rate_count = match fragment_shading_rate_count {
             Some(v) => v,
             None => {

@@ -98,10 +98,11 @@ impl<'a> std::ops::DerefMut for HeadlessSurfaceCreateInfoEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_headless_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateHeadlessSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateHeadlessSurfaceEXT")]
     pub unsafe fn create_headless_surface_ext(&self, create_info: &crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_headless_surface_ext.expect("`create_headless_surface_ext` is not loaded");
+        let _function = self.create_headless_surface_ext.expect("tried to call a function that isn't loaded");
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

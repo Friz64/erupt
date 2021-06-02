@@ -444,10 +444,11 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetImageDrmFormatModifierPropertiesEXT")]
     pub unsafe fn get_image_drm_format_modifier_properties_ext(&self, image: crate::vk1_0::Image, properties: Option<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT>) -> crate::utils::VulkanResult<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT> {
-        let _function = self.get_image_drm_format_modifier_properties_ext.expect("`get_image_drm_format_modifier_properties_ext` is not loaded");
+        let _function = self.get_image_drm_format_modifier_properties_ext.expect("tried to call a function that isn't loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),

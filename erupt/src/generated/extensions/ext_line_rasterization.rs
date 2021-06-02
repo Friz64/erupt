@@ -281,10 +281,11 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
 #[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]
     #[doc(alias = "vkCmdSetLineStippleEXT")]
     pub unsafe fn cmd_set_line_stipple_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, line_stipple_factor: u32, line_stipple_pattern: u16) -> () {
-        let _function = self.cmd_set_line_stipple_ext.expect("`cmd_set_line_stipple_ext` is not loaded");
+        let _function = self.cmd_set_line_stipple_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, line_stipple_factor as _, line_stipple_pattern as _);
         ()
     }

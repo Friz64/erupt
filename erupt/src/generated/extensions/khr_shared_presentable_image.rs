@@ -78,10 +78,11 @@ impl<'a> std::ops::DerefMut for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainStatusKHR")]
     pub unsafe fn get_swapchain_status_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_swapchain_status_khr.expect("`get_swapchain_status_khr` is not loaded");
+        let _function = self.get_swapchain_status_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }

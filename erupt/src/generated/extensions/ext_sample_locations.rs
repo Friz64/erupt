@@ -611,10 +611,11 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
     #[doc(alias = "vkCmdSetSampleLocationsEXT")]
     pub unsafe fn cmd_set_sample_locations_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, sample_locations_info: &crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> () {
-        let _function = self.cmd_set_sample_locations_ext.expect("`cmd_set_sample_locations_ext` is not loaded");
+        let _function = self.cmd_set_sample_locations_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, sample_locations_info as _);
         ()
     }
@@ -622,10 +623,11 @@ impl crate::DeviceLoader {
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceMultisamplePropertiesEXT")]
     pub unsafe fn get_physical_device_multisample_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, multisample_properties: Option<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
-        let _function = self.get_physical_device_multisample_properties_ext.expect("`get_physical_device_multisample_properties_ext` is not loaded");
+        let _function = self.get_physical_device_multisample_properties_ext.expect("tried to call a function that isn't loaded");
         let mut multisample_properties = match multisample_properties {
             Some(v) => v,
             None => Default::default(),

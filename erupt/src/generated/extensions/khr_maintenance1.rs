@@ -16,10 +16,11 @@ pub type PFN_vkTrimCommandPoolKHR = crate::vk1_1::PFN_vkTrimCommandPool;
 #[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Function"]
     #[doc(alias = "vkTrimCommandPoolKHR")]
     pub unsafe fn trim_command_pool_khr(&self, command_pool: crate::vk1_0::CommandPool, flags: Option<crate::vk1_1::CommandPoolTrimFlags>) -> () {
-        let _function = self.trim_command_pool_khr.expect("`trim_command_pool_khr` is not loaded");
+        let _function = self.trim_command_pool_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             command_pool as _,

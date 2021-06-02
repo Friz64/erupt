@@ -221,10 +221,11 @@ impl<'a> std::ops::DerefMut for ShaderStatisticsInfoAMDBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::amd_shader_info`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function"]
     #[doc(alias = "vkGetShaderInfoAMD")]
     pub unsafe fn get_shader_info_amd(&self, pipeline: crate::vk1_0::Pipeline, shader_stage: crate::vk1_0::ShaderStageFlagBits, info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD, info_size: *mut usize, info: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_shader_info_amd.expect("`get_shader_info_amd` is not loaded");
+        let _function = self.get_shader_info_amd.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, pipeline as _, shader_stage as _, info_type as _, info_size, info);
         crate::utils::VulkanResult::new(_return, ())
     }

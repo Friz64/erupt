@@ -273,10 +273,11 @@ impl<'a> std::ops::DerefMut for FramebufferMixedSamplesCombinationNVBuilder<'a> 
 #[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV")]
     pub unsafe fn get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, combination_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>> {
-        let _function = self.get_physical_device_supported_framebuffer_mixed_samples_combinations_nv.expect("`get_physical_device_supported_framebuffer_mixed_samples_combinations_nv` is not loaded");
+        let _function = self.get_physical_device_supported_framebuffer_mixed_samples_combinations_nv.expect("tried to call a function that isn't loaded");
         let mut combination_count = match combination_count {
             Some(v) => v,
             None => {

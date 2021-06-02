@@ -12,10 +12,11 @@ pub type PFN_vkReleaseDisplayEXT = unsafe extern "system" fn(physical_device: cr
 #[doc = "Provided by [`crate::extensions::ext_direct_mode_display`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseDisplayEXT.html) · Function"]
     #[doc(alias = "vkReleaseDisplayEXT")]
     pub unsafe fn release_display_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.release_display_ext.expect("`release_display_ext` is not loaded");
+        let _function = self.release_display_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(physical_device as _, display as _);
         crate::utils::VulkanResult::new(_return, ())
     }

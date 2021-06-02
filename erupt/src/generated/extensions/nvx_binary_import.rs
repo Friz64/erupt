@@ -310,10 +310,11 @@ impl<'a> std::ops::DerefMut for CuLaunchInfoNVXBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuModuleNVX.html) · Function"]
     #[doc(alias = "vkCreateCuModuleNVX")]
     pub unsafe fn create_cu_module_nvx(&self, create_info: &crate::extensions::nvx_binary_import::CuModuleCreateInfoNVX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::nvx_binary_import::CuModuleNVX> {
-        let _function = self.create_cu_module_nvx.expect("`create_cu_module_nvx` is not loaded");
+        let _function = self.create_cu_module_nvx.expect("tried to call a function that isn't loaded");
         let mut module = Default::default();
         let _return = _function(
             self.handle,
@@ -327,10 +328,11 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, module)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuFunctionNVX.html) · Function"]
     #[doc(alias = "vkCreateCuFunctionNVX")]
     pub unsafe fn create_cu_function_nvx(&self, create_info: &crate::extensions::nvx_binary_import::CuFunctionCreateInfoNVX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::nvx_binary_import::CuFunctionNVX> {
-        let _function = self.create_cu_function_nvx.expect("`create_cu_function_nvx` is not loaded");
+        let _function = self.create_cu_function_nvx.expect("tried to call a function that isn't loaded");
         let mut function = Default::default();
         let _return = _function(
             self.handle,
@@ -344,10 +346,11 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, function)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuModuleNVX.html) · Function"]
     #[doc(alias = "vkDestroyCuModuleNVX")]
     pub unsafe fn destroy_cu_module_nvx(&self, module: crate::extensions::nvx_binary_import::CuModuleNVX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_cu_module_nvx.expect("`destroy_cu_module_nvx` is not loaded");
+        let _function = self.destroy_cu_module_nvx.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             module as _,
@@ -359,10 +362,11 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuFunctionNVX.html) · Function"]
     #[doc(alias = "vkDestroyCuFunctionNVX")]
     pub unsafe fn destroy_cu_function_nvx(&self, function: crate::extensions::nvx_binary_import::CuFunctionNVX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_cu_function_nvx.expect("`destroy_cu_function_nvx` is not loaded");
+        let _function = self.destroy_cu_function_nvx.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             function as _,
@@ -374,10 +378,11 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCuLaunchKernelNVX.html) · Function"]
     #[doc(alias = "vkCmdCuLaunchKernelNVX")]
     pub unsafe fn cmd_cu_launch_kernel_nvx(&self, command_buffer: crate::vk1_0::CommandBuffer, launch_info: &crate::extensions::nvx_binary_import::CuLaunchInfoNVX) -> () {
-        let _function = self.cmd_cu_launch_kernel_nvx.expect("`cmd_cu_launch_kernel_nvx` is not loaded");
+        let _function = self.cmd_cu_launch_kernel_nvx.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, launch_info as _);
         ()
     }

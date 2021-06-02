@@ -155,18 +155,20 @@ impl<'a> std::ops::DerefMut for CheckpointDataNVBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::nv_device_diagnostic_checkpoints`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
     #[doc(alias = "vkCmdSetCheckpointNV")]
     pub unsafe fn cmd_set_checkpoint_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, checkpoint_marker: *const std::ffi::c_void) -> () {
-        let _function = self.cmd_set_checkpoint_nv.expect("`cmd_set_checkpoint_nv` is not loaded");
+        let _function = self.cmd_set_checkpoint_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, checkpoint_marker);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointDataNV")]
     pub unsafe fn get_queue_checkpoint_data_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>) -> Vec<crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV> {
-        let _function = self.get_queue_checkpoint_data_nv.expect("`get_queue_checkpoint_data_nv` is not loaded");
+        let _function = self.get_queue_checkpoint_data_nv.expect("tried to call a function that isn't loaded");
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
             None => {

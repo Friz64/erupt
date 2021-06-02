@@ -106,10 +106,11 @@ impl<'a> std::ops::DerefMut for MetalSurfaceCreateInfoEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_metal_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateMetalSurfaceEXT")]
     pub unsafe fn create_metal_surface_ext(&self, create_info: &crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_metal_surface_ext.expect("`create_metal_surface_ext` is not loaded");
+        let _function = self.create_metal_surface_ext.expect("tried to call a function that isn't loaded");
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

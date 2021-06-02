@@ -1154,43 +1154,48 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSynchronization2FeaturesKHRBuilder
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdSetEvent2KHR")]
     pub unsafe fn cmd_set_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
-        let _function = self.cmd_set_event2_khr.expect("`cmd_set_event2_khr` is not loaded");
+        let _function = self.cmd_set_event2_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, event as _, dependency_info as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdResetEvent2KHR")]
     pub unsafe fn cmd_reset_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> () {
-        let _function = self.cmd_reset_event2_khr.expect("`cmd_reset_event2_khr` is not loaded");
+        let _function = self.cmd_reset_event2_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents2KHR.html) · Function"]
     #[doc(alias = "vkCmdWaitEvents2KHR")]
     pub unsafe fn cmd_wait_events2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], dependency_infos: &[crate::extensions::khr_synchronization2::DependencyInfoKHRBuilder]) -> () {
-        let _function = self.cmd_wait_events2_khr.expect("`cmd_wait_events2_khr` is not loaded");
+        let _function = self.cmd_wait_events2_khr.expect("tried to call a function that isn't loaded");
         let event_count = events.len().min(dependency_infos.len());
         let _return = _function(command_buffer as _, event_count as _, events.as_ptr() as _, dependency_infos.as_ptr() as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier2KHR.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier2KHR")]
     pub unsafe fn cmd_pipeline_barrier2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
-        let _function = self.cmd_pipeline_barrier2_khr.expect("`cmd_pipeline_barrier2_khr` is not loaded");
+        let _function = self.cmd_pipeline_barrier2_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, dependency_info as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
     #[doc(alias = "vkQueueSubmit2KHR")]
     pub unsafe fn queue_submit2_khr(&self, queue: crate::vk1_0::Queue, submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
-        let _function = self.queue_submit2_khr.expect("`queue_submit2_khr` is not loaded");
+        let _function = self.queue_submit2_khr.expect("tried to call a function that isn't loaded");
         let submit_count = submits.len();
         let _return = _function(
             queue as _,
@@ -1204,26 +1209,29 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp2KHR.html) · Function"]
     #[doc(alias = "vkCmdWriteTimestamp2KHR")]
     pub unsafe fn cmd_write_timestamp2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, query_pool: crate::vk1_0::QueryPool, query: u32) -> () {
-        let _function = self.cmd_write_timestamp2_khr.expect("`cmd_write_timestamp2_khr` is not loaded");
+        let _function = self.cmd_write_timestamp2_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, stage as _, query_pool as _, query as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarker2AMD.html) · Function"]
     #[doc(alias = "vkCmdWriteBufferMarker2AMD")]
     pub unsafe fn cmd_write_buffer_marker2_amd(&self, command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> () {
-        let _function = self.cmd_write_buffer_marker2_amd.expect("`cmd_write_buffer_marker2_amd` is not loaded");
+        let _function = self.cmd_write_buffer_marker2_amd.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, stage as _, dst_buffer as _, dst_offset as _, marker as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointData2NV")]
     pub unsafe fn get_queue_checkpoint_data2_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>) -> Vec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
-        let _function = self.get_queue_checkpoint_data2_nv.expect("`get_queue_checkpoint_data2_nv` is not loaded");
+        let _function = self.get_queue_checkpoint_data2_nv.expect("tried to call a function that isn't loaded");
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
             None => {

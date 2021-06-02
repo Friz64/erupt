@@ -248,10 +248,11 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesFullScreenExclusiveEXTBuilder
 #[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModes2EXT")]
     pub unsafe fn get_physical_device_surface_present_modes2_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let _function = self.get_physical_device_surface_present_modes2_ext.expect("`get_physical_device_surface_present_modes2_ext` is not loaded");
+        let _function = self.get_physical_device_surface_present_modes2_ext.expect("tried to call a function that isn't loaded");
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
             None => {
@@ -268,26 +269,29 @@ impl crate::InstanceLoader {
 #[doc = "Provided by [`crate::extensions::ext_full_screen_exclusive`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModes2EXT")]
     pub unsafe fn get_device_group_surface_present_modes2_ext(&self, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_device_group_surface_present_modes2_ext.expect("`get_device_group_surface_present_modes2_ext` is not loaded");
+        let _function = self.get_device_group_surface_present_modes2_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, surface_info as _, modes as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html) · Function"]
     #[doc(alias = "vkAcquireFullScreenExclusiveModeEXT")]
     pub unsafe fn acquire_full_screen_exclusive_mode_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.acquire_full_screen_exclusive_mode_ext.expect("`acquire_full_screen_exclusive_mode_ext` is not loaded");
+        let _function = self.acquire_full_screen_exclusive_mode_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html) · Function"]
     #[doc(alias = "vkReleaseFullScreenExclusiveModeEXT")]
     pub unsafe fn release_full_screen_exclusive_mode_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.release_full_screen_exclusive_mode_ext.expect("`release_full_screen_exclusive_mode_ext` is not loaded");
+        let _function = self.release_full_screen_exclusive_mode_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }

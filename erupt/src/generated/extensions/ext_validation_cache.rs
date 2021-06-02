@@ -209,10 +209,11 @@ impl<'a> std::ops::DerefMut for ShaderModuleValidationCacheCreateInfoEXTBuilder<
 #[doc = "Provided by [`crate::extensions::ext_validation_cache`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateValidationCacheEXT.html) · Function"]
     #[doc(alias = "vkCreateValidationCacheEXT")]
     pub unsafe fn create_validation_cache_ext(&self, create_info: &crate::extensions::ext_validation_cache::ValidationCacheCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_validation_cache::ValidationCacheEXT> {
-        let _function = self.create_validation_cache_ext.expect("`create_validation_cache_ext` is not loaded");
+        let _function = self.create_validation_cache_ext.expect("tried to call a function that isn't loaded");
         let mut validation_cache = Default::default();
         let _return = _function(
             self.handle,
@@ -226,10 +227,11 @@ impl crate::DeviceLoader {
         crate::utils::VulkanResult::new(_return, validation_cache)
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
     #[doc(alias = "vkDestroyValidationCacheEXT")]
     pub unsafe fn destroy_validation_cache_ext(&self, validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_validation_cache_ext.expect("`destroy_validation_cache_ext` is not loaded");
+        let _function = self.destroy_validation_cache_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(
             self.handle,
             match validation_cache {
@@ -244,18 +246,20 @@ impl crate::DeviceLoader {
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetValidationCacheDataEXT.html) · Function"]
     #[doc(alias = "vkGetValidationCacheDataEXT")]
     pub unsafe fn get_validation_cache_data_ext(&self, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, data_size: *mut usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_validation_cache_data_ext.expect("`get_validation_cache_data_ext` is not loaded");
+        let _function = self.get_validation_cache_data_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, validation_cache as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergeValidationCachesEXT.html) · Function"]
     #[doc(alias = "vkMergeValidationCachesEXT")]
     pub unsafe fn merge_validation_caches_ext(&self, dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, src_caches: &[crate::extensions::ext_validation_cache::ValidationCacheEXT]) -> crate::utils::VulkanResult<()> {
-        let _function = self.merge_validation_caches_ext.expect("`merge_validation_caches_ext` is not loaded");
+        let _function = self.merge_validation_caches_ext.expect("tried to call a function that isn't loaded");
         let src_cache_count = src_caches.len();
         let _return = _function(self.handle, dst_cache as _, src_cache_count as _, src_caches.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())

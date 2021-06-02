@@ -190,10 +190,11 @@ impl<'a> std::ops::DerefMut for HdrMetadataEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_hdr_metadata`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
     #[doc(alias = "vkSetHdrMetadataEXT")]
     pub unsafe fn set_hdr_metadata_ext(&self, swapchains: &[crate::extensions::khr_swapchain::SwapchainKHR], metadata: &[crate::extensions::ext_hdr_metadata::HdrMetadataEXTBuilder]) -> () {
-        let _function = self.set_hdr_metadata_ext.expect("`set_hdr_metadata_ext` is not loaded");
+        let _function = self.set_hdr_metadata_ext.expect("tried to call a function that isn't loaded");
         let swapchain_count = swapchains.len().min(metadata.len());
         let _return = _function(self.handle, swapchain_count as _, swapchains.as_ptr() as _, metadata.as_ptr() as _);
         ()

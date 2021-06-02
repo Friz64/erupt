@@ -146,10 +146,11 @@ impl<'a> std::ops::DerefMut for PipelineColorWriteCreateInfoEXTBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::ext_color_write_enable`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetColorWriteEnableEXT")]
     pub unsafe fn cmd_set_color_write_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, color_write_enables: &[crate::vk1_0::Bool32]) -> () {
-        let _function = self.cmd_set_color_write_enable_ext.expect("`cmd_set_color_write_enable_ext` is not loaded");
+        let _function = self.cmd_set_color_write_enable_ext.expect("tried to call a function that isn't loaded");
         let attachment_count = color_write_enables.len();
         let _return = _function(command_buffer as _, attachment_count as _, color_write_enables.as_ptr() as _);
         ()

@@ -167,18 +167,20 @@ impl<'a> std::ops::DerefMut for ImageViewAddressPropertiesNVXBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
     #[doc(alias = "vkGetImageViewHandleNVX")]
     pub unsafe fn get_image_view_handle_nvx(&self, info: &crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX) -> u32 {
-        let _function = self.get_image_view_handle_nvx.expect("`get_image_view_handle_nvx` is not loaded");
+        let _function = self.get_image_view_handle_nvx.expect("tried to call a function that isn't loaded");
         let _return = _function(self.handle, info as _);
         _return
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function"]
     #[doc(alias = "vkGetImageViewAddressNVX")]
     pub unsafe fn get_image_view_address_nvx(&self, image_view: crate::vk1_0::ImageView, properties: Option<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX>) -> crate::utils::VulkanResult<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX> {
-        let _function = self.get_image_view_address_nvx.expect("`get_image_view_address_nvx` is not loaded");
+        let _function = self.get_image_view_address_nvx.expect("tried to call a function that isn't loaded");
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),

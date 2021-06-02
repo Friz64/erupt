@@ -104,10 +104,11 @@ impl<'a> std::ops::DerefMut for IOSSurfaceCreateInfoMVKBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::mvk_ios_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function"]
     #[doc(alias = "vkCreateIOSSurfaceMVK")]
     pub unsafe fn create_ios_surface_mvk(&self, create_info: &crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_ios_surface_mvk.expect("`create_ios_surface_mvk` is not loaded");
+        let _function = self.create_ios_surface_mvk.expect("tried to call a function that isn't loaded");
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

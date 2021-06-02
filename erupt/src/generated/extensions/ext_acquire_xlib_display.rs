@@ -17,18 +17,20 @@ pub type PFN_vkGetRandROutputDisplayEXT = unsafe extern "system" fn(physical_dev
 #[doc = "Provided by [`crate::extensions::ext_acquire_xlib_display`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function"]
     #[doc(alias = "vkAcquireXlibDisplayEXT")]
     pub unsafe fn acquire_xlib_display_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, dpy: *mut std::ffi::c_void, display: crate::extensions::khr_display::DisplayKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.acquire_xlib_display_ext.expect("`acquire_xlib_display_ext` is not loaded");
+        let _function = self.acquire_xlib_display_ext.expect("tried to call a function that isn't loaded");
         let _return = _function(physical_device as _, dpy, display as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function"]
     #[doc(alias = "vkGetRandROutputDisplayEXT")]
     pub unsafe fn get_rand_r_output_display_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, dpy: *mut std::ffi::c_void, rr_output: u64) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
-        let _function = self.get_rand_r_output_display_ext.expect("`get_rand_r_output_display_ext` is not loaded");
+        let _function = self.get_rand_r_output_display_ext.expect("tried to call a function that isn't loaded");
         let mut display = Default::default();
         let _return = _function(physical_device as _, dpy, rr_output as _, &mut display);
         crate::utils::VulkanResult::new(_return, display)

@@ -106,10 +106,11 @@ impl<'a> std::ops::DerefMut for AndroidSurfaceCreateInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_android_surface`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAndroidSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateAndroidSurfaceKHR")]
     pub unsafe fn create_android_surface_khr(&self, create_info: &crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_android_surface_khr.expect("`create_android_surface_khr` is not loaded");
+        let _function = self.create_android_surface_khr.expect("tried to call a function that isn't loaded");
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

@@ -17,18 +17,20 @@ pub type PFN_vkGetWinrtDisplayNV = unsafe extern "system" fn(physical_device: cr
 #[doc = "Provided by [`crate::extensions::nv_acquire_winrt_display`]"]
 impl crate::InstanceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function"]
     #[doc(alias = "vkAcquireWinrtDisplayNV")]
     pub unsafe fn acquire_winrt_display_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.acquire_winrt_display_nv.expect("`acquire_winrt_display_nv` is not loaded");
+        let _function = self.acquire_winrt_display_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(physical_device as _, display as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetWinrtDisplayNV.html) · Function"]
     #[doc(alias = "vkGetWinrtDisplayNV")]
     pub unsafe fn get_winrt_display_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, device_relative_id: u32) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayKHR> {
-        let _function = self.get_winrt_display_nv.expect("`get_winrt_display_nv` is not loaded");
+        let _function = self.get_winrt_display_nv.expect("tried to call a function that isn't loaded");
         let mut display = Default::default();
         let _return = _function(physical_device as _, device_relative_id as _, &mut display);
         crate::utils::VulkanResult::new(_return, display)

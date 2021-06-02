@@ -302,26 +302,29 @@ impl<'a> std::ops::DerefMut for DrawMeshTasksIndirectCommandNVBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksNV")]
     pub unsafe fn cmd_draw_mesh_tasks_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, task_count: u32, first_task: u32) -> () {
-        let _function = self.cmd_draw_mesh_tasks_nv.expect("`cmd_draw_mesh_tasks_nv` is not loaded");
+        let _function = self.cmd_draw_mesh_tasks_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, task_count as _, first_task as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksIndirectNV")]
     pub unsafe fn cmd_draw_mesh_tasks_indirect_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_mesh_tasks_indirect_nv.expect("`cmd_draw_mesh_tasks_indirect_nv` is not loaded");
+        let _function = self.cmd_draw_mesh_tasks_indirect_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, draw_count as _, stride as _);
         ()
     }
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
     #[doc(alias = "vkCmdDrawMeshTasksIndirectCountNV")]
     pub unsafe fn cmd_draw_mesh_tasks_indirect_count_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_mesh_tasks_indirect_count_nv.expect("`cmd_draw_mesh_tasks_indirect_count_nv` is not loaded");
+        let _function = self.cmd_draw_mesh_tasks_indirect_count_nv.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }

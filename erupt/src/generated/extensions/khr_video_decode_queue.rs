@@ -165,10 +165,11 @@ impl<'a> std::ops::DerefMut for VideoDecodeInfoKHRBuilder<'a> {
 #[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function"]
     #[doc(alias = "vkCmdDecodeVideoKHR")]
     pub unsafe fn cmd_decode_video_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, frame_info: &crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR) -> () {
-        let _function = self.cmd_decode_video_khr.expect("`cmd_decode_video_khr` is not loaded");
+        let _function = self.cmd_decode_video_khr.expect("tried to call a function that isn't loaded");
         let _return = _function(command_buffer as _, frame_info as _);
         ()
     }

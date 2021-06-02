@@ -146,10 +146,11 @@ impl<'a> std::ops::DerefMut for PipelineViewportExclusiveScissorStateCreateInfoN
 #[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
 impl crate::DeviceLoader {
     #[inline]
+    #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
     #[doc(alias = "vkCmdSetExclusiveScissorNV")]
     pub unsafe fn cmd_set_exclusive_scissor_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissors: &[crate::vk1_0::Rect2DBuilder]) -> () {
-        let _function = self.cmd_set_exclusive_scissor_nv.expect("`cmd_set_exclusive_scissor_nv` is not loaded");
+        let _function = self.cmd_set_exclusive_scissor_nv.expect("tried to call a function that isn't loaded");
         let exclusive_scissor_count = exclusive_scissors.len();
         let _return = _function(command_buffer as _, first_exclusive_scissor as _, exclusive_scissor_count as _, exclusive_scissors.as_ptr() as _);
         ()

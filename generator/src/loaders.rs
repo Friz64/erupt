@@ -357,7 +357,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
     }
 
     let code = quote! {
-        /// A list of requirements enabled in the entry loader
+        /// A list of requirements enabled in the entry loader.
         #[derive(Debug)]
         pub struct EntryEnabled {
             pub instance_version: u32,
@@ -388,7 +388,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        /// Loader for entry commands
+        /// Loader for entry commands.
         ///
         /// To create a new loader, call [`EntryLoader::new`].
         pub struct EntryLoader<T> {
@@ -437,7 +437,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        /// A list of requirements enabled in the instance loader
+        /// A list of requirements enabled in the instance loader.
         #[derive(Debug)]
         pub struct InstanceEnabled {
             #(pub #instance_enabled_idents: bool,)*
@@ -461,7 +461,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        /// Loader for instance commands
+        /// Loader for instance commands.
+        ///
+        /// This will consume lots of stack space, so consider putting it into
+        /// a heap pointer type such as `Box` or `Arc`.
         ///
         /// To create a new loader, call [`InstanceLoader::new`].
         pub struct InstanceLoader {
@@ -509,7 +512,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        /// A list of requirements enabled in the device loader
+        /// A list of requirements enabled in the device loader.
         #[derive(Debug)]
         pub struct DeviceEnabled {
             #(pub #device_enabled_idents: bool,)*
@@ -526,7 +529,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        /// Loader for device commands
+        /// Loader for device commands.
+        ///
+        /// This will consume lots of stack space, so consider putting it into
+        /// a heap pointer type such as `Box` or `Arc`.
         ///
         /// To create a new loader, call [`DeviceLoader::new`].
         pub struct DeviceLoader {

@@ -4,7 +4,7 @@ pub mod extensions;
 pub mod external;
 #[doc = r" Re-exports **every** Vulkan item"]
 pub mod vk;
-#[doc = r" A list of requirements enabled in the entry loader"]
+#[doc = r" A list of requirements enabled in the entry loader."]
 #[derive(Debug)]
 pub struct EntryEnabled {
     pub instance_version: u32,
@@ -24,7 +24,7 @@ impl EntryEnabled {
         Ok(EntryEnabled { instance_version: version, vk1_1: version >= crate::vk1_0::make_api_version(0, 1, 1, 0), vk1_2: version >= crate::vk1_0::make_api_version(0, 1, 2, 0) })
     }
 }
-#[doc = r" Loader for entry commands"]
+#[doc = r" Loader for entry commands."]
 #[doc = r""]
 #[doc = r" To create a new loader, call [`EntryLoader::new`]."]
 pub struct EntryLoader<T> {
@@ -58,7 +58,7 @@ impl<T> Drop for EntryLoader<T> {
         }
     }
 }
-#[doc = r" A list of requirements enabled in the instance loader"]
+#[doc = r" A list of requirements enabled in the instance loader."]
 #[derive(Debug)]
 pub struct InstanceEnabled {
     pub vk1_1: bool,
@@ -157,7 +157,10 @@ impl InstanceEnabled {
         })
     }
 }
-#[doc = r" Loader for instance commands"]
+#[doc = r" Loader for instance commands."]
+#[doc = r""]
+#[doc = r" This will consume lots of stack space, so consider putting it into"]
+#[doc = r" a heap pointer type such as `Box` or `Arc`."]
 #[doc = r""]
 #[doc = r" To create a new loader, call [`InstanceLoader::new`]."]
 pub struct InstanceLoader {
@@ -387,7 +390,7 @@ impl Drop for InstanceLoader {
         }
     }
 }
-#[doc = r" A list of requirements enabled in the device loader"]
+#[doc = r" A list of requirements enabled in the device loader."]
 #[derive(Debug)]
 pub struct DeviceEnabled {
     pub ext_conditional_rendering: bool,
@@ -550,7 +553,10 @@ impl DeviceEnabled {
         }
     }
 }
-#[doc = r" Loader for device commands"]
+#[doc = r" Loader for device commands."]
+#[doc = r""]
+#[doc = r" This will consume lots of stack space, so consider putting it into"]
+#[doc = r" a heap pointer type such as `Box` or `Arc`."]
 #[doc = r""]
 #[doc = r" To create a new loader, call [`DeviceLoader::new`]."]
 pub struct DeviceLoader {

@@ -13,7 +13,6 @@ use crate::{
     source::{NotApplicable, Source},
     XmlNode,
 };
-use itertools::Itertools;
 use lang_c::ast::{
     Declaration as CDeclaration, DeclarationSpecifier, StructDeclaration, StructField, StructKind,
     TypeSpecifier,
@@ -152,10 +151,16 @@ impl StructureField {
     pub fn ident(&self) -> Ident {
         let string = match self {
             StructureField::Normal(decl) => decl.ident().to_string(),
-            StructureField::Bitfield(decls) => decls
-                .iter()
-                .map(|decl| decl.ident().to_string())
-                .join("_and_"),
+            StructureField::Bitfield(decls) => {
+                assert!(!decls.is_empty());
+                let mut idents = decls.iter().map(|decl| decl.ident().to_string());
+                match (idents.next(), idents.next(), idents.next()) {
+                    (Some(ident), None, None) => ident,
+                    (Some(ident1), Some(ident2), None) => format!("{}_and_{}", ident1, ident2),
+                    (Some(ident), _, _) => format!("{}_bitfield", ident),
+                    _ => unreachable!(),
+                }
+            }
         };
 
         format_ident!("{}", string)

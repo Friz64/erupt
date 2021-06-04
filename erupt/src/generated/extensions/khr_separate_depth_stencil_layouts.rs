@@ -28,3 +28,16 @@ pub type AttachmentDescriptionStencilLayoutKHR = crate::vk1_2::AttachmentDescrip
 #[doc(alias = "VkAttachmentDescriptionStencilLayoutKHR")]
 #[allow(non_camel_case_types)]
 pub type AttachmentDescriptionStencilLayoutKHRBuilder<'a> = crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_separate_depth_stencil_layouts`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const DEPTH_ATTACHMENT_OPTIMAL_KHR: Self = Self::DEPTH_ATTACHMENT_OPTIMAL;
+    pub const DEPTH_READ_ONLY_OPTIMAL_KHR: Self = Self::DEPTH_READ_ONLY_OPTIMAL;
+    pub const STENCIL_ATTACHMENT_OPTIMAL_KHR: Self = Self::STENCIL_ATTACHMENT_OPTIMAL;
+    pub const STENCIL_READ_ONLY_OPTIMAL_KHR: Self = Self::STENCIL_READ_ONLY_OPTIMAL;
+}
+#[doc = "Provided by [`crate::extensions::khr_separate_depth_stencil_layouts`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES;
+    pub const ATTACHMENT_REFERENCE_STENCIL_LAYOUT_KHR: Self = Self::ATTACHMENT_REFERENCE_STENCIL_LAYOUT;
+    pub const ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT_KHR: Self = Self::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT;
+}

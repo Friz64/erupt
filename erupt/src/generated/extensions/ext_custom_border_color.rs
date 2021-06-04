@@ -4,6 +4,25 @@ pub const EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION: u32 = 12;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME")]
 pub const EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_custom_border_color");
+#[doc = "Provided by [`crate::extensions::ext_custom_border_color`]"]
+impl crate::vk1_0::BorderColor {
+    pub const FLOAT_CUSTOM_EXT: Self = Self(1000287003);
+    pub const INT_CUSTOM_EXT: Self = Self(1000287004);
+}
+#[doc = "Provided by [`crate::extensions::ext_custom_border_color`]"]
+impl crate::vk1_0::StructureType {
+    pub const SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT: Self = Self(1000287000);
+    pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT: Self = Self(1000287001);
+    pub const PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT: Self = Self(1000287002);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCustomBorderColorFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerCustomBorderColorCreateInfoEXT> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerCustomBorderColorCreateInfoEXTBuilder<'_>> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCustomBorderColorFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCustomBorderColorPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkSamplerCustomBorderColorCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -50,7 +69,8 @@ impl<'a> SamplerCustomBorderColorCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SamplerCustomBorderColorCreateInfoEXT {
         self.0
     }
@@ -116,7 +136,8 @@ impl<'a> PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceCustomBorderColorPropertiesEXT {
         self.0
     }
@@ -188,7 +209,8 @@ impl<'a> PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceCustomBorderColorFeaturesEXT {
         self.0
     }

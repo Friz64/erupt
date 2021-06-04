@@ -4,6 +4,10 @@ pub const AMD_RASTERIZATION_ORDER_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME")]
 pub const AMD_RASTERIZATION_ORDER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_rasterization_order");
+#[doc = "Provided by [`crate::extensions::amd_rasterization_order`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD: Self = Self(1000018000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRasterizationOrderAMD.html) · Enum"]
 #[doc(alias = "VkRasterizationOrderAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -19,10 +23,12 @@ impl std::fmt::Debug for RasterizationOrderAMD {
     }
 }
 #[doc = "Provided by [`crate::extensions::amd_rasterization_order`]"]
-impl RasterizationOrderAMD {
+impl crate::extensions::amd_rasterization_order::RasterizationOrderAMD {
     pub const STRICT_AMD: Self = Self(0);
     pub const RELAXED_AMD: Self = Self(1);
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateRasterizationOrderAMD> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateRasterizationOrderAMDBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationStateRasterizationOrderAMD")]
 #[derive(Copy, Clone)]
@@ -63,7 +69,8 @@ impl<'a> PipelineRasterizationStateRasterizationOrderAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineRasterizationStateRasterizationOrderAMD {
         self.0
     }

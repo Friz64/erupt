@@ -4,6 +4,23 @@ pub const EXT_FILTER_CUBIC_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FILTER_CUBIC_EXTENSION_NAME")]
 pub const EXT_FILTER_CUBIC_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_filter_cubic");
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const SAMPLED_IMAGE_FILTER_CUBIC_EXT: Self = Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG;
+}
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT: Self = Self(1000170000);
+    pub const FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT: Self = Self(1000170001);
+}
+#[doc = "Provided by [`crate::extensions::ext_filter_cubic`]"]
+impl crate::vk1_0::Filter {
+    pub const CUBIC_EXT: Self = Self::CUBIC_IMG;
+}
+impl<'a> crate::ExtendableFromMut<'a, FilterCubicImageViewImageFormatPropertiesEXT> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageViewImageFormatInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageViewImageFormatInfoEXT")]
 #[derive(Copy, Clone)]
@@ -44,7 +61,8 @@ impl<'a> PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceImageViewImageFormatInfoEXT {
         self.0
     }
@@ -116,7 +134,8 @@ impl<'a> FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FilterCubicImageViewImageFormatPropertiesEXT {
         self.0
     }

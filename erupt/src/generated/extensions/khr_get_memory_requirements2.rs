@@ -60,6 +60,14 @@ pub type PFN_vkGetImageMemoryRequirements2KHR = crate::vk1_1::PFN_vkGetImageMemo
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageSparseMemoryRequirements2KHR = crate::vk1_1::PFN_vkGetImageSparseMemoryRequirements2;
 #[doc = "Provided by [`crate::extensions::khr_get_memory_requirements2`]"]
+impl crate::vk1_0::StructureType {
+    pub const BUFFER_MEMORY_REQUIREMENTS_INFO_2_KHR: Self = Self::BUFFER_MEMORY_REQUIREMENTS_INFO_2;
+    pub const IMAGE_MEMORY_REQUIREMENTS_INFO_2_KHR: Self = Self::IMAGE_MEMORY_REQUIREMENTS_INFO_2;
+    pub const IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2_KHR: Self = Self::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2;
+    pub const MEMORY_REQUIREMENTS_2_KHR: Self = Self::MEMORY_REQUIREMENTS_2;
+    pub const SPARSE_IMAGE_MEMORY_REQUIREMENTS_2_KHR: Self = Self::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2;
+}
+#[doc = "Provided by [`crate::extensions::khr_get_memory_requirements2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

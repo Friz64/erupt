@@ -23,6 +23,30 @@ pub const FN_ACQUIRE_NEXT_IMAGE2_KHR: *const std::os::raw::c_char = crate::cstr!
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDevicePresentRectanglesKHR");
 crate::non_dispatchable_handle!(SwapchainKHR, SWAPCHAIN_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle", "VkSwapchainKHR");
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const PRESENT_SRC_KHR: Self = Self(1000001002);
+}
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
+impl crate::vk1_0::Result {
+    pub const SUBOPTIMAL_KHR: Self = Self(1000001003);
+    pub const ERROR_OUT_OF_DATE_KHR: Self = Self(-1000001004);
+}
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
+impl crate::vk1_0::StructureType {
+    pub const SWAPCHAIN_CREATE_INFO_KHR: Self = Self(1000001000);
+    pub const PRESENT_INFO_KHR: Self = Self(1000001001);
+    pub const DEVICE_GROUP_PRESENT_CAPABILITIES_KHR: Self = Self(1000060007);
+    pub const IMAGE_SWAPCHAIN_CREATE_INFO_KHR: Self = Self(1000060008);
+    pub const BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR: Self = Self(1000060009);
+    pub const ACQUIRE_NEXT_IMAGE_INFO_KHR: Self = Self(1000060010);
+    pub const DEVICE_GROUP_PRESENT_INFO_KHR: Self = Self(1000060011);
+    pub const DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR: Self = Self(1000060012);
+}
+#[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
+impl crate::vk1_0::ObjectType {
+    pub const SWAPCHAIN_KHR: Self = Self(1000001000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagsKHR.html) · Bitmask of [`DeviceGroupPresentModeFlagBitsKHR`]"] # [doc (alias = "VkDeviceGroupPresentModeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DeviceGroupPresentModeFlagsKHR : u32 { const LOCAL_KHR = DeviceGroupPresentModeFlagBitsKHR :: LOCAL_KHR . 0 ; const REMOTE_KHR = DeviceGroupPresentModeFlagBitsKHR :: REMOTE_KHR . 0 ; const SUM_KHR = DeviceGroupPresentModeFlagBitsKHR :: SUM_KHR . 0 ; const LOCAL_MULTI_DEVICE_KHR = DeviceGroupPresentModeFlagBitsKHR :: LOCAL_MULTI_DEVICE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagBitsKHR.html) · Bits enum of [`DeviceGroupPresentModeFlagsKHR`]"]
 #[doc(alias = "VkDeviceGroupPresentModeFlagBitsKHR")]
@@ -48,7 +72,7 @@ impl std::fmt::Debug for DeviceGroupPresentModeFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
-impl DeviceGroupPresentModeFlagBitsKHR {
+impl crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagBitsKHR {
     pub const LOCAL_KHR: Self = Self(1);
     pub const REMOTE_KHR: Self = Self(2);
     pub const SUM_KHR: Self = Self(4);
@@ -78,13 +102,9 @@ impl std::fmt::Debug for SwapchainCreateFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_swapchain`]"]
-impl SwapchainCreateFlagBitsKHR {
+impl crate::extensions::khr_swapchain::SwapchainCreateFlagBitsKHR {
     pub const SPLIT_INSTANCE_BIND_REGIONS_KHR: Self = Self(1);
     pub const PROTECTED_KHR: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::khr_swapchain_mutable_format`]"]
-impl SwapchainCreateFlagBitsKHR {
-    pub const MUTABLE_FORMAT_KHR: Self = Self(4);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -113,6 +133,8 @@ pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(device: crate::v
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_rect_count: *mut u32, p_rects: *mut crate::vk1_0::Rect2D) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImageSwapchainCreateInfoKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageSwapchainCreateInfoKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -153,18 +175,8 @@ impl SwapchainCreateInfoKHR {
         SwapchainCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHR> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMD> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfo> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT> for SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSwapchainCreateInfoKHR> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`]"]
 #[repr(transparent)]
@@ -251,7 +263,8 @@ impl<'a> SwapchainCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SwapchainCreateInfoKHR {
         self.0
     }
@@ -307,16 +320,8 @@ impl PresentInfoKHR {
         PresentInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_display_swapchain::DisplayPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_incremental_present::PresentRegionsKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_incremental_present::PresentRegionsKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHR> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHRBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLE> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::google_display_timing::PresentTimesInfoGOOGLEBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGP> for PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ggp_frame_token::PresentFrameTokenGGPBuilder<'_>> for PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupPresentInfoKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupPresentInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`]"]
 #[repr(transparent)]
@@ -351,7 +356,8 @@ impl<'a> PresentInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PresentInfoKHR {
         self.0
     }
@@ -377,6 +383,8 @@ impl<'a> std::ops::DerefMut for PresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, BindImageMemorySwapchainInfoKHR> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindImageMemorySwapchainInfoKHRBuilder<'_>> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkDeviceGroupPresentCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -423,7 +431,8 @@ impl<'a> DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupPresentCapabilitiesKHR {
         self.0
     }
@@ -489,7 +498,8 @@ impl<'a> ImageSwapchainCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageSwapchainCreateInfoKHR {
         self.0
     }
@@ -561,7 +571,8 @@ impl<'a> BindImageMemorySwapchainInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindImageMemorySwapchainInfoKHR {
         self.0
     }
@@ -651,7 +662,8 @@ impl<'a> AcquireNextImageInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AcquireNextImageInfoKHR {
         self.0
     }
@@ -725,7 +737,8 @@ impl<'a> DeviceGroupPresentInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupPresentInfoKHR {
         self.0
     }
@@ -791,7 +804,8 @@ impl<'a> DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupSwapchainCreateInfoKHR {
         self.0
     }

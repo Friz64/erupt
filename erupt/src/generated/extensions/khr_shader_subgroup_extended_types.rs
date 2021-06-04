@@ -12,3 +12,7 @@ pub type PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR = crate::vk1_2::Ph
 #[doc(alias = "VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_shader_subgroup_extended_types`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES;
+}

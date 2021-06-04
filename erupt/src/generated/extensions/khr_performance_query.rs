@@ -12,6 +12,20 @@ pub const FN_GET_PHYSICAL_DEVICE_QUEUE_FAMILY_PERFORMANCE_QUERY_PASSES_KHR: *con
 pub const FN_ACQUIRE_PROFILING_LOCK_KHR: *const std::os::raw::c_char = crate::cstr!("vkAcquireProfilingLockKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_RELEASE_PROFILING_LOCK_KHR: *const std::os::raw::c_char = crate::cstr!("vkReleaseProfilingLockKHR");
+#[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
+impl crate::vk1_0::QueryType {
+    pub const PERFORMANCE_QUERY_KHR: Self = Self(1000116000);
+}
+#[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR: Self = Self(1000116000);
+    pub const PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR: Self = Self(1000116001);
+    pub const QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR: Self = Self(1000116002);
+    pub const PERFORMANCE_QUERY_SUBMIT_INFO_KHR: Self = Self(1000116003);
+    pub const ACQUIRE_PROFILING_LOCK_INFO_KHR: Self = Self(1000116004);
+    pub const PERFORMANCE_COUNTER_KHR: Self = Self(1000116005);
+    pub const PERFORMANCE_COUNTER_DESCRIPTION_KHR: Self = Self(1000116006);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterScopeKHR.html) · Enum"]
 #[doc(alias = "VkPerformanceCounterScopeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -28,7 +42,7 @@ impl std::fmt::Debug for PerformanceCounterScopeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
-impl PerformanceCounterScopeKHR {
+impl crate::extensions::khr_performance_query::PerformanceCounterScopeKHR {
     pub const COMMAND_BUFFER_KHR: Self = Self(0);
     pub const RENDER_PASS_KHR: Self = Self(1);
     pub const COMMAND_KHR: Self = Self(2);
@@ -60,7 +74,7 @@ impl std::fmt::Debug for PerformanceCounterUnitKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
-impl PerformanceCounterUnitKHR {
+impl crate::extensions::khr_performance_query::PerformanceCounterUnitKHR {
     pub const GENERIC_KHR: Self = Self(0);
     pub const PERCENTAGE_KHR: Self = Self(1);
     pub const NANOSECONDS_KHR: Self = Self(2);
@@ -92,7 +106,7 @@ impl std::fmt::Debug for PerformanceCounterStorageKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
-impl PerformanceCounterStorageKHR {
+impl crate::extensions::khr_performance_query::PerformanceCounterStorageKHR {
     pub const INT32_KHR: Self = Self(0);
     pub const INT64_KHR: Self = Self(1);
     pub const UINT32_KHR: Self = Self(2);
@@ -123,7 +137,7 @@ impl std::fmt::Debug for PerformanceCounterDescriptionFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
-impl PerformanceCounterDescriptionFlagBitsKHR {
+impl crate::extensions::khr_performance_query::PerformanceCounterDescriptionFlagBitsKHR {
     pub const PERFORMANCE_IMPACTING_KHR: Self = Self(1);
     pub const CONCURRENTLY_IMPACTED_KHR: Self = Self(2);
 }
@@ -159,6 +173,16 @@ pub type PFN_vkAcquireProfilingLockKHR = unsafe extern "system" fn(device: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseProfilingLockKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleaseProfilingLockKHR = unsafe extern "system" fn(device: crate::vk1_0::Device) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePerformanceQueryFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceCreateInfoKHR> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceCreateInfoKHRBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHR> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHRBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePerformanceQueryFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePerformanceQueryPropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePerformanceQueryFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePerformanceQueryFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -205,7 +229,8 @@ impl<'a> PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePerformanceQueryFeaturesKHR {
         self.0
     }
@@ -271,7 +296,8 @@ impl<'a> PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePerformanceQueryPropertiesKHR {
         self.0
     }
@@ -355,7 +381,8 @@ impl<'a> PerformanceCounterKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceCounterKHR {
         self.0
     }
@@ -439,7 +466,8 @@ impl<'a> PerformanceCounterDescriptionKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceCounterDescriptionKHR {
         self.0
     }
@@ -513,7 +541,8 @@ impl<'a> QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> QueryPoolPerformanceCreateInfoKHR {
         self.0
     }
@@ -607,7 +636,8 @@ impl<'a> AcquireProfilingLockInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AcquireProfilingLockInfoKHR {
         self.0
     }
@@ -673,7 +703,8 @@ impl<'a> PerformanceQuerySubmitInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceQuerySubmitInfoKHR {
         self.0
     }
@@ -699,6 +730,8 @@ impl<'a> std::ops::DerefMut for PerformanceQuerySubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHR> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHRBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl crate::InstanceLoader {
     #[inline]

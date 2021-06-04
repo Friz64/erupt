@@ -4,6 +4,12 @@ pub const EXT_MEMORY_BUDGET_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_MEMORY_BUDGET_EXTENSION_NAME")]
 pub const EXT_MEMORY_BUDGET_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_memory_budget");
+#[doc = "Provided by [`crate::extensions::ext_memory_budget`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT: Self = Self(1000237000);
+}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryBudgetPropertiesEXT> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryBudgetPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -50,7 +56,8 @@ impl<'a> PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMemoryBudgetPropertiesEXT {
         self.0
     }

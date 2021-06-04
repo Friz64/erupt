@@ -6,9 +6,24 @@ pub const KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION: u32 = 1;
 pub const KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_shared_presentable_image");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_SWAPCHAIN_STATUS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSwapchainStatusKHR");
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const SHARED_PRESENT_KHR: Self = Self(1000111000);
+}
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
+impl crate::vk1_0::StructureType {
+    pub const SHARED_PRESENT_SURFACE_CAPABILITIES_KHR: Self = Self(1000111000);
+}
+#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
+impl crate::extensions::khr_surface::PresentModeKHR {
+    pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
+    pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromMut<'a, SharedPresentSurfaceCapabilitiesKHR> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, SharedPresentSurfaceCapabilitiesKHRBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -49,7 +64,8 @@ impl<'a> SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SharedPresentSurfaceCapabilitiesKHR {
         self.0
     }

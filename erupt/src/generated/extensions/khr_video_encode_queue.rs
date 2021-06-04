@@ -12,6 +12,50 @@ pub const KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 2;
 pub const KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_video_encode_queue");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_ENCODE_VIDEO_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdEncodeVideoKHR");
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
+    pub const VIDEO_ENCODE_READ_KHR: Self = Self(137438953472);
+    pub const VIDEO_ENCODE_WRITE_KHR: Self = Self(274877906944);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
+    pub const VIDEO_ENCODE_KHR: Self = Self(134217728);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(32768);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(65536);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const VIDEO_ENCODE_INPUT_KHR: Self = Self(134217728);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(268435456);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(1000299001);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(1000299002);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::ImageUsageFlagBits {
+    pub const VIDEO_ENCODE_DST_KHR: Self = Self(8192);
+    pub const VIDEO_ENCODE_SRC_KHR: Self = Self(16384);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(32768);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::QueryType {
+    pub const VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::QueueFlagBits {
+    pub const VIDEO_ENCODE_KHR: Self = Self(64);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::vk1_0::StructureType {
+    pub const VIDEO_ENCODE_INFO_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: Self = Self(1000299001);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeFlagsKHR.html) · Bitmask of [`VideoEncodeFlagBitsKHR`]"] # [doc (alias = "VkVideoEncodeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeFlagsKHR : u32 { const DEFAULT_KHR = VideoEncodeFlagBitsKHR :: DEFAULT_KHR . 0 ; const RESERVED_0_KHR = VideoEncodeFlagBitsKHR :: RESERVED_0_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeFlagBitsKHR.html) · Bits enum of [`VideoEncodeFlagsKHR`]"]
 #[doc(alias = "VkVideoEncodeFlagBitsKHR")]
@@ -35,7 +79,7 @@ impl std::fmt::Debug for VideoEncodeFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl VideoEncodeFlagBitsKHR {
+impl crate::extensions::khr_video_encode_queue::VideoEncodeFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESERVED_0_KHR: Self = Self(1);
 }
@@ -62,7 +106,7 @@ impl std::fmt::Debug for VideoEncodeRateControlFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl VideoEncodeRateControlFlagBitsKHR {
+impl crate::extensions::khr_video_encode_queue::VideoEncodeRateControlFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESET_KHR: Self = Self(1);
 }
@@ -90,7 +134,7 @@ impl std::fmt::Debug for VideoEncodeRateControlModeFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl VideoEncodeRateControlModeFlagBitsKHR {
+impl crate::extensions::khr_video_encode_queue::VideoEncodeRateControlModeFlagBitsKHR {
     pub const NONE_KHR: Self = Self(0);
     pub const CBR_KHR: Self = Self(1);
     pub const VBR_KHR: Self = Self(2);
@@ -98,6 +142,8 @@ impl VideoEncodeRateControlModeFlagBitsKHR {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEncodeVideoKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEncodeVideoKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_encode_info: *const crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHR) -> ();
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeRateControlInfoKHR> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeRateControlInfoKHRBuilder<'_>> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeInfoKHR.html) · Structure"]
 #[doc(alias = "VkVideoEncodeInfoKHR")]
 #[derive(Copy, Clone)]
@@ -132,10 +178,6 @@ impl VideoEncodeInfoKHR {
         VideoEncodeInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_encode_h264::VideoEncodeH264VclFrameInfoEXT> for VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_encode_h264::VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_encode_h264::VideoEncodeH264EmitPictureParametersEXT> for VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_encode_h264::VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for VideoEncodeInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeInfoKHR.html) · Builder of [`VideoEncodeInfoKHR`]"]
 #[repr(transparent)]
@@ -192,7 +234,8 @@ impl<'a> VideoEncodeInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeInfoKHR {
         self.0
     }
@@ -294,7 +337,8 @@ impl<'a> VideoEncodeRateControlInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeRateControlInfoKHR {
         self.0
     }

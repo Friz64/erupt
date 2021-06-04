@@ -8,12 +8,20 @@ pub const KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME: *const std::os::raw::c_char = c
 pub const FN_GET_MEMORY_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_MEMORY_FD_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryFdPropertiesKHR");
+#[doc = "Provided by [`crate::extensions::khr_external_memory_fd`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_MEMORY_FD_INFO_KHR: Self = Self(1000074000);
+    pub const MEMORY_FD_PROPERTIES_KHR: Self = Self(1000074001);
+    pub const MEMORY_GET_FD_INFO_KHR: Self = Self(1000074002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, fd: std::os::raw::c_int, p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryFdInfoKHR> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryFdInfoKHRBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryFdInfoKHR")]
 #[derive(Copy, Clone)]
@@ -60,7 +68,8 @@ impl<'a> ImportMemoryFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportMemoryFdInfoKHR {
         self.0
     }
@@ -126,7 +135,8 @@ impl<'a> MemoryFdPropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryFdPropertiesKHR {
         self.0
     }
@@ -198,7 +208,8 @@ impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryGetFdInfoKHR {
         self.0
     }

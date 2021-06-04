@@ -14,6 +14,12 @@ pub const FN_CMD_DEBUG_MARKER_BEGIN_EXT: *const std::os::raw::c_char = crate::cs
 pub const FN_CMD_DEBUG_MARKER_END_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerEndEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_DEBUG_MARKER_INSERT_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdDebugMarkerInsertEXT");
+#[doc = "Provided by [`crate::extensions::ext_debug_marker`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEBUG_MARKER_OBJECT_NAME_INFO_EXT: Self = Self(1000022000);
+    pub const DEBUG_MARKER_OBJECT_TAG_INFO_EXT: Self = Self(1000022001);
+    pub const DEBUG_MARKER_MARKER_INFO_EXT: Self = Self(1000022002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugMarkerSetObjectNameEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT) -> crate::vk1_0::Result;
@@ -81,7 +87,8 @@ impl<'a> DebugMarkerObjectNameInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugMarkerObjectNameInfoEXT {
         self.0
     }
@@ -171,7 +178,8 @@ impl<'a> DebugMarkerObjectTagInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugMarkerObjectTagInfoEXT {
         self.0
     }
@@ -243,7 +251,8 @@ impl<'a> DebugMarkerMarkerInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugMarkerMarkerInfoEXT {
         self.0
     }

@@ -26,6 +26,10 @@ impl std::fmt::Debug for HeadlessSurfaceCreateFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_headless_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const HEADLESS_SURFACE_CREATE_INFO_EXT: Self = Self(1000256000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateHeadlessSurfaceEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -69,7 +73,8 @@ impl<'a> HeadlessSurfaceCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> HeadlessSurfaceCreateInfoEXT {
         self.0
     }

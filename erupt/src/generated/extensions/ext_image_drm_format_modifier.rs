@@ -6,9 +6,40 @@ pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION: u32 = 1;
 pub const EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_image_drm_format_modifier");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetImageDrmFormatModifierPropertiesEXT");
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
+impl crate::vk1_0::ImageAspectFlagBits {
+    pub const MEMORY_PLANE_0_EXT: Self = Self(128);
+    pub const MEMORY_PLANE_1_EXT: Self = Self(256);
+    pub const MEMORY_PLANE_2_EXT: Self = Self(512);
+    pub const MEMORY_PLANE_3_EXT: Self = Self(1024);
+}
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
+impl crate::vk1_0::ImageTiling {
+    pub const DRM_FORMAT_MODIFIER_EXT: Self = Self(1000158000);
+}
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT: Self = Self(-1000158000);
+}
+#[doc = "Provided by [`crate::extensions::ext_image_drm_format_modifier`]"]
+impl crate::vk1_0::StructureType {
+    pub const DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT: Self = Self(1000158000);
+    pub const PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT: Self = Self(1000158002);
+    pub const IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT: Self = Self(1000158003);
+    pub const IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT: Self = Self(1000158004);
+    pub const IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT: Self = Self(1000158005);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierListCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierListCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierExplicitCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesListEXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesListEXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageDrmFormatModifierInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]
@@ -51,7 +82,8 @@ impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DrmFormatModifierPropertiesListEXT {
         self.0
     }
@@ -127,7 +159,8 @@ impl<'a> DrmFormatModifierPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DrmFormatModifierPropertiesEXT {
         self.0
     }
@@ -207,7 +240,8 @@ impl<'a> PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceImageDrmFormatModifierInfoEXT {
         self.0
     }
@@ -275,7 +309,8 @@ impl<'a> ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageDrmFormatModifierListCreateInfoEXT {
         self.0
     }
@@ -349,7 +384,8 @@ impl<'a> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageDrmFormatModifierExplicitCreateInfoEXT {
         self.0
     }
@@ -415,7 +451,8 @@ impl<'a> ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageDrmFormatModifierPropertiesEXT {
         self.0
     }

@@ -4,6 +4,27 @@ pub const EXT_INLINE_UNIFORM_BLOCK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME")]
 pub const EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_inline_uniform_block");
+#[doc = "Provided by [`crate::extensions::ext_inline_uniform_block`]"]
+impl crate::vk1_0::DescriptorType {
+    pub const INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138000);
+}
+#[doc = "Provided by [`crate::extensions::ext_inline_uniform_block`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT: Self = Self(1000138000);
+    pub const PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT: Self = Self(1000138001);
+    pub const WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138002);
+    pub const DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT: Self = Self(1000138003);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetInlineUniformBlockEXT> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetInlineUniformBlockEXTBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorPoolInlineUniformBlockCreateInfoEXT> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -50,7 +71,8 @@ impl<'a> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceInlineUniformBlockFeaturesEXT {
         self.0
     }
@@ -140,7 +162,8 @@ impl<'a> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceInlineUniformBlockPropertiesEXT {
         self.0
     }
@@ -212,7 +235,8 @@ impl<'a> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> WriteDescriptorSetInlineUniformBlockEXT {
         self.0
     }
@@ -278,7 +302,8 @@ impl<'a> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorPoolInlineUniformBlockCreateInfoEXT {
         self.0
     }

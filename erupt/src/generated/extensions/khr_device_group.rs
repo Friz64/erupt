@@ -92,6 +92,40 @@ pub type PFN_vkCmdSetDeviceMaskKHR = crate::vk1_1::PFN_vkCmdSetDeviceMask;
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchBaseKHR = crate::vk1_1::PFN_vkCmdDispatchBase;
 #[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const SPLIT_INSTANCE_BIND_REGIONS_KHR: Self = Self::SPLIT_INSTANCE_BIND_REGIONS;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const VIEW_INDEX_FROM_DEVICE_INDEX_KHR: Self = Self::VIEW_INDEX_FROM_DEVICE_INDEX;
+    pub const DISPATCH_BASE_KHR: Self = Self::DISPATCH_BASE;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_0::StructureType {
+    pub const MEMORY_ALLOCATE_FLAGS_INFO_KHR: Self = Self::MEMORY_ALLOCATE_FLAGS_INFO;
+    pub const DEVICE_GROUP_RENDER_PASS_BEGIN_INFO_KHR: Self = Self::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO;
+    pub const DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO_KHR: Self = Self::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO;
+    pub const DEVICE_GROUP_SUBMIT_INFO_KHR: Self = Self::DEVICE_GROUP_SUBMIT_INFO;
+    pub const DEVICE_GROUP_BIND_SPARSE_INFO_KHR: Self = Self::DEVICE_GROUP_BIND_SPARSE_INFO;
+    pub const BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO_KHR: Self = Self::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO;
+    pub const BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO_KHR: Self = Self::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_0::DependencyFlagBits {
+    pub const DEVICE_GROUP_KHR: Self = Self::DEVICE_GROUP;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_1::PeerMemoryFeatureFlagBits {
+    pub const COPY_SRC_KHR: Self = Self::COPY_SRC;
+    pub const COPY_DST_KHR: Self = Self::COPY_DST;
+    pub const GENERIC_SRC_KHR: Self = Self::GENERIC_SRC;
+    pub const GENERIC_DST_KHR: Self = Self::GENERIC_DST;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
+impl crate::vk1_1::MemoryAllocateFlagBits {
+    pub const DEVICE_MASK_KHR: Self = Self::DEVICE_MASK;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

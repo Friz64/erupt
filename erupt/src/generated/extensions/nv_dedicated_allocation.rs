@@ -4,6 +4,18 @@ pub const NV_DEDICATED_ALLOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME")]
 pub const NV_DEDICATED_ALLOCATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_dedicated_allocation");
+#[doc = "Provided by [`crate::extensions::nv_dedicated_allocation`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV: Self = Self(1000026000);
+    pub const DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV: Self = Self(1000026001);
+    pub const DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000026002);
+}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationBufferCreateInfoNVBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -44,7 +56,8 @@ impl<'a> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DedicatedAllocationImageCreateInfoNV {
         self.0
     }
@@ -110,7 +123,8 @@ impl<'a> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DedicatedAllocationBufferCreateInfoNV {
         self.0
     }
@@ -182,7 +196,8 @@ impl<'a> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DedicatedAllocationMemoryAllocateInfoNV {
         self.0
     }

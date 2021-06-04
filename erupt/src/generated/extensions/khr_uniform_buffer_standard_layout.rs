@@ -12,3 +12,7 @@ pub type PhysicalDeviceUniformBufferStandardLayoutFeaturesKHR = crate::vk1_2::Ph
 #[doc(alias = "VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceUniformBufferStandardLayoutFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_uniform_buffer_standard_layout`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES;
+}

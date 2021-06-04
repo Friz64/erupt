@@ -52,3 +52,30 @@ pub type DescriptorSetVariableDescriptorCountLayoutSupportEXT = crate::vk1_2::De
 #[doc(alias = "VkDescriptorSetVariableDescriptorCountLayoutSupportEXT")]
 #[allow(non_camel_case_types)]
 pub type DescriptorSetVariableDescriptorCountLayoutSupportEXTBuilder<'a> = crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
+impl crate::vk1_0::DescriptorSetLayoutCreateFlagBits {
+    pub const UPDATE_AFTER_BIND_POOL_EXT: Self = Self::UPDATE_AFTER_BIND_POOL;
+}
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_FRAGMENTATION_EXT: Self = Self::ERROR_FRAGMENTATION;
+}
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
+impl crate::vk1_0::StructureType {
+    pub const DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT: Self = Self::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
+    pub const PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES_EXT: Self = Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES;
+    pub const PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES_EXT: Self = Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES;
+    pub const DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO_EXT: Self = Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO;
+    pub const DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT_EXT: Self = Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT;
+}
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
+impl crate::vk1_0::DescriptorPoolCreateFlagBits {
+    pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
+}
+#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
+impl crate::vk1_2::DescriptorBindingFlagBits {
+    pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
+    pub const UPDATE_UNUSED_WHILE_PENDING_EXT: Self = Self::UPDATE_UNUSED_WHILE_PENDING;
+    pub const PARTIALLY_BOUND_EXT: Self = Self::PARTIALLY_BOUND;
+    pub const VARIABLE_DESCRIPTOR_COUNT_EXT: Self = Self::VARIABLE_DESCRIPTOR_COUNT;
+}

@@ -4,6 +4,12 @@ pub const NV_WIN32_KEYED_MUTEX_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_WIN32_KEYED_MUTEX_EXTENSION_NAME")]
 pub const NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_win32_keyed_mutex");
+#[doc = "Provided by [`crate::extensions::nv_win32_keyed_mutex`]"]
+impl crate::vk1_0::StructureType {
+    pub const WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV: Self = Self(1000058000);
+}
+impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Structure"]
 #[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoNV")]
 #[derive(Copy, Clone)]
@@ -75,7 +81,8 @@ impl<'a> Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> Win32KeyedMutexAcquireReleaseInfoNV {
         self.0
     }
@@ -101,3 +108,5 @@ impl<'a> std::ops::DerefMut for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}

@@ -4,6 +4,10 @@ pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME")]
 pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_validation_features");
+#[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
+impl crate::vk1_0::StructureType {
+    pub const VALIDATION_FEATURES_EXT: Self = Self(1000247000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum"]
 #[doc(alias = "VkValidationFeatureEnableEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -22,7 +26,7 @@ impl std::fmt::Debug for ValidationFeatureEnableEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
-impl ValidationFeatureEnableEXT {
+impl crate::extensions::ext_validation_features::ValidationFeatureEnableEXT {
     pub const GPU_ASSISTED_EXT: Self = Self(0);
     pub const GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT: Self = Self(1);
     pub const BEST_PRACTICES_EXT: Self = Self(2);
@@ -49,7 +53,7 @@ impl std::fmt::Debug for ValidationFeatureDisableEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_validation_features`]"]
-impl ValidationFeatureDisableEXT {
+impl crate::extensions::ext_validation_features::ValidationFeatureDisableEXT {
     pub const ALL_EXT: Self = Self(0);
     pub const SHADERS_EXT: Self = Self(1);
     pub const THREAD_SAFETY_EXT: Self = Self(2);
@@ -58,6 +62,8 @@ impl ValidationFeatureDisableEXT {
     pub const CORE_CHECKS_EXT: Self = Self(5);
     pub const UNIQUE_HANDLES_EXT: Self = Self(6);
 }
+impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkValidationFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -108,7 +114,8 @@ impl<'a> ValidationFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ValidationFeaturesEXT {
         self.0
     }

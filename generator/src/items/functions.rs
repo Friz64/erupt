@@ -12,6 +12,7 @@ use lang_c::ast::{Declaration as CDeclaration, DerivedDeclarator, ParameterDecla
 use proc_macro2::TokenStream;
 use quote::quote;
 use std::{
+    collections::HashMap,
     convert::{TryFrom, TryInto},
     fmt::Debug,
 };
@@ -148,7 +149,13 @@ impl Function {
         )
     }
 
-    pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        source: &Source,
+    ) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("PFN missing origin");
+
         let name = self.name.pointer_ident();
         let doc = self.doc(comment_gen);
         let return_type = self.return_type.rust_type(source);
@@ -159,13 +166,19 @@ impl Function {
             .iter()
             .map(|parameter| parameter.ty.rust_type(source));
 
-        quote! {
-            #[doc = #doc]
-            #[allow(non_camel_case_types)]
-            pub type #name = unsafe extern "system" fn(
-                #(#parameter_idents: #parameter_types),*
-            ) -> #return_type;
-        }
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #[doc = #doc]
+                #[allow(non_camel_case_types)]
+                pub type #name = unsafe extern "system" fn(
+                    #(#parameter_idents: #parameter_types),*
+                ) -> #return_type;
+            },
+        );
+
+        tokens
     }
 }
 

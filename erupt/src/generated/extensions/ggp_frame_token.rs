@@ -4,6 +4,12 @@ pub const GGP_FRAME_TOKEN_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_GGP_FRAME_TOKEN_EXTENSION_NAME")]
 pub const GGP_FRAME_TOKEN_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_GGP_frame_token");
+#[doc = "Provided by [`crate::extensions::ggp_frame_token`]"]
+impl crate::vk1_0::StructureType {
+    pub const PRESENT_FRAME_TOKEN_GGP: Self = Self(1000191000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PresentFrameTokenGGP> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PresentFrameTokenGGPBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentFrameTokenGGP.html) · Structure"]
 #[doc(alias = "VkPresentFrameTokenGGP")]
 #[derive(Copy, Clone)]
@@ -44,7 +50,8 @@ impl<'a> PresentFrameTokenGGPBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PresentFrameTokenGGP {
         self.0
     }

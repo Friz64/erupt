@@ -37,6 +37,59 @@ pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw:
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
 crate::non_dispatchable_handle!(AccelerationStructureKHR, ACCELERATION_STRUCTURE_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle", "VkAccelerationStructureKHR");
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR: Self = Self(524288);
+    pub const ACCELERATION_STRUCTURE_STORAGE_KHR: Self = Self(1048576);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::DescriptorType {
+    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR: Self = Self(536870912);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::IndexType {
+    pub const NONE_KHR: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const ACCELERATION_STRUCTURE_READ_KHR: Self = Self(2097152);
+    pub const ACCELERATION_STRUCTURE_WRITE_KHR: Self = Self(4194304);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::QueryType {
+    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR: Self = Self(1000150000);
+    pub const ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR: Self = Self(1000150001);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::StructureType {
+    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR: Self = Self(1000150007);
+    pub const ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR: Self = Self(1000150000);
+    pub const ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR: Self = Self(1000150002);
+    pub const ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR: Self = Self(1000150003);
+    pub const ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR: Self = Self(1000150004);
+    pub const ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR: Self = Self(1000150005);
+    pub const ACCELERATION_STRUCTURE_GEOMETRY_KHR: Self = Self(1000150006);
+    pub const ACCELERATION_STRUCTURE_VERSION_INFO_KHR: Self = Self(1000150009);
+    pub const COPY_ACCELERATION_STRUCTURE_INFO_KHR: Self = Self(1000150010);
+    pub const COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR: Self = Self(1000150011);
+    pub const COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR: Self = Self(1000150012);
+    pub const PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR: Self = Self(1000150013);
+    pub const PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR: Self = Self(1000150014);
+    pub const ACCELERATION_STRUCTURE_CREATE_INFO_KHR: Self = Self(1000150017);
+    pub const ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR: Self = Self(1000150020);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const ACCELERATION_STRUCTURE_BUILD_KHR: Self = Self(33554432);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::vk1_0::ObjectType {
+    pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`]"] # [doc (alias = "VkGeometryFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Bits enum of [`GeometryFlagsKHR`]"]
 #[doc(alias = "VkGeometryFlagBitsKHR")]
@@ -60,14 +113,9 @@ impl std::fmt::Debug for GeometryFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl GeometryFlagBitsKHR {
+impl crate::extensions::khr_acceleration_structure::GeometryFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl GeometryFlagBitsKHR {
-    pub const OPAQUE_NV: Self = Self::OPAQUE_KHR;
-    pub const NO_DUPLICATE_ANY_HIT_INVOCATION_NV: Self = Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`]"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Bits enum of [`GeometryInstanceFlagsKHR`]"]
@@ -94,18 +142,11 @@ impl std::fmt::Debug for GeometryInstanceFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl GeometryInstanceFlagBitsKHR {
+impl crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR {
     pub const TRIANGLE_FACING_CULL_DISABLE_KHR: Self = Self(1);
     pub const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR: Self = Self(2);
     pub const FORCE_OPAQUE_KHR: Self = Self(4);
     pub const FORCE_NO_OPAQUE_KHR: Self = Self(8);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl GeometryInstanceFlagBitsKHR {
-    pub const TRIANGLE_CULL_DISABLE_NV: Self = Self::TRIANGLE_FACING_CULL_DISABLE_KHR;
-    pub const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV: Self = Self::TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR;
-    pub const FORCE_OPAQUE_NV: Self = Self::FORCE_OPAQUE_KHR;
-    pub const FORCE_NO_OPAQUE_NV: Self = Self::FORCE_NO_OPAQUE_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`]"] # [doc (alias = "VkBuildAccelerationStructureFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Bits enum of [`BuildAccelerationStructureFlagsKHR`]"]
@@ -133,20 +174,12 @@ impl std::fmt::Debug for BuildAccelerationStructureFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl BuildAccelerationStructureFlagBitsKHR {
+impl crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagBitsKHR {
     pub const ALLOW_UPDATE_KHR: Self = Self(1);
     pub const ALLOW_COMPACTION_KHR: Self = Self(2);
     pub const PREFER_FAST_TRACE_KHR: Self = Self(4);
     pub const PREFER_FAST_BUILD_KHR: Self = Self(8);
     pub const LOW_MEMORY_KHR: Self = Self(16);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl BuildAccelerationStructureFlagBitsKHR {
-    pub const ALLOW_UPDATE_NV: Self = Self::ALLOW_UPDATE_KHR;
-    pub const ALLOW_COMPACTION_NV: Self = Self::ALLOW_COMPACTION_KHR;
-    pub const PREFER_FAST_TRACE_NV: Self = Self::PREFER_FAST_TRACE_KHR;
-    pub const PREFER_FAST_BUILD_NV: Self = Self::PREFER_FAST_BUILD_KHR;
-    pub const LOW_MEMORY_NV: Self = Self::LOW_MEMORY_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagsKHR.html) · Bitmask of [`AccelerationStructureCreateFlagBitsKHR`]"] # [doc (alias = "VkAccelerationStructureCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AccelerationStructureCreateFlagsKHR : u32 { const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = AccelerationStructureCreateFlagBitsKHR :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagBitsKHR.html) · Bits enum of [`AccelerationStructureCreateFlagsKHR`]"]
@@ -170,7 +203,7 @@ impl std::fmt::Debug for AccelerationStructureCreateFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl AccelerationStructureCreateFlagBitsKHR {
+impl crate::extensions::khr_acceleration_structure::AccelerationStructureCreateFlagBitsKHR {
     pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureModeKHR.html) · Enum"]
@@ -188,7 +221,7 @@ impl std::fmt::Debug for BuildAccelerationStructureModeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl BuildAccelerationStructureModeKHR {
+impl crate::extensions::khr_acceleration_structure::BuildAccelerationStructureModeKHR {
     pub const BUILD_KHR: Self = Self(0);
     pub const UPDATE_KHR: Self = Self(1);
 }
@@ -209,16 +242,11 @@ impl std::fmt::Debug for CopyAccelerationStructureModeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl CopyAccelerationStructureModeKHR {
+impl crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR {
     pub const CLONE_KHR: Self = Self(0);
     pub const COMPACT_KHR: Self = Self(1);
     pub const SERIALIZE_KHR: Self = Self(2);
     pub const DESERIALIZE_KHR: Self = Self(3);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl CopyAccelerationStructureModeKHR {
-    pub const CLONE_NV: Self = Self::CLONE_KHR;
-    pub const COMPACT_NV: Self = Self::COMPACT_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureTypeKHR.html) · Enum"]
 #[doc(alias = "VkAccelerationStructureTypeKHR")]
@@ -236,15 +264,10 @@ impl std::fmt::Debug for AccelerationStructureTypeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl AccelerationStructureTypeKHR {
+impl crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR {
     pub const TOP_LEVEL_KHR: Self = Self(0);
     pub const BOTTOM_LEVEL_KHR: Self = Self(1);
     pub const GENERIC_KHR: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl AccelerationStructureTypeKHR {
-    pub const TOP_LEVEL_NV: Self = Self::TOP_LEVEL_KHR;
-    pub const BOTTOM_LEVEL_NV: Self = Self::BOTTOM_LEVEL_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTypeKHR.html) · Enum"]
 #[doc(alias = "VkGeometryTypeKHR")]
@@ -262,15 +285,10 @@ impl std::fmt::Debug for GeometryTypeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl GeometryTypeKHR {
+impl crate::extensions::khr_acceleration_structure::GeometryTypeKHR {
     pub const TRIANGLES_KHR: Self = Self(0);
     pub const AABBS_KHR: Self = Self(1);
     pub const INSTANCES_KHR: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl GeometryTypeKHR {
-    pub const TRIANGLES_NV: Self = Self::TRIANGLES_KHR;
-    pub const AABBS_NV: Self = Self::AABBS_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildTypeKHR.html) · Enum"]
 #[doc(alias = "VkAccelerationStructureBuildTypeKHR")]
@@ -288,7 +306,7 @@ impl std::fmt::Debug for AccelerationStructureBuildTypeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl AccelerationStructureBuildTypeKHR {
+impl crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR {
     pub const HOST_KHR: Self = Self(0);
     pub const DEVICE_KHR: Self = Self(1);
     pub const HOST_OR_DEVICE_KHR: Self = Self(2);
@@ -308,9 +326,13 @@ impl std::fmt::Debug for AccelerationStructureCompatibilityKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl AccelerationStructureCompatibilityKHR {
+impl crate::extensions::khr_acceleration_structure::AccelerationStructureCompatibilityKHR {
     pub const COMPATIBLE_KHR: Self = Self(0);
     pub const INCOMPATIBLE_KHR: Self = Self(1);
+}
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
+    pub const ACCELERATION_STRUCTURE_KHR_EXT: Self = Self(1000150000);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureKHR.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -360,6 +382,14 @@ pub type PFN_vkGetAccelerationStructureDeviceAddressKHR = unsafe extern "system"
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, build_type: crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR, p_build_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR, p_max_primitive_counts: *const u32, p_size_info: *mut crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureKHR> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureKHRBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructurePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Structure"]
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureKHR")]
 #[derive(Copy, Clone)]
@@ -402,7 +432,8 @@ impl<'a> WriteDescriptorSetAccelerationStructureKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> WriteDescriptorSetAccelerationStructureKHR {
         self.0
     }
@@ -492,7 +523,8 @@ impl<'a> PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceAccelerationStructureFeaturesKHR {
         self.0
     }
@@ -600,7 +632,8 @@ impl<'a> PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceAccelerationStructurePropertiesKHR {
         self.0
     }
@@ -738,7 +771,8 @@ impl<'a> AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureGeometryTrianglesDataKHR {
         self.0
     }
@@ -810,7 +844,8 @@ impl<'a> AccelerationStructureGeometryAabbsDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureGeometryAabbsDataKHR {
         self.0
     }
@@ -882,7 +917,8 @@ impl<'a> AccelerationStructureGeometryInstancesDataKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureGeometryInstancesDataKHR {
         self.0
     }
@@ -979,7 +1015,8 @@ impl<'a> AccelerationStructureGeometryKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureGeometryKHR {
         self.0
     }
@@ -1084,7 +1121,8 @@ impl<'a> AccelerationStructureBuildGeometryInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureBuildGeometryInfoKHR {
         self.0
     }
@@ -1166,7 +1204,8 @@ impl<'a> AccelerationStructureBuildRangeInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureBuildRangeInfoKHR {
         self.0
     }
@@ -1262,7 +1301,8 @@ impl<'a> AccelerationStructureCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureCreateInfoKHR {
         self.0
     }
@@ -1356,7 +1396,8 @@ impl<'a> AabbPositionsKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AabbPositionsKHR {
         self.0
     }
@@ -1420,7 +1461,8 @@ impl<'a> TransformMatrixKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> TransformMatrixKHR {
         self.0
     }
@@ -1512,7 +1554,8 @@ impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureInstanceKHR {
         self.0
     }
@@ -1578,7 +1621,8 @@ impl<'a> AccelerationStructureDeviceAddressInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureDeviceAddressInfoKHR {
         self.0
     }
@@ -1644,7 +1688,8 @@ impl<'a> AccelerationStructureVersionInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureVersionInfoKHR {
         self.0
     }
@@ -1722,7 +1767,8 @@ impl<'a> CopyAccelerationStructureInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyAccelerationStructureInfoKHR {
         self.0
     }
@@ -1800,7 +1846,8 @@ impl<'a> CopyAccelerationStructureToMemoryInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyAccelerationStructureToMemoryInfoKHR {
         self.0
     }
@@ -1878,7 +1925,8 @@ impl<'a> CopyMemoryToAccelerationStructureInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyMemoryToAccelerationStructureInfoKHR {
         self.0
     }
@@ -1956,7 +2004,8 @@ impl<'a> AccelerationStructureBuildSizesInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureBuildSizesInfoKHR {
         self.0
     }

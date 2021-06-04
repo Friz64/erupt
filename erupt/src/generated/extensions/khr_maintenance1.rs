@@ -14,6 +14,19 @@ pub type CommandPoolTrimFlagsKHR = crate::vk1_1::CommandPoolTrimFlags;
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPoolKHR = crate::vk1_1::PFN_vkTrimCommandPool;
 #[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const TRANSFER_SRC_KHR: Self = Self::TRANSFER_SRC;
+    pub const TRANSFER_DST_KHR: Self = Self::TRANSFER_DST;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const _2D_ARRAY_COMPATIBLE_KHR: Self = Self::_2D_ARRAY_COMPATIBLE;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_OUT_OF_POOL_MEMORY_KHR: Self = Self::ERROR_OUT_OF_POOL_MEMORY;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance1`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

@@ -121,6 +121,190 @@ impl std::fmt::Debug for CommandPoolTrimFlagBits {
         })
     }
 }
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::DeviceQueueCreateFlagBits {
+    pub const PROTECTED: Self = Self(1);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::BufferCreateFlagBits {
+    pub const PROTECTED: Self = Self(8);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::CommandPoolCreateFlagBits {
+    pub const PROTECTED: Self = Self(4);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::Format {
+    pub const G8B8G8R8_422_UNORM: Self = Self(1000156000);
+    pub const B8G8R8G8_422_UNORM: Self = Self(1000156001);
+    pub const G8_B8_R8_3PLANE_420_UNORM: Self = Self(1000156002);
+    pub const G8_B8R8_2PLANE_420_UNORM: Self = Self(1000156003);
+    pub const G8_B8_R8_3PLANE_422_UNORM: Self = Self(1000156004);
+    pub const G8_B8R8_2PLANE_422_UNORM: Self = Self(1000156005);
+    pub const G8_B8_R8_3PLANE_444_UNORM: Self = Self(1000156006);
+    pub const R10X6_UNORM_PACK16: Self = Self(1000156007);
+    pub const R10X6G10X6_UNORM_2PACK16: Self = Self(1000156008);
+    pub const R10X6G10X6B10X6A10X6_UNORM_4PACK16: Self = Self(1000156009);
+    pub const G10X6B10X6G10X6R10X6_422_UNORM_4PACK16: Self = Self(1000156010);
+    pub const B10X6G10X6R10X6G10X6_422_UNORM_4PACK16: Self = Self(1000156011);
+    pub const G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16: Self = Self(1000156012);
+    pub const G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16: Self = Self(1000156013);
+    pub const G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16: Self = Self(1000156014);
+    pub const G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16: Self = Self(1000156015);
+    pub const G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16: Self = Self(1000156016);
+    pub const R12X4_UNORM_PACK16: Self = Self(1000156017);
+    pub const R12X4G12X4_UNORM_2PACK16: Self = Self(1000156018);
+    pub const R12X4G12X4B12X4A12X4_UNORM_4PACK16: Self = Self(1000156019);
+    pub const G12X4B12X4G12X4R12X4_422_UNORM_4PACK16: Self = Self(1000156020);
+    pub const B12X4G12X4R12X4G12X4_422_UNORM_4PACK16: Self = Self(1000156021);
+    pub const G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16: Self = Self(1000156022);
+    pub const G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16: Self = Self(1000156023);
+    pub const G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16: Self = Self(1000156024);
+    pub const G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16: Self = Self(1000156025);
+    pub const G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16: Self = Self(1000156026);
+    pub const G16B16G16R16_422_UNORM: Self = Self(1000156027);
+    pub const B16G16R16G16_422_UNORM: Self = Self(1000156028);
+    pub const G16_B16_R16_3PLANE_420_UNORM: Self = Self(1000156029);
+    pub const G16_B16R16_2PLANE_420_UNORM: Self = Self(1000156030);
+    pub const G16_B16_R16_3PLANE_422_UNORM: Self = Self(1000156031);
+    pub const G16_B16R16_2PLANE_422_UNORM: Self = Self(1000156032);
+    pub const G16_B16_R16_3PLANE_444_UNORM: Self = Self(1000156033);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const TRANSFER_SRC: Self = Self(16384);
+    pub const TRANSFER_DST: Self = Self(32768);
+    pub const MIDPOINT_CHROMA_SAMPLES: Self = Self(131072);
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER: Self = Self(262144);
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER: Self = Self(524288);
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT: Self = Self(1048576);
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE: Self = Self(2097152);
+    pub const DISJOINT: Self = Self(4194304);
+    pub const COSITED_CHROMA_SAMPLES: Self = Self(8388608);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::ImageAspectFlagBits {
+    pub const PLANE_0: Self = Self(16);
+    pub const PLANE_1: Self = Self(32);
+    pub const PLANE_2: Self = Self(64);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const ALIAS: Self = Self(1024);
+    pub const SPLIT_INSTANCE_BIND_REGIONS: Self = Self(64);
+    pub const _2D_ARRAY_COMPATIBLE: Self = Self(32);
+    pub const BLOCK_TEXEL_VIEW_COMPATIBLE: Self = Self(128);
+    pub const EXTENDED_USAGE: Self = Self(256);
+    pub const PROTECTED: Self = Self(2048);
+    pub const DISJOINT: Self = Self(512);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL: Self = Self(1000117000);
+    pub const DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL: Self = Self(1000117001);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::MemoryHeapFlagBits {
+    pub const MULTI_INSTANCE: Self = Self(2);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::MemoryPropertyFlagBits {
+    pub const PROTECTED: Self = Self(32);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const VIEW_INDEX_FROM_DEVICE_INDEX: Self = Self(8);
+    pub const DISPATCH_BASE: Self = Self(16);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::QueueFlagBits {
+    pub const PROTECTED: Self = Self(16);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_OUT_OF_POOL_MEMORY: Self = Self(-1000069000);
+    pub const ERROR_INVALID_EXTERNAL_HANDLE: Self = Self(-1000072003);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SUBGROUP_PROPERTIES: Self = Self(1000094000);
+    pub const BIND_BUFFER_MEMORY_INFO: Self = Self(1000157000);
+    pub const BIND_IMAGE_MEMORY_INFO: Self = Self(1000157001);
+    pub const PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES: Self = Self(1000083000);
+    pub const MEMORY_DEDICATED_REQUIREMENTS: Self = Self(1000127000);
+    pub const MEMORY_DEDICATED_ALLOCATE_INFO: Self = Self(1000127001);
+    pub const MEMORY_ALLOCATE_FLAGS_INFO: Self = Self(1000060000);
+    pub const DEVICE_GROUP_RENDER_PASS_BEGIN_INFO: Self = Self(1000060003);
+    pub const DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO: Self = Self(1000060004);
+    pub const DEVICE_GROUP_SUBMIT_INFO: Self = Self(1000060005);
+    pub const DEVICE_GROUP_BIND_SPARSE_INFO: Self = Self(1000060006);
+    pub const BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO: Self = Self(1000060013);
+    pub const BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO: Self = Self(1000060014);
+    pub const PHYSICAL_DEVICE_GROUP_PROPERTIES: Self = Self(1000070000);
+    pub const DEVICE_GROUP_DEVICE_CREATE_INFO: Self = Self(1000070001);
+    pub const BUFFER_MEMORY_REQUIREMENTS_INFO_2: Self = Self(1000146000);
+    pub const IMAGE_MEMORY_REQUIREMENTS_INFO_2: Self = Self(1000146001);
+    pub const IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2: Self = Self(1000146002);
+    pub const MEMORY_REQUIREMENTS_2: Self = Self(1000146003);
+    pub const SPARSE_IMAGE_MEMORY_REQUIREMENTS_2: Self = Self(1000146004);
+    pub const PHYSICAL_DEVICE_FEATURES_2: Self = Self(1000059000);
+    pub const PHYSICAL_DEVICE_PROPERTIES_2: Self = Self(1000059001);
+    pub const FORMAT_PROPERTIES_2: Self = Self(1000059002);
+    pub const IMAGE_FORMAT_PROPERTIES_2: Self = Self(1000059003);
+    pub const PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2: Self = Self(1000059004);
+    pub const QUEUE_FAMILY_PROPERTIES_2: Self = Self(1000059005);
+    pub const PHYSICAL_DEVICE_MEMORY_PROPERTIES_2: Self = Self(1000059006);
+    pub const SPARSE_IMAGE_FORMAT_PROPERTIES_2: Self = Self(1000059007);
+    pub const PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2: Self = Self(1000059008);
+    pub const PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES: Self = Self(1000117000);
+    pub const RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO: Self = Self(1000117001);
+    pub const IMAGE_VIEW_USAGE_CREATE_INFO: Self = Self(1000117002);
+    pub const PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO: Self = Self(1000117003);
+    pub const RENDER_PASS_MULTIVIEW_CREATE_INFO: Self = Self(1000053000);
+    pub const PHYSICAL_DEVICE_MULTIVIEW_FEATURES: Self = Self(1000053001);
+    pub const PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES: Self = Self(1000053002);
+    pub const PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES: Self = Self(1000120000);
+    pub const PROTECTED_SUBMIT_INFO: Self = Self(1000145000);
+    pub const PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES: Self = Self(1000145001);
+    pub const PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES: Self = Self(1000145002);
+    pub const DEVICE_QUEUE_INFO_2: Self = Self(1000145003);
+    pub const SAMPLER_YCBCR_CONVERSION_CREATE_INFO: Self = Self(1000156000);
+    pub const SAMPLER_YCBCR_CONVERSION_INFO: Self = Self(1000156001);
+    pub const BIND_IMAGE_PLANE_MEMORY_INFO: Self = Self(1000156002);
+    pub const IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO: Self = Self(1000156003);
+    pub const PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES: Self = Self(1000156004);
+    pub const SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES: Self = Self(1000156005);
+    pub const DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO: Self = Self(1000085000);
+    pub const PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO: Self = Self(1000071000);
+    pub const EXTERNAL_IMAGE_FORMAT_PROPERTIES: Self = Self(1000071001);
+    pub const PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO: Self = Self(1000071002);
+    pub const EXTERNAL_BUFFER_PROPERTIES: Self = Self(1000071003);
+    pub const PHYSICAL_DEVICE_ID_PROPERTIES: Self = Self(1000071004);
+    pub const EXTERNAL_MEMORY_BUFFER_CREATE_INFO: Self = Self(1000072000);
+    pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO: Self = Self(1000072001);
+    pub const EXPORT_MEMORY_ALLOCATE_INFO: Self = Self(1000072002);
+    pub const PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO: Self = Self(1000112000);
+    pub const EXTERNAL_FENCE_PROPERTIES: Self = Self(1000112001);
+    pub const EXPORT_FENCE_CREATE_INFO: Self = Self(1000113000);
+    pub const EXPORT_SEMAPHORE_CREATE_INFO: Self = Self(1000077000);
+    pub const PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO: Self = Self(1000076000);
+    pub const EXTERNAL_SEMAPHORE_PROPERTIES: Self = Self(1000076001);
+    pub const PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES: Self = Self(1000168000);
+    pub const DESCRIPTOR_SET_LAYOUT_SUPPORT: Self = Self(1000168001);
+    pub const PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES: Self = Self(1000063000);
+    pub const PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES: Self = Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES;
+    pub const PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES: Self = Self::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES;
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::DependencyFlagBits {
+    pub const DEVICE_GROUP: Self = Self(4);
+    pub const VIEW_LOCAL: Self = Self(2);
+}
+#[doc = "Provided by [`crate::vk1_1`]"]
+impl crate::vk1_0::ObjectType {
+    pub const SAMPLER_YCBCR_CONVERSION: Self = Self(1000156000);
+    pub const DESCRIPTOR_UPDATE_TEMPLATE: Self = Self(1000085000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateType.html) · Enum"]
 #[doc(alias = "VkDescriptorUpdateTemplateType")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -136,16 +320,8 @@ impl std::fmt::Debug for DescriptorUpdateTemplateType {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl DescriptorUpdateTemplateType {
+impl crate::vk1_1::DescriptorUpdateTemplateType {
     pub const DESCRIPTOR_SET: Self = Self(0);
-}
-#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
-impl DescriptorUpdateTemplateType {
-    pub const PUSH_DESCRIPTORS_KHR: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
-impl DescriptorUpdateTemplateType {
-    pub const DESCRIPTOR_SET_KHR: Self = Self::DESCRIPTOR_SET;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPointClippingBehavior.html) · Enum"]
 #[doc(alias = "VkPointClippingBehavior")]
@@ -162,14 +338,9 @@ impl std::fmt::Debug for PointClippingBehavior {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl PointClippingBehavior {
+impl crate::vk1_1::PointClippingBehavior {
     pub const ALL_CLIP_PLANES: Self = Self(0);
     pub const USER_CLIP_PLANES_ONLY: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
-impl PointClippingBehavior {
-    pub const ALL_CLIP_PLANES_KHR: Self = Self::ALL_CLIP_PLANES;
-    pub const USER_CLIP_PLANES_ONLY_KHR: Self = Self::USER_CLIP_PLANES_ONLY;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlags.html) · Bitmask of [`ExternalMemoryHandleTypeFlagBits`]"] # [doc (alias = "VkExternalMemoryHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryHandleTypeFlags : u32 { const OPAQUE_FD = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D11_TEXTURE = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE . 0 ; const D3D11_TEXTURE_KMT = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT . 0 ; const D3D12_HEAP = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP . 0 ; const D3D12_RESOURCE = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE . 0 ; const DMA_BUF_EXT = ExternalMemoryHandleTypeFlagBits :: DMA_BUF_EXT . 0 ; const ANDROID_HARDWARE_BUFFER_ANDROID = ExternalMemoryHandleTypeFlagBits :: ANDROID_HARDWARE_BUFFER_ANDROID . 0 ; const HOST_ALLOCATION_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_ALLOCATION_EXT . 0 ; const HOST_MAPPED_FOREIGN_MEMORY_EXT = ExternalMemoryHandleTypeFlagBits :: HOST_MAPPED_FOREIGN_MEMORY_EXT . 0 ; const ZIRCON_VMO_FUCHSIA = ExternalMemoryHandleTypeFlagBits :: ZIRCON_VMO_FUCHSIA . 0 ; const OPAQUE_FD_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D11_TEXTURE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KHR . 0 ; const D3D11_TEXTURE_KMT_KHR = ExternalMemoryHandleTypeFlagBits :: D3D11_TEXTURE_KMT_KHR . 0 ; const D3D12_HEAP_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_HEAP_KHR . 0 ; const D3D12_RESOURCE_KHR = ExternalMemoryHandleTypeFlagBits :: D3D12_RESOURCE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBits.html) · Bits enum of [`ExternalMemoryHandleTypeFlags`]"]
@@ -204,7 +375,7 @@ impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalMemoryHandleTypeFlagBits {
+impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
     pub const OPAQUE_FD: Self = Self(1);
     pub const OPAQUE_WIN32: Self = Self(2);
     pub const OPAQUE_WIN32_KMT: Self = Self(4);
@@ -212,33 +383,6 @@ impl ExternalMemoryHandleTypeFlagBits {
     pub const D3D11_TEXTURE_KMT: Self = Self(16);
     pub const D3D12_HEAP: Self = Self(32);
     pub const D3D12_RESOURCE: Self = Self(64);
-}
-#[doc = "Provided by [`crate::extensions::ext_external_memory_dma_buf`]"]
-impl ExternalMemoryHandleTypeFlagBits {
-    pub const DMA_BUF_EXT: Self = Self(512);
-}
-#[doc = "Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]"]
-impl ExternalMemoryHandleTypeFlagBits {
-    pub const ANDROID_HARDWARE_BUFFER_ANDROID: Self = Self(1024);
-}
-#[doc = "Provided by [`crate::extensions::ext_external_memory_host`]"]
-impl ExternalMemoryHandleTypeFlagBits {
-    pub const HOST_ALLOCATION_EXT: Self = Self(128);
-    pub const HOST_MAPPED_FOREIGN_MEMORY_EXT: Self = Self(256);
-}
-#[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
-impl ExternalMemoryHandleTypeFlagBits {
-    pub const ZIRCON_VMO_FUCHSIA: Self = Self(2048);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
-impl ExternalMemoryHandleTypeFlagBits {
-    pub const OPAQUE_FD_KHR: Self = Self::OPAQUE_FD;
-    pub const OPAQUE_WIN32_KHR: Self = Self::OPAQUE_WIN32;
-    pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
-    pub const D3D11_TEXTURE_KHR: Self = Self::D3D11_TEXTURE;
-    pub const D3D11_TEXTURE_KMT_KHR: Self = Self::D3D11_TEXTURE_KMT;
-    pub const D3D12_HEAP_KHR: Self = Self::D3D12_HEAP;
-    pub const D3D12_RESOURCE_KHR: Self = Self::D3D12_RESOURCE;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlags.html) · Bitmask of [`ExternalMemoryFeatureFlagBits`]"] # [doc (alias = "VkExternalMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalMemoryFeatureFlags : u32 { const DEDICATED_ONLY = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY . 0 ; const EXPORTABLE = ExternalMemoryFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalMemoryFeatureFlagBits :: IMPORTABLE . 0 ; const DEDICATED_ONLY_KHR = ExternalMemoryFeatureFlagBits :: DEDICATED_ONLY_KHR . 0 ; const EXPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalMemoryFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBits.html) · Bits enum of [`ExternalMemoryFeatureFlags`]"]
@@ -264,16 +408,10 @@ impl std::fmt::Debug for ExternalMemoryFeatureFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalMemoryFeatureFlagBits {
+impl crate::vk1_1::ExternalMemoryFeatureFlagBits {
     pub const DEDICATED_ONLY: Self = Self(1);
     pub const EXPORTABLE: Self = Self(2);
     pub const IMPORTABLE: Self = Self(4);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
-impl ExternalMemoryFeatureFlagBits {
-    pub const DEDICATED_ONLY_KHR: Self = Self::DEDICATED_ONLY;
-    pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
-    pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlags.html) · Bitmask of [`ExternalSemaphoreHandleTypeFlagBits`]"] # [doc (alias = "VkExternalSemaphoreHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreHandleTypeFlags : u32 { const OPAQUE_FD = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const D3D12_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE . 0 ; const SYNC_FD = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD . 0 ; const ZIRCON_EVENT_FUCHSIA = ExternalSemaphoreHandleTypeFlagBits :: ZIRCON_EVENT_FUCHSIA . 0 ; const D3D11_FENCE = ExternalSemaphoreHandleTypeFlagBits :: D3D11_FENCE . 0 ; const OPAQUE_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalSemaphoreHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const D3D12_FENCE_KHR = ExternalSemaphoreHandleTypeFlagBits :: D3D12_FENCE_KHR . 0 ; const SYNC_FD_KHR = ExternalSemaphoreHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreHandleTypeFlagBits.html) · Bits enum of [`ExternalSemaphoreHandleTypeFlags`]"]
@@ -302,25 +440,13 @@ impl std::fmt::Debug for ExternalSemaphoreHandleTypeFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalSemaphoreHandleTypeFlagBits {
+impl crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits {
     pub const OPAQUE_FD: Self = Self(1);
     pub const OPAQUE_WIN32: Self = Self(2);
     pub const OPAQUE_WIN32_KMT: Self = Self(4);
     pub const D3D12_FENCE: Self = Self(8);
     pub const SYNC_FD: Self = Self(16);
     pub const D3D11_FENCE: Self = Self::D3D12_FENCE;
-}
-#[doc = "Provided by [`crate::extensions::fuchsia_external_semaphore`]"]
-impl ExternalSemaphoreHandleTypeFlagBits {
-    pub const ZIRCON_EVENT_FUCHSIA: Self = Self(128);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_semaphore_capabilities`]"]
-impl ExternalSemaphoreHandleTypeFlagBits {
-    pub const OPAQUE_FD_KHR: Self = Self::OPAQUE_FD;
-    pub const OPAQUE_WIN32_KHR: Self = Self::OPAQUE_WIN32;
-    pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
-    pub const D3D12_FENCE_KHR: Self = Self::D3D12_FENCE;
-    pub const SYNC_FD_KHR: Self = Self::SYNC_FD;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlags.html) · Bitmask of [`ExternalSemaphoreFeatureFlagBits`]"] # [doc (alias = "VkExternalSemaphoreFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalSemaphoreFeatureFlags : u32 { const EXPORTABLE = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalSemaphoreFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalSemaphoreFeatureFlagBits.html) · Bits enum of [`ExternalSemaphoreFeatureFlags`]"]
@@ -345,14 +471,9 @@ impl std::fmt::Debug for ExternalSemaphoreFeatureFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalSemaphoreFeatureFlagBits {
+impl crate::vk1_1::ExternalSemaphoreFeatureFlagBits {
     pub const EXPORTABLE: Self = Self(1);
     pub const IMPORTABLE: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_semaphore_capabilities`]"]
-impl ExternalSemaphoreFeatureFlagBits {
-    pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
-    pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlags.html) · Bitmask of [`SemaphoreImportFlagBits`]"] # [doc (alias = "VkSemaphoreImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreImportFlags : u32 { const TEMPORARY = SemaphoreImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = SemaphoreImportFlagBits :: TEMPORARY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreImportFlagBits.html) · Bits enum of [`SemaphoreImportFlags`]"]
@@ -376,12 +497,8 @@ impl std::fmt::Debug for SemaphoreImportFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl SemaphoreImportFlagBits {
+impl crate::vk1_1::SemaphoreImportFlagBits {
     pub const TEMPORARY: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_semaphore`]"]
-impl SemaphoreImportFlagBits {
-    pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlags.html) · Bitmask of [`ExternalFenceHandleTypeFlagBits`]"] # [doc (alias = "VkExternalFenceHandleTypeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceHandleTypeFlags : u32 { const OPAQUE_FD = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD . 0 ; const OPAQUE_WIN32 = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32 . 0 ; const OPAQUE_WIN32_KMT = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT . 0 ; const SYNC_FD = ExternalFenceHandleTypeFlagBits :: SYNC_FD . 0 ; const OPAQUE_FD_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_FD_KHR . 0 ; const OPAQUE_WIN32_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KHR . 0 ; const OPAQUE_WIN32_KMT_KHR = ExternalFenceHandleTypeFlagBits :: OPAQUE_WIN32_KMT_KHR . 0 ; const SYNC_FD_KHR = ExternalFenceHandleTypeFlagBits :: SYNC_FD_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagBits.html) · Bits enum of [`ExternalFenceHandleTypeFlags`]"]
@@ -408,18 +525,11 @@ impl std::fmt::Debug for ExternalFenceHandleTypeFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalFenceHandleTypeFlagBits {
+impl crate::vk1_1::ExternalFenceHandleTypeFlagBits {
     pub const OPAQUE_FD: Self = Self(1);
     pub const OPAQUE_WIN32: Self = Self(2);
     pub const OPAQUE_WIN32_KMT: Self = Self(4);
     pub const SYNC_FD: Self = Self(8);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
-impl ExternalFenceHandleTypeFlagBits {
-    pub const OPAQUE_FD_KHR: Self = Self::OPAQUE_FD;
-    pub const OPAQUE_WIN32_KHR: Self = Self::OPAQUE_WIN32;
-    pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
-    pub const SYNC_FD_KHR: Self = Self::SYNC_FD;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlags.html) · Bitmask of [`ExternalFenceFeatureFlagBits`]"] # [doc (alias = "VkExternalFenceFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct ExternalFenceFeatureFlags : u32 { const EXPORTABLE = ExternalFenceFeatureFlagBits :: EXPORTABLE . 0 ; const IMPORTABLE = ExternalFenceFeatureFlagBits :: IMPORTABLE . 0 ; const EXPORTABLE_KHR = ExternalFenceFeatureFlagBits :: EXPORTABLE_KHR . 0 ; const IMPORTABLE_KHR = ExternalFenceFeatureFlagBits :: IMPORTABLE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlagBits.html) · Bits enum of [`ExternalFenceFeatureFlags`]"]
@@ -444,14 +554,9 @@ impl std::fmt::Debug for ExternalFenceFeatureFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ExternalFenceFeatureFlagBits {
+impl crate::vk1_1::ExternalFenceFeatureFlagBits {
     pub const EXPORTABLE: Self = Self(1);
     pub const IMPORTABLE: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
-impl ExternalFenceFeatureFlagBits {
-    pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
-    pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlags.html) · Bitmask of [`FenceImportFlagBits`]"] # [doc (alias = "VkFenceImportFlags")] # [derive (Default)] # [repr (transparent)] pub struct FenceImportFlags : u32 { const TEMPORARY = FenceImportFlagBits :: TEMPORARY . 0 ; const TEMPORARY_KHR = FenceImportFlagBits :: TEMPORARY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlagBits.html) · Bits enum of [`FenceImportFlags`]"]
@@ -475,12 +580,8 @@ impl std::fmt::Debug for FenceImportFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl FenceImportFlagBits {
+impl crate::vk1_1::FenceImportFlagBits {
     pub const TEMPORARY: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_external_fence`]"]
-impl FenceImportFlagBits {
-    pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlags.html) · Bitmask of [`PeerMemoryFeatureFlagBits`]"] # [doc (alias = "VkPeerMemoryFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct PeerMemoryFeatureFlags : u32 { const COPY_SRC = PeerMemoryFeatureFlagBits :: COPY_SRC . 0 ; const COPY_DST = PeerMemoryFeatureFlagBits :: COPY_DST . 0 ; const GENERIC_SRC = PeerMemoryFeatureFlagBits :: GENERIC_SRC . 0 ; const GENERIC_DST = PeerMemoryFeatureFlagBits :: GENERIC_DST . 0 ; const COPY_SRC_KHR = PeerMemoryFeatureFlagBits :: COPY_SRC_KHR . 0 ; const COPY_DST_KHR = PeerMemoryFeatureFlagBits :: COPY_DST_KHR . 0 ; const GENERIC_SRC_KHR = PeerMemoryFeatureFlagBits :: GENERIC_SRC_KHR . 0 ; const GENERIC_DST_KHR = PeerMemoryFeatureFlagBits :: GENERIC_DST_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagBits.html) · Bits enum of [`PeerMemoryFeatureFlags`]"]
@@ -507,18 +608,11 @@ impl std::fmt::Debug for PeerMemoryFeatureFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl PeerMemoryFeatureFlagBits {
+impl crate::vk1_1::PeerMemoryFeatureFlagBits {
     pub const COPY_SRC: Self = Self(1);
     pub const COPY_DST: Self = Self(2);
     pub const GENERIC_SRC: Self = Self(4);
     pub const GENERIC_DST: Self = Self(8);
-}
-#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
-impl PeerMemoryFeatureFlagBits {
-    pub const COPY_SRC_KHR: Self = Self::COPY_SRC;
-    pub const COPY_DST_KHR: Self = Self::COPY_DST;
-    pub const GENERIC_SRC_KHR: Self = Self::GENERIC_SRC;
-    pub const GENERIC_DST_KHR: Self = Self::GENERIC_DST;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlags.html) · Bitmask of [`MemoryAllocateFlagBits`]"] # [doc (alias = "VkMemoryAllocateFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryAllocateFlags : u32 { const DEVICE_MASK = MemoryAllocateFlagBits :: DEVICE_MASK . 0 ; const DEVICE_ADDRESS = MemoryAllocateFlagBits :: DEVICE_ADDRESS . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_MASK_KHR = MemoryAllocateFlagBits :: DEVICE_MASK_KHR . 0 ; const DEVICE_ADDRESS_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_KHR . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = MemoryAllocateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagBits.html) · Bits enum of [`MemoryAllocateFlags`]"]
@@ -544,22 +638,8 @@ impl std::fmt::Debug for MemoryAllocateFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl MemoryAllocateFlagBits {
+impl crate::vk1_1::MemoryAllocateFlagBits {
     pub const DEVICE_MASK: Self = Self(1);
-}
-#[doc = "Provided by [`crate::vk1_2`]"]
-impl MemoryAllocateFlagBits {
-    pub const DEVICE_ADDRESS: Self = Self(2);
-    pub const DEVICE_ADDRESS_CAPTURE_REPLAY: Self = Self(4);
-}
-#[doc = "Provided by [`crate::extensions::khr_device_group`]"]
-impl MemoryAllocateFlagBits {
-    pub const DEVICE_MASK_KHR: Self = Self::DEVICE_MASK;
-}
-#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
-impl MemoryAllocateFlagBits {
-    pub const DEVICE_ADDRESS_KHR: Self = Self::DEVICE_ADDRESS;
-    pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlags.html) · Bitmask of [`SubgroupFeatureFlagBits`]"] # [doc (alias = "VkSubgroupFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubgroupFeatureFlags : u32 { const BASIC = SubgroupFeatureFlagBits :: BASIC . 0 ; const VOTE = SubgroupFeatureFlagBits :: VOTE . 0 ; const ARITHMETIC = SubgroupFeatureFlagBits :: ARITHMETIC . 0 ; const BALLOT = SubgroupFeatureFlagBits :: BALLOT . 0 ; const SHUFFLE = SubgroupFeatureFlagBits :: SHUFFLE . 0 ; const SHUFFLE_RELATIVE = SubgroupFeatureFlagBits :: SHUFFLE_RELATIVE . 0 ; const CLUSTERED = SubgroupFeatureFlagBits :: CLUSTERED . 0 ; const QUAD = SubgroupFeatureFlagBits :: QUAD . 0 ; const PARTITIONED_NV = SubgroupFeatureFlagBits :: PARTITIONED_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubgroupFeatureFlagBits.html) · Bits enum of [`SubgroupFeatureFlags`]"]
@@ -591,7 +671,7 @@ impl std::fmt::Debug for SubgroupFeatureFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl SubgroupFeatureFlagBits {
+impl crate::vk1_1::SubgroupFeatureFlagBits {
     pub const BASIC: Self = Self(1);
     pub const VOTE: Self = Self(2);
     pub const ARITHMETIC: Self = Self(4);
@@ -600,10 +680,6 @@ impl SubgroupFeatureFlagBits {
     pub const SHUFFLE_RELATIVE: Self = Self(32);
     pub const CLUSTERED: Self = Self(64);
     pub const QUAD: Self = Self(128);
-}
-#[doc = "Provided by [`crate::extensions::nv_shader_subgroup_partitioned`]"]
-impl SubgroupFeatureFlagBits {
-    pub const PARTITIONED_NV: Self = Self(256);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTessellationDomainOrigin.html) · Enum"]
 #[doc(alias = "VkTessellationDomainOrigin")]
@@ -620,14 +696,9 @@ impl std::fmt::Debug for TessellationDomainOrigin {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl TessellationDomainOrigin {
+impl crate::vk1_1::TessellationDomainOrigin {
     pub const UPPER_LEFT: Self = Self(0);
     pub const LOWER_LEFT: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
-impl TessellationDomainOrigin {
-    pub const UPPER_LEFT_KHR: Self = Self::UPPER_LEFT;
-    pub const LOWER_LEFT_KHR: Self = Self::LOWER_LEFT;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrModelConversion.html) · Enum"]
 #[doc(alias = "VkSamplerYcbcrModelConversion")]
@@ -647,20 +718,12 @@ impl std::fmt::Debug for SamplerYcbcrModelConversion {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl SamplerYcbcrModelConversion {
+impl crate::vk1_1::SamplerYcbcrModelConversion {
     pub const RGB_IDENTITY: Self = Self(0);
     pub const YCBCR_IDENTITY: Self = Self(1);
     pub const YCBCR_709: Self = Self(2);
     pub const YCBCR_601: Self = Self(3);
     pub const YCBCR_2020: Self = Self(4);
-}
-#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
-impl SamplerYcbcrModelConversion {
-    pub const RGB_IDENTITY_KHR: Self = Self::RGB_IDENTITY;
-    pub const YCBCR_IDENTITY_KHR: Self = Self::YCBCR_IDENTITY;
-    pub const YCBCR_709_KHR: Self = Self::YCBCR_709;
-    pub const YCBCR_601_KHR: Self = Self::YCBCR_601;
-    pub const YCBCR_2020_KHR: Self = Self::YCBCR_2020;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrRange.html) · Enum"]
 #[doc(alias = "VkSamplerYcbcrRange")]
@@ -677,14 +740,9 @@ impl std::fmt::Debug for SamplerYcbcrRange {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl SamplerYcbcrRange {
+impl crate::vk1_1::SamplerYcbcrRange {
     pub const ITU_FULL: Self = Self(0);
     pub const ITU_NARROW: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
-impl SamplerYcbcrRange {
-    pub const ITU_FULL_KHR: Self = Self::ITU_FULL;
-    pub const ITU_NARROW_KHR: Self = Self::ITU_NARROW;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkChromaLocation.html) · Enum"]
 #[doc(alias = "VkChromaLocation")]
@@ -701,14 +759,9 @@ impl std::fmt::Debug for ChromaLocation {
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl ChromaLocation {
+impl crate::vk1_1::ChromaLocation {
     pub const COSITED_EVEN: Self = Self(0);
     pub const MIDPOINT: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
-impl ChromaLocation {
-    pub const COSITED_EVEN_KHR: Self = Self::COSITED_EVEN;
-    pub const MIDPOINT_KHR: Self = Self::MIDPOINT;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -794,6 +847,58 @@ pub type PFN_vkGetDeviceQueue2 = unsafe extern "system" fn(device: crate::vk1_0:
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupport.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupport = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::vk1_0::DescriptorSetLayoutCreateInfo, p_support: *mut crate::vk1_1::DescriptorSetLayoutSupport) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFeatures2> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFeatures2Builder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVariablePointersFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMultiviewFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMultiviewFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupDeviceCreateInfo> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupDeviceCreateInfoBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice16BitStorageFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice16BitStorageFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSamplerYcbcrConversionFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceProtectedMemoryFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderDrawParametersFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfo> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfoBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryAllocateFlagsInfo> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryAllocateFlagsInfoBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryDedicatedAllocateInfo> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryDedicatedAllocateInfoBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryBufferCreateInfo> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryBufferCreateInfoBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfo> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfoBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageViewUsageCreateInfo> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageViewUsageCreateInfoBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerYcbcrConversionInfo> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerYcbcrConversionInfoBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupBindSparseInfo> for crate::vk1_0::BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupBindSparseInfoBuilder<'_>> for crate::vk1_0::BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineTessellationDomainOriginStateCreateInfo> for crate::vk1_0::PipelineTessellationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineTessellationDomainOriginStateCreateInfoBuilder<'_>> for crate::vk1_0::PipelineTessellationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerYcbcrConversionInfo> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerYcbcrConversionInfoBuilder<'_>> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupCommandBufferBeginInfo> for crate::vk1_0::CommandBufferBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupCommandBufferBeginInfoBuilder<'_>> for crate::vk1_0::CommandBufferBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupRenderPassBeginInfo> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupRenderPassBeginInfoBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassMultiviewCreateInfo> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassMultiviewCreateInfoBuilder<'_>> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassInputAttachmentAspectCreateInfo> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassInputAttachmentAspectCreateInfoBuilder<'_>> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportFenceCreateInfo> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportFenceCreateInfoBuilder<'_>> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreCreateInfo> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreCreateInfoBuilder<'_>> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSubmitInfo> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSubmitInfoBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ProtectedSubmitInfo> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ProtectedSubmitInfoBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFeatures2")]
 #[derive(Copy, Clone)]
@@ -819,178 +924,18 @@ impl PhysicalDeviceFeatures2 {
         PhysicalDeviceFeatures2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMultiviewFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDevice16BitStorageFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDevice8BitStorageFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan11Features> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan11FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan12Features> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan12FeaturesBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNV> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXT> for PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVariablePointersFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVariablePointersFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice16BitStorageFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice16BitStorageFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSamplerYcbcrConversionFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProtectedMemoryFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProtectedMemoryFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderDrawParametersFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderDrawParametersFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Builder of [`PhysicalDeviceFeatures2`]"]
 #[repr(transparent)]
@@ -1006,7 +951,8 @@ impl<'a> PhysicalDeviceFeatures2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFeatures2 {
         self.0
     }
@@ -1057,100 +1003,18 @@ impl PhysicalDeviceProperties2 {
         PhysicalDeviceProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDriverProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDriverPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceIDProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceIDPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMultiviewProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMultiviewPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nvx_multiview_per_view_attributes::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nvx_multiview_per_view_attributes::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceSubgroupProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceSubgroupPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDevicePointClippingProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDevicePointClippingPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceProtectedMemoryPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMaintenance3Properties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::PhysicalDeviceMaintenance3PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceFloatControlsProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceFloatControlsPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_conservative_rasterization::PhysicalDeviceConservativeRasterizationPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_conservative_rasterization::PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMD> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMDBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMD> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMDBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDescriptorIndexingPropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphoreProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceTimelineSemaphorePropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolveProperties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceDepthStencilResolvePropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructurePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2PropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan11Properties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan11PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan12Properties> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::PhysicalDeviceVulkan12PropertiesBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHR> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexPropertiesEXT> for PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'_>> for PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceIDProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceIDPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePointClippingProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePointClippingPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProtectedMemoryProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProtectedMemoryPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMaintenance3Properties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMaintenance3PropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProperties2.html) · Builder of [`PhysicalDeviceProperties2`]"]
 #[repr(transparent)]
@@ -1166,7 +1030,8 @@ impl<'a> PhysicalDeviceProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceProperties2 {
         self.0
     }
@@ -1217,12 +1082,6 @@ impl FormatProperties2 {
         FormatProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXT> for FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXTBuilder<'_>> for FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfilesKHR> for FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfilesKHRBuilder<'_>> for FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfileKHR> for FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'_>> for FormatProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties2.html) · Builder of [`FormatProperties2`]"]
 #[repr(transparent)]
@@ -1238,7 +1097,8 @@ impl<'a> FormatProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FormatProperties2 {
         self.0
     }
@@ -1289,16 +1149,10 @@ impl ImageFormatProperties2 {
         ImageFormatProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::ExternalImageFormatProperties> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::ExternalImageFormatPropertiesBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatProperties> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::SamplerYcbcrConversionImageFormatPropertiesBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMD> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMDBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferUsageANDROID> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferUsageANDROIDBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXT> for ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_>> for ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, ExternalImageFormatProperties> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, ExternalImageFormatPropertiesBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, SamplerYcbcrConversionImageFormatProperties> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, SamplerYcbcrConversionImageFormatPropertiesBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties2.html) · Builder of [`ImageFormatProperties2`]"]
 #[repr(transparent)]
@@ -1314,7 +1168,8 @@ impl<'a> ImageFormatProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageFormatProperties2 {
         self.0
     }
@@ -1369,16 +1224,8 @@ impl PhysicalDeviceImageFormatInfo2 {
         PhysicalDeviceImageFormatInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::PhysicalDeviceExternalImageFormatInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageFormatListCreateInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::PhysicalDeviceImageDrmFormatModifierInfoEXT> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_image_drm_format_modifier::PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfo> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXT> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>> for PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalImageFormatInfo> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalImageFormatInfoBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageFormatInfo2.html) · Builder of [`PhysicalDeviceImageFormatInfo2`]"]
 #[repr(transparent)]
@@ -1414,7 +1261,8 @@ impl<'a> PhysicalDeviceImageFormatInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceImageFormatInfo2 {
         self.0
     }
@@ -1465,12 +1313,6 @@ impl QueueFamilyProperties2 {
         QueueFamilyProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNV> for QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV> for QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NVBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoQueueFamilyProperties2KHR> for QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::khr_video_queue::VideoQueueFamilyProperties2KHRBuilder<'_>> for QueueFamilyProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties2.html) · Builder of [`QueueFamilyProperties2`]"]
 #[repr(transparent)]
@@ -1486,7 +1328,8 @@ impl<'a> QueueFamilyProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> QueueFamilyProperties2 {
         self.0
     }
@@ -1537,8 +1380,6 @@ impl PhysicalDeviceMemoryProperties2 {
         PhysicalDeviceMemoryProperties2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXT> for PhysicalDeviceMemoryProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>> for PhysicalDeviceMemoryProperties2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties2.html) · Builder of [`PhysicalDeviceMemoryProperties2`]"]
 #[repr(transparent)]
@@ -1554,7 +1395,8 @@ impl<'a> PhysicalDeviceMemoryProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMemoryProperties2 {
         self.0
     }
@@ -1620,7 +1462,8 @@ impl<'a> SparseImageFormatProperties2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SparseImageFormatProperties2 {
         self.0
     }
@@ -1710,7 +1553,8 @@ impl<'a> PhysicalDeviceSparseImageFormatInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSparseImageFormatInfo2 {
         self.0
     }
@@ -1782,7 +1626,8 @@ impl<'a> PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVariablePointersFeatures {
         self.0
     }
@@ -1858,7 +1703,8 @@ impl<'a> ExternalMemoryPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalMemoryProperties {
         self.0
     }
@@ -1924,7 +1770,8 @@ impl<'a> PhysicalDeviceExternalImageFormatInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExternalImageFormatInfo {
         self.0
     }
@@ -1990,7 +1837,8 @@ impl<'a> ExternalImageFormatPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalImageFormatProperties {
         self.0
     }
@@ -2068,7 +1916,8 @@ impl<'a> PhysicalDeviceExternalBufferInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExternalBufferInfo {
         self.0
     }
@@ -2134,7 +1983,8 @@ impl<'a> ExternalBufferPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalBufferProperties {
         self.0
     }
@@ -2224,7 +2074,8 @@ impl<'a> PhysicalDeviceIDPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceIDProperties {
         self.0
     }
@@ -2290,7 +2141,8 @@ impl<'a> ExternalMemoryImageCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalMemoryImageCreateInfo {
         self.0
     }
@@ -2356,7 +2208,8 @@ impl<'a> ExternalMemoryBufferCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalMemoryBufferCreateInfo {
         self.0
     }
@@ -2422,7 +2275,8 @@ impl<'a> ExportMemoryAllocateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportMemoryAllocateInfo {
         self.0
     }
@@ -2473,8 +2327,6 @@ impl PhysicalDeviceExternalSemaphoreInfo {
         PhysicalDeviceExternalSemaphoreInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SemaphoreTypeCreateInfo> for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SemaphoreTypeCreateInfoBuilder<'_>> for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfo.html) · Builder of [`PhysicalDeviceExternalSemaphoreInfo`]"]
 #[repr(transparent)]
@@ -2490,7 +2342,8 @@ impl<'a> PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExternalSemaphoreInfo {
         self.0
     }
@@ -2568,7 +2421,8 @@ impl<'a> ExternalSemaphorePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalSemaphoreProperties {
         self.0
     }
@@ -2634,7 +2488,8 @@ impl<'a> ExportSemaphoreCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportSemaphoreCreateInfo {
         self.0
     }
@@ -2700,7 +2555,8 @@ impl<'a> PhysicalDeviceExternalFenceInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExternalFenceInfo {
         self.0
     }
@@ -2778,7 +2634,8 @@ impl<'a> ExternalFencePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalFenceProperties {
         self.0
     }
@@ -2844,7 +2701,8 @@ impl<'a> ExportFenceCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportFenceCreateInfo {
         self.0
     }
@@ -2922,7 +2780,8 @@ impl<'a> PhysicalDeviceMultiviewFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMultiviewFeatures {
         self.0
     }
@@ -2994,7 +2853,8 @@ impl<'a> PhysicalDeviceMultiviewPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMultiviewProperties {
         self.0
     }
@@ -3078,7 +2938,8 @@ impl<'a> RenderPassMultiviewCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassMultiviewCreateInfo {
         self.0
     }
@@ -3156,7 +3017,8 @@ impl<'a> PhysicalDeviceGroupPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceGroupProperties {
         self.0
     }
@@ -3228,7 +3090,8 @@ impl<'a> MemoryAllocateFlagsInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryAllocateFlagsInfo {
         self.0
     }
@@ -3281,8 +3144,8 @@ impl BindBufferMemoryInfo {
         BindBufferMemoryInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfo> for BindBufferMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<'_>> for BindBufferMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindBufferMemoryDeviceGroupInfo> for crate::vk1_1::BindBufferMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindBufferMemoryDeviceGroupInfoBuilder<'_>> for crate::vk1_1::BindBufferMemoryInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfo.html) · Builder of [`BindBufferMemoryInfo`]"]
 #[repr(transparent)]
@@ -3308,7 +3171,8 @@ impl<'a> BindBufferMemoryInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindBufferMemoryInfo {
         self.0
     }
@@ -3376,7 +3240,8 @@ impl<'a> BindBufferMemoryDeviceGroupInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindBufferMemoryDeviceGroupInfo {
         self.0
     }
@@ -3429,12 +3294,10 @@ impl BindImageMemoryInfo {
         BindImageMemoryInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfo> for BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHR> for BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHRBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindImagePlaneMemoryInfo> for BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::BindImagePlaneMemoryInfoBuilder<'_>> for BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindImageMemoryDeviceGroupInfo> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindImageMemoryDeviceGroupInfoBuilder<'_>> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindImagePlaneMemoryInfo> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BindImagePlaneMemoryInfoBuilder<'_>> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryInfo.html) · Builder of [`BindImageMemoryInfo`]"]
 #[repr(transparent)]
@@ -3460,7 +3323,8 @@ impl<'a> BindImageMemoryInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindImageMemoryInfo {
         self.0
     }
@@ -3536,7 +3400,8 @@ impl<'a> BindImageMemoryDeviceGroupInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindImageMemoryDeviceGroupInfo {
         self.0
     }
@@ -3610,7 +3475,8 @@ impl<'a> DeviceGroupRenderPassBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupRenderPassBeginInfo {
         self.0
     }
@@ -3676,7 +3542,8 @@ impl<'a> DeviceGroupCommandBufferBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupCommandBufferBeginInfo {
         self.0
     }
@@ -3760,7 +3627,8 @@ impl<'a> DeviceGroupSubmitInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupSubmitInfo {
         self.0
     }
@@ -3832,7 +3700,8 @@ impl<'a> DeviceGroupBindSparseInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupBindSparseInfo {
         self.0
     }
@@ -3900,7 +3769,8 @@ impl<'a> DeviceGroupDeviceCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceGroupDeviceCreateInfo {
         self.0
     }
@@ -3994,7 +3864,8 @@ impl<'a> DescriptorUpdateTemplateEntryBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorUpdateTemplateEntry {
         self.0
     }
@@ -4098,7 +3969,8 @@ impl<'a> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorUpdateTemplateCreateInfo {
         self.0
     }
@@ -4174,7 +4046,8 @@ impl<'a> InputAttachmentAspectReferenceBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> InputAttachmentAspectReference {
         self.0
     }
@@ -4242,7 +4115,8 @@ impl<'a> RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassInputAttachmentAspectCreateInfo {
         self.0
     }
@@ -4326,7 +4200,8 @@ impl<'a> PhysicalDevice16BitStorageFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevice16BitStorageFeatures {
         self.0
     }
@@ -4410,7 +4285,8 @@ impl<'a> PhysicalDeviceSubgroupPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSubgroupProperties {
         self.0
     }
@@ -4476,7 +4352,8 @@ impl<'a> BufferMemoryRequirementsInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferMemoryRequirementsInfo2 {
         self.0
     }
@@ -4527,8 +4404,8 @@ impl ImageMemoryRequirementsInfo2 {
         ImageMemoryRequirementsInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfo> for ImageMemoryRequirementsInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_1::ImagePlaneMemoryRequirementsInfoBuilder<'_>> for ImageMemoryRequirementsInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImagePlaneMemoryRequirementsInfo> for crate::vk1_1::ImageMemoryRequirementsInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImagePlaneMemoryRequirementsInfoBuilder<'_>> for crate::vk1_1::ImageMemoryRequirementsInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryRequirementsInfo2.html) · Builder of [`ImageMemoryRequirementsInfo2`]"]
 #[repr(transparent)]
@@ -4544,7 +4421,8 @@ impl<'a> ImageMemoryRequirementsInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageMemoryRequirementsInfo2 {
         self.0
     }
@@ -4610,7 +4488,8 @@ impl<'a> ImageSparseMemoryRequirementsInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageSparseMemoryRequirementsInfo2 {
         self.0
     }
@@ -4661,8 +4540,8 @@ impl MemoryRequirements2 {
         MemoryRequirements2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::MemoryDedicatedRequirements> for MemoryRequirements2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_1::MemoryDedicatedRequirementsBuilder<'_>> for MemoryRequirements2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, MemoryDedicatedRequirements> for crate::vk1_1::MemoryRequirements2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, MemoryDedicatedRequirementsBuilder<'_>> for crate::vk1_1::MemoryRequirements2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements2.html) · Builder of [`MemoryRequirements2`]"]
 #[repr(transparent)]
@@ -4678,7 +4557,8 @@ impl<'a> MemoryRequirements2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryRequirements2 {
         self.0
     }
@@ -4744,7 +4624,8 @@ impl<'a> SparseImageMemoryRequirements2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SparseImageMemoryRequirements2 {
         self.0
     }
@@ -4810,7 +4691,8 @@ impl<'a> PhysicalDevicePointClippingPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePointClippingProperties {
         self.0
     }
@@ -4882,7 +4764,8 @@ impl<'a> MemoryDedicatedRequirementsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryDedicatedRequirements {
         self.0
     }
@@ -4954,7 +4837,8 @@ impl<'a> MemoryDedicatedAllocateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryDedicatedAllocateInfo {
         self.0
     }
@@ -5020,7 +4904,8 @@ impl<'a> ImageViewUsageCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageViewUsageCreateInfo {
         self.0
     }
@@ -5086,7 +4971,8 @@ impl<'a> PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineTessellationDomainOriginStateCreateInfo {
         self.0
     }
@@ -5152,7 +5038,8 @@ impl<'a> SamplerYcbcrConversionInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SamplerYcbcrConversionInfo {
         self.0
     }
@@ -5210,8 +5097,6 @@ impl SamplerYcbcrConversionCreateInfo {
         SamplerYcbcrConversionCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID> for SamplerYcbcrConversionCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROIDBuilder<'_>> for SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionCreateInfo.html) · Builder of [`SamplerYcbcrConversionCreateInfo`]"]
 #[repr(transparent)]
@@ -5262,7 +5147,8 @@ impl<'a> SamplerYcbcrConversionCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SamplerYcbcrConversionCreateInfo {
         self.0
     }
@@ -5328,7 +5214,8 @@ impl<'a> BindImagePlaneMemoryInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindImagePlaneMemoryInfo {
         self.0
     }
@@ -5394,7 +5281,8 @@ impl<'a> ImagePlaneMemoryRequirementsInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImagePlaneMemoryRequirementsInfo {
         self.0
     }
@@ -5460,7 +5348,8 @@ impl<'a> PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSamplerYcbcrConversionFeatures {
         self.0
     }
@@ -5526,7 +5415,8 @@ impl<'a> SamplerYcbcrConversionImageFormatPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SamplerYcbcrConversionImageFormatProperties {
         self.0
     }
@@ -5592,7 +5482,8 @@ impl<'a> ProtectedSubmitInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ProtectedSubmitInfo {
         self.0
     }
@@ -5658,7 +5549,8 @@ impl<'a> PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceProtectedMemoryFeatures {
         self.0
     }
@@ -5724,7 +5616,8 @@ impl<'a> PhysicalDeviceProtectedMemoryPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceProtectedMemoryProperties {
         self.0
     }
@@ -5802,7 +5695,8 @@ impl<'a> DeviceQueueInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceQueueInfo2 {
         self.0
     }
@@ -5874,7 +5768,8 @@ impl<'a> PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMaintenance3Properties {
         self.0
     }
@@ -5925,8 +5820,6 @@ impl DescriptorSetLayoutSupport {
         DescriptorSetLayoutSupportBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupport> for DescriptorSetLayoutSupportBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'_>> for DescriptorSetLayoutSupportBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupport.html) · Builder of [`DescriptorSetLayoutSupport`]"]
 #[repr(transparent)]
@@ -5942,7 +5835,8 @@ impl<'a> DescriptorSetLayoutSupportBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorSetLayoutSupport {
         self.0
     }
@@ -6008,7 +5902,8 @@ impl<'a> PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderDrawParametersFeatures {
         self.0
     }

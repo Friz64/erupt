@@ -6,6 +6,10 @@ pub const EXT_HDR_METADATA_SPEC_VERSION: u32 = 2;
 pub const EXT_HDR_METADATA_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_hdr_metadata");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkSetHdrMetadataEXT");
+#[doc = "Provided by [`crate::extensions::ext_hdr_metadata`]"]
+impl crate::vk1_0::StructureType {
+    pub const HDR_METADATA_EXT: Self = Self(1000105000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR, p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT) -> ();
@@ -53,7 +57,8 @@ impl<'a> XYColorEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> XYColorEXT {
         self.0
     }
@@ -161,7 +166,8 @@ impl<'a> HdrMetadataEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> HdrMetadataEXT {
         self.0
     }

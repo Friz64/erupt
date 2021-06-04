@@ -21,6 +21,49 @@ pub const FN_CMD_TRACE_RAYS_INDIRECT_KHR: *const std::os::raw::c_char = crate::c
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_STACK_SIZE_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetRayTracingShaderGroupStackSizeKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_RAY_TRACING_PIPELINE_STACK_SIZE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetRayTracingPipelineStackSizeKHR");
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const SHADER_BINDING_TABLE_KHR: Self = Self(1024);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::DynamicState {
+    pub const RAY_TRACING_PIPELINE_STACK_SIZE_KHR: Self = Self(1000347000);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::PipelineBindPoint {
+    pub const RAY_TRACING_KHR: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR: Self = Self(16384);
+    pub const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR: Self = Self(32768);
+    pub const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR: Self = Self(65536);
+    pub const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR: Self = Self(131072);
+    pub const RAY_TRACING_SKIP_TRIANGLES_KHR: Self = Self(4096);
+    pub const RAY_TRACING_SKIP_AABBS_KHR: Self = Self(8192);
+    pub const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR: Self = Self(524288);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::ShaderStageFlagBits {
+    pub const RAYGEN_KHR: Self = Self(256);
+    pub const ANY_HIT_KHR: Self = Self(512);
+    pub const CLOSEST_HIT_KHR: Self = Self(1024);
+    pub const MISS_KHR: Self = Self(2048);
+    pub const INTERSECTION_KHR: Self = Self(4096);
+    pub const CALLABLE_KHR: Self = Self(8192);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR: Self = Self(1000347000);
+    pub const PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR: Self = Self(1000347001);
+    pub const RAY_TRACING_PIPELINE_CREATE_INFO_KHR: Self = Self(1000150015);
+    pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR: Self = Self(1000150016);
+    pub const RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR: Self = Self(1000150018);
+}
+#[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const RAY_TRACING_SHADER_KHR: Self = Self(2097152);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeKHR.html) · Enum"]
 #[doc(alias = "VkRayTracingShaderGroupTypeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -37,16 +80,10 @@ impl std::fmt::Debug for RayTracingShaderGroupTypeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
-impl RayTracingShaderGroupTypeKHR {
+impl crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR {
     pub const GENERAL_KHR: Self = Self(0);
     pub const TRIANGLES_HIT_GROUP_KHR: Self = Self(1);
     pub const PROCEDURAL_HIT_GROUP_KHR: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl RayTracingShaderGroupTypeKHR {
-    pub const GENERAL_NV: Self = Self::GENERAL_KHR;
-    pub const TRIANGLES_HIT_GROUP_NV: Self = Self::TRIANGLES_HIT_GROUP_KHR;
-    pub const PROCEDURAL_HIT_GROUP_NV: Self = Self::PROCEDURAL_HIT_GROUP_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderGroupShaderKHR.html) · Enum"]
 #[doc(alias = "VkShaderGroupShaderKHR")]
@@ -65,7 +102,7 @@ impl std::fmt::Debug for ShaderGroupShaderKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_ray_tracing_pipeline`]"]
-impl ShaderGroupShaderKHR {
+impl crate::extensions::khr_ray_tracing_pipeline::ShaderGroupShaderKHR {
     pub const GENERAL_KHR: Self = Self(0);
     pub const CLOSEST_HIT_KHR: Self = Self(1);
     pub const ANY_HIT_KHR: Self = Self(2);
@@ -92,6 +129,12 @@ pub type PFN_vkGetRayTracingShaderGroupStackSizeKHR = unsafe extern "system" fn(
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetRayTracingPipelineStackSizeKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_stack_size: u32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingPipelineFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPipelineFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPipelinePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -162,7 +205,8 @@ impl<'a> RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RayTracingShaderGroupCreateInfoKHR {
         self.0
     }
@@ -224,8 +268,6 @@ impl RayTracingPipelineCreateInfoKHR {
         RayTracingPipelineCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Builder of [`RayTracingPipelineCreateInfoKHR`]"]
 #[repr(transparent)]
@@ -288,7 +330,8 @@ impl<'a> RayTracingPipelineCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RayTracingPipelineCreateInfoKHR {
         self.0
     }
@@ -378,7 +421,8 @@ impl<'a> PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceRayTracingPipelineFeaturesKHR {
         self.0
     }
@@ -486,7 +530,8 @@ impl<'a> PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceRayTracingPipelinePropertiesKHR {
         self.0
     }
@@ -562,7 +607,8 @@ impl<'a> StridedDeviceAddressRegionKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> StridedDeviceAddressRegionKHR {
         self.0
     }
@@ -638,7 +684,8 @@ impl<'a> TraceRaysIndirectCommandKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> TraceRaysIndirectCommandKHR {
         self.0
     }
@@ -710,7 +757,8 @@ impl<'a> RayTracingPipelineInterfaceCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RayTracingPipelineInterfaceCreateInfoKHR {
         self.0
     }

@@ -4,6 +4,17 @@ pub const EXT_MEMORY_PRIORITY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_MEMORY_PRIORITY_EXTENSION_NAME")]
 pub const EXT_MEMORY_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_memory_priority");
+#[doc = "Provided by [`crate::extensions::ext_memory_priority`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT: Self = Self(1000238000);
+    pub const MEMORY_PRIORITY_ALLOCATE_INFO_EXT: Self = Self(1000238001);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMemoryPriorityFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryPriorityAllocateInfoEXT> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryPriorityAllocateInfoEXTBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryPriorityFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryPriorityFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -44,7 +55,8 @@ impl<'a> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMemoryPriorityFeaturesEXT {
         self.0
     }
@@ -110,7 +122,8 @@ impl<'a> MemoryPriorityAllocateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryPriorityAllocateInfoEXT {
         self.0
     }

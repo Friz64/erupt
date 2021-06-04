@@ -11,6 +11,19 @@ pub const FN_DESTROY_DEBUG_REPORT_CALLBACK_EXT: *const std::os::raw::c_char = cr
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DEBUG_REPORT_MESSAGE_EXT: *const std::os::raw::c_char = crate::cstr!("vkDebugReportMessageEXT");
 crate::non_dispatchable_handle!(DebugReportCallbackEXT, DEBUG_REPORT_CALLBACK_EXT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackEXT.html) · Non-dispatchable Handle", "VkDebugReportCallbackEXT");
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_VALIDATION_FAILED_EXT: Self = Self(-1000011001);
+}
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT: Self = Self(1000011000);
+    pub const DEBUG_REPORT_CREATE_INFO_EXT: Self = Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
+}
+#[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
+impl crate::vk1_0::ObjectType {
+    pub const DEBUG_REPORT_CALLBACK_EXT: Self = Self(1000011000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`]"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Bits enum of [`DebugReportFlagsEXT`]"]
 #[doc(alias = "VkDebugReportFlagBitsEXT")]
@@ -37,7 +50,7 @@ impl std::fmt::Debug for DebugReportFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
-impl DebugReportFlagBitsEXT {
+impl crate::extensions::ext_debug_report::DebugReportFlagBitsEXT {
     pub const INFORMATION_EXT: Self = Self(1);
     pub const WARNING_EXT: Self = Self(2);
     pub const PERFORMANCE_WARNING_EXT: Self = Self(4);
@@ -95,7 +108,7 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
-impl DebugReportObjectTypeEXT {
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
     pub const UNKNOWN_EXT: Self = Self(0);
     pub const INSTANCE_EXT: Self = Self(1);
     pub const PHYSICAL_DEVICE_EXT: Self = Self(2);
@@ -133,27 +146,6 @@ impl DebugReportObjectTypeEXT {
     pub const DEBUG_REPORT_EXT: Self = Self::DEBUG_REPORT_CALLBACK_EXT_EXT;
     pub const VALIDATION_CACHE_EXT: Self = Self::VALIDATION_CACHE_EXT_EXT;
 }
-#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
-impl DebugReportObjectTypeEXT {
-    pub const CU_MODULE_NVX_EXT: Self = Self(1000029000);
-    pub const CU_FUNCTION_NVX_EXT: Self = Self(1000029001);
-}
-#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
-impl DebugReportObjectTypeEXT {
-    pub const ACCELERATION_STRUCTURE_KHR_EXT: Self = Self(1000150000);
-}
-#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl DebugReportObjectTypeEXT {
-    pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self(1000165000);
-}
-#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
-impl DebugReportObjectTypeEXT {
-    pub const DESCRIPTOR_UPDATE_TEMPLATE_KHR_EXT: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT;
-}
-#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
-impl DebugReportObjectTypeEXT {
-    pub const SAMPLER_YCBCR_CONVERSION_KHR_EXT: Self = Self::SAMPLER_YCBCR_CONVERSION_EXT;
-}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDebugReportCallbackEXT = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_callback: *mut crate::extensions::ext_debug_report::DebugReportCallbackEXT) -> crate::vk1_0::Result;
@@ -166,6 +158,8 @@ pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(instance: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, p_layer_prefix: *const std::os::raw::c_char, p_message: *const std::os::raw::c_char, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
+impl<'a> crate::ExtendableFromConst<'a, DebugReportCallbackCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DebugReportCallbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugReportCallbackCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -218,7 +212,8 @@ impl<'a> DebugReportCallbackCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugReportCallbackCreateInfoEXT {
         self.0
     }

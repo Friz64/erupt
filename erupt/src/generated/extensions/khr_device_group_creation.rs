@@ -29,6 +29,15 @@ pub type DeviceGroupDeviceCreateInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupDe
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumeratePhysicalDeviceGroupsKHR = crate::vk1_1::PFN_vkEnumeratePhysicalDeviceGroups;
 #[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
+impl crate::vk1_0::MemoryHeapFlagBits {
+    pub const MULTI_INSTANCE_KHR: Self = Self::MULTI_INSTANCE;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_GROUP_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_GROUP_PROPERTIES;
+    pub const DEVICE_GROUP_DEVICE_CREATE_INFO_KHR: Self = Self::DEVICE_GROUP_DEVICE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_device_group_creation`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]

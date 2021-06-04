@@ -4,6 +4,14 @@ pub const KHR_PIPELINE_LIBRARY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME")]
 pub const KHR_PIPELINE_LIBRARY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_pipeline_library");
+#[doc = "Provided by [`crate::extensions::khr_pipeline_library`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const LIBRARY_KHR: Self = Self(2048);
+}
+#[doc = "Provided by [`crate::extensions::khr_pipeline_library`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_LIBRARY_CREATE_INFO_KHR: Self = Self(1000290000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkPipelineLibraryCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -46,7 +54,8 @@ impl<'a> PipelineLibraryCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineLibraryCreateInfoKHR {
         self.0
     }

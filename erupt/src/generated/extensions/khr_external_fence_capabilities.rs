@@ -42,6 +42,23 @@ pub type ExternalFencePropertiesKHRBuilder<'a> = crate::vk1_1::ExternalFenceProp
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalFenceProperties;
 #[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO_KHR: Self = Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
+    pub const EXTERNAL_FENCE_PROPERTIES_KHR: Self = Self::EXTERNAL_FENCE_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
+impl crate::vk1_1::ExternalFenceHandleTypeFlagBits {
+    pub const OPAQUE_FD_KHR: Self = Self::OPAQUE_FD;
+    pub const OPAQUE_WIN32_KHR: Self = Self::OPAQUE_WIN32;
+    pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
+    pub const SYNC_FD_KHR: Self = Self::SYNC_FD;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
+impl crate::vk1_1::ExternalFenceFeatureFlagBits {
+    pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
+    pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_fence_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]

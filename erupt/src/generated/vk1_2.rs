@@ -30,6 +30,99 @@ pub const FN_GET_BUFFER_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char = cr
 pub const FN_GET_BUFFER_DEVICE_ADDRESS: *const std::os::raw::c_char = crate::cstr!("vkGetBufferDeviceAddress");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceMemoryOpaqueCaptureAddress");
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::FramebufferCreateFlagBits {
+    pub const IMAGELESS: Self = Self(1);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::DescriptorSetLayoutCreateFlagBits {
+    pub const UPDATE_AFTER_BIND_POOL: Self = Self(2);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::BufferCreateFlagBits {
+    pub const DEVICE_ADDRESS_CAPTURE_REPLAY: Self = Self(16);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const SHADER_DEVICE_ADDRESS: Self = Self(131072);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const SAMPLED_IMAGE_FILTER_MINMAX: Self = Self(65536);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const DEPTH_ATTACHMENT_OPTIMAL: Self = Self(1000241000);
+    pub const DEPTH_READ_ONLY_OPTIMAL: Self = Self(1000241001);
+    pub const STENCIL_ATTACHMENT_OPTIMAL: Self = Self(1000241002);
+    pub const STENCIL_READ_ONLY_OPTIMAL: Self = Self(1000241003);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_FRAGMENTATION: Self = Self(-1000161000);
+    pub const ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: Self = Self(-1000257000);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_VULKAN_1_1_FEATURES: Self = Self(49);
+    pub const PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES: Self = Self(50);
+    pub const PHYSICAL_DEVICE_VULKAN_1_2_FEATURES: Self = Self(51);
+    pub const PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES: Self = Self(52);
+    pub const IMAGE_FORMAT_LIST_CREATE_INFO: Self = Self(1000147000);
+    pub const ATTACHMENT_DESCRIPTION_2: Self = Self(1000109000);
+    pub const ATTACHMENT_REFERENCE_2: Self = Self(1000109001);
+    pub const SUBPASS_DESCRIPTION_2: Self = Self(1000109002);
+    pub const SUBPASS_DEPENDENCY_2: Self = Self(1000109003);
+    pub const RENDER_PASS_CREATE_INFO_2: Self = Self(1000109004);
+    pub const SUBPASS_BEGIN_INFO: Self = Self(1000109005);
+    pub const SUBPASS_END_INFO: Self = Self(1000109006);
+    pub const PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES: Self = Self(1000177000);
+    pub const PHYSICAL_DEVICE_DRIVER_PROPERTIES: Self = Self(1000196000);
+    pub const PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES: Self = Self(1000180000);
+    pub const PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES: Self = Self(1000082000);
+    pub const PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES: Self = Self(1000197000);
+    pub const DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO: Self = Self(1000161000);
+    pub const PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES: Self = Self(1000161001);
+    pub const PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES: Self = Self(1000161002);
+    pub const DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO: Self = Self(1000161003);
+    pub const DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT: Self = Self(1000161004);
+    pub const PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES: Self = Self(1000199000);
+    pub const SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE: Self = Self(1000199001);
+    pub const PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES: Self = Self(1000221000);
+    pub const IMAGE_STENCIL_USAGE_CREATE_INFO: Self = Self(1000246000);
+    pub const PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES: Self = Self(1000130000);
+    pub const SAMPLER_REDUCTION_MODE_CREATE_INFO: Self = Self(1000130001);
+    pub const PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES: Self = Self(1000211000);
+    pub const PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES: Self = Self(1000108000);
+    pub const FRAMEBUFFER_ATTACHMENTS_CREATE_INFO: Self = Self(1000108001);
+    pub const FRAMEBUFFER_ATTACHMENT_IMAGE_INFO: Self = Self(1000108002);
+    pub const RENDER_PASS_ATTACHMENT_BEGIN_INFO: Self = Self(1000108003);
+    pub const PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES: Self = Self(1000253000);
+    pub const PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES: Self = Self(1000175000);
+    pub const PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES: Self = Self(1000241000);
+    pub const ATTACHMENT_REFERENCE_STENCIL_LAYOUT: Self = Self(1000241001);
+    pub const ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT: Self = Self(1000241002);
+    pub const PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES: Self = Self(1000261000);
+    pub const PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES: Self = Self(1000207000);
+    pub const PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES: Self = Self(1000207001);
+    pub const SEMAPHORE_TYPE_CREATE_INFO: Self = Self(1000207002);
+    pub const TIMELINE_SEMAPHORE_SUBMIT_INFO: Self = Self(1000207003);
+    pub const SEMAPHORE_WAIT_INFO: Self = Self(1000207004);
+    pub const SEMAPHORE_SIGNAL_INFO: Self = Self(1000207005);
+    pub const PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES: Self = Self(1000257000);
+    pub const BUFFER_DEVICE_ADDRESS_INFO: Self = Self(1000244001);
+    pub const BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO: Self = Self(1000257002);
+    pub const MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO: Self = Self(1000257003);
+    pub const DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO: Self = Self(1000257004);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::SamplerAddressMode {
+    pub const MIRROR_CLAMP_TO_EDGE: Self = Self(4);
+}
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_0::DescriptorPoolCreateFlagBits {
+    pub const UPDATE_AFTER_BIND: Self = Self(2);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlags.html) · Bitmask of [`ResolveModeFlagBits`]"] # [doc (alias = "VkResolveModeFlags")] # [derive (Default)] # [repr (transparent)] pub struct ResolveModeFlags : u32 { const NONE = ResolveModeFlagBits :: NONE . 0 ; const SAMPLE_ZERO = ResolveModeFlagBits :: SAMPLE_ZERO . 0 ; const AVERAGE = ResolveModeFlagBits :: AVERAGE . 0 ; const MIN = ResolveModeFlagBits :: MIN . 0 ; const MAX = ResolveModeFlagBits :: MAX . 0 ; const NONE_KHR = ResolveModeFlagBits :: NONE_KHR . 0 ; const SAMPLE_ZERO_KHR = ResolveModeFlagBits :: SAMPLE_ZERO_KHR . 0 ; const AVERAGE_KHR = ResolveModeFlagBits :: AVERAGE_KHR . 0 ; const MIN_KHR = ResolveModeFlagBits :: MIN_KHR . 0 ; const MAX_KHR = ResolveModeFlagBits :: MAX_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkResolveModeFlagBits.html) · Bits enum of [`ResolveModeFlags`]"]
 #[doc(alias = "VkResolveModeFlagBits")]
@@ -56,20 +149,12 @@ impl std::fmt::Debug for ResolveModeFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl ResolveModeFlagBits {
+impl crate::vk1_2::ResolveModeFlagBits {
     pub const NONE: Self = Self(0);
     pub const SAMPLE_ZERO: Self = Self(1);
     pub const AVERAGE: Self = Self(2);
     pub const MIN: Self = Self(4);
     pub const MAX: Self = Self(8);
-}
-#[doc = "Provided by [`crate::extensions::khr_depth_stencil_resolve`]"]
-impl ResolveModeFlagBits {
-    pub const NONE_KHR: Self = Self::NONE;
-    pub const SAMPLE_ZERO_KHR: Self = Self::SAMPLE_ZERO;
-    pub const AVERAGE_KHR: Self = Self::AVERAGE;
-    pub const MIN_KHR: Self = Self::MIN;
-    pub const MAX_KHR: Self = Self::MAX;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlags.html) · Bitmask of [`DescriptorBindingFlagBits`]"] # [doc (alias = "VkDescriptorBindingFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorBindingFlags : u32 { const UPDATE_AFTER_BIND = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND . 0 ; const UPDATE_UNUSED_WHILE_PENDING = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING . 0 ; const PARTIALLY_BOUND = DescriptorBindingFlagBits :: PARTIALLY_BOUND . 0 ; const VARIABLE_DESCRIPTOR_COUNT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorBindingFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; const UPDATE_UNUSED_WHILE_PENDING_EXT = DescriptorBindingFlagBits :: UPDATE_UNUSED_WHILE_PENDING_EXT . 0 ; const PARTIALLY_BOUND_EXT = DescriptorBindingFlagBits :: PARTIALLY_BOUND_EXT . 0 ; const VARIABLE_DESCRIPTOR_COUNT_EXT = DescriptorBindingFlagBits :: VARIABLE_DESCRIPTOR_COUNT_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBindingFlagBits.html) · Bits enum of [`DescriptorBindingFlags`]"]
@@ -96,18 +181,11 @@ impl std::fmt::Debug for DescriptorBindingFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl DescriptorBindingFlagBits {
+impl crate::vk1_2::DescriptorBindingFlagBits {
     pub const UPDATE_AFTER_BIND: Self = Self(1);
     pub const UPDATE_UNUSED_WHILE_PENDING: Self = Self(2);
     pub const PARTIALLY_BOUND: Self = Self(4);
     pub const VARIABLE_DESCRIPTOR_COUNT: Self = Self(8);
-}
-#[doc = "Provided by [`crate::extensions::ext_descriptor_indexing`]"]
-impl DescriptorBindingFlagBits {
-    pub const UPDATE_AFTER_BIND_EXT: Self = Self::UPDATE_AFTER_BIND;
-    pub const UPDATE_UNUSED_WHILE_PENDING_EXT: Self = Self::UPDATE_UNUSED_WHILE_PENDING;
-    pub const PARTIALLY_BOUND_EXT: Self = Self::PARTIALLY_BOUND;
-    pub const VARIABLE_DESCRIPTOR_COUNT_EXT: Self = Self::VARIABLE_DESCRIPTOR_COUNT;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreType.html) · Enum"]
 #[doc(alias = "VkSemaphoreType")]
@@ -124,14 +202,9 @@ impl std::fmt::Debug for SemaphoreType {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl SemaphoreType {
+impl crate::vk1_2::SemaphoreType {
     pub const BINARY: Self = Self(0);
     pub const TIMELINE: Self = Self(1);
-}
-#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
-impl SemaphoreType {
-    pub const BINARY_KHR: Self = Self::BINARY;
-    pub const TIMELINE_KHR: Self = Self::TIMELINE;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlags.html) · Bitmask of [`SemaphoreWaitFlagBits`]"] # [doc (alias = "VkSemaphoreWaitFlags")] # [derive (Default)] # [repr (transparent)] pub struct SemaphoreWaitFlags : u32 { const ANY = SemaphoreWaitFlagBits :: ANY . 0 ; const ANY_KHR = SemaphoreWaitFlagBits :: ANY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagBits.html) · Bits enum of [`SemaphoreWaitFlags`]"]
@@ -155,12 +228,13 @@ impl std::fmt::Debug for SemaphoreWaitFlagBits {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl SemaphoreWaitFlagBits {
+impl crate::vk1_2::SemaphoreWaitFlagBits {
     pub const ANY: Self = Self(1);
 }
-#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
-impl SemaphoreWaitFlagBits {
-    pub const ANY_KHR: Self = Self::ANY;
+#[doc = "Provided by [`crate::vk1_2`]"]
+impl crate::vk1_1::MemoryAllocateFlagBits {
+    pub const DEVICE_ADDRESS: Self = Self(2);
+    pub const DEVICE_ADDRESS_CAPTURE_REPLAY: Self = Self(4);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionMode.html) · Enum"]
 #[doc(alias = "VkSamplerReductionMode")]
@@ -178,16 +252,10 @@ impl std::fmt::Debug for SamplerReductionMode {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl SamplerReductionMode {
+impl crate::vk1_2::SamplerReductionMode {
     pub const WEIGHTED_AVERAGE: Self = Self(0);
     pub const MIN: Self = Self(1);
     pub const MAX: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
-impl SamplerReductionMode {
-    pub const WEIGHTED_AVERAGE_EXT: Self = Self::WEIGHTED_AVERAGE;
-    pub const MIN_EXT: Self = Self::MIN;
-    pub const MAX_EXT: Self = Self::MAX;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderFloatControlsIndependence.html) · Enum"]
 #[doc(alias = "VkShaderFloatControlsIndependence")]
@@ -205,16 +273,10 @@ impl std::fmt::Debug for ShaderFloatControlsIndependence {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl ShaderFloatControlsIndependence {
+impl crate::vk1_2::ShaderFloatControlsIndependence {
     pub const _32_ONLY: Self = Self(0);
     pub const ALL: Self = Self(1);
     pub const NONE: Self = Self(2);
-}
-#[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
-impl ShaderFloatControlsIndependence {
-    pub const _32_ONLY_KHR: Self = Self::_32_ONLY;
-    pub const ALL_KHR: Self = Self::ALL;
-    pub const NONE_KHR: Self = Self::NONE;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDriverId.html) · Enum"]
 #[doc(alias = "VkDriverId")]
@@ -245,7 +307,7 @@ impl std::fmt::Debug for DriverId {
     }
 }
 #[doc = "Provided by [`crate::vk1_2`]"]
-impl DriverId {
+impl crate::vk1_2::DriverId {
     pub const AMD_PROPRIETARY: Self = Self(1);
     pub const AMD_OPEN_SOURCE: Self = Self(2);
     pub const MESA_RADV: Self = Self(3);
@@ -262,21 +324,6 @@ impl DriverId {
     pub const MOLTENVK: Self = Self(14);
     pub const COREAVI_PROPRIETARY: Self = Self(15);
     pub const JUICE_PROPRIETARY: Self = Self(16);
-}
-#[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
-impl DriverId {
-    pub const AMD_PROPRIETARY_KHR: Self = Self::AMD_PROPRIETARY;
-    pub const AMD_OPEN_SOURCE_KHR: Self = Self::AMD_OPEN_SOURCE;
-    pub const MESA_RADV_KHR: Self = Self::MESA_RADV;
-    pub const NVIDIA_PROPRIETARY_KHR: Self = Self::NVIDIA_PROPRIETARY;
-    pub const INTEL_PROPRIETARY_WINDOWS_KHR: Self = Self::INTEL_PROPRIETARY_WINDOWS;
-    pub const INTEL_OPEN_SOURCE_MESA_KHR: Self = Self::INTEL_OPEN_SOURCE_MESA;
-    pub const IMAGINATION_PROPRIETARY_KHR: Self = Self::IMAGINATION_PROPRIETARY;
-    pub const QUALCOMM_PROPRIETARY_KHR: Self = Self::QUALCOMM_PROPRIETARY;
-    pub const ARM_PROPRIETARY_KHR: Self = Self::ARM_PROPRIETARY;
-    pub const GOOGLE_SWIFTSHADER_KHR: Self = Self::GOOGLE_SWIFTSHADER;
-    pub const GGP_PROPRIETARY_KHR: Self = Self::GGP_PROPRIETARY;
-    pub const BROADCOM_PROPRIETARY_KHR: Self = Self::BROADCOM_PROPRIETARY;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -317,6 +364,112 @@ pub type PFN_vkGetBufferDeviceAddress = unsafe extern "system" fn(device: crate:
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddress = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo) -> u64;
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderFloat16Int8Features> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceHostQueryResetFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDescriptorIndexingFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTimelineSemaphoreFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice8BitStorageFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice8BitStorageFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkanMemoryModelFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderAtomicInt64Features> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceScalarBlockLayoutFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceUniformBufferStandardLayoutFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBufferDeviceAddressFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImagelessFramebufferFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkan11Features> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkan11FeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkan12Features> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVulkan12FeaturesBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryOpaqueCaptureAddressAllocateInfo> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryOpaqueCaptureAddressAllocateInfoBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BufferOpaqueCaptureAddressCreateInfo> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, BufferOpaqueCaptureAddressCreateInfoBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfo> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfoBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfo> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfoBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, TimelineSemaphoreSubmitInfo> for crate::vk1_0::BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, TimelineSemaphoreSubmitInfoBuilder<'_>> for crate::vk1_0::BindSparseInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorSetLayoutBindingFlagsCreateInfo> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'_>> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorSetVariableDescriptorCountAllocateInfo> for crate::vk1_0::DescriptorSetAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'_>> for crate::vk1_0::DescriptorSetAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerReductionModeCreateInfo> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SamplerReductionModeCreateInfoBuilder<'_>> for crate::vk1_0::SamplerCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassAttachmentBeginInfo> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassAttachmentBeginInfoBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SemaphoreTypeCreateInfo> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SemaphoreTypeCreateInfoBuilder<'_>> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, FramebufferAttachmentsCreateInfo> for crate::vk1_0::FramebufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, FramebufferAttachmentsCreateInfoBuilder<'_>> for crate::vk1_0::FramebufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, TimelineSemaphoreSubmitInfo> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, TimelineSemaphoreSubmitInfoBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfo> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfoBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderSubgroupExtendedTypesFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderFloat16Int8Features> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceHostQueryResetFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceHostQueryResetFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDescriptorIndexingFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDescriptorIndexingFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTimelineSemaphoreFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice8BitStorageFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice8BitStorageFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkanMemoryModelFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderAtomicInt64Features> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceScalarBlockLayoutFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceUniformBufferStandardLayoutFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBufferDeviceAddressFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceImagelessFramebufferFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceImagelessFramebufferFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSeparateDepthStencilLayoutsFeatures> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan11Features> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan11FeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan12Features> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan12FeaturesBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDriverProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDriverPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSamplerFilterMinmaxProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFloatControlsProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFloatControlsPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDescriptorIndexingProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDescriptorIndexingPropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTimelineSemaphoreProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTimelineSemaphorePropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDepthStencilResolveProperties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDepthStencilResolvePropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan11Properties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan11PropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan12Properties> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVulkan12PropertiesBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfo> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageFormatListCreateInfoBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfo> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfoBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersion.html) · Structure"]
 #[doc(alias = "VkConformanceVersion")]
 #[derive(Copy, Clone)]
@@ -373,7 +526,8 @@ impl<'a> ConformanceVersionBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ConformanceVersion {
         self.0
     }
@@ -457,7 +611,8 @@ impl<'a> PhysicalDeviceDriverPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDriverProperties {
         self.0
     }
@@ -483,6 +638,8 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDriverPropertiesBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, SemaphoreTypeCreateInfo> for crate::vk1_1::PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SemaphoreTypeCreateInfoBuilder<'_>> for crate::vk1_1::PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures")]
 #[derive(Copy, Clone)]
@@ -523,7 +680,8 @@ impl<'a> PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
         self.0
     }
@@ -595,7 +753,8 @@ impl<'a> PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSamplerFilterMinmaxProperties {
         self.0
     }
@@ -661,7 +820,8 @@ impl<'a> SamplerReductionModeCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SamplerReductionModeCreateInfo {
         self.0
     }
@@ -729,7 +889,8 @@ impl<'a> ImageFormatListCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageFormatListCreateInfo {
         self.0
     }
@@ -755,6 +916,8 @@ impl<'a> std::ops::DerefMut for ImageFormatListCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromMut<'a, DescriptorSetVariableDescriptorCountLayoutSupport> for crate::vk1_1::DescriptorSetLayoutSupportBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'_>> for crate::vk1_1::DescriptorSetLayoutSupportBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderFloat16Int8Features.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderFloat16Int8Features")]
 #[derive(Copy, Clone)]
@@ -801,7 +964,8 @@ impl<'a> PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderFloat16Int8Features {
         self.0
     }
@@ -963,7 +1127,8 @@ impl<'a> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFloatControlsProperties {
         self.0
     }
@@ -1029,7 +1194,8 @@ impl<'a> PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceHostQueryResetFeatures {
         self.0
     }
@@ -1209,7 +1375,8 @@ impl<'a> PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDescriptorIndexingFeatures {
         self.0
     }
@@ -1433,7 +1600,8 @@ impl<'a> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDescriptorIndexingProperties {
         self.0
     }
@@ -1501,7 +1669,8 @@ impl<'a> DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorSetLayoutBindingFlagsCreateInfo {
         self.0
     }
@@ -1569,7 +1738,8 @@ impl<'a> DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorSetVariableDescriptorCountAllocateInfo {
         self.0
     }
@@ -1635,7 +1805,8 @@ impl<'a> DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DescriptorSetVariableDescriptorCountLayoutSupport {
         self.0
     }
@@ -1694,8 +1865,8 @@ impl AttachmentDescription2 {
         AttachmentDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentDescriptionStencilLayout> for AttachmentDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<'_>> for AttachmentDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, AttachmentDescriptionStencilLayout> for crate::vk1_2::AttachmentDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, AttachmentDescriptionStencilLayoutBuilder<'_>> for crate::vk1_2::AttachmentDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription2.html) · Builder of [`AttachmentDescription2`]"]
 #[repr(transparent)]
@@ -1751,7 +1922,8 @@ impl<'a> AttachmentDescription2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AttachmentDescription2 {
         self.0
     }
@@ -1804,8 +1976,8 @@ impl AttachmentReference2 {
         AttachmentReference2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentReferenceStencilLayout> for AttachmentReference2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<'_>> for AttachmentReference2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, AttachmentReferenceStencilLayout> for crate::vk1_2::AttachmentReference2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, AttachmentReferenceStencilLayoutBuilder<'_>> for crate::vk1_2::AttachmentReference2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference2.html) · Builder of [`AttachmentReference2`]"]
 #[repr(transparent)]
@@ -1831,7 +2003,8 @@ impl<'a> AttachmentReference2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AttachmentReference2 {
         self.0
     }
@@ -1892,10 +2065,8 @@ impl SubpassDescription2 {
         SubpassDescription2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolve> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::vk1_2::SubpassDescriptionDepthStencilResolveBuilder<'_>> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR> for SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SubpassDescriptionDepthStencilResolve> for crate::vk1_2::SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SubpassDescriptionDepthStencilResolveBuilder<'_>> for crate::vk1_2::SubpassDescription2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescription2.html) · Builder of [`SubpassDescription2`]"]
 #[repr(transparent)]
@@ -1950,7 +2121,8 @@ impl<'a> SubpassDescription2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassDescription2 {
         self.0
     }
@@ -2008,8 +2180,6 @@ impl SubpassDependency2 {
         SubpassDependency2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHR> for SubpassDependency2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder<'_>> for SubpassDependency2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency2.html) · Builder of [`SubpassDependency2`]"]
 #[repr(transparent)]
@@ -2060,7 +2230,8 @@ impl<'a> SubpassDependency2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassDependency2 {
         self.0
     }
@@ -2119,8 +2290,6 @@ impl RenderPassCreateInfo2 {
         RenderPassCreateInfo2Builder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT> for RenderPassCreateInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for RenderPassCreateInfo2Builder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateInfo2.html) · Builder of [`RenderPassCreateInfo2`]"]
 #[repr(transparent)]
@@ -2160,7 +2329,8 @@ impl<'a> RenderPassCreateInfo2Builder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassCreateInfo2 {
         self.0
     }
@@ -2226,7 +2396,8 @@ impl<'a> SubpassBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassBeginInfo {
         self.0
     }
@@ -2286,7 +2457,8 @@ impl<'a> SubpassEndInfoBuilder<'a> {
         SubpassEndInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassEndInfo {
         self.0
     }
@@ -2352,7 +2524,8 @@ impl<'a> PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceTimelineSemaphoreFeatures {
         self.0
     }
@@ -2418,7 +2591,8 @@ impl<'a> PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceTimelineSemaphoreProperties {
         self.0
     }
@@ -2490,7 +2664,8 @@ impl<'a> SemaphoreTypeCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreTypeCreateInfo {
         self.0
     }
@@ -2566,7 +2741,8 @@ impl<'a> TimelineSemaphoreSubmitInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> TimelineSemaphoreSubmitInfo {
         self.0
     }
@@ -2647,7 +2823,8 @@ impl<'a> SemaphoreWaitInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreWaitInfo {
         self.0
     }
@@ -2719,7 +2896,8 @@ impl<'a> SemaphoreSignalInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreSignalInfo {
         self.0
     }
@@ -2797,7 +2975,8 @@ impl<'a> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevice8BitStorageFeatures {
         self.0
     }
@@ -2875,7 +3054,8 @@ impl<'a> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVulkanMemoryModelFeatures {
         self.0
     }
@@ -2947,7 +3127,8 @@ impl<'a> PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderAtomicInt64Features {
         self.0
     }
@@ -3031,7 +3212,8 @@ impl<'a> PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDepthStencilResolveProperties {
         self.0
     }
@@ -3109,7 +3291,8 @@ impl<'a> SubpassDescriptionDepthStencilResolveBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassDescriptionDepthStencilResolve {
         self.0
     }
@@ -3175,7 +3358,8 @@ impl<'a> ImageStencilUsageCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageStencilUsageCreateInfo {
         self.0
     }
@@ -3241,7 +3425,8 @@ impl<'a> PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceScalarBlockLayoutFeatures {
         self.0
     }
@@ -3307,7 +3492,8 @@ impl<'a> PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceUniformBufferStandardLayoutFeatures {
         self.0
     }
@@ -3385,7 +3571,8 @@ impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceBufferDeviceAddressFeatures {
         self.0
     }
@@ -3451,7 +3638,8 @@ impl<'a> BufferDeviceAddressInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferDeviceAddressInfo {
         self.0
     }
@@ -3517,7 +3705,8 @@ impl<'a> BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferOpaqueCaptureAddressCreateInfo {
         self.0
     }
@@ -3583,7 +3772,8 @@ impl<'a> PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceImagelessFramebufferFeatures {
         self.0
     }
@@ -3651,7 +3841,8 @@ impl<'a> FramebufferAttachmentsCreateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FramebufferAttachmentsCreateInfo {
         self.0
     }
@@ -3749,7 +3940,8 @@ impl<'a> FramebufferAttachmentImageInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FramebufferAttachmentImageInfo {
         self.0
     }
@@ -3817,7 +4009,8 @@ impl<'a> RenderPassAttachmentBeginInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassAttachmentBeginInfo {
         self.0
     }
@@ -3883,7 +4076,8 @@ impl<'a> PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
         self.0
     }
@@ -3949,7 +4143,8 @@ impl<'a> AttachmentReferenceStencilLayoutBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AttachmentReferenceStencilLayout {
         self.0
     }
@@ -4021,7 +4216,8 @@ impl<'a> AttachmentDescriptionStencilLayoutBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AttachmentDescriptionStencilLayout {
         self.0
     }
@@ -4087,7 +4283,8 @@ impl<'a> MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryOpaqueCaptureAddressAllocateInfo {
         self.0
     }
@@ -4153,7 +4350,8 @@ impl<'a> DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceMemoryOpaqueCaptureAddressInfo {
         self.0
     }
@@ -4285,7 +4483,8 @@ impl<'a> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVulkan11Features {
         self.0
     }
@@ -4435,7 +4634,8 @@ impl<'a> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVulkan11Properties {
         self.0
     }
@@ -4827,7 +5027,8 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVulkan12Features {
         self.0
     }
@@ -5254,7 +5455,8 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVulkan12Properties {
         self.0
     }

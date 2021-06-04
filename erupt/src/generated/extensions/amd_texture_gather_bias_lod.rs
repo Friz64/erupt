@@ -4,6 +4,12 @@ pub const AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME")]
 pub const AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_texture_gather_bias_lod");
+#[doc = "Provided by [`crate::extensions::amd_texture_gather_bias_lod`]"]
+impl crate::vk1_0::StructureType {
+    pub const TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD: Self = Self(1000041000);
+}
+impl<'a> crate::ExtendableFromMut<'a, TextureLODGatherFormatPropertiesAMD> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, TextureLODGatherFormatPropertiesAMDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure"]
 #[doc(alias = "VkTextureLODGatherFormatPropertiesAMD")]
 #[derive(Copy, Clone)]
@@ -44,7 +50,8 @@ impl<'a> TextureLODGatherFormatPropertiesAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> TextureLODGatherFormatPropertiesAMD {
         self.0
     }

@@ -20,3 +20,11 @@ pub type ExportSemaphoreCreateInfoKHR = crate::vk1_1::ExportSemaphoreCreateInfo;
 #[doc(alias = "VkExportSemaphoreCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ExportSemaphoreCreateInfoKHRBuilder<'a> = crate::vk1_1::ExportSemaphoreCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore`]"]
+impl crate::vk1_0::StructureType {
+    pub const EXPORT_SEMAPHORE_CREATE_INFO_KHR: Self = Self::EXPORT_SEMAPHORE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore`]"]
+impl crate::vk1_1::SemaphoreImportFlagBits {
+    pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
+}

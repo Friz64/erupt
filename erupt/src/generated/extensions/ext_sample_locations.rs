@@ -8,12 +8,36 @@ pub const EXT_SAMPLE_LOCATIONS_EXTENSION_NAME: *const std::os::raw::c_char = cra
 pub const FN_CMD_SET_SAMPLE_LOCATIONS_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetSampleLocationsEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_MULTISAMPLE_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceMultisamplePropertiesEXT");
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
+impl crate::vk1_0::DynamicState {
+    pub const SAMPLE_LOCATIONS_EXT: Self = Self(1000143000);
+}
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT: Self = Self(4096);
+}
+#[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
+impl crate::vk1_0::StructureType {
+    pub const SAMPLE_LOCATIONS_INFO_EXT: Self = Self(1000143000);
+    pub const RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT: Self = Self(1000143001);
+    pub const PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT: Self = Self(1000143002);
+    pub const PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT: Self = Self(1000143003);
+    pub const MULTISAMPLE_PROPERTIES_EXT: Self = Self(1000143004);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetSampleLocationsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_sample_locations_info: *const crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT) -> ();
+impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXT> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineSampleLocationsStateCreateInfoEXT> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineSampleLocationsStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassSampleLocationsBeginInfoEXT> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassSampleLocationsBeginInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSampleLocationsPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[doc(alias = "VkSampleLocationEXT")]
 #[derive(Copy, Clone)]
@@ -58,7 +82,8 @@ impl<'a> SampleLocationEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SampleLocationEXT {
         self.0
     }
@@ -138,7 +163,8 @@ impl<'a> SampleLocationsInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SampleLocationsInfoEXT {
         self.0
     }
@@ -208,7 +234,8 @@ impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AttachmentSampleLocationsEXT {
         self.0
     }
@@ -278,7 +305,8 @@ impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubpassSampleLocationsEXT {
         self.0
     }
@@ -354,7 +382,8 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassSampleLocationsBeginInfoEXT {
         self.0
     }
@@ -426,7 +455,8 @@ impl<'a> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineSampleLocationsStateCreateInfoEXT {
         self.0
     }
@@ -516,7 +546,8 @@ impl<'a> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSampleLocationsPropertiesEXT {
         self.0
     }
@@ -582,7 +613,8 @@ impl<'a> MultisamplePropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MultisamplePropertiesEXT {
         self.0
     }
@@ -608,6 +640,8 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXT> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {
     #[inline]

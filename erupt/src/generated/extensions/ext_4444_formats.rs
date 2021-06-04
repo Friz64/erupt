@@ -4,6 +4,19 @@ pub const EXT_4444_FORMATS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_4444_FORMATS_EXTENSION_NAME")]
 pub const EXT_4444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_4444_formats");
+#[doc = "Provided by [`crate::extensions::ext_4444_formats`]"]
+impl crate::vk1_0::Format {
+    pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self(1000340000);
+    pub const A4B4G4R4_UNORM_PACK16_EXT: Self = Self(1000340001);
+}
+#[doc = "Provided by [`crate::extensions::ext_4444_formats`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT: Self = Self(1000340000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice4444FormatsFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice4444FormatsFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevice4444FormatsFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -50,7 +63,8 @@ impl<'a> PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevice4444FormatsFeaturesEXT {
         self.0
     }

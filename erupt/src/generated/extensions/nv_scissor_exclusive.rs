@@ -6,9 +6,24 @@ pub const NV_SCISSOR_EXCLUSIVE_SPEC_VERSION: u32 = 1;
 pub const NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_scissor_exclusive");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_EXCLUSIVE_SCISSOR_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetExclusiveScissorNV");
+#[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
+impl crate::vk1_0::DynamicState {
+    pub const EXCLUSIVE_SCISSOR_NV: Self = Self(1000205001);
+}
+#[doc = "Provided by [`crate::extensions::nv_scissor_exclusive`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV: Self = Self(1000205000);
+    pub const PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV: Self = Self(1000205002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_exclusive_scissor: u32, exclusive_scissor_count: u32, p_exclusive_scissors: *const crate::vk1_0::Rect2D) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExclusiveScissorFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportExclusiveScissorStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExclusiveScissorFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -49,7 +64,8 @@ impl<'a> PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExclusiveScissorFeaturesNV {
         self.0
     }
@@ -117,7 +133,8 @@ impl<'a> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineViewportExclusiveScissorStateCreateInfoNV {
         self.0
     }

@@ -26,6 +26,12 @@ impl std::fmt::Debug for PipelineCoverageReductionStateCreateFlagBitsNV {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV: Self = Self(1000250000);
+    pub const PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV: Self = Self(1000250001);
+    pub const FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV: Self = Self(1000250002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoverageReductionModeNV.html) · Enum"]
 #[doc(alias = "VkCoverageReductionModeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -41,13 +47,19 @@ impl std::fmt::Debug for CoverageReductionModeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_coverage_reduction_mode`]"]
-impl CoverageReductionModeNV {
+impl crate::extensions::nv_coverage_reduction_mode::CoverageReductionModeNV {
     pub const MERGE_NV: Self = Self(0);
     pub const TRUNCATE_NV: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_combination_count: *mut u32, p_combinations: *mut crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCoverageReductionModeFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageReductionStateCreateInfoNV> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageReductionStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCoverageReductionModeFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCoverageReductionModeFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -88,7 +100,8 @@ impl<'a> PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceCoverageReductionModeFeaturesNV {
         self.0
     }
@@ -160,7 +173,8 @@ impl<'a> PipelineCoverageReductionStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCoverageReductionStateCreateInfoNV {
         self.0
     }
@@ -244,7 +258,8 @@ impl<'a> FramebufferMixedSamplesCombinationNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FramebufferMixedSamplesCombinationNV {
         self.0
     }

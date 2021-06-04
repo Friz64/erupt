@@ -26,6 +26,11 @@ pub type DescriptorSetLayoutSupportKHRBuilder<'a> = crate::vk1_1::DescriptorSetL
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupportKHR = crate::vk1_1::PFN_vkGetDescriptorSetLayoutSupport;
 #[doc = "Provided by [`crate::extensions::khr_maintenance3`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES;
+    pub const DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR: Self = Self::DESCRIPTOR_SET_LAYOUT_SUPPORT;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance3`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

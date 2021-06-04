@@ -12,3 +12,7 @@ pub type ImageStencilUsageCreateInfoEXT = crate::vk1_2::ImageStencilUsageCreateI
 #[doc(alias = "VkImageStencilUsageCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type ImageStencilUsageCreateInfoEXTBuilder<'a> = crate::vk1_2::ImageStencilUsageCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::ext_separate_stencil_usage`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMAGE_STENCIL_USAGE_CREATE_INFO_EXT: Self = Self::IMAGE_STENCIL_USAGE_CREATE_INFO;
+}

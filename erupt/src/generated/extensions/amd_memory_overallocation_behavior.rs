@@ -4,6 +4,10 @@ pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME")]
 pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_memory_overallocation_behavior");
+#[doc = "Provided by [`crate::extensions::amd_memory_overallocation_behavior`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD: Self = Self(1000189000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum"]
 #[doc(alias = "VkMemoryOverallocationBehaviorAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -20,11 +24,13 @@ impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
     }
 }
 #[doc = "Provided by [`crate::extensions::amd_memory_overallocation_behavior`]"]
-impl MemoryOverallocationBehaviorAMD {
+impl crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD {
     pub const DEFAULT_AMD: Self = Self(0);
     pub const ALLOWED_AMD: Self = Self(1);
     pub const DISALLOWED_AMD: Self = Self(2);
 }
+impl<'a> crate::ExtendableFromConst<'a, DeviceMemoryOverallocationCreateInfoAMD> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure"]
 #[doc(alias = "VkDeviceMemoryOverallocationCreateInfoAMD")]
 #[derive(Copy, Clone)]
@@ -65,7 +71,8 @@ impl<'a> DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceMemoryOverallocationCreateInfoAMD {
         self.0
     }

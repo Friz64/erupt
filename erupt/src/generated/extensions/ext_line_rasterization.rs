@@ -6,6 +6,16 @@ pub const EXT_LINE_RASTERIZATION_SPEC_VERSION: u32 = 1;
 pub const EXT_LINE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_line_rasterization");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_LINE_STIPPLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetLineStippleEXT");
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
+impl crate::vk1_0::DynamicState {
+    pub const LINE_STIPPLE_EXT: Self = Self(1000259000);
+}
+#[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT: Self = Self(1000259000);
+    pub const PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT: Self = Self(1000259001);
+    pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000259002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum"]
 #[doc(alias = "VkLineRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -23,7 +33,7 @@ impl std::fmt::Debug for LineRasterizationModeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_line_rasterization`]"]
-impl LineRasterizationModeEXT {
+impl crate::extensions::ext_line_rasterization::LineRasterizationModeEXT {
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RECTANGULAR_EXT: Self = Self(1);
     pub const BRESENHAM_EXT: Self = Self(2);
@@ -32,6 +42,14 @@ impl LineRasterizationModeEXT {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, line_stipple_factor: u32, line_stipple_pattern: u16) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceLineRasterizationFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationLineStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationLineStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceLineRasterizationFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceLineRasterizationPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceLineRasterizationFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -102,7 +120,8 @@ impl<'a> PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceLineRasterizationFeaturesEXT {
         self.0
     }
@@ -168,7 +187,8 @@ impl<'a> PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceLineRasterizationPropertiesEXT {
         self.0
     }
@@ -252,7 +272,8 @@ impl<'a> PipelineRasterizationLineStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineRasterizationLineStateCreateInfoEXT {
         self.0
     }

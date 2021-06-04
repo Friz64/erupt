@@ -4,6 +4,31 @@ pub const VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME")]
 pub const VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_VALVE_mutable_descriptor_type");
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl crate::vk1_0::DescriptorSetLayoutCreateFlagBits {
+    pub const HOST_ONLY_POOL_VALVE: Self = Self(4);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl crate::vk1_0::DescriptorType {
+    pub const MUTABLE_VALVE: Self = Self(1000351000);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE: Self = Self(1000351000);
+    pub const MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE: Self = Self(1000351002);
+}
+#[doc = "Provided by [`crate::extensions::valve_mutable_descriptor_type`]"]
+impl crate::vk1_0::DescriptorPoolCreateFlagBits {
+    pub const HOST_ONLY_VALVE: Self = Self(4);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE")]
 #[derive(Copy, Clone)]
@@ -44,7 +69,8 @@ impl<'a> PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
         self.0
     }
@@ -110,7 +136,8 @@ impl<'a> MutableDescriptorTypeListVALVEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MutableDescriptorTypeListVALVE {
         self.0
     }
@@ -178,7 +205,8 @@ impl<'a> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MutableDescriptorTypeCreateInfoVALVE {
         self.0
     }

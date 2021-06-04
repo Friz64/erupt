@@ -17,6 +17,34 @@ pub const FN_CREATE_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char = c
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char = crate::cstr!("vkDestroyIndirectCommandsLayoutNV");
 crate::non_dispatchable_handle!(IndirectCommandsLayoutNV, INDIRECT_COMMANDS_LAYOUT_NV, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle", "VkIndirectCommandsLayoutNV");
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const COMMAND_PREPROCESS_READ_NV: Self = Self(131072);
+    pub const COMMAND_PREPROCESS_WRITE_NV: Self = Self(262144);
+}
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const INDIRECT_BINDABLE_NV: Self = Self(262144);
+}
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV: Self = Self(1000277000);
+    pub const GRAPHICS_SHADER_GROUP_CREATE_INFO_NV: Self = Self(1000277001);
+    pub const GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV: Self = Self(1000277002);
+    pub const INDIRECT_COMMANDS_LAYOUT_TOKEN_NV: Self = Self(1000277003);
+    pub const INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV: Self = Self(1000277004);
+    pub const GENERATED_COMMANDS_INFO_NV: Self = Self(1000277005);
+    pub const GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV: Self = Self(1000277006);
+    pub const PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV: Self = Self(1000277007);
+}
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const COMMAND_PREPROCESS_NV: Self = Self(131072);
+}
+#[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
+impl crate::vk1_0::ObjectType {
+    pub const INDIRECT_COMMANDS_LAYOUT_NV: Self = Self(1000277000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]"]
 #[doc(alias = "VkIndirectCommandsLayoutUsageFlagBitsNV")]
@@ -41,7 +69,7 @@ impl std::fmt::Debug for IndirectCommandsLayoutUsageFlagBitsNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
-impl IndirectCommandsLayoutUsageFlagBitsNV {
+impl crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutUsageFlagBitsNV {
     pub const EXPLICIT_PREPROCESS_NV: Self = Self(1);
     pub const INDEXED_SEQUENCES_NV: Self = Self(2);
     pub const UNORDERED_SEQUENCES_NV: Self = Self(4);
@@ -67,7 +95,7 @@ impl std::fmt::Debug for IndirectCommandsTokenTypeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
-impl IndirectCommandsTokenTypeNV {
+impl crate::extensions::nv_device_generated_commands::IndirectCommandsTokenTypeNV {
     pub const SHADER_GROUP_NV: Self = Self(0);
     pub const STATE_FLAGS_NV: Self = Self(1);
     pub const INDEX_BUFFER_NV: Self = Self(2);
@@ -99,7 +127,7 @@ impl std::fmt::Debug for IndirectStateFlagBitsNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
-impl IndirectStateFlagBitsNV {
+impl crate::extensions::nv_device_generated_commands::IndirectStateFlagBitsNV {
     pub const FLAG_FRONTFACE_NV: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function"]
@@ -120,6 +148,10 @@ pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(device
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn(device: crate::vk1_0::Device, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV, p_allocator: *const crate::vk1_0::AllocationCallbacks) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, GraphicsPipelineShaderGroupsCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -160,7 +192,8 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
         self.0
     }
@@ -274,7 +307,8 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
         self.0
     }
@@ -354,7 +388,8 @@ impl<'a> GraphicsShaderGroupCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GraphicsShaderGroupCreateInfoNV {
         self.0
     }
@@ -430,7 +465,8 @@ impl<'a> GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GraphicsPipelineShaderGroupsCreateInfoNV {
         self.0
     }
@@ -494,7 +530,8 @@ impl<'a> BindShaderGroupIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindShaderGroupIndirectCommandNV {
         self.0
     }
@@ -570,7 +607,8 @@ impl<'a> BindIndexBufferIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindIndexBufferIndirectCommandNV {
         self.0
     }
@@ -646,7 +684,8 @@ impl<'a> BindVertexBufferIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindVertexBufferIndirectCommandNV {
         self.0
     }
@@ -710,7 +749,8 @@ impl<'a> SetStateFlagsIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SetStateFlagsIndirectCommandNV {
         self.0
     }
@@ -780,7 +820,8 @@ impl<'a> IndirectCommandsStreamNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> IndirectCommandsStreamNV {
         self.0
     }
@@ -915,7 +956,8 @@ impl<'a> IndirectCommandsLayoutTokenNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> IndirectCommandsLayoutTokenNV {
         self.0
     }
@@ -1003,7 +1045,8 @@ impl<'a> IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> IndirectCommandsLayoutCreateInfoNV {
         self.0
     }
@@ -1137,7 +1180,8 @@ impl<'a> GeneratedCommandsInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeneratedCommandsInfoNV {
         self.0
     }
@@ -1221,7 +1265,8 @@ impl<'a> GeneratedCommandsMemoryRequirementsInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeneratedCommandsMemoryRequirementsInfoNV {
         self.0
     }
@@ -1247,6 +1292,10 @@ impl<'a> std::ops::DerefMut for GeneratedCommandsMemoryRequirementsInfoNVBuilder
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDeviceGeneratedCommandsFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDeviceGeneratedCommandsPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "Provided by [`crate::extensions::nv_device_generated_commands`]"]
 impl crate::DeviceLoader {
     #[inline]

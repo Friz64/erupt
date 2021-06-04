@@ -26,6 +26,10 @@ impl std::fmt::Debug for StreamDescriptorSurfaceCreateFlagBitsGGP {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ggp_stream_descriptor_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP: Self = Self(1000049000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateStreamDescriptorSurfaceGGP.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateStreamDescriptorSurfaceGGP = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateInfoGGP, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -75,7 +79,8 @@ impl<'a> StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> StreamDescriptorSurfaceCreateInfoGGP {
         self.0
     }

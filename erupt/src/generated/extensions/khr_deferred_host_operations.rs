@@ -15,6 +15,17 @@ pub const FN_GET_DEFERRED_OPERATION_RESULT_KHR: *const std::os::raw::c_char = cr
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_DEFERRED_OPERATION_JOIN_KHR: *const std::os::raw::c_char = crate::cstr!("vkDeferredOperationJoinKHR");
 crate::non_dispatchable_handle!(DeferredOperationKHR, DEFERRED_OPERATION_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeferredOperationKHR.html) · Non-dispatchable Handle", "VkDeferredOperationKHR");
+#[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
+impl crate::vk1_0::Result {
+    pub const THREAD_IDLE_KHR: Self = Self(1000268000);
+    pub const THREAD_DONE_KHR: Self = Self(1000268001);
+    pub const OPERATION_DEFERRED_KHR: Self = Self(1000268002);
+    pub const OPERATION_NOT_DEFERRED_KHR: Self = Self(1000268003);
+}
+#[doc = "Provided by [`crate::extensions::khr_deferred_host_operations`]"]
+impl crate::vk1_0::ObjectType {
+    pub const DEFERRED_OPERATION_KHR: Self = Self(1000268000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDeferredOperationKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_deferred_operation: *mut crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::vk1_0::Result;

@@ -9,7 +9,10 @@ use crate::{
 use heck::ShoutySnakeCase;
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
-use std::fmt::{self, Display};
+use std::{
+    collections::HashMap,
+    fmt::{self, Display},
+};
 
 #[derive(Debug)]
 pub enum HandleKind {
@@ -53,16 +56,24 @@ pub struct Handle {
 }
 
 impl Handle {
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
+    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("Handle missing origin");
+
         let ident = self.name.ident();
         let doc_alias = &self.name.original;
         let macro_path = self.kind.macro_path();
         let object_type = format_ident!("{}", self.name.trimmed.to_shouty_snake_case());
         let doc = comment_gen.def(Some(&self.name.original), &self.kind, self.origin.as_ref());
 
-        quote! {
-            #macro_path(#ident, #object_type, #doc, #doc_alias);
-        }
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #macro_path(#ident, #object_type, #doc, #doc_alias);
+            },
+        );
+
+        tokens
     }
 }
 

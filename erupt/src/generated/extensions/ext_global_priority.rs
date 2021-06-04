@@ -4,6 +4,14 @@ pub const EXT_GLOBAL_PRIORITY_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME")]
 pub const EXT_GLOBAL_PRIORITY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_global_priority");
+#[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_NOT_PERMITTED_EXT: Self = Self(-1000174001);
+}
+#[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT: Self = Self(1000174000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueGlobalPriorityEXT.html) · Enum"]
 #[doc(alias = "VkQueueGlobalPriorityEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -21,12 +29,14 @@ impl std::fmt::Debug for QueueGlobalPriorityEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_global_priority`]"]
-impl QueueGlobalPriorityEXT {
+impl crate::extensions::ext_global_priority::QueueGlobalPriorityEXT {
     pub const LOW_EXT: Self = Self(128);
     pub const MEDIUM_EXT: Self = Self(256);
     pub const HIGH_EXT: Self = Self(512);
     pub const REALTIME_EXT: Self = Self(1024);
 }
+impl<'a> crate::ExtendableFromConst<'a, DeviceQueueGlobalPriorityCreateInfoEXT> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_>> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDeviceQueueGlobalPriorityCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -67,7 +77,8 @@ impl<'a> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceQueueGlobalPriorityCreateInfoEXT {
         self.0
     }

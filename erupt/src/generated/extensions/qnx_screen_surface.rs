@@ -28,6 +28,10 @@ impl std::fmt::Debug for ScreenSurfaceCreateFlagBitsQNX {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::qnx_screen_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const SCREEN_SURFACE_CREATE_INFO_QNX: Self = Self(1000378000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateScreenSurfaceQNX = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -86,7 +90,8 @@ impl<'a> ScreenSurfaceCreateInfoQNXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ScreenSurfaceCreateInfoQNX {
         self.0
     }

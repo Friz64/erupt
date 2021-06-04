@@ -24,3 +24,18 @@ pub type SamplerReductionModeCreateInfoEXT = crate::vk1_2::SamplerReductionModeC
 #[doc(alias = "VkSamplerReductionModeCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type SamplerReductionModeCreateInfoEXTBuilder<'a> = crate::vk1_2::SamplerReductionModeCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const SAMPLED_IMAGE_FILTER_MINMAX_EXT: Self = Self::SAMPLED_IMAGE_FILTER_MINMAX;
+}
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES_EXT: Self = Self::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES;
+    pub const SAMPLER_REDUCTION_MODE_CREATE_INFO_EXT: Self = Self::SAMPLER_REDUCTION_MODE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::ext_sampler_filter_minmax`]"]
+impl crate::vk1_2::SamplerReductionMode {
+    pub const WEIGHTED_AVERAGE_EXT: Self = Self::WEIGHTED_AVERAGE;
+    pub const MIN_EXT: Self = Self::MIN;
+    pub const MAX_EXT: Self = Self::MAX;
+}

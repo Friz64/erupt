@@ -4,6 +4,17 @@ pub const NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME")]
 pub const NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NVX_multiview_per_view_attributes");
+#[doc = "Provided by [`crate::extensions::nvx_multiview_per_view_attributes`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX: Self = Self(1000097000);
+}
+#[doc = "Provided by [`crate::extensions::nvx_multiview_per_view_attributes`]"]
+impl crate::vk1_0::SubpassDescriptionFlagBits {
+    pub const PER_VIEW_ATTRIBUTES_NVX: Self = Self(1);
+    pub const PER_VIEW_POSITION_X_ONLY_NVX: Self = Self(2);
+}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")]
 #[derive(Copy, Clone)]
@@ -44,7 +55,8 @@ impl<'a> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
         self.0
     }

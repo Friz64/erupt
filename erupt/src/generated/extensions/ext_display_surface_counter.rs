@@ -6,6 +6,11 @@ pub const EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION: u32 = 1;
 pub const EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_display_surface_counter");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+#[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
+impl crate::vk1_0::StructureType {
+    pub const SURFACE_CAPABILITIES_2_EXT: Self = Self(1000090000);
+    pub const SURFACE_CAPABILITIES2_EXT: Self = Self::SURFACE_CAPABILITIES_2_EXT;
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`]"]
 #[doc(alias = "VkSurfaceCounterFlagBitsEXT")]
@@ -28,7 +33,7 @@ impl std::fmt::Debug for SurfaceCounterFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
-impl SurfaceCounterFlagBitsEXT {
+impl crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT {
     pub const VBLANK_EXT: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
@@ -134,7 +139,8 @@ impl<'a> SurfaceCapabilities2EXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SurfaceCapabilities2EXT {
         self.0
     }

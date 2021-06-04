@@ -13,6 +13,16 @@ pub const FN_SET_PRIVATE_DATA_EXT: *const std::os::raw::c_char = crate::cstr!("v
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PRIVATE_DATA_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPrivateDataEXT");
 crate::non_dispatchable_handle!(PrivateDataSlotEXT, PRIVATE_DATA_SLOT_EXT, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotEXT.html) · Non-dispatchable Handle", "VkPrivateDataSlotEXT");
+#[doc = "Provided by [`crate::extensions::ext_private_data`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT: Self = Self(1000295000);
+    pub const DEVICE_PRIVATE_DATA_CREATE_INFO_EXT: Self = Self(1000295001);
+    pub const PRIVATE_DATA_SLOT_CREATE_INFO_EXT: Self = Self(1000295002);
+}
+#[doc = "Provided by [`crate::extensions::ext_private_data`]"]
+impl crate::vk1_0::ObjectType {
+    pub const PRIVATE_DATA_SLOT_EXT: Self = Self(1000295000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPrivateDataSlotCreateFlagsEXT.html) · Bitmask of [`PrivateDataSlotCreateFlagBitsEXT`]"] # [doc (alias = "VkPrivateDataSlotCreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PrivateDataSlotCreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlagsEXT`]"]
 #[doc(alias = "VkPrivateDataSlotCreateFlagBitsEXT")]
@@ -45,6 +55,10 @@ pub type PFN_vkSetPrivateDataEXT = unsafe extern "system" fn(device: crate::vk1_
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPrivateDataEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPrivateDataEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, object_type: crate::vk1_0::ObjectType, object_handle: u64, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT, p_data: *mut u64) -> ();
+impl<'a> crate::ExtendableFromConst<'a, DevicePrivateDataCreateInfoEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DevicePrivateDataCreateInfoEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePrivateDataFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDevicePrivateDataCreateInfoEXT")]
 #[derive(Copy, Clone)]
@@ -85,7 +99,8 @@ impl<'a> DevicePrivateDataCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DevicePrivateDataCreateInfoEXT {
         self.0
     }
@@ -151,7 +166,8 @@ impl<'a> PrivateDataSlotCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PrivateDataSlotCreateInfoEXT {
         self.0
     }
@@ -217,7 +233,8 @@ impl<'a> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePrivateDataFeaturesEXT {
         self.0
     }
@@ -243,6 +260,8 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePrivateDataFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePrivateDataFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "Provided by [`crate::extensions::ext_private_data`]"]
 impl crate::DeviceLoader {
     #[inline]

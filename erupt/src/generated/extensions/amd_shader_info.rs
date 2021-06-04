@@ -22,7 +22,7 @@ impl std::fmt::Debug for ShaderInfoTypeAMD {
     }
 }
 #[doc = "Provided by [`crate::extensions::amd_shader_info`]"]
-impl ShaderInfoTypeAMD {
+impl crate::extensions::amd_shader_info::ShaderInfoTypeAMD {
     pub const STATISTICS_AMD: Self = Self(0);
     pub const BINARY_AMD: Self = Self(1);
     pub const DISASSEMBLY_AMD: Self = Self(2);
@@ -92,7 +92,8 @@ impl<'a> ShaderResourceUsageAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ShaderResourceUsageAMD {
         self.0
     }
@@ -192,7 +193,8 @@ impl<'a> ShaderStatisticsInfoAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ShaderStatisticsInfoAMD {
         self.0
     }

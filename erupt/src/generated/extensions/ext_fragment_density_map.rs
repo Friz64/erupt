@@ -4,6 +4,55 @@ pub const EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME")]
 pub const EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_density_map");
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::SamplerCreateFlagBits {
+    pub const SUBSAMPLED_EXT: Self = Self(1);
+    pub const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(16777216);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const SUBSAMPLED_EXT: Self = Self(16384);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const FRAGMENT_DENSITY_MAP_OPTIMAL_EXT: Self = Self(1000218000);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::ImageUsageFlagBits {
+    pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(512);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::ImageViewCreateFlagBits {
+    pub const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT: Self = Self(1);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const FRAGMENT_DENSITY_MAP_READ_EXT: Self = Self(16777216);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT: Self = Self(1000218000);
+    pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT: Self = Self(1000218001);
+    pub const RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT: Self = Self(1000218002);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const FRAGMENT_DENSITY_PROCESS_EXT: Self = Self(8388608);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -56,7 +105,8 @@ impl<'a> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentDensityMapFeaturesEXT {
         self.0
     }
@@ -134,7 +184,8 @@ impl<'a> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentDensityMapPropertiesEXT {
         self.0
     }
@@ -200,7 +251,8 @@ impl<'a> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassFragmentDensityMapCreateInfoEXT {
         self.0
     }

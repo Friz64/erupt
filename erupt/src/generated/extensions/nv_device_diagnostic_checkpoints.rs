@@ -8,12 +8,19 @@ pub const NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME: *const std::os::raw::
 pub const FN_CMD_SET_CHECKPOINT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetCheckpointNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_QUEUE_CHECKPOINT_DATA_NV: *const std::os::raw::c_char = crate::cstr!("vkGetQueueCheckpointDataNV");
+#[doc = "Provided by [`crate::extensions::nv_device_diagnostic_checkpoints`]"]
+impl crate::vk1_0::StructureType {
+    pub const CHECKPOINT_DATA_NV: Self = Self(1000206000);
+    pub const QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV: Self = Self(1000206001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetCheckpointNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_checkpoint_marker: *const std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV) -> ();
+impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointPropertiesNV> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointPropertiesNVBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure"]
 #[doc(alias = "VkQueueFamilyCheckpointPropertiesNV")]
 #[derive(Copy, Clone)]
@@ -54,7 +61,8 @@ impl<'a> QueueFamilyCheckpointPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> QueueFamilyCheckpointPropertiesNV {
         self.0
     }
@@ -126,7 +134,8 @@ impl<'a> CheckpointDataNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CheckpointDataNV {
         self.0
     }

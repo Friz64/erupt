@@ -8,6 +8,15 @@ pub const FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME: *const std::os::raw::c_char
 pub const FN_GET_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreZirconHandleFUCHSIA");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_IMPORT_SEMAPHORE_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreZirconHandleFUCHSIA");
+#[doc = "Provided by [`crate::extensions::fuchsia_external_semaphore`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365000);
+    pub const SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000365001);
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_external_semaphore`]"]
+impl crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits {
+    pub const ZIRCON_EVENT_FUCHSIA: Self = Self(128);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
@@ -72,7 +81,8 @@ impl<'a> ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportSemaphoreZirconHandleInfoFUCHSIA {
         self.0
     }
@@ -144,7 +154,8 @@ impl<'a> SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreGetZirconHandleInfoFUCHSIA {
         self.0
     }

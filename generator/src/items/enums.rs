@@ -18,6 +18,7 @@ use lang_c::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
+use std::collections::HashMap;
 
 #[derive(Debug)]
 pub enum FlagBitWidth {
@@ -272,11 +273,8 @@ pub struct Enum {
 }
 
 impl Enum {
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
-        let enum_origin = match &self.origin {
-            Some(origin) => origin,
-            None => panic!("Enum has no origin: {:?}", self),
-        };
+    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+        let enum_origin = self.origin.as_ref().expect("Enum missing origin");
 
         let mut stream = match &self.kind {
             EnumKind::Enum { name } => {
@@ -355,6 +353,9 @@ impl Enum {
 
         stream.extend(self.debug_impl());
 
+        let mut tokens = HashMap::new();
+        tokens.insert(enum_origin.clone(), stream);
+
         let mut variant_map = IndexMap::new();
         for variant in &self.variants {
             variant_map
@@ -365,19 +366,23 @@ impl Enum {
 
         let enum_ident = self.kind.enum_ident();
         for (origin, variants) in variant_map {
+            let enum_path = enum_origin.module_path();
             let variant_idents = variants.iter().map(|variant| variant.name.ident());
             let variant_values = variants.iter().map(|variant| variant.kind.value());
             let doc = comment_gen.provided_by(&origin);
 
-            stream.extend(quote! {
-                #[doc = #doc]
-                impl #enum_ident {
-                    #(pub const #variant_idents: Self = #variant_values; )*
-                }
-            });
+            tokens
+                .entry(origin.clone())
+                .or_insert_with(TokenStream::new)
+                .extend(quote! {
+                    #[doc = #doc]
+                    impl crate::#enum_path#enum_ident {
+                        #(pub const #variant_idents: Self = #variant_values;)*
+                    }
+                });
         }
 
-        stream
+        tokens
     }
 
     fn debug_impl(&self) -> TokenStream {

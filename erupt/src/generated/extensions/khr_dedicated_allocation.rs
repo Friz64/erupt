@@ -20,3 +20,8 @@ pub type MemoryDedicatedAllocateInfoKHR = crate::vk1_1::MemoryDedicatedAllocateI
 #[doc(alias = "VkMemoryDedicatedAllocateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryDedicatedAllocateInfoKHRBuilder<'a> = crate::vk1_1::MemoryDedicatedAllocateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_dedicated_allocation`]"]
+impl crate::vk1_0::StructureType {
+    pub const MEMORY_DEDICATED_REQUIREMENTS_KHR: Self = Self::MEMORY_DEDICATED_REQUIREMENTS;
+    pub const MEMORY_DEDICATED_ALLOCATE_INFO_KHR: Self = Self::MEMORY_DEDICATED_ALLOCATE_INFO;
+}

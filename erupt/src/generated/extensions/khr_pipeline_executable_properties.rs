@@ -10,6 +10,20 @@ pub const FN_GET_PIPELINE_EXECUTABLE_PROPERTIES_KHR: *const std::os::raw::c_char
 pub const FN_GET_PIPELINE_EXECUTABLE_STATISTICS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPipelineExecutableStatisticsKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATIONS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPipelineExecutableInternalRepresentationsKHR");
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const CAPTURE_STATISTICS_KHR: Self = Self(64);
+    pub const CAPTURE_INTERNAL_REPRESENTATIONS_KHR: Self = Self(128);
+}
+#[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR: Self = Self(1000269000);
+    pub const PIPELINE_INFO_KHR: Self = Self(1000269001);
+    pub const PIPELINE_EXECUTABLE_PROPERTIES_KHR: Self = Self(1000269002);
+    pub const PIPELINE_EXECUTABLE_INFO_KHR: Self = Self(1000269003);
+    pub const PIPELINE_EXECUTABLE_STATISTIC_KHR: Self = Self(1000269004);
+    pub const PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR: Self = Self(1000269005);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineExecutableStatisticFormatKHR.html) · Enum"]
 #[doc(alias = "VkPipelineExecutableStatisticFormatKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -27,7 +41,7 @@ impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_pipeline_executable_properties`]"]
-impl PipelineExecutableStatisticFormatKHR {
+impl crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticFormatKHR {
     pub const BOOL32_KHR: Self = Self(0);
     pub const INT64_KHR: Self = Self(1);
     pub const UINT64_KHR: Self = Self(2);
@@ -42,6 +56,10 @@ pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn(de
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, p_internal_representation_count: *mut u32, p_internal_representations: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -82,7 +100,8 @@ impl<'a> PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
         self.0
     }
@@ -148,7 +167,8 @@ impl<'a> PipelineInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineInfoKHR {
         self.0
     }
@@ -232,7 +252,8 @@ impl<'a> PipelineExecutablePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineExecutablePropertiesKHR {
         self.0
     }
@@ -304,7 +325,8 @@ impl<'a> PipelineExecutableInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineExecutableInfoKHR {
         self.0
     }
@@ -408,7 +430,8 @@ impl<'a> PipelineExecutableStatisticKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineExecutableStatisticKHR {
         self.0
     }
@@ -498,7 +521,8 @@ impl<'a> PipelineExecutableInternalRepresentationKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineExecutableInternalRepresentationKHR {
         self.0
     }

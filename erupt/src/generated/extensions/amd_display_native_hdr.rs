@@ -6,9 +6,20 @@ pub const AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION: u32 = 1;
 pub const AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_display_native_hdr");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_SET_LOCAL_DIMMING_AMD: *const std::os::raw::c_char = crate::cstr!("vkSetLocalDimmingAMD");
+#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
+impl crate::vk1_0::StructureType {
+    pub const DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD: Self = Self(1000213000);
+    pub const SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD: Self = Self(1000213001);
+}
+#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
+impl crate::extensions::khr_surface::ColorSpaceKHR {
+    pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(device: crate::vk1_0::Device, swap_chain: crate::extensions::khr_swapchain::SwapchainKHR, local_dimming_enable: crate::vk1_0::Bool32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, SwapchainDisplayNativeHdrCreateInfoAMD> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure"]
 #[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
 #[derive(Copy, Clone)]
@@ -49,7 +60,8 @@ impl<'a> DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayNativeHdrSurfaceCapabilitiesAMD {
         self.0
     }
@@ -115,7 +127,8 @@ impl<'a> SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SwapchainDisplayNativeHdrCreateInfoAMD {
         self.0
     }
@@ -141,6 +154,8 @@ impl<'a> std::ops::DerefMut for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromMut<'a, DisplayNativeHdrSurfaceCapabilitiesAMD> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl crate::DeviceLoader {
     #[inline]

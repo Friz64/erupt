@@ -77,6 +77,30 @@ pub type PhysicalDeviceIDPropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDevice
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalBufferProperties;
 #[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO_KHR: Self = Self::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO;
+    pub const EXTERNAL_IMAGE_FORMAT_PROPERTIES_KHR: Self = Self::EXTERNAL_IMAGE_FORMAT_PROPERTIES;
+    pub const PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO_KHR: Self = Self::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
+    pub const EXTERNAL_BUFFER_PROPERTIES_KHR: Self = Self::EXTERNAL_BUFFER_PROPERTIES;
+    pub const PHYSICAL_DEVICE_ID_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_ID_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
+impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
+    pub const OPAQUE_FD_KHR: Self = Self::OPAQUE_FD;
+    pub const OPAQUE_WIN32_KHR: Self = Self::OPAQUE_WIN32;
+    pub const OPAQUE_WIN32_KMT_KHR: Self = Self::OPAQUE_WIN32_KMT;
+    pub const D3D11_TEXTURE_KHR: Self = Self::D3D11_TEXTURE;
+    pub const D3D11_TEXTURE_KMT_KHR: Self = Self::D3D11_TEXTURE_KMT;
+    pub const D3D12_HEAP_KHR: Self = Self::D3D12_HEAP;
+    pub const D3D12_RESOURCE_KHR: Self = Self::D3D12_RESOURCE;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
+impl crate::vk1_1::ExternalMemoryFeatureFlagBits {
+    pub const DEDICATED_ONLY_KHR: Self = Self::DEDICATED_ONLY;
+    pub const EXPORTABLE_KHR: Self = Self::EXPORTABLE;
+    pub const IMPORTABLE_KHR: Self = Self::IMPORTABLE;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_memory_capabilities`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]

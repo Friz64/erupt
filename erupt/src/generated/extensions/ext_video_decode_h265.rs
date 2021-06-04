@@ -30,6 +30,28 @@ impl std::fmt::Debug for VideoDecodeH265CreateFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h265`]"]
+impl crate::vk1_0::StructureType {
+    pub const VIDEO_DECODE_H265_CAPABILITIES_EXT: Self = Self(1000187000);
+    pub const VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT: Self = Self(1000187001);
+    pub const VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000187002);
+    pub const VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000187003);
+    pub const VIDEO_DECODE_H265_PROFILE_EXT: Self = Self(1000187004);
+    pub const VIDEO_DECODE_H265_PICTURE_INFO_EXT: Self = Self(1000187005);
+    pub const VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT: Self = Self(1000187006);
+}
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h265`]"]
+impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
+    pub const DECODE_H265_EXT: Self = Self(2);
+}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH265ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH265ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH265CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH265CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265DpbSlotInfoEXT> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265DpbSlotInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265PictureInfoEXT> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265PictureInfoEXTBuilder<'_>> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH265ProfileEXT.html) · Structure"]
 #[doc(alias = "VkVideoDecodeH265ProfileEXT")]
 #[derive(Copy, Clone)]
@@ -70,7 +92,8 @@ impl<'a> VideoDecodeH265ProfileEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265ProfileEXT {
         self.0
     }
@@ -142,7 +165,8 @@ impl<'a> VideoDecodeH265CapabilitiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265CapabilitiesEXT {
         self.0
     }
@@ -214,7 +238,8 @@ impl<'a> VideoDecodeH265SessionCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265SessionCreateInfoEXT {
         self.0
     }
@@ -290,7 +315,8 @@ impl<'a> VideoDecodeH265SessionParametersAddInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265SessionParametersAddInfoEXT {
         self.0
     }
@@ -368,7 +394,8 @@ impl<'a> VideoDecodeH265SessionParametersCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265SessionParametersCreateInfoEXT {
         self.0
     }
@@ -442,7 +469,8 @@ impl<'a> VideoDecodeH265PictureInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265PictureInfoEXT {
         self.0
     }
@@ -508,7 +536,8 @@ impl<'a> VideoDecodeH265DpbSlotInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH265DpbSlotInfoEXT {
         self.0
     }
@@ -534,3 +563,9 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265DpbSlotInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH265SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}

@@ -20,3 +20,11 @@ pub type ExportFenceCreateInfoKHR = crate::vk1_1::ExportFenceCreateInfo;
 #[doc(alias = "VkExportFenceCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ExportFenceCreateInfoKHRBuilder<'a> = crate::vk1_1::ExportFenceCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_external_fence`]"]
+impl crate::vk1_0::StructureType {
+    pub const EXPORT_FENCE_CREATE_INFO_KHR: Self = Self::EXPORT_FENCE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_fence`]"]
+impl crate::vk1_1::FenceImportFlagBits {
+    pub const TEMPORARY_KHR: Self = Self::TEMPORARY;
+}

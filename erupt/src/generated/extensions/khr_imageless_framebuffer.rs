@@ -36,3 +36,14 @@ pub type RenderPassAttachmentBeginInfoKHR = crate::vk1_2::RenderPassAttachmentBe
 #[doc(alias = "VkRenderPassAttachmentBeginInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassAttachmentBeginInfoKHRBuilder<'a> = crate::vk1_2::RenderPassAttachmentBeginInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_imageless_framebuffer`]"]
+impl crate::vk1_0::FramebufferCreateFlagBits {
+    pub const IMAGELESS_KHR: Self = Self::IMAGELESS;
+}
+#[doc = "Provided by [`crate::extensions::khr_imageless_framebuffer`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES;
+    pub const FRAMEBUFFER_ATTACHMENTS_CREATE_INFO_KHR: Self = Self::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO;
+    pub const FRAMEBUFFER_ATTACHMENT_IMAGE_INFO_KHR: Self = Self::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
+    pub const RENDER_PASS_ATTACHMENT_BEGIN_INFO_KHR: Self = Self::RENDER_PASS_ATTACHMENT_BEGIN_INFO;
+}

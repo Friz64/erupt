@@ -15,6 +15,15 @@ pub const FN_GET_PHYSICAL_DEVICE_SURFACE_FORMATS_KHR: *const std::os::raw::c_cha
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceSurfacePresentModesKHR");
 crate::non_dispatchable_handle!(SurfaceKHR, SURFACE_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle", "VkSurfaceKHR");
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_SURFACE_LOST_KHR: Self = Self(-1000000000);
+    pub const ERROR_NATIVE_WINDOW_IN_USE_KHR: Self = Self(-1000000001);
+}
+#[doc = "Provided by [`crate::extensions::khr_surface`]"]
+impl crate::vk1_0::ObjectType {
+    pub const SURFACE_KHR: Self = Self(1000000000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorSpaceKHR.html) · Enum"]
 #[doc(alias = "VkColorSpaceKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -44,31 +53,9 @@ impl std::fmt::Debug for ColorSpaceKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
-impl ColorSpaceKHR {
+impl crate::extensions::khr_surface::ColorSpaceKHR {
     pub const SRGB_NONLINEAR_KHR: Self = Self(0);
     pub const COLORSPACE_SRGB_NONLINEAR_KHR: Self = Self::SRGB_NONLINEAR_KHR;
-}
-#[doc = "Provided by [`crate::extensions::ext_swapchain_colorspace`]"]
-impl ColorSpaceKHR {
-    pub const DISPLAY_P3_NONLINEAR_EXT: Self = Self(1000104001);
-    pub const EXTENDED_SRGB_LINEAR_EXT: Self = Self(1000104002);
-    pub const DISPLAY_P3_LINEAR_EXT: Self = Self(1000104003);
-    pub const DCI_P3_NONLINEAR_EXT: Self = Self(1000104004);
-    pub const BT709_LINEAR_EXT: Self = Self(1000104005);
-    pub const BT709_NONLINEAR_EXT: Self = Self(1000104006);
-    pub const BT2020_LINEAR_EXT: Self = Self(1000104007);
-    pub const HDR10_ST2084_EXT: Self = Self(1000104008);
-    pub const DOLBYVISION_EXT: Self = Self(1000104009);
-    pub const HDR10_HLG_EXT: Self = Self(1000104010);
-    pub const ADOBERGB_LINEAR_EXT: Self = Self(1000104011);
-    pub const ADOBERGB_NONLINEAR_EXT: Self = Self(1000104012);
-    pub const PASS_THROUGH_EXT: Self = Self(1000104013);
-    pub const EXTENDED_SRGB_NONLINEAR_EXT: Self = Self(1000104014);
-    pub const DCI_P3_LINEAR_EXT: Self = Self::DISPLAY_P3_LINEAR_EXT;
-}
-#[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
-impl ColorSpaceKHR {
-    pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`]"]
@@ -95,7 +82,7 @@ impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
-impl CompositeAlphaFlagBitsKHR {
+impl crate::extensions::khr_surface::CompositeAlphaFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const PRE_MULTIPLIED_KHR: Self = Self(2);
     pub const POST_MULTIPLIED_KHR: Self = Self(4);
@@ -120,16 +107,11 @@ impl std::fmt::Debug for PresentModeKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
-impl PresentModeKHR {
+impl crate::extensions::khr_surface::PresentModeKHR {
     pub const IMMEDIATE_KHR: Self = Self(0);
     pub const MAILBOX_KHR: Self = Self(1);
     pub const FIFO_KHR: Self = Self(2);
     pub const FIFO_RELAXED_KHR: Self = Self(3);
-}
-#[doc = "Provided by [`crate::extensions::khr_shared_presentable_image`]"]
-impl PresentModeKHR {
-    pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
-    pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"] # [doc (alias = "VkSurfaceTransformFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceTransformFlagsKHR : u32 { const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`]"]
@@ -161,7 +143,7 @@ impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
-impl SurfaceTransformFlagBitsKHR {
+impl crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR {
     pub const IDENTITY_KHR: Self = Self(1);
     pub const ROTATE_90_KHR: Self = Self(2);
     pub const ROTATE_180_KHR: Self = Self(4);
@@ -279,7 +261,8 @@ impl<'a> SurfaceCapabilitiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SurfaceCapabilitiesKHR {
         self.0
     }
@@ -349,7 +332,8 @@ impl<'a> SurfaceFormatKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SurfaceFormatKHR {
         self.0
     }

@@ -80,6 +80,24 @@ pub type PFN_vkWaitSemaphoresKHR = crate::vk1_2::PFN_vkWaitSemaphores;
 #[allow(non_camel_case_types)]
 pub type PFN_vkSignalSemaphoreKHR = crate::vk1_2::PFN_vkSignalSemaphore;
 #[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES;
+    pub const PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES;
+    pub const SEMAPHORE_TYPE_CREATE_INFO_KHR: Self = Self::SEMAPHORE_TYPE_CREATE_INFO;
+    pub const TIMELINE_SEMAPHORE_SUBMIT_INFO_KHR: Self = Self::TIMELINE_SEMAPHORE_SUBMIT_INFO;
+    pub const SEMAPHORE_WAIT_INFO_KHR: Self = Self::SEMAPHORE_WAIT_INFO;
+    pub const SEMAPHORE_SIGNAL_INFO_KHR: Self = Self::SEMAPHORE_SIGNAL_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
+impl crate::vk1_2::SemaphoreType {
+    pub const BINARY_KHR: Self = Self::BINARY;
+    pub const TIMELINE_KHR: Self = Self::TIMELINE;
+}
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
+impl crate::vk1_2::SemaphoreWaitFlagBits {
+    pub const ANY_KHR: Self = Self::ANY;
+}
+#[doc = "Provided by [`crate::extensions::khr_timeline_semaphore`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

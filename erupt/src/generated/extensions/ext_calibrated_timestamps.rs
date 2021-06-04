@@ -8,6 +8,10 @@ pub const EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_GET_PHYSICAL_DEVICE_CALIBRATEABLE_TIME_DOMAINS_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceCalibrateableTimeDomainsEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_CALIBRATED_TIMESTAMPS_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetCalibratedTimestampsEXT");
+#[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
+impl crate::vk1_0::StructureType {
+    pub const CALIBRATED_TIMESTAMP_INFO_EXT: Self = Self(1000184000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimeDomainEXT.html) · Enum"]
 #[doc(alias = "VkTimeDomainEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -25,7 +29,7 @@ impl std::fmt::Debug for TimeDomainEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_calibrated_timestamps`]"]
-impl TimeDomainEXT {
+impl crate::extensions::ext_calibrated_timestamps::TimeDomainEXT {
     pub const DEVICE_EXT: Self = Self(0);
     pub const CLOCK_MONOTONIC_EXT: Self = Self(1);
     pub const CLOCK_MONOTONIC_RAW_EXT: Self = Self(2);
@@ -77,7 +81,8 @@ impl<'a> CalibratedTimestampInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CalibratedTimestampInfoEXT {
         self.0
     }

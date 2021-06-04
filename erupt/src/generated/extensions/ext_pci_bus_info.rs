@@ -4,6 +4,12 @@ pub const EXT_PCI_BUS_INFO_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_PCI_BUS_INFO_EXTENSION_NAME")]
 pub const EXT_PCI_BUS_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_pci_bus_info");
+#[doc = "Provided by [`crate::extensions::ext_pci_bus_info`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT: Self = Self(1000212000);
+}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePCIBusInfoPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePCIBusInfoPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -62,7 +68,8 @@ impl<'a> PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePCIBusInfoPropertiesEXT {
         self.0
     }

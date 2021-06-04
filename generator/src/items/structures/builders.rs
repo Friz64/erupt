@@ -3,6 +3,7 @@ use crate::{
     comment_gen::DocCommentGen,
     declaration::{self, Mutability, Type},
     name::{Name, TypeName},
+    origin::Origin,
     source::Source,
 };
 use proc_macro2::{Span, TokenStream};
@@ -214,10 +215,16 @@ impl FieldKind {
 }
 
 impl Structure {
-    pub(super) fn builder(&self, source: &Source, comment_gen: &DocCommentGen) -> TokenStream {
+    pub(super) fn builder(
+        &self,
+        source: &Source,
+        comment_gen: &DocCommentGen,
+    ) -> HashMap<Origin, TokenStream> {
         if !self.qualifies_as_builder() {
-            return TokenStream::new();
+            return HashMap::new();
         }
+
+        let origin = self.origin.as_ref().expect("Structure missing origin");
 
         let inner_ident = self.name.ident();
         //log::debug!("Processing builder for `{}`", inner_ident);
@@ -377,41 +384,48 @@ impl Structure {
             (true, true) => Some(quote! { unreachable!() }),
         };
 
-        let extends = source
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                impl #inner_ident {
+                    #[inline]
+                    pub fn into_builder<'a>(self) -> #ident<'a> {
+                        #ident(self, std::marker::PhantomData)
+                    }
+                }
+            },
+        );
+
+        for other in source
             .structures
             .iter()
             .filter(|structure| structure.metadata.extends.contains(&self.name))
-            .map(|other| {
-                let other_path = other
-                    .origin
-                    .as_ref()
-                    .expect("Structure has no origin")
-                    .module_path();
+        {
+            let this_path = origin.module_path();
+            let other_origin = other
+                .origin
+                .as_ref()
+                .expect("(other) Structure missing origin");
 
-                let mut other_name = other.name.clone();
-                let other_ident = other_name.ident();
-                other_name.builder = true;
-                let other_builder_ident = other_name.ident();
+            let mut other_name = other.name.clone();
+            let other_ident = other_name.ident();
+            other_name.builder = true;
+            let other_builder_ident = other_name.ident();
 
-                quote! {
-                    impl<'a> crate::#extendable_from_kind<'a, crate::#other_path#other_ident>
-                        for #ident<'a> {}
+            tokens
+                .entry(other_origin.clone())
+                .or_insert_with(TokenStream::new)
+                .extend(quote! {
+                    impl<'a> crate::#extendable_from_kind<'a, #other_ident>
+                        for crate::#this_path#ident<'a> {}
 
-                    impl<'a> crate::#extendable_from_kind<'a, crate::#other_path#other_builder_ident<'_>>
-                        for #ident<'a> {}
-                }
-            });
+                    impl<'a> crate::#extendable_from_kind<'a, #other_builder_ident<'_>>
+                        for crate::#this_path#ident<'a> {}
+                });
+        }
 
-        quote! {
-            impl #inner_ident {
-                #[inline]
-                pub fn into_builder<'a>(self) -> #ident<'a> {
-                    #ident(self, std::marker::PhantomData)
-                }
-            }
-
-            #(#extends)*
-
+        tokens.get_mut(origin).unwrap().extend(quote! {
             #[derive(Copy, Clone)]
             #[doc = #doc]
             #[repr(transparent)]
@@ -426,7 +440,8 @@ impl Structure {
                 #(#field_builders)*
 
                 #[inline]
-                #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+                /// Discards all lifetime information.
+                /// Use the `Deref` and `DerefMut` implementations if possible.
                 pub fn build(self) -> #inner_ident {
                     self.0
                 }
@@ -457,6 +472,8 @@ impl Structure {
                     &mut self.0
                 }
             }
-        }
+        });
+
+        tokens
     }
 }

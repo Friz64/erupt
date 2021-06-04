@@ -48,6 +48,22 @@ pub type PFN_vkDestroyDescriptorUpdateTemplateKHR = crate::vk1_1::PFN_vkDestroyD
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplateKHR = crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;
 #[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
+impl crate::vk1_0::StructureType {
+    pub const DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO_KHR: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
+impl crate::vk1_0::ObjectType {
+    pub const DESCRIPTOR_UPDATE_TEMPLATE_KHR: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE;
+}
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
+impl crate::vk1_1::DescriptorUpdateTemplateType {
+    pub const DESCRIPTOR_SET_KHR: Self = Self::DESCRIPTOR_SET;
+}
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
+    pub const DESCRIPTOR_UPDATE_TEMPLATE_KHR_EXT: Self = Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT;
+}
+#[doc = "Provided by [`crate::extensions::khr_descriptor_update_template`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

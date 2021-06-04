@@ -80,7 +80,7 @@ impl std::fmt::Debug for AccessFlagBits2KHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
-impl AccessFlagBits2KHR {
+impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
     pub const NONE_KHR: Self = Self(0);
     pub const INDIRECT_COMMAND_READ_KHR: Self = Self(1);
     pub const INDEX_READ_KHR: Self = Self(2);
@@ -116,16 +116,6 @@ impl AccessFlagBits2KHR {
     pub const ACCELERATION_STRUCTURE_WRITE_NV: Self = Self(4194304);
     pub const FRAGMENT_DENSITY_MAP_READ_EXT: Self = Self(16777216);
     pub const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT: Self = Self(524288);
-}
-#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
-impl AccessFlagBits2KHR {
-    pub const VIDEO_DECODE_READ_KHR: Self = Self(34359738368);
-    pub const VIDEO_DECODE_WRITE_KHR: Self = Self(68719476736);
-}
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl AccessFlagBits2KHR {
-    pub const VIDEO_ENCODE_READ_KHR: Self = Self(137438953472);
-    pub const VIDEO_ENCODE_WRITE_KHR: Self = Self(274877906944);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags2KHR.html) · Bitmask of [`PipelineStageFlagBits2KHR`]"] # [doc (alias = "VkPipelineStageFlags2KHR")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags2KHR : u64 { const NONE_KHR = PipelineStageFlagBits2KHR :: NONE_KHR . 0 ; const TOP_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: TOP_OF_PIPE_KHR . 0 ; const DRAW_INDIRECT_KHR = PipelineStageFlagBits2KHR :: DRAW_INDIRECT_KHR . 0 ; const VERTEX_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_INPUT_KHR . 0 ; const VERTEX_SHADER_KHR = PipelineStageFlagBits2KHR :: VERTEX_SHADER_KHR . 0 ; const TESSELLATION_CONTROL_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_CONTROL_SHADER_KHR . 0 ; const TESSELLATION_EVALUATION_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_EVALUATION_SHADER_KHR . 0 ; const GEOMETRY_SHADER_KHR = PipelineStageFlagBits2KHR :: GEOMETRY_SHADER_KHR . 0 ; const FRAGMENT_SHADER_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADER_KHR . 0 ; const EARLY_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: EARLY_FRAGMENT_TESTS_KHR . 0 ; const LATE_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: LATE_FRAGMENT_TESTS_KHR . 0 ; const COLOR_ATTACHMENT_OUTPUT_KHR = PipelineStageFlagBits2KHR :: COLOR_ATTACHMENT_OUTPUT_KHR . 0 ; const COMPUTE_SHADER_KHR = PipelineStageFlagBits2KHR :: COMPUTE_SHADER_KHR . 0 ; const ALL_TRANSFER_KHR = PipelineStageFlagBits2KHR :: ALL_TRANSFER_KHR . 0 ; const TRANSFER_KHR = PipelineStageFlagBits2KHR :: TRANSFER_KHR . 0 ; const BOTTOM_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: BOTTOM_OF_PIPE_KHR . 0 ; const HOST_KHR = PipelineStageFlagBits2KHR :: HOST_KHR . 0 ; const ALL_GRAPHICS_KHR = PipelineStageFlagBits2KHR :: ALL_GRAPHICS_KHR . 0 ; const ALL_COMMANDS_KHR = PipelineStageFlagBits2KHR :: ALL_COMMANDS_KHR . 0 ; const COPY_KHR = PipelineStageFlagBits2KHR :: COPY_KHR . 0 ; const RESOLVE_KHR = PipelineStageFlagBits2KHR :: RESOLVE_KHR . 0 ; const BLIT_KHR = PipelineStageFlagBits2KHR :: BLIT_KHR . 0 ; const CLEAR_KHR = PipelineStageFlagBits2KHR :: CLEAR_KHR . 0 ; const INDEX_INPUT_KHR = PipelineStageFlagBits2KHR :: INDEX_INPUT_KHR . 0 ; const VERTEX_ATTRIBUTE_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_ATTRIBUTE_INPUT_KHR . 0 ; const PRE_RASTERIZATION_SHADERS_KHR = PipelineStageFlagBits2KHR :: PRE_RASTERIZATION_SHADERS_KHR . 0 ; const VIDEO_DECODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_ENCODE_KHR . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits2KHR :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits2KHR :: CONDITIONAL_RENDERING_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits2KHR :: COMMAND_PREPROCESS_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits2KHR :: SHADING_RATE_IMAGE_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_KHR . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits2KHR :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits2KHR :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits2KHR :: MESH_SHADER_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits2KHR.html) · Bits enum of [`PipelineStageFlags2KHR`]"]
@@ -188,7 +178,7 @@ impl std::fmt::Debug for PipelineStageFlagBits2KHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
-impl PipelineStageFlagBits2KHR {
+impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
     pub const NONE_KHR: Self = Self(0);
     pub const TOP_OF_PIPE_KHR: Self = Self(1);
     pub const DRAW_INDIRECT_KHR: Self = Self(2);
@@ -228,13 +218,35 @@ impl PipelineStageFlagBits2KHR {
     pub const TASK_SHADER_NV: Self = Self(524288);
     pub const MESH_SHADER_NV: Self = Self(1048576);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
-impl PipelineStageFlagBits2KHR {
-    pub const VIDEO_DECODE_KHR: Self = Self(67108864);
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const READ_ONLY_OPTIMAL_KHR: Self = Self(1000314000);
+    pub const ATTACHMENT_OPTIMAL_KHR: Self = Self(1000314001);
 }
-#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
-impl PipelineStageFlagBits2KHR {
-    pub const VIDEO_ENCODE_KHR: Self = Self(134217728);
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const NONE_KHR: Self = Self(0);
+}
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl crate::vk1_0::StructureType {
+    pub const MEMORY_BARRIER_2_KHR: Self = Self(1000314000);
+    pub const BUFFER_MEMORY_BARRIER_2_KHR: Self = Self(1000314001);
+    pub const IMAGE_MEMORY_BARRIER_2_KHR: Self = Self(1000314002);
+    pub const DEPENDENCY_INFO_KHR: Self = Self(1000314003);
+    pub const SUBMIT_INFO_2_KHR: Self = Self(1000314004);
+    pub const SEMAPHORE_SUBMIT_INFO_KHR: Self = Self(1000314005);
+    pub const COMMAND_BUFFER_SUBMIT_INFO_KHR: Self = Self(1000314006);
+    pub const PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR: Self = Self(1000314007);
+    pub const QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV: Self = Self(1000314008);
+    pub const CHECKPOINT_DATA_2_NV: Self = Self(1000314009);
+}
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const NONE_KHR: Self = Self(0);
+}
+#[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
+impl crate::vk1_0::EventCreateFlagBits {
+    pub const DEVICE_ONLY_KHR: Self = Self(1);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitFlagsKHR.html) · Bitmask of [`SubmitFlagBitsKHR`]"] # [doc (alias = "VkSubmitFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SubmitFlagsKHR : u32 { const PROTECTED_KHR = SubmitFlagBitsKHR :: PROTECTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitFlagBitsKHR.html) · Bits enum of [`SubmitFlagsKHR`]"]
@@ -258,7 +270,7 @@ impl std::fmt::Debug for SubmitFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_synchronization2`]"]
-impl SubmitFlagBitsKHR {
+impl crate::extensions::khr_synchronization2::SubmitFlagBitsKHR {
     pub const PROTECTED_KHR: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
@@ -285,6 +297,14 @@ pub type PFN_vkCmdWriteBufferMarker2AMD = unsafe extern "system" fn(command_buff
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueueCheckpointData2NV = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointProperties2NV> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointProperties2NVBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryBarrier2KHR> for crate::vk1_2::SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, MemoryBarrier2KHRBuilder<'_>> for crate::vk1_2::SubpassDependency2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]
@@ -343,7 +363,8 @@ impl<'a> MemoryBarrier2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryBarrier2KHR {
         self.0
     }
@@ -403,8 +424,6 @@ impl ImageMemoryBarrier2KHR {
         ImageMemoryBarrier2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXT> for ImageMemoryBarrier2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_sample_locations::SampleLocationsInfoEXTBuilder<'_>> for ImageMemoryBarrier2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageMemoryBarrier2KHR.html) · Builder of [`ImageMemoryBarrier2KHR`]"]
 #[repr(transparent)]
@@ -465,7 +484,8 @@ impl<'a> ImageMemoryBarrier2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageMemoryBarrier2KHR {
         self.0
     }
@@ -579,7 +599,8 @@ impl<'a> BufferMemoryBarrier2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferMemoryBarrier2KHR {
         self.0
     }
@@ -669,7 +690,8 @@ impl<'a> DependencyInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DependencyInfoKHR {
         self.0
     }
@@ -753,7 +775,8 @@ impl<'a> SemaphoreSubmitInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreSubmitInfoKHR {
         self.0
     }
@@ -825,7 +848,8 @@ impl<'a> CommandBufferSubmitInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CommandBufferSubmitInfoKHR {
         self.0
     }
@@ -882,12 +906,6 @@ impl SubmitInfo2KHR {
         SubmitInfo2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR> for SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHRBuilder<'_>> for SubmitInfo2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubmitInfo2KHR.html) · Builder of [`SubmitInfo2KHR`]"]
 #[repr(transparent)]
@@ -921,7 +939,8 @@ impl<'a> SubmitInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SubmitInfo2KHR {
         self.0
     }
@@ -987,7 +1006,8 @@ impl<'a> QueueFamilyCheckpointProperties2NVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> QueueFamilyCheckpointProperties2NV {
         self.0
     }
@@ -1059,7 +1079,8 @@ impl<'a> CheckpointData2NVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CheckpointData2NV {
         self.0
     }
@@ -1125,7 +1146,8 @@ impl<'a> PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSynchronization2FeaturesKHR {
         self.0
     }

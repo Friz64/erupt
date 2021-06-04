@@ -4,6 +4,65 @@ pub const EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME")]
 pub const EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_blend_operation_advanced");
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
+impl crate::vk1_0::BlendOp {
+    pub const ZERO_EXT: Self = Self(1000148000);
+    pub const SRC_EXT: Self = Self(1000148001);
+    pub const DST_EXT: Self = Self(1000148002);
+    pub const SRC_OVER_EXT: Self = Self(1000148003);
+    pub const DST_OVER_EXT: Self = Self(1000148004);
+    pub const SRC_IN_EXT: Self = Self(1000148005);
+    pub const DST_IN_EXT: Self = Self(1000148006);
+    pub const SRC_OUT_EXT: Self = Self(1000148007);
+    pub const DST_OUT_EXT: Self = Self(1000148008);
+    pub const SRC_ATOP_EXT: Self = Self(1000148009);
+    pub const DST_ATOP_EXT: Self = Self(1000148010);
+    pub const XOR_EXT: Self = Self(1000148011);
+    pub const MULTIPLY_EXT: Self = Self(1000148012);
+    pub const SCREEN_EXT: Self = Self(1000148013);
+    pub const OVERLAY_EXT: Self = Self(1000148014);
+    pub const DARKEN_EXT: Self = Self(1000148015);
+    pub const LIGHTEN_EXT: Self = Self(1000148016);
+    pub const COLORDODGE_EXT: Self = Self(1000148017);
+    pub const COLORBURN_EXT: Self = Self(1000148018);
+    pub const HARDLIGHT_EXT: Self = Self(1000148019);
+    pub const SOFTLIGHT_EXT: Self = Self(1000148020);
+    pub const DIFFERENCE_EXT: Self = Self(1000148021);
+    pub const EXCLUSION_EXT: Self = Self(1000148022);
+    pub const INVERT_EXT: Self = Self(1000148023);
+    pub const INVERT_RGB_EXT: Self = Self(1000148024);
+    pub const LINEARDODGE_EXT: Self = Self(1000148025);
+    pub const LINEARBURN_EXT: Self = Self(1000148026);
+    pub const VIVIDLIGHT_EXT: Self = Self(1000148027);
+    pub const LINEARLIGHT_EXT: Self = Self(1000148028);
+    pub const PINLIGHT_EXT: Self = Self(1000148029);
+    pub const HARDMIX_EXT: Self = Self(1000148030);
+    pub const HSL_HUE_EXT: Self = Self(1000148031);
+    pub const HSL_SATURATION_EXT: Self = Self(1000148032);
+    pub const HSL_COLOR_EXT: Self = Self(1000148033);
+    pub const HSL_LUMINOSITY_EXT: Self = Self(1000148034);
+    pub const PLUS_EXT: Self = Self(1000148035);
+    pub const PLUS_CLAMPED_EXT: Self = Self(1000148036);
+    pub const PLUS_CLAMPED_ALPHA_EXT: Self = Self(1000148037);
+    pub const PLUS_DARKER_EXT: Self = Self(1000148038);
+    pub const MINUS_EXT: Self = Self(1000148039);
+    pub const MINUS_CLAMPED_EXT: Self = Self(1000148040);
+    pub const CONTRAST_EXT: Self = Self(1000148041);
+    pub const INVERT_OVG_EXT: Self = Self(1000148042);
+    pub const RED_EXT: Self = Self(1000148043);
+    pub const GREEN_EXT: Self = Self(1000148044);
+    pub const BLUE_EXT: Self = Self(1000148045);
+}
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT: Self = Self(524288);
+}
+#[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT: Self = Self(1000148000);
+    pub const PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT: Self = Self(1000148001);
+    pub const PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT: Self = Self(1000148002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlendOverlapEXT.html) · Enum"]
 #[doc(alias = "VkBlendOverlapEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -20,11 +79,19 @@ impl std::fmt::Debug for BlendOverlapEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_blend_operation_advanced`]"]
-impl BlendOverlapEXT {
+impl crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT {
     pub const UNCORRELATED_EXT: Self = Self(0);
     pub const DISJOINT_EXT: Self = Self(1);
     pub const CONJOINT_EXT: Self = Self(2);
 }
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineColorBlendAdvancedStateCreateInfoEXT> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -65,7 +132,8 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
         self.0
     }
@@ -161,7 +229,8 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
         self.0
     }
@@ -239,7 +308,8 @@ impl<'a> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineColorBlendAdvancedStateCreateInfoEXT {
         self.0
     }

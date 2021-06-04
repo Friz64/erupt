@@ -6,9 +6,24 @@ pub const EXT_COLOR_WRITE_ENABLE_SPEC_VERSION: u32 = 1;
 pub const EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_color_write_enable");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_COLOR_WRITE_ENABLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetColorWriteEnableEXT");
+#[doc = "Provided by [`crate::extensions::ext_color_write_enable`]"]
+impl crate::vk1_0::DynamicState {
+    pub const COLOR_WRITE_ENABLE_EXT: Self = Self(1000381000);
+}
+#[doc = "Provided by [`crate::extensions::ext_color_write_enable`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT: Self = Self(1000381000);
+    pub const PIPELINE_COLOR_WRITE_CREATE_INFO_EXT: Self = Self(1000381001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetColorWriteEnableEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, attachment_count: u32, p_color_write_enables: *const crate::vk1_0::Bool32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceColorWriteEnableFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineColorWriteCreateInfoEXT> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineColorWriteCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceColorWriteEnableFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceColorWriteEnableFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -49,7 +64,8 @@ impl<'a> PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceColorWriteEnableFeaturesEXT {
         self.0
     }
@@ -117,7 +133,8 @@ impl<'a> PipelineColorWriteCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineColorWriteCreateInfoEXT {
         self.0
     }

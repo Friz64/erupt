@@ -4,6 +4,19 @@ pub const QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME")]
 pub const QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_QCOM_render_pass_transform");
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_transform`]"]
+impl crate::vk1_0::RenderPassCreateFlagBits {
+    pub const TRANSFORM_QCOM: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::qcom_render_pass_transform`]"]
+impl crate::vk1_0::StructureType {
+    pub const COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM: Self = Self(1000282000);
+    pub const RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM: Self = Self(1000282001);
+}
+impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceRenderPassTransformInfoQCOM> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassTransformBeginInfoQCOM> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, RenderPassTransformBeginInfoQCOMBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Structure"]
 #[doc(alias = "VkRenderPassTransformBeginInfoQCOM")]
 #[derive(Copy, Clone)]
@@ -44,7 +57,8 @@ impl<'a> RenderPassTransformBeginInfoQCOMBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RenderPassTransformBeginInfoQCOM {
         self.0
     }
@@ -116,7 +130,8 @@ impl<'a> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CommandBufferInheritanceRenderPassTransformInfoQCOM {
         self.0
     }

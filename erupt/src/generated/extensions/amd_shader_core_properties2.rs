@@ -4,6 +4,10 @@ pub const AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME")]
 pub const AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_shader_core_properties2");
+#[doc = "Provided by [`crate::extensions::amd_shader_core_properties2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD: Self = Self(1000227000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`]"] # [doc (alias = "VkShaderCorePropertiesFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderCorePropertiesFlagsAMD`]"]
 #[doc(alias = "VkShaderCorePropertiesFlagBitsAMD")]
@@ -24,6 +28,8 @@ impl std::fmt::Debug for ShaderCorePropertiesFlagBitsAMD {
         })
     }
 }
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderCoreProperties2AMD> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderCoreProperties2AMDBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderCoreProperties2AMD")]
 #[derive(Copy, Clone)]
@@ -70,7 +76,8 @@ impl<'a> PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderCoreProperties2AMD {
         self.0
     }

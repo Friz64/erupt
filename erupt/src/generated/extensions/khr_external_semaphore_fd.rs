@@ -8,6 +8,11 @@ pub const KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_GET_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_IMPORT_SEMAPHORE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreFdKHR");
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_fd`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_SEMAPHORE_FD_INFO_KHR: Self = Self(1000079000);
+    pub const SEMAPHORE_GET_FD_INFO_KHR: Self = Self(1000079001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
@@ -72,7 +77,8 @@ impl<'a> ImportSemaphoreFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportSemaphoreFdInfoKHR {
         self.0
     }
@@ -144,7 +150,8 @@ impl<'a> SemaphoreGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreGetFdInfoKHR {
         self.0
     }

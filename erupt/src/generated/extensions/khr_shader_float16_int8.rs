@@ -20,3 +20,8 @@ pub type PhysicalDeviceFloat16Int8FeaturesKHR = crate::vk1_2::PhysicalDeviceShad
 #[doc(alias = "VkPhysicalDeviceFloat16Int8FeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceFloat16Int8FeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_shader_float16_int8`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
+    pub const PHYSICAL_DEVICE_FLOAT16_INT8_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
+}

@@ -12,3 +12,7 @@ pub type PhysicalDevice16BitStorageFeaturesKHR = crate::vk1_1::PhysicalDevice16B
 #[doc(alias = "VkPhysicalDevice16BitStorageFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDevice16BitStorageFeaturesKHRBuilder<'a> = crate::vk1_1::PhysicalDevice16BitStorageFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_16bit_storage`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES;
+}

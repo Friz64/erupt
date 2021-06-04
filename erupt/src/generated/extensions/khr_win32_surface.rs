@@ -28,6 +28,10 @@ impl std::fmt::Debug for Win32SurfaceCreateFlagBitsKHR {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::khr_win32_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const WIN32_SURFACE_CREATE_INFO_KHR: Self = Self(1000009000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateWin32SurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -86,7 +90,8 @@ impl<'a> Win32SurfaceCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> Win32SurfaceCreateInfoKHR {
         self.0
     }

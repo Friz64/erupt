@@ -24,6 +24,11 @@ impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateFlagBitsEXT
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_conservative_rasterization`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000101000);
+    pub const PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT: Self = Self(1000101001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConservativeRasterizationModeEXT.html) · Enum"]
 #[doc(alias = "VkConservativeRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -40,11 +45,15 @@ impl std::fmt::Debug for ConservativeRasterizationModeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_conservative_rasterization`]"]
-impl ConservativeRasterizationModeEXT {
+impl crate::extensions::ext_conservative_rasterization::ConservativeRasterizationModeEXT {
     pub const DISABLED_EXT: Self = Self(0);
     pub const OVERESTIMATE_EXT: Self = Self(1);
     pub const UNDERESTIMATE_EXT: Self = Self(2);
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationConservativeStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConservativeRasterizationPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceConservativeRasterizationPropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -133,7 +142,8 @@ impl<'a> PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceConservativeRasterizationPropertiesEXT {
         self.0
     }
@@ -211,7 +221,8 @@ impl<'a> PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineRasterizationConservativeStateCreateInfoEXT {
         self.0
     }

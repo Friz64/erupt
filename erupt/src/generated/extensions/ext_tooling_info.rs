@@ -6,6 +6,10 @@ pub const EXT_TOOLING_INFO_SPEC_VERSION: u32 = 1;
 pub const EXT_TOOLING_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_tooling_info");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceToolPropertiesEXT");
+#[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: Self = Self(1000245000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`]"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Bits enum of [`ToolPurposeFlagsEXT`]"]
 #[doc(alias = "VkToolPurposeFlagBitsEXT")]
@@ -34,7 +38,7 @@ impl std::fmt::Debug for ToolPurposeFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_tooling_info`]"]
-impl ToolPurposeFlagBitsEXT {
+impl crate::extensions::ext_tooling_info::ToolPurposeFlagBitsEXT {
     pub const VALIDATION_EXT: Self = Self(1);
     pub const PROFILING_EXT: Self = Self(2);
     pub const TRACING_EXT: Self = Self(4);
@@ -110,7 +114,8 @@ impl<'a> PhysicalDeviceToolPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceToolPropertiesEXT {
         self.0
     }

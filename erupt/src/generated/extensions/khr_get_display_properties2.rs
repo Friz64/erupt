@@ -12,6 +12,14 @@ pub const FN_GET_PHYSICAL_DEVICE_DISPLAY_PLANE_PROPERTIES2_KHR: *const std::os::
 pub const FN_GET_DISPLAY_MODE_PROPERTIES2_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDisplayModeProperties2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_DISPLAY_PLANE_CAPABILITIES2_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDisplayPlaneCapabilities2KHR");
+#[doc = "Provided by [`crate::extensions::khr_get_display_properties2`]"]
+impl crate::vk1_0::StructureType {
+    pub const DISPLAY_PROPERTIES_2_KHR: Self = Self(1000121000);
+    pub const DISPLAY_PLANE_PROPERTIES_2_KHR: Self = Self(1000121001);
+    pub const DISPLAY_MODE_PROPERTIES_2_KHR: Self = Self(1000121002);
+    pub const DISPLAY_PLANE_INFO_2_KHR: Self = Self(1000121003);
+    pub const DISPLAY_PLANE_CAPABILITIES_2_KHR: Self = Self(1000121004);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceDisplayProperties2KHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::khr_get_display_properties2::DisplayProperties2KHR) -> crate::vk1_0::Result;
@@ -64,7 +72,8 @@ impl<'a> DisplayProperties2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayProperties2KHR {
         self.0
     }
@@ -130,7 +139,8 @@ impl<'a> DisplayPlaneProperties2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPlaneProperties2KHR {
         self.0
     }
@@ -196,7 +206,8 @@ impl<'a> DisplayModeProperties2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayModeProperties2KHR {
         self.0
     }
@@ -268,7 +279,8 @@ impl<'a> DisplayPlaneInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPlaneInfo2KHR {
         self.0
     }
@@ -334,7 +346,8 @@ impl<'a> DisplayPlaneCapabilities2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPlaneCapabilities2KHR {
         self.0
     }

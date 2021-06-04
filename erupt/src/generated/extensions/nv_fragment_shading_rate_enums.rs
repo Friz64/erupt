@@ -6,6 +6,12 @@ pub const NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION: u32 = 1;
 pub const NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_fragment_shading_rate_enums");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_ENUM_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetFragmentShadingRateEnumNV");
+#[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV: Self = Self(1000326000);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV: Self = Self(1000326001);
+    pub const PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV: Self = Self(1000326002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateNV.html) · Enum"]
 #[doc(alias = "VkFragmentShadingRateNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -31,7 +37,7 @@ impl std::fmt::Debug for FragmentShadingRateNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
-impl FragmentShadingRateNV {
+impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV {
     pub const _1_INVOCATION_PER_PIXEL_NV: Self = Self(0);
     pub const _1_INVOCATION_PER_1X2_PIXELS_NV: Self = Self(1);
     pub const _1_INVOCATION_PER_2X1_PIXELS_NV: Self = Self(4);
@@ -60,13 +66,21 @@ impl std::fmt::Debug for FragmentShadingRateTypeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]"]
-impl FragmentShadingRateTypeNV {
+impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateTypeNV {
     pub const FRAGMENT_SIZE_NV: Self = Self(0);
     pub const ENUMS_NV: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateEnumStateCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -119,7 +133,8 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
         self.0
     }
@@ -185,7 +200,8 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
         self.0
     }
@@ -263,7 +279,8 @@ impl<'a> PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineFragmentShadingRateEnumStateCreateInfoNV {
         self.0
     }

@@ -28,6 +28,25 @@ pub const FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT: *const std::os::raw::c_char =
 pub const FN_CMD_SET_STENCIL_TEST_ENABLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetStencilTestEnableEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_STENCIL_OP_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetStencilOpEXT");
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
+impl crate::vk1_0::DynamicState {
+    pub const CULL_MODE_EXT: Self = Self(1000267000);
+    pub const FRONT_FACE_EXT: Self = Self(1000267001);
+    pub const PRIMITIVE_TOPOLOGY_EXT: Self = Self(1000267002);
+    pub const VIEWPORT_WITH_COUNT_EXT: Self = Self(1000267003);
+    pub const SCISSOR_WITH_COUNT_EXT: Self = Self(1000267004);
+    pub const VERTEX_INPUT_BINDING_STRIDE_EXT: Self = Self(1000267005);
+    pub const DEPTH_TEST_ENABLE_EXT: Self = Self(1000267006);
+    pub const DEPTH_WRITE_ENABLE_EXT: Self = Self(1000267007);
+    pub const DEPTH_COMPARE_OP_EXT: Self = Self(1000267008);
+    pub const DEPTH_BOUNDS_TEST_ENABLE_EXT: Self = Self(1000267009);
+    pub const STENCIL_TEST_ENABLE_EXT: Self = Self(1000267010);
+    pub const STENCIL_OP_EXT: Self = Self(1000267011);
+}
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000267000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetCullModeEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, cull_mode: crate::vk1_0::CullModeFlags) -> ();
@@ -64,6 +83,10 @@ pub type PFN_vkCmdSetStencilTestEnableEXT = unsafe extern "system" fn(command_bu
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, fail_op: crate::vk1_0::StencilOp, pass_op: crate::vk1_0::StencilOp, depth_fail_op: crate::vk1_0::StencilOp, compare_op: crate::vk1_0::CompareOp) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExtendedDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -104,7 +127,8 @@ impl<'a> PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExtendedDynamicStateFeaturesEXT {
         self.0
     }

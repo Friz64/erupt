@@ -10,6 +10,34 @@ pub const FN_CMD_BIND_SHADING_RATE_IMAGE_NV: *const std::os::raw::c_char = crate
 pub const FN_CMD_SET_VIEWPORT_SHADING_RATE_PALETTE_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewportShadingRatePaletteNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_COARSE_SAMPLE_ORDER_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetCoarseSampleOrderNV");
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::DynamicState {
+    pub const VIEWPORT_SHADING_RATE_PALETTE_NV: Self = Self(1000164004);
+    pub const VIEWPORT_COARSE_SAMPLE_ORDER_NV: Self = Self(1000164006);
+}
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const SHADING_RATE_OPTIMAL_NV: Self = Self::FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::ImageUsageFlagBits {
+    pub const SHADING_RATE_IMAGE_NV: Self = Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const SHADING_RATE_IMAGE_READ_NV: Self = Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV: Self = Self(1000164000);
+    pub const PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV: Self = Self(1000164001);
+    pub const PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV: Self = Self(1000164002);
+    pub const PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV: Self = Self(1000164005);
+}
+#[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const SHADING_RATE_IMAGE_NV: Self = Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR;
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteEntryNV.html) · Enum"]
 #[doc(alias = "VkShadingRatePaletteEntryNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -35,7 +63,7 @@ impl std::fmt::Debug for ShadingRatePaletteEntryNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
-impl ShadingRatePaletteEntryNV {
+impl crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV {
     pub const NO_INVOCATIONS_NV: Self = Self(0);
     pub const _16_INVOCATIONS_PER_PIXEL_NV: Self = Self(1);
     pub const _8_INVOCATIONS_PER_PIXEL_NV: Self = Self(2);
@@ -66,7 +94,7 @@ impl std::fmt::Debug for CoarseSampleOrderTypeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_shading_rate_image`]"]
-impl CoarseSampleOrderTypeNV {
+impl crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV {
     pub const DEFAULT_NV: Self = Self(0);
     pub const CUSTOM_NV: Self = Self(1);
     pub const PIXEL_MAJOR_NV: Self = Self(2);
@@ -81,6 +109,16 @@ pub type PFN_vkCmdSetViewportShadingRatePaletteNV = unsafe extern "system" fn(co
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetCoarseSampleOrderNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV, custom_sample_order_count: u32, p_custom_sample_orders: *const crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShadingRateImageFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportShadingRateImageStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportCoarseSampleOrderStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShadingRateImageFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShadingRateImageFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShadingRateImagePropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShadingRateImagePropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShadingRatePaletteNV.html) · Structure"]
 #[doc(alias = "VkShadingRatePaletteNV")]
 #[derive(Copy, Clone)]
@@ -121,7 +159,8 @@ impl<'a> ShadingRatePaletteNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ShadingRatePaletteNV {
         self.0
     }
@@ -195,7 +234,8 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineViewportShadingRateImageStateCreateInfoNV {
         self.0
     }
@@ -267,7 +307,8 @@ impl<'a> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShadingRateImageFeaturesNV {
         self.0
     }
@@ -345,7 +386,8 @@ impl<'a> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShadingRateImagePropertiesNV {
         self.0
     }
@@ -421,7 +463,8 @@ impl<'a> CoarseSampleLocationNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CoarseSampleLocationNV {
         self.0
     }
@@ -499,7 +542,8 @@ impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CoarseSampleOrderCustomNV {
         self.0
     }
@@ -573,7 +617,8 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
         self.0
     }

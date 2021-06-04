@@ -8,12 +8,24 @@ pub const FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char = 
 pub const FN_GET_MEMORY_ZIRCON_HANDLE_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryZirconHandleFUCHSIA");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryZirconHandlePropertiesFUCHSIA");
+#[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000364000);
+    pub const MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA: Self = Self(1000364001);
+    pub const MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA: Self = Self(1000364002);
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_external_memory`]"]
+impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
+    pub const ZIRCON_VMO_FUCHSIA: Self = Self(2048);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryZirconHandleFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, p_zircon_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, zircon_handle: *mut std::ffi::c_void, p_memory_zircon_handle_properties: *mut crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryZirconHandleInfoFUCHSIA> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportMemoryZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]
@@ -60,7 +72,8 @@ impl<'a> ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportMemoryZirconHandleInfoFUCHSIA {
         self.0
     }
@@ -126,7 +139,8 @@ impl<'a> MemoryZirconHandlePropertiesFUCHSIABuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryZirconHandlePropertiesFUCHSIA {
         self.0
     }
@@ -198,7 +212,8 @@ impl<'a> MemoryGetZirconHandleInfoFUCHSIABuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryGetZirconHandleInfoFUCHSIA {
         self.0
     }

@@ -16,6 +16,20 @@ pub const FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR: *const std::os::raw::c_char = crate:
 pub const FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdCopyImageToBuffer2KHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_RESOLVE_IMAGE2_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdResolveImage2KHR");
+#[doc = "Provided by [`crate::extensions::khr_copy_commands2`]"]
+impl crate::vk1_0::StructureType {
+    pub const COPY_BUFFER_INFO_2_KHR: Self = Self(1000337000);
+    pub const COPY_IMAGE_INFO_2_KHR: Self = Self(1000337001);
+    pub const COPY_BUFFER_TO_IMAGE_INFO_2_KHR: Self = Self(1000337002);
+    pub const COPY_IMAGE_TO_BUFFER_INFO_2_KHR: Self = Self(1000337003);
+    pub const BLIT_IMAGE_INFO_2_KHR: Self = Self(1000337004);
+    pub const RESOLVE_IMAGE_INFO_2_KHR: Self = Self(1000337005);
+    pub const BUFFER_COPY_2_KHR: Self = Self(1000337006);
+    pub const IMAGE_COPY_2_KHR: Self = Self(1000337007);
+    pub const IMAGE_BLIT_2_KHR: Self = Self(1000337008);
+    pub const BUFFER_IMAGE_COPY_2_KHR: Self = Self(1000337009);
+    pub const IMAGE_RESOLVE_2_KHR: Self = Self(1000337010);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer2KHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyBuffer2KHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_copy_buffer_info: *const crate::extensions::khr_copy_commands2::CopyBufferInfo2KHR) -> ();
@@ -86,7 +100,8 @@ impl<'a> BufferCopy2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferCopy2KHR {
         self.0
     }
@@ -176,7 +191,8 @@ impl<'a> ImageCopy2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageCopy2KHR {
         self.0
     }
@@ -230,8 +246,6 @@ impl ImageBlit2KHR {
         ImageBlit2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for ImageBlit2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for ImageBlit2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit2KHR.html) · Builder of [`ImageBlit2KHR`]"]
 #[repr(transparent)]
@@ -262,7 +276,8 @@ impl<'a> ImageBlit2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageBlit2KHR {
         self.0
     }
@@ -318,8 +333,6 @@ impl BufferImageCopy2KHR {
         BufferImageCopy2KHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM> for BufferImageCopy2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOMBuilder<'_>> for BufferImageCopy2KHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy2KHR.html) · Builder of [`BufferImageCopy2KHR`]"]
 #[repr(transparent)]
@@ -360,7 +373,8 @@ impl<'a> BufferImageCopy2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BufferImageCopy2KHR {
         self.0
     }
@@ -450,7 +464,8 @@ impl<'a> ImageResolve2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageResolve2KHR {
         self.0
     }
@@ -530,7 +545,8 @@ impl<'a> CopyBufferInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyBufferInfo2KHR {
         self.0
     }
@@ -622,7 +638,8 @@ impl<'a> CopyImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyImageInfo2KHR {
         self.0
     }
@@ -720,7 +737,8 @@ impl<'a> BlitImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BlitImageInfo2KHR {
         self.0
     }
@@ -806,7 +824,8 @@ impl<'a> CopyBufferToImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyBufferToImageInfo2KHR {
         self.0
     }
@@ -892,7 +911,8 @@ impl<'a> CopyImageToBufferInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyImageToBufferInfo2KHR {
         self.0
     }
@@ -984,7 +1004,8 @@ impl<'a> ResolveImageInfo2KHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ResolveImageInfo2KHR {
         self.0
     }

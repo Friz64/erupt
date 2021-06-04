@@ -6,6 +6,12 @@ pub const NV_COOPERATIVE_MATRIX_SPEC_VERSION: u32 = 1;
 pub const NV_COOPERATIVE_MATRIX_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_cooperative_matrix");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceCooperativeMatrixPropertiesNV");
+#[doc = "Provided by [`crate::extensions::nv_cooperative_matrix`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV: Self = Self(1000249000);
+    pub const COOPERATIVE_MATRIX_PROPERTIES_NV: Self = Self(1000249001);
+    pub const PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV: Self = Self(1000249002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScopeNV.html) · Enum"]
 #[doc(alias = "VkScopeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -23,7 +29,7 @@ impl std::fmt::Debug for ScopeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_cooperative_matrix`]"]
-impl ScopeNV {
+impl crate::extensions::nv_cooperative_matrix::ScopeNV {
     pub const DEVICE_NV: Self = Self(1);
     pub const WORKGROUP_NV: Self = Self(2);
     pub const SUBGROUP_NV: Self = Self(3);
@@ -53,7 +59,7 @@ impl std::fmt::Debug for ComponentTypeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_cooperative_matrix`]"]
-impl ComponentTypeNV {
+impl crate::extensions::nv_cooperative_matrix::ComponentTypeNV {
     pub const FLOAT16_NV: Self = Self(0);
     pub const FLOAT32_NV: Self = Self(1);
     pub const FLOAT64_NV: Self = Self(2);
@@ -69,6 +75,12 @@ impl ComponentTypeNV {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_property_count: *mut u32, p_properties: *mut crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCooperativeMatrixFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCooperativeMatrixFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCooperativeMatrixPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -115,7 +127,8 @@ impl<'a> PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceCooperativeMatrixFeaturesNV {
         self.0
     }
@@ -181,7 +194,8 @@ impl<'a> PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceCooperativeMatrixPropertiesNV {
         self.0
     }
@@ -289,7 +303,8 @@ impl<'a> CooperativeMatrixPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CooperativeMatrixPropertiesNV {
         self.0
     }

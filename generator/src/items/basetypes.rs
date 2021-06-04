@@ -10,7 +10,10 @@ use crate::{
 use lang_c::ast::{Declaration as CDeclaration, DeclarationSpecifier, TypeSpecifier};
 use proc_macro2::TokenStream;
 use quote::quote;
-use std::convert::{TryFrom, TryInto};
+use std::{
+    collections::HashMap,
+    convert::{TryFrom, TryInto},
+};
 
 #[derive(Debug)]
 pub struct Basetype {
@@ -20,18 +23,30 @@ pub struct Basetype {
 }
 
 impl Basetype {
-    pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        source: &Source,
+    ) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("Basetype missing origin");
+
         let ident = self.name.ident();
         let doc_alias = self.name.doc_alias();
 
         let ty = self.ty.rust_type(source);
         let doc = comment_gen.def(Some(&self.name.original), "Basetype", self.origin.as_ref());
 
-        quote! {
-            #[doc = #doc]
-            #doc_alias
-            pub type #ident = #ty;
-        }
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #[doc = #doc]
+                #doc_alias
+                pub type #ident = #ty;
+            },
+        );
+
+        tokens
     }
 }
 

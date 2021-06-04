@@ -31,3 +31,13 @@ pub type ExportMemoryAllocateInfoKHR = crate::vk1_1::ExportMemoryAllocateInfo;
 #[doc(alias = "VkExportMemoryAllocateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ExportMemoryAllocateInfoKHRBuilder<'a> = crate::vk1_1::ExportMemoryAllocateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_external_memory`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_INVALID_EXTERNAL_HANDLE_KHR: Self = Self::ERROR_INVALID_EXTERNAL_HANDLE;
+}
+#[doc = "Provided by [`crate::extensions::khr_external_memory`]"]
+impl crate::vk1_0::StructureType {
+    pub const EXTERNAL_MEMORY_BUFFER_CREATE_INFO_KHR: Self = Self::EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
+    pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO_KHR: Self = Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO;
+    pub const EXPORT_MEMORY_ALLOCATE_INFO_KHR: Self = Self::EXPORT_MEMORY_ALLOCATE_INFO;
+}

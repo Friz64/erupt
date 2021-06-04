@@ -8,12 +8,18 @@ pub const GOOGLE_DISPLAY_TIMING_EXTENSION_NAME: *const std::os::raw::c_char = cr
 pub const FN_GET_REFRESH_CYCLE_DURATION_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetRefreshCycleDurationGOOGLE");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char = crate::cstr!("vkGetPastPresentationTimingGOOGLE");
+#[doc = "Provided by [`crate::extensions::google_display_timing`]"]
+impl crate::vk1_0::StructureType {
+    pub const PRESENT_TIMES_INFO_GOOGLE: Self = Self(1000092000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_presentation_timing_count: *mut u32, p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, PresentTimesInfoGOOGLE> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PresentTimesInfoGOOGLEBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure"]
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
 #[derive(Copy, Clone)]
@@ -52,7 +58,8 @@ impl<'a> RefreshCycleDurationGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RefreshCycleDurationGOOGLE {
         self.0
     }
@@ -140,7 +147,8 @@ impl<'a> PastPresentationTimingGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PastPresentationTimingGOOGLE {
         self.0
     }
@@ -208,7 +216,8 @@ impl<'a> PresentTimesInfoGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PresentTimesInfoGOOGLE {
         self.0
     }
@@ -278,7 +287,8 @@ impl<'a> PresentTimeGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PresentTimeGOOGLE {
         self.0
     }

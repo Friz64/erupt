@@ -16,6 +16,22 @@ pub const FN_DESTROY_CU_FUNCTION_NVX: *const std::os::raw::c_char = crate::cstr!
 pub const FN_CMD_CU_LAUNCH_KERNEL_NVX: *const std::os::raw::c_char = crate::cstr!("vkCmdCuLaunchKernelNVX");
 crate::non_dispatchable_handle!(CuModuleNVX, CU_MODULE_NVX, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuModuleNVX.html) · Non-dispatchable Handle", "VkCuModuleNVX");
 crate::non_dispatchable_handle!(CuFunctionNVX, CU_FUNCTION_NVX, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuFunctionNVX.html) · Non-dispatchable Handle", "VkCuFunctionNVX");
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl crate::vk1_0::StructureType {
+    pub const CU_MODULE_CREATE_INFO_NVX: Self = Self(1000029000);
+    pub const CU_FUNCTION_CREATE_INFO_NVX: Self = Self(1000029001);
+    pub const CU_LAUNCH_INFO_NVX: Self = Self(1000029002);
+}
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl crate::vk1_0::ObjectType {
+    pub const CU_MODULE_NVX: Self = Self(1000029000);
+    pub const CU_FUNCTION_NVX: Self = Self(1000029001);
+}
+#[doc = "Provided by [`crate::extensions::nvx_binary_import`]"]
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
+    pub const CU_MODULE_NVX_EXT: Self = Self(1000029000);
+    pub const CU_FUNCTION_NVX_EXT: Self = Self(1000029001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuModuleNVX.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateCuModuleNVX = unsafe extern "system" fn(device: crate::vk1_0::Device, p_create_info: *const crate::extensions::nvx_binary_import::CuModuleCreateInfoNVX, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_module: *mut crate::extensions::nvx_binary_import::CuModuleNVX) -> crate::vk1_0::Result;
@@ -77,7 +93,8 @@ impl<'a> CuModuleCreateInfoNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CuModuleCreateInfoNVX {
         self.0
     }
@@ -149,7 +166,8 @@ impl<'a> CuFunctionCreateInfoNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CuFunctionCreateInfoNVX {
         self.0
     }
@@ -281,7 +299,8 @@ impl<'a> CuLaunchInfoNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CuLaunchInfoNVX {
         self.0
     }

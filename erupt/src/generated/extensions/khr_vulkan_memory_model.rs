@@ -12,3 +12,7 @@ pub type PhysicalDeviceVulkanMemoryModelFeaturesKHR = crate::vk1_2::PhysicalDevi
 #[doc(alias = "VkPhysicalDeviceVulkanMemoryModelFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceVulkanMemoryModelFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_vulkan_memory_model`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES;
+}

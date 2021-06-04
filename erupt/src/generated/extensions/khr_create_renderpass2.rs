@@ -81,6 +81,16 @@ pub type PFN_vkCmdNextSubpass2KHR = crate::vk1_2::PFN_vkCmdNextSubpass2;
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndRenderPass2KHR = crate::vk1_2::PFN_vkCmdEndRenderPass2;
 #[doc = "Provided by [`crate::extensions::khr_create_renderpass2`]"]
+impl crate::vk1_0::StructureType {
+    pub const ATTACHMENT_DESCRIPTION_2_KHR: Self = Self::ATTACHMENT_DESCRIPTION_2;
+    pub const ATTACHMENT_REFERENCE_2_KHR: Self = Self::ATTACHMENT_REFERENCE_2;
+    pub const SUBPASS_DESCRIPTION_2_KHR: Self = Self::SUBPASS_DESCRIPTION_2;
+    pub const SUBPASS_DEPENDENCY_2_KHR: Self = Self::SUBPASS_DEPENDENCY_2;
+    pub const RENDER_PASS_CREATE_INFO_2_KHR: Self = Self::RENDER_PASS_CREATE_INFO_2;
+    pub const SUBPASS_BEGIN_INFO_KHR: Self = Self::SUBPASS_BEGIN_INFO;
+    pub const SUBPASS_END_INFO_KHR: Self = Self::SUBPASS_END_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_create_renderpass2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

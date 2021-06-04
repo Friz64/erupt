@@ -4,6 +4,10 @@ pub const EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME")]
 pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_pipeline_creation_feedback");
+#[doc = "Provided by [`crate::extensions::ext_pipeline_creation_feedback`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT: Self = Self(1000192000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`]"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`]"]
 #[doc(alias = "VkPipelineCreationFeedbackFlagBitsEXT")]
@@ -28,11 +32,19 @@ impl std::fmt::Debug for PipelineCreationFeedbackFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_pipeline_creation_feedback`]"]
-impl PipelineCreationFeedbackFlagBitsEXT {
+impl crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackFlagBitsEXT {
     pub const VALID_EXT: Self = Self(1);
     pub const APPLICATION_PIPELINE_CACHE_HIT_EXT: Self = Self(2);
     pub const BASE_PIPELINE_ACCELERATION_EXT: Self = Self(4);
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Structure"]
 #[doc(alias = "VkPipelineCreationFeedbackEXT")]
 #[derive(Copy, Clone)]
@@ -77,7 +89,8 @@ impl<'a> PipelineCreationFeedbackEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCreationFeedbackEXT {
         self.0
     }
@@ -151,7 +164,8 @@ impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCreationFeedbackCreateInfoEXT {
         self.0
     }

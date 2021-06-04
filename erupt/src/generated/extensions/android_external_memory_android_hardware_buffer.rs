@@ -10,12 +10,33 @@ pub const FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: *const std::os::raw
 pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryAndroidHardwareBufferANDROID");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/AHardwareBuffer.html) · Basetype"]
 pub type AHardwareBuffer = std::ffi::c_void;
+#[doc = "Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]"]
+impl crate::vk1_0::StructureType {
+    pub const ANDROID_HARDWARE_BUFFER_USAGE_ANDROID: Self = Self(1000129000);
+    pub const ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: Self = Self(1000129001);
+    pub const ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID: Self = Self(1000129002);
+    pub const IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID: Self = Self(1000129003);
+    pub const MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID: Self = Self(1000129004);
+    pub const EXTERNAL_FORMAT_ANDROID: Self = Self(1000129005);
+}
+#[doc = "Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]"]
+impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
+    pub const ANDROID_HARDWARE_BUFFER_ANDROID: Self = Self(1024);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn(device: crate::vk1_0::Device, buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer, p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID, p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImportAndroidHardwareBufferInfoANDROID> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROID> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferUsageANDROID> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferUsageANDROIDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROID> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure"]
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone)]
@@ -56,7 +77,8 @@ impl<'a> ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportAndroidHardwareBufferInfoANDROID {
         self.0
     }
@@ -122,7 +144,8 @@ impl<'a> AndroidHardwareBufferUsageANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AndroidHardwareBufferUsageANDROID {
         self.0
     }
@@ -174,8 +197,8 @@ impl AndroidHardwareBufferPropertiesANDROID {
         AndroidHardwareBufferPropertiesANDROIDBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROID> for AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]
 #[repr(transparent)]
@@ -196,7 +219,8 @@ impl<'a> AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AndroidHardwareBufferPropertiesANDROID {
         self.0
     }
@@ -262,7 +286,8 @@ impl<'a> MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryGetAndroidHardwareBufferInfoANDROID {
         self.0
     }
@@ -370,7 +395,8 @@ impl<'a> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AndroidHardwareBufferFormatPropertiesANDROID {
         self.0
     }
@@ -436,7 +462,8 @@ impl<'a> ExternalFormatANDROIDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalFormatANDROID {
         self.0
     }

@@ -60,6 +60,16 @@ impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::khr_display`]"]
+impl crate::vk1_0::StructureType {
+    pub const DISPLAY_MODE_CREATE_INFO_KHR: Self = Self(1000002000);
+    pub const DISPLAY_SURFACE_CREATE_INFO_KHR: Self = Self(1000002001);
+}
+#[doc = "Provided by [`crate::extensions::khr_display`]"]
+impl crate::vk1_0::ObjectType {
+    pub const DISPLAY_KHR: Self = Self(1000002000);
+    pub const DISPLAY_MODE_KHR: Self = Self(1000002001);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"] # [doc (alias = "VkDisplayPlaneAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`]"]
 #[doc(alias = "VkDisplayPlaneAlphaFlagBitsKHR")]
@@ -85,7 +95,7 @@ impl std::fmt::Debug for DisplayPlaneAlphaFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_display`]"]
-impl DisplayPlaneAlphaFlagBitsKHR {
+impl crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const GLOBAL_KHR: Self = Self(2);
     pub const PER_PIXEL_KHR: Self = Self(4);
@@ -186,7 +196,8 @@ impl<'a> DisplayPropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPropertiesKHR {
         self.0
     }
@@ -256,7 +267,8 @@ impl<'a> DisplayPlanePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPlanePropertiesKHR {
         self.0
     }
@@ -326,7 +338,8 @@ impl<'a> DisplayModeParametersKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayModeParametersKHR {
         self.0
     }
@@ -396,7 +409,8 @@ impl<'a> DisplayModePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayModePropertiesKHR {
         self.0
     }
@@ -468,7 +482,8 @@ impl<'a> DisplayModeCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayModeCreateInfoKHR {
         self.0
     }
@@ -580,7 +595,8 @@ impl<'a> DisplayPlaneCapabilitiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPlaneCapabilitiesKHR {
         self.0
     }
@@ -688,7 +704,8 @@ impl<'a> DisplaySurfaceCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplaySurfaceCreateInfoKHR {
         self.0
     }

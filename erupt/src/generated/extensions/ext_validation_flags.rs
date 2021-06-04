@@ -4,6 +4,10 @@ pub const EXT_VALIDATION_FLAGS_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME")]
 pub const EXT_VALIDATION_FLAGS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_validation_flags");
+#[doc = "Provided by [`crate::extensions::ext_validation_flags`]"]
+impl crate::vk1_0::StructureType {
+    pub const VALIDATION_FLAGS_EXT: Self = Self(1000061000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCheckEXT.html) · Enum"]
 #[doc(alias = "VkValidationCheckEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -19,10 +23,12 @@ impl std::fmt::Debug for ValidationCheckEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_validation_flags`]"]
-impl ValidationCheckEXT {
+impl crate::extensions::ext_validation_flags::ValidationCheckEXT {
     pub const ALL_EXT: Self = Self(0);
     pub const SHADERS_EXT: Self = Self(1);
 }
+impl<'a> crate::ExtendableFromConst<'a, ValidationFlagsEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ValidationFlagsEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Structure"]
 #[doc(alias = "VkValidationFlagsEXT")]
 #[derive(Copy, Clone)]
@@ -65,7 +71,8 @@ impl<'a> ValidationFlagsEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ValidationFlagsEXT {
         self.0
     }

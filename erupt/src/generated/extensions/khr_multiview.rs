@@ -28,3 +28,13 @@ pub type RenderPassMultiviewCreateInfoKHR = crate::vk1_1::RenderPassMultiviewCre
 #[doc(alias = "VkRenderPassMultiviewCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassMultiviewCreateInfoKHRBuilder<'a> = crate::vk1_1::RenderPassMultiviewCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_multiview`]"]
+impl crate::vk1_0::StructureType {
+    pub const RENDER_PASS_MULTIVIEW_CREATE_INFO_KHR: Self = Self::RENDER_PASS_MULTIVIEW_CREATE_INFO;
+    pub const PHYSICAL_DEVICE_MULTIVIEW_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_MULTIVIEW_FEATURES;
+    pub const PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_multiview`]"]
+impl crate::vk1_0::DependencyFlagBits {
+    pub const VIEW_LOCAL_KHR: Self = Self::VIEW_LOCAL;
+}

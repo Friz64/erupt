@@ -16,3 +16,13 @@ pub type PhysicalDeviceFloatControlsPropertiesKHR = crate::vk1_2::PhysicalDevice
 #[doc(alias = "VkPhysicalDeviceFloatControlsPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceFloatControlsPropertiesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceFloatControlsPropertiesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
+impl crate::vk1_2::ShaderFloatControlsIndependence {
+    pub const _32_ONLY_KHR: Self = Self::_32_ONLY;
+    pub const ALL_KHR: Self = Self::ALL;
+    pub const NONE_KHR: Self = Self::NONE;
+}

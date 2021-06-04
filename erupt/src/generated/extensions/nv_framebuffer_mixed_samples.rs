@@ -24,6 +24,10 @@ impl std::fmt::Debug for PipelineCoverageModulationStateCreateFlagBitsNV {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::nv_framebuffer_mixed_samples`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV: Self = Self(1000152000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoverageModulationModeNV.html) · Enum"]
 #[doc(alias = "VkCoverageModulationModeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -41,12 +45,14 @@ impl std::fmt::Debug for CoverageModulationModeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_framebuffer_mixed_samples`]"]
-impl CoverageModulationModeNV {
+impl crate::extensions::nv_framebuffer_mixed_samples::CoverageModulationModeNV {
     pub const NONE_NV: Self = Self(0);
     pub const RGB_NV: Self = Self(1);
     pub const ALPHA_NV: Self = Self(2);
     pub const RGBA_NV: Self = Self(3);
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageModulationStateCreateInfoNV> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageModulationStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineCoverageModulationStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -107,7 +113,8 @@ impl<'a> PipelineCoverageModulationStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCoverageModulationStateCreateInfoNV {
         self.0
     }

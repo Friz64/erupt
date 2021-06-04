@@ -4,6 +4,11 @@ pub const NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME")]
 pub const NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_device_diagnostics_config");
+#[doc = "Provided by [`crate::extensions::nv_device_diagnostics_config`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
+    pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagsNV.html) · Bitmask of [`DeviceDiagnosticsConfigFlagBitsNV`]"] # [doc (alias = "VkDeviceDiagnosticsConfigFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct DeviceDiagnosticsConfigFlagsNV : u32 { const ENABLE_SHADER_DEBUG_INFO_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_SHADER_DEBUG_INFO_NV . 0 ; const ENABLE_RESOURCE_TRACKING_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_RESOURCE_TRACKING_NV . 0 ; const ENABLE_AUTOMATIC_CHECKPOINTS_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_AUTOMATIC_CHECKPOINTS_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagBitsNV.html) · Bits enum of [`DeviceDiagnosticsConfigFlagsNV`]"]
 #[doc(alias = "VkDeviceDiagnosticsConfigFlagBitsNV")]
@@ -28,11 +33,17 @@ impl std::fmt::Debug for DeviceDiagnosticsConfigFlagBitsNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_device_diagnostics_config`]"]
-impl DeviceDiagnosticsConfigFlagBitsNV {
+impl crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigFlagBitsNV {
     pub const ENABLE_SHADER_DEBUG_INFO_NV: Self = Self(1);
     pub const ENABLE_RESOURCE_TRACKING_NV: Self = Self(2);
     pub const ENABLE_AUTOMATIC_CHECKPOINTS_NV: Self = Self(4);
 }
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceDiagnosticsConfigCreateInfoNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DeviceDiagnosticsConfigCreateInfoNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDiagnosticsConfigFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -73,7 +84,8 @@ impl<'a> PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDiagnosticsConfigFeaturesNV {
         self.0
     }
@@ -139,7 +151,8 @@ impl<'a> DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceDiagnosticsConfigCreateInfoNV {
         self.0
     }

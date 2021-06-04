@@ -24,6 +24,10 @@ impl std::fmt::Debug for PipelineViewportSwizzleStateCreateFlagBitsNV {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::nv_viewport_swizzle`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV: Self = Self(1000098000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportCoordinateSwizzleNV.html) · Enum"]
 #[doc(alias = "VkViewportCoordinateSwizzleNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -45,7 +49,7 @@ impl std::fmt::Debug for ViewportCoordinateSwizzleNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_viewport_swizzle`]"]
-impl ViewportCoordinateSwizzleNV {
+impl crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV {
     pub const POSITIVE_X_NV: Self = Self(0);
     pub const NEGATIVE_X_NV: Self = Self(1);
     pub const POSITIVE_Y_NV: Self = Self(2);
@@ -55,6 +59,8 @@ impl ViewportCoordinateSwizzleNV {
     pub const POSITIVE_W_NV: Self = Self(6);
     pub const NEGATIVE_W_NV: Self = Self(7);
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportSwizzleNV.html) · Structure"]
 #[doc(alias = "VkViewportSwizzleNV")]
 #[derive(Copy, Clone)]
@@ -111,7 +117,8 @@ impl<'a> ViewportSwizzleNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ViewportSwizzleNV {
         self.0
     }
@@ -185,7 +192,8 @@ impl<'a> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineViewportSwizzleStateCreateInfoNV {
         self.0
     }

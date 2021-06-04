@@ -31,7 +31,7 @@ impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBitsNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
-impl ExternalMemoryHandleTypeFlagBitsNV {
+impl crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagBitsNV {
     pub const OPAQUE_WIN32_NV: Self = Self(1);
     pub const OPAQUE_WIN32_KMT_NV: Self = Self(2);
     pub const D3D11_IMAGE_NV: Self = Self(4);
@@ -61,7 +61,7 @@ impl std::fmt::Debug for ExternalMemoryFeatureFlagBitsNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_external_memory_capabilities`]"]
-impl ExternalMemoryFeatureFlagBitsNV {
+impl crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFlagBitsNV {
     pub const DEDICATED_ONLY_NV: Self = Self(1);
     pub const EXPORTABLE_NV: Self = Self(2);
     pub const IMPORTABLE_NV: Self = Self(4);
@@ -125,7 +125,8 @@ impl<'a> ExternalImageFormatPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalImageFormatPropertiesNV {
         self.0
     }

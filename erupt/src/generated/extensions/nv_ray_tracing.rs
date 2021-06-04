@@ -99,6 +99,108 @@ pub type AccelerationStructureInstanceNVBuilder<'a> = crate::extensions::khr_acc
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRayTracingShaderGroupHandlesNV = crate::extensions::khr_ray_tracing_pipeline::PFN_vkGetRayTracingShaderGroupHandlesKHR;
 crate::non_dispatchable_handle!(AccelerationStructureNV, ACCELERATION_STRUCTURE_NV, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureNV.html) · Non-dispatchable Handle", "VkAccelerationStructureNV");
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const RAY_TRACING_NV: Self = Self::SHADER_BINDING_TABLE_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::DescriptorType {
+    pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::IndexType {
+    pub const NONE_NV: Self = Self::NONE_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const ACCELERATION_STRUCTURE_READ_NV: Self = Self::ACCELERATION_STRUCTURE_READ_KHR;
+    pub const ACCELERATION_STRUCTURE_WRITE_NV: Self = Self::ACCELERATION_STRUCTURE_WRITE_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::PipelineBindPoint {
+    pub const RAY_TRACING_NV: Self = Self::RAY_TRACING_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::PipelineCreateFlagBits {
+    pub const DEFER_COMPILE_NV: Self = Self(32);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::QueryType {
+    pub const ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::ShaderStageFlagBits {
+    pub const RAYGEN_NV: Self = Self::RAYGEN_KHR;
+    pub const ANY_HIT_NV: Self = Self::ANY_HIT_KHR;
+    pub const CLOSEST_HIT_NV: Self = Self::CLOSEST_HIT_KHR;
+    pub const MISS_NV: Self = Self::MISS_KHR;
+    pub const INTERSECTION_NV: Self = Self::INTERSECTION_KHR;
+    pub const CALLABLE_NV: Self = Self::CALLABLE_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::StructureType {
+    pub const RAY_TRACING_PIPELINE_CREATE_INFO_NV: Self = Self(1000165000);
+    pub const ACCELERATION_STRUCTURE_CREATE_INFO_NV: Self = Self(1000165001);
+    pub const GEOMETRY_NV: Self = Self(1000165003);
+    pub const GEOMETRY_TRIANGLES_NV: Self = Self(1000165004);
+    pub const GEOMETRY_AABB_NV: Self = Self(1000165005);
+    pub const BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV: Self = Self(1000165006);
+    pub const WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV: Self = Self(1000165007);
+    pub const ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV: Self = Self(1000165008);
+    pub const PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV: Self = Self(1000165009);
+    pub const RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV: Self = Self(1000165011);
+    pub const ACCELERATION_STRUCTURE_INFO_NV: Self = Self(1000165012);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const RAY_TRACING_SHADER_NV: Self = Self::RAY_TRACING_SHADER_KHR;
+    pub const ACCELERATION_STRUCTURE_BUILD_NV: Self = Self::ACCELERATION_STRUCTURE_BUILD_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::vk1_0::ObjectType {
+    pub const ACCELERATION_STRUCTURE_NV: Self = Self(1000165000);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::GeometryFlagBitsKHR {
+    pub const OPAQUE_NV: Self = Self::OPAQUE_KHR;
+    pub const NO_DUPLICATE_ANY_HIT_INVOCATION_NV: Self = Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR {
+    pub const TRIANGLE_CULL_DISABLE_NV: Self = Self::TRIANGLE_FACING_CULL_DISABLE_KHR;
+    pub const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV: Self = Self::TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR;
+    pub const FORCE_OPAQUE_NV: Self = Self::FORCE_OPAQUE_KHR;
+    pub const FORCE_NO_OPAQUE_NV: Self = Self::FORCE_NO_OPAQUE_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagBitsKHR {
+    pub const ALLOW_UPDATE_NV: Self = Self::ALLOW_UPDATE_KHR;
+    pub const ALLOW_COMPACTION_NV: Self = Self::ALLOW_COMPACTION_KHR;
+    pub const PREFER_FAST_TRACE_NV: Self = Self::PREFER_FAST_TRACE_KHR;
+    pub const PREFER_FAST_BUILD_NV: Self = Self::PREFER_FAST_BUILD_KHR;
+    pub const LOW_MEMORY_NV: Self = Self::LOW_MEMORY_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR {
+    pub const CLONE_NV: Self = Self::CLONE_KHR;
+    pub const COMPACT_NV: Self = Self::COMPACT_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR {
+    pub const TOP_LEVEL_NV: Self = Self::TOP_LEVEL_KHR;
+    pub const BOTTOM_LEVEL_NV: Self = Self::BOTTOM_LEVEL_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_acceleration_structure::GeometryTypeKHR {
+    pub const TRIANGLES_NV: Self = Self::TRIANGLES_KHR;
+    pub const AABBS_NV: Self = Self::AABBS_KHR;
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR {
+    pub const GENERAL_NV: Self = Self::GENERAL_KHR;
+    pub const TRIANGLES_HIT_GROUP_NV: Self = Self::TRIANGLES_HIT_GROUP_KHR;
+    pub const PROCEDURAL_HIT_GROUP_NV: Self = Self::PROCEDURAL_HIT_GROUP_KHR;
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsTypeNV.html) · Enum"]
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -115,10 +217,14 @@ impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeNV {
     }
 }
 #[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
-impl AccelerationStructureMemoryRequirementsTypeNV {
+impl crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsTypeNV {
     pub const OBJECT_NV: Self = Self(0);
     pub const BUILD_SCRATCH_NV: Self = Self(1);
     pub const UPDATE_SCRATCH_NV: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::nv_ray_tracing`]"]
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
+    pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self(1000165000);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function"]
 #[allow(non_camel_case_types)]
@@ -153,6 +259,10 @@ pub type PFN_vkGetAccelerationStructureHandleNV = unsafe extern "system" fn(devi
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRayTracingPipelinesNV = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, create_info_count: u32, p_create_infos: *const crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipelines: *mut crate::vk1_0::Pipeline) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureNV> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureNVBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -217,7 +327,8 @@ impl<'a> RayTracingShaderGroupCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RayTracingShaderGroupCreateInfoNV {
         self.0
     }
@@ -276,8 +387,6 @@ impl RayTracingPipelineCreateInfoNV {
         RayTracingPipelineCreateInfoNVBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT> for RayTracingPipelineCreateInfoNVBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for RayTracingPipelineCreateInfoNVBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Builder of [`RayTracingPipelineCreateInfoNV`]"]
 #[repr(transparent)]
@@ -325,7 +434,8 @@ impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> RayTracingPipelineCreateInfoNV {
         self.0
     }
@@ -451,7 +561,8 @@ impl<'a> GeometryTrianglesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeometryTrianglesNV {
         self.0
     }
@@ -535,7 +646,8 @@ impl<'a> GeometryAABBNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeometryAABBNV {
         self.0
     }
@@ -605,7 +717,8 @@ impl<'a> GeometryDataNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeometryDataNV {
         self.0
     }
@@ -683,7 +796,8 @@ impl<'a> GeometryNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> GeometryNV {
         self.0
     }
@@ -769,7 +883,8 @@ impl<'a> AccelerationStructureInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureInfoNV {
         self.0
     }
@@ -841,7 +956,8 @@ impl<'a> AccelerationStructureCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureCreateInfoNV {
         self.0
     }
@@ -927,7 +1043,8 @@ impl<'a> BindAccelerationStructureMemoryInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> BindAccelerationStructureMemoryInfoNV {
         self.0
     }
@@ -995,7 +1112,8 @@ impl<'a> WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> WriteDescriptorSetAccelerationStructureNV {
         self.0
     }
@@ -1067,7 +1185,8 @@ impl<'a> AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> AccelerationStructureMemoryRequirementsInfoNV {
         self.0
     }
@@ -1175,7 +1294,8 @@ impl<'a> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceRayTracingPropertiesNV {
         self.0
     }

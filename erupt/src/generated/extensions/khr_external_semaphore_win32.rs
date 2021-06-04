@@ -8,12 +8,23 @@ pub const KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME: *const std::os::raw::c_ch
 pub const FN_GET_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetSemaphoreWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_IMPORT_SEMAPHORE_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportSemaphoreWin32HandleKHR");
+#[doc = "Provided by [`crate::extensions::khr_external_semaphore_win32`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR: Self = Self(1000078000);
+    pub const EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR: Self = Self(1000078001);
+    pub const D3D12_FENCE_SUBMIT_INFO_KHR: Self = Self(1000078002);
+    pub const SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000078003);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreWin32HandleInfoKHR> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, D3D12FenceSubmitInfoKHR> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, D3D12FenceSubmitInfoKHRBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -78,7 +89,8 @@ impl<'a> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportSemaphoreWin32HandleInfoKHR {
         self.0
     }
@@ -156,7 +168,8 @@ impl<'a> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportSemaphoreWin32HandleInfoKHR {
         self.0
     }
@@ -232,7 +245,8 @@ impl<'a> D3D12FenceSubmitInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> D3D12FenceSubmitInfoKHR {
         self.0
     }
@@ -304,7 +318,8 @@ impl<'a> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SemaphoreGetWin32HandleInfoKHR {
         self.0
     }

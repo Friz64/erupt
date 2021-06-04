@@ -31,6 +31,15 @@ pub type PFN_vkBindBufferMemory2KHR = crate::vk1_1::PFN_vkBindBufferMemory2;
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindImageMemory2KHR = crate::vk1_1::PFN_vkBindImageMemory2;
 #[doc = "Provided by [`crate::extensions::khr_bind_memory2`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const ALIAS_KHR: Self = Self::ALIAS;
+}
+#[doc = "Provided by [`crate::extensions::khr_bind_memory2`]"]
+impl crate::vk1_0::StructureType {
+    pub const BIND_BUFFER_MEMORY_INFO_KHR: Self = Self::BIND_BUFFER_MEMORY_INFO;
+    pub const BIND_IMAGE_MEMORY_INFO_KHR: Self = Self::BIND_IMAGE_MEMORY_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_bind_memory2`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

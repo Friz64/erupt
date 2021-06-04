@@ -26,6 +26,10 @@ impl std::fmt::Debug for MacOSSurfaceCreateFlagBitsMVK {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::mvk_macos_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const MACOS_SURFACE_CREATE_INFO_MVK: Self = Self(1000123000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateMacOSSurfaceMVK = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -75,7 +79,8 @@ impl<'a> MacOSSurfaceCreateInfoMVKBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MacOSSurfaceCreateInfoMVK {
         self.0
     }

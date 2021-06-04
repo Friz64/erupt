@@ -19,7 +19,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::{cmp::Ordering, convert::TryFrom};
+use std::{cmp::Ordering, collections::HashMap, convert::TryFrom};
 
 impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
     fn from(field: &'a StructField) -> Self {
@@ -211,7 +211,12 @@ impl Structure {
         self.kind == StructureKind::Struct
     }
 
-    pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        source: &Source,
+    ) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("Structure missing origin");
         let ident = self.name.ident();
 
         let doc_alias = self.name.doc_alias();
@@ -258,30 +263,40 @@ impl Structure {
             },
         };
 
-        let builder = self.builder(source, comment_gen);
-        quote! {
-            #[doc = #doc]
-            #doc_alias
-            #[derive(Copy, Clone)]
-            #[repr(C)]
-            pub #keyword #ident {
-                #(pub #field_idents: #field_types),*
-            }
-
-            impl Default for #ident {
-                fn default() -> Self {
-                    #default_impl
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #[doc = #doc]
+                #doc_alias
+                #[derive(Copy, Clone)]
+                #[repr(C)]
+                pub #keyword #ident {
+                    #(pub #field_idents: #field_types),*
                 }
-            }
 
-            impl std::fmt::Debug for #ident {
-                fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-                    #debug_impl
+                impl Default for #ident {
+                    fn default() -> Self {
+                        #default_impl
+                    }
                 }
-            }
 
-            #builder
+                impl std::fmt::Debug for #ident {
+                    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+                        #debug_impl
+                    }
+                }
+            },
+        );
+
+        for (origin, tokens_inner) in self.builder(source, comment_gen) {
+            tokens
+                .entry(origin)
+                .or_insert_with(TokenStream::new)
+                .extend(tokens_inner);
         }
+
+        tokens
     }
 
     pub fn has_p_next(&self, kind: Mutability) -> bool {

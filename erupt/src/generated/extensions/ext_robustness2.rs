@@ -4,6 +4,17 @@ pub const EXT_ROBUSTNESS_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_ROBUSTNESS_2_EXTENSION_NAME")]
 pub const EXT_ROBUSTNESS_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_robustness2");
+#[doc = "Provided by [`crate::extensions::ext_robustness2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT: Self = Self(1000286000);
+    pub const PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT: Self = Self(1000286001);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRobustness2FeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRobustness2FeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRobustness2FeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRobustness2PropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRobustness2PropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRobustness2FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -56,7 +67,8 @@ impl<'a> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceRobustness2FeaturesEXT {
         self.0
     }
@@ -128,7 +140,8 @@ impl<'a> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceRobustness2PropertiesEXT {
         self.0
     }

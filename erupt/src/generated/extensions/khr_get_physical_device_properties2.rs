@@ -112,6 +112,18 @@ pub type PFN_vkGetPhysicalDeviceMemoryProperties2KHR = crate::vk1_1::PFN_vkGetPh
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR = crate::vk1_1::PFN_vkGetPhysicalDeviceSparseImageFormatProperties2;
 #[doc = "Provided by [`crate::extensions::khr_get_physical_device_properties2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_FEATURES_2_KHR: Self = Self::PHYSICAL_DEVICE_FEATURES_2;
+    pub const PHYSICAL_DEVICE_PROPERTIES_2_KHR: Self = Self::PHYSICAL_DEVICE_PROPERTIES_2;
+    pub const FORMAT_PROPERTIES_2_KHR: Self = Self::FORMAT_PROPERTIES_2;
+    pub const IMAGE_FORMAT_PROPERTIES_2_KHR: Self = Self::IMAGE_FORMAT_PROPERTIES_2;
+    pub const PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2_KHR: Self = Self::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
+    pub const QUEUE_FAMILY_PROPERTIES_2_KHR: Self = Self::QUEUE_FAMILY_PROPERTIES_2;
+    pub const PHYSICAL_DEVICE_MEMORY_PROPERTIES_2_KHR: Self = Self::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2;
+    pub const SPARSE_IMAGE_FORMAT_PROPERTIES_2_KHR: Self = Self::SPARSE_IMAGE_FORMAT_PROPERTIES_2;
+    pub const PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2_KHR: Self = Self::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
+}
+#[doc = "Provided by [`crate::extensions::khr_get_physical_device_properties2`]"]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]

@@ -4,6 +4,15 @@ pub const NV_EXTERNAL_MEMORY_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME")]
 pub const NV_EXTERNAL_MEMORY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_external_memory");
+#[doc = "Provided by [`crate::extensions::nv_external_memory`]"]
+impl crate::vk1_0::StructureType {
+    pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV: Self = Self(1000056000);
+    pub const EXPORT_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000056001);
+}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -44,7 +53,8 @@ impl<'a> ExternalMemoryImageCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExternalMemoryImageCreateInfoNV {
         self.0
     }
@@ -110,7 +120,8 @@ impl<'a> ExportMemoryAllocateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportMemoryAllocateInfoNV {
         self.0
     }

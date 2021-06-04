@@ -28,6 +28,10 @@ impl std::fmt::Debug for XcbSurfaceCreateFlagBitsKHR {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::khr_xcb_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const XCB_SURFACE_CREATE_INFO_KHR: Self = Self(1000005000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -86,7 +90,8 @@ impl<'a> XcbSurfaceCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> XcbSurfaceCreateInfoKHR {
         self.0
     }

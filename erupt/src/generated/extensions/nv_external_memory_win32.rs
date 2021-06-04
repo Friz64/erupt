@@ -6,9 +6,18 @@ pub const NV_EXTERNAL_MEMORY_WIN32_SPEC_VERSION: u32 = 1;
 pub const NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_external_memory_win32");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_MEMORY_WIN32_HANDLE_NV: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandleNV");
+#[doc = "Provided by [`crate::extensions::nv_external_memory_win32`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057000);
+    pub const EXPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryWin32HandleNV = unsafe extern "system" fn(device: crate::vk1_0::Device, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryWin32HandleInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryWin32HandleInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryWin32HandleInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Structure"]
 #[doc(alias = "VkImportMemoryWin32HandleInfoNV")]
 #[derive(Copy, Clone)]
@@ -55,7 +64,8 @@ impl<'a> ImportMemoryWin32HandleInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportMemoryWin32HandleInfoNV {
         self.0
     }
@@ -127,7 +137,8 @@ impl<'a> ExportMemoryWin32HandleInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportMemoryWin32HandleInfoNV {
         self.0
     }

@@ -79,6 +79,98 @@ pub type PFN_vkCreateSamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkCreateSampl
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkDestroySamplerYcbcrConversion;
 #[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::Format {
+    pub const G8B8G8R8_422_UNORM_KHR: Self = Self::G8B8G8R8_422_UNORM;
+    pub const B8G8R8G8_422_UNORM_KHR: Self = Self::B8G8R8G8_422_UNORM;
+    pub const G8_B8_R8_3PLANE_420_UNORM_KHR: Self = Self::G8_B8_R8_3PLANE_420_UNORM;
+    pub const G8_B8R8_2PLANE_420_UNORM_KHR: Self = Self::G8_B8R8_2PLANE_420_UNORM;
+    pub const G8_B8_R8_3PLANE_422_UNORM_KHR: Self = Self::G8_B8_R8_3PLANE_422_UNORM;
+    pub const G8_B8R8_2PLANE_422_UNORM_KHR: Self = Self::G8_B8R8_2PLANE_422_UNORM;
+    pub const G8_B8_R8_3PLANE_444_UNORM_KHR: Self = Self::G8_B8_R8_3PLANE_444_UNORM;
+    pub const R10X6_UNORM_PACK16_KHR: Self = Self::R10X6_UNORM_PACK16;
+    pub const R10X6G10X6_UNORM_2PACK16_KHR: Self = Self::R10X6G10X6_UNORM_2PACK16;
+    pub const R10X6G10X6B10X6A10X6_UNORM_4PACK16_KHR: Self = Self::R10X6G10X6B10X6A10X6_UNORM_4PACK16;
+    pub const G10X6B10X6G10X6R10X6_422_UNORM_4PACK16_KHR: Self = Self::G10X6B10X6G10X6R10X6_422_UNORM_4PACK16;
+    pub const B10X6G10X6R10X6G10X6_422_UNORM_4PACK16_KHR: Self = Self::B10X6G10X6R10X6G10X6_422_UNORM_4PACK16;
+    pub const G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16_KHR: Self = Self::G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16;
+    pub const G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16_KHR: Self = Self::G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16;
+    pub const G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16_KHR: Self = Self::G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16;
+    pub const G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16_KHR: Self = Self::G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16;
+    pub const G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16_KHR: Self = Self::G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16;
+    pub const R12X4_UNORM_PACK16_KHR: Self = Self::R12X4_UNORM_PACK16;
+    pub const R12X4G12X4_UNORM_2PACK16_KHR: Self = Self::R12X4G12X4_UNORM_2PACK16;
+    pub const R12X4G12X4B12X4A12X4_UNORM_4PACK16_KHR: Self = Self::R12X4G12X4B12X4A12X4_UNORM_4PACK16;
+    pub const G12X4B12X4G12X4R12X4_422_UNORM_4PACK16_KHR: Self = Self::G12X4B12X4G12X4R12X4_422_UNORM_4PACK16;
+    pub const B12X4G12X4R12X4G12X4_422_UNORM_4PACK16_KHR: Self = Self::B12X4G12X4R12X4G12X4_422_UNORM_4PACK16;
+    pub const G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16_KHR: Self = Self::G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16;
+    pub const G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16_KHR: Self = Self::G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16;
+    pub const G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16_KHR: Self = Self::G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16;
+    pub const G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16_KHR: Self = Self::G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16;
+    pub const G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16_KHR: Self = Self::G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16;
+    pub const G16B16G16R16_422_UNORM_KHR: Self = Self::G16B16G16R16_422_UNORM;
+    pub const B16G16R16G16_422_UNORM_KHR: Self = Self::B16G16R16G16_422_UNORM;
+    pub const G16_B16_R16_3PLANE_420_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_420_UNORM;
+    pub const G16_B16R16_2PLANE_420_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_420_UNORM;
+    pub const G16_B16_R16_3PLANE_422_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_422_UNORM;
+    pub const G16_B16R16_2PLANE_422_UNORM_KHR: Self = Self::G16_B16R16_2PLANE_422_UNORM;
+    pub const G16_B16_R16_3PLANE_444_UNORM_KHR: Self = Self::G16_B16_R16_3PLANE_444_UNORM;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const MIDPOINT_CHROMA_SAMPLES_KHR: Self = Self::MIDPOINT_CHROMA_SAMPLES;
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR: Self = Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER;
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR: Self = Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER;
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR: Self = Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT;
+    pub const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR: Self = Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE;
+    pub const DISJOINT_KHR: Self = Self::DISJOINT;
+    pub const COSITED_CHROMA_SAMPLES_KHR: Self = Self::COSITED_CHROMA_SAMPLES;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::ImageAspectFlagBits {
+    pub const PLANE_0_KHR: Self = Self::PLANE_0;
+    pub const PLANE_1_KHR: Self = Self::PLANE_1;
+    pub const PLANE_2_KHR: Self = Self::PLANE_2;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const DISJOINT_KHR: Self = Self::DISJOINT;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::StructureType {
+    pub const SAMPLER_YCBCR_CONVERSION_CREATE_INFO_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION_CREATE_INFO;
+    pub const SAMPLER_YCBCR_CONVERSION_INFO_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION_INFO;
+    pub const BIND_IMAGE_PLANE_MEMORY_INFO_KHR: Self = Self::BIND_IMAGE_PLANE_MEMORY_INFO;
+    pub const IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO_KHR: Self = Self::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO;
+    pub const PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES;
+    pub const SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_0::ObjectType {
+    pub const SAMPLER_YCBCR_CONVERSION_KHR: Self = Self::SAMPLER_YCBCR_CONVERSION;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
+    pub const SAMPLER_YCBCR_CONVERSION_KHR_EXT: Self = Self::SAMPLER_YCBCR_CONVERSION_EXT;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_1::SamplerYcbcrModelConversion {
+    pub const RGB_IDENTITY_KHR: Self = Self::RGB_IDENTITY;
+    pub const YCBCR_IDENTITY_KHR: Self = Self::YCBCR_IDENTITY;
+    pub const YCBCR_709_KHR: Self = Self::YCBCR_709;
+    pub const YCBCR_601_KHR: Self = Self::YCBCR_601;
+    pub const YCBCR_2020_KHR: Self = Self::YCBCR_2020;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_1::SamplerYcbcrRange {
+    pub const ITU_FULL_KHR: Self = Self::ITU_FULL;
+    pub const ITU_NARROW_KHR: Self = Self::ITU_NARROW;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
+impl crate::vk1_1::ChromaLocation {
+    pub const COSITED_EVEN_KHR: Self = Self::COSITED_EVEN;
+    pub const MIDPOINT_KHR: Self = Self::MIDPOINT;
+}
+#[doc = "Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

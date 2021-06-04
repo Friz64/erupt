@@ -14,6 +14,18 @@ pub const FN_CMD_SET_DEPTH_BIAS_ENABLE_EXT: *const std::os::raw::c_char = crate:
 pub const FN_CMD_SET_LOGIC_OP_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetLogicOpEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_PRIMITIVE_RESTART_ENABLE_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetPrimitiveRestartEnableEXT");
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state2`]"]
+impl crate::vk1_0::DynamicState {
+    pub const PATCH_CONTROL_POINTS_EXT: Self = Self(1000377000);
+    pub const RASTERIZER_DISCARD_ENABLE_EXT: Self = Self(1000377001);
+    pub const DEPTH_BIAS_ENABLE_EXT: Self = Self(1000377002);
+    pub const LOGIC_OP_EXT: Self = Self(1000377003);
+    pub const PRIMITIVE_RESTART_ENABLE_EXT: Self = Self(1000377004);
+}
+#[doc = "Provided by [`crate::extensions::ext_extended_dynamic_state2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT: Self = Self(1000377000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPatchControlPointsEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, patch_control_points: u32) -> ();
@@ -29,6 +41,10 @@ pub type PFN_vkCmdSetLogicOpEXT = unsafe extern "system" fn(command_buffer: crat
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPrimitiveRestartEnableEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, primitive_restart_enable: crate::vk1_0::Bool32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicState2FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExtendedDynamicState2FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -81,7 +97,8 @@ impl<'a> PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceExtendedDynamicState2FeaturesEXT {
         self.0
     }

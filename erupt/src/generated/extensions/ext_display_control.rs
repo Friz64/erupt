@@ -12,6 +12,13 @@ pub const FN_REGISTER_DEVICE_EVENT_EXT: *const std::os::raw::c_char = crate::cst
 pub const FN_REGISTER_DISPLAY_EVENT_EXT: *const std::os::raw::c_char = crate::cstr!("vkRegisterDisplayEventEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_SWAPCHAIN_COUNTER_EXT: *const std::os::raw::c_char = crate::cstr!("vkGetSwapchainCounterEXT");
+#[doc = "Provided by [`crate::extensions::ext_display_control`]"]
+impl crate::vk1_0::StructureType {
+    pub const DISPLAY_POWER_INFO_EXT: Self = Self(1000091000);
+    pub const DEVICE_EVENT_INFO_EXT: Self = Self(1000091001);
+    pub const DISPLAY_EVENT_INFO_EXT: Self = Self(1000091002);
+    pub const SWAPCHAIN_COUNTER_CREATE_INFO_EXT: Self = Self(1000091003);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerStateEXT.html) · Enum"]
 #[doc(alias = "VkDisplayPowerStateEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -28,7 +35,7 @@ impl std::fmt::Debug for DisplayPowerStateEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_display_control`]"]
-impl DisplayPowerStateEXT {
+impl crate::extensions::ext_display_control::DisplayPowerStateEXT {
     pub const OFF_EXT: Self = Self(0);
     pub const SUSPEND_EXT: Self = Self(1);
     pub const ON_EXT: Self = Self(2);
@@ -47,7 +54,7 @@ impl std::fmt::Debug for DeviceEventTypeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_display_control`]"]
-impl DeviceEventTypeEXT {
+impl crate::extensions::ext_display_control::DeviceEventTypeEXT {
     pub const DISPLAY_HOTPLUG_EXT: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayEventTypeEXT.html) · Enum"]
@@ -64,7 +71,7 @@ impl std::fmt::Debug for DisplayEventTypeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_display_control`]"]
-impl DisplayEventTypeEXT {
+impl crate::extensions::ext_display_control::DisplayEventTypeEXT {
     pub const FIRST_PIXEL_OUT_EXT: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]
@@ -79,6 +86,8 @@ pub type PFN_vkRegisterDisplayEventEXT = unsafe extern "system" fn(device: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainCounterEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT, p_counter_value: *mut u64) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Structure"]
 #[doc(alias = "VkDisplayPowerInfoEXT")]
 #[derive(Copy, Clone)]
@@ -119,7 +128,8 @@ impl<'a> DisplayPowerInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPowerInfoEXT {
         self.0
     }
@@ -185,7 +195,8 @@ impl<'a> DeviceEventInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DeviceEventInfoEXT {
         self.0
     }
@@ -251,7 +262,8 @@ impl<'a> DisplayEventInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayEventInfoEXT {
         self.0
     }
@@ -317,7 +329,8 @@ impl<'a> SwapchainCounterCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SwapchainCounterCreateInfoEXT {
         self.0
     }

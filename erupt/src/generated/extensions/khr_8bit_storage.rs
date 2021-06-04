@@ -12,3 +12,7 @@ pub type PhysicalDevice8BitStorageFeaturesKHR = crate::vk1_2::PhysicalDevice8Bit
 #[doc(alias = "VkPhysicalDevice8BitStorageFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDevice8BitStorageFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDevice8BitStorageFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_8bit_storage`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES;
+}

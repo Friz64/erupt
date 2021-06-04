@@ -31,6 +31,24 @@ pub type QueryPoolCreateInfoINTEL = crate::extensions::intel_performance_query::
 #[allow(non_camel_case_types)]
 pub type QueryPoolCreateInfoINTELBuilder<'a> = crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a>;
 crate::non_dispatchable_handle!(PerformanceConfigurationINTEL, PERFORMANCE_CONFIGURATION_INTEL, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationINTEL.html) · Non-dispatchable Handle", "VkPerformanceConfigurationINTEL");
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
+impl crate::vk1_0::QueryType {
+    pub const PERFORMANCE_QUERY_INTEL: Self = Self(1000210000);
+}
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
+impl crate::vk1_0::StructureType {
+    pub const QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL: Self = Self(1000210000);
+    pub const INITIALIZE_PERFORMANCE_API_INFO_INTEL: Self = Self(1000210001);
+    pub const PERFORMANCE_MARKER_INFO_INTEL: Self = Self(1000210002);
+    pub const PERFORMANCE_STREAM_MARKER_INFO_INTEL: Self = Self(1000210003);
+    pub const PERFORMANCE_OVERRIDE_INFO_INTEL: Self = Self(1000210004);
+    pub const PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL: Self = Self(1000210005);
+    pub const QUERY_POOL_CREATE_INFO_INTEL: Self = Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL;
+}
+#[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
+impl crate::vk1_0::ObjectType {
+    pub const PERFORMANCE_CONFIGURATION_INTEL: Self = Self(1000210000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceConfigurationTypeINTEL.html) · Enum"]
 #[doc(alias = "VkPerformanceConfigurationTypeINTEL")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -45,7 +63,7 @@ impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
     }
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
-impl PerformanceConfigurationTypeINTEL {
+impl crate::extensions::intel_performance_query::PerformanceConfigurationTypeINTEL {
     pub const COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryPoolSamplingModeINTEL.html) · Enum"]
@@ -62,7 +80,7 @@ impl std::fmt::Debug for QueryPoolSamplingModeINTEL {
     }
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
-impl QueryPoolSamplingModeINTEL {
+impl crate::extensions::intel_performance_query::QueryPoolSamplingModeINTEL {
     pub const MANUAL_INTEL: Self = Self(0);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceOverrideTypeINTEL.html) · Enum"]
@@ -80,7 +98,7 @@ impl std::fmt::Debug for PerformanceOverrideTypeINTEL {
     }
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
-impl PerformanceOverrideTypeINTEL {
+impl crate::extensions::intel_performance_query::PerformanceOverrideTypeINTEL {
     pub const NULL_HARDWARE_INTEL: Self = Self(0);
     pub const FLUSH_GPU_CACHES_INTEL: Self = Self(1);
 }
@@ -99,7 +117,7 @@ impl std::fmt::Debug for PerformanceParameterTypeINTEL {
     }
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
-impl PerformanceParameterTypeINTEL {
+impl crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL {
     pub const HW_COUNTERS_SUPPORTED_INTEL: Self = Self(0);
     pub const STREAM_MARKER_VALIDS_INTEL: Self = Self(1);
 }
@@ -121,7 +139,7 @@ impl std::fmt::Debug for PerformanceValueTypeINTEL {
     }
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
-impl PerformanceValueTypeINTEL {
+impl crate::extensions::intel_performance_query::PerformanceValueTypeINTEL {
     pub const UINT32_INTEL: Self = Self(0);
     pub const UINT64_INTEL: Self = Self(1);
     pub const FLOAT_INTEL: Self = Self(2);
@@ -155,6 +173,8 @@ pub type PFN_vkQueueSetPerformanceConfigurationINTEL = unsafe extern "system" fn
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPerformanceParameterINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(device: crate::vk1_0::Device, parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL, p_value: *mut crate::extensions::intel_performance_query::PerformanceValueINTEL) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceQueryCreateInfoINTEL> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueDataINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceValueDataINTEL")]
 #[derive(Copy, Clone)]
@@ -220,7 +240,8 @@ impl<'a> PerformanceValueINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceValueINTEL {
         self.0
     }
@@ -286,7 +307,8 @@ impl<'a> InitializePerformanceApiInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> InitializePerformanceApiInfoINTEL {
         self.0
     }
@@ -352,7 +374,8 @@ impl<'a> QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> QueryPoolPerformanceQueryCreateInfoINTEL {
         self.0
     }
@@ -418,7 +441,8 @@ impl<'a> PerformanceMarkerInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceMarkerInfoINTEL {
         self.0
     }
@@ -484,7 +508,8 @@ impl<'a> PerformanceStreamMarkerInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceStreamMarkerInfoINTEL {
         self.0
     }
@@ -562,7 +587,8 @@ impl<'a> PerformanceOverrideInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceOverrideInfoINTEL {
         self.0
     }
@@ -628,7 +654,8 @@ impl<'a> PerformanceConfigurationAcquireInfoINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PerformanceConfigurationAcquireInfoINTEL {
         self.0
     }

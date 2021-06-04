@@ -24,6 +24,12 @@ impl std::fmt::Debug for PipelineCoverageToColorStateCreateFlagBitsNV {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::nv_fragment_coverage_to_color`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV: Self = Self(1000149000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageToColorStateCreateInfoNV> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageToColorStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineCoverageToColorStateCreateInfoNV")]
 #[derive(Copy, Clone)]
@@ -76,7 +82,8 @@ impl<'a> PipelineCoverageToColorStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCoverageToColorStateCreateInfoNV {
         self.0
     }

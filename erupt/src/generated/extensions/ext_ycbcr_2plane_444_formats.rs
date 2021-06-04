@@ -4,6 +4,21 @@ pub const EXT_YCBCR_2PLANE_444_FORMATS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME")]
 pub const EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_ycbcr_2plane_444_formats");
+#[doc = "Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]"]
+impl crate::vk1_0::Format {
+    pub const G8_B8R8_2PLANE_444_UNORM_EXT: Self = Self(1000330000);
+    pub const G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330001);
+    pub const G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330002);
+    pub const G16_B16R16_2PLANE_444_UNORM_EXT: Self = Self(1000330003);
+}
+#[doc = "Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT: Self = Self(1000330000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -44,7 +59,8 @@ impl<'a> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
         self.0
     }

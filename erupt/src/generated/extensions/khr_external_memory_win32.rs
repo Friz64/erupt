@@ -8,12 +8,23 @@ pub const KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_GET_MEMORY_WIN32_HANDLE_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandleKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_MEMORY_WIN32_HANDLE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetMemoryWin32HandlePropertiesKHR");
+#[doc = "Provided by [`crate::extensions::khr_external_memory_win32`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR: Self = Self(1000073000);
+    pub const EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR: Self = Self(1000073001);
+    pub const MEMORY_WIN32_HANDLE_PROPERTIES_KHR: Self = Self(1000073002);
+    pub const MEMORY_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000073003);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_win32_handle_info: *const crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, p_handle: *mut *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryWin32HandlePropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, handle: *mut std::ffi::c_void, p_memory_win32_handle_properties: *mut crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryWin32HandleInfoKHR> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ImportMemoryWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryWin32HandleInfoKHR> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, ExportMemoryWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]
@@ -66,7 +77,8 @@ impl<'a> ImportMemoryWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportMemoryWin32HandleInfoKHR {
         self.0
     }
@@ -144,7 +156,8 @@ impl<'a> ExportMemoryWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ExportMemoryWin32HandleInfoKHR {
         self.0
     }
@@ -210,7 +223,8 @@ impl<'a> MemoryWin32HandlePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryWin32HandlePropertiesKHR {
         self.0
     }
@@ -282,7 +296,8 @@ impl<'a> MemoryGetWin32HandleInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> MemoryGetWin32HandleInfoKHR {
         self.0
     }

@@ -4,6 +4,25 @@ pub const EXT_SUBGROUP_SIZE_CONTROL_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME")]
 pub const EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_subgroup_size_control");
+#[doc = "Provided by [`crate::extensions::ext_subgroup_size_control`]"]
+impl crate::vk1_0::PipelineShaderStageCreateFlagBits {
+    pub const ALLOW_VARYING_SUBGROUP_SIZE_EXT: Self = Self(1);
+    pub const REQUIRE_FULL_SUBGROUPS_EXT: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::ext_subgroup_size_control`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT: Self = Self(1000225000);
+    pub const PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT: Self = Self(1000225001);
+    pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT: Self = Self(1000225002);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -50,7 +69,8 @@ impl<'a> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSubgroupSizeControlFeaturesEXT {
         self.0
     }
@@ -134,7 +154,8 @@ impl<'a> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceSubgroupSizeControlPropertiesEXT {
         self.0
     }
@@ -200,7 +221,8 @@ impl<'a> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
         self.0
     }

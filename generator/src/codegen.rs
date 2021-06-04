@@ -18,12 +18,12 @@ impl CodeMap {
         }
     }
 
-    fn extend(&mut self, origin: Option<Origin>, stream: impl FnOnce() -> TokenStream) {
-        if let Some(origin) = origin {
+    fn extend(&mut self, tokens: HashMap<Origin, TokenStream>) {
+        for (origin, tokens_inner) in tokens {
             self.map
                 .entry(origin)
                 .or_insert_with(TokenStream::new)
-                .extend(stream());
+                .extend(tokens_inner);
         }
     }
 
@@ -151,44 +151,40 @@ pub fn generate(source: &Source) {
             constant.origin = Some(Origin::Feature { major: 1, minor: 0 });
         }
 
-        codemap.extend(constant.origin.clone(), || constant.tokens(&comment_gen));
+        codemap.extend(constant.tokens(&comment_gen));
     }
 
-    for alias in &source.aliases {
-        codemap.extend(alias.origin.clone(), || alias.tokens(&comment_gen, source));
+    for alias in source.aliases.iter().filter(|v| v.origin.is_some()) {
+        codemap.extend(alias.tokens(&comment_gen, &source));
     }
 
-    for basetype in &source.basetypes {
-        codemap.extend(basetype.origin.clone(), || {
-            basetype.tokens(&comment_gen, source)
-        });
+    for basetype in source.basetypes.iter().filter(|v| v.origin.is_some()) {
+        codemap.extend(basetype.tokens(&comment_gen, &source));
     }
 
-    for handle in &source.handles {
-        codemap.extend(handle.origin.clone(), || handle.tokens(&comment_gen));
+    for handle in source.handles.iter().filter(|v| v.origin.is_some()) {
+        codemap.extend(handle.tokens(&comment_gen));
     }
 
-    for en in &source.enums {
-        codemap.extend(en.origin.clone(), || en.tokens(&comment_gen));
+    for en in source.enums.iter().filter(|v| v.origin.is_some()) {
+        codemap.extend(en.tokens(&comment_gen));
     }
 
-    for func in source.functions.iter().chain(&source.func_pointers) {
-        codemap.extend(func.origin.clone(), || func.tokens(&comment_gen, source));
+    let functions = source
+        .functions
+        .iter()
+        .chain(&source.func_pointers)
+        .filter(|v| v.origin.is_some());
+    for func in functions {
+        codemap.extend(func.tokens(&comment_gen, &source));
     }
 
-    for structure in &source.structures {
-        codemap.extend(structure.origin.clone(), || {
-            structure.tokens(&comment_gen, &source)
-        });
+    for structure in source.structures.iter().filter(|v| v.origin.is_some()) {
+        codemap.extend(structure.tokens(&comment_gen, &source));
     }
 
-    for (origin, stream) in defines::tokens(&comment_gen) {
-        codemap.extend(Some(origin), || stream);
-    }
-
-    for (origin, stream) in loaders::tokens(&comment_gen, source) {
-        codemap.extend(Some(origin), || stream);
-    }
+    codemap.extend(defines::tokens(&comment_gen));
+    codemap.extend(loaders::tokens(&comment_gen, source));
 
     codemap.write(
         "erupt/src/generated/",

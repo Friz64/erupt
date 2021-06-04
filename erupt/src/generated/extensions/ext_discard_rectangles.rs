@@ -26,6 +26,15 @@ impl std::fmt::Debug for PipelineDiscardRectangleStateCreateFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
+impl crate::vk1_0::DynamicState {
+    pub const DISCARD_RECTANGLE_EXT: Self = Self(1000099000);
+}
+#[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT: Self = Self(1000099000);
+    pub const PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT: Self = Self(1000099001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDiscardRectangleModeEXT.html) · Enum"]
 #[doc(alias = "VkDiscardRectangleModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -41,13 +50,17 @@ impl std::fmt::Debug for DiscardRectangleModeEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_discard_rectangles`]"]
-impl DiscardRectangleModeEXT {
+impl crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT {
     pub const INCLUSIVE_EXT: Self = Self(0);
     pub const EXCLUSIVE_EXT: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDiscardRectangleEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangle_count: u32, p_discard_rectangles: *const crate::vk1_0::Rect2D) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PipelineDiscardRectangleStateCreateInfoEXT> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineDiscardRectangleStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiscardRectanglePropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDiscardRectanglePropertiesEXT")]
 #[derive(Copy, Clone)]
@@ -88,7 +101,8 @@ impl<'a> PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceDiscardRectanglePropertiesEXT {
         self.0
     }
@@ -168,7 +182,8 @@ impl<'a> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineDiscardRectangleStateCreateInfoEXT {
         self.0
     }

@@ -18,6 +18,10 @@ pub type PhysicalDeviceHostQueryResetFeaturesEXTBuilder<'a> = crate::vk1_2::Phys
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetQueryPoolEXT = crate::vk1_2::PFN_vkResetQueryPool;
 #[doc = "Provided by [`crate::extensions::ext_host_query_reset`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES_EXT: Self = Self::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES;
+}
+#[doc = "Provided by [`crate::extensions::ext_host_query_reset`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

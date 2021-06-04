@@ -8,12 +8,26 @@ pub const KHR_PUSH_DESCRIPTOR_EXTENSION_NAME: *const std::os::raw::c_char = crat
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdPushDescriptorSetKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_PUSH_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdPushDescriptorSetWithTemplateKHR");
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
+impl crate::vk1_0::DescriptorSetLayoutCreateFlagBits {
+    pub const PUSH_DESCRIPTOR_KHR: Self = Self(1);
+}
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR: Self = Self(1000080000);
+}
+#[doc = "Provided by [`crate::extensions::khr_push_descriptor`]"]
+impl crate::vk1_1::DescriptorUpdateTemplateType {
+    pub const PUSH_DESCRIPTORS_KHR: Self = Self(1);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, pipeline_bind_point: crate::vk1_0::PipelineBindPoint, layout: crate::vk1_0::PipelineLayout, set: u32, descriptor_write_count: u32, p_descriptor_writes: *const crate::vk1_0::WriteDescriptorSet) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, layout: crate::vk1_0::PipelineLayout, set: u32, p_data: *const std::ffi::c_void) -> ();
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePushDescriptorPropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePushDescriptorPropertiesKHR")]
 #[derive(Copy, Clone)]
@@ -54,7 +68,8 @@ impl<'a> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDevicePushDescriptorPropertiesKHR {
         self.0
     }

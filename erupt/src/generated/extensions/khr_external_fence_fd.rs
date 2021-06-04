@@ -8,6 +8,11 @@ pub const KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME: *const std::os::raw::c_char = cr
 pub const FN_GET_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetFenceFdKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_IMPORT_FENCE_FD_KHR: *const std::os::raw::c_char = crate::cstr!("vkImportFenceFdKHR");
+#[doc = "Provided by [`crate::extensions::khr_external_fence_fd`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMPORT_FENCE_FD_INFO_KHR: Self = Self(1000115000);
+    pub const FENCE_GET_FD_INFO_KHR: Self = Self(1000115001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetFenceFdKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_get_fd_info: *const crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR, p_fd: *mut std::os::raw::c_int) -> crate::vk1_0::Result;
@@ -72,7 +77,8 @@ impl<'a> ImportFenceFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImportFenceFdInfoKHR {
         self.0
     }
@@ -144,7 +150,8 @@ impl<'a> FenceGetFdInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FenceGetFdInfoKHR {
         self.0
     }

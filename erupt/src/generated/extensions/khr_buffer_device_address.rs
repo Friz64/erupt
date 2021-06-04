@@ -60,6 +60,31 @@ pub type PFN_vkGetBufferDeviceAddressKHR = crate::vk1_2::PFN_vkGetBufferDeviceAd
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR = crate::vk1_2::PFN_vkGetDeviceMemoryOpaqueCaptureAddress;
 #[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
+impl crate::vk1_0::BufferCreateFlagBits {
+    pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
+}
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const SHADER_DEVICE_ADDRESS_KHR: Self = Self::SHADER_DEVICE_ADDRESS;
+}
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR: Self = Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS;
+}
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
+    pub const BUFFER_DEVICE_ADDRESS_INFO_KHR: Self = Self::BUFFER_DEVICE_ADDRESS_INFO;
+    pub const BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO_KHR: Self = Self::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO;
+    pub const MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO_KHR: Self = Self::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO;
+    pub const DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO_KHR: Self = Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
+impl crate::vk1_1::MemoryAllocateFlagBits {
+    pub const DEVICE_ADDRESS_KHR: Self = Self::DEVICE_ADDRESS;
+    pub const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR: Self = Self::DEVICE_ADDRESS_CAPTURE_REPLAY;
+}
+#[doc = "Provided by [`crate::extensions::khr_buffer_device_address`]"]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]

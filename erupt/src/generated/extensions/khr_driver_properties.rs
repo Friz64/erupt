@@ -30,3 +30,22 @@ pub type PhysicalDeviceDriverPropertiesKHR = crate::vk1_2::PhysicalDeviceDriverP
 #[doc(alias = "VkPhysicalDeviceDriverPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceDriverPropertiesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceDriverPropertiesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_DRIVER_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES;
+}
+#[doc = "Provided by [`crate::extensions::khr_driver_properties`]"]
+impl crate::vk1_2::DriverId {
+    pub const AMD_PROPRIETARY_KHR: Self = Self::AMD_PROPRIETARY;
+    pub const AMD_OPEN_SOURCE_KHR: Self = Self::AMD_OPEN_SOURCE;
+    pub const MESA_RADV_KHR: Self = Self::MESA_RADV;
+    pub const NVIDIA_PROPRIETARY_KHR: Self = Self::NVIDIA_PROPRIETARY;
+    pub const INTEL_PROPRIETARY_WINDOWS_KHR: Self = Self::INTEL_PROPRIETARY_WINDOWS;
+    pub const INTEL_OPEN_SOURCE_MESA_KHR: Self = Self::INTEL_OPEN_SOURCE_MESA;
+    pub const IMAGINATION_PROPRIETARY_KHR: Self = Self::IMAGINATION_PROPRIETARY;
+    pub const QUALCOMM_PROPRIETARY_KHR: Self = Self::QUALCOMM_PROPRIETARY;
+    pub const ARM_PROPRIETARY_KHR: Self = Self::ARM_PROPRIETARY;
+    pub const GOOGLE_SWIFTSHADER_KHR: Self = Self::GOOGLE_SWIFTSHADER;
+    pub const GGP_PROPRIETARY_KHR: Self = Self::GGP_PROPRIETARY;
+    pub const BROADCOM_PROPRIETARY_KHR: Self = Self::BROADCOM_PROPRIETARY;
+}

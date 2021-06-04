@@ -4,6 +4,14 @@ pub const KHR_SHADER_TERMINATE_INVOCATION_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME")]
 pub const KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_shader_terminate_invocation");
+#[doc = "Provided by [`crate::extensions::khr_shader_terminate_invocation`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR: Self = Self(1000215000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderTerminateInvocationFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR")]
 #[derive(Copy, Clone)]
@@ -44,7 +52,8 @@ impl<'a> PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceShaderTerminateInvocationFeaturesKHR {
         self.0
     }

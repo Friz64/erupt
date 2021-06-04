@@ -67,6 +67,18 @@ impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
+impl crate::vk1_0::StructureType {
+    pub const DEBUG_UTILS_OBJECT_NAME_INFO_EXT: Self = Self(1000128000);
+    pub const DEBUG_UTILS_OBJECT_TAG_INFO_EXT: Self = Self(1000128001);
+    pub const DEBUG_UTILS_LABEL_EXT: Self = Self(1000128002);
+    pub const DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT: Self = Self(1000128003);
+    pub const DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT: Self = Self(1000128004);
+}
+#[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
+impl crate::vk1_0::ObjectType {
+    pub const DEBUG_UTILS_MESSENGER_EXT: Self = Self(1000128000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessageSeverityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageSeverityFlagsEXT`]"]
 #[doc(alias = "VkDebugUtilsMessageSeverityFlagBitsEXT")]
@@ -92,7 +104,7 @@ impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
-impl DebugUtilsMessageSeverityFlagBitsEXT {
+impl crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT {
     pub const VERBOSE_EXT: Self = Self(1);
     pub const INFO_EXT: Self = Self(16);
     pub const WARNING_EXT: Self = Self(256);
@@ -122,7 +134,7 @@ impl std::fmt::Debug for DebugUtilsMessageTypeFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_utils`]"]
-impl DebugUtilsMessageTypeFlagBitsEXT {
+impl crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagBitsEXT {
     pub const GENERAL_EXT: Self = Self(1);
     pub const VALIDATION_EXT: Self = Self(2);
     pub const PERFORMANCE_EXT: Self = Self(4);
@@ -163,6 +175,8 @@ pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(instance: 
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugUtilsMessengerCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
+impl<'a> crate::ExtendableFromConst<'a, DebugUtilsMessengerCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DebugUtilsMessengerCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
 #[derive(Copy, Clone)]
@@ -215,7 +229,8 @@ impl<'a> DebugUtilsObjectNameInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugUtilsObjectNameInfoEXT {
         self.0
     }
@@ -305,7 +320,8 @@ impl<'a> DebugUtilsObjectTagInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugUtilsObjectTagInfoEXT {
         self.0
     }
@@ -377,7 +393,8 @@ impl<'a> DebugUtilsLabelEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugUtilsLabelEXT {
         self.0
     }
@@ -467,7 +484,8 @@ impl<'a> DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugUtilsMessengerCreateInfoEXT {
         self.0
     }
@@ -575,7 +593,8 @@ impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DebugUtilsMessengerCallbackDataEXT {
         self.0
     }

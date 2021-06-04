@@ -52,3 +52,30 @@ pub type PipelineTessellationDomainOriginStateCreateInfoKHR = crate::vk1_1::Pipe
 #[doc(alias = "VkPipelineTessellationDomainOriginStateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PipelineTessellationDomainOriginStateCreateInfoKHRBuilder<'a> = crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
+impl crate::vk1_0::ImageCreateFlagBits {
+    pub const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR: Self = Self::BLOCK_TEXEL_VIEW_COMPATIBLE;
+    pub const EXTENDED_USAGE_KHR: Self = Self::EXTENDED_USAGE;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR: Self = Self::DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL;
+    pub const DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR: Self = Self::DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES;
+    pub const RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO_KHR: Self = Self::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO;
+    pub const IMAGE_VIEW_USAGE_CREATE_INFO_KHR: Self = Self::IMAGE_VIEW_USAGE_CREATE_INFO;
+    pub const PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO_KHR: Self = Self::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
+impl crate::vk1_1::PointClippingBehavior {
+    pub const ALL_CLIP_PLANES_KHR: Self = Self::ALL_CLIP_PLANES;
+    pub const USER_CLIP_PLANES_ONLY_KHR: Self = Self::USER_CLIP_PLANES_ONLY;
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance2`]"]
+impl crate::vk1_1::TessellationDomainOrigin {
+    pub const UPPER_LEFT_KHR: Self = Self::UPPER_LEFT;
+    pub const LOWER_LEFT_KHR: Self = Self::LOWER_LEFT;
+}

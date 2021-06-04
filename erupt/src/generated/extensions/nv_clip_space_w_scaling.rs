@@ -6,9 +6,19 @@ pub const NV_CLIP_SPACE_W_SCALING_SPEC_VERSION: u32 = 1;
 pub const NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_NV_clip_space_w_scaling");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_VIEWPORT_W_SCALING_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdSetViewportWScalingNV");
+#[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
+impl crate::vk1_0::DynamicState {
+    pub const VIEWPORT_W_SCALING_NV: Self = Self(1000087000);
+}
+#[doc = "Provided by [`crate::extensions::nv_clip_space_w_scaling`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV: Self = Self(1000087000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetViewportWScalingNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_count: u32, p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportWScalingStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineViewportWScalingStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportWScalingNV.html) · Structure"]
 #[doc(alias = "VkViewportWScalingNV")]
 #[derive(Copy, Clone)]
@@ -53,7 +63,8 @@ impl<'a> ViewportWScalingNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ViewportWScalingNV {
         self.0
     }
@@ -127,7 +138,8 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineViewportWScalingStateCreateInfoNV {
         self.0
     }

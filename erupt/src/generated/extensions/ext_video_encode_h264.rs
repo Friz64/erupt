@@ -10,6 +10,22 @@ pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_video_encode_h264");
+#[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
+impl crate::vk1_0::StructureType {
+    pub const VIDEO_ENCODE_H264_CAPABILITIES_EXT: Self = Self(1000038000);
+    pub const VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT: Self = Self(1000038001);
+    pub const VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000038002);
+    pub const VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000038003);
+    pub const VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT: Self = Self(1000038004);
+    pub const VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000038005);
+    pub const VIDEO_ENCODE_H264_NALU_SLICE_EXT: Self = Self(1000038006);
+    pub const VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT: Self = Self(1000038007);
+    pub const VIDEO_ENCODE_H264_PROFILE_EXT: Self = Self(1000038008);
+}
+#[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
+impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
+    pub const ENCODE_H264_EXT: Self = Self(65536);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilitiesFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilitiesFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilitiesFlagsEXT : u32 { const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilitiesFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesFlagBitsEXT")]
@@ -42,7 +58,7 @@ impl std::fmt::Debug for VideoEncodeH264CapabilitiesFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
-impl VideoEncodeH264CapabilitiesFlagBitsEXT {
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesFlagBitsEXT {
     pub const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT: Self = Self(1);
     pub const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT: Self = Self(2);
     pub const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT: Self = Self(4);
@@ -79,7 +95,7 @@ impl std::fmt::Debug for VideoEncodeH264InputModeFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
-impl VideoEncodeH264InputModeFlagBitsEXT {
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264InputModeFlagBitsEXT {
     pub const FRAME_EXT: Self = Self(1);
     pub const SLICE_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
@@ -108,7 +124,7 @@ impl std::fmt::Debug for VideoEncodeH264OutputModeFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
-impl VideoEncodeH264OutputModeFlagBitsEXT {
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264OutputModeFlagBitsEXT {
     pub const FRAME_EXT: Self = Self(1);
     pub const SLICE_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
@@ -136,10 +152,24 @@ impl std::fmt::Debug for VideoEncodeH264CreateFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
-impl VideoEncodeH264CreateFlagBitsEXT {
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CreateFlagBitsEXT {
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RESERVED_0_EXT: Self = Self(1);
 }
+impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesEXT.html) · Structure"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesEXT")]
 #[derive(Copy, Clone)]
@@ -240,7 +270,8 @@ impl<'a> VideoEncodeH264CapabilitiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264CapabilitiesEXT {
         self.0
     }
@@ -318,7 +349,8 @@ impl<'a> VideoEncodeH264SessionCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264SessionCreateInfoEXT {
         self.0
     }
@@ -394,7 +426,8 @@ impl<'a> VideoEncodeH264SessionParametersAddInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264SessionParametersAddInfoEXT {
         self.0
     }
@@ -472,7 +505,8 @@ impl<'a> VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264SessionParametersCreateInfoEXT {
         self.0
     }
@@ -544,7 +578,8 @@ impl<'a> VideoEncodeH264DpbSlotInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264DpbSlotInfoEXT {
         self.0
     }
@@ -634,7 +669,8 @@ impl<'a> VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264VclFrameInfoEXT {
         self.0
     }
@@ -714,7 +750,8 @@ impl<'a> VideoEncodeH264EmitPictureParametersEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264EmitPictureParametersEXT {
         self.0
     }
@@ -780,7 +817,8 @@ impl<'a> VideoEncodeH264ProfileEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264ProfileEXT {
         self.0
     }
@@ -886,7 +924,8 @@ impl<'a> VideoEncodeH264NaluSliceEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoEncodeH264NaluSliceEXT {
         self.0
     }

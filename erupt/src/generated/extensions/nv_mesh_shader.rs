@@ -10,6 +10,21 @@ pub const FN_CMD_DRAW_MESH_TASKS_NV: *const std::os::raw::c_char = crate::cstr!(
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawMeshTasksIndirectNV");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_DRAW_MESH_TASKS_INDIRECT_COUNT_NV: *const std::os::raw::c_char = crate::cstr!("vkCmdDrawMeshTasksIndirectCountNV");
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
+impl crate::vk1_0::ShaderStageFlagBits {
+    pub const TASK_NV: Self = Self(64);
+    pub const MESH_NV: Self = Self(128);
+}
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV: Self = Self(1000202000);
+    pub const PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV: Self = Self(1000202001);
+}
+#[doc = "Provided by [`crate::extensions::nv_mesh_shader`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const TASK_SHADER_NV: Self = Self(524288);
+    pub const MESH_SHADER_NV: Self = Self(1048576);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, task_count: u32, first_task: u32) -> ();
@@ -19,6 +34,12 @@ pub type PFN_vkCmdDrawMeshTasksIndirectNV = unsafe extern "system" fn(command_bu
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMeshTasksIndirectCountNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMeshShaderFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMeshShaderFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMeshShaderFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMeshShaderPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMeshShaderPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMeshShaderFeaturesNV")]
 #[derive(Copy, Clone)]
@@ -65,7 +86,8 @@ impl<'a> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMeshShaderFeaturesNV {
         self.0
     }
@@ -203,7 +225,8 @@ impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceMeshShaderPropertiesNV {
         self.0
     }
@@ -273,7 +296,8 @@ impl<'a> DrawMeshTasksIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DrawMeshTasksIndirectCommandNV {
         self.0
     }

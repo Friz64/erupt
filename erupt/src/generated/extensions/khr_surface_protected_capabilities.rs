@@ -4,6 +4,12 @@ pub const KHR_SURFACE_PROTECTED_CAPABILITIES_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME")]
 pub const KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_surface_protected_capabilities");
+#[doc = "Provided by [`crate::extensions::khr_surface_protected_capabilities`]"]
+impl crate::vk1_0::StructureType {
+    pub const SURFACE_PROTECTED_CAPABILITIES_KHR: Self = Self(1000239000);
+}
+impl<'a> crate::ExtendableFromMut<'a, SurfaceProtectedCapabilitiesKHR> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, SurfaceProtectedCapabilitiesKHRBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceProtectedCapabilitiesKHR")]
 #[derive(Copy, Clone)]
@@ -44,7 +50,8 @@ impl<'a> SurfaceProtectedCapabilitiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> SurfaceProtectedCapabilitiesKHR {
         self.0
     }

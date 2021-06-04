@@ -6,9 +6,23 @@ pub const EXT_VERTEX_INPUT_DYNAMIC_STATE_SPEC_VERSION: u32 = 2;
 pub const EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_vertex_input_dynamic_state");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_SET_VERTEX_INPUT_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdSetVertexInputEXT");
+#[doc = "Provided by [`crate::extensions::ext_vertex_input_dynamic_state`]"]
+impl crate::vk1_0::DynamicState {
+    pub const VERTEX_INPUT_EXT: Self = Self(1000352000);
+}
+#[doc = "Provided by [`crate::extensions::ext_vertex_input_dynamic_state`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT: Self = Self(1000352000);
+    pub const VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT: Self = Self(1000352001);
+    pub const VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT: Self = Self(1000352002);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetVertexInputEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetVertexInputEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, vertex_binding_description_count: u32, p_vertex_binding_descriptions: *const crate::extensions::ext_vertex_input_dynamic_state::VertexInputBindingDescription2EXT, vertex_attribute_description_count: u32, p_vertex_attribute_descriptions: *const crate::extensions::ext_vertex_input_dynamic_state::VertexInputAttributeDescription2EXT) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -49,7 +63,8 @@ impl<'a> PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
         self.0
     }
@@ -133,7 +148,8 @@ impl<'a> VertexInputBindingDescription2EXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VertexInputBindingDescription2EXT {
         self.0
     }
@@ -217,7 +233,8 @@ impl<'a> VertexInputAttributeDescription2EXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VertexInputAttributeDescription2EXT {
         self.0
     }

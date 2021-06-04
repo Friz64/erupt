@@ -12,3 +12,7 @@ pub type PhysicalDeviceShaderAtomicInt64FeaturesKHR = crate::vk1_2::PhysicalDevi
 #[doc(alias = "VkPhysicalDeviceShaderAtomicInt64FeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderAtomicInt64FeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_shader_atomic_int64`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;
+}

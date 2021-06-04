@@ -12,6 +12,45 @@ pub const KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 1;
 pub const KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_video_decode_queue");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_DECODE_VIDEO_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdDecodeVideoKHR");
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
+    pub const VIDEO_DECODE_READ_KHR: Self = Self(34359738368);
+    pub const VIDEO_DECODE_WRITE_KHR: Self = Self(68719476736);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
+    pub const VIDEO_DECODE_KHR: Self = Self(67108864);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(8192);
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(16384);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const VIDEO_DECODE_OUTPUT_KHR: Self = Self(33554432);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(67108864);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(1000024000);
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(1000024001);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(1000024002);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::ImageUsageFlagBits {
+    pub const VIDEO_DECODE_DST_KHR: Self = Self(1024);
+    pub const VIDEO_DECODE_SRC_KHR: Self = Self(2048);
+    pub const VIDEO_DECODE_DPB_KHR: Self = Self(4096);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::QueueFlagBits {
+    pub const VIDEO_DECODE_KHR: Self = Self(32);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
+impl crate::vk1_0::StructureType {
+    pub const VIDEO_DECODE_INFO_KHR: Self = Self(1000024000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagsKHR.html) · Bitmask of [`VideoDecodeFlagBitsKHR`]"] # [doc (alias = "VkVideoDecodeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeFlagsKHR : u32 { const DEFAULT_KHR = VideoDecodeFlagBitsKHR :: DEFAULT_KHR . 0 ; const RESERVED_0_KHR = VideoDecodeFlagBitsKHR :: RESERVED_0_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagBitsKHR.html) · Bits enum of [`VideoDecodeFlagsKHR`]"]
 #[doc(alias = "VkVideoDecodeFlagBitsKHR")]
@@ -35,7 +74,7 @@ impl std::fmt::Debug for VideoDecodeFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_decode_queue`]"]
-impl VideoDecodeFlagBitsKHR {
+impl crate::extensions::khr_video_decode_queue::VideoDecodeFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESERVED_0_KHR: Self = Self(1);
 }
@@ -76,10 +115,6 @@ impl VideoDecodeInfoKHR {
         VideoDecodeInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXT> for VideoDecodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'_>> for VideoDecodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h265::VideoDecodeH265PictureInfoEXT> for VideoDecodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h265::VideoDecodeH265PictureInfoEXTBuilder<'_>> for VideoDecodeInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeInfoKHR.html) · Builder of [`VideoDecodeInfoKHR`]"]
 #[repr(transparent)]
@@ -136,7 +171,8 @@ impl<'a> VideoDecodeInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeInfoKHR {
         self.0
     }

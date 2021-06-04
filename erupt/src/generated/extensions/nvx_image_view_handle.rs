@@ -8,6 +8,11 @@ pub const NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME: *const std::os::raw::c_char = cr
 pub const FN_GET_IMAGE_VIEW_HANDLE_NVX: *const std::os::raw::c_char = crate::cstr!("vkGetImageViewHandleNVX");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_IMAGE_VIEW_ADDRESS_NVX: *const std::os::raw::c_char = crate::cstr!("vkGetImageViewAddressNVX");
+#[doc = "Provided by [`crate::extensions::nvx_image_view_handle`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMAGE_VIEW_HANDLE_INFO_NVX: Self = Self(1000030000);
+    pub const IMAGE_VIEW_ADDRESS_PROPERTIES_NVX: Self = Self(1000030001);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageViewHandleNVX = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX) -> u32;
@@ -66,7 +71,8 @@ impl<'a> ImageViewHandleInfoNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageViewHandleInfoNVX {
         self.0
     }
@@ -138,7 +144,8 @@ impl<'a> ImageViewAddressPropertiesNVXBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ImageViewAddressPropertiesNVX {
         self.0
     }

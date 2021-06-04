@@ -30,6 +30,21 @@ impl std::fmt::Debug for VideoDecodeH264CreateFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h264`]"]
+impl crate::vk1_0::StructureType {
+    pub const VIDEO_DECODE_H264_CAPABILITIES_EXT: Self = Self(1000040000);
+    pub const VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT: Self = Self(1000040001);
+    pub const VIDEO_DECODE_H264_PICTURE_INFO_EXT: Self = Self(1000040002);
+    pub const VIDEO_DECODE_H264_MVC_EXT: Self = Self(1000040003);
+    pub const VIDEO_DECODE_H264_PROFILE_EXT: Self = Self(1000040004);
+    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(1000040005);
+    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000040006);
+    pub const VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000040007);
+}
+#[doc = "Provided by [`crate::extensions::ext_video_decode_h264`]"]
+impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
+    pub const DECODE_H264_EXT: Self = Self(1);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagsEXT.html) · Bitmask of [`VideoDecodeH264FieldLayoutFlagBitsEXT`]"] # [doc (alias = "VkVideoDecodeH264FieldLayoutFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeH264FieldLayoutFlagsEXT : u32 { const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT . 0 ; const LINE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: LINE_INTERLACED_PLANE_EXT . 0 ; const SEPARATE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: SEPARATE_INTERLACED_PLANE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagBitsEXT.html) · Bits enum of [`VideoDecodeH264FieldLayoutFlagsEXT`]"]
 #[doc(alias = "VkVideoDecodeH264FieldLayoutFlagBitsEXT")]
@@ -54,11 +69,19 @@ impl std::fmt::Debug for VideoDecodeH264FieldLayoutFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_decode_h264`]"]
-impl VideoDecodeH264FieldLayoutFlagBitsEXT {
+impl crate::extensions::ext_video_decode_h264::VideoDecodeH264FieldLayoutFlagBitsEXT {
     pub const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT: Self = Self(0);
     pub const LINE_INTERLACED_PLANE_EXT: Self = Self(1);
     pub const SEPARATE_INTERLACED_PLANE_EXT: Self = Self(2);
 }
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXT> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXT> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXTBuilder<'_>> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264ProfileEXT.html) · Structure"]
 #[doc(alias = "VkVideoDecodeH264ProfileEXT")]
 #[derive(Copy, Clone)]
@@ -105,7 +128,8 @@ impl<'a> VideoDecodeH264ProfileEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264ProfileEXT {
         self.0
     }
@@ -183,7 +207,8 @@ impl<'a> VideoDecodeH264CapabilitiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264CapabilitiesEXT {
         self.0
     }
@@ -255,7 +280,8 @@ impl<'a> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264SessionCreateInfoEXT {
         self.0
     }
@@ -331,7 +357,8 @@ impl<'a> VideoDecodeH264SessionParametersAddInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264SessionParametersAddInfoEXT {
         self.0
     }
@@ -409,7 +436,8 @@ impl<'a> VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264SessionParametersCreateInfoEXT {
         self.0
     }
@@ -462,8 +490,8 @@ impl VideoDecodeH264PictureInfoEXT {
         VideoDecodeH264PictureInfoEXTBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h264::VideoDecodeH264MvcEXT> for VideoDecodeH264PictureInfoEXTBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, crate::extensions::ext_video_decode_h264::VideoDecodeH264MvcEXTBuilder<'_>> for VideoDecodeH264PictureInfoEXTBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXT> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXTBuilder<'_>> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264PictureInfoEXT.html) · Builder of [`VideoDecodeH264PictureInfoEXT`]"]
 #[repr(transparent)]
@@ -485,7 +513,8 @@ impl<'a> VideoDecodeH264PictureInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264PictureInfoEXT {
         self.0
     }
@@ -551,7 +580,8 @@ impl<'a> VideoDecodeH264DpbSlotInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264DpbSlotInfoEXT {
         self.0
     }
@@ -617,7 +647,8 @@ impl<'a> VideoDecodeH264MvcEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> VideoDecodeH264MvcEXT {
         self.0
     }
@@ -643,3 +674,9 @@ impl<'a> std::ops::DerefMut for VideoDecodeH264MvcEXTBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}

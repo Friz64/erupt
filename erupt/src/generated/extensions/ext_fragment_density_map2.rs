@@ -4,6 +4,21 @@ pub const EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME")]
 pub const EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_density_map2");
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map2`]"]
+impl crate::vk1_0::ImageViewCreateFlagBits {
+    pub const FRAGMENT_DENSITY_MAP_DEFERRED_EXT: Self = Self(2);
+}
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map2`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT: Self = Self(1000332000);
+    pub const PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT: Self = Self(1000332001);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMap2FeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMap2FeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMap2PropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMap2FeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -44,7 +59,8 @@ impl<'a> PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentDensityMap2FeaturesEXT {
         self.0
     }
@@ -128,7 +144,8 @@ impl<'a> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentDensityMap2PropertiesEXT {
         self.0
     }

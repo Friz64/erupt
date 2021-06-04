@@ -4,6 +4,14 @@ pub const EXT_IMAGE_ROBUSTNESS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME")]
 pub const EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_image_robustness");
+#[doc = "Provided by [`crate::extensions::ext_image_robustness`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT: Self = Self(1000335000);
+}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageRobustnessFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceImageRobustnessFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageRobustnessFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageRobustnessFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -44,7 +52,8 @@ impl<'a> PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceImageRobustnessFeaturesEXT {
         self.0
     }

@@ -4,6 +4,10 @@ pub const AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME")]
 pub const AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_AMD_pipeline_compiler_control");
+#[doc = "Provided by [`crate::extensions::amd_pipeline_compiler_control`]"]
+impl crate::vk1_0::StructureType {
+    pub const PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD: Self = Self(1000183000);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`]"] # [doc (alias = "VkPipelineCompilerControlFlagsAMD")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCompilerControlFlagsAMD : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineCompilerControlFlagsAMD`]"]
 #[doc(alias = "VkPipelineCompilerControlFlagBitsAMD")]
@@ -24,6 +28,10 @@ impl std::fmt::Debug for PipelineCompilerControlFlagBitsAMD {
         })
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Structure"]
 #[doc(alias = "VkPipelineCompilerControlCreateInfoAMD")]
 #[derive(Copy, Clone)]
@@ -64,7 +72,8 @@ impl<'a> PipelineCompilerControlCreateInfoAMDBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineCompilerControlCreateInfoAMD {
         self.0
     }

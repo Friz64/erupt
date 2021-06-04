@@ -6,6 +6,14 @@ pub const KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION: u32 = 10;
 pub const KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_display_swapchain");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CREATE_SHARED_SWAPCHAINS_KHR: *const std::os::raw::c_char = crate::cstr!("vkCreateSharedSwapchainsKHR");
+#[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
+impl crate::vk1_0::Result {
+    pub const ERROR_INCOMPATIBLE_DISPLAY_KHR: Self = Self(-1000003001);
+}
+#[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
+impl crate::vk1_0::StructureType {
+    pub const DISPLAY_PRESENT_INFO_KHR: Self = Self(1000003000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain_count: u32, p_create_infos: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
@@ -61,7 +69,8 @@ impl<'a> DisplayPresentInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> DisplayPresentInfoKHR {
         self.0
     }
@@ -87,6 +96,8 @@ impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, DisplayPresentInfoKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, DisplayPresentInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl crate::DeviceLoader {
     #[inline]

@@ -36,6 +36,31 @@ impl std::fmt::Debug for PipelineRasterizationStateStreamCreateFlagBitsEXT {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const TRANSFORM_FEEDBACK_BUFFER_EXT: Self = Self(2048);
+    pub const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT: Self = Self(4096);
+}
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const TRANSFORM_FEEDBACK_WRITE_EXT: Self = Self(33554432);
+    pub const TRANSFORM_FEEDBACK_COUNTER_READ_EXT: Self = Self(67108864);
+    pub const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT: Self = Self(134217728);
+}
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
+impl crate::vk1_0::QueryType {
+    pub const TRANSFORM_FEEDBACK_STREAM_EXT: Self = Self(1000028004);
+}
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT: Self = Self(1000028000);
+    pub const PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT: Self = Self(1000028001);
+    pub const PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT: Self = Self(1000028002);
+}
+#[doc = "Provided by [`crate::extensions::ext_transform_feedback`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const TRANSFORM_FEEDBACK_EXT: Self = Self(16777216);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindTransformFeedbackBuffersEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, binding_count: u32, p_buffers: *const crate::vk1_0::Buffer, p_offsets: *const crate::vk1_0::DeviceSize, p_sizes: *const crate::vk1_0::DeviceSize) -> ();
@@ -54,6 +79,14 @@ pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(command_buffer:
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, instance_count: u32, first_instance: u32, counter_buffer: crate::vk1_0::Buffer, counter_buffer_offset: crate::vk1_0::DeviceSize, counter_offset: u32, vertex_stride: u32) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTransformFeedbackFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateStreamCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateStreamCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTransformFeedbackFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTransformFeedbackPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackFeaturesEXT")]
 #[derive(Copy, Clone)]
@@ -100,7 +133,8 @@ impl<'a> PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceTransformFeedbackFeaturesEXT {
         self.0
     }
@@ -220,7 +254,8 @@ impl<'a> PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceTransformFeedbackPropertiesEXT {
         self.0
     }
@@ -292,7 +327,8 @@ impl<'a> PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineRasterizationStateStreamCreateInfoEXT {
         self.0
     }

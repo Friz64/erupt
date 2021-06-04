@@ -10,7 +10,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::convert::TryFrom;
+use std::{collections::HashMap, convert::TryFrom};
 
 const PREFIX: &str = "__ERUPT_CONSTANT_";
 
@@ -55,7 +55,9 @@ impl Constant {
         format_ident!("{}", *self.trimmed_name)
     }
 
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> TokenStream {
+    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("Constant missing origin");
+
         let ident = self.ident();
         let doc_alias = &self.original_name;
         let doc_alias_code = (&**doc_alias != ident.to_string().as_str())
@@ -65,11 +67,17 @@ impl Constant {
         let ty = self.value.ty();
         let doc = comment_gen.def(None, "Constant", self.origin.as_ref());
 
-        quote! {
-            #[doc = #doc]
-            #doc_alias_code
-            pub const #ident: #ty = #value;
-        }
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #[doc = #doc]
+                #doc_alias_code
+                pub const #ident: #ty = #value;
+            },
+        );
+
+        tokens
     }
 }
 

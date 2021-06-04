@@ -8,6 +8,38 @@ pub const KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetFragmentShadingRateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceFragmentShadingRatesKHR");
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::DynamicState {
+    pub const FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226000);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::FormatFeatureFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(1073741824);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::ImageLayout {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR: Self = Self(1000164003);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::ImageUsageFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(256);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR: Self = Self(8388608);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::StructureType {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR: Self = Self(1000226000);
+    pub const PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR: Self = Self(1000226001);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR: Self = Self(1000226002);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR: Self = Self(1000226003);
+    pub const PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226004);
+}
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(4194304);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateCombinerOpKHR.html) · Enum"]
 #[doc(alias = "VkFragmentShadingRateCombinerOpKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -26,7 +58,7 @@ impl std::fmt::Debug for FragmentShadingRateCombinerOpKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
-impl FragmentShadingRateCombinerOpKHR {
+impl crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR {
     pub const KEEP_KHR: Self = Self(0);
     pub const REPLACE_KHR: Self = Self(1);
     pub const MIN_KHR: Self = Self(2);
@@ -39,6 +71,16 @@ pub type PFN_vkCmdSetFragmentShadingRateKHR = unsafe extern "system" fn(command_
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_fragment_shading_rate_count: *mut u32, p_fragment_shading_rates: *mut crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR) -> crate::vk1_0::Result;
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateStateCreateInfoKHR> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRatePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, FragmentShadingRateAttachmentInfoKHR> for crate::vk1_2::SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for crate::vk1_2::SubpassDescription2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Structure"]
 #[doc(alias = "VkFragmentShadingRateAttachmentInfoKHR")]
 #[derive(Copy, Clone)]
@@ -85,7 +127,8 @@ impl<'a> FragmentShadingRateAttachmentInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> FragmentShadingRateAttachmentInfoKHR {
         self.0
     }
@@ -157,7 +200,8 @@ impl<'a> PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PipelineFragmentShadingRateStateCreateInfoKHR {
         self.0
     }
@@ -235,7 +279,8 @@ impl<'a> PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentShadingRateFeaturesKHR {
         self.0
     }
@@ -397,7 +442,8 @@ impl<'a> PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentShadingRatePropertiesKHR {
         self.0
     }
@@ -469,7 +515,8 @@ impl<'a> PhysicalDeviceFragmentShadingRateKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceFragmentShadingRateKHR {
         self.0
     }

@@ -8,6 +8,24 @@ pub const EXT_CONDITIONAL_RENDERING_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_CMD_BEGIN_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdBeginConditionalRenderingEXT");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_CMD_END_CONDITIONAL_RENDERING_EXT: *const std::os::raw::c_char = crate::cstr!("vkCmdEndConditionalRenderingEXT");
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
+impl crate::vk1_0::BufferUsageFlagBits {
+    pub const CONDITIONAL_RENDERING_EXT: Self = Self(512);
+}
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
+impl crate::vk1_0::AccessFlagBits {
+    pub const CONDITIONAL_RENDERING_READ_EXT: Self = Self(1048576);
+}
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
+impl crate::vk1_0::StructureType {
+    pub const COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT: Self = Self(1000081000);
+    pub const PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT: Self = Self(1000081001);
+    pub const CONDITIONAL_RENDERING_BEGIN_INFO_EXT: Self = Self(1000081002);
+}
+#[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
+impl crate::vk1_0::PipelineStageFlagBits {
+    pub const CONDITIONAL_RENDERING_EXT: Self = Self(262144);
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagBitsEXT.html) · Bits enum of [`ConditionalRenderingFlagsEXT`]"]
 #[doc(alias = "VkConditionalRenderingFlagBitsEXT")]
@@ -30,7 +48,7 @@ impl std::fmt::Debug for ConditionalRenderingFlagBitsEXT {
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_conditional_rendering`]"]
-impl ConditionalRenderingFlagBitsEXT {
+impl crate::extensions::ext_conditional_rendering::ConditionalRenderingFlagBitsEXT {
     pub const INVERTED_EXT: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginConditionalRenderingEXT.html) · Function"]
@@ -39,6 +57,12 @@ pub type PFN_vkCmdBeginConditionalRenderingEXT = unsafe extern "system" fn(comma
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndConditionalRenderingEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndConditionalRenderingEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceConditionalRenderingInfoEXT> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingBeginInfoEXT.html) · Structure"]
 #[doc(alias = "VkConditionalRenderingBeginInfoEXT")]
 #[derive(Copy, Clone)]
@@ -91,7 +115,8 @@ impl<'a> ConditionalRenderingBeginInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ConditionalRenderingBeginInfoEXT {
         self.0
     }
@@ -157,7 +182,8 @@ impl<'a> CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CommandBufferInheritanceConditionalRenderingInfoEXT {
         self.0
     }
@@ -229,7 +255,8 @@ impl<'a> PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> PhysicalDeviceConditionalRenderingFeaturesEXT {
         self.0
     }

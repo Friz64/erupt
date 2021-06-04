@@ -10,6 +10,7 @@ use crate::{
 };
 use proc_macro2::TokenStream;
 use quote::quote;
+use std::collections::HashMap;
 
 #[derive(Clone, Debug)]
 pub struct Alias {
@@ -76,7 +77,13 @@ impl Alias {
         }
     }
 
-    pub fn tokens(&self, comment_gen: &DocCommentGen, source: &Source) -> TokenStream {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        source: &Source,
+    ) -> HashMap<Origin, TokenStream> {
+        let origin = self.origin.as_ref().expect("Alias missing origin");
+
         let mut is_builder_alias = false;
         let mut builder_tokens = None;
         let mut doc_alias_code = None;
@@ -97,7 +104,7 @@ impl Alias {
                         let mut builder_alias = self.clone();
                         builder_alias.name = Name::Type(name.clone().set_builder(true));
                         builder_alias.alias = Name::Type(alias.clone().set_builder(true));
-                        builder_tokens = Some(builder_alias.tokens(comment_gen, source));
+                        builder_tokens = builder_alias.tokens(comment_gen, source).remove(origin);
                     }
                 }
             }
@@ -108,13 +115,19 @@ impl Alias {
         let doc = comment_gen.def(Some(self.name.original()), "Alias", self.origin.as_ref());
         let lifetime = is_builder_alias.then(|| quote! { <'a> });
 
-        quote! {
-            #[doc = #doc]
-            #doc_alias_code
-            #[allow(non_camel_case_types)]
-            pub type #ident#lifetime = #alias#lifetime;
+        let mut tokens = HashMap::new();
+        tokens.insert(
+            origin.clone(),
+            quote! {
+                #[doc = #doc]
+                #doc_alias_code
+                #[allow(non_camel_case_types)]
+                pub type #ident#lifetime = #alias#lifetime;
 
-            #builder_tokens
-        }
+                #builder_tokens
+            },
+        );
+
+        tokens
     }
 }

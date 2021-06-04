@@ -26,6 +26,10 @@ impl std::fmt::Debug for ViSurfaceCreateFlagBitsNN {
         })
     }
 }
+#[doc = "Provided by [`crate::extensions::nn_vi_surface`]"]
+impl crate::vk1_0::StructureType {
+    pub const VI_SURFACE_CREATE_INFO_NN: Self = Self(1000062000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateViSurfaceNN = unsafe extern "system" fn(instance: crate::vk1_0::Instance, p_create_info: *const crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_surface: *mut crate::extensions::khr_surface::SurfaceKHR) -> crate::vk1_0::Result;
@@ -75,7 +79,8 @@ impl<'a> ViSurfaceCreateInfoNNBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> ViSurfaceCreateInfoNN {
         self.0
     }

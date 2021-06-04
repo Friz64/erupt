@@ -4,6 +4,10 @@ pub const QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME")]
 pub const QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_QCOM_rotated_copy_commands");
+#[doc = "Provided by [`crate::extensions::qcom_rotated_copy_commands`]"]
+impl crate::vk1_0::StructureType {
+    pub const COPY_COMMAND_TRANSFORM_INFO_QCOM: Self = Self(1000333000);
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Structure"]
 #[doc(alias = "VkCopyCommandTransformInfoQCOM")]
 #[derive(Copy, Clone)]
@@ -44,7 +48,8 @@ impl<'a> CopyCommandTransformInfoQCOMBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = "Discards all lifetime information. Use the `Deref` and `DerefMut` implementations if possible."]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build(self) -> CopyCommandTransformInfoQCOM {
         self.0
     }
@@ -70,3 +75,7 @@ impl<'a> std::ops::DerefMut for CopyCommandTransformInfoQCOMBuilder<'a> {
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}

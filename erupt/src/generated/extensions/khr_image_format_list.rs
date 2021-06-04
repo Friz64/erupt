@@ -12,3 +12,7 @@ pub type ImageFormatListCreateInfoKHR = crate::vk1_2::ImageFormatListCreateInfo;
 #[doc(alias = "VkImageFormatListCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImageFormatListCreateInfoKHRBuilder<'a> = crate::vk1_2::ImageFormatListCreateInfoBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::khr_image_format_list`]"]
+impl crate::vk1_0::StructureType {
+    pub const IMAGE_FORMAT_LIST_CREATE_INFO_KHR: Self = Self::IMAGE_FORMAT_LIST_CREATE_INFO;
+}

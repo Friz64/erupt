@@ -12,3 +12,7 @@ pub type PhysicalDeviceScalarBlockLayoutFeaturesEXT = crate::vk1_2::PhysicalDevi
 #[doc(alias = "VkPhysicalDeviceScalarBlockLayoutFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceScalarBlockLayoutFeaturesEXTBuilder<'a> = crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a>;
+#[doc = "Provided by [`crate::extensions::ext_scalar_block_layout`]"]
+impl crate::vk1_0::StructureType {
+    pub const PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES_EXT: Self = Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES;
+}

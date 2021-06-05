@@ -50,12 +50,12 @@ impl Requirement {
     pub fn new(base_origin: Origin, require_node: XmlNode) -> Requirement {
         let require_origin = if let Some(feature) = require_node.attribute("feature") {
             Some(Origin::feature_from_name(feature))
-        } else if let Some(extension) = require_node.attribute("extension") {
-            Some(Origin::Extension {
-                full: extension.into(),
-            })
         } else {
-            None
+            require_node
+                .attribute("extension")
+                .map(|extension| Origin::Extension {
+                    full: extension.into(),
+                })
         };
 
         Requirement {

@@ -36,9 +36,13 @@ pub struct CoverageModulationModeNV(pub i32);
 impl std::fmt::Debug for CoverageModulationModeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_framebuffer_mixed_samples")]
             &Self::NONE_NV => "NONE_NV",
+            #[cfg(feature = "nv_framebuffer_mixed_samples")]
             &Self::RGB_NV => "RGB_NV",
+            #[cfg(feature = "nv_framebuffer_mixed_samples")]
             &Self::ALPHA_NV => "ALPHA_NV",
+            #[cfg(feature = "nv_framebuffer_mixed_samples")]
             &Self::RGBA_NV => "RGBA_NV",
             _ => "(unknown variant)",
         })

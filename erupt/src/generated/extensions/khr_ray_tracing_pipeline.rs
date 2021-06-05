@@ -72,8 +72,11 @@ pub struct RayTracingShaderGroupTypeKHR(pub i32);
 impl std::fmt::Debug for RayTracingShaderGroupTypeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::GENERAL_KHR => "GENERAL_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::TRIANGLES_HIT_GROUP_KHR => "TRIANGLES_HIT_GROUP_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::PROCEDURAL_HIT_GROUP_KHR => "PROCEDURAL_HIT_GROUP_KHR",
             _ => "(unknown variant)",
         })
@@ -93,9 +96,13 @@ pub struct ShaderGroupShaderKHR(pub i32);
 impl std::fmt::Debug for ShaderGroupShaderKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::GENERAL_KHR => "GENERAL_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
             _ => "(unknown variant)",
         })

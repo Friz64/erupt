@@ -728,6 +728,7 @@ impl std::fmt::Debug for AttachmentStoreOp {
         f.write_str(match self {
             &Self::STORE => "STORE",
             &Self::DONT_CARE => "DONT_CARE",
+            #[cfg(feature = "qcom_render_pass_store_ops")]
             &Self::NONE_QCOM => "NONE_QCOM",
             _ => "(unknown variant)",
         })
@@ -804,51 +805,97 @@ impl std::fmt::Debug for BlendOp {
             &Self::REVERSE_SUBTRACT => "REVERSE_SUBTRACT",
             &Self::MIN => "MIN",
             &Self::MAX => "MAX",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::ZERO_EXT => "ZERO_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SRC_EXT => "SRC_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DST_EXT => "DST_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SRC_OVER_EXT => "SRC_OVER_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DST_OVER_EXT => "DST_OVER_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SRC_IN_EXT => "SRC_IN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DST_IN_EXT => "DST_IN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SRC_OUT_EXT => "SRC_OUT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DST_OUT_EXT => "DST_OUT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SRC_ATOP_EXT => "SRC_ATOP_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DST_ATOP_EXT => "DST_ATOP_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::XOR_EXT => "XOR_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::MULTIPLY_EXT => "MULTIPLY_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SCREEN_EXT => "SCREEN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::OVERLAY_EXT => "OVERLAY_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DARKEN_EXT => "DARKEN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::LIGHTEN_EXT => "LIGHTEN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::COLORDODGE_EXT => "COLORDODGE_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::COLORBURN_EXT => "COLORBURN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HARDLIGHT_EXT => "HARDLIGHT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::SOFTLIGHT_EXT => "SOFTLIGHT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DIFFERENCE_EXT => "DIFFERENCE_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::EXCLUSION_EXT => "EXCLUSION_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::INVERT_EXT => "INVERT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::INVERT_RGB_EXT => "INVERT_RGB_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::LINEARDODGE_EXT => "LINEARDODGE_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::LINEARBURN_EXT => "LINEARBURN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::VIVIDLIGHT_EXT => "VIVIDLIGHT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::LINEARLIGHT_EXT => "LINEARLIGHT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PINLIGHT_EXT => "PINLIGHT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HARDMIX_EXT => "HARDMIX_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HSL_HUE_EXT => "HSL_HUE_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HSL_SATURATION_EXT => "HSL_SATURATION_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HSL_COLOR_EXT => "HSL_COLOR_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::HSL_LUMINOSITY_EXT => "HSL_LUMINOSITY_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PLUS_EXT => "PLUS_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PLUS_CLAMPED_EXT => "PLUS_CLAMPED_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PLUS_CLAMPED_ALPHA_EXT => "PLUS_CLAMPED_ALPHA_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PLUS_DARKER_EXT => "PLUS_DARKER_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::MINUS_EXT => "MINUS_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::MINUS_CLAMPED_EXT => "MINUS_CLAMPED_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::CONTRAST_EXT => "CONTRAST_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::INVERT_OVG_EXT => "INVERT_OVG_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::RED_EXT => "RED_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::GREEN_EXT => "GREEN_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::BLUE_EXT => "BLUE_EXT",
             _ => "(unknown variant)",
         })
@@ -876,7 +923,9 @@ impl std::fmt::Debug for BorderColor {
             &Self::INT_OPAQUE_BLACK => "INT_OPAQUE_BLACK",
             &Self::FLOAT_OPAQUE_WHITE => "FLOAT_OPAQUE_WHITE",
             &Self::INT_OPAQUE_WHITE => "INT_OPAQUE_WHITE",
+            #[cfg(feature = "ext_custom_border_color")]
             &Self::FLOAT_CUSTOM_EXT => "FLOAT_CUSTOM_EXT",
+            #[cfg(feature = "ext_custom_border_color")]
             &Self::INT_CUSTOM_EXT => "INT_CUSTOM_EXT",
             _ => "(unknown variant)",
         })
@@ -891,7 +940,7 @@ impl crate::vk1_0::BorderColor {
     pub const FLOAT_OPAQUE_WHITE: Self = Self(4);
     pub const INT_OPAQUE_WHITE: Self = Self(5);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`]"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlags.html) · Bitmask of [`FramebufferCreateFlagBits`]"] # [doc (alias = "VkFramebufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct FramebufferCreateFlags : u32 { const IMAGELESS = FramebufferCreateFlagBits :: IMAGELESS . 0 ; # [cfg (feature = "khr_imageless_framebuffer")] const IMAGELESS_KHR = FramebufferCreateFlagBits :: IMAGELESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFramebufferCreateFlagBits.html) · Bits enum of [`FramebufferCreateFlags`]"]
 #[doc(alias = "VkFramebufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -912,7 +961,7 @@ impl std::fmt::Debug for FramebufferCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`]"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlags.html) · Bitmask of [`RenderPassCreateFlagBits`]"] # [doc (alias = "VkRenderPassCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct RenderPassCreateFlags : u32 { # [cfg (feature = "qcom_render_pass_transform")] const TRANSFORM_QCOM = RenderPassCreateFlagBits :: TRANSFORM_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassCreateFlagBits.html) · Bits enum of [`RenderPassCreateFlags`]"]
 #[doc(alias = "VkRenderPassCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -928,12 +977,13 @@ impl RenderPassCreateFlagBits {
 impl std::fmt::Debug for RenderPassCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "qcom_render_pass_transform")]
             &Self::TRANSFORM_QCOM => "TRANSFORM_QCOM",
             _ => "(unknown variant)",
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`]"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlags.html) · Bitmask of [`SamplerCreateFlagBits`]"] # [doc (alias = "VkSamplerCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct SamplerCreateFlags : u32 { # [cfg (feature = "ext_fragment_density_map")] const SUBSAMPLED_EXT = SamplerCreateFlagBits :: SUBSAMPLED_EXT . 0 ; # [cfg (feature = "ext_fragment_density_map")] const SUBSAMPLED_COARSE_RECONSTRUCTION_EXT = SamplerCreateFlagBits :: SUBSAMPLED_COARSE_RECONSTRUCTION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerCreateFlagBits.html) · Bits enum of [`SamplerCreateFlags`]"]
 #[doc(alias = "VkSamplerCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -949,7 +999,9 @@ impl SamplerCreateFlagBits {
 impl std::fmt::Debug for SamplerCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::SUBSAMPLED_COARSE_RECONSTRUCTION_EXT => "SUBSAMPLED_COARSE_RECONSTRUCTION_EXT",
             _ => "(unknown variant)",
         })
@@ -972,7 +1024,7 @@ impl std::fmt::Debug for PipelineCacheHeaderVersion {
 impl crate::vk1_0::PipelineCacheHeaderVersion {
     pub const ONE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`]"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlags.html) · Bitmask of [`PipelineCacheCreateFlagBits`]"] # [doc (alias = "VkPipelineCacheCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCacheCreateFlags : u32 { # [cfg (feature = "ext_pipeline_creation_cache_control")] const EXTERNALLY_SYNCHRONIZED_EXT = PipelineCacheCreateFlagBits :: EXTERNALLY_SYNCHRONIZED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheCreateFlagBits.html) · Bits enum of [`PipelineCacheCreateFlags`]"]
 #[doc(alias = "VkPipelineCacheCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -988,12 +1040,13 @@ impl PipelineCacheCreateFlagBits {
 impl std::fmt::Debug for PipelineCacheCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_pipeline_creation_cache_control")]
             &Self::EXTERNALLY_SYNCHRONIZED_EXT => "EXTERNALLY_SYNCHRONIZED_EXT",
             _ => "(unknown variant)",
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`]"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlags.html) · Bitmask of [`PipelineShaderStageCreateFlagBits`]"] # [doc (alias = "VkPipelineShaderStageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineShaderStageCreateFlags : u32 { # [cfg (feature = "ext_subgroup_size_control")] const ALLOW_VARYING_SUBGROUP_SIZE_EXT = PipelineShaderStageCreateFlagBits :: ALLOW_VARYING_SUBGROUP_SIZE_EXT . 0 ; # [cfg (feature = "ext_subgroup_size_control")] const REQUIRE_FULL_SUBGROUPS_EXT = PipelineShaderStageCreateFlagBits :: REQUIRE_FULL_SUBGROUPS_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html) · Bits enum of [`PipelineShaderStageCreateFlags`]"]
 #[doc(alias = "VkPipelineShaderStageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1009,13 +1062,15 @@ impl PipelineShaderStageCreateFlagBits {
 impl std::fmt::Debug for PipelineShaderStageCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_subgroup_size_control")]
             &Self::ALLOW_VARYING_SUBGROUP_SIZE_EXT => "ALLOW_VARYING_SUBGROUP_SIZE_EXT",
+            #[cfg(feature = "ext_subgroup_size_control")]
             &Self::REQUIRE_FULL_SUBGROUPS_EXT => "REQUIRE_FULL_SUBGROUPS_EXT",
             _ => "(unknown variant)",
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits :: HOST_ONLY_POOL_VALVE . 0 ; const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlags.html) · Bitmask of [`DescriptorSetLayoutCreateFlagBits`]"] # [doc (alias = "VkDescriptorSetLayoutCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { const UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL . 0 ; # [cfg (feature = "khr_push_descriptor")] const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits :: PUSH_DESCRIPTOR_KHR . 0 ; # [cfg (feature = "valve_mutable_descriptor_type")] const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits :: HOST_ONLY_POOL_VALVE . 0 ; # [cfg (feature = "ext_descriptor_indexing")] const UPDATE_AFTER_BIND_POOL_EXT = DescriptorSetLayoutCreateFlagBits :: UPDATE_AFTER_BIND_POOL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`]"]
 #[doc(alias = "VkDescriptorSetLayoutCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1032,7 +1087,9 @@ impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
+            #[cfg(feature = "khr_push_descriptor")]
             &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
+            #[cfg(feature = "valve_mutable_descriptor_type")]
             &Self::HOST_ONLY_POOL_VALVE => "HOST_ONLY_POOL_VALVE",
             _ => "(unknown variant)",
         })
@@ -1059,7 +1116,7 @@ impl std::fmt::Debug for DeviceQueueCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`]"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlags.html) · Bitmask of [`BufferCreateFlagBits`]"] # [doc (alias = "VkBufferCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferCreateFlags : u32 { const SPARSE_BINDING = BufferCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = BufferCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = BufferCreateFlagBits :: SPARSE_ALIASED . 0 ; const PROTECTED = BufferCreateFlagBits :: PROTECTED . 0 ; const DEVICE_ADDRESS_CAPTURE_REPLAY = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY . 0 ; # [cfg (feature = "ext_buffer_device_address")] const DEVICE_ADDRESS_CAPTURE_REPLAY_EXT = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_EXT . 0 ; # [cfg (feature = "khr_buffer_device_address")] const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = BufferCreateFlagBits :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCreateFlagBits.html) · Bits enum of [`BufferCreateFlags`]"]
 #[doc(alias = "VkBufferCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1090,7 +1147,7 @@ impl crate::vk1_0::BufferCreateFlagBits {
     pub const SPARSE_RESIDENCY: Self = Self(2);
     pub const SPARSE_ALIASED: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; const VIDEO_DECODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DST_KHR = BufferUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlags.html) · Bitmask of [`BufferUsageFlagBits`]"] # [doc (alias = "VkBufferUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct BufferUsageFlags : u32 { const TRANSFER_SRC = BufferUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = BufferUsageFlagBits :: TRANSFER_DST . 0 ; const UNIFORM_TEXEL_BUFFER = BufferUsageFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = BufferUsageFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const UNIFORM_BUFFER = BufferUsageFlagBits :: UNIFORM_BUFFER . 0 ; const STORAGE_BUFFER = BufferUsageFlagBits :: STORAGE_BUFFER . 0 ; const INDEX_BUFFER = BufferUsageFlagBits :: INDEX_BUFFER . 0 ; const VERTEX_BUFFER = BufferUsageFlagBits :: VERTEX_BUFFER . 0 ; const INDIRECT_BUFFER = BufferUsageFlagBits :: INDIRECT_BUFFER . 0 ; const SHADER_DEVICE_ADDRESS = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_DST_KHR = BufferUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_BUFFER_EXT . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT = BufferUsageFlagBits :: TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT . 0 ; # [cfg (feature = "ext_conditional_rendering")] const CONDITIONAL_RENDERING_EXT = BufferUsageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_STORAGE_KHR = BufferUsageFlagBits :: ACCELERATION_STRUCTURE_STORAGE_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const SHADER_BINDING_TABLE_KHR = BufferUsageFlagBits :: SHADER_BINDING_TABLE_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_DST_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_SRC_KHR = BufferUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; # [cfg (feature = "nv_ray_tracing")] const RAY_TRACING_NV = BufferUsageFlagBits :: RAY_TRACING_NV . 0 ; # [cfg (feature = "ext_buffer_device_address")] const SHADER_DEVICE_ADDRESS_EXT = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_EXT . 0 ; # [cfg (feature = "khr_buffer_device_address")] const SHADER_DEVICE_ADDRESS_KHR = BufferUsageFlagBits :: SHADER_DEVICE_ADDRESS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferUsageFlagBits.html) · Bits enum of [`BufferUsageFlags`]"]
 #[doc(alias = "VkBufferUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -1116,15 +1173,25 @@ impl std::fmt::Debug for BufferUsageFlagBits {
             &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
             &Self::INDIRECT_BUFFER => "INDIRECT_BUFFER",
             &Self::SHADER_DEVICE_ADDRESS => "SHADER_DEVICE_ADDRESS",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR => "ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_STORAGE_KHR => "ACCELERATION_STRUCTURE_STORAGE_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::SHADER_BINDING_TABLE_KHR => "SHADER_BINDING_TABLE_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             _ => "(unknown variant)",
         })
@@ -1409,9 +1476,13 @@ impl std::fmt::Debug for DescriptorType {
             &Self::UNIFORM_BUFFER_DYNAMIC => "UNIFORM_BUFFER_DYNAMIC",
             &Self::STORAGE_BUFFER_DYNAMIC => "STORAGE_BUFFER_DYNAMIC",
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
+            #[cfg(feature = "ext_inline_uniform_block")]
             &Self::INLINE_UNIFORM_BLOCK_EXT => "INLINE_UNIFORM_BLOCK_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
+            #[cfg(feature = "valve_mutable_descriptor_type")]
             &Self::MUTABLE_VALVE => "MUTABLE_VALVE",
             _ => "(unknown variant)",
         })
@@ -1448,33 +1519,61 @@ impl std::fmt::Debug for DynamicState {
             &Self::STENCIL_COMPARE_MASK => "STENCIL_COMPARE_MASK",
             &Self::STENCIL_WRITE_MASK => "STENCIL_WRITE_MASK",
             &Self::STENCIL_REFERENCE => "STENCIL_REFERENCE",
+            #[cfg(feature = "nv_clip_space_w_scaling")]
             &Self::VIEWPORT_W_SCALING_NV => "VIEWPORT_W_SCALING_NV",
+            #[cfg(feature = "ext_discard_rectangles")]
             &Self::DISCARD_RECTANGLE_EXT => "DISCARD_RECTANGLE_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::SAMPLE_LOCATIONS_EXT => "SAMPLE_LOCATIONS_EXT",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_PIPELINE_STACK_SIZE_KHR => "RAY_TRACING_PIPELINE_STACK_SIZE_KHR",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => "VIEWPORT_SHADING_RATE_PALETTE_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => "VIEWPORT_COARSE_SAMPLE_ORDER_NV",
+            #[cfg(feature = "nv_scissor_exclusive")]
             &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_KHR => "FRAGMENT_SHADING_RATE_KHR",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::LINE_STIPPLE_EXT => "LINE_STIPPLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::CULL_MODE_EXT => "CULL_MODE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::FRONT_FACE_EXT => "FRONT_FACE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::PRIMITIVE_TOPOLOGY_EXT => "PRIMITIVE_TOPOLOGY_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::VIEWPORT_WITH_COUNT_EXT => "VIEWPORT_WITH_COUNT_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::SCISSOR_WITH_COUNT_EXT => "SCISSOR_WITH_COUNT_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::VERTEX_INPUT_BINDING_STRIDE_EXT => "VERTEX_INPUT_BINDING_STRIDE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::DEPTH_TEST_ENABLE_EXT => "DEPTH_TEST_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::DEPTH_WRITE_ENABLE_EXT => "DEPTH_WRITE_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::DEPTH_COMPARE_OP_EXT => "DEPTH_COMPARE_OP_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::DEPTH_BOUNDS_TEST_ENABLE_EXT => "DEPTH_BOUNDS_TEST_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::STENCIL_TEST_ENABLE_EXT => "STENCIL_TEST_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::STENCIL_OP_EXT => "STENCIL_OP_EXT",
+            #[cfg(feature = "ext_vertex_input_dynamic_state")]
             &Self::VERTEX_INPUT_EXT => "VERTEX_INPUT_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::PATCH_CONTROL_POINTS_EXT => "PATCH_CONTROL_POINTS_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::RASTERIZER_DISCARD_ENABLE_EXT => "RASTERIZER_DISCARD_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::DEPTH_BIAS_ENABLE_EXT => "DEPTH_BIAS_ENABLE_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::LOGIC_OP_EXT => "LOGIC_OP_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::PRIMITIVE_RESTART_ENABLE_EXT => "PRIMITIVE_RESTART_ENABLE_EXT",
+            #[cfg(feature = "ext_color_write_enable")]
             &Self::COLOR_WRITE_ENABLE_EXT => "COLOR_WRITE_ENABLE_EXT",
             _ => "(unknown variant)",
         })
@@ -1528,6 +1627,7 @@ impl std::fmt::Debug for PolygonMode {
             &Self::FILL => "FILL",
             &Self::LINE => "LINE",
             &Self::POINT => "POINT",
+            #[cfg(feature = "nv_fill_rectangle")]
             &Self::FILL_RECTANGLE_NV => "FILL_RECTANGLE_NV",
             _ => "(unknown variant)",
         })
@@ -1766,33 +1866,61 @@ impl std::fmt::Debug for Format {
             &Self::G16_B16_R16_3PLANE_422_UNORM => "G16_B16_R16_3PLANE_422_UNORM",
             &Self::G16_B16R16_2PLANE_422_UNORM => "G16_B16R16_2PLANE_422_UNORM",
             &Self::G16_B16_R16_3PLANE_444_UNORM => "G16_B16_R16_3PLANE_444_UNORM",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC1_2BPP_UNORM_BLOCK_IMG => "PVRTC1_2BPP_UNORM_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC1_4BPP_UNORM_BLOCK_IMG => "PVRTC1_4BPP_UNORM_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC2_2BPP_UNORM_BLOCK_IMG => "PVRTC2_2BPP_UNORM_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC2_4BPP_UNORM_BLOCK_IMG => "PVRTC2_4BPP_UNORM_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC1_2BPP_SRGB_BLOCK_IMG => "PVRTC1_2BPP_SRGB_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC1_4BPP_SRGB_BLOCK_IMG => "PVRTC1_4BPP_SRGB_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC2_2BPP_SRGB_BLOCK_IMG => "PVRTC2_2BPP_SRGB_BLOCK_IMG",
+            #[cfg(feature = "img_format_pvrtc")]
             &Self::PVRTC2_4BPP_SRGB_BLOCK_IMG => "PVRTC2_4BPP_SRGB_BLOCK_IMG",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_4X4_SFLOAT_BLOCK_EXT => "ASTC_4X4_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_5X4_SFLOAT_BLOCK_EXT => "ASTC_5X4_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_5X5_SFLOAT_BLOCK_EXT => "ASTC_5X5_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_6X5_SFLOAT_BLOCK_EXT => "ASTC_6X5_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_6X6_SFLOAT_BLOCK_EXT => "ASTC_6X6_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_8X5_SFLOAT_BLOCK_EXT => "ASTC_8X5_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_8X6_SFLOAT_BLOCK_EXT => "ASTC_8X6_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_8X8_SFLOAT_BLOCK_EXT => "ASTC_8X8_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_10X5_SFLOAT_BLOCK_EXT => "ASTC_10X5_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_10X6_SFLOAT_BLOCK_EXT => "ASTC_10X6_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_10X8_SFLOAT_BLOCK_EXT => "ASTC_10X8_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_10X10_SFLOAT_BLOCK_EXT => "ASTC_10X10_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_12X10_SFLOAT_BLOCK_EXT => "ASTC_12X10_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::ASTC_12X12_SFLOAT_BLOCK_EXT => "ASTC_12X12_SFLOAT_BLOCK_EXT",
+            #[cfg(feature = "ext_ycbcr_2plane_444_formats")]
             &Self::G8_B8R8_2PLANE_444_UNORM_EXT => "G8_B8R8_2PLANE_444_UNORM_EXT",
+            #[cfg(feature = "ext_ycbcr_2plane_444_formats")]
             &Self::G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT => "G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT",
+            #[cfg(feature = "ext_ycbcr_2plane_444_formats")]
             &Self::G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT => "G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT",
+            #[cfg(feature = "ext_ycbcr_2plane_444_formats")]
             &Self::G16_B16R16_2PLANE_444_UNORM_EXT => "G16_B16R16_2PLANE_444_UNORM_EXT",
+            #[cfg(feature = "ext_4444_formats")]
             &Self::A4R4G4B4_UNORM_PACK16_EXT => "A4R4G4B4_UNORM_PACK16_EXT",
+            #[cfg(feature = "ext_4444_formats")]
             &Self::A4B4G4R4_UNORM_PACK16_EXT => "A4B4G4R4_UNORM_PACK16_EXT",
             _ => "(unknown variant)",
         })
@@ -1986,7 +2114,7 @@ impl crate::vk1_0::Format {
     pub const ASTC_12X12_UNORM_BLOCK: Self = Self(183);
     pub const ASTC_12X12_SRGB_BLOCK: Self = Self(184);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; const VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_OUTPUT_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const VIDEO_ENCODE_INPUT_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_INPUT_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlags.html) · Bitmask of [`FormatFeatureFlagBits`]"] # [doc (alias = "VkFormatFeatureFlags")] # [derive (Default)] # [repr (transparent)] pub struct FormatFeatureFlags : u32 { const SAMPLED_IMAGE = FormatFeatureFlagBits :: SAMPLED_IMAGE . 0 ; const STORAGE_IMAGE = FormatFeatureFlagBits :: STORAGE_IMAGE . 0 ; const STORAGE_IMAGE_ATOMIC = FormatFeatureFlagBits :: STORAGE_IMAGE_ATOMIC . 0 ; const UNIFORM_TEXEL_BUFFER = FormatFeatureFlagBits :: UNIFORM_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER . 0 ; const STORAGE_TEXEL_BUFFER_ATOMIC = FormatFeatureFlagBits :: STORAGE_TEXEL_BUFFER_ATOMIC . 0 ; const VERTEX_BUFFER = FormatFeatureFlagBits :: VERTEX_BUFFER . 0 ; const COLOR_ATTACHMENT = FormatFeatureFlagBits :: COLOR_ATTACHMENT . 0 ; const COLOR_ATTACHMENT_BLEND = FormatFeatureFlagBits :: COLOR_ATTACHMENT_BLEND . 0 ; const DEPTH_STENCIL_ATTACHMENT = FormatFeatureFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const BLIT_SRC = FormatFeatureFlagBits :: BLIT_SRC . 0 ; const BLIT_DST = FormatFeatureFlagBits :: BLIT_DST . 0 ; const SAMPLED_IMAGE_FILTER_LINEAR = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_LINEAR . 0 ; const TRANSFER_SRC = FormatFeatureFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = FormatFeatureFlagBits :: TRANSFER_DST . 0 ; const MIDPOINT_CHROMA_SAMPLES = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT . 0 ; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE . 0 ; const DISJOINT = FormatFeatureFlagBits :: DISJOINT . 0 ; const COSITED_CHROMA_SAMPLES = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES . 0 ; const SAMPLED_IMAGE_FILTER_MINMAX = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX . 0 ; # [cfg (feature = "img_filter_cubic")] const SAMPLED_IMAGE_FILTER_CUBIC_IMG = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_IMG . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_OUTPUT_KHR . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR = FormatFeatureFlagBits :: ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR . 0 ; # [cfg (feature = "ext_fragment_density_map")] const FRAGMENT_DENSITY_MAP_EXT = FormatFeatureFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; # [cfg (feature = "khr_fragment_shading_rate")] const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = FormatFeatureFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_INPUT_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_INPUT_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_DPB_KHR = FormatFeatureFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; # [cfg (feature = "khr_maintenance1")] const TRANSFER_SRC_KHR = FormatFeatureFlagBits :: TRANSFER_SRC_KHR . 0 ; # [cfg (feature = "khr_maintenance1")] const TRANSFER_DST_KHR = FormatFeatureFlagBits :: TRANSFER_DST_KHR . 0 ; # [cfg (feature = "ext_sampler_filter_minmax")] const SAMPLED_IMAGE_FILTER_MINMAX_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_MINMAX_EXT . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const MIDPOINT_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: MIDPOINT_CHROMA_SAMPLES_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR = FormatFeatureFlagBits :: SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const DISJOINT_KHR = FormatFeatureFlagBits :: DISJOINT_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits :: COSITED_CHROMA_SAMPLES_KHR . 0 ; # [cfg (feature = "ext_filter_cubic")] const SAMPLED_IMAGE_FILTER_CUBIC_EXT = FormatFeatureFlagBits :: SAMPLED_IMAGE_FILTER_CUBIC_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatFeatureFlagBits.html) · Bits enum of [`FormatFeatureFlags`]"]
 #[doc(alias = "VkFormatFeatureFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2025,13 +2153,21 @@ impl std::fmt::Debug for FormatFeatureFlagBits {
             &Self::DISJOINT => "DISJOINT",
             &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
             &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
+            #[cfg(feature = "img_filter_cubic")]
             &Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG => "SAMPLED_IMAGE_FILTER_CUBIC_IMG",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             _ => "(unknown variant)",
         })
@@ -2072,7 +2208,7 @@ impl crate::vk1_0::FrontFace {
     pub const COUNTER_CLOCKWISE: Self = Self(0);
     pub const CLOCKWISE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`]"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlags.html) · Bitmask of [`ImageAspectFlagBits`]"] # [doc (alias = "VkImageAspectFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageAspectFlags : u32 { const COLOR = ImageAspectFlagBits :: COLOR . 0 ; const DEPTH = ImageAspectFlagBits :: DEPTH . 0 ; const STENCIL = ImageAspectFlagBits :: STENCIL . 0 ; const METADATA = ImageAspectFlagBits :: METADATA . 0 ; const PLANE_0 = ImageAspectFlagBits :: PLANE_0 . 0 ; const PLANE_1 = ImageAspectFlagBits :: PLANE_1 . 0 ; const PLANE_2 = ImageAspectFlagBits :: PLANE_2 . 0 ; # [cfg (feature = "ext_image_drm_format_modifier")] const MEMORY_PLANE_0_EXT = ImageAspectFlagBits :: MEMORY_PLANE_0_EXT . 0 ; # [cfg (feature = "ext_image_drm_format_modifier")] const MEMORY_PLANE_1_EXT = ImageAspectFlagBits :: MEMORY_PLANE_1_EXT . 0 ; # [cfg (feature = "ext_image_drm_format_modifier")] const MEMORY_PLANE_2_EXT = ImageAspectFlagBits :: MEMORY_PLANE_2_EXT . 0 ; # [cfg (feature = "ext_image_drm_format_modifier")] const MEMORY_PLANE_3_EXT = ImageAspectFlagBits :: MEMORY_PLANE_3_EXT . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const PLANE_0_KHR = ImageAspectFlagBits :: PLANE_0_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const PLANE_1_KHR = ImageAspectFlagBits :: PLANE_1_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const PLANE_2_KHR = ImageAspectFlagBits :: PLANE_2_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageAspectFlagBits.html) · Bits enum of [`ImageAspectFlags`]"]
 #[doc(alias = "VkImageAspectFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2095,9 +2231,13 @@ impl std::fmt::Debug for ImageAspectFlagBits {
             &Self::PLANE_0 => "PLANE_0",
             &Self::PLANE_1 => "PLANE_1",
             &Self::PLANE_2 => "PLANE_2",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::MEMORY_PLANE_0_EXT => "MEMORY_PLANE_0_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::MEMORY_PLANE_1_EXT => "MEMORY_PLANE_1_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::MEMORY_PLANE_2_EXT => "MEMORY_PLANE_2_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::MEMORY_PLANE_3_EXT => "MEMORY_PLANE_3_EXT",
             _ => "(unknown variant)",
         })
@@ -2110,7 +2250,7 @@ impl crate::vk1_0::ImageAspectFlagBits {
     pub const STENCIL: Self = Self(4);
     pub const METADATA: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`]"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlags.html) · Bitmask of [`ImageCreateFlagBits`]"] # [doc (alias = "VkImageCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageCreateFlags : u32 { const SPARSE_BINDING = ImageCreateFlagBits :: SPARSE_BINDING . 0 ; const SPARSE_RESIDENCY = ImageCreateFlagBits :: SPARSE_RESIDENCY . 0 ; const SPARSE_ALIASED = ImageCreateFlagBits :: SPARSE_ALIASED . 0 ; const MUTABLE_FORMAT = ImageCreateFlagBits :: MUTABLE_FORMAT . 0 ; const CUBE_COMPATIBLE = ImageCreateFlagBits :: CUBE_COMPATIBLE . 0 ; const ALIAS = ImageCreateFlagBits :: ALIAS . 0 ; const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS . 0 ; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE . 0 ; const BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE . 0 ; const EXTENDED_USAGE = ImageCreateFlagBits :: EXTENDED_USAGE . 0 ; const PROTECTED = ImageCreateFlagBits :: PROTECTED . 0 ; const DISJOINT = ImageCreateFlagBits :: DISJOINT . 0 ; # [cfg (feature = "nv_corner_sampled_image")] const CORNER_SAMPLED_NV = ImageCreateFlagBits :: CORNER_SAMPLED_NV . 0 ; # [cfg (feature = "ext_sample_locations")] const SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT = ImageCreateFlagBits :: SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT . 0 ; # [cfg (feature = "ext_fragment_density_map")] const SUBSAMPLED_EXT = ImageCreateFlagBits :: SUBSAMPLED_EXT . 0 ; # [cfg (feature = "khr_device_group")] const SPLIT_INSTANCE_BIND_REGIONS_KHR = ImageCreateFlagBits :: SPLIT_INSTANCE_BIND_REGIONS_KHR . 0 ; # [cfg (feature = "khr_maintenance1")] const _2D_ARRAY_COMPATIBLE_KHR = ImageCreateFlagBits :: _2D_ARRAY_COMPATIBLE_KHR . 0 ; # [cfg (feature = "khr_maintenance2")] const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR = ImageCreateFlagBits :: BLOCK_TEXEL_VIEW_COMPATIBLE_KHR . 0 ; # [cfg (feature = "khr_maintenance2")] const EXTENDED_USAGE_KHR = ImageCreateFlagBits :: EXTENDED_USAGE_KHR . 0 ; # [cfg (feature = "khr_sampler_ycbcr_conversion")] const DISJOINT_KHR = ImageCreateFlagBits :: DISJOINT_KHR . 0 ; # [cfg (feature = "khr_bind_memory2")] const ALIAS_KHR = ImageCreateFlagBits :: ALIAS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCreateFlagBits.html) · Bits enum of [`ImageCreateFlags`]"]
 #[doc(alias = "VkImageCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2138,8 +2278,11 @@ impl std::fmt::Debug for ImageCreateFlagBits {
             &Self::EXTENDED_USAGE => "EXTENDED_USAGE",
             &Self::PROTECTED => "PROTECTED",
             &Self::DISJOINT => "DISJOINT",
+            #[cfg(feature = "nv_corner_sampled_image")]
             &Self::CORNER_SAMPLED_NV => "CORNER_SAMPLED_NV",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT => "SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
             _ => "(unknown variant)",
         })
@@ -2176,17 +2319,29 @@ impl std::fmt::Debug for ImageLayout {
             &Self::DEPTH_READ_ONLY_OPTIMAL => "DEPTH_READ_ONLY_OPTIMAL",
             &Self::STENCIL_ATTACHMENT_OPTIMAL => "STENCIL_ATTACHMENT_OPTIMAL",
             &Self::STENCIL_READ_ONLY_OPTIMAL => "STENCIL_READ_ONLY_OPTIMAL",
+            #[cfg(feature = "khr_swapchain")]
             &Self::PRESENT_SRC_KHR => "PRESENT_SRC_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            #[cfg(feature = "khr_shared_presentable_image")]
             &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::READ_ONLY_OPTIMAL_KHR => "READ_ONLY_OPTIMAL_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::ATTACHMENT_OPTIMAL_KHR => "ATTACHMENT_OPTIMAL_KHR",
             _ => "(unknown variant)",
         })
@@ -2214,6 +2369,7 @@ impl std::fmt::Debug for ImageTiling {
         f.write_str(match self {
             &Self::OPTIMAL => "OPTIMAL",
             &Self::LINEAR => "LINEAR",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::DRM_FORMAT_MODIFIER_EXT => "DRM_FORMAT_MODIFIER_EXT",
             _ => "(unknown variant)",
         })
@@ -2245,7 +2401,7 @@ impl crate::vk1_0::ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; # [cfg (feature = "ext_fragment_density_map")] const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; # [cfg (feature = "khr_fragment_shading_rate")] const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; # [cfg (feature = "nv_shading_rate_image")] const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2269,13 +2425,21 @@ impl std::fmt::Debug for ImageUsageFlagBits {
             &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
             &Self::TRANSIENT_ATTACHMENT => "TRANSIENT_ATTACHMENT",
             &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
             _ => "(unknown variant)",
         })
@@ -2292,7 +2456,7 @@ impl crate::vk1_0::ImageUsageFlagBits {
     pub const TRANSIENT_ATTACHMENT: Self = Self(64);
     pub const INPUT_ATTACHMENT: Self = Self(128);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`]"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlags.html) · Bitmask of [`ImageViewCreateFlagBits`]"] # [doc (alias = "VkImageViewCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageViewCreateFlags : u32 { # [cfg (feature = "ext_fragment_density_map")] const FRAGMENT_DENSITY_MAP_DYNAMIC_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DYNAMIC_EXT . 0 ; # [cfg (feature = "ext_fragment_density_map2")] const FRAGMENT_DENSITY_MAP_DEFERRED_EXT = ImageViewCreateFlagBits :: FRAGMENT_DENSITY_MAP_DEFERRED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewCreateFlagBits.html) · Bits enum of [`ImageViewCreateFlags`]"]
 #[doc(alias = "VkImageViewCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2308,7 +2472,9 @@ impl ImageViewCreateFlagBits {
 impl std::fmt::Debug for ImageViewCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_MAP_DYNAMIC_EXT => "FRAGMENT_DENSITY_MAP_DYNAMIC_EXT",
+            #[cfg(feature = "ext_fragment_density_map2")]
             &Self::FRAGMENT_DENSITY_MAP_DEFERRED_EXT => "FRAGMENT_DENSITY_MAP_DEFERRED_EXT",
             _ => "(unknown variant)",
         })
@@ -2372,7 +2538,9 @@ impl std::fmt::Debug for IndexType {
         f.write_str(match self {
             &Self::UINT16 => "UINT16",
             &Self::UINT32 => "UINT32",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::NONE_KHR => "NONE_KHR",
+            #[cfg(feature = "ext_index_type_uint8")]
             &Self::UINT8_EXT => "UINT8_EXT",
             _ => "(unknown variant)",
         })
@@ -2430,7 +2598,7 @@ impl crate::vk1_0::LogicOp {
     pub const NAND: Self = Self(14);
     pub const SET: Self = Self(15);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"] # [doc (alias = "VkMemoryHeapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryHeapFlags : u32 { const DEVICE_LOCAL = MemoryHeapFlagBits :: DEVICE_LOCAL . 0 ; const MULTI_INSTANCE = MemoryHeapFlagBits :: MULTI_INSTANCE . 0 ; # [cfg (feature = "khr_device_group_creation")] const MULTI_INSTANCE_KHR = MemoryHeapFlagBits :: MULTI_INSTANCE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeapFlagBits.html) · Bits enum of [`MemoryHeapFlags`]"]
 #[doc(alias = "VkMemoryHeapFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2456,7 +2624,7 @@ impl std::fmt::Debug for MemoryHeapFlagBits {
 impl crate::vk1_0::MemoryHeapFlagBits {
     pub const DEVICE_LOCAL: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`]"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; const NONE_KHR = AccessFlagBits :: NONE_KHR . 0 ; const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlags.html) · Bitmask of [`AccessFlagBits`]"] # [doc (alias = "VkAccessFlags")] # [derive (Default)] # [repr (transparent)] pub struct AccessFlags : u32 { const INDIRECT_COMMAND_READ = AccessFlagBits :: INDIRECT_COMMAND_READ . 0 ; const INDEX_READ = AccessFlagBits :: INDEX_READ . 0 ; const VERTEX_ATTRIBUTE_READ = AccessFlagBits :: VERTEX_ATTRIBUTE_READ . 0 ; const UNIFORM_READ = AccessFlagBits :: UNIFORM_READ . 0 ; const INPUT_ATTACHMENT_READ = AccessFlagBits :: INPUT_ATTACHMENT_READ . 0 ; const SHADER_READ = AccessFlagBits :: SHADER_READ . 0 ; const SHADER_WRITE = AccessFlagBits :: SHADER_WRITE . 0 ; const COLOR_ATTACHMENT_READ = AccessFlagBits :: COLOR_ATTACHMENT_READ . 0 ; const COLOR_ATTACHMENT_WRITE = AccessFlagBits :: COLOR_ATTACHMENT_WRITE . 0 ; const DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_READ . 0 ; const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits :: DEPTH_STENCIL_ATTACHMENT_WRITE . 0 ; const TRANSFER_READ = AccessFlagBits :: TRANSFER_READ . 0 ; const TRANSFER_WRITE = AccessFlagBits :: TRANSFER_WRITE . 0 ; const HOST_READ = AccessFlagBits :: HOST_READ . 0 ; const HOST_WRITE = AccessFlagBits :: HOST_WRITE . 0 ; const MEMORY_READ = AccessFlagBits :: MEMORY_READ . 0 ; const MEMORY_WRITE = AccessFlagBits :: MEMORY_WRITE . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_WRITE_EXT . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_COUNTER_READ_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_READ_EXT . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT = AccessFlagBits :: TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT . 0 ; # [cfg (feature = "ext_conditional_rendering")] const CONDITIONAL_RENDERING_READ_EXT = AccessFlagBits :: CONDITIONAL_RENDERING_READ_EXT . 0 ; # [cfg (feature = "ext_blend_operation_advanced")] const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT = AccessFlagBits :: COLOR_ATTACHMENT_READ_NONCOHERENT_EXT . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_READ_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_WRITE_KHR = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_KHR . 0 ; # [cfg (feature = "ext_fragment_density_map")] const FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits :: FRAGMENT_DENSITY_MAP_READ_EXT . 0 ; # [cfg (feature = "khr_fragment_shading_rate")] const FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR = AccessFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR . 0 ; # [cfg (feature = "nv_device_generated_commands")] const COMMAND_PREPROCESS_READ_NV = AccessFlagBits :: COMMAND_PREPROCESS_READ_NV . 0 ; # [cfg (feature = "nv_device_generated_commands")] const COMMAND_PREPROCESS_WRITE_NV = AccessFlagBits :: COMMAND_PREPROCESS_WRITE_NV . 0 ; # [cfg (feature = "khr_synchronization2")] const NONE_KHR = AccessFlagBits :: NONE_KHR . 0 ; # [cfg (feature = "nv_shading_rate_image")] const SHADING_RATE_IMAGE_READ_NV = AccessFlagBits :: SHADING_RATE_IMAGE_READ_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const ACCELERATION_STRUCTURE_READ_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_READ_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const ACCELERATION_STRUCTURE_WRITE_NV = AccessFlagBits :: ACCELERATION_STRUCTURE_WRITE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccessFlagBits.html) · Bits enum of [`AccessFlags`]"]
 #[doc(alias = "VkAccessFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2489,17 +2657,29 @@ impl std::fmt::Debug for AccessFlagBits {
             &Self::HOST_WRITE => "HOST_WRITE",
             &Self::MEMORY_READ => "MEMORY_READ",
             &Self::MEMORY_WRITE => "MEMORY_WRITE",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_WRITE_EXT => "TRANSFORM_FEEDBACK_WRITE_EXT",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_COUNTER_READ_EXT => "TRANSFORM_FEEDBACK_COUNTER_READ_EXT",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT => "TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::CONDITIONAL_RENDERING_READ_EXT => "CONDITIONAL_RENDERING_READ_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT => "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_READ_KHR => "ACCELERATION_STRUCTURE_READ_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_WRITE_KHR => "ACCELERATION_STRUCTURE_WRITE_KHR",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_MAP_READ_EXT => "FRAGMENT_DENSITY_MAP_READ_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::NONE_KHR => "NONE_KHR",
             _ => "(unknown variant)",
         })
@@ -2525,7 +2705,7 @@ impl crate::vk1_0::AccessFlagBits {
     pub const MEMORY_READ: Self = Self(32768);
     pub const MEMORY_WRITE: Self = Self(65536);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; # [cfg (feature = "amd_device_coherent_memory")] const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; # [cfg (feature = "amd_device_coherent_memory")] const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`]"]
 #[doc(alias = "VkMemoryPropertyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2547,7 +2727,9 @@ impl std::fmt::Debug for MemoryPropertyFlagBits {
             &Self::HOST_CACHED => "HOST_CACHED",
             &Self::LAZILY_ALLOCATED => "LAZILY_ALLOCATED",
             &Self::PROTECTED => "PROTECTED",
+            #[cfg(feature = "amd_device_coherent_memory")]
             &Self::DEVICE_COHERENT_AMD => "DEVICE_COHERENT_AMD",
+            #[cfg(feature = "amd_device_coherent_memory")]
             &Self::DEVICE_UNCACHED_AMD => "DEVICE_UNCACHED_AMD",
             _ => "(unknown variant)",
         })
@@ -2596,6 +2778,7 @@ impl std::fmt::Debug for PipelineBindPoint {
         f.write_str(match self {
             &Self::GRAPHICS => "GRAPHICS",
             &Self::COMPUTE => "COMPUTE",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
             _ => "(unknown variant)",
         })
@@ -2606,7 +2789,7 @@ impl crate::vk1_0::PipelineBindPoint {
     pub const GRAPHICS: Self = Self(0);
     pub const COMPUTE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; # [cfg (feature = "nv_ray_tracing")] const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; # [cfg (feature = "khr_pipeline_executable_properties")] const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; # [cfg (feature = "khr_pipeline_executable_properties")] const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; # [cfg (feature = "nv_device_generated_commands")] const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; # [cfg (feature = "khr_pipeline_library")] const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; # [cfg (feature = "ext_pipeline_creation_cache_control")] const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; # [cfg (feature = "ext_pipeline_creation_cache_control")] const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; # [cfg (feature = "khr_device_group")] const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; # [cfg (feature = "khr_device_group")] const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`]"]
 #[doc(alias = "VkPipelineCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2627,19 +2810,33 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
             &Self::DERIVATIVE => "DERIVATIVE",
             &Self::VIEW_INDEX_FROM_DEVICE_INDEX => "VIEW_INDEX_FROM_DEVICE_INDEX",
             &Self::DISPATCH_BASE => "DISPATCH_BASE",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_NO_NULL_MISS_SHADERS_KHR => "RAY_TRACING_NO_NULL_MISS_SHADERS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR => "RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_SKIP_TRIANGLES_KHR => "RAY_TRACING_SKIP_TRIANGLES_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_SKIP_AABBS_KHR => "RAY_TRACING_SKIP_AABBS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR => "RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::DEFER_COMPILE_NV => "DEFER_COMPILE_NV",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::CAPTURE_STATISTICS_KHR => "CAPTURE_STATISTICS_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::CAPTURE_INTERNAL_REPRESENTATIONS_KHR => "CAPTURE_INTERNAL_REPRESENTATIONS_KHR",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDIRECT_BINDABLE_NV => "INDIRECT_BINDABLE_NV",
+            #[cfg(feature = "khr_pipeline_library")]
             &Self::LIBRARY_KHR => "LIBRARY_KHR",
+            #[cfg(feature = "ext_pipeline_creation_cache_control")]
             &Self::FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT => "FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT",
+            #[cfg(feature = "ext_pipeline_creation_cache_control")]
             &Self::EARLY_RETURN_ON_FAILURE_EXT => "EARLY_RETURN_ON_FAILURE_EXT",
             _ => "(unknown variant)",
         })
@@ -2758,7 +2955,7 @@ impl crate::vk1_0::QueryPipelineStatisticFlagBits {
     pub const TESSELLATION_EVALUATION_SHADER_INVOCATIONS: Self = Self(512);
     pub const COMPUTE_SHADER_INVOCATIONS: Self = Self(1024);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; const WITH_STATUS_KHR = QueryResultFlagBits :: WITH_STATUS_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlags.html) · Bitmask of [`QueryResultFlagBits`]"] # [doc (alias = "VkQueryResultFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueryResultFlags : u32 { const _64 = QueryResultFlagBits :: _64 . 0 ; const WAIT = QueryResultFlagBits :: WAIT . 0 ; const WITH_AVAILABILITY = QueryResultFlagBits :: WITH_AVAILABILITY . 0 ; const PARTIAL = QueryResultFlagBits :: PARTIAL . 0 ; # [cfg (feature = "khr_video_queue")] const WITH_STATUS_KHR = QueryResultFlagBits :: WITH_STATUS_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultFlagBits.html) · Bits enum of [`QueryResultFlags`]"]
 #[doc(alias = "VkQueryResultFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2778,6 +2975,7 @@ impl std::fmt::Debug for QueryResultFlagBits {
             &Self::WAIT => "WAIT",
             &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
             &Self::PARTIAL => "PARTIAL",
+            #[cfg(feature = "khr_video_queue")]
             &Self::WITH_STATUS_KHR => "WITH_STATUS_KHR",
             _ => "(unknown variant)",
         })
@@ -2801,13 +2999,21 @@ impl std::fmt::Debug for QueryType {
             &Self::OCCLUSION => "OCCLUSION",
             &Self::PIPELINE_STATISTICS => "PIPELINE_STATISTICS",
             &Self::TIMESTAMP => "TIMESTAMP",
+            #[cfg(feature = "khr_video_queue")]
             &Self::RESULT_STATUS_ONLY_KHR => "RESULT_STATUS_ONLY_KHR",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_STREAM_EXT => "TRANSFORM_FEEDBACK_STREAM_EXT",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERFORMANCE_QUERY_KHR => "PERFORMANCE_QUERY_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR",
             _ => "(unknown variant)",
         })
@@ -2819,7 +3025,7 @@ impl crate::vk1_0::QueryType {
     pub const PIPELINE_STATISTICS: Self = Self(1);
     pub const TIMESTAMP: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; const VIDEO_DECODE_KHR = QueueFlagBits :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = QueueFlagBits :: VIDEO_ENCODE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlags.html) · Bitmask of [`QueueFlagBits`]"] # [doc (alias = "VkQueueFlags")] # [derive (Default)] # [repr (transparent)] pub struct QueueFlags : u32 { const GRAPHICS = QueueFlagBits :: GRAPHICS . 0 ; const COMPUTE = QueueFlagBits :: COMPUTE . 0 ; const TRANSFER = QueueFlagBits :: TRANSFER . 0 ; const SPARSE_BINDING = QueueFlagBits :: SPARSE_BINDING . 0 ; const PROTECTED = QueueFlagBits :: PROTECTED . 0 ; # [cfg (feature = "khr_video_decode_queue")] const VIDEO_DECODE_KHR = QueueFlagBits :: VIDEO_DECODE_KHR . 0 ; # [cfg (feature = "khr_video_encode_queue")] const VIDEO_ENCODE_KHR = QueueFlagBits :: VIDEO_ENCODE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]"]
 #[doc(alias = "VkQueueFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2840,7 +3046,9 @@ impl std::fmt::Debug for QueueFlagBits {
             &Self::TRANSFER => "TRANSFER",
             &Self::SPARSE_BINDING => "SPARSE_BINDING",
             &Self::PROTECTED => "PROTECTED",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
             _ => "(unknown variant)",
         })
@@ -2903,20 +3111,35 @@ impl std::fmt::Debug for Result {
             &Self::ERROR_INVALID_EXTERNAL_HANDLE => "ERROR_INVALID_EXTERNAL_HANDLE",
             &Self::ERROR_FRAGMENTATION => "ERROR_FRAGMENTATION",
             &Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS => "ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS",
+            #[cfg(feature = "khr_surface")]
             &Self::ERROR_SURFACE_LOST_KHR => "ERROR_SURFACE_LOST_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::ERROR_NATIVE_WINDOW_IN_USE_KHR => "ERROR_NATIVE_WINDOW_IN_USE_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::SUBOPTIMAL_KHR => "SUBOPTIMAL_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::ERROR_OUT_OF_DATE_KHR => "ERROR_OUT_OF_DATE_KHR",
+            #[cfg(feature = "khr_display_swapchain")]
             &Self::ERROR_INCOMPATIBLE_DISPLAY_KHR => "ERROR_INCOMPATIBLE_DISPLAY_KHR",
+            #[cfg(feature = "ext_debug_report")]
             &Self::ERROR_VALIDATION_FAILED_EXT => "ERROR_VALIDATION_FAILED_EXT",
+            #[cfg(feature = "nv_glsl_shader")]
             &Self::ERROR_INVALID_SHADER_NV => "ERROR_INVALID_SHADER_NV",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT => "ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT",
+            #[cfg(feature = "ext_global_priority")]
             &Self::ERROR_NOT_PERMITTED_EXT => "ERROR_NOT_PERMITTED_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT => "ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT",
+            #[cfg(feature = "khr_deferred_host_operations")]
             &Self::THREAD_IDLE_KHR => "THREAD_IDLE_KHR",
+            #[cfg(feature = "khr_deferred_host_operations")]
             &Self::THREAD_DONE_KHR => "THREAD_DONE_KHR",
+            #[cfg(feature = "khr_deferred_host_operations")]
             &Self::OPERATION_DEFERRED_KHR => "OPERATION_DEFERRED_KHR",
+            #[cfg(feature = "khr_deferred_host_operations")]
             &Self::OPERATION_NOT_DEFERRED_KHR => "OPERATION_NOT_DEFERRED_KHR",
+            #[cfg(feature = "ext_pipeline_creation_cache_control")]
             &Self::PIPELINE_COMPILE_REQUIRED_EXT => "PIPELINE_COMPILE_REQUIRED_EXT",
             _ => "(unknown variant)",
         })
@@ -2944,7 +3167,7 @@ impl crate::vk1_0::Result {
     pub const ERROR_FRAGMENTED_POOL: Self = Self(-12);
     pub const ERROR_UNKNOWN: Self = Self(-13);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`]"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlags.html) · Bitmask of [`ShaderStageFlagBits`]"] # [doc (alias = "VkShaderStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderStageFlags : u32 { const VERTEX = ShaderStageFlagBits :: VERTEX . 0 ; const TESSELLATION_CONTROL = ShaderStageFlagBits :: TESSELLATION_CONTROL . 0 ; const TESSELLATION_EVALUATION = ShaderStageFlagBits :: TESSELLATION_EVALUATION . 0 ; const GEOMETRY = ShaderStageFlagBits :: GEOMETRY . 0 ; const FRAGMENT = ShaderStageFlagBits :: FRAGMENT . 0 ; const COMPUTE = ShaderStageFlagBits :: COMPUTE . 0 ; const ALL_GRAPHICS = ShaderStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL = ShaderStageFlagBits :: ALL . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAYGEN_KHR = ShaderStageFlagBits :: RAYGEN_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const ANY_HIT_KHR = ShaderStageFlagBits :: ANY_HIT_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const CLOSEST_HIT_KHR = ShaderStageFlagBits :: CLOSEST_HIT_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const MISS_KHR = ShaderStageFlagBits :: MISS_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const INTERSECTION_KHR = ShaderStageFlagBits :: INTERSECTION_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const CALLABLE_KHR = ShaderStageFlagBits :: CALLABLE_KHR . 0 ; # [cfg (feature = "nv_mesh_shader")] const TASK_NV = ShaderStageFlagBits :: TASK_NV . 0 ; # [cfg (feature = "nv_mesh_shader")] const MESH_NV = ShaderStageFlagBits :: MESH_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const RAYGEN_NV = ShaderStageFlagBits :: RAYGEN_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const ANY_HIT_NV = ShaderStageFlagBits :: ANY_HIT_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const CLOSEST_HIT_NV = ShaderStageFlagBits :: CLOSEST_HIT_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const MISS_NV = ShaderStageFlagBits :: MISS_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const INTERSECTION_NV = ShaderStageFlagBits :: INTERSECTION_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const CALLABLE_NV = ShaderStageFlagBits :: CALLABLE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStageFlagBits.html) · Bits enum of [`ShaderStageFlags`]"]
 #[doc(alias = "VkShaderStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2968,13 +3191,21 @@ impl std::fmt::Debug for ShaderStageFlagBits {
             &Self::COMPUTE => "COMPUTE",
             &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
             &Self::ALL => "ALL",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAYGEN_KHR => "RAYGEN_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::MISS_KHR => "MISS_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::CALLABLE_KHR => "CALLABLE_KHR",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::TASK_NV => "TASK_NV",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::MESH_NV => "MESH_NV",
             _ => "(unknown variant)",
         })
@@ -3249,390 +3480,775 @@ impl std::fmt::Debug for StructureType {
             &Self::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO => "BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO",
             &Self::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO => "MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO",
             &Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO => "DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO",
+            #[cfg(feature = "khr_swapchain")]
             &Self::SWAPCHAIN_CREATE_INFO_KHR => "SWAPCHAIN_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::PRESENT_INFO_KHR => "PRESENT_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR => "DEVICE_GROUP_PRESENT_CAPABILITIES_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::IMAGE_SWAPCHAIN_CREATE_INFO_KHR => "IMAGE_SWAPCHAIN_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR => "BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::ACQUIRE_NEXT_IMAGE_INFO_KHR => "ACQUIRE_NEXT_IMAGE_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::DEVICE_GROUP_PRESENT_INFO_KHR => "DEVICE_GROUP_PRESENT_INFO_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR => "DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::DISPLAY_MODE_CREATE_INFO_KHR => "DISPLAY_MODE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::DISPLAY_SURFACE_CREATE_INFO_KHR => "DISPLAY_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_display_swapchain")]
             &Self::DISPLAY_PRESENT_INFO_KHR => "DISPLAY_PRESENT_INFO_KHR",
+            #[cfg(feature = "khr_xlib_surface")]
             &Self::XLIB_SURFACE_CREATE_INFO_KHR => "XLIB_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_xcb_surface")]
             &Self::XCB_SURFACE_CREATE_INFO_KHR => "XCB_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_wayland_surface")]
             &Self::WAYLAND_SURFACE_CREATE_INFO_KHR => "WAYLAND_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_android_surface")]
             &Self::ANDROID_SURFACE_CREATE_INFO_KHR => "ANDROID_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_win32_surface")]
             &Self::WIN32_SURFACE_CREATE_INFO_KHR => "WIN32_SURFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT => "DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT",
+            #[cfg(feature = "amd_rasterization_order")]
             &Self::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD => "PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD",
+            #[cfg(feature = "ext_debug_marker")]
             &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => "DEBUG_MARKER_OBJECT_NAME_INFO_EXT",
+            #[cfg(feature = "ext_debug_marker")]
             &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => "DEBUG_MARKER_OBJECT_TAG_INFO_EXT",
+            #[cfg(feature = "ext_debug_marker")]
             &Self::DEBUG_MARKER_MARKER_INFO_EXT => "DEBUG_MARKER_MARKER_INFO_EXT",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_PROFILE_KHR => "VIDEO_PROFILE_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_CAPABILITIES_KHR => "VIDEO_CAPABILITIES_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_PICTURE_RESOURCE_KHR => "VIDEO_PICTURE_RESOURCE_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_GET_MEMORY_PROPERTIES_KHR => "VIDEO_GET_MEMORY_PROPERTIES_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_BIND_MEMORY_KHR => "VIDEO_BIND_MEMORY_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_SESSION_CREATE_INFO_KHR => "VIDEO_SESSION_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR => "VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR => "VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_BEGIN_CODING_INFO_KHR => "VIDEO_BEGIN_CODING_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_END_CODING_INFO_KHR => "VIDEO_END_CODING_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_CODING_CONTROL_INFO_KHR => "VIDEO_CODING_CONTROL_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_REFERENCE_SLOT_KHR => "VIDEO_REFERENCE_SLOT_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR => "VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_PROFILES_KHR => "VIDEO_PROFILES_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => "PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_FORMAT_PROPERTIES_KHR => "VIDEO_FORMAT_PROPERTIES_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
+            #[cfg(feature = "nv_dedicated_allocation")]
             &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_dedicated_allocation")]
             &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => "DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV",
+            #[cfg(feature = "nv_dedicated_allocation")]
             &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => "DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT => "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_MODULE_CREATE_INFO_NVX => "CU_MODULE_CREATE_INFO_NVX",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_FUNCTION_CREATE_INFO_NVX => "CU_FUNCTION_CREATE_INFO_NVX",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_LAUNCH_INFO_NVX => "CU_LAUNCH_INFO_NVX",
+            #[cfg(feature = "nvx_image_view_handle")]
             &Self::IMAGE_VIEW_HANDLE_INFO_NVX => "IMAGE_VIEW_HANDLE_INFO_NVX",
+            #[cfg(feature = "nvx_image_view_handle")]
             &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => "IMAGE_VIEW_ADDRESS_PROPERTIES_NVX",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => "VIDEO_ENCODE_H264_CAPABILITIES_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT => "VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT => "VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_NALU_SLICE_EXT => "VIDEO_ENCODE_H264_NALU_SLICE_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT => "VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_PROFILE_EXT => "VIDEO_ENCODE_H264_PROFILE_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => "VIDEO_DECODE_H264_CAPABILITIES_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => "VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => "VIDEO_DECODE_H264_PICTURE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_MVC_EXT => "VIDEO_DECODE_H264_MVC_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_PROFILE_EXT => "VIDEO_DECODE_H264_PROFILE_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => "VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT",
+            #[cfg(feature = "amd_texture_gather_bias_lod")]
             &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => "TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD",
+            #[cfg(feature = "ggp_stream_descriptor_surface")]
             &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => "STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP",
+            #[cfg(feature = "nv_corner_sampled_image")]
             &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => "PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV",
+            #[cfg(feature = "nv_external_memory")]
             &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV => "EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_external_memory")]
             &Self::EXPORT_MEMORY_ALLOCATE_INFO_NV => "EXPORT_MEMORY_ALLOCATE_INFO_NV",
+            #[cfg(feature = "nv_external_memory_win32")]
             &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV => "IMPORT_MEMORY_WIN32_HANDLE_INFO_NV",
+            #[cfg(feature = "nv_external_memory_win32")]
             &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV => "EXPORT_MEMORY_WIN32_HANDLE_INFO_NV",
+            #[cfg(feature = "nv_win32_keyed_mutex")]
             &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV => "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV",
+            #[cfg(feature = "ext_validation_flags")]
             &Self::VALIDATION_FLAGS_EXT => "VALIDATION_FLAGS_EXT",
+            #[cfg(feature = "nn_vi_surface")]
             &Self::VI_SURFACE_CREATE_INFO_NN => "VI_SURFACE_CREATE_INFO_NN",
+            #[cfg(feature = "ext_texture_compression_astc_hdr")]
             &Self::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT => "PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT",
+            #[cfg(feature = "ext_astc_decode_mode")]
             &Self::IMAGE_VIEW_ASTC_DECODE_MODE_EXT => "IMAGE_VIEW_ASTC_DECODE_MODE_EXT",
+            #[cfg(feature = "ext_astc_decode_mode")]
             &Self::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT => "PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT",
+            #[cfg(feature = "khr_external_memory_win32")]
             &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR => "IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_memory_win32")]
             &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR => "EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_memory_win32")]
             &Self::MEMORY_WIN32_HANDLE_PROPERTIES_KHR => "MEMORY_WIN32_HANDLE_PROPERTIES_KHR",
+            #[cfg(feature = "khr_external_memory_win32")]
             &Self::MEMORY_GET_WIN32_HANDLE_INFO_KHR => "MEMORY_GET_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_memory_fd")]
             &Self::IMPORT_MEMORY_FD_INFO_KHR => "IMPORT_MEMORY_FD_INFO_KHR",
+            #[cfg(feature = "khr_external_memory_fd")]
             &Self::MEMORY_FD_PROPERTIES_KHR => "MEMORY_FD_PROPERTIES_KHR",
+            #[cfg(feature = "khr_external_memory_fd")]
             &Self::MEMORY_GET_FD_INFO_KHR => "MEMORY_GET_FD_INFO_KHR",
+            #[cfg(feature = "khr_win32_keyed_mutex")]
             &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR => "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_win32")]
             &Self::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => "IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_win32")]
             &Self::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => "EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_win32")]
             &Self::D3D12_FENCE_SUBMIT_INFO_KHR => "D3D12_FENCE_SUBMIT_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_win32")]
             &Self::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR => "SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_fd")]
             &Self::IMPORT_SEMAPHORE_FD_INFO_KHR => "IMPORT_SEMAPHORE_FD_INFO_KHR",
+            #[cfg(feature = "khr_external_semaphore_fd")]
             &Self::SEMAPHORE_GET_FD_INFO_KHR => "SEMAPHORE_GET_FD_INFO_KHR",
+            #[cfg(feature = "khr_push_descriptor")]
             &Self::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR => "PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT => "COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT => "PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::CONDITIONAL_RENDERING_BEGIN_INFO_EXT => "CONDITIONAL_RENDERING_BEGIN_INFO_EXT",
+            #[cfg(feature = "khr_incremental_present")]
             &Self::PRESENT_REGIONS_KHR => "PRESENT_REGIONS_KHR",
+            #[cfg(feature = "nv_clip_space_w_scaling")]
             &Self::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV => "PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "ext_display_surface_counter")]
             &Self::SURFACE_CAPABILITIES_2_EXT => "SURFACE_CAPABILITIES_2_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::DISPLAY_POWER_INFO_EXT => "DISPLAY_POWER_INFO_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::DEVICE_EVENT_INFO_EXT => "DEVICE_EVENT_INFO_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::DISPLAY_EVENT_INFO_EXT => "DISPLAY_EVENT_INFO_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::SWAPCHAIN_COUNTER_CREATE_INFO_EXT => "SWAPCHAIN_COUNTER_CREATE_INFO_EXT",
+            #[cfg(feature = "google_display_timing")]
             &Self::PRESENT_TIMES_INFO_GOOGLE => "PRESENT_TIMES_INFO_GOOGLE",
+            #[cfg(feature = "nvx_multiview_per_view_attributes")]
             &Self::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX => "PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV => "PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "ext_discard_rectangles")]
             &Self::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT => "PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT",
+            #[cfg(feature = "ext_discard_rectangles")]
             &Self::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT => "PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_conservative_rasterization")]
             &Self::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT => "PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT",
+            #[cfg(feature = "ext_conservative_rasterization")]
             &Self::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_depth_clip_enable")]
             &Self::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT => "PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT",
+            #[cfg(feature = "ext_depth_clip_enable")]
             &Self::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_hdr_metadata")]
             &Self::HDR_METADATA_EXT => "HDR_METADATA_EXT",
+            #[cfg(feature = "khr_shared_presentable_image")]
             &Self::SHARED_PRESENT_SURFACE_CAPABILITIES_KHR => "SHARED_PRESENT_SURFACE_CAPABILITIES_KHR",
+            #[cfg(feature = "khr_external_fence_win32")]
             &Self::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR => "IMPORT_FENCE_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_fence_win32")]
             &Self::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR => "EXPORT_FENCE_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_fence_win32")]
             &Self::FENCE_GET_WIN32_HANDLE_INFO_KHR => "FENCE_GET_WIN32_HANDLE_INFO_KHR",
+            #[cfg(feature = "khr_external_fence_fd")]
             &Self::IMPORT_FENCE_FD_INFO_KHR => "IMPORT_FENCE_FD_INFO_KHR",
+            #[cfg(feature = "khr_external_fence_fd")]
             &Self::FENCE_GET_FD_INFO_KHR => "FENCE_GET_FD_INFO_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR => "PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR => "PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR => "QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERFORMANCE_QUERY_SUBMIT_INFO_KHR => "PERFORMANCE_QUERY_SUBMIT_INFO_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::ACQUIRE_PROFILING_LOCK_INFO_KHR => "ACQUIRE_PROFILING_LOCK_INFO_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERFORMANCE_COUNTER_KHR => "PERFORMANCE_COUNTER_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERFORMANCE_COUNTER_DESCRIPTION_KHR => "PERFORMANCE_COUNTER_DESCRIPTION_KHR",
+            #[cfg(feature = "khr_get_surface_capabilities2")]
             &Self::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR => "PHYSICAL_DEVICE_SURFACE_INFO_2_KHR",
+            #[cfg(feature = "khr_get_surface_capabilities2")]
             &Self::SURFACE_CAPABILITIES_2_KHR => "SURFACE_CAPABILITIES_2_KHR",
+            #[cfg(feature = "khr_get_surface_capabilities2")]
             &Self::SURFACE_FORMAT_2_KHR => "SURFACE_FORMAT_2_KHR",
+            #[cfg(feature = "khr_get_display_properties2")]
             &Self::DISPLAY_PROPERTIES_2_KHR => "DISPLAY_PROPERTIES_2_KHR",
+            #[cfg(feature = "khr_get_display_properties2")]
             &Self::DISPLAY_PLANE_PROPERTIES_2_KHR => "DISPLAY_PLANE_PROPERTIES_2_KHR",
+            #[cfg(feature = "khr_get_display_properties2")]
             &Self::DISPLAY_MODE_PROPERTIES_2_KHR => "DISPLAY_MODE_PROPERTIES_2_KHR",
+            #[cfg(feature = "khr_get_display_properties2")]
             &Self::DISPLAY_PLANE_INFO_2_KHR => "DISPLAY_PLANE_INFO_2_KHR",
+            #[cfg(feature = "khr_get_display_properties2")]
             &Self::DISPLAY_PLANE_CAPABILITIES_2_KHR => "DISPLAY_PLANE_CAPABILITIES_2_KHR",
+            #[cfg(feature = "mvk_ios_surface")]
             &Self::IOS_SURFACE_CREATE_INFO_MVK => "IOS_SURFACE_CREATE_INFO_MVK",
+            #[cfg(feature = "mvk_macos_surface")]
             &Self::MACOS_SURFACE_CREATE_INFO_MVK => "MACOS_SURFACE_CREATE_INFO_MVK",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_OBJECT_NAME_INFO_EXT => "DEBUG_UTILS_OBJECT_NAME_INFO_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_OBJECT_TAG_INFO_EXT => "DEBUG_UTILS_OBJECT_TAG_INFO_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_LABEL_EXT => "DEBUG_UTILS_LABEL_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT => "DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT => "DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID => "ANDROID_HARDWARE_BUFFER_USAGE_ANDROID",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID => "ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID => "ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => "IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => "MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID",
+            #[cfg(feature = "android_external_memory_android_hardware_buffer")]
             &Self::EXTERNAL_FORMAT_ANDROID => "EXTERNAL_FORMAT_ANDROID",
+            #[cfg(feature = "ext_inline_uniform_block")]
             &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT => "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT",
+            #[cfg(feature = "ext_inline_uniform_block")]
             &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT => "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT",
+            #[cfg(feature = "ext_inline_uniform_block")]
             &Self::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT => "WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT",
+            #[cfg(feature = "ext_inline_uniform_block")]
             &Self::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT => "DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::SAMPLE_LOCATIONS_INFO_EXT => "SAMPLE_LOCATIONS_INFO_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT => "RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT => "PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT => "PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT",
+            #[cfg(feature = "ext_sample_locations")]
             &Self::MULTISAMPLE_PROPERTIES_EXT => "MULTISAMPLE_PROPERTIES_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT => "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT => "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT => "PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "nv_fragment_coverage_to_color")]
             &Self::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV => "PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR => "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR => "ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR => "ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR => "ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR => "ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR => "ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_GEOMETRY_KHR => "ACCELERATION_STRUCTURE_GEOMETRY_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_VERSION_INFO_KHR => "ACCELERATION_STRUCTURE_VERSION_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::COPY_ACCELERATION_STRUCTURE_INFO_KHR => "COPY_ACCELERATION_STRUCTURE_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR => "COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR => "COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR => "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => "ACCELERATION_STRUCTURE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR => "ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR => "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_PIPELINE_CREATE_INFO_KHR => "RAY_TRACING_PIPELINE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR => "RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR => "RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_ray_query")]
             &Self::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => "PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR",
+            #[cfg(feature = "nv_framebuffer_mixed_samples")]
             &Self::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV => "PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_shader_sm_builtins")]
             &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV => "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV",
+            #[cfg(feature = "nv_shader_sm_builtins")]
             &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV => "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT => "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT => "PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT => "IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT => "IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_image_drm_format_modifier")]
             &Self::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT => "IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT",
+            #[cfg(feature = "ext_validation_cache")]
             &Self::VALIDATION_CACHE_CREATE_INFO_EXT => "VALIDATION_CACHE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_validation_cache")]
             &Self::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT => "SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT",
+            #[cfg(feature = "khr_portability_subset")]
             &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR => "PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR",
+            #[cfg(feature = "khr_portability_subset")]
             &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR => "PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV => "PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV => "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV => "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV => "PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::RAY_TRACING_PIPELINE_CREATE_INFO_NV => "RAY_TRACING_PIPELINE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_CREATE_INFO_NV => "ACCELERATION_STRUCTURE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::GEOMETRY_NV => "GEOMETRY_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::GEOMETRY_TRIANGLES_NV => "GEOMETRY_TRIANGLES_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::GEOMETRY_AABB_NV => "GEOMETRY_AABB_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV => "BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV => "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV => "ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV => "PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV => "RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_INFO_NV => "ACCELERATION_STRUCTURE_INFO_NV",
+            #[cfg(feature = "nv_representative_fragment_test")]
             &Self::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV => "PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV",
+            #[cfg(feature = "nv_representative_fragment_test")]
             &Self::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV => "PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "ext_filter_cubic")]
             &Self::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT => "PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT",
+            #[cfg(feature = "ext_filter_cubic")]
             &Self::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT => "FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT",
+            #[cfg(feature = "ext_global_priority")]
             &Self::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT => "DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_external_memory_host")]
             &Self::IMPORT_MEMORY_HOST_POINTER_INFO_EXT => "IMPORT_MEMORY_HOST_POINTER_INFO_EXT",
+            #[cfg(feature = "ext_external_memory_host")]
             &Self::MEMORY_HOST_POINTER_PROPERTIES_EXT => "MEMORY_HOST_POINTER_PROPERTIES_EXT",
+            #[cfg(feature = "ext_external_memory_host")]
             &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT => "PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT",
+            #[cfg(feature = "khr_shader_clock")]
             &Self::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR => "PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR",
+            #[cfg(feature = "amd_pipeline_compiler_control")]
             &Self::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD => "PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD",
+            #[cfg(feature = "ext_calibrated_timestamps")]
             &Self::CALIBRATED_TIMESTAMP_INFO_EXT => "CALIBRATED_TIMESTAMP_INFO_EXT",
+            #[cfg(feature = "amd_shader_core_properties")]
             &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD => "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => "VIDEO_DECODE_H265_CAPABILITIES_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => "VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => "VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_PROFILE_EXT => "VIDEO_DECODE_H265_PROFILE_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_PICTURE_INFO_EXT => "VIDEO_DECODE_H265_PICTURE_INFO_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT => "VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT",
+            #[cfg(feature = "amd_memory_overallocation_behavior")]
             &Self::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD => "DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD",
+            #[cfg(feature = "ext_vertex_attribute_divisor")]
             &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT => "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT",
+            #[cfg(feature = "ext_vertex_attribute_divisor")]
             &Self::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT => "PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_vertex_attribute_divisor")]
             &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT => "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT",
+            #[cfg(feature = "ggp_frame_token")]
             &Self::PRESENT_FRAME_TOKEN_GGP => "PRESENT_FRAME_TOKEN_GGP",
+            #[cfg(feature = "ext_pipeline_creation_feedback")]
             &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT => "PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT",
+            #[cfg(feature = "nv_compute_shader_derivatives")]
             &Self::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV => "PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV => "PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV => "PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV",
+            #[cfg(feature = "nv_fragment_shader_barycentric")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV => "PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV",
+            #[cfg(feature = "nv_shader_image_footprint")]
             &Self::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV => "PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV",
+            #[cfg(feature = "nv_scissor_exclusive")]
             &Self::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV => "PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_scissor_exclusive")]
             &Self::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV => "PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV",
+            #[cfg(feature = "nv_device_diagnostic_checkpoints")]
             &Self::CHECKPOINT_DATA_NV => "CHECKPOINT_DATA_NV",
+            #[cfg(feature = "nv_device_diagnostic_checkpoints")]
             &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV => "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV",
+            #[cfg(feature = "intel_shader_integer_functions2")]
             &Self::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL => "PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL => "QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::INITIALIZE_PERFORMANCE_API_INFO_INTEL => "INITIALIZE_PERFORMANCE_API_INFO_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_MARKER_INFO_INTEL => "PERFORMANCE_MARKER_INFO_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_STREAM_MARKER_INFO_INTEL => "PERFORMANCE_STREAM_MARKER_INFO_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_OVERRIDE_INFO_INTEL => "PERFORMANCE_OVERRIDE_INFO_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL => "PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL",
+            #[cfg(feature = "ext_pci_bus_info")]
             &Self::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT => "PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT",
+            #[cfg(feature = "amd_display_native_hdr")]
             &Self::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD => "DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD",
+            #[cfg(feature = "amd_display_native_hdr")]
             &Self::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD => "SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD",
+            #[cfg(feature = "fuchsia_imagepipe_surface")]
             &Self::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA => "IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA",
+            #[cfg(feature = "khr_shader_terminate_invocation")]
             &Self::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR => "PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR",
+            #[cfg(feature = "ext_metal_surface")]
             &Self::METAL_SURFACE_CREATE_INFO_EXT => "METAL_SURFACE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT => "RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_subgroup_size_control")]
             &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT => "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT",
+            #[cfg(feature = "ext_subgroup_size_control")]
             &Self::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT => "PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_subgroup_size_control")]
             &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT => "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR => "PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR",
+            #[cfg(feature = "amd_shader_core_properties2")]
             &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD => "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD",
+            #[cfg(feature = "amd_device_coherent_memory")]
             &Self::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => "PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD",
+            #[cfg(feature = "ext_shader_image_atomic_int64")]
             &Self::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => "PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT",
+            #[cfg(feature = "ext_memory_budget")]
             &Self::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT => "PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT",
+            #[cfg(feature = "ext_memory_priority")]
             &Self::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT => "PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT",
+            #[cfg(feature = "ext_memory_priority")]
             &Self::MEMORY_PRIORITY_ALLOCATE_INFO_EXT => "MEMORY_PRIORITY_ALLOCATE_INFO_EXT",
+            #[cfg(feature = "khr_surface_protected_capabilities")]
             &Self::SURFACE_PROTECTED_CAPABILITIES_KHR => "SURFACE_PROTECTED_CAPABILITIES_KHR",
+            #[cfg(feature = "nv_dedicated_allocation_image_aliasing")]
             &Self::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV => "PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV",
+            #[cfg(feature = "ext_buffer_device_address")]
             &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT => "PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT",
+            #[cfg(feature = "ext_buffer_device_address")]
             &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => "BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT => "PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::VALIDATION_FEATURES_EXT => "VALIDATION_FEATURES_EXT",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => "COOPERATIVE_MATRIX_PROPERTIES_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV",
+            #[cfg(feature = "nv_coverage_reduction_mode")]
             &Self::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV => "PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV",
+            #[cfg(feature = "nv_coverage_reduction_mode")]
             &Self::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV => "PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "nv_coverage_reduction_mode")]
             &Self::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV => "FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV",
+            #[cfg(feature = "ext_fragment_shader_interlock")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => "PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT",
+            #[cfg(feature = "ext_ycbcr_image_arrays")]
             &Self::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => "PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT",
+            #[cfg(feature = "ext_provoking_vertex")]
             &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => "PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT",
+            #[cfg(feature = "ext_provoking_vertex")]
             &Self::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_provoking_vertex")]
             &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT => "PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT => "SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT => "SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT => "SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT",
+            #[cfg(feature = "ext_headless_surface")]
             &Self::HEADLESS_SURFACE_CREATE_INFO_EXT => "HEADLESS_SURFACE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT => "PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT => "PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT => "PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT",
+            #[cfg(feature = "ext_shader_atomic_float")]
             &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT",
+            #[cfg(feature = "ext_index_type_uint8")]
             &Self::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => "PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT",
+            #[cfg(feature = "ext_extended_dynamic_state")]
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => "PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PIPELINE_INFO_KHR => "PIPELINE_INFO_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PIPELINE_EXECUTABLE_PROPERTIES_KHR => "PIPELINE_EXECUTABLE_PROPERTIES_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PIPELINE_EXECUTABLE_INFO_KHR => "PIPELINE_EXECUTABLE_INFO_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => "PIPELINE_EXECUTABLE_STATISTIC_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => "PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR",
+            #[cfg(feature = "ext_shader_demote_to_helper_invocation")]
             &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT => "PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => "GRAPHICS_SHADER_GROUP_CREATE_INFO_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV => "GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV => "INDIRECT_COMMANDS_LAYOUT_TOKEN_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV => "INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::GENERATED_COMMANDS_INFO_NV => "GENERATED_COMMANDS_INFO_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV => "GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV",
+            #[cfg(feature = "nv_inherited_viewport_scissor")]
             &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => "PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV",
+            #[cfg(feature = "nv_inherited_viewport_scissor")]
             &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => "COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV",
+            #[cfg(feature = "ext_texel_buffer_alignment")]
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT",
+            #[cfg(feature = "ext_texel_buffer_alignment")]
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT",
+            #[cfg(feature = "qcom_render_pass_transform")]
             &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM",
+            #[cfg(feature = "qcom_render_pass_transform")]
             &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => "RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => "PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT => "DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT => "DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT",
+            #[cfg(feature = "ext_robustness2")]
             &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT",
+            #[cfg(feature = "ext_robustness2")]
             &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT => "PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT",
+            #[cfg(feature = "ext_custom_border_color")]
             &Self::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT => "SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_custom_border_color")]
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT",
+            #[cfg(feature = "ext_custom_border_color")]
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT",
+            #[cfg(feature = "khr_pipeline_library")]
             &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => "PIPELINE_LIBRARY_CREATE_INFO_KHR",
+            #[cfg(feature = "ext_private_data")]
             &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT => "PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT",
+            #[cfg(feature = "ext_private_data")]
             &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => "DEVICE_PRIVATE_DATA_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_private_data")]
             &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => "PRIVATE_DATA_SLOT_CREATE_INFO_EXT",
+            #[cfg(feature = "ext_pipeline_creation_cache_control")]
             &Self::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT => "PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
+            #[cfg(feature = "khr_video_encode_queue")]
             &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR",
+            #[cfg(feature = "nv_device_diagnostics_config")]
             &Self::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => "PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV",
+            #[cfg(feature = "nv_device_diagnostics_config")]
             &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::MEMORY_BARRIER_2_KHR => "MEMORY_BARRIER_2_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::BUFFER_MEMORY_BARRIER_2_KHR => "BUFFER_MEMORY_BARRIER_2_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::IMAGE_MEMORY_BARRIER_2_KHR => "IMAGE_MEMORY_BARRIER_2_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::DEPENDENCY_INFO_KHR => "DEPENDENCY_INFO_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::SUBMIT_INFO_2_KHR => "SUBMIT_INFO_2_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::SEMAPHORE_SUBMIT_INFO_KHR => "SEMAPHORE_SUBMIT_INFO_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::COMMAND_BUFFER_SUBMIT_INFO_KHR => "COMMAND_BUFFER_SUBMIT_INFO_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR => "PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::CHECKPOINT_DATA_2_NV => "CHECKPOINT_DATA_2_NV",
+            #[cfg(feature = "khr_zero_initialize_workgroup_memory")]
             &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR => "PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => "PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV",
+            #[cfg(feature = "ext_ycbcr_2plane_444_formats")]
             &Self::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => "PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT",
+            #[cfg(feature = "ext_fragment_density_map2")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT",
+            #[cfg(feature = "ext_fragment_density_map2")]
             &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT",
+            #[cfg(feature = "qcom_rotated_copy_commands")]
             &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => "COPY_COMMAND_TRANSFORM_INFO_QCOM",
+            #[cfg(feature = "ext_image_robustness")]
             &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT",
+            #[cfg(feature = "khr_workgroup_memory_explicit_layout")]
             &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => "PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::COPY_BUFFER_INFO_2_KHR => "COPY_BUFFER_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::COPY_IMAGE_INFO_2_KHR => "COPY_IMAGE_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::COPY_BUFFER_TO_IMAGE_INFO_2_KHR => "COPY_BUFFER_TO_IMAGE_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::COPY_IMAGE_TO_BUFFER_INFO_2_KHR => "COPY_IMAGE_TO_BUFFER_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::BLIT_IMAGE_INFO_2_KHR => "BLIT_IMAGE_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::RESOLVE_IMAGE_INFO_2_KHR => "RESOLVE_IMAGE_INFO_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::BUFFER_COPY_2_KHR => "BUFFER_COPY_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::IMAGE_COPY_2_KHR => "IMAGE_COPY_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::IMAGE_BLIT_2_KHR => "IMAGE_BLIT_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::BUFFER_IMAGE_COPY_2_KHR => "BUFFER_IMAGE_COPY_2_KHR",
+            #[cfg(feature = "khr_copy_commands2")]
             &Self::IMAGE_RESOLVE_2_KHR => "IMAGE_RESOLVE_2_KHR",
+            #[cfg(feature = "ext_4444_formats")]
             &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT",
+            #[cfg(feature = "ext_directfb_surface")]
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
+            #[cfg(feature = "valve_mutable_descriptor_type")]
             &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE",
+            #[cfg(feature = "valve_mutable_descriptor_type")]
             &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE",
+            #[cfg(feature = "ext_vertex_input_dynamic_state")]
             &Self::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => "PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT",
+            #[cfg(feature = "ext_vertex_input_dynamic_state")]
             &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT",
+            #[cfg(feature = "ext_vertex_input_dynamic_state")]
             &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT",
+            #[cfg(feature = "fuchsia_external_memory")]
             &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA",
+            #[cfg(feature = "fuchsia_external_memory")]
             &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA",
+            #[cfg(feature = "fuchsia_external_memory")]
             &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
+            #[cfg(feature = "fuchsia_external_semaphore")]
             &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA",
+            #[cfg(feature = "fuchsia_external_semaphore")]
             &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
+            #[cfg(feature = "ext_extended_dynamic_state2")]
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT",
+            #[cfg(feature = "qnx_screen_surface")]
             &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
+            #[cfg(feature = "ext_color_write_enable")]
             &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => "PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT",
+            #[cfg(feature = "ext_color_write_enable")]
             &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => "PIPELINE_COLOR_WRITE_CREATE_INFO_EXT",
             _ => "(unknown variant)",
         })
@@ -3766,6 +4382,7 @@ impl std::fmt::Debug for Filter {
         f.write_str(match self {
             &Self::NEAREST => "NEAREST",
             &Self::LINEAR => "LINEAR",
+            #[cfg(feature = "img_filter_cubic")]
             &Self::CUBIC_IMG => "CUBIC_IMG",
             _ => "(unknown variant)",
         })
@@ -3814,7 +4431,7 @@ impl crate::vk1_0::VertexInputRate {
     pub const VERTEX: Self = Self(0);
     pub const INSTANCE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`]"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; const NONE_KHR = PipelineStageFlagBits :: NONE_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags.html) · Bitmask of [`PipelineStageFlagBits`]"] # [doc (alias = "VkPipelineStageFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags : u32 { const TOP_OF_PIPE = PipelineStageFlagBits :: TOP_OF_PIPE . 0 ; const DRAW_INDIRECT = PipelineStageFlagBits :: DRAW_INDIRECT . 0 ; const VERTEX_INPUT = PipelineStageFlagBits :: VERTEX_INPUT . 0 ; const VERTEX_SHADER = PipelineStageFlagBits :: VERTEX_SHADER . 0 ; const TESSELLATION_CONTROL_SHADER = PipelineStageFlagBits :: TESSELLATION_CONTROL_SHADER . 0 ; const TESSELLATION_EVALUATION_SHADER = PipelineStageFlagBits :: TESSELLATION_EVALUATION_SHADER . 0 ; const GEOMETRY_SHADER = PipelineStageFlagBits :: GEOMETRY_SHADER . 0 ; const FRAGMENT_SHADER = PipelineStageFlagBits :: FRAGMENT_SHADER . 0 ; const EARLY_FRAGMENT_TESTS = PipelineStageFlagBits :: EARLY_FRAGMENT_TESTS . 0 ; const LATE_FRAGMENT_TESTS = PipelineStageFlagBits :: LATE_FRAGMENT_TESTS . 0 ; const COLOR_ATTACHMENT_OUTPUT = PipelineStageFlagBits :: COLOR_ATTACHMENT_OUTPUT . 0 ; const COMPUTE_SHADER = PipelineStageFlagBits :: COMPUTE_SHADER . 0 ; const TRANSFER = PipelineStageFlagBits :: TRANSFER . 0 ; const BOTTOM_OF_PIPE = PipelineStageFlagBits :: BOTTOM_OF_PIPE . 0 ; const HOST = PipelineStageFlagBits :: HOST . 0 ; const ALL_GRAPHICS = PipelineStageFlagBits :: ALL_GRAPHICS . 0 ; const ALL_COMMANDS = PipelineStageFlagBits :: ALL_COMMANDS . 0 ; # [cfg (feature = "ext_transform_feedback")] const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits :: TRANSFORM_FEEDBACK_EXT . 0 ; # [cfg (feature = "ext_conditional_rendering")] const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits :: CONDITIONAL_RENDERING_EXT . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; # [cfg (feature = "khr_ray_tracing_pipeline")] const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits :: RAY_TRACING_SHADER_KHR . 0 ; # [cfg (feature = "nv_mesh_shader")] const TASK_SHADER_NV = PipelineStageFlagBits :: TASK_SHADER_NV . 0 ; # [cfg (feature = "nv_mesh_shader")] const MESH_SHADER_NV = PipelineStageFlagBits :: MESH_SHADER_NV . 0 ; # [cfg (feature = "ext_fragment_density_map")] const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; # [cfg (feature = "khr_fragment_shading_rate")] const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; # [cfg (feature = "nv_device_generated_commands")] const COMMAND_PREPROCESS_NV = PipelineStageFlagBits :: COMMAND_PREPROCESS_NV . 0 ; # [cfg (feature = "khr_synchronization2")] const NONE_KHR = PipelineStageFlagBits :: NONE_KHR . 0 ; # [cfg (feature = "nv_shading_rate_image")] const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const RAY_TRACING_SHADER_NV = PipelineStageFlagBits :: RAY_TRACING_SHADER_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits.html) · Bits enum of [`PipelineStageFlags`]"]
 #[doc(alias = "VkPipelineStageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3847,15 +4464,25 @@ impl std::fmt::Debug for PipelineStageFlagBits {
             &Self::HOST => "HOST",
             &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
             &Self::ALL_COMMANDS => "ALL_COMMANDS",
+            #[cfg(feature = "ext_transform_feedback")]
             &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_BUILD_KHR => "ACCELERATION_STRUCTURE_BUILD_KHR",
+            #[cfg(feature = "khr_ray_tracing_pipeline")]
             &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
+            #[cfg(feature = "nv_mesh_shader")]
             &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
+            #[cfg(feature = "ext_fragment_density_map")]
             &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
+            #[cfg(feature = "khr_synchronization2")]
             &Self::NONE_KHR => "NONE_KHR",
             _ => "(unknown variant)",
         })
@@ -3972,7 +4599,7 @@ impl std::fmt::Debug for AttachmentDescriptionFlagBits {
 impl crate::vk1_0::AttachmentDescriptionFlagBits {
     pub const MAY_ALIAS: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; const HOST_ONLY_VALVE = DescriptorPoolCreateFlagBits :: HOST_ONLY_VALVE . 0 ; const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlags.html) · Bitmask of [`DescriptorPoolCreateFlagBits`]"] # [doc (alias = "VkDescriptorPoolCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct DescriptorPoolCreateFlags : u32 { const FREE_DESCRIPTOR_SET = DescriptorPoolCreateFlagBits :: FREE_DESCRIPTOR_SET . 0 ; const UPDATE_AFTER_BIND = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND . 0 ; # [cfg (feature = "valve_mutable_descriptor_type")] const HOST_ONLY_VALVE = DescriptorPoolCreateFlagBits :: HOST_ONLY_VALVE . 0 ; # [cfg (feature = "ext_descriptor_indexing")] const UPDATE_AFTER_BIND_EXT = DescriptorPoolCreateFlagBits :: UPDATE_AFTER_BIND_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolCreateFlagBits.html) · Bits enum of [`DescriptorPoolCreateFlags`]"]
 #[doc(alias = "VkDescriptorPoolCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3990,6 +4617,7 @@ impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
         f.write_str(match self {
             &Self::FREE_DESCRIPTOR_SET => "FREE_DESCRIPTOR_SET",
             &Self::UPDATE_AFTER_BIND => "UPDATE_AFTER_BIND",
+            #[cfg(feature = "valve_mutable_descriptor_type")]
             &Self::HOST_ONLY_VALVE => "HOST_ONLY_VALVE",
             _ => "(unknown variant)",
         })
@@ -3999,7 +4627,7 @@ impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
 impl crate::vk1_0::DescriptorPoolCreateFlagBits {
     pub const FREE_DESCRIPTOR_SET: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`]"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlags.html) · Bitmask of [`DependencyFlagBits`]"] # [doc (alias = "VkDependencyFlags")] # [derive (Default)] # [repr (transparent)] pub struct DependencyFlags : u32 { const BY_REGION = DependencyFlagBits :: BY_REGION . 0 ; const DEVICE_GROUP = DependencyFlagBits :: DEVICE_GROUP . 0 ; const VIEW_LOCAL = DependencyFlagBits :: VIEW_LOCAL . 0 ; # [cfg (feature = "khr_multiview")] const VIEW_LOCAL_KHR = DependencyFlagBits :: VIEW_LOCAL_KHR . 0 ; # [cfg (feature = "khr_device_group")] const DEVICE_GROUP_KHR = DependencyFlagBits :: DEVICE_GROUP_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDependencyFlagBits.html) · Bits enum of [`DependencyFlags`]"]
 #[doc(alias = "VkDependencyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -4062,22 +4690,39 @@ impl std::fmt::Debug for ObjectType {
             &Self::COMMAND_POOL => "COMMAND_POOL",
             &Self::SAMPLER_YCBCR_CONVERSION => "SAMPLER_YCBCR_CONVERSION",
             &Self::DESCRIPTOR_UPDATE_TEMPLATE => "DESCRIPTOR_UPDATE_TEMPLATE",
+            #[cfg(feature = "khr_surface")]
             &Self::SURFACE_KHR => "SURFACE_KHR",
+            #[cfg(feature = "khr_swapchain")]
             &Self::SWAPCHAIN_KHR => "SWAPCHAIN_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::DISPLAY_KHR => "DISPLAY_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::DISPLAY_MODE_KHR => "DISPLAY_MODE_KHR",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_SESSION_KHR => "VIDEO_SESSION_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_SESSION_PARAMETERS_KHR => "VIDEO_SESSION_PARAMETERS_KHR",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_MODULE_NVX => "CU_MODULE_NVX",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_FUNCTION_NVX => "CU_FUNCTION_NVX",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
+            #[cfg(feature = "ext_validation_cache")]
             &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
+            #[cfg(feature = "intel_performance_query")]
             &Self::PERFORMANCE_CONFIGURATION_INTEL => "PERFORMANCE_CONFIGURATION_INTEL",
+            #[cfg(feature = "khr_deferred_host_operations")]
             &Self::DEFERRED_OPERATION_KHR => "DEFERRED_OPERATION_KHR",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDIRECT_COMMANDS_LAYOUT_NV => "INDIRECT_COMMANDS_LAYOUT_NV",
+            #[cfg(feature = "ext_private_data")]
             &Self::PRIVATE_DATA_SLOT_EXT => "PRIVATE_DATA_SLOT_EXT",
             _ => "(unknown variant)",
         })
@@ -4112,7 +4757,7 @@ impl crate::vk1_0::ObjectType {
     pub const FRAMEBUFFER: Self = Self(24);
     pub const COMMAND_POOL: Self = Self(25);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { const DEVICE_ONLY_KHR = EventCreateFlagBits :: DEVICE_ONLY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"] # [doc (alias = "VkEventCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct EventCreateFlags : u32 { # [cfg (feature = "khr_synchronization2")] const DEVICE_ONLY_KHR = EventCreateFlagBits :: DEVICE_ONLY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkEventCreateFlagBits.html) · Bits enum of [`EventCreateFlags`]"]
 #[doc(alias = "VkEventCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -4128,12 +4773,13 @@ impl EventCreateFlagBits {
 impl std::fmt::Debug for EventCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_synchronization2")]
             &Self::DEVICE_ONLY_KHR => "DEVICE_ONLY_KHR",
             _ => "(unknown variant)",
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { # [cfg (feature = "nvx_multiview_per_view_attributes")] const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; # [cfg (feature = "nvx_multiview_per_view_attributes")] const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; # [cfg (feature = "qcom_render_pass_shader_resolve")] const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; # [cfg (feature = "qcom_render_pass_shader_resolve")] const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`]"]
 #[doc(alias = "VkSubpassDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -4149,9 +4795,13 @@ impl SubpassDescriptionFlagBits {
 impl std::fmt::Debug for SubpassDescriptionFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nvx_multiview_per_view_attributes")]
             &Self::PER_VIEW_ATTRIBUTES_NVX => "PER_VIEW_ATTRIBUTES_NVX",
+            #[cfg(feature = "nvx_multiview_per_view_attributes")]
             &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
+            #[cfg(feature = "qcom_render_pass_shader_resolve")]
             &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
+            #[cfg(feature = "qcom_render_pass_shader_resolve")]
             &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
             _ => "(unknown variant)",
         })

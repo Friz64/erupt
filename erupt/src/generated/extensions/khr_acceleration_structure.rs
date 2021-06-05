@@ -90,7 +90,7 @@ impl crate::vk1_0::PipelineStageFlagBits {
 impl crate::vk1_0::ObjectType {
     pub const ACCELERATION_STRUCTURE_KHR: Self = Self(1000150000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`]"] # [doc (alias = "VkGeometryFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsKHR.html) · Bitmask of [`GeometryFlagBitsKHR`]"] # [doc (alias = "VkGeometryFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryFlagsKHR : u32 { # [cfg (feature = "khr_acceleration_structure")] const OPAQUE_KHR = GeometryFlagBitsKHR :: OPAQUE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_KHR . 0 ; # [cfg (feature = "nv_ray_tracing")] const OPAQUE_NV = GeometryFlagBitsKHR :: OPAQUE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const NO_DUPLICATE_ANY_HIT_INVOCATION_NV = GeometryFlagBitsKHR :: NO_DUPLICATE_ANY_HIT_INVOCATION_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsKHR.html) · Bits enum of [`GeometryFlagsKHR`]"]
 #[doc(alias = "VkGeometryFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -106,7 +106,9 @@ impl GeometryFlagBitsKHR {
 impl std::fmt::Debug for GeometryFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::OPAQUE_KHR => "OPAQUE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::NO_DUPLICATE_ANY_HIT_INVOCATION_KHR => "NO_DUPLICATE_ANY_HIT_INVOCATION_KHR",
             _ => "(unknown variant)",
         })
@@ -117,7 +119,7 @@ impl crate::extensions::khr_acceleration_structure::GeometryFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`]"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`]"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { # [cfg (feature = "khr_acceleration_structure")] const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; # [cfg (feature = "nv_ray_tracing")] const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Bits enum of [`GeometryInstanceFlagsKHR`]"]
 #[doc(alias = "VkGeometryInstanceFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -133,9 +135,13 @@ impl GeometryInstanceFlagBitsKHR {
 impl std::fmt::Debug for GeometryInstanceFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::TRIANGLE_FACING_CULL_DISABLE_KHR => "TRIANGLE_FACING_CULL_DISABLE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR => "TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::FORCE_OPAQUE_KHR => "FORCE_OPAQUE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::FORCE_NO_OPAQUE_KHR => "FORCE_NO_OPAQUE_KHR",
             _ => "(unknown variant)",
         })
@@ -148,7 +154,7 @@ impl crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR 
     pub const FORCE_OPAQUE_KHR: Self = Self(4);
     pub const FORCE_NO_OPAQUE_KHR: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`]"] # [doc (alias = "VkBuildAccelerationStructureFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`]"] # [doc (alias = "VkBuildAccelerationStructureFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { # [cfg (feature = "khr_acceleration_structure")] const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; # [cfg (feature = "khr_acceleration_structure")] const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; # [cfg (feature = "nv_ray_tracing")] const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; # [cfg (feature = "nv_ray_tracing")] const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Bits enum of [`BuildAccelerationStructureFlagsKHR`]"]
 #[doc(alias = "VkBuildAccelerationStructureFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -164,10 +170,15 @@ impl BuildAccelerationStructureFlagBitsKHR {
 impl std::fmt::Debug for BuildAccelerationStructureFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ALLOW_UPDATE_KHR => "ALLOW_UPDATE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ALLOW_COMPACTION_KHR => "ALLOW_COMPACTION_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::PREFER_FAST_TRACE_KHR => "PREFER_FAST_TRACE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::PREFER_FAST_BUILD_KHR => "PREFER_FAST_BUILD_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::LOW_MEMORY_KHR => "LOW_MEMORY_KHR",
             _ => "(unknown variant)",
         })
@@ -181,7 +192,7 @@ impl crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFl
     pub const PREFER_FAST_BUILD_KHR: Self = Self(8);
     pub const LOW_MEMORY_KHR: Self = Self(16);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagsKHR.html) · Bitmask of [`AccelerationStructureCreateFlagBitsKHR`]"] # [doc (alias = "VkAccelerationStructureCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AccelerationStructureCreateFlagsKHR : u32 { const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = AccelerationStructureCreateFlagBitsKHR :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagsKHR.html) · Bitmask of [`AccelerationStructureCreateFlagBitsKHR`]"] # [doc (alias = "VkAccelerationStructureCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct AccelerationStructureCreateFlagsKHR : u32 { # [cfg (feature = "khr_acceleration_structure")] const DEVICE_ADDRESS_CAPTURE_REPLAY_KHR = AccelerationStructureCreateFlagBitsKHR :: DEVICE_ADDRESS_CAPTURE_REPLAY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateFlagBitsKHR.html) · Bits enum of [`AccelerationStructureCreateFlagsKHR`]"]
 #[doc(alias = "VkAccelerationStructureCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -197,6 +208,7 @@ impl AccelerationStructureCreateFlagBitsKHR {
 impl std::fmt::Debug for AccelerationStructureCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::DEVICE_ADDRESS_CAPTURE_REPLAY_KHR => "DEVICE_ADDRESS_CAPTURE_REPLAY_KHR",
             _ => "(unknown variant)",
         })
@@ -214,7 +226,9 @@ pub struct BuildAccelerationStructureModeKHR(pub i32);
 impl std::fmt::Debug for BuildAccelerationStructureModeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::BUILD_KHR => "BUILD_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::UPDATE_KHR => "UPDATE_KHR",
             _ => "(unknown variant)",
         })
@@ -233,9 +247,13 @@ pub struct CopyAccelerationStructureModeKHR(pub i32);
 impl std::fmt::Debug for CopyAccelerationStructureModeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::CLONE_KHR => "CLONE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::COMPACT_KHR => "COMPACT_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::SERIALIZE_KHR => "SERIALIZE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::DESERIALIZE_KHR => "DESERIALIZE_KHR",
             _ => "(unknown variant)",
         })
@@ -256,8 +274,11 @@ pub struct AccelerationStructureTypeKHR(pub i32);
 impl std::fmt::Debug for AccelerationStructureTypeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::TOP_LEVEL_KHR => "TOP_LEVEL_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::BOTTOM_LEVEL_KHR => "BOTTOM_LEVEL_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::GENERIC_KHR => "GENERIC_KHR",
             _ => "(unknown variant)",
         })
@@ -277,8 +298,11 @@ pub struct GeometryTypeKHR(pub i32);
 impl std::fmt::Debug for GeometryTypeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::TRIANGLES_KHR => "TRIANGLES_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::AABBS_KHR => "AABBS_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::INSTANCES_KHR => "INSTANCES_KHR",
             _ => "(unknown variant)",
         })
@@ -298,8 +322,11 @@ pub struct AccelerationStructureBuildTypeKHR(pub i32);
 impl std::fmt::Debug for AccelerationStructureBuildTypeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::HOST_KHR => "HOST_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::DEVICE_KHR => "DEVICE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::HOST_OR_DEVICE_KHR => "HOST_OR_DEVICE_KHR",
             _ => "(unknown variant)",
         })
@@ -319,7 +346,9 @@ pub struct AccelerationStructureCompatibilityKHR(pub i32);
 impl std::fmt::Debug for AccelerationStructureCompatibilityKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::COMPATIBLE_KHR => "COMPATIBLE_KHR",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::INCOMPATIBLE_KHR => "INCOMPATIBLE_KHR",
             _ => "(unknown variant)",
         })

@@ -70,7 +70,7 @@ impl crate::vk1_0::ObjectType {
     pub const DISPLAY_KHR: Self = Self(1000002000);
     pub const DISPLAY_MODE_KHR: Self = Self(1000002001);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"] # [doc (alias = "VkDisplayPlaneAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"] # [doc (alias = "VkDisplayPlaneAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct DisplayPlaneAlphaFlagsKHR : u32 { # [cfg (feature = "khr_display")] const OPAQUE_KHR = DisplayPlaneAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; # [cfg (feature = "khr_display")] const GLOBAL_KHR = DisplayPlaneAlphaFlagBitsKHR :: GLOBAL_KHR . 0 ; # [cfg (feature = "khr_display")] const PER_PIXEL_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_KHR . 0 ; # [cfg (feature = "khr_display")] const PER_PIXEL_PREMULTIPLIED_KHR = DisplayPlaneAlphaFlagBitsKHR :: PER_PIXEL_PREMULTIPLIED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`]"]
 #[doc(alias = "VkDisplayPlaneAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -86,9 +86,13 @@ impl DisplayPlaneAlphaFlagBitsKHR {
 impl std::fmt::Debug for DisplayPlaneAlphaFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_display")]
             &Self::OPAQUE_KHR => "OPAQUE_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::GLOBAL_KHR => "GLOBAL_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::PER_PIXEL_KHR => "PER_PIXEL_KHR",
+            #[cfg(feature = "khr_display")]
             &Self::PER_PIXEL_PREMULTIPLIED_KHR => "PER_PIXEL_PREMULTIPLIED_KHR",
             _ => "(unknown variant)",
         })

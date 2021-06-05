@@ -1,4 +1,5 @@
 use crate::{
+    cargotoml_gen,
     items::enums::{Enum, EnumKind},
     name::{FunctionName, Name, TypeName},
     source::Source,
@@ -110,6 +111,27 @@ impl Origin {
 
     pub fn ident(&self) -> Ident {
         format_ident!("{}", self.path().last().unwrap())
+    }
+
+    pub fn feature(&self) -> Option<String> {
+        match self {
+            Origin::Extension { full } => Some(cargotoml_gen::ext_feature_name(full)),
+            Origin::External { .. } => {
+                // todo add (?)
+                None
+            }
+            _ => None,
+        }
+    }
+
+    pub fn feature_gate(&self) -> Option<TokenStream> {
+        self.feature()
+            .map(|feature| quote! { #[cfg(feature = #feature)] })
+    }
+
+    pub fn inverse_feature_gate(&self) -> Option<TokenStream> {
+        self.feature()
+            .map(|feature| quote! { #[cfg(not(feature = #feature))] })
     }
 }
 

@@ -18,7 +18,9 @@ pub struct ProvokingVertexModeEXT(pub i32);
 impl std::fmt::Debug for ProvokingVertexModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_provoking_vertex")]
             &Self::FIRST_VERTEX_EXT => "FIRST_VERTEX_EXT",
+            #[cfg(feature = "ext_provoking_vertex")]
             &Self::LAST_VERTEX_EXT => "LAST_VERTEX_EXT",
             _ => "(unknown variant)",
         })

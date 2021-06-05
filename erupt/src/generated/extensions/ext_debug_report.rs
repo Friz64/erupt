@@ -24,7 +24,7 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::ObjectType {
     pub const DEBUG_REPORT_CALLBACK_EXT: Self = Self(1000011000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`]"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagsEXT.html) · Bitmask of [`DebugReportFlagBitsEXT`]"] # [doc (alias = "VkDebugReportFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugReportFlagsEXT : u32 { # [cfg (feature = "ext_debug_report")] const INFORMATION_EXT = DebugReportFlagBitsEXT :: INFORMATION_EXT . 0 ; # [cfg (feature = "ext_debug_report")] const WARNING_EXT = DebugReportFlagBitsEXT :: WARNING_EXT . 0 ; # [cfg (feature = "ext_debug_report")] const PERFORMANCE_WARNING_EXT = DebugReportFlagBitsEXT :: PERFORMANCE_WARNING_EXT . 0 ; # [cfg (feature = "ext_debug_report")] const ERROR_EXT = DebugReportFlagBitsEXT :: ERROR_EXT . 0 ; # [cfg (feature = "ext_debug_report")] const DEBUG_EXT = DebugReportFlagBitsEXT :: DEBUG_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportFlagBitsEXT.html) · Bits enum of [`DebugReportFlagsEXT`]"]
 #[doc(alias = "VkDebugReportFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -40,10 +40,15 @@ impl DebugReportFlagBitsEXT {
 impl std::fmt::Debug for DebugReportFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_debug_report")]
             &Self::INFORMATION_EXT => "INFORMATION_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::WARNING_EXT => "WARNING_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::PERFORMANCE_WARNING_EXT => "PERFORMANCE_WARNING_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::ERROR_EXT => "ERROR_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEBUG_EXT => "DEBUG_EXT",
             _ => "(unknown variant)",
         })
@@ -65,43 +70,81 @@ pub struct DebugReportObjectTypeEXT(pub i32);
 impl std::fmt::Debug for DebugReportObjectTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_debug_report")]
             &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::INSTANCE_EXT => "INSTANCE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::PHYSICAL_DEVICE_EXT => "PHYSICAL_DEVICE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEVICE_EXT => "DEVICE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::QUEUE_EXT => "QUEUE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SEMAPHORE_EXT => "SEMAPHORE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::COMMAND_BUFFER_EXT => "COMMAND_BUFFER_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::FENCE_EXT => "FENCE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEVICE_MEMORY_EXT => "DEVICE_MEMORY_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::BUFFER_EXT => "BUFFER_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::IMAGE_EXT => "IMAGE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::EVENT_EXT => "EVENT_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::QUERY_POOL_EXT => "QUERY_POOL_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::BUFFER_VIEW_EXT => "BUFFER_VIEW_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::IMAGE_VIEW_EXT => "IMAGE_VIEW_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SHADER_MODULE_EXT => "SHADER_MODULE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::PIPELINE_CACHE_EXT => "PIPELINE_CACHE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::PIPELINE_LAYOUT_EXT => "PIPELINE_LAYOUT_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::RENDER_PASS_EXT => "RENDER_PASS_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::PIPELINE_EXT => "PIPELINE_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DESCRIPTOR_SET_LAYOUT_EXT => "DESCRIPTOR_SET_LAYOUT_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SAMPLER_EXT => "SAMPLER_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DESCRIPTOR_POOL_EXT => "DESCRIPTOR_POOL_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DESCRIPTOR_SET_EXT => "DESCRIPTOR_SET_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::FRAMEBUFFER_EXT => "FRAMEBUFFER_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::COMMAND_POOL_EXT => "COMMAND_POOL_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SURFACE_KHR_EXT => "SURFACE_KHR_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SWAPCHAIN_KHR_EXT => "SWAPCHAIN_KHR_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DEBUG_REPORT_CALLBACK_EXT_EXT => "DEBUG_REPORT_CALLBACK_EXT_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DISPLAY_KHR_EXT => "DISPLAY_KHR_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DISPLAY_MODE_KHR_EXT => "DISPLAY_MODE_KHR_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::VALIDATION_CACHE_EXT_EXT => "VALIDATION_CACHE_EXT_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
+            #[cfg(feature = "ext_debug_report")]
             &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => "DESCRIPTOR_UPDATE_TEMPLATE_EXT",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_MODULE_NVX_EXT => "CU_MODULE_NVX_EXT",
+            #[cfg(feature = "nvx_binary_import")]
             &Self::CU_FUNCTION_NVX_EXT => "CU_FUNCTION_NVX_EXT",
+            #[cfg(feature = "khr_acceleration_structure")]
             &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::ACCELERATION_STRUCTURE_NV_EXT => "ACCELERATION_STRUCTURE_NV_EXT",
             _ => "(unknown variant)",
         })

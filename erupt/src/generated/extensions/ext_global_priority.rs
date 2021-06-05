@@ -20,9 +20,13 @@ pub struct QueueGlobalPriorityEXT(pub i32);
 impl std::fmt::Debug for QueueGlobalPriorityEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_global_priority")]
             &Self::LOW_EXT => "LOW_EXT",
+            #[cfg(feature = "ext_global_priority")]
             &Self::MEDIUM_EXT => "MEDIUM_EXT",
+            #[cfg(feature = "ext_global_priority")]
             &Self::HIGH_EXT => "HIGH_EXT",
+            #[cfg(feature = "ext_global_priority")]
             &Self::REALTIME_EXT => "REALTIME_EXT",
             _ => "(unknown variant)",
         })

@@ -27,8 +27,11 @@ pub struct DisplayPowerStateEXT(pub i32);
 impl std::fmt::Debug for DisplayPowerStateEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_display_control")]
             &Self::OFF_EXT => "OFF_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::SUSPEND_EXT => "SUSPEND_EXT",
+            #[cfg(feature = "ext_display_control")]
             &Self::ON_EXT => "ON_EXT",
             _ => "(unknown variant)",
         })
@@ -48,6 +51,7 @@ pub struct DeviceEventTypeEXT(pub i32);
 impl std::fmt::Debug for DeviceEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_display_control")]
             &Self::DISPLAY_HOTPLUG_EXT => "DISPLAY_HOTPLUG_EXT",
             _ => "(unknown variant)",
         })
@@ -65,6 +69,7 @@ pub struct DisplayEventTypeEXT(pub i32);
 impl std::fmt::Debug for DisplayEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_display_control")]
             &Self::FIRST_PIXEL_OUT_EXT => "FIRST_PIXEL_OUT_EXT",
             _ => "(unknown variant)",
         })
@@ -86,7 +91,9 @@ pub type PFN_vkRegisterDisplayEventEXT = unsafe extern "system" fn(device: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainCounterEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT, p_counter_value: *mut u64) -> crate::vk1_0::Result;
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Structure"]
 #[doc(alias = "VkDisplayPowerInfoEXT")]

@@ -75,7 +75,11 @@ impl<'a> std::ops::DerefMut for CopyCommandTransformInfoQCOMBuilder<'a> {
         &mut self.0
     }
 }
+#[cfg(feature = "khr_copy_commands2")]
 impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+#[cfg(feature = "khr_copy_commands2")]
 impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+#[cfg(feature = "khr_copy_commands2")]
 impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+#[cfg(feature = "khr_copy_commands2")]
 impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}

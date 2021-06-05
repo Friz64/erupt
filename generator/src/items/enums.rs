@@ -257,6 +257,13 @@ impl EnumVariant {
             Ok(variants)
         }
     }
+
+    pub fn origin<'a>(&'a self, en: &'a Enum) -> &'a Origin {
+        match self.origin.as_ref().or_else(|| en.origin.as_ref()) {
+            Some(origin) => origin,
+            None => panic!("Enum variant missing origin: {:?}", self.name.original),
+        }
+    }
 }
 
 impl PartialEq for EnumVariant {
@@ -314,6 +321,10 @@ impl Enum {
                     self.origin.as_ref(),
                 );
 
+                let flagbits_gates = self
+                    .variants
+                    .iter()
+                    .map(|variant| variant.origin(&self).feature_gate());
                 let flagbits_variants = self.variants.iter().map(|variant| variant.name.ident());
                 let empty_bitflag_workaround = self.variants.is_empty().then(|| {
                     quote! {
@@ -330,7 +341,10 @@ impl Enum {
                         #[repr(transparent)]
                         pub struct #flags_ident: #bitbase {
                             #empty_bitflag_workaround
-                            #(const #flagbits_variants = #flagbits_ident::#flagbits_variants.0;)*
+                            #(
+                                #flagbits_gates
+                                const #flagbits_variants = #flagbits_ident::#flagbits_variants.0;
+                            )*
                         }
                     }
 
@@ -392,6 +406,11 @@ impl Enum {
             .iter()
             .filter(|variant| matches!(variant.kind, EnumVariantKind::Value(_)))
             .collect();
+
+        let variant_gates = self
+            .variants
+            .iter()
+            .map(|variant| variant.origin(&self).feature_gate());
         let variant_idents = variants.iter().map(|variant| variant.name.ident());
         let variant_names = variants.iter().map(|variant| &variant.name.variant);
 
@@ -399,7 +418,10 @@ impl Enum {
             impl std::fmt::Debug for #enum_ident {
                 fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
                     f.write_str(match self {
-                        #(&Self::#variant_idents => #variant_names,)*
+                        #(
+                            #variant_gates
+                            &Self::#variant_idents => #variant_names,
+                        )*
                         _ => "(unknown variant)",
                     })
                 }

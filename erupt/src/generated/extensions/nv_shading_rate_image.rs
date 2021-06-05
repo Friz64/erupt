@@ -46,17 +46,29 @@ pub struct ShadingRatePaletteEntryNV(pub i32);
 impl std::fmt::Debug for ShadingRatePaletteEntryNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_16_INVOCATIONS_PER_PIXEL_NV => "_16_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_8_INVOCATIONS_PER_PIXEL_NV => "_8_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_4_INVOCATIONS_PER_PIXEL_NV => "_4_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_2_INVOCATIONS_PER_PIXEL_NV => "_2_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_PIXEL_NV => "_1_INVOCATION_PER_PIXEL_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => "_1_INVOCATION_PER_2X1_PIXELS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => "_1_INVOCATION_PER_1X2_PIXELS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => "_1_INVOCATION_PER_2X2_PIXELS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => "_1_INVOCATION_PER_4X2_PIXELS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => "_1_INVOCATION_PER_2X4_PIXELS_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => "_1_INVOCATION_PER_4X4_PIXELS_NV",
             _ => "(unknown variant)",
         })
@@ -85,9 +97,13 @@ pub struct CoarseSampleOrderTypeNV(pub i32);
 impl std::fmt::Debug for CoarseSampleOrderTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::DEFAULT_NV => "DEFAULT_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::CUSTOM_NV => "CUSTOM_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::PIXEL_MAJOR_NV => "PIXEL_MAJOR_NV",
+            #[cfg(feature = "nv_shading_rate_image")]
             &Self::SAMPLE_MAJOR_NV => "SAMPLE_MAJOR_NV",
             _ => "(unknown variant)",
         })

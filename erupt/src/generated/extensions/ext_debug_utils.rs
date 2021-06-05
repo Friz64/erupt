@@ -79,7 +79,7 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::ObjectType {
     pub const DEBUG_UTILS_MESSENGER_EXT: Self = Self(1000128000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessageSeverityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagsEXT.html) · Bitmask of [`DebugUtilsMessageSeverityFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessageSeverityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageSeverityFlagsEXT : u32 { # [cfg (feature = "ext_debug_utils")] const VERBOSE_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: VERBOSE_EXT . 0 ; # [cfg (feature = "ext_debug_utils")] const INFO_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: INFO_EXT . 0 ; # [cfg (feature = "ext_debug_utils")] const WARNING_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: WARNING_EXT . 0 ; # [cfg (feature = "ext_debug_utils")] const ERROR_EXT = DebugUtilsMessageSeverityFlagBitsEXT :: ERROR_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageSeverityFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageSeverityFlagsEXT`]"]
 #[doc(alias = "VkDebugUtilsMessageSeverityFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -95,9 +95,13 @@ impl DebugUtilsMessageSeverityFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_debug_utils")]
             &Self::VERBOSE_EXT => "VERBOSE_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::INFO_EXT => "INFO_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::WARNING_EXT => "WARNING_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::ERROR_EXT => "ERROR_EXT",
             _ => "(unknown variant)",
         })
@@ -110,7 +114,7 @@ impl crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT {
     pub const WARNING_EXT: Self = Self(256);
     pub const ERROR_EXT: Self = Self(4096);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessageTypeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagsEXT.html) · Bitmask of [`DebugUtilsMessageTypeFlagBitsEXT`]"] # [doc (alias = "VkDebugUtilsMessageTypeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct DebugUtilsMessageTypeFlagsEXT : u32 { # [cfg (feature = "ext_debug_utils")] const GENERAL_EXT = DebugUtilsMessageTypeFlagBitsEXT :: GENERAL_EXT . 0 ; # [cfg (feature = "ext_debug_utils")] const VALIDATION_EXT = DebugUtilsMessageTypeFlagBitsEXT :: VALIDATION_EXT . 0 ; # [cfg (feature = "ext_debug_utils")] const PERFORMANCE_EXT = DebugUtilsMessageTypeFlagBitsEXT :: PERFORMANCE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsMessageTypeFlagBitsEXT.html) · Bits enum of [`DebugUtilsMessageTypeFlagsEXT`]"]
 #[doc(alias = "VkDebugUtilsMessageTypeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -126,8 +130,11 @@ impl DebugUtilsMessageTypeFlagBitsEXT {
 impl std::fmt::Debug for DebugUtilsMessageTypeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_debug_utils")]
             &Self::GENERAL_EXT => "GENERAL_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::VALIDATION_EXT => "VALIDATION_EXT",
+            #[cfg(feature = "ext_debug_utils")]
             &Self::PERFORMANCE_EXT => "PERFORMANCE_EXT",
             _ => "(unknown variant)",
         })

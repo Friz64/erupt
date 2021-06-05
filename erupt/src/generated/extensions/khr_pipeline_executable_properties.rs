@@ -32,9 +32,13 @@ pub struct PipelineExecutableStatisticFormatKHR(pub i32);
 impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::BOOL32_KHR => "BOOL32_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::INT64_KHR => "INT64_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::UINT64_KHR => "UINT64_KHR",
+            #[cfg(feature = "khr_pipeline_executable_properties")]
             &Self::FLOAT64_KHR => "FLOAT64_KHR",
             _ => "(unknown variant)",
         })

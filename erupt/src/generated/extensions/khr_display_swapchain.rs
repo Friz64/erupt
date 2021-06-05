@@ -96,7 +96,9 @@ impl<'a> std::ops::DerefMut for DisplayPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, DisplayPresentInfoKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, DisplayPresentInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::khr_display_swapchain`]"]
 impl crate::DeviceLoader {

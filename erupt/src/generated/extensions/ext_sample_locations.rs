@@ -640,7 +640,9 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXT> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {

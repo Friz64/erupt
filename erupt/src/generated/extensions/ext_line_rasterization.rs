@@ -24,9 +24,13 @@ pub struct LineRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for LineRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::DEFAULT_EXT => "DEFAULT_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::RECTANGULAR_EXT => "RECTANGULAR_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::BRESENHAM_EXT => "BRESENHAM_EXT",
+            #[cfg(feature = "ext_line_rasterization")]
             &Self::RECTANGULAR_SMOOTH_EXT => "RECTANGULAR_SMOOTH_EXT",
             _ => "(unknown variant)",
         })

@@ -1,3 +1,4 @@
+mod cargotoml_gen;
 mod codegen;
 mod comment_gen;
 mod declaration;

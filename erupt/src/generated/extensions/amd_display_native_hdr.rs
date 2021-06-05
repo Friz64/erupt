@@ -18,7 +18,9 @@ impl crate::extensions::khr_surface::ColorSpaceKHR {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(device: crate::vk1_0::Device, swap_chain: crate::extensions::khr_swapchain::SwapchainKHR, local_dimming_enable: crate::vk1_0::Bool32) -> ();
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SwapchainDisplayNativeHdrCreateInfoAMD> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure"]
 #[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
@@ -154,7 +156,9 @@ impl<'a> std::ops::DerefMut for SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a
         &mut self.0
     }
 }
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, DisplayNativeHdrSurfaceCapabilitiesAMD> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::amd_display_native_hdr`]"]
 impl crate::DeviceLoader {

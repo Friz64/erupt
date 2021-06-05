@@ -108,7 +108,7 @@ impl crate::vk1_0::ObjectType {
     pub const VIDEO_SESSION_KHR: Self = Self(1000023000);
     pub const VIDEO_SESSION_PARAMETERS_KHR: Self = Self(1000023001);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"] # [doc (alias = "VkVideoCodecOperationFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodecOperationFlagsKHR : u32 { const INVALID_KHR = VideoCodecOperationFlagBitsKHR :: INVALID_KHR . 0 ; const ENCODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: ENCODE_H264_EXT . 0 ; const DECODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H264_EXT . 0 ; const DECODE_H265_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H265_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"] # [doc (alias = "VkVideoCodecOperationFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodecOperationFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const INVALID_KHR = VideoCodecOperationFlagBitsKHR :: INVALID_KHR . 0 ; # [cfg (feature = "ext_video_encode_h264")] const ENCODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: ENCODE_H264_EXT . 0 ; # [cfg (feature = "ext_video_decode_h264")] const DECODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H264_EXT . 0 ; # [cfg (feature = "ext_video_decode_h265")] const DECODE_H265_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H265_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagBitsKHR.html) · Bits enum of [`VideoCodecOperationFlagsKHR`]"]
 #[doc(alias = "VkVideoCodecOperationFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -124,9 +124,13 @@ impl VideoCodecOperationFlagBitsKHR {
 impl std::fmt::Debug for VideoCodecOperationFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::INVALID_KHR => "INVALID_KHR",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::ENCODE_H264_EXT => "ENCODE_H264_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::DECODE_H264_EXT => "DECODE_H264_EXT",
+            #[cfg(feature = "ext_video_decode_h265")]
             &Self::DECODE_H265_EXT => "DECODE_H265_EXT",
             _ => "(unknown variant)",
         })
@@ -136,7 +140,7 @@ impl std::fmt::Debug for VideoCodecOperationFlagBitsKHR {
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const INVALID_KHR: Self = Self(0);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoChromaSubsamplingFlagsKHR.html) · Bitmask of [`VideoChromaSubsamplingFlagBitsKHR`]"] # [doc (alias = "VkVideoChromaSubsamplingFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoChromaSubsamplingFlagsKHR : u32 { const INVALID_KHR = VideoChromaSubsamplingFlagBitsKHR :: INVALID_KHR . 0 ; const MONOCHROME_KHR = VideoChromaSubsamplingFlagBitsKHR :: MONOCHROME_KHR . 0 ; const _420_KHR = VideoChromaSubsamplingFlagBitsKHR :: _420_KHR . 0 ; const _422_KHR = VideoChromaSubsamplingFlagBitsKHR :: _422_KHR . 0 ; const _444_KHR = VideoChromaSubsamplingFlagBitsKHR :: _444_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoChromaSubsamplingFlagsKHR.html) · Bitmask of [`VideoChromaSubsamplingFlagBitsKHR`]"] # [doc (alias = "VkVideoChromaSubsamplingFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoChromaSubsamplingFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const INVALID_KHR = VideoChromaSubsamplingFlagBitsKHR :: INVALID_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const MONOCHROME_KHR = VideoChromaSubsamplingFlagBitsKHR :: MONOCHROME_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const _420_KHR = VideoChromaSubsamplingFlagBitsKHR :: _420_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const _422_KHR = VideoChromaSubsamplingFlagBitsKHR :: _422_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const _444_KHR = VideoChromaSubsamplingFlagBitsKHR :: _444_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoChromaSubsamplingFlagBitsKHR.html) · Bits enum of [`VideoChromaSubsamplingFlagsKHR`]"]
 #[doc(alias = "VkVideoChromaSubsamplingFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -152,10 +156,15 @@ impl VideoChromaSubsamplingFlagBitsKHR {
 impl std::fmt::Debug for VideoChromaSubsamplingFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::INVALID_KHR => "INVALID_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::MONOCHROME_KHR => "MONOCHROME_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::_420_KHR => "_420_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::_422_KHR => "_422_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::_444_KHR => "_444_KHR",
             _ => "(unknown variant)",
         })
@@ -169,7 +178,7 @@ impl crate::extensions::khr_video_queue::VideoChromaSubsamplingFlagBitsKHR {
     pub const _422_KHR: Self = Self(4);
     pub const _444_KHR: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"] # [doc (alias = "VkVideoComponentBitDepthFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoComponentBitDepthFlagsKHR : u32 { const VIDEO_COMPONENT_DEPTH_INVALID_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_INVALID_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_8_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_8_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_10_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_10_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_12_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_12_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"] # [doc (alias = "VkVideoComponentBitDepthFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoComponentBitDepthFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const VIDEO_COMPONENT_DEPTH_INVALID_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_INVALID_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const VIDEO_COMPONENT_DEPTH_8_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_8_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const VIDEO_COMPONENT_DEPTH_10_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_10_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const VIDEO_COMPONENT_DEPTH_12_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_12_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagBitsKHR.html) · Bits enum of [`VideoComponentBitDepthFlagsKHR`]"]
 #[doc(alias = "VkVideoComponentBitDepthFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -185,9 +194,13 @@ impl VideoComponentBitDepthFlagBitsKHR {
 impl std::fmt::Debug for VideoComponentBitDepthFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_COMPONENT_DEPTH_INVALID_KHR => "VIDEO_COMPONENT_DEPTH_INVALID_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_COMPONENT_DEPTH_8_KHR => "VIDEO_COMPONENT_DEPTH_8_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_COMPONENT_DEPTH_10_KHR => "VIDEO_COMPONENT_DEPTH_10_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::VIDEO_COMPONENT_DEPTH_12_KHR => "VIDEO_COMPONENT_DEPTH_12_KHR",
             _ => "(unknown variant)",
         })
@@ -200,7 +213,7 @@ impl crate::extensions::khr_video_queue::VideoComponentBitDepthFlagBitsKHR {
     pub const VIDEO_COMPONENT_DEPTH_10_KHR: Self = Self(4);
     pub const VIDEO_COMPONENT_DEPTH_12_KHR: Self = Self(16);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesFlagsKHR.html) · Bitmask of [`VideoCapabilitiesFlagBitsKHR`]"] # [doc (alias = "VkVideoCapabilitiesFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCapabilitiesFlagsKHR : u32 { const PROTECTED_CONTENT_KHR = VideoCapabilitiesFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; const SEPARATE_REFERENCE_IMAGES_KHR = VideoCapabilitiesFlagBitsKHR :: SEPARATE_REFERENCE_IMAGES_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesFlagsKHR.html) · Bitmask of [`VideoCapabilitiesFlagBitsKHR`]"] # [doc (alias = "VkVideoCapabilitiesFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCapabilitiesFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const PROTECTED_CONTENT_KHR = VideoCapabilitiesFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const SEPARATE_REFERENCE_IMAGES_KHR = VideoCapabilitiesFlagBitsKHR :: SEPARATE_REFERENCE_IMAGES_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesFlagBitsKHR.html) · Bits enum of [`VideoCapabilitiesFlagsKHR`]"]
 #[doc(alias = "VkVideoCapabilitiesFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -216,7 +229,9 @@ impl VideoCapabilitiesFlagBitsKHR {
 impl std::fmt::Debug for VideoCapabilitiesFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::SEPARATE_REFERENCE_IMAGES_KHR => "SEPARATE_REFERENCE_IMAGES_KHR",
             _ => "(unknown variant)",
         })
@@ -227,7 +242,7 @@ impl crate::extensions::khr_video_queue::VideoCapabilitiesFlagBitsKHR {
     pub const PROTECTED_CONTENT_KHR: Self = Self(1);
     pub const SEPARATE_REFERENCE_IMAGES_KHR: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateFlagsKHR.html) · Bitmask of [`VideoSessionCreateFlagBitsKHR`]"] # [doc (alias = "VkVideoSessionCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoSessionCreateFlagsKHR : u32 { const DEFAULT_KHR = VideoSessionCreateFlagBitsKHR :: DEFAULT_KHR . 0 ; const PROTECTED_CONTENT_KHR = VideoSessionCreateFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateFlagsKHR.html) · Bitmask of [`VideoSessionCreateFlagBitsKHR`]"] # [doc (alias = "VkVideoSessionCreateFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoSessionCreateFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const DEFAULT_KHR = VideoSessionCreateFlagBitsKHR :: DEFAULT_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const PROTECTED_CONTENT_KHR = VideoSessionCreateFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateFlagBitsKHR.html) · Bits enum of [`VideoSessionCreateFlagsKHR`]"]
 #[doc(alias = "VkVideoSessionCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -243,7 +258,9 @@ impl VideoSessionCreateFlagBitsKHR {
 impl std::fmt::Debug for VideoSessionCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::DEFAULT_KHR => "DEFAULT_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
             _ => "(unknown variant)",
         })
@@ -254,7 +271,7 @@ impl crate::extensions::khr_video_queue::VideoSessionCreateFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const PROTECTED_CONTENT_KHR: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingQualityPresetFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingQualityPresetFlagsKHR : u32 { const DEFAULT_KHR = VideoCodingQualityPresetFlagBitsKHR :: DEFAULT_KHR . 0 ; const NORMAL_KHR = VideoCodingQualityPresetFlagBitsKHR :: NORMAL_KHR . 0 ; const POWER_KHR = VideoCodingQualityPresetFlagBitsKHR :: POWER_KHR . 0 ; const QUALITY_KHR = VideoCodingQualityPresetFlagBitsKHR :: QUALITY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingQualityPresetFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingQualityPresetFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const DEFAULT_KHR = VideoCodingQualityPresetFlagBitsKHR :: DEFAULT_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const NORMAL_KHR = VideoCodingQualityPresetFlagBitsKHR :: NORMAL_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const POWER_KHR = VideoCodingQualityPresetFlagBitsKHR :: POWER_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const QUALITY_KHR = VideoCodingQualityPresetFlagBitsKHR :: QUALITY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagBitsKHR.html) · Bits enum of [`VideoCodingQualityPresetFlagsKHR`]"]
 #[doc(alias = "VkVideoCodingQualityPresetFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -270,9 +287,13 @@ impl VideoCodingQualityPresetFlagBitsKHR {
 impl std::fmt::Debug for VideoCodingQualityPresetFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::DEFAULT_KHR => "DEFAULT_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::NORMAL_KHR => "NORMAL_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::POWER_KHR => "POWER_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::QUALITY_KHR => "QUALITY_KHR",
             _ => "(unknown variant)",
         })
@@ -285,7 +306,7 @@ impl crate::extensions::khr_video_queue::VideoCodingQualityPresetFlagBitsKHR {
     pub const POWER_KHR: Self = Self(2);
     pub const QUALITY_KHR: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlFlagsKHR.html) · Bitmask of [`VideoCodingControlFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingControlFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingControlFlagsKHR : u32 { const DEFAULT_KHR = VideoCodingControlFlagBitsKHR :: DEFAULT_KHR . 0 ; const RESET_KHR = VideoCodingControlFlagBitsKHR :: RESET_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlFlagsKHR.html) · Bitmask of [`VideoCodingControlFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingControlFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingControlFlagsKHR : u32 { # [cfg (feature = "khr_video_queue")] const DEFAULT_KHR = VideoCodingControlFlagBitsKHR :: DEFAULT_KHR . 0 ; # [cfg (feature = "khr_video_queue")] const RESET_KHR = VideoCodingControlFlagBitsKHR :: RESET_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlFlagBitsKHR.html) · Bits enum of [`VideoCodingControlFlagsKHR`]"]
 #[doc(alias = "VkVideoCodingControlFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -301,7 +322,9 @@ impl VideoCodingControlFlagBitsKHR {
 impl std::fmt::Debug for VideoCodingControlFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::DEFAULT_KHR => "DEFAULT_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::RESET_KHR => "RESET_KHR",
             _ => "(unknown variant)",
         })
@@ -320,8 +343,11 @@ pub struct QueryResultStatusKHR(pub i32);
 impl std::fmt::Debug for QueryResultStatusKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_queue")]
             &Self::ERROR_KHR => "ERROR_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::NOT_READY_KHR => "NOT_READY_KHR",
+            #[cfg(feature = "khr_video_queue")]
             &Self::COMPLETE_KHR => "COMPLETE_KHR",
             _ => "(unknown variant)",
         })

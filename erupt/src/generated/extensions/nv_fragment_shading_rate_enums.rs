@@ -20,17 +20,29 @@ pub struct FragmentShadingRateNV(pub i32);
 impl std::fmt::Debug for FragmentShadingRateNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_PIXEL_NV => "_1_INVOCATION_PER_PIXEL_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => "_1_INVOCATION_PER_1X2_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => "_1_INVOCATION_PER_2X1_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => "_1_INVOCATION_PER_2X2_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => "_1_INVOCATION_PER_2X4_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => "_1_INVOCATION_PER_4X2_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => "_1_INVOCATION_PER_4X4_PIXELS_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_2_INVOCATIONS_PER_PIXEL_NV => "_2_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_4_INVOCATIONS_PER_PIXEL_NV => "_4_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_8_INVOCATIONS_PER_PIXEL_NV => "_8_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::_16_INVOCATIONS_PER_PIXEL_NV => "_16_INVOCATIONS_PER_PIXEL_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
             _ => "(unknown variant)",
         })
@@ -59,7 +71,9 @@ pub struct FragmentShadingRateTypeNV(pub i32);
 impl std::fmt::Debug for FragmentShadingRateTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::FRAGMENT_SIZE_NV => "FRAGMENT_SIZE_NV",
+            #[cfg(feature = "nv_fragment_shading_rate_enums")]
             &Self::ENUMS_NV => "ENUMS_NV",
             _ => "(unknown variant)",
         })

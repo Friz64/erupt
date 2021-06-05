@@ -10,7 +10,7 @@ pub const FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: *const std::os::raw::c_cha
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT: Self = Self(1000245000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`]"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagsEXT.html) · Bitmask of [`ToolPurposeFlagBitsEXT`]"] # [doc (alias = "VkToolPurposeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ToolPurposeFlagsEXT : u32 { # [cfg (feature = "ext_tooling_info")] const VALIDATION_EXT = ToolPurposeFlagBitsEXT :: VALIDATION_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const PROFILING_EXT = ToolPurposeFlagBitsEXT :: PROFILING_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const TRACING_EXT = ToolPurposeFlagBitsEXT :: TRACING_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const ADDITIONAL_FEATURES_EXT = ToolPurposeFlagBitsEXT :: ADDITIONAL_FEATURES_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const MODIFYING_FEATURES_EXT = ToolPurposeFlagBitsEXT :: MODIFYING_FEATURES_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const DEBUG_REPORTING_EXT = ToolPurposeFlagBitsEXT :: DEBUG_REPORTING_EXT . 0 ; # [cfg (feature = "ext_tooling_info")] const DEBUG_MARKERS_EXT = ToolPurposeFlagBitsEXT :: DEBUG_MARKERS_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkToolPurposeFlagBitsEXT.html) · Bits enum of [`ToolPurposeFlagsEXT`]"]
 #[doc(alias = "VkToolPurposeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -26,12 +26,19 @@ impl ToolPurposeFlagBitsEXT {
 impl std::fmt::Debug for ToolPurposeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_tooling_info")]
             &Self::VALIDATION_EXT => "VALIDATION_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::PROFILING_EXT => "PROFILING_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::TRACING_EXT => "TRACING_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::ADDITIONAL_FEATURES_EXT => "ADDITIONAL_FEATURES_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::MODIFYING_FEATURES_EXT => "MODIFYING_FEATURES_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::DEBUG_REPORTING_EXT => "DEBUG_REPORTING_EXT",
+            #[cfg(feature = "ext_tooling_info")]
             &Self::DEBUG_MARKERS_EXT => "DEBUG_MARKERS_EXT",
             _ => "(unknown variant)",
         })

@@ -16,7 +16,9 @@ pub struct RasterizationOrderAMD(pub i32);
 impl std::fmt::Debug for RasterizationOrderAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "amd_rasterization_order")]
             &Self::STRICT_AMD => "STRICT_AMD",
+            #[cfg(feature = "amd_rasterization_order")]
             &Self::RELAXED_AMD => "RELAXED_AMD",
             _ => "(unknown variant)",
         })

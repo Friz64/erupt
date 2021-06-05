@@ -14,8 +14,11 @@ pub struct ShaderInfoTypeAMD(pub i32);
 impl std::fmt::Debug for ShaderInfoTypeAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "amd_shader_info")]
             &Self::STATISTICS_AMD => "STATISTICS_AMD",
+            #[cfg(feature = "amd_shader_info")]
             &Self::BINARY_AMD => "BINARY_AMD",
+            #[cfg(feature = "amd_shader_info")]
             &Self::DISASSEMBLY_AMD => "DISASSEMBLY_AMD",
             _ => "(unknown variant)",
         })

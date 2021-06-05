@@ -43,7 +43,9 @@ pub struct DiscardRectangleModeEXT(pub i32);
 impl std::fmt::Debug for DiscardRectangleModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_discard_rectangles")]
             &Self::INCLUSIVE_EXT => "INCLUSIVE_EXT",
+            #[cfg(feature = "ext_discard_rectangles")]
             &Self::EXCLUSIVE_EXT => "EXCLUSIVE_EXT",
             _ => "(unknown variant)",
         })

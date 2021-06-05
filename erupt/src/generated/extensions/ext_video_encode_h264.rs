@@ -26,7 +26,7 @@ impl crate::vk1_0::StructureType {
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const ENCODE_H264_EXT: Self = Self(65536);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilitiesFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilitiesFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilitiesFlagsEXT : u32 { const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilitiesFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilitiesFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilitiesFlagsEXT : u32 { # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilitiesFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -42,16 +42,27 @@ impl VideoEncodeH264CapabilitiesFlagBitsEXT {
 impl std::fmt::Debug for VideoEncodeH264CapabilitiesFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT => "VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT => "VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT => "VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT => "VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => "VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT",
             _ => "(unknown variant)",
         })
@@ -71,7 +82,7 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesFlagBi
     pub const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(512);
     pub const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(1024);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264InputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264InputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264InputModeFlagsEXT : u32 { const FRAME_EXT = VideoEncodeH264InputModeFlagBitsEXT :: FRAME_EXT . 0 ; const SLICE_EXT = VideoEncodeH264InputModeFlagBitsEXT :: SLICE_EXT . 0 ; const NON_VCL_EXT = VideoEncodeH264InputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264InputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264InputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264InputModeFlagsEXT : u32 { # [cfg (feature = "ext_video_encode_h264")] const FRAME_EXT = VideoEncodeH264InputModeFlagBitsEXT :: FRAME_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const SLICE_EXT = VideoEncodeH264InputModeFlagBitsEXT :: SLICE_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const NON_VCL_EXT = VideoEncodeH264InputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264InputModeFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264InputModeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -87,8 +98,11 @@ impl VideoEncodeH264InputModeFlagBitsEXT {
 impl std::fmt::Debug for VideoEncodeH264InputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::FRAME_EXT => "FRAME_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::SLICE_EXT => "SLICE_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::NON_VCL_EXT => "NON_VCL_EXT",
             _ => "(unknown variant)",
         })
@@ -100,7 +114,7 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264InputModeFlagBitsE
     pub const SLICE_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264OutputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264OutputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264OutputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264OutputModeFlagsEXT : u32 { const FRAME_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: FRAME_EXT . 0 ; const SLICE_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: SLICE_EXT . 0 ; const NON_VCL_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264OutputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264OutputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264OutputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264OutputModeFlagsEXT : u32 { # [cfg (feature = "ext_video_encode_h264")] const FRAME_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: FRAME_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const SLICE_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: SLICE_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const NON_VCL_EXT = VideoEncodeH264OutputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264OutputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264OutputModeFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264OutputModeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -116,8 +130,11 @@ impl VideoEncodeH264OutputModeFlagBitsEXT {
 impl std::fmt::Debug for VideoEncodeH264OutputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::FRAME_EXT => "FRAME_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::SLICE_EXT => "SLICE_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::NON_VCL_EXT => "NON_VCL_EXT",
             _ => "(unknown variant)",
         })
@@ -129,7 +146,7 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264OutputModeFlagBits
     pub const SLICE_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH264CreateFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CreateFlagsEXT : u32 { const DEFAULT_EXT = VideoEncodeH264CreateFlagBitsEXT :: DEFAULT_EXT . 0 ; const RESERVED_0_EXT = VideoEncodeH264CreateFlagBitsEXT :: RESERVED_0_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH264CreateFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CreateFlagsEXT : u32 { # [cfg (feature = "ext_video_encode_h264")] const DEFAULT_EXT = VideoEncodeH264CreateFlagBitsEXT :: DEFAULT_EXT . 0 ; # [cfg (feature = "ext_video_encode_h264")] const RESERVED_0_EXT = VideoEncodeH264CreateFlagBitsEXT :: RESERVED_0_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CreateFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CreateFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264CreateFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -145,7 +162,9 @@ impl VideoEncodeH264CreateFlagBitsEXT {
 impl std::fmt::Debug for VideoEncodeH264CreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::DEFAULT_EXT => "DEFAULT_EXT",
+            #[cfg(feature = "ext_video_encode_h264")]
             &Self::RESERVED_0_EXT => "RESERVED_0_EXT",
             _ => "(unknown variant)",
         })
@@ -156,19 +175,33 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CreateFlagBitsEXT 
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RESERVED_0_EXT: Self = Self(1);
 }
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_encode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_encode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_encode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_encode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesEXT.html) · Structure"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesEXT")]

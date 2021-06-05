@@ -108,5 +108,7 @@ impl<'a> std::ops::DerefMut for Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'a> 
         &mut self.0
     }
 }
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoKHR> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}

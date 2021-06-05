@@ -16,7 +16,9 @@ pub struct ValidationCheckEXT(pub i32);
 impl std::fmt::Debug for ValidationCheckEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_validation_flags")]
             &Self::ALL_EXT => "ALL_EXT",
+            #[cfg(feature = "ext_validation_flags")]
             &Self::SHADERS_EXT => "SHADERS_EXT",
             _ => "(unknown variant)",
         })

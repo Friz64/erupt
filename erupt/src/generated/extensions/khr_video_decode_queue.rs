@@ -51,7 +51,7 @@ impl crate::vk1_0::QueueFlagBits {
 impl crate::vk1_0::StructureType {
     pub const VIDEO_DECODE_INFO_KHR: Self = Self(1000024000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagsKHR.html) · Bitmask of [`VideoDecodeFlagBitsKHR`]"] # [doc (alias = "VkVideoDecodeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeFlagsKHR : u32 { const DEFAULT_KHR = VideoDecodeFlagBitsKHR :: DEFAULT_KHR . 0 ; const RESERVED_0_KHR = VideoDecodeFlagBitsKHR :: RESERVED_0_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagsKHR.html) · Bitmask of [`VideoDecodeFlagBitsKHR`]"] # [doc (alias = "VkVideoDecodeFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeFlagsKHR : u32 { # [cfg (feature = "khr_video_decode_queue")] const DEFAULT_KHR = VideoDecodeFlagBitsKHR :: DEFAULT_KHR . 0 ; # [cfg (feature = "khr_video_decode_queue")] const RESERVED_0_KHR = VideoDecodeFlagBitsKHR :: RESERVED_0_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagBitsKHR.html) · Bits enum of [`VideoDecodeFlagsKHR`]"]
 #[doc(alias = "VkVideoDecodeFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -67,7 +67,9 @@ impl VideoDecodeFlagBitsKHR {
 impl std::fmt::Debug for VideoDecodeFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::DEFAULT_KHR => "DEFAULT_KHR",
+            #[cfg(feature = "khr_video_decode_queue")]
             &Self::RESERVED_0_KHR => "RESERVED_0_KHR",
             _ => "(unknown variant)",
         })

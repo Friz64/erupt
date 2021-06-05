@@ -26,7 +26,7 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::PipelineStageFlagBits {
     pub const CONDITIONAL_RENDERING_EXT: Self = Self(262144);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagsEXT.html) · Bitmask of [`ConditionalRenderingFlagBitsEXT`]"] # [doc (alias = "VkConditionalRenderingFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct ConditionalRenderingFlagsEXT : u32 { # [cfg (feature = "ext_conditional_rendering")] const INVERTED_EXT = ConditionalRenderingFlagBitsEXT :: INVERTED_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingFlagBitsEXT.html) · Bits enum of [`ConditionalRenderingFlagsEXT`]"]
 #[doc(alias = "VkConditionalRenderingFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -42,6 +42,7 @@ impl ConditionalRenderingFlagBitsEXT {
 impl std::fmt::Debug for ConditionalRenderingFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_conditional_rendering")]
             &Self::INVERTED_EXT => "INVERTED_EXT",
             _ => "(unknown variant)",
         })

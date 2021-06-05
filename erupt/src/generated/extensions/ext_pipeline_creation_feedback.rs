@@ -8,7 +8,7 @@ pub const EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME: *const std::os::raw::c_
 impl crate::vk1_0::StructureType {
     pub const PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT: Self = Self(1000192000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`]"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagsEXT.html) · Bitmask of [`PipelineCreationFeedbackFlagBitsEXT`]"] # [doc (alias = "VkPipelineCreationFeedbackFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreationFeedbackFlagsEXT : u32 { # [cfg (feature = "ext_pipeline_creation_feedback")] const VALID_EXT = PipelineCreationFeedbackFlagBitsEXT :: VALID_EXT . 0 ; # [cfg (feature = "ext_pipeline_creation_feedback")] const APPLICATION_PIPELINE_CACHE_HIT_EXT = PipelineCreationFeedbackFlagBitsEXT :: APPLICATION_PIPELINE_CACHE_HIT_EXT . 0 ; # [cfg (feature = "ext_pipeline_creation_feedback")] const BASE_PIPELINE_ACCELERATION_EXT = PipelineCreationFeedbackFlagBitsEXT :: BASE_PIPELINE_ACCELERATION_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackFlagBitsEXT.html) · Bits enum of [`PipelineCreationFeedbackFlagsEXT`]"]
 #[doc(alias = "VkPipelineCreationFeedbackFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -24,8 +24,11 @@ impl PipelineCreationFeedbackFlagBitsEXT {
 impl std::fmt::Debug for PipelineCreationFeedbackFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_pipeline_creation_feedback")]
             &Self::VALID_EXT => "VALID_EXT",
+            #[cfg(feature = "ext_pipeline_creation_feedback")]
             &Self::APPLICATION_PIPELINE_CACHE_HIT_EXT => "APPLICATION_PIPELINE_CACHE_HIT_EXT",
+            #[cfg(feature = "ext_pipeline_creation_feedback")]
             &Self::BASE_PIPELINE_ACCELERATION_EXT => "BASE_PIPELINE_ACCELERATION_EXT",
             _ => "(unknown variant)",
         })
@@ -41,9 +44,13 @@ impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> f
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+#[cfg(feature = "nv_ray_tracing")]
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+#[cfg(feature = "nv_ray_tracing")]
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+#[cfg(feature = "khr_ray_tracing_pipeline")]
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_ray_tracing_pipeline")]
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Structure"]
 #[doc(alias = "VkPipelineCreationFeedbackEXT")]

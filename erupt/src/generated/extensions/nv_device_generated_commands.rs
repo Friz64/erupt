@@ -45,7 +45,7 @@ impl crate::vk1_0::PipelineStageFlagBits {
 impl crate::vk1_0::ObjectType {
     pub const INDIRECT_COMMANDS_LAYOUT_NV: Self = Self(1000277000);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"] # [doc (alias = "VkIndirectCommandsLayoutUsageFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { # [cfg (feature = "nv_device_generated_commands")] const EXPLICIT_PREPROCESS_NV = IndirectCommandsLayoutUsageFlagBitsNV :: EXPLICIT_PREPROCESS_NV . 0 ; # [cfg (feature = "nv_device_generated_commands")] const INDEXED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: INDEXED_SEQUENCES_NV . 0 ; # [cfg (feature = "nv_device_generated_commands")] const UNORDERED_SEQUENCES_NV = IndirectCommandsLayoutUsageFlagBitsNV :: UNORDERED_SEQUENCES_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]"]
 #[doc(alias = "VkIndirectCommandsLayoutUsageFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -61,8 +61,11 @@ impl IndirectCommandsLayoutUsageFlagBitsNV {
 impl std::fmt::Debug for IndirectCommandsLayoutUsageFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::EXPLICIT_PREPROCESS_NV => "EXPLICIT_PREPROCESS_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDEXED_SEQUENCES_NV => "INDEXED_SEQUENCES_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::UNORDERED_SEQUENCES_NV => "UNORDERED_SEQUENCES_NV",
             _ => "(unknown variant)",
         })
@@ -82,13 +85,21 @@ pub struct IndirectCommandsTokenTypeNV(pub i32);
 impl std::fmt::Debug for IndirectCommandsTokenTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::SHADER_GROUP_NV => "SHADER_GROUP_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::STATE_FLAGS_NV => "STATE_FLAGS_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::INDEX_BUFFER_NV => "INDEX_BUFFER_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::VERTEX_BUFFER_NV => "VERTEX_BUFFER_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::PUSH_CONSTANT_NV => "PUSH_CONSTANT_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::DRAW_INDEXED_NV => "DRAW_INDEXED_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::DRAW_NV => "DRAW_NV",
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::DRAW_TASKS_NV => "DRAW_TASKS_NV",
             _ => "(unknown variant)",
         })
@@ -105,7 +116,7 @@ impl crate::extensions::nv_device_generated_commands::IndirectCommandsTokenTypeN
     pub const DRAW_NV: Self = Self(6);
     pub const DRAW_TASKS_NV: Self = Self(7);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"] # [doc (alias = "VkIndirectStateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectStateFlagsNV : u32 { const FLAG_FRONTFACE_NV = IndirectStateFlagBitsNV :: FLAG_FRONTFACE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"] # [doc (alias = "VkIndirectStateFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct IndirectStateFlagsNV : u32 { # [cfg (feature = "nv_device_generated_commands")] const FLAG_FRONTFACE_NV = IndirectStateFlagBitsNV :: FLAG_FRONTFACE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagBitsNV.html) · Bits enum of [`IndirectStateFlagsNV`]"]
 #[doc(alias = "VkIndirectStateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -121,6 +132,7 @@ impl IndirectStateFlagBitsNV {
 impl std::fmt::Debug for IndirectStateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_device_generated_commands")]
             &Self::FLAG_FRONTFACE_NV => "FLAG_FRONTFACE_NV",
             _ => "(unknown variant)",
         })

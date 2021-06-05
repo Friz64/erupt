@@ -11,7 +11,7 @@ impl crate::vk1_0::StructureType {
     pub const SURFACE_CAPABILITIES_2_EXT: Self = Self(1000090000);
     pub const SURFACE_CAPABILITIES2_EXT: Self = Self::SURFACE_CAPABILITIES_2_EXT;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { # [cfg (feature = "ext_display_surface_counter")] const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html) · Bits enum of [`SurfaceCounterFlagsEXT`]"]
 #[doc(alias = "VkSurfaceCounterFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -27,6 +27,7 @@ impl SurfaceCounterFlagBitsEXT {
 impl std::fmt::Debug for SurfaceCounterFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_display_surface_counter")]
             &Self::VBLANK_EXT => "VBLANK_EXT",
             _ => "(unknown variant)",
         })

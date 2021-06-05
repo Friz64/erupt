@@ -173,8 +173,6 @@ macro_rules! non_dispatchable_handle {
             }
 
             /// Returns the raw handle value.
-            ///
-            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
             #[inline]
             pub fn object_handle(&self) -> u64 {
                 self.0
@@ -221,8 +219,6 @@ macro_rules! dispatchable_handle {
             }
 
             /// Returns the raw handle value.
-            ///
-            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
             #[inline]
             pub fn object_handle(&self) -> u64 {
                 self.0 as u64

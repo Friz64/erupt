@@ -8,7 +8,9 @@ pub const KHR_INCREMENTAL_PRESENT_EXTENSION_NAME: *const std::os::raw::c_char = 
 impl crate::vk1_0::StructureType {
     pub const PRESENT_REGIONS_KHR: Self = Self(1000084000);
 }
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, PresentRegionsKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, PresentRegionsKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Structure"]
 #[doc(alias = "VkPresentRegionsKHR")]

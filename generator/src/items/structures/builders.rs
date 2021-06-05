@@ -403,6 +403,7 @@ impl Structure {
             .filter(|structure| structure.metadata.extends.contains(&self.name))
         {
             let this_path = origin.module_path();
+            let this_feature_gate = origin.feature_gate();
             let other_origin = other
                 .origin
                 .as_ref()
@@ -417,9 +418,11 @@ impl Structure {
                 .entry(other_origin.clone())
                 .or_insert_with(TokenStream::new)
                 .extend(quote! {
+                    #this_feature_gate
                     impl<'a> crate::#extendable_from_kind<'a, #other_ident>
                         for crate::#this_path#ident<'a> {}
 
+                    #this_feature_gate
                     impl<'a> crate::#extendable_from_kind<'a, #other_builder_ident<'_>>
                         for crate::#this_path#ident<'a> {}
                 });

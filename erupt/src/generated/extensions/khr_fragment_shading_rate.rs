@@ -48,10 +48,15 @@ pub struct FragmentShadingRateCombinerOpKHR(pub i32);
 impl std::fmt::Debug for FragmentShadingRateCombinerOpKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::KEEP_KHR => "KEEP_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::REPLACE_KHR => "REPLACE_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::MIN_KHR => "MIN_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::MAX_KHR => "MAX_KHR",
+            #[cfg(feature = "khr_fragment_shading_rate")]
             &Self::MUL_KHR => "MUL_KHR",
             _ => "(unknown variant)",
         })

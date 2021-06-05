@@ -30,9 +30,13 @@ pub struct FullScreenExclusiveEXT(pub i32);
 impl std::fmt::Debug for FullScreenExclusiveEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::DEFAULT_EXT => "DEFAULT_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::ALLOWED_EXT => "ALLOWED_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::DISALLOWED_EXT => "DISALLOWED_EXT",
+            #[cfg(feature = "ext_full_screen_exclusive")]
             &Self::APPLICATION_CONTROLLED_EXT => "APPLICATION_CONTROLLED_EXT",
             _ => "(unknown variant)",
         })
@@ -57,15 +61,25 @@ pub type PFN_vkAcquireFullScreenExclusiveModeEXT = unsafe extern "system" fn(dev
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleaseFullScreenExclusiveModeEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SurfaceCapabilitiesFullScreenExclusiveEXT> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Structure"]
 #[doc(alias = "VkSurfaceFullScreenExclusiveInfoEXT")]

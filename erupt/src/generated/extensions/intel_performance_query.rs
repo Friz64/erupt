@@ -57,6 +57,7 @@ pub struct PerformanceConfigurationTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "intel_performance_query")]
             &Self::COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL => "COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL",
             _ => "(unknown variant)",
         })
@@ -74,6 +75,7 @@ pub struct QueryPoolSamplingModeINTEL(pub i32);
 impl std::fmt::Debug for QueryPoolSamplingModeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "intel_performance_query")]
             &Self::MANUAL_INTEL => "MANUAL_INTEL",
             _ => "(unknown variant)",
         })
@@ -91,7 +93,9 @@ pub struct PerformanceOverrideTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceOverrideTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "intel_performance_query")]
             &Self::NULL_HARDWARE_INTEL => "NULL_HARDWARE_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::FLUSH_GPU_CACHES_INTEL => "FLUSH_GPU_CACHES_INTEL",
             _ => "(unknown variant)",
         })
@@ -110,7 +114,9 @@ pub struct PerformanceParameterTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceParameterTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "intel_performance_query")]
             &Self::HW_COUNTERS_SUPPORTED_INTEL => "HW_COUNTERS_SUPPORTED_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::STREAM_MARKER_VALIDS_INTEL => "STREAM_MARKER_VALIDS_INTEL",
             _ => "(unknown variant)",
         })
@@ -129,10 +135,15 @@ pub struct PerformanceValueTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceValueTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "intel_performance_query")]
             &Self::UINT32_INTEL => "UINT32_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::UINT64_INTEL => "UINT64_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::FLOAT_INTEL => "FLOAT_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::BOOL_INTEL => "BOOL_INTEL",
+            #[cfg(feature = "intel_performance_query")]
             &Self::STRING_INTEL => "STRING_INTEL",
             _ => "(unknown variant)",
         })

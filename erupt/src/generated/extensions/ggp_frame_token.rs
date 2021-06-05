@@ -8,7 +8,9 @@ pub const GGP_FRAME_TOKEN_EXTENSION_NAME: *const std::os::raw::c_char = crate::c
 impl crate::vk1_0::StructureType {
     pub const PRESENT_FRAME_TOKEN_GGP: Self = Self(1000191000);
 }
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, PresentFrameTokenGGP> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_swapchain")]
 impl<'a> crate::ExtendableFromConst<'a, PresentFrameTokenGGPBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentFrameTokenGGP.html) · Structure"]
 #[doc(alias = "VkPresentFrameTokenGGP")]

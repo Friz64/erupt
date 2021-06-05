@@ -1,4 +1,7 @@
-use crate::{comment_gen::DocCommentGen, items::defines, loaders, origin::Origin, source::Source};
+use crate::{
+    cargotoml_gen, comment_gen::DocCommentGen, items::defines, loaders, origin::Origin,
+    source::Source,
+};
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use std::{
@@ -6,6 +9,8 @@ use std::{
     fs,
     path::Path,
 };
+
+const ERUPT_DIR: &str = "./erupt/";
 
 struct CodeMap {
     map: HashMap<Origin, TokenStream>,
@@ -69,8 +74,10 @@ impl CodeMap {
             }
 
             if !matches!(origin, Origin::External { .. }) {
+                let feature_gate = origin.feature_gate();
                 let origin_module_path = origin.module_path();
                 vk_mod.extend(quote! {
+                    #feature_gate
                     #[doc(no_inline)]
                     pub use crate::#origin_module_path*;
                 });
@@ -84,8 +91,10 @@ impl CodeMap {
                     pub mod #name;
                 }),
                 Origin::Extension { full } => {
+                    let feature_gate = origin.feature_gate();
                     let doc = comment_gen.def(Some(full), "Vulkan extension", None);
                     extensions_mod.extend(quote! {
+                        #feature_gate
                         #[doc = #doc]
                         pub mod #name;
                     });
@@ -136,6 +145,8 @@ impl CodeMap {
 }
 
 pub fn generate(source: &Source) {
+    cargotoml_gen::generate(Path::new(ERUPT_DIR).join("Cargo.toml"), source);
+
     let mut codemap = CodeMap::new();
     let comment_gen = DocCommentGen::new((
         source.latest_vulkan_version.0,
@@ -187,7 +198,7 @@ pub fn generate(source: &Source) {
     codemap.extend(loaders::tokens(&comment_gen, source));
 
     codemap.write(
-        "erupt/src/generated/",
+        Path::new(ERUPT_DIR).join("src/generated/"),
         &comment_gen,
         &source.provisional_extensions,
     );

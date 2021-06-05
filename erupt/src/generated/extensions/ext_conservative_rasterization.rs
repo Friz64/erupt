@@ -37,8 +37,11 @@ pub struct ConservativeRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for ConservativeRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_conservative_rasterization")]
             &Self::DISABLED_EXT => "DISABLED_EXT",
+            #[cfg(feature = "ext_conservative_rasterization")]
             &Self::OVERESTIMATE_EXT => "OVERESTIMATE_EXT",
+            #[cfg(feature = "ext_conservative_rasterization")]
             &Self::UNDERESTIMATE_EXT => "UNDERESTIMATE_EXT",
             _ => "(unknown variant)",
         })

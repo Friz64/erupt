@@ -45,7 +45,7 @@ impl crate::vk1_0::StructureType {
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const DECODE_H264_EXT: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagsEXT.html) · Bitmask of [`VideoDecodeH264FieldLayoutFlagBitsEXT`]"] # [doc (alias = "VkVideoDecodeH264FieldLayoutFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeH264FieldLayoutFlagsEXT : u32 { const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT . 0 ; const LINE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: LINE_INTERLACED_PLANE_EXT . 0 ; const SEPARATE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: SEPARATE_INTERLACED_PLANE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagsEXT.html) · Bitmask of [`VideoDecodeH264FieldLayoutFlagBitsEXT`]"] # [doc (alias = "VkVideoDecodeH264FieldLayoutFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeH264FieldLayoutFlagsEXT : u32 { # [cfg (feature = "ext_video_decode_h264")] const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT . 0 ; # [cfg (feature = "ext_video_decode_h264")] const LINE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: LINE_INTERLACED_PLANE_EXT . 0 ; # [cfg (feature = "ext_video_decode_h264")] const SEPARATE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: SEPARATE_INTERLACED_PLANE_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagBitsEXT.html) · Bits enum of [`VideoDecodeH264FieldLayoutFlagsEXT`]"]
 #[doc(alias = "VkVideoDecodeH264FieldLayoutFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -61,8 +61,11 @@ impl VideoDecodeH264FieldLayoutFlagBitsEXT {
 impl std::fmt::Debug for VideoDecodeH264FieldLayoutFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT => "VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::LINE_INTERLACED_PLANE_EXT => "LINE_INTERLACED_PLANE_EXT",
+            #[cfg(feature = "ext_video_decode_h264")]
             &Self::SEPARATE_INTERLACED_PLANE_EXT => "SEPARATE_INTERLACED_PLANE_EXT",
             _ => "(unknown variant)",
         })
@@ -74,13 +77,21 @@ impl crate::extensions::ext_video_decode_h264::VideoDecodeH264FieldLayoutFlagBit
     pub const LINE_INTERLACED_PLANE_EXT: Self = Self(1);
     pub const SEPARATE_INTERLACED_PLANE_EXT: Self = Self(2);
 }
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXT> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_decode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXT> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_decode_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXTBuilder<'_>> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264ProfileEXT.html) · Structure"]
 #[doc(alias = "VkVideoDecodeH264ProfileEXT")]
@@ -490,7 +501,9 @@ impl VideoDecodeH264PictureInfoEXT {
         VideoDecodeH264PictureInfoEXTBuilder(self, std::marker::PhantomData)
     }
 }
+#[cfg(feature = "ext_video_decode_h264")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXT> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
+#[cfg(feature = "ext_video_decode_h264")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXTBuilder<'_>> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264PictureInfoEXT.html) · Builder of [`VideoDecodeH264PictureInfoEXT`]"]
@@ -674,9 +687,15 @@ impl<'a> std::ops::DerefMut for VideoDecodeH264MvcEXTBuilder<'a> {
         &mut self.0
     }
 }
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+#[cfg(feature = "khr_video_queue")]
 impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}

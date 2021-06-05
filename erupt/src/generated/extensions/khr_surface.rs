@@ -32,21 +32,37 @@ pub struct ColorSpaceKHR(pub i32);
 impl std::fmt::Debug for ColorSpaceKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_surface")]
             &Self::SRGB_NONLINEAR_KHR => "SRGB_NONLINEAR_KHR",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::DISPLAY_P3_NONLINEAR_EXT => "DISPLAY_P3_NONLINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::EXTENDED_SRGB_LINEAR_EXT => "EXTENDED_SRGB_LINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::DISPLAY_P3_LINEAR_EXT => "DISPLAY_P3_LINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::DCI_P3_NONLINEAR_EXT => "DCI_P3_NONLINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::BT709_LINEAR_EXT => "BT709_LINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::BT709_NONLINEAR_EXT => "BT709_NONLINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::BT2020_LINEAR_EXT => "BT2020_LINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::HDR10_ST2084_EXT => "HDR10_ST2084_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::DOLBYVISION_EXT => "DOLBYVISION_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::HDR10_HLG_EXT => "HDR10_HLG_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::ADOBERGB_LINEAR_EXT => "ADOBERGB_LINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
+            #[cfg(feature = "ext_swapchain_colorspace")]
             &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
+            #[cfg(feature = "amd_display_native_hdr")]
             &Self::DISPLAY_NATIVE_AMD => "DISPLAY_NATIVE_AMD",
             _ => "(unknown variant)",
         })
@@ -57,7 +73,7 @@ impl crate::extensions::khr_surface::ColorSpaceKHR {
     pub const SRGB_NONLINEAR_KHR: Self = Self(0);
     pub const COLORSPACE_SRGB_NONLINEAR_KHR: Self = Self::SRGB_NONLINEAR_KHR;
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { # [cfg (feature = "khr_surface")] const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; # [cfg (feature = "khr_surface")] const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; # [cfg (feature = "khr_surface")] const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; # [cfg (feature = "khr_surface")] const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`]"]
 #[doc(alias = "VkCompositeAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -73,9 +89,13 @@ impl CompositeAlphaFlagBitsKHR {
 impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_surface")]
             &Self::OPAQUE_KHR => "OPAQUE_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::INHERIT_KHR => "INHERIT_KHR",
             _ => "(unknown variant)",
         })
@@ -96,11 +116,17 @@ pub struct PresentModeKHR(pub i32);
 impl std::fmt::Debug for PresentModeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_surface")]
             &Self::IMMEDIATE_KHR => "IMMEDIATE_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::MAILBOX_KHR => "MAILBOX_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::FIFO_KHR => "FIFO_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::FIFO_RELAXED_KHR => "FIFO_RELAXED_KHR",
+            #[cfg(feature = "khr_shared_presentable_image")]
             &Self::SHARED_DEMAND_REFRESH_KHR => "SHARED_DEMAND_REFRESH_KHR",
+            #[cfg(feature = "khr_shared_presentable_image")]
             &Self::SHARED_CONTINUOUS_REFRESH_KHR => "SHARED_CONTINUOUS_REFRESH_KHR",
             _ => "(unknown variant)",
         })
@@ -113,7 +139,7 @@ impl crate::extensions::khr_surface::PresentModeKHR {
     pub const FIFO_KHR: Self = Self(2);
     pub const FIFO_RELAXED_KHR: Self = Self(3);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"] # [doc (alias = "VkSurfaceTransformFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceTransformFlagsKHR : u32 { const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"] # [doc (alias = "VkSurfaceTransformFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceTransformFlagsKHR : u32 { # [cfg (feature = "khr_surface")] const IDENTITY_KHR = SurfaceTransformFlagBitsKHR :: IDENTITY_KHR . 0 ; # [cfg (feature = "khr_surface")] const ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_90_KHR . 0 ; # [cfg (feature = "khr_surface")] const ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_180_KHR . 0 ; # [cfg (feature = "khr_surface")] const ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: ROTATE_270_KHR . 0 ; # [cfg (feature = "khr_surface")] const HORIZONTAL_MIRROR_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_KHR . 0 ; # [cfg (feature = "khr_surface")] const HORIZONTAL_MIRROR_ROTATE_90_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_90_KHR . 0 ; # [cfg (feature = "khr_surface")] const HORIZONTAL_MIRROR_ROTATE_180_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_180_KHR . 0 ; # [cfg (feature = "khr_surface")] const HORIZONTAL_MIRROR_ROTATE_270_KHR = SurfaceTransformFlagBitsKHR :: HORIZONTAL_MIRROR_ROTATE_270_KHR . 0 ; # [cfg (feature = "khr_surface")] const INHERIT_KHR = SurfaceTransformFlagBitsKHR :: INHERIT_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`]"]
 #[doc(alias = "VkSurfaceTransformFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -129,14 +155,23 @@ impl SurfaceTransformFlagBitsKHR {
 impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_surface")]
             &Self::IDENTITY_KHR => "IDENTITY_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::ROTATE_90_KHR => "ROTATE_90_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::ROTATE_180_KHR => "ROTATE_180_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::ROTATE_270_KHR => "ROTATE_270_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::HORIZONTAL_MIRROR_KHR => "HORIZONTAL_MIRROR_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::HORIZONTAL_MIRROR_ROTATE_90_KHR => "HORIZONTAL_MIRROR_ROTATE_90_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => "HORIZONTAL_MIRROR_ROTATE_180_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => "HORIZONTAL_MIRROR_ROTATE_270_KHR",
+            #[cfg(feature = "khr_surface")]
             &Self::INHERIT_KHR => "INHERIT_KHR",
             _ => "(unknown variant)",
         })

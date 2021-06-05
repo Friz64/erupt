@@ -34,8 +34,11 @@ pub struct PerformanceCounterScopeKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterScopeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_performance_query")]
             &Self::COMMAND_BUFFER_KHR => "COMMAND_BUFFER_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::RENDER_PASS_KHR => "RENDER_PASS_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::COMMAND_KHR => "COMMAND_KHR",
             _ => "(unknown variant)",
         })
@@ -58,16 +61,27 @@ pub struct PerformanceCounterUnitKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterUnitKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_performance_query")]
             &Self::GENERIC_KHR => "GENERIC_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERCENTAGE_KHR => "PERCENTAGE_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::NANOSECONDS_KHR => "NANOSECONDS_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::BYTES_KHR => "BYTES_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::BYTES_PER_SECOND_KHR => "BYTES_PER_SECOND_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::KELVIN_KHR => "KELVIN_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::WATTS_KHR => "WATTS_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::VOLTS_KHR => "VOLTS_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::AMPS_KHR => "AMPS_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::HERTZ_KHR => "HERTZ_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::CYCLES_KHR => "CYCLES_KHR",
             _ => "(unknown variant)",
         })
@@ -95,11 +109,17 @@ pub struct PerformanceCounterStorageKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterStorageKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_performance_query")]
             &Self::INT32_KHR => "INT32_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::INT64_KHR => "INT64_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::UINT32_KHR => "UINT32_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::UINT64_KHR => "UINT64_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::FLOAT32_KHR => "FLOAT32_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::FLOAT64_KHR => "FLOAT64_KHR",
             _ => "(unknown variant)",
         })
@@ -114,7 +134,7 @@ impl crate::extensions::khr_performance_query::PerformanceCounterStorageKHR {
     pub const FLOAT32_KHR: Self = Self(4);
     pub const FLOAT64_KHR: Self = Self(5);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`]"] # [doc (alias = "VkPerformanceCounterDescriptionFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagsKHR.html) · Bitmask of [`PerformanceCounterDescriptionFlagBitsKHR`]"] # [doc (alias = "VkPerformanceCounterDescriptionFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct PerformanceCounterDescriptionFlagsKHR : u32 { # [cfg (feature = "khr_performance_query")] const PERFORMANCE_IMPACTING_KHR = PerformanceCounterDescriptionFlagBitsKHR :: PERFORMANCE_IMPACTING_KHR . 0 ; # [cfg (feature = "khr_performance_query")] const CONCURRENTLY_IMPACTED_KHR = PerformanceCounterDescriptionFlagBitsKHR :: CONCURRENTLY_IMPACTED_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterDescriptionFlagBitsKHR.html) · Bits enum of [`PerformanceCounterDescriptionFlagsKHR`]"]
 #[doc(alias = "VkPerformanceCounterDescriptionFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -130,7 +150,9 @@ impl PerformanceCounterDescriptionFlagBitsKHR {
 impl std::fmt::Debug for PerformanceCounterDescriptionFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "khr_performance_query")]
             &Self::PERFORMANCE_IMPACTING_KHR => "PERFORMANCE_IMPACTING_KHR",
+            #[cfg(feature = "khr_performance_query")]
             &Self::CONCURRENTLY_IMPACTED_KHR => "CONCURRENTLY_IMPACTED_KHR",
             _ => "(unknown variant)",
         })
@@ -730,7 +752,9 @@ impl<'a> std::ops::DerefMut for PerformanceQuerySubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHR> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+#[cfg(feature = "khr_synchronization2")]
 impl<'a> crate::ExtendableFromConst<'a, PerformanceQuerySubmitInfoKHRBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::khr_performance_query`]"]
 impl crate::InstanceLoader {

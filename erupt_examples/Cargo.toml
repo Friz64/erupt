@@ -5,7 +5,7 @@ authors = ["Friz64 <friz64mc@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-erupt = { path = "../erupt" }
-winit = "0.24"
+erupt = { path = "../erupt", features = ["khr_swapchain", "ext_debug_utils"] }
+winit = "0.25"
 structopt = "0.3"
 bytemuck = "1.5"

@@ -36,13 +36,21 @@ pub struct ViewportCoordinateSwizzleNV(pub i32);
 impl std::fmt::Debug for ViewportCoordinateSwizzleNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::POSITIVE_X_NV => "POSITIVE_X_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::NEGATIVE_X_NV => "NEGATIVE_X_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::POSITIVE_Y_NV => "POSITIVE_Y_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::NEGATIVE_Y_NV => "NEGATIVE_Y_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::POSITIVE_Z_NV => "POSITIVE_Z_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::NEGATIVE_Z_NV => "NEGATIVE_Z_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::POSITIVE_W_NV => "POSITIVE_W_NV",
+            #[cfg(feature = "nv_viewport_swizzle")]
             &Self::NEGATIVE_W_NV => "NEGATIVE_W_NV",
             _ => "(unknown variant)",
         })

@@ -16,10 +16,15 @@ pub struct ValidationFeatureEnableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureEnableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_validation_features")]
             &Self::GPU_ASSISTED_EXT => "GPU_ASSISTED_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT => "GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::BEST_PRACTICES_EXT => "BEST_PRACTICES_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::DEBUG_PRINTF_EXT => "DEBUG_PRINTF_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::SYNCHRONIZATION_VALIDATION_EXT => "SYNCHRONIZATION_VALIDATION_EXT",
             _ => "(unknown variant)",
         })
@@ -41,12 +46,19 @@ pub struct ValidationFeatureDisableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureDisableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_validation_features")]
             &Self::ALL_EXT => "ALL_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::SHADERS_EXT => "SHADERS_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::THREAD_SAFETY_EXT => "THREAD_SAFETY_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::API_PARAMETERS_EXT => "API_PARAMETERS_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::OBJECT_LIFETIMES_EXT => "OBJECT_LIFETIMES_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::CORE_CHECKS_EXT => "CORE_CHECKS_EXT",
+            #[cfg(feature = "ext_validation_features")]
             &Self::UNIQUE_HANDLES_EXT => "UNIQUE_HANDLES_EXT",
             _ => "(unknown variant)",
         })

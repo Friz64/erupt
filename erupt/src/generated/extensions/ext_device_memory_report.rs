@@ -38,10 +38,15 @@ pub struct DeviceMemoryReportEventTypeEXT(pub i32);
 impl std::fmt::Debug for DeviceMemoryReportEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::ALLOCATE_EXT => "ALLOCATE_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::FREE_EXT => "FREE_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::IMPORT_EXT => "IMPORT_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::UNIMPORT_EXT => "UNIMPORT_EXT",
+            #[cfg(feature = "ext_device_memory_report")]
             &Self::ALLOCATION_FAILED_EXT => "ALLOCATION_FAILED_EXT",
             _ => "(unknown variant)",
         })

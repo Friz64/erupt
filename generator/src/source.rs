@@ -14,7 +14,7 @@ use crate::{
 };
 use roxmltree::Document;
 use std::{
-    collections::HashSet,
+    collections::{HashMap, HashSet},
     error::Error,
     fmt::{self, Debug, Display},
     fs,
@@ -45,6 +45,7 @@ pub struct Source {
     pub latest_vulkan_version: (u32, u32),
     pub header_version: u32,
     pub provisional_extensions: HashSet<String>,
+    pub extension_requires: HashMap<String, Vec<String>>,
 }
 
 impl Source {
@@ -119,6 +120,7 @@ impl Source {
             latest_vulkan_version,
             header_version,
             provisional_extensions: HashSet::new(),
+            extension_requires: HashMap::new(),
         };
 
         for registry_child in registry.children().filter(|n| n.is_element()) {
@@ -160,13 +162,22 @@ impl Source {
                             continue;
                         }
 
-                        if extension.attribute("provisional") == Some("true") {
-                            let name = extension
-                                .attribute("name")
-                                .expect("Extension is missing name");
+                        let name = extension
+                            .attribute("name")
+                            .expect("Extension is missing name");
 
+                        if extension.attribute("provisional") == Some("true") {
                             source.provisional_extensions.insert(name.into());
                         }
+
+                        source.extension_requires.insert(
+                            name.into(),
+                            if let Some(requires) = extension.attribute("requires") {
+                                requires.split(',').map(|s| s.to_owned()).collect()
+                            } else {
+                                Vec::new()
+                            },
+                        );
 
                         source.assign_origins(extension);
                         source.assign_function_metadata(extension);

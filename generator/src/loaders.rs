@@ -156,6 +156,26 @@ impl EnabledData {
         self.origins.keys().map(|origin| origin.ident())
     }
 
+    fn gates(&self) -> impl Iterator<Item = TokenStream> + '_ {
+        self.origins.keys().map(|origin| {
+            origin.feature_gate().unwrap_or_else(|| {
+                quote! {
+                    #[cfg(all())]
+                }
+            })
+        })
+    }
+
+    fn inverse_gates(&self) -> impl Iterator<Item = TokenStream> + '_ {
+        self.origins.keys().map(|origin| {
+            origin.inverse_feature_gate().unwrap_or_else(|| {
+                quote! {
+                    #[cfg(any())]
+                }
+            })
+        })
+    }
+
     fn values<'a>(&'a self, source: &'a Source) -> impl Iterator<Item = TokenStream> + 'a {
         self.origins.iter().map(move |origin| match origin {
             (Origin::Feature { major, minor }, EnabledKind::Normal) => {
@@ -193,6 +213,7 @@ impl EnabledData {
 #[derive(Default)]
 struct LoaderData {
     target_command_level: Option<CommandLevel>,
+    gates: Vec<Option<TokenStream>>,
     idents: Vec<Ident>,
     types: Vec<TokenStream>,
     loads: Vec<TokenStream>,
@@ -213,6 +234,7 @@ impl LoaderData {
             return;
         }
 
+        self.gates.push(origin.feature_gate());
         self.idents.push(function.name.pretty_ident());
 
         let pointer_ident = function.name.pointer_ident();
@@ -322,9 +344,13 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
     let entry_enabled_idents: Vec<_> = entry_enabled_data.idents().collect();
     let entry_enabled_values = entry_enabled_data.values(source);
 
+    let instance_enabled_gates: Vec<_> = instance_enabled_data.gates().collect();
+    let instance_enabled_inverse_gates: Vec<_> = instance_enabled_data.inverse_gates().collect();
     let instance_enabled_idents: Vec<_> = instance_enabled_data.idents().collect();
     let instance_enabled_values = instance_enabled_data.values(source);
 
+    let device_enabled_gates: Vec<_> = device_enabled_data.gates().collect();
+    let device_enabled_inverse_gates: Vec<_> = device_enabled_data.inverse_gates().collect();
     let device_enabled_idents: Vec<_> = device_enabled_data.idents().collect();
     let device_enabled_values = device_enabled_data.values(source);
 
@@ -332,10 +358,12 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
     let entry_loader_types = &entry_loader_data.types;
     let entry_loader_loading = entry_loader_data.loading(&device_enabled_data);
 
+    let instance_loader_gates = &instance_loader_data.gates;
     let instance_loader_idents = &instance_loader_data.idents;
     let instance_loader_types = &instance_loader_data.types;
     let instance_loader_loading = instance_loader_data.loading(&device_enabled_data);
 
+    let device_loader_gates = &device_loader_data.gates;
     let device_loader_idents = &device_loader_data.idents;
     let device_loader_types = &device_loader_data.types;
     let device_loader_loading = device_loader_data.loading(&device_enabled_data);
@@ -444,6 +472,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl InstanceEnabled {
+            #[allow(unused_variables)]
             pub unsafe fn new(
                 instance_version: u32,
                 enabled_extensions: &[&std::ffi::CStr],
@@ -456,7 +485,14 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     available_device_extensions.contains(&std::ffi::CStr::from_ptr(extension));
 
                 Ok(InstanceEnabled {
-                    #(#instance_enabled_idents: #instance_enabled_values,)*
+                    #(
+                        #instance_enabled_idents: {
+                            #instance_enabled_gates
+                            { #instance_enabled_values }
+                            #instance_enabled_inverse_gates
+                            { false }
+                        },
+                    )*
                 })
             }
         }
@@ -474,7 +510,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             pub handle: crate::vk1_0::Instance,
             enabled: InstanceEnabled,
             pub get_device_proc_addr: crate::vk1_0::PFN_vkGetDeviceProcAddr,
-            #(pub #instance_loader_idents: #instance_loader_types,)*
+            #(
+                #instance_loader_gates
+                pub #instance_loader_idents: #instance_loader_types,
+            )*
         }
 
         impl InstanceLoader {
@@ -494,7 +533,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     arc: std::sync::Arc::new(()),
                     handle: instance,
                     get_device_proc_addr: std::mem::transmute(get_device_proc_addr),
-                    #(#instance_loader_idents: #instance_loader_loading,)*
+                    #(
+                        #instance_loader_gates
+                        #instance_loader_idents: #instance_loader_loading,
+                    )*
                     enabled: instance_enabled,
                 })
             }
@@ -519,12 +561,20 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl DeviceEnabled {
+            #[allow(unused_variables)]
             pub unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
                 let enabled_extension = |extension|
                     enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
 
                 DeviceEnabled {
-                    #(#device_enabled_idents: #device_enabled_values,)*
+                    #(
+                        #device_enabled_idents: {
+                            #device_enabled_gates
+                            { #device_enabled_values }
+                            #device_enabled_inverse_gates
+                            { false }
+                        },
+                    )*
                 }
             }
         }
@@ -540,7 +590,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             parent: std::sync::Weak<()>,
             pub handle: crate::vk1_0::Device,
             enabled: DeviceEnabled,
-            #(pub #device_loader_idents: #device_loader_types,)*
+            #(
+                #device_loader_gates
+                pub #device_loader_idents: #device_loader_types,
+            )*
         }
 
         impl DeviceLoader {
@@ -557,7 +610,10 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                 Ok(DeviceLoader {
                     parent: std::sync::Arc::downgrade(&instance_loader.arc),
                     handle: device,
-                    #(#device_loader_idents: #device_loader_loading,)*
+                    #(
+                        #device_loader_gates
+                        #device_loader_idents: #device_loader_loading,
+                    )*
                     enabled: device_enabled,
                 })
             }

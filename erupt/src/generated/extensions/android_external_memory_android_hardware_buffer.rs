@@ -197,7 +197,9 @@ impl AndroidHardwareBufferPropertiesANDROID {
         AndroidHardwareBufferPropertiesANDROIDBuilder(self, std::marker::PhantomData)
     }
 }
+#[cfg(feature = "android_external_memory_android_hardware_buffer")]
 impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+#[cfg(feature = "android_external_memory_android_hardware_buffer")]
 impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]

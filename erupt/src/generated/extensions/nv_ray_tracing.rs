@@ -209,8 +209,11 @@ pub struct AccelerationStructureMemoryRequirementsTypeNV(pub i32);
 impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::OBJECT_NV => "OBJECT_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::BUILD_SCRATCH_NV => "BUILD_SCRATCH_NV",
+            #[cfg(feature = "nv_ray_tracing")]
             &Self::UPDATE_SCRATCH_NV => "UPDATE_SCRATCH_NV",
             _ => "(unknown variant)",
         })

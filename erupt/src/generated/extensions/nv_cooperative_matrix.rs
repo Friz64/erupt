@@ -20,9 +20,13 @@ pub struct ScopeNV(pub i32);
 impl std::fmt::Debug for ScopeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::DEVICE_NV => "DEVICE_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::WORKGROUP_NV => "WORKGROUP_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::SUBGROUP_NV => "SUBGROUP_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::QUEUE_FAMILY_NV => "QUEUE_FAMILY_NV",
             _ => "(unknown variant)",
         })
@@ -43,16 +47,27 @@ pub struct ComponentTypeNV(pub i32);
 impl std::fmt::Debug for ComponentTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::FLOAT16_NV => "FLOAT16_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::FLOAT32_NV => "FLOAT32_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::FLOAT64_NV => "FLOAT64_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::SINT8_NV => "SINT8_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::SINT16_NV => "SINT16_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::SINT32_NV => "SINT32_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::SINT64_NV => "SINT64_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::UINT8_NV => "UINT8_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::UINT16_NV => "UINT16_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::UINT32_NV => "UINT32_NV",
+            #[cfg(feature = "nv_cooperative_matrix")]
             &Self::UINT64_NV => "UINT64_NV",
             _ => "(unknown variant)",
         })

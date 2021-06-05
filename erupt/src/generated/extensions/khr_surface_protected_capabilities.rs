@@ -8,7 +8,9 @@ pub const KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME: *const std::os::raw
 impl crate::vk1_0::StructureType {
     pub const SURFACE_PROTECTED_CAPABILITIES_KHR: Self = Self(1000239000);
 }
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SurfaceProtectedCapabilitiesKHR> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SurfaceProtectedCapabilitiesKHRBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceProtectedCapabilitiesKHR")]

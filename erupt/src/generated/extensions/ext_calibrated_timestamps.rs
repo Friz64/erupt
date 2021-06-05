@@ -20,9 +20,13 @@ pub struct TimeDomainEXT(pub i32);
 impl std::fmt::Debug for TimeDomainEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_calibrated_timestamps")]
             &Self::DEVICE_EXT => "DEVICE_EXT",
+            #[cfg(feature = "ext_calibrated_timestamps")]
             &Self::CLOCK_MONOTONIC_EXT => "CLOCK_MONOTONIC_EXT",
+            #[cfg(feature = "ext_calibrated_timestamps")]
             &Self::CLOCK_MONOTONIC_RAW_EXT => "CLOCK_MONOTONIC_RAW_EXT",
+            #[cfg(feature = "ext_calibrated_timestamps")]
             &Self::QUERY_PERFORMANCE_COUNTER_EXT => "QUERY_PERFORMANCE_COUNTER_EXT",
             _ => "(unknown variant)",
         })

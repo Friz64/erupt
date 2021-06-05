@@ -16,8 +16,11 @@ pub struct MemoryOverallocationBehaviorAMD(pub i32);
 impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "amd_memory_overallocation_behavior")]
             &Self::DEFAULT_AMD => "DEFAULT_AMD",
+            #[cfg(feature = "amd_memory_overallocation_behavior")]
             &Self::ALLOWED_AMD => "ALLOWED_AMD",
+            #[cfg(feature = "amd_memory_overallocation_behavior")]
             &Self::DISALLOWED_AMD => "DISALLOWED_AMD",
             _ => "(unknown variant)",
         })

@@ -40,7 +40,9 @@ pub struct CoverageReductionModeNV(pub i32);
 impl std::fmt::Debug for CoverageReductionModeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_coverage_reduction_mode")]
             &Self::MERGE_NV => "MERGE_NV",
+            #[cfg(feature = "nv_coverage_reduction_mode")]
             &Self::TRUNCATE_NV => "TRUNCATE_NV",
             _ => "(unknown variant)",
         })

@@ -22,7 +22,9 @@ impl crate::extensions::khr_surface::PresentModeKHR {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SharedPresentSurfaceCapabilitiesKHR> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+#[cfg(feature = "khr_get_surface_capabilities2")]
 impl<'a> crate::ExtendableFromMut<'a, SharedPresentSurfaceCapabilitiesKHRBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]

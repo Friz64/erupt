@@ -9,7 +9,7 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV: Self = Self(1000300000);
     pub const DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV: Self = Self(1000300001);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagsNV.html) · Bitmask of [`DeviceDiagnosticsConfigFlagBitsNV`]"] # [doc (alias = "VkDeviceDiagnosticsConfigFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct DeviceDiagnosticsConfigFlagsNV : u32 { const ENABLE_SHADER_DEBUG_INFO_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_SHADER_DEBUG_INFO_NV . 0 ; const ENABLE_RESOURCE_TRACKING_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_RESOURCE_TRACKING_NV . 0 ; const ENABLE_AUTOMATIC_CHECKPOINTS_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_AUTOMATIC_CHECKPOINTS_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagsNV.html) · Bitmask of [`DeviceDiagnosticsConfigFlagBitsNV`]"] # [doc (alias = "VkDeviceDiagnosticsConfigFlagsNV")] # [derive (Default)] # [repr (transparent)] pub struct DeviceDiagnosticsConfigFlagsNV : u32 { # [cfg (feature = "nv_device_diagnostics_config")] const ENABLE_SHADER_DEBUG_INFO_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_SHADER_DEBUG_INFO_NV . 0 ; # [cfg (feature = "nv_device_diagnostics_config")] const ENABLE_RESOURCE_TRACKING_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_RESOURCE_TRACKING_NV . 0 ; # [cfg (feature = "nv_device_diagnostics_config")] const ENABLE_AUTOMATIC_CHECKPOINTS_NV = DeviceDiagnosticsConfigFlagBitsNV :: ENABLE_AUTOMATIC_CHECKPOINTS_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagBitsNV.html) · Bits enum of [`DeviceDiagnosticsConfigFlagsNV`]"]
 #[doc(alias = "VkDeviceDiagnosticsConfigFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -25,8 +25,11 @@ impl DeviceDiagnosticsConfigFlagBitsNV {
 impl std::fmt::Debug for DeviceDiagnosticsConfigFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "nv_device_diagnostics_config")]
             &Self::ENABLE_SHADER_DEBUG_INFO_NV => "ENABLE_SHADER_DEBUG_INFO_NV",
+            #[cfg(feature = "nv_device_diagnostics_config")]
             &Self::ENABLE_RESOURCE_TRACKING_NV => "ENABLE_RESOURCE_TRACKING_NV",
+            #[cfg(feature = "nv_device_diagnostics_config")]
             &Self::ENABLE_AUTOMATIC_CHECKPOINTS_NV => "ENABLE_AUTOMATIC_CHECKPOINTS_NV",
             _ => "(unknown variant)",
         })

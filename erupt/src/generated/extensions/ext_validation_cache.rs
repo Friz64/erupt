@@ -50,6 +50,7 @@ pub struct ValidationCacheHeaderVersionEXT(pub i32);
 impl std::fmt::Debug for ValidationCacheHeaderVersionEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_validation_cache")]
             &Self::ONE_EXT => "ONE_EXT",
             _ => "(unknown variant)",
         })

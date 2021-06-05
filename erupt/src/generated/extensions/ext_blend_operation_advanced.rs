@@ -71,8 +71,11 @@ pub struct BlendOverlapEXT(pub i32);
 impl std::fmt::Debug for BlendOverlapEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::UNCORRELATED_EXT => "UNCORRELATED_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::DISJOINT_EXT => "DISJOINT_EXT",
+            #[cfg(feature = "ext_blend_operation_advanced")]
             &Self::CONJOINT_EXT => "CONJOINT_EXT",
             _ => "(unknown variant)",
         })

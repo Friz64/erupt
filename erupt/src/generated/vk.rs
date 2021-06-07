@@ -107,6 +107,8 @@ pub use crate::extensions::ext_full_screen_exclusive::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_global_priority::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_global_priority_query::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_hdr_metadata::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_headless_surface::*;
@@ -344,6 +346,8 @@ pub use crate::extensions::khr_shader_float_controls::*;
 pub use crate::extensions::khr_shader_non_semantic_info::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_shader_subgroup_extended_types::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_shader_subgroup_uniform_control_flow::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_shader_terminate_invocation::*;
 #[doc(no_inline)]

@@ -106,6 +106,8 @@ pub mod ext_fragment_shader_interlock;
 pub mod ext_full_screen_exclusive;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_global_priority.html) · Vulkan extension"]
 pub mod ext_global_priority;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_global_priority_query.html) · Vulkan extension"]
+pub mod ext_global_priority_query;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_hdr_metadata.html) · Vulkan extension"]
 pub mod ext_hdr_metadata;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_headless_surface.html) · Vulkan extension"]
@@ -344,6 +346,8 @@ pub mod khr_shader_float_controls;
 pub mod khr_shader_non_semantic_info;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_subgroup_extended_types.html) · Vulkan extension"]
 pub mod khr_shader_subgroup_extended_types;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_subgroup_uniform_control_flow.html) · Vulkan extension"]
+pub mod khr_shader_subgroup_uniform_control_flow;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_terminate_invocation.html) · Vulkan extension"]
 pub mod khr_shader_terminate_invocation;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shared_presentable_image.html) · Vulkan extension"]

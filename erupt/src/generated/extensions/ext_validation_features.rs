@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_FEATURES_SPEC_VERSION")]
-pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 4;
+pub const EXT_VALIDATION_FEATURES_SPEC_VERSION: u32 = 5;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME")]
 pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_validation_features");
@@ -48,6 +48,7 @@ impl std::fmt::Debug for ValidationFeatureDisableEXT {
             &Self::OBJECT_LIFETIMES_EXT => "OBJECT_LIFETIMES_EXT",
             &Self::CORE_CHECKS_EXT => "CORE_CHECKS_EXT",
             &Self::UNIQUE_HANDLES_EXT => "UNIQUE_HANDLES_EXT",
+            &Self::SHADER_VALIDATION_CACHE_EXT => "SHADER_VALIDATION_CACHE_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -61,6 +62,7 @@ impl crate::extensions::ext_validation_features::ValidationFeatureDisableEXT {
     pub const OBJECT_LIFETIMES_EXT: Self = Self(4);
     pub const CORE_CHECKS_EXT: Self = Self(5);
     pub const UNIQUE_HANDLES_EXT: Self = Self(6);
+    pub const SHADER_VALIDATION_CACHE_EXT: Self = Self(7);
 }
 impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}

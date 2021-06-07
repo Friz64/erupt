@@ -112,6 +112,36 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
         }],
     );
 
+    map.insert(
+        TypeName::new("VkQueueFamilyGlobalPriorityPropertiesEXT"),
+        vec![
+            Override {
+                index: 2,
+                kind: FieldKind::Ignore,
+            },
+            Override {
+                index: 3,
+                kind: FieldKind::Overridden {
+                    ty: Type::Slice {
+                        of: Box::new(Type::Named(Name::Type(TypeName::new(
+                            "VkQueueGlobalPriorityEXT",
+                        )))),
+                        kind: Mutability::Const,
+                        lifetime: Some(lifetime_a.clone()),
+                    },
+                    // VK_MAX_GLOBAL_PRIORITY_SIZE_EXT
+                    body: quote! {
+                        let mut priorities_array = [Default::default(); 16];
+                        let truncated_len = priorities.len().min(priorities_array.len());
+                        priorities_array[..truncated_len].copy_from_slice(&priorities[..truncated_len]);
+                        self.0.priority_count = truncated_len as _;
+                        self.0.priorities = priorities_array;
+                    },
+                },
+            },
+        ],
+    );
+
     map
 }
 

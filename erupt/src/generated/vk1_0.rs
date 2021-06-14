@@ -15201,10 +15201,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 180u32;
+pub const HEADER_VERSION: u32 = 181u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 180u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 181u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::EntryLoader<T> {
     #[inline]

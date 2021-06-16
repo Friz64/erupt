@@ -317,5 +317,6 @@ _Initial Development_
 [0.5.0+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.4.0+137...v0.5.0+137
 [0.4.0+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.3.0+137...v0.4.0+137
 [0.3.0+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.2.0+137...v0.3.0+137
-[0.2.0+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.1.0...v0.2.0+137
+[0.2.0+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.1.1+137...v0.2.0+137
+[0.1.1+137]: https://gitlab.com/Friz64/erupt/-/compare/v0.1.0...v0.1.1+137
 [0.1.0]: https://gitlab.com/Friz64/erupt/-/commit/c3083459

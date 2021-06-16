@@ -1,6 +1,2 @@
 [workspace]
-members = [
-    "erupt",
-    "erupt_examples",
-    "generator",
-]
+members = ["erupt", "erupt_examples", "generator"]

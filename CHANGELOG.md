@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added versioning warning to provisional/beta extensions
+- Allow for custom instance and device creation functions (useful for e.g. OpenXR)
 
 ### Changed
 
@@ -17,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Mark `{Instance,Device}Loader::new` functions unsafe
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants
-- Remove specific function-not-loaded errors
+- Remove function-specific "function not loaded" error messages
 - Expose `FramebufferCreateInfoBuilder::attachment_count`
 
 ### Fixed

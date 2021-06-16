@@ -14752,6 +14752,11 @@ impl<'a> FramebufferCreateInfoBuilder<'a> {
         self
     }
     #[inline]
+    pub fn attachment_count(mut self, attachment_count: u32) -> Self {
+        self.0.attachment_count = attachment_count as _;
+        self
+    }
+    #[inline]
     pub fn attachments(mut self, attachments: &'a [crate::vk1_0::ImageView]) -> Self {
         self.0.p_attachments = attachments.as_ptr() as _;
         self.0.attachment_count = attachments.len() as _;

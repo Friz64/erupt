@@ -142,6 +142,14 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
         ],
     );
 
+    map.insert(
+        TypeName::new("VkFramebufferCreateInfo"),
+        vec![Override {
+            index: 4,
+            kind: FieldKind::Regular,
+        }],
+    );
+
     map
 }
 

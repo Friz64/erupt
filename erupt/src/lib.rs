@@ -111,7 +111,7 @@ use std::{
     mem, ptr,
 };
 #[cfg(feature = "loading")]
-pub use utils::loading::DefaultEntryLoader;
+pub use utils::loading::EntryLoader;
 
 /// Construct a `*const std::os::raw::c_char` from a string
 ///
@@ -296,7 +296,7 @@ impl Display for LoaderError {
 
 impl Error for LoaderError {}
 
-impl<T> Debug for EntryLoader<T> {
+impl<T> Debug for CustomEntryLoader<T> {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "Entry")
     }
@@ -308,10 +308,10 @@ impl InstanceLoader {
     /// The instance object is created using the supplied `create_instance` function.
     /// This may be useful when creating the instance using e.g. OpenXR.
     #[inline]
-    pub unsafe fn with_creation_fn<T>(entry_loader: &EntryLoader<T>, create_info: &crate::vk1_0::InstanceCreateInfo, create_instance: impl FnOnce() -> Result<vk1_0::Instance, vk1_0::Result>) -> Result<InstanceLoader, LoaderError> {
+    pub unsafe fn with_creation_fn<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo, create_instance: impl FnOnce() -> Result<vk1_0::Instance, vk1_0::Result>) -> Result<InstanceLoader, LoaderError> {
         let instance = create_instance().map_err(LoaderError::VulkanError)?;
 
-        let mut version = crate::vk1_0::make_api_version(0, 1, 0, 0);
+        let mut version = vk1_0::make_api_version(0, 1, 0, 0);
         if !create_info.p_application_info.is_null() {
             let user_version = (*create_info.p_application_info).api_version;
             if user_version != 0 {
@@ -334,7 +334,7 @@ impl InstanceLoader {
     ///
     /// The instance object is created for you. If this is not desired, use [`InstanceLoader::with_creation_fn`].
     #[inline]
-    pub unsafe fn new<T>(entry_loader: &EntryLoader<T>, create_info: &crate::vk1_0::InstanceCreateInfo, allocator: Option<&vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
+    pub unsafe fn new<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo, allocator: Option<&vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
         InstanceLoader::with_creation_fn(entry_loader, create_info, || entry_loader.create_instance(create_info, allocator).result())
     }
 }
@@ -345,8 +345,8 @@ impl InstanceLoader {
 // by any physical device enumerated by instance.
 // https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetInstanceProcAddr.html#_description
 unsafe fn all_physical_device_extension_properties(mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>, instance: vk1_0::Instance) -> Result<Vec<vk1_0::ExtensionProperties>, LoaderError> {
-    let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
-    let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(crate::LoaderError::SymbolNotAvailable)?);
+    let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(LoaderError::SymbolNotAvailable)?);
+    let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(symbol(vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(LoaderError::SymbolNotAvailable)?);
 
     let mut physical_device_count = 0;
     let result = enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
@@ -427,7 +427,7 @@ pub trait ExtendableFromConst<'a, T> {
         Self: Sized,
     {
         unsafe {
-            crate::append_const_ptr_chain(&mut self as *mut Self as _, other as *const T as _);
+            append_const_ptr_chain(&mut self as *mut Self as _, other as *const T as _);
         }
 
         self
@@ -457,7 +457,7 @@ pub trait ExtendableFromMut<'a, T> {
         Self: Sized,
     {
         unsafe {
-            crate::append_mut_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
+            append_mut_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
         }
 
         self

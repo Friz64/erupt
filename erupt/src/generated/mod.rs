@@ -26,8 +26,8 @@ impl EntryEnabled {
 }
 #[doc = r" Loader for entry commands."]
 #[doc = r""]
-#[doc = r" To create a new loader, call [`EntryLoader::new`]."]
-pub struct EntryLoader<T> {
+#[doc = r" To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new)."]
+pub struct CustomEntryLoader<T> {
     arc: std::sync::Arc<()>,
     pub loader: T,
     enabled: EntryEnabled,
@@ -37,12 +37,12 @@ pub struct EntryLoader<T> {
     pub enumerate_instance_layer_properties: Option<vk1_0::PFN_vkEnumerateInstanceLayerProperties>,
     pub enumerate_instance_extension_properties: Option<vk1_0::PFN_vkEnumerateInstanceExtensionProperties>,
 }
-impl<T> EntryLoader<T> {
+impl<T> CustomEntryLoader<T> {
     #[allow(unused_parens)]
-    pub unsafe fn custom(mut loader: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>, entry_enabled: EntryEnabled) -> Result<EntryLoader<T>, crate::LoaderError> {
+    pub unsafe fn custom(mut loader: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>, entry_enabled: EntryEnabled) -> Result<CustomEntryLoader<T>, crate::LoaderError> {
         let mut symbol = |name| symbol(&mut loader, name);
         let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR).ok_or(crate::LoaderError::SymbolNotAvailable)?;
-        Ok(EntryLoader { arc: std::sync::Arc::new(()), get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr), create_instance: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_INSTANCE)), enumerate_instance_version: if entry_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION)) } else { None }, enumerate_instance_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES)), enumerate_instance_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES)), loader, enabled: entry_enabled })
+        Ok(CustomEntryLoader { arc: std::sync::Arc::new(()), get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr), create_instance: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_INSTANCE)), enumerate_instance_version: if entry_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION)) } else { None }, enumerate_instance_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES)), enumerate_instance_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES)), loader, enabled: entry_enabled })
     }
     pub fn enabled(&self) -> &EntryEnabled {
         &self.enabled
@@ -51,7 +51,7 @@ impl<T> EntryLoader<T> {
         self.enabled.instance_version
     }
 }
-impl<T> Drop for EntryLoader<T> {
+impl<T> Drop for CustomEntryLoader<T> {
     fn drop(&mut self) {
         if std::sync::Arc::weak_count(&self.arc) != 0 {
             panic!("Attempting to drop a entry loader with active references to it");
@@ -271,7 +271,7 @@ pub struct InstanceLoader {
 }
 impl InstanceLoader {
     #[allow(unused_parens)]
-    pub unsafe fn custom<T>(entry_loader: &EntryLoader<T>, instance: crate::vk1_0::Instance, instance_enabled: InstanceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<InstanceLoader, crate::LoaderError> {
+    pub unsafe fn custom<T>(entry_loader: &CustomEntryLoader<T>, instance: crate::vk1_0::Instance, instance_enabled: InstanceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<InstanceLoader, crate::LoaderError> {
         let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR).ok_or(crate::LoaderError::SymbolNotAvailable)?;
         Ok(InstanceLoader {
             parent: std::sync::Arc::downgrade(&entry_loader.arc),

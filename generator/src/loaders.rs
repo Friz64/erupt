@@ -12,10 +12,7 @@ use crate::{
 use indexmap::IndexMap;
 use proc_macro2::{Ident, Literal, TokenStream};
 use quote::{format_ident, quote};
-use std::{
-    collections::HashMap,
-    fmt::{self, Display},
-};
+use std::collections::HashMap;
 
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 enum CommandLevel {
@@ -33,7 +30,15 @@ impl CommandLevel {
     }
 
     fn loader(&self) -> TokenStream {
-        let ident = format_ident!("{}Loader", self.to_string());
+        let ident = format_ident!(
+            "{}Loader",
+            match self {
+                CommandLevel::Entry => "CustomEntry",
+                CommandLevel::Instance => "Instance",
+                CommandLevel::Device => "Device",
+            }
+        );
+
         let generics = self.generics();
 
         quote! { crate::#ident#generics }
@@ -45,16 +50,6 @@ impl CommandLevel {
             CommandLevel::Instance => Some(Type::Named(Name::Type(TypeName::instance()))),
             CommandLevel::Device => Some(Type::Named(Name::Type(TypeName::device()))),
         }
-    }
-}
-
-impl Display for CommandLevel {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        f.write_str(match self {
-            CommandLevel::Entry => "Entry",
-            CommandLevel::Instance => "Instance",
-            CommandLevel::Device => "Device",
-        })
     }
 }
 
@@ -390,8 +385,8 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
 
         /// Loader for entry commands.
         ///
-        /// To create a new loader, call [`EntryLoader::new`].
-        pub struct EntryLoader<T> {
+        /// To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new).
+        pub struct CustomEntryLoader<T> {
             arc: std::sync::Arc<()>,
             pub loader: T,
             enabled: EntryEnabled,
@@ -399,19 +394,19 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             #(pub #entry_loader_idents: #entry_loader_types,)*
         }
 
-        impl<T> EntryLoader<T> {
+        impl<T> CustomEntryLoader<T> {
             #[allow(unused_parens)]
             pub unsafe fn custom(
                 mut loader: T,
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
                 entry_enabled: EntryEnabled,
-            ) -> Result<EntryLoader<T>, crate::LoaderError> {
+            ) -> Result<CustomEntryLoader<T>, crate::LoaderError> {
                 let mut symbol = |name| symbol(&mut loader, name);
 
                 let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR)
                     .ok_or(crate::LoaderError::SymbolNotAvailable)?;
-                Ok(EntryLoader {
+                Ok(CustomEntryLoader {
                     arc: std::sync::Arc::new(()),
                     get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr),
                     #(#entry_loader_idents: #entry_loader_loading,)*
@@ -429,7 +424,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
-        impl<T> Drop for EntryLoader<T> {
+        impl<T> Drop for CustomEntryLoader<T> {
             fn drop(&mut self) {
                 if std::sync::Arc::weak_count(&self.arc) != 0 {
                     panic!("Attempting to drop a entry loader with active references to it");
@@ -480,7 +475,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         impl InstanceLoader {
             #[allow(unused_parens)]
             pub unsafe fn custom<T>(
-                entry_loader: &EntryLoader<T>,
+                entry_loader: &CustomEntryLoader<T>,
                 instance: crate::vk1_0::Instance,
                 instance_enabled: InstanceEnabled,
                 mut symbol: impl FnMut(*const std::os::raw::c_char)

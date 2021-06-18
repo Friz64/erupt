@@ -448,7 +448,7 @@ impl Source {
                         _ => panic!("Enum type has no name: {:?}", node),
                     };
 
-                    if self.enums.iter_mut().find(|en| en.kind == kind).is_none() {
+                    if !self.enums.iter().any(|en| en.kind == kind) {
                         self.enums.push(Enum {
                             origin: Default::default(),
                             kind,

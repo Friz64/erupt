@@ -5930,7 +5930,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderDrawParametersFeaturesBuilde
     }
 }
 #[doc = "Provided by [`crate::vk1_1`]"]
-impl<T> crate::EntryLoader<T> {
+impl<T> crate::CustomEntryLoader<T> {
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceVersion.html) · Function"]

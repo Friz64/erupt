@@ -242,7 +242,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryFdKHR")]
     pub unsafe fn get_memory_fd_khr(&self, get_fd_info: &crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self.get_memory_fd_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_fd_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut fd = Default::default();
         let _return = _function(self.handle, get_fd_info as _, &mut fd);
         crate::utils::VulkanResult::new(_return, fd)
@@ -252,7 +252,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryFdPropertiesKHR")]
     pub unsafe fn get_memory_fd_properties_khr(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, fd: std::os::raw::c_int, memory_fd_properties: Option<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR> {
-        let _function = self.get_memory_fd_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_fd_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_fd_properties = match memory_fd_properties {
             Some(v) => v,
             None => Default::default(),

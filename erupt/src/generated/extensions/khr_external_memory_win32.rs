@@ -330,7 +330,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandleKHR")]
     pub unsafe fn get_memory_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_memory_win32_handle_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_win32_handle_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, get_win32_handle_info as _, handle);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -339,7 +339,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandlePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandlePropertiesKHR")]
     pub unsafe fn get_memory_win32_handle_properties_khr(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, handle: *mut std::ffi::c_void, memory_win32_handle_properties: Option<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR> {
-        let _function = self.get_memory_win32_handle_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_win32_handle_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_win32_handle_properties = match memory_win32_handle_properties {
             Some(v) => v,
             None => Default::default(),

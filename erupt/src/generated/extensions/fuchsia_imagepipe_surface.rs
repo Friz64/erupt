@@ -113,7 +113,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateImagePipeSurfaceFUCHSIA.html) · Function"]
     #[doc(alias = "vkCreateImagePipeSurfaceFUCHSIA")]
     pub unsafe fn create_image_pipe_surface_fuchsia(&self, create_info: &crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_image_pipe_surface_fuchsia.expect("tried to call a function that isn't loaded");
+        let _function = self.create_image_pipe_surface_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

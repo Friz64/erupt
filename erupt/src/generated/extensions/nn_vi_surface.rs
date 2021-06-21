@@ -113,7 +113,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function"]
     #[doc(alias = "vkCreateViSurfaceNN")]
     pub unsafe fn create_vi_surface_nn(&self, create_info: &crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_vi_surface_nn.expect("tried to call a function that isn't loaded");
+        let _function = self.create_vi_surface_nn.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

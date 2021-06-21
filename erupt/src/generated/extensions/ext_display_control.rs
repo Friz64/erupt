@@ -363,7 +363,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDisplayPowerControlEXT.html) · Function"]
     #[doc(alias = "vkDisplayPowerControlEXT")]
     pub unsafe fn display_power_control_ext(&self, display: crate::extensions::khr_display::DisplayKHR, display_power_info: &crate::extensions::ext_display_control::DisplayPowerInfoEXT) -> crate::utils::VulkanResult<()> {
-        let _function = self.display_power_control_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.display_power_control_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, display as _, display_power_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -372,7 +372,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDeviceEventEXT.html) · Function"]
     #[doc(alias = "vkRegisterDeviceEventEXT")]
     pub unsafe fn register_device_event_ext(&self, device_event_info: &crate::extensions::ext_display_control::DeviceEventInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let _function = self.register_device_event_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.register_device_event_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut fence = Default::default();
         let _return = _function(
             self.handle,
@@ -390,7 +390,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkRegisterDisplayEventEXT.html) · Function"]
     #[doc(alias = "vkRegisterDisplayEventEXT")]
     pub unsafe fn register_display_event_ext(&self, display: crate::extensions::khr_display::DisplayKHR, display_event_info: &crate::extensions::ext_display_control::DisplayEventInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_0::Fence> {
-        let _function = self.register_display_event_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.register_display_event_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut fence = Default::default();
         let _return = _function(
             self.handle,
@@ -409,7 +409,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
     #[doc(alias = "vkGetSwapchainCounterEXT")]
     pub unsafe fn get_swapchain_counter_ext(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT) -> crate::utils::VulkanResult<u64> {
-        let _function = self.get_swapchain_counter_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_swapchain_counter_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut counter_value = Default::default();
         let _return = _function(self.handle, swapchain as _, counter as _, &mut counter_value);
         crate::utils::VulkanResult::new(_return, counter_value)

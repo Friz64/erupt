@@ -246,7 +246,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]
     #[doc(alias = "vkCreateDebugReportCallbackEXT")]
     pub unsafe fn create_debug_report_callback_ext(&self, create_info: &crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_debug_report::DebugReportCallbackEXT> {
-        let _function = self.create_debug_report_callback_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.create_debug_report_callback_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut callback = Default::default();
         let _return = _function(
             self.handle,
@@ -264,7 +264,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugReportCallbackEXT.html) · Function"]
     #[doc(alias = "vkDestroyDebugReportCallbackEXT")]
     pub unsafe fn destroy_debug_report_callback_ext(&self, callback: Option<crate::extensions::ext_debug_report::DebugReportCallbackEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_debug_report_callback_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_debug_report_callback_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match callback {
@@ -283,7 +283,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugReportMessageEXT.html) · Function"]
     #[doc(alias = "vkDebugReportMessageEXT")]
     pub unsafe fn debug_report_message_ext(&self, flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, layer_prefix: Option<&std::ffi::CStr>, message: Option<&std::ffi::CStr>) -> () {
-        let _function = self.debug_report_message_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.debug_report_message_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             flags as _,

@@ -267,7 +267,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetVertexInputEXT.html) · Function"]
     #[doc(alias = "vkCmdSetVertexInputEXT")]
     pub unsafe fn cmd_set_vertex_input_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, vertex_binding_descriptions: &[crate::extensions::ext_vertex_input_dynamic_state::VertexInputBindingDescription2EXTBuilder], vertex_attribute_descriptions: &[crate::extensions::ext_vertex_input_dynamic_state::VertexInputAttributeDescription2EXTBuilder]) -> () {
-        let _function = self.cmd_set_vertex_input_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_vertex_input_ext.expect(crate::NOT_LOADED_MESSAGE);
         let vertex_binding_description_count = vertex_binding_descriptions.len();
         let vertex_attribute_description_count = vertex_attribute_descriptions.len();
         let _return = _function(command_buffer as _, vertex_binding_description_count as _, vertex_binding_descriptions.as_ptr() as _, vertex_attribute_description_count as _, vertex_attribute_descriptions.as_ptr() as _);

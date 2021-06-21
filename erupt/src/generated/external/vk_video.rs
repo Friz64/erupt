@@ -408,16 +408,16 @@ impl crate::external::vk_video::StdVideoH265Level {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH264SpsFlags {
-    pub constraint_set0_flag_bitfield: u32,
+    pub constraint_set0_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH264SpsFlags {
     fn default() -> Self {
-        Self { constraint_set0_flag_bitfield: Default::default() }
+        Self { constraint_set0_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH264SpsFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH264SpsFlags").field("constraint_set0_flag_bitfield", &format!("{:#b}", &self.constraint_set0_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH264SpsFlags").field("constraint_set0_flag_and_more_bitfield", &format!("{:#b}", &self.constraint_set0_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH264SpsFlags {
@@ -437,87 +437,87 @@ impl<'a> StdVideoH264SpsFlagsBuilder<'a> {
     }
     #[inline]
     pub fn constraint_set0_flag(mut self, constraint_set0_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set0_flag, 0usize, 0usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set0_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn constraint_set1_flag(mut self, constraint_set1_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set1_flag, 1usize, 1usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set1_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn constraint_set2_flag(mut self, constraint_set2_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set2_flag, 2usize, 2usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set2_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn constraint_set3_flag(mut self, constraint_set3_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set3_flag, 3usize, 3usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set3_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn constraint_set4_flag(mut self, constraint_set4_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set4_flag, 4usize, 4usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set4_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn constraint_set5_flag(mut self, constraint_set5_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, constraint_set5_flag, 5usize, 5usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set5_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn direct_8x8_inference_flag(mut self, direct_8x8_inference_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, direct_8x8_inference_flag, 6usize, 6usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, direct_8x8_inference_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn mb_adaptive_frame_field_flag(mut self, mb_adaptive_frame_field_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, mb_adaptive_frame_field_flag, 7usize, 7usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, mb_adaptive_frame_field_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn frame_mbs_only_flag(mut self, frame_mbs_only_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, frame_mbs_only_flag, 8usize, 8usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_mbs_only_flag, 8usize, 8usize);
         self
     }
     #[inline]
     pub fn delta_pic_order_always_zero_flag(mut self, delta_pic_order_always_zero_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, delta_pic_order_always_zero_flag, 9usize, 9usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, delta_pic_order_always_zero_flag, 9usize, 9usize);
         self
     }
     #[inline]
     pub fn residual_colour_transform_flag(mut self, residual_colour_transform_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, residual_colour_transform_flag, 10usize, 10usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, residual_colour_transform_flag, 10usize, 10usize);
         self
     }
     #[inline]
     pub fn gaps_in_frame_num_value_allowed_flag(mut self, gaps_in_frame_num_value_allowed_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, gaps_in_frame_num_value_allowed_flag, 11usize, 11usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, gaps_in_frame_num_value_allowed_flag, 11usize, 11usize);
         self
     }
     #[inline]
     pub fn first_picture_after_seek_flag(mut self, first_picture_after_seek_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, first_picture_after_seek_flag, 12usize, 12usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, first_picture_after_seek_flag, 12usize, 12usize);
         self
     }
     #[inline]
     pub fn qpprime_y_zero_transform_bypass_flag(mut self, qpprime_y_zero_transform_bypass_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, qpprime_y_zero_transform_bypass_flag, 13usize, 13usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, qpprime_y_zero_transform_bypass_flag, 13usize, 13usize);
         self
     }
     #[inline]
     pub fn frame_cropping_flag(mut self, frame_cropping_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, frame_cropping_flag, 14usize, 14usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_cropping_flag, 14usize, 14usize);
         self
     }
     #[inline]
     pub fn scaling_matrix_present_flag(mut self, scaling_matrix_present_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, scaling_matrix_present_flag, 15usize, 15usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, scaling_matrix_present_flag, 15usize, 15usize);
         self
     }
     #[inline]
     pub fn vui_parameters_present_flag(mut self, vui_parameters_present_flag: u32) -> Self {
-        self.0.constraint_set0_flag_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_bitfield, vui_parameters_present_flag, 16usize, 16usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, vui_parameters_present_flag, 16usize, 16usize);
         self
     }
     #[inline]
@@ -888,16 +888,16 @@ impl<'a> std::ops::DerefMut for StdVideoH264HrdParametersBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH264SpsVuiFlags {
-    pub aspect_ratio_info_present_flag_bitfield: u32,
+    pub aspect_ratio_info_present_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH264SpsVuiFlags {
     fn default() -> Self {
-        Self { aspect_ratio_info_present_flag_bitfield: Default::default() }
+        Self { aspect_ratio_info_present_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH264SpsVuiFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH264SpsVuiFlags").field("aspect_ratio_info_present_flag_bitfield", &format!("{:#b}", &self.aspect_ratio_info_present_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH264SpsVuiFlags").field("aspect_ratio_info_present_flag_and_more_bitfield", &format!("{:#b}", &self.aspect_ratio_info_present_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH264SpsVuiFlags {
@@ -917,62 +917,62 @@ impl<'a> StdVideoH264SpsVuiFlagsBuilder<'a> {
     }
     #[inline]
     pub fn aspect_ratio_info_present_flag(mut self, aspect_ratio_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn overscan_info_present_flag(mut self, overscan_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, overscan_info_present_flag, 1usize, 1usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn overscan_appropriate_flag(mut self, overscan_appropriate_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, overscan_appropriate_flag, 2usize, 2usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_appropriate_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn video_signal_type_present_flag(mut self, video_signal_type_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, video_signal_type_present_flag, 3usize, 3usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_signal_type_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn video_full_range_flag(mut self, video_full_range_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, video_full_range_flag, 4usize, 4usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_full_range_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn color_description_present_flag(mut self, color_description_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, color_description_present_flag, 5usize, 5usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, color_description_present_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn chroma_loc_info_present_flag(mut self, chroma_loc_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn timing_info_present_flag(mut self, timing_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, timing_info_present_flag, 7usize, 7usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, timing_info_present_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn fixed_frame_rate_flag(mut self, fixed_frame_rate_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, fixed_frame_rate_flag, 8usize, 8usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, fixed_frame_rate_flag, 8usize, 8usize);
         self
     }
     #[inline]
     pub fn bitstream_restriction_flag(mut self, bitstream_restriction_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, bitstream_restriction_flag, 9usize, 9usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, bitstream_restriction_flag, 9usize, 9usize);
         self
     }
     #[inline]
     pub fn nal_hrd_parameters_present_flag(mut self, nal_hrd_parameters_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, nal_hrd_parameters_present_flag, 10usize, 10usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, nal_hrd_parameters_present_flag, 10usize, 10usize);
         self
     }
     #[inline]
     pub fn vcl_hrd_parameters_present_flag(mut self, vcl_hrd_parameters_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, vcl_hrd_parameters_present_flag, 11usize, 11usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vcl_hrd_parameters_present_flag, 11usize, 11usize);
         self
     }
     #[inline]
@@ -1007,16 +1007,16 @@ impl<'a> std::ops::DerefMut for StdVideoH264SpsVuiFlagsBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH264PpsFlags {
-    pub transform_8x8_mode_flag_bitfield: u32,
+    pub transform_8x8_mode_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH264PpsFlags {
     fn default() -> Self {
-        Self { transform_8x8_mode_flag_bitfield: Default::default() }
+        Self { transform_8x8_mode_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH264PpsFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH264PpsFlags").field("transform_8x8_mode_flag_bitfield", &format!("{:#b}", &self.transform_8x8_mode_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH264PpsFlags").field("transform_8x8_mode_flag_and_more_bitfield", &format!("{:#b}", &self.transform_8x8_mode_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH264PpsFlags {
@@ -1036,47 +1036,47 @@ impl<'a> StdVideoH264PpsFlagsBuilder<'a> {
     }
     #[inline]
     pub fn transform_8x8_mode_flag(mut self, transform_8x8_mode_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, transform_8x8_mode_flag, 0usize, 0usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, transform_8x8_mode_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn redundant_pic_cnt_present_flag(mut self, redundant_pic_cnt_present_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, redundant_pic_cnt_present_flag, 1usize, 1usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, redundant_pic_cnt_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn constrained_intra_pred_flag(mut self, constrained_intra_pred_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, constrained_intra_pred_flag, 2usize, 2usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, constrained_intra_pred_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn deblocking_filter_control_present_flag(mut self, deblocking_filter_control_present_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, deblocking_filter_control_present_flag, 3usize, 3usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, deblocking_filter_control_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn weighted_bipred_idc_flag(mut self, weighted_bipred_idc_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, weighted_bipred_idc_flag, 4usize, 4usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, weighted_bipred_idc_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn weighted_pred_flag(mut self, weighted_pred_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, weighted_pred_flag, 5usize, 5usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, weighted_pred_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn pic_order_present_flag(mut self, pic_order_present_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, pic_order_present_flag, 6usize, 6usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, pic_order_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn entropy_coding_mode_flag(mut self, entropy_coding_mode_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, entropy_coding_mode_flag, 7usize, 7usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, entropy_coding_mode_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn scaling_matrix_present_flag(mut self, scaling_matrix_present_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_bitfield, scaling_matrix_present_flag, 8usize, 8usize);
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, scaling_matrix_present_flag, 8usize, 8usize);
         self
     }
     #[inline]
@@ -1369,16 +1369,16 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264MvcBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoDecodeH264PictureInfoFlags {
-    pub field_pic_flag_bitfield: u32,
+    pub field_pic_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoDecodeH264PictureInfoFlags {
     fn default() -> Self {
-        Self { field_pic_flag_bitfield: Default::default() }
+        Self { field_pic_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoDecodeH264PictureInfoFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoDecodeH264PictureInfoFlags").field("field_pic_flag_bitfield", &format!("{:#b}", &self.field_pic_flag_bitfield)).finish()
+        f.debug_struct("StdVideoDecodeH264PictureInfoFlags").field("field_pic_flag_and_more_bitfield", &format!("{:#b}", &self.field_pic_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoDecodeH264PictureInfoFlags {
@@ -1398,27 +1398,27 @@ impl<'a> StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
     }
     #[inline]
     pub fn field_pic_flag(mut self, field_pic_flag: u32) -> Self {
-        self.0.field_pic_flag_bitfield = crate::bits_copy!(self.0.field_pic_flag_bitfield, field_pic_flag, 0usize, 0usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, field_pic_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn is_intra(mut self, is_intra: u32) -> Self {
-        self.0.field_pic_flag_bitfield = crate::bits_copy!(self.0.field_pic_flag_bitfield, is_intra, 1usize, 1usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_intra, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn bottom_field_flag(mut self, bottom_field_flag: u32) -> Self {
-        self.0.field_pic_flag_bitfield = crate::bits_copy!(self.0.field_pic_flag_bitfield, bottom_field_flag, 2usize, 2usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, bottom_field_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn is_reference(mut self, is_reference: u32) -> Self {
-        self.0.field_pic_flag_bitfield = crate::bits_copy!(self.0.field_pic_flag_bitfield, is_reference, 3usize, 3usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_reference, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn complementary_field_pair(mut self, complementary_field_pair: u32) -> Self {
-        self.0.field_pic_flag_bitfield = crate::bits_copy!(self.0.field_pic_flag_bitfield, complementary_field_pair, 4usize, 4usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, complementary_field_pair, 4usize, 4usize);
         self
     }
     #[inline]
@@ -1453,16 +1453,16 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoDecodeH264ReferenceInfoFlags {
-    pub top_field_flag_bitfield: u32,
+    pub top_field_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoDecodeH264ReferenceInfoFlags {
     fn default() -> Self {
-        Self { top_field_flag_bitfield: Default::default() }
+        Self { top_field_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoDecodeH264ReferenceInfoFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoDecodeH264ReferenceInfoFlags").field("top_field_flag_bitfield", &format!("{:#b}", &self.top_field_flag_bitfield)).finish()
+        f.debug_struct("StdVideoDecodeH264ReferenceInfoFlags").field("top_field_flag_and_more_bitfield", &format!("{:#b}", &self.top_field_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoDecodeH264ReferenceInfoFlags {
@@ -1482,22 +1482,22 @@ impl<'a> StdVideoDecodeH264ReferenceInfoFlagsBuilder<'a> {
     }
     #[inline]
     pub fn top_field_flag(mut self, top_field_flag: u32) -> Self {
-        self.0.top_field_flag_bitfield = crate::bits_copy!(self.0.top_field_flag_bitfield, top_field_flag, 0usize, 0usize);
+        self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, top_field_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn bottom_field_flag(mut self, bottom_field_flag: u32) -> Self {
-        self.0.top_field_flag_bitfield = crate::bits_copy!(self.0.top_field_flag_bitfield, bottom_field_flag, 1usize, 1usize);
+        self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, bottom_field_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn is_long_term(mut self, is_long_term: u32) -> Self {
-        self.0.top_field_flag_bitfield = crate::bits_copy!(self.0.top_field_flag_bitfield, is_long_term, 2usize, 2usize);
+        self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, is_long_term, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn is_non_existing(mut self, is_non_existing: u32) -> Self {
-        self.0.top_field_flag_bitfield = crate::bits_copy!(self.0.top_field_flag_bitfield, is_non_existing, 3usize, 3usize);
+        self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, is_non_existing, 3usize, 3usize);
         self
     }
     #[inline]
@@ -1668,16 +1668,16 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264MvcElementBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoDecodeH264MvcElementFlags {
-    pub non_idr_bitfield: u32,
+    pub non_idr_and_more_bitfield: u32,
 }
 impl Default for StdVideoDecodeH264MvcElementFlags {
     fn default() -> Self {
-        Self { non_idr_bitfield: Default::default() }
+        Self { non_idr_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoDecodeH264MvcElementFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoDecodeH264MvcElementFlags").field("non_idr_bitfield", &format!("{:#b}", &self.non_idr_bitfield)).finish()
+        f.debug_struct("StdVideoDecodeH264MvcElementFlags").field("non_idr_and_more_bitfield", &format!("{:#b}", &self.non_idr_and_more_bitfield)).finish()
     }
 }
 impl StdVideoDecodeH264MvcElementFlags {
@@ -1697,17 +1697,17 @@ impl<'a> StdVideoDecodeH264MvcElementFlagsBuilder<'a> {
     }
     #[inline]
     pub fn non_idr(mut self, non_idr: u32) -> Self {
-        self.0.non_idr_bitfield = crate::bits_copy!(self.0.non_idr_bitfield, non_idr, 0usize, 0usize);
+        self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, non_idr, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn anchor_pic(mut self, anchor_pic: u32) -> Self {
-        self.0.non_idr_bitfield = crate::bits_copy!(self.0.non_idr_bitfield, anchor_pic, 1usize, 1usize);
+        self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, anchor_pic, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn inter_view(mut self, inter_view: u32) -> Self {
-        self.0.non_idr_bitfield = crate::bits_copy!(self.0.non_idr_bitfield, inter_view, 2usize, 2usize);
+        self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, inter_view, 2usize, 2usize);
         self
     }
     #[inline]
@@ -2954,16 +2954,16 @@ impl<'a> std::ops::DerefMut for StdVideoH265HrdParametersBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH265VpsFlags {
-    pub vps_temporal_id_nesting_flag_bitfield: u32,
+    pub vps_temporal_id_nesting_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH265VpsFlags {
     fn default() -> Self {
-        Self { vps_temporal_id_nesting_flag_bitfield: Default::default() }
+        Self { vps_temporal_id_nesting_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265VpsFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265VpsFlags").field("vps_temporal_id_nesting_flag_bitfield", &format!("{:#b}", &self.vps_temporal_id_nesting_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH265VpsFlags").field("vps_temporal_id_nesting_flag_and_more_bitfield", &format!("{:#b}", &self.vps_temporal_id_nesting_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH265VpsFlags {
@@ -2983,22 +2983,22 @@ impl<'a> StdVideoH265VpsFlagsBuilder<'a> {
     }
     #[inline]
     pub fn vps_temporal_id_nesting_flag(mut self, vps_temporal_id_nesting_flag: u32) -> Self {
-        self.0.vps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_bitfield, vps_temporal_id_nesting_flag, 0usize, 0usize);
+        self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_temporal_id_nesting_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn vps_sub_layer_ordering_info_present_flag(mut self, vps_sub_layer_ordering_info_present_flag: u32) -> Self {
-        self.0.vps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_bitfield, vps_sub_layer_ordering_info_present_flag, 1usize, 1usize);
+        self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_sub_layer_ordering_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn vps_timing_info_present_flag(mut self, vps_timing_info_present_flag: u32) -> Self {
-        self.0.vps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_bitfield, vps_timing_info_present_flag, 2usize, 2usize);
+        self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_timing_info_present_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn vps_poc_proportional_to_timing_flag(mut self, vps_poc_proportional_to_timing_flag: u32) -> Self {
-        self.0.vps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_bitfield, vps_poc_proportional_to_timing_flag, 3usize, 3usize);
+        self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_poc_proportional_to_timing_flag, 3usize, 3usize);
         self
     }
     #[inline]
@@ -3033,16 +3033,16 @@ impl<'a> std::ops::DerefMut for StdVideoH265VpsFlagsBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH265SpsFlags {
-    pub sps_temporal_id_nesting_flag_bitfield: u32,
+    pub sps_temporal_id_nesting_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH265SpsFlags {
     fn default() -> Self {
-        Self { sps_temporal_id_nesting_flag_bitfield: Default::default() }
+        Self { sps_temporal_id_nesting_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265SpsFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265SpsFlags").field("sps_temporal_id_nesting_flag_bitfield", &format!("{:#b}", &self.sps_temporal_id_nesting_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH265SpsFlags").field("sps_temporal_id_nesting_flag_and_more_bitfield", &format!("{:#b}", &self.sps_temporal_id_nesting_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH265SpsFlags {
@@ -3062,137 +3062,137 @@ impl<'a> StdVideoH265SpsFlagsBuilder<'a> {
     }
     #[inline]
     pub fn sps_temporal_id_nesting_flag(mut self, sps_temporal_id_nesting_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_temporal_id_nesting_flag, 0usize, 0usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_temporal_id_nesting_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn separate_colour_plane_flag(mut self, separate_colour_plane_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, separate_colour_plane_flag, 1usize, 1usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, separate_colour_plane_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn scaling_list_enabled_flag(mut self, scaling_list_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, scaling_list_enabled_flag, 2usize, 2usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, scaling_list_enabled_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn sps_scaling_list_data_present_flag(mut self, sps_scaling_list_data_present_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_scaling_list_data_present_flag, 3usize, 3usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_scaling_list_data_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn amp_enabled_flag(mut self, amp_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, amp_enabled_flag, 4usize, 4usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, amp_enabled_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn sample_adaptive_offset_enabled_flag(mut self, sample_adaptive_offset_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sample_adaptive_offset_enabled_flag, 5usize, 5usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sample_adaptive_offset_enabled_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn pcm_enabled_flag(mut self, pcm_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, pcm_enabled_flag, 6usize, 6usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, pcm_enabled_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn pcm_loop_filter_disabled_flag(mut self, pcm_loop_filter_disabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, pcm_loop_filter_disabled_flag, 7usize, 7usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, pcm_loop_filter_disabled_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn long_term_ref_pics_present_flag(mut self, long_term_ref_pics_present_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, long_term_ref_pics_present_flag, 8usize, 8usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, long_term_ref_pics_present_flag, 8usize, 8usize);
         self
     }
     #[inline]
     pub fn sps_temporal_mvp_enabled_flag(mut self, sps_temporal_mvp_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_temporal_mvp_enabled_flag, 9usize, 9usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_temporal_mvp_enabled_flag, 9usize, 9usize);
         self
     }
     #[inline]
     pub fn strong_intra_smoothing_enabled_flag(mut self, strong_intra_smoothing_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, strong_intra_smoothing_enabled_flag, 10usize, 10usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, strong_intra_smoothing_enabled_flag, 10usize, 10usize);
         self
     }
     #[inline]
     pub fn vui_parameters_present_flag(mut self, vui_parameters_present_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, vui_parameters_present_flag, 11usize, 11usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, vui_parameters_present_flag, 11usize, 11usize);
         self
     }
     #[inline]
     pub fn sps_extension_present_flag(mut self, sps_extension_present_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_extension_present_flag, 12usize, 12usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_extension_present_flag, 12usize, 12usize);
         self
     }
     #[inline]
     pub fn sps_range_extension_flag(mut self, sps_range_extension_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_range_extension_flag, 13usize, 13usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_range_extension_flag, 13usize, 13usize);
         self
     }
     #[inline]
     pub fn transform_skip_rotation_enabled_flag(mut self, transform_skip_rotation_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, transform_skip_rotation_enabled_flag, 14usize, 14usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, transform_skip_rotation_enabled_flag, 14usize, 14usize);
         self
     }
     #[inline]
     pub fn transform_skip_context_enabled_flag(mut self, transform_skip_context_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, transform_skip_context_enabled_flag, 15usize, 15usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, transform_skip_context_enabled_flag, 15usize, 15usize);
         self
     }
     #[inline]
     pub fn implicit_rdpcm_enabled_flag(mut self, implicit_rdpcm_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, implicit_rdpcm_enabled_flag, 16usize, 16usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, implicit_rdpcm_enabled_flag, 16usize, 16usize);
         self
     }
     #[inline]
     pub fn explicit_rdpcm_enabled_flag(mut self, explicit_rdpcm_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, explicit_rdpcm_enabled_flag, 17usize, 17usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, explicit_rdpcm_enabled_flag, 17usize, 17usize);
         self
     }
     #[inline]
     pub fn extended_precision_processing_flag(mut self, extended_precision_processing_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, extended_precision_processing_flag, 18usize, 18usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, extended_precision_processing_flag, 18usize, 18usize);
         self
     }
     #[inline]
     pub fn intra_smoothing_disabled_flag(mut self, intra_smoothing_disabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, intra_smoothing_disabled_flag, 19usize, 19usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, intra_smoothing_disabled_flag, 19usize, 19usize);
         self
     }
     #[inline]
     pub fn high_precision_offsets_enabled_flag(mut self, high_precision_offsets_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, high_precision_offsets_enabled_flag, 20usize, 20usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, high_precision_offsets_enabled_flag, 20usize, 20usize);
         self
     }
     #[inline]
     pub fn persistent_rice_adaptation_enabled_flag(mut self, persistent_rice_adaptation_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, persistent_rice_adaptation_enabled_flag, 21usize, 21usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, persistent_rice_adaptation_enabled_flag, 21usize, 21usize);
         self
     }
     #[inline]
     pub fn cabac_bypass_alignment_enabled_flag(mut self, cabac_bypass_alignment_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, cabac_bypass_alignment_enabled_flag, 22usize, 22usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, cabac_bypass_alignment_enabled_flag, 22usize, 22usize);
         self
     }
     #[inline]
     pub fn sps_curr_pic_ref_enabled_flag(mut self, sps_curr_pic_ref_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_curr_pic_ref_enabled_flag, 23usize, 23usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_curr_pic_ref_enabled_flag, 23usize, 23usize);
         self
     }
     #[inline]
     pub fn palette_mode_enabled_flag(mut self, palette_mode_enabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, palette_mode_enabled_flag, 24usize, 24usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, palette_mode_enabled_flag, 24usize, 24usize);
         self
     }
     #[inline]
     pub fn sps_palette_predictor_initializer_present_flag(mut self, sps_palette_predictor_initializer_present_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, sps_palette_predictor_initializer_present_flag, 25usize, 25usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_palette_predictor_initializer_present_flag, 25usize, 25usize);
         self
     }
     #[inline]
     pub fn intra_boundary_filtering_disabled_flag(mut self, intra_boundary_filtering_disabled_flag: u32) -> Self {
-        self.0.sps_temporal_id_nesting_flag_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_bitfield, intra_boundary_filtering_disabled_flag, 26usize, 26usize);
+        self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, intra_boundary_filtering_disabled_flag, 26usize, 26usize);
         self
     }
     #[inline]
@@ -3581,16 +3581,16 @@ impl<'a> std::ops::DerefMut for StdVideoH265PredictorPaletteEntriesBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH265PpsFlags {
-    pub dependent_slice_segments_enabled_flag_bitfield: u32,
+    pub dependent_slice_segments_enabled_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH265PpsFlags {
     fn default() -> Self {
-        Self { dependent_slice_segments_enabled_flag_bitfield: Default::default() }
+        Self { dependent_slice_segments_enabled_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265PpsFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265PpsFlags").field("dependent_slice_segments_enabled_flag_bitfield", &format!("{:#b}", &self.dependent_slice_segments_enabled_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH265PpsFlags").field("dependent_slice_segments_enabled_flag_and_more_bitfield", &format!("{:#b}", &self.dependent_slice_segments_enabled_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH265PpsFlags {
@@ -3610,157 +3610,157 @@ impl<'a> StdVideoH265PpsFlagsBuilder<'a> {
     }
     #[inline]
     pub fn dependent_slice_segments_enabled_flag(mut self, dependent_slice_segments_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, dependent_slice_segments_enabled_flag, 0usize, 0usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, dependent_slice_segments_enabled_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn output_flag_present_flag(mut self, output_flag_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, output_flag_present_flag, 1usize, 1usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, output_flag_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn sign_data_hiding_enabled_flag(mut self, sign_data_hiding_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, sign_data_hiding_enabled_flag, 2usize, 2usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, sign_data_hiding_enabled_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn cabac_init_present_flag(mut self, cabac_init_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, cabac_init_present_flag, 3usize, 3usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cabac_init_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn constrained_intra_pred_flag(mut self, constrained_intra_pred_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, constrained_intra_pred_flag, 4usize, 4usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, constrained_intra_pred_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn transform_skip_enabled_flag(mut self, transform_skip_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, transform_skip_enabled_flag, 5usize, 5usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, transform_skip_enabled_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn cu_qp_delta_enabled_flag(mut self, cu_qp_delta_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, cu_qp_delta_enabled_flag, 6usize, 6usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cu_qp_delta_enabled_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn pps_slice_chroma_qp_offsets_present_flag(mut self, pps_slice_chroma_qp_offsets_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_slice_chroma_qp_offsets_present_flag, 7usize, 7usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_slice_chroma_qp_offsets_present_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn weighted_pred_flag(mut self, weighted_pred_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, weighted_pred_flag, 8usize, 8usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, weighted_pred_flag, 8usize, 8usize);
         self
     }
     #[inline]
     pub fn weighted_bipred_flag(mut self, weighted_bipred_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, weighted_bipred_flag, 9usize, 9usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, weighted_bipred_flag, 9usize, 9usize);
         self
     }
     #[inline]
     pub fn transquant_bypass_enabled_flag(mut self, transquant_bypass_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, transquant_bypass_enabled_flag, 10usize, 10usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, transquant_bypass_enabled_flag, 10usize, 10usize);
         self
     }
     #[inline]
     pub fn tiles_enabled_flag(mut self, tiles_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, tiles_enabled_flag, 11usize, 11usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, tiles_enabled_flag, 11usize, 11usize);
         self
     }
     #[inline]
     pub fn entropy_coding_sync_enabled_flag(mut self, entropy_coding_sync_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, entropy_coding_sync_enabled_flag, 12usize, 12usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, entropy_coding_sync_enabled_flag, 12usize, 12usize);
         self
     }
     #[inline]
     pub fn uniform_spacing_flag(mut self, uniform_spacing_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, uniform_spacing_flag, 13usize, 13usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, uniform_spacing_flag, 13usize, 13usize);
         self
     }
     #[inline]
     pub fn loop_filter_across_tiles_enabled_flag(mut self, loop_filter_across_tiles_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, loop_filter_across_tiles_enabled_flag, 14usize, 14usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, loop_filter_across_tiles_enabled_flag, 14usize, 14usize);
         self
     }
     #[inline]
     pub fn pps_loop_filter_across_slices_enabled_flag(mut self, pps_loop_filter_across_slices_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_loop_filter_across_slices_enabled_flag, 15usize, 15usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_loop_filter_across_slices_enabled_flag, 15usize, 15usize);
         self
     }
     #[inline]
     pub fn deblocking_filter_control_present_flag(mut self, deblocking_filter_control_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, deblocking_filter_control_present_flag, 16usize, 16usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, deblocking_filter_control_present_flag, 16usize, 16usize);
         self
     }
     #[inline]
     pub fn deblocking_filter_override_enabled_flag(mut self, deblocking_filter_override_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, deblocking_filter_override_enabled_flag, 17usize, 17usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, deblocking_filter_override_enabled_flag, 17usize, 17usize);
         self
     }
     #[inline]
     pub fn pps_deblocking_filter_disabled_flag(mut self, pps_deblocking_filter_disabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_deblocking_filter_disabled_flag, 18usize, 18usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_deblocking_filter_disabled_flag, 18usize, 18usize);
         self
     }
     #[inline]
     pub fn pps_scaling_list_data_present_flag(mut self, pps_scaling_list_data_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_scaling_list_data_present_flag, 19usize, 19usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_scaling_list_data_present_flag, 19usize, 19usize);
         self
     }
     #[inline]
     pub fn lists_modification_present_flag(mut self, lists_modification_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, lists_modification_present_flag, 20usize, 20usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, lists_modification_present_flag, 20usize, 20usize);
         self
     }
     #[inline]
     pub fn slice_segment_header_extension_present_flag(mut self, slice_segment_header_extension_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, slice_segment_header_extension_present_flag, 21usize, 21usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, slice_segment_header_extension_present_flag, 21usize, 21usize);
         self
     }
     #[inline]
     pub fn pps_extension_present_flag(mut self, pps_extension_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_extension_present_flag, 22usize, 22usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_extension_present_flag, 22usize, 22usize);
         self
     }
     #[inline]
     pub fn cross_component_prediction_enabled_flag(mut self, cross_component_prediction_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, cross_component_prediction_enabled_flag, 23usize, 23usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cross_component_prediction_enabled_flag, 23usize, 23usize);
         self
     }
     #[inline]
     pub fn chroma_qp_offset_list_enabled_flag(mut self, chroma_qp_offset_list_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, chroma_qp_offset_list_enabled_flag, 24usize, 24usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, chroma_qp_offset_list_enabled_flag, 24usize, 24usize);
         self
     }
     #[inline]
     pub fn pps_curr_pic_ref_enabled_flag(mut self, pps_curr_pic_ref_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_curr_pic_ref_enabled_flag, 25usize, 25usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_curr_pic_ref_enabled_flag, 25usize, 25usize);
         self
     }
     #[inline]
     pub fn residual_adaptive_colour_transform_enabled_flag(mut self, residual_adaptive_colour_transform_enabled_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, residual_adaptive_colour_transform_enabled_flag, 26usize, 26usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, residual_adaptive_colour_transform_enabled_flag, 26usize, 26usize);
         self
     }
     #[inline]
     pub fn pps_slice_act_qp_offsets_present_flag(mut self, pps_slice_act_qp_offsets_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_slice_act_qp_offsets_present_flag, 27usize, 27usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_slice_act_qp_offsets_present_flag, 27usize, 27usize);
         self
     }
     #[inline]
     pub fn pps_palette_predictor_initializer_present_flag(mut self, pps_palette_predictor_initializer_present_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_palette_predictor_initializer_present_flag, 28usize, 28usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_palette_predictor_initializer_present_flag, 28usize, 28usize);
         self
     }
     #[inline]
     pub fn monochrome_palette_flag(mut self, monochrome_palette_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, monochrome_palette_flag, 29usize, 29usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, monochrome_palette_flag, 29usize, 29usize);
         self
     }
     #[inline]
     pub fn pps_range_extension_flag(mut self, pps_range_extension_flag: u32) -> Self {
-        self.0.dependent_slice_segments_enabled_flag_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_bitfield, pps_range_extension_flag, 30usize, 30usize);
+        self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_range_extension_flag, 30usize, 30usize);
         self
     }
     #[inline]
@@ -3883,19 +3883,19 @@ impl<'a> std::ops::DerefMut for StdVideoH265SubLayerHrdParametersBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH265HrdFlags {
-    pub nal_hrd_parameters_present_flag_bitfield: u32,
+    pub nal_hrd_parameters_present_flag_and_more_bitfield: u32,
     pub fixed_pic_rate_general_flag: u8,
     pub fixed_pic_rate_within_cvs_flag: u8,
     pub low_delay_hrd_flag: u8,
 }
 impl Default for StdVideoH265HrdFlags {
     fn default() -> Self {
-        Self { nal_hrd_parameters_present_flag_bitfield: Default::default(), fixed_pic_rate_general_flag: Default::default(), fixed_pic_rate_within_cvs_flag: Default::default(), low_delay_hrd_flag: Default::default() }
+        Self { nal_hrd_parameters_present_flag_and_more_bitfield: Default::default(), fixed_pic_rate_general_flag: Default::default(), fixed_pic_rate_within_cvs_flag: Default::default(), low_delay_hrd_flag: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265HrdFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265HrdFlags").field("nal_hrd_parameters_present_flag_bitfield", &format!("{:#b}", &self.nal_hrd_parameters_present_flag_bitfield)).field("fixed_pic_rate_general_flag", &self.fixed_pic_rate_general_flag).field("fixed_pic_rate_within_cvs_flag", &self.fixed_pic_rate_within_cvs_flag).field("low_delay_hrd_flag", &self.low_delay_hrd_flag).finish()
+        f.debug_struct("StdVideoH265HrdFlags").field("nal_hrd_parameters_present_flag_and_more_bitfield", &format!("{:#b}", &self.nal_hrd_parameters_present_flag_and_more_bitfield)).field("fixed_pic_rate_general_flag", &self.fixed_pic_rate_general_flag).field("fixed_pic_rate_within_cvs_flag", &self.fixed_pic_rate_within_cvs_flag).field("low_delay_hrd_flag", &self.low_delay_hrd_flag).finish()
     }
 }
 impl StdVideoH265HrdFlags {
@@ -3915,22 +3915,22 @@ impl<'a> StdVideoH265HrdFlagsBuilder<'a> {
     }
     #[inline]
     pub fn nal_hrd_parameters_present_flag(mut self, nal_hrd_parameters_present_flag: u32) -> Self {
-        self.0.nal_hrd_parameters_present_flag_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_bitfield, nal_hrd_parameters_present_flag, 0usize, 0usize);
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, nal_hrd_parameters_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn vcl_hrd_parameters_present_flag(mut self, vcl_hrd_parameters_present_flag: u32) -> Self {
-        self.0.nal_hrd_parameters_present_flag_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_bitfield, vcl_hrd_parameters_present_flag, 1usize, 1usize);
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, vcl_hrd_parameters_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn sub_pic_hrd_params_present_flag(mut self, sub_pic_hrd_params_present_flag: u32) -> Self {
-        self.0.nal_hrd_parameters_present_flag_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_bitfield, sub_pic_hrd_params_present_flag, 2usize, 2usize);
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, sub_pic_hrd_params_present_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn sub_pic_cpb_params_in_pic_timing_sei_flag(mut self, sub_pic_cpb_params_in_pic_timing_sei_flag: u32) -> Self {
-        self.0.nal_hrd_parameters_present_flag_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_bitfield, sub_pic_cpb_params_in_pic_timing_sei_flag, 3usize, 3usize);
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, sub_pic_cpb_params_in_pic_timing_sei_flag, 3usize, 3usize);
         self
     }
     #[inline]
@@ -3980,16 +3980,16 @@ impl<'a> std::ops::DerefMut for StdVideoH265HrdFlagsBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH265SpsVuiFlags {
-    pub aspect_ratio_info_present_flag_bitfield: u32,
+    pub aspect_ratio_info_present_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoH265SpsVuiFlags {
     fn default() -> Self {
-        Self { aspect_ratio_info_present_flag_bitfield: Default::default() }
+        Self { aspect_ratio_info_present_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265SpsVuiFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265SpsVuiFlags").field("aspect_ratio_info_present_flag_bitfield", &format!("{:#b}", &self.aspect_ratio_info_present_flag_bitfield)).finish()
+        f.debug_struct("StdVideoH265SpsVuiFlags").field("aspect_ratio_info_present_flag_and_more_bitfield", &format!("{:#b}", &self.aspect_ratio_info_present_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH265SpsVuiFlags {
@@ -4009,92 +4009,92 @@ impl<'a> StdVideoH265SpsVuiFlagsBuilder<'a> {
     }
     #[inline]
     pub fn aspect_ratio_info_present_flag(mut self, aspect_ratio_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn overscan_info_present_flag(mut self, overscan_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, overscan_info_present_flag, 1usize, 1usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn overscan_appropriate_flag(mut self, overscan_appropriate_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, overscan_appropriate_flag, 2usize, 2usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_appropriate_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn video_signal_type_present_flag(mut self, video_signal_type_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, video_signal_type_present_flag, 3usize, 3usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_signal_type_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn video_full_range_flag(mut self, video_full_range_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, video_full_range_flag, 4usize, 4usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_full_range_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn colour_description_present_flag(mut self, colour_description_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, colour_description_present_flag, 5usize, 5usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, colour_description_present_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn chroma_loc_info_present_flag(mut self, chroma_loc_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
     pub fn neutral_chroma_indication_flag(mut self, neutral_chroma_indication_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, neutral_chroma_indication_flag, 7usize, 7usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, neutral_chroma_indication_flag, 7usize, 7usize);
         self
     }
     #[inline]
     pub fn field_seq_flag(mut self, field_seq_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, field_seq_flag, 8usize, 8usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, field_seq_flag, 8usize, 8usize);
         self
     }
     #[inline]
     pub fn frame_field_info_present_flag(mut self, frame_field_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, frame_field_info_present_flag, 9usize, 9usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, frame_field_info_present_flag, 9usize, 9usize);
         self
     }
     #[inline]
     pub fn default_display_window_flag(mut self, default_display_window_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, default_display_window_flag, 10usize, 10usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, default_display_window_flag, 10usize, 10usize);
         self
     }
     #[inline]
     pub fn vui_timing_info_present_flag(mut self, vui_timing_info_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, vui_timing_info_present_flag, 11usize, 11usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_timing_info_present_flag, 11usize, 11usize);
         self
     }
     #[inline]
     pub fn vui_poc_proportional_to_timing_flag(mut self, vui_poc_proportional_to_timing_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, vui_poc_proportional_to_timing_flag, 12usize, 12usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_poc_proportional_to_timing_flag, 12usize, 12usize);
         self
     }
     #[inline]
     pub fn vui_hrd_parameters_present_flag(mut self, vui_hrd_parameters_present_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, vui_hrd_parameters_present_flag, 13usize, 13usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_hrd_parameters_present_flag, 13usize, 13usize);
         self
     }
     #[inline]
     pub fn bitstream_restriction_flag(mut self, bitstream_restriction_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, bitstream_restriction_flag, 14usize, 14usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, bitstream_restriction_flag, 14usize, 14usize);
         self
     }
     #[inline]
     pub fn tiles_fixed_structure_flag(mut self, tiles_fixed_structure_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, tiles_fixed_structure_flag, 15usize, 15usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, tiles_fixed_structure_flag, 15usize, 15usize);
         self
     }
     #[inline]
     pub fn motion_vectors_over_pic_boundaries_flag(mut self, motion_vectors_over_pic_boundaries_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, motion_vectors_over_pic_boundaries_flag, 16usize, 16usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, motion_vectors_over_pic_boundaries_flag, 16usize, 16usize);
         self
     }
     #[inline]
     pub fn restricted_ref_pic_lists_flag(mut self, restricted_ref_pic_lists_flag: u32) -> Self {
-        self.0.aspect_ratio_info_present_flag_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_bitfield, restricted_ref_pic_lists_flag, 17usize, 17usize);
+        self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, restricted_ref_pic_lists_flag, 17usize, 17usize);
         self
     }
     #[inline]
@@ -4323,16 +4323,16 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH265ReferenceInfoBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoDecodeH265PictureInfoFlags {
-    pub irap_pic_flag_bitfield: u32,
+    pub irap_pic_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoDecodeH265PictureInfoFlags {
     fn default() -> Self {
-        Self { irap_pic_flag_bitfield: Default::default() }
+        Self { irap_pic_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoDecodeH265PictureInfoFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoDecodeH265PictureInfoFlags").field("irap_pic_flag_bitfield", &format!("{:#b}", &self.irap_pic_flag_bitfield)).finish()
+        f.debug_struct("StdVideoDecodeH265PictureInfoFlags").field("irap_pic_flag_and_more_bitfield", &format!("{:#b}", &self.irap_pic_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoDecodeH265PictureInfoFlags {
@@ -4352,22 +4352,22 @@ impl<'a> StdVideoDecodeH265PictureInfoFlagsBuilder<'a> {
     }
     #[inline]
     pub fn irap_pic_flag(mut self, irap_pic_flag: u32) -> Self {
-        self.0.irap_pic_flag_bitfield = crate::bits_copy!(self.0.irap_pic_flag_bitfield, irap_pic_flag, 0usize, 0usize);
+        self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, irap_pic_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn idr_pic_flag(mut self, idr_pic_flag: u32) -> Self {
-        self.0.irap_pic_flag_bitfield = crate::bits_copy!(self.0.irap_pic_flag_bitfield, idr_pic_flag, 1usize, 1usize);
+        self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, idr_pic_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn is_reference(mut self, is_reference: u32) -> Self {
-        self.0.irap_pic_flag_bitfield = crate::bits_copy!(self.0.irap_pic_flag_bitfield, is_reference, 2usize, 2usize);
+        self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, is_reference, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn short_term_ref_pic_set_sps_flag(mut self, short_term_ref_pic_set_sps_flag: u32) -> Self {
-        self.0.irap_pic_flag_bitfield = crate::bits_copy!(self.0.irap_pic_flag_bitfield, short_term_ref_pic_set_sps_flag, 3usize, 3usize);
+        self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, short_term_ref_pic_set_sps_flag, 3usize, 3usize);
         self
     }
     #[inline]
@@ -4695,16 +4695,16 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264PictureInfoBuilder<'a> {
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoEncodeH264SliceHeaderFlags {
-    pub idr_flag_bitfield: u32,
+    pub idr_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoEncodeH264SliceHeaderFlags {
     fn default() -> Self {
-        Self { idr_flag_bitfield: Default::default() }
+        Self { idr_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoEncodeH264SliceHeaderFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoEncodeH264SliceHeaderFlags").field("idr_flag_bitfield", &format!("{:#b}", &self.idr_flag_bitfield)).finish()
+        f.debug_struct("StdVideoEncodeH264SliceHeaderFlags").field("idr_flag_and_more_bitfield", &format!("{:#b}", &self.idr_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoEncodeH264SliceHeaderFlags {
@@ -4724,37 +4724,37 @@ impl<'a> StdVideoEncodeH264SliceHeaderFlagsBuilder<'a> {
     }
     #[inline]
     pub fn idr_flag(mut self, idr_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, idr_flag, 0usize, 0usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, idr_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, is_reference_flag, 1usize, 1usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, is_reference_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn num_ref_idx_active_override_flag(mut self, num_ref_idx_active_override_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, num_ref_idx_active_override_flag, 2usize, 2usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, num_ref_idx_active_override_flag, 2usize, 2usize);
         self
     }
     #[inline]
     pub fn no_output_of_prior_pics_flag(mut self, no_output_of_prior_pics_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, no_output_of_prior_pics_flag, 3usize, 3usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, no_output_of_prior_pics_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn long_term_reference_flag(mut self, long_term_reference_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, long_term_reference_flag, 4usize, 4usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, long_term_reference_flag, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn adaptive_ref_pic_marking_mode_flag(mut self, adaptive_ref_pic_marking_mode_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, adaptive_ref_pic_marking_mode_flag, 5usize, 5usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, adaptive_ref_pic_marking_mode_flag, 5usize, 5usize);
         self
     }
     #[inline]
     pub fn no_prior_references_available_flag(mut self, no_prior_references_available_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, no_prior_references_available_flag, 6usize, 6usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, no_prior_references_available_flag, 6usize, 6usize);
         self
     }
     #[inline]
@@ -4889,16 +4889,16 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264RefMemMgmtCtrlOperationsBuilde
 #[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoEncodeH264PictureInfoFlags {
-    pub idr_flag_bitfield: u32,
+    pub idr_flag_and_more_bitfield: u32,
 }
 impl Default for StdVideoEncodeH264PictureInfoFlags {
     fn default() -> Self {
-        Self { idr_flag_bitfield: Default::default() }
+        Self { idr_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoEncodeH264PictureInfoFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoEncodeH264PictureInfoFlags").field("idr_flag_bitfield", &format!("{:#b}", &self.idr_flag_bitfield)).finish()
+        f.debug_struct("StdVideoEncodeH264PictureInfoFlags").field("idr_flag_and_more_bitfield", &format!("{:#b}", &self.idr_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoEncodeH264PictureInfoFlags {
@@ -4918,17 +4918,17 @@ impl<'a> StdVideoEncodeH264PictureInfoFlagsBuilder<'a> {
     }
     #[inline]
     pub fn idr_flag(mut self, idr_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, idr_flag, 0usize, 0usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, idr_flag, 0usize, 0usize);
         self
     }
     #[inline]
     pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, is_reference_flag, 1usize, 1usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, is_reference_flag, 1usize, 1usize);
         self
     }
     #[inline]
     pub fn long_term_reference_flag(mut self, long_term_reference_flag: u32) -> Self {
-        self.0.idr_flag_bitfield = crate::bits_copy!(self.0.idr_flag_bitfield, long_term_reference_flag, 2usize, 2usize);
+        self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, long_term_reference_flag, 2usize, 2usize);
         self
     }
     #[inline]

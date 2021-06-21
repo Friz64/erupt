@@ -48,7 +48,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDeferredOperationKHR.html) · Function"]
     #[doc(alias = "vkCreateDeferredOperationKHR")]
     pub unsafe fn create_deferred_operation_khr(&self, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR> {
-        let _function = self.create_deferred_operation_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_deferred_operation_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut deferred_operation = Default::default();
         let _return = _function(
             self.handle,
@@ -65,7 +65,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
     #[doc(alias = "vkDestroyDeferredOperationKHR")]
     pub unsafe fn destroy_deferred_operation_khr(&self, operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_deferred_operation_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_deferred_operation_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match operation {
@@ -84,7 +84,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationMaxConcurrencyKHR.html) · Function"]
     #[doc(alias = "vkGetDeferredOperationMaxConcurrencyKHR")]
     pub unsafe fn get_deferred_operation_max_concurrency_khr(&self, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> u32 {
-        let _function = self.get_deferred_operation_max_concurrency_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_deferred_operation_max_concurrency_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, operation as _);
         _return
     }
@@ -93,7 +93,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeferredOperationResultKHR.html) · Function"]
     #[doc(alias = "vkGetDeferredOperationResultKHR")]
     pub unsafe fn get_deferred_operation_result_khr(&self, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_deferred_operation_result_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_deferred_operation_result_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, operation as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -102,7 +102,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDeferredOperationJoinKHR.html) · Function"]
     #[doc(alias = "vkDeferredOperationJoinKHR")]
     pub unsafe fn deferred_operation_join_khr(&self, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.deferred_operation_join_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.deferred_operation_join_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, operation as _);
         crate::utils::VulkanResult::new(_return, ())
     }

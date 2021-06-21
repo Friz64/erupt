@@ -161,7 +161,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]
     #[doc(alias = "vkCmdSetCullModeEXT")]
     pub unsafe fn cmd_set_cull_mode_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, cull_mode: Option<crate::vk1_0::CullModeFlags>) -> () {
-        let _function = self.cmd_set_cull_mode_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_cull_mode_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             command_buffer as _,
             match cull_mode {
@@ -176,7 +176,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFrontFaceEXT.html) · Function"]
     #[doc(alias = "vkCmdSetFrontFaceEXT")]
     pub unsafe fn cmd_set_front_face_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, front_face: crate::vk1_0::FrontFace) -> () {
-        let _function = self.cmd_set_front_face_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_front_face_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, front_face as _);
         ()
     }
@@ -185,7 +185,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html) · Function"]
     #[doc(alias = "vkCmdSetPrimitiveTopologyEXT")]
     pub unsafe fn cmd_set_primitive_topology_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, primitive_topology: crate::vk1_0::PrimitiveTopology) -> () {
-        let _function = self.cmd_set_primitive_topology_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_primitive_topology_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, primitive_topology as _);
         ()
     }
@@ -194,7 +194,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWithCountEXT.html) · Function"]
     #[doc(alias = "vkCmdSetViewportWithCountEXT")]
     pub unsafe fn cmd_set_viewport_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, viewports: &[crate::vk1_0::ViewportBuilder]) -> () {
-        let _function = self.cmd_set_viewport_with_count_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_viewport_with_count_ext.expect(crate::NOT_LOADED_MESSAGE);
         let viewport_count = viewports.len();
         let _return = _function(command_buffer as _, viewport_count as _, viewports.as_ptr() as _);
         ()
@@ -204,7 +204,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetScissorWithCountEXT.html) · Function"]
     #[doc(alias = "vkCmdSetScissorWithCountEXT")]
     pub unsafe fn cmd_set_scissor_with_count_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, scissors: &[crate::vk1_0::Rect2DBuilder]) -> () {
-        let _function = self.cmd_set_scissor_with_count_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_scissor_with_count_ext.expect(crate::NOT_LOADED_MESSAGE);
         let scissor_count = scissors.len();
         let _return = _function(command_buffer as _, scissor_count as _, scissors.as_ptr() as _);
         ()
@@ -214,7 +214,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindVertexBuffers2EXT.html) · Function"]
     #[doc(alias = "vkCmdBindVertexBuffers2EXT")]
     pub unsafe fn cmd_bind_vertex_buffers2_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_binding: u32, buffers: &[crate::vk1_0::Buffer], offsets: &[crate::vk1_0::DeviceSize], sizes: &[crate::vk1_0::DeviceSize], strides: &[crate::vk1_0::DeviceSize]) -> () {
-        let _function = self.cmd_bind_vertex_buffers2_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_bind_vertex_buffers2_ext.expect(crate::NOT_LOADED_MESSAGE);
         let binding_count = buffers.len().min(offsets.len()).min(sizes.len()).min(strides.len());
         let _return = _function(command_buffer as _, first_binding as _, binding_count as _, buffers.as_ptr() as _, offsets.as_ptr() as _, sizes.as_ptr() as _, strides.as_ptr() as _);
         ()
@@ -224,7 +224,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthTestEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDepthTestEnableEXT")]
     pub unsafe fn cmd_set_depth_test_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_test_enable: bool) -> () {
-        let _function = self.cmd_set_depth_test_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_depth_test_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, depth_test_enable as _);
         ()
     }
@@ -233,7 +233,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDepthWriteEnableEXT")]
     pub unsafe fn cmd_set_depth_write_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_write_enable: bool) -> () {
-        let _function = self.cmd_set_depth_write_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_depth_write_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, depth_write_enable as _);
         ()
     }
@@ -242,7 +242,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthCompareOpEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDepthCompareOpEXT")]
     pub unsafe fn cmd_set_depth_compare_op_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_compare_op: crate::vk1_0::CompareOp) -> () {
-        let _function = self.cmd_set_depth_compare_op_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_depth_compare_op_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, depth_compare_op as _);
         ()
     }
@@ -251,7 +251,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBoundsTestEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDepthBoundsTestEnableEXT")]
     pub unsafe fn cmd_set_depth_bounds_test_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_bounds_test_enable: bool) -> () {
-        let _function = self.cmd_set_depth_bounds_test_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_depth_bounds_test_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, depth_bounds_test_enable as _);
         ()
     }
@@ -260,7 +260,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilTestEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetStencilTestEnableEXT")]
     pub unsafe fn cmd_set_stencil_test_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, stencil_test_enable: bool) -> () {
-        let _function = self.cmd_set_stencil_test_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_stencil_test_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, stencil_test_enable as _);
         ()
     }
@@ -269,7 +269,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
     #[doc(alias = "vkCmdSetStencilOpEXT")]
     pub unsafe fn cmd_set_stencil_op_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, fail_op: crate::vk1_0::StencilOp, pass_op: crate::vk1_0::StencilOp, depth_fail_op: crate::vk1_0::StencilOp, compare_op: crate::vk1_0::CompareOp) -> () {
-        let _function = self.cmd_set_stencil_op_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_stencil_op_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, face_mask as _, fail_op as _, pass_op as _, depth_fail_op as _, compare_op as _);
         ()
     }

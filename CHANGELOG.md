@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.19.0+182] - 2021-06-21
+
 ### Added
 
 - Added versioning warning to provisional/beta extensions
@@ -14,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 181
+- Update Vulkan Headers to version 182
 - Mark `{Instance,Device}Loader::new` functions unsafe
 - Simplified function wrapper arguments
 - Split `ExtendableFrom` into `Const` and `Mut` variants
@@ -301,7 +303,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Development_
 
-[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.18.0+174...main
+[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.19.0+182...main
+[0.19.0+182]: https://gitlab.com/Friz64/erupt/-/compare/v0.18.0+174...v0.19.0+182
 [0.18.0+174]: https://gitlab.com/Friz64/erupt/-/compare/v0.17.1+169...v0.18.0+174
 [0.17.1+169]: https://gitlab.com/Friz64/erupt/-/compare/v0.17.0+169...v0.17.1+169
 [0.17.0+169]: https://gitlab.com/Friz64/erupt/-/compare/v0.16.0+162...v0.17.0+169

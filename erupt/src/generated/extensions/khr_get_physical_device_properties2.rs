@@ -130,7 +130,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFeatures2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFeatures2KHR")]
     pub unsafe fn get_physical_device_features2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, features: Option<crate::vk1_1::PhysicalDeviceFeatures2>) -> crate::vk1_1::PhysicalDeviceFeatures2 {
-        let _function = self.get_physical_device_features2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_features2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut features = match features {
             Some(v) => v,
             None => Default::default(),
@@ -143,7 +143,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceProperties2KHR")]
     pub unsafe fn get_physical_device_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, properties: Option<crate::vk1_1::PhysicalDeviceProperties2>) -> crate::vk1_1::PhysicalDeviceProperties2 {
-        let _function = self.get_physical_device_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),
@@ -156,7 +156,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFormatProperties2KHR")]
     pub unsafe fn get_physical_device_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, format_properties: Option<crate::vk1_1::FormatProperties2>) -> crate::vk1_1::FormatProperties2 {
-        let _function = self.get_physical_device_format_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_format_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut format_properties = match format_properties {
             Some(v) => v,
             None => Default::default(),
@@ -169,7 +169,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties2KHR")]
     pub unsafe fn get_physical_device_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2, image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
-        let _function = self.get_physical_device_image_format_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_image_format_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut image_format_properties = match image_format_properties {
             Some(v) => v,
             None => Default::default(),
@@ -182,7 +182,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties2KHR")]
     pub unsafe fn get_physical_device_queue_family_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> Vec<crate::vk1_1::QueueFamilyProperties2> {
-        let _function = self.get_physical_device_queue_family_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_queue_family_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
             None => {
@@ -200,7 +200,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMemoryProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceMemoryProperties2KHR")]
     pub unsafe fn get_physical_device_memory_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, memory_properties: Option<crate::vk1_1::PhysicalDeviceMemoryProperties2>) -> crate::vk1_1::PhysicalDeviceMemoryProperties2 {
-        let _function = self.get_physical_device_memory_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_memory_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_properties = match memory_properties {
             Some(v) => v,
             None => Default::default(),
@@ -213,7 +213,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2KHR")]
     pub unsafe fn get_physical_device_sparse_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
-        let _function = self.get_physical_device_sparse_image_format_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_sparse_image_format_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {

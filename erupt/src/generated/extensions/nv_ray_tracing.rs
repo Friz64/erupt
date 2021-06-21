@@ -1328,7 +1328,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function"]
     #[doc(alias = "vkCompileDeferredNV")]
     pub unsafe fn compile_deferred_nv(&self, pipeline: crate::vk1_0::Pipeline, shader: u32) -> crate::utils::VulkanResult<()> {
-        let _function = self.compile_deferred_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.compile_deferred_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, pipeline as _, shader as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1337,7 +1337,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkCreateAccelerationStructureNV")]
     pub unsafe fn create_acceleration_structure_nv(&self, create_info: &crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::nv_ray_tracing::AccelerationStructureNV> {
-        let _function = self.create_acceleration_structure_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.create_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut acceleration_structure = Default::default();
         let _return = _function(
             self.handle,
@@ -1355,7 +1355,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkDestroyAccelerationStructureNV")]
     pub unsafe fn destroy_acceleration_structure_nv(&self, acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_acceleration_structure_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match acceleration_structure {
@@ -1374,7 +1374,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function"]
     #[doc(alias = "vkGetAccelerationStructureMemoryRequirementsNV")]
     pub unsafe fn get_acceleration_structure_memory_requirements_nv(&self, info: &crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV) -> crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR {
-        let _function = self.get_acceleration_structure_memory_requirements_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.get_acceleration_structure_memory_requirements_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_requirements = Default::default();
         let _return = _function(self.handle, info as _, &mut memory_requirements);
         memory_requirements
@@ -1384,7 +1384,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function"]
     #[doc(alias = "vkBindAccelerationStructureMemoryNV")]
     pub unsafe fn bind_acceleration_structure_memory_nv(&self, bind_infos: &[crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNVBuilder]) -> crate::utils::VulkanResult<()> {
-        let _function = self.bind_acceleration_structure_memory_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.bind_acceleration_structure_memory_nv.expect(crate::NOT_LOADED_MESSAGE);
         let bind_info_count = bind_infos.len();
         let _return = _function(self.handle, bind_info_count as _, bind_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -1394,7 +1394,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkCmdCopyAccelerationStructureNV")]
     pub unsafe fn cmd_copy_acceleration_structure_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV, src: crate::extensions::nv_ray_tracing::AccelerationStructureNV, mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR) -> () {
-        let _function = self.cmd_copy_acceleration_structure_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_copy_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, dst as _, src as _, mode as _);
         ()
     }
@@ -1403,7 +1403,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html) · Function"]
     #[doc(alias = "vkCmdWriteAccelerationStructuresPropertiesNV")]
     pub unsafe fn cmd_write_acceleration_structures_properties_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, acceleration_structures: &[crate::extensions::nv_ray_tracing::AccelerationStructureNV], query_type: crate::vk1_0::QueryType, query_pool: crate::vk1_0::QueryPool, first_query: u32) -> () {
-        let _function = self.cmd_write_acceleration_structures_properties_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_write_acceleration_structures_properties_nv.expect(crate::NOT_LOADED_MESSAGE);
         let acceleration_structure_count = acceleration_structures.len();
         let _return = _function(command_buffer as _, acceleration_structure_count as _, acceleration_structures.as_ptr() as _, query_type as _, query_pool as _, first_query as _);
         ()
@@ -1413,7 +1413,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkCmdBuildAccelerationStructureNV")]
     pub unsafe fn cmd_build_acceleration_structure_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV, instance_data: Option<crate::vk1_0::Buffer>, instance_offset: crate::vk1_0::DeviceSize, update: bool, dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV, src: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>, scratch: crate::vk1_0::Buffer, scratch_offset: crate::vk1_0::DeviceSize) -> () {
-        let _function = self.cmd_build_acceleration_structure_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_build_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             command_buffer as _,
             info as _,
@@ -1438,7 +1438,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysNV.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysNV")]
     pub unsafe fn cmd_trace_rays_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table_buffer: crate::vk1_0::Buffer, raygen_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, miss_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_stride: crate::vk1_0::DeviceSize, hit_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, hit_shader_binding_offset: crate::vk1_0::DeviceSize, hit_shader_binding_stride: crate::vk1_0::DeviceSize, callable_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, callable_shader_binding_offset: crate::vk1_0::DeviceSize, callable_shader_binding_stride: crate::vk1_0::DeviceSize, width: u32, height: u32, depth: u32) -> () {
-        let _function = self.cmd_trace_rays_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_trace_rays_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             command_buffer as _,
             raygen_shader_binding_table_buffer as _,
@@ -1472,7 +1472,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function"]
     #[doc(alias = "vkGetAccelerationStructureHandleNV")]
     pub unsafe fn get_acceleration_structure_handle_nv(&self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_acceleration_structure_handle_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.get_acceleration_structure_handle_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, acceleration_structure as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1481,7 +1481,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesNV")]
     pub unsafe fn create_ray_tracing_pipelines_nv(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
-        let _function = self.create_ray_tracing_pipelines_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.create_ray_tracing_pipelines_nv.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
         let mut pipelines = vec![Default::default(); create_info_count as _];
         let _return = _function(
@@ -1505,7 +1505,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Function"]
     #[doc(alias = "vkGetRayTracingShaderGroupHandlesNV")]
     pub unsafe fn get_ray_tracing_shader_group_handles_nv(&self, pipeline: crate::vk1_0::Pipeline, first_group: u32, group_count: u32, data_size: usize, data: *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_ray_tracing_shader_group_handles_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.get_ray_tracing_shader_group_handles_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, pipeline as _, first_group as _, group_count as _, data_size, data);
         crate::utils::VulkanResult::new(_return, ())
     }

@@ -321,7 +321,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function"]
     #[doc(alias = "vkGetRefreshCycleDurationGOOGLE")]
     pub unsafe fn get_refresh_cycle_duration_google(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE> {
-        let _function = self.get_refresh_cycle_duration_google.expect("tried to call a function that isn't loaded");
+        let _function = self.get_refresh_cycle_duration_google.expect(crate::NOT_LOADED_MESSAGE);
         let mut display_timing_properties = Default::default();
         let _return = _function(self.handle, swapchain as _, &mut display_timing_properties);
         crate::utils::VulkanResult::new(_return, display_timing_properties)
@@ -331,7 +331,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
     #[doc(alias = "vkGetPastPresentationTimingGOOGLE")]
     pub unsafe fn get_past_presentation_timing_google(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, presentation_timing_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::google_display_timing::PastPresentationTimingGOOGLE>> {
-        let _function = self.get_past_presentation_timing_google.expect("tried to call a function that isn't loaded");
+        let _function = self.get_past_presentation_timing_google.expect(crate::NOT_LOADED_MESSAGE);
         let mut presentation_timing_count = match presentation_timing_count {
             Some(v) => v,
             None => {

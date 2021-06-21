@@ -131,7 +131,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function"]
     #[doc(alias = "vkCmdSetPatchControlPointsEXT")]
     pub unsafe fn cmd_set_patch_control_points_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, patch_control_points: u32) -> () {
-        let _function = self.cmd_set_patch_control_points_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_patch_control_points_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, patch_control_points as _);
         ()
     }
@@ -140,7 +140,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetRasterizerDiscardEnableEXT")]
     pub unsafe fn cmd_set_rasterizer_discard_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, rasterizer_discard_enable: bool) -> () {
-        let _function = self.cmd_set_rasterizer_discard_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_rasterizer_discard_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, rasterizer_discard_enable as _);
         ()
     }
@@ -149,7 +149,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDepthBiasEnableEXT")]
     pub unsafe fn cmd_set_depth_bias_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, depth_bias_enable: bool) -> () {
-        let _function = self.cmd_set_depth_bias_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_depth_bias_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, depth_bias_enable as _);
         ()
     }
@@ -158,7 +158,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLogicOpEXT.html) · Function"]
     #[doc(alias = "vkCmdSetLogicOpEXT")]
     pub unsafe fn cmd_set_logic_op_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, logic_op: crate::vk1_0::LogicOp) -> () {
-        let _function = self.cmd_set_logic_op_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_logic_op_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, logic_op as _);
         ()
     }
@@ -167,7 +167,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Function"]
     #[doc(alias = "vkCmdSetPrimitiveRestartEnableEXT")]
     pub unsafe fn cmd_set_primitive_restart_enable_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, primitive_restart_enable: bool) -> () {
-        let _function = self.cmd_set_primitive_restart_enable_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_primitive_restart_enable_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, primitive_restart_enable as _);
         ()
     }

@@ -148,7 +148,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceToolPropertiesEXT")]
     pub unsafe fn get_physical_device_tool_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, tool_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
-        let _function = self.get_physical_device_tool_properties_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_tool_properties_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut tool_count = match tool_count {
             Some(v) => v,
             None => {

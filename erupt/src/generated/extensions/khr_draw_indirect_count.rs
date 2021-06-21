@@ -21,7 +21,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Function"]
     #[doc(alias = "vkCmdDrawIndirectCountKHR")]
     pub unsafe fn cmd_draw_indirect_count_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_indirect_count_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_draw_indirect_count_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }
@@ -30,7 +30,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Function"]
     #[doc(alias = "vkCmdDrawIndexedIndirectCountKHR")]
     pub unsafe fn cmd_draw_indexed_indirect_count_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, buffer: crate::vk1_0::Buffer, offset: crate::vk1_0::DeviceSize, count_buffer: crate::vk1_0::Buffer, count_buffer_offset: crate::vk1_0::DeviceSize, max_draw_count: u32, stride: u32) -> () {
-        let _function = self.cmd_draw_indexed_indirect_count_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_draw_indexed_indirect_count_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, buffer as _, offset as _, count_buffer as _, count_buffer_offset as _, max_draw_count as _, stride as _);
         ()
     }

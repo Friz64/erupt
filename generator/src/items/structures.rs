@@ -157,7 +157,7 @@ impl StructureField {
                 match (idents.next(), idents.next(), idents.next()) {
                     (Some(ident), None, None) => ident,
                     (Some(ident1), Some(ident2), None) => format!("{}_and_{}", ident1, ident2),
-                    (Some(ident), _, _) => format!("{}_bitfield", ident),
+                    (Some(ident), _, _) => format!("{}_and_more_bitfield", ident),
                     _ => unreachable!(),
                 }
             }

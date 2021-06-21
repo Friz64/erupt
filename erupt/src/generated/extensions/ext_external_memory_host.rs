@@ -238,7 +238,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetMemoryHostPointerPropertiesEXT")]
     pub unsafe fn get_memory_host_pointer_properties_ext(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, host_pointer: *const std::ffi::c_void, memory_host_pointer_properties: Option<crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT>) -> crate::utils::VulkanResult<crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT> {
-        let _function = self.get_memory_host_pointer_properties_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_host_pointer_properties_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_host_pointer_properties = match memory_host_pointer_properties {
             Some(v) => v,
             None => Default::default(),

@@ -627,7 +627,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html) · Function"]
     #[doc(alias = "vkSetDebugUtilsObjectNameEXT")]
     pub unsafe fn set_debug_utils_object_name_ext(&self, name_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT) -> crate::utils::VulkanResult<()> {
-        let _function = self.set_debug_utils_object_name_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.set_debug_utils_object_name_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, name_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -636,7 +636,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html) · Function"]
     #[doc(alias = "vkSetDebugUtilsObjectTagEXT")]
     pub unsafe fn set_debug_utils_object_tag_ext(&self, tag_info: &crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT) -> crate::utils::VulkanResult<()> {
-        let _function = self.set_debug_utils_object_tag_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.set_debug_utils_object_tag_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, tag_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -645,7 +645,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueBeginDebugUtilsLabelEXT")]
     pub unsafe fn queue_begin_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
-        let _function = self.queue_begin_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_begin_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(queue as _, label_info as _);
         ()
     }
@@ -654,7 +654,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueEndDebugUtilsLabelEXT")]
     pub unsafe fn queue_end_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue) -> () {
-        let _function = self.queue_end_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_end_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(queue as _);
         ()
     }
@@ -663,7 +663,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkQueueInsertDebugUtilsLabelEXT")]
     pub unsafe fn queue_insert_debug_utils_label_ext(&self, queue: crate::vk1_0::Queue, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
-        let _function = self.queue_insert_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_insert_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(queue as _, label_info as _);
         ()
     }
@@ -672,7 +672,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginDebugUtilsLabelEXT")]
     pub unsafe fn cmd_begin_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
-        let _function = self.cmd_begin_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_begin_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, label_info as _);
         ()
     }
@@ -681,7 +681,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdEndDebugUtilsLabelEXT")]
     pub unsafe fn cmd_end_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
-        let _function = self.cmd_end_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_end_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _);
         ()
     }
@@ -690,7 +690,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html) · Function"]
     #[doc(alias = "vkCmdInsertDebugUtilsLabelEXT")]
     pub unsafe fn cmd_insert_debug_utils_label_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, label_info: &crate::extensions::ext_debug_utils::DebugUtilsLabelEXT) -> () {
-        let _function = self.cmd_insert_debug_utils_label_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_insert_debug_utils_label_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, label_info as _);
         ()
     }
@@ -702,7 +702,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html) · Function"]
     #[doc(alias = "vkCreateDebugUtilsMessengerEXT")]
     pub unsafe fn create_debug_utils_messenger_ext(&self, create_info: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT> {
-        let _function = self.create_debug_utils_messenger_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.create_debug_utils_messenger_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut messenger = Default::default();
         let _return = _function(
             self.handle,
@@ -720,7 +720,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
     #[doc(alias = "vkDestroyDebugUtilsMessengerEXT")]
     pub unsafe fn destroy_debug_utils_messenger_ext(&self, messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_debug_utils_messenger_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_debug_utils_messenger_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match messenger {
@@ -739,7 +739,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html) · Function"]
     #[doc(alias = "vkSubmitDebugUtilsMessageEXT")]
     pub unsafe fn submit_debug_utils_message_ext(&self, message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, callback_data: &crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT) -> () {
-        let _function = self.submit_debug_utils_message_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.submit_debug_utils_message_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, message_severity as _, message_types as _, callback_data as _);
         ()
     }

@@ -124,7 +124,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDirectFBSurfaceEXT.html) · Function"]
     #[doc(alias = "vkCreateDirectFBSurfaceEXT")]
     pub unsafe fn create_direct_fb_surface_ext(&self, create_info: &crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_direct_fb_surface_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.create_direct_fb_surface_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,
@@ -142,7 +142,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDirectFBPresentationSupportEXT")]
     pub unsafe fn get_physical_device_direct_fb_presentation_support_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dfb: *mut std::ffi::c_void) -> bool {
-        let _function = self.get_physical_device_direct_fb_presentation_support_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_direct_fb_presentation_support_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(physical_device as _, queue_family_index as _, dfb);
         _return != 0
     }

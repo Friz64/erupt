@@ -496,7 +496,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function"]
     #[doc(alias = "vkGetAndroidHardwareBufferPropertiesANDROID")]
     pub unsafe fn get_android_hardware_buffer_properties_android(&self, buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer, properties: Option<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>) -> crate::utils::VulkanResult<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID> {
-        let _function = self.get_android_hardware_buffer_properties_android.expect("tried to call a function that isn't loaded");
+        let _function = self.get_android_hardware_buffer_properties_android.expect(crate::NOT_LOADED_MESSAGE);
         let mut properties = match properties {
             Some(v) => v,
             None => Default::default(),
@@ -509,7 +509,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
     #[doc(alias = "vkGetMemoryAndroidHardwareBufferANDROID")]
     pub unsafe fn get_memory_android_hardware_buffer_android(&self, info: &crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID) -> crate::utils::VulkanResult<*mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer> {
-        let _function = self.get_memory_android_hardware_buffer_android.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_android_hardware_buffer_android.expect(crate::NOT_LOADED_MESSAGE);
         let mut buffer = std::ptr::null_mut();
         let _return = _function(self.handle, info as _, &mut buffer);
         crate::utils::VulkanResult::new(_return, buffer)

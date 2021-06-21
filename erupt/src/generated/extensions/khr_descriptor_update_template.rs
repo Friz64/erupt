@@ -70,7 +70,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Function"]
     #[doc(alias = "vkCreateDescriptorUpdateTemplateKHR")]
     pub unsafe fn create_descriptor_update_template_khr(&self, create_info: &crate::vk1_1::DescriptorUpdateTemplateCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::DescriptorUpdateTemplate> {
-        let _function = self.create_descriptor_update_template_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_descriptor_update_template_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut descriptor_update_template = Default::default();
         let _return = _function(
             self.handle,
@@ -88,7 +88,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplateKHR")]
     pub unsafe fn destroy_descriptor_update_template_khr(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_descriptor_update_template_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_descriptor_update_template_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match descriptor_update_template {
@@ -107,7 +107,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Function"]
     #[doc(alias = "vkUpdateDescriptorSetWithTemplateKHR")]
     pub unsafe fn update_descriptor_set_with_template_khr(&self, descriptor_set: crate::vk1_0::DescriptorSet, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, data: *const std::ffi::c_void) -> () {
-        let _function = self.update_descriptor_set_with_template_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.update_descriptor_set_with_template_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, descriptor_set as _, descriptor_update_template as _, data);
         ()
     }

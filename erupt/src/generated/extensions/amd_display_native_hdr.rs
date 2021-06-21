@@ -163,7 +163,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function"]
     #[doc(alias = "vkSetLocalDimmingAMD")]
     pub unsafe fn set_local_dimming_amd(&self, swap_chain: crate::extensions::khr_swapchain::SwapchainKHR, local_dimming_enable: bool) -> () {
-        let _function = self.set_local_dimming_amd.expect("tried to call a function that isn't loaded");
+        let _function = self.set_local_dimming_amd.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, swap_chain as _, local_dimming_enable as _);
         ()
     }

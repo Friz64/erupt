@@ -44,6 +44,8 @@ pub mod amd_texture_gather_bias_lod;
 pub mod android_external_memory_android_hardware_buffer;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_4444_formats.html) · Vulkan extension"]
 pub mod ext_4444_formats;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_acquire_drm_display.html) · Vulkan extension"]
+pub mod ext_acquire_drm_display;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_acquire_xlib_display.html) · Vulkan extension"]
 pub mod ext_acquire_xlib_display;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_astc_decode_mode.html) · Vulkan extension"]
@@ -130,8 +132,12 @@ pub mod ext_memory_budget;
 pub mod ext_memory_priority;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_metal_surface.html) · Vulkan extension"]
 pub mod ext_metal_surface;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_multi_draw.html) · Vulkan extension"]
+pub mod ext_multi_draw;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_pci_bus_info.html) · Vulkan extension"]
 pub mod ext_pci_bus_info;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_physical_device_drm.html) · Vulkan extension"]
+pub mod ext_physical_device_drm;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_pipeline_creation_cache_control.html) · Vulkan extension"]
 pub mod ext_pipeline_creation_cache_control;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_pipeline_creation_feedback.html) · Vulkan extension"]
@@ -218,6 +224,8 @@ pub mod google_display_timing;
 pub mod google_hlsl_functionality1;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GOOGLE_user_type.html) · Vulkan extension"]
 pub mod google_user_type;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HUAWEI_subpass_shading.html) · Vulkan extension"]
+pub mod huawei_subpass_shading;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_IMG_filter_cubic.html) · Vulkan extension"]
 pub mod img_filter_cubic;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_IMG_format_pvrtc.html) · Vulkan extension"]
@@ -448,6 +456,8 @@ pub mod nv_inherited_viewport_scissor;
 pub mod nv_mesh_shader;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_ray_tracing.html) · Vulkan extension"]
 pub mod nv_ray_tracing;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_ray_tracing_motion_blur.html) · Vulkan extension"]
+pub mod nv_ray_tracing_motion_blur;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_representative_fragment_test.html) · Vulkan extension"]
 pub mod nv_representative_fragment_test;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_sample_mask_override_coverage.html) · Vulkan extension"]

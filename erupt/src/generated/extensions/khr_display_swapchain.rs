@@ -105,7 +105,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function"]
     #[doc(alias = "vkCreateSharedSwapchainsKHR")]
     pub unsafe fn create_shared_swapchains_khr(&self, create_infos: &[crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_swapchain::SwapchainKHR>> {
-        let _function = self.create_shared_swapchains_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_shared_swapchains_khr.expect(crate::NOT_LOADED_MESSAGE);
         let swapchain_count = create_infos.len();
         let mut swapchains = vec![Default::default(); swapchain_count as _];
         let _return = _function(

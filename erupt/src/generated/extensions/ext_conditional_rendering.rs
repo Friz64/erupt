@@ -289,7 +289,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginConditionalRenderingEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginConditionalRenderingEXT")]
     pub unsafe fn cmd_begin_conditional_rendering_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, conditional_rendering_begin: &crate::extensions::ext_conditional_rendering::ConditionalRenderingBeginInfoEXT) -> () {
-        let _function = self.cmd_begin_conditional_rendering_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_begin_conditional_rendering_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, conditional_rendering_begin as _);
         ()
     }
@@ -298,7 +298,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndConditionalRenderingEXT.html) · Function"]
     #[doc(alias = "vkCmdEndConditionalRenderingEXT")]
     pub unsafe fn cmd_end_conditional_rendering_ext(&self, command_buffer: crate::vk1_0::CommandBuffer) -> () {
-        let _function = self.cmd_end_conditional_rendering_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_end_conditional_rendering_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _);
         ()
     }

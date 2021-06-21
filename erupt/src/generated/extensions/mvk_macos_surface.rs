@@ -113,7 +113,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function"]
     #[doc(alias = "vkCreateMacOSSurfaceMVK")]
     pub unsafe fn create_mac_os_surface_mvk(&self, create_info: &crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_mac_os_surface_mvk.expect("tried to call a function that isn't loaded");
+        let _function = self.create_mac_os_surface_mvk.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

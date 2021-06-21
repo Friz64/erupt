@@ -45,6 +45,8 @@ pub use crate::extensions::android_external_memory_android_hardware_buffer::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_4444_formats::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_acquire_drm_display::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_acquire_xlib_display::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_astc_decode_mode::*;
@@ -131,7 +133,11 @@ pub use crate::extensions::ext_memory_priority::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_metal_surface::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_multi_draw::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_pci_bus_info::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_physical_device_drm::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_pipeline_creation_cache_control::*;
 #[doc(no_inline)]
@@ -218,6 +224,8 @@ pub use crate::extensions::google_display_timing::*;
 pub use crate::extensions::google_hlsl_functionality1::*;
 #[doc(no_inline)]
 pub use crate::extensions::google_user_type::*;
+#[doc(no_inline)]
+pub use crate::extensions::huawei_subpass_shading::*;
 #[doc(no_inline)]
 pub use crate::extensions::img_filter_cubic::*;
 #[doc(no_inline)]
@@ -448,6 +456,8 @@ pub use crate::extensions::nv_inherited_viewport_scissor::*;
 pub use crate::extensions::nv_mesh_shader::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_ray_tracing::*;
+#[doc(no_inline)]
+pub use crate::extensions::nv_ray_tracing_motion_blur::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_representative_fragment_test::*;
 #[doc(no_inline)]

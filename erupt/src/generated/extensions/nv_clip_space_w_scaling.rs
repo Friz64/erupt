@@ -172,7 +172,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportWScalingNV.html) · Function"]
     #[doc(alias = "vkCmdSetViewportWScalingNV")]
     pub unsafe fn cmd_set_viewport_w_scaling_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, viewport_w_scalings: &[crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder]) -> () {
-        let _function = self.cmd_set_viewport_w_scaling_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_viewport_w_scaling_nv.expect(crate::NOT_LOADED_MESSAGE);
         let viewport_count = viewport_w_scalings.len();
         let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, viewport_w_scalings.as_ptr() as _);
         ()

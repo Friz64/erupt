@@ -838,7 +838,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function"]
     #[doc(alias = "vkCreateSwapchainKHR")]
     pub unsafe fn create_swapchain_khr(&self, create_info: &crate::extensions::khr_swapchain::SwapchainCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::SwapchainKHR> {
-        let _function = self.create_swapchain_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_swapchain_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut swapchain = Default::default();
         let _return = _function(
             self.handle,
@@ -856,7 +856,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function"]
     #[doc(alias = "vkDestroySwapchainKHR")]
     pub unsafe fn destroy_swapchain_khr(&self, swapchain: Option<crate::extensions::khr_swapchain::SwapchainKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_swapchain_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_swapchain_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match swapchain {
@@ -875,7 +875,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainImagesKHR")]
     pub unsafe fn get_swapchain_images_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, swapchain_image_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Image>> {
-        let _function = self.get_swapchain_images_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_swapchain_images_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut swapchain_image_count = match swapchain_image_count {
             Some(v) => v,
             None => {
@@ -893,7 +893,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function"]
     #[doc(alias = "vkAcquireNextImageKHR")]
     pub unsafe fn acquire_next_image_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: Option<crate::vk1_0::Semaphore>, fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<u32> {
-        let _function = self.acquire_next_image_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.acquire_next_image_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut image_index = Default::default();
         let _return = _function(
             self.handle,
@@ -916,7 +916,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueuePresentKHR.html) · Function"]
     #[doc(alias = "vkQueuePresentKHR")]
     pub unsafe fn queue_present_khr(&self, queue: crate::vk1_0::Queue, present_info: &crate::extensions::khr_swapchain::PresentInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.queue_present_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_present_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(queue as _, present_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -925,7 +925,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPresentCapabilitiesKHR")]
     pub unsafe fn get_device_group_present_capabilities_khr(&self) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR> {
-        let _function = self.get_device_group_present_capabilities_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_device_group_present_capabilities_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut device_group_present_capabilities = Default::default();
         let _return = _function(self.handle, &mut device_group_present_capabilities);
         crate::utils::VulkanResult::new(_return, device_group_present_capabilities)
@@ -935,7 +935,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModesKHR")]
     pub unsafe fn get_device_group_surface_present_modes_khr(&self, surface: crate::extensions::khr_surface::SurfaceKHR, modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_device_group_surface_present_modes_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_device_group_surface_present_modes_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, surface as _, modes as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -944,7 +944,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function"]
     #[doc(alias = "vkAcquireNextImage2KHR")]
     pub unsafe fn acquire_next_image2_khr(&self, acquire_info: &crate::extensions::khr_swapchain::AcquireNextImageInfoKHR) -> crate::utils::VulkanResult<u32> {
-        let _function = self.acquire_next_image2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.acquire_next_image2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut image_index = Default::default();
         let _return = _function(self.handle, acquire_info as _, &mut image_index);
         crate::utils::VulkanResult::new(_return, image_index)
@@ -957,7 +957,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDevicePresentRectanglesKHR")]
     pub unsafe fn get_physical_device_present_rectangles_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, rect_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
-        let _function = self.get_physical_device_present_rectangles_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_present_rectangles_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut rect_count = match rect_count {
             Some(v) => v,
             None => {

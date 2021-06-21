@@ -184,7 +184,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetFenceFdKHR.html) · Function"]
     #[doc(alias = "vkGetFenceFdKHR")]
     pub unsafe fn get_fence_fd_khr(&self, get_fd_info: &crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR) -> crate::utils::VulkanResult<std::os::raw::c_int> {
-        let _function = self.get_fence_fd_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_fence_fd_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut fd = Default::default();
         let _return = _function(self.handle, get_fd_info as _, &mut fd);
         crate::utils::VulkanResult::new(_return, fd)
@@ -194,7 +194,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceFdKHR.html) · Function"]
     #[doc(alias = "vkImportFenceFdKHR")]
     pub unsafe fn import_fence_fd_khr(&self, import_fence_fd_info: &crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.import_fence_fd_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.import_fence_fd_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, import_fence_fd_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

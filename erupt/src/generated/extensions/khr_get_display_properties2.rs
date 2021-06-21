@@ -380,7 +380,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayProperties2KHR")]
     pub unsafe fn get_physical_device_display_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayProperties2KHR>> {
-        let _function = self.get_physical_device_display_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_display_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -398,7 +398,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlaneProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlaneProperties2KHR")]
     pub unsafe fn get_physical_device_display_plane_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR>> {
-        let _function = self.get_physical_device_display_plane_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_display_plane_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -416,7 +416,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModeProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetDisplayModeProperties2KHR")]
     pub unsafe fn get_display_mode_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR>> {
-        let _function = self.get_display_mode_properties2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_display_mode_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -434,7 +434,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilities2KHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneCapabilities2KHR")]
     pub unsafe fn get_display_plane_capabilities2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display_plane_info: &crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR, capabilities: Option<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR>) -> crate::utils::VulkanResult<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR> {
-        let _function = self.get_display_plane_capabilities2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_display_plane_capabilities2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut capabilities = match capabilities {
             Some(v) => v,
             None => Default::default(),

@@ -124,7 +124,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function"]
     #[doc(alias = "vkCreateScreenSurfaceQNX")]
     pub unsafe fn create_screen_surface_qnx(&self, create_info: &crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_screen_surface_qnx.expect("tried to call a function that isn't loaded");
+        let _function = self.create_screen_surface_qnx.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,
@@ -142,7 +142,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceScreenPresentationSupportQNX")]
     pub unsafe fn get_physical_device_screen_presentation_support_qnx(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, window: *mut std::ffi::c_void) -> bool {
-        let _function = self.get_physical_device_screen_presentation_support_qnx.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_screen_presentation_support_qnx.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(physical_device as _, queue_family_index as _, window);
         _return != 0
     }

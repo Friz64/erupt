@@ -651,7 +651,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindShadingRateImageNV.html) · Function"]
     #[doc(alias = "vkCmdBindShadingRateImageNV")]
     pub unsafe fn cmd_bind_shading_rate_image_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, image_view: Option<crate::vk1_0::ImageView>, image_layout: crate::vk1_0::ImageLayout) -> () {
-        let _function = self.cmd_bind_shading_rate_image_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_bind_shading_rate_image_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             command_buffer as _,
             match image_view {
@@ -667,7 +667,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetViewportShadingRatePaletteNV.html) · Function"]
     #[doc(alias = "vkCmdSetViewportShadingRatePaletteNV")]
     pub unsafe fn cmd_set_viewport_shading_rate_palette_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, first_viewport: u32, shading_rate_palettes: &[crate::extensions::nv_shading_rate_image::ShadingRatePaletteNVBuilder]) -> () {
-        let _function = self.cmd_set_viewport_shading_rate_palette_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_viewport_shading_rate_palette_nv.expect(crate::NOT_LOADED_MESSAGE);
         let viewport_count = shading_rate_palettes.len();
         let _return = _function(command_buffer as _, first_viewport as _, viewport_count as _, shading_rate_palettes.as_ptr() as _);
         ()
@@ -677,7 +677,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html) · Function"]
     #[doc(alias = "vkCmdSetCoarseSampleOrderNV")]
     pub unsafe fn cmd_set_coarse_sample_order_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV, custom_sample_orders: &[crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder]) -> () {
-        let _function = self.cmd_set_coarse_sample_order_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_coarse_sample_order_nv.expect(crate::NOT_LOADED_MESSAGE);
         let custom_sample_order_count = custom_sample_orders.len();
         let _return = _function(command_buffer as _, sample_order_type as _, custom_sample_order_count as _, custom_sample_orders.as_ptr() as _);
         ()

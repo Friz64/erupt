@@ -104,7 +104,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreCounterValueKHR")]
     pub unsafe fn get_semaphore_counter_value_khr(&self, semaphore: crate::vk1_0::Semaphore) -> crate::utils::VulkanResult<u64> {
-        let _function = self.get_semaphore_counter_value_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_semaphore_counter_value_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut value = Default::default();
         let _return = _function(self.handle, semaphore as _, &mut value);
         crate::utils::VulkanResult::new(_return, value)
@@ -114,7 +114,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphoresKHR.html) · Function"]
     #[doc(alias = "vkWaitSemaphoresKHR")]
     pub unsafe fn wait_semaphores_khr(&self, wait_info: &crate::vk1_2::SemaphoreWaitInfo, timeout: u64) -> crate::utils::VulkanResult<()> {
-        let _function = self.wait_semaphores_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.wait_semaphores_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, wait_info as _, timeout as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -123,7 +123,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphoreKHR.html) · Function"]
     #[doc(alias = "vkSignalSemaphoreKHR")]
     pub unsafe fn signal_semaphore_khr(&self, signal_info: &crate::vk1_2::SemaphoreSignalInfo) -> crate::utils::VulkanResult<()> {
-        let _function = self.signal_semaphore_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.signal_semaphore_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, signal_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

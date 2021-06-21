@@ -274,6 +274,8 @@ macro_rules! bits_copy {
     }};
 }
 
+const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded";
+
 /// An error which can occur while initializing a loader
 #[derive(Debug)]
 pub enum LoaderError {

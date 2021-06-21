@@ -228,7 +228,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilities2KHR")]
     pub unsafe fn get_physical_device_surface_capabilities2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, surface_capabilities: Option<crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR>) -> crate::utils::VulkanResult<crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR> {
-        let _function = self.get_physical_device_surface_capabilities2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_capabilities2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_capabilities = match surface_capabilities {
             Some(v) => v,
             None => Default::default(),
@@ -241,7 +241,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormats2KHR")]
     pub unsafe fn get_physical_device_surface_formats2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>> {
-        let _function = self.get_physical_device_surface_formats2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_formats2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
             None => {

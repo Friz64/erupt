@@ -117,7 +117,7 @@ impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
     pub const FRAGMENT_DENSITY_MAP_READ_EXT: Self = Self(16777216);
     pub const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT: Self = Self(524288);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags2KHR.html) · Bitmask of [`PipelineStageFlagBits2KHR`]"] # [doc (alias = "VkPipelineStageFlags2KHR")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags2KHR : u64 { const NONE_KHR = PipelineStageFlagBits2KHR :: NONE_KHR . 0 ; const TOP_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: TOP_OF_PIPE_KHR . 0 ; const DRAW_INDIRECT_KHR = PipelineStageFlagBits2KHR :: DRAW_INDIRECT_KHR . 0 ; const VERTEX_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_INPUT_KHR . 0 ; const VERTEX_SHADER_KHR = PipelineStageFlagBits2KHR :: VERTEX_SHADER_KHR . 0 ; const TESSELLATION_CONTROL_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_CONTROL_SHADER_KHR . 0 ; const TESSELLATION_EVALUATION_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_EVALUATION_SHADER_KHR . 0 ; const GEOMETRY_SHADER_KHR = PipelineStageFlagBits2KHR :: GEOMETRY_SHADER_KHR . 0 ; const FRAGMENT_SHADER_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADER_KHR . 0 ; const EARLY_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: EARLY_FRAGMENT_TESTS_KHR . 0 ; const LATE_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: LATE_FRAGMENT_TESTS_KHR . 0 ; const COLOR_ATTACHMENT_OUTPUT_KHR = PipelineStageFlagBits2KHR :: COLOR_ATTACHMENT_OUTPUT_KHR . 0 ; const COMPUTE_SHADER_KHR = PipelineStageFlagBits2KHR :: COMPUTE_SHADER_KHR . 0 ; const ALL_TRANSFER_KHR = PipelineStageFlagBits2KHR :: ALL_TRANSFER_KHR . 0 ; const TRANSFER_KHR = PipelineStageFlagBits2KHR :: TRANSFER_KHR . 0 ; const BOTTOM_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: BOTTOM_OF_PIPE_KHR . 0 ; const HOST_KHR = PipelineStageFlagBits2KHR :: HOST_KHR . 0 ; const ALL_GRAPHICS_KHR = PipelineStageFlagBits2KHR :: ALL_GRAPHICS_KHR . 0 ; const ALL_COMMANDS_KHR = PipelineStageFlagBits2KHR :: ALL_COMMANDS_KHR . 0 ; const COPY_KHR = PipelineStageFlagBits2KHR :: COPY_KHR . 0 ; const RESOLVE_KHR = PipelineStageFlagBits2KHR :: RESOLVE_KHR . 0 ; const BLIT_KHR = PipelineStageFlagBits2KHR :: BLIT_KHR . 0 ; const CLEAR_KHR = PipelineStageFlagBits2KHR :: CLEAR_KHR . 0 ; const INDEX_INPUT_KHR = PipelineStageFlagBits2KHR :: INDEX_INPUT_KHR . 0 ; const VERTEX_ATTRIBUTE_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_ATTRIBUTE_INPUT_KHR . 0 ; const PRE_RASTERIZATION_SHADERS_KHR = PipelineStageFlagBits2KHR :: PRE_RASTERIZATION_SHADERS_KHR . 0 ; const VIDEO_DECODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_ENCODE_KHR . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits2KHR :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits2KHR :: CONDITIONAL_RENDERING_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits2KHR :: COMMAND_PREPROCESS_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits2KHR :: SHADING_RATE_IMAGE_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_KHR . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits2KHR :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits2KHR :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits2KHR :: MESH_SHADER_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlags2KHR.html) · Bitmask of [`PipelineStageFlagBits2KHR`]"] # [doc (alias = "VkPipelineStageFlags2KHR")] # [derive (Default)] # [repr (transparent)] pub struct PipelineStageFlags2KHR : u64 { const NONE_KHR = PipelineStageFlagBits2KHR :: NONE_KHR . 0 ; const TOP_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: TOP_OF_PIPE_KHR . 0 ; const DRAW_INDIRECT_KHR = PipelineStageFlagBits2KHR :: DRAW_INDIRECT_KHR . 0 ; const VERTEX_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_INPUT_KHR . 0 ; const VERTEX_SHADER_KHR = PipelineStageFlagBits2KHR :: VERTEX_SHADER_KHR . 0 ; const TESSELLATION_CONTROL_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_CONTROL_SHADER_KHR . 0 ; const TESSELLATION_EVALUATION_SHADER_KHR = PipelineStageFlagBits2KHR :: TESSELLATION_EVALUATION_SHADER_KHR . 0 ; const GEOMETRY_SHADER_KHR = PipelineStageFlagBits2KHR :: GEOMETRY_SHADER_KHR . 0 ; const FRAGMENT_SHADER_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADER_KHR . 0 ; const EARLY_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: EARLY_FRAGMENT_TESTS_KHR . 0 ; const LATE_FRAGMENT_TESTS_KHR = PipelineStageFlagBits2KHR :: LATE_FRAGMENT_TESTS_KHR . 0 ; const COLOR_ATTACHMENT_OUTPUT_KHR = PipelineStageFlagBits2KHR :: COLOR_ATTACHMENT_OUTPUT_KHR . 0 ; const COMPUTE_SHADER_KHR = PipelineStageFlagBits2KHR :: COMPUTE_SHADER_KHR . 0 ; const ALL_TRANSFER_KHR = PipelineStageFlagBits2KHR :: ALL_TRANSFER_KHR . 0 ; const TRANSFER_KHR = PipelineStageFlagBits2KHR :: TRANSFER_KHR . 0 ; const BOTTOM_OF_PIPE_KHR = PipelineStageFlagBits2KHR :: BOTTOM_OF_PIPE_KHR . 0 ; const HOST_KHR = PipelineStageFlagBits2KHR :: HOST_KHR . 0 ; const ALL_GRAPHICS_KHR = PipelineStageFlagBits2KHR :: ALL_GRAPHICS_KHR . 0 ; const ALL_COMMANDS_KHR = PipelineStageFlagBits2KHR :: ALL_COMMANDS_KHR . 0 ; const COPY_KHR = PipelineStageFlagBits2KHR :: COPY_KHR . 0 ; const RESOLVE_KHR = PipelineStageFlagBits2KHR :: RESOLVE_KHR . 0 ; const BLIT_KHR = PipelineStageFlagBits2KHR :: BLIT_KHR . 0 ; const CLEAR_KHR = PipelineStageFlagBits2KHR :: CLEAR_KHR . 0 ; const INDEX_INPUT_KHR = PipelineStageFlagBits2KHR :: INDEX_INPUT_KHR . 0 ; const VERTEX_ATTRIBUTE_INPUT_KHR = PipelineStageFlagBits2KHR :: VERTEX_ATTRIBUTE_INPUT_KHR . 0 ; const PRE_RASTERIZATION_SHADERS_KHR = PipelineStageFlagBits2KHR :: PRE_RASTERIZATION_SHADERS_KHR . 0 ; const VIDEO_DECODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_DECODE_KHR . 0 ; const VIDEO_ENCODE_KHR = PipelineStageFlagBits2KHR :: VIDEO_ENCODE_KHR . 0 ; const TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits2KHR :: TRANSFORM_FEEDBACK_EXT . 0 ; const CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits2KHR :: CONDITIONAL_RENDERING_EXT . 0 ; const COMMAND_PREPROCESS_NV = PipelineStageFlagBits2KHR :: COMMAND_PREPROCESS_NV . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineStageFlagBits2KHR :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const SHADING_RATE_IMAGE_NV = PipelineStageFlagBits2KHR :: SHADING_RATE_IMAGE_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_KHR = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_KHR . 0 ; const RAY_TRACING_SHADER_KHR = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_KHR . 0 ; const RAY_TRACING_SHADER_NV = PipelineStageFlagBits2KHR :: RAY_TRACING_SHADER_NV . 0 ; const ACCELERATION_STRUCTURE_BUILD_NV = PipelineStageFlagBits2KHR :: ACCELERATION_STRUCTURE_BUILD_NV . 0 ; const FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits2KHR :: FRAGMENT_DENSITY_PROCESS_EXT . 0 ; const TASK_SHADER_NV = PipelineStageFlagBits2KHR :: TASK_SHADER_NV . 0 ; const MESH_SHADER_NV = PipelineStageFlagBits2KHR :: MESH_SHADER_NV . 0 ; const SUBPASS_SHADING_HUAWEI = PipelineStageFlagBits2KHR :: SUBPASS_SHADING_HUAWEI . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineStageFlagBits2KHR.html) · Bits enum of [`PipelineStageFlags2KHR`]"]
 #[doc(alias = "VkPipelineStageFlagBits2KHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -173,6 +173,7 @@ impl std::fmt::Debug for PipelineStageFlagBits2KHR {
             &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
             &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
             &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
+            &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
             _ => "(unknown variant)",
         })
     }
@@ -1180,7 +1181,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdSetEvent2KHR")]
     pub unsafe fn cmd_set_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
-        let _function = self.cmd_set_event2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_event2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, event as _, dependency_info as _);
         ()
     }
@@ -1189,7 +1190,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent2KHR.html) · Function"]
     #[doc(alias = "vkCmdResetEvent2KHR")]
     pub unsafe fn cmd_reset_event2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> () {
-        let _function = self.cmd_reset_event2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_reset_event2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
     }
@@ -1198,7 +1199,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents2KHR.html) · Function"]
     #[doc(alias = "vkCmdWaitEvents2KHR")]
     pub unsafe fn cmd_wait_events2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], dependency_infos: &[crate::extensions::khr_synchronization2::DependencyInfoKHRBuilder]) -> () {
-        let _function = self.cmd_wait_events2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_wait_events2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let event_count = events.len().min(dependency_infos.len());
         let _return = _function(command_buffer as _, event_count as _, events.as_ptr() as _, dependency_infos.as_ptr() as _);
         ()
@@ -1208,7 +1209,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier2KHR.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier2KHR")]
     pub unsafe fn cmd_pipeline_barrier2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, dependency_info: &crate::extensions::khr_synchronization2::DependencyInfoKHR) -> () {
-        let _function = self.cmd_pipeline_barrier2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_pipeline_barrier2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, dependency_info as _);
         ()
     }
@@ -1217,7 +1218,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
     #[doc(alias = "vkQueueSubmit2KHR")]
     pub unsafe fn queue_submit2_khr(&self, queue: crate::vk1_0::Queue, submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
-        let _function = self.queue_submit2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_submit2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let submit_count = submits.len();
         let _return = _function(
             queue as _,
@@ -1235,7 +1236,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteTimestamp2KHR.html) · Function"]
     #[doc(alias = "vkCmdWriteTimestamp2KHR")]
     pub unsafe fn cmd_write_timestamp2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, query_pool: crate::vk1_0::QueryPool, query: u32) -> () {
-        let _function = self.cmd_write_timestamp2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_write_timestamp2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, stage as _, query_pool as _, query as _);
         ()
     }
@@ -1244,7 +1245,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarker2AMD.html) · Function"]
     #[doc(alias = "vkCmdWriteBufferMarker2AMD")]
     pub unsafe fn cmd_write_buffer_marker2_amd(&self, command_buffer: crate::vk1_0::CommandBuffer, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> () {
-        let _function = self.cmd_write_buffer_marker2_amd.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_write_buffer_marker2_amd.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, stage as _, dst_buffer as _, dst_offset as _, marker as _);
         ()
     }
@@ -1253,7 +1254,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointData2NV")]
     pub unsafe fn get_queue_checkpoint_data2_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>) -> Vec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
-        let _function = self.get_queue_checkpoint_data2_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.get_queue_checkpoint_data2_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
             None => {

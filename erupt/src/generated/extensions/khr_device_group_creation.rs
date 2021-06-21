@@ -44,7 +44,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceGroupsKHR")]
     pub unsafe fn enumerate_physical_device_groups_khr(&self, physical_device_group_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
-        let _function = self.enumerate_physical_device_groups_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.enumerate_physical_device_groups_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut physical_device_group_count = match physical_device_group_count {
             Some(v) => v,
             None => {

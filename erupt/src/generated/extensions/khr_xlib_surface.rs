@@ -124,7 +124,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateXlibSurfaceKHR")]
     pub unsafe fn create_xlib_surface_khr(&self, create_info: &crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_xlib_surface_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_xlib_surface_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,
@@ -142,7 +142,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceXlibPresentationSupportKHR")]
     pub unsafe fn get_physical_device_xlib_presentation_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, dpy: *mut std::ffi::c_void, visual_id: u64) -> bool {
-        let _function = self.get_physical_device_xlib_presentation_support_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_xlib_presentation_support_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(physical_device as _, queue_family_index as _, dpy, visual_id as _);
         _return != 0
     }

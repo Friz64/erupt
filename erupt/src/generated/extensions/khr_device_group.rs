@@ -132,7 +132,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPeerMemoryFeaturesKHR")]
     pub unsafe fn get_device_group_peer_memory_features_khr(&self, heap_index: u32, local_device_index: u32, remote_device_index: u32) -> crate::vk1_1::PeerMemoryFeatureFlags {
-        let _function = self.get_device_group_peer_memory_features_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_device_group_peer_memory_features_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut peer_memory_features = Default::default();
         let _return = _function(self.handle, heap_index as _, local_device_index as _, remote_device_index as _, &mut peer_memory_features);
         peer_memory_features
@@ -142,7 +142,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Function"]
     #[doc(alias = "vkCmdSetDeviceMaskKHR")]
     pub unsafe fn cmd_set_device_mask_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, device_mask: u32) -> () {
-        let _function = self.cmd_set_device_mask_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_device_mask_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, device_mask as _);
         ()
     }
@@ -151,7 +151,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Function"]
     #[doc(alias = "vkCmdDispatchBaseKHR")]
     pub unsafe fn cmd_dispatch_base_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, base_group_x: u32, base_group_y: u32, base_group_z: u32, group_count_x: u32, group_count_y: u32, group_count_z: u32) -> () {
-        let _function = self.cmd_dispatch_base_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_dispatch_base_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, base_group_x as _, base_group_y as _, base_group_z as _, group_count_x as _, group_count_y as _, group_count_z as _);
         ()
     }

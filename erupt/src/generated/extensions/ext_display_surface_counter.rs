@@ -173,7 +173,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilities2EXT")]
     pub unsafe fn get_physical_device_surface_capabilities2_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_capabilities: Option<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>) -> crate::utils::VulkanResult<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT> {
-        let _function = self.get_physical_device_surface_capabilities2_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_capabilities2_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_capabilities = match surface_capabilities {
             Some(v) => v,
             None => Default::default(),

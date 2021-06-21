@@ -688,7 +688,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkInitializePerformanceApiINTEL.html) · Function"]
     #[doc(alias = "vkInitializePerformanceApiINTEL")]
     pub unsafe fn initialize_performance_api_intel(&self, initialize_info: &crate::extensions::intel_performance_query::InitializePerformanceApiInfoINTEL) -> crate::utils::VulkanResult<()> {
-        let _function = self.initialize_performance_api_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.initialize_performance_api_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, initialize_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -697,7 +697,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUninitializePerformanceApiINTEL.html) · Function"]
     #[doc(alias = "vkUninitializePerformanceApiINTEL")]
     pub unsafe fn uninitialize_performance_api_intel(&self) -> () {
-        let _function = self.uninitialize_performance_api_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.uninitialize_performance_api_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle);
         ()
     }
@@ -706,7 +706,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html) · Function"]
     #[doc(alias = "vkCmdSetPerformanceMarkerINTEL")]
     pub unsafe fn cmd_set_performance_marker_intel(&self, command_buffer: crate::vk1_0::CommandBuffer, marker_info: &crate::extensions::intel_performance_query::PerformanceMarkerInfoINTEL) -> crate::utils::VulkanResult<()> {
-        let _function = self.cmd_set_performance_marker_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_performance_marker_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, marker_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -715,7 +715,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceStreamMarkerINTEL.html) · Function"]
     #[doc(alias = "vkCmdSetPerformanceStreamMarkerINTEL")]
     pub unsafe fn cmd_set_performance_stream_marker_intel(&self, command_buffer: crate::vk1_0::CommandBuffer, marker_info: &crate::extensions::intel_performance_query::PerformanceStreamMarkerInfoINTEL) -> crate::utils::VulkanResult<()> {
-        let _function = self.cmd_set_performance_stream_marker_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_performance_stream_marker_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, marker_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -724,7 +724,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPerformanceOverrideINTEL.html) · Function"]
     #[doc(alias = "vkCmdSetPerformanceOverrideINTEL")]
     pub unsafe fn cmd_set_performance_override_intel(&self, command_buffer: crate::vk1_0::CommandBuffer, override_info: &crate::extensions::intel_performance_query::PerformanceOverrideInfoINTEL) -> crate::utils::VulkanResult<()> {
-        let _function = self.cmd_set_performance_override_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_performance_override_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, override_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -733,7 +733,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html) · Function"]
     #[doc(alias = "vkAcquirePerformanceConfigurationINTEL")]
     pub unsafe fn acquire_performance_configuration_intel(&self, acquire_info: &crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL> {
-        let _function = self.acquire_performance_configuration_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.acquire_performance_configuration_intel.expect(crate::NOT_LOADED_MESSAGE);
         let mut configuration = Default::default();
         let _return = _function(self.handle, acquire_info as _, &mut configuration);
         crate::utils::VulkanResult::new(_return, configuration)
@@ -743,7 +743,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
     #[doc(alias = "vkReleasePerformanceConfigurationINTEL")]
     pub unsafe fn release_performance_configuration_intel(&self, configuration: Option<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL>) -> crate::utils::VulkanResult<()> {
-        let _function = self.release_performance_configuration_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.release_performance_configuration_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match configuration {
@@ -758,7 +758,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSetPerformanceConfigurationINTEL.html) · Function"]
     #[doc(alias = "vkQueueSetPerformanceConfigurationINTEL")]
     pub unsafe fn queue_set_performance_configuration_intel(&self, queue: crate::vk1_0::Queue, configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL) -> crate::utils::VulkanResult<()> {
-        let _function = self.queue_set_performance_configuration_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.queue_set_performance_configuration_intel.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(queue as _, configuration as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -767,7 +767,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPerformanceParameterINTEL.html) · Function"]
     #[doc(alias = "vkGetPerformanceParameterINTEL")]
     pub unsafe fn get_performance_parameter_intel(&self, parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL) -> crate::utils::VulkanResult<crate::extensions::intel_performance_query::PerformanceValueINTEL> {
-        let _function = self.get_performance_parameter_intel.expect("tried to call a function that isn't loaded");
+        let _function = self.get_performance_parameter_intel.expect(crate::NOT_LOADED_MESSAGE);
         let mut value = Default::default();
         let _return = _function(self.handle, parameter as _, &mut value);
         crate::utils::VulkanResult::new(_return, value)

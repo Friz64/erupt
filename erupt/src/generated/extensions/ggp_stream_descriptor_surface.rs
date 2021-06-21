@@ -113,7 +113,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateStreamDescriptorSurfaceGGP.html) · Function"]
     #[doc(alias = "vkCreateStreamDescriptorSurfaceGGP")]
     pub unsafe fn create_stream_descriptor_surface_ggp(&self, create_info: &crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateInfoGGP, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_stream_descriptor_surface_ggp.expect("tried to call a function that isn't loaded");
+        let _function = self.create_stream_descriptor_surface_ggp.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

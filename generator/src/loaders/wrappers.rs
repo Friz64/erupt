@@ -398,7 +398,7 @@ impl Function {
             #[doc = #doc]
             #[doc(alias = #doc_alias)]
             pub unsafe fn #ident(&self, #(#param_idents: #param_types),*) -> #return_type {
-                let _function = self.#ident.expect("tried to call a function that isn't loaded");
+                let _function = self.#ident.expect(crate::NOT_LOADED_MESSAGE);
                 #extra_call
                 #length_init
                 #return_init

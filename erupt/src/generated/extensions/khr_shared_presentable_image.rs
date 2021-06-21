@@ -98,7 +98,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainStatusKHR")]
     pub unsafe fn get_swapchain_status_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_swapchain_status_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_swapchain_status_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, swapchain as _);
         crate::utils::VulkanResult::new(_return, ())
     }

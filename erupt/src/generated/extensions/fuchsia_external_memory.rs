@@ -246,7 +246,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetMemoryZirconHandleFUCHSIA")]
     pub unsafe fn get_memory_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, zircon_handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_memory_zircon_handle_fuchsia.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_zircon_handle_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, get_zircon_handle_info as _, zircon_handle);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -255,7 +255,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetMemoryZirconHandlePropertiesFUCHSIA")]
     pub unsafe fn get_memory_zircon_handle_properties_fuchsia(&self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, zircon_handle: *mut std::ffi::c_void, memory_zircon_handle_properties: Option<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA>) -> crate::utils::VulkanResult<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA> {
-        let _function = self.get_memory_zircon_handle_properties_fuchsia.expect("tried to call a function that isn't loaded");
+        let _function = self.get_memory_zircon_handle_properties_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
         let mut memory_zircon_handle_properties = match memory_zircon_handle_properties {
             Some(v) => v,
             None => Default::default(),

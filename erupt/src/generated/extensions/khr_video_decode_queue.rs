@@ -205,7 +205,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function"]
     #[doc(alias = "vkCmdDecodeVideoKHR")]
     pub unsafe fn cmd_decode_video_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, frame_info: &crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR) -> () {
-        let _function = self.cmd_decode_video_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_decode_video_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, frame_info as _);
         ()
     }

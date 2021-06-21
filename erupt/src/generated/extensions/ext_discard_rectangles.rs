@@ -216,7 +216,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDiscardRectangleEXT.html) · Function"]
     #[doc(alias = "vkCmdSetDiscardRectangleEXT")]
     pub unsafe fn cmd_set_discard_rectangle_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, first_discard_rectangle: u32, discard_rectangles: &[crate::vk1_0::Rect2DBuilder]) -> () {
-        let _function = self.cmd_set_discard_rectangle_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_discard_rectangle_ext.expect(crate::NOT_LOADED_MESSAGE);
         let discard_rectangle_count = discard_rectangles.len();
         let _return = _function(command_buffer as _, first_discard_rectangle as _, discard_rectangle_count as _, discard_rectangles.as_ptr() as _);
         ()

@@ -1038,7 +1038,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBuffer2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyBuffer2KHR")]
     pub unsafe fn cmd_copy_buffer2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_buffer_info: &crate::extensions::khr_copy_commands2::CopyBufferInfo2KHR) -> () {
-        let _function = self.cmd_copy_buffer2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_copy_buffer2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, copy_buffer_info as _);
         ()
     }
@@ -1047,7 +1047,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImage2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyImage2KHR")]
     pub unsafe fn cmd_copy_image2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_image_info: &crate::extensions::khr_copy_commands2::CopyImageInfo2KHR) -> () {
-        let _function = self.cmd_copy_image2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_copy_image2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, copy_image_info as _);
         ()
     }
@@ -1056,7 +1056,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBlitImage2KHR.html) · Function"]
     #[doc(alias = "vkCmdBlitImage2KHR")]
     pub unsafe fn cmd_blit_image2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, blit_image_info: &crate::extensions::khr_copy_commands2::BlitImageInfo2KHR) -> () {
-        let _function = self.cmd_blit_image2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_blit_image2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, blit_image_info as _);
         ()
     }
@@ -1065,7 +1065,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyBufferToImage2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyBufferToImage2KHR")]
     pub unsafe fn cmd_copy_buffer_to_image2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_buffer_to_image_info: &crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR) -> () {
-        let _function = self.cmd_copy_buffer_to_image2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_copy_buffer_to_image2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, copy_buffer_to_image_info as _);
         ()
     }
@@ -1074,7 +1074,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html) · Function"]
     #[doc(alias = "vkCmdCopyImageToBuffer2KHR")]
     pub unsafe fn cmd_copy_image_to_buffer2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, copy_image_to_buffer_info: &crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR) -> () {
-        let _function = self.cmd_copy_image_to_buffer2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_copy_image_to_buffer2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, copy_image_to_buffer_info as _);
         ()
     }
@@ -1083,7 +1083,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResolveImage2KHR.html) · Function"]
     #[doc(alias = "vkCmdResolveImage2KHR")]
     pub unsafe fn cmd_resolve_image2_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, resolve_image_info: &crate::extensions::khr_copy_commands2::ResolveImageInfo2KHR) -> () {
-        let _function = self.cmd_resolve_image2_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_resolve_image2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, resolve_image_info as _);
         ()
     }

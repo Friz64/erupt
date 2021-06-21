@@ -1662,7 +1662,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceVideoCapabilitiesKHR")]
     pub unsafe fn get_physical_device_video_capabilities_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, video_profile: &crate::extensions::khr_video_queue::VideoProfileKHR, capabilities: Option<crate::extensions::khr_video_queue::VideoCapabilitiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_video_queue::VideoCapabilitiesKHR> {
-        let _function = self.get_physical_device_video_capabilities_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_video_capabilities_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut capabilities = match capabilities {
             Some(v) => v,
             None => Default::default(),
@@ -1675,7 +1675,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceVideoFormatPropertiesKHR")]
     pub unsafe fn get_physical_device_video_format_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, video_format_info: &crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR, video_format_property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_video_queue::VideoFormatPropertiesKHR>> {
-        let _function = self.get_physical_device_video_format_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_video_format_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_format_property_count = match video_format_property_count {
             Some(v) => v,
             None => {
@@ -1696,7 +1696,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionKHR.html) · Function"]
     #[doc(alias = "vkCreateVideoSessionKHR")]
     pub unsafe fn create_video_session_khr(&self, create_info: &crate::extensions::khr_video_queue::VideoSessionCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_video_queue::VideoSessionKHR> {
-        let _function = self.create_video_session_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_video_session_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_session = Default::default();
         let _return = _function(
             self.handle,
@@ -1714,7 +1714,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionKHR.html) · Function"]
     #[doc(alias = "vkDestroyVideoSessionKHR")]
     pub unsafe fn destroy_video_session_khr(&self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_video_session_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_video_session_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             video_session as _,
@@ -1730,7 +1730,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionParametersKHR.html) · Function"]
     #[doc(alias = "vkCreateVideoSessionParametersKHR")]
     pub unsafe fn create_video_session_parameters_khr(&self, create_info: &crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_video_queue::VideoSessionParametersKHR> {
-        let _function = self.create_video_session_parameters_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_video_session_parameters_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_session_parameters = Default::default();
         let _return = _function(
             self.handle,
@@ -1748,7 +1748,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateVideoSessionParametersKHR.html) · Function"]
     #[doc(alias = "vkUpdateVideoSessionParametersKHR")]
     pub unsafe fn update_video_session_parameters_khr(&self, video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR, update_info: &crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHR) -> crate::utils::VulkanResult<()> {
-        let _function = self.update_video_session_parameters_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.update_video_session_parameters_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, video_session_parameters as _, update_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -1757,7 +1757,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionParametersKHR.html) · Function"]
     #[doc(alias = "vkDestroyVideoSessionParametersKHR")]
     pub unsafe fn destroy_video_session_parameters_khr(&self, video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_video_session_parameters_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_video_session_parameters_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             video_session_parameters as _,
@@ -1773,7 +1773,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function"]
     #[doc(alias = "vkGetVideoSessionMemoryRequirementsKHR")]
     pub unsafe fn get_video_session_memory_requirements_khr(&self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR, video_session_memory_requirements_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR>> {
-        let _function = self.get_video_session_memory_requirements_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_video_session_memory_requirements_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_session_memory_requirements_count = match video_session_memory_requirements_count {
             Some(v) => v,
             None => {
@@ -1791,7 +1791,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindVideoSessionMemoryKHR.html) · Function"]
     #[doc(alias = "vkBindVideoSessionMemoryKHR")]
     pub unsafe fn bind_video_session_memory_khr(&self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR, video_session_bind_memories: &[crate::extensions::khr_video_queue::VideoBindMemoryKHRBuilder]) -> crate::utils::VulkanResult<()> {
-        let _function = self.bind_video_session_memory_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.bind_video_session_memory_khr.expect(crate::NOT_LOADED_MESSAGE);
         let video_session_bind_memory_count = video_session_bind_memories.len();
         let _return = _function(self.handle, video_session as _, video_session_bind_memory_count as _, video_session_bind_memories.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
@@ -1801,7 +1801,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginVideoCodingKHR.html) · Function"]
     #[doc(alias = "vkCmdBeginVideoCodingKHR")]
     pub unsafe fn cmd_begin_video_coding_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, begin_info: &crate::extensions::khr_video_queue::VideoBeginCodingInfoKHR) -> () {
-        let _function = self.cmd_begin_video_coding_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_begin_video_coding_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, begin_info as _);
         ()
     }
@@ -1810,7 +1810,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdControlVideoCodingKHR.html) · Function"]
     #[doc(alias = "vkCmdControlVideoCodingKHR")]
     pub unsafe fn cmd_control_video_coding_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, coding_control_info: &crate::extensions::khr_video_queue::VideoCodingControlInfoKHR) -> () {
-        let _function = self.cmd_control_video_coding_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_control_video_coding_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, coding_control_info as _);
         ()
     }
@@ -1819,7 +1819,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function"]
     #[doc(alias = "vkCmdEndVideoCodingKHR")]
     pub unsafe fn cmd_end_video_coding_khr(&self, command_buffer: crate::vk1_0::CommandBuffer, end_coding_info: &crate::extensions::khr_video_queue::VideoEndCodingInfoKHR) -> () {
-        let _function = self.cmd_end_video_coding_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_end_video_coding_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, end_coding_info as _);
         ()
     }

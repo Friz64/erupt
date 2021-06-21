@@ -91,7 +91,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Function"]
     #[doc(alias = "vkGetBufferOpaqueCaptureAddressKHR")]
     pub unsafe fn get_buffer_opaque_capture_address_khr(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> u64 {
-        let _function = self.get_buffer_opaque_capture_address_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_buffer_opaque_capture_address_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, info as _);
         _return
     }
@@ -100,7 +100,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Function"]
     #[doc(alias = "vkGetBufferDeviceAddressKHR")]
     pub unsafe fn get_buffer_device_address_khr(&self, info: &crate::vk1_2::BufferDeviceAddressInfo) -> crate::vk1_0::DeviceAddress {
-        let _function = self.get_buffer_device_address_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_buffer_device_address_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, info as _);
         _return
     }
@@ -109,7 +109,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceMemoryOpaqueCaptureAddressKHR")]
     pub unsafe fn get_device_memory_opaque_capture_address_khr(&self, info: &crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo) -> u64 {
-        let _function = self.get_device_memory_opaque_capture_address_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_device_memory_opaque_capture_address_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, info as _);
         _return
     }

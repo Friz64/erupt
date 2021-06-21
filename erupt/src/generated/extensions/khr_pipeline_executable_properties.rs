@@ -555,7 +555,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutablePropertiesKHR")]
     pub unsafe fn get_pipeline_executable_properties_khr(&self, pipeline_info: &crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR, executable_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>> {
-        let _function = self.get_pipeline_executable_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_pipeline_executable_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut executable_count = match executable_count {
             Some(v) => v,
             None => {
@@ -573,7 +573,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableStatisticsKHR")]
     pub unsafe fn get_pipeline_executable_statistics_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, statistic_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>> {
-        let _function = self.get_pipeline_executable_statistics_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_pipeline_executable_statistics_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut statistic_count = match statistic_count {
             Some(v) => v,
             None => {
@@ -591,7 +591,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableInternalRepresentationsKHR")]
     pub unsafe fn get_pipeline_executable_internal_representations_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, internal_representation_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
-        let _function = self.get_pipeline_executable_internal_representations_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_pipeline_executable_internal_representations_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut internal_representation_count = match internal_representation_count {
             Some(v) => v,
             None => {

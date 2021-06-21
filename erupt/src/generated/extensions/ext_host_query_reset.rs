@@ -28,7 +28,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPoolEXT.html) · Function"]
     #[doc(alias = "vkResetQueryPoolEXT")]
     pub unsafe fn reset_query_pool_ext(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32) -> () {
-        let _function = self.reset_query_pool_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.reset_query_pool_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, query_pool as _, first_query as _, query_count as _);
         ()
     }

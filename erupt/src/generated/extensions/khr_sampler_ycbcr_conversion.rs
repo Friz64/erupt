@@ -177,7 +177,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Function"]
     #[doc(alias = "vkCreateSamplerYcbcrConversionKHR")]
     pub unsafe fn create_sampler_ycbcr_conversion_khr(&self, create_info: &crate::vk1_1::SamplerYcbcrConversionCreateInfo, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::vk1_1::SamplerYcbcrConversion> {
-        let _function = self.create_sampler_ycbcr_conversion_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_sampler_ycbcr_conversion_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut ycbcr_conversion = Default::default();
         let _return = _function(
             self.handle,
@@ -195,7 +195,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Function"]
     #[doc(alias = "vkDestroySamplerYcbcrConversionKHR")]
     pub unsafe fn destroy_sampler_ycbcr_conversion_khr(&self, ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_sampler_ycbcr_conversion_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_sampler_ycbcr_conversion_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match ycbcr_conversion {

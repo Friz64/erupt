@@ -188,7 +188,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetSemaphoreZirconHandleFUCHSIA")]
     pub unsafe fn get_semaphore_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA, zircon_handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
-        let _function = self.get_semaphore_zircon_handle_fuchsia.expect("tried to call a function that isn't loaded");
+        let _function = self.get_semaphore_zircon_handle_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, get_zircon_handle_info as _, zircon_handle);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -197,7 +197,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkImportSemaphoreZirconHandleFUCHSIA")]
     pub unsafe fn import_semaphore_zircon_handle_fuchsia(&self, import_semaphore_zircon_handle_info: &crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA) -> crate::utils::VulkanResult<()> {
-        let _function = self.import_semaphore_zircon_handle_fuchsia.expect("tried to call a function that isn't loaded");
+        let _function = self.import_semaphore_zircon_handle_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, import_semaphore_zircon_handle_info as _);
         crate::utils::VulkanResult::new(_return, ())
     }

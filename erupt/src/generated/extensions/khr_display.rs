@@ -738,7 +738,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPropertiesKHR")]
     pub unsafe fn get_physical_device_display_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
-        let _function = self.get_physical_device_display_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_display_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -756,7 +756,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlanePropertiesKHR")]
     pub unsafe fn get_physical_device_display_plane_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>> {
-        let _function = self.get_physical_device_display_plane_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_display_plane_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -774,7 +774,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneSupportedDisplaysKHR")]
     pub unsafe fn get_display_plane_supported_displays_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, plane_index: u32, display_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
-        let _function = self.get_display_plane_supported_displays_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_display_plane_supported_displays_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut display_count = match display_count {
             Some(v) => v,
             None => {
@@ -792,7 +792,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayModePropertiesKHR")]
     pub unsafe fn get_display_mode_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayModePropertiesKHR>> {
-        let _function = self.get_display_mode_properties_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_display_mode_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
             None => {
@@ -810,7 +810,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Function"]
     #[doc(alias = "vkCreateDisplayModeKHR")]
     pub unsafe fn create_display_mode_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, create_info: &crate::extensions::khr_display::DisplayModeCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayModeKHR> {
-        let _function = self.create_display_mode_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_display_mode_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut mode = Default::default();
         let _return = _function(
             physical_device as _,
@@ -829,7 +829,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneCapabilitiesKHR")]
     pub unsafe fn get_display_plane_capabilities_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, mode: crate::extensions::khr_display::DisplayModeKHR, plane_index: u32) -> crate::utils::VulkanResult<crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR> {
-        let _function = self.get_display_plane_capabilities_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_display_plane_capabilities_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut capabilities = Default::default();
         let _return = _function(physical_device as _, mode as _, plane_index as _, &mut capabilities);
         crate::utils::VulkanResult::new(_return, capabilities)
@@ -839,7 +839,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Function"]
     #[doc(alias = "vkCreateDisplayPlaneSurfaceKHR")]
     pub unsafe fn create_display_plane_surface_khr(&self, create_info: &crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceKHR> {
-        let _function = self.create_display_plane_surface_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.create_display_plane_surface_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface = Default::default();
         let _return = _function(
             self.handle,

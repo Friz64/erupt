@@ -37,7 +37,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Function"]
     #[doc(alias = "vkGetDescriptorSetLayoutSupportKHR")]
     pub unsafe fn get_descriptor_set_layout_support_khr(&self, create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo, support: Option<crate::vk1_1::DescriptorSetLayoutSupport>) -> crate::vk1_1::DescriptorSetLayoutSupport {
-        let _function = self.get_descriptor_set_layout_support_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_descriptor_set_layout_support_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut support = match support {
             Some(v) => v,
             None => Default::default(),

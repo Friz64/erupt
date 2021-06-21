@@ -366,7 +366,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]
     #[doc(alias = "vkDestroySurfaceKHR")]
     pub unsafe fn destroy_surface_khr(&self, surface: Option<crate::extensions::khr_surface::SurfaceKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_surface_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_surface_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match surface {
@@ -385,7 +385,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceSupportKHR")]
     pub unsafe fn get_physical_device_surface_support_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, surface: crate::extensions::khr_surface::SurfaceKHR) -> crate::utils::VulkanResult<bool> {
-        let _function = self.get_physical_device_surface_support_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_support_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut supported = Default::default();
         let _return = _function(physical_device as _, queue_family_index as _, surface as _, &mut supported);
         crate::utils::VulkanResult::new(_return, supported != 0)
@@ -395,7 +395,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilitiesKHR")]
     pub unsafe fn get_physical_device_surface_capabilities_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR) -> crate::utils::VulkanResult<crate::extensions::khr_surface::SurfaceCapabilitiesKHR> {
-        let _function = self.get_physical_device_surface_capabilities_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_capabilities_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_capabilities = Default::default();
         let _return = _function(physical_device as _, surface as _, &mut surface_capabilities);
         crate::utils::VulkanResult::new(_return, surface_capabilities)
@@ -405,7 +405,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormatsKHR")]
     pub unsafe fn get_physical_device_surface_formats_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
-        let _function = self.get_physical_device_surface_formats_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_formats_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
             None => {
@@ -423,7 +423,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModesKHR")]
     pub unsafe fn get_physical_device_surface_present_modes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
-        let _function = self.get_physical_device_surface_present_modes_khr.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_surface_present_modes_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
             None => {

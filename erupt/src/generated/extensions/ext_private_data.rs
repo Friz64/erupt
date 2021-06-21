@@ -269,7 +269,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreatePrivateDataSlotEXT.html) · Function"]
     #[doc(alias = "vkCreatePrivateDataSlotEXT")]
     pub unsafe fn create_private_data_slot_ext(&self, create_info: &crate::extensions::ext_private_data::PrivateDataSlotCreateInfoEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::extensions::ext_private_data::PrivateDataSlotEXT> {
-        let _function = self.create_private_data_slot_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.create_private_data_slot_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut private_data_slot = Default::default();
         let _return = _function(
             self.handle,
@@ -287,7 +287,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPrivateDataSlotEXT.html) · Function"]
     #[doc(alias = "vkDestroyPrivateDataSlotEXT")]
     pub unsafe fn destroy_private_data_slot_ext(&self, private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
-        let _function = self.destroy_private_data_slot_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.destroy_private_data_slot_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
             match private_data_slot {
@@ -306,7 +306,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetPrivateDataEXT.html) · Function"]
     #[doc(alias = "vkSetPrivateDataEXT")]
     pub unsafe fn set_private_data_ext(&self, object_type: crate::vk1_0::ObjectType, object_handle: u64, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT, data: u64) -> crate::utils::VulkanResult<()> {
-        let _function = self.set_private_data_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.set_private_data_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(self.handle, object_type as _, object_handle as _, private_data_slot as _, data as _);
         crate::utils::VulkanResult::new(_return, ())
     }
@@ -315,7 +315,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPrivateDataEXT.html) · Function"]
     #[doc(alias = "vkGetPrivateDataEXT")]
     pub unsafe fn get_private_data_ext(&self, object_type: crate::vk1_0::ObjectType, object_handle: u64, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT) -> u64 {
-        let _function = self.get_private_data_ext.expect("tried to call a function that isn't loaded");
+        let _function = self.get_private_data_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut data = Default::default();
         let _return = _function(self.handle, object_type as _, object_handle as _, private_data_slot as _, &mut data);
         data

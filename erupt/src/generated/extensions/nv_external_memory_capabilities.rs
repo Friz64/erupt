@@ -159,7 +159,7 @@ impl crate::InstanceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceExternalImageFormatPropertiesNV")]
     pub unsafe fn get_physical_device_external_image_format_properties_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: Option<crate::vk1_0::ImageCreateFlags>, external_handle_type: Option<crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV>) -> crate::utils::VulkanResult<crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV> {
-        let _function = self.get_physical_device_external_image_format_properties_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.get_physical_device_external_image_format_properties_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut external_image_format_properties = Default::default();
         let _return = _function(
             physical_device as _,

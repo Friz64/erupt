@@ -313,7 +313,7 @@ impl crate::DeviceLoader {
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
     #[doc(alias = "vkCmdSetFragmentShadingRateEnumNV")]
     pub unsafe fn cmd_set_fragment_shading_rate_enum_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> () {
-        let _function = self.cmd_set_fragment_shading_rate_enum_nv.expect("tried to call a function that isn't loaded");
+        let _function = self.cmd_set_fragment_shading_rate_enum_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(command_buffer as _, shading_rate as _, combiner_ops as _);
         ()
     }

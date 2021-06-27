@@ -22,9 +22,7 @@ use lang_c::{
         TranslationUnit, TypeQualifier, TypeSpecifier,
     },
     driver::{self, Config},
-    print::Printer,
     span::Node,
-    visit::Visit,
 };
 use std::{
     convert::TryFrom,
@@ -337,8 +335,7 @@ impl HeaderSource {
         if false {
             log::info!("Writing header_debug");
 
-            let mut debug_print = String::new();
-            Printer::new(&mut debug_print).visit_translation_unit(&unit);
+            let debug_print = format!("{:#?}", unit);
             fs::write("header_debug", debug_print).expect("Failed to write header_debug");
         }
 

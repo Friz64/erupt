@@ -8,7 +8,13 @@ use crate::{
     source::{NotApplicable, Source},
     XmlNode,
 };
-use lang_c::ast::{Declaration as CDeclaration, DerivedDeclarator, ParameterDeclaration};
+use lang_c::{
+    ast::{
+        Declaration as CDeclaration, DeclarationSpecifier, DerivedDeclarator, ParameterDeclaration,
+        TypeSpecifier,
+    },
+    span::{Node, Span},
+};
 use proc_macro2::TokenStream;
 use quote::quote;
 use std::{
@@ -197,12 +203,32 @@ impl TryFrom<&CDeclaration> for Function {
                             bitwidth: BitWidth::Full,
                         });
 
-                        let parameters = function_declarator
-                            .node
-                            .parameters
-                            .iter()
-                            .map(|parameter| Declaration::from(&parameter.node))
-                            .collect();
+                        let parameters = &function_declarator.node.parameters;
+                        let mut no_parameters = false;
+                        if let [param] = &parameters[..] {
+                            let reference = ParameterDeclaration {
+                                specifiers: vec![Node {
+                                    node: DeclarationSpecifier::TypeSpecifier(Node {
+                                        node: TypeSpecifier::Void,
+                                        span: Span::none(),
+                                    }),
+                                    span: Span::none(),
+                                }],
+                                declarator: None,
+                                extensions: vec![],
+                            };
+
+                            no_parameters = reference == param.node;
+                        }
+
+                        let parameters = if no_parameters {
+                            vec![]
+                        } else {
+                            parameters
+                                .iter()
+                                .map(|parameter| Declaration::from(&parameter.node))
+                                .collect()
+                        };
 
                         let name = match ty.name {
                             Some(name) => FunctionName::new(&name),

@@ -4647,7 +4647,7 @@ pub type PFN_vkAllocationFunction = unsafe extern "system" fn(p_user_data: *mut 
 pub type PFN_vkFreeFunction = unsafe extern "system" fn(p_user_data: *mut std::ffi::c_void, p_memory: *mut std::ffi::c_void) -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkVoidFunction.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkVoidFunction = unsafe extern "system" fn(unnamed: std::ffi::c_void) -> ();
+pub type PFN_vkVoidFunction = unsafe extern "system" fn() -> ();
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBaseOutStructure.html) · Structure"]
 #[doc(alias = "VkBaseOutStructure")]
 #[derive(Copy, Clone)]

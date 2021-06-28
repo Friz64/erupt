@@ -817,10 +817,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesKHR.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesKHR")]
-    pub unsafe fn create_ray_tracing_pipelines_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_ray_tracing_pipelines_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_khr.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
-        let mut pipelines = vec![Default::default(); create_info_count as _];
+        let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
             match deferred_operation {

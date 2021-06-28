@@ -737,7 +737,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPropertiesKHR")]
-    pub unsafe fn get_physical_device_display_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
+    pub unsafe fn get_physical_device_display_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_display::DisplayPropertiesKHR>> {
         let _function = self.get_physical_device_display_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -747,7 +747,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, &mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }
@@ -755,7 +755,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlanePropertiesKHR")]
-    pub unsafe fn get_physical_device_display_plane_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>> {
+    pub unsafe fn get_physical_device_display_plane_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_display::DisplayPlanePropertiesKHR>> {
         let _function = self.get_physical_device_display_plane_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -765,7 +765,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, &mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }
@@ -773,7 +773,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayPlaneSupportedDisplaysKHR")]
-    pub unsafe fn get_display_plane_supported_displays_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, plane_index: u32, display_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayKHR>> {
+    pub unsafe fn get_display_plane_supported_displays_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, plane_index: u32, display_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_display::DisplayKHR>> {
         let _function = self.get_display_plane_supported_displays_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut display_count = match display_count {
             Some(v) => v,
@@ -783,7 +783,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut displays = vec![Default::default(); display_count as _];
+        let mut displays = crate::SmallVec::from_elem(Default::default(), display_count as _);
         let _return = _function(physical_device as _, plane_index as _, &mut display_count, displays.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, displays)
     }
@@ -791,7 +791,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetDisplayModePropertiesKHR")]
-    pub unsafe fn get_display_mode_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_display::DisplayModePropertiesKHR>> {
+    pub unsafe fn get_display_mode_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, display: crate::extensions::khr_display::DisplayKHR, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_display::DisplayModePropertiesKHR>> {
         let _function = self.get_display_mode_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -801,7 +801,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, display as _, &mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }

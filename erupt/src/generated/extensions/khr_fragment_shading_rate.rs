@@ -560,7 +560,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceFragmentShadingRatesKHR")]
-    pub unsafe fn get_physical_device_fragment_shading_rates_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, fragment_shading_rate_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
+    pub unsafe fn get_physical_device_fragment_shading_rates_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, fragment_shading_rate_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>> {
         let _function = self.get_physical_device_fragment_shading_rates_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut fragment_shading_rate_count = match fragment_shading_rate_count {
             Some(v) => v,
@@ -570,7 +570,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut fragment_shading_rates = vec![Default::default(); fragment_shading_rate_count as _];
+        let mut fragment_shading_rates = crate::SmallVec::from_elem(Default::default(), fragment_shading_rate_count as _);
         let _return = _function(physical_device as _, &mut fragment_shading_rate_count, fragment_shading_rates.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, fragment_shading_rates)
     }

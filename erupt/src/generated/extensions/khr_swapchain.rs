@@ -874,7 +874,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function"]
     #[doc(alias = "vkGetSwapchainImagesKHR")]
-    pub unsafe fn get_swapchain_images_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, swapchain_image_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Image>> {
+    pub unsafe fn get_swapchain_images_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, swapchain_image_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Image>> {
         let _function = self.get_swapchain_images_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut swapchain_image_count = match swapchain_image_count {
             Some(v) => v,
@@ -884,7 +884,7 @@ impl crate::DeviceLoader {
                 v
             }
         };
-        let mut swapchain_images = vec![Default::default(); swapchain_image_count as _];
+        let mut swapchain_images = crate::SmallVec::from_elem(Default::default(), swapchain_image_count as _);
         let _return = _function(self.handle, swapchain as _, &mut swapchain_image_count, swapchain_images.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, swapchain_images)
     }
@@ -959,7 +959,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDevicePresentRectanglesKHR")]
-    pub unsafe fn get_physical_device_present_rectangles_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, rect_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Rect2D>> {
+    pub unsafe fn get_physical_device_present_rectangles_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, rect_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Rect2D>> {
         let _function = self.get_physical_device_present_rectangles_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut rect_count = match rect_count {
             Some(v) => v,
@@ -969,7 +969,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut rects = vec![Default::default(); rect_count as _];
+        let mut rects = crate::SmallVec::from_elem(Default::default(), rect_count as _);
         let _return = _function(physical_device as _, surface as _, &mut rect_count, rects.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, rects)
     }

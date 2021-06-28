@@ -37,8 +37,8 @@ impl Value {
 
     pub fn vec_cloning(ty: Type, value_expr: TokenStream, len_expr: TokenStream) -> Value {
         Value {
-            expr: quote! { vec![#value_expr; #len_expr] },
-            ty: Type::Vec(Box::new(ty)),
+            expr: quote! { crate::SmallVec::from_elem(#value_expr, #len_expr) },
+            ty: Type::SmallVec(Box::new(ty)),
         }
     }
 

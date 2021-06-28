@@ -99,7 +99,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2KHR.html) · Function"]
     #[doc(alias = "vkGetImageSparseMemoryRequirements2KHR")]
-    pub unsafe fn get_image_sparse_memory_requirements2_khr(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageMemoryRequirements2> {
+    pub unsafe fn get_image_sparse_memory_requirements2_khr(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>) -> crate::SmallVec<crate::vk1_1::SparseImageMemoryRequirements2> {
         let _function = self.get_image_sparse_memory_requirements2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,
@@ -109,7 +109,7 @@ impl crate::DeviceLoader {
                 v
             }
         };
-        let mut sparse_memory_requirements = vec![Default::default(); sparse_memory_requirement_count as _];
+        let mut sparse_memory_requirements = crate::SmallVec::from_elem(Default::default(), sparse_memory_requirement_count as _);
         let _return = _function(self.handle, info as _, &mut sparse_memory_requirement_count, sparse_memory_requirements.as_mut_ptr());
         sparse_memory_requirements
     }

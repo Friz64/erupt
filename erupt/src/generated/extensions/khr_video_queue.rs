@@ -1674,7 +1674,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceVideoFormatPropertiesKHR")]
-    pub unsafe fn get_physical_device_video_format_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, video_format_info: &crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR, video_format_property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_video_queue::VideoFormatPropertiesKHR>> {
+    pub unsafe fn get_physical_device_video_format_properties_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, video_format_info: &crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR, video_format_property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_video_queue::VideoFormatPropertiesKHR>> {
         let _function = self.get_physical_device_video_format_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_format_property_count = match video_format_property_count {
             Some(v) => v,
@@ -1684,7 +1684,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut video_format_properties = vec![Default::default(); video_format_property_count as _];
+        let mut video_format_properties = crate::SmallVec::from_elem(Default::default(), video_format_property_count as _);
         let _return = _function(physical_device as _, video_format_info as _, &mut video_format_property_count, video_format_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, video_format_properties)
     }
@@ -1772,7 +1772,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function"]
     #[doc(alias = "vkGetVideoSessionMemoryRequirementsKHR")]
-    pub unsafe fn get_video_session_memory_requirements_khr(&self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR, video_session_memory_requirements_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR>> {
+    pub unsafe fn get_video_session_memory_requirements_khr(&self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR, video_session_memory_requirements_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR>> {
         let _function = self.get_video_session_memory_requirements_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut video_session_memory_requirements_count = match video_session_memory_requirements_count {
             Some(v) => v,
@@ -1782,7 +1782,7 @@ impl crate::DeviceLoader {
                 v
             }
         };
-        let mut video_session_memory_requirements = vec![Default::default(); video_session_memory_requirements_count as _];
+        let mut video_session_memory_requirements = crate::SmallVec::from_elem(Default::default(), video_session_memory_requirements_count as _);
         let _return = _function(self.handle, video_session as _, &mut video_session_memory_requirements_count, video_session_memory_requirements.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, video_session_memory_requirements)
     }

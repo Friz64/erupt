@@ -15245,7 +15245,7 @@ impl<T> crate::CustomEntryLoader<T> {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceLayerProperties.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceLayerProperties")]
-    pub unsafe fn enumerate_instance_layer_properties(&self, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
+    pub unsafe fn enumerate_instance_layer_properties(&self, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::LayerProperties>> {
         let _function = self.enumerate_instance_layer_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -15255,7 +15255,7 @@ impl<T> crate::CustomEntryLoader<T> {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(&mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }
@@ -15263,7 +15263,7 @@ impl<T> crate::CustomEntryLoader<T> {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateInstanceExtensionProperties.html) · Function"]
     #[doc(alias = "vkEnumerateInstanceExtensionProperties")]
-    pub unsafe fn enumerate_instance_extension_properties(&self, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
+    pub unsafe fn enumerate_instance_extension_properties(&self, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::ExtensionProperties>> {
         let _function = self.enumerate_instance_extension_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -15280,7 +15280,7 @@ impl<T> crate::CustomEntryLoader<T> {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(
             match layer_name {
                 Some(v) => v.as_ptr(),
@@ -15313,7 +15313,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDevices.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDevices")]
-    pub unsafe fn enumerate_physical_devices(&self, physical_device_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::PhysicalDevice>> {
+    pub unsafe fn enumerate_physical_devices(&self, physical_device_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::PhysicalDevice>> {
         let _function = self.enumerate_physical_devices.expect(crate::NOT_LOADED_MESSAGE);
         let mut physical_device_count = match physical_device_count {
             Some(v) => v,
@@ -15323,7 +15323,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut physical_devices = vec![Default::default(); physical_device_count as _];
+        let mut physical_devices = crate::SmallVec::from_elem(Default::default(), physical_device_count as _);
         let _return = _function(self.handle, &mut physical_device_count, physical_devices.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, physical_devices)
     }
@@ -15356,7 +15356,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties")]
-    pub unsafe fn get_physical_device_queue_family_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> Vec<crate::vk1_0::QueueFamilyProperties> {
+    pub unsafe fn get_physical_device_queue_family_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> crate::SmallVec<crate::vk1_0::QueueFamilyProperties> {
         let _function = self.get_physical_device_queue_family_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
@@ -15366,7 +15366,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut queue_family_properties = vec![Default::default(); queue_family_property_count as _];
+        let mut queue_family_properties = crate::SmallVec::from_elem(Default::default(), queue_family_property_count as _);
         let _return = _function(physical_device as _, &mut queue_family_property_count, queue_family_properties.as_mut_ptr());
         queue_family_properties
     }
@@ -15443,7 +15443,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceLayerProperties.html) · Function"]
     #[doc(alias = "vkEnumerateDeviceLayerProperties")]
-    pub unsafe fn enumerate_device_layer_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::LayerProperties>> {
+    pub unsafe fn enumerate_device_layer_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::LayerProperties>> {
         let _function = self.enumerate_device_layer_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -15453,7 +15453,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, &mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }
@@ -15461,7 +15461,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumerateDeviceExtensionProperties.html) · Function"]
     #[doc(alias = "vkEnumerateDeviceExtensionProperties")]
-    pub unsafe fn enumerate_device_extension_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::ExtensionProperties>> {
+    pub unsafe fn enumerate_device_extension_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, layer_name: Option<&std::ffi::CStr>, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::ExtensionProperties>> {
         let _function = self.enumerate_device_extension_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -15479,7 +15479,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(
             physical_device as _,
             match layer_name {
@@ -15495,7 +15495,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, samples: crate::vk1_0::SampleCountFlagBits, usage: crate::vk1_0::ImageUsageFlags, tiling: crate::vk1_0::ImageTiling, property_count: Option<u32>) -> Vec<crate::vk1_0::SparseImageFormatProperties> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, samples: crate::vk1_0::SampleCountFlagBits, usage: crate::vk1_0::ImageUsageFlags, tiling: crate::vk1_0::ImageTiling, property_count: Option<u32>) -> crate::SmallVec<crate::vk1_0::SparseImageFormatProperties> {
         let _function = self.get_physical_device_sparse_image_format_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -15505,7 +15505,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, format as _, _type as _, samples as _, usage as _, tiling as _, &mut property_count, properties.as_mut_ptr());
         properties
     }
@@ -15725,7 +15725,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements.html) · Function"]
     #[doc(alias = "vkGetImageSparseMemoryRequirements")]
-    pub unsafe fn get_image_sparse_memory_requirements(&self, image: crate::vk1_0::Image, sparse_memory_requirement_count: Option<u32>) -> Vec<crate::vk1_0::SparseImageMemoryRequirements> {
+    pub unsafe fn get_image_sparse_memory_requirements(&self, image: crate::vk1_0::Image, sparse_memory_requirement_count: Option<u32>) -> crate::SmallVec<crate::vk1_0::SparseImageMemoryRequirements> {
         let _function = self.get_image_sparse_memory_requirements.expect(crate::NOT_LOADED_MESSAGE);
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,
@@ -15735,7 +15735,7 @@ impl crate::DeviceLoader {
                 v
             }
         };
-        let mut sparse_memory_requirements = vec![Default::default(); sparse_memory_requirement_count as _];
+        let mut sparse_memory_requirements = crate::SmallVec::from_elem(Default::default(), sparse_memory_requirement_count as _);
         let _return = _function(self.handle, image as _, &mut sparse_memory_requirement_count, sparse_memory_requirements.as_mut_ptr());
         sparse_memory_requirements
     }
@@ -16237,10 +16237,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateGraphicsPipelines.html) · Function"]
     #[doc(alias = "vkCreateGraphicsPipelines")]
-    pub unsafe fn create_graphics_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_graphics_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_graphics_pipelines.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
-        let mut pipelines = vec![Default::default(); create_info_count as _];
+        let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
             match pipeline_cache {
@@ -16261,10 +16261,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateComputePipelines.html) · Function"]
     #[doc(alias = "vkCreateComputePipelines")]
-    pub unsafe fn create_compute_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_compute_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_compute_pipelines.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
-        let mut pipelines = vec![Default::default(); create_info_count as _];
+        let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
             match pipeline_cache {
@@ -16468,9 +16468,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateDescriptorSets.html) · Function"]
     #[doc(alias = "vkAllocateDescriptorSets")]
-    pub unsafe fn allocate_descriptor_sets(&self, allocate_info: &crate::vk1_0::DescriptorSetAllocateInfo) -> crate::utils::VulkanResult<Vec<crate::vk1_0::DescriptorSet>> {
+    pub unsafe fn allocate_descriptor_sets(&self, allocate_info: &crate::vk1_0::DescriptorSetAllocateInfo) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::DescriptorSet>> {
         let _function = self.allocate_descriptor_sets.expect(crate::NOT_LOADED_MESSAGE);
-        let mut descriptor_sets = vec![Default::default(); allocate_info.descriptor_set_count as _];
+        let mut descriptor_sets = crate::SmallVec::from_elem(Default::default(), allocate_info.descriptor_set_count as _);
         let _return = _function(self.handle, allocate_info as _, descriptor_sets.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, descriptor_sets)
     }
@@ -16636,9 +16636,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAllocateCommandBuffers.html) · Function"]
     #[doc(alias = "vkAllocateCommandBuffers")]
-    pub unsafe fn allocate_command_buffers(&self, allocate_info: &crate::vk1_0::CommandBufferAllocateInfo) -> crate::utils::VulkanResult<Vec<crate::vk1_0::CommandBuffer>> {
+    pub unsafe fn allocate_command_buffers(&self, allocate_info: &crate::vk1_0::CommandBufferAllocateInfo) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::CommandBuffer>> {
         let _function = self.allocate_command_buffers.expect(crate::NOT_LOADED_MESSAGE);
-        let mut command_buffers = vec![Default::default(); allocate_info.command_buffer_count as _];
+        let mut command_buffers = crate::SmallVec::from_elem(Default::default(), allocate_info.command_buffer_count as _);
         let _return = _function(self.handle, allocate_info as _, command_buffers.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, command_buffers)
     }

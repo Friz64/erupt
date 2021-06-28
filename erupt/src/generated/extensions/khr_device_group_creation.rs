@@ -43,7 +43,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceGroupsKHR")]
-    pub unsafe fn enumerate_physical_device_groups_khr(&self, physical_device_group_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
+    pub unsafe fn enumerate_physical_device_groups_khr(&self, physical_device_group_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
         let _function = self.enumerate_physical_device_groups_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut physical_device_group_count = match physical_device_group_count {
             Some(v) => v,
@@ -53,7 +53,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut physical_device_group_properties = vec![Default::default(); physical_device_group_count as _];
+        let mut physical_device_group_properties = crate::SmallVec::from_elem(Default::default(), physical_device_group_count as _);
         let _return = _function(self.handle, &mut physical_device_group_count, physical_device_group_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, physical_device_group_properties)
     }

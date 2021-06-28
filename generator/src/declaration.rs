@@ -75,7 +75,7 @@ pub enum Type {
     },
     Tuple(Vec<Type>),
     Option(Box<Type>),
-    Vec(Box<Type>),
+    SmallVec(Box<Type>),
     Slice {
         of: Box<Type>,
         kind: Mutability,
@@ -208,9 +208,9 @@ impl Type {
                 let of = of.rust_type(source);
                 quote! { Option<#of> }
             }
-            Type::Vec(of) => {
+            Type::SmallVec(of) => {
                 let of = of.rust_type(source);
-                quote! { Vec<#of> }
+                quote! { crate::SmallVec<#of> }
             }
             Type::Slice { of, kind, lifetime } => {
                 let of = of.rust_type(source);
@@ -283,7 +283,7 @@ impl Type {
             Type::Array { of, .. } => of.has_types(types),
             Type::Tuple(types) => types.iter().any(|ty| ty.has_types(types)),
             Type::Option(ty) => ty.has_types(types),
-            Type::Vec(ty) => ty.has_types(types),
+            Type::SmallVec(ty) => ty.has_types(types),
             Type::Slice { of, .. } => of.has_types(types),
             ty if types.contains(ty) => true,
             _ => false,

@@ -336,7 +336,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceCooperativeMatrixPropertiesNV")]
-    pub unsafe fn get_physical_device_cooperative_matrix_properties_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>> {
+    pub unsafe fn get_physical_device_cooperative_matrix_properties_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, property_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>> {
         let _function = self.get_physical_device_cooperative_matrix_properties_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -346,7 +346,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, &mut property_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }

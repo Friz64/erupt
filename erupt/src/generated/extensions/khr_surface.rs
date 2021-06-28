@@ -404,7 +404,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormatsKHR")]
-    pub unsafe fn get_physical_device_surface_formats_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
+    pub unsafe fn get_physical_device_surface_formats_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_surface::SurfaceFormatKHR>> {
         let _function = self.get_physical_device_surface_formats_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
@@ -414,7 +414,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut surface_formats = vec![Default::default(); surface_format_count as _];
+        let mut surface_formats = crate::SmallVec::from_elem(Default::default(), surface_format_count as _);
         let _return = _function(physical_device as _, surface as _, &mut surface_format_count, surface_formats.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, surface_formats)
     }
@@ -422,7 +422,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModesKHR")]
-    pub unsafe fn get_physical_device_surface_present_modes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<Vec<crate::extensions::khr_surface::PresentModeKHR>> {
+    pub unsafe fn get_physical_device_surface_present_modes_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, present_mode_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_surface::PresentModeKHR>> {
         let _function = self.get_physical_device_surface_present_modes_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut present_mode_count = match present_mode_count {
             Some(v) => v,
@@ -432,7 +432,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut present_modes = vec![Default::default(); present_mode_count as _];
+        let mut present_modes = crate::SmallVec::from_elem(Default::default(), present_mode_count as _);
         let _return = _function(physical_device as _, surface as _, &mut present_mode_count, present_modes.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, present_modes)
     }

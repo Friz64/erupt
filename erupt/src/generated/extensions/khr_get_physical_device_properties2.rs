@@ -181,7 +181,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties2KHR")]
-    pub unsafe fn get_physical_device_queue_family_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> Vec<crate::vk1_1::QueueFamilyProperties2> {
+    pub unsafe fn get_physical_device_queue_family_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>) -> crate::SmallVec<crate::vk1_1::QueueFamilyProperties2> {
         let _function = self.get_physical_device_queue_family_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
@@ -191,7 +191,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut queue_family_properties = vec![Default::default(); queue_family_property_count as _];
+        let mut queue_family_properties = crate::SmallVec::from_elem(Default::default(), queue_family_property_count as _);
         let _return = _function(physical_device as _, &mut queue_family_property_count, queue_family_properties.as_mut_ptr());
         queue_family_properties
     }
@@ -212,7 +212,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2KHR")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> Vec<crate::vk1_1::SparseImageFormatProperties2> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>) -> crate::SmallVec<crate::vk1_1::SparseImageFormatProperties2> {
         let _function = self.get_physical_device_sparse_image_format_properties2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -222,7 +222,7 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut properties = vec![Default::default(); property_count as _];
+        let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
         let _return = _function(physical_device as _, format_info as _, &mut property_count, properties.as_mut_ptr());
         properties
     }

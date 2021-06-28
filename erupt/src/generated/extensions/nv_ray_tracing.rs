@@ -1480,10 +1480,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesNV")]
-    pub unsafe fn create_ray_tracing_pipelines_nv(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<Vec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_ray_tracing_pipelines_nv(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_nv.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
-        let mut pipelines = vec![Default::default(); create_info_count as _];
+        let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
             match pipeline_cache {

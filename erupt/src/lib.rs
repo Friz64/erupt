@@ -113,7 +113,7 @@ use std::{
 #[cfg(feature = "loading")]
 pub use utils::loading::EntryLoader;
 
-/// Construct a `*const std::os::raw::c_char` from a string
+/// Construct a `*const std::os::raw::c_char` from a string.
 ///
 /// # Example
 /// ```ignore
@@ -126,7 +126,7 @@ macro_rules! cstr {
     };
 }
 
-/// Like `try!`, but for [`utils::VulkanResult`](utils/struct.VulkanResult.html)
+/// Like `try!`, but for [`utils::VulkanResult`](utils/struct.VulkanResult.html).
 ///
 /// ```ignore
 /// unsafe fn example(device: &DeviceLoader) -> VulkanResult<(Semaphore, Semaphore)> {
@@ -276,12 +276,16 @@ macro_rules! bits_copy {
 
 const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded";
 
-/// An error which can occur while initializing a loader
+/// Allows returning small amounts of data (specifially with a length <= 8)
+/// without needlessly allocating heap memory.
+pub type SmallVec<T> = smallvec::SmallVec<[T; 8]>;
+
+/// An error which can occur while initializing a loader.
 #[derive(Debug)]
 pub enum LoaderError {
-    /// A Vulkan function returned a negative `Result` value
+    /// A Vulkan function returned a negative `Result` value.
     VulkanError(vk1_0::Result),
-    /// A symbol was not available while it should have been
+    /// A symbol was not available while it should have been.
     SymbolNotAvailable,
 }
 

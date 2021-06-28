@@ -738,7 +738,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR")]
-    pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, counter_count: Option<u32>) -> crate::utils::VulkanResult<(Vec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, Vec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
+    pub unsafe fn enumerate_physical_device_queue_family_performance_query_counters_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_index: u32, counter_count: Option<u32>) -> crate::utils::VulkanResult<(crate::SmallVec<crate::extensions::khr_performance_query::PerformanceCounterKHR>, crate::SmallVec<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>)> {
         let _function = self.enumerate_physical_device_queue_family_performance_query_counters_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut counter_count = match counter_count {
             Some(v) => v,
@@ -748,8 +748,8 @@ impl crate::InstanceLoader {
                 v
             }
         };
-        let mut counters = vec![Default::default(); counter_count as _];
-        let mut counter_descriptions = vec![Default::default(); counter_count as _];
+        let mut counters = crate::SmallVec::from_elem(Default::default(), counter_count as _);
+        let mut counter_descriptions = crate::SmallVec::from_elem(Default::default(), counter_count as _);
         let _return = _function(physical_device as _, queue_family_index as _, &mut counter_count, counters.as_mut_ptr(), counter_descriptions.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, (counters, counter_descriptions))
     }

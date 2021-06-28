@@ -329,7 +329,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryPropertiesKHRBuild
 #[repr(C)]
 pub struct PerformanceCounterKHR {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub unit: crate::extensions::khr_performance_query::PerformanceCounterUnitKHR,
     pub scope: crate::extensions::khr_performance_query::PerformanceCounterScopeKHR,
     pub storage: crate::extensions::khr_performance_query::PerformanceCounterStorageKHR,
@@ -337,7 +337,7 @@ pub struct PerformanceCounterKHR {
 }
 impl Default for PerformanceCounterKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR, p_next: std::ptr::null(), unit: Default::default(), scope: Default::default(), storage: Default::default(), uuid: unsafe { std::mem::zeroed() } }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR, p_next: std::ptr::null_mut(), unit: Default::default(), scope: Default::default(), storage: Default::default(), uuid: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterKHR {
@@ -414,7 +414,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterKHRBuilder<'a> {
 #[repr(C)]
 pub struct PerformanceCounterDescriptionKHR {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub flags: crate::extensions::khr_performance_query::PerformanceCounterDescriptionFlagsKHR,
     pub name: [std::os::raw::c_char; 256],
     pub category: [std::os::raw::c_char; 256],
@@ -422,7 +422,7 @@ pub struct PerformanceCounterDescriptionKHR {
 }
 impl Default for PerformanceCounterDescriptionKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR, p_next: std::ptr::null(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
+        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR, p_next: std::ptr::null_mut(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterDescriptionKHR {

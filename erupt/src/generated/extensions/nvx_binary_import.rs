@@ -280,7 +280,7 @@ impl<'a> CuLaunchInfoNVXBuilder<'a> {
     }
     #[inline]
     pub fn param_count(mut self, param_count: usize) -> Self {
-        self.0.param_count = param_count as _;
+        self.0.param_count = param_count;
         self
     }
     #[inline]
@@ -290,7 +290,7 @@ impl<'a> CuLaunchInfoNVXBuilder<'a> {
     }
     #[inline]
     pub fn extra_count(mut self, extra_count: usize) -> Self {
-        self.0.extra_count = extra_count as _;
+        self.0.extra_count = extra_count;
         self
     }
     #[inline]

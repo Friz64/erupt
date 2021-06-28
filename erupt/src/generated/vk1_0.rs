@@ -3638,7 +3638,7 @@ impl std::fmt::Debug for StructureType {
             &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
-            &Self::SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => "SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI",
+            &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => "SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI",
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT",
@@ -15218,10 +15218,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 182u32;
+pub const HEADER_VERSION: u32 = 183u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 182u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 183u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

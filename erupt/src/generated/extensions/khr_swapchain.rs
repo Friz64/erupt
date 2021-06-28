@@ -391,13 +391,13 @@ impl<'a> crate::ExtendableFromConst<'a, BindImageMemorySwapchainInfoKHRBuilder<'
 #[repr(C)]
 pub struct DeviceGroupPresentCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub present_mask: [u32; 32],
     pub modes: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
 }
 impl Default for DeviceGroupPresentCapabilitiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR, p_next: std::ptr::null(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR, p_next: std::ptr::null_mut(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupPresentCapabilitiesKHR {
@@ -924,9 +924,12 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupPresentCapabilitiesKHR")]
-    pub unsafe fn get_device_group_present_capabilities_khr(&self) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR> {
+    pub unsafe fn get_device_group_present_capabilities_khr(&self, device_group_present_capabilities: Option<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR>) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR> {
         let _function = self.get_device_group_present_capabilities_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let mut device_group_present_capabilities = Default::default();
+        let mut device_group_present_capabilities = match device_group_present_capabilities {
+            Some(v) => v,
+            None => Default::default(),
+        };
         let _return = _function(self.handle, &mut device_group_present_capabilities);
         crate::utils::VulkanResult::new(_return, device_group_present_capabilities)
     }

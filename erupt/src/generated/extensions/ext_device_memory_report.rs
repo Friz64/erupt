@@ -216,7 +216,7 @@ impl<'a> std::ops::DerefMut for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a>
 #[repr(C)]
 pub struct DeviceMemoryReportCallbackDataEXT {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub flags: crate::extensions::ext_device_memory_report::DeviceMemoryReportFlagsEXT,
     pub _type: crate::extensions::ext_device_memory_report::DeviceMemoryReportEventTypeEXT,
     pub memory_object_id: u64,
@@ -227,7 +227,7 @@ pub struct DeviceMemoryReportCallbackDataEXT {
 }
 impl Default for DeviceMemoryReportCallbackDataEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT, p_next: std::ptr::null(), flags: Default::default(), _type: Default::default(), memory_object_id: Default::default(), size: Default::default(), object_type: Default::default(), object_handle: Default::default(), heap_index: Default::default() }
+        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT, p_next: std::ptr::null_mut(), flags: Default::default(), _type: Default::default(), memory_object_id: Default::default(), size: Default::default(), object_type: Default::default(), object_handle: Default::default(), heap_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceMemoryReportCallbackDataEXT {

@@ -85,8 +85,8 @@ impl crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionI
 }
 impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureGeometryMotionTrianglesDataNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'_>> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureMotionInfoNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<'a> {}
@@ -97,13 +97,13 @@ impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureMotionInfoNVBuilder
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub ray_tracing_motion_blur: crate::vk1_0::Bool32,
     pub ray_tracing_motion_blur_pipeline_trace_rays_indirect: crate::vk1_0::Bool32,
 }
 impl Default for PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV, p_next: std::ptr::null(), ray_tracing_motion_blur: Default::default(), ray_tracing_motion_blur_pipeline_trace_rays_indirect: Default::default() }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV, p_next: std::ptr::null_mut(), ray_tracing_motion_blur: Default::default(), ray_tracing_motion_blur_pipeline_trace_rays_indirect: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingMotionBlurFeaturesNV {

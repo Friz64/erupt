@@ -22,7 +22,7 @@ impl crate::vk1_0::ShaderStageFlagBits {
 }
 #[doc = "Provided by [`crate::extensions::huawei_subpass_shading`]"]
 impl crate::vk1_0::StructureType {
-    pub const SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI: Self = Self(1000369000);
+    pub const SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI: Self = Self(1000369000);
     pub const PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI: Self = Self(1000369001);
     pub const PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI: Self = Self(1000369002);
 }
@@ -52,7 +52,7 @@ pub struct SubpassShadingPipelineCreateInfoHUAWEI {
 }
 impl Default for SubpassShadingPipelineCreateInfoHUAWEI {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI, p_next: std::ptr::null_mut(), render_pass: Default::default(), subpass: Default::default() }
+        Self { s_type: crate::vk1_0::StructureType::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI, p_next: std::ptr::null_mut(), render_pass: Default::default(), subpass: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassShadingPipelineCreateInfoHUAWEI {

@@ -535,13 +535,13 @@ impl<'a> std::ops::DerefMut for VideoProfilesKHRBuilder<'a> {
 #[repr(C)]
 pub struct PhysicalDeviceVideoFormatInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub image_usage: crate::vk1_0::ImageUsageFlags,
     pub p_video_profiles: *const crate::extensions::khr_video_queue::VideoProfilesKHR,
 }
 impl Default for PhysicalDeviceVideoFormatInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR, p_next: std::ptr::null(), image_usage: Default::default(), p_video_profiles: std::ptr::null() }
+        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR, p_next: std::ptr::null_mut(), image_usage: Default::default(), p_video_profiles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVideoFormatInfoKHR {

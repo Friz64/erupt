@@ -39,7 +39,7 @@ impl Display for LibraryError {
 
 impl Error for LibraryError {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        Error::source(&self.0)
+        Some(&self.0)
     }
 }
 
@@ -55,10 +55,8 @@ pub enum EntryLoaderError {
 impl Display for EntryLoaderError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            EntryLoaderError::Library(err) => write!(f, "The library failed to load: {}", err),
-            EntryLoaderError::EntryLoad(err) => {
-                write!(f, "The entry loader failed to initialize: {}", err)
-            }
+            EntryLoaderError::Library(_) => write!(f, "The library failed to load"),
+            EntryLoaderError::EntryLoad(_) => write!(f, "The entry loader failed to initialize"),
         }
     }
 }
@@ -66,8 +64,8 @@ impl Display for EntryLoaderError {
 impl Error for EntryLoaderError {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
         match self {
-            EntryLoaderError::Library(err) => Error::source(err),
-            EntryLoaderError::EntryLoad(err) => Error::source(err),
+            EntryLoaderError::Library(err) => Some(err),
+            EntryLoaderError::EntryLoad(err) => Some(err),
         }
     }
 }

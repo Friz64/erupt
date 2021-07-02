@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fix function definition of `vkVoidFunction`
+- Correct the error handling implementation
 
 ## [0.19.0+182] - 2021-06-21
 

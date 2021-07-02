@@ -292,7 +292,7 @@ pub enum LoaderError {
 impl Display for LoaderError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            LoaderError::VulkanError(err) => write!(f, "A Vulkan function returned a negative `Result` value: {}", err),
+            LoaderError::VulkanError(_) => write!(f, "A Vulkan function returned a negative `Result` value"),
             LoaderError::SymbolNotAvailable => {
                 write!(f, "A symbol was not available while it should have been")
             }
@@ -300,7 +300,14 @@ impl Display for LoaderError {
     }
 }
 
-impl Error for LoaderError {}
+impl Error for LoaderError {
+    fn source(&self) -> Option<&(dyn Error + 'static)> {
+        match self {
+            LoaderError::VulkanError(vk_result) => Some(vk_result),
+            LoaderError::SymbolNotAvailable => None,
+        }
+    }
+}
 
 impl<T> Debug for CustomEntryLoader<T> {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

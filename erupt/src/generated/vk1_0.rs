@@ -2525,7 +2525,7 @@ impl crate::vk1_0::AccessFlagBits {
     pub const MEMORY_READ: Self = Self(32768);
     pub const MEMORY_WRITE: Self = Self(65536);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlags.html) · Bitmask of [`MemoryPropertyFlagBits`]"] # [doc (alias = "VkMemoryPropertyFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryPropertyFlags : u32 { const DEVICE_LOCAL = MemoryPropertyFlagBits :: DEVICE_LOCAL . 0 ; const HOST_VISIBLE = MemoryPropertyFlagBits :: HOST_VISIBLE . 0 ; const HOST_COHERENT = MemoryPropertyFlagBits :: HOST_COHERENT . 0 ; const HOST_CACHED = MemoryPropertyFlagBits :: HOST_CACHED . 0 ; const LAZILY_ALLOCATED = MemoryPropertyFlagBits :: LAZILY_ALLOCATED . 0 ; const PROTECTED = MemoryPropertyFlagBits :: PROTECTED . 0 ; const DEVICE_COHERENT_AMD = MemoryPropertyFlagBits :: DEVICE_COHERENT_AMD . 0 ; const DEVICE_UNCACHED_AMD = MemoryPropertyFlagBits :: DEVICE_UNCACHED_AMD . 0 ; const RDMA_CAPABLE_NV = MemoryPropertyFlagBits :: RDMA_CAPABLE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPropertyFlagBits.html) · Bits enum of [`MemoryPropertyFlags`]"]
 #[doc(alias = "VkMemoryPropertyFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2549,6 +2549,7 @@ impl std::fmt::Debug for MemoryPropertyFlagBits {
             &Self::PROTECTED => "PROTECTED",
             &Self::DEVICE_COHERENT_AMD => "DEVICE_COHERENT_AMD",
             &Self::DEVICE_UNCACHED_AMD => "DEVICE_UNCACHED_AMD",
+            &Self::RDMA_CAPABLE_NV => "RDMA_CAPABLE_NV",
             _ => "(unknown variant)",
         })
     }
@@ -3641,6 +3642,8 @@ impl std::fmt::Debug for StructureType {
             &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => "SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI",
+            &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => "MEMORY_GET_REMOTE_ADDRESS_INFO_NV",
+            &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => "PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV",
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT",
             &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
             &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => "PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT",
@@ -11589,6 +11592,95 @@ impl<'a> std::ops::DerefMut for PipelineCacheCreateInfoBuilder<'a> {
         &mut self.0
     }
 }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheHeaderVersionOne.html) · Structure"]
+#[doc(alias = "VkPipelineCacheHeaderVersionOne")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct PipelineCacheHeaderVersionOne {
+    pub header_size: u32,
+    pub header_version: crate::vk1_0::PipelineCacheHeaderVersion,
+    pub vendor_id: u32,
+    pub device_id: u32,
+    pub pipeline_cache_uuid: [u8; 16],
+}
+impl Default for PipelineCacheHeaderVersionOne {
+    fn default() -> Self {
+        Self { header_size: Default::default(), header_version: Default::default(), vendor_id: Default::default(), device_id: Default::default(), pipeline_cache_uuid: unsafe { std::mem::zeroed() } }
+    }
+}
+impl std::fmt::Debug for PipelineCacheHeaderVersionOne {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("PipelineCacheHeaderVersionOne").field("header_size", &self.header_size).field("header_version", &self.header_version).field("vendor_id", &self.vendor_id).field("device_id", &self.device_id).field("pipeline_cache_uuid", &self.pipeline_cache_uuid).finish()
+    }
+}
+impl PipelineCacheHeaderVersionOne {
+    #[inline]
+    pub fn into_builder<'a>(self) -> PipelineCacheHeaderVersionOneBuilder<'a> {
+        PipelineCacheHeaderVersionOneBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheHeaderVersionOne.html) · Builder of [`PipelineCacheHeaderVersionOne`]"]
+#[repr(transparent)]
+pub struct PipelineCacheHeaderVersionOneBuilder<'a>(PipelineCacheHeaderVersionOne, std::marker::PhantomData<&'a ()>);
+impl<'a> PipelineCacheHeaderVersionOneBuilder<'a> {
+    #[inline]
+    pub fn new() -> PipelineCacheHeaderVersionOneBuilder<'a> {
+        PipelineCacheHeaderVersionOneBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn header_size(mut self, header_size: u32) -> Self {
+        self.0.header_size = header_size as _;
+        self
+    }
+    #[inline]
+    pub fn header_version(mut self, header_version: crate::vk1_0::PipelineCacheHeaderVersion) -> Self {
+        self.0.header_version = header_version as _;
+        self
+    }
+    #[inline]
+    pub fn vendor_id(mut self, vendor_id: u32) -> Self {
+        self.0.vendor_id = vendor_id as _;
+        self
+    }
+    #[inline]
+    pub fn device_id(mut self, device_id: u32) -> Self {
+        self.0.device_id = device_id as _;
+        self
+    }
+    #[inline]
+    pub fn pipeline_cache_uuid(mut self, pipeline_cache_uuid: [u8; 16]) -> Self {
+        self.0.pipeline_cache_uuid = pipeline_cache_uuid as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> PipelineCacheHeaderVersionOne {
+        self.0
+    }
+}
+impl<'a> std::default::Default for PipelineCacheHeaderVersionOneBuilder<'a> {
+    fn default() -> PipelineCacheHeaderVersionOneBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for PipelineCacheHeaderVersionOneBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for PipelineCacheHeaderVersionOneBuilder<'a> {
+    type Target = PipelineCacheHeaderVersionOne;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for PipelineCacheHeaderVersionOneBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPushConstantRange.html) · Structure"]
 #[doc(alias = "VkPushConstantRange")]
 #[derive(Copy, Clone)]
@@ -15218,10 +15310,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 183u32;
+pub const HEADER_VERSION: u32 = 184u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 183u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 184u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

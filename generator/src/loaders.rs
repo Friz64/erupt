@@ -69,7 +69,6 @@ impl Function {
             TypeName::device(),
             TypeName::command_buffer(),
             TypeName::queue(),
-            TypeName::render_pass(),
         ];
 
         let instance_types = [TypeName::instance(), TypeName::physical_device()];

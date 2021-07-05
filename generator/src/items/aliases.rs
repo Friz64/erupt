@@ -1,10 +1,7 @@
 use crate::{
     comment_gen::DocCommentGen,
-    items::{
-        functions::{ExtensionType, Function, Requirement},
-        structures::Structure,
-    },
-    name::Name,
+    items::functions::{ExtensionType, Function, Requirement},
+    name::{Name, TypeName},
     origin::Origin,
     source::Source,
 };
@@ -42,11 +39,11 @@ impl Alias {
         name
     }
 
-    pub fn resolve_to_structure<'a>(&'a self, source: &'a Source) -> Option<&Structure> {
-        source.find_structure(match self.resolve(source) {
+    pub fn resolve_to_type_name<'a>(&'a self, source: &'a Source) -> &TypeName {
+        match self.resolve(source) {
             Name::Type(name) => name,
-            _ => panic!("Alias is not pointing to a type"),
-        })
+            _ => panic!("Alias is not pointing to a type name"),
+        }
     }
 
     pub fn emulate_function(&self, source: &Source) -> Option<Function> {
@@ -99,7 +96,7 @@ impl Alias {
 
             is_builder_alias = name.builder || alias.builder;
             if !is_builder_alias {
-                if let Some(structure) = self.resolve_to_structure(source) {
+                if let Some(structure) = source.find_structure(self.resolve_to_type_name(source)) {
                     if structure.qualifies_as_builder() {
                         let mut builder_alias = self.clone();
                         builder_alias.name = Name::Type(name.clone().set_builder(true));

@@ -434,6 +434,8 @@ pub mod nv_device_generated_commands;
 pub mod nv_external_memory;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_capabilities.html) · Vulkan extension"]
 pub mod nv_external_memory_capabilities;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_rdma.html) · Vulkan extension"]
+pub mod nv_external_memory_rdma;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_win32.html) · Vulkan extension"]
 pub mod nv_external_memory_win32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_fill_rectangle.html) · Vulkan extension"]

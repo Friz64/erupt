@@ -435,6 +435,8 @@ pub use crate::extensions::nv_external_memory::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_external_memory_capabilities::*;
 #[doc(no_inline)]
+pub use crate::extensions::nv_external_memory_rdma::*;
+#[doc(no_inline)]
 pub use crate::extensions::nv_external_memory_win32::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_fill_rectangle::*;

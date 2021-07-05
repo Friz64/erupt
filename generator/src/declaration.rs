@@ -222,8 +222,15 @@ impl Type {
         }
     }
 
-    pub fn default_value(&self) -> TokenStream {
-        match self {
+    pub fn default_value(&self, source: &Source) -> TokenStream {
+        let mut ty = self;
+        if let Type::Named(Name::Type(type_name)) = self {
+            if let Some(basetype) = source.find_basetype(type_name) {
+                ty = &basetype.ty;
+            }
+        }
+
+        match ty {
             Type::Array { .. } => quote! { unsafe { std::mem::zeroed() } },
             Type::Pointer { kind, .. } => match kind {
                 Mutability::Const => quote! { std::ptr::null() },
@@ -256,7 +263,7 @@ impl Type {
             let structure = source.find_structure(&name).or_else(|| {
                 source
                     .find_type_alias(&name)
-                    .and_then(|alias| alias.resolve_to_structure(source))
+                    .and_then(|alias| source.find_structure(alias.resolve_to_type_name(source)))
             });
 
             if let Some(structure) = structure {
@@ -413,7 +420,7 @@ impl Declaration {
 
             quote! { #ty::#variant_ident }
         } else {
-            self.ty.default_value()
+            self.ty.default_value(source)
         }
     }
 

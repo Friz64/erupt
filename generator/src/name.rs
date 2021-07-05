@@ -191,10 +191,6 @@ impl TypeName {
         TypeName::new("VkQueue")
     }
 
-    pub fn render_pass() -> TypeName {
-        TypeName::new("VkRenderPass")
-    }
-
     pub fn physical_device() -> TypeName {
         TypeName::new("VkPhysicalDevice")
     }

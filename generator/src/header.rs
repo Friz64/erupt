@@ -316,7 +316,7 @@ impl HeaderSource {
                 format!("-I{}", include_vulkan.display()),
                 "-E".into(),
             ],
-            ..Config::with_clang()
+            ..Config::with_gcc()
         };
 
         let root_header_path = Path::new("generator/root.h");

@@ -12,8 +12,17 @@ use log::LevelFilter;
 pub use roxmltree::Node as XmlNode;
 use source::Source;
 use std::{env, process::Command, time::Instant};
+use structopt::StructOpt;
+
+#[derive(StructOpt)]
+pub struct Opt {
+    #[structopt(short, long, default_value = "clang")]
+    preprocessor: String,
+}
 
 fn main() {
+    let opt = Opt::from_args();
+
     env::set_var("RUST_BACKTRACE", "1");
     pretty_env_logger::formatted_builder()
         .filter(Some("generator"), LevelFilter::Trace)
@@ -21,7 +30,7 @@ fn main() {
 
     log::info!("Collecting source...");
     let start = Instant::now();
-    let source = Source::collect();
+    let source = Source::collect(&opt);
     log::info!("Source collection finished in {:.2?}", start.elapsed());
 
     log::info!("Generating code...");

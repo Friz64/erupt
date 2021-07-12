@@ -11,6 +11,7 @@ use crate::{
     },
     name::{FunctionName, Name, TypeName},
     origin::Origin,
+    Opt,
 };
 use roxmltree::Document;
 use std::{
@@ -48,7 +49,7 @@ pub struct Source {
 }
 
 impl Source {
-    pub fn collect() -> Source {
+    pub fn collect(opt: &Opt) -> Source {
         let vk_xml = fs::read_to_string("generator/Vulkan-Headers/registry/vk.xml")
             .expect("Failed to read vk.xml");
         let document = Document::parse(&vk_xml).expect("Failed to parse vk.xml");
@@ -104,6 +105,7 @@ impl Source {
             &headers_include,
             &include_vulkan,
             &other_includes_headers,
+            opt,
         );
 
         let mut source = Source {

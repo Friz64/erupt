@@ -12,7 +12,7 @@ use crate::{
     },
     name::{FunctionName, Name, TypeName},
     source::NotApplicable,
-    XmlNode,
+    Opt, XmlNode,
 };
 use eval::{Expression, Literal};
 use lang_c::{
@@ -307,8 +307,10 @@ impl HeaderSource {
         headers_include: &Path,
         include_vulkan: &Path,
         other_includes_headers: &[PathBuf],
+        opt: &Opt,
     ) -> HeaderSource {
         let header_config = Config {
+            cpp_command: opt.preprocessor.clone(),
             cpp_options: vec![
                 "-DVK_NO_PROTOTYPES".into(),
                 "-DVK_ENABLE_BETA_EXTENSIONS".into(),
@@ -316,7 +318,7 @@ impl HeaderSource {
                 format!("-I{}", include_vulkan.display()),
                 "-E".into(),
             ],
-            ..Config::with_gcc()
+            flavor: driver::Flavor::ClangC11,
         };
 
         let root_header_path = Path::new("generator/root.h");

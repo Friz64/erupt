@@ -11,13 +11,13 @@ mod source;
 use log::LevelFilter;
 pub use roxmltree::Node as XmlNode;
 use source::Source;
-use std::{env, process::Command, time::Instant};
+use std::{env, path::PathBuf, process::Command, time::Instant};
 use structopt::StructOpt;
 
 #[derive(StructOpt)]
 pub struct Opt {
-    #[structopt(short, long, default_value = "clang")]
-    preprocessor: String,
+    #[structopt(short, long, parse(from_os_str), default_value = "clang")]
+    preprocessor: PathBuf,
 }
 
 fn main() {

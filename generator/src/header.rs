@@ -310,7 +310,7 @@ impl HeaderSource {
         opt: &Opt,
     ) -> HeaderSource {
         let header_config = Config {
-            cpp_command: opt.preprocessor.clone(),
+            cpp_command: opt.preprocessor.display().to_string(),
             cpp_options: vec![
                 "-DVK_NO_PROTOTYPES".into(),
                 "-DVK_ENABLE_BETA_EXTENSIONS".into(),

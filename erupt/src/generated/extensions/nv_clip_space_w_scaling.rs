@@ -101,6 +101,9 @@ pub struct PipelineViewportWScalingStateCreateInfoNV {
     pub viewport_count: u32,
     pub p_viewport_w_scalings: *const crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNV,
 }
+impl PipelineViewportWScalingStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV;
+}
 impl Default for PipelineViewportWScalingStateCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), viewport_w_scaling_enable: Default::default(), viewport_count: Default::default(), p_viewport_w_scalings: std::ptr::null() }

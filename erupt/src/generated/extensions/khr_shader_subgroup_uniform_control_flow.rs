@@ -21,6 +21,9 @@ pub struct PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub shader_subgroup_uniform_control_flow: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR;
+}
 impl Default for PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_subgroup_uniform_control_flow: Default::default() }

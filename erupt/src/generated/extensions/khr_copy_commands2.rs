@@ -59,6 +59,9 @@ pub struct BufferCopy2KHR {
     pub dst_offset: crate::vk1_0::DeviceSize,
     pub size: crate::vk1_0::DeviceSize,
 }
+impl BufferCopy2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_COPY_2_KHR;
+}
 impl Default for BufferCopy2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::BUFFER_COPY_2_KHR, p_next: std::ptr::null(), src_offset: Default::default(), dst_offset: Default::default(), size: Default::default() }
@@ -139,6 +142,9 @@ pub struct ImageCopy2KHR {
     pub dst_subresource: crate::vk1_0::ImageSubresourceLayers,
     pub dst_offset: crate::vk1_0::Offset3D,
     pub extent: crate::vk1_0::Extent3D,
+}
+impl ImageCopy2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_COPY_2_KHR;
 }
 impl Default for ImageCopy2KHR {
     fn default() -> Self {
@@ -230,6 +236,9 @@ pub struct ImageBlit2KHR {
     pub dst_subresource: crate::vk1_0::ImageSubresourceLayers,
     pub dst_offsets: [crate::vk1_0::Offset3D; 2],
 }
+impl ImageBlit2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_BLIT_2_KHR;
+}
 impl Default for ImageBlit2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_BLIT_2_KHR, p_next: std::ptr::null(), src_subresource: Default::default(), src_offsets: unsafe { std::mem::zeroed() }, dst_subresource: Default::default(), dst_offsets: unsafe { std::mem::zeroed() } }
@@ -316,6 +325,9 @@ pub struct BufferImageCopy2KHR {
     pub image_subresource: crate::vk1_0::ImageSubresourceLayers,
     pub image_offset: crate::vk1_0::Offset3D,
     pub image_extent: crate::vk1_0::Extent3D,
+}
+impl BufferImageCopy2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_IMAGE_COPY_2_KHR;
 }
 impl Default for BufferImageCopy2KHR {
     fn default() -> Self {
@@ -413,6 +425,9 @@ pub struct ImageResolve2KHR {
     pub dst_offset: crate::vk1_0::Offset3D,
     pub extent: crate::vk1_0::Extent3D,
 }
+impl ImageResolve2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_RESOLVE_2_KHR;
+}
 impl Default for ImageResolve2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_RESOLVE_2_KHR, p_next: std::ptr::null(), src_subresource: Default::default(), src_offset: Default::default(), dst_subresource: Default::default(), dst_offset: Default::default(), extent: Default::default() }
@@ -503,6 +518,9 @@ pub struct CopyBufferInfo2KHR {
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::BufferCopy2KHR,
 }
+impl CopyBufferInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_BUFFER_INFO_2_KHR;
+}
 impl Default for CopyBufferInfo2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_BUFFER_INFO_2_KHR, p_next: std::ptr::null(), src_buffer: Default::default(), dst_buffer: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
@@ -585,6 +603,9 @@ pub struct CopyImageInfo2KHR {
     pub dst_image_layout: crate::vk1_0::ImageLayout,
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::ImageCopy2KHR,
+}
+impl CopyImageInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_IMAGE_INFO_2_KHR;
 }
 impl Default for CopyImageInfo2KHR {
     fn default() -> Self {
@@ -679,6 +700,9 @@ pub struct BlitImageInfo2KHR {
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::ImageBlit2KHR,
     pub filter: crate::vk1_0::Filter,
+}
+impl BlitImageInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BLIT_IMAGE_INFO_2_KHR;
 }
 impl Default for BlitImageInfo2KHR {
     fn default() -> Self {
@@ -777,6 +801,9 @@ pub struct CopyBufferToImageInfo2KHR {
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::BufferImageCopy2KHR,
 }
+impl CopyBufferToImageInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_BUFFER_TO_IMAGE_INFO_2_KHR;
+}
 impl Default for CopyBufferToImageInfo2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_BUFFER_TO_IMAGE_INFO_2_KHR, p_next: std::ptr::null(), src_buffer: Default::default(), dst_image: Default::default(), dst_image_layout: Default::default(), region_count: Default::default(), p_regions: std::ptr::null() }
@@ -863,6 +890,9 @@ pub struct CopyImageToBufferInfo2KHR {
     pub dst_buffer: crate::vk1_0::Buffer,
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::BufferImageCopy2KHR,
+}
+impl CopyImageToBufferInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_IMAGE_TO_BUFFER_INFO_2_KHR;
 }
 impl Default for CopyImageToBufferInfo2KHR {
     fn default() -> Self {
@@ -951,6 +981,9 @@ pub struct ResolveImageInfo2KHR {
     pub dst_image_layout: crate::vk1_0::ImageLayout,
     pub region_count: u32,
     pub p_regions: *const crate::extensions::khr_copy_commands2::ImageResolve2KHR,
+}
+impl ResolveImageInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RESOLVE_IMAGE_INFO_2_KHR;
 }
 impl Default for ResolveImageInfo2KHR {
     fn default() -> Self {

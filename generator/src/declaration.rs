@@ -410,8 +410,8 @@ impl Declaration {
         }
     }
 
-    pub fn default_impl(&self, source: &Source) -> TokenStream {
-        if let Some(variant) = self.metadata.structure_type() {
+    pub fn structure_type_value(&self, source: &Source) -> Option<TokenStream> {
+        self.metadata.structure_type().map(|variant| {
             let structure_type = Type::Named(Name::Type(TypeName::structure_type()));
             assert_eq!(self.ty, structure_type);
 
@@ -419,9 +419,12 @@ impl Declaration {
             let variant_ident = variant.ident();
 
             quote! { #ty::#variant_ident }
-        } else {
-            self.ty.default_value(source)
-        }
+        })
+    }
+
+    pub fn default_impl(&self, source: &Source) -> TokenStream {
+        self.structure_type_value(source)
+            .unwrap_or_else(|| self.ty.default_value(source))
     }
 
     pub fn array_indices(&self, other: &[impl Borrow<Declaration>]) -> Option<Vec<usize>> {

@@ -24,6 +24,9 @@ pub struct ImageViewASTCDecodeModeEXT {
     pub p_next: *const std::ffi::c_void,
     pub decode_mode: crate::vk1_0::Format,
 }
+impl ImageViewASTCDecodeModeEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_VIEW_ASTC_DECODE_MODE_EXT;
+}
 impl Default for ImageViewASTCDecodeModeEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ASTC_DECODE_MODE_EXT, p_next: std::ptr::null(), decode_mode: Default::default() }
@@ -90,6 +93,9 @@ pub struct PhysicalDeviceASTCDecodeFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub decode_mode_shared_exponent: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceASTCDecodeFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT;
 }
 impl Default for PhysicalDeviceASTCDecodeFeaturesEXT {
     fn default() -> Self {

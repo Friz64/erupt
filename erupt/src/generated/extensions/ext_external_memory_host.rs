@@ -34,6 +34,9 @@ pub struct ImportMemoryHostPointerInfoEXT {
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
     pub p_host_pointer: *mut std::ffi::c_void,
 }
+impl ImportMemoryHostPointerInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_MEMORY_HOST_POINTER_INFO_EXT;
+}
 impl Default for ImportMemoryHostPointerInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_HOST_POINTER_INFO_EXT, p_next: std::ptr::null(), handle_type: Default::default(), p_host_pointer: std::ptr::null_mut() }
@@ -106,6 +109,9 @@ pub struct MemoryHostPointerPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub memory_type_bits: u32,
 }
+impl MemoryHostPointerPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_HOST_POINTER_PROPERTIES_EXT;
+}
 impl Default for MemoryHostPointerPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_HOST_POINTER_PROPERTIES_EXT, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
@@ -172,6 +178,9 @@ pub struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub min_imported_host_pointer_alignment: crate::vk1_0::DeviceSize,
+}
+impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceExternalMemoryHostPropertiesEXT {
     fn default() -> Self {

@@ -276,6 +276,9 @@ pub struct RayTracingShaderGroupCreateInfoNV {
     pub any_hit_shader: u32,
     pub intersection_shader: u32,
 }
+impl RayTracingShaderGroupCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV;
+}
 impl Default for RayTracingShaderGroupCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default() }
@@ -370,6 +373,9 @@ pub struct RayTracingPipelineCreateInfoNV {
     pub layout: crate::vk1_0::PipelineLayout,
     pub base_pipeline_handle: crate::vk1_0::Pipeline,
     pub base_pipeline_index: i32,
+}
+impl RayTracingPipelineCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_NV;
 }
 impl Default for RayTracingPipelineCreateInfoNV {
     fn default() -> Self {
@@ -479,6 +485,9 @@ pub struct GeometryTrianglesNV {
     pub index_type: crate::vk1_0::IndexType,
     pub transform_data: crate::vk1_0::Buffer,
     pub transform_offset: crate::vk1_0::DeviceSize,
+}
+impl GeometryTrianglesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GEOMETRY_TRIANGLES_NV;
 }
 impl Default for GeometryTrianglesNV {
     fn default() -> Self {
@@ -599,6 +608,9 @@ pub struct GeometryAABBNV {
     pub num_aab_bs: u32,
     pub stride: u32,
     pub offset: crate::vk1_0::DeviceSize,
+}
+impl GeometryAABBNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GEOMETRY_AABB_NV;
 }
 impl Default for GeometryAABBNV {
     fn default() -> Self {
@@ -755,6 +767,9 @@ pub struct GeometryNV {
     pub geometry: crate::extensions::nv_ray_tracing::GeometryDataNV,
     pub flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR,
 }
+impl GeometryNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GEOMETRY_NV;
+}
 impl Default for GeometryNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::GEOMETRY_NV, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
@@ -835,6 +850,9 @@ pub struct AccelerationStructureInfoNV {
     pub instance_count: u32,
     pub geometry_count: u32,
     pub p_geometries: *const crate::extensions::nv_ray_tracing::GeometryNV,
+}
+impl AccelerationStructureInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_INFO_NV;
 }
 impl Default for AccelerationStructureInfoNV {
     fn default() -> Self {
@@ -920,6 +938,9 @@ pub struct AccelerationStructureCreateInfoNV {
     pub compacted_size: crate::vk1_0::DeviceSize,
     pub info: crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV,
 }
+impl AccelerationStructureCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_CREATE_INFO_NV;
+}
 impl Default for AccelerationStructureCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_CREATE_INFO_NV, p_next: std::ptr::null(), compacted_size: Default::default(), info: Default::default() }
@@ -995,6 +1016,9 @@ pub struct BindAccelerationStructureMemoryInfoNV {
     pub memory_offset: crate::vk1_0::DeviceSize,
     pub device_index_count: u32,
     pub p_device_indices: *const u32,
+}
+impl BindAccelerationStructureMemoryInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV;
 }
 impl Default for BindAccelerationStructureMemoryInfoNV {
     fn default() -> Self {
@@ -1080,6 +1104,9 @@ pub struct WriteDescriptorSetAccelerationStructureNV {
     pub acceleration_structure_count: u32,
     pub p_acceleration_structures: *const crate::extensions::nv_ray_tracing::AccelerationStructureNV,
 }
+impl WriteDescriptorSetAccelerationStructureNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV;
+}
 impl Default for WriteDescriptorSetAccelerationStructureNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
@@ -1148,6 +1175,9 @@ pub struct AccelerationStructureMemoryRequirementsInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub _type: crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsTypeNV,
     pub acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+}
+impl AccelerationStructureMemoryRequirementsInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV;
 }
 impl Default for AccelerationStructureMemoryRequirementsInfoNV {
     fn default() -> Self {
@@ -1227,6 +1257,9 @@ pub struct PhysicalDeviceRayTracingPropertiesNV {
     pub max_instance_count: u64,
     pub max_triangle_count: u64,
     pub max_descriptor_set_acceleration_structures: u32,
+}
+impl PhysicalDeviceRayTracingPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV;
 }
 impl Default for PhysicalDeviceRayTracingPropertiesNV {
     fn default() -> Self {

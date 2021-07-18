@@ -28,6 +28,9 @@ pub struct DisplayPresentInfoKHR {
     pub dst_rect: crate::vk1_0::Rect2D,
     pub persistent: crate::vk1_0::Bool32,
 }
+impl DisplayPresentInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR;
+}
 impl Default for DisplayPresentInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR, p_next: std::ptr::null(), src_rect: Default::default(), dst_rect: Default::default(), persistent: Default::default() }

@@ -46,6 +46,9 @@ pub struct DeviceQueueGlobalPriorityCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT,
 }
+impl DeviceQueueGlobalPriorityCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT;
+}
 impl Default for DeviceQueueGlobalPriorityCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT, p_next: std::ptr::null(), global_priority: Default::default() }

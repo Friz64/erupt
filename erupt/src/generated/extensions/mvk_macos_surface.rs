@@ -43,6 +43,9 @@ pub struct MacOSSurfaceCreateInfoMVK {
     pub flags: crate::extensions::mvk_macos_surface::MacOSSurfaceCreateFlagsMVK,
     pub p_view: *const std::ffi::c_void,
 }
+impl MacOSSurfaceCreateInfoMVK {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MACOS_SURFACE_CREATE_INFO_MVK;
+}
 impl Default for MacOSSurfaceCreateInfoMVK {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MACOS_SURFACE_CREATE_INFO_MVK, p_next: std::ptr::null(), flags: Default::default(), p_view: std::ptr::null() }

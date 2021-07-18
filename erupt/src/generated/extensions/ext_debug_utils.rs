@@ -188,6 +188,9 @@ pub struct DebugUtilsObjectNameInfoEXT {
     pub object_handle: u64,
     pub p_object_name: *const std::os::raw::c_char,
 }
+impl DebugUtilsObjectNameInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_NAME_INFO_EXT;
+}
 impl Default for DebugUtilsObjectNameInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), p_object_name: std::ptr::null() }
@@ -268,6 +271,9 @@ pub struct DebugUtilsObjectTagInfoEXT {
     pub tag_name: u64,
     pub tag_size: usize,
     pub p_tag: *const std::ffi::c_void,
+}
+impl DebugUtilsObjectTagInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_TAG_INFO_EXT;
 }
 impl Default for DebugUtilsObjectTagInfoEXT {
     fn default() -> Self {
@@ -357,6 +363,9 @@ pub struct DebugUtilsLabelEXT {
     pub p_label_name: *const std::os::raw::c_char,
     pub color: [std::os::raw::c_float; 4],
 }
+impl DebugUtilsLabelEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_UTILS_LABEL_EXT;
+}
 impl Default for DebugUtilsLabelEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_LABEL_EXT, p_next: std::ptr::null(), p_label_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
@@ -432,6 +441,9 @@ pub struct DebugUtilsMessengerCreateInfoEXT {
     pub message_type: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT,
     pub pfn_user_callback: Option<crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT>,
     pub p_user_data: *mut std::ffi::c_void,
+}
+impl DebugUtilsMessengerCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
 }
 impl Default for DebugUtilsMessengerCreateInfoEXT {
     fn default() -> Self {
@@ -528,6 +540,9 @@ pub struct DebugUtilsMessengerCallbackDataEXT {
     pub p_cmd_buf_labels: *const crate::extensions::ext_debug_utils::DebugUtilsLabelEXT,
     pub object_count: u32,
     pub p_objects: *const crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT,
+}
+impl DebugUtilsMessengerCallbackDataEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT;
 }
 impl Default for DebugUtilsMessengerCallbackDataEXT {
     fn default() -> Self {

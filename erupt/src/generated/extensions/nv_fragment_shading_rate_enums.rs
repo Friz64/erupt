@@ -92,6 +92,9 @@ pub struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     pub supersample_fragment_shading_rates: crate::vk1_0::Bool32,
     pub no_invocation_fragment_shading_rates: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV;
+}
 impl Default for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shading_rate_enums: Default::default(), supersample_fragment_shading_rates: Default::default(), no_invocation_fragment_shading_rates: Default::default() }
@@ -169,6 +172,9 @@ pub struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     pub p_next: *mut std::ffi::c_void,
     pub max_fragment_shading_rate_invocation_count: crate::vk1_0::SampleCountFlagBits,
 }
+impl PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV;
+}
 impl Default for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_fragment_shading_rate_invocation_count: Default::default() }
@@ -237,6 +243,9 @@ pub struct PipelineFragmentShadingRateEnumStateCreateInfoNV {
     pub shading_rate_type: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateTypeNV,
     pub shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV,
     pub combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
+}
+impl PipelineFragmentShadingRateEnumStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV;
 }
 impl Default for PipelineFragmentShadingRateEnumStateCreateInfoNV {
     fn default() -> Self {

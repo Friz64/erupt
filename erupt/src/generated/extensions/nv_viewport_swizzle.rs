@@ -155,6 +155,9 @@ pub struct PipelineViewportSwizzleStateCreateInfoNV {
     pub viewport_count: u32,
     pub p_viewport_swizzles: *const crate::extensions::nv_viewport_swizzle::ViewportSwizzleNV,
 }
+impl PipelineViewportSwizzleStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV;
+}
 impl Default for PipelineViewportSwizzleStateCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), viewport_count: Default::default(), p_viewport_swizzles: std::ptr::null() }

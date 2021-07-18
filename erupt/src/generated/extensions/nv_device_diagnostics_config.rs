@@ -53,6 +53,9 @@ pub struct PhysicalDeviceDiagnosticsConfigFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub diagnostics_config: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceDiagnosticsConfigFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV;
+}
 impl Default for PhysicalDeviceDiagnosticsConfigFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV, p_next: std::ptr::null_mut(), diagnostics_config: Default::default() }
@@ -119,6 +122,9 @@ pub struct DeviceDiagnosticsConfigCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigFlagsNV,
+}
+impl DeviceDiagnosticsConfigCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV;
 }
 impl Default for DeviceDiagnosticsConfigCreateInfoNV {
     fn default() -> Self {

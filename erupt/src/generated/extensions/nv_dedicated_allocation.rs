@@ -25,6 +25,9 @@ pub struct DedicatedAllocationImageCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub dedicated_allocation: crate::vk1_0::Bool32,
 }
+impl DedicatedAllocationImageCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV;
+}
 impl Default for DedicatedAllocationImageCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
@@ -91,6 +94,9 @@ pub struct DedicatedAllocationBufferCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub dedicated_allocation: crate::vk1_0::Bool32,
+}
+impl DedicatedAllocationBufferCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV;
 }
 impl Default for DedicatedAllocationBufferCreateInfoNV {
     fn default() -> Self {
@@ -159,6 +165,9 @@ pub struct DedicatedAllocationMemoryAllocateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub image: crate::vk1_0::Image,
     pub buffer: crate::vk1_0::Buffer,
+}
+impl DedicatedAllocationMemoryAllocateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV;
 }
 impl Default for DedicatedAllocationMemoryAllocateInfoNV {
     fn default() -> Self {

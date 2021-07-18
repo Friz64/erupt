@@ -21,6 +21,9 @@ pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     pub p_next: *mut std::ffi::c_void,
     pub shader_integer_functions2: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL;
+}
 impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL, p_next: std::ptr::null_mut(), shader_integer_functions2: Default::default() }

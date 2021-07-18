@@ -61,6 +61,9 @@ pub struct VideoDecodeH265ProfileEXT {
     pub p_next: *const std::ffi::c_void,
     pub std_profile_idc: crate::external::vk_video::StdVideoH265ProfileIdc,
 }
+impl VideoDecodeH265ProfileEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_PROFILE_EXT;
+}
 impl Default for VideoDecodeH265ProfileEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_PROFILE_EXT, p_next: std::ptr::null(), std_profile_idc: Default::default() }
@@ -128,6 +131,9 @@ pub struct VideoDecodeH265CapabilitiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub max_level: u32,
     pub std_extension_version: crate::vk1_0::ExtensionProperties,
+}
+impl VideoDecodeH265CapabilitiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_CAPABILITIES_EXT;
 }
 impl Default for VideoDecodeH265CapabilitiesEXT {
     fn default() -> Self {
@@ -201,6 +207,9 @@ pub struct VideoDecodeH265SessionCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::ext_video_decode_h265::VideoDecodeH265CreateFlagsEXT,
     pub p_std_extension_version: *const crate::vk1_0::ExtensionProperties,
+}
+impl VideoDecodeH265SessionCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT;
 }
 impl Default for VideoDecodeH265SessionCreateInfoEXT {
     fn default() -> Self {
@@ -277,6 +286,9 @@ pub struct VideoDecodeH265SessionParametersAddInfoEXT {
     pub pps_std_count: u32,
     pub p_pps_std: *const crate::external::vk_video::StdVideoH265PictureParameterSet,
 }
+impl VideoDecodeH265SessionParametersAddInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT;
+}
 impl Default for VideoDecodeH265SessionParametersAddInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT, p_next: std::ptr::null(), sps_std_count: Default::default(), p_sps_std: std::ptr::null(), pps_std_count: Default::default(), p_pps_std: std::ptr::null() }
@@ -352,6 +364,9 @@ pub struct VideoDecodeH265SessionParametersCreateInfoEXT {
     pub max_sps_std_count: u32,
     pub max_pps_std_count: u32,
     pub p_parameters_add_info: *const crate::extensions::ext_video_decode_h265::VideoDecodeH265SessionParametersAddInfoEXT,
+}
+impl VideoDecodeH265SessionParametersCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT;
 }
 impl Default for VideoDecodeH265SessionParametersCreateInfoEXT {
     fn default() -> Self {
@@ -432,6 +447,9 @@ pub struct VideoDecodeH265PictureInfoEXT {
     pub slices_count: u32,
     pub p_slices_data_offsets: *const u32,
 }
+impl VideoDecodeH265PictureInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_PICTURE_INFO_EXT;
+}
 impl Default for VideoDecodeH265PictureInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_PICTURE_INFO_EXT, p_next: std::ptr::null(), p_std_picture_info: std::ptr::null_mut(), slices_count: Default::default(), p_slices_data_offsets: std::ptr::null() }
@@ -504,6 +522,9 @@ pub struct VideoDecodeH265DpbSlotInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub p_std_reference_info: *const crate::external::vk_video::StdVideoDecodeH265ReferenceInfo,
+}
+impl VideoDecodeH265DpbSlotInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT;
 }
 impl Default for VideoDecodeH265DpbSlotInfoEXT {
     fn default() -> Self {

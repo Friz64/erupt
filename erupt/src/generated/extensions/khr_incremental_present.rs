@@ -20,6 +20,9 @@ pub struct PresentRegionsKHR {
     pub swapchain_count: u32,
     pub p_regions: *const crate::extensions::khr_incremental_present::PresentRegionKHR,
 }
+impl PresentRegionsKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PRESENT_REGIONS_KHR;
+}
 impl Default for PresentRegionsKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PRESENT_REGIONS_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_regions: std::ptr::null() }

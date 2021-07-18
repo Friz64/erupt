@@ -22,6 +22,9 @@ pub struct PhysicalDeviceShaderClockFeaturesKHR {
     pub shader_subgroup_clock: crate::vk1_0::Bool32,
     pub shader_device_clock: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderClockFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR;
+}
 impl Default for PhysicalDeviceShaderClockFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_subgroup_clock: Default::default(), shader_device_clock: Default::default() }

@@ -40,6 +40,9 @@ pub struct PhysicalDeviceShaderCoreProperties2AMD {
     pub shader_core_features: crate::extensions::amd_shader_core_properties2::ShaderCorePropertiesFlagsAMD,
     pub active_compute_unit_count: u32,
 }
+impl PhysicalDeviceShaderCoreProperties2AMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD;
+}
 impl Default for PhysicalDeviceShaderCoreProperties2AMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD, p_next: std::ptr::null_mut(), shader_core_features: Default::default(), active_compute_unit_count: Default::default() }

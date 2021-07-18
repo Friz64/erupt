@@ -149,6 +149,9 @@ pub struct RayTracingShaderGroupCreateInfoKHR {
     pub intersection_shader: u32,
     pub p_shader_group_capture_replay_handle: *const std::ffi::c_void,
 }
+impl RayTracingShaderGroupCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR;
+}
 impl Default for RayTracingShaderGroupCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default(), p_shader_group_capture_replay_handle: std::ptr::null() }
@@ -251,6 +254,9 @@ pub struct RayTracingPipelineCreateInfoKHR {
     pub layout: crate::vk1_0::PipelineLayout,
     pub base_pipeline_handle: crate::vk1_0::Pipeline,
     pub base_pipeline_index: i32,
+}
+impl RayTracingPipelineCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_KHR;
 }
 impl Default for RayTracingPipelineCreateInfoKHR {
     fn default() -> Self {
@@ -370,6 +376,9 @@ pub struct PhysicalDeviceRayTracingPipelineFeaturesKHR {
     pub ray_tracing_pipeline_trace_rays_indirect: crate::vk1_0::Bool32,
     pub ray_traversal_primitive_culling: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceRayTracingPipelineFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR;
+}
 impl Default for PhysicalDeviceRayTracingPipelineFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR, p_next: std::ptr::null_mut(), ray_tracing_pipeline: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: Default::default(), ray_tracing_pipeline_trace_rays_indirect: Default::default(), ray_traversal_primitive_culling: Default::default() }
@@ -463,6 +472,9 @@ pub struct PhysicalDeviceRayTracingPipelinePropertiesKHR {
     pub max_ray_dispatch_invocation_count: u32,
     pub shader_group_handle_alignment: u32,
     pub max_ray_hit_attribute_size: u32,
+}
+impl PhysicalDeviceRayTracingPipelinePropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR;
 }
 impl Default for PhysicalDeviceRayTracingPipelinePropertiesKHR {
     fn default() -> Self {
@@ -720,6 +732,9 @@ pub struct RayTracingPipelineInterfaceCreateInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub max_pipeline_ray_payload_size: u32,
     pub max_pipeline_ray_hit_attribute_size: u32,
+}
+impl RayTracingPipelineInterfaceCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR;
 }
 impl Default for RayTracingPipelineInterfaceCreateInfoKHR {
     fn default() -> Self {

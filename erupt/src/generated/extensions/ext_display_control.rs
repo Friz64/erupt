@@ -97,6 +97,9 @@ pub struct DisplayPowerInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub power_state: crate::extensions::ext_display_control::DisplayPowerStateEXT,
 }
+impl DisplayPowerInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_POWER_INFO_EXT;
+}
 impl Default for DisplayPowerInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_POWER_INFO_EXT, p_next: std::ptr::null(), power_state: Default::default() }
@@ -163,6 +166,9 @@ pub struct DeviceEventInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub device_event: crate::extensions::ext_display_control::DeviceEventTypeEXT,
+}
+impl DeviceEventInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_EVENT_INFO_EXT;
 }
 impl Default for DeviceEventInfoEXT {
     fn default() -> Self {
@@ -231,6 +237,9 @@ pub struct DisplayEventInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub display_event: crate::extensions::ext_display_control::DisplayEventTypeEXT,
 }
+impl DisplayEventInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_EVENT_INFO_EXT;
+}
 impl Default for DisplayEventInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_EVENT_INFO_EXT, p_next: std::ptr::null(), display_event: Default::default() }
@@ -297,6 +306,9 @@ pub struct SwapchainCounterCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT,
+}
+impl SwapchainCounterCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SWAPCHAIN_COUNTER_CREATE_INFO_EXT;
 }
 impl Default for SwapchainCounterCreateInfoEXT {
     fn default() -> Self {

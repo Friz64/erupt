@@ -96,6 +96,9 @@ pub struct PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub extended_dynamic_state: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceExtendedDynamicStateFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT, p_next: std::ptr::null_mut(), extended_dynamic_state: Default::default() }

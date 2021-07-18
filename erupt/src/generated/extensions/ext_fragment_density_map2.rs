@@ -28,6 +28,9 @@ pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub fragment_density_map_deferred: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceFragmentDensityMap2FeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map_deferred: Default::default() }
@@ -97,6 +100,9 @@ pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     pub subsampled_coarse_reconstruction_early_access: crate::vk1_0::Bool32,
     pub max_subsampled_array_layers: u32,
     pub max_descriptor_set_subsampled_samplers: u32,
+}
+impl PhysicalDeviceFragmentDensityMap2PropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn default() -> Self {

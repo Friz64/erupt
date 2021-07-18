@@ -35,6 +35,9 @@ pub struct ImportSemaphoreZirconHandleInfoFUCHSIA {
     pub handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
     pub zircon_handle: *mut std::ffi::c_void,
 }
+impl ImportSemaphoreZirconHandleInfoFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA;
+}
 impl Default for ImportSemaphoreZirconHandleInfoFUCHSIA {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), zircon_handle: std::ptr::null_mut() }
@@ -117,6 +120,9 @@ pub struct SemaphoreGetZirconHandleInfoFUCHSIA {
     pub p_next: *const std::ffi::c_void,
     pub semaphore: crate::vk1_0::Semaphore,
     pub handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
+}
+impl SemaphoreGetZirconHandleInfoFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA;
 }
 impl Default for SemaphoreGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {

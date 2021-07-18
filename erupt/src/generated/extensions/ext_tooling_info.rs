@@ -63,6 +63,9 @@ pub struct PhysicalDeviceToolPropertiesEXT {
     pub description: [std::os::raw::c_char; 256],
     pub layer: [std::os::raw::c_char; 256],
 }
+impl PhysicalDeviceToolPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceToolPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, version: unsafe { std::mem::zeroed() }, purposes: Default::default(), description: unsafe { std::mem::zeroed() }, layer: unsafe { std::mem::zeroed() } }

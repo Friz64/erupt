@@ -35,6 +35,9 @@ pub struct ImportFenceWin32HandleInfoKHR {
     pub handle: *mut std::ffi::c_void,
     pub name: *const u16,
 }
+impl ImportFenceWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ImportFenceWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
@@ -124,6 +127,9 @@ pub struct ExportFenceWin32HandleInfoKHR {
     pub dw_access: u32,
     pub name: *const u16,
 }
+impl ExportFenceWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ExportFenceWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
@@ -201,6 +207,9 @@ pub struct FenceGetWin32HandleInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub fence: crate::vk1_0::Fence,
     pub handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
+}
+impl FenceGetWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FENCE_GET_WIN32_HANDLE_INFO_KHR;
 }
 impl Default for FenceGetWin32HandleInfoKHR {
     fn default() -> Self {

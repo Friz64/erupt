@@ -19,6 +19,9 @@ pub struct TextureLODGatherFormatPropertiesAMD {
     pub p_next: *mut std::ffi::c_void,
     pub supports_texture_gather_lod_bias_amd: crate::vk1_0::Bool32,
 }
+impl TextureLODGatherFormatPropertiesAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD;
+}
 impl Default for TextureLODGatherFormatPropertiesAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD, p_next: std::ptr::null_mut(), supports_texture_gather_lod_bias_amd: Default::default() }

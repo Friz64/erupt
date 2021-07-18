@@ -318,6 +318,9 @@ pub struct MemoryBarrier2KHR {
     pub dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
     pub dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR,
 }
+impl MemoryBarrier2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_BARRIER_2_KHR;
+}
 impl Default for MemoryBarrier2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_BARRIER_2_KHR, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default() }
@@ -408,6 +411,9 @@ pub struct ImageMemoryBarrier2KHR {
     pub dst_queue_family_index: u32,
     pub image: crate::vk1_0::Image,
     pub subresource_range: crate::vk1_0::ImageSubresourceRange,
+}
+impl ImageMemoryBarrier2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER_2_KHR;
 }
 impl Default for ImageMemoryBarrier2KHR {
     fn default() -> Self {
@@ -529,6 +535,9 @@ pub struct BufferMemoryBarrier2KHR {
     pub offset: crate::vk1_0::DeviceSize,
     pub size: crate::vk1_0::DeviceSize,
 }
+impl BufferMemoryBarrier2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER_2_KHR;
+}
 impl Default for BufferMemoryBarrier2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER_2_KHR, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
@@ -642,6 +651,9 @@ pub struct DependencyInfoKHR {
     pub image_memory_barrier_count: u32,
     pub p_image_memory_barriers: *const crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHR,
 }
+impl DependencyInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEPENDENCY_INFO_KHR;
+}
 impl Default for DependencyInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEPENDENCY_INFO_KHR, p_next: std::ptr::null(), dependency_flags: Default::default(), memory_barrier_count: Default::default(), p_memory_barriers: std::ptr::null(), buffer_memory_barrier_count: Default::default(), p_buffer_memory_barriers: std::ptr::null(), image_memory_barrier_count: Default::default(), p_image_memory_barriers: std::ptr::null() }
@@ -730,6 +742,9 @@ pub struct SemaphoreSubmitInfoKHR {
     pub stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
     pub device_index: u32,
 }
+impl SemaphoreSubmitInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_SUBMIT_INFO_KHR;
+}
 impl Default for SemaphoreSubmitInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_SUBMIT_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default(), stage_mask: Default::default(), device_index: Default::default() }
@@ -813,6 +828,9 @@ pub struct CommandBufferSubmitInfoKHR {
     pub command_buffer: crate::vk1_0::CommandBuffer,
     pub device_mask: u32,
 }
+impl CommandBufferSubmitInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_SUBMIT_INFO_KHR;
+}
 impl Default for CommandBufferSubmitInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_SUBMIT_INFO_KHR, p_next: std::ptr::null(), command_buffer: Default::default(), device_mask: Default::default() }
@@ -890,6 +908,9 @@ pub struct SubmitInfo2KHR {
     pub p_command_buffer_infos: *const crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHR,
     pub signal_semaphore_info_count: u32,
     pub p_signal_semaphore_infos: *const crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR,
+}
+impl SubmitInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBMIT_INFO_2_KHR;
 }
 impl Default for SubmitInfo2KHR {
     fn default() -> Self {
@@ -976,6 +997,9 @@ pub struct QueueFamilyCheckpointProperties2NV {
     pub p_next: *mut std::ffi::c_void,
     pub checkpoint_execution_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
 }
+impl QueueFamilyCheckpointProperties2NV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV;
+}
 impl Default for QueueFamilyCheckpointProperties2NV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
@@ -1043,6 +1067,9 @@ pub struct CheckpointData2NV {
     pub p_next: *mut std::ffi::c_void,
     pub stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR,
     pub p_checkpoint_marker: *mut std::ffi::c_void,
+}
+impl CheckpointData2NV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CHECKPOINT_DATA_2_NV;
 }
 impl Default for CheckpointData2NV {
     fn default() -> Self {
@@ -1115,6 +1142,9 @@ pub struct PhysicalDeviceSynchronization2FeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub synchronization2: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceSynchronization2FeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR;
 }
 impl Default for PhysicalDeviceSynchronization2FeaturesKHR {
     fn default() -> Self {

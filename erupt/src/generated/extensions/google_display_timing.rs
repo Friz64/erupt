@@ -184,6 +184,9 @@ pub struct PresentTimesInfoGOOGLE {
     pub swapchain_count: u32,
     pub p_times: *const crate::extensions::google_display_timing::PresentTimeGOOGLE,
 }
+impl PresentTimesInfoGOOGLE {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PRESENT_TIMES_INFO_GOOGLE;
+}
 impl Default for PresentTimesInfoGOOGLE {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PRESENT_TIMES_INFO_GOOGLE, p_next: std::ptr::null(), swapchain_count: Default::default(), p_times: std::ptr::null() }

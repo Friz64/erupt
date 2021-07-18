@@ -21,6 +21,9 @@ pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub shader_zero_initialize_workgroup_memory: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR;
+}
 impl Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_zero_initialize_workgroup_memory: Default::default() }

@@ -27,6 +27,9 @@ pub struct PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub global_priority_query: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT, p_next: std::ptr::null_mut(), global_priority_query: Default::default() }
@@ -94,6 +97,9 @@ pub struct QueueFamilyGlobalPriorityPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub priority_count: u32,
     pub priorities: [crate::extensions::ext_global_priority::QueueGlobalPriorityEXT; 16],
+}
+impl QueueFamilyGlobalPriorityPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
 }
 impl Default for QueueFamilyGlobalPriorityPropertiesEXT {
     fn default() -> Self {

@@ -22,6 +22,9 @@ pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     pub compute_derivative_group_quads: crate::vk1_0::Bool32,
     pub compute_derivative_group_linear: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV;
+}
 impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV, p_next: std::ptr::null_mut(), compute_derivative_group_quads: Default::default(), compute_derivative_group_linear: Default::default() }

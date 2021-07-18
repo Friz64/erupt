@@ -36,6 +36,9 @@ pub struct ImportMemoryZirconHandleInfoFUCHSIA {
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
     pub handle: *mut std::ffi::c_void,
 }
+impl ImportMemoryZirconHandleInfoFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA;
+}
 impl Default for ImportMemoryZirconHandleInfoFUCHSIA {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
@@ -108,6 +111,9 @@ pub struct MemoryZirconHandlePropertiesFUCHSIA {
     pub p_next: *mut std::ffi::c_void,
     pub memory_type_bits: u32,
 }
+impl MemoryZirconHandlePropertiesFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA;
+}
 impl Default for MemoryZirconHandlePropertiesFUCHSIA {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
@@ -175,6 +181,9 @@ pub struct MemoryGetZirconHandleInfoFUCHSIA {
     pub p_next: *const std::ffi::c_void,
     pub memory: crate::vk1_0::DeviceMemory,
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+}
+impl MemoryGetZirconHandleInfoFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA;
 }
 impl Default for MemoryGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {

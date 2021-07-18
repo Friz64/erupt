@@ -565,6 +565,9 @@ pub struct PhysicalDeviceDriverProperties {
     pub driver_info: [std::os::raw::c_char; 256],
     pub conformance_version: crate::vk1_2::ConformanceVersion,
 }
+impl PhysicalDeviceDriverProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRIVER_PROPERTIES;
+}
 impl Default for PhysicalDeviceDriverProperties {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRIVER_PROPERTIES, p_next: std::ptr::null_mut(), driver_id: Default::default(), driver_name: unsafe { std::mem::zeroed() }, driver_info: unsafe { std::mem::zeroed() }, conformance_version: Default::default() }
@@ -649,6 +652,9 @@ pub struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     pub p_next: *mut std::ffi::c_void,
     pub shader_subgroup_extended_types: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES;
+}
 impl Default for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES, p_next: std::ptr::null_mut(), shader_subgroup_extended_types: Default::default() }
@@ -716,6 +722,9 @@ pub struct PhysicalDeviceSamplerFilterMinmaxProperties {
     pub p_next: *mut std::ffi::c_void,
     pub filter_minmax_single_component_formats: crate::vk1_0::Bool32,
     pub filter_minmax_image_component_mapping: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceSamplerFilterMinmaxProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES;
 }
 impl Default for PhysicalDeviceSamplerFilterMinmaxProperties {
     fn default() -> Self {
@@ -789,6 +798,9 @@ pub struct SamplerReductionModeCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub reduction_mode: crate::vk1_2::SamplerReductionMode,
 }
+impl SamplerReductionModeCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SAMPLER_REDUCTION_MODE_CREATE_INFO;
+}
 impl Default for SamplerReductionModeCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SAMPLER_REDUCTION_MODE_CREATE_INFO, p_next: std::ptr::null(), reduction_mode: Default::default() }
@@ -856,6 +868,9 @@ pub struct ImageFormatListCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub view_format_count: u32,
     pub p_view_formats: *const crate::vk1_0::Format,
+}
+impl ImageFormatListCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_FORMAT_LIST_CREATE_INFO;
 }
 impl Default for ImageFormatListCreateInfo {
     fn default() -> Self {
@@ -927,6 +942,9 @@ pub struct PhysicalDeviceShaderFloat16Int8Features {
     pub p_next: *mut std::ffi::c_void,
     pub shader_float16: crate::vk1_0::Bool32,
     pub shader_int8: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceShaderFloat16Int8Features {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
 }
 impl Default for PhysicalDeviceShaderFloat16Int8Features {
     fn default() -> Self {
@@ -1015,6 +1033,9 @@ pub struct PhysicalDeviceFloatControlsProperties {
     pub shader_rounding_mode_rtz_float16: crate::vk1_0::Bool32,
     pub shader_rounding_mode_rtz_float32: crate::vk1_0::Bool32,
     pub shader_rounding_mode_rtz_float64: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceFloatControlsProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES;
 }
 impl Default for PhysicalDeviceFloatControlsProperties {
     fn default() -> Self {
@@ -1163,6 +1184,9 @@ pub struct PhysicalDeviceHostQueryResetFeatures {
     pub p_next: *mut std::ffi::c_void,
     pub host_query_reset: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceHostQueryResetFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES;
+}
 impl Default for PhysicalDeviceHostQueryResetFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES, p_next: std::ptr::null_mut(), host_query_reset: Default::default() }
@@ -1248,6 +1272,9 @@ pub struct PhysicalDeviceDescriptorIndexingFeatures {
     pub descriptor_binding_partially_bound: crate::vk1_0::Bool32,
     pub descriptor_binding_variable_descriptor_count: crate::vk1_0::Bool32,
     pub runtime_descriptor_array: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceDescriptorIndexingFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES;
 }
 impl Default for PhysicalDeviceDescriptorIndexingFeatures {
     fn default() -> Self {
@@ -1432,6 +1459,9 @@ pub struct PhysicalDeviceDescriptorIndexingProperties {
     pub max_descriptor_set_update_after_bind_sampled_images: u32,
     pub max_descriptor_set_update_after_bind_storage_images: u32,
     pub max_descriptor_set_update_after_bind_input_attachments: u32,
+}
+impl PhysicalDeviceDescriptorIndexingProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES;
 }
 impl Default for PhysicalDeviceDescriptorIndexingProperties {
     fn default() -> Self {
@@ -1637,6 +1667,9 @@ pub struct DescriptorSetLayoutBindingFlagsCreateInfo {
     pub binding_count: u32,
     pub p_binding_flags: *const crate::vk1_2::DescriptorBindingFlags,
 }
+impl DescriptorSetLayoutBindingFlagsCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
+}
 impl Default for DescriptorSetLayoutBindingFlagsCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO, p_next: std::ptr::null(), binding_count: Default::default(), p_binding_flags: std::ptr::null() }
@@ -1706,6 +1739,9 @@ pub struct DescriptorSetVariableDescriptorCountAllocateInfo {
     pub descriptor_set_count: u32,
     pub p_descriptor_counts: *const u32,
 }
+impl DescriptorSetVariableDescriptorCountAllocateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO;
+}
 impl Default for DescriptorSetVariableDescriptorCountAllocateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO, p_next: std::ptr::null(), descriptor_set_count: Default::default(), p_descriptor_counts: std::ptr::null() }
@@ -1773,6 +1809,9 @@ pub struct DescriptorSetVariableDescriptorCountLayoutSupport {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub max_variable_descriptor_count: u32,
+}
+impl DescriptorSetVariableDescriptorCountLayoutSupport {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT;
 }
 impl Default for DescriptorSetVariableDescriptorCountLayoutSupport {
     fn default() -> Self {
@@ -1848,6 +1887,9 @@ pub struct AttachmentDescription2 {
     pub stencil_store_op: crate::vk1_0::AttachmentStoreOp,
     pub initial_layout: crate::vk1_0::ImageLayout,
     pub final_layout: crate::vk1_0::ImageLayout,
+}
+impl AttachmentDescription2 {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ATTACHMENT_DESCRIPTION_2;
 }
 impl Default for AttachmentDescription2 {
     fn default() -> Self {
@@ -1960,6 +2002,9 @@ pub struct AttachmentReference2 {
     pub layout: crate::vk1_0::ImageLayout,
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
 }
+impl AttachmentReference2 {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ATTACHMENT_REFERENCE_2;
+}
 impl Default for AttachmentReference2 {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ATTACHMENT_REFERENCE_2, p_next: std::ptr::null(), attachment: Default::default(), layout: Default::default(), aspect_mask: Default::default() }
@@ -2048,6 +2093,9 @@ pub struct SubpassDescription2 {
     pub p_depth_stencil_attachment: *const crate::vk1_2::AttachmentReference2,
     pub preserve_attachment_count: u32,
     pub p_preserve_attachments: *const u32,
+}
+impl SubpassDescription2 {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBPASS_DESCRIPTION_2;
 }
 impl Default for SubpassDescription2 {
     fn default() -> Self {
@@ -2164,6 +2212,9 @@ pub struct SubpassDependency2 {
     pub dependency_flags: crate::vk1_0::DependencyFlags,
     pub view_offset: i32,
 }
+impl SubpassDependency2 {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBPASS_DEPENDENCY_2;
+}
 impl Default for SubpassDependency2 {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SUBPASS_DEPENDENCY_2, p_next: std::ptr::null(), src_subpass: Default::default(), dst_subpass: Default::default(), src_stage_mask: Default::default(), dst_stage_mask: Default::default(), src_access_mask: Default::default(), dst_access_mask: Default::default(), dependency_flags: Default::default(), view_offset: Default::default() }
@@ -2274,6 +2325,9 @@ pub struct RenderPassCreateInfo2 {
     pub correlated_view_mask_count: u32,
     pub p_correlated_view_masks: *const u32,
 }
+impl RenderPassCreateInfo2 {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO_2;
+}
 impl Default for RenderPassCreateInfo2 {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO_2, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null(), correlated_view_mask_count: Default::default(), p_correlated_view_masks: std::ptr::null() }
@@ -2365,6 +2419,9 @@ pub struct SubpassBeginInfo {
     pub p_next: *const std::ffi::c_void,
     pub contents: crate::vk1_0::SubpassContents,
 }
+impl SubpassBeginInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBPASS_BEGIN_INFO;
+}
 impl Default for SubpassBeginInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SUBPASS_BEGIN_INFO, p_next: std::ptr::null(), contents: Default::default() }
@@ -2431,6 +2488,9 @@ pub struct SubpassEndInfo {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
 }
+impl SubpassEndInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBPASS_END_INFO;
+}
 impl Default for SubpassEndInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SUBPASS_END_INFO, p_next: std::ptr::null() }
@@ -2492,6 +2552,9 @@ pub struct PhysicalDeviceTimelineSemaphoreFeatures {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub timeline_semaphore: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceTimelineSemaphoreFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES;
 }
 impl Default for PhysicalDeviceTimelineSemaphoreFeatures {
     fn default() -> Self {
@@ -2560,6 +2623,9 @@ pub struct PhysicalDeviceTimelineSemaphoreProperties {
     pub p_next: *mut std::ffi::c_void,
     pub max_timeline_semaphore_value_difference: u64,
 }
+impl PhysicalDeviceTimelineSemaphoreProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES;
+}
 impl Default for PhysicalDeviceTimelineSemaphoreProperties {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES, p_next: std::ptr::null_mut(), max_timeline_semaphore_value_difference: Default::default() }
@@ -2627,6 +2693,9 @@ pub struct SemaphoreTypeCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub semaphore_type: crate::vk1_2::SemaphoreType,
     pub initial_value: u64,
+}
+impl SemaphoreTypeCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_TYPE_CREATE_INFO;
 }
 impl Default for SemaphoreTypeCreateInfo {
     fn default() -> Self {
@@ -2702,6 +2771,9 @@ pub struct TimelineSemaphoreSubmitInfo {
     pub p_wait_semaphore_values: *const u64,
     pub signal_semaphore_value_count: u32,
     pub p_signal_semaphore_values: *const u64,
+}
+impl TimelineSemaphoreSubmitInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::TIMELINE_SEMAPHORE_SUBMIT_INFO;
 }
 impl Default for TimelineSemaphoreSubmitInfo {
     fn default() -> Self {
@@ -2779,6 +2851,9 @@ pub struct SemaphoreWaitInfo {
     pub semaphore_count: u32,
     pub p_semaphores: *const crate::vk1_0::Semaphore,
     pub p_values: *const u64,
+}
+impl SemaphoreWaitInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_WAIT_INFO;
 }
 impl Default for SemaphoreWaitInfo {
     fn default() -> Self {
@@ -2860,6 +2935,9 @@ pub struct SemaphoreSignalInfo {
     pub semaphore: crate::vk1_0::Semaphore,
     pub value: u64,
 }
+impl SemaphoreSignalInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_SIGNAL_INFO;
+}
 impl Default for SemaphoreSignalInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_SIGNAL_INFO, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default() }
@@ -2933,6 +3011,9 @@ pub struct PhysicalDevice8BitStorageFeatures {
     pub storage_buffer8_bit_access: crate::vk1_0::Bool32,
     pub uniform_and_storage_buffer8_bit_access: crate::vk1_0::Bool32,
     pub storage_push_constant8: crate::vk1_0::Bool32,
+}
+impl PhysicalDevice8BitStorageFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES;
 }
 impl Default for PhysicalDevice8BitStorageFeatures {
     fn default() -> Self {
@@ -3013,6 +3094,9 @@ pub struct PhysicalDeviceVulkanMemoryModelFeatures {
     pub vulkan_memory_model_device_scope: crate::vk1_0::Bool32,
     pub vulkan_memory_model_availability_visibility_chains: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceVulkanMemoryModelFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES;
+}
 impl Default for PhysicalDeviceVulkanMemoryModelFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES, p_next: std::ptr::null_mut(), vulkan_memory_model: Default::default(), vulkan_memory_model_device_scope: Default::default(), vulkan_memory_model_availability_visibility_chains: Default::default() }
@@ -3091,6 +3175,9 @@ pub struct PhysicalDeviceShaderAtomicInt64Features {
     pub shader_buffer_int64_atomics: crate::vk1_0::Bool32,
     pub shader_shared_int64_atomics: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderAtomicInt64Features {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;
+}
 impl Default for PhysicalDeviceShaderAtomicInt64Features {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES, p_next: std::ptr::null_mut(), shader_buffer_int64_atomics: Default::default(), shader_shared_int64_atomics: Default::default() }
@@ -3165,6 +3252,9 @@ pub struct PhysicalDeviceDepthStencilResolveProperties {
     pub supported_stencil_resolve_modes: crate::vk1_2::ResolveModeFlags,
     pub independent_resolve_none: crate::vk1_0::Bool32,
     pub independent_resolve: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceDepthStencilResolveProperties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
 }
 impl Default for PhysicalDeviceDepthStencilResolveProperties {
     fn default() -> Self {
@@ -3250,6 +3340,9 @@ pub struct SubpassDescriptionDepthStencilResolve {
     pub stencil_resolve_mode: crate::vk1_2::ResolveModeFlagBits,
     pub p_depth_stencil_resolve_attachment: *const crate::vk1_2::AttachmentReference2,
 }
+impl SubpassDescriptionDepthStencilResolve {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE;
+}
 impl Default for SubpassDescriptionDepthStencilResolve {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE, p_next: std::ptr::null(), depth_resolve_mode: Default::default(), stencil_resolve_mode: Default::default(), p_depth_stencil_resolve_attachment: std::ptr::null() }
@@ -3327,6 +3420,9 @@ pub struct ImageStencilUsageCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub stencil_usage: crate::vk1_0::ImageUsageFlags,
 }
+impl ImageStencilUsageCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_STENCIL_USAGE_CREATE_INFO;
+}
 impl Default for ImageStencilUsageCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_STENCIL_USAGE_CREATE_INFO, p_next: std::ptr::null(), stencil_usage: Default::default() }
@@ -3394,6 +3490,9 @@ pub struct PhysicalDeviceScalarBlockLayoutFeatures {
     pub p_next: *mut std::ffi::c_void,
     pub scalar_block_layout: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceScalarBlockLayoutFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES;
+}
 impl Default for PhysicalDeviceScalarBlockLayoutFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES, p_next: std::ptr::null_mut(), scalar_block_layout: Default::default() }
@@ -3460,6 +3559,9 @@ pub struct PhysicalDeviceUniformBufferStandardLayoutFeatures {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub uniform_buffer_standard_layout: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES;
 }
 impl Default for PhysicalDeviceUniformBufferStandardLayoutFeatures {
     fn default() -> Self {
@@ -3529,6 +3631,9 @@ pub struct PhysicalDeviceBufferDeviceAddressFeatures {
     pub buffer_device_address: crate::vk1_0::Bool32,
     pub buffer_device_address_capture_replay: crate::vk1_0::Bool32,
     pub buffer_device_address_multi_device: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceBufferDeviceAddressFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
 }
 impl Default for PhysicalDeviceBufferDeviceAddressFeatures {
     fn default() -> Self {
@@ -3607,6 +3712,9 @@ pub struct BufferDeviceAddressInfo {
     pub p_next: *const std::ffi::c_void,
     pub buffer: crate::vk1_0::Buffer,
 }
+impl BufferDeviceAddressInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_INFO;
+}
 impl Default for BufferDeviceAddressInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_INFO, p_next: std::ptr::null(), buffer: Default::default() }
@@ -3673,6 +3781,9 @@ pub struct BufferOpaqueCaptureAddressCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub opaque_capture_address: u64,
+}
+impl BufferOpaqueCaptureAddressCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO;
 }
 impl Default for BufferOpaqueCaptureAddressCreateInfo {
     fn default() -> Self {
@@ -3741,6 +3852,9 @@ pub struct PhysicalDeviceImagelessFramebufferFeatures {
     pub p_next: *mut std::ffi::c_void,
     pub imageless_framebuffer: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceImagelessFramebufferFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES;
+}
 impl Default for PhysicalDeviceImagelessFramebufferFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES, p_next: std::ptr::null_mut(), imageless_framebuffer: Default::default() }
@@ -3808,6 +3922,9 @@ pub struct FramebufferAttachmentsCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub attachment_image_info_count: u32,
     pub p_attachment_image_infos: *const crate::vk1_2::FramebufferAttachmentImageInfo,
+}
+impl FramebufferAttachmentsCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO;
 }
 impl Default for FramebufferAttachmentsCreateInfo {
     fn default() -> Self {
@@ -3882,6 +3999,9 @@ pub struct FramebufferAttachmentImageInfo {
     pub layer_count: u32,
     pub view_format_count: u32,
     pub p_view_formats: *const crate::vk1_0::Format,
+}
+impl FramebufferAttachmentImageInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
 }
 impl Default for FramebufferAttachmentImageInfo {
     fn default() -> Self {
@@ -3977,6 +4097,9 @@ pub struct RenderPassAttachmentBeginInfo {
     pub attachment_count: u32,
     pub p_attachments: *const crate::vk1_0::ImageView,
 }
+impl RenderPassAttachmentBeginInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_ATTACHMENT_BEGIN_INFO;
+}
 impl Default for RenderPassAttachmentBeginInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_ATTACHMENT_BEGIN_INFO, p_next: std::ptr::null(), attachment_count: Default::default(), p_attachments: std::ptr::null() }
@@ -4045,6 +4168,9 @@ pub struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     pub p_next: *mut std::ffi::c_void,
     pub separate_depth_stencil_layouts: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES;
+}
 impl Default for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES, p_next: std::ptr::null_mut(), separate_depth_stencil_layouts: Default::default() }
@@ -4111,6 +4237,9 @@ pub struct AttachmentReferenceStencilLayout {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub stencil_layout: crate::vk1_0::ImageLayout,
+}
+impl AttachmentReferenceStencilLayout {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ATTACHMENT_REFERENCE_STENCIL_LAYOUT;
 }
 impl Default for AttachmentReferenceStencilLayout {
     fn default() -> Self {
@@ -4179,6 +4308,9 @@ pub struct AttachmentDescriptionStencilLayout {
     pub p_next: *mut std::ffi::c_void,
     pub stencil_initial_layout: crate::vk1_0::ImageLayout,
     pub stencil_final_layout: crate::vk1_0::ImageLayout,
+}
+impl AttachmentDescriptionStencilLayout {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT;
 }
 impl Default for AttachmentDescriptionStencilLayout {
     fn default() -> Self {
@@ -4252,6 +4384,9 @@ pub struct MemoryOpaqueCaptureAddressAllocateInfo {
     pub p_next: *const std::ffi::c_void,
     pub opaque_capture_address: u64,
 }
+impl MemoryOpaqueCaptureAddressAllocateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO;
+}
 impl Default for MemoryOpaqueCaptureAddressAllocateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO, p_next: std::ptr::null(), opaque_capture_address: Default::default() }
@@ -4318,6 +4453,9 @@ pub struct DeviceMemoryOpaqueCaptureAddressInfo {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub memory: crate::vk1_0::DeviceMemory,
+}
+impl DeviceMemoryOpaqueCaptureAddressInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO;
 }
 impl Default for DeviceMemoryOpaqueCaptureAddressInfo {
     fn default() -> Self {
@@ -4396,6 +4534,9 @@ pub struct PhysicalDeviceVulkan11Features {
     pub protected_memory: crate::vk1_0::Bool32,
     pub sampler_ycbcr_conversion: crate::vk1_0::Bool32,
     pub shader_draw_parameters: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceVulkan11Features {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES;
 }
 impl Default for PhysicalDeviceVulkan11Features {
     fn default() -> Self {
@@ -4532,6 +4673,9 @@ pub struct PhysicalDeviceVulkan11Properties {
     pub protected_no_fault: crate::vk1_0::Bool32,
     pub max_per_set_descriptors: u32,
     pub max_memory_allocation_size: crate::vk1_0::DeviceSize,
+}
+impl PhysicalDeviceVulkan11Properties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES;
 }
 impl Default for PhysicalDeviceVulkan11Properties {
     fn default() -> Self {
@@ -4715,6 +4859,9 @@ pub struct PhysicalDeviceVulkan12Features {
     pub shader_output_viewport_index: crate::vk1_0::Bool32,
     pub shader_output_layer: crate::vk1_0::Bool32,
     pub subgroup_broadcast_dynamic_id: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceVulkan12Features {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
 }
 impl Default for PhysicalDeviceVulkan12Features {
     fn default() -> Self {
@@ -5113,6 +5260,9 @@ pub struct PhysicalDeviceVulkan12Properties {
     pub filter_minmax_image_component_mapping: crate::vk1_0::Bool32,
     pub max_timeline_semaphore_value_difference: u64,
     pub framebuffer_integer_color_sample_counts: crate::vk1_0::SampleCountFlags,
+}
+impl PhysicalDeviceVulkan12Properties {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES;
 }
 impl Default for PhysicalDeviceVulkan12Properties {
     fn default() -> Self {

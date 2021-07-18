@@ -101,6 +101,9 @@ pub struct PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     pub ray_tracing_motion_blur: crate::vk1_0::Bool32,
     pub ray_tracing_motion_blur_pipeline_trace_rays_indirect: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceRayTracingMotionBlurFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV;
+}
 impl Default for PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV, p_next: std::ptr::null_mut(), ray_tracing_motion_blur: Default::default(), ray_tracing_motion_blur_pipeline_trace_rays_indirect: Default::default() }
@@ -173,6 +176,9 @@ pub struct AccelerationStructureGeometryMotionTrianglesDataNV {
     pub p_next: *const std::ffi::c_void,
     pub vertex_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
 }
+impl AccelerationStructureGeometryMotionTrianglesDataNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV;
+}
 impl Default for AccelerationStructureGeometryMotionTrianglesDataNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV, p_next: std::ptr::null(), vertex_data: Default::default() }
@@ -240,6 +246,9 @@ pub struct AccelerationStructureMotionInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub max_instances: u32,
     pub flags: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInfoFlagsNV,
+}
+impl AccelerationStructureMotionInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_MOTION_INFO_NV;
 }
 impl Default for AccelerationStructureMotionInfoNV {
     fn default() -> Self {

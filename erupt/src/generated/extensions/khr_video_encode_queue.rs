@@ -162,6 +162,9 @@ pub struct VideoEncodeInfoKHR {
     pub reference_slot_count: u32,
     pub p_reference_slots: *const crate::extensions::khr_video_queue::VideoReferenceSlotKHR,
 }
+impl VideoEncodeInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_INFO_KHR;
+}
 impl Default for VideoEncodeInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), quality_level: Default::default(), coded_extent: Default::default(), dst_bitstream_buffer: Default::default(), dst_bitstream_buffer_offset: Default::default(), dst_bitstream_buffer_max_range: Default::default(), src_picture_resource: Default::default(), p_setup_reference_slot: std::ptr::null(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
@@ -275,6 +278,9 @@ pub struct VideoEncodeRateControlInfoKHR {
     pub frame_rate_numerator: u16,
     pub frame_rate_denominator: u16,
     pub virtual_buffer_size_in_ms: u32,
+}
+impl VideoEncodeRateControlInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR;
 }
 impl Default for VideoEncodeRateControlInfoKHR {
     fn default() -> Self {

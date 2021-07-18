@@ -68,6 +68,9 @@ pub struct DevicePrivateDataCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub private_data_slot_request_count: u32,
 }
+impl DevicePrivateDataCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT;
+}
 impl Default for DevicePrivateDataCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT, p_next: std::ptr::null(), private_data_slot_request_count: Default::default() }
@@ -135,6 +138,9 @@ pub struct PrivateDataSlotCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::ext_private_data::PrivateDataSlotCreateFlagsEXT,
 }
+impl PrivateDataSlotCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PRIVATE_DATA_SLOT_CREATE_INFO_EXT;
+}
 impl Default for PrivateDataSlotCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PRIVATE_DATA_SLOT_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default() }
@@ -201,6 +207,9 @@ pub struct PhysicalDevicePrivateDataFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub private_data: crate::vk1_0::Bool32,
+}
+impl PhysicalDevicePrivateDataFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT;
 }
 impl Default for PhysicalDevicePrivateDataFeaturesEXT {
     fn default() -> Self {

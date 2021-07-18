@@ -76,6 +76,9 @@ pub struct SurfaceFullScreenExclusiveInfoEXT {
     pub p_next: *mut std::ffi::c_void,
     pub full_screen_exclusive: crate::extensions::ext_full_screen_exclusive::FullScreenExclusiveEXT,
 }
+impl SurfaceFullScreenExclusiveInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT;
+}
 impl Default for SurfaceFullScreenExclusiveInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT, p_next: std::ptr::null_mut(), full_screen_exclusive: Default::default() }
@@ -143,6 +146,9 @@ pub struct SurfaceFullScreenExclusiveWin32InfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub hmonitor: *mut std::ffi::c_void,
 }
+impl SurfaceFullScreenExclusiveWin32InfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT;
+}
 impl Default for SurfaceFullScreenExclusiveWin32InfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT, p_next: std::ptr::null(), hmonitor: std::ptr::null_mut() }
@@ -209,6 +215,9 @@ pub struct SurfaceCapabilitiesFullScreenExclusiveEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub full_screen_exclusive_supported: crate::vk1_0::Bool32,
+}
+impl SurfaceCapabilitiesFullScreenExclusiveEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
 }
 impl Default for SurfaceCapabilitiesFullScreenExclusiveEXT {
     fn default() -> Self {

@@ -69,6 +69,9 @@ pub struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub pipeline_executable_info: crate::vk1_0::Bool32,
 }
+impl PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR;
+}
 impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR, p_next: std::ptr::null_mut(), pipeline_executable_info: Default::default() }
@@ -135,6 +138,9 @@ pub struct PipelineInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub pipeline: crate::vk1_0::Pipeline,
+}
+impl PipelineInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_INFO_KHR;
 }
 impl Default for PipelineInfoKHR {
     fn default() -> Self {
@@ -205,6 +211,9 @@ pub struct PipelineExecutablePropertiesKHR {
     pub name: [std::os::raw::c_char; 256],
     pub description: [std::os::raw::c_char; 256],
     pub subgroup_size: u32,
+}
+impl PipelineExecutablePropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_PROPERTIES_KHR;
 }
 impl Default for PipelineExecutablePropertiesKHR {
     fn default() -> Self {
@@ -288,6 +297,9 @@ pub struct PipelineExecutableInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub pipeline: crate::vk1_0::Pipeline,
     pub executable_index: u32,
+}
+impl PipelineExecutableInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INFO_KHR;
 }
 impl Default for PipelineExecutableInfoKHR {
     fn default() -> Self {
@@ -384,6 +396,9 @@ pub struct PipelineExecutableStatisticKHR {
     pub format: crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticFormatKHR,
     pub value: crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticValueKHR,
 }
+impl PipelineExecutableStatisticKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_STATISTIC_KHR;
+}
 impl Default for PipelineExecutableStatisticKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_STATISTIC_KHR, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, format: Default::default(), value: Default::default() }
@@ -469,6 +484,9 @@ pub struct PipelineExecutableInternalRepresentationKHR {
     pub is_text: crate::vk1_0::Bool32,
     pub data_size: usize,
     pub p_data: *mut std::ffi::c_void,
+}
+impl PipelineExecutableInternalRepresentationKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR;
 }
 impl Default for PipelineExecutableInternalRepresentationKHR {
     fn default() -> Self {

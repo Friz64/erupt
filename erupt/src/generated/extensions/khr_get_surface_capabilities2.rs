@@ -29,6 +29,9 @@ pub struct PhysicalDeviceSurfaceInfo2KHR {
     pub p_next: *const std::ffi::c_void,
     pub surface: crate::extensions::khr_surface::SurfaceKHR,
 }
+impl PhysicalDeviceSurfaceInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR;
+}
 impl Default for PhysicalDeviceSurfaceInfo2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR, p_next: std::ptr::null(), surface: Default::default() }
@@ -96,6 +99,9 @@ pub struct SurfaceCapabilities2KHR {
     pub p_next: *mut std::ffi::c_void,
     pub surface_capabilities: crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
 }
+impl SurfaceCapabilities2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_KHR;
+}
 impl Default for SurfaceCapabilities2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_KHR, p_next: std::ptr::null_mut(), surface_capabilities: Default::default() }
@@ -162,6 +168,9 @@ pub struct SurfaceFormat2KHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub surface_format: crate::extensions::khr_surface::SurfaceFormatKHR,
+}
+impl SurfaceFormat2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_FORMAT_2_KHR;
 }
 impl Default for SurfaceFormat2KHR {
     fn default() -> Self {

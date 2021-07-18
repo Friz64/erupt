@@ -38,6 +38,9 @@ pub struct ImportSemaphoreWin32HandleInfoKHR {
     pub handle: *mut std::ffi::c_void,
     pub name: *const u16,
 }
+impl ImportSemaphoreWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ImportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
@@ -127,6 +130,9 @@ pub struct ExportSemaphoreWin32HandleInfoKHR {
     pub dw_access: u32,
     pub name: *const u16,
 }
+impl ExportSemaphoreWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ExportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
@@ -207,6 +213,9 @@ pub struct D3D12FenceSubmitInfoKHR {
     pub signal_semaphore_values_count: u32,
     pub p_signal_semaphore_values: *const u64,
 }
+impl D3D12FenceSubmitInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::D3D12_FENCE_SUBMIT_INFO_KHR;
+}
 impl Default for D3D12FenceSubmitInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::D3D12_FENCE_SUBMIT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_values_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_values_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
@@ -281,6 +290,9 @@ pub struct SemaphoreGetWin32HandleInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub semaphore: crate::vk1_0::Semaphore,
     pub handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
+}
+impl SemaphoreGetWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR;
 }
 impl Default for SemaphoreGetWin32HandleInfoKHR {
     fn default() -> Self {

@@ -73,6 +73,9 @@ pub struct PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub device_memory_report: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceDeviceMemoryReportFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT, p_next: std::ptr::null_mut(), device_memory_report: Default::default() }
@@ -141,6 +144,9 @@ pub struct DeviceDeviceMemoryReportCreateInfoEXT {
     pub flags: crate::extensions::ext_device_memory_report::DeviceMemoryReportFlagsEXT,
     pub pfn_user_callback: Option<crate::extensions::ext_device_memory_report::PFN_vkDeviceMemoryReportCallbackEXT>,
     pub p_user_data: *mut std::ffi::c_void,
+}
+impl DeviceDeviceMemoryReportCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT;
 }
 impl Default for DeviceDeviceMemoryReportCreateInfoEXT {
     fn default() -> Self {
@@ -224,6 +230,9 @@ pub struct DeviceMemoryReportCallbackDataEXT {
     pub object_type: crate::vk1_0::ObjectType,
     pub object_handle: u64,
     pub heap_index: u32,
+}
+impl DeviceMemoryReportCallbackDataEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT;
 }
 impl Default for DeviceMemoryReportCallbackDataEXT {
     fn default() -> Self {

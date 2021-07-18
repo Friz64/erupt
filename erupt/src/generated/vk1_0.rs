@@ -3656,6 +3656,579 @@ impl std::fmt::Debug for StructureType {
         })
     }
 }
+impl StructureType {
+    #[doc = r" Returns the memory size of the underlying structure type."]
+    #[doc = r" Returns `None` when the structure type is unknown."]
+    pub fn mem_size(&self) -> Option<usize> {
+        use std::mem::size_of;
+        match self {
+            &Self::APPLICATION_INFO => Some(size_of::<crate::vk1_0::ApplicationInfo>()),
+            &Self::INSTANCE_CREATE_INFO => Some(size_of::<crate::vk1_0::InstanceCreateInfo>()),
+            &Self::DEVICE_QUEUE_CREATE_INFO => Some(size_of::<crate::vk1_0::DeviceQueueCreateInfo>()),
+            &Self::DEVICE_CREATE_INFO => Some(size_of::<crate::vk1_0::DeviceCreateInfo>()),
+            &Self::SUBMIT_INFO => Some(size_of::<crate::vk1_0::SubmitInfo>()),
+            &Self::MEMORY_ALLOCATE_INFO => Some(size_of::<crate::vk1_0::MemoryAllocateInfo>()),
+            &Self::MAPPED_MEMORY_RANGE => Some(size_of::<crate::vk1_0::MappedMemoryRange>()),
+            &Self::BIND_SPARSE_INFO => Some(size_of::<crate::vk1_0::BindSparseInfo>()),
+            &Self::FENCE_CREATE_INFO => Some(size_of::<crate::vk1_0::FenceCreateInfo>()),
+            &Self::SEMAPHORE_CREATE_INFO => Some(size_of::<crate::vk1_0::SemaphoreCreateInfo>()),
+            &Self::EVENT_CREATE_INFO => Some(size_of::<crate::vk1_0::EventCreateInfo>()),
+            &Self::QUERY_POOL_CREATE_INFO => Some(size_of::<crate::vk1_0::QueryPoolCreateInfo>()),
+            &Self::BUFFER_CREATE_INFO => Some(size_of::<crate::vk1_0::BufferCreateInfo>()),
+            &Self::BUFFER_VIEW_CREATE_INFO => Some(size_of::<crate::vk1_0::BufferViewCreateInfo>()),
+            &Self::IMAGE_CREATE_INFO => Some(size_of::<crate::vk1_0::ImageCreateInfo>()),
+            &Self::IMAGE_VIEW_CREATE_INFO => Some(size_of::<crate::vk1_0::ImageViewCreateInfo>()),
+            &Self::SHADER_MODULE_CREATE_INFO => Some(size_of::<crate::vk1_0::ShaderModuleCreateInfo>()),
+            &Self::PIPELINE_CACHE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineCacheCreateInfo>()),
+            &Self::PIPELINE_SHADER_STAGE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineShaderStageCreateInfo>()),
+            &Self::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineVertexInputStateCreateInfo>()),
+            &Self::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineInputAssemblyStateCreateInfo>()),
+            &Self::PIPELINE_TESSELLATION_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineTessellationStateCreateInfo>()),
+            &Self::PIPELINE_VIEWPORT_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineViewportStateCreateInfo>()),
+            &Self::PIPELINE_RASTERIZATION_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineRasterizationStateCreateInfo>()),
+            &Self::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineMultisampleStateCreateInfo>()),
+            &Self::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineDepthStencilStateCreateInfo>()),
+            &Self::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineColorBlendStateCreateInfo>()),
+            &Self::PIPELINE_DYNAMIC_STATE_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineDynamicStateCreateInfo>()),
+            &Self::GRAPHICS_PIPELINE_CREATE_INFO => Some(size_of::<crate::vk1_0::GraphicsPipelineCreateInfo>()),
+            &Self::COMPUTE_PIPELINE_CREATE_INFO => Some(size_of::<crate::vk1_0::ComputePipelineCreateInfo>()),
+            &Self::PIPELINE_LAYOUT_CREATE_INFO => Some(size_of::<crate::vk1_0::PipelineLayoutCreateInfo>()),
+            &Self::SAMPLER_CREATE_INFO => Some(size_of::<crate::vk1_0::SamplerCreateInfo>()),
+            &Self::DESCRIPTOR_SET_LAYOUT_CREATE_INFO => Some(size_of::<crate::vk1_0::DescriptorSetLayoutCreateInfo>()),
+            &Self::DESCRIPTOR_POOL_CREATE_INFO => Some(size_of::<crate::vk1_0::DescriptorPoolCreateInfo>()),
+            &Self::DESCRIPTOR_SET_ALLOCATE_INFO => Some(size_of::<crate::vk1_0::DescriptorSetAllocateInfo>()),
+            &Self::WRITE_DESCRIPTOR_SET => Some(size_of::<crate::vk1_0::WriteDescriptorSet>()),
+            &Self::COPY_DESCRIPTOR_SET => Some(size_of::<crate::vk1_0::CopyDescriptorSet>()),
+            &Self::FRAMEBUFFER_CREATE_INFO => Some(size_of::<crate::vk1_0::FramebufferCreateInfo>()),
+            &Self::RENDER_PASS_CREATE_INFO => Some(size_of::<crate::vk1_0::RenderPassCreateInfo>()),
+            &Self::COMMAND_POOL_CREATE_INFO => Some(size_of::<crate::vk1_0::CommandPoolCreateInfo>()),
+            &Self::COMMAND_BUFFER_ALLOCATE_INFO => Some(size_of::<crate::vk1_0::CommandBufferAllocateInfo>()),
+            &Self::COMMAND_BUFFER_INHERITANCE_INFO => Some(size_of::<crate::vk1_0::CommandBufferInheritanceInfo>()),
+            &Self::COMMAND_BUFFER_BEGIN_INFO => Some(size_of::<crate::vk1_0::CommandBufferBeginInfo>()),
+            &Self::RENDER_PASS_BEGIN_INFO => Some(size_of::<crate::vk1_0::RenderPassBeginInfo>()),
+            &Self::BUFFER_MEMORY_BARRIER => Some(size_of::<crate::vk1_0::BufferMemoryBarrier>()),
+            &Self::IMAGE_MEMORY_BARRIER => Some(size_of::<crate::vk1_0::ImageMemoryBarrier>()),
+            &Self::MEMORY_BARRIER => Some(size_of::<crate::vk1_0::MemoryBarrier>()),
+            &Self::LOADER_INSTANCE_CREATE_INFO => None,
+            &Self::LOADER_DEVICE_CREATE_INFO => None,
+            &Self::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceSubgroupProperties>()),
+            &Self::BIND_BUFFER_MEMORY_INFO => Some(size_of::<crate::vk1_1::BindBufferMemoryInfo>()),
+            &Self::BIND_IMAGE_MEMORY_INFO => Some(size_of::<crate::vk1_1::BindImageMemoryInfo>()),
+            &Self::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDevice16BitStorageFeatures>()),
+            &Self::MEMORY_DEDICATED_REQUIREMENTS => Some(size_of::<crate::vk1_1::MemoryDedicatedRequirements>()),
+            &Self::MEMORY_DEDICATED_ALLOCATE_INFO => Some(size_of::<crate::vk1_1::MemoryDedicatedAllocateInfo>()),
+            &Self::MEMORY_ALLOCATE_FLAGS_INFO => Some(size_of::<crate::vk1_1::MemoryAllocateFlagsInfo>()),
+            &Self::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO => Some(size_of::<crate::vk1_1::DeviceGroupRenderPassBeginInfo>()),
+            &Self::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO => Some(size_of::<crate::vk1_1::DeviceGroupCommandBufferBeginInfo>()),
+            &Self::DEVICE_GROUP_SUBMIT_INFO => Some(size_of::<crate::vk1_1::DeviceGroupSubmitInfo>()),
+            &Self::DEVICE_GROUP_BIND_SPARSE_INFO => Some(size_of::<crate::vk1_1::DeviceGroupBindSparseInfo>()),
+            &Self::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO => Some(size_of::<crate::vk1_1::BindBufferMemoryDeviceGroupInfo>()),
+            &Self::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO => Some(size_of::<crate::vk1_1::BindImageMemoryDeviceGroupInfo>()),
+            &Self::PHYSICAL_DEVICE_GROUP_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceGroupProperties>()),
+            &Self::DEVICE_GROUP_DEVICE_CREATE_INFO => Some(size_of::<crate::vk1_1::DeviceGroupDeviceCreateInfo>()),
+            &Self::BUFFER_MEMORY_REQUIREMENTS_INFO_2 => Some(size_of::<crate::vk1_1::BufferMemoryRequirementsInfo2>()),
+            &Self::IMAGE_MEMORY_REQUIREMENTS_INFO_2 => Some(size_of::<crate::vk1_1::ImageMemoryRequirementsInfo2>()),
+            &Self::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2 => Some(size_of::<crate::vk1_1::ImageSparseMemoryRequirementsInfo2>()),
+            &Self::MEMORY_REQUIREMENTS_2 => Some(size_of::<crate::vk1_1::MemoryRequirements2>()),
+            &Self::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2 => Some(size_of::<crate::vk1_1::SparseImageMemoryRequirements2>()),
+            &Self::PHYSICAL_DEVICE_FEATURES_2 => Some(size_of::<crate::vk1_1::PhysicalDeviceFeatures2>()),
+            &Self::PHYSICAL_DEVICE_PROPERTIES_2 => Some(size_of::<crate::vk1_1::PhysicalDeviceProperties2>()),
+            &Self::FORMAT_PROPERTIES_2 => Some(size_of::<crate::vk1_1::FormatProperties2>()),
+            &Self::IMAGE_FORMAT_PROPERTIES_2 => Some(size_of::<crate::vk1_1::ImageFormatProperties2>()),
+            &Self::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2 => Some(size_of::<crate::vk1_1::PhysicalDeviceImageFormatInfo2>()),
+            &Self::QUEUE_FAMILY_PROPERTIES_2 => Some(size_of::<crate::vk1_1::QueueFamilyProperties2>()),
+            &Self::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2 => Some(size_of::<crate::vk1_1::PhysicalDeviceMemoryProperties2>()),
+            &Self::SPARSE_IMAGE_FORMAT_PROPERTIES_2 => Some(size_of::<crate::vk1_1::SparseImageFormatProperties2>()),
+            &Self::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2 => Some(size_of::<crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2>()),
+            &Self::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDevicePointClippingProperties>()),
+            &Self::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO => Some(size_of::<crate::vk1_1::RenderPassInputAttachmentAspectCreateInfo>()),
+            &Self::IMAGE_VIEW_USAGE_CREATE_INFO => Some(size_of::<crate::vk1_1::ImageViewUsageCreateInfo>()),
+            &Self::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO => Some(size_of::<crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfo>()),
+            &Self::RENDER_PASS_MULTIVIEW_CREATE_INFO => Some(size_of::<crate::vk1_1::RenderPassMultiviewCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_MULTIVIEW_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDeviceMultiviewFeatures>()),
+            &Self::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceMultiviewProperties>()),
+            &Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDeviceVariablePointersFeatures>()),
+            &Self::PROTECTED_SUBMIT_INFO => Some(size_of::<crate::vk1_1::ProtectedSubmitInfo>()),
+            &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDeviceProtectedMemoryFeatures>()),
+            &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceProtectedMemoryProperties>()),
+            &Self::DEVICE_QUEUE_INFO_2 => Some(size_of::<crate::vk1_1::DeviceQueueInfo2>()),
+            &Self::SAMPLER_YCBCR_CONVERSION_CREATE_INFO => Some(size_of::<crate::vk1_1::SamplerYcbcrConversionCreateInfo>()),
+            &Self::SAMPLER_YCBCR_CONVERSION_INFO => Some(size_of::<crate::vk1_1::SamplerYcbcrConversionInfo>()),
+            &Self::BIND_IMAGE_PLANE_MEMORY_INFO => Some(size_of::<crate::vk1_1::BindImagePlaneMemoryInfo>()),
+            &Self::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO => Some(size_of::<crate::vk1_1::ImagePlaneMemoryRequirementsInfo>()),
+            &Self::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures>()),
+            &Self::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES => Some(size_of::<crate::vk1_1::SamplerYcbcrConversionImageFormatProperties>()),
+            &Self::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO => Some(size_of::<crate::vk1_1::DescriptorUpdateTemplateCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO => Some(size_of::<crate::vk1_1::PhysicalDeviceExternalImageFormatInfo>()),
+            &Self::EXTERNAL_IMAGE_FORMAT_PROPERTIES => Some(size_of::<crate::vk1_1::ExternalImageFormatProperties>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO => Some(size_of::<crate::vk1_1::PhysicalDeviceExternalBufferInfo>()),
+            &Self::EXTERNAL_BUFFER_PROPERTIES => Some(size_of::<crate::vk1_1::ExternalBufferProperties>()),
+            &Self::PHYSICAL_DEVICE_ID_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceIDProperties>()),
+            &Self::EXTERNAL_MEMORY_BUFFER_CREATE_INFO => Some(size_of::<crate::vk1_1::ExternalMemoryBufferCreateInfo>()),
+            &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO => Some(size_of::<crate::vk1_1::ExternalMemoryImageCreateInfo>()),
+            &Self::EXPORT_MEMORY_ALLOCATE_INFO => Some(size_of::<crate::vk1_1::ExportMemoryAllocateInfo>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO => Some(size_of::<crate::vk1_1::PhysicalDeviceExternalFenceInfo>()),
+            &Self::EXTERNAL_FENCE_PROPERTIES => Some(size_of::<crate::vk1_1::ExternalFenceProperties>()),
+            &Self::EXPORT_FENCE_CREATE_INFO => Some(size_of::<crate::vk1_1::ExportFenceCreateInfo>()),
+            &Self::EXPORT_SEMAPHORE_CREATE_INFO => Some(size_of::<crate::vk1_1::ExportSemaphoreCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO => Some(size_of::<crate::vk1_1::PhysicalDeviceExternalSemaphoreInfo>()),
+            &Self::EXTERNAL_SEMAPHORE_PROPERTIES => Some(size_of::<crate::vk1_1::ExternalSemaphoreProperties>()),
+            &Self::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES => Some(size_of::<crate::vk1_1::PhysicalDeviceMaintenance3Properties>()),
+            &Self::DESCRIPTOR_SET_LAYOUT_SUPPORT => Some(size_of::<crate::vk1_1::DescriptorSetLayoutSupport>()),
+            &Self::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES => Some(size_of::<crate::vk1_1::PhysicalDeviceShaderDrawParametersFeatures>()),
+            &Self::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceVulkan11Features>()),
+            &Self::PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceVulkan11Properties>()),
+            &Self::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceVulkan12Features>()),
+            &Self::PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceVulkan12Properties>()),
+            &Self::IMAGE_FORMAT_LIST_CREATE_INFO => Some(size_of::<crate::vk1_2::ImageFormatListCreateInfo>()),
+            &Self::ATTACHMENT_DESCRIPTION_2 => Some(size_of::<crate::vk1_2::AttachmentDescription2>()),
+            &Self::ATTACHMENT_REFERENCE_2 => Some(size_of::<crate::vk1_2::AttachmentReference2>()),
+            &Self::SUBPASS_DESCRIPTION_2 => Some(size_of::<crate::vk1_2::SubpassDescription2>()),
+            &Self::SUBPASS_DEPENDENCY_2 => Some(size_of::<crate::vk1_2::SubpassDependency2>()),
+            &Self::RENDER_PASS_CREATE_INFO_2 => Some(size_of::<crate::vk1_2::RenderPassCreateInfo2>()),
+            &Self::SUBPASS_BEGIN_INFO => Some(size_of::<crate::vk1_2::SubpassBeginInfo>()),
+            &Self::SUBPASS_END_INFO => Some(size_of::<crate::vk1_2::SubpassEndInfo>()),
+            &Self::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDevice8BitStorageFeatures>()),
+            &Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceDriverProperties>()),
+            &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features>()),
+            &Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceShaderFloat16Int8Features>()),
+            &Self::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceFloatControlsProperties>()),
+            &Self::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO => Some(size_of::<crate::vk1_2::DescriptorSetLayoutBindingFlagsCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceDescriptorIndexingFeatures>()),
+            &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceDescriptorIndexingProperties>()),
+            &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO => Some(size_of::<crate::vk1_2::DescriptorSetVariableDescriptorCountAllocateInfo>()),
+            &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT => Some(size_of::<crate::vk1_2::DescriptorSetVariableDescriptorCountLayoutSupport>()),
+            &Self::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceDepthStencilResolveProperties>()),
+            &Self::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE => Some(size_of::<crate::vk1_2::SubpassDescriptionDepthStencilResolve>()),
+            &Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures>()),
+            &Self::IMAGE_STENCIL_USAGE_CREATE_INFO => Some(size_of::<crate::vk1_2::ImageStencilUsageCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxProperties>()),
+            &Self::SAMPLER_REDUCTION_MODE_CREATE_INFO => Some(size_of::<crate::vk1_2::SamplerReductionModeCreateInfo>()),
+            &Self::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceVulkanMemoryModelFeatures>()),
+            &Self::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceImagelessFramebufferFeatures>()),
+            &Self::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO => Some(size_of::<crate::vk1_2::FramebufferAttachmentsCreateInfo>()),
+            &Self::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO => Some(size_of::<crate::vk1_2::FramebufferAttachmentImageInfo>()),
+            &Self::RENDER_PASS_ATTACHMENT_BEGIN_INFO => Some(size_of::<crate::vk1_2::RenderPassAttachmentBeginInfo>()),
+            &Self::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceUniformBufferStandardLayoutFeatures>()),
+            &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures>()),
+            &Self::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures>()),
+            &Self::ATTACHMENT_REFERENCE_STENCIL_LAYOUT => Some(size_of::<crate::vk1_2::AttachmentReferenceStencilLayout>()),
+            &Self::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT => Some(size_of::<crate::vk1_2::AttachmentDescriptionStencilLayout>()),
+            &Self::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceHostQueryResetFeatures>()),
+            &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures>()),
+            &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES => Some(size_of::<crate::vk1_2::PhysicalDeviceTimelineSemaphoreProperties>()),
+            &Self::SEMAPHORE_TYPE_CREATE_INFO => Some(size_of::<crate::vk1_2::SemaphoreTypeCreateInfo>()),
+            &Self::TIMELINE_SEMAPHORE_SUBMIT_INFO => Some(size_of::<crate::vk1_2::TimelineSemaphoreSubmitInfo>()),
+            &Self::SEMAPHORE_WAIT_INFO => Some(size_of::<crate::vk1_2::SemaphoreWaitInfo>()),
+            &Self::SEMAPHORE_SIGNAL_INFO => Some(size_of::<crate::vk1_2::SemaphoreSignalInfo>()),
+            &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES => Some(size_of::<crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures>()),
+            &Self::BUFFER_DEVICE_ADDRESS_INFO => Some(size_of::<crate::vk1_2::BufferDeviceAddressInfo>()),
+            &Self::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO => Some(size_of::<crate::vk1_2::BufferOpaqueCaptureAddressCreateInfo>()),
+            &Self::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO => Some(size_of::<crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfo>()),
+            &Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO => Some(size_of::<crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo>()),
+            &Self::SWAPCHAIN_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::SwapchainCreateInfoKHR>()),
+            &Self::PRESENT_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::PresentInfoKHR>()),
+            &Self::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR => Some(size_of::<crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR>()),
+            &Self::IMAGE_SWAPCHAIN_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::ImageSwapchainCreateInfoKHR>()),
+            &Self::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::BindImageMemorySwapchainInfoKHR>()),
+            &Self::ACQUIRE_NEXT_IMAGE_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::AcquireNextImageInfoKHR>()),
+            &Self::DEVICE_GROUP_PRESENT_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::DeviceGroupPresentInfoKHR>()),
+            &Self::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_swapchain::DeviceGroupSwapchainCreateInfoKHR>()),
+            &Self::DISPLAY_MODE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_display::DisplayModeCreateInfoKHR>()),
+            &Self::DISPLAY_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR>()),
+            &Self::DISPLAY_PRESENT_INFO_KHR => Some(size_of::<crate::extensions::khr_display_swapchain::DisplayPresentInfoKHR>()),
+            &Self::XLIB_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR>()),
+            &Self::XCB_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR>()),
+            &Self::WAYLAND_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR>()),
+            &Self::ANDROID_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_android_surface::AndroidSurfaceCreateInfoKHR>()),
+            &Self::WIN32_SURFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR>()),
+            &Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_report::DebugReportCallbackCreateInfoEXT>()),
+            &Self::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD => Some(size_of::<crate::extensions::amd_rasterization_order::PipelineRasterizationStateRasterizationOrderAMD>()),
+            &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT>()),
+            &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT>()),
+            &Self::DEBUG_MARKER_MARKER_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT>()),
+            &Self::VIDEO_PROFILE_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoProfileKHR>()),
+            &Self::VIDEO_CAPABILITIES_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoCapabilitiesKHR>()),
+            &Self::VIDEO_PICTURE_RESOURCE_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoPictureResourceKHR>()),
+            &Self::VIDEO_GET_MEMORY_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR>()),
+            &Self::VIDEO_BIND_MEMORY_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoBindMemoryKHR>()),
+            &Self::VIDEO_SESSION_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoSessionCreateInfoKHR>()),
+            &Self::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHR>()),
+            &Self::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHR>()),
+            &Self::VIDEO_BEGIN_CODING_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoBeginCodingInfoKHR>()),
+            &Self::VIDEO_END_CODING_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoEndCodingInfoKHR>()),
+            &Self::VIDEO_CODING_CONTROL_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoCodingControlInfoKHR>()),
+            &Self::VIDEO_REFERENCE_SLOT_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoReferenceSlotKHR>()),
+            &Self::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoQueueFamilyProperties2KHR>()),
+            &Self::VIDEO_PROFILES_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoProfilesKHR>()),
+            &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => Some(size_of::<crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR>()),
+            &Self::VIDEO_FORMAT_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_video_queue::VideoFormatPropertiesKHR>()),
+            &Self::VIDEO_DECODE_INFO_KHR => Some(size_of::<crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR>()),
+            &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_dedicated_allocation::DedicatedAllocationImageCreateInfoNV>()),
+            &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_dedicated_allocation::DedicatedAllocationBufferCreateInfoNV>()),
+            &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => Some(size_of::<crate::extensions::nv_dedicated_allocation::DedicatedAllocationMemoryAllocateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => Some(size_of::<crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_transform_feedback::PhysicalDeviceTransformFeedbackPropertiesEXT>()),
+            &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateInfoEXT>()),
+            &Self::CU_MODULE_CREATE_INFO_NVX => Some(size_of::<crate::extensions::nvx_binary_import::CuModuleCreateInfoNVX>()),
+            &Self::CU_FUNCTION_CREATE_INFO_NVX => Some(size_of::<crate::extensions::nvx_binary_import::CuFunctionCreateInfoNVX>()),
+            &Self::CU_LAUNCH_INFO_NVX => Some(size_of::<crate::extensions::nvx_binary_import::CuLaunchInfoNVX>()),
+            &Self::IMAGE_VIEW_HANDLE_INFO_NVX => Some(size_of::<crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX>()),
+            &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => Some(size_of::<crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX>()),
+            &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesEXT>()),
+            &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264SessionCreateInfoEXT>()),
+            &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264SessionParametersCreateInfoEXT>()),
+            &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264SessionParametersAddInfoEXT>()),
+            &Self::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264VclFrameInfoEXT>()),
+            &Self::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT>()),
+            &Self::VIDEO_ENCODE_H264_NALU_SLICE_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264NaluSliceEXT>()),
+            &Self::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264EmitPictureParametersEXT>()),
+            &Self::VIDEO_ENCODE_H264_PROFILE_EXT => Some(size_of::<crate::extensions::ext_video_encode_h264::VideoEncodeH264ProfileEXT>()),
+            &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264CapabilitiesEXT>()),
+            &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264SessionCreateInfoEXT>()),
+            &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXT>()),
+            &Self::VIDEO_DECODE_H264_MVC_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264MvcEXT>()),
+            &Self::VIDEO_DECODE_H264_PROFILE_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264ProfileEXT>()),
+            &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264SessionParametersCreateInfoEXT>()),
+            &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264SessionParametersAddInfoEXT>()),
+            &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h264::VideoDecodeH264DpbSlotInfoEXT>()),
+            &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => Some(size_of::<crate::extensions::amd_texture_gather_bias_lod::TextureLODGatherFormatPropertiesAMD>()),
+            &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => Some(size_of::<crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateInfoGGP>()),
+            &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => Some(size_of::<crate::extensions::nv_corner_sampled_image::PhysicalDeviceCornerSampledImageFeaturesNV>()),
+            &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory::ExternalMemoryImageCreateInfoNV>()),
+            &Self::EXPORT_MEMORY_ALLOCATE_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory::ExportMemoryAllocateInfoNV>()),
+            &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory_win32::ImportMemoryWin32HandleInfoNV>()),
+            &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory_win32::ExportMemoryWin32HandleInfoNV>()),
+            &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV => Some(size_of::<crate::extensions::nv_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoNV>()),
+            &Self::VALIDATION_FLAGS_EXT => Some(size_of::<crate::extensions::ext_validation_flags::ValidationFlagsEXT>()),
+            &Self::VI_SURFACE_CREATE_INFO_NN => Some(size_of::<crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN>()),
+            &Self::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT => Some(size_of::<crate::extensions::ext_texture_compression_astc_hdr::PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>()),
+            &Self::IMAGE_VIEW_ASTC_DECODE_MODE_EXT => Some(size_of::<crate::extensions::ext_astc_decode_mode::ImageViewASTCDecodeModeEXT>()),
+            &Self::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT => Some(size_of::<crate::extensions::ext_astc_decode_mode::PhysicalDeviceASTCDecodeFeaturesEXT>()),
+            &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_memory_win32::ImportMemoryWin32HandleInfoKHR>()),
+            &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_memory_win32::ExportMemoryWin32HandleInfoKHR>()),
+            &Self::MEMORY_WIN32_HANDLE_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR>()),
+            &Self::MEMORY_GET_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_memory_win32::MemoryGetWin32HandleInfoKHR>()),
+            &Self::IMPORT_MEMORY_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_memory_fd::ImportMemoryFdInfoKHR>()),
+            &Self::MEMORY_FD_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR>()),
+            &Self::MEMORY_GET_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR>()),
+            &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR => Some(size_of::<crate::extensions::khr_win32_keyed_mutex::Win32KeyedMutexAcquireReleaseInfoKHR>()),
+            &Self::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR>()),
+            &Self::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_win32::ExportSemaphoreWin32HandleInfoKHR>()),
+            &Self::D3D12_FENCE_SUBMIT_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_win32::D3D12FenceSubmitInfoKHR>()),
+            &Self::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR>()),
+            &Self::IMPORT_SEMAPHORE_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_fd::ImportSemaphoreFdInfoKHR>()),
+            &Self::SEMAPHORE_GET_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_semaphore_fd::SemaphoreGetFdInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_push_descriptor::PhysicalDevicePushDescriptorPropertiesKHR>()),
+            &Self::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT => Some(size_of::<crate::extensions::ext_conditional_rendering::CommandBufferInheritanceConditionalRenderingInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT => Some(size_of::<crate::extensions::ext_conditional_rendering::PhysicalDeviceConditionalRenderingFeaturesEXT>()),
+            &Self::CONDITIONAL_RENDERING_BEGIN_INFO_EXT => Some(size_of::<crate::extensions::ext_conditional_rendering::ConditionalRenderingBeginInfoEXT>()),
+            &Self::PRESENT_REGIONS_KHR => Some(size_of::<crate::extensions::khr_incremental_present::PresentRegionsKHR>()),
+            &Self::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_clip_space_w_scaling::PipelineViewportWScalingStateCreateInfoNV>()),
+            &Self::SURFACE_CAPABILITIES_2_EXT => Some(size_of::<crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT>()),
+            &Self::DISPLAY_POWER_INFO_EXT => Some(size_of::<crate::extensions::ext_display_control::DisplayPowerInfoEXT>()),
+            &Self::DEVICE_EVENT_INFO_EXT => Some(size_of::<crate::extensions::ext_display_control::DeviceEventInfoEXT>()),
+            &Self::DISPLAY_EVENT_INFO_EXT => Some(size_of::<crate::extensions::ext_display_control::DisplayEventInfoEXT>()),
+            &Self::SWAPCHAIN_COUNTER_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_display_control::SwapchainCounterCreateInfoEXT>()),
+            &Self::PRESENT_TIMES_INFO_GOOGLE => Some(size_of::<crate::extensions::google_display_timing::PresentTimesInfoGOOGLE>()),
+            &Self::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX => Some(size_of::<crate::extensions::nvx_multiview_per_view_attributes::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>()),
+            &Self::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_discard_rectangles::PhysicalDeviceDiscardRectanglePropertiesEXT>()),
+            &Self::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_conservative_rasterization::PhysicalDeviceConservativeRasterizationPropertiesEXT>()),
+            &Self::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT => Some(size_of::<crate::extensions::ext_depth_clip_enable::PhysicalDeviceDepthClipEnableFeaturesEXT>()),
+            &Self::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateInfoEXT>()),
+            &Self::HDR_METADATA_EXT => Some(size_of::<crate::extensions::ext_hdr_metadata::HdrMetadataEXT>()),
+            &Self::SHARED_PRESENT_SURFACE_CAPABILITIES_KHR => Some(size_of::<crate::extensions::khr_shared_presentable_image::SharedPresentSurfaceCapabilitiesKHR>()),
+            &Self::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR>()),
+            &Self::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_fence_win32::ExportFenceWin32HandleInfoKHR>()),
+            &Self::FENCE_GET_WIN32_HANDLE_INFO_KHR => Some(size_of::<crate::extensions::khr_external_fence_win32::FenceGetWin32HandleInfoKHR>()),
+            &Self::IMPORT_FENCE_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_fence_fd::ImportFenceFdInfoKHR>()),
+            &Self::FENCE_GET_FD_INFO_KHR => Some(size_of::<crate::extensions::khr_external_fence_fd::FenceGetFdInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR => Some(size_of::<crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_performance_query::PhysicalDevicePerformanceQueryPropertiesKHR>()),
+            &Self::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_performance_query::QueryPoolPerformanceCreateInfoKHR>()),
+            &Self::PERFORMANCE_QUERY_SUBMIT_INFO_KHR => Some(size_of::<crate::extensions::khr_performance_query::PerformanceQuerySubmitInfoKHR>()),
+            &Self::ACQUIRE_PROFILING_LOCK_INFO_KHR => Some(size_of::<crate::extensions::khr_performance_query::AcquireProfilingLockInfoKHR>()),
+            &Self::PERFORMANCE_COUNTER_KHR => Some(size_of::<crate::extensions::khr_performance_query::PerformanceCounterKHR>()),
+            &Self::PERFORMANCE_COUNTER_DESCRIPTION_KHR => Some(size_of::<crate::extensions::khr_performance_query::PerformanceCounterDescriptionKHR>()),
+            &Self::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR>()),
+            &Self::SURFACE_CAPABILITIES_2_KHR => Some(size_of::<crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR>()),
+            &Self::SURFACE_FORMAT_2_KHR => Some(size_of::<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>()),
+            &Self::DISPLAY_PROPERTIES_2_KHR => Some(size_of::<crate::extensions::khr_get_display_properties2::DisplayProperties2KHR>()),
+            &Self::DISPLAY_PLANE_PROPERTIES_2_KHR => Some(size_of::<crate::extensions::khr_get_display_properties2::DisplayPlaneProperties2KHR>()),
+            &Self::DISPLAY_MODE_PROPERTIES_2_KHR => Some(size_of::<crate::extensions::khr_get_display_properties2::DisplayModeProperties2KHR>()),
+            &Self::DISPLAY_PLANE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR>()),
+            &Self::DISPLAY_PLANE_CAPABILITIES_2_KHR => Some(size_of::<crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR>()),
+            &Self::IOS_SURFACE_CREATE_INFO_MVK => Some(size_of::<crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK>()),
+            &Self::MACOS_SURFACE_CREATE_INFO_MVK => Some(size_of::<crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK>()),
+            &Self::DEBUG_UTILS_OBJECT_NAME_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXT>()),
+            &Self::DEBUG_UTILS_OBJECT_TAG_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_utils::DebugUtilsObjectTagInfoEXT>()),
+            &Self::DEBUG_UTILS_LABEL_EXT => Some(size_of::<crate::extensions::ext_debug_utils::DebugUtilsLabelEXT>()),
+            &Self::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT => Some(size_of::<crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT>()),
+            &Self::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateInfoEXT>()),
+            &Self::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferUsageANDROID>()),
+            &Self::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID>()),
+            &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferFormatPropertiesANDROID>()),
+            &Self::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::ImportAndroidHardwareBufferInfoANDROID>()),
+            &Self::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID>()),
+            &Self::EXTERNAL_FORMAT_ANDROID => Some(size_of::<crate::extensions::android_external_memory_android_hardware_buffer::ExternalFormatANDROID>()),
+            &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT => Some(size_of::<crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_inline_uniform_block::PhysicalDeviceInlineUniformBlockPropertiesEXT>()),
+            &Self::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT => Some(size_of::<crate::extensions::ext_inline_uniform_block::WriteDescriptorSetInlineUniformBlockEXT>()),
+            &Self::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_inline_uniform_block::DescriptorPoolInlineUniformBlockCreateInfoEXT>()),
+            &Self::SAMPLE_LOCATIONS_INFO_EXT => Some(size_of::<crate::extensions::ext_sample_locations::SampleLocationsInfoEXT>()),
+            &Self::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT => Some(size_of::<crate::extensions::ext_sample_locations::RenderPassSampleLocationsBeginInfoEXT>()),
+            &Self::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_sample_locations::PipelineSampleLocationsStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_sample_locations::PhysicalDeviceSampleLocationsPropertiesEXT>()),
+            &Self::MULTISAMPLE_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_sample_locations::MultisamplePropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT => Some(size_of::<crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_blend_operation_advanced::PhysicalDeviceBlendOperationAdvancedPropertiesEXT>()),
+            &Self::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_blend_operation_advanced::PipelineColorBlendAdvancedStateCreateInfoEXT>()),
+            &Self::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateInfoNV>()),
+            &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::WriteDescriptorSetAccelerationStructureKHR>()),
+            &Self::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR>()),
+            &Self::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureDeviceAddressInfoKHR>()),
+            &Self::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryAabbsDataKHR>()),
+            &Self::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryInstancesDataKHR>()),
+            &Self::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHR>()),
+            &Self::ACCELERATION_STRUCTURE_GEOMETRY_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHR>()),
+            &Self::ACCELERATION_STRUCTURE_VERSION_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureVersionInfoKHR>()),
+            &Self::COPY_ACCELERATION_STRUCTURE_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR>()),
+            &Self::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR>()),
+            &Self::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructureFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::PhysicalDeviceAccelerationStructurePropertiesKHR>()),
+            &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHR>()),
+            &Self::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR => Some(size_of::<crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => Some(size_of::<crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelineFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_ray_tracing_pipeline::PhysicalDeviceRayTracingPipelinePropertiesKHR>()),
+            &Self::RAY_TRACING_PIPELINE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHR>()),
+            &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupCreateInfoKHR>()),
+            &Self::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineInterfaceCreateInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => Some(size_of::<crate::extensions::khr_ray_query::PhysicalDeviceRayQueryFeaturesKHR>()),
+            &Self::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV => Some(size_of::<crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_shader_sm_builtins::PhysicalDeviceShaderSMBuiltinsPropertiesNV>()),
+            &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT => Some(size_of::<crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesListEXT>()),
+            &Self::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT => Some(size_of::<crate::extensions::ext_image_drm_format_modifier::PhysicalDeviceImageDrmFormatModifierInfoEXT>()),
+            &Self::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierListCreateInfoEXT>()),
+            &Self::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierExplicitCreateInfoEXT>()),
+            &Self::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT>()),
+            &Self::VALIDATION_CACHE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_validation_cache::ValidationCacheCreateInfoEXT>()),
+            &Self::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_validation_cache::ShaderModuleValidationCacheCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR => Some(size_of::<crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_portability_subset::PhysicalDevicePortabilitySubsetPropertiesKHR>()),
+            &Self::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_shading_rate_image::PipelineViewportShadingRateImageStateCreateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV => Some(size_of::<crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImageFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_shading_rate_image::PhysicalDeviceShadingRateImagePropertiesNV>()),
+            &Self::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_shading_rate_image::PipelineViewportCoarseSampleOrderStateCreateInfoNV>()),
+            &Self::RAY_TRACING_PIPELINE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV>()),
+            &Self::ACCELERATION_STRUCTURE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV>()),
+            &Self::GEOMETRY_NV => Some(size_of::<crate::extensions::nv_ray_tracing::GeometryNV>()),
+            &Self::GEOMETRY_TRIANGLES_NV => Some(size_of::<crate::extensions::nv_ray_tracing::GeometryTrianglesNV>()),
+            &Self::GEOMETRY_AABB_NV => Some(size_of::<crate::extensions::nv_ray_tracing::GeometryAABBNV>()),
+            &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNV>()),
+            &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV => Some(size_of::<crate::extensions::nv_ray_tracing::WriteDescriptorSetAccelerationStructureNV>()),
+            &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV>()),
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_ray_tracing::PhysicalDeviceRayTracingPropertiesNV>()),
+            &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNV>()),
+            &Self::ACCELERATION_STRUCTURE_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV>()),
+            &Self::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV => Some(size_of::<crate::extensions::nv_representative_fragment_test::PhysicalDeviceRepresentativeFragmentTestFeaturesNV>()),
+            &Self::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_representative_fragment_test::PipelineRepresentativeFragmentTestStateCreateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT => Some(size_of::<crate::extensions::ext_filter_cubic::PhysicalDeviceImageViewImageFormatInfoEXT>()),
+            &Self::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_filter_cubic::FilterCubicImageViewImageFormatPropertiesEXT>()),
+            &Self::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_global_priority::DeviceQueueGlobalPriorityCreateInfoEXT>()),
+            &Self::IMPORT_MEMORY_HOST_POINTER_INFO_EXT => Some(size_of::<crate::extensions::ext_external_memory_host::ImportMemoryHostPointerInfoEXT>()),
+            &Self::MEMORY_HOST_POINTER_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_external_memory_host::PhysicalDeviceExternalMemoryHostPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR => Some(size_of::<crate::extensions::khr_shader_clock::PhysicalDeviceShaderClockFeaturesKHR>()),
+            &Self::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD => Some(size_of::<crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlCreateInfoAMD>()),
+            &Self::CALIBRATED_TIMESTAMP_INFO_EXT => Some(size_of::<crate::extensions::ext_calibrated_timestamps::CalibratedTimestampInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD => Some(size_of::<crate::extensions::amd_shader_core_properties::PhysicalDeviceShaderCorePropertiesAMD>()),
+            &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265CapabilitiesEXT>()),
+            &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265SessionCreateInfoEXT>()),
+            &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265SessionParametersCreateInfoEXT>()),
+            &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265SessionParametersAddInfoEXT>()),
+            &Self::VIDEO_DECODE_H265_PROFILE_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265ProfileEXT>()),
+            &Self::VIDEO_DECODE_H265_PICTURE_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265PictureInfoEXT>()),
+            &Self::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT => Some(size_of::<crate::extensions::ext_video_decode_h265::VideoDecodeH265DpbSlotInfoEXT>()),
+            &Self::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD => Some(size_of::<crate::extensions::amd_memory_overallocation_behavior::DeviceMemoryOverallocationCreateInfoAMD>()),
+            &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorPropertiesEXT>()),
+            &Self::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_vertex_attribute_divisor::PipelineVertexInputDivisorStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT => Some(size_of::<crate::extensions::ext_vertex_attribute_divisor::PhysicalDeviceVertexAttributeDivisorFeaturesEXT>()),
+            &Self::PRESENT_FRAME_TOKEN_GGP => Some(size_of::<crate::extensions::ggp_frame_token::PresentFrameTokenGGP>()),
+            &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV => Some(size_of::<crate::extensions::nv_compute_shader_derivatives::PhysicalDeviceComputeShaderDerivativesFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV => Some(size_of::<crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_mesh_shader::PhysicalDeviceMeshShaderPropertiesNV>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV => Some(size_of::<crate::extensions::nv_fragment_shader_barycentric::PhysicalDeviceFragmentShaderBarycentricFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV => Some(size_of::<crate::extensions::nv_shader_image_footprint::PhysicalDeviceShaderImageFootprintFeaturesNV>()),
+            &Self::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_scissor_exclusive::PipelineViewportExclusiveScissorStateCreateInfoNV>()),
+            &Self::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV => Some(size_of::<crate::extensions::nv_scissor_exclusive::PhysicalDeviceExclusiveScissorFeaturesNV>()),
+            &Self::CHECKPOINT_DATA_NV => Some(size_of::<crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV>()),
+            &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_device_diagnostic_checkpoints::QueueFamilyCheckpointPropertiesNV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL => Some(size_of::<crate::extensions::intel_shader_integer_functions2::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>()),
+            &Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::QueryPoolPerformanceQueryCreateInfoINTEL>()),
+            &Self::INITIALIZE_PERFORMANCE_API_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::InitializePerformanceApiInfoINTEL>()),
+            &Self::PERFORMANCE_MARKER_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::PerformanceMarkerInfoINTEL>()),
+            &Self::PERFORMANCE_STREAM_MARKER_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::PerformanceStreamMarkerInfoINTEL>()),
+            &Self::PERFORMANCE_OVERRIDE_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::PerformanceOverrideInfoINTEL>()),
+            &Self::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL => Some(size_of::<crate::extensions::intel_performance_query::PerformanceConfigurationAcquireInfoINTEL>()),
+            &Self::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_pci_bus_info::PhysicalDevicePCIBusInfoPropertiesEXT>()),
+            &Self::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD => Some(size_of::<crate::extensions::amd_display_native_hdr::DisplayNativeHdrSurfaceCapabilitiesAMD>()),
+            &Self::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD => Some(size_of::<crate::extensions::amd_display_native_hdr::SwapchainDisplayNativeHdrCreateInfoAMD>()),
+            &Self::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateInfoFUCHSIA>()),
+            &Self::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR => Some(size_of::<crate::extensions::khr_shader_terminate_invocation::PhysicalDeviceShaderTerminateInvocationFeaturesKHR>()),
+            &Self::METAL_SURFACE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => Some(size_of::<crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_fragment_density_map::PhysicalDeviceFragmentDensityMapPropertiesEXT>()),
+            &Self::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_fragment_density_map::RenderPassFragmentDensityMapCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlPropertiesEXT>()),
+            &Self::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_subgroup_size_control::PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT => Some(size_of::<crate::extensions::ext_subgroup_size_control::PhysicalDeviceSubgroupSizeControlFeaturesEXT>()),
+            &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => Some(size_of::<crate::extensions::khr_fragment_shading_rate::FragmentShadingRateAttachmentInfoKHR>()),
+            &Self::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_fragment_shading_rate::PipelineFragmentShadingRateStateCreateInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRatePropertiesKHR>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => Some(size_of::<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR => Some(size_of::<crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR>()),
+            &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD => Some(size_of::<crate::extensions::amd_shader_core_properties2::PhysicalDeviceShaderCoreProperties2AMD>()),
+            &Self::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => Some(size_of::<crate::extensions::amd_device_coherent_memory::PhysicalDeviceCoherentMemoryFeaturesAMD>()),
+            &Self::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => Some(size_of::<crate::extensions::ext_shader_image_atomic_int64::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_memory_budget::PhysicalDeviceMemoryBudgetPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT => Some(size_of::<crate::extensions::ext_memory_priority::PhysicalDeviceMemoryPriorityFeaturesEXT>()),
+            &Self::MEMORY_PRIORITY_ALLOCATE_INFO_EXT => Some(size_of::<crate::extensions::ext_memory_priority::MemoryPriorityAllocateInfoEXT>()),
+            &Self::SURFACE_PROTECTED_CAPABILITIES_KHR => Some(size_of::<crate::extensions::khr_surface_protected_capabilities::SurfaceProtectedCapabilitiesKHR>()),
+            &Self::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV => Some(size_of::<crate::extensions::nv_dedicated_allocation_image_aliasing::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT => Some(size_of::<crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT>()),
+            &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>()),
+            &Self::VALIDATION_FEATURES_EXT => Some(size_of::<crate::extensions::ext_validation_features::ValidationFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV>()),
+            &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>()),
+            &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNV>()),
+            &Self::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV => Some(size_of::<crate::extensions::nv_coverage_reduction_mode::PhysicalDeviceCoverageReductionModeFeaturesNV>()),
+            &Self::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateInfoNV>()),
+            &Self::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV => Some(size_of::<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => Some(size_of::<crate::extensions::ext_fragment_shader_interlock::PhysicalDeviceFragmentShaderInterlockFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => Some(size_of::<crate::extensions::ext_ycbcr_image_arrays::PhysicalDeviceYcbcrImageArraysFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => Some(size_of::<crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexFeaturesEXT>()),
+            &Self::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_provoking_vertex::PipelineRasterizationProvokingVertexStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_provoking_vertex::PhysicalDeviceProvokingVertexPropertiesEXT>()),
+            &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT => Some(size_of::<crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveInfoEXT>()),
+            &Self::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT => Some(size_of::<crate::extensions::ext_full_screen_exclusive::SurfaceCapabilitiesFullScreenExclusiveEXT>()),
+            &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT => Some(size_of::<crate::extensions::ext_full_screen_exclusive::SurfaceFullScreenExclusiveWin32InfoEXT>()),
+            &Self::HEADLESS_SURFACE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_headless_surface::HeadlessSurfaceCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT => Some(size_of::<crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationFeaturesEXT>()),
+            &Self::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_line_rasterization::PipelineRasterizationLineStateCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_line_rasterization::PhysicalDeviceLineRasterizationPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => Some(size_of::<crate::extensions::ext_shader_atomic_float::PhysicalDeviceShaderAtomicFloatFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => Some(size_of::<crate::extensions::ext_index_type_uint8::PhysicalDeviceIndexTypeUint8FeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => Some(size_of::<crate::extensions::ext_extended_dynamic_state::PhysicalDeviceExtendedDynamicStateFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR>()),
+            &Self::PIPELINE_INFO_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR>()),
+            &Self::PIPELINE_EXECUTABLE_PROPERTIES_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>()),
+            &Self::PIPELINE_EXECUTABLE_INFO_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR>()),
+            &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>()),
+            &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>()),
+            &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT => Some(size_of::<crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV>()),
+            &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNV>()),
+            &Self::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::GraphicsPipelineShaderGroupsCreateInfoNV>()),
+            &Self::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutTokenNV>()),
+            &Self::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV>()),
+            &Self::GENERATED_COMMANDS_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV>()),
+            &Self::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV>()),
+            &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => Some(size_of::<crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNV>()),
+            &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => Some(size_of::<crate::extensions::nv_inherited_viewport_scissor::CommandBufferInheritanceViewportScissorInfoNV>()),
+            &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => Some(size_of::<crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXT>()),
+            &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => Some(size_of::<crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOM>()),
+            &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => Some(size_of::<crate::extensions::qcom_render_pass_transform::RenderPassTransformBeginInfoQCOM>()),
+            &Self::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => Some(size_of::<crate::extensions::ext_device_memory_report::PhysicalDeviceDeviceMemoryReportFeaturesEXT>()),
+            &Self::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_device_memory_report::DeviceDeviceMemoryReportCreateInfoEXT>()),
+            &Self::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT => Some(size_of::<crate::extensions::ext_device_memory_report::DeviceMemoryReportCallbackDataEXT>()),
+            &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => Some(size_of::<crate::extensions::ext_robustness2::PhysicalDeviceRobustness2FeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_robustness2::PhysicalDeviceRobustness2PropertiesEXT>()),
+            &Self::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_custom_border_color::SamplerCustomBorderColorCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => Some(size_of::<crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT>()),
+            &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_pipeline_library::PipelineLibraryCreateInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT => Some(size_of::<crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT>()),
+            &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXT>()),
+            &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_private_data::PrivateDataSlotCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT => Some(size_of::<crate::extensions::ext_pipeline_creation_cache_control::PhysicalDevicePipelineCreationCacheControlFeaturesEXT>()),
+            &Self::VIDEO_ENCODE_INFO_KHR => Some(size_of::<crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHR>()),
+            &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => Some(size_of::<crate::extensions::khr_video_encode_queue::VideoEncodeRateControlInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => Some(size_of::<crate::extensions::nv_device_diagnostics_config::PhysicalDeviceDiagnosticsConfigFeaturesNV>()),
+            &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigCreateInfoNV>()),
+            &Self::MEMORY_BARRIER_2_KHR => Some(size_of::<crate::extensions::khr_synchronization2::MemoryBarrier2KHR>()),
+            &Self::BUFFER_MEMORY_BARRIER_2_KHR => Some(size_of::<crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHR>()),
+            &Self::IMAGE_MEMORY_BARRIER_2_KHR => Some(size_of::<crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHR>()),
+            &Self::DEPENDENCY_INFO_KHR => Some(size_of::<crate::extensions::khr_synchronization2::DependencyInfoKHR>()),
+            &Self::SUBMIT_INFO_2_KHR => Some(size_of::<crate::extensions::khr_synchronization2::SubmitInfo2KHR>()),
+            &Self::SEMAPHORE_SUBMIT_INFO_KHR => Some(size_of::<crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHR>()),
+            &Self::COMMAND_BUFFER_SUBMIT_INFO_KHR => Some(size_of::<crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHR>()),
+            &Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR => Some(size_of::<crate::extensions::khr_synchronization2::PhysicalDeviceSynchronization2FeaturesKHR>()),
+            &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => Some(size_of::<crate::extensions::khr_synchronization2::QueueFamilyCheckpointProperties2NV>()),
+            &Self::CHECKPOINT_DATA_2_NV => Some(size_of::<crate::extensions::khr_synchronization2::CheckpointData2NV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR => Some(size_of::<crate::extensions::khr_shader_subgroup_uniform_control_flow::PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR => Some(size_of::<crate::extensions::khr_zero_initialize_workgroup_memory::PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsPropertiesNV>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => Some(size_of::<crate::extensions::nv_fragment_shading_rate_enums::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV>()),
+            &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_fragment_shading_rate_enums::PipelineFragmentShadingRateEnumStateCreateInfoNV>()),
+            &Self::ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV => Some(size_of::<crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureGeometryMotionTrianglesDataNV>()),
+            &Self::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV => Some(size_of::<crate::extensions::nv_ray_tracing_motion_blur::PhysicalDeviceRayTracingMotionBlurFeaturesNV>()),
+            &Self::ACCELERATION_STRUCTURE_MOTION_INFO_NV => Some(size_of::<crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInfoNV>()),
+            &Self::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => Some(size_of::<crate::extensions::ext_ycbcr_2plane_444_formats::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => Some(size_of::<crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2FeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_fragment_density_map2::PhysicalDeviceFragmentDensityMap2PropertiesEXT>()),
+            &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => Some(size_of::<crate::extensions::qcom_rotated_copy_commands::CopyCommandTransformInfoQCOM>()),
+            &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT => Some(size_of::<crate::extensions::ext_image_robustness::PhysicalDeviceImageRobustnessFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => Some(size_of::<crate::extensions::khr_workgroup_memory_explicit_layout::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR>()),
+            &Self::COPY_BUFFER_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::CopyBufferInfo2KHR>()),
+            &Self::COPY_IMAGE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::CopyImageInfo2KHR>()),
+            &Self::COPY_BUFFER_TO_IMAGE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::CopyBufferToImageInfo2KHR>()),
+            &Self::COPY_IMAGE_TO_BUFFER_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::CopyImageToBufferInfo2KHR>()),
+            &Self::BLIT_IMAGE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::BlitImageInfo2KHR>()),
+            &Self::RESOLVE_IMAGE_INFO_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::ResolveImageInfo2KHR>()),
+            &Self::BUFFER_COPY_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::BufferCopy2KHR>()),
+            &Self::IMAGE_COPY_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::ImageCopy2KHR>()),
+            &Self::IMAGE_BLIT_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::ImageBlit2KHR>()),
+            &Self::BUFFER_IMAGE_COPY_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::BufferImageCopy2KHR>()),
+            &Self::IMAGE_RESOLVE_2_KHR => Some(size_of::<crate::extensions::khr_copy_commands2::ImageResolve2KHR>()),
+            &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => Some(size_of::<crate::extensions::ext_4444_formats::PhysicalDevice4444FormatsFeaturesEXT>()),
+            &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => Some(size_of::<crate::extensions::valve_mutable_descriptor_type::PhysicalDeviceMutableDescriptorTypeFeaturesVALVE>()),
+            &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => Some(size_of::<crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeCreateInfoVALVE>()),
+            &Self::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => Some(size_of::<crate::extensions::ext_vertex_input_dynamic_state::PhysicalDeviceVertexInputDynamicStateFeaturesEXT>()),
+            &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => Some(size_of::<crate::extensions::ext_vertex_input_dynamic_state::VertexInputBindingDescription2EXT>()),
+            &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => Some(size_of::<crate::extensions::ext_vertex_input_dynamic_state::VertexInputAttributeDescription2EXT>()),
+            &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_physical_device_drm::PhysicalDeviceDrmPropertiesEXT>()),
+            &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIA>()),
+            &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA>()),
+            &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA>()),
+            &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA>()),
+            &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => Some(size_of::<crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA>()),
+            &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::SubpassShadingPipelineCreateInfoHUAWEI>()),
+            &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::PhysicalDeviceSubpassShadingFeaturesHUAWEI>()),
+            &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::PhysicalDeviceSubpassShadingPropertiesHUAWEI>()),
+            &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV>()),
+            &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => Some(size_of::<crate::extensions::nv_external_memory_rdma::PhysicalDeviceExternalMemoryRDMAFeaturesNV>()),
+            &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => Some(size_of::<crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXT>()),
+            &Self::SCREEN_SURFACE_CREATE_INFO_QNX => Some(size_of::<crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX>()),
+            &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => Some(size_of::<crate::extensions::ext_color_write_enable::PhysicalDeviceColorWriteEnableFeaturesEXT>()),
+            &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_color_write_enable::PipelineColorWriteCreateInfoEXT>()),
+            &Self::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT => Some(size_of::<crate::extensions::ext_global_priority_query::PhysicalDeviceGlobalPriorityQueryFeaturesEXT>()),
+            &Self::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_global_priority_query::QueueFamilyGlobalPriorityPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT => Some(size_of::<crate::extensions::ext_multi_draw::PhysicalDeviceMultiDrawFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_multi_draw::PhysicalDeviceMultiDrawPropertiesEXT>()),
+            _ => None,
+        }
+    }
+}
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl crate::vk1_0::StructureType {
     pub const APPLICATION_INFO: Self = Self(0);
@@ -5685,6 +6258,9 @@ pub struct ApplicationInfo {
     pub engine_version: u32,
     pub api_version: u32,
 }
+impl ApplicationInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::APPLICATION_INFO;
+}
 impl Default for ApplicationInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::APPLICATION_INFO, p_next: std::ptr::null(), p_application_name: std::ptr::null(), application_version: Default::default(), p_engine_name: std::ptr::null(), engine_version: Default::default(), api_version: Default::default() }
@@ -5870,6 +6446,9 @@ pub struct DeviceQueueCreateInfo {
     pub queue_count: u32,
     pub p_queue_priorities: *const std::os::raw::c_float,
 }
+impl DeviceQueueCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_QUEUE_CREATE_INFO;
+}
 impl Default for DeviceQueueCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_count: Default::default(), p_queue_priorities: std::ptr::null() }
@@ -5954,6 +6533,9 @@ pub struct DeviceCreateInfo {
     pub enabled_extension_count: u32,
     pub pp_enabled_extension_names: *const *const std::os::raw::c_char,
     pub p_enabled_features: *const crate::vk1_0::PhysicalDeviceFeatures,
+}
+impl DeviceCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_CREATE_INFO;
 }
 impl Default for DeviceCreateInfo {
     fn default() -> Self {
@@ -6049,6 +6631,9 @@ pub struct InstanceCreateInfo {
     pub pp_enabled_layer_names: *const *const std::os::raw::c_char,
     pub enabled_extension_count: u32,
     pub pp_enabled_extension_names: *const *const std::os::raw::c_char,
+}
+impl InstanceCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::INSTANCE_CREATE_INFO;
 }
 impl Default for InstanceCreateInfo {
     fn default() -> Self {
@@ -6300,6 +6885,9 @@ pub struct MemoryAllocateInfo {
     pub p_next: *const std::ffi::c_void,
     pub allocation_size: crate::vk1_0::DeviceSize,
     pub memory_type_index: u32,
+}
+impl MemoryAllocateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_ALLOCATE_INFO;
 }
 impl Default for MemoryAllocateInfo {
     fn default() -> Self {
@@ -6760,6 +7348,9 @@ pub struct MappedMemoryRange {
     pub offset: crate::vk1_0::DeviceSize,
     pub size: crate::vk1_0::DeviceSize,
 }
+impl MappedMemoryRange {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MAPPED_MEMORY_RANGE;
+}
 impl Default for MappedMemoryRange {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MAPPED_MEMORY_RANGE, p_next: std::ptr::null(), memory: Default::default(), offset: Default::default(), size: Default::default() }
@@ -7164,6 +7755,9 @@ pub struct WriteDescriptorSet {
     pub p_buffer_info: *const crate::vk1_0::DescriptorBufferInfo,
     pub p_texel_buffer_view: *const crate::vk1_0::BufferView,
 }
+impl WriteDescriptorSet {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET;
+}
 impl Default for WriteDescriptorSet {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET, p_next: std::ptr::null(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default(), descriptor_type: Default::default(), p_image_info: std::ptr::null(), p_buffer_info: std::ptr::null(), p_texel_buffer_view: std::ptr::null() }
@@ -7270,6 +7864,9 @@ pub struct CopyDescriptorSet {
     pub dst_array_element: u32,
     pub descriptor_count: u32,
 }
+impl CopyDescriptorSet {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_DESCRIPTOR_SET;
+}
 impl Default for CopyDescriptorSet {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_DESCRIPTOR_SET, p_next: std::ptr::null(), src_set: Default::default(), src_binding: Default::default(), src_array_element: Default::default(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default() }
@@ -7372,6 +7969,9 @@ pub struct BufferCreateInfo {
     pub queue_family_index_count: u32,
     pub p_queue_family_indices: *const u32,
 }
+impl BufferCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_CREATE_INFO;
+}
 impl Default for BufferCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::BUFFER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), size: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
@@ -7463,6 +8063,9 @@ pub struct BufferViewCreateInfo {
     pub format: crate::vk1_0::Format,
     pub offset: crate::vk1_0::DeviceSize,
     pub range: crate::vk1_0::DeviceSize,
+}
+impl BufferViewCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_VIEW_CREATE_INFO;
 }
 impl Default for BufferViewCreateInfo {
     fn default() -> Self {
@@ -7801,6 +8404,9 @@ pub struct MemoryBarrier {
     pub src_access_mask: crate::vk1_0::AccessFlags,
     pub dst_access_mask: crate::vk1_0::AccessFlags,
 }
+impl MemoryBarrier {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_BARRIER;
+}
 impl Default for MemoryBarrier {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default() }
@@ -7878,6 +8484,9 @@ pub struct BufferMemoryBarrier {
     pub buffer: crate::vk1_0::Buffer,
     pub offset: crate::vk1_0::DeviceSize,
     pub size: crate::vk1_0::DeviceSize,
+}
+impl BufferMemoryBarrier {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER;
 }
 impl Default for BufferMemoryBarrier {
     fn default() -> Self {
@@ -7982,6 +8591,9 @@ pub struct ImageMemoryBarrier {
     pub dst_queue_family_index: u32,
     pub image: crate::vk1_0::Image,
     pub subresource_range: crate::vk1_0::ImageSubresourceRange,
+}
+impl ImageMemoryBarrier {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER;
 }
 impl Default for ImageMemoryBarrier {
     fn default() -> Self {
@@ -8096,6 +8708,9 @@ pub struct ImageCreateInfo {
     pub queue_family_index_count: u32,
     pub p_queue_family_indices: *const u32,
     pub initial_layout: crate::vk1_0::ImageLayout,
+}
+impl ImageCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_CREATE_INFO;
 }
 impl Default for ImageCreateInfo {
     fn default() -> Self {
@@ -8313,6 +8928,9 @@ pub struct ImageViewCreateInfo {
     pub format: crate::vk1_0::Format,
     pub components: crate::vk1_0::ComponentMapping,
     pub subresource_range: crate::vk1_0::ImageSubresourceRange,
+}
+impl ImageViewCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_VIEW_CREATE_INFO;
 }
 impl Default for ImageViewCreateInfo {
     fn default() -> Self {
@@ -8895,6 +9513,9 @@ pub struct BindSparseInfo {
     pub signal_semaphore_count: u32,
     pub p_signal_semaphores: *const crate::vk1_0::Semaphore,
 }
+impl BindSparseInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BIND_SPARSE_INFO;
+}
 impl Default for BindSparseInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::BIND_SPARSE_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), buffer_bind_count: Default::default(), p_buffer_binds: std::ptr::null(), image_opaque_bind_count: Default::default(), p_image_opaque_binds: std::ptr::null(), image_bind_count: Default::default(), p_image_binds: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
@@ -9345,6 +9966,9 @@ pub struct ShaderModuleCreateInfo {
     pub code_size: usize,
     pub p_code: *const u32,
 }
+impl ShaderModuleCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SHADER_MODULE_CREATE_INFO;
+}
 impl Default for ShaderModuleCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SHADER_MODULE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), code_size: Default::default(), p_code: std::ptr::null() }
@@ -9510,6 +10134,9 @@ pub struct DescriptorSetLayoutCreateInfo {
     pub binding_count: u32,
     pub p_bindings: *const crate::vk1_0::DescriptorSetLayoutBinding,
 }
+impl DescriptorSetLayoutCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+}
 impl Default for DescriptorSetLayoutCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), binding_count: Default::default(), p_bindings: std::ptr::null() }
@@ -9657,6 +10284,9 @@ pub struct DescriptorPoolCreateInfo {
     pub pool_size_count: u32,
     pub p_pool_sizes: *const crate::vk1_0::DescriptorPoolSize,
 }
+impl DescriptorPoolCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_POOL_CREATE_INFO;
+}
 impl Default for DescriptorPoolCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), max_sets: Default::default(), pool_size_count: Default::default(), p_pool_sizes: std::ptr::null() }
@@ -9736,6 +10366,9 @@ pub struct DescriptorSetAllocateInfo {
     pub descriptor_pool: crate::vk1_0::DescriptorPool,
     pub descriptor_set_count: u32,
     pub p_set_layouts: *const crate::vk1_0::DescriptorSetLayout,
+}
+impl DescriptorSetAllocateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_SET_ALLOCATE_INFO;
 }
 impl Default for DescriptorSetAllocateInfo {
     fn default() -> Self {
@@ -9970,6 +10603,9 @@ pub struct PipelineShaderStageCreateInfo {
     pub p_name: *const std::os::raw::c_char,
     pub p_specialization_info: *const crate::vk1_0::SpecializationInfo,
 }
+impl PipelineShaderStageCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_CREATE_INFO;
+}
 impl Default for PipelineShaderStageCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), module: Default::default(), p_name: std::ptr::null(), p_specialization_info: std::ptr::null() }
@@ -10060,6 +10696,9 @@ pub struct ComputePipelineCreateInfo {
     pub layout: crate::vk1_0::PipelineLayout,
     pub base_pipeline_handle: crate::vk1_0::Pipeline,
     pub base_pipeline_index: i32,
+}
+impl ComputePipelineCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMPUTE_PIPELINE_CREATE_INFO;
 }
 impl Default for ComputePipelineCreateInfo {
     fn default() -> Self {
@@ -10312,6 +10951,9 @@ pub struct PipelineVertexInputStateCreateInfo {
     pub vertex_attribute_description_count: u32,
     pub p_vertex_attribute_descriptions: *const crate::vk1_0::VertexInputAttributeDescription,
 }
+impl PipelineVertexInputStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+}
 impl Default for PipelineVertexInputStateCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), vertex_binding_description_count: Default::default(), p_vertex_binding_descriptions: std::ptr::null(), vertex_attribute_description_count: Default::default(), p_vertex_attribute_descriptions: std::ptr::null() }
@@ -10393,6 +11035,9 @@ pub struct PipelineInputAssemblyStateCreateInfo {
     pub topology: crate::vk1_0::PrimitiveTopology,
     pub primitive_restart_enable: crate::vk1_0::Bool32,
 }
+impl PipelineInputAssemblyStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+}
 impl Default for PipelineInputAssemblyStateCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), topology: Default::default(), primitive_restart_enable: Default::default() }
@@ -10471,6 +11116,9 @@ pub struct PipelineTessellationStateCreateInfo {
     pub flags: crate::vk1_0::PipelineTessellationStateCreateFlags,
     pub patch_control_points: u32,
 }
+impl PipelineTessellationStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_TESSELLATION_STATE_CREATE_INFO;
+}
 impl Default for PipelineTessellationStateCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), patch_control_points: Default::default() }
@@ -10546,6 +11194,9 @@ pub struct PipelineViewportStateCreateInfo {
     pub p_viewports: *const crate::vk1_0::Viewport,
     pub scissor_count: u32,
     pub p_scissors: *const crate::vk1_0::Rect2D,
+}
+impl PipelineViewportStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_STATE_CREATE_INFO;
 }
 impl Default for PipelineViewportStateCreateInfo {
     fn default() -> Self {
@@ -10645,6 +11296,9 @@ pub struct PipelineRasterizationStateCreateInfo {
     pub depth_bias_clamp: std::os::raw::c_float,
     pub depth_bias_slope_factor: std::os::raw::c_float,
     pub line_width: std::os::raw::c_float,
+}
+impl PipelineRasterizationStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
 }
 impl Default for PipelineRasterizationStateCreateInfo {
     fn default() -> Self {
@@ -10768,6 +11422,9 @@ pub struct PipelineMultisampleStateCreateInfo {
     pub p_sample_mask: *const crate::vk1_0::SampleMask,
     pub alpha_to_coverage_enable: crate::vk1_0::Bool32,
     pub alpha_to_one_enable: crate::vk1_0::Bool32,
+}
+impl PipelineMultisampleStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
 }
 impl Default for PipelineMultisampleStateCreateInfo {
     fn default() -> Self {
@@ -10978,6 +11635,9 @@ pub struct PipelineColorBlendStateCreateInfo {
     pub p_attachments: *const crate::vk1_0::PipelineColorBlendAttachmentState,
     pub blend_constants: [std::os::raw::c_float; 4],
 }
+impl PipelineColorBlendStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+}
 impl Default for PipelineColorBlendStateCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), logic_op_enable: Default::default(), logic_op: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), blend_constants: unsafe { std::mem::zeroed() } }
@@ -11067,6 +11727,9 @@ pub struct PipelineDynamicStateCreateInfo {
     pub flags: crate::vk1_0::PipelineDynamicStateCreateFlags,
     pub dynamic_state_count: u32,
     pub p_dynamic_states: *const crate::vk1_0::DynamicState,
+}
+impl PipelineDynamicStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_DYNAMIC_STATE_CREATE_INFO;
 }
 impl Default for PipelineDynamicStateCreateInfo {
     fn default() -> Self {
@@ -11251,6 +11914,9 @@ pub struct PipelineDepthStencilStateCreateInfo {
     pub min_depth_bounds: std::os::raw::c_float,
     pub max_depth_bounds: std::os::raw::c_float,
 }
+impl PipelineDepthStencilStateCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
+}
 impl Default for PipelineDepthStencilStateCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), depth_test_enable: Default::default(), depth_write_enable: Default::default(), depth_compare_op: Default::default(), depth_bounds_test_enable: Default::default(), stencil_test_enable: Default::default(), front: Default::default(), back: Default::default(), min_depth_bounds: Default::default(), max_depth_bounds: Default::default() }
@@ -11378,6 +12044,9 @@ pub struct GraphicsPipelineCreateInfo {
     pub subpass: u32,
     pub base_pipeline_handle: crate::vk1_0::Pipeline,
     pub base_pipeline_index: i32,
+}
+impl GraphicsPipelineCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GRAPHICS_PIPELINE_CREATE_INFO;
 }
 impl Default for GraphicsPipelineCreateInfo {
     fn default() -> Self {
@@ -11523,6 +12192,9 @@ pub struct PipelineCacheCreateInfo {
     pub flags: crate::vk1_0::PipelineCacheCreateFlags,
     pub initial_data_size: usize,
     pub p_initial_data: *const std::ffi::c_void,
+}
+impl PipelineCacheCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_CACHE_CREATE_INFO;
 }
 impl Default for PipelineCacheCreateInfo {
     fn default() -> Self {
@@ -11771,6 +12443,9 @@ pub struct PipelineLayoutCreateInfo {
     pub push_constant_range_count: u32,
     pub p_push_constant_ranges: *const crate::vk1_0::PushConstantRange,
 }
+impl PipelineLayoutCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_LAYOUT_CREATE_INFO;
+}
 impl Default for PipelineLayoutCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), set_layout_count: Default::default(), p_set_layouts: std::ptr::null(), push_constant_range_count: Default::default(), p_push_constant_ranges: std::ptr::null() }
@@ -11864,6 +12539,9 @@ pub struct SamplerCreateInfo {
     pub max_lod: std::os::raw::c_float,
     pub border_color: crate::vk1_0::BorderColor,
     pub unnormalized_coordinates: crate::vk1_0::Bool32,
+}
+impl SamplerCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SAMPLER_CREATE_INFO;
 }
 impl Default for SamplerCreateInfo {
     fn default() -> Self {
@@ -12008,6 +12686,9 @@ pub struct CommandPoolCreateInfo {
     pub flags: crate::vk1_0::CommandPoolCreateFlags,
     pub queue_family_index: u32,
 }
+impl CommandPoolCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_POOL_CREATE_INFO;
+}
 impl Default for CommandPoolCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COMMAND_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default() }
@@ -12081,6 +12762,9 @@ pub struct CommandBufferAllocateInfo {
     pub command_pool: crate::vk1_0::CommandPool,
     pub level: crate::vk1_0::CommandBufferLevel,
     pub command_buffer_count: u32,
+}
+impl CommandBufferAllocateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_ALLOCATE_INFO;
 }
 impl Default for CommandBufferAllocateInfo {
     fn default() -> Self {
@@ -12163,6 +12847,9 @@ pub struct CommandBufferInheritanceInfo {
     pub occlusion_query_enable: crate::vk1_0::Bool32,
     pub query_flags: crate::vk1_0::QueryControlFlags,
     pub pipeline_statistics: crate::vk1_0::QueryPipelineStatisticFlags,
+}
+impl CommandBufferInheritanceInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_INFO;
 }
 impl Default for CommandBufferInheritanceInfo {
     fn default() -> Self {
@@ -12257,6 +12944,9 @@ pub struct CommandBufferBeginInfo {
     pub flags: crate::vk1_0::CommandBufferUsageFlags,
     pub p_inheritance_info: *const crate::vk1_0::CommandBufferInheritanceInfo,
 }
+impl CommandBufferBeginInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_BEGIN_INFO;
+}
 impl Default for CommandBufferBeginInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_BEGIN_INFO, p_next: std::ptr::null(), flags: Default::default(), p_inheritance_info: std::ptr::null() }
@@ -12332,6 +13022,9 @@ pub struct RenderPassBeginInfo {
     pub render_area: crate::vk1_0::Rect2D,
     pub clear_value_count: u32,
     pub p_clear_values: *const crate::vk1_0::ClearValue,
+}
+impl RenderPassBeginInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_BEGIN_INFO;
 }
 impl Default for RenderPassBeginInfo {
     fn default() -> Self {
@@ -13000,6 +13693,9 @@ pub struct RenderPassCreateInfo {
     pub dependency_count: u32,
     pub p_dependencies: *const crate::vk1_0::SubpassDependency,
 }
+impl RenderPassCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO;
+}
 impl Default for RenderPassCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null() }
@@ -13085,6 +13781,9 @@ pub struct EventCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::vk1_0::EventCreateFlags,
 }
+impl EventCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EVENT_CREATE_INFO;
+}
 impl Default for EventCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::EVENT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
@@ -13151,6 +13850,9 @@ pub struct FenceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::vk1_0::FenceCreateFlags,
+}
+impl FenceCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FENCE_CREATE_INFO;
 }
 impl Default for FenceCreateInfo {
     fn default() -> Self {
@@ -14662,6 +15364,9 @@ pub struct SemaphoreCreateInfo {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::vk1_0::SemaphoreCreateFlags,
 }
+impl SemaphoreCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_CREATE_INFO;
+}
 impl Default for SemaphoreCreateInfo {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
@@ -14731,6 +15436,9 @@ pub struct QueryPoolCreateInfo {
     pub query_type: crate::vk1_0::QueryType,
     pub query_count: u32,
     pub pipeline_statistics: crate::vk1_0::QueryPipelineStatisticFlags,
+}
+impl QueryPoolCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUERY_POOL_CREATE_INFO;
 }
 impl Default for QueryPoolCreateInfo {
     fn default() -> Self {
@@ -14819,6 +15527,9 @@ pub struct FramebufferCreateInfo {
     pub width: u32,
     pub height: u32,
     pub layers: u32,
+}
+impl FramebufferCreateInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FRAMEBUFFER_CREATE_INFO;
 }
 impl Default for FramebufferCreateInfo {
     fn default() -> Self {
@@ -15172,6 +15883,9 @@ pub struct SubmitInfo {
     pub p_command_buffers: *const crate::vk1_0::CommandBuffer,
     pub signal_semaphore_count: u32,
     pub p_signal_semaphores: *const crate::vk1_0::Semaphore,
+}
+impl SubmitInfo {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SUBMIT_INFO;
 }
 impl Default for SubmitInfo {
     fn default() -> Self {

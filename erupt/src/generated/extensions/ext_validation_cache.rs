@@ -84,6 +84,9 @@ pub struct ValidationCacheCreateInfoEXT {
     pub initial_data_size: usize,
     pub p_initial_data: *const std::ffi::c_void,
 }
+impl ValidationCacheCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VALIDATION_CACHE_CREATE_INFO_EXT;
+}
 impl Default for ValidationCacheCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VALIDATION_CACHE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
@@ -160,6 +163,9 @@ pub struct ShaderModuleValidationCacheCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT,
+}
+impl ShaderModuleValidationCacheCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT;
 }
 impl Default for ShaderModuleValidationCacheCreateInfoEXT {
     fn default() -> Self {

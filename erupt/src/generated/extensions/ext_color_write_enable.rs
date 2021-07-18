@@ -33,6 +33,9 @@ pub struct PhysicalDeviceColorWriteEnableFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub color_write_enable: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceColorWriteEnableFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceColorWriteEnableFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT, p_next: std::ptr::null_mut(), color_write_enable: Default::default() }
@@ -100,6 +103,9 @@ pub struct PipelineColorWriteCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub attachment_count: u32,
     pub p_color_write_enables: *const crate::vk1_0::Bool32,
+}
+impl PipelineColorWriteCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT;
 }
 impl Default for PipelineColorWriteCreateInfoEXT {
     fn default() -> Self {

@@ -167,7 +167,7 @@ pub fn generate(source: &Source) {
     }
 
     for en in source.enums.iter().filter(|v| v.origin.is_some()) {
-        codemap.extend(en.tokens(&comment_gen));
+        codemap.extend(en.tokens(&comment_gen, &source));
     }
 
     let functions = source

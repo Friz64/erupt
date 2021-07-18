@@ -24,6 +24,9 @@ pub struct PhysicalDeviceInheritedViewportScissorFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub inherited_viewport_scissor2_d: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceInheritedViewportScissorFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV;
+}
 impl Default for PhysicalDeviceInheritedViewportScissorFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV, p_next: std::ptr::null_mut(), inherited_viewport_scissor2_d: Default::default() }
@@ -92,6 +95,9 @@ pub struct CommandBufferInheritanceViewportScissorInfoNV {
     pub viewport_scissor2_d: crate::vk1_0::Bool32,
     pub viewport_depth_count: u32,
     pub p_viewport_depths: *const crate::vk1_0::Viewport,
+}
+impl CommandBufferInheritanceViewportScissorInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV;
 }
 impl Default for CommandBufferInheritanceViewportScissorInfoNV {
     fn default() -> Self {

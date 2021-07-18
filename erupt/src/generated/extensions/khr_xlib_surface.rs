@@ -49,6 +49,9 @@ pub struct XlibSurfaceCreateInfoKHR {
     pub dpy: *mut std::ffi::c_void,
     pub window: u64,
 }
+impl XlibSurfaceCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR;
+}
 impl Default for XlibSurfaceCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::XLIB_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), dpy: std::ptr::null_mut(), window: Default::default() }

@@ -402,6 +402,9 @@ pub struct WriteDescriptorSetAccelerationStructureKHR {
     pub acceleration_structure_count: u32,
     pub p_acceleration_structures: *const crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
 }
+impl WriteDescriptorSetAccelerationStructureKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR;
+}
 impl Default for WriteDescriptorSetAccelerationStructureKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
@@ -473,6 +476,9 @@ pub struct PhysicalDeviceAccelerationStructureFeaturesKHR {
     pub acceleration_structure_indirect_build: crate::vk1_0::Bool32,
     pub acceleration_structure_host_commands: crate::vk1_0::Bool32,
     pub descriptor_binding_acceleration_structure_update_after_bind: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceAccelerationStructureFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR;
 }
 impl Default for PhysicalDeviceAccelerationStructureFeaturesKHR {
     fn default() -> Self {
@@ -567,6 +573,9 @@ pub struct PhysicalDeviceAccelerationStructurePropertiesKHR {
     pub max_descriptor_set_acceleration_structures: u32,
     pub max_descriptor_set_update_after_bind_acceleration_structures: u32,
     pub min_acceleration_structure_scratch_offset_alignment: u32,
+}
+impl PhysicalDeviceAccelerationStructurePropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR;
 }
 impl Default for PhysicalDeviceAccelerationStructurePropertiesKHR {
     fn default() -> Self {
@@ -712,6 +721,9 @@ pub struct AccelerationStructureGeometryTrianglesDataKHR {
     pub index_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
     pub transform_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
 }
+impl AccelerationStructureGeometryTrianglesDataKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR;
+}
 impl Default for AccelerationStructureGeometryTrianglesDataKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR, p_next: std::ptr::null(), vertex_format: Default::default(), vertex_data: Default::default(), vertex_stride: Default::default(), max_vertex: Default::default(), index_type: Default::default(), index_data: Default::default(), transform_data: Default::default() }
@@ -810,6 +822,9 @@ pub struct AccelerationStructureGeometryAabbsDataKHR {
     pub data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
     pub stride: crate::vk1_0::DeviceSize,
 }
+impl AccelerationStructureGeometryAabbsDataKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR;
+}
 impl Default for AccelerationStructureGeometryAabbsDataKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR, p_next: std::ptr::null(), data: Default::default(), stride: Default::default() }
@@ -882,6 +897,9 @@ pub struct AccelerationStructureGeometryInstancesDataKHR {
     pub p_next: *const std::ffi::c_void,
     pub array_of_pointers: crate::vk1_0::Bool32,
     pub data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR,
+}
+impl AccelerationStructureGeometryInstancesDataKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR;
 }
 impl Default for AccelerationStructureGeometryInstancesDataKHR {
     fn default() -> Self {
@@ -976,6 +994,9 @@ pub struct AccelerationStructureGeometryKHR {
     pub geometry: crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryDataKHR,
     pub flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR,
 }
+impl AccelerationStructureGeometryKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_KHR;
+}
 impl Default for AccelerationStructureGeometryKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_KHR, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
@@ -1060,6 +1081,9 @@ pub struct AccelerationStructureBuildGeometryInfoKHR {
     pub p_geometries: *const crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHR,
     pub pp_geometries: *const *const crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryKHR,
     pub scratch_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR,
+}
+impl AccelerationStructureBuildGeometryInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR;
 }
 impl Default for AccelerationStructureBuildGeometryInfoKHR {
     fn default() -> Self {
@@ -1246,6 +1270,9 @@ pub struct AccelerationStructureCreateInfoKHR {
     pub size: crate::vk1_0::DeviceSize,
     pub _type: crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR,
     pub device_address: crate::vk1_0::DeviceAddress,
+}
+impl AccelerationStructureCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_CREATE_INFO_KHR;
 }
 impl Default for AccelerationStructureCreateInfoKHR {
     fn default() -> Self {
@@ -1592,6 +1619,9 @@ pub struct AccelerationStructureDeviceAddressInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
 }
+impl AccelerationStructureDeviceAddressInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR;
+}
 impl Default for AccelerationStructureDeviceAddressInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR, p_next: std::ptr::null(), acceleration_structure: Default::default() }
@@ -1658,6 +1688,9 @@ pub struct AccelerationStructureVersionInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub p_version_data: *const u8,
+}
+impl AccelerationStructureVersionInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_VERSION_INFO_KHR;
 }
 impl Default for AccelerationStructureVersionInfoKHR {
     fn default() -> Self {
@@ -1727,6 +1760,9 @@ pub struct CopyAccelerationStructureInfoKHR {
     pub src: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
     pub dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
     pub mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
+}
+impl CopyAccelerationStructureInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_ACCELERATION_STRUCTURE_INFO_KHR;
 }
 impl Default for CopyAccelerationStructureInfoKHR {
     fn default() -> Self {
@@ -1807,6 +1843,9 @@ pub struct CopyAccelerationStructureToMemoryInfoKHR {
     pub dst: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressKHR,
     pub mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
 }
+impl CopyAccelerationStructureToMemoryInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR;
+}
 impl Default for CopyAccelerationStructureToMemoryInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
@@ -1886,6 +1925,9 @@ pub struct CopyMemoryToAccelerationStructureInfoKHR {
     pub dst: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR,
     pub mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
 }
+impl CopyMemoryToAccelerationStructureInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR;
+}
 impl Default for CopyMemoryToAccelerationStructureInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
@@ -1964,6 +2006,9 @@ pub struct AccelerationStructureBuildSizesInfoKHR {
     pub acceleration_structure_size: crate::vk1_0::DeviceSize,
     pub update_scratch_size: crate::vk1_0::DeviceSize,
     pub build_scratch_size: crate::vk1_0::DeviceSize,
+}
+impl AccelerationStructureBuildSizesInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR;
 }
 impl Default for AccelerationStructureBuildSizesInfoKHR {
     fn default() -> Self {

@@ -91,6 +91,9 @@ pub struct PhysicalDeviceCooperativeMatrixFeaturesNV {
     pub cooperative_matrix: crate::vk1_0::Bool32,
     pub cooperative_matrix_robust_buffer_access: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceCooperativeMatrixFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV;
+}
 impl Default for PhysicalDeviceCooperativeMatrixFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV, p_next: std::ptr::null_mut(), cooperative_matrix: Default::default(), cooperative_matrix_robust_buffer_access: Default::default() }
@@ -162,6 +165,9 @@ pub struct PhysicalDeviceCooperativeMatrixPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub cooperative_matrix_supported_stages: crate::vk1_0::ShaderStageFlags,
+}
+impl PhysicalDeviceCooperativeMatrixPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV;
 }
 impl Default for PhysicalDeviceCooperativeMatrixPropertiesNV {
     fn default() -> Self {
@@ -236,6 +242,9 @@ pub struct CooperativeMatrixPropertiesNV {
     pub c_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV,
     pub d_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV,
     pub scope: crate::extensions::nv_cooperative_matrix::ScopeNV,
+}
+impl CooperativeMatrixPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COOPERATIVE_MATRIX_PROPERTIES_NV;
 }
 impl Default for CooperativeMatrixPropertiesNV {
     fn default() -> Self {

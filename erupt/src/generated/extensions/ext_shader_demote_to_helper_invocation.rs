@@ -21,6 +21,9 @@ pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub shader_demote_to_helper_invocation: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_demote_to_helper_invocation: Default::default() }

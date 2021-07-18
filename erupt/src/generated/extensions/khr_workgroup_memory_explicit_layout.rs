@@ -24,6 +24,9 @@ pub struct PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     pub workgroup_memory_explicit_layout8_bit_access: crate::vk1_0::Bool32,
     pub workgroup_memory_explicit_layout16_bit_access: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR;
+}
 impl Default for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR, p_next: std::ptr::null_mut(), workgroup_memory_explicit_layout: Default::default(), workgroup_memory_explicit_layout_scalar_block_layout: Default::default(), workgroup_memory_explicit_layout8_bit_access: Default::default(), workgroup_memory_explicit_layout16_bit_access: Default::default() }

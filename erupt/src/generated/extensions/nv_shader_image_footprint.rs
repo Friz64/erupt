@@ -21,6 +21,9 @@ pub struct PhysicalDeviceShaderImageFootprintFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub image_footprint: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderImageFootprintFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV;
+}
 impl Default for PhysicalDeviceShaderImageFootprintFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV, p_next: std::ptr::null_mut(), image_footprint: Default::default() }

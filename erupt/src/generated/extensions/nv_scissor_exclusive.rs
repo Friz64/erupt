@@ -33,6 +33,9 @@ pub struct PhysicalDeviceExclusiveScissorFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub exclusive_scissor: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceExclusiveScissorFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV;
+}
 impl Default for PhysicalDeviceExclusiveScissorFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV, p_next: std::ptr::null_mut(), exclusive_scissor: Default::default() }
@@ -100,6 +103,9 @@ pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub exclusive_scissor_count: u32,
     pub p_exclusive_scissors: *const crate::vk1_0::Rect2D,
+}
+impl PipelineViewportExclusiveScissorStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV;
 }
 impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn default() -> Self {

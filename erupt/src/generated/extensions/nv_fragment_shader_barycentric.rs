@@ -21,6 +21,9 @@ pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub fragment_shader_barycentric: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV;
+}
 impl Default for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shader_barycentric: Default::default() }

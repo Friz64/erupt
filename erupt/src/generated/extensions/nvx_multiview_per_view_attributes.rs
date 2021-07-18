@@ -24,6 +24,9 @@ pub struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     pub p_next: *mut std::ffi::c_void,
     pub per_view_position_all_components: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX;
+}
 impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX, p_next: std::ptr::null_mut(), per_view_position_all_components: Default::default() }

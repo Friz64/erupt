@@ -171,6 +171,9 @@ pub struct DebugReportCallbackCreateInfoEXT {
     pub pfn_callback: Option<crate::extensions::ext_debug_report::PFN_vkDebugReportCallbackEXT>,
     pub p_user_data: *mut std::ffi::c_void,
 }
+impl DebugReportCallbackCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
+}
 impl Default for DebugReportCallbackCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), pfn_callback: Default::default(), p_user_data: std::ptr::null_mut() }

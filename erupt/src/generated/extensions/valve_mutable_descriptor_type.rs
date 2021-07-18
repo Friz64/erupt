@@ -38,6 +38,9 @@ pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     pub p_next: *mut std::ffi::c_void,
     pub mutable_descriptor_type: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE;
+}
 impl Default for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE, p_next: std::ptr::null_mut(), mutable_descriptor_type: Default::default() }
@@ -172,6 +175,9 @@ pub struct MutableDescriptorTypeCreateInfoVALVE {
     pub p_next: *const std::ffi::c_void,
     pub mutable_descriptor_type_list_count: u32,
     pub p_mutable_descriptor_type_lists: *const crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVE,
+}
+impl MutableDescriptorTypeCreateInfoVALVE {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE;
 }
 impl Default for MutableDescriptorTypeCreateInfoVALVE {
     fn default() -> Self {

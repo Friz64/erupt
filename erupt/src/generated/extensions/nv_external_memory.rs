@@ -22,6 +22,9 @@ pub struct ExternalMemoryImageCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
 }
+impl ExternalMemoryImageCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV;
+}
 impl Default for ExternalMemoryImageCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV, p_next: std::ptr::null(), handle_types: Default::default() }
@@ -88,6 +91,9 @@ pub struct ExportMemoryAllocateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+}
+impl ExportMemoryAllocateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO_NV;
 }
 impl Default for ExportMemoryAllocateInfoNV {
     fn default() -> Self {

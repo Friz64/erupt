@@ -70,6 +70,9 @@ pub struct PhysicalDeviceDiscardRectanglePropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub max_discard_rectangles: u32,
 }
+impl PhysicalDeviceDiscardRectanglePropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceDiscardRectanglePropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_discard_rectangles: Default::default() }
@@ -139,6 +142,9 @@ pub struct PipelineDiscardRectangleStateCreateInfoEXT {
     pub discard_rectangle_mode: crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT,
     pub discard_rectangle_count: u32,
     pub p_discard_rectangles: *const crate::vk1_0::Rect2D,
+}
+impl PipelineDiscardRectangleStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineDiscardRectangleStateCreateInfoEXT {
     fn default() -> Self {

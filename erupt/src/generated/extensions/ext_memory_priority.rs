@@ -24,6 +24,9 @@ pub struct PhysicalDeviceMemoryPriorityFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub memory_priority: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceMemoryPriorityFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceMemoryPriorityFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT, p_next: std::ptr::null_mut(), memory_priority: Default::default() }
@@ -90,6 +93,9 @@ pub struct MemoryPriorityAllocateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub priority: std::os::raw::c_float,
+}
+impl MemoryPriorityAllocateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_PRIORITY_ALLOCATE_INFO_EXT;
 }
 impl Default for MemoryPriorityAllocateInfoEXT {
     fn default() -> Self {

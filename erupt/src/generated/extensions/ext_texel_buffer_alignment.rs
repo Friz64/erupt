@@ -24,6 +24,9 @@ pub struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub texel_buffer_alignment: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT, p_next: std::ptr::null_mut(), texel_buffer_alignment: Default::default() }
@@ -93,6 +96,9 @@ pub struct PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     pub storage_texel_buffer_offset_single_texel_alignment: crate::vk1_0::Bool32,
     pub uniform_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize,
     pub uniform_texel_buffer_offset_single_texel_alignment: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     fn default() -> Self {

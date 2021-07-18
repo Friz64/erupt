@@ -97,6 +97,9 @@ pub struct PhysicalDeviceTransformFeedbackFeaturesEXT {
     pub transform_feedback: crate::vk1_0::Bool32,
     pub geometry_streams: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceTransformFeedbackFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceTransformFeedbackFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT, p_next: std::ptr::null_mut(), transform_feedback: Default::default(), geometry_streams: Default::default() }
@@ -177,6 +180,9 @@ pub struct PhysicalDeviceTransformFeedbackPropertiesEXT {
     pub transform_feedback_streams_lines_triangles: crate::vk1_0::Bool32,
     pub transform_feedback_rasterization_stream_select: crate::vk1_0::Bool32,
     pub transform_feedback_draw: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceTransformFeedbackPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceTransformFeedbackPropertiesEXT {
     fn default() -> Self {
@@ -290,6 +296,9 @@ pub struct PipelineRasterizationStateStreamCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateFlagsEXT,
     pub rasterization_stream: u32,
+}
+impl PipelineRasterizationStateStreamCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT;
 }
 impl Default for PipelineRasterizationStateStreamCreateInfoEXT {
     fn default() -> Self {

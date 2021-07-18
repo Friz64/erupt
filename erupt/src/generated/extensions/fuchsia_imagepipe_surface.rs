@@ -43,6 +43,9 @@ pub struct ImagePipeSurfaceCreateInfoFUCHSIA {
     pub flags: crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateFlagsFUCHSIA,
     pub image_pipe_handle: *mut std::ffi::c_void,
 }
+impl ImagePipeSurfaceCreateInfoFUCHSIA {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA;
+}
 impl Default for ImagePipeSurfaceCreateInfoFUCHSIA {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA, p_next: std::ptr::null(), flags: Default::default(), image_pipe_handle: std::ptr::null_mut() }

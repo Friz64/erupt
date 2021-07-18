@@ -276,6 +276,9 @@ pub struct InitializePerformanceApiInfoINTEL {
     pub p_next: *const std::ffi::c_void,
     pub p_user_data: *mut std::ffi::c_void,
 }
+impl InitializePerformanceApiInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::INITIALIZE_PERFORMANCE_API_INFO_INTEL;
+}
 impl Default for InitializePerformanceApiInfoINTEL {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::INITIALIZE_PERFORMANCE_API_INFO_INTEL, p_next: std::ptr::null(), p_user_data: std::ptr::null_mut() }
@@ -342,6 +345,9 @@ pub struct QueryPoolPerformanceQueryCreateInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub performance_counters_sampling: crate::extensions::intel_performance_query::QueryPoolSamplingModeINTEL,
+}
+impl QueryPoolPerformanceQueryCreateInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL;
 }
 impl Default for QueryPoolPerformanceQueryCreateInfoINTEL {
     fn default() -> Self {
@@ -410,6 +416,9 @@ pub struct PerformanceMarkerInfoINTEL {
     pub p_next: *const std::ffi::c_void,
     pub marker: u64,
 }
+impl PerformanceMarkerInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_MARKER_INFO_INTEL;
+}
 impl Default for PerformanceMarkerInfoINTEL {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_MARKER_INFO_INTEL, p_next: std::ptr::null(), marker: Default::default() }
@@ -476,6 +485,9 @@ pub struct PerformanceStreamMarkerInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub marker: u32,
+}
+impl PerformanceStreamMarkerInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_STREAM_MARKER_INFO_INTEL;
 }
 impl Default for PerformanceStreamMarkerInfoINTEL {
     fn default() -> Self {
@@ -545,6 +557,9 @@ pub struct PerformanceOverrideInfoINTEL {
     pub _type: crate::extensions::intel_performance_query::PerformanceOverrideTypeINTEL,
     pub enable: crate::vk1_0::Bool32,
     pub parameter: u64,
+}
+impl PerformanceOverrideInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_OVERRIDE_INFO_INTEL;
 }
 impl Default for PerformanceOverrideInfoINTEL {
     fn default() -> Self {
@@ -622,6 +637,9 @@ pub struct PerformanceConfigurationAcquireInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub _type: crate::extensions::intel_performance_query::PerformanceConfigurationTypeINTEL,
+}
+impl PerformanceConfigurationAcquireInfoINTEL {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL;
 }
 impl Default for PerformanceConfigurationAcquireInfoINTEL {
     fn default() -> Self {

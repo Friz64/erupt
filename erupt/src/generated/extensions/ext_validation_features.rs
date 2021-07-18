@@ -78,6 +78,9 @@ pub struct ValidationFeaturesEXT {
     pub disabled_validation_feature_count: u32,
     pub p_disabled_validation_features: *const crate::extensions::ext_validation_features::ValidationFeatureDisableEXT,
 }
+impl ValidationFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VALIDATION_FEATURES_EXT;
+}
 impl Default for ValidationFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VALIDATION_FEATURES_EXT, p_next: std::ptr::null(), enabled_validation_feature_count: Default::default(), p_enabled_validation_features: std::ptr::null(), disabled_validation_feature_count: Default::default(), p_disabled_validation_features: std::ptr::null() }

@@ -101,6 +101,9 @@ pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub advanced_blend_coherent_operations: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT, p_next: std::ptr::null_mut(), advanced_blend_coherent_operations: Default::default() }
@@ -172,6 +175,9 @@ pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     pub advanced_blend_non_premultiplied_dst_color: crate::vk1_0::Bool32,
     pub advanced_blend_correlated_overlap: crate::vk1_0::Bool32,
     pub advanced_blend_all_operations: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn default() -> Self {
@@ -266,6 +272,9 @@ pub struct PipelineColorBlendAdvancedStateCreateInfoEXT {
     pub src_premultiplied: crate::vk1_0::Bool32,
     pub dst_premultiplied: crate::vk1_0::Bool32,
     pub blend_overlap: crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT,
+}
+impl PipelineColorBlendAdvancedStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn default() -> Self {

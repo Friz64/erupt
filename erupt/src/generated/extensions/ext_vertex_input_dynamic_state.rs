@@ -32,6 +32,9 @@ pub struct PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub vertex_input_dynamic_state: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT, p_next: std::ptr::null_mut(), vertex_input_dynamic_state: Default::default() }
@@ -101,6 +104,9 @@ pub struct VertexInputBindingDescription2EXT {
     pub stride: u32,
     pub input_rate: crate::vk1_0::VertexInputRate,
     pub divisor: u32,
+}
+impl VertexInputBindingDescription2EXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT;
 }
 impl Default for VertexInputBindingDescription2EXT {
     fn default() -> Self {
@@ -186,6 +192,9 @@ pub struct VertexInputAttributeDescription2EXT {
     pub binding: u32,
     pub format: crate::vk1_0::Format,
     pub offset: u32,
+}
+impl VertexInputAttributeDescription2EXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT;
 }
 impl Default for VertexInputAttributeDescription2EXT {
     fn default() -> Self {

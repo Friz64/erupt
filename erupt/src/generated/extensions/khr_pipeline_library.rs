@@ -22,6 +22,9 @@ pub struct PipelineLibraryCreateInfoKHR {
     pub library_count: u32,
     pub p_libraries: *const crate::vk1_0::Pipeline,
 }
+impl PipelineLibraryCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_LIBRARY_CREATE_INFO_KHR;
+}
 impl Default for PipelineLibraryCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_LIBRARY_CREATE_INFO_KHR, p_next: std::ptr::null(), library_count: Default::default(), p_libraries: std::ptr::null() }

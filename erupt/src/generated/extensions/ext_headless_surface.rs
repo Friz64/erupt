@@ -42,6 +42,9 @@ pub struct HeadlessSurfaceCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::ext_headless_surface::HeadlessSurfaceCreateFlagsEXT,
 }
+impl HeadlessSurfaceCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::HEADLESS_SURFACE_CREATE_INFO_EXT;
+}
 impl Default for HeadlessSurfaceCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::HEADLESS_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default() }

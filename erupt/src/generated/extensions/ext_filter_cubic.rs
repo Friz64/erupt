@@ -30,6 +30,9 @@ pub struct PhysicalDeviceImageViewImageFormatInfoEXT {
     pub p_next: *mut std::ffi::c_void,
     pub image_view_type: crate::vk1_0::ImageViewType,
 }
+impl PhysicalDeviceImageViewImageFormatInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT;
+}
 impl Default for PhysicalDeviceImageViewImageFormatInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT, p_next: std::ptr::null_mut(), image_view_type: Default::default() }
@@ -97,6 +100,9 @@ pub struct FilterCubicImageViewImageFormatPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub filter_cubic: crate::vk1_0::Bool32,
     pub filter_cubic_minmax: crate::vk1_0::Bool32,
+}
+impl FilterCubicImageViewImageFormatPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT;
 }
 impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
     fn default() -> Self {

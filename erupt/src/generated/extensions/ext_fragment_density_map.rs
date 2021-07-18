@@ -64,6 +64,9 @@ pub struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
     pub fragment_density_map_dynamic: crate::vk1_0::Bool32,
     pub fragment_density_map_non_subsampled_images: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceFragmentDensityMapFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map: Default::default(), fragment_density_map_dynamic: Default::default(), fragment_density_map_non_subsampled_images: Default::default() }
@@ -143,6 +146,9 @@ pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
     pub max_fragment_density_texel_size: crate::vk1_0::Extent2D,
     pub fragment_density_invocations: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_fragment_density_texel_size: Default::default(), max_fragment_density_texel_size: Default::default(), fragment_density_invocations: Default::default() }
@@ -219,6 +225,9 @@ pub struct RenderPassFragmentDensityMapCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub fragment_density_map_attachment: crate::vk1_0::AttachmentReference,
+}
+impl RenderPassFragmentDensityMapCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT;
 }
 impl Default for RenderPassFragmentDensityMapCreateInfoEXT {
     fn default() -> Self {

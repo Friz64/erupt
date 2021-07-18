@@ -19,6 +19,9 @@ pub struct PresentFrameTokenGGP {
     pub p_next: *const std::ffi::c_void,
     pub frame_token: u64,
 }
+impl PresentFrameTokenGGP {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PRESENT_FRAME_TOKEN_GGP;
+}
 impl Default for PresentFrameTokenGGP {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PRESENT_FRAME_TOKEN_GGP, p_next: std::ptr::null(), frame_token: Default::default() }

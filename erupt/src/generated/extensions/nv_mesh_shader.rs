@@ -50,6 +50,9 @@ pub struct PhysicalDeviceMeshShaderFeaturesNV {
     pub task_shader: crate::vk1_0::Bool32,
     pub mesh_shader: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceMeshShaderFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV;
+}
 impl Default for PhysicalDeviceMeshShaderFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV, p_next: std::ptr::null_mut(), task_shader: Default::default(), mesh_shader: Default::default() }
@@ -133,6 +136,9 @@ pub struct PhysicalDeviceMeshShaderPropertiesNV {
     pub max_mesh_multiview_view_count: u32,
     pub mesh_output_per_vertex_granularity: u32,
     pub mesh_output_per_primitive_granularity: u32,
+}
+impl PhysicalDeviceMeshShaderPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV;
 }
 impl Default for PhysicalDeviceMeshShaderPropertiesNV {
     fn default() -> Self {

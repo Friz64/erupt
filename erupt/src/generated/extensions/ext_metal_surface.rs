@@ -45,6 +45,9 @@ pub struct MetalSurfaceCreateInfoEXT {
     pub flags: crate::extensions::ext_metal_surface::MetalSurfaceCreateFlagsEXT,
     pub p_layer: *const crate::extensions::ext_metal_surface::CAMetalLayer,
 }
+impl MetalSurfaceCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::METAL_SURFACE_CREATE_INFO_EXT;
+}
 impl Default for MetalSurfaceCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::METAL_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), p_layer: std::ptr::null() }

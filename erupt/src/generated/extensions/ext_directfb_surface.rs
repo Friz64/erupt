@@ -49,6 +49,9 @@ pub struct DirectFBSurfaceCreateInfoEXT {
     pub dfb: *mut std::ffi::c_void,
     pub surface: *mut std::ffi::c_void,
 }
+impl DirectFBSurfaceCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DIRECTFB_SURFACE_CREATE_INFO_EXT;
+}
 impl Default for DirectFBSurfaceCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DIRECTFB_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), dfb: std::ptr::null_mut(), surface: std::ptr::null_mut() }

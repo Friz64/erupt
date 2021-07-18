@@ -121,6 +121,9 @@ pub struct SampleLocationsInfoEXT {
     pub sample_locations_count: u32,
     pub p_sample_locations: *const crate::extensions::ext_sample_locations::SampleLocationEXT,
 }
+impl SampleLocationsInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SAMPLE_LOCATIONS_INFO_EXT;
+}
 impl Default for SampleLocationsInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SAMPLE_LOCATIONS_INFO_EXT, p_next: std::ptr::null(), sample_locations_per_pixel: Default::default(), sample_location_grid_size: Default::default(), sample_locations_count: Default::default(), p_sample_locations: std::ptr::null() }
@@ -344,6 +347,9 @@ pub struct RenderPassSampleLocationsBeginInfoEXT {
     pub post_subpass_sample_locations_count: u32,
     pub p_post_subpass_sample_locations: *const crate::extensions::ext_sample_locations::SubpassSampleLocationsEXT,
 }
+impl RenderPassSampleLocationsBeginInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT;
+}
 impl Default for RenderPassSampleLocationsBeginInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT, p_next: std::ptr::null(), attachment_initial_sample_locations_count: Default::default(), p_attachment_initial_sample_locations: std::ptr::null(), post_subpass_sample_locations_count: Default::default(), p_post_subpass_sample_locations: std::ptr::null() }
@@ -418,6 +424,9 @@ pub struct PipelineSampleLocationsStateCreateInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub sample_locations_enable: crate::vk1_0::Bool32,
     pub sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT,
+}
+impl PipelineSampleLocationsStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineSampleLocationsStateCreateInfoEXT {
     fn default() -> Self {
@@ -494,6 +503,9 @@ pub struct PhysicalDeviceSampleLocationsPropertiesEXT {
     pub sample_location_coordinate_range: [std::os::raw::c_float; 2],
     pub sample_location_sub_pixel_bits: u32,
     pub variable_sample_locations: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceSampleLocationsPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceSampleLocationsPropertiesEXT {
     fn default() -> Self {
@@ -581,6 +593,9 @@ pub struct MultisamplePropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub max_sample_location_grid_size: crate::vk1_0::Extent2D,
+}
+impl MultisamplePropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MULTISAMPLE_PROPERTIES_EXT;
 }
 impl Default for MultisamplePropertiesEXT {
     fn default() -> Self {

@@ -38,6 +38,9 @@ pub struct PipelineRasterizationStateRasterizationOrderAMD {
     pub p_next: *const std::ffi::c_void,
     pub rasterization_order: crate::extensions::amd_rasterization_order::RasterizationOrderAMD,
 }
+impl PipelineRasterizationStateRasterizationOrderAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD;
+}
 impl Default for PipelineRasterizationStateRasterizationOrderAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD, p_next: std::ptr::null(), rasterization_order: Default::default() }

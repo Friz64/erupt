@@ -127,6 +127,9 @@ pub struct PipelineCreationFeedbackCreateInfoEXT {
     pub pipeline_stage_creation_feedback_count: u32,
     pub p_pipeline_stage_creation_feedbacks: *mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT,
 }
+impl PipelineCreationFeedbackCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT;
+}
 impl Default for PipelineCreationFeedbackCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT, p_next: std::ptr::null(), p_pipeline_creation_feedback: std::ptr::null_mut(), pipeline_stage_creation_feedback_count: Default::default(), p_pipeline_stage_creation_feedbacks: std::ptr::null_mut() }

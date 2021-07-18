@@ -61,6 +61,9 @@ pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     pub buffer_device_address_capture_replay: crate::vk1_0::Bool32,
     pub buffer_device_address_multi_device: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
@@ -137,6 +140,9 @@ pub struct BufferDeviceAddressCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub device_address: crate::vk1_0::DeviceAddress,
+}
+impl BufferDeviceAddressCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT;
 }
 impl Default for BufferDeviceAddressCreateInfoEXT {
     fn default() -> Self {

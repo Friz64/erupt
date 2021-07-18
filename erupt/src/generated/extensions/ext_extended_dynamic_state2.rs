@@ -56,6 +56,9 @@ pub struct PhysicalDeviceExtendedDynamicState2FeaturesEXT {
     pub extended_dynamic_state2_logic_op: crate::vk1_0::Bool32,
     pub extended_dynamic_state2_patch_control_points: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceExtendedDynamicState2FeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceExtendedDynamicState2FeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT, p_next: std::ptr::null_mut(), extended_dynamic_state2: Default::default(), extended_dynamic_state2_logic_op: Default::default(), extended_dynamic_state2_patch_control_points: Default::default() }

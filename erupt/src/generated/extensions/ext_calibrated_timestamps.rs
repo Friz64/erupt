@@ -50,6 +50,9 @@ pub struct CalibratedTimestampInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub time_domain: crate::extensions::ext_calibrated_timestamps::TimeDomainEXT,
 }
+impl CalibratedTimestampInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CALIBRATED_TIMESTAMP_INFO_EXT;
+}
 impl Default for CalibratedTimestampInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::CALIBRATED_TIMESTAMP_INFO_EXT, p_next: std::ptr::null(), time_domain: Default::default() }

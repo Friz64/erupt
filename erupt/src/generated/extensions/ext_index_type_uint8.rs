@@ -25,6 +25,9 @@ pub struct PhysicalDeviceIndexTypeUint8FeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub index_type_uint8: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceIndexTypeUint8FeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT, p_next: std::ptr::null_mut(), index_type_uint8: Default::default() }

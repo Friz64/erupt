@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add associated constants for structure types on structs
+- Add `StructureType::mem_size`: returns the memory size of the structure type variant
+
 ### Changed
 
 - Update Vulkan Headers to version 184

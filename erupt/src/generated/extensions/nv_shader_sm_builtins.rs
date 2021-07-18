@@ -25,6 +25,9 @@ pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     pub shader_sm_count: u32,
     pub shader_warps_per_sm: u32,
 }
+impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV;
+}
 impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV, p_next: std::ptr::null_mut(), shader_sm_count: Default::default(), shader_warps_per_sm: Default::default() }
@@ -96,6 +99,9 @@ pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub shader_sm_builtins: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV;
 }
 impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     fn default() -> Self {

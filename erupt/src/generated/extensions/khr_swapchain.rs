@@ -159,6 +159,9 @@ pub struct SwapchainCreateInfoKHR {
     pub clipped: crate::vk1_0::Bool32,
     pub old_swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
 }
+impl SwapchainCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SWAPCHAIN_CREATE_INFO_KHR;
+}
 impl Default for SwapchainCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), surface: Default::default(), min_image_count: Default::default(), image_format: Default::default(), image_color_space: Default::default(), image_extent: Default::default(), image_array_layers: Default::default(), image_usage: Default::default(), image_sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), pre_transform: Default::default(), composite_alpha: Default::default(), present_mode: Default::default(), clipped: Default::default(), old_swapchain: Default::default() }
@@ -304,6 +307,9 @@ pub struct PresentInfoKHR {
     pub p_image_indices: *const u32,
     pub p_results: *mut crate::vk1_0::Result,
 }
+impl PresentInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PRESENT_INFO_KHR;
+}
 impl Default for PresentInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PRESENT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), swapchain_count: Default::default(), p_swapchains: std::ptr::null(), p_image_indices: std::ptr::null(), p_results: std::ptr::null_mut() }
@@ -395,6 +401,9 @@ pub struct DeviceGroupPresentCapabilitiesKHR {
     pub present_mask: [u32; 32],
     pub modes: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
 }
+impl DeviceGroupPresentCapabilitiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR;
+}
 impl Default for DeviceGroupPresentCapabilitiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR, p_next: std::ptr::null_mut(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
@@ -467,6 +476,9 @@ pub struct ImageSwapchainCreateInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
 }
+impl ImageSwapchainCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_SWAPCHAIN_CREATE_INFO_KHR;
+}
 impl Default for ImageSwapchainCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default() }
@@ -534,6 +546,9 @@ pub struct BindImageMemorySwapchainInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
     pub image_index: u32,
+}
+impl BindImageMemorySwapchainInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR;
 }
 impl Default for BindImageMemorySwapchainInfoKHR {
     fn default() -> Self {
@@ -610,6 +625,9 @@ pub struct AcquireNextImageInfoKHR {
     pub semaphore: crate::vk1_0::Semaphore,
     pub fence: crate::vk1_0::Fence,
     pub device_mask: u32,
+}
+impl AcquireNextImageInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACQUIRE_NEXT_IMAGE_INFO_KHR;
 }
 impl Default for AcquireNextImageInfoKHR {
     fn default() -> Self {
@@ -700,6 +718,9 @@ pub struct DeviceGroupPresentInfoKHR {
     pub p_device_masks: *const u32,
     pub mode: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagBitsKHR,
 }
+impl DeviceGroupPresentInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_INFO_KHR;
+}
 impl Default for DeviceGroupPresentInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_INFO_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_device_masks: std::ptr::null(), mode: Default::default() }
@@ -772,6 +793,9 @@ pub struct DeviceGroupSwapchainCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub modes: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
+}
+impl DeviceGroupSwapchainCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR;
 }
 impl Default for DeviceGroupSwapchainCreateInfoKHR {
     fn default() -> Self {

@@ -21,6 +21,9 @@ pub struct PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub dedicated_allocation_image_aliasing: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV;
+}
 impl Default for PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV, p_next: std::ptr::null_mut(), dedicated_allocation_image_aliasing: Default::default() }

@@ -99,6 +99,9 @@ pub struct PipelineVertexInputDivisorStateCreateInfoEXT {
     pub vertex_binding_divisor_count: u32,
     pub p_vertex_binding_divisors: *const crate::extensions::ext_vertex_attribute_divisor::VertexInputBindingDivisorDescriptionEXT,
 }
+impl PipelineVertexInputDivisorStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT;
+}
 impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), vertex_binding_divisor_count: Default::default(), p_vertex_binding_divisors: std::ptr::null() }
@@ -167,6 +170,9 @@ pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub max_vertex_attrib_divisor: u32,
 }
+impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_vertex_attrib_divisor: Default::default() }
@@ -234,6 +240,9 @@ pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub vertex_attribute_instance_rate_divisor: crate::vk1_0::Bool32,
     pub vertex_attribute_instance_rate_zero_divisor: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT;
 }
 impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     fn default() -> Self {

@@ -43,6 +43,9 @@ pub struct ViSurfaceCreateInfoNN {
     pub flags: crate::extensions::nn_vi_surface::ViSurfaceCreateFlagsNN,
     pub window: *mut std::ffi::c_void,
 }
+impl ViSurfaceCreateInfoNN {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VI_SURFACE_CREATE_INFO_NN;
+}
 impl Default for ViSurfaceCreateInfoNN {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VI_SURFACE_CREATE_INFO_NN, p_next: std::ptr::null(), flags: Default::default(), window: std::ptr::null_mut() }

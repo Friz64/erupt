@@ -27,6 +27,9 @@ pub struct PhysicalDevice4444FormatsFeaturesEXT {
     pub format_a4r4g4b4: crate::vk1_0::Bool32,
     pub format_a4b4g4r4: crate::vk1_0::Bool32,
 }
+impl PhysicalDevice4444FormatsFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT;
+}
 impl Default for PhysicalDevice4444FormatsFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT, p_next: std::ptr::null_mut(), format_a4r4g4b4: Default::default(), format_a4b4g4r4: Default::default() }

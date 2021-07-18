@@ -21,6 +21,9 @@ pub struct PhysicalDeviceImageRobustnessFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub robust_image_access: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceImageRobustnessFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceImageRobustnessFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT, p_next: std::ptr::null_mut(), robust_image_access: Default::default() }

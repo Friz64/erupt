@@ -47,6 +47,9 @@ pub struct PhysicalDeviceProvokingVertexFeaturesEXT {
     pub provoking_vertex_last: crate::vk1_0::Bool32,
     pub transform_feedback_preserves_provoking_vertex: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceProvokingVertexFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceProvokingVertexFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT, p_next: std::ptr::null_mut(), provoking_vertex_last: Default::default(), transform_feedback_preserves_provoking_vertex: Default::default() }
@@ -120,6 +123,9 @@ pub struct PhysicalDeviceProvokingVertexPropertiesEXT {
     pub provoking_vertex_mode_per_pipeline: crate::vk1_0::Bool32,
     pub transform_feedback_preserves_triangle_fan_provoking_vertex: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceProvokingVertexPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceProvokingVertexPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT, p_next: std::ptr::null_mut(), provoking_vertex_mode_per_pipeline: Default::default(), transform_feedback_preserves_triangle_fan_provoking_vertex: Default::default() }
@@ -191,6 +197,9 @@ pub struct PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub provoking_vertex_mode: crate::extensions::ext_provoking_vertex::ProvokingVertexModeEXT,
+}
+impl PipelineRasterizationProvokingVertexStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     fn default() -> Self {

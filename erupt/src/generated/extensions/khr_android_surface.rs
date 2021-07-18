@@ -45,6 +45,9 @@ pub struct AndroidSurfaceCreateInfoKHR {
     pub flags: crate::extensions::khr_android_surface::AndroidSurfaceCreateFlagsKHR,
     pub window: *mut crate::extensions::khr_android_surface::ANativeWindow,
 }
+impl AndroidSurfaceCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR;
+}
 impl Default for AndroidSurfaceCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ANDROID_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), window: std::ptr::null_mut() }

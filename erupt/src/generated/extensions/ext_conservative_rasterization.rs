@@ -71,6 +71,9 @@ pub struct PhysicalDeviceConservativeRasterizationPropertiesEXT {
     pub fully_covered_fragment_shader_input_variable: crate::vk1_0::Bool32,
     pub conservative_rasterization_post_depth_coverage: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceConservativeRasterizationPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceConservativeRasterizationPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT, p_next: std::ptr::null_mut(), primitive_overestimation_size: Default::default(), max_extra_primitive_overestimation_size: Default::default(), extra_primitive_overestimation_size_granularity: Default::default(), primitive_underestimation: Default::default(), conservative_point_and_line_rasterization: Default::default(), degenerate_triangles_rasterized: Default::default(), degenerate_lines_rasterized: Default::default(), fully_covered_fragment_shader_input_variable: Default::default(), conservative_rasterization_post_depth_coverage: Default::default() }
@@ -179,6 +182,9 @@ pub struct PipelineRasterizationConservativeStateCreateInfoEXT {
     pub flags: crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateFlagsEXT,
     pub conservative_rasterization_mode: crate::extensions::ext_conservative_rasterization::ConservativeRasterizationModeEXT,
     pub extra_primitive_overestimation_size: std::os::raw::c_float,
+}
+impl PipelineRasterizationConservativeStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineRasterizationConservativeStateCreateInfoEXT {
     fn default() -> Self {

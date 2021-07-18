@@ -32,6 +32,9 @@ pub struct PhysicalDeviceShaderAtomicFloatFeaturesEXT {
     pub sparse_image_float32_atomics: crate::vk1_0::Bool32,
     pub sparse_image_float32_atomic_add: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderAtomicFloatFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceShaderAtomicFloatFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_buffer_float32_atomics: Default::default(), shader_buffer_float32_atomic_add: Default::default(), shader_buffer_float64_atomics: Default::default(), shader_buffer_float64_atomic_add: Default::default(), shader_shared_float32_atomics: Default::default(), shader_shared_float32_atomic_add: Default::default(), shader_shared_float64_atomics: Default::default(), shader_shared_float64_atomic_add: Default::default(), shader_image_float32_atomics: Default::default(), shader_image_float32_atomic_add: Default::default(), sparse_image_float32_atomics: Default::default(), sparse_image_float32_atomic_add: Default::default() }

@@ -37,6 +37,9 @@ pub struct PhysicalDevicePushDescriptorPropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub max_push_descriptors: u32,
 }
+impl PhysicalDevicePushDescriptorPropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR;
+}
 impl Default for PhysicalDevicePushDescriptorPropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR, p_next: std::ptr::null_mut(), max_push_descriptors: Default::default() }

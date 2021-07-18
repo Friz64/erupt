@@ -29,6 +29,9 @@ pub struct DisplayNativeHdrSurfaceCapabilitiesAMD {
     pub p_next: *mut std::ffi::c_void,
     pub local_dimming_support: crate::vk1_0::Bool32,
 }
+impl DisplayNativeHdrSurfaceCapabilitiesAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD;
+}
 impl Default for DisplayNativeHdrSurfaceCapabilitiesAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD, p_next: std::ptr::null_mut(), local_dimming_support: Default::default() }
@@ -95,6 +98,9 @@ pub struct SwapchainDisplayNativeHdrCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub local_dimming_enable: crate::vk1_0::Bool32,
+}
+impl SwapchainDisplayNativeHdrCreateInfoAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD;
 }
 impl Default for SwapchainDisplayNativeHdrCreateInfoAMD {
     fn default() -> Self {

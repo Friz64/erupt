@@ -32,6 +32,9 @@ pub struct PhysicalDeviceShaderCorePropertiesAMD {
     pub max_vgpr_allocation: u32,
     pub vgpr_allocation_granularity: u32,
 }
+impl PhysicalDeviceShaderCorePropertiesAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD;
+}
 impl Default for PhysicalDeviceShaderCorePropertiesAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD, p_next: std::ptr::null_mut(), shader_engine_count: Default::default(), shader_arrays_per_engine_count: Default::default(), compute_units_per_shader_array: Default::default(), simd_per_compute_unit: Default::default(), wavefronts_per_simd: Default::default(), wavefront_size: Default::default(), sgprs_per_simd: Default::default(), min_sgpr_allocation: Default::default(), max_sgpr_allocation: Default::default(), sgpr_allocation_granularity: Default::default(), vgprs_per_simd: Default::default(), min_vgpr_allocation: Default::default(), max_vgpr_allocation: Default::default(), vgpr_allocation_granularity: Default::default() }

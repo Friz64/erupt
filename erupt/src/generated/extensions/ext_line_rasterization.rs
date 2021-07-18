@@ -64,6 +64,9 @@ pub struct PhysicalDeviceLineRasterizationFeaturesEXT {
     pub stippled_bresenham_lines: crate::vk1_0::Bool32,
     pub stippled_smooth_lines: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceLineRasterizationFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceLineRasterizationFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT, p_next: std::ptr::null_mut(), rectangular_lines: Default::default(), bresenham_lines: Default::default(), smooth_lines: Default::default(), stippled_rectangular_lines: Default::default(), stippled_bresenham_lines: Default::default(), stippled_smooth_lines: Default::default() }
@@ -156,6 +159,9 @@ pub struct PhysicalDeviceLineRasterizationPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub line_sub_pixel_precision_bits: u32,
 }
+impl PhysicalDeviceLineRasterizationPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceLineRasterizationPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT, p_next: std::ptr::null_mut(), line_sub_pixel_precision_bits: Default::default() }
@@ -225,6 +231,9 @@ pub struct PipelineRasterizationLineStateCreateInfoEXT {
     pub stippled_line_enable: crate::vk1_0::Bool32,
     pub line_stipple_factor: u32,
     pub line_stipple_pattern: u16,
+}
+impl PipelineRasterizationLineStateCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT;
 }
 impl Default for PipelineRasterizationLineStateCreateInfoEXT {
     fn default() -> Self {

@@ -446,6 +446,9 @@ pub struct DisplayModeCreateInfoKHR {
     pub flags: crate::extensions::khr_display::DisplayModeCreateFlagsKHR,
     pub parameters: crate::extensions::khr_display::DisplayModeParametersKHR,
 }
+impl DisplayModeCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_MODE_CREATE_INFO_KHR;
+}
 impl Default for DisplayModeCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_MODE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), parameters: Default::default() }
@@ -637,6 +640,9 @@ pub struct DisplaySurfaceCreateInfoKHR {
     pub global_alpha: std::os::raw::c_float,
     pub alpha_mode: crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR,
     pub image_extent: crate::vk1_0::Extent2D,
+}
+impl DisplaySurfaceCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_SURFACE_CREATE_INFO_KHR;
 }
 impl Default for DisplaySurfaceCreateInfoKHR {
     fn default() -> Self {

@@ -21,6 +21,9 @@ pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub ycbcr_image_arrays: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceYcbcrImageArraysFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT, p_next: std::ptr::null_mut(), ycbcr_image_arrays: Default::default() }

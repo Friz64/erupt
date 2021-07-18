@@ -57,6 +57,9 @@ pub struct CuModuleCreateInfoNVX {
     pub data_size: usize,
     pub p_data: *const std::ffi::c_void,
 }
+impl CuModuleCreateInfoNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CU_MODULE_CREATE_INFO_NVX;
+}
 impl Default for CuModuleCreateInfoNVX {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::CU_MODULE_CREATE_INFO_NVX, p_next: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
@@ -129,6 +132,9 @@ pub struct CuFunctionCreateInfoNVX {
     pub p_next: *const std::ffi::c_void,
     pub module: crate::extensions::nvx_binary_import::CuModuleNVX,
     pub p_name: *const std::os::raw::c_char,
+}
+impl CuFunctionCreateInfoNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CU_FUNCTION_CREATE_INFO_NVX;
 }
 impl Default for CuFunctionCreateInfoNVX {
     fn default() -> Self {
@@ -212,6 +218,9 @@ pub struct CuLaunchInfoNVX {
     pub p_params: *const *const std::ffi::c_void,
     pub extra_count: usize,
     pub p_extras: *const *const std::ffi::c_void,
+}
+impl CuLaunchInfoNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CU_LAUNCH_INFO_NVX;
 }
 impl Default for CuLaunchInfoNVX {
     fn default() -> Self {

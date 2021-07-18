@@ -30,6 +30,9 @@ pub struct ImageViewHandleInfoNVX {
     pub descriptor_type: crate::vk1_0::DescriptorType,
     pub sampler: crate::vk1_0::Sampler,
 }
+impl ImageViewHandleInfoNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_VIEW_HANDLE_INFO_NVX;
+}
 impl Default for ImageViewHandleInfoNVX {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_HANDLE_INFO_NVX, p_next: std::ptr::null(), image_view: Default::default(), descriptor_type: Default::default(), sampler: Default::default() }
@@ -107,6 +110,9 @@ pub struct ImageViewAddressPropertiesNVX {
     pub p_next: *mut std::ffi::c_void,
     pub device_address: crate::vk1_0::DeviceAddress,
     pub size: crate::vk1_0::DeviceSize,
+}
+impl ImageViewAddressPropertiesNVX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX;
 }
 impl Default for ImageViewAddressPropertiesNVX {
     fn default() -> Self {

@@ -161,6 +161,9 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub device_generated_commands: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV;
+}
 impl Default for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV, p_next: std::ptr::null_mut(), device_generated_commands: Default::default() }
@@ -235,6 +238,9 @@ pub struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     pub min_sequences_count_buffer_offset_alignment: u32,
     pub min_sequences_index_buffer_offset_alignment: u32,
     pub min_indirect_commands_buffer_offset_alignment: u32,
+}
+impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV;
 }
 impl Default for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     fn default() -> Self {
@@ -346,6 +352,9 @@ pub struct GraphicsShaderGroupCreateInfoNV {
     pub p_vertex_input_state: *const crate::vk1_0::PipelineVertexInputStateCreateInfo,
     pub p_tessellation_state: *const crate::vk1_0::PipelineTessellationStateCreateInfo,
 }
+impl GraphicsShaderGroupCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV;
+}
 impl Default for GraphicsShaderGroupCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV, p_next: std::ptr::null(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_tessellation_state: std::ptr::null() }
@@ -426,6 +435,9 @@ pub struct GraphicsPipelineShaderGroupsCreateInfoNV {
     pub p_groups: *const crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNV,
     pub pipeline_count: u32,
     pub p_pipelines: *const crate::vk1_0::Pipeline,
+}
+impl GraphicsPipelineShaderGroupsCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV;
 }
 impl Default for GraphicsPipelineShaderGroupsCreateInfoNV {
     fn default() -> Self {
@@ -868,6 +880,9 @@ pub struct IndirectCommandsLayoutTokenNV {
     pub p_index_types: *const crate::vk1_0::IndexType,
     pub p_index_type_values: *const u32,
 }
+impl IndirectCommandsLayoutTokenNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV;
+}
 impl Default for IndirectCommandsLayoutTokenNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV, p_next: std::ptr::null(), token_type: Default::default(), stream: Default::default(), offset: Default::default(), vertex_binding_unit: Default::default(), vertex_dynamic_stride: Default::default(), pushconstant_pipeline_layout: Default::default(), pushconstant_shader_stage_flags: Default::default(), pushconstant_offset: Default::default(), pushconstant_size: Default::default(), indirect_state_flags: Default::default(), index_type_count: Default::default(), p_index_types: std::ptr::null(), p_index_type_values: std::ptr::null() }
@@ -997,6 +1012,9 @@ pub struct IndirectCommandsLayoutCreateInfoNV {
     pub stream_count: u32,
     pub p_stream_strides: *const u32,
 }
+impl IndirectCommandsLayoutCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV;
+}
 impl Default for IndirectCommandsLayoutCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), token_count: Default::default(), p_tokens: std::ptr::null(), stream_count: Default::default(), p_stream_strides: std::ptr::null() }
@@ -1092,6 +1110,9 @@ pub struct GeneratedCommandsInfoNV {
     pub sequences_count_offset: crate::vk1_0::DeviceSize,
     pub sequences_index_buffer: crate::vk1_0::Buffer,
     pub sequences_index_offset: crate::vk1_0::DeviceSize,
+}
+impl GeneratedCommandsInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GENERATED_COMMANDS_INFO_NV;
 }
 impl Default for GeneratedCommandsInfoNV {
     fn default() -> Self {
@@ -1218,6 +1239,9 @@ pub struct GeneratedCommandsMemoryRequirementsInfoNV {
     pub pipeline: crate::vk1_0::Pipeline,
     pub indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
     pub max_sequences_count: u32,
+}
+impl GeneratedCommandsMemoryRequirementsInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV;
 }
 impl Default for GeneratedCommandsMemoryRequirementsInfoNV {
     fn default() -> Self {

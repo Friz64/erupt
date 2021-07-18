@@ -30,6 +30,9 @@ pub struct QueueFamilyCheckpointPropertiesNV {
     pub p_next: *mut std::ffi::c_void,
     pub checkpoint_execution_stage_mask: crate::vk1_0::PipelineStageFlags,
 }
+impl QueueFamilyCheckpointPropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV;
+}
 impl Default for QueueFamilyCheckpointPropertiesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
@@ -97,6 +100,9 @@ pub struct CheckpointDataNV {
     pub p_next: *mut std::ffi::c_void,
     pub stage: crate::vk1_0::PipelineStageFlagBits,
     pub p_checkpoint_marker: *mut std::ffi::c_void,
+}
+impl CheckpointDataNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CHECKPOINT_DATA_NV;
 }
 impl Default for CheckpointDataNV {
     fn default() -> Self {

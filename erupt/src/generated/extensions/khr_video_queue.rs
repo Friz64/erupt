@@ -398,6 +398,9 @@ pub struct VideoQueueFamilyProperties2KHR {
     pub p_next: *mut std::ffi::c_void,
     pub video_codec_operations: crate::extensions::khr_video_queue::VideoCodecOperationFlagsKHR,
 }
+impl VideoQueueFamilyProperties2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR;
+}
 impl Default for VideoQueueFamilyProperties2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), video_codec_operations: Default::default() }
@@ -465,6 +468,9 @@ pub struct VideoProfilesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub profile_count: u32,
     pub p_profiles: *const crate::extensions::khr_video_queue::VideoProfileKHR,
+}
+impl VideoProfilesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_PROFILES_KHR;
 }
 impl Default for VideoProfilesKHR {
     fn default() -> Self {
@@ -539,6 +545,9 @@ pub struct PhysicalDeviceVideoFormatInfoKHR {
     pub image_usage: crate::vk1_0::ImageUsageFlags,
     pub p_video_profiles: *const crate::extensions::khr_video_queue::VideoProfilesKHR,
 }
+impl PhysicalDeviceVideoFormatInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR;
+}
 impl Default for PhysicalDeviceVideoFormatInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR, p_next: std::ptr::null_mut(), image_usage: Default::default(), p_video_profiles: std::ptr::null() }
@@ -611,6 +620,9 @@ pub struct VideoFormatPropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub format: crate::vk1_0::Format,
 }
+impl VideoFormatPropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_FORMAT_PROPERTIES_KHR;
+}
 impl Default for VideoFormatPropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_FORMAT_PROPERTIES_KHR, p_next: std::ptr::null_mut(), format: Default::default() }
@@ -680,6 +692,9 @@ pub struct VideoProfileKHR {
     pub chroma_subsampling: crate::extensions::khr_video_queue::VideoChromaSubsamplingFlagsKHR,
     pub luma_bit_depth: crate::extensions::khr_video_queue::VideoComponentBitDepthFlagsKHR,
     pub chroma_bit_depth: crate::extensions::khr_video_queue::VideoComponentBitDepthFlagsKHR,
+}
+impl VideoProfileKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_PROFILE_KHR;
 }
 impl Default for VideoProfileKHR {
     fn default() -> Self {
@@ -769,6 +784,9 @@ pub struct VideoCapabilitiesKHR {
     pub max_extent: crate::vk1_0::Extent2D,
     pub max_reference_pictures_slots_count: u32,
     pub max_reference_pictures_active_count: u32,
+}
+impl VideoCapabilitiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_CAPABILITIES_KHR;
 }
 impl Default for VideoCapabilitiesKHR {
     fn default() -> Self {
@@ -873,6 +891,9 @@ pub struct VideoGetMemoryPropertiesKHR {
     pub memory_bind_index: u32,
     pub p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
 }
+impl VideoGetMemoryPropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_GET_MEMORY_PROPERTIES_KHR;
+}
 impl Default for VideoGetMemoryPropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_GET_MEMORY_PROPERTIES_KHR, p_next: std::ptr::null(), memory_bind_index: Default::default(), p_memory_requirements: std::ptr::null_mut() }
@@ -947,6 +968,9 @@ pub struct VideoBindMemoryKHR {
     pub memory: crate::vk1_0::DeviceMemory,
     pub memory_offset: crate::vk1_0::DeviceSize,
     pub memory_size: crate::vk1_0::DeviceSize,
+}
+impl VideoBindMemoryKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_BIND_MEMORY_KHR;
 }
 impl Default for VideoBindMemoryKHR {
     fn default() -> Self {
@@ -1033,6 +1057,9 @@ pub struct VideoPictureResourceKHR {
     pub base_array_layer: u32,
     pub image_view_binding: crate::vk1_0::ImageView,
 }
+impl VideoPictureResourceKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_PICTURE_RESOURCE_KHR;
+}
 impl Default for VideoPictureResourceKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_PICTURE_RESOURCE_KHR, p_next: std::ptr::null(), coded_offset: Default::default(), coded_extent: Default::default(), base_array_layer: Default::default(), image_view_binding: Default::default() }
@@ -1116,6 +1143,9 @@ pub struct VideoReferenceSlotKHR {
     pub slot_index: i8,
     pub p_picture_resource: *const crate::extensions::khr_video_queue::VideoPictureResourceKHR,
 }
+impl VideoReferenceSlotKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_REFERENCE_SLOT_KHR;
+}
 impl Default for VideoReferenceSlotKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_REFERENCE_SLOT_KHR, p_next: std::ptr::null(), slot_index: Default::default(), p_picture_resource: std::ptr::null() }
@@ -1194,6 +1224,9 @@ pub struct VideoSessionCreateInfoKHR {
     pub reference_pictures_format: crate::vk1_0::Format,
     pub max_reference_pictures_slots_count: u32,
     pub max_reference_pictures_active_count: u32,
+}
+impl VideoSessionCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_SESSION_CREATE_INFO_KHR;
 }
 impl Default for VideoSessionCreateInfoKHR {
     fn default() -> Self {
@@ -1298,6 +1331,9 @@ pub struct VideoSessionParametersCreateInfoKHR {
     pub video_session_parameters_template: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
     pub video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
 }
+impl VideoSessionParametersCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR;
+}
 impl Default for VideoSessionParametersCreateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR, p_next: std::ptr::null(), video_session_parameters_template: Default::default(), video_session: Default::default() }
@@ -1370,6 +1406,9 @@ pub struct VideoSessionParametersUpdateInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub update_sequence_count: u32,
 }
+impl VideoSessionParametersUpdateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR;
+}
 impl Default for VideoSessionParametersUpdateInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR, p_next: std::ptr::null(), update_sequence_count: Default::default() }
@@ -1441,6 +1480,9 @@ pub struct VideoBeginCodingInfoKHR {
     pub video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
     pub reference_slot_count: u32,
     pub p_reference_slots: *const crate::extensions::khr_video_queue::VideoReferenceSlotKHR,
+}
+impl VideoBeginCodingInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_BEGIN_CODING_INFO_KHR;
 }
 impl Default for VideoBeginCodingInfoKHR {
     fn default() -> Self {
@@ -1530,6 +1572,9 @@ pub struct VideoEndCodingInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_video_queue::VideoEndCodingFlagsKHR,
 }
+impl VideoEndCodingInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_END_CODING_INFO_KHR;
+}
 impl Default for VideoEndCodingInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VIDEO_END_CODING_INFO_KHR, p_next: std::ptr::null(), flags: Default::default() }
@@ -1596,6 +1641,9 @@ pub struct VideoCodingControlInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_video_queue::VideoCodingControlFlagsKHR,
+}
+impl VideoCodingControlInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_CODING_CONTROL_INFO_KHR;
 }
 impl Default for VideoCodingControlInfoKHR {
     fn default() -> Self {

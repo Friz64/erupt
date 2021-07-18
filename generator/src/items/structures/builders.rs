@@ -262,7 +262,7 @@ impl Structure {
             return HashMap::new();
         }
 
-        let origin = self.origin.as_ref().expect("Structure missing origin");
+        let origin = self.origin();
 
         let inner_ident = self.name.ident();
         //log::debug!("Processing builder for `{}`", inner_ident);

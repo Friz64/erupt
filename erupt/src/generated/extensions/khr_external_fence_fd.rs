@@ -31,6 +31,9 @@ pub struct ImportFenceFdInfoKHR {
     pub handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
     pub fd: std::os::raw::c_int,
 }
+impl ImportFenceFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_FENCE_FD_INFO_KHR;
+}
 impl Default for ImportFenceFdInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_FENCE_FD_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
@@ -113,6 +116,9 @@ pub struct FenceGetFdInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub fence: crate::vk1_0::Fence,
     pub handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits,
+}
+impl FenceGetFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FENCE_GET_FD_INFO_KHR;
 }
 impl Default for FenceGetFdInfoKHR {
     fn default() -> Self {

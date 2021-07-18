@@ -19,6 +19,9 @@ pub struct SurfaceProtectedCapabilitiesKHR {
     pub p_next: *const std::ffi::c_void,
     pub supports_protected: crate::vk1_0::Bool32,
 }
+impl SurfaceProtectedCapabilitiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SURFACE_PROTECTED_CAPABILITIES_KHR;
+}
 impl Default for SurfaceProtectedCapabilitiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SURFACE_PROTECTED_CAPABILITIES_KHR, p_next: std::ptr::null(), supports_protected: Default::default() }

@@ -39,6 +39,9 @@ pub struct ValidationFlagsEXT {
     pub disabled_validation_check_count: u32,
     pub p_disabled_validation_checks: *const crate::extensions::ext_validation_flags::ValidationCheckEXT,
 }
+impl ValidationFlagsEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VALIDATION_FLAGS_EXT;
+}
 impl Default for ValidationFlagsEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::VALIDATION_FLAGS_EXT, p_next: std::ptr::null(), disabled_validation_check_count: Default::default(), p_disabled_validation_checks: std::ptr::null() }

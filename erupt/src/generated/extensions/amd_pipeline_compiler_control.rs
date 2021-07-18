@@ -41,6 +41,9 @@ pub struct PipelineCompilerControlCreateInfoAMD {
     pub p_next: *const std::ffi::c_void,
     pub compiler_control_flags: crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlFlagsAMD,
 }
+impl PipelineCompilerControlCreateInfoAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD;
+}
 impl Default for PipelineCompilerControlCreateInfoAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD, p_next: std::ptr::null(), compiler_control_flags: Default::default() }

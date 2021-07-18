@@ -26,6 +26,9 @@ pub struct PhysicalDeviceCoherentMemoryFeaturesAMD {
     pub p_next: *mut std::ffi::c_void,
     pub device_coherent_memory: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceCoherentMemoryFeaturesAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD;
+}
 impl Default for PhysicalDeviceCoherentMemoryFeaturesAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD, p_next: std::ptr::null_mut(), device_coherent_memory: Default::default() }

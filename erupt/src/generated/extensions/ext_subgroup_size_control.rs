@@ -33,6 +33,9 @@ pub struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     pub subgroup_size_control: crate::vk1_0::Bool32,
     pub compute_full_subgroups: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT, p_next: std::ptr::null_mut(), subgroup_size_control: Default::default(), compute_full_subgroups: Default::default() }
@@ -107,6 +110,9 @@ pub struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     pub max_subgroup_size: u32,
     pub max_compute_workgroup_subgroups: u32,
     pub required_subgroup_size_stages: crate::vk1_0::ShaderStageFlags,
+}
+impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     fn default() -> Self {
@@ -189,6 +195,9 @@ pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub required_subgroup_size: u32,
+}
+impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT;
 }
 impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn default() -> Self {

@@ -36,6 +36,9 @@ pub struct ImportMemoryWin32HandleInfoKHR {
     pub handle: *mut std::ffi::c_void,
     pub name: *const u16,
 }
+impl ImportMemoryWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ImportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
@@ -115,6 +118,9 @@ pub struct ExportMemoryWin32HandleInfoKHR {
     pub dw_access: u32,
     pub name: *const u16,
 }
+impl ExportMemoryWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
+}
 impl Default for ExportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
@@ -192,6 +198,9 @@ pub struct MemoryWin32HandlePropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub memory_type_bits: u32,
 }
+impl MemoryWin32HandlePropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_WIN32_HANDLE_PROPERTIES_KHR;
+}
 impl Default for MemoryWin32HandlePropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_WIN32_HANDLE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
@@ -259,6 +268,9 @@ pub struct MemoryGetWin32HandleInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub memory: crate::vk1_0::DeviceMemory,
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+}
+impl MemoryGetWin32HandleInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_GET_WIN32_HANDLE_INFO_KHR;
 }
 impl Default for MemoryGetWin32HandleInfoKHR {
     fn default() -> Self {

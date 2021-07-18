@@ -24,6 +24,9 @@ pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub representative_fragment_test: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV;
+}
 impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV, p_next: std::ptr::null_mut(), representative_fragment_test: Default::default() }
@@ -90,6 +93,9 @@ pub struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub representative_fragment_test_enable: crate::vk1_0::Bool32,
+}
+impl PipelineRepresentativeFragmentTestStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV;
 }
 impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
     fn default() -> Self {

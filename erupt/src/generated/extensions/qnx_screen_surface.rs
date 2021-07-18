@@ -49,6 +49,9 @@ pub struct ScreenSurfaceCreateInfoQNX {
     pub context: *mut std::ffi::c_void,
     pub window: *mut std::ffi::c_void,
 }
+impl ScreenSurfaceCreateInfoQNX {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SCREEN_SURFACE_CREATE_INFO_QNX;
+}
 impl Default for ScreenSurfaceCreateInfoQNX {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::SCREEN_SURFACE_CREATE_INFO_QNX, p_next: std::ptr::null(), flags: Default::default(), context: std::ptr::null_mut(), window: std::ptr::null_mut() }

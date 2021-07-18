@@ -17,6 +17,9 @@ pub struct CopyCommandTransformInfoQCOM {
     pub p_next: *const std::ffi::c_void,
     pub transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
 }
+impl CopyCommandTransformInfoQCOM {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COPY_COMMAND_TRANSFORM_INFO_QCOM;
+}
 impl Default for CopyCommandTransformInfoQCOM {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COPY_COMMAND_TRANSFORM_INFO_QCOM, p_next: std::ptr::null(), transform: Default::default() }

@@ -32,6 +32,9 @@ pub struct ImportMemoryFdInfoKHR {
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
     pub fd: std::os::raw::c_int,
 }
+impl ImportMemoryFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_MEMORY_FD_INFO_KHR;
+}
 impl Default for ImportMemoryFdInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_FD_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), fd: Default::default() }
@@ -104,6 +107,9 @@ pub struct MemoryFdPropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub memory_type_bits: u32,
 }
+impl MemoryFdPropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_FD_PROPERTIES_KHR;
+}
 impl Default for MemoryFdPropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_FD_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
@@ -171,6 +177,9 @@ pub struct MemoryGetFdInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub memory: crate::vk1_0::DeviceMemory,
     pub handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+}
+impl MemoryGetFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_GET_FD_INFO_KHR;
 }
 impl Default for MemoryGetFdInfoKHR {
     fn default() -> Self {

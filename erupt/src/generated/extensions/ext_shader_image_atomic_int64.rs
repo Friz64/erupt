@@ -22,6 +22,9 @@ pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     pub shader_image_int64_atomics: crate::vk1_0::Bool32,
     pub sparse_image_int64_atomics: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_image_int64_atomics: Default::default(), sparse_image_int64_atomics: Default::default() }

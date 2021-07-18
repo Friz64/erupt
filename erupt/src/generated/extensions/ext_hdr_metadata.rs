@@ -100,6 +100,9 @@ pub struct HdrMetadataEXT {
     pub max_content_light_level: std::os::raw::c_float,
     pub max_frame_average_light_level: std::os::raw::c_float,
 }
+impl HdrMetadataEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::HDR_METADATA_EXT;
+}
 impl Default for HdrMetadataEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::HDR_METADATA_EXT, p_next: std::ptr::null(), display_primary_red: Default::default(), display_primary_green: Default::default(), display_primary_blue: Default::default(), white_point: Default::default(), max_luminance: Default::default(), min_luminance: Default::default(), max_content_light_level: Default::default(), max_frame_average_light_level: Default::default() }

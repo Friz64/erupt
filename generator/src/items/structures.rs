@@ -8,7 +8,7 @@ use crate::{
         BitWidth, DeclarationInfo,
     },
     items::aliases::Alias,
-    name::{Name, TypeName},
+    name::{EnumVariantName, Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},
     XmlNode,
@@ -207,8 +207,24 @@ pub struct Structure {
 }
 
 impl Structure {
+    pub fn origin(&self) -> &Origin {
+        self.origin.as_ref().expect("Structure missing origin")
+    }
+
     pub fn qualifies_as_builder(&self) -> bool {
         self.kind == StructureKind::Struct
+    }
+
+    pub fn structure_type(&self) -> Option<EnumVariantName> {
+        self.fields
+            .get(0)
+            .and_then(|field| field.main_decl().metadata.structure_type())
+    }
+
+    pub fn structure_type_value(&self, source: &Source) -> Option<TokenStream> {
+        self.fields
+            .get(0)
+            .and_then(|field| field.main_decl().structure_type_value(source))
     }
 
     pub fn tokens(
@@ -216,7 +232,7 @@ impl Structure {
         comment_gen: &DocCommentGen,
         source: &Source,
     ) -> HashMap<Origin, TokenStream> {
-        let origin = self.origin.as_ref().expect("Structure missing origin");
+        let origin = self.origin();
         let ident = self.name.ident();
 
         let doc_alias = self.name.doc_alias();
@@ -229,6 +245,14 @@ impl Structure {
             .fields
             .iter()
             .map(|field| field.main_decl().ty.rust_type(source));
+
+        let structure_type = self.structure_type_value(source).map(|value| {
+            quote! {
+                impl #ident {
+                    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = #value;
+                }
+            }
+        });
 
         let default_impl = match self.kind {
             StructureKind::Struct => {
@@ -274,6 +298,8 @@ impl Structure {
                 pub #keyword #ident {
                     #(pub #field_idents: #field_types),*
                 }
+
+                #structure_type
 
                 impl Default for #ident {
                     fn default() -> Self {

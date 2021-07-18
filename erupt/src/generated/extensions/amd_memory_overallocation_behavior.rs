@@ -40,6 +40,9 @@ pub struct DeviceMemoryOverallocationCreateInfoAMD {
     pub p_next: *const std::ffi::c_void,
     pub overallocation_behavior: crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD,
 }
+impl DeviceMemoryOverallocationCreateInfoAMD {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD;
+}
 impl Default for DeviceMemoryOverallocationCreateInfoAMD {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD, p_next: std::ptr::null(), overallocation_behavior: Default::default() }

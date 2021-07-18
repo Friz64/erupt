@@ -46,6 +46,9 @@ pub struct DebugMarkerObjectNameInfoEXT {
     pub object: u64,
     pub p_object_name: *const std::os::raw::c_char,
 }
+impl DebugMarkerObjectNameInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_NAME_INFO_EXT;
+}
 impl Default for DebugMarkerObjectNameInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), p_object_name: std::ptr::null() }
@@ -126,6 +129,9 @@ pub struct DebugMarkerObjectTagInfoEXT {
     pub tag_name: u64,
     pub tag_size: usize,
     pub p_tag: *const std::ffi::c_void,
+}
+impl DebugMarkerObjectTagInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_TAG_INFO_EXT;
 }
 impl Default for DebugMarkerObjectTagInfoEXT {
     fn default() -> Self {
@@ -214,6 +220,9 @@ pub struct DebugMarkerMarkerInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub p_marker_name: *const std::os::raw::c_char,
     pub color: [std::os::raw::c_float; 4],
+}
+impl DebugMarkerMarkerInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DEBUG_MARKER_MARKER_INFO_EXT;
 }
 impl Default for DebugMarkerMarkerInfoEXT {
     fn default() -> Self {

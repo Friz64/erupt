@@ -69,6 +69,9 @@ pub struct PhysicalDeviceCoverageReductionModeFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub coverage_reduction_mode: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceCoverageReductionModeFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV;
+}
 impl Default for PhysicalDeviceCoverageReductionModeFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default() }
@@ -136,6 +139,9 @@ pub struct PipelineCoverageReductionStateCreateInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateFlagsNV,
     pub coverage_reduction_mode: crate::extensions::nv_coverage_reduction_mode::CoverageReductionModeNV,
+}
+impl PipelineCoverageReductionStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV;
 }
 impl Default for PipelineCoverageReductionStateCreateInfoNV {
     fn default() -> Self {
@@ -211,6 +217,9 @@ pub struct FramebufferMixedSamplesCombinationNV {
     pub rasterization_samples: crate::vk1_0::SampleCountFlagBits,
     pub depth_stencil_samples: crate::vk1_0::SampleCountFlags,
     pub color_samples: crate::vk1_0::SampleCountFlags,
+}
+impl FramebufferMixedSamplesCombinationNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV;
 }
 impl Default for FramebufferMixedSamplesCombinationNV {
     fn default() -> Self {

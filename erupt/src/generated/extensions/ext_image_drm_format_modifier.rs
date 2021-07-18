@@ -50,6 +50,9 @@ pub struct DrmFormatModifierPropertiesListEXT {
     pub drm_format_modifier_count: u32,
     pub p_drm_format_modifier_properties: *mut crate::extensions::ext_image_drm_format_modifier::DrmFormatModifierPropertiesEXT,
 }
+impl DrmFormatModifierPropertiesListEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT;
+}
 impl Default for DrmFormatModifierPropertiesListEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT, p_next: std::ptr::null_mut(), drm_format_modifier_count: Default::default(), p_drm_format_modifier_properties: std::ptr::null_mut() }
@@ -198,6 +201,9 @@ pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
     pub queue_family_index_count: u32,
     pub p_queue_family_indices: *const u32,
 }
+impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT;
+}
 impl Default for PhysicalDeviceImageDrmFormatModifierInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
@@ -277,6 +283,9 @@ pub struct ImageDrmFormatModifierListCreateInfoEXT {
     pub drm_format_modifier_count: u32,
     pub p_drm_format_modifiers: *const u64,
 }
+impl ImageDrmFormatModifierListCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT;
+}
 impl Default for ImageDrmFormatModifierListCreateInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier_count: Default::default(), p_drm_format_modifiers: std::ptr::null() }
@@ -346,6 +355,9 @@ pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
     pub drm_format_modifier: u64,
     pub drm_format_modifier_plane_count: u32,
     pub p_plane_layouts: *const crate::vk1_0::SubresourceLayout,
+}
+impl ImageDrmFormatModifierExplicitCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT;
 }
 impl Default for ImageDrmFormatModifierExplicitCreateInfoEXT {
     fn default() -> Self {
@@ -419,6 +431,9 @@ pub struct ImageDrmFormatModifierPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub drm_format_modifier: u64,
+}
+impl ImageDrmFormatModifierPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT;
 }
 impl Default for ImageDrmFormatModifierPropertiesEXT {
     fn default() -> Self {

@@ -91,6 +91,9 @@ pub struct FragmentShadingRateAttachmentInfoKHR {
     pub p_fragment_shading_rate_attachment: *const crate::vk1_2::AttachmentReference2,
     pub shading_rate_attachment_texel_size: crate::vk1_0::Extent2D,
 }
+impl FragmentShadingRateAttachmentInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR;
+}
 impl Default for FragmentShadingRateAttachmentInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR, p_next: std::ptr::null(), p_fragment_shading_rate_attachment: std::ptr::null(), shading_rate_attachment_texel_size: Default::default() }
@@ -163,6 +166,9 @@ pub struct PipelineFragmentShadingRateStateCreateInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub fragment_size: crate::vk1_0::Extent2D,
     pub combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
+}
+impl PipelineFragmentShadingRateStateCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR;
 }
 impl Default for PipelineFragmentShadingRateStateCreateInfoKHR {
     fn default() -> Self {
@@ -237,6 +243,9 @@ pub struct PhysicalDeviceFragmentShadingRateFeaturesKHR {
     pub pipeline_fragment_shading_rate: crate::vk1_0::Bool32,
     pub primitive_fragment_shading_rate: crate::vk1_0::Bool32,
     pub attachment_fragment_shading_rate: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceFragmentShadingRateFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR;
 }
 impl Default for PhysicalDeviceFragmentShadingRateFeaturesKHR {
     fn default() -> Self {
@@ -330,6 +339,9 @@ pub struct PhysicalDeviceFragmentShadingRatePropertiesKHR {
     pub fragment_shading_rate_with_fragment_shader_interlock: crate::vk1_0::Bool32,
     pub fragment_shading_rate_with_custom_sample_locations: crate::vk1_0::Bool32,
     pub fragment_shading_rate_strict_multiply_combiner: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceFragmentShadingRatePropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR;
 }
 impl Default for PhysicalDeviceFragmentShadingRatePropertiesKHR {
     fn default() -> Self {
@@ -478,6 +490,9 @@ pub struct PhysicalDeviceFragmentShadingRateKHR {
     pub p_next: *mut std::ffi::c_void,
     pub sample_counts: crate::vk1_0::SampleCountFlags,
     pub fragment_size: crate::vk1_0::Extent2D,
+}
+impl PhysicalDeviceFragmentShadingRateKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR;
 }
 impl Default for PhysicalDeviceFragmentShadingRateKHR {
     fn default() -> Self {

@@ -25,6 +25,9 @@ pub struct Win32KeyedMutexAcquireReleaseInfoKHR {
     pub p_release_syncs: *const crate::vk1_0::DeviceMemory,
     pub p_release_keys: *const u64,
 }
+impl Win32KeyedMutexAcquireReleaseInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR;
+}
 impl Default for Win32KeyedMutexAcquireReleaseInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR, p_next: std::ptr::null(), acquire_count: Default::default(), p_acquire_syncs: std::ptr::null(), p_acquire_keys: std::ptr::null(), p_acquire_timeouts: std::ptr::null(), release_count: Default::default(), p_release_syncs: std::ptr::null(), p_release_keys: std::ptr::null() }

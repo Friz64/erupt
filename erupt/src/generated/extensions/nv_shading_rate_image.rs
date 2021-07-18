@@ -197,6 +197,9 @@ pub struct PipelineViewportShadingRateImageStateCreateInfoNV {
     pub viewport_count: u32,
     pub p_shading_rate_palettes: *const crate::extensions::nv_shading_rate_image::ShadingRatePaletteNV,
 }
+impl PipelineViewportShadingRateImageStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV;
+}
 impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), shading_rate_image_enable: Default::default(), viewport_count: Default::default(), p_shading_rate_palettes: std::ptr::null() }
@@ -271,6 +274,9 @@ pub struct PhysicalDeviceShadingRateImageFeaturesNV {
     pub shading_rate_image: crate::vk1_0::Bool32,
     pub shading_rate_coarse_sample_order: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceShadingRateImageFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV;
+}
 impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), shading_rate_image: Default::default(), shading_rate_coarse_sample_order: Default::default() }
@@ -344,6 +350,9 @@ pub struct PhysicalDeviceShadingRateImagePropertiesNV {
     pub shading_rate_texel_size: crate::vk1_0::Extent2D,
     pub shading_rate_palette_size: u32,
     pub shading_rate_max_coarse_samples: u32,
+}
+impl PhysicalDeviceShadingRateImagePropertiesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV;
 }
 impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
     fn default() -> Self {
@@ -579,6 +588,9 @@ pub struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     pub sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV,
     pub custom_sample_order_count: u32,
     pub p_custom_sample_orders: *const crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNV,
+}
+impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV;
 }
 impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     fn default() -> Self {

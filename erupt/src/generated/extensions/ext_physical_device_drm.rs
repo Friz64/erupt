@@ -24,6 +24,9 @@ pub struct PhysicalDeviceDrmPropertiesEXT {
     pub render_major: i64,
     pub render_minor: i64,
 }
+impl PhysicalDeviceDrmPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceDrmPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT, p_next: std::ptr::null_mut(), has_primary: Default::default(), has_render: Default::default(), primary_major: Default::default(), primary_minor: Default::default(), render_major: Default::default(), render_minor: Default::default() }

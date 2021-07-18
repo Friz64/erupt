@@ -46,6 +46,9 @@ pub struct ImportAndroidHardwareBufferInfoANDROID {
     pub p_next: *const std::ffi::c_void,
     pub buffer: *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
 }
+impl ImportAndroidHardwareBufferInfoANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID;
+}
 impl Default for ImportAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), buffer: std::ptr::null_mut() }
@@ -112,6 +115,9 @@ pub struct AndroidHardwareBufferUsageANDROID {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub android_hardware_buffer_usage: u64,
+}
+impl AndroidHardwareBufferUsageANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID;
 }
 impl Default for AndroidHardwareBufferUsageANDROID {
     fn default() -> Self {
@@ -180,6 +186,9 @@ pub struct AndroidHardwareBufferPropertiesANDROID {
     pub p_next: *mut std::ffi::c_void,
     pub allocation_size: crate::vk1_0::DeviceSize,
     pub memory_type_bits: u32,
+}
+impl AndroidHardwareBufferPropertiesANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID;
 }
 impl Default for AndroidHardwareBufferPropertiesANDROID {
     fn default() -> Self {
@@ -255,6 +264,9 @@ pub struct MemoryGetAndroidHardwareBufferInfoANDROID {
     pub p_next: *const std::ffi::c_void,
     pub memory: crate::vk1_0::DeviceMemory,
 }
+impl MemoryGetAndroidHardwareBufferInfoANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID;
+}
 impl Default for MemoryGetAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), memory: Default::default() }
@@ -328,6 +340,9 @@ pub struct AndroidHardwareBufferFormatPropertiesANDROID {
     pub suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange,
     pub suggested_x_chroma_offset: crate::vk1_1::ChromaLocation,
     pub suggested_y_chroma_offset: crate::vk1_1::ChromaLocation,
+}
+impl AndroidHardwareBufferFormatPropertiesANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID;
 }
 impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
     fn default() -> Self {
@@ -430,6 +445,9 @@ pub struct ExternalFormatANDROID {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub external_format: u64,
+}
+impl ExternalFormatANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXTERNAL_FORMAT_ANDROID;
 }
 impl Default for ExternalFormatANDROID {
     fn default() -> Self {

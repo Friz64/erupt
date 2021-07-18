@@ -31,6 +31,9 @@ pub struct ImportSemaphoreFdInfoKHR {
     pub handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
     pub fd: std::os::raw::c_int,
 }
+impl ImportSemaphoreFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_SEMAPHORE_FD_INFO_KHR;
+}
 impl Default for ImportSemaphoreFdInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_FD_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
@@ -113,6 +116,9 @@ pub struct SemaphoreGetFdInfoKHR {
     pub p_next: *const std::ffi::c_void,
     pub semaphore: crate::vk1_0::Semaphore,
     pub handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits,
+}
+impl SemaphoreGetFdInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::SEMAPHORE_GET_FD_INFO_KHR;
 }
 impl Default for SemaphoreGetFdInfoKHR {
     fn default() -> Self {

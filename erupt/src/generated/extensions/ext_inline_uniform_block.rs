@@ -35,6 +35,9 @@ pub struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
     pub inline_uniform_block: crate::vk1_0::Bool32,
     pub descriptor_binding_inline_uniform_block_update_after_bind: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceInlineUniformBlockFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceInlineUniformBlockFeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT, p_next: std::ptr::null_mut(), inline_uniform_block: Default::default(), descriptor_binding_inline_uniform_block_update_after_bind: Default::default() }
@@ -110,6 +113,9 @@ pub struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
     pub max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: u32,
     pub max_descriptor_set_inline_uniform_blocks: u32,
     pub max_descriptor_set_update_after_bind_inline_uniform_blocks: u32,
+}
+impl PhysicalDeviceInlineUniformBlockPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceInlineUniformBlockPropertiesEXT {
     fn default() -> Self {
@@ -199,6 +205,9 @@ pub struct WriteDescriptorSetInlineUniformBlockEXT {
     pub data_size: u32,
     pub p_data: *const std::ffi::c_void,
 }
+impl WriteDescriptorSetInlineUniformBlockEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT;
+}
 impl Default for WriteDescriptorSetInlineUniformBlockEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT, p_next: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
@@ -270,6 +279,9 @@ pub struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub max_inline_uniform_block_bindings: u32,
+}
+impl DescriptorPoolInlineUniformBlockCreateInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT;
 }
 impl Default for DescriptorPoolInlineUniformBlockCreateInfoEXT {
     fn default() -> Self {

@@ -26,6 +26,9 @@ pub struct RenderPassTransformBeginInfoQCOM {
     pub p_next: *mut std::ffi::c_void,
     pub transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
 }
+impl RenderPassTransformBeginInfoQCOM {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM;
+}
 impl Default for RenderPassTransformBeginInfoQCOM {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM, p_next: std::ptr::null_mut(), transform: Default::default() }
@@ -93,6 +96,9 @@ pub struct CommandBufferInheritanceRenderPassTransformInfoQCOM {
     pub p_next: *mut std::ffi::c_void,
     pub transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR,
     pub render_area: crate::vk1_0::Rect2D,
+}
+impl CommandBufferInheritanceRenderPassTransformInfoQCOM {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM;
 }
 impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn default() -> Self {

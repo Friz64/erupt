@@ -28,6 +28,9 @@ pub struct ImportMemoryWin32HandleInfoNV {
     pub handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
     pub handle: *mut std::ffi::c_void,
 }
+impl ImportMemoryWin32HandleInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV;
+}
 impl Default for ImportMemoryWin32HandleInfoNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
@@ -100,6 +103,9 @@ pub struct ExportMemoryWin32HandleInfoNV {
     pub p_next: *const std::ffi::c_void,
     pub p_attributes: *const std::ffi::c_void,
     pub dw_access: u32,
+}
+impl ExportMemoryWin32HandleInfoNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV;
 }
 impl Default for ExportMemoryWin32HandleInfoNV {
     fn default() -> Self {

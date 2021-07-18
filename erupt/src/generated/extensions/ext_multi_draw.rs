@@ -178,6 +178,9 @@ pub struct PhysicalDeviceMultiDrawPropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub max_multi_draw_count: u32,
 }
+impl PhysicalDeviceMultiDrawPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT;
+}
 impl Default for PhysicalDeviceMultiDrawPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_multi_draw_count: Default::default() }
@@ -248,6 +251,9 @@ pub struct PhysicalDeviceMultiDrawFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub multi_draw: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceMultiDrawFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT;
 }
 impl Default for PhysicalDeviceMultiDrawFeaturesEXT {
     fn default() -> Self {

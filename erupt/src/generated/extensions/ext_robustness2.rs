@@ -26,6 +26,9 @@ pub struct PhysicalDeviceRobustness2FeaturesEXT {
     pub robust_image_access2: crate::vk1_0::Bool32,
     pub null_descriptor: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceRobustness2FeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT;
+}
 impl Default for PhysicalDeviceRobustness2FeaturesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT, p_next: std::ptr::null_mut(), robust_buffer_access2: Default::default(), robust_image_access2: Default::default(), null_descriptor: Default::default() }
@@ -103,6 +106,9 @@ pub struct PhysicalDeviceRobustness2PropertiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
     pub robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize,
+}
+impl PhysicalDeviceRobustness2PropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT;
 }
 impl Default for PhysicalDeviceRobustness2PropertiesEXT {
     fn default() -> Self {

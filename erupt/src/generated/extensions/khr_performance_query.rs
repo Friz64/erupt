@@ -193,6 +193,9 @@ pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
     pub performance_counter_query_pools: crate::vk1_0::Bool32,
     pub performance_counter_multiple_query_pools: crate::vk1_0::Bool32,
 }
+impl PhysicalDevicePerformanceQueryFeaturesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR;
+}
 impl Default for PhysicalDevicePerformanceQueryFeaturesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR, p_next: std::ptr::null_mut(), performance_counter_query_pools: Default::default(), performance_counter_multiple_query_pools: Default::default() }
@@ -265,6 +268,9 @@ pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
     pub p_next: *mut std::ffi::c_void,
     pub allow_command_buffer_query_copies: crate::vk1_0::Bool32,
 }
+impl PhysicalDevicePerformanceQueryPropertiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR;
+}
 impl Default for PhysicalDevicePerformanceQueryPropertiesKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR, p_next: std::ptr::null_mut(), allow_command_buffer_query_copies: Default::default() }
@@ -334,6 +340,9 @@ pub struct PerformanceCounterKHR {
     pub scope: crate::extensions::khr_performance_query::PerformanceCounterScopeKHR,
     pub storage: crate::extensions::khr_performance_query::PerformanceCounterStorageKHR,
     pub uuid: [u8; 16],
+}
+impl PerformanceCounterKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR;
 }
 impl Default for PerformanceCounterKHR {
     fn default() -> Self {
@@ -420,6 +429,9 @@ pub struct PerformanceCounterDescriptionKHR {
     pub category: [std::os::raw::c_char; 256],
     pub description: [std::os::raw::c_char; 256],
 }
+impl PerformanceCounterDescriptionKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR;
+}
 impl Default for PerformanceCounterDescriptionKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR, p_next: std::ptr::null_mut(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
@@ -503,6 +515,9 @@ pub struct QueryPoolPerformanceCreateInfoKHR {
     pub queue_family_index: u32,
     pub counter_index_count: u32,
     pub p_counter_indices: *const u32,
+}
+impl QueryPoolPerformanceCreateInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR;
 }
 impl Default for QueryPoolPerformanceCreateInfoKHR {
     fn default() -> Self {
@@ -600,6 +615,9 @@ pub struct AcquireProfilingLockInfoKHR {
     pub flags: crate::extensions::khr_performance_query::AcquireProfilingLockFlagsKHR,
     pub timeout: u64,
 }
+impl AcquireProfilingLockInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ACQUIRE_PROFILING_LOCK_INFO_KHR;
+}
 impl Default for AcquireProfilingLockInfoKHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::ACQUIRE_PROFILING_LOCK_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), timeout: Default::default() }
@@ -671,6 +689,9 @@ pub struct PerformanceQuerySubmitInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub counter_pass_index: u32,
+}
+impl PerformanceQuerySubmitInfoKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PERFORMANCE_QUERY_SUBMIT_INFO_KHR;
 }
 impl Default for PerformanceQuerySubmitInfoKHR {
     fn default() -> Self {

@@ -22,6 +22,9 @@ pub struct PhysicalDevicePCIBusInfoPropertiesEXT {
     pub pci_device: u32,
     pub pci_function: u32,
 }
+impl PhysicalDevicePCIBusInfoPropertiesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT;
+}
 impl Default for PhysicalDevicePCIBusInfoPropertiesEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT, p_next: std::ptr::null_mut(), pci_domain: Default::default(), pci_bus: Default::default(), pci_device: Default::default(), pci_function: Default::default() }

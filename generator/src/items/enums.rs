@@ -273,7 +273,11 @@ pub struct Enum {
 }
 
 impl Enum {
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        source: &Source,
+    ) -> HashMap<Origin, TokenStream> {
         let enum_origin = self.origin.as_ref().expect("Enum missing origin");
 
         let mut stream = match &self.kind {
@@ -352,6 +356,7 @@ impl Enum {
         };
 
         stream.extend(self.debug_impl());
+        stream.extend(self.structure_type_size(source));
 
         let mut tokens = HashMap::new();
         tokens.insert(enum_origin.clone(), stream);
@@ -402,6 +407,51 @@ impl Enum {
                         #(&Self::#variant_idents => #variant_names,)*
                         _ => "(unknown variant)",
                     })
+                }
+            }
+        }
+    }
+
+    fn structure_type_size(&self, source: &Source) -> TokenStream {
+        if !matches!(&self.kind, EnumKind::Enum { name } if *name == TypeName::structure_type()) {
+            return quote! {};
+        }
+
+        let enum_ident = self.kind.enum_ident();
+        let variants: Vec<_> = self
+            .variants
+            .iter()
+            .filter(|variant| matches!(variant.kind, EnumVariantKind::Value(_)))
+            .collect();
+        let variant_idents = variants.iter().map(|variant| variant.name.ident());
+        let variant_values = variants.iter().map(|variant| {
+            let structure = source
+                .structures
+                .iter()
+                .find(|structure| {
+                    matches!(structure.structure_type(), Some(name) if name == variant.name)
+                });
+
+            match structure {
+                Some(structure) => {
+                    let path = structure.origin().module_path();
+                    let typ = structure.name.ident();
+                    quote! { Some(size_of::<crate::#path#typ>()) }
+                }
+                None => quote! { None },
+            }
+        });
+
+        quote! {
+            impl #enum_ident {
+                /// Returns the memory size of the underlying structure type.
+                /// Returns `None` when the structure type is unknown.
+                pub fn mem_size(&self) -> Option<usize> {
+                    use std::mem::size_of;
+                    match self {
+                        #(&Self::#variant_idents => #variant_values,)*
+                        _ => None,
+                    }
                 }
             }
         }

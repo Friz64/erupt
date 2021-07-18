@@ -74,6 +74,9 @@ pub struct ConditionalRenderingBeginInfoEXT {
     pub offset: crate::vk1_0::DeviceSize,
     pub flags: crate::extensions::ext_conditional_rendering::ConditionalRenderingFlagsEXT,
 }
+impl ConditionalRenderingBeginInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::CONDITIONAL_RENDERING_BEGIN_INFO_EXT;
+}
 impl Default for ConditionalRenderingBeginInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::CONDITIONAL_RENDERING_BEGIN_INFO_EXT, p_next: std::ptr::null(), buffer: Default::default(), offset: Default::default(), flags: Default::default() }
@@ -151,6 +154,9 @@ pub struct CommandBufferInheritanceConditionalRenderingInfoEXT {
     pub p_next: *const std::ffi::c_void,
     pub conditional_rendering_enable: crate::vk1_0::Bool32,
 }
+impl CommandBufferInheritanceConditionalRenderingInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT;
+}
 impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT, p_next: std::ptr::null(), conditional_rendering_enable: Default::default() }
@@ -218,6 +224,9 @@ pub struct PhysicalDeviceConditionalRenderingFeaturesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub conditional_rendering: crate::vk1_0::Bool32,
     pub inherited_conditional_rendering: crate::vk1_0::Bool32,
+}
+impl PhysicalDeviceConditionalRenderingFeaturesEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT;
 }
 impl Default for PhysicalDeviceConditionalRenderingFeaturesEXT {
     fn default() -> Self {

@@ -25,6 +25,9 @@ pub struct PhysicalDeviceCornerSampledImageFeaturesNV {
     pub p_next: *mut std::ffi::c_void,
     pub corner_sampled_image: crate::vk1_0::Bool32,
 }
+impl PhysicalDeviceCornerSampledImageFeaturesNV {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV;
+}
 impl Default for PhysicalDeviceCornerSampledImageFeaturesNV {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), corner_sampled_image: Default::default() }

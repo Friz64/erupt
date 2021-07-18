@@ -41,6 +41,9 @@ pub struct DisplayProperties2KHR {
     pub p_next: *mut std::ffi::c_void,
     pub display_properties: crate::extensions::khr_display::DisplayPropertiesKHR,
 }
+impl DisplayProperties2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_PROPERTIES_2_KHR;
+}
 impl Default for DisplayProperties2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_properties: Default::default() }
@@ -107,6 +110,9 @@ pub struct DisplayPlaneProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub display_plane_properties: crate::extensions::khr_display::DisplayPlanePropertiesKHR,
+}
+impl DisplayPlaneProperties2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_PLANE_PROPERTIES_2_KHR;
 }
 impl Default for DisplayPlaneProperties2KHR {
     fn default() -> Self {
@@ -175,6 +181,9 @@ pub struct DisplayModeProperties2KHR {
     pub p_next: *mut std::ffi::c_void,
     pub display_mode_properties: crate::extensions::khr_display::DisplayModePropertiesKHR,
 }
+impl DisplayModeProperties2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_MODE_PROPERTIES_2_KHR;
+}
 impl Default for DisplayModeProperties2KHR {
     fn default() -> Self {
         Self { s_type: crate::vk1_0::StructureType::DISPLAY_MODE_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_mode_properties: Default::default() }
@@ -242,6 +251,9 @@ pub struct DisplayPlaneInfo2KHR {
     pub p_next: *const std::ffi::c_void,
     pub mode: crate::extensions::khr_display::DisplayModeKHR,
     pub plane_index: u32,
+}
+impl DisplayPlaneInfo2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_PLANE_INFO_2_KHR;
 }
 impl Default for DisplayPlaneInfo2KHR {
     fn default() -> Self {
@@ -314,6 +326,9 @@ pub struct DisplayPlaneCapabilities2KHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
     pub capabilities: crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR,
+}
+impl DisplayPlaneCapabilities2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::DISPLAY_PLANE_CAPABILITIES_2_KHR;
 }
 impl Default for DisplayPlaneCapabilities2KHR {
     fn default() -> Self {

@@ -33,7 +33,7 @@ impl PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
 }
 impl Default for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT, p_next: std::ptr::null_mut(), ycbcr2plane444_formats: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), ycbcr2plane444_formats: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {

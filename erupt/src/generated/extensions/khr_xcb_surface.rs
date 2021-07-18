@@ -54,7 +54,7 @@ impl XcbSurfaceCreateInfoKHR {
 }
 impl Default for XcbSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::XCB_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), connection: std::ptr::null_mut(), window: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), connection: std::ptr::null_mut(), window: Default::default() }
     }
 }
 impl std::fmt::Debug for XcbSurfaceCreateInfoKHR {

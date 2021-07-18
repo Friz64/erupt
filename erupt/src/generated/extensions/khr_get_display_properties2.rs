@@ -46,7 +46,7 @@ impl DisplayProperties2KHR {
 }
 impl Default for DisplayProperties2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), display_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayProperties2KHR {
@@ -116,7 +116,7 @@ impl DisplayPlaneProperties2KHR {
 }
 impl Default for DisplayPlaneProperties2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_plane_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), display_plane_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneProperties2KHR {
@@ -186,7 +186,7 @@ impl DisplayModeProperties2KHR {
 }
 impl Default for DisplayModeProperties2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_MODE_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), display_mode_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), display_mode_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayModeProperties2KHR {
@@ -257,7 +257,7 @@ impl DisplayPlaneInfo2KHR {
 }
 impl Default for DisplayPlaneInfo2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_INFO_2_KHR, p_next: std::ptr::null(), mode: Default::default(), plane_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), mode: Default::default(), plane_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneInfo2KHR {
@@ -332,7 +332,7 @@ impl DisplayPlaneCapabilities2KHR {
 }
 impl Default for DisplayPlaneCapabilities2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PLANE_CAPABILITIES_2_KHR, p_next: std::ptr::null_mut(), capabilities: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), capabilities: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPlaneCapabilities2KHR {

@@ -403,7 +403,7 @@ impl VideoQueueFamilyProperties2KHR {
 }
 impl Default for VideoQueueFamilyProperties2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR, p_next: std::ptr::null_mut(), video_codec_operations: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), video_codec_operations: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoQueueFamilyProperties2KHR {
@@ -474,7 +474,7 @@ impl VideoProfilesKHR {
 }
 impl Default for VideoProfilesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_PROFILES_KHR, p_next: std::ptr::null_mut(), profile_count: Default::default(), p_profiles: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), profile_count: Default::default(), p_profiles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoProfilesKHR {
@@ -550,7 +550,7 @@ impl PhysicalDeviceVideoFormatInfoKHR {
 }
 impl Default for PhysicalDeviceVideoFormatInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR, p_next: std::ptr::null_mut(), image_usage: Default::default(), p_video_profiles: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), image_usage: Default::default(), p_video_profiles: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVideoFormatInfoKHR {
@@ -625,7 +625,7 @@ impl VideoFormatPropertiesKHR {
 }
 impl Default for VideoFormatPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_FORMAT_PROPERTIES_KHR, p_next: std::ptr::null_mut(), format: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), format: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoFormatPropertiesKHR {
@@ -698,7 +698,7 @@ impl VideoProfileKHR {
 }
 impl Default for VideoProfileKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_PROFILE_KHR, p_next: std::ptr::null_mut(), video_codec_operation: Default::default(), chroma_subsampling: Default::default(), luma_bit_depth: Default::default(), chroma_bit_depth: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), video_codec_operation: Default::default(), chroma_subsampling: Default::default(), luma_bit_depth: Default::default(), chroma_bit_depth: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoProfileKHR {
@@ -790,7 +790,7 @@ impl VideoCapabilitiesKHR {
 }
 impl Default for VideoCapabilitiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_CAPABILITIES_KHR, p_next: std::ptr::null_mut(), capability_flags: Default::default(), min_bitstream_buffer_offset_alignment: Default::default(), min_bitstream_buffer_size_alignment: Default::default(), video_picture_extent_granularity: Default::default(), min_extent: Default::default(), max_extent: Default::default(), max_reference_pictures_slots_count: Default::default(), max_reference_pictures_active_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), capability_flags: Default::default(), min_bitstream_buffer_offset_alignment: Default::default(), min_bitstream_buffer_size_alignment: Default::default(), video_picture_extent_granularity: Default::default(), min_extent: Default::default(), max_extent: Default::default(), max_reference_pictures_slots_count: Default::default(), max_reference_pictures_active_count: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoCapabilitiesKHR {
@@ -896,7 +896,7 @@ impl VideoGetMemoryPropertiesKHR {
 }
 impl Default for VideoGetMemoryPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_GET_MEMORY_PROPERTIES_KHR, p_next: std::ptr::null(), memory_bind_index: Default::default(), p_memory_requirements: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory_bind_index: Default::default(), p_memory_requirements: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for VideoGetMemoryPropertiesKHR {
@@ -974,7 +974,7 @@ impl VideoBindMemoryKHR {
 }
 impl Default for VideoBindMemoryKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_BIND_MEMORY_KHR, p_next: std::ptr::null(), memory_bind_index: Default::default(), memory: Default::default(), memory_offset: Default::default(), memory_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory_bind_index: Default::default(), memory: Default::default(), memory_offset: Default::default(), memory_size: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoBindMemoryKHR {
@@ -1062,7 +1062,7 @@ impl VideoPictureResourceKHR {
 }
 impl Default for VideoPictureResourceKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_PICTURE_RESOURCE_KHR, p_next: std::ptr::null(), coded_offset: Default::default(), coded_extent: Default::default(), base_array_layer: Default::default(), image_view_binding: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), coded_offset: Default::default(), coded_extent: Default::default(), base_array_layer: Default::default(), image_view_binding: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoPictureResourceKHR {
@@ -1148,7 +1148,7 @@ impl VideoReferenceSlotKHR {
 }
 impl Default for VideoReferenceSlotKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_REFERENCE_SLOT_KHR, p_next: std::ptr::null(), slot_index: Default::default(), p_picture_resource: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), slot_index: Default::default(), p_picture_resource: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoReferenceSlotKHR {
@@ -1230,7 +1230,7 @@ impl VideoSessionCreateInfoKHR {
 }
 impl Default for VideoSessionCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_SESSION_CREATE_INFO_KHR, p_next: std::ptr::null(), queue_family_index: Default::default(), flags: Default::default(), p_video_profile: std::ptr::null(), picture_format: Default::default(), max_coded_extent: Default::default(), reference_pictures_format: Default::default(), max_reference_pictures_slots_count: Default::default(), max_reference_pictures_active_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), queue_family_index: Default::default(), flags: Default::default(), p_video_profile: std::ptr::null(), picture_format: Default::default(), max_coded_extent: Default::default(), reference_pictures_format: Default::default(), max_reference_pictures_slots_count: Default::default(), max_reference_pictures_active_count: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoSessionCreateInfoKHR {
@@ -1336,7 +1336,7 @@ impl VideoSessionParametersCreateInfoKHR {
 }
 impl Default for VideoSessionParametersCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR, p_next: std::ptr::null(), video_session_parameters_template: Default::default(), video_session: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), video_session_parameters_template: Default::default(), video_session: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoSessionParametersCreateInfoKHR {
@@ -1411,7 +1411,7 @@ impl VideoSessionParametersUpdateInfoKHR {
 }
 impl Default for VideoSessionParametersUpdateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR, p_next: std::ptr::null(), update_sequence_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), update_sequence_count: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoSessionParametersUpdateInfoKHR {
@@ -1486,7 +1486,7 @@ impl VideoBeginCodingInfoKHR {
 }
 impl Default for VideoBeginCodingInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_BEGIN_CODING_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), codec_quality_preset: Default::default(), video_session: Default::default(), video_session_parameters: Default::default(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), codec_quality_preset: Default::default(), video_session: Default::default(), video_session_parameters: Default::default(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoBeginCodingInfoKHR {
@@ -1577,7 +1577,7 @@ impl VideoEndCodingInfoKHR {
 }
 impl Default for VideoEndCodingInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_END_CODING_INFO_KHR, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEndCodingInfoKHR {
@@ -1647,7 +1647,7 @@ impl VideoCodingControlInfoKHR {
 }
 impl Default for VideoCodingControlInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_CODING_CONTROL_INFO_KHR, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoCodingControlInfoKHR {

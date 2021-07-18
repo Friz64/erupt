@@ -74,7 +74,7 @@ impl PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
 }
 impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR, p_next: std::ptr::null_mut(), pipeline_executable_info: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), pipeline_executable_info: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
@@ -144,7 +144,7 @@ impl PipelineInfoKHR {
 }
 impl Default for PipelineInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_INFO_KHR, p_next: std::ptr::null(), pipeline: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), pipeline: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineInfoKHR {
@@ -217,7 +217,7 @@ impl PipelineExecutablePropertiesKHR {
 }
 impl Default for PipelineExecutablePropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), stages: Default::default(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, subgroup_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), stages: Default::default(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, subgroup_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutablePropertiesKHR {
@@ -303,7 +303,7 @@ impl PipelineExecutableInfoKHR {
 }
 impl Default for PipelineExecutableInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INFO_KHR, p_next: std::ptr::null(), pipeline: Default::default(), executable_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), pipeline: Default::default(), executable_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableInfoKHR {
@@ -401,7 +401,7 @@ impl PipelineExecutableStatisticKHR {
 }
 impl Default for PipelineExecutableStatisticKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_STATISTIC_KHR, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, format: Default::default(), value: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, format: Default::default(), value: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableStatisticKHR {
@@ -490,7 +490,7 @@ impl PipelineExecutableInternalRepresentationKHR {
 }
 impl Default for PipelineExecutableInternalRepresentationKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, is_text: Default::default(), data_size: Default::default(), p_data: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() }, is_text: Default::default(), data_size: Default::default(), p_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PipelineExecutableInternalRepresentationKHR {

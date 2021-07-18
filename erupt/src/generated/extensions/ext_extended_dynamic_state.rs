@@ -101,7 +101,7 @@ impl PhysicalDeviceExtendedDynamicStateFeaturesEXT {
 }
 impl Default for PhysicalDeviceExtendedDynamicStateFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT, p_next: std::ptr::null_mut(), extended_dynamic_state: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), extended_dynamic_state: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExtendedDynamicStateFeaturesEXT {

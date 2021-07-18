@@ -96,7 +96,7 @@ impl PhysicalDeviceCooperativeMatrixFeaturesNV {
 }
 impl Default for PhysicalDeviceCooperativeMatrixFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV, p_next: std::ptr::null_mut(), cooperative_matrix: Default::default(), cooperative_matrix_robust_buffer_access: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), cooperative_matrix: Default::default(), cooperative_matrix_robust_buffer_access: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixFeaturesNV {
@@ -171,7 +171,7 @@ impl PhysicalDeviceCooperativeMatrixPropertiesNV {
 }
 impl Default for PhysicalDeviceCooperativeMatrixPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV, p_next: std::ptr::null_mut(), cooperative_matrix_supported_stages: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), cooperative_matrix_supported_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixPropertiesNV {
@@ -248,7 +248,7 @@ impl CooperativeMatrixPropertiesNV {
 }
 impl Default for CooperativeMatrixPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COOPERATIVE_MATRIX_PROPERTIES_NV, p_next: std::ptr::null_mut(), m_size: Default::default(), n_size: Default::default(), k_size: Default::default(), a_type: Default::default(), b_type: Default::default(), c_type: Default::default(), d_type: Default::default(), scope: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), m_size: Default::default(), n_size: Default::default(), k_size: Default::default(), a_type: Default::default(), b_type: Default::default(), c_type: Default::default(), d_type: Default::default(), scope: Default::default() }
     }
 }
 impl std::fmt::Debug for CooperativeMatrixPropertiesNV {

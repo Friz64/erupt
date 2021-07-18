@@ -30,7 +30,7 @@ impl PhysicalDeviceCornerSampledImageFeaturesNV {
 }
 impl Default for PhysicalDeviceCornerSampledImageFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), corner_sampled_image: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), corner_sampled_image: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCornerSampledImageFeaturesNV {

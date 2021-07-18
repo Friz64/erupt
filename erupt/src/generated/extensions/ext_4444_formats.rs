@@ -32,7 +32,7 @@ impl PhysicalDevice4444FormatsFeaturesEXT {
 }
 impl Default for PhysicalDevice4444FormatsFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT, p_next: std::ptr::null_mut(), format_a4r4g4b4: Default::default(), format_a4b4g4r4: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), format_a4r4g4b4: Default::default(), format_a4b4g4r4: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevice4444FormatsFeaturesEXT {

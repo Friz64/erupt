@@ -26,7 +26,7 @@ impl PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
 }
 impl Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_zero_initialize_workgroup_memory: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_zero_initialize_workgroup_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {

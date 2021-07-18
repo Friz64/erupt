@@ -46,7 +46,7 @@ impl PipelineCoverageToColorStateCreateInfoNV {
 }
 impl Default for PipelineCoverageToColorStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_to_color_enable: Default::default(), coverage_to_color_location: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), coverage_to_color_enable: Default::default(), coverage_to_color_location: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageToColorStateCreateInfoNV {

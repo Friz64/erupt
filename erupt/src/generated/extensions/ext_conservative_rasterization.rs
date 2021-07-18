@@ -76,7 +76,7 @@ impl PhysicalDeviceConservativeRasterizationPropertiesEXT {
 }
 impl Default for PhysicalDeviceConservativeRasterizationPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT, p_next: std::ptr::null_mut(), primitive_overestimation_size: Default::default(), max_extra_primitive_overestimation_size: Default::default(), extra_primitive_overestimation_size_granularity: Default::default(), primitive_underestimation: Default::default(), conservative_point_and_line_rasterization: Default::default(), degenerate_triangles_rasterized: Default::default(), degenerate_lines_rasterized: Default::default(), fully_covered_fragment_shader_input_variable: Default::default(), conservative_rasterization_post_depth_coverage: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), primitive_overestimation_size: Default::default(), max_extra_primitive_overestimation_size: Default::default(), extra_primitive_overestimation_size_granularity: Default::default(), primitive_underestimation: Default::default(), conservative_point_and_line_rasterization: Default::default(), degenerate_triangles_rasterized: Default::default(), degenerate_lines_rasterized: Default::default(), fully_covered_fragment_shader_input_variable: Default::default(), conservative_rasterization_post_depth_coverage: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceConservativeRasterizationPropertiesEXT {
@@ -188,7 +188,7 @@ impl PipelineRasterizationConservativeStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationConservativeStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), conservative_rasterization_mode: Default::default(), extra_primitive_overestimation_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), conservative_rasterization_mode: Default::default(), extra_primitive_overestimation_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateInfoEXT {

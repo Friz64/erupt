@@ -570,7 +570,7 @@ impl PhysicalDeviceDriverProperties {
 }
 impl Default for PhysicalDeviceDriverProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRIVER_PROPERTIES, p_next: std::ptr::null_mut(), driver_id: Default::default(), driver_name: unsafe { std::mem::zeroed() }, driver_info: unsafe { std::mem::zeroed() }, conformance_version: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), driver_id: Default::default(), driver_name: unsafe { std::mem::zeroed() }, driver_info: unsafe { std::mem::zeroed() }, conformance_version: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDriverProperties {
@@ -657,7 +657,7 @@ impl PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
 }
 impl Default for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES, p_next: std::ptr::null_mut(), shader_subgroup_extended_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_subgroup_extended_types: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
@@ -728,7 +728,7 @@ impl PhysicalDeviceSamplerFilterMinmaxProperties {
 }
 impl Default for PhysicalDeviceSamplerFilterMinmaxProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES, p_next: std::ptr::null_mut(), filter_minmax_single_component_formats: Default::default(), filter_minmax_image_component_mapping: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), filter_minmax_single_component_formats: Default::default(), filter_minmax_image_component_mapping: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSamplerFilterMinmaxProperties {
@@ -803,7 +803,7 @@ impl SamplerReductionModeCreateInfo {
 }
 impl Default for SamplerReductionModeCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_REDUCTION_MODE_CREATE_INFO, p_next: std::ptr::null(), reduction_mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), reduction_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerReductionModeCreateInfo {
@@ -874,7 +874,7 @@ impl ImageFormatListCreateInfo {
 }
 impl Default for ImageFormatListCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_FORMAT_LIST_CREATE_INFO, p_next: std::ptr::null(), view_format_count: Default::default(), p_view_formats: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), view_format_count: Default::default(), p_view_formats: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImageFormatListCreateInfo {
@@ -948,7 +948,7 @@ impl PhysicalDeviceShaderFloat16Int8Features {
 }
 impl Default for PhysicalDeviceShaderFloat16Int8Features {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES, p_next: std::ptr::null_mut(), shader_float16: Default::default(), shader_int8: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_float16: Default::default(), shader_int8: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderFloat16Int8Features {
@@ -1039,7 +1039,7 @@ impl PhysicalDeviceFloatControlsProperties {
 }
 impl Default for PhysicalDeviceFloatControlsProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES, p_next: std::ptr::null_mut(), denorm_behavior_independence: Default::default(), rounding_mode_independence: Default::default(), shader_signed_zero_inf_nan_preserve_float16: Default::default(), shader_signed_zero_inf_nan_preserve_float32: Default::default(), shader_signed_zero_inf_nan_preserve_float64: Default::default(), shader_denorm_preserve_float16: Default::default(), shader_denorm_preserve_float32: Default::default(), shader_denorm_preserve_float64: Default::default(), shader_denorm_flush_to_zero_float16: Default::default(), shader_denorm_flush_to_zero_float32: Default::default(), shader_denorm_flush_to_zero_float64: Default::default(), shader_rounding_mode_rte_float16: Default::default(), shader_rounding_mode_rte_float32: Default::default(), shader_rounding_mode_rte_float64: Default::default(), shader_rounding_mode_rtz_float16: Default::default(), shader_rounding_mode_rtz_float32: Default::default(), shader_rounding_mode_rtz_float64: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), denorm_behavior_independence: Default::default(), rounding_mode_independence: Default::default(), shader_signed_zero_inf_nan_preserve_float16: Default::default(), shader_signed_zero_inf_nan_preserve_float32: Default::default(), shader_signed_zero_inf_nan_preserve_float64: Default::default(), shader_denorm_preserve_float16: Default::default(), shader_denorm_preserve_float32: Default::default(), shader_denorm_preserve_float64: Default::default(), shader_denorm_flush_to_zero_float16: Default::default(), shader_denorm_flush_to_zero_float32: Default::default(), shader_denorm_flush_to_zero_float64: Default::default(), shader_rounding_mode_rte_float16: Default::default(), shader_rounding_mode_rte_float32: Default::default(), shader_rounding_mode_rte_float64: Default::default(), shader_rounding_mode_rtz_float16: Default::default(), shader_rounding_mode_rtz_float32: Default::default(), shader_rounding_mode_rtz_float64: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFloatControlsProperties {
@@ -1189,7 +1189,7 @@ impl PhysicalDeviceHostQueryResetFeatures {
 }
 impl Default for PhysicalDeviceHostQueryResetFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES, p_next: std::ptr::null_mut(), host_query_reset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), host_query_reset: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceHostQueryResetFeatures {
@@ -1278,7 +1278,7 @@ impl PhysicalDeviceDescriptorIndexingFeatures {
 }
 impl Default for PhysicalDeviceDescriptorIndexingFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES, p_next: std::ptr::null_mut(), shader_input_attachment_array_dynamic_indexing: Default::default(), shader_uniform_texel_buffer_array_dynamic_indexing: Default::default(), shader_storage_texel_buffer_array_dynamic_indexing: Default::default(), shader_uniform_buffer_array_non_uniform_indexing: Default::default(), shader_sampled_image_array_non_uniform_indexing: Default::default(), shader_storage_buffer_array_non_uniform_indexing: Default::default(), shader_storage_image_array_non_uniform_indexing: Default::default(), shader_input_attachment_array_non_uniform_indexing: Default::default(), shader_uniform_texel_buffer_array_non_uniform_indexing: Default::default(), shader_storage_texel_buffer_array_non_uniform_indexing: Default::default(), descriptor_binding_uniform_buffer_update_after_bind: Default::default(), descriptor_binding_sampled_image_update_after_bind: Default::default(), descriptor_binding_storage_image_update_after_bind: Default::default(), descriptor_binding_storage_buffer_update_after_bind: Default::default(), descriptor_binding_uniform_texel_buffer_update_after_bind: Default::default(), descriptor_binding_storage_texel_buffer_update_after_bind: Default::default(), descriptor_binding_update_unused_while_pending: Default::default(), descriptor_binding_partially_bound: Default::default(), descriptor_binding_variable_descriptor_count: Default::default(), runtime_descriptor_array: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_input_attachment_array_dynamic_indexing: Default::default(), shader_uniform_texel_buffer_array_dynamic_indexing: Default::default(), shader_storage_texel_buffer_array_dynamic_indexing: Default::default(), shader_uniform_buffer_array_non_uniform_indexing: Default::default(), shader_sampled_image_array_non_uniform_indexing: Default::default(), shader_storage_buffer_array_non_uniform_indexing: Default::default(), shader_storage_image_array_non_uniform_indexing: Default::default(), shader_input_attachment_array_non_uniform_indexing: Default::default(), shader_uniform_texel_buffer_array_non_uniform_indexing: Default::default(), shader_storage_texel_buffer_array_non_uniform_indexing: Default::default(), descriptor_binding_uniform_buffer_update_after_bind: Default::default(), descriptor_binding_sampled_image_update_after_bind: Default::default(), descriptor_binding_storage_image_update_after_bind: Default::default(), descriptor_binding_storage_buffer_update_after_bind: Default::default(), descriptor_binding_uniform_texel_buffer_update_after_bind: Default::default(), descriptor_binding_storage_texel_buffer_update_after_bind: Default::default(), descriptor_binding_update_unused_while_pending: Default::default(), descriptor_binding_partially_bound: Default::default(), descriptor_binding_variable_descriptor_count: Default::default(), runtime_descriptor_array: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingFeatures {
@@ -1465,33 +1465,7 @@ impl PhysicalDeviceDescriptorIndexingProperties {
 }
 impl Default for PhysicalDeviceDescriptorIndexingProperties {
     fn default() -> Self {
-        Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES,
-            p_next: std::ptr::null_mut(),
-            max_update_after_bind_descriptors_in_all_pools: Default::default(),
-            shader_uniform_buffer_array_non_uniform_indexing_native: Default::default(),
-            shader_sampled_image_array_non_uniform_indexing_native: Default::default(),
-            shader_storage_buffer_array_non_uniform_indexing_native: Default::default(),
-            shader_storage_image_array_non_uniform_indexing_native: Default::default(),
-            shader_input_attachment_array_non_uniform_indexing_native: Default::default(),
-            robust_buffer_access_update_after_bind: Default::default(),
-            quad_divergent_implicit_lod: Default::default(),
-            max_per_stage_descriptor_update_after_bind_samplers: Default::default(),
-            max_per_stage_descriptor_update_after_bind_uniform_buffers: Default::default(),
-            max_per_stage_descriptor_update_after_bind_storage_buffers: Default::default(),
-            max_per_stage_descriptor_update_after_bind_sampled_images: Default::default(),
-            max_per_stage_descriptor_update_after_bind_storage_images: Default::default(),
-            max_per_stage_descriptor_update_after_bind_input_attachments: Default::default(),
-            max_per_stage_update_after_bind_resources: Default::default(),
-            max_descriptor_set_update_after_bind_samplers: Default::default(),
-            max_descriptor_set_update_after_bind_uniform_buffers: Default::default(),
-            max_descriptor_set_update_after_bind_uniform_buffers_dynamic: Default::default(),
-            max_descriptor_set_update_after_bind_storage_buffers: Default::default(),
-            max_descriptor_set_update_after_bind_storage_buffers_dynamic: Default::default(),
-            max_descriptor_set_update_after_bind_sampled_images: Default::default(),
-            max_descriptor_set_update_after_bind_storage_images: Default::default(),
-            max_descriptor_set_update_after_bind_input_attachments: Default::default(),
-        }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_update_after_bind_descriptors_in_all_pools: Default::default(), shader_uniform_buffer_array_non_uniform_indexing_native: Default::default(), shader_sampled_image_array_non_uniform_indexing_native: Default::default(), shader_storage_buffer_array_non_uniform_indexing_native: Default::default(), shader_storage_image_array_non_uniform_indexing_native: Default::default(), shader_input_attachment_array_non_uniform_indexing_native: Default::default(), robust_buffer_access_update_after_bind: Default::default(), quad_divergent_implicit_lod: Default::default(), max_per_stage_descriptor_update_after_bind_samplers: Default::default(), max_per_stage_descriptor_update_after_bind_uniform_buffers: Default::default(), max_per_stage_descriptor_update_after_bind_storage_buffers: Default::default(), max_per_stage_descriptor_update_after_bind_sampled_images: Default::default(), max_per_stage_descriptor_update_after_bind_storage_images: Default::default(), max_per_stage_descriptor_update_after_bind_input_attachments: Default::default(), max_per_stage_update_after_bind_resources: Default::default(), max_descriptor_set_update_after_bind_samplers: Default::default(), max_descriptor_set_update_after_bind_uniform_buffers: Default::default(), max_descriptor_set_update_after_bind_uniform_buffers_dynamic: Default::default(), max_descriptor_set_update_after_bind_storage_buffers: Default::default(), max_descriptor_set_update_after_bind_storage_buffers_dynamic: Default::default(), max_descriptor_set_update_after_bind_sampled_images: Default::default(), max_descriptor_set_update_after_bind_storage_images: Default::default(), max_descriptor_set_update_after_bind_input_attachments: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDescriptorIndexingProperties {
@@ -1672,7 +1646,7 @@ impl DescriptorSetLayoutBindingFlagsCreateInfo {
 }
 impl Default for DescriptorSetLayoutBindingFlagsCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO, p_next: std::ptr::null(), binding_count: Default::default(), p_binding_flags: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), binding_count: Default::default(), p_binding_flags: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutBindingFlagsCreateInfo {
@@ -1744,7 +1718,7 @@ impl DescriptorSetVariableDescriptorCountAllocateInfo {
 }
 impl Default for DescriptorSetVariableDescriptorCountAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO, p_next: std::ptr::null(), descriptor_set_count: Default::default(), p_descriptor_counts: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), descriptor_set_count: Default::default(), p_descriptor_counts: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetVariableDescriptorCountAllocateInfo {
@@ -1815,7 +1789,7 @@ impl DescriptorSetVariableDescriptorCountLayoutSupport {
 }
 impl Default for DescriptorSetVariableDescriptorCountLayoutSupport {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT, p_next: std::ptr::null_mut(), max_variable_descriptor_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_variable_descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorSetVariableDescriptorCountLayoutSupport {
@@ -1893,7 +1867,7 @@ impl AttachmentDescription2 {
 }
 impl Default for AttachmentDescription2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ATTACHMENT_DESCRIPTION_2, p_next: std::ptr::null(), flags: Default::default(), format: Default::default(), samples: Default::default(), load_op: Default::default(), store_op: Default::default(), stencil_load_op: Default::default(), stencil_store_op: Default::default(), initial_layout: Default::default(), final_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), format: Default::default(), samples: Default::default(), load_op: Default::default(), store_op: Default::default(), stencil_load_op: Default::default(), stencil_store_op: Default::default(), initial_layout: Default::default(), final_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentDescription2 {
@@ -2007,7 +1981,7 @@ impl AttachmentReference2 {
 }
 impl Default for AttachmentReference2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ATTACHMENT_REFERENCE_2, p_next: std::ptr::null(), attachment: Default::default(), layout: Default::default(), aspect_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), attachment: Default::default(), layout: Default::default(), aspect_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentReference2 {
@@ -2099,7 +2073,7 @@ impl SubpassDescription2 {
 }
 impl Default for SubpassDescription2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_DESCRIPTION_2, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), view_mask: Default::default(), input_attachment_count: Default::default(), p_input_attachments: std::ptr::null(), color_attachment_count: Default::default(), p_color_attachments: std::ptr::null(), p_resolve_attachments: std::ptr::null(), p_depth_stencil_attachment: std::ptr::null(), preserve_attachment_count: Default::default(), p_preserve_attachments: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), view_mask: Default::default(), input_attachment_count: Default::default(), p_input_attachments: std::ptr::null(), color_attachment_count: Default::default(), p_color_attachments: std::ptr::null(), p_resolve_attachments: std::ptr::null(), p_depth_stencil_attachment: std::ptr::null(), preserve_attachment_count: Default::default(), p_preserve_attachments: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubpassDescription2 {
@@ -2217,7 +2191,7 @@ impl SubpassDependency2 {
 }
 impl Default for SubpassDependency2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_DEPENDENCY_2, p_next: std::ptr::null(), src_subpass: Default::default(), dst_subpass: Default::default(), src_stage_mask: Default::default(), dst_stage_mask: Default::default(), src_access_mask: Default::default(), dst_access_mask: Default::default(), dependency_flags: Default::default(), view_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_subpass: Default::default(), dst_subpass: Default::default(), src_stage_mask: Default::default(), dst_stage_mask: Default::default(), src_access_mask: Default::default(), dst_access_mask: Default::default(), dependency_flags: Default::default(), view_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassDependency2 {
@@ -2330,7 +2304,7 @@ impl RenderPassCreateInfo2 {
 }
 impl Default for RenderPassCreateInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO_2, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null(), correlated_view_mask_count: Default::default(), p_correlated_view_masks: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null(), correlated_view_mask_count: Default::default(), p_correlated_view_masks: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassCreateInfo2 {
@@ -2424,7 +2398,7 @@ impl SubpassBeginInfo {
 }
 impl Default for SubpassBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_BEGIN_INFO, p_next: std::ptr::null(), contents: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), contents: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassBeginInfo {
@@ -2493,7 +2467,7 @@ impl SubpassEndInfo {
 }
 impl Default for SubpassEndInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_END_INFO, p_next: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubpassEndInfo {
@@ -2558,7 +2532,7 @@ impl PhysicalDeviceTimelineSemaphoreFeatures {
 }
 impl Default for PhysicalDeviceTimelineSemaphoreFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES, p_next: std::ptr::null_mut(), timeline_semaphore: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), timeline_semaphore: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTimelineSemaphoreFeatures {
@@ -2628,7 +2602,7 @@ impl PhysicalDeviceTimelineSemaphoreProperties {
 }
 impl Default for PhysicalDeviceTimelineSemaphoreProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES, p_next: std::ptr::null_mut(), max_timeline_semaphore_value_difference: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_timeline_semaphore_value_difference: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTimelineSemaphoreProperties {
@@ -2699,7 +2673,7 @@ impl SemaphoreTypeCreateInfo {
 }
 impl Default for SemaphoreTypeCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_TYPE_CREATE_INFO, p_next: std::ptr::null(), semaphore_type: Default::default(), initial_value: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore_type: Default::default(), initial_value: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreTypeCreateInfo {
@@ -2777,7 +2751,7 @@ impl TimelineSemaphoreSubmitInfo {
 }
 impl Default for TimelineSemaphoreSubmitInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::TIMELINE_SEMAPHORE_SUBMIT_INFO, p_next: std::ptr::null(), wait_semaphore_value_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_value_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_value_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_value_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for TimelineSemaphoreSubmitInfo {
@@ -2857,7 +2831,7 @@ impl SemaphoreWaitInfo {
 }
 impl Default for SemaphoreWaitInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_WAIT_INFO, p_next: std::ptr::null(), flags: Default::default(), semaphore_count: Default::default(), p_semaphores: std::ptr::null(), p_values: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), semaphore_count: Default::default(), p_semaphores: std::ptr::null(), p_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SemaphoreWaitInfo {
@@ -2940,7 +2914,7 @@ impl SemaphoreSignalInfo {
 }
 impl Default for SemaphoreSignalInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_SIGNAL_INFO, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreSignalInfo {
@@ -3017,7 +2991,7 @@ impl PhysicalDevice8BitStorageFeatures {
 }
 impl Default for PhysicalDevice8BitStorageFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES, p_next: std::ptr::null_mut(), storage_buffer8_bit_access: Default::default(), uniform_and_storage_buffer8_bit_access: Default::default(), storage_push_constant8: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), storage_buffer8_bit_access: Default::default(), uniform_and_storage_buffer8_bit_access: Default::default(), storage_push_constant8: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevice8BitStorageFeatures {
@@ -3099,7 +3073,7 @@ impl PhysicalDeviceVulkanMemoryModelFeatures {
 }
 impl Default for PhysicalDeviceVulkanMemoryModelFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES, p_next: std::ptr::null_mut(), vulkan_memory_model: Default::default(), vulkan_memory_model_device_scope: Default::default(), vulkan_memory_model_availability_visibility_chains: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), vulkan_memory_model: Default::default(), vulkan_memory_model_device_scope: Default::default(), vulkan_memory_model_availability_visibility_chains: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVulkanMemoryModelFeatures {
@@ -3180,7 +3154,7 @@ impl PhysicalDeviceShaderAtomicInt64Features {
 }
 impl Default for PhysicalDeviceShaderAtomicInt64Features {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES, p_next: std::ptr::null_mut(), shader_buffer_int64_atomics: Default::default(), shader_shared_int64_atomics: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_buffer_int64_atomics: Default::default(), shader_shared_int64_atomics: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderAtomicInt64Features {
@@ -3258,7 +3232,7 @@ impl PhysicalDeviceDepthStencilResolveProperties {
 }
 impl Default for PhysicalDeviceDepthStencilResolveProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES, p_next: std::ptr::null_mut(), supported_depth_resolve_modes: Default::default(), supported_stencil_resolve_modes: Default::default(), independent_resolve_none: Default::default(), independent_resolve: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), supported_depth_resolve_modes: Default::default(), supported_stencil_resolve_modes: Default::default(), independent_resolve_none: Default::default(), independent_resolve: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDepthStencilResolveProperties {
@@ -3345,7 +3319,7 @@ impl SubpassDescriptionDepthStencilResolve {
 }
 impl Default for SubpassDescriptionDepthStencilResolve {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE, p_next: std::ptr::null(), depth_resolve_mode: Default::default(), stencil_resolve_mode: Default::default(), p_depth_stencil_resolve_attachment: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), depth_resolve_mode: Default::default(), stencil_resolve_mode: Default::default(), p_depth_stencil_resolve_attachment: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubpassDescriptionDepthStencilResolve {
@@ -3425,7 +3399,7 @@ impl ImageStencilUsageCreateInfo {
 }
 impl Default for ImageStencilUsageCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_STENCIL_USAGE_CREATE_INFO, p_next: std::ptr::null(), stencil_usage: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), stencil_usage: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageStencilUsageCreateInfo {
@@ -3495,7 +3469,7 @@ impl PhysicalDeviceScalarBlockLayoutFeatures {
 }
 impl Default for PhysicalDeviceScalarBlockLayoutFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES, p_next: std::ptr::null_mut(), scalar_block_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), scalar_block_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceScalarBlockLayoutFeatures {
@@ -3565,7 +3539,7 @@ impl PhysicalDeviceUniformBufferStandardLayoutFeatures {
 }
 impl Default for PhysicalDeviceUniformBufferStandardLayoutFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES, p_next: std::ptr::null_mut(), uniform_buffer_standard_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), uniform_buffer_standard_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceUniformBufferStandardLayoutFeatures {
@@ -3637,7 +3611,7 @@ impl PhysicalDeviceBufferDeviceAddressFeatures {
 }
 impl Default for PhysicalDeviceBufferDeviceAddressFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBufferDeviceAddressFeatures {
@@ -3717,7 +3691,7 @@ impl BufferDeviceAddressInfo {
 }
 impl Default for BufferDeviceAddressInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_INFO, p_next: std::ptr::null(), buffer: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferDeviceAddressInfo {
@@ -3787,7 +3761,7 @@ impl BufferOpaqueCaptureAddressCreateInfo {
 }
 impl Default for BufferOpaqueCaptureAddressCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO, p_next: std::ptr::null(), opaque_capture_address: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), opaque_capture_address: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferOpaqueCaptureAddressCreateInfo {
@@ -3857,7 +3831,7 @@ impl PhysicalDeviceImagelessFramebufferFeatures {
 }
 impl Default for PhysicalDeviceImagelessFramebufferFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES, p_next: std::ptr::null_mut(), imageless_framebuffer: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), imageless_framebuffer: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImagelessFramebufferFeatures {
@@ -3928,7 +3902,7 @@ impl FramebufferAttachmentsCreateInfo {
 }
 impl Default for FramebufferAttachmentsCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO, p_next: std::ptr::null(), attachment_image_info_count: Default::default(), p_attachment_image_infos: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), attachment_image_info_count: Default::default(), p_attachment_image_infos: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for FramebufferAttachmentsCreateInfo {
@@ -4005,7 +3979,7 @@ impl FramebufferAttachmentImageInfo {
 }
 impl Default for FramebufferAttachmentImageInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO, p_next: std::ptr::null(), flags: Default::default(), usage: Default::default(), width: Default::default(), height: Default::default(), layer_count: Default::default(), view_format_count: Default::default(), p_view_formats: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), usage: Default::default(), width: Default::default(), height: Default::default(), layer_count: Default::default(), view_format_count: Default::default(), p_view_formats: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for FramebufferAttachmentImageInfo {
@@ -4102,7 +4076,7 @@ impl RenderPassAttachmentBeginInfo {
 }
 impl Default for RenderPassAttachmentBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_ATTACHMENT_BEGIN_INFO, p_next: std::ptr::null(), attachment_count: Default::default(), p_attachments: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), attachment_count: Default::default(), p_attachments: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassAttachmentBeginInfo {
@@ -4173,7 +4147,7 @@ impl PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
 }
 impl Default for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES, p_next: std::ptr::null_mut(), separate_depth_stencil_layouts: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), separate_depth_stencil_layouts: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
@@ -4243,7 +4217,7 @@ impl AttachmentReferenceStencilLayout {
 }
 impl Default for AttachmentReferenceStencilLayout {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ATTACHMENT_REFERENCE_STENCIL_LAYOUT, p_next: std::ptr::null_mut(), stencil_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), stencil_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentReferenceStencilLayout {
@@ -4314,7 +4288,7 @@ impl AttachmentDescriptionStencilLayout {
 }
 impl Default for AttachmentDescriptionStencilLayout {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT, p_next: std::ptr::null_mut(), stencil_initial_layout: Default::default(), stencil_final_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), stencil_initial_layout: Default::default(), stencil_final_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for AttachmentDescriptionStencilLayout {
@@ -4389,7 +4363,7 @@ impl MemoryOpaqueCaptureAddressAllocateInfo {
 }
 impl Default for MemoryOpaqueCaptureAddressAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO, p_next: std::ptr::null(), opaque_capture_address: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), opaque_capture_address: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryOpaqueCaptureAddressAllocateInfo {
@@ -4459,7 +4433,7 @@ impl DeviceMemoryOpaqueCaptureAddressInfo {
 }
 impl Default for DeviceMemoryOpaqueCaptureAddressInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO, p_next: std::ptr::null(), memory: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceMemoryOpaqueCaptureAddressInfo {
@@ -4540,7 +4514,7 @@ impl PhysicalDeviceVulkan11Features {
 }
 impl Default for PhysicalDeviceVulkan11Features {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES, p_next: std::ptr::null_mut(), storage_buffer16_bit_access: Default::default(), uniform_and_storage_buffer16_bit_access: Default::default(), storage_push_constant16: Default::default(), storage_input_output16: Default::default(), multiview: Default::default(), multiview_geometry_shader: Default::default(), multiview_tessellation_shader: Default::default(), variable_pointers_storage_buffer: Default::default(), variable_pointers: Default::default(), protected_memory: Default::default(), sampler_ycbcr_conversion: Default::default(), shader_draw_parameters: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), storage_buffer16_bit_access: Default::default(), uniform_and_storage_buffer16_bit_access: Default::default(), storage_push_constant16: Default::default(), storage_input_output16: Default::default(), multiview: Default::default(), multiview_geometry_shader: Default::default(), multiview_tessellation_shader: Default::default(), variable_pointers_storage_buffer: Default::default(), variable_pointers: Default::default(), protected_memory: Default::default(), sampler_ycbcr_conversion: Default::default(), shader_draw_parameters: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVulkan11Features {
@@ -4679,7 +4653,7 @@ impl PhysicalDeviceVulkan11Properties {
 }
 impl Default for PhysicalDeviceVulkan11Properties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES, p_next: std::ptr::null_mut(), device_uuid: unsafe { std::mem::zeroed() }, driver_uuid: unsafe { std::mem::zeroed() }, device_luid: unsafe { std::mem::zeroed() }, device_node_mask: Default::default(), device_luid_valid: Default::default(), subgroup_size: Default::default(), subgroup_supported_stages: Default::default(), subgroup_supported_operations: Default::default(), subgroup_quad_operations_in_all_stages: Default::default(), point_clipping_behavior: Default::default(), max_multiview_view_count: Default::default(), max_multiview_instance_index: Default::default(), protected_no_fault: Default::default(), max_per_set_descriptors: Default::default(), max_memory_allocation_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), device_uuid: unsafe { std::mem::zeroed() }, driver_uuid: unsafe { std::mem::zeroed() }, device_luid: unsafe { std::mem::zeroed() }, device_node_mask: Default::default(), device_luid_valid: Default::default(), subgroup_size: Default::default(), subgroup_supported_stages: Default::default(), subgroup_supported_operations: Default::default(), subgroup_quad_operations_in_all_stages: Default::default(), point_clipping_behavior: Default::default(), max_multiview_view_count: Default::default(), max_multiview_instance_index: Default::default(), protected_no_fault: Default::default(), max_per_set_descriptors: Default::default(), max_memory_allocation_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVulkan11Properties {
@@ -4866,7 +4840,7 @@ impl PhysicalDeviceVulkan12Features {
 impl Default for PhysicalDeviceVulkan12Features {
     fn default() -> Self {
         Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES,
+            s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null_mut(),
             sampler_mirror_clamp_to_edge: Default::default(),
             draw_indirect_count: Default::default(),
@@ -5267,7 +5241,7 @@ impl PhysicalDeviceVulkan12Properties {
 impl Default for PhysicalDeviceVulkan12Properties {
     fn default() -> Self {
         Self {
-            s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES,
+            s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null_mut(),
             driver_id: Default::default(),
             driver_name: unsafe { std::mem::zeroed() },

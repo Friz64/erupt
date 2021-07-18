@@ -48,7 +48,7 @@ impl StreamDescriptorSurfaceCreateInfoGGP {
 }
 impl Default for StreamDescriptorSurfaceCreateInfoGGP {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP, p_next: std::ptr::null(), flags: Default::default(), stream_descriptor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stream_descriptor: Default::default() }
     }
 }
 impl std::fmt::Debug for StreamDescriptorSurfaceCreateInfoGGP {

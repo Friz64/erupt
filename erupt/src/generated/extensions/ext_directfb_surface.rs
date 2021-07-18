@@ -54,7 +54,7 @@ impl DirectFBSurfaceCreateInfoEXT {
 }
 impl Default for DirectFBSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DIRECTFB_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), dfb: std::ptr::null_mut(), surface: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), dfb: std::ptr::null_mut(), surface: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DirectFBSurfaceCreateInfoEXT {

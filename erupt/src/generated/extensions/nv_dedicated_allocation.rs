@@ -30,7 +30,7 @@ impl DedicatedAllocationImageCreateInfoNV {
 }
 impl Default for DedicatedAllocationImageCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationImageCreateInfoNV {
@@ -100,7 +100,7 @@ impl DedicatedAllocationBufferCreateInfoNV {
 }
 impl Default for DedicatedAllocationBufferCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationBufferCreateInfoNV {
@@ -171,7 +171,7 @@ impl DedicatedAllocationMemoryAllocateInfoNV {
 }
 impl Default for DedicatedAllocationMemoryAllocateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNV {

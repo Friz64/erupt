@@ -96,7 +96,7 @@ impl FragmentShadingRateAttachmentInfoKHR {
 }
 impl Default for FragmentShadingRateAttachmentInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR, p_next: std::ptr::null(), p_fragment_shading_rate_attachment: std::ptr::null(), shading_rate_attachment_texel_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_fragment_shading_rate_attachment: std::ptr::null(), shading_rate_attachment_texel_size: Default::default() }
     }
 }
 impl std::fmt::Debug for FragmentShadingRateAttachmentInfoKHR {
@@ -172,7 +172,7 @@ impl PipelineFragmentShadingRateStateCreateInfoKHR {
 }
 impl Default for PipelineFragmentShadingRateStateCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR, p_next: std::ptr::null(), fragment_size: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), fragment_size: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateStateCreateInfoKHR {
@@ -249,7 +249,7 @@ impl PhysicalDeviceFragmentShadingRateFeaturesKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRateFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR, p_next: std::ptr::null_mut(), pipeline_fragment_shading_rate: Default::default(), primitive_fragment_shading_rate: Default::default(), attachment_fragment_shading_rate: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), pipeline_fragment_shading_rate: Default::default(), primitive_fragment_shading_rate: Default::default(), attachment_fragment_shading_rate: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateFeaturesKHR {
@@ -345,7 +345,7 @@ impl PhysicalDeviceFragmentShadingRatePropertiesKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRatePropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), min_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size_aspect_ratio: Default::default(), primitive_fragment_shading_rate_with_multiple_viewports: Default::default(), layered_shading_rate_attachments: Default::default(), fragment_shading_rate_non_trivial_combiner_ops: Default::default(), max_fragment_size: Default::default(), max_fragment_size_aspect_ratio: Default::default(), max_fragment_shading_rate_coverage_samples: Default::default(), max_fragment_shading_rate_rasterization_samples: Default::default(), fragment_shading_rate_with_shader_depth_stencil_writes: Default::default(), fragment_shading_rate_with_sample_mask: Default::default(), fragment_shading_rate_with_shader_sample_mask: Default::default(), fragment_shading_rate_with_conservative_rasterization: Default::default(), fragment_shading_rate_with_fragment_shader_interlock: Default::default(), fragment_shading_rate_with_custom_sample_locations: Default::default(), fragment_shading_rate_strict_multiply_combiner: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size: Default::default(), max_fragment_shading_rate_attachment_texel_size_aspect_ratio: Default::default(), primitive_fragment_shading_rate_with_multiple_viewports: Default::default(), layered_shading_rate_attachments: Default::default(), fragment_shading_rate_non_trivial_combiner_ops: Default::default(), max_fragment_size: Default::default(), max_fragment_size_aspect_ratio: Default::default(), max_fragment_shading_rate_coverage_samples: Default::default(), max_fragment_shading_rate_rasterization_samples: Default::default(), fragment_shading_rate_with_shader_depth_stencil_writes: Default::default(), fragment_shading_rate_with_sample_mask: Default::default(), fragment_shading_rate_with_shader_sample_mask: Default::default(), fragment_shading_rate_with_conservative_rasterization: Default::default(), fragment_shading_rate_with_fragment_shader_interlock: Default::default(), fragment_shading_rate_with_custom_sample_locations: Default::default(), fragment_shading_rate_strict_multiply_combiner: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRatePropertiesKHR {
@@ -496,7 +496,7 @@ impl PhysicalDeviceFragmentShadingRateKHR {
 }
 impl Default for PhysicalDeviceFragmentShadingRateKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR, p_next: std::ptr::null_mut(), sample_counts: Default::default(), fragment_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), sample_counts: Default::default(), fragment_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateKHR {

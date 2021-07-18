@@ -49,7 +49,7 @@ impl PhysicalDevicePortabilitySubsetFeaturesKHR {
 }
 impl Default for PhysicalDevicePortabilitySubsetFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR, p_next: std::ptr::null_mut(), constant_alpha_color_blend_factors: Default::default(), events: Default::default(), image_view_format_reinterpretation: Default::default(), image_view_format_swizzle: Default::default(), image_view2_d_on3_d_image: Default::default(), multisample_array_image: Default::default(), mutable_comparison_samplers: Default::default(), point_polygons: Default::default(), sampler_mip_lod_bias: Default::default(), separate_stencil_mask_ref: Default::default(), shader_sample_rate_interpolation_functions: Default::default(), tessellation_isolines: Default::default(), tessellation_point_mode: Default::default(), triangle_fans: Default::default(), vertex_attribute_access_beyond_stride: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), constant_alpha_color_blend_factors: Default::default(), events: Default::default(), image_view_format_reinterpretation: Default::default(), image_view_format_swizzle: Default::default(), image_view2_d_on3_d_image: Default::default(), multisample_array_image: Default::default(), mutable_comparison_samplers: Default::default(), point_polygons: Default::default(), sampler_mip_lod_bias: Default::default(), separate_stencil_mask_ref: Default::default(), shader_sample_rate_interpolation_functions: Default::default(), tessellation_isolines: Default::default(), tessellation_point_mode: Default::default(), triangle_fans: Default::default(), vertex_attribute_access_beyond_stride: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetFeaturesKHR {
@@ -189,7 +189,7 @@ impl PhysicalDevicePortabilitySubsetPropertiesKHR {
 }
 impl Default for PhysicalDevicePortabilitySubsetPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR, p_next: std::ptr::null_mut(), min_vertex_input_binding_stride_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_vertex_input_binding_stride_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetPropertiesKHR {

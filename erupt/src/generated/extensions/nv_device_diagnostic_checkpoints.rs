@@ -35,7 +35,7 @@ impl QueueFamilyCheckpointPropertiesNV {
 }
 impl Default for QueueFamilyCheckpointPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyCheckpointPropertiesNV {
@@ -106,7 +106,7 @@ impl CheckpointDataNV {
 }
 impl Default for CheckpointDataNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CHECKPOINT_DATA_NV, p_next: std::ptr::null_mut(), stage: Default::default(), p_checkpoint_marker: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), stage: Default::default(), p_checkpoint_marker: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for CheckpointDataNV {

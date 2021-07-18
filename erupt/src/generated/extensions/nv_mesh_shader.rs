@@ -55,7 +55,7 @@ impl PhysicalDeviceMeshShaderFeaturesNV {
 }
 impl Default for PhysicalDeviceMeshShaderFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV, p_next: std::ptr::null_mut(), task_shader: Default::default(), mesh_shader: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), task_shader: Default::default(), mesh_shader: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNV {
@@ -142,7 +142,7 @@ impl PhysicalDeviceMeshShaderPropertiesNV {
 }
 impl Default for PhysicalDeviceMeshShaderPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_draw_mesh_tasks_count: Default::default(), max_task_work_group_invocations: Default::default(), max_task_work_group_size: unsafe { std::mem::zeroed() }, max_task_total_memory_size: Default::default(), max_task_output_count: Default::default(), max_mesh_work_group_invocations: Default::default(), max_mesh_work_group_size: unsafe { std::mem::zeroed() }, max_mesh_total_memory_size: Default::default(), max_mesh_output_vertices: Default::default(), max_mesh_output_primitives: Default::default(), max_mesh_multiview_view_count: Default::default(), mesh_output_per_vertex_granularity: Default::default(), mesh_output_per_primitive_granularity: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_draw_mesh_tasks_count: Default::default(), max_task_work_group_invocations: Default::default(), max_task_work_group_size: unsafe { std::mem::zeroed() }, max_task_total_memory_size: Default::default(), max_task_output_count: Default::default(), max_mesh_work_group_invocations: Default::default(), max_mesh_work_group_size: unsafe { std::mem::zeroed() }, max_mesh_total_memory_size: Default::default(), max_mesh_output_vertices: Default::default(), max_mesh_output_primitives: Default::default(), max_mesh_multiview_view_count: Default::default(), mesh_output_per_vertex_granularity: Default::default(), mesh_output_per_primitive_granularity: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {

@@ -35,7 +35,7 @@ impl ImageViewHandleInfoNVX {
 }
 impl Default for ImageViewHandleInfoNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_HANDLE_INFO_NVX, p_next: std::ptr::null(), image_view: Default::default(), descriptor_type: Default::default(), sampler: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image_view: Default::default(), descriptor_type: Default::default(), sampler: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewHandleInfoNVX {
@@ -116,7 +116,7 @@ impl ImageViewAddressPropertiesNVX {
 }
 impl Default for ImageViewAddressPropertiesNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX, p_next: std::ptr::null_mut(), device_address: Default::default(), size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), device_address: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewAddressPropertiesNVX {

@@ -24,7 +24,7 @@ impl PresentFrameTokenGGP {
 }
 impl Default for PresentFrameTokenGGP {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PRESENT_FRAME_TOKEN_GGP, p_next: std::ptr::null(), frame_token: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), frame_token: Default::default() }
     }
 }
 impl std::fmt::Debug for PresentFrameTokenGGP {

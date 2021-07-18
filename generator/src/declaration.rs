@@ -423,8 +423,11 @@ impl Declaration {
     }
 
     pub fn default_impl(&self, source: &Source) -> TokenStream {
-        self.structure_type_value(source)
-            .unwrap_or_else(|| self.ty.default_value(source))
+        if self.metadata.structure_type().is_some() {
+            quote! { Self::STRUCTURE_TYPE }
+        } else {
+            self.ty.default_value(source)
+        }
     }
 
     pub fn array_indices(&self, other: &[impl Borrow<Declaration>]) -> Option<Vec<usize>> {

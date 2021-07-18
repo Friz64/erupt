@@ -46,7 +46,7 @@ impl PipelineCompilerControlCreateInfoAMD {
 }
 impl Default for PipelineCompilerControlCreateInfoAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD, p_next: std::ptr::null(), compiler_control_flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), compiler_control_flags: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCompilerControlCreateInfoAMD {

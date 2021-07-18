@@ -106,7 +106,7 @@ impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 }
 impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT, p_next: std::ptr::null_mut(), advanced_blend_coherent_operations: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), advanced_blend_coherent_operations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
@@ -181,7 +181,7 @@ impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 }
 impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT, p_next: std::ptr::null_mut(), advanced_blend_max_color_attachments: Default::default(), advanced_blend_independent_blend: Default::default(), advanced_blend_non_premultiplied_src_color: Default::default(), advanced_blend_non_premultiplied_dst_color: Default::default(), advanced_blend_correlated_overlap: Default::default(), advanced_blend_all_operations: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), advanced_blend_max_color_attachments: Default::default(), advanced_blend_independent_blend: Default::default(), advanced_blend_non_premultiplied_src_color: Default::default(), advanced_blend_non_premultiplied_dst_color: Default::default(), advanced_blend_correlated_overlap: Default::default(), advanced_blend_all_operations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
@@ -278,7 +278,7 @@ impl PipelineColorBlendAdvancedStateCreateInfoEXT {
 }
 impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), src_premultiplied: Default::default(), dst_premultiplied: Default::default(), blend_overlap: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_premultiplied: Default::default(), dst_premultiplied: Default::default(), blend_overlap: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineColorBlendAdvancedStateCreateInfoEXT {

@@ -22,7 +22,7 @@ impl CopyCommandTransformInfoQCOM {
 }
 impl Default for CopyCommandTransformInfoQCOM {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COPY_COMMAND_TRANSFORM_INFO_QCOM, p_next: std::ptr::null(), transform: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), transform: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyCommandTransformInfoQCOM {

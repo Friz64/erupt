@@ -154,7 +154,7 @@ impl RayTracingShaderGroupCreateInfoKHR {
 }
 impl Default for RayTracingShaderGroupCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default(), p_shader_group_capture_replay_handle: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default(), p_shader_group_capture_replay_handle: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RayTracingShaderGroupCreateInfoKHR {
@@ -260,7 +260,7 @@ impl RayTracingPipelineCreateInfoKHR {
 }
 impl Default for RayTracingPipelineCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), max_pipeline_ray_recursion_depth: Default::default(), p_library_info: std::ptr::null(), p_library_interface: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), max_pipeline_ray_recursion_depth: Default::default(), p_library_info: std::ptr::null(), p_library_interface: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingPipelineCreateInfoKHR {
@@ -381,7 +381,7 @@ impl PhysicalDeviceRayTracingPipelineFeaturesKHR {
 }
 impl Default for PhysicalDeviceRayTracingPipelineFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR, p_next: std::ptr::null_mut(), ray_tracing_pipeline: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: Default::default(), ray_tracing_pipeline_trace_rays_indirect: Default::default(), ray_traversal_primitive_culling: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), ray_tracing_pipeline: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay: Default::default(), ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: Default::default(), ray_tracing_pipeline_trace_rays_indirect: Default::default(), ray_traversal_primitive_culling: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelineFeaturesKHR {
@@ -478,7 +478,7 @@ impl PhysicalDeviceRayTracingPipelinePropertiesKHR {
 }
 impl Default for PhysicalDeviceRayTracingPipelinePropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), shader_group_handle_size: Default::default(), max_ray_recursion_depth: Default::default(), max_shader_group_stride: Default::default(), shader_group_base_alignment: Default::default(), shader_group_handle_capture_replay_size: Default::default(), max_ray_dispatch_invocation_count: Default::default(), shader_group_handle_alignment: Default::default(), max_ray_hit_attribute_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_group_handle_size: Default::default(), max_ray_recursion_depth: Default::default(), max_shader_group_stride: Default::default(), shader_group_base_alignment: Default::default(), shader_group_handle_capture_replay_size: Default::default(), max_ray_dispatch_invocation_count: Default::default(), shader_group_handle_alignment: Default::default(), max_ray_hit_attribute_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelinePropertiesKHR {
@@ -738,7 +738,7 @@ impl RayTracingPipelineInterfaceCreateInfoKHR {
 }
 impl Default for RayTracingPipelineInterfaceCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), max_pipeline_ray_payload_size: Default::default(), max_pipeline_ray_hit_attribute_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), max_pipeline_ray_payload_size: Default::default(), max_pipeline_ray_hit_attribute_size: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingPipelineInterfaceCreateInfoKHR {

@@ -27,7 +27,7 @@ impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
 }
 impl Default for PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV, p_next: std::ptr::null_mut(), compute_derivative_group_quads: Default::default(), compute_derivative_group_linear: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), compute_derivative_group_quads: Default::default(), compute_derivative_group_linear: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceComputeShaderDerivativesFeaturesNV {

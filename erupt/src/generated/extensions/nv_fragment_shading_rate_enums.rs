@@ -97,7 +97,7 @@ impl PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
 }
 impl Default for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shading_rate_enums: Default::default(), supersample_fragment_shading_rates: Default::default(), no_invocation_fragment_shading_rates: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), fragment_shading_rate_enums: Default::default(), supersample_fragment_shading_rates: Default::default(), no_invocation_fragment_shading_rates: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
@@ -177,7 +177,7 @@ impl PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
 }
 impl Default for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_fragment_shading_rate_invocation_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_fragment_shading_rate_invocation_count: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
@@ -249,7 +249,7 @@ impl PipelineFragmentShadingRateEnumStateCreateInfoNV {
 }
 impl Default for PipelineFragmentShadingRateEnumStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), shading_rate_type: Default::default(), shading_rate: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), shading_rate_type: Default::default(), shading_rate: Default::default(), combiner_ops: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateEnumStateCreateInfoNV {

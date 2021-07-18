@@ -44,7 +44,7 @@ impl ValidationFlagsEXT {
 }
 impl Default for ValidationFlagsEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VALIDATION_FLAGS_EXT, p_next: std::ptr::null(), disabled_validation_check_count: Default::default(), p_disabled_validation_checks: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), disabled_validation_check_count: Default::default(), p_disabled_validation_checks: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ValidationFlagsEXT {

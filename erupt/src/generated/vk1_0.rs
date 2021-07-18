@@ -6263,7 +6263,7 @@ impl ApplicationInfo {
 }
 impl Default for ApplicationInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::APPLICATION_INFO, p_next: std::ptr::null(), p_application_name: std::ptr::null(), application_version: Default::default(), p_engine_name: std::ptr::null(), engine_version: Default::default(), api_version: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_application_name: std::ptr::null(), application_version: Default::default(), p_engine_name: std::ptr::null(), engine_version: Default::default(), api_version: Default::default() }
     }
 }
 impl std::fmt::Debug for ApplicationInfo {
@@ -6451,7 +6451,7 @@ impl DeviceQueueCreateInfo {
 }
 impl Default for DeviceQueueCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_count: Default::default(), p_queue_priorities: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_count: Default::default(), p_queue_priorities: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceQueueCreateInfo {
@@ -6539,7 +6539,7 @@ impl DeviceCreateInfo {
 }
 impl Default for DeviceCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_create_info_count: Default::default(), p_queue_create_infos: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null(), p_enabled_features: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), queue_create_info_count: Default::default(), p_queue_create_infos: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null(), p_enabled_features: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceCreateInfo {
@@ -6637,7 +6637,7 @@ impl InstanceCreateInfo {
 }
 impl Default for InstanceCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::INSTANCE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), p_application_info: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), p_application_info: std::ptr::null(), enabled_layer_count: Default::default(), pp_enabled_layer_names: std::ptr::null(), enabled_extension_count: Default::default(), pp_enabled_extension_names: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for InstanceCreateInfo {
@@ -6891,7 +6891,7 @@ impl MemoryAllocateInfo {
 }
 impl Default for MemoryAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_INFO, p_next: std::ptr::null(), allocation_size: Default::default(), memory_type_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), allocation_size: Default::default(), memory_type_index: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryAllocateInfo {
@@ -7353,7 +7353,7 @@ impl MappedMemoryRange {
 }
 impl Default for MappedMemoryRange {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MAPPED_MEMORY_RANGE, p_next: std::ptr::null(), memory: Default::default(), offset: Default::default(), size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for MappedMemoryRange {
@@ -7760,7 +7760,7 @@ impl WriteDescriptorSet {
 }
 impl Default for WriteDescriptorSet {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET, p_next: std::ptr::null(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default(), descriptor_type: Default::default(), p_image_info: std::ptr::null(), p_buffer_info: std::ptr::null(), p_texel_buffer_view: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default(), descriptor_type: Default::default(), p_image_info: std::ptr::null(), p_buffer_info: std::ptr::null(), p_texel_buffer_view: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for WriteDescriptorSet {
@@ -7869,7 +7869,7 @@ impl CopyDescriptorSet {
 }
 impl Default for CopyDescriptorSet {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COPY_DESCRIPTOR_SET, p_next: std::ptr::null(), src_set: Default::default(), src_binding: Default::default(), src_array_element: Default::default(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_set: Default::default(), src_binding: Default::default(), src_array_element: Default::default(), dst_set: Default::default(), dst_binding: Default::default(), dst_array_element: Default::default(), descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyDescriptorSet {
@@ -7974,7 +7974,7 @@ impl BufferCreateInfo {
 }
 impl Default for BufferCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), size: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), size: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BufferCreateInfo {
@@ -8069,7 +8069,7 @@ impl BufferViewCreateInfo {
 }
 impl Default for BufferViewCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_VIEW_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), buffer: Default::default(), format: Default::default(), offset: Default::default(), range: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), buffer: Default::default(), format: Default::default(), offset: Default::default(), range: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferViewCreateInfo {
@@ -8409,7 +8409,7 @@ impl MemoryBarrier {
 }
 impl Default for MemoryBarrier {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryBarrier {
@@ -8490,7 +8490,7 @@ impl BufferMemoryBarrier {
 }
 impl Default for BufferMemoryBarrier {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferMemoryBarrier {
@@ -8597,7 +8597,7 @@ impl ImageMemoryBarrier {
 }
 impl Default for ImageMemoryBarrier {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), old_layout: Default::default(), new_layout: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), image: Default::default(), subresource_range: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_access_mask: Default::default(), dst_access_mask: Default::default(), old_layout: Default::default(), new_layout: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), image: Default::default(), subresource_range: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageMemoryBarrier {
@@ -8714,7 +8714,7 @@ impl ImageCreateInfo {
 }
 impl Default for ImageCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), image_type: Default::default(), format: Default::default(), extent: Default::default(), mip_levels: Default::default(), array_layers: Default::default(), samples: Default::default(), tiling: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), initial_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), image_type: Default::default(), format: Default::default(), extent: Default::default(), mip_levels: Default::default(), array_layers: Default::default(), samples: Default::default(), tiling: Default::default(), usage: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), initial_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageCreateInfo {
@@ -8934,7 +8934,7 @@ impl ImageViewCreateInfo {
 }
 impl Default for ImageViewCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), image: Default::default(), view_type: Default::default(), format: Default::default(), components: Default::default(), subresource_range: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), image: Default::default(), view_type: Default::default(), format: Default::default(), components: Default::default(), subresource_range: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewCreateInfo {
@@ -9518,7 +9518,7 @@ impl BindSparseInfo {
 }
 impl Default for BindSparseInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_SPARSE_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), buffer_bind_count: Default::default(), p_buffer_binds: std::ptr::null(), image_opaque_bind_count: Default::default(), p_image_opaque_binds: std::ptr::null(), image_bind_count: Default::default(), p_image_binds: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), buffer_bind_count: Default::default(), p_buffer_binds: std::ptr::null(), image_opaque_bind_count: Default::default(), p_image_opaque_binds: std::ptr::null(), image_bind_count: Default::default(), p_image_binds: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindSparseInfo {
@@ -9971,7 +9971,7 @@ impl ShaderModuleCreateInfo {
 }
 impl Default for ShaderModuleCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SHADER_MODULE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), code_size: Default::default(), p_code: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), code_size: Default::default(), p_code: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ShaderModuleCreateInfo {
@@ -10139,7 +10139,7 @@ impl DescriptorSetLayoutCreateInfo {
 }
 impl Default for DescriptorSetLayoutCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), binding_count: Default::default(), p_bindings: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), binding_count: Default::default(), p_bindings: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutCreateInfo {
@@ -10289,7 +10289,7 @@ impl DescriptorPoolCreateInfo {
 }
 impl Default for DescriptorPoolCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), max_sets: Default::default(), pool_size_count: Default::default(), p_pool_sizes: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), max_sets: Default::default(), pool_size_count: Default::default(), p_pool_sizes: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorPoolCreateInfo {
@@ -10372,7 +10372,7 @@ impl DescriptorSetAllocateInfo {
 }
 impl Default for DescriptorSetAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_ALLOCATE_INFO, p_next: std::ptr::null(), descriptor_pool: Default::default(), descriptor_set_count: Default::default(), p_set_layouts: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), descriptor_pool: Default::default(), descriptor_set_count: Default::default(), p_set_layouts: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DescriptorSetAllocateInfo {
@@ -10608,7 +10608,7 @@ impl PipelineShaderStageCreateInfo {
 }
 impl Default for PipelineShaderStageCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), module: Default::default(), p_name: std::ptr::null(), p_specialization_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), module: Default::default(), p_name: std::ptr::null(), p_specialization_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageCreateInfo {
@@ -10702,7 +10702,7 @@ impl ComputePipelineCreateInfo {
 }
 impl Default for ComputePipelineCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMPUTE_PIPELINE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stage: Default::default(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for ComputePipelineCreateInfo {
@@ -10956,7 +10956,7 @@ impl PipelineVertexInputStateCreateInfo {
 }
 impl Default for PipelineVertexInputStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), vertex_binding_description_count: Default::default(), p_vertex_binding_descriptions: std::ptr::null(), vertex_attribute_description_count: Default::default(), p_vertex_attribute_descriptions: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), vertex_binding_description_count: Default::default(), p_vertex_binding_descriptions: std::ptr::null(), vertex_attribute_description_count: Default::default(), p_vertex_attribute_descriptions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineVertexInputStateCreateInfo {
@@ -11040,7 +11040,7 @@ impl PipelineInputAssemblyStateCreateInfo {
 }
 impl Default for PipelineInputAssemblyStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), topology: Default::default(), primitive_restart_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), topology: Default::default(), primitive_restart_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineInputAssemblyStateCreateInfo {
@@ -11121,7 +11121,7 @@ impl PipelineTessellationStateCreateInfo {
 }
 impl Default for PipelineTessellationStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), patch_control_points: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), patch_control_points: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineTessellationStateCreateInfo {
@@ -11200,7 +11200,7 @@ impl PipelineViewportStateCreateInfo {
 }
 impl Default for PipelineViewportStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), viewport_count: Default::default(), p_viewports: std::ptr::null(), scissor_count: Default::default(), p_scissors: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), viewport_count: Default::default(), p_viewports: std::ptr::null(), scissor_count: Default::default(), p_scissors: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportStateCreateInfo {
@@ -11302,7 +11302,7 @@ impl PipelineRasterizationStateCreateInfo {
 }
 impl Default for PipelineRasterizationStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), depth_clamp_enable: Default::default(), rasterizer_discard_enable: Default::default(), polygon_mode: Default::default(), cull_mode: Default::default(), front_face: Default::default(), depth_bias_enable: Default::default(), depth_bias_constant_factor: Default::default(), depth_bias_clamp: Default::default(), depth_bias_slope_factor: Default::default(), line_width: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), depth_clamp_enable: Default::default(), rasterizer_discard_enable: Default::default(), polygon_mode: Default::default(), cull_mode: Default::default(), front_face: Default::default(), depth_bias_enable: Default::default(), depth_bias_constant_factor: Default::default(), depth_bias_clamp: Default::default(), depth_bias_slope_factor: Default::default(), line_width: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationStateCreateInfo {
@@ -11428,7 +11428,7 @@ impl PipelineMultisampleStateCreateInfo {
 }
 impl Default for PipelineMultisampleStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), rasterization_samples: Default::default(), sample_shading_enable: Default::default(), min_sample_shading: Default::default(), p_sample_mask: std::ptr::null(), alpha_to_coverage_enable: Default::default(), alpha_to_one_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), rasterization_samples: Default::default(), sample_shading_enable: Default::default(), min_sample_shading: Default::default(), p_sample_mask: std::ptr::null(), alpha_to_coverage_enable: Default::default(), alpha_to_one_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineMultisampleStateCreateInfo {
@@ -11640,7 +11640,7 @@ impl PipelineColorBlendStateCreateInfo {
 }
 impl Default for PipelineColorBlendStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), logic_op_enable: Default::default(), logic_op: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), blend_constants: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), logic_op_enable: Default::default(), logic_op: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), blend_constants: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PipelineColorBlendStateCreateInfo {
@@ -11733,7 +11733,7 @@ impl PipelineDynamicStateCreateInfo {
 }
 impl Default for PipelineDynamicStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_DYNAMIC_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), dynamic_state_count: Default::default(), p_dynamic_states: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), dynamic_state_count: Default::default(), p_dynamic_states: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineDynamicStateCreateInfo {
@@ -11919,7 +11919,7 @@ impl PipelineDepthStencilStateCreateInfo {
 }
 impl Default for PipelineDepthStencilStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), depth_test_enable: Default::default(), depth_write_enable: Default::default(), depth_compare_op: Default::default(), depth_bounds_test_enable: Default::default(), stencil_test_enable: Default::default(), front: Default::default(), back: Default::default(), min_depth_bounds: Default::default(), max_depth_bounds: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), depth_test_enable: Default::default(), depth_write_enable: Default::default(), depth_compare_op: Default::default(), depth_bounds_test_enable: Default::default(), stencil_test_enable: Default::default(), front: Default::default(), back: Default::default(), min_depth_bounds: Default::default(), max_depth_bounds: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineDepthStencilStateCreateInfo {
@@ -12050,7 +12050,7 @@ impl GraphicsPipelineCreateInfo {
 }
 impl Default for GraphicsPipelineCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_input_assembly_state: std::ptr::null(), p_tessellation_state: std::ptr::null(), p_viewport_state: std::ptr::null(), p_rasterization_state: std::ptr::null(), p_multisample_state: std::ptr::null(), p_depth_stencil_state: std::ptr::null(), p_color_blend_state: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), render_pass: Default::default(), subpass: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_input_assembly_state: std::ptr::null(), p_tessellation_state: std::ptr::null(), p_viewport_state: std::ptr::null(), p_rasterization_state: std::ptr::null(), p_multisample_state: std::ptr::null(), p_depth_stencil_state: std::ptr::null(), p_color_blend_state: std::ptr::null(), p_dynamic_state: std::ptr::null(), layout: Default::default(), render_pass: Default::default(), subpass: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for GraphicsPipelineCreateInfo {
@@ -12198,7 +12198,7 @@ impl PipelineCacheCreateInfo {
 }
 impl Default for PipelineCacheCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_CACHE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineCacheCreateInfo {
@@ -12448,7 +12448,7 @@ impl PipelineLayoutCreateInfo {
 }
 impl Default for PipelineLayoutCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_LAYOUT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), set_layout_count: Default::default(), p_set_layouts: std::ptr::null(), push_constant_range_count: Default::default(), p_push_constant_ranges: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), set_layout_count: Default::default(), p_set_layouts: std::ptr::null(), push_constant_range_count: Default::default(), p_push_constant_ranges: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineLayoutCreateInfo {
@@ -12545,7 +12545,7 @@ impl SamplerCreateInfo {
 }
 impl Default for SamplerCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), mag_filter: Default::default(), min_filter: Default::default(), mipmap_mode: Default::default(), address_mode_u: Default::default(), address_mode_v: Default::default(), address_mode_w: Default::default(), mip_lod_bias: Default::default(), anisotropy_enable: Default::default(), max_anisotropy: Default::default(), compare_enable: Default::default(), compare_op: Default::default(), min_lod: Default::default(), max_lod: Default::default(), border_color: Default::default(), unnormalized_coordinates: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), mag_filter: Default::default(), min_filter: Default::default(), mipmap_mode: Default::default(), address_mode_u: Default::default(), address_mode_v: Default::default(), address_mode_w: Default::default(), mip_lod_bias: Default::default(), anisotropy_enable: Default::default(), max_anisotropy: Default::default(), compare_enable: Default::default(), compare_op: Default::default(), min_lod: Default::default(), max_lod: Default::default(), border_color: Default::default(), unnormalized_coordinates: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerCreateInfo {
@@ -12691,7 +12691,7 @@ impl CommandPoolCreateInfo {
 }
 impl Default for CommandPoolCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandPoolCreateInfo {
@@ -12768,7 +12768,7 @@ impl CommandBufferAllocateInfo {
 }
 impl Default for CommandBufferAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_ALLOCATE_INFO, p_next: std::ptr::null(), command_pool: Default::default(), level: Default::default(), command_buffer_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), command_pool: Default::default(), level: Default::default(), command_buffer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferAllocateInfo {
@@ -12853,7 +12853,7 @@ impl CommandBufferInheritanceInfo {
 }
 impl Default for CommandBufferInheritanceInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_INFO, p_next: std::ptr::null(), render_pass: Default::default(), subpass: Default::default(), framebuffer: Default::default(), occlusion_query_enable: Default::default(), query_flags: Default::default(), pipeline_statistics: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), render_pass: Default::default(), subpass: Default::default(), framebuffer: Default::default(), occlusion_query_enable: Default::default(), query_flags: Default::default(), pipeline_statistics: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceInfo {
@@ -12949,7 +12949,7 @@ impl CommandBufferBeginInfo {
 }
 impl Default for CommandBufferBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_BEGIN_INFO, p_next: std::ptr::null(), flags: Default::default(), p_inheritance_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), p_inheritance_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CommandBufferBeginInfo {
@@ -13028,7 +13028,7 @@ impl RenderPassBeginInfo {
 }
 impl Default for RenderPassBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_BEGIN_INFO, p_next: std::ptr::null(), render_pass: Default::default(), framebuffer: Default::default(), render_area: Default::default(), clear_value_count: Default::default(), p_clear_values: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), render_pass: Default::default(), framebuffer: Default::default(), render_area: Default::default(), clear_value_count: Default::default(), p_clear_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassBeginInfo {
@@ -13698,7 +13698,7 @@ impl RenderPassCreateInfo {
 }
 impl Default for RenderPassCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), subpass_count: Default::default(), p_subpasses: std::ptr::null(), dependency_count: Default::default(), p_dependencies: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassCreateInfo {
@@ -13786,7 +13786,7 @@ impl EventCreateInfo {
 }
 impl Default for EventCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EVENT_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for EventCreateInfo {
@@ -13856,7 +13856,7 @@ impl FenceCreateInfo {
 }
 impl Default for FenceCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FENCE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for FenceCreateInfo {
@@ -15369,7 +15369,7 @@ impl SemaphoreCreateInfo {
 }
 impl Default for SemaphoreCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreCreateInfo {
@@ -15442,7 +15442,7 @@ impl QueryPoolCreateInfo {
 }
 impl Default for QueryPoolCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), query_type: Default::default(), query_count: Default::default(), pipeline_statistics: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), query_type: Default::default(), query_count: Default::default(), pipeline_statistics: Default::default() }
     }
 }
 impl std::fmt::Debug for QueryPoolCreateInfo {
@@ -15533,7 +15533,7 @@ impl FramebufferCreateInfo {
 }
 impl Default for FramebufferCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), render_pass: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), width: Default::default(), height: Default::default(), layers: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), render_pass: Default::default(), attachment_count: Default::default(), p_attachments: std::ptr::null(), width: Default::default(), height: Default::default(), layers: Default::default() }
     }
 }
 impl std::fmt::Debug for FramebufferCreateInfo {
@@ -15889,7 +15889,7 @@ impl SubmitInfo {
 }
 impl Default for SubmitInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBMIT_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), p_wait_dst_stage_mask: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffers: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), p_wait_dst_stage_mask: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffers: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphores: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubmitInfo {

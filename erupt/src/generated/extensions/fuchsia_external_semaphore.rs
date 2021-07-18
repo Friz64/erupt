@@ -40,7 +40,7 @@ impl ImportSemaphoreZirconHandleInfoFUCHSIA {
 }
 impl Default for ImportSemaphoreZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), zircon_handle: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), zircon_handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreZirconHandleInfoFUCHSIA {
@@ -126,7 +126,7 @@ impl SemaphoreGetZirconHandleInfoFUCHSIA {
 }
 impl Default for SemaphoreGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetZirconHandleInfoFUCHSIA {

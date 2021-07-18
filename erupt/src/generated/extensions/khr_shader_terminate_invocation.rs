@@ -26,7 +26,7 @@ impl PhysicalDeviceShaderTerminateInvocationFeaturesKHR {
 }
 impl Default for PhysicalDeviceShaderTerminateInvocationFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_terminate_invocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_terminate_invocation: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderTerminateInvocationFeaturesKHR {

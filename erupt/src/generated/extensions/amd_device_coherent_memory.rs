@@ -31,7 +31,7 @@ impl PhysicalDeviceCoherentMemoryFeaturesAMD {
 }
 impl Default for PhysicalDeviceCoherentMemoryFeaturesAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD, p_next: std::ptr::null_mut(), device_coherent_memory: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), device_coherent_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCoherentMemoryFeaturesAMD {

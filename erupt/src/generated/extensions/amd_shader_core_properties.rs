@@ -37,7 +37,7 @@ impl PhysicalDeviceShaderCorePropertiesAMD {
 }
 impl Default for PhysicalDeviceShaderCorePropertiesAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD, p_next: std::ptr::null_mut(), shader_engine_count: Default::default(), shader_arrays_per_engine_count: Default::default(), compute_units_per_shader_array: Default::default(), simd_per_compute_unit: Default::default(), wavefronts_per_simd: Default::default(), wavefront_size: Default::default(), sgprs_per_simd: Default::default(), min_sgpr_allocation: Default::default(), max_sgpr_allocation: Default::default(), sgpr_allocation_granularity: Default::default(), vgprs_per_simd: Default::default(), min_vgpr_allocation: Default::default(), max_vgpr_allocation: Default::default(), vgpr_allocation_granularity: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_engine_count: Default::default(), shader_arrays_per_engine_count: Default::default(), compute_units_per_shader_array: Default::default(), simd_per_compute_unit: Default::default(), wavefronts_per_simd: Default::default(), wavefront_size: Default::default(), sgprs_per_simd: Default::default(), min_sgpr_allocation: Default::default(), max_sgpr_allocation: Default::default(), sgpr_allocation_granularity: Default::default(), vgprs_per_simd: Default::default(), min_vgpr_allocation: Default::default(), max_vgpr_allocation: Default::default(), vgpr_allocation_granularity: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCorePropertiesAMD {

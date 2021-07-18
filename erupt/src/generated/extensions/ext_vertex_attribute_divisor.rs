@@ -104,7 +104,7 @@ impl PipelineVertexInputDivisorStateCreateInfoEXT {
 }
 impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), vertex_binding_divisor_count: Default::default(), p_vertex_binding_divisors: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), vertex_binding_divisor_count: Default::default(), p_vertex_binding_divisors: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXT {
@@ -175,7 +175,7 @@ impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
 }
 impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_vertex_attrib_divisor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_vertex_attrib_divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
@@ -246,7 +246,7 @@ impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
 }
 impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT, p_next: std::ptr::null_mut(), vertex_attribute_instance_rate_divisor: Default::default(), vertex_attribute_instance_rate_zero_divisor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), vertex_attribute_instance_rate_divisor: Default::default(), vertex_attribute_instance_rate_zero_divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {

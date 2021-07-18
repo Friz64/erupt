@@ -58,7 +58,7 @@ impl PhysicalDeviceDiagnosticsConfigFeaturesNV {
 }
 impl Default for PhysicalDeviceDiagnosticsConfigFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV, p_next: std::ptr::null_mut(), diagnostics_config: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), diagnostics_config: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDiagnosticsConfigFeaturesNV {
@@ -128,7 +128,7 @@ impl DeviceDiagnosticsConfigCreateInfoNV {
 }
 impl Default for DeviceDiagnosticsConfigCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceDiagnosticsConfigCreateInfoNV {

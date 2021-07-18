@@ -104,7 +104,7 @@ impl VideoDecodeInfoKHR {
 }
 impl Default for VideoDecodeInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), coded_offset: Default::default(), coded_extent: Default::default(), src_buffer: Default::default(), src_buffer_offset: Default::default(), src_buffer_range: Default::default(), dst_picture_resource: Default::default(), p_setup_reference_slot: std::ptr::null(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), coded_offset: Default::default(), coded_extent: Default::default(), src_buffer: Default::default(), src_buffer_offset: Default::default(), src_buffer_range: Default::default(), dst_picture_resource: Default::default(), p_setup_reference_slot: std::ptr::null(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeInfoKHR {

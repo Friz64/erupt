@@ -24,7 +24,7 @@ impl SurfaceProtectedCapabilitiesKHR {
 }
 impl Default for SurfaceProtectedCapabilitiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_PROTECTED_CAPABILITIES_KHR, p_next: std::ptr::null(), supports_protected: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), supports_protected: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceProtectedCapabilitiesKHR {

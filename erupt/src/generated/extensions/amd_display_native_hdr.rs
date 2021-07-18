@@ -34,7 +34,7 @@ impl DisplayNativeHdrSurfaceCapabilitiesAMD {
 }
 impl Default for DisplayNativeHdrSurfaceCapabilitiesAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD, p_next: std::ptr::null_mut(), local_dimming_support: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), local_dimming_support: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayNativeHdrSurfaceCapabilitiesAMD {
@@ -104,7 +104,7 @@ impl SwapchainDisplayNativeHdrCreateInfoAMD {
 }
 impl Default for SwapchainDisplayNativeHdrCreateInfoAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD, p_next: std::ptr::null(), local_dimming_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), local_dimming_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for SwapchainDisplayNativeHdrCreateInfoAMD {

@@ -202,7 +202,7 @@ impl PipelineViewportShadingRateImageStateCreateInfoNV {
 }
 impl Default for PipelineViewportShadingRateImageStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), shading_rate_image_enable: Default::default(), viewport_count: Default::default(), p_shading_rate_palettes: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), shading_rate_image_enable: Default::default(), viewport_count: Default::default(), p_shading_rate_palettes: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportShadingRateImageStateCreateInfoNV {
@@ -279,7 +279,7 @@ impl PhysicalDeviceShadingRateImageFeaturesNV {
 }
 impl Default for PhysicalDeviceShadingRateImageFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV, p_next: std::ptr::null_mut(), shading_rate_image: Default::default(), shading_rate_coarse_sample_order: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shading_rate_image: Default::default(), shading_rate_coarse_sample_order: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImageFeaturesNV {
@@ -356,7 +356,7 @@ impl PhysicalDeviceShadingRateImagePropertiesNV {
 }
 impl Default for PhysicalDeviceShadingRateImagePropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV, p_next: std::ptr::null_mut(), shading_rate_texel_size: Default::default(), shading_rate_palette_size: Default::default(), shading_rate_max_coarse_samples: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shading_rate_texel_size: Default::default(), shading_rate_palette_size: Default::default(), shading_rate_max_coarse_samples: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShadingRateImagePropertiesNV {
@@ -594,7 +594,7 @@ impl PipelineViewportCoarseSampleOrderStateCreateInfoNV {
 }
 impl Default for PipelineViewportCoarseSampleOrderStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), sample_order_type: Default::default(), custom_sample_order_count: Default::default(), p_custom_sample_orders: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sample_order_type: Default::default(), custom_sample_order_count: Default::default(), p_custom_sample_orders: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineViewportCoarseSampleOrderStateCreateInfoNV {

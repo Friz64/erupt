@@ -51,7 +51,7 @@ impl DeviceQueueGlobalPriorityCreateInfoEXT {
 }
 impl Default for DeviceQueueGlobalPriorityCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT, p_next: std::ptr::null(), global_priority: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), global_priority: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoEXT {

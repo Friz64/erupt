@@ -40,7 +40,7 @@ impl ImportFenceWin32HandleInfoKHR {
 }
 impl Default for ImportFenceWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), fence: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportFenceWin32HandleInfoKHR {
@@ -132,7 +132,7 @@ impl ExportFenceWin32HandleInfoKHR {
 }
 impl Default for ExportFenceWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportFenceWin32HandleInfoKHR {
@@ -213,7 +213,7 @@ impl FenceGetWin32HandleInfoKHR {
 }
 impl Default for FenceGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FENCE_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), fence: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), fence: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for FenceGetWin32HandleInfoKHR {

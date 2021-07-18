@@ -34,7 +34,7 @@ impl PhysicalDeviceSurfaceInfo2KHR {
 }
 impl Default for PhysicalDeviceSurfaceInfo2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR, p_next: std::ptr::null(), surface: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), surface: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSurfaceInfo2KHR {
@@ -104,7 +104,7 @@ impl SurfaceCapabilities2KHR {
 }
 impl Default for SurfaceCapabilities2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_KHR, p_next: std::ptr::null_mut(), surface_capabilities: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), surface_capabilities: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilities2KHR {
@@ -174,7 +174,7 @@ impl SurfaceFormat2KHR {
 }
 impl Default for SurfaceFormat2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_FORMAT_2_KHR, p_next: std::ptr::null_mut(), surface_format: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), surface_format: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceFormat2KHR {

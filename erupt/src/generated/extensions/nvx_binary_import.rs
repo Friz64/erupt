@@ -62,7 +62,7 @@ impl CuModuleCreateInfoNVX {
 }
 impl Default for CuModuleCreateInfoNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CU_MODULE_CREATE_INFO_NVX, p_next: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), data_size: Default::default(), p_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CuModuleCreateInfoNVX {
@@ -138,7 +138,7 @@ impl CuFunctionCreateInfoNVX {
 }
 impl Default for CuFunctionCreateInfoNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CU_FUNCTION_CREATE_INFO_NVX, p_next: std::ptr::null(), module: Default::default(), p_name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), module: Default::default(), p_name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CuFunctionCreateInfoNVX {
@@ -224,7 +224,7 @@ impl CuLaunchInfoNVX {
 }
 impl Default for CuLaunchInfoNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CU_LAUNCH_INFO_NVX, p_next: std::ptr::null(), function: Default::default(), grid_dim_x: Default::default(), grid_dim_y: Default::default(), grid_dim_z: Default::default(), block_dim_x: Default::default(), block_dim_y: Default::default(), block_dim_z: Default::default(), shared_mem_bytes: Default::default(), param_count: Default::default(), p_params: std::ptr::null(), extra_count: Default::default(), p_extras: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), function: Default::default(), grid_dim_x: Default::default(), grid_dim_y: Default::default(), grid_dim_z: Default::default(), block_dim_x: Default::default(), block_dim_y: Default::default(), block_dim_z: Default::default(), shared_mem_bytes: Default::default(), param_count: Default::default(), p_params: std::ptr::null(), extra_count: Default::default(), p_extras: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CuLaunchInfoNVX {

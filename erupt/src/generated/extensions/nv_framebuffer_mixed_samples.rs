@@ -71,7 +71,7 @@ impl PipelineCoverageModulationStateCreateInfoNV {
 }
 impl Default for PipelineCoverageModulationStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_modulation_mode: Default::default(), coverage_modulation_table_enable: Default::default(), coverage_modulation_table_count: Default::default(), p_coverage_modulation_table: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), coverage_modulation_mode: Default::default(), coverage_modulation_table_enable: Default::default(), coverage_modulation_table_count: Default::default(), p_coverage_modulation_table: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageModulationStateCreateInfoNV {

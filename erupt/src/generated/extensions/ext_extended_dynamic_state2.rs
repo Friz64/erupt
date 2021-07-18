@@ -61,7 +61,7 @@ impl PhysicalDeviceExtendedDynamicState2FeaturesEXT {
 }
 impl Default for PhysicalDeviceExtendedDynamicState2FeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT, p_next: std::ptr::null_mut(), extended_dynamic_state2: Default::default(), extended_dynamic_state2_logic_op: Default::default(), extended_dynamic_state2_patch_control_points: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), extended_dynamic_state2: Default::default(), extended_dynamic_state2_logic_op: Default::default(), extended_dynamic_state2_patch_control_points: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExtendedDynamicState2FeaturesEXT {

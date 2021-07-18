@@ -43,7 +43,7 @@ impl PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
 }
 impl Default for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE, p_next: std::ptr::null_mut(), mutable_descriptor_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), mutable_descriptor_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
@@ -181,7 +181,7 @@ impl MutableDescriptorTypeCreateInfoVALVE {
 }
 impl Default for MutableDescriptorTypeCreateInfoVALVE {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE, p_next: std::ptr::null(), mutable_descriptor_type_list_count: Default::default(), p_mutable_descriptor_type_lists: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), mutable_descriptor_type_list_count: Default::default(), p_mutable_descriptor_type_lists: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MutableDescriptorTypeCreateInfoVALVE {

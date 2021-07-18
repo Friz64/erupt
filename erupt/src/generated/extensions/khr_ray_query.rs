@@ -26,7 +26,7 @@ impl PhysicalDeviceRayQueryFeaturesKHR {
 }
 impl Default for PhysicalDeviceRayQueryFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR, p_next: std::ptr::null_mut(), ray_query: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), ray_query: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayQueryFeaturesKHR {

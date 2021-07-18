@@ -35,7 +35,7 @@ impl PhysicalDeviceImageViewImageFormatInfoEXT {
 }
 impl Default for PhysicalDeviceImageViewImageFormatInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT, p_next: std::ptr::null_mut(), image_view_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), image_view_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageViewImageFormatInfoEXT {
@@ -106,7 +106,7 @@ impl FilterCubicImageViewImageFormatPropertiesEXT {
 }
 impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT, p_next: std::ptr::null_mut(), filter_cubic: Default::default(), filter_cubic_minmax: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), filter_cubic: Default::default(), filter_cubic_minmax: Default::default() }
     }
 }
 impl std::fmt::Debug for FilterCubicImageViewImageFormatPropertiesEXT {

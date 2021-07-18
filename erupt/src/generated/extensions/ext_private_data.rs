@@ -73,7 +73,7 @@ impl DevicePrivateDataCreateInfoEXT {
 }
 impl Default for DevicePrivateDataCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT, p_next: std::ptr::null(), private_data_slot_request_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), private_data_slot_request_count: Default::default() }
     }
 }
 impl std::fmt::Debug for DevicePrivateDataCreateInfoEXT {
@@ -143,7 +143,7 @@ impl PrivateDataSlotCreateInfoEXT {
 }
 impl Default for PrivateDataSlotCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PRIVATE_DATA_SLOT_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for PrivateDataSlotCreateInfoEXT {
@@ -213,7 +213,7 @@ impl PhysicalDevicePrivateDataFeaturesEXT {
 }
 impl Default for PhysicalDevicePrivateDataFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT, p_next: std::ptr::null_mut(), private_data: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), private_data: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePrivateDataFeaturesEXT {

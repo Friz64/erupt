@@ -281,7 +281,7 @@ impl RayTracingShaderGroupCreateInfoNV {
 }
 impl Default for RayTracingShaderGroupCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), general_shader: Default::default(), closest_hit_shader: Default::default(), any_hit_shader: Default::default(), intersection_shader: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingShaderGroupCreateInfoNV {
@@ -379,7 +379,7 @@ impl RayTracingPipelineCreateInfoNV {
 }
 impl Default for RayTracingPipelineCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RAY_TRACING_PIPELINE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), max_recursion_depth: Default::default(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), stage_count: Default::default(), p_stages: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), max_recursion_depth: Default::default(), layout: Default::default(), base_pipeline_handle: Default::default(), base_pipeline_index: Default::default() }
     }
 }
 impl std::fmt::Debug for RayTracingPipelineCreateInfoNV {
@@ -491,7 +491,7 @@ impl GeometryTrianglesNV {
 }
 impl Default for GeometryTrianglesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GEOMETRY_TRIANGLES_NV, p_next: std::ptr::null(), vertex_data: Default::default(), vertex_offset: Default::default(), vertex_count: Default::default(), vertex_stride: Default::default(), vertex_format: Default::default(), index_data: Default::default(), index_offset: Default::default(), index_count: Default::default(), index_type: Default::default(), transform_data: Default::default(), transform_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), vertex_data: Default::default(), vertex_offset: Default::default(), vertex_count: Default::default(), vertex_stride: Default::default(), vertex_format: Default::default(), index_data: Default::default(), index_offset: Default::default(), index_count: Default::default(), index_type: Default::default(), transform_data: Default::default(), transform_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for GeometryTrianglesNV {
@@ -614,7 +614,7 @@ impl GeometryAABBNV {
 }
 impl Default for GeometryAABBNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GEOMETRY_AABB_NV, p_next: std::ptr::null(), aabb_data: Default::default(), num_aab_bs: Default::default(), stride: Default::default(), offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), aabb_data: Default::default(), num_aab_bs: Default::default(), stride: Default::default(), offset: Default::default() }
     }
 }
 impl std::fmt::Debug for GeometryAABBNV {
@@ -772,7 +772,7 @@ impl GeometryNV {
 }
 impl Default for GeometryNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GEOMETRY_NV, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for GeometryNV {
@@ -856,7 +856,7 @@ impl AccelerationStructureInfoNV {
 }
 impl Default for AccelerationStructureInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_INFO_NV, p_next: std::ptr::null(), _type: Default::default(), flags: Default::default(), instance_count: Default::default(), geometry_count: Default::default(), p_geometries: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), flags: Default::default(), instance_count: Default::default(), geometry_count: Default::default(), p_geometries: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureInfoNV {
@@ -943,7 +943,7 @@ impl AccelerationStructureCreateInfoNV {
 }
 impl Default for AccelerationStructureCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_CREATE_INFO_NV, p_next: std::ptr::null(), compacted_size: Default::default(), info: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), compacted_size: Default::default(), info: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureCreateInfoNV {
@@ -1022,7 +1022,7 @@ impl BindAccelerationStructureMemoryInfoNV {
 }
 impl Default for BindAccelerationStructureMemoryInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV, p_next: std::ptr::null(), acceleration_structure: Default::default(), memory: Default::default(), memory_offset: Default::default(), device_index_count: Default::default(), p_device_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), acceleration_structure: Default::default(), memory: Default::default(), memory_offset: Default::default(), device_index_count: Default::default(), p_device_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindAccelerationStructureMemoryInfoNV {
@@ -1109,7 +1109,7 @@ impl WriteDescriptorSetAccelerationStructureNV {
 }
 impl Default for WriteDescriptorSetAccelerationStructureNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for WriteDescriptorSetAccelerationStructureNV {
@@ -1181,7 +1181,7 @@ impl AccelerationStructureMemoryRequirementsInfoNV {
 }
 impl Default for AccelerationStructureMemoryRequirementsInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV, p_next: std::ptr::null(), _type: Default::default(), acceleration_structure: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), acceleration_structure: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureMemoryRequirementsInfoNV {
@@ -1263,7 +1263,7 @@ impl PhysicalDeviceRayTracingPropertiesNV {
 }
 impl Default for PhysicalDeviceRayTracingPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV, p_next: std::ptr::null_mut(), shader_group_handle_size: Default::default(), max_recursion_depth: Default::default(), max_shader_group_stride: Default::default(), shader_group_base_alignment: Default::default(), max_geometry_count: Default::default(), max_instance_count: Default::default(), max_triangle_count: Default::default(), max_descriptor_set_acceleration_structures: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_group_handle_size: Default::default(), max_recursion_depth: Default::default(), max_shader_group_stride: Default::default(), shader_group_base_alignment: Default::default(), max_geometry_count: Default::default(), max_instance_count: Default::default(), max_triangle_count: Default::default(), max_descriptor_set_acceleration_structures: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPropertiesNV {

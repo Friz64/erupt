@@ -281,7 +281,7 @@ impl InitializePerformanceApiInfoINTEL {
 }
 impl Default for InitializePerformanceApiInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::INITIALIZE_PERFORMANCE_API_INFO_INTEL, p_next: std::ptr::null(), p_user_data: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for InitializePerformanceApiInfoINTEL {
@@ -351,7 +351,7 @@ impl QueryPoolPerformanceQueryCreateInfoINTEL {
 }
 impl Default for QueryPoolPerformanceQueryCreateInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL, p_next: std::ptr::null(), performance_counters_sampling: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), performance_counters_sampling: Default::default() }
     }
 }
 impl std::fmt::Debug for QueryPoolPerformanceQueryCreateInfoINTEL {
@@ -421,7 +421,7 @@ impl PerformanceMarkerInfoINTEL {
 }
 impl Default for PerformanceMarkerInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_MARKER_INFO_INTEL, p_next: std::ptr::null(), marker: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), marker: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceMarkerInfoINTEL {
@@ -491,7 +491,7 @@ impl PerformanceStreamMarkerInfoINTEL {
 }
 impl Default for PerformanceStreamMarkerInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_STREAM_MARKER_INFO_INTEL, p_next: std::ptr::null(), marker: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), marker: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceStreamMarkerInfoINTEL {
@@ -563,7 +563,7 @@ impl PerformanceOverrideInfoINTEL {
 }
 impl Default for PerformanceOverrideInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_OVERRIDE_INFO_INTEL, p_next: std::ptr::null(), _type: Default::default(), enable: Default::default(), parameter: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), enable: Default::default(), parameter: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceOverrideInfoINTEL {
@@ -643,7 +643,7 @@ impl PerformanceConfigurationAcquireInfoINTEL {
 }
 impl Default for PerformanceConfigurationAcquireInfoINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL, p_next: std::ptr::null(), _type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceConfigurationAcquireInfoINTEL {

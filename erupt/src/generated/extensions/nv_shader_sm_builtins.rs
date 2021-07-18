@@ -30,7 +30,7 @@ impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
 }
 impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV, p_next: std::ptr::null_mut(), shader_sm_count: Default::default(), shader_warps_per_sm: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_sm_count: Default::default(), shader_warps_per_sm: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
@@ -105,7 +105,7 @@ impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
 }
 impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV, p_next: std::ptr::null_mut(), shader_sm_builtins: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_sm_builtins: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNV {

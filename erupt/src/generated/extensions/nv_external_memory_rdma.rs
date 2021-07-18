@@ -43,7 +43,7 @@ impl PhysicalDeviceExternalMemoryRDMAFeaturesNV {
 }
 impl Default for PhysicalDeviceExternalMemoryRDMAFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV, p_next: std::ptr::null_mut(), external_memory_rdma: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), external_memory_rdma: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalMemoryRDMAFeaturesNV {
@@ -114,7 +114,7 @@ impl MemoryGetRemoteAddressInfoNV {
 }
 impl Default for MemoryGetRemoteAddressInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_REMOTE_ADDRESS_INFO_NV, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetRemoteAddressInfoNV {

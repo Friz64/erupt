@@ -37,7 +37,7 @@ impl ImportMemoryFdInfoKHR {
 }
 impl Default for ImportMemoryFdInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_FD_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), fd: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default(), fd: Default::default() }
     }
 }
 impl std::fmt::Debug for ImportMemoryFdInfoKHR {
@@ -112,7 +112,7 @@ impl MemoryFdPropertiesKHR {
 }
 impl Default for MemoryFdPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_FD_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryFdPropertiesKHR {
@@ -183,7 +183,7 @@ impl MemoryGetFdInfoKHR {
 }
 impl Default for MemoryGetFdInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_FD_INFO_KHR, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetFdInfoKHR {

@@ -38,7 +38,7 @@ impl PhysicalDeviceSubgroupSizeControlFeaturesEXT {
 }
 impl Default for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT, p_next: std::ptr::null_mut(), subgroup_size_control: Default::default(), compute_full_subgroups: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), subgroup_size_control: Default::default(), compute_full_subgroups: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlFeaturesEXT {
@@ -116,7 +116,7 @@ impl PhysicalDeviceSubgroupSizeControlPropertiesEXT {
 }
 impl Default for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_subgroup_size: Default::default(), max_subgroup_size: Default::default(), max_compute_workgroup_subgroups: Default::default(), required_subgroup_size_stages: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_subgroup_size: Default::default(), max_subgroup_size: Default::default(), max_compute_workgroup_subgroups: Default::default(), required_subgroup_size_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlPropertiesEXT {
@@ -201,7 +201,7 @@ impl PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 }
 impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT, p_next: std::ptr::null_mut(), required_subgroup_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), required_subgroup_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {

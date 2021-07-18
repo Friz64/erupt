@@ -43,7 +43,7 @@ impl ImportSemaphoreWin32HandleInfoKHR {
 }
 impl Default for ImportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreWin32HandleInfoKHR {
@@ -135,7 +135,7 @@ impl ExportSemaphoreWin32HandleInfoKHR {
 }
 impl Default for ExportSemaphoreWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportSemaphoreWin32HandleInfoKHR {
@@ -218,7 +218,7 @@ impl D3D12FenceSubmitInfoKHR {
 }
 impl Default for D3D12FenceSubmitInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::D3D12_FENCE_SUBMIT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_values_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_values_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_values_count: Default::default(), p_wait_semaphore_values: std::ptr::null(), signal_semaphore_values_count: Default::default(), p_signal_semaphore_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for D3D12FenceSubmitInfoKHR {
@@ -296,7 +296,7 @@ impl SemaphoreGetWin32HandleInfoKHR {
 }
 impl Default for SemaphoreGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetWin32HandleInfoKHR {

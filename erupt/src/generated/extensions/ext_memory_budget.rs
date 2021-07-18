@@ -25,7 +25,7 @@ impl PhysicalDeviceMemoryBudgetPropertiesEXT {
 }
 impl Default for PhysicalDeviceMemoryBudgetPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT, p_next: std::ptr::null_mut(), heap_budget: unsafe { std::mem::zeroed() }, heap_usage: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), heap_budget: unsafe { std::mem::zeroed() }, heap_usage: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryBudgetPropertiesEXT {

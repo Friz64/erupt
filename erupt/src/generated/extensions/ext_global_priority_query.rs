@@ -32,7 +32,7 @@ impl PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
 }
 impl Default for PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT, p_next: std::ptr::null_mut(), global_priority_query: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), global_priority_query: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
@@ -103,7 +103,7 @@ impl QueueFamilyGlobalPriorityPropertiesEXT {
 }
 impl Default for QueueFamilyGlobalPriorityPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT, p_next: std::ptr::null_mut(), priority_count: Default::default(), priorities: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), priority_count: Default::default(), priorities: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for QueueFamilyGlobalPriorityPropertiesEXT {

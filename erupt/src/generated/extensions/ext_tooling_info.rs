@@ -68,7 +68,7 @@ impl PhysicalDeviceToolPropertiesEXT {
 }
 impl Default for PhysicalDeviceToolPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, version: unsafe { std::mem::zeroed() }, purposes: Default::default(), description: unsafe { std::mem::zeroed() }, layer: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), name: unsafe { std::mem::zeroed() }, version: unsafe { std::mem::zeroed() }, purposes: Default::default(), description: unsafe { std::mem::zeroed() }, layer: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceToolPropertiesEXT {

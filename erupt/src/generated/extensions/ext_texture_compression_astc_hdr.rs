@@ -43,7 +43,7 @@ impl PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
 }
 impl Default for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT, p_next: std::ptr::null_mut(), texture_compression_astc_hdr: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), texture_compression_astc_hdr: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {

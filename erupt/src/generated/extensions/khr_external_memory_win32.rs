@@ -41,7 +41,7 @@ impl ImportMemoryWin32HandleInfoKHR {
 }
 impl Default for ImportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoKHR {
@@ -123,7 +123,7 @@ impl ExportMemoryWin32HandleInfoKHR {
 }
 impl Default for ExportMemoryWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default(), name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoKHR {
@@ -203,7 +203,7 @@ impl MemoryWin32HandlePropertiesKHR {
 }
 impl Default for MemoryWin32HandlePropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_WIN32_HANDLE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryWin32HandlePropertiesKHR {
@@ -274,7 +274,7 @@ impl MemoryGetWin32HandleInfoKHR {
 }
 impl Default for MemoryGetWin32HandleInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_WIN32_HANDLE_INFO_KHR, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetWin32HandleInfoKHR {

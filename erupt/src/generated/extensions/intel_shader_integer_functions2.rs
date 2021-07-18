@@ -26,7 +26,7 @@ impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 }
 impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL, p_next: std::ptr::null_mut(), shader_integer_functions2: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_integer_functions2: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {

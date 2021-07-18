@@ -31,7 +31,7 @@ impl RenderPassTransformBeginInfoQCOM {
 }
 impl Default for RenderPassTransformBeginInfoQCOM {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM, p_next: std::ptr::null_mut(), transform: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), transform: Default::default() }
     }
 }
 impl std::fmt::Debug for RenderPassTransformBeginInfoQCOM {
@@ -102,7 +102,7 @@ impl CommandBufferInheritanceRenderPassTransformInfoQCOM {
 }
 impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM, p_next: std::ptr::null_mut(), transform: Default::default(), render_area: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), transform: Default::default(), render_area: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceRenderPassTransformInfoQCOM {

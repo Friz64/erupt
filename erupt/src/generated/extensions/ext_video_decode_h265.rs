@@ -66,7 +66,7 @@ impl VideoDecodeH265ProfileEXT {
 }
 impl Default for VideoDecodeH265ProfileEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_PROFILE_EXT, p_next: std::ptr::null(), std_profile_idc: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), std_profile_idc: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265ProfileEXT {
@@ -137,7 +137,7 @@ impl VideoDecodeH265CapabilitiesEXT {
 }
 impl Default for VideoDecodeH265CapabilitiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_CAPABILITIES_EXT, p_next: std::ptr::null_mut(), max_level: Default::default(), std_extension_version: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_level: Default::default(), std_extension_version: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265CapabilitiesEXT {
@@ -213,7 +213,7 @@ impl VideoDecodeH265SessionCreateInfoEXT {
 }
 impl Default for VideoDecodeH265SessionCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), p_std_extension_version: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), p_std_extension_version: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265SessionCreateInfoEXT {
@@ -291,7 +291,7 @@ impl VideoDecodeH265SessionParametersAddInfoEXT {
 }
 impl Default for VideoDecodeH265SessionParametersAddInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT, p_next: std::ptr::null(), sps_std_count: Default::default(), p_sps_std: std::ptr::null(), pps_std_count: Default::default(), p_pps_std: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sps_std_count: Default::default(), p_sps_std: std::ptr::null(), pps_std_count: Default::default(), p_pps_std: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265SessionParametersAddInfoEXT {
@@ -370,7 +370,7 @@ impl VideoDecodeH265SessionParametersCreateInfoEXT {
 }
 impl Default for VideoDecodeH265SessionParametersCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT, p_next: std::ptr::null(), max_sps_std_count: Default::default(), max_pps_std_count: Default::default(), p_parameters_add_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), max_sps_std_count: Default::default(), max_pps_std_count: Default::default(), p_parameters_add_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265SessionParametersCreateInfoEXT {
@@ -452,7 +452,7 @@ impl VideoDecodeH265PictureInfoEXT {
 }
 impl Default for VideoDecodeH265PictureInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_PICTURE_INFO_EXT, p_next: std::ptr::null(), p_std_picture_info: std::ptr::null_mut(), slices_count: Default::default(), p_slices_data_offsets: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_std_picture_info: std::ptr::null_mut(), slices_count: Default::default(), p_slices_data_offsets: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265PictureInfoEXT {
@@ -528,7 +528,7 @@ impl VideoDecodeH265DpbSlotInfoEXT {
 }
 impl Default for VideoDecodeH265DpbSlotInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT, p_next: std::ptr::null(), p_std_reference_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_std_reference_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH265DpbSlotInfoEXT {

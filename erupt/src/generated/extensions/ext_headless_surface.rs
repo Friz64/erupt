@@ -47,7 +47,7 @@ impl HeadlessSurfaceCreateInfoEXT {
 }
 impl Default for HeadlessSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::HEADLESS_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for HeadlessSurfaceCreateInfoEXT {

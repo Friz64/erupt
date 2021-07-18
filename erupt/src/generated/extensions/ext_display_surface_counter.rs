@@ -63,7 +63,7 @@ impl SurfaceCapabilities2EXT {
 }
 impl Default for SurfaceCapabilities2EXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_2_EXT, p_next: std::ptr::null_mut(), min_image_count: Default::default(), max_image_count: Default::default(), current_extent: Default::default(), min_image_extent: Default::default(), max_image_extent: Default::default(), max_image_array_layers: Default::default(), supported_transforms: Default::default(), current_transform: Default::default(), supported_composite_alpha: Default::default(), supported_usage_flags: Default::default(), supported_surface_counters: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_image_count: Default::default(), max_image_count: Default::default(), current_extent: Default::default(), min_image_extent: Default::default(), max_image_extent: Default::default(), max_image_array_layers: Default::default(), supported_transforms: Default::default(), current_transform: Default::default(), supported_composite_alpha: Default::default(), supported_usage_flags: Default::default(), supported_surface_counters: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilities2EXT {

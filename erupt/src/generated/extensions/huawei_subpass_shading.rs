@@ -55,7 +55,7 @@ impl SubpassShadingPipelineCreateInfoHUAWEI {
 }
 impl Default for SubpassShadingPipelineCreateInfoHUAWEI {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI, p_next: std::ptr::null_mut(), render_pass: Default::default(), subpass: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), render_pass: Default::default(), subpass: Default::default() }
     }
 }
 impl std::fmt::Debug for SubpassShadingPipelineCreateInfoHUAWEI {
@@ -130,7 +130,7 @@ impl PhysicalDeviceSubpassShadingPropertiesHUAWEI {
 }
 impl Default for PhysicalDeviceSubpassShadingPropertiesHUAWEI {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI, p_next: std::ptr::null_mut(), max_subpass_shading_workgroup_size_aspect_ratio: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_subpass_shading_workgroup_size_aspect_ratio: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubpassShadingPropertiesHUAWEI {
@@ -200,7 +200,7 @@ impl PhysicalDeviceSubpassShadingFeaturesHUAWEI {
 }
 impl Default for PhysicalDeviceSubpassShadingFeaturesHUAWEI {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI, p_next: std::ptr::null_mut(), subpass_shading: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), subpass_shading: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubpassShadingFeaturesHUAWEI {

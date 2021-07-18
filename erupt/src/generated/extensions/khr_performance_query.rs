@@ -198,7 +198,7 @@ impl PhysicalDevicePerformanceQueryFeaturesKHR {
 }
 impl Default for PhysicalDevicePerformanceQueryFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR, p_next: std::ptr::null_mut(), performance_counter_query_pools: Default::default(), performance_counter_multiple_query_pools: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), performance_counter_query_pools: Default::default(), performance_counter_multiple_query_pools: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryFeaturesKHR {
@@ -273,7 +273,7 @@ impl PhysicalDevicePerformanceQueryPropertiesKHR {
 }
 impl Default for PhysicalDevicePerformanceQueryPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR, p_next: std::ptr::null_mut(), allow_command_buffer_query_copies: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), allow_command_buffer_query_copies: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryPropertiesKHR {
@@ -346,7 +346,7 @@ impl PerformanceCounterKHR {
 }
 impl Default for PerformanceCounterKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_KHR, p_next: std::ptr::null_mut(), unit: Default::default(), scope: Default::default(), storage: Default::default(), uuid: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), unit: Default::default(), scope: Default::default(), storage: Default::default(), uuid: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterKHR {
@@ -434,7 +434,7 @@ impl PerformanceCounterDescriptionKHR {
 }
 impl Default for PerformanceCounterDescriptionKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_COUNTER_DESCRIPTION_KHR, p_next: std::ptr::null_mut(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), flags: Default::default(), name: unsafe { std::mem::zeroed() }, category: unsafe { std::mem::zeroed() }, description: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for PerformanceCounterDescriptionKHR {
@@ -521,7 +521,7 @@ impl QueryPoolPerformanceCreateInfoKHR {
 }
 impl Default for QueryPoolPerformanceCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR, p_next: std::ptr::null(), queue_family_index: Default::default(), counter_index_count: Default::default(), p_counter_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), queue_family_index: Default::default(), counter_index_count: Default::default(), p_counter_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for QueryPoolPerformanceCreateInfoKHR {
@@ -620,7 +620,7 @@ impl AcquireProfilingLockInfoKHR {
 }
 impl Default for AcquireProfilingLockInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACQUIRE_PROFILING_LOCK_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), timeout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), timeout: Default::default() }
     }
 }
 impl std::fmt::Debug for AcquireProfilingLockInfoKHR {
@@ -695,7 +695,7 @@ impl PerformanceQuerySubmitInfoKHR {
 }
 impl Default for PerformanceQuerySubmitInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PERFORMANCE_QUERY_SUBMIT_INFO_KHR, p_next: std::ptr::null(), counter_pass_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), counter_pass_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PerformanceQuerySubmitInfoKHR {

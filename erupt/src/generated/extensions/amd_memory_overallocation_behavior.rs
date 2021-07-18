@@ -45,7 +45,7 @@ impl DeviceMemoryOverallocationCreateInfoAMD {
 }
 impl Default for DeviceMemoryOverallocationCreateInfoAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD, p_next: std::ptr::null(), overallocation_behavior: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), overallocation_behavior: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceMemoryOverallocationCreateInfoAMD {

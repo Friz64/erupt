@@ -55,7 +55,7 @@ impl DrmFormatModifierPropertiesListEXT {
 }
 impl Default for DrmFormatModifierPropertiesListEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT, p_next: std::ptr::null_mut(), drm_format_modifier_count: Default::default(), p_drm_format_modifier_properties: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), drm_format_modifier_count: Default::default(), p_drm_format_modifier_properties: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesListEXT {
@@ -206,7 +206,7 @@ impl PhysicalDeviceImageDrmFormatModifierInfoEXT {
 }
 impl Default for PhysicalDeviceImageDrmFormatModifierInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), drm_format_modifier: Default::default(), sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageDrmFormatModifierInfoEXT {
@@ -288,7 +288,7 @@ impl ImageDrmFormatModifierListCreateInfoEXT {
 }
 impl Default for ImageDrmFormatModifierListCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier_count: Default::default(), p_drm_format_modifiers: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), drm_format_modifier_count: Default::default(), p_drm_format_modifiers: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierListCreateInfoEXT {
@@ -361,7 +361,7 @@ impl ImageDrmFormatModifierExplicitCreateInfoEXT {
 }
 impl Default for ImageDrmFormatModifierExplicitCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT, p_next: std::ptr::null(), drm_format_modifier: Default::default(), drm_format_modifier_plane_count: Default::default(), p_plane_layouts: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), drm_format_modifier: Default::default(), drm_format_modifier_plane_count: Default::default(), p_plane_layouts: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierExplicitCreateInfoEXT {
@@ -437,7 +437,7 @@ impl ImageDrmFormatModifierPropertiesEXT {
 }
 impl Default for ImageDrmFormatModifierPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT, p_next: std::ptr::null_mut(), drm_format_modifier: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), drm_format_modifier: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageDrmFormatModifierPropertiesEXT {

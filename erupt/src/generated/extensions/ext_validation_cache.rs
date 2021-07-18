@@ -89,7 +89,7 @@ impl ValidationCacheCreateInfoEXT {
 }
 impl Default for ValidationCacheCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VALIDATION_CACHE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), initial_data_size: Default::default(), p_initial_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ValidationCacheCreateInfoEXT {
@@ -169,7 +169,7 @@ impl ShaderModuleValidationCacheCreateInfoEXT {
 }
 impl Default for ShaderModuleValidationCacheCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT, p_next: std::ptr::null(), validation_cache: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), validation_cache: Default::default() }
     }
 }
 impl std::fmt::Debug for ShaderModuleValidationCacheCreateInfoEXT {

@@ -69,7 +69,7 @@ impl PhysicalDeviceFragmentDensityMapFeaturesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMapFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map: Default::default(), fragment_density_map_dynamic: Default::default(), fragment_density_map_non_subsampled_images: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), fragment_density_map: Default::default(), fragment_density_map_dynamic: Default::default(), fragment_density_map_non_subsampled_images: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapFeaturesEXT {
@@ -151,7 +151,7 @@ impl PhysicalDeviceFragmentDensityMapPropertiesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_fragment_density_texel_size: Default::default(), max_fragment_density_texel_size: Default::default(), fragment_density_invocations: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_fragment_density_texel_size: Default::default(), max_fragment_density_texel_size: Default::default(), fragment_density_invocations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapPropertiesEXT {
@@ -231,7 +231,7 @@ impl RenderPassFragmentDensityMapCreateInfoEXT {
 }
 impl Default for RenderPassFragmentDensityMapCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT, p_next: std::ptr::null(), fragment_density_map_attachment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), fragment_density_map_attachment: Default::default() }
     }
 }
 impl std::fmt::Debug for RenderPassFragmentDensityMapCreateInfoEXT {

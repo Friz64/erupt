@@ -81,7 +81,7 @@ impl SurfaceFullScreenExclusiveInfoEXT {
 }
 impl Default for SurfaceFullScreenExclusiveInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT, p_next: std::ptr::null_mut(), full_screen_exclusive: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), full_screen_exclusive: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveInfoEXT {
@@ -151,7 +151,7 @@ impl SurfaceFullScreenExclusiveWin32InfoEXT {
 }
 impl Default for SurfaceFullScreenExclusiveWin32InfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT, p_next: std::ptr::null(), hmonitor: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), hmonitor: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveWin32InfoEXT {
@@ -221,7 +221,7 @@ impl SurfaceCapabilitiesFullScreenExclusiveEXT {
 }
 impl Default for SurfaceCapabilitiesFullScreenExclusiveEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT, p_next: std::ptr::null_mut(), full_screen_exclusive_supported: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), full_screen_exclusive_supported: Default::default() }
     }
 }
 impl std::fmt::Debug for SurfaceCapabilitiesFullScreenExclusiveEXT {

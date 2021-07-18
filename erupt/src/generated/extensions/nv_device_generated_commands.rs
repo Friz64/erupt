@@ -166,7 +166,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
 }
 impl Default for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV, p_next: std::ptr::null_mut(), device_generated_commands: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), device_generated_commands: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
@@ -244,7 +244,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
 }
 impl Default for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV, p_next: std::ptr::null_mut(), max_graphics_shader_group_count: Default::default(), max_indirect_sequence_count: Default::default(), max_indirect_commands_token_count: Default::default(), max_indirect_commands_stream_count: Default::default(), max_indirect_commands_token_offset: Default::default(), max_indirect_commands_stream_stride: Default::default(), min_sequences_count_buffer_offset_alignment: Default::default(), min_sequences_index_buffer_offset_alignment: Default::default(), min_indirect_commands_buffer_offset_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_graphics_shader_group_count: Default::default(), max_indirect_sequence_count: Default::default(), max_indirect_commands_token_count: Default::default(), max_indirect_commands_stream_count: Default::default(), max_indirect_commands_token_offset: Default::default(), max_indirect_commands_stream_stride: Default::default(), min_sequences_count_buffer_offset_alignment: Default::default(), min_sequences_index_buffer_offset_alignment: Default::default(), min_indirect_commands_buffer_offset_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
@@ -357,7 +357,7 @@ impl GraphicsShaderGroupCreateInfoNV {
 }
 impl Default for GraphicsShaderGroupCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV, p_next: std::ptr::null(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_tessellation_state: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), stage_count: Default::default(), p_stages: std::ptr::null(), p_vertex_input_state: std::ptr::null(), p_tessellation_state: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for GraphicsShaderGroupCreateInfoNV {
@@ -441,7 +441,7 @@ impl GraphicsPipelineShaderGroupsCreateInfoNV {
 }
 impl Default for GraphicsPipelineShaderGroupsCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV, p_next: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), pipeline_count: Default::default(), p_pipelines: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), group_count: Default::default(), p_groups: std::ptr::null(), pipeline_count: Default::default(), p_pipelines: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for GraphicsPipelineShaderGroupsCreateInfoNV {
@@ -885,7 +885,7 @@ impl IndirectCommandsLayoutTokenNV {
 }
 impl Default for IndirectCommandsLayoutTokenNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV, p_next: std::ptr::null(), token_type: Default::default(), stream: Default::default(), offset: Default::default(), vertex_binding_unit: Default::default(), vertex_dynamic_stride: Default::default(), pushconstant_pipeline_layout: Default::default(), pushconstant_shader_stage_flags: Default::default(), pushconstant_offset: Default::default(), pushconstant_size: Default::default(), indirect_state_flags: Default::default(), index_type_count: Default::default(), p_index_types: std::ptr::null(), p_index_type_values: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), token_type: Default::default(), stream: Default::default(), offset: Default::default(), vertex_binding_unit: Default::default(), vertex_dynamic_stride: Default::default(), pushconstant_pipeline_layout: Default::default(), pushconstant_shader_stage_flags: Default::default(), pushconstant_offset: Default::default(), pushconstant_size: Default::default(), indirect_state_flags: Default::default(), index_type_count: Default::default(), p_index_types: std::ptr::null(), p_index_type_values: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for IndirectCommandsLayoutTokenNV {
@@ -1017,7 +1017,7 @@ impl IndirectCommandsLayoutCreateInfoNV {
 }
 impl Default for IndirectCommandsLayoutCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), token_count: Default::default(), p_tokens: std::ptr::null(), stream_count: Default::default(), p_stream_strides: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), pipeline_bind_point: Default::default(), token_count: Default::default(), p_tokens: std::ptr::null(), stream_count: Default::default(), p_stream_strides: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for IndirectCommandsLayoutCreateInfoNV {
@@ -1116,7 +1116,7 @@ impl GeneratedCommandsInfoNV {
 }
 impl Default for GeneratedCommandsInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_INFO_NV, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), stream_count: Default::default(), p_streams: std::ptr::null(), sequences_count: Default::default(), preprocess_buffer: Default::default(), preprocess_offset: Default::default(), preprocess_size: Default::default(), sequences_count_buffer: Default::default(), sequences_count_offset: Default::default(), sequences_index_buffer: Default::default(), sequences_index_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), stream_count: Default::default(), p_streams: std::ptr::null(), sequences_count: Default::default(), preprocess_buffer: Default::default(), preprocess_offset: Default::default(), preprocess_size: Default::default(), sequences_count_buffer: Default::default(), sequences_count_offset: Default::default(), sequences_index_buffer: Default::default(), sequences_index_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for GeneratedCommandsInfoNV {
@@ -1245,7 +1245,7 @@ impl GeneratedCommandsMemoryRequirementsInfoNV {
 }
 impl Default for GeneratedCommandsMemoryRequirementsInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), max_sequences_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), pipeline_bind_point: Default::default(), pipeline: Default::default(), indirect_commands_layout: Default::default(), max_sequences_count: Default::default() }
     }
 }
 impl std::fmt::Debug for GeneratedCommandsMemoryRequirementsInfoNV {

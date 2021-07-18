@@ -33,7 +33,7 @@ impl PhysicalDeviceFragmentDensityMap2FeaturesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT, p_next: std::ptr::null_mut(), fragment_density_map_deferred: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), fragment_density_map_deferred: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
@@ -106,7 +106,7 @@ impl PhysicalDeviceFragmentDensityMap2PropertiesEXT {
 }
 impl Default for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT, p_next: std::ptr::null_mut(), subsampled_loads: Default::default(), subsampled_coarse_reconstruction_early_access: Default::default(), max_subsampled_array_layers: Default::default(), max_descriptor_set_subsampled_samplers: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), subsampled_loads: Default::default(), subsampled_coarse_reconstruction_early_access: Default::default(), max_subsampled_array_layers: Default::default(), max_descriptor_set_subsampled_samplers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2PropertiesEXT {

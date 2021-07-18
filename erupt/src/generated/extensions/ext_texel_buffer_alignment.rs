@@ -29,7 +29,7 @@ impl PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
 }
 impl Default for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT, p_next: std::ptr::null_mut(), texel_buffer_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), texel_buffer_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
@@ -102,7 +102,7 @@ impl PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
 }
 impl Default for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT, p_next: std::ptr::null_mut(), storage_texel_buffer_offset_alignment_bytes: Default::default(), storage_texel_buffer_offset_single_texel_alignment: Default::default(), uniform_texel_buffer_offset_alignment_bytes: Default::default(), uniform_texel_buffer_offset_single_texel_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), storage_texel_buffer_offset_alignment_bytes: Default::default(), storage_texel_buffer_offset_single_texel_alignment: Default::default(), uniform_texel_buffer_offset_alignment_bytes: Default::default(), uniform_texel_buffer_offset_single_texel_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentPropertiesEXT {

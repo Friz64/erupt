@@ -29,7 +29,7 @@ impl PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
 }
 impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX, p_next: std::ptr::null_mut(), per_view_position_all_components: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), per_view_position_all_components: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {

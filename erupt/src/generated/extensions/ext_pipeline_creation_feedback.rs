@@ -132,7 +132,7 @@ impl PipelineCreationFeedbackCreateInfoEXT {
 }
 impl Default for PipelineCreationFeedbackCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT, p_next: std::ptr::null(), p_pipeline_creation_feedback: std::ptr::null_mut(), pipeline_stage_creation_feedback_count: Default::default(), p_pipeline_stage_creation_feedbacks: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_pipeline_creation_feedback: std::ptr::null_mut(), pipeline_stage_creation_feedback_count: Default::default(), p_pipeline_stage_creation_feedbacks: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PipelineCreationFeedbackCreateInfoEXT {

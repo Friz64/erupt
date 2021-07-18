@@ -38,7 +38,7 @@ impl SharedPresentSurfaceCapabilitiesKHR {
 }
 impl Default for SharedPresentSurfaceCapabilitiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SHARED_PRESENT_SURFACE_CAPABILITIES_KHR, p_next: std::ptr::null_mut(), shared_present_supported_usage_flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shared_present_supported_usage_flags: Default::default() }
     }
 }
 impl std::fmt::Debug for SharedPresentSurfaceCapabilitiesKHR {

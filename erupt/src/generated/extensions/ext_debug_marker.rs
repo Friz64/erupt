@@ -51,7 +51,7 @@ impl DebugMarkerObjectNameInfoEXT {
 }
 impl Default for DebugMarkerObjectNameInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), p_object_name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), p_object_name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugMarkerObjectNameInfoEXT {
@@ -135,7 +135,7 @@ impl DebugMarkerObjectTagInfoEXT {
 }
 impl Default for DebugMarkerObjectTagInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_OBJECT_TAG_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), object_type: Default::default(), object: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugMarkerObjectTagInfoEXT {
@@ -226,7 +226,7 @@ impl DebugMarkerMarkerInfoEXT {
 }
 impl Default for DebugMarkerMarkerInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_MARKER_MARKER_INFO_EXT, p_next: std::ptr::null(), p_marker_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_marker_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for DebugMarkerMarkerInfoEXT {

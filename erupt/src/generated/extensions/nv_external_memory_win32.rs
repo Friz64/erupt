@@ -33,7 +33,7 @@ impl ImportMemoryWin32HandleInfoNV {
 }
 impl Default for ImportMemoryWin32HandleInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoNV {
@@ -109,7 +109,7 @@ impl ExportMemoryWin32HandleInfoNV {
 }
 impl Default for ExportMemoryWin32HandleInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_attributes: std::ptr::null(), dw_access: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoNV {

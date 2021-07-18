@@ -51,7 +51,7 @@ impl ImportAndroidHardwareBufferInfoANDROID {
 }
 impl Default for ImportAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), buffer: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), buffer: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportAndroidHardwareBufferInfoANDROID {
@@ -121,7 +121,7 @@ impl AndroidHardwareBufferUsageANDROID {
 }
 impl Default for AndroidHardwareBufferUsageANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID, p_next: std::ptr::null_mut(), android_hardware_buffer_usage: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), android_hardware_buffer_usage: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferUsageANDROID {
@@ -192,7 +192,7 @@ impl AndroidHardwareBufferPropertiesANDROID {
 }
 impl Default for AndroidHardwareBufferPropertiesANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID, p_next: std::ptr::null_mut(), allocation_size: Default::default(), memory_type_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), allocation_size: Default::default(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferPropertiesANDROID {
@@ -269,7 +269,7 @@ impl MemoryGetAndroidHardwareBufferInfoANDROID {
 }
 impl Default for MemoryGetAndroidHardwareBufferInfoANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID, p_next: std::ptr::null(), memory: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetAndroidHardwareBufferInfoANDROID {
@@ -346,7 +346,7 @@ impl AndroidHardwareBufferFormatPropertiesANDROID {
 }
 impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID, p_next: std::ptr::null_mut(), format: Default::default(), external_format: Default::default(), format_features: Default::default(), sampler_ycbcr_conversion_components: Default::default(), suggested_ycbcr_model: Default::default(), suggested_ycbcr_range: Default::default(), suggested_x_chroma_offset: Default::default(), suggested_y_chroma_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), format: Default::default(), external_format: Default::default(), format_features: Default::default(), sampler_ycbcr_conversion_components: Default::default(), suggested_ycbcr_model: Default::default(), suggested_ycbcr_range: Default::default(), suggested_x_chroma_offset: Default::default(), suggested_y_chroma_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for AndroidHardwareBufferFormatPropertiesANDROID {
@@ -451,7 +451,7 @@ impl ExternalFormatANDROID {
 }
 impl Default for ExternalFormatANDROID {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_FORMAT_ANDROID, p_next: std::ptr::null_mut(), external_format: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), external_format: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalFormatANDROID {

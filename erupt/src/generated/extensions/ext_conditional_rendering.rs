@@ -79,7 +79,7 @@ impl ConditionalRenderingBeginInfoEXT {
 }
 impl Default for ConditionalRenderingBeginInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CONDITIONAL_RENDERING_BEGIN_INFO_EXT, p_next: std::ptr::null(), buffer: Default::default(), offset: Default::default(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), buffer: Default::default(), offset: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for ConditionalRenderingBeginInfoEXT {
@@ -159,7 +159,7 @@ impl CommandBufferInheritanceConditionalRenderingInfoEXT {
 }
 impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT, p_next: std::ptr::null(), conditional_rendering_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), conditional_rendering_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceConditionalRenderingInfoEXT {
@@ -230,7 +230,7 @@ impl PhysicalDeviceConditionalRenderingFeaturesEXT {
 }
 impl Default for PhysicalDeviceConditionalRenderingFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT, p_next: std::ptr::null_mut(), conditional_rendering: Default::default(), inherited_conditional_rendering: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), conditional_rendering: Default::default(), inherited_conditional_rendering: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceConditionalRenderingFeaturesEXT {

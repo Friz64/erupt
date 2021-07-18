@@ -69,7 +69,7 @@ impl PhysicalDeviceLineRasterizationFeaturesEXT {
 }
 impl Default for PhysicalDeviceLineRasterizationFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT, p_next: std::ptr::null_mut(), rectangular_lines: Default::default(), bresenham_lines: Default::default(), smooth_lines: Default::default(), stippled_rectangular_lines: Default::default(), stippled_bresenham_lines: Default::default(), stippled_smooth_lines: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), rectangular_lines: Default::default(), bresenham_lines: Default::default(), smooth_lines: Default::default(), stippled_rectangular_lines: Default::default(), stippled_bresenham_lines: Default::default(), stippled_smooth_lines: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationFeaturesEXT {
@@ -164,7 +164,7 @@ impl PhysicalDeviceLineRasterizationPropertiesEXT {
 }
 impl Default for PhysicalDeviceLineRasterizationPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT, p_next: std::ptr::null_mut(), line_sub_pixel_precision_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), line_sub_pixel_precision_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationPropertiesEXT {
@@ -237,7 +237,7 @@ impl PipelineRasterizationLineStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationLineStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), line_rasterization_mode: Default::default(), stippled_line_enable: Default::default(), line_stipple_factor: Default::default(), line_stipple_pattern: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), line_rasterization_mode: Default::default(), stippled_line_enable: Default::default(), line_stipple_factor: Default::default(), line_stipple_pattern: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationLineStateCreateInfoEXT {

@@ -914,7 +914,7 @@ impl PhysicalDeviceFeatures2 {
 }
 impl Default for PhysicalDeviceFeatures2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FEATURES_2, p_next: std::ptr::null_mut(), features: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), features: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFeatures2 {
@@ -996,7 +996,7 @@ impl PhysicalDeviceProperties2 {
 }
 impl Default for PhysicalDeviceProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROPERTIES_2, p_next: std::ptr::null_mut(), properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), properties: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProperties2 {
@@ -1078,7 +1078,7 @@ impl FormatProperties2 {
 }
 impl Default for FormatProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), format_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), format_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for FormatProperties2 {
@@ -1148,7 +1148,7 @@ impl ImageFormatProperties2 {
 }
 impl Default for ImageFormatProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), image_format_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), image_format_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageFormatProperties2 {
@@ -1226,7 +1226,7 @@ impl PhysicalDeviceImageFormatInfo2 {
 }
 impl Default for PhysicalDeviceImageFormatInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), tiling: Default::default(), usage: Default::default(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), tiling: Default::default(), usage: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceImageFormatInfo2 {
@@ -1318,7 +1318,7 @@ impl QueueFamilyProperties2 {
 }
 impl Default for QueueFamilyProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_PROPERTIES_2, p_next: std::ptr::null_mut(), queue_family_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), queue_family_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyProperties2 {
@@ -1388,7 +1388,7 @@ impl PhysicalDeviceMemoryProperties2 {
 }
 impl Default for PhysicalDeviceMemoryProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2, p_next: std::ptr::null_mut(), memory_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryProperties2 {
@@ -1458,7 +1458,7 @@ impl SparseImageFormatProperties2 {
 }
 impl Default for SparseImageFormatProperties2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_FORMAT_PROPERTIES_2, p_next: std::ptr::null_mut(), properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), properties: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageFormatProperties2 {
@@ -1532,7 +1532,7 @@ impl PhysicalDeviceSparseImageFormatInfo2 {
 }
 impl Default for PhysicalDeviceSparseImageFormatInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), samples: Default::default(), usage: Default::default(), tiling: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), format: Default::default(), _type: Default::default(), samples: Default::default(), usage: Default::default(), tiling: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSparseImageFormatInfo2 {
@@ -1623,7 +1623,7 @@ impl PhysicalDeviceVariablePointersFeatures {
 }
 impl Default for PhysicalDeviceVariablePointersFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES, p_next: std::ptr::null_mut(), variable_pointers_storage_buffer: Default::default(), variable_pointers: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), variable_pointers_storage_buffer: Default::default(), variable_pointers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVariablePointersFeatures {
@@ -1775,7 +1775,7 @@ impl PhysicalDeviceExternalImageFormatInfo {
 }
 impl Default for PhysicalDeviceExternalImageFormatInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalImageFormatInfo {
@@ -1845,7 +1845,7 @@ impl ExternalImageFormatProperties {
 }
 impl Default for ExternalImageFormatProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_IMAGE_FORMAT_PROPERTIES, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalImageFormatProperties {
@@ -1917,7 +1917,7 @@ impl PhysicalDeviceExternalBufferInfo {
 }
 impl Default for PhysicalDeviceExternalBufferInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO, p_next: std::ptr::null(), flags: Default::default(), usage: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), usage: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalBufferInfo {
@@ -1997,7 +1997,7 @@ impl ExternalBufferProperties {
 }
 impl Default for ExternalBufferProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_BUFFER_PROPERTIES, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), external_memory_properties: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalBufferProperties {
@@ -2071,7 +2071,7 @@ impl PhysicalDeviceIDProperties {
 }
 impl Default for PhysicalDeviceIDProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ID_PROPERTIES, p_next: std::ptr::null_mut(), device_uuid: unsafe { std::mem::zeroed() }, driver_uuid: unsafe { std::mem::zeroed() }, device_luid: unsafe { std::mem::zeroed() }, device_node_mask: Default::default(), device_luid_valid: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), device_uuid: unsafe { std::mem::zeroed() }, driver_uuid: unsafe { std::mem::zeroed() }, device_luid: unsafe { std::mem::zeroed() }, device_node_mask: Default::default(), device_luid_valid: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceIDProperties {
@@ -2161,7 +2161,7 @@ impl ExternalMemoryImageCreateInfo {
 }
 impl Default for ExternalMemoryImageCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_IMAGE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryImageCreateInfo {
@@ -2231,7 +2231,7 @@ impl ExternalMemoryBufferCreateInfo {
 }
 impl Default for ExternalMemoryBufferCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_MEMORY_BUFFER_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalMemoryBufferCreateInfo {
@@ -2301,7 +2301,7 @@ impl ExportMemoryAllocateInfo {
 }
 impl Default for ExportMemoryAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_MEMORY_ALLOCATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportMemoryAllocateInfo {
@@ -2371,7 +2371,7 @@ impl PhysicalDeviceExternalSemaphoreInfo {
 }
 impl Default for PhysicalDeviceExternalSemaphoreInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalSemaphoreInfo {
@@ -2443,7 +2443,7 @@ impl ExternalSemaphoreProperties {
 }
 impl Default for ExternalSemaphoreProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_SEMAPHORE_PROPERTIES, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_semaphore_features: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_semaphore_features: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalSemaphoreProperties {
@@ -2523,7 +2523,7 @@ impl ExportSemaphoreCreateInfo {
 }
 impl Default for ExportSemaphoreCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_SEMAPHORE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportSemaphoreCreateInfo {
@@ -2593,7 +2593,7 @@ impl PhysicalDeviceExternalFenceInfo {
 }
 impl Default for PhysicalDeviceExternalFenceInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO, p_next: std::ptr::null(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalFenceInfo {
@@ -2665,7 +2665,7 @@ impl ExternalFenceProperties {
 }
 impl Default for ExternalFenceProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXTERNAL_FENCE_PROPERTIES, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_fence_features: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), export_from_imported_handle_types: Default::default(), compatible_handle_types: Default::default(), external_fence_features: Default::default() }
     }
 }
 impl std::fmt::Debug for ExternalFenceProperties {
@@ -2745,7 +2745,7 @@ impl ExportFenceCreateInfo {
 }
 impl Default for ExportFenceCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::EXPORT_FENCE_CREATE_INFO, p_next: std::ptr::null(), handle_types: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_types: Default::default() }
     }
 }
 impl std::fmt::Debug for ExportFenceCreateInfo {
@@ -2817,7 +2817,7 @@ impl PhysicalDeviceMultiviewFeatures {
 }
 impl Default for PhysicalDeviceMultiviewFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_FEATURES, p_next: std::ptr::null_mut(), multiview: Default::default(), multiview_geometry_shader: Default::default(), multiview_tessellation_shader: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), multiview: Default::default(), multiview_geometry_shader: Default::default(), multiview_tessellation_shader: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewFeatures {
@@ -2898,7 +2898,7 @@ impl PhysicalDeviceMultiviewProperties {
 }
 impl Default for PhysicalDeviceMultiviewProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES, p_next: std::ptr::null_mut(), max_multiview_view_count: Default::default(), max_multiview_instance_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_multiview_view_count: Default::default(), max_multiview_instance_index: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewProperties {
@@ -2978,7 +2978,7 @@ impl RenderPassMultiviewCreateInfo {
 }
 impl Default for RenderPassMultiviewCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_MULTIVIEW_CREATE_INFO, p_next: std::ptr::null(), subpass_count: Default::default(), p_view_masks: std::ptr::null(), dependency_count: Default::default(), p_view_offsets: std::ptr::null(), correlation_mask_count: Default::default(), p_correlation_masks: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), subpass_count: Default::default(), p_view_masks: std::ptr::null(), dependency_count: Default::default(), p_view_offsets: std::ptr::null(), correlation_mask_count: Default::default(), p_correlation_masks: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassMultiviewCreateInfo {
@@ -3063,7 +3063,7 @@ impl PhysicalDeviceGroupProperties {
 }
 impl Default for PhysicalDeviceGroupProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_GROUP_PROPERTIES, p_next: std::ptr::null_mut(), physical_device_count: Default::default(), physical_devices: unsafe { std::mem::zeroed() }, subset_allocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), physical_device_count: Default::default(), physical_devices: unsafe { std::mem::zeroed() }, subset_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceGroupProperties {
@@ -3144,7 +3144,7 @@ impl MemoryAllocateFlagsInfo {
 }
 impl Default for MemoryAllocateFlagsInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_ALLOCATE_FLAGS_INFO, p_next: std::ptr::null(), flags: Default::default(), device_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryAllocateFlagsInfo {
@@ -3221,7 +3221,7 @@ impl BindBufferMemoryInfo {
 }
 impl Default for BindBufferMemoryInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_INFO, p_next: std::ptr::null(), buffer: Default::default(), memory: Default::default(), memory_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), buffer: Default::default(), memory: Default::default(), memory_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for BindBufferMemoryInfo {
@@ -3304,7 +3304,7 @@ impl BindBufferMemoryDeviceGroupInfo {
 }
 impl Default for BindBufferMemoryDeviceGroupInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindBufferMemoryDeviceGroupInfo {
@@ -3377,7 +3377,7 @@ impl BindImageMemoryInfo {
 }
 impl Default for BindImageMemoryInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_INFO, p_next: std::ptr::null(), image: Default::default(), memory: Default::default(), memory_offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image: Default::default(), memory: Default::default(), memory_offset: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImageMemoryInfo {
@@ -3464,7 +3464,7 @@ impl BindImageMemoryDeviceGroupInfo {
 }
 impl Default for BindImageMemoryDeviceGroupInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null(), split_instance_bind_region_count: Default::default(), p_split_instance_bind_regions: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_index_count: Default::default(), p_device_indices: std::ptr::null(), split_instance_bind_region_count: Default::default(), p_split_instance_bind_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for BindImageMemoryDeviceGroupInfo {
@@ -3543,7 +3543,7 @@ impl DeviceGroupRenderPassBeginInfo {
 }
 impl Default for DeviceGroupRenderPassBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO, p_next: std::ptr::null(), device_mask: Default::default(), device_render_area_count: Default::default(), p_device_render_areas: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_mask: Default::default(), device_render_area_count: Default::default(), p_device_render_areas: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupRenderPassBeginInfo {
@@ -3619,7 +3619,7 @@ impl DeviceGroupCommandBufferBeginInfo {
 }
 impl Default for DeviceGroupCommandBufferBeginInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO, p_next: std::ptr::null(), device_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupCommandBufferBeginInfo {
@@ -3694,7 +3694,7 @@ impl DeviceGroupSubmitInfo {
 }
 impl Default for DeviceGroupSubmitInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SUBMIT_INFO, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphore_device_indices: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffer_device_masks: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphore_device_indices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphore_device_indices: std::ptr::null(), command_buffer_count: Default::default(), p_command_buffer_device_masks: std::ptr::null(), signal_semaphore_count: Default::default(), p_signal_semaphore_device_indices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupSubmitInfo {
@@ -3778,7 +3778,7 @@ impl DeviceGroupBindSparseInfo {
 }
 impl Default for DeviceGroupBindSparseInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_BIND_SPARSE_INFO, p_next: std::ptr::null(), resource_device_index: Default::default(), memory_device_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), resource_device_index: Default::default(), memory_device_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupBindSparseInfo {
@@ -3854,7 +3854,7 @@ impl DeviceGroupDeviceCreateInfo {
 }
 impl Default for DeviceGroupDeviceCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_DEVICE_CREATE_INFO, p_next: std::ptr::null(), physical_device_count: Default::default(), p_physical_devices: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), physical_device_count: Default::default(), p_physical_devices: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DeviceGroupDeviceCreateInfo {
@@ -4027,7 +4027,7 @@ impl DescriptorUpdateTemplateCreateInfo {
 }
 impl Default for DescriptorUpdateTemplateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO, p_next: std::ptr::null(), flags: Default::default(), descriptor_update_entry_count: Default::default(), p_descriptor_update_entries: std::ptr::null(), template_type: Default::default(), descriptor_set_layout: Default::default(), pipeline_bind_point: Default::default(), pipeline_layout: Default::default(), set: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), descriptor_update_entry_count: Default::default(), p_descriptor_update_entries: std::ptr::null(), template_type: Default::default(), descriptor_set_layout: Default::default(), pipeline_bind_point: Default::default(), pipeline_layout: Default::default(), set: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateCreateInfo {
@@ -4206,7 +4206,7 @@ impl RenderPassInputAttachmentAspectCreateInfo {
 }
 impl Default for RenderPassInputAttachmentAspectCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO, p_next: std::ptr::null(), aspect_reference_count: Default::default(), p_aspect_references: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), aspect_reference_count: Default::default(), p_aspect_references: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassInputAttachmentAspectCreateInfo {
@@ -4280,7 +4280,7 @@ impl PhysicalDevice16BitStorageFeatures {
 }
 impl Default for PhysicalDevice16BitStorageFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES, p_next: std::ptr::null_mut(), storage_buffer16_bit_access: Default::default(), uniform_and_storage_buffer16_bit_access: Default::default(), storage_push_constant16: Default::default(), storage_input_output16: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), storage_buffer16_bit_access: Default::default(), uniform_and_storage_buffer16_bit_access: Default::default(), storage_push_constant16: Default::default(), storage_input_output16: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevice16BitStorageFeatures {
@@ -4368,7 +4368,7 @@ impl PhysicalDeviceSubgroupProperties {
 }
 impl Default for PhysicalDeviceSubgroupProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES, p_next: std::ptr::null_mut(), subgroup_size: Default::default(), supported_stages: Default::default(), supported_operations: Default::default(), quad_operations_in_all_stages: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), subgroup_size: Default::default(), supported_stages: Default::default(), supported_operations: Default::default(), quad_operations_in_all_stages: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupProperties {
@@ -4453,7 +4453,7 @@ impl BufferMemoryRequirementsInfo2 {
 }
 impl Default for BufferMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), buffer: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferMemoryRequirementsInfo2 {
@@ -4523,7 +4523,7 @@ impl ImageMemoryRequirementsInfo2 {
 }
 impl Default for ImageMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), image: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageMemoryRequirementsInfo2 {
@@ -4595,7 +4595,7 @@ impl ImageSparseMemoryRequirementsInfo2 {
 }
 impl Default for ImageSparseMemoryRequirementsInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2, p_next: std::ptr::null(), image: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSparseMemoryRequirementsInfo2 {
@@ -4665,7 +4665,7 @@ impl MemoryRequirements2 {
 }
 impl Default for MemoryRequirements2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_REQUIREMENTS_2, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryRequirements2 {
@@ -4737,7 +4737,7 @@ impl SparseImageMemoryRequirements2 {
 }
 impl Default for SparseImageMemoryRequirements2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_requirements: Default::default() }
     }
 }
 impl std::fmt::Debug for SparseImageMemoryRequirements2 {
@@ -4807,7 +4807,7 @@ impl PhysicalDevicePointClippingProperties {
 }
 impl Default for PhysicalDevicePointClippingProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES, p_next: std::ptr::null_mut(), point_clipping_behavior: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), point_clipping_behavior: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePointClippingProperties {
@@ -4878,7 +4878,7 @@ impl MemoryDedicatedRequirements {
 }
 impl Default for MemoryDedicatedRequirements {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_REQUIREMENTS, p_next: std::ptr::null_mut(), prefers_dedicated_allocation: Default::default(), requires_dedicated_allocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), prefers_dedicated_allocation: Default::default(), requires_dedicated_allocation: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryDedicatedRequirements {
@@ -4954,7 +4954,7 @@ impl MemoryDedicatedAllocateInfo {
 }
 impl Default for MemoryDedicatedAllocateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_DEDICATED_ALLOCATE_INFO, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), image: Default::default(), buffer: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryDedicatedAllocateInfo {
@@ -5029,7 +5029,7 @@ impl ImageViewUsageCreateInfo {
 }
 impl Default for ImageViewUsageCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_USAGE_CREATE_INFO, p_next: std::ptr::null(), usage: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), usage: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewUsageCreateInfo {
@@ -5099,7 +5099,7 @@ impl PipelineTessellationDomainOriginStateCreateInfo {
 }
 impl Default for PipelineTessellationDomainOriginStateCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO, p_next: std::ptr::null(), domain_origin: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), domain_origin: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineTessellationDomainOriginStateCreateInfo {
@@ -5169,7 +5169,7 @@ impl SamplerYcbcrConversionInfo {
 }
 impl Default for SamplerYcbcrConversionInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_INFO, p_next: std::ptr::null(), conversion: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), conversion: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionInfo {
@@ -5246,7 +5246,7 @@ impl SamplerYcbcrConversionCreateInfo {
 }
 impl Default for SamplerYcbcrConversionCreateInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_CREATE_INFO, p_next: std::ptr::null(), format: Default::default(), ycbcr_model: Default::default(), ycbcr_range: Default::default(), components: Default::default(), x_chroma_offset: Default::default(), y_chroma_offset: Default::default(), chroma_filter: Default::default(), force_explicit_reconstruction: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), format: Default::default(), ycbcr_model: Default::default(), ycbcr_range: Default::default(), components: Default::default(), x_chroma_offset: Default::default(), y_chroma_offset: Default::default(), chroma_filter: Default::default(), force_explicit_reconstruction: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionCreateInfo {
@@ -5351,7 +5351,7 @@ impl BindImagePlaneMemoryInfo {
 }
 impl Default for BindImagePlaneMemoryInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_PLANE_MEMORY_INFO, p_next: std::ptr::null(), plane_aspect: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), plane_aspect: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImagePlaneMemoryInfo {
@@ -5421,7 +5421,7 @@ impl ImagePlaneMemoryRequirementsInfo {
 }
 impl Default for ImagePlaneMemoryRequirementsInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO, p_next: std::ptr::null(), plane_aspect: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), plane_aspect: Default::default() }
     }
 }
 impl std::fmt::Debug for ImagePlaneMemoryRequirementsInfo {
@@ -5491,7 +5491,7 @@ impl PhysicalDeviceSamplerYcbcrConversionFeatures {
 }
 impl Default for PhysicalDeviceSamplerYcbcrConversionFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES, p_next: std::ptr::null_mut(), sampler_ycbcr_conversion: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), sampler_ycbcr_conversion: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSamplerYcbcrConversionFeatures {
@@ -5561,7 +5561,7 @@ impl SamplerYcbcrConversionImageFormatProperties {
 }
 impl Default for SamplerYcbcrConversionImageFormatProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES, p_next: std::ptr::null_mut(), combined_image_sampler_descriptor_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), combined_image_sampler_descriptor_count: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerYcbcrConversionImageFormatProperties {
@@ -5631,7 +5631,7 @@ impl ProtectedSubmitInfo {
 }
 impl Default for ProtectedSubmitInfo {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PROTECTED_SUBMIT_INFO, p_next: std::ptr::null(), protected_submit: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), protected_submit: Default::default() }
     }
 }
 impl std::fmt::Debug for ProtectedSubmitInfo {
@@ -5701,7 +5701,7 @@ impl PhysicalDeviceProtectedMemoryFeatures {
 }
 impl Default for PhysicalDeviceProtectedMemoryFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES, p_next: std::ptr::null_mut(), protected_memory: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), protected_memory: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryFeatures {
@@ -5771,7 +5771,7 @@ impl PhysicalDeviceProtectedMemoryProperties {
 }
 impl Default for PhysicalDeviceProtectedMemoryProperties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES, p_next: std::ptr::null_mut(), protected_no_fault: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), protected_no_fault: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryProperties {
@@ -5843,7 +5843,7 @@ impl DeviceQueueInfo2 {
 }
 impl Default for DeviceQueueInfo2 {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_QUEUE_INFO_2, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), queue_family_index: Default::default(), queue_index: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceQueueInfo2 {
@@ -5924,7 +5924,7 @@ impl PhysicalDeviceMaintenance3Properties {
 }
 impl Default for PhysicalDeviceMaintenance3Properties {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES, p_next: std::ptr::null_mut(), max_per_set_descriptors: Default::default(), max_memory_allocation_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_per_set_descriptors: Default::default(), max_memory_allocation_size: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMaintenance3Properties {
@@ -5999,7 +5999,7 @@ impl DescriptorSetLayoutSupport {
 }
 impl Default for DescriptorSetLayoutSupport {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DESCRIPTOR_SET_LAYOUT_SUPPORT, p_next: std::ptr::null_mut(), supported: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), supported: Default::default() }
     }
 }
 impl std::fmt::Debug for DescriptorSetLayoutSupport {
@@ -6069,7 +6069,7 @@ impl PhysicalDeviceShaderDrawParametersFeatures {
 }
 impl Default for PhysicalDeviceShaderDrawParametersFeatures {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES, p_next: std::ptr::null_mut(), shader_draw_parameters: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_draw_parameters: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDrawParametersFeatures {

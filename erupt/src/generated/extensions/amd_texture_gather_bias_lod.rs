@@ -24,7 +24,7 @@ impl TextureLODGatherFormatPropertiesAMD {
 }
 impl Default for TextureLODGatherFormatPropertiesAMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD, p_next: std::ptr::null_mut(), supports_texture_gather_lod_bias_amd: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), supports_texture_gather_lod_bias_amd: Default::default() }
     }
 }
 impl std::fmt::Debug for TextureLODGatherFormatPropertiesAMD {

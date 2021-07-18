@@ -30,7 +30,7 @@ impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
 }
 impl Default for PhysicalDeviceIndexTypeUint8FeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT, p_next: std::ptr::null_mut(), index_type_uint8: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), index_type_uint8: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceIndexTypeUint8FeaturesEXT {

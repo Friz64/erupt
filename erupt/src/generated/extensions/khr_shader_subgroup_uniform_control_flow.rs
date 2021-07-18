@@ -26,7 +26,7 @@ impl PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
 }
 impl Default for PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR, p_next: std::ptr::null_mut(), shader_subgroup_uniform_control_flow: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_subgroup_uniform_control_flow: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {

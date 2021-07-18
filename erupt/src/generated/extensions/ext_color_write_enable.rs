@@ -38,7 +38,7 @@ impl PhysicalDeviceColorWriteEnableFeaturesEXT {
 }
 impl Default for PhysicalDeviceColorWriteEnableFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT, p_next: std::ptr::null_mut(), color_write_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), color_write_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceColorWriteEnableFeaturesEXT {
@@ -109,7 +109,7 @@ impl PipelineColorWriteCreateInfoEXT {
 }
 impl Default for PipelineColorWriteCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT, p_next: std::ptr::null(), attachment_count: Default::default(), p_color_write_enables: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), attachment_count: Default::default(), p_color_write_enables: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PipelineColorWriteCreateInfoEXT {

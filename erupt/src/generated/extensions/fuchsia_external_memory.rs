@@ -41,7 +41,7 @@ impl ImportMemoryZirconHandleInfoFUCHSIA {
 }
 impl Default for ImportMemoryZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default(), handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportMemoryZirconHandleInfoFUCHSIA {
@@ -116,7 +116,7 @@ impl MemoryZirconHandlePropertiesFUCHSIA {
 }
 impl Default for MemoryZirconHandlePropertiesFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryZirconHandlePropertiesFUCHSIA {
@@ -187,7 +187,7 @@ impl MemoryGetZirconHandleInfoFUCHSIA {
 }
 impl Default for MemoryGetZirconHandleInfoFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), memory: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryGetZirconHandleInfoFUCHSIA {

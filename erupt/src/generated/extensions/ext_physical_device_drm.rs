@@ -29,7 +29,7 @@ impl PhysicalDeviceDrmPropertiesEXT {
 }
 impl Default for PhysicalDeviceDrmPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT, p_next: std::ptr::null_mut(), has_primary: Default::default(), has_render: Default::default(), primary_major: Default::default(), primary_minor: Default::default(), render_major: Default::default(), render_minor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), has_primary: Default::default(), has_render: Default::default(), primary_major: Default::default(), primary_minor: Default::default(), render_major: Default::default(), render_minor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDrmPropertiesEXT {

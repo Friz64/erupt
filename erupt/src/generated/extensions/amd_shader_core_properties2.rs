@@ -45,7 +45,7 @@ impl PhysicalDeviceShaderCoreProperties2AMD {
 }
 impl Default for PhysicalDeviceShaderCoreProperties2AMD {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD, p_next: std::ptr::null_mut(), shader_core_features: Default::default(), active_compute_unit_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_core_features: Default::default(), active_compute_unit_count: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCoreProperties2AMD {

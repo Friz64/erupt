@@ -27,7 +27,7 @@ impl PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_image_int64_atomics: Default::default(), sparse_image_int64_atomics: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_image_int64_atomics: Default::default(), sparse_image_int64_atomics: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {

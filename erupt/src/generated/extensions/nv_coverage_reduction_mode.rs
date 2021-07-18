@@ -74,7 +74,7 @@ impl PhysicalDeviceCoverageReductionModeFeaturesNV {
 }
 impl Default for PhysicalDeviceCoverageReductionModeFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCoverageReductionModeFeaturesNV {
@@ -145,7 +145,7 @@ impl PipelineCoverageReductionStateCreateInfoNV {
 }
 impl Default for PipelineCoverageReductionStateCreateInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV, p_next: std::ptr::null(), flags: Default::default(), coverage_reduction_mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), coverage_reduction_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineCoverageReductionStateCreateInfoNV {
@@ -223,7 +223,7 @@ impl FramebufferMixedSamplesCombinationNV {
 }
 impl Default for FramebufferMixedSamplesCombinationNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default(), rasterization_samples: Default::default(), depth_stencil_samples: Default::default(), color_samples: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), coverage_reduction_mode: Default::default(), rasterization_samples: Default::default(), depth_stencil_samples: Default::default(), color_samples: Default::default() }
     }
 }
 impl std::fmt::Debug for FramebufferMixedSamplesCombinationNV {

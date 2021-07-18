@@ -33,7 +33,7 @@ impl DisplayPresentInfoKHR {
 }
 impl Default for DisplayPresentInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_PRESENT_INFO_KHR, p_next: std::ptr::null(), src_rect: Default::default(), dst_rect: Default::default(), persistent: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_rect: Default::default(), dst_rect: Default::default(), persistent: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPresentInfoKHR {

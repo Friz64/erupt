@@ -183,7 +183,7 @@ impl PhysicalDeviceMultiDrawPropertiesEXT {
 }
 impl Default for PhysicalDeviceMultiDrawPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_multi_draw_count: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_multi_draw_count: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiDrawPropertiesEXT {
@@ -257,7 +257,7 @@ impl PhysicalDeviceMultiDrawFeaturesEXT {
 }
 impl Default for PhysicalDeviceMultiDrawFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT, p_next: std::ptr::null_mut(), multi_draw: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), multi_draw: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceMultiDrawFeaturesEXT {

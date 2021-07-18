@@ -167,7 +167,7 @@ impl VideoEncodeInfoKHR {
 }
 impl Default for VideoEncodeInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), quality_level: Default::default(), coded_extent: Default::default(), dst_bitstream_buffer: Default::default(), dst_bitstream_buffer_offset: Default::default(), dst_bitstream_buffer_max_range: Default::default(), src_picture_resource: Default::default(), p_setup_reference_slot: std::ptr::null(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), quality_level: Default::default(), coded_extent: Default::default(), dst_bitstream_buffer: Default::default(), dst_bitstream_buffer_offset: Default::default(), dst_bitstream_buffer_max_range: Default::default(), src_picture_resource: Default::default(), p_setup_reference_slot: std::ptr::null(), reference_slot_count: Default::default(), p_reference_slots: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeInfoKHR {
@@ -284,7 +284,7 @@ impl VideoEncodeRateControlInfoKHR {
 }
 impl Default for VideoEncodeRateControlInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), rate_control_mode: Default::default(), average_bitrate: Default::default(), peak_to_average_bitrate_ratio: Default::default(), frame_rate_numerator: Default::default(), frame_rate_denominator: Default::default(), virtual_buffer_size_in_ms: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), rate_control_mode: Default::default(), average_bitrate: Default::default(), peak_to_average_bitrate_ratio: Default::default(), frame_rate_numerator: Default::default(), frame_rate_denominator: Default::default(), virtual_buffer_size_in_ms: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEncodeRateControlInfoKHR {

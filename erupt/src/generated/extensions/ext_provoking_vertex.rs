@@ -52,7 +52,7 @@ impl PhysicalDeviceProvokingVertexFeaturesEXT {
 }
 impl Default for PhysicalDeviceProvokingVertexFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT, p_next: std::ptr::null_mut(), provoking_vertex_last: Default::default(), transform_feedback_preserves_provoking_vertex: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), provoking_vertex_last: Default::default(), transform_feedback_preserves_provoking_vertex: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProvokingVertexFeaturesEXT {
@@ -128,7 +128,7 @@ impl PhysicalDeviceProvokingVertexPropertiesEXT {
 }
 impl Default for PhysicalDeviceProvokingVertexPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT, p_next: std::ptr::null_mut(), provoking_vertex_mode_per_pipeline: Default::default(), transform_feedback_preserves_triangle_fan_provoking_vertex: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), provoking_vertex_mode_per_pipeline: Default::default(), transform_feedback_preserves_triangle_fan_provoking_vertex: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceProvokingVertexPropertiesEXT {
@@ -203,7 +203,7 @@ impl PipelineRasterizationProvokingVertexStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), provoking_vertex_mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), provoking_vertex_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationProvokingVertexStateCreateInfoEXT {

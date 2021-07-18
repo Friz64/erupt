@@ -26,7 +26,7 @@ impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
 }
 impl Default for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV, p_next: std::ptr::null_mut(), fragment_shader_barycentric: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), fragment_shader_barycentric: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShaderBarycentricFeaturesNV {

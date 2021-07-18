@@ -27,7 +27,7 @@ impl PhysicalDevicePCIBusInfoPropertiesEXT {
 }
 impl Default for PhysicalDevicePCIBusInfoPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT, p_next: std::ptr::null_mut(), pci_domain: Default::default(), pci_bus: Default::default(), pci_device: Default::default(), pci_function: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), pci_domain: Default::default(), pci_bus: Default::default(), pci_device: Default::default(), pci_function: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePCIBusInfoPropertiesEXT {

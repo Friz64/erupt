@@ -194,7 +194,7 @@ impl VideoEncodeH264CapabilitiesEXT {
 }
 impl Default for VideoEncodeH264CapabilitiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_CAPABILITIES_EXT, p_next: std::ptr::null(), flags: Default::default(), input_mode_flags: Default::default(), output_mode_flags: Default::default(), min_picture_size_in_mbs: Default::default(), max_picture_size_in_mbs: Default::default(), input_image_data_alignment: Default::default(), max_num_l0_reference_for_p: Default::default(), max_num_l0_reference_for_b: Default::default(), max_num_l1_reference: Default::default(), quality_level_count: Default::default(), std_extension_version: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), input_mode_flags: Default::default(), output_mode_flags: Default::default(), min_picture_size_in_mbs: Default::default(), max_picture_size_in_mbs: Default::default(), input_image_data_alignment: Default::default(), max_num_l0_reference_for_p: Default::default(), max_num_l0_reference_for_b: Default::default(), max_num_l1_reference: Default::default(), quality_level_count: Default::default(), std_extension_version: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264CapabilitiesEXT {
@@ -316,7 +316,7 @@ impl VideoEncodeH264SessionCreateInfoEXT {
 }
 impl Default for VideoEncodeH264SessionCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), max_picture_size_in_mbs: Default::default(), p_std_extension_version: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), max_picture_size_in_mbs: Default::default(), p_std_extension_version: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264SessionCreateInfoEXT {
@@ -399,7 +399,7 @@ impl VideoEncodeH264SessionParametersAddInfoEXT {
 }
 impl Default for VideoEncodeH264SessionParametersAddInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT, p_next: std::ptr::null(), sps_std_count: Default::default(), p_sps_std: std::ptr::null(), pps_std_count: Default::default(), p_pps_std: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sps_std_count: Default::default(), p_sps_std: std::ptr::null(), pps_std_count: Default::default(), p_pps_std: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264SessionParametersAddInfoEXT {
@@ -478,7 +478,7 @@ impl VideoEncodeH264SessionParametersCreateInfoEXT {
 }
 impl Default for VideoEncodeH264SessionParametersCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT, p_next: std::ptr::null(), max_sps_std_count: Default::default(), max_pps_std_count: Default::default(), p_parameters_add_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), max_sps_std_count: Default::default(), max_pps_std_count: Default::default(), p_parameters_add_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264SessionParametersCreateInfoEXT {
@@ -559,7 +559,7 @@ impl VideoEncodeH264DpbSlotInfoEXT {
 }
 impl Default for VideoEncodeH264DpbSlotInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT, p_next: std::ptr::null(), slot_index: Default::default(), p_std_picture_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), slot_index: Default::default(), p_std_picture_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264DpbSlotInfoEXT {
@@ -640,7 +640,7 @@ impl VideoEncodeH264VclFrameInfoEXT {
 }
 impl Default for VideoEncodeH264VclFrameInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT, p_next: std::ptr::null(), ref_default_final_list0_entry_count: Default::default(), p_ref_default_final_list0_entries: std::ptr::null(), ref_default_final_list1_entry_count: Default::default(), p_ref_default_final_list1_entries: std::ptr::null(), nalu_slice_entry_count: Default::default(), p_nalu_slice_entries: std::ptr::null(), p_current_picture_info: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), ref_default_final_list0_entry_count: Default::default(), p_ref_default_final_list0_entries: std::ptr::null(), ref_default_final_list1_entry_count: Default::default(), p_ref_default_final_list1_entries: std::ptr::null(), nalu_slice_entry_count: Default::default(), p_nalu_slice_entries: std::ptr::null(), p_current_picture_info: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264VclFrameInfoEXT {
@@ -731,7 +731,7 @@ impl VideoEncodeH264EmitPictureParametersEXT {
 }
 impl Default for VideoEncodeH264EmitPictureParametersEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT, p_next: std::ptr::null(), sps_id: Default::default(), emit_sps_enable: Default::default(), pps_id_entry_count: Default::default(), pps_id_entries: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sps_id: Default::default(), emit_sps_enable: Default::default(), pps_id_entry_count: Default::default(), pps_id_entries: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264EmitPictureParametersEXT {
@@ -812,7 +812,7 @@ impl VideoEncodeH264ProfileEXT {
 }
 impl Default for VideoEncodeH264ProfileEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_PROFILE_EXT, p_next: std::ptr::null(), std_profile_idc: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), std_profile_idc: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264ProfileEXT {
@@ -890,7 +890,7 @@ impl VideoEncodeH264NaluSliceEXT {
 }
 impl Default for VideoEncodeH264NaluSliceEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VIDEO_ENCODE_H264_NALU_SLICE_EXT, p_next: std::ptr::null(), p_slice_header_std: std::ptr::null(), mb_count: Default::default(), ref_final_list0_entry_count: Default::default(), p_ref_final_list0_entries: std::ptr::null(), ref_final_list1_entry_count: Default::default(), p_ref_final_list1_entries: std::ptr::null(), preceding_nalu_bytes: Default::default(), min_qp: Default::default(), max_qp: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_slice_header_std: std::ptr::null(), mb_count: Default::default(), ref_final_list0_entry_count: Default::default(), p_ref_final_list0_entries: std::ptr::null(), ref_final_list1_entry_count: Default::default(), p_ref_final_list1_entries: std::ptr::null(), preceding_nalu_bytes: Default::default(), min_qp: Default::default(), max_qp: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264NaluSliceEXT {

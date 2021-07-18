@@ -26,7 +26,7 @@ impl PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
 }
 impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT, p_next: std::ptr::null_mut(), shader_demote_to_helper_invocation: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), shader_demote_to_helper_invocation: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {

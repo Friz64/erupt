@@ -102,7 +102,7 @@ impl DisplayPowerInfoEXT {
 }
 impl Default for DisplayPowerInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_POWER_INFO_EXT, p_next: std::ptr::null(), power_state: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), power_state: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayPowerInfoEXT {
@@ -172,7 +172,7 @@ impl DeviceEventInfoEXT {
 }
 impl Default for DeviceEventInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_EVENT_INFO_EXT, p_next: std::ptr::null(), device_event: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_event: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceEventInfoEXT {
@@ -242,7 +242,7 @@ impl DisplayEventInfoEXT {
 }
 impl Default for DisplayEventInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_EVENT_INFO_EXT, p_next: std::ptr::null(), display_event: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), display_event: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayEventInfoEXT {
@@ -312,7 +312,7 @@ impl SwapchainCounterCreateInfoEXT {
 }
 impl Default for SwapchainCounterCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_COUNTER_CREATE_INFO_EXT, p_next: std::ptr::null(), surface_counters: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), surface_counters: Default::default() }
     }
 }
 impl std::fmt::Debug for SwapchainCounterCreateInfoEXT {

@@ -49,7 +49,7 @@ impl PhysicalDeviceDepthClipEnableFeaturesEXT {
 }
 impl Default for PhysicalDeviceDepthClipEnableFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT, p_next: std::ptr::null_mut(), depth_clip_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), depth_clip_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceDepthClipEnableFeaturesEXT {
@@ -120,7 +120,7 @@ impl PipelineRasterizationDepthClipStateCreateInfoEXT {
 }
 impl Default for PipelineRasterizationDepthClipStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), depth_clip_enable: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), depth_clip_enable: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineRasterizationDepthClipStateCreateInfoEXT {

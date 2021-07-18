@@ -40,7 +40,7 @@ impl PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
 }
 impl Default for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT, p_next: std::ptr::null_mut(), pipeline_creation_cache_control: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), pipeline_creation_cache_control: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePipelineCreationCacheControlFeaturesEXT {

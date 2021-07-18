@@ -25,7 +25,7 @@ impl PresentRegionsKHR {
 }
 impl Default for PresentRegionsKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PRESENT_REGIONS_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_regions: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), swapchain_count: Default::default(), p_regions: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for PresentRegionsKHR {

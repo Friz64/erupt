@@ -66,7 +66,7 @@ impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
 }
 impl Default for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), buffer_device_address: Default::default(), buffer_device_address_capture_replay: Default::default(), buffer_device_address_multi_device: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceBufferDeviceAddressFeaturesEXT {
@@ -146,7 +146,7 @@ impl BufferDeviceAddressCreateInfoEXT {
 }
 impl Default for BufferDeviceAddressCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT, p_next: std::ptr::null(), device_address: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), device_address: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferDeviceAddressCreateInfoEXT {

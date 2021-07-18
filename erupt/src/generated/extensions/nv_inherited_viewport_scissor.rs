@@ -29,7 +29,7 @@ impl PhysicalDeviceInheritedViewportScissorFeaturesNV {
 }
 impl Default for PhysicalDeviceInheritedViewportScissorFeaturesNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV, p_next: std::ptr::null_mut(), inherited_viewport_scissor2_d: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), inherited_viewport_scissor2_d: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceInheritedViewportScissorFeaturesNV {
@@ -101,7 +101,7 @@ impl CommandBufferInheritanceViewportScissorInfoNV {
 }
 impl Default for CommandBufferInheritanceViewportScissorInfoNV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV, p_next: std::ptr::null(), viewport_scissor2_d: Default::default(), viewport_depth_count: Default::default(), p_viewport_depths: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), viewport_scissor2_d: Default::default(), viewport_depth_count: Default::default(), p_viewport_depths: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for CommandBufferInheritanceViewportScissorInfoNV {

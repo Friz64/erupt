@@ -37,7 +37,7 @@ impl PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
 }
 impl Default for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT, p_next: std::ptr::null_mut(), vertex_input_dynamic_state: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), vertex_input_dynamic_state: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
@@ -110,7 +110,7 @@ impl VertexInputBindingDescription2EXT {
 }
 impl Default for VertexInputBindingDescription2EXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT, p_next: std::ptr::null_mut(), binding: Default::default(), stride: Default::default(), input_rate: Default::default(), divisor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), binding: Default::default(), stride: Default::default(), input_rate: Default::default(), divisor: Default::default() }
     }
 }
 impl std::fmt::Debug for VertexInputBindingDescription2EXT {
@@ -198,7 +198,7 @@ impl VertexInputAttributeDescription2EXT {
 }
 impl Default for VertexInputAttributeDescription2EXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT, p_next: std::ptr::null_mut(), location: Default::default(), binding: Default::default(), format: Default::default(), offset: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), location: Default::default(), binding: Default::default(), format: Default::default(), offset: Default::default() }
     }
 }
 impl std::fmt::Debug for VertexInputAttributeDescription2EXT {

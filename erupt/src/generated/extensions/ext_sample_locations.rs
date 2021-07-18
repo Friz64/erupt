@@ -126,7 +126,7 @@ impl SampleLocationsInfoEXT {
 }
 impl Default for SampleLocationsInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLE_LOCATIONS_INFO_EXT, p_next: std::ptr::null(), sample_locations_per_pixel: Default::default(), sample_location_grid_size: Default::default(), sample_locations_count: Default::default(), p_sample_locations: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sample_locations_per_pixel: Default::default(), sample_location_grid_size: Default::default(), sample_locations_count: Default::default(), p_sample_locations: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SampleLocationsInfoEXT {
@@ -352,7 +352,7 @@ impl RenderPassSampleLocationsBeginInfoEXT {
 }
 impl Default for RenderPassSampleLocationsBeginInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT, p_next: std::ptr::null(), attachment_initial_sample_locations_count: Default::default(), p_attachment_initial_sample_locations: std::ptr::null(), post_subpass_sample_locations_count: Default::default(), p_post_subpass_sample_locations: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), attachment_initial_sample_locations_count: Default::default(), p_attachment_initial_sample_locations: std::ptr::null(), post_subpass_sample_locations_count: Default::default(), p_post_subpass_sample_locations: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for RenderPassSampleLocationsBeginInfoEXT {
@@ -430,7 +430,7 @@ impl PipelineSampleLocationsStateCreateInfoEXT {
 }
 impl Default for PipelineSampleLocationsStateCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT, p_next: std::ptr::null(), sample_locations_enable: Default::default(), sample_locations_info: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), sample_locations_enable: Default::default(), sample_locations_info: Default::default() }
     }
 }
 impl std::fmt::Debug for PipelineSampleLocationsStateCreateInfoEXT {
@@ -509,7 +509,7 @@ impl PhysicalDeviceSampleLocationsPropertiesEXT {
 }
 impl Default for PhysicalDeviceSampleLocationsPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT, p_next: std::ptr::null_mut(), sample_location_sample_counts: Default::default(), max_sample_location_grid_size: Default::default(), sample_location_coordinate_range: unsafe { std::mem::zeroed() }, sample_location_sub_pixel_bits: Default::default(), variable_sample_locations: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), sample_location_sample_counts: Default::default(), max_sample_location_grid_size: Default::default(), sample_location_coordinate_range: unsafe { std::mem::zeroed() }, sample_location_sub_pixel_bits: Default::default(), variable_sample_locations: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSampleLocationsPropertiesEXT {
@@ -599,7 +599,7 @@ impl MultisamplePropertiesEXT {
 }
 impl Default for MultisamplePropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MULTISAMPLE_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_sample_location_grid_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_sample_location_grid_size: Default::default() }
     }
 }
 impl std::fmt::Debug for MultisamplePropertiesEXT {

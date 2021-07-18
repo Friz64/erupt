@@ -54,7 +54,7 @@ impl WaylandSurfaceCreateInfoKHR {
 }
 impl Default for WaylandSurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::WAYLAND_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), display: std::ptr::null_mut(), surface: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), display: std::ptr::null_mut(), surface: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for WaylandSurfaceCreateInfoKHR {

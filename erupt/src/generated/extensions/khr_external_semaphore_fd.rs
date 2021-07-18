@@ -36,7 +36,7 @@ impl ImportSemaphoreFdInfoKHR {
 }
 impl Default for ImportSemaphoreFdInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_SEMAPHORE_FD_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), flags: Default::default(), handle_type: Default::default(), fd: Default::default() }
     }
 }
 impl std::fmt::Debug for ImportSemaphoreFdInfoKHR {
@@ -122,7 +122,7 @@ impl SemaphoreGetFdInfoKHR {
 }
 impl Default for SemaphoreGetFdInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_GET_FD_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), handle_type: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreGetFdInfoKHR {

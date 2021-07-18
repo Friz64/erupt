@@ -38,7 +38,7 @@ impl SamplerCustomBorderColorCreateInfoEXT {
 }
 impl Default for SamplerCustomBorderColorCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT, p_next: std::ptr::null(), custom_border_color: Default::default(), format: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), custom_border_color: Default::default(), format: Default::default() }
     }
 }
 impl std::fmt::Debug for SamplerCustomBorderColorCreateInfoEXT {
@@ -113,7 +113,7 @@ impl PhysicalDeviceCustomBorderColorPropertiesEXT {
 }
 impl Default for PhysicalDeviceCustomBorderColorPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT, p_next: std::ptr::null_mut(), max_custom_border_color_samplers: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_custom_border_color_samplers: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorPropertiesEXT {
@@ -184,7 +184,7 @@ impl PhysicalDeviceCustomBorderColorFeaturesEXT {
 }
 impl Default for PhysicalDeviceCustomBorderColorFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT, p_next: std::ptr::null_mut(), custom_border_colors: Default::default(), custom_border_color_without_format: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), custom_border_colors: Default::default(), custom_border_color_without_format: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorFeaturesEXT {

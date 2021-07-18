@@ -39,7 +39,7 @@ impl ImportMemoryHostPointerInfoEXT {
 }
 impl Default for ImportMemoryHostPointerInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMPORT_MEMORY_HOST_POINTER_INFO_EXT, p_next: std::ptr::null(), handle_type: Default::default(), p_host_pointer: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), handle_type: Default::default(), p_host_pointer: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImportMemoryHostPointerInfoEXT {
@@ -114,7 +114,7 @@ impl MemoryHostPointerPropertiesEXT {
 }
 impl Default for MemoryHostPointerPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_HOST_POINTER_PROPERTIES_EXT, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), memory_type_bits: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryHostPointerPropertiesEXT {
@@ -184,7 +184,7 @@ impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
 }
 impl Default for PhysicalDeviceExternalMemoryHostPropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT, p_next: std::ptr::null_mut(), min_imported_host_pointer_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), min_imported_host_pointer_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceExternalMemoryHostPropertiesEXT {

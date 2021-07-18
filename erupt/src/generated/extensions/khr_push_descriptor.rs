@@ -42,7 +42,7 @@ impl PhysicalDevicePushDescriptorPropertiesKHR {
 }
 impl Default for PhysicalDevicePushDescriptorPropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR, p_next: std::ptr::null_mut(), max_push_descriptors: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_push_descriptors: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDevicePushDescriptorPropertiesKHR {

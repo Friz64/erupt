@@ -50,7 +50,7 @@ impl MetalSurfaceCreateInfoEXT {
 }
 impl Default for MetalSurfaceCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::METAL_SURFACE_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), p_layer: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), p_layer: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for MetalSurfaceCreateInfoEXT {

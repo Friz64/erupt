@@ -48,7 +48,7 @@ impl ImagePipeSurfaceCreateInfoFUCHSIA {
 }
 impl Default for ImagePipeSurfaceCreateInfoFUCHSIA {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA, p_next: std::ptr::null(), flags: Default::default(), image_pipe_handle: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), image_pipe_handle: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for ImagePipeSurfaceCreateInfoFUCHSIA {

@@ -164,7 +164,7 @@ impl SwapchainCreateInfoKHR {
 }
 impl Default for SwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), surface: Default::default(), min_image_count: Default::default(), image_format: Default::default(), image_color_space: Default::default(), image_extent: Default::default(), image_array_layers: Default::default(), image_usage: Default::default(), image_sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), pre_transform: Default::default(), composite_alpha: Default::default(), present_mode: Default::default(), clipped: Default::default(), old_swapchain: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), surface: Default::default(), min_image_count: Default::default(), image_format: Default::default(), image_color_space: Default::default(), image_extent: Default::default(), image_array_layers: Default::default(), image_usage: Default::default(), image_sharing_mode: Default::default(), queue_family_index_count: Default::default(), p_queue_family_indices: std::ptr::null(), pre_transform: Default::default(), composite_alpha: Default::default(), present_mode: Default::default(), clipped: Default::default(), old_swapchain: Default::default() }
     }
 }
 impl std::fmt::Debug for SwapchainCreateInfoKHR {
@@ -312,7 +312,7 @@ impl PresentInfoKHR {
 }
 impl Default for PresentInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PRESENT_INFO_KHR, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), swapchain_count: Default::default(), p_swapchains: std::ptr::null(), p_image_indices: std::ptr::null(), p_results: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), wait_semaphore_count: Default::default(), p_wait_semaphores: std::ptr::null(), swapchain_count: Default::default(), p_swapchains: std::ptr::null(), p_image_indices: std::ptr::null(), p_results: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for PresentInfoKHR {
@@ -406,7 +406,7 @@ impl DeviceGroupPresentCapabilitiesKHR {
 }
 impl Default for DeviceGroupPresentCapabilitiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR, p_next: std::ptr::null_mut(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), present_mask: unsafe { std::mem::zeroed() }, modes: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupPresentCapabilitiesKHR {
@@ -481,7 +481,7 @@ impl ImageSwapchainCreateInfoKHR {
 }
 impl Default for ImageSwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), swapchain: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageSwapchainCreateInfoKHR {
@@ -552,7 +552,7 @@ impl BindImageMemorySwapchainInfoKHR {
 }
 impl Default for BindImageMemorySwapchainInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default(), image_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), swapchain: Default::default(), image_index: Default::default() }
     }
 }
 impl std::fmt::Debug for BindImageMemorySwapchainInfoKHR {
@@ -631,7 +631,7 @@ impl AcquireNextImageInfoKHR {
 }
 impl Default for AcquireNextImageInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACQUIRE_NEXT_IMAGE_INFO_KHR, p_next: std::ptr::null(), swapchain: Default::default(), timeout: Default::default(), semaphore: Default::default(), fence: Default::default(), device_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), swapchain: Default::default(), timeout: Default::default(), semaphore: Default::default(), fence: Default::default(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for AcquireNextImageInfoKHR {
@@ -723,7 +723,7 @@ impl DeviceGroupPresentInfoKHR {
 }
 impl Default for DeviceGroupPresentInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_PRESENT_INFO_KHR, p_next: std::ptr::null(), swapchain_count: Default::default(), p_device_masks: std::ptr::null(), mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), swapchain_count: Default::default(), p_device_masks: std::ptr::null(), mode: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupPresentInfoKHR {
@@ -799,7 +799,7 @@ impl DeviceGroupSwapchainCreateInfoKHR {
 }
 impl Default for DeviceGroupSwapchainCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR, p_next: std::ptr::null(), modes: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), modes: Default::default() }
     }
 }
 impl std::fmt::Debug for DeviceGroupSwapchainCreateInfoKHR {

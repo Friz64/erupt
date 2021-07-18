@@ -193,7 +193,7 @@ impl DebugUtilsObjectNameInfoEXT {
 }
 impl Default for DebugUtilsObjectNameInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_NAME_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), p_object_name: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), p_object_name: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsObjectNameInfoEXT {
@@ -277,7 +277,7 @@ impl DebugUtilsObjectTagInfoEXT {
 }
 impl Default for DebugUtilsObjectTagInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_OBJECT_TAG_INFO_EXT, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), object_type: Default::default(), object_handle: Default::default(), tag_name: Default::default(), tag_size: Default::default(), p_tag: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsObjectTagInfoEXT {
@@ -368,7 +368,7 @@ impl DebugUtilsLabelEXT {
 }
 impl Default for DebugUtilsLabelEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_LABEL_EXT, p_next: std::ptr::null(), p_label_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_label_name: std::ptr::null(), color: unsafe { std::mem::zeroed() } }
     }
 }
 impl std::fmt::Debug for DebugUtilsLabelEXT {
@@ -447,7 +447,7 @@ impl DebugUtilsMessengerCreateInfoEXT {
 }
 impl Default for DebugUtilsMessengerCreateInfoEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT, p_next: std::ptr::null(), flags: Default::default(), message_severity: Default::default(), message_type: Default::default(), pfn_user_callback: Default::default(), p_user_data: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), message_severity: Default::default(), message_type: Default::default(), pfn_user_callback: Default::default(), p_user_data: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for DebugUtilsMessengerCreateInfoEXT {
@@ -546,7 +546,7 @@ impl DebugUtilsMessengerCallbackDataEXT {
 }
 impl Default for DebugUtilsMessengerCallbackDataEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT, p_next: std::ptr::null(), flags: Default::default(), p_message_id_name: std::ptr::null(), message_id_number: Default::default(), p_message: std::ptr::null(), queue_label_count: Default::default(), p_queue_labels: std::ptr::null(), cmd_buf_label_count: Default::default(), p_cmd_buf_labels: std::ptr::null(), object_count: Default::default(), p_objects: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), p_message_id_name: std::ptr::null(), message_id_number: Default::default(), p_message: std::ptr::null(), queue_label_count: Default::default(), p_queue_labels: std::ptr::null(), cmd_buf_label_count: Default::default(), p_cmd_buf_labels: std::ptr::null(), object_count: Default::default(), p_objects: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataEXT {

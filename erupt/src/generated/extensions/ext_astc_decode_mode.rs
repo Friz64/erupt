@@ -29,7 +29,7 @@ impl ImageViewASTCDecodeModeEXT {
 }
 impl Default for ImageViewASTCDecodeModeEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_VIEW_ASTC_DECODE_MODE_EXT, p_next: std::ptr::null(), decode_mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), decode_mode: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageViewASTCDecodeModeEXT {
@@ -99,7 +99,7 @@ impl PhysicalDeviceASTCDecodeFeaturesEXT {
 }
 impl Default for PhysicalDeviceASTCDecodeFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT, p_next: std::ptr::null_mut(), decode_mode_shared_exponent: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), decode_mode_shared_exponent: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceASTCDecodeFeaturesEXT {

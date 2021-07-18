@@ -31,7 +31,7 @@ impl PhysicalDeviceRobustness2FeaturesEXT {
 }
 impl Default for PhysicalDeviceRobustness2FeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT, p_next: std::ptr::null_mut(), robust_buffer_access2: Default::default(), robust_image_access2: Default::default(), null_descriptor: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), robust_buffer_access2: Default::default(), robust_image_access2: Default::default(), null_descriptor: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRobustness2FeaturesEXT {
@@ -112,7 +112,7 @@ impl PhysicalDeviceRobustness2PropertiesEXT {
 }
 impl Default for PhysicalDeviceRobustness2PropertiesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT, p_next: std::ptr::null_mut(), robust_storage_buffer_access_size_alignment: Default::default(), robust_uniform_buffer_access_size_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), robust_storage_buffer_access_size_alignment: Default::default(), robust_uniform_buffer_access_size_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceRobustness2PropertiesEXT {

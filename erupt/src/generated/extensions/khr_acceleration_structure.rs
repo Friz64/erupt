@@ -407,7 +407,7 @@ impl WriteDescriptorSetAccelerationStructureKHR {
 }
 impl Default for WriteDescriptorSetAccelerationStructureKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), acceleration_structure_count: Default::default(), p_acceleration_structures: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for WriteDescriptorSetAccelerationStructureKHR {
@@ -482,7 +482,7 @@ impl PhysicalDeviceAccelerationStructureFeaturesKHR {
 }
 impl Default for PhysicalDeviceAccelerationStructureFeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR, p_next: std::ptr::null_mut(), acceleration_structure: Default::default(), acceleration_structure_capture_replay: Default::default(), acceleration_structure_indirect_build: Default::default(), acceleration_structure_host_commands: Default::default(), descriptor_binding_acceleration_structure_update_after_bind: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), acceleration_structure: Default::default(), acceleration_structure_capture_replay: Default::default(), acceleration_structure_indirect_build: Default::default(), acceleration_structure_host_commands: Default::default(), descriptor_binding_acceleration_structure_update_after_bind: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceAccelerationStructureFeaturesKHR {
@@ -579,7 +579,7 @@ impl PhysicalDeviceAccelerationStructurePropertiesKHR {
 }
 impl Default for PhysicalDeviceAccelerationStructurePropertiesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR, p_next: std::ptr::null_mut(), max_geometry_count: Default::default(), max_instance_count: Default::default(), max_primitive_count: Default::default(), max_per_stage_descriptor_acceleration_structures: Default::default(), max_per_stage_descriptor_update_after_bind_acceleration_structures: Default::default(), max_descriptor_set_acceleration_structures: Default::default(), max_descriptor_set_update_after_bind_acceleration_structures: Default::default(), min_acceleration_structure_scratch_offset_alignment: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), max_geometry_count: Default::default(), max_instance_count: Default::default(), max_primitive_count: Default::default(), max_per_stage_descriptor_acceleration_structures: Default::default(), max_per_stage_descriptor_update_after_bind_acceleration_structures: Default::default(), max_descriptor_set_acceleration_structures: Default::default(), max_descriptor_set_update_after_bind_acceleration_structures: Default::default(), min_acceleration_structure_scratch_offset_alignment: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceAccelerationStructurePropertiesKHR {
@@ -726,7 +726,7 @@ impl AccelerationStructureGeometryTrianglesDataKHR {
 }
 impl Default for AccelerationStructureGeometryTrianglesDataKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR, p_next: std::ptr::null(), vertex_format: Default::default(), vertex_data: Default::default(), vertex_stride: Default::default(), max_vertex: Default::default(), index_type: Default::default(), index_data: Default::default(), transform_data: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), vertex_format: Default::default(), vertex_data: Default::default(), vertex_stride: Default::default(), max_vertex: Default::default(), index_type: Default::default(), index_data: Default::default(), transform_data: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureGeometryTrianglesDataKHR {
@@ -827,7 +827,7 @@ impl AccelerationStructureGeometryAabbsDataKHR {
 }
 impl Default for AccelerationStructureGeometryAabbsDataKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR, p_next: std::ptr::null(), data: Default::default(), stride: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), data: Default::default(), stride: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureGeometryAabbsDataKHR {
@@ -903,7 +903,7 @@ impl AccelerationStructureGeometryInstancesDataKHR {
 }
 impl Default for AccelerationStructureGeometryInstancesDataKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR, p_next: std::ptr::null(), array_of_pointers: Default::default(), data: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), array_of_pointers: Default::default(), data: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureGeometryInstancesDataKHR {
@@ -999,7 +999,7 @@ impl AccelerationStructureGeometryKHR {
 }
 impl Default for AccelerationStructureGeometryKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_GEOMETRY_KHR, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), geometry_type: Default::default(), geometry: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureGeometryKHR {
@@ -1087,7 +1087,7 @@ impl AccelerationStructureBuildGeometryInfoKHR {
 }
 impl Default for AccelerationStructureBuildGeometryInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR, p_next: std::ptr::null(), _type: Default::default(), flags: Default::default(), mode: Default::default(), src_acceleration_structure: Default::default(), dst_acceleration_structure: Default::default(), geometry_count: Default::default(), p_geometries: std::ptr::null(), pp_geometries: std::ptr::null(), scratch_data: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), _type: Default::default(), flags: Default::default(), mode: Default::default(), src_acceleration_structure: Default::default(), dst_acceleration_structure: Default::default(), geometry_count: Default::default(), p_geometries: std::ptr::null(), pp_geometries: std::ptr::null(), scratch_data: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureBuildGeometryInfoKHR {
@@ -1276,7 +1276,7 @@ impl AccelerationStructureCreateInfoKHR {
 }
 impl Default for AccelerationStructureCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_CREATE_INFO_KHR, p_next: std::ptr::null(), create_flags: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default(), _type: Default::default(), device_address: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), create_flags: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default(), _type: Default::default(), device_address: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureCreateInfoKHR {
@@ -1624,7 +1624,7 @@ impl AccelerationStructureDeviceAddressInfoKHR {
 }
 impl Default for AccelerationStructureDeviceAddressInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR, p_next: std::ptr::null(), acceleration_structure: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), acceleration_structure: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureDeviceAddressInfoKHR {
@@ -1694,7 +1694,7 @@ impl AccelerationStructureVersionInfoKHR {
 }
 impl Default for AccelerationStructureVersionInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_VERSION_INFO_KHR, p_next: std::ptr::null(), p_version_data: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_version_data: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureVersionInfoKHR {
@@ -1766,7 +1766,7 @@ impl CopyAccelerationStructureInfoKHR {
 }
 impl Default for CopyAccelerationStructureInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COPY_ACCELERATION_STRUCTURE_INFO_KHR, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyAccelerationStructureInfoKHR {
@@ -1848,7 +1848,7 @@ impl CopyAccelerationStructureToMemoryInfoKHR {
 }
 impl Default for CopyAccelerationStructureToMemoryInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyAccelerationStructureToMemoryInfoKHR {
@@ -1930,7 +1930,7 @@ impl CopyMemoryToAccelerationStructureInfoKHR {
 }
 impl Default for CopyMemoryToAccelerationStructureInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src: Default::default(), dst: Default::default(), mode: Default::default() }
     }
 }
 impl std::fmt::Debug for CopyMemoryToAccelerationStructureInfoKHR {
@@ -2012,7 +2012,7 @@ impl AccelerationStructureBuildSizesInfoKHR {
 }
 impl Default for AccelerationStructureBuildSizesInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR, p_next: std::ptr::null(), acceleration_structure_size: Default::default(), update_scratch_size: Default::default(), build_scratch_size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), acceleration_structure_size: Default::default(), update_scratch_size: Default::default(), build_scratch_size: Default::default() }
     }
 }
 impl std::fmt::Debug for AccelerationStructureBuildSizesInfoKHR {

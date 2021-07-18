@@ -83,7 +83,7 @@ impl ValidationFeaturesEXT {
 }
 impl Default for ValidationFeaturesEXT {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::VALIDATION_FEATURES_EXT, p_next: std::ptr::null(), enabled_validation_feature_count: Default::default(), p_enabled_validation_features: std::ptr::null(), disabled_validation_feature_count: Default::default(), p_disabled_validation_features: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), enabled_validation_feature_count: Default::default(), p_enabled_validation_features: std::ptr::null(), disabled_validation_feature_count: Default::default(), p_disabled_validation_features: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for ValidationFeaturesEXT {

@@ -323,7 +323,7 @@ impl MemoryBarrier2KHR {
 }
 impl Default for MemoryBarrier2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::MEMORY_BARRIER_2_KHR, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for MemoryBarrier2KHR {
@@ -417,7 +417,7 @@ impl ImageMemoryBarrier2KHR {
 }
 impl Default for ImageMemoryBarrier2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::IMAGE_MEMORY_BARRIER_2_KHR, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default(), old_layout: Default::default(), new_layout: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), image: Default::default(), subresource_range: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default(), old_layout: Default::default(), new_layout: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), image: Default::default(), subresource_range: Default::default() }
     }
 }
 impl std::fmt::Debug for ImageMemoryBarrier2KHR {
@@ -540,7 +540,7 @@ impl BufferMemoryBarrier2KHR {
 }
 impl Default for BufferMemoryBarrier2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::BUFFER_MEMORY_BARRIER_2_KHR, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), src_stage_mask: Default::default(), src_access_mask: Default::default(), dst_stage_mask: Default::default(), dst_access_mask: Default::default(), src_queue_family_index: Default::default(), dst_queue_family_index: Default::default(), buffer: Default::default(), offset: Default::default(), size: Default::default() }
     }
 }
 impl std::fmt::Debug for BufferMemoryBarrier2KHR {
@@ -656,7 +656,7 @@ impl DependencyInfoKHR {
 }
 impl Default for DependencyInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DEPENDENCY_INFO_KHR, p_next: std::ptr::null(), dependency_flags: Default::default(), memory_barrier_count: Default::default(), p_memory_barriers: std::ptr::null(), buffer_memory_barrier_count: Default::default(), p_buffer_memory_barriers: std::ptr::null(), image_memory_barrier_count: Default::default(), p_image_memory_barriers: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), dependency_flags: Default::default(), memory_barrier_count: Default::default(), p_memory_barriers: std::ptr::null(), buffer_memory_barrier_count: Default::default(), p_buffer_memory_barriers: std::ptr::null(), image_memory_barrier_count: Default::default(), p_image_memory_barriers: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for DependencyInfoKHR {
@@ -747,7 +747,7 @@ impl SemaphoreSubmitInfoKHR {
 }
 impl Default for SemaphoreSubmitInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SEMAPHORE_SUBMIT_INFO_KHR, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default(), stage_mask: Default::default(), device_index: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), semaphore: Default::default(), value: Default::default(), stage_mask: Default::default(), device_index: Default::default() }
     }
 }
 impl std::fmt::Debug for SemaphoreSubmitInfoKHR {
@@ -833,7 +833,7 @@ impl CommandBufferSubmitInfoKHR {
 }
 impl Default for CommandBufferSubmitInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::COMMAND_BUFFER_SUBMIT_INFO_KHR, p_next: std::ptr::null(), command_buffer: Default::default(), device_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), command_buffer: Default::default(), device_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for CommandBufferSubmitInfoKHR {
@@ -914,7 +914,7 @@ impl SubmitInfo2KHR {
 }
 impl Default for SubmitInfo2KHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::SUBMIT_INFO_2_KHR, p_next: std::ptr::null(), flags: Default::default(), wait_semaphore_info_count: Default::default(), p_wait_semaphore_infos: std::ptr::null(), command_buffer_info_count: Default::default(), p_command_buffer_infos: std::ptr::null(), signal_semaphore_info_count: Default::default(), p_signal_semaphore_infos: std::ptr::null() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), wait_semaphore_info_count: Default::default(), p_wait_semaphore_infos: std::ptr::null(), command_buffer_info_count: Default::default(), p_command_buffer_infos: std::ptr::null(), signal_semaphore_info_count: Default::default(), p_signal_semaphore_infos: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for SubmitInfo2KHR {
@@ -1002,7 +1002,7 @@ impl QueueFamilyCheckpointProperties2NV {
 }
 impl Default for QueueFamilyCheckpointProperties2NV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), checkpoint_execution_stage_mask: Default::default() }
     }
 }
 impl std::fmt::Debug for QueueFamilyCheckpointProperties2NV {
@@ -1073,7 +1073,7 @@ impl CheckpointData2NV {
 }
 impl Default for CheckpointData2NV {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::CHECKPOINT_DATA_2_NV, p_next: std::ptr::null_mut(), stage: Default::default(), p_checkpoint_marker: std::ptr::null_mut() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), stage: Default::default(), p_checkpoint_marker: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for CheckpointData2NV {
@@ -1148,7 +1148,7 @@ impl PhysicalDeviceSynchronization2FeaturesKHR {
 }
 impl Default for PhysicalDeviceSynchronization2FeaturesKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR, p_next: std::ptr::null_mut(), synchronization2: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), synchronization2: Default::default() }
     }
 }
 impl std::fmt::Debug for PhysicalDeviceSynchronization2FeaturesKHR {

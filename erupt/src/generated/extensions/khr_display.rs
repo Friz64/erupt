@@ -451,7 +451,7 @@ impl DisplayModeCreateInfoKHR {
 }
 impl Default for DisplayModeCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_MODE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), parameters: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), parameters: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplayModeCreateInfoKHR {
@@ -646,7 +646,7 @@ impl DisplaySurfaceCreateInfoKHR {
 }
 impl Default for DisplaySurfaceCreateInfoKHR {
     fn default() -> Self {
-        Self { s_type: crate::vk1_0::StructureType::DISPLAY_SURFACE_CREATE_INFO_KHR, p_next: std::ptr::null(), flags: Default::default(), display_mode: Default::default(), plane_index: Default::default(), plane_stack_index: Default::default(), transform: Default::default(), global_alpha: Default::default(), alpha_mode: Default::default(), image_extent: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), flags: Default::default(), display_mode: Default::default(), plane_index: Default::default(), plane_stack_index: Default::default(), transform: Default::default(), global_alpha: Default::default(), alpha_mode: Default::default(), image_extent: Default::default() }
     }
 }
 impl std::fmt::Debug for DisplaySurfaceCreateInfoKHR {

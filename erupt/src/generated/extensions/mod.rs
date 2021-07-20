@@ -162,6 +162,8 @@ pub mod ext_scalar_block_layout;
 pub mod ext_separate_stencil_usage;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_atomic_float.html) · Vulkan extension"]
 pub mod ext_shader_atomic_float;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_atomic_float2.html) · Vulkan extension"]
+pub mod ext_shader_atomic_float2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html) · Vulkan extension"]
 pub mod ext_shader_demote_to_helper_invocation;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_shader_image_atomic_int64.html) · Vulkan extension"]
@@ -224,6 +226,8 @@ pub mod google_display_timing;
 pub mod google_hlsl_functionality1;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GOOGLE_user_type.html) · Vulkan extension"]
 pub mod google_user_type;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HUAWEI_invocation_mask.html) · Vulkan extension"]
+pub mod huawei_invocation_mask;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HUAWEI_subpass_shading.html) · Vulkan extension"]
 pub mod huawei_subpass_shading;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_IMG_filter_cubic.html) · Vulkan extension"]
@@ -326,6 +330,10 @@ pub mod khr_pipeline_executable_properties;
 pub mod khr_pipeline_library;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_portability_subset.html) · Vulkan extension"]
 pub mod khr_portability_subset;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_present_id.html) · Vulkan extension"]
+pub mod khr_present_id;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_present_wait.html) · Vulkan extension"]
+pub mod khr_present_wait;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_push_descriptor.html) · Vulkan extension"]
 pub mod khr_push_descriptor;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_ray_query.html) · Vulkan extension"]

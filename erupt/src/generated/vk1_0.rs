@@ -2245,7 +2245,7 @@ impl crate::vk1_0::ImageType {
     pub const _2D: Self = Self(1);
     pub const _3D: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"] # [doc (alias = "VkImageUsageFlags")] # [derive (Default)] # [repr (transparent)] pub struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits :: TRANSFER_SRC . 0 ; const TRANSFER_DST = ImageUsageFlagBits :: TRANSFER_DST . 0 ; const SAMPLED = ImageUsageFlagBits :: SAMPLED . 0 ; const STORAGE = ImageUsageFlagBits :: STORAGE . 0 ; const COLOR_ATTACHMENT = ImageUsageFlagBits :: COLOR_ATTACHMENT . 0 ; const DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits :: DEPTH_STENCIL_ATTACHMENT . 0 ; const TRANSIENT_ATTACHMENT = ImageUsageFlagBits :: TRANSIENT_ATTACHMENT . 0 ; const INPUT_ATTACHMENT = ImageUsageFlagBits :: INPUT_ATTACHMENT . 0 ; const VIDEO_DECODE_DST_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DST_KHR . 0 ; const VIDEO_DECODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_DECODE_SRC_KHR . 0 ; const VIDEO_DECODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_DECODE_DPB_KHR . 0 ; const FRAGMENT_DENSITY_MAP_EXT = ImageUsageFlagBits :: FRAGMENT_DENSITY_MAP_EXT . 0 ; const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = ImageUsageFlagBits :: FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const VIDEO_ENCODE_DST_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DST_KHR . 0 ; const VIDEO_ENCODE_SRC_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_SRC_KHR . 0 ; const VIDEO_ENCODE_DPB_KHR = ImageUsageFlagBits :: VIDEO_ENCODE_DPB_KHR . 0 ; const INVOCATION_MASK_HUAWEI = ImageUsageFlagBits :: INVOCATION_MASK_HUAWEI . 0 ; const SHADING_RATE_IMAGE_NV = ImageUsageFlagBits :: SHADING_RATE_IMAGE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageUsageFlagBits.html) · Bits enum of [`ImageUsageFlags`]"]
 #[doc(alias = "VkImageUsageFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2277,6 +2277,7 @@ impl std::fmt::Debug for ImageUsageFlagBits {
             &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
             &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
             &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+            &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
             _ => "(unknown variant)",
         })
     }
@@ -3532,6 +3533,7 @@ impl std::fmt::Debug for StructureType {
             &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => "BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT => "PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT",
             &Self::VALIDATION_FEATURES_EXT => "VALIDATION_FEATURES_EXT",
+            &Self::PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR => "PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR",
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV",
             &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => "COOPERATIVE_MATRIX_PROPERTIES_NV",
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV",
@@ -3559,6 +3561,7 @@ impl std::fmt::Debug for StructureType {
             &Self::PIPELINE_EXECUTABLE_INFO_KHR => "PIPELINE_EXECUTABLE_INFO_KHR",
             &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => "PIPELINE_EXECUTABLE_STATISTIC_KHR",
             &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => "PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR",
+            &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT => "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT => "PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV",
             &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => "GRAPHICS_SHADER_GROUP_CREATE_INFO_NV",
@@ -3583,6 +3586,8 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT",
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT",
             &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => "PIPELINE_LIBRARY_CREATE_INFO_KHR",
+            &Self::PRESENT_ID_KHR => "PRESENT_ID_KHR",
+            &Self::PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR => "PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR",
             &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT => "PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT",
             &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => "DEVICE_PRIVATE_DATA_CREATE_INFO_EXT",
             &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => "PRIVATE_DATA_SLOT_CREATE_INFO_EXT",
@@ -3642,6 +3647,7 @@ impl std::fmt::Debug for StructureType {
             &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => "SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI",
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => "PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI",
+            &Self::PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI => "PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI",
             &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => "MEMORY_GET_REMOTE_ADDRESS_INFO_NV",
             &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => "PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV",
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT",
@@ -4105,6 +4111,7 @@ impl StructureType {
             &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_buffer_device_address::BufferDeviceAddressCreateInfoEXT>()),
             &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>()),
             &Self::VALIDATION_FEATURES_EXT => Some(size_of::<crate::extensions::ext_validation_features::ValidationFeaturesEXT>()),
+            &Self::PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR => Some(size_of::<crate::extensions::khr_present_wait::PhysicalDevicePresentWaitFeaturesKHR>()),
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixFeaturesNV>()),
             &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::CooperativeMatrixPropertiesNV>()),
             &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_cooperative_matrix::PhysicalDeviceCooperativeMatrixPropertiesNV>()),
@@ -4132,6 +4139,7 @@ impl StructureType {
             &Self::PIPELINE_EXECUTABLE_INFO_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR>()),
             &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>()),
             &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => Some(size_of::<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>()),
+            &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT => Some(size_of::<crate::extensions::ext_shader_atomic_float2::PhysicalDeviceShaderAtomicFloat2FeaturesEXT>()),
             &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT => Some(size_of::<crate::extensions::ext_shader_demote_to_helper_invocation::PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>()),
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV>()),
             &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => Some(size_of::<crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNV>()),
@@ -4156,6 +4164,8 @@ impl StructureType {
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => Some(size_of::<crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorPropertiesEXT>()),
             &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => Some(size_of::<crate::extensions::ext_custom_border_color::PhysicalDeviceCustomBorderColorFeaturesEXT>()),
             &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => Some(size_of::<crate::extensions::khr_pipeline_library::PipelineLibraryCreateInfoKHR>()),
+            &Self::PRESENT_ID_KHR => Some(size_of::<crate::extensions::khr_present_id::PresentIdKHR>()),
+            &Self::PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR => Some(size_of::<crate::extensions::khr_present_id::PhysicalDevicePresentIdFeaturesKHR>()),
             &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT => Some(size_of::<crate::extensions::ext_private_data::PhysicalDevicePrivateDataFeaturesEXT>()),
             &Self::DEVICE_PRIVATE_DATA_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_private_data::DevicePrivateDataCreateInfoEXT>()),
             &Self::PRIVATE_DATA_SLOT_CREATE_INFO_EXT => Some(size_of::<crate::extensions::ext_private_data::PrivateDataSlotCreateInfoEXT>()),
@@ -4215,6 +4225,7 @@ impl StructureType {
             &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::SubpassShadingPipelineCreateInfoHUAWEI>()),
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::PhysicalDeviceSubpassShadingFeaturesHUAWEI>()),
             &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => Some(size_of::<crate::extensions::huawei_subpass_shading::PhysicalDeviceSubpassShadingPropertiesHUAWEI>()),
+            &Self::PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI => Some(size_of::<crate::extensions::huawei_invocation_mask::PhysicalDeviceInvocationMaskFeaturesHUAWEI>()),
             &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => Some(size_of::<crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV>()),
             &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => Some(size_of::<crate::extensions::nv_external_memory_rdma::PhysicalDeviceExternalMemoryRDMAFeaturesNV>()),
             &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => Some(size_of::<crate::extensions::ext_extended_dynamic_state2::PhysicalDeviceExtendedDynamicState2FeaturesEXT>()),
@@ -16024,10 +16035,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 184u32;
+pub const HEADER_VERSION: u32 = 185u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 184u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 185u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]
@@ -17780,18 +17791,32 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent.html) · Function"]
     #[doc(alias = "vkCmdSetEvent")]
-    pub unsafe fn cmd_set_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> () {
+    pub unsafe fn cmd_set_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: Option<crate::vk1_0::PipelineStageFlags>) -> () {
         let _function = self.cmd_set_event.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(command_buffer as _, event as _, stage_mask as _);
+        let _return = _function(
+            command_buffer as _,
+            event as _,
+            match stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
+        );
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent.html) · Function"]
     #[doc(alias = "vkCmdResetEvent")]
-    pub unsafe fn cmd_reset_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> () {
+    pub unsafe fn cmd_reset_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: Option<crate::vk1_0::PipelineStageFlags>) -> () {
         let _function = self.cmd_reset_event.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(command_buffer as _, event as _, stage_mask as _);
+        let _return = _function(
+            command_buffer as _,
+            event as _,
+            match stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
+        );
         ()
     }
     #[inline]
@@ -17829,15 +17854,21 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier")]
-    pub unsafe fn cmd_pipeline_barrier(&self, command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, dependency_flags: Option<crate::vk1_0::DependencyFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
+    pub unsafe fn cmd_pipeline_barrier(&self, command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dependency_flags: Option<crate::vk1_0::DependencyFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
         let _function = self.cmd_pipeline_barrier.expect(crate::NOT_LOADED_MESSAGE);
         let memory_barrier_count = memory_barriers.len();
         let buffer_memory_barrier_count = buffer_memory_barriers.len();
         let image_memory_barrier_count = image_memory_barriers.len();
         let _return = _function(
             command_buffer as _,
-            src_stage_mask as _,
-            dst_stage_mask as _,
+            match src_stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
+            match dst_stage_mask {
+                Some(v) => v,
+                None => Default::default(),
+            },
             match dependency_flags {
                 Some(v) => v,
                 None => Default::default(),

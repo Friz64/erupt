@@ -276,7 +276,7 @@ macro_rules! bits_copy {
 
 const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded";
 
-/// Allows returning small amounts of data (specifially with a length <= 8)
+/// Allows returning small amounts of data (specifically with a length <= 8)
 /// without needlessly allocating heap memory.
 pub type SmallVec<T> = smallvec::SmallVec<[T; 8]>;
 

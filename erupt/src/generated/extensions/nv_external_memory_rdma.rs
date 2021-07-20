@@ -24,7 +24,7 @@ impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function"]
 #[allow(non_camel_case_types)]
-pub type PFN_vkGetMemoryRemoteAddressNV = unsafe extern "system" fn(device: crate::vk1_0::Device, get_memory_remote_address_info: *const crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV, p_address: *mut crate::extensions::nv_external_memory_rdma::RemoteAddressNV) -> crate::vk1_0::Result;
+pub type PFN_vkGetMemoryRemoteAddressNV = unsafe extern "system" fn(device: crate::vk1_0::Device, p_memory_get_remote_address_info: *const crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV, p_address: *mut crate::extensions::nv_external_memory_rdma::RemoteAddressNV) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
@@ -181,10 +181,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function"]
     #[doc(alias = "vkGetMemoryRemoteAddressNV")]
-    pub unsafe fn get_memory_remote_address_nv(&self, get_memory_remote_address_info: &crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV) -> crate::utils::VulkanResult<crate::extensions::nv_external_memory_rdma::RemoteAddressNV> {
+    pub unsafe fn get_memory_remote_address_nv(&self, memory_get_remote_address_info: &crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV) -> crate::utils::VulkanResult<crate::extensions::nv_external_memory_rdma::RemoteAddressNV> {
         let _function = self.get_memory_remote_address_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut address = std::ptr::null_mut();
-        let _return = _function(self.handle, get_memory_remote_address_info as _, &mut address);
+        let _return = _function(self.handle, memory_get_remote_address_info as _, &mut address);
         crate::utils::VulkanResult::new(_return, address)
     }
 }

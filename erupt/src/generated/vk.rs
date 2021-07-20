@@ -163,6 +163,8 @@ pub use crate::extensions::ext_separate_stencil_usage::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_shader_atomic_float::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_shader_atomic_float2::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_shader_demote_to_helper_invocation::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_shader_image_atomic_int64::*;
@@ -224,6 +226,8 @@ pub use crate::extensions::google_display_timing::*;
 pub use crate::extensions::google_hlsl_functionality1::*;
 #[doc(no_inline)]
 pub use crate::extensions::google_user_type::*;
+#[doc(no_inline)]
+pub use crate::extensions::huawei_invocation_mask::*;
 #[doc(no_inline)]
 pub use crate::extensions::huawei_subpass_shading::*;
 #[doc(no_inline)]
@@ -326,6 +330,10 @@ pub use crate::extensions::khr_pipeline_executable_properties::*;
 pub use crate::extensions::khr_pipeline_library::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_portability_subset::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_present_id::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_present_wait::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_push_descriptor::*;
 #[doc(no_inline)]

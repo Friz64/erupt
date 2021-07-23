@@ -61,8 +61,10 @@ A: It represents the Vulkan Header version this version of erupt was generated a
 informational.
 
 ### Q: I need to easily allocate memory, what should i use?
-A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc)
-or [`vk-alloc`](https://github.com/hasenbanck/vk-alloc).
+A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc),
+[`vk-alloc`](https://github.com/hasenbanck/vk-alloc) for Rust-native
+solutions and [`vk-mem-erupt`](https://github.com/HindrikStegenga/vk-mem-rs) for
+bindings to the C++ Vulkan Memory Allocator (VMA) library.
 
 ## Minimum Supported Rust Version (MSRV)
 Rust 1.48 or higher.

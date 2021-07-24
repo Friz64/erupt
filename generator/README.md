@@ -9,10 +9,14 @@ preprocess the C Vulkan Header files.
 cargo run --release -p generator
 ```
 
-To allow for more flexibility, you can provide a
-custom preprocessor path with the `-p` option.
+## Options
 
-Examples include:
+- `-p`, `--preprocessor`: Provide a custom preprocessor path.
+- `--vulkan-headers-path`: Specify a custom `Vulkan-Headers` directory.
+  - **Please be aware that versions outside of `generator/Vulkan-Headers/` are
+    unsupported and may fail to generate.**
+
+## CLI Examples
 
 ```
 cargo run --release -p generator -- -p gcc

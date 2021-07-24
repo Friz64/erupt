@@ -19,7 +19,6 @@ use std::{
     error::Error,
     fmt::{self, Debug, Display},
     fs,
-    path::Path,
 };
 
 #[derive(Debug)]
@@ -50,7 +49,7 @@ pub struct Source {
 
 impl Source {
     pub fn collect(opt: &Opt) -> Source {
-        let vk_xml = fs::read_to_string("generator/Vulkan-Headers/registry/vk.xml")
+        let vk_xml = fs::read_to_string(opt.vulkan_headers_path.join("registry/vk.xml"))
             .expect("Failed to read vk.xml");
         let document = Document::parse(&vk_xml).expect("Failed to parse vk.xml");
         let registry = document.root_element();
@@ -85,9 +84,9 @@ impl Source {
             .expect("Failed to parse Header version");
         log::info!("Generating against header version {}", header_version);
 
-        let headers_include = Path::new("generator/Vulkan-Headers/include");
+        let headers_include = opt.vulkan_headers_path.join("include");
         let include_vulkan = headers_include.join("vulkan");
-        let other_includes_headers: Vec<_> = fs::read_dir(headers_include)
+        let other_includes_headers: Vec<_> = fs::read_dir(&headers_include)
             .expect("Failed to read include dir")
             .map(|entry| entry.expect("Failed to read include dir entry"))
             .filter(|entry| entry.file_type().unwrap().is_dir())

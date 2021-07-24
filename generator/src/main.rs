@@ -18,6 +18,12 @@ use structopt::StructOpt;
 pub struct Opt {
     #[structopt(short, long, parse(from_os_str), default_value = "clang")]
     preprocessor: PathBuf,
+    #[structopt(
+        long,
+        parse(from_os_str),
+        default_value = "./generator/Vulkan-Headers/"
+    )]
+    vulkan_headers_path: PathBuf,
 }
 
 fn main() {

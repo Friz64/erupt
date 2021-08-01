@@ -436,7 +436,7 @@ impl Enum {
                 Some(structure) => {
                     let path = structure.origin().module_path();
                     let typ = structure.name.ident();
-                    quote! { Some(size_of::<crate::#path#typ>()) }
+                    quote! { Some(Layout::new::<crate::#path#typ>()) }
                 }
                 None => quote! { None },
             }
@@ -444,10 +444,10 @@ impl Enum {
 
         quote! {
             impl #enum_ident {
-                /// Returns the memory size of the underlying structure type.
+                /// Returns the memory layout (size, alignment) of the underlying structure type.
                 /// Returns `None` when the structure type is unknown.
-                pub fn mem_size(&self) -> Option<usize> {
-                    use std::mem::size_of;
+                pub fn mem_layout(&self) -> Option<std::alloc::Layout> {
+                    use std::alloc::Layout;
                     match self {
                         #(&Self::#variant_idents => #variant_values,)*
                         _ => None,

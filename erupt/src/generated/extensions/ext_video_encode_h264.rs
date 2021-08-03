@@ -6,7 +6,7 @@
 //! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 1;
+pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_video_encode_h264");
@@ -26,50 +26,50 @@ impl crate::vk1_0::StructureType {
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const ENCODE_H264_EXT: Self = Self(65536);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilitiesFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilitiesFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilitiesFlagsEXT : u32 { const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilitiesFlagBitsEXT :: VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilitiesFlagsEXT`]"]
-#[doc(alias = "VkVideoEncodeH264CapabilitiesFlagBitsEXT")]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilityFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilityFlagsEXT : u32 { const CABAC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CABAC_EXT . 0 ; const CAVLC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CAVLC_EXT . 0 ; const WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const TRANSFORM_8X8_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: TRANSFORM_8X8_EXT . 0 ; const CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CHROMA_QP_OFFSET_EXT . 0 ; const SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilityFlagsEXT`]"]
+#[doc(alias = "VkVideoEncodeH264CapabilityFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
-pub struct VideoEncodeH264CapabilitiesFlagBitsEXT(pub u32);
-impl VideoEncodeH264CapabilitiesFlagBitsEXT {
+pub struct VideoEncodeH264CapabilityFlagBitsEXT(pub u32);
+impl VideoEncodeH264CapabilityFlagBitsEXT {
     #[inline]
     #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> VideoEncodeH264CapabilitiesFlagsEXT {
-        VideoEncodeH264CapabilitiesFlagsEXT::from_bits_truncate(self.0)
+    pub const fn bitmask(&self) -> VideoEncodeH264CapabilityFlagsEXT {
+        VideoEncodeH264CapabilityFlagsEXT::from_bits_truncate(self.0)
     }
 }
-impl std::fmt::Debug for VideoEncodeH264CapabilitiesFlagBitsEXT {
+impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT => "VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT => "VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT => "VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT => "VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT => "VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT => "VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT",
-            &Self::VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => "VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT",
+            &Self::CABAC_EXT => "CABAC_EXT",
+            &Self::CAVLC_EXT => "CAVLC_EXT",
+            &Self::WEIGHTED_BI_PRED_IMPLICIT_EXT => "WEIGHTED_BI_PRED_IMPLICIT_EXT",
+            &Self::TRANSFORM_8X8_EXT => "TRANSFORM_8X8_EXT",
+            &Self::CHROMA_QP_OFFSET_EXT => "CHROMA_QP_OFFSET_EXT",
+            &Self::SECOND_CHROMA_QP_OFFSET_EXT => "SECOND_CHROMA_QP_OFFSET_EXT",
+            &Self::DEBLOCKING_FILTER_DISABLED_EXT => "DEBLOCKING_FILTER_DISABLED_EXT",
+            &Self::DEBLOCKING_FILTER_ENABLED_EXT => "DEBLOCKING_FILTER_ENABLED_EXT",
+            &Self::DEBLOCKING_FILTER_PARTIAL_EXT => "DEBLOCKING_FILTER_PARTIAL_EXT",
+            &Self::MULTIPLE_SLICE_PER_FRAME_EXT => "MULTIPLE_SLICE_PER_FRAME_EXT",
+            &Self::EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => "EVENLY_DISTRIBUTED_SLICE_SIZE_EXT",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
-impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesFlagBitsEXT {
-    pub const VIDEO_ENCODE_H264_CAPABILITY_CABAC_EXT: Self = Self(1);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_CAVLC_EXT: Self = Self(2);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_WEIGHTED_BI_PRED_IMPLICIT_EXT: Self = Self(4);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_TRANSFORM_8X8_EXT: Self = Self(8);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_CHROMA_QP_OFFSET_EXT: Self = Self(16);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(32);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(64);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(128);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(256);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(512);
-    pub const VIDEO_ENCODE_H264_CAPABILITY_EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(1024);
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagBitsEXT {
+    pub const CABAC_EXT: Self = Self(1);
+    pub const CAVLC_EXT: Self = Self(2);
+    pub const WEIGHTED_BI_PRED_IMPLICIT_EXT: Self = Self(4);
+    pub const TRANSFORM_8X8_EXT: Self = Self(8);
+    pub const CHROMA_QP_OFFSET_EXT: Self = Self(16);
+    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(32);
+    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(64);
+    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(128);
+    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(256);
+    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(512);
+    pub const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(1024);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264InputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264InputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264InputModeFlagsEXT : u32 { const FRAME_EXT = VideoEncodeH264InputModeFlagBitsEXT :: FRAME_EXT . 0 ; const SLICE_EXT = VideoEncodeH264InputModeFlagBitsEXT :: SLICE_EXT . 0 ; const NON_VCL_EXT = VideoEncodeH264InputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264InputModeFlagsEXT`]"]
@@ -177,7 +177,7 @@ impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXTB
 pub struct VideoEncodeH264CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesFlagsEXT,
+    pub flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagsEXT,
     pub input_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264InputModeFlagsEXT,
     pub output_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264OutputModeFlagsEXT,
     pub min_picture_size_in_mbs: crate::vk1_0::Extent2D,
@@ -218,7 +218,7 @@ impl<'a> VideoEncodeH264CapabilitiesEXTBuilder<'a> {
         VideoEncodeH264CapabilitiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn flags(mut self, flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilitiesFlagsEXT) -> Self {
+    pub fn flags(mut self, flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }

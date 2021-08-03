@@ -6,7 +6,7 @@
 //! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_VIDEO_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 1;
+pub const KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_VIDEO_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_video_queue");
@@ -200,20 +200,20 @@ impl crate::extensions::khr_video_queue::VideoComponentBitDepthFlagBitsKHR {
     pub const VIDEO_COMPONENT_DEPTH_10_KHR: Self = Self(4);
     pub const VIDEO_COMPONENT_DEPTH_12_KHR: Self = Self(16);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesFlagsKHR.html) · Bitmask of [`VideoCapabilitiesFlagBitsKHR`]"] # [doc (alias = "VkVideoCapabilitiesFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCapabilitiesFlagsKHR : u32 { const PROTECTED_CONTENT_KHR = VideoCapabilitiesFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; const SEPARATE_REFERENCE_IMAGES_KHR = VideoCapabilitiesFlagBitsKHR :: SEPARATE_REFERENCE_IMAGES_KHR . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesFlagBitsKHR.html) · Bits enum of [`VideoCapabilitiesFlagsKHR`]"]
-#[doc(alias = "VkVideoCapabilitiesFlagBitsKHR")]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagsKHR.html) · Bitmask of [`VideoCapabilityFlagBitsKHR`]"] # [doc (alias = "VkVideoCapabilityFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCapabilityFlagsKHR : u32 { const PROTECTED_CONTENT_KHR = VideoCapabilityFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; const SEPARATE_REFERENCE_IMAGES_KHR = VideoCapabilityFlagBitsKHR :: SEPARATE_REFERENCE_IMAGES_KHR . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagBitsKHR.html) · Bits enum of [`VideoCapabilityFlagsKHR`]"]
+#[doc(alias = "VkVideoCapabilityFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
-pub struct VideoCapabilitiesFlagBitsKHR(pub u32);
-impl VideoCapabilitiesFlagBitsKHR {
+pub struct VideoCapabilityFlagBitsKHR(pub u32);
+impl VideoCapabilityFlagBitsKHR {
     #[inline]
     #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> VideoCapabilitiesFlagsKHR {
-        VideoCapabilitiesFlagsKHR::from_bits_truncate(self.0)
+    pub const fn bitmask(&self) -> VideoCapabilityFlagsKHR {
+        VideoCapabilityFlagsKHR::from_bits_truncate(self.0)
     }
 }
-impl std::fmt::Debug for VideoCapabilitiesFlagBitsKHR {
+impl std::fmt::Debug for VideoCapabilityFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
@@ -223,7 +223,7 @@ impl std::fmt::Debug for VideoCapabilitiesFlagBitsKHR {
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
-impl crate::extensions::khr_video_queue::VideoCapabilitiesFlagBitsKHR {
+impl crate::extensions::khr_video_queue::VideoCapabilityFlagBitsKHR {
     pub const PROTECTED_CONTENT_KHR: Self = Self(1);
     pub const SEPARATE_REFERENCE_IMAGES_KHR: Self = Self(2);
 }
@@ -776,7 +776,7 @@ impl<'a> std::ops::DerefMut for VideoProfileKHRBuilder<'a> {
 pub struct VideoCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
-    pub capability_flags: crate::extensions::khr_video_queue::VideoCapabilitiesFlagsKHR,
+    pub capability_flags: crate::extensions::khr_video_queue::VideoCapabilityFlagsKHR,
     pub min_bitstream_buffer_offset_alignment: crate::vk1_0::DeviceSize,
     pub min_bitstream_buffer_size_alignment: crate::vk1_0::DeviceSize,
     pub video_picture_extent_granularity: crate::vk1_0::Extent2D,
@@ -814,7 +814,7 @@ impl<'a> VideoCapabilitiesKHRBuilder<'a> {
         VideoCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
-    pub fn capability_flags(mut self, capability_flags: crate::extensions::khr_video_queue::VideoCapabilitiesFlagsKHR) -> Self {
+    pub fn capability_flags(mut self, capability_flags: crate::extensions::khr_video_queue::VideoCapabilityFlagsKHR) -> Self {
         self.0.capability_flags = capability_flags as _;
         self
     }

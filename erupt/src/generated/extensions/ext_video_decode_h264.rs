@@ -6,7 +6,7 @@
 //! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 1;
+pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_DECODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_video_decode_h264");
@@ -45,34 +45,34 @@ impl crate::vk1_0::StructureType {
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const DECODE_H264_EXT: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagsEXT.html) · Bitmask of [`VideoDecodeH264FieldLayoutFlagBitsEXT`]"] # [doc (alias = "VkVideoDecodeH264FieldLayoutFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeH264FieldLayoutFlagsEXT : u32 { const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT . 0 ; const LINE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: LINE_INTERLACED_PLANE_EXT . 0 ; const SEPARATE_INTERLACED_PLANE_EXT = VideoDecodeH264FieldLayoutFlagBitsEXT :: SEPARATE_INTERLACED_PLANE_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264FieldLayoutFlagBitsEXT.html) · Bits enum of [`VideoDecodeH264FieldLayoutFlagsEXT`]"]
-#[doc(alias = "VkVideoDecodeH264FieldLayoutFlagBitsEXT")]
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264PictureLayoutFlagsEXT.html) · Bitmask of [`VideoDecodeH264PictureLayoutFlagBitsEXT`]"] # [doc (alias = "VkVideoDecodeH264PictureLayoutFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoDecodeH264PictureLayoutFlagsEXT : u32 { const PROGRESSIVE_EXT = VideoDecodeH264PictureLayoutFlagBitsEXT :: PROGRESSIVE_EXT . 0 ; const INTERLACED_INTERLEAVED_LINES_EXT = VideoDecodeH264PictureLayoutFlagBitsEXT :: INTERLACED_INTERLEAVED_LINES_EXT . 0 ; const INTERLACED_SEPARATE_PLANES_EXT = VideoDecodeH264PictureLayoutFlagBitsEXT :: INTERLACED_SEPARATE_PLANES_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264PictureLayoutFlagBitsEXT.html) · Bits enum of [`VideoDecodeH264PictureLayoutFlagsEXT`]"]
+#[doc(alias = "VkVideoDecodeH264PictureLayoutFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
-pub struct VideoDecodeH264FieldLayoutFlagBitsEXT(pub u32);
-impl VideoDecodeH264FieldLayoutFlagBitsEXT {
+pub struct VideoDecodeH264PictureLayoutFlagBitsEXT(pub u32);
+impl VideoDecodeH264PictureLayoutFlagBitsEXT {
     #[inline]
     #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> VideoDecodeH264FieldLayoutFlagsEXT {
-        VideoDecodeH264FieldLayoutFlagsEXT::from_bits_truncate(self.0)
+    pub const fn bitmask(&self) -> VideoDecodeH264PictureLayoutFlagsEXT {
+        VideoDecodeH264PictureLayoutFlagsEXT::from_bits_truncate(self.0)
     }
 }
-impl std::fmt::Debug for VideoDecodeH264FieldLayoutFlagBitsEXT {
+impl std::fmt::Debug for VideoDecodeH264PictureLayoutFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT => "VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT",
-            &Self::LINE_INTERLACED_PLANE_EXT => "LINE_INTERLACED_PLANE_EXT",
-            &Self::SEPARATE_INTERLACED_PLANE_EXT => "SEPARATE_INTERLACED_PLANE_EXT",
+            &Self::PROGRESSIVE_EXT => "PROGRESSIVE_EXT",
+            &Self::INTERLACED_INTERLEAVED_LINES_EXT => "INTERLACED_INTERLEAVED_LINES_EXT",
+            &Self::INTERLACED_SEPARATE_PLANES_EXT => "INTERLACED_SEPARATE_PLANES_EXT",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::extensions::ext_video_decode_h264`]"]
-impl crate::extensions::ext_video_decode_h264::VideoDecodeH264FieldLayoutFlagBitsEXT {
-    pub const VIDEO_DECODE_H264_PROGRESSIVE_PICTURES_ONLY_EXT: Self = Self(0);
-    pub const LINE_INTERLACED_PLANE_EXT: Self = Self(1);
-    pub const SEPARATE_INTERLACED_PLANE_EXT: Self = Self(2);
+impl crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureLayoutFlagBitsEXT {
+    pub const PROGRESSIVE_EXT: Self = Self(0);
+    pub const INTERLACED_INTERLEAVED_LINES_EXT: Self = Self(1);
+    pub const INTERLACED_SEPARATE_PLANES_EXT: Self = Self(2);
 }
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
@@ -90,19 +90,19 @@ pub struct VideoDecodeH264ProfileEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub std_profile_idc: crate::external::vk_video::StdVideoH264ProfileIdc,
-    pub field_layout: crate::extensions::ext_video_decode_h264::VideoDecodeH264FieldLayoutFlagsEXT,
+    pub picture_layout: crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureLayoutFlagsEXT,
 }
 impl VideoDecodeH264ProfileEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H264_PROFILE_EXT;
 }
 impl Default for VideoDecodeH264ProfileEXT {
     fn default() -> Self {
-        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), std_profile_idc: Default::default(), field_layout: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), std_profile_idc: Default::default(), picture_layout: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoDecodeH264ProfileEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VideoDecodeH264ProfileEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("std_profile_idc", &self.std_profile_idc).field("field_layout", &self.field_layout).finish()
+        f.debug_struct("VideoDecodeH264ProfileEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("std_profile_idc", &self.std_profile_idc).field("picture_layout", &self.picture_layout).finish()
     }
 }
 impl VideoDecodeH264ProfileEXT {
@@ -126,8 +126,8 @@ impl<'a> VideoDecodeH264ProfileEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn field_layout(mut self, field_layout: crate::extensions::ext_video_decode_h264::VideoDecodeH264FieldLayoutFlagsEXT) -> Self {
-        self.0.field_layout = field_layout as _;
+    pub fn picture_layout(mut self, picture_layout: crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureLayoutFlagsEXT) -> Self {
+        self.0.picture_layout = picture_layout as _;
         self
     }
     #[inline]

@@ -19,7 +19,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::{cmp::Ordering, collections::HashMap, convert::TryFrom};
+use std::{cell::RefCell, cmp::Ordering, collections::HashMap, convert::TryFrom};
 
 impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
     fn from(field: &'a StructField) -> Self {
@@ -204,6 +204,8 @@ pub struct Structure {
     pub kind: StructureKind,
     pub fields: Vec<StructureField>,
     pub metadata: StructureMetadata,
+    // caches the result of `::supports_hash_eq()`
+    supports_hash_eq: RefCell<Option<bool>>,
 }
 
 impl Structure {
@@ -287,13 +289,17 @@ impl Structure {
             },
         };
 
+        let hash_eq_derive = self
+            .supports_hash_eq(source)
+            .then(|| quote! { Hash, PartialEq, Eq, });
+
         let mut tokens = HashMap::new();
         tokens.insert(
             origin.clone(),
             quote! {
                 #[doc = #doc]
                 #doc_alias
-                #[derive(Copy, Clone)]
+                #[derive(Copy, Clone, #hash_eq_derive)]
                 #[repr(C)]
                 pub #keyword #ident {
                     #(pub #field_idents: #field_types),*
@@ -331,6 +337,18 @@ impl Structure {
             _ => false,
         }
     }
+
+    pub fn supports_hash_eq(&self, source: &Source) -> bool {
+        *(self.supports_hash_eq.borrow_mut().get_or_insert_with(|| {
+            self.kind == StructureKind::Struct
+                && self.fields.iter().all(|field| match field {
+                    StructureField::Normal(field) => field.ty.supports_hash_eq(source),
+                    StructureField::Bitfield(fields) => {
+                        fields.iter().all(|field| field.ty.supports_hash_eq(source))
+                    }
+                })
+        }))
+    }
 }
 
 impl TryFrom<&CDeclaration> for Structure {
@@ -358,6 +376,7 @@ impl TryFrom<&CDeclaration> for Structure {
                             kind: struct_type.node.kind.node.clone().into(),
                             fields: StructureField::distribute_field_decls(field_decls),
                             metadata: StructureMetadata::empty(),
+                            supports_hash_eq: RefCell::new(None),
                         });
                     }
                 }

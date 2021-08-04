@@ -20,7 +20,7 @@ impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorProper
 impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure"]
 #[doc(alias = "VkVertexInputBindingDivisorDescriptionEXT")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputBindingDivisorDescriptionEXT {
     pub binding: u32,

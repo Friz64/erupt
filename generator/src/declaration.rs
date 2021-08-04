@@ -310,6 +310,43 @@ impl Type {
             _ => false,
         }
     }
+
+    pub fn supports_hash_eq(&self, source: &Source) -> bool {
+        match self {
+            Type::Void | Type::Float | Type::Double | Type::Pointer { .. } => false,
+            Type::Char
+            | Type::SignedChar
+            | Type::UnsignedChar
+            | Type::Short
+            | Type::UnsignedShort
+            | Type::Int
+            | Type::UnsignedInt
+            | Type::Long
+            | Type::UnsignedLong
+            | Type::LongLong
+            | Type::UnsignedLongLong
+            | Type::Int8
+            | Type::UnsignedInt8
+            | Type::Int16
+            | Type::UnsignedInt16
+            | Type::Int32
+            | Type::UnsignedInt32
+            | Type::Int64
+            | Type::UnsignedInt64
+            | Type::Size
+            | Type::UnsignedSize
+            | Type::Bool
+            | Type::CStr
+            | Type::Unit => true,
+            Type::Named(name) => name.supports_hash_eq(source),
+            Type::Reference { to, .. } => to.supports_hash_eq(source),
+            Type::Array { of, .. } => of.supports_hash_eq(source),
+            Type::Tuple(types) => types.iter().all(|ty| ty.supports_hash_eq(source)),
+            Type::Option(of) => of.supports_hash_eq(source),
+            Type::SmallVec(of) => of.supports_hash_eq(source),
+            Type::Slice { of, .. } => of.supports_hash_eq(source),
+        }
+    }
 }
 
 #[derive(Debug, Clone)]

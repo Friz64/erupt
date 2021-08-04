@@ -171,7 +171,7 @@ pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR = unsafe extern "system" fn(ph
 pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_present_mode_count: *mut u32, p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceCapabilitiesKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SurfaceCapabilitiesKHR {
     pub min_image_count: u32,
@@ -290,7 +290,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Structure"]
 #[doc(alias = "VkSurfaceFormatKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SurfaceFormatKHR {
     pub format: crate::vk1_0::Format,

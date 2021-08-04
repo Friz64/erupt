@@ -1686,7 +1686,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVariablePointersFeaturesBuilder<'a
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryProperties.html) · Structure"]
 #[doc(alias = "VkExternalMemoryProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExternalMemoryProperties {
     pub external_memory_features: crate::vk1_1::ExternalMemoryFeatureFlags,
@@ -3913,7 +3913,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupDeviceCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntry.html) · Structure"]
 #[doc(alias = "VkDescriptorUpdateTemplateEntry")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorUpdateTemplateEntry {
     pub dst_binding: u32,
@@ -4116,7 +4116,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInputAttachmentAspectReference.html) · Structure"]
 #[doc(alias = "VkInputAttachmentAspectReference")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct InputAttachmentAspectReference {
     pub subpass: u32,

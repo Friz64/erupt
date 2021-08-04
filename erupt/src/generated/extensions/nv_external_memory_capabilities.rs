@@ -71,7 +71,7 @@ impl crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFl
 pub type PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: crate::vk1_0::ImageCreateFlags, external_handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, p_external_image_format_properties: *mut crate::extensions::nv_external_memory_capabilities::ExternalImageFormatPropertiesNV) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Structure"]
 #[doc(alias = "VkExternalImageFormatPropertiesNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExternalImageFormatPropertiesNV {
     pub image_format_properties: crate::vk1_0::ImageFormatProperties,

@@ -32,7 +32,7 @@ impl crate::extensions::amd_shader_info::ShaderInfoTypeAMD {
 pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline: crate::vk1_0::Pipeline, shader_stage: crate::vk1_0::ShaderStageFlagBits, info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD, p_info_size: *mut usize, p_info: *mut std::ffi::c_void) -> crate::vk1_0::Result;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure"]
 #[doc(alias = "VkShaderResourceUsageAMD")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ShaderResourceUsageAMD {
     pub num_used_vgprs: u32,
@@ -121,7 +121,7 @@ impl<'a> std::ops::DerefMut for ShaderResourceUsageAMDBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure"]
 #[doc(alias = "VkShaderStatisticsInfoAMD")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ShaderStatisticsInfoAMD {
     pub shader_stage_mask: crate::vk1_0::ShaderStageFlags,

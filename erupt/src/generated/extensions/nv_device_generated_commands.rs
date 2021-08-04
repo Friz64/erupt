@@ -506,7 +506,7 @@ impl<'a> std::ops::DerefMut for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindShaderGroupIndirectCommandNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindShaderGroupIndirectCommandNV {
     pub group_index: u32,
@@ -571,7 +571,7 @@ impl<'a> std::ops::DerefMut for BindShaderGroupIndirectCommandNVBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindIndexBufferIndirectCommandNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindIndexBufferIndirectCommandNV {
     pub buffer_address: crate::vk1_0::DeviceAddress,
@@ -648,7 +648,7 @@ impl<'a> std::ops::DerefMut for BindIndexBufferIndirectCommandNVBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkBindVertexBufferIndirectCommandNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindVertexBufferIndirectCommandNV {
     pub buffer_address: crate::vk1_0::DeviceAddress,
@@ -725,7 +725,7 @@ impl<'a> std::ops::DerefMut for BindVertexBufferIndirectCommandNVBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkSetStateFlagsIndirectCommandNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SetStateFlagsIndirectCommandNV {
     pub data: u32,
@@ -790,7 +790,7 @@ impl<'a> std::ops::DerefMut for SetStateFlagsIndirectCommandNVBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsStreamNV.html) · Structure"]
 #[doc(alias = "VkIndirectCommandsStreamNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct IndirectCommandsStreamNV {
     pub buffer: crate::vk1_0::Buffer,

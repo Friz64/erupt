@@ -405,7 +405,7 @@ impl crate::external::vk_video::StdVideoH265Level {
     pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264SpsFlags {
     pub constraint_set0_flag_and_more_bitfield: u32,
@@ -549,7 +549,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264SpsFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264ScalingLists {
     pub scaling_list_present_mask: u8,
@@ -631,7 +631,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264ScalingListsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264SequenceParameterSetVui {
     pub aspect_ratio_idc: crate::external::vk_video::StdVideoH264AspectRatioIdc,
@@ -767,7 +767,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264SequenceParameterSetVuiBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264HrdParameters {
     pub cpb_cnt_minus1: u8,
@@ -885,7 +885,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264HrdParametersBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264SpsVuiFlags {
     pub aspect_ratio_info_present_flag_and_more_bitfield: u32,
@@ -1004,7 +1004,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264SpsVuiFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH264PpsFlags {
     pub transform_8x8_mode_flag_and_more_bitfield: u32,
@@ -1108,7 +1108,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264PpsFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264PictureInfo {
     pub seq_parameter_set_id: u8,
@@ -1208,7 +1208,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264PictureInfoBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264ReferenceInfo {
     pub frame_num: u16,
@@ -1366,7 +1366,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264MvcBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264PictureInfoFlags {
     pub field_pic_flag_and_more_bitfield: u32,
@@ -1450,7 +1450,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264ReferenceInfoFlags {
     pub top_field_flag_and_more_bitfield: u32,
@@ -1529,7 +1529,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264ReferenceInfoFlagsBuilder<'a> 
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264MvcElement {
     pub flags: crate::external::vk_video::StdVideoDecodeH264MvcElementFlags,
@@ -1665,7 +1665,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH264MvcElementBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH264MvcElementFlags {
     pub non_idr_and_more_bitfield: u32,
@@ -2733,7 +2733,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265PictureParameterSetBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265DecPicBufMgr {
     pub max_latency_increase_plus1: [u32; 7],
@@ -2951,7 +2951,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265HrdParametersBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265VpsFlags {
     pub vps_temporal_id_nesting_flag_and_more_bitfield: u32,
@@ -3030,7 +3030,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265VpsFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265SpsFlags {
     pub sps_temporal_id_nesting_flag_and_more_bitfield: u32,
@@ -3224,7 +3224,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265SpsFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265ScalingLists {
     pub scaling_list4x4: [[u8; 16]; 6],
@@ -3514,7 +3514,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265SequenceParameterSetVuiBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265PredictorPaletteEntries {
     pub predictor_palette_entries: [[u16; 128]; 3],
@@ -3578,7 +3578,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265PredictorPaletteEntriesBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265PpsFlags {
     pub dependent_slice_segments_enabled_flag_and_more_bitfield: u32,
@@ -3792,7 +3792,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265PpsFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265SubLayerHrdParameters {
     pub bit_rate_value_minus1: [u32; 32],
@@ -3880,7 +3880,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265SubLayerHrdParametersBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265HrdFlags {
     pub nal_hrd_parameters_present_flag_and_more_bitfield: u32,
@@ -3977,7 +3977,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265HrdFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoH265SpsVuiFlags {
     pub aspect_ratio_info_present_flag_and_more_bitfield: u32,
@@ -4126,7 +4126,7 @@ impl<'a> std::ops::DerefMut for StdVideoH265SpsVuiFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH265PictureInfo {
     pub vps_video_parameter_set_id: u8,
@@ -4250,7 +4250,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH265PictureInfoBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH265ReferenceInfo {
     pub pic_order_cnt_val: i32,
@@ -4320,7 +4320,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH265ReferenceInfoBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH265PictureInfoFlags {
     pub irap_pic_flag_and_more_bitfield: u32,
@@ -4399,7 +4399,7 @@ impl<'a> std::ops::DerefMut for StdVideoDecodeH265PictureInfoFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoDecodeH265ReferenceInfoFlags {
     pub is_long_term_and_is_non_existing: u32,
@@ -4598,7 +4598,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264SliceHeaderBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264PictureInfo {
     pub flags: crate::external::vk_video::StdVideoEncodeH264PictureInfoFlags,
@@ -4692,7 +4692,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264PictureInfoBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264SliceHeaderFlags {
     pub idr_flag_and_more_bitfield: u32,
@@ -4886,7 +4886,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264RefMemMgmtCtrlOperationsBuilde
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264PictureInfoFlags {
     pub idr_flag_and_more_bitfield: u32,
@@ -4960,7 +4960,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264PictureInfoFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264RefMgmtFlags {
     pub ref_pic_list_modification_l0_flag_and_ref_pic_list_modification_l1_flag: u32,
@@ -5029,7 +5029,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264RefMgmtFlagsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264RefListModEntry {
     pub modification_of_pic_nums_idc: crate::external::vk_video::StdVideoH264ModificationOfPicNumsIdc,
@@ -5105,7 +5105,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH264RefListModEntryBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StdVideoEncodeH264RefPicMarkingEntry {
     pub operation: crate::external::vk_video::StdVideoH264MemMgmtControlOp,

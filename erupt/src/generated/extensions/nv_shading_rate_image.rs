@@ -424,7 +424,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShadingRateImagePropertiesNVBuilde
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoarseSampleLocationNV.html) · Structure"]
 #[doc(alias = "VkCoarseSampleLocationNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct CoarseSampleLocationNV {
     pub pixel_x: u32,

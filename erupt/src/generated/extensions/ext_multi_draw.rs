@@ -23,7 +23,7 @@ impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMultiDrawFeaturesEXT> for 
 impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMultiDrawFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawInfoEXT.html) · Structure"]
 #[doc(alias = "VkMultiDrawInfoEXT")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MultiDrawInfoEXT {
     pub first_vertex: u32,
@@ -94,7 +94,7 @@ impl<'a> std::ops::DerefMut for MultiDrawInfoEXTBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Structure"]
 #[doc(alias = "VkMultiDrawIndexedInfoEXT")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MultiDrawIndexedInfoEXT {
     pub first_index: u32,

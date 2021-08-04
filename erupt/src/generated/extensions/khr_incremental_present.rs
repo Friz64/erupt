@@ -151,7 +151,7 @@ impl<'a> std::ops::DerefMut for PresentRegionKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Structure"]
 #[doc(alias = "VkRectLayerKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct RectLayerKHR {
     pub offset: crate::vk1_0::Offset2D,

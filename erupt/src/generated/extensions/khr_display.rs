@@ -225,7 +225,7 @@ impl<'a> std::ops::DerefMut for DisplayPropertiesKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlanePropertiesKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayPlanePropertiesKHR {
     pub current_display: crate::extensions::khr_display::DisplayKHR,
@@ -296,7 +296,7 @@ impl<'a> std::ops::DerefMut for DisplayPlanePropertiesKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure"]
 #[doc(alias = "VkDisplayModeParametersKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayModeParametersKHR {
     pub visible_region: crate::vk1_0::Extent2D,
@@ -367,7 +367,7 @@ impl<'a> std::ops::DerefMut for DisplayModeParametersKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayModePropertiesKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayModePropertiesKHR {
     pub display_mode: crate::extensions::khr_display::DisplayModeKHR,
@@ -514,7 +514,7 @@ impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkDisplayPlaneCapabilitiesKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayPlaneCapabilitiesKHR {
     pub supported_alpha: crate::extensions::khr_display::DisplayPlaneAlphaFlagsKHR,

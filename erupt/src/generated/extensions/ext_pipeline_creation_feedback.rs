@@ -47,7 +47,7 @@ impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> f
 impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Structure"]
 #[doc(alias = "VkPipelineCreationFeedbackEXT")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineCreationFeedbackEXT {
     pub flags: crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackFlagsEXT,

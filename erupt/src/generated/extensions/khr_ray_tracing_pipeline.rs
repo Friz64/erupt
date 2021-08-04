@@ -571,7 +571,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelinePropertiesKHRBui
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Structure"]
 #[doc(alias = "VkStridedDeviceAddressRegionKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StridedDeviceAddressRegionKHR {
     pub device_address: crate::vk1_0::DeviceAddress,
@@ -648,7 +648,7 @@ impl<'a> std::ops::DerefMut for StridedDeviceAddressRegionKHRBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Structure"]
 #[doc(alias = "VkTraceRaysIndirectCommandKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct TraceRaysIndirectCommandKHR {
     pub width: u32,

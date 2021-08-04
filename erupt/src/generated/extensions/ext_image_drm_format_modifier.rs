@@ -114,7 +114,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesListEXTBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesEXT")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesEXT {
     pub drm_format_modifier: u64,

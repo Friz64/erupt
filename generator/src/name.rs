@@ -36,6 +36,27 @@ impl Name {
         let ident = self.ident();
         quote! { crate::#path#ident }
     }
+
+    pub fn supports_hash_eq(&self, source: &Source) -> bool {
+        match self {
+            Name::Type(type_name) => {
+                if let Some(alias) = source.find_type_alias(type_name) {
+                    alias.resolve(source).supports_hash_eq(source)
+                } else if let Some(structure) = source.find_structure(type_name) {
+                    structure.supports_hash_eq(source)
+                } else if let Some(_) = source.find_enum(type_name) {
+                    true
+                } else if let Some(_) = source.find_handle(type_name) {
+                    true
+                } else if let Some(basetype) = source.find_basetype(type_name) {
+                    basetype.ty.supports_hash_eq(source)
+                } else {
+                    panic!("Unknown origin for type name {:?}", type_name)
+                }
+            }
+            Name::Function(_) => false,
+        }
+    }
 }
 
 #[derive(Clone)]

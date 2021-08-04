@@ -260,7 +260,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> 
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Structure"]
 #[doc(alias = "VkDrawMeshTasksIndirectCommandNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawMeshTasksIndirectCommandNV {
     pub task_count: u32,

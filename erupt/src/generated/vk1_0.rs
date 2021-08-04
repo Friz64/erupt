@@ -5369,7 +5369,7 @@ impl<'a> std::ops::DerefMut for BaseInStructureBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset2D.html) · Structure"]
 #[doc(alias = "VkOffset2D")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Offset2D {
     pub x: i32,
@@ -5440,7 +5440,7 @@ impl<'a> std::ops::DerefMut for Offset2DBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkOffset3D.html) · Structure"]
 #[doc(alias = "VkOffset3D")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Offset3D {
     pub x: i32,
@@ -5517,7 +5517,7 @@ impl<'a> std::ops::DerefMut for Offset3DBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent2D.html) · Structure"]
 #[doc(alias = "VkExtent2D")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Extent2D {
     pub width: u32,
@@ -5588,7 +5588,7 @@ impl<'a> std::ops::DerefMut for Extent2DBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtent3D.html) · Structure"]
 #[doc(alias = "VkExtent3D")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Extent3D {
     pub width: u32,
@@ -5760,7 +5760,7 @@ impl<'a> std::ops::DerefMut for ViewportBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRect2D.html) · Structure"]
 #[doc(alias = "VkRect2D")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Rect2D {
     pub offset: crate::vk1_0::Offset2D,
@@ -5831,7 +5831,7 @@ impl<'a> std::ops::DerefMut for Rect2DBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkClearRect.html) · Structure"]
 #[doc(alias = "VkClearRect")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ClearRect {
     pub rect: crate::vk1_0::Rect2D,
@@ -5908,7 +5908,7 @@ impl<'a> std::ops::DerefMut for ClearRectBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkComponentMapping.html) · Structure"]
 #[doc(alias = "VkComponentMapping")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ComponentMapping {
     pub r: crate::vk1_0::ComponentSwizzle,
@@ -6104,7 +6104,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExtensionProperties.html) · Structure"]
 #[doc(alias = "VkExtensionProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExtensionProperties {
     pub extension_name: [std::os::raw::c_char; 256],
@@ -6175,7 +6175,7 @@ impl<'a> std::ops::DerefMut for ExtensionPropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLayerProperties.html) · Structure"]
 #[doc(alias = "VkLayerProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct LayerProperties {
     pub layer_name: [std::os::raw::c_char; 256],
@@ -6723,7 +6723,7 @@ impl<'a> std::ops::DerefMut for InstanceCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyProperties.html) · Structure"]
 #[doc(alias = "VkQueueFamilyProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct QueueFamilyProperties {
     pub queue_flags: crate::vk1_0::QueueFlags,
@@ -6806,7 +6806,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyPropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceMemoryProperties {
     pub memory_type_count: u32,
@@ -6965,7 +6965,7 @@ impl<'a> std::ops::DerefMut for MemoryAllocateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryRequirements.html) · Structure"]
 #[doc(alias = "VkMemoryRequirements")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryRequirements {
     pub size: crate::vk1_0::DeviceSize,
@@ -7042,7 +7042,7 @@ impl<'a> std::ops::DerefMut for MemoryRequirementsBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageFormatProperties.html) · Structure"]
 #[doc(alias = "VkSparseImageFormatProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageFormatProperties {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -7119,7 +7119,7 @@ impl<'a> std::ops::DerefMut for SparseImageFormatPropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryRequirements.html) · Structure"]
 #[doc(alias = "VkSparseImageMemoryRequirements")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageMemoryRequirements {
     pub format_properties: crate::vk1_0::SparseImageFormatProperties,
@@ -7208,7 +7208,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryRequirementsBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryType.html) · Structure"]
 #[doc(alias = "VkMemoryType")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryType {
     pub property_flags: crate::vk1_0::MemoryPropertyFlags,
@@ -7279,7 +7279,7 @@ impl<'a> std::ops::DerefMut for MemoryTypeBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHeap.html) · Structure"]
 #[doc(alias = "VkMemoryHeap")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryHeap {
     pub size: crate::vk1_0::DeviceSize,
@@ -7432,7 +7432,7 @@ impl<'a> std::ops::DerefMut for MappedMemoryRangeBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties.html) · Structure"]
 #[doc(alias = "VkFormatProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct FormatProperties {
     pub linear_tiling_features: crate::vk1_0::FormatFeatureFlags,
@@ -7509,7 +7509,7 @@ impl<'a> std::ops::DerefMut for FormatPropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatProperties.html) · Structure"]
 #[doc(alias = "VkImageFormatProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageFormatProperties {
     pub max_extent: crate::vk1_0::Extent3D,
@@ -7598,7 +7598,7 @@ impl<'a> std::ops::DerefMut for ImageFormatPropertiesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorBufferInfo.html) · Structure"]
 #[doc(alias = "VkDescriptorBufferInfo")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorBufferInfo {
     pub buffer: crate::vk1_0::Buffer,
@@ -7675,7 +7675,7 @@ impl<'a> std::ops::DerefMut for DescriptorBufferInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorImageInfo.html) · Structure"]
 #[doc(alias = "VkDescriptorImageInfo")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorImageInfo {
     pub sampler: crate::vk1_0::Sampler,
@@ -8158,7 +8158,7 @@ impl<'a> std::ops::DerefMut for BufferViewCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresource.html) · Structure"]
 #[doc(alias = "VkImageSubresource")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresource {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -8235,7 +8235,7 @@ impl<'a> std::ops::DerefMut for ImageSubresourceBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceLayers.html) · Structure"]
 #[doc(alias = "VkImageSubresourceLayers")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresourceLayers {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -8318,7 +8318,7 @@ impl<'a> std::ops::DerefMut for ImageSubresourceLayersBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSubresourceRange.html) · Structure"]
 #[doc(alias = "VkImageSubresourceRange")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresourceRange {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -8839,7 +8839,7 @@ impl<'a> std::ops::DerefMut for ImageCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubresourceLayout.html) · Structure"]
 #[doc(alias = "VkSubresourceLayout")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SubresourceLayout {
     pub offset: crate::vk1_0::DeviceSize,
@@ -9028,7 +9028,7 @@ impl<'a> std::ops::DerefMut for ImageViewCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCopy.html) · Structure"]
 #[doc(alias = "VkBufferCopy")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BufferCopy {
     pub src_offset: crate::vk1_0::DeviceSize,
@@ -9105,7 +9105,7 @@ impl<'a> std::ops::DerefMut for BufferCopyBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseMemoryBind.html) · Structure"]
 #[doc(alias = "VkSparseMemoryBind")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseMemoryBind {
     pub resource_offset: crate::vk1_0::DeviceSize,
@@ -9194,7 +9194,7 @@ impl<'a> std::ops::DerefMut for SparseMemoryBindBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSparseImageMemoryBind.html) · Structure"]
 #[doc(alias = "VkSparseImageMemoryBind")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageMemoryBind {
     pub subresource: crate::vk1_0::ImageSubresource,
@@ -9612,7 +9612,7 @@ impl<'a> std::ops::DerefMut for BindSparseInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageCopy.html) · Structure"]
 #[doc(alias = "VkImageCopy")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageCopy {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -9701,7 +9701,7 @@ impl<'a> std::ops::DerefMut for ImageCopyBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageBlit.html) · Structure"]
 #[doc(alias = "VkImageBlit")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageBlit {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -9784,7 +9784,7 @@ impl<'a> std::ops::DerefMut for ImageBlitBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferImageCopy.html) · Structure"]
 #[doc(alias = "VkBufferImageCopy")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BufferImageCopy {
     pub buffer_offset: crate::vk1_0::DeviceSize,
@@ -9879,7 +9879,7 @@ impl<'a> std::ops::DerefMut for BufferImageCopyBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageResolve.html) · Structure"]
 #[doc(alias = "VkImageResolve")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageResolve {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -10214,7 +10214,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorPoolSize.html) · Structure"]
 #[doc(alias = "VkDescriptorPoolSize")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorPoolSize {
     pub _type: crate::vk1_0::DescriptorType,
@@ -10447,7 +10447,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetAllocateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSpecializationMapEntry.html) · Structure"]
 #[doc(alias = "VkSpecializationMapEntry")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SpecializationMapEntry {
     pub constant_id: u32,
@@ -10791,7 +10791,7 @@ impl<'a> std::ops::DerefMut for ComputePipelineCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDescription.html) · Structure"]
 #[doc(alias = "VkVertexInputBindingDescription")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputBindingDescription {
     pub binding: u32,
@@ -10868,7 +10868,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDescriptionBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputAttributeDescription.html) · Structure"]
 #[doc(alias = "VkVertexInputAttributeDescription")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputAttributeDescription {
     pub location: u32,
@@ -11527,7 +11527,7 @@ impl<'a> std::ops::DerefMut for PipelineMultisampleStateCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAttachmentState.html) · Structure"]
 #[doc(alias = "VkPipelineColorBlendAttachmentState")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineColorBlendAttachmentState {
     pub blend_enable: crate::vk1_0::Bool32,
@@ -11808,7 +11808,7 @@ impl<'a> std::ops::DerefMut for PipelineDynamicStateCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilOpState.html) · Structure"]
 #[doc(alias = "VkStencilOpState")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StencilOpState {
     pub fail_op: crate::vk1_0::StencilOp,
@@ -12277,7 +12277,7 @@ impl<'a> std::ops::DerefMut for PipelineCacheCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCacheHeaderVersionOne.html) · Structure"]
 #[doc(alias = "VkPipelineCacheHeaderVersionOne")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineCacheHeaderVersionOne {
     pub header_size: u32,
@@ -12366,7 +12366,7 @@ impl<'a> std::ops::DerefMut for PipelineCacheHeaderVersionOneBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPushConstantRange.html) · Structure"]
 #[doc(alias = "VkPushConstantRange")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PushConstantRange {
     pub stage_flags: crate::vk1_0::ShaderStageFlags,
@@ -13298,7 +13298,7 @@ impl<'a> std::ops::DerefMut for ClearAttachmentBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescription.html) · Structure"]
 #[doc(alias = "VkAttachmentDescription")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct AttachmentDescription {
     pub flags: crate::vk1_0::AttachmentDescriptionFlags,
@@ -13411,7 +13411,7 @@ impl<'a> std::ops::DerefMut for AttachmentDescriptionBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReference.html) · Structure"]
 #[doc(alias = "VkAttachmentReference")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct AttachmentReference {
     pub attachment: u32,
@@ -13590,7 +13590,7 @@ impl<'a> std::ops::DerefMut for SubpassDescriptionBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDependency.html) · Structure"]
 #[doc(alias = "VkSubpassDependency")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SubpassDependency {
     pub src_subpass: u32,
@@ -13925,7 +13925,7 @@ impl<'a> std::ops::DerefMut for FenceCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFeatures.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFeatures")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceFeatures {
     pub robust_buffer_access: crate::vk1_0::Bool32,
@@ -14370,7 +14370,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFeaturesBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSparseProperties.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSparseProperties")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceSparseProperties {
     pub residency_standard2_d_block_shape: crate::vk1_0::Bool32,
@@ -15633,7 +15633,7 @@ impl<'a> std::ops::DerefMut for FramebufferCreateInfoBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndirectCommand.html) · Structure"]
 #[doc(alias = "VkDrawIndirectCommand")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawIndirectCommand {
     pub vertex_count: u32,
@@ -15716,7 +15716,7 @@ impl<'a> std::ops::DerefMut for DrawIndirectCommandBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrawIndexedIndirectCommand.html) · Structure"]
 #[doc(alias = "VkDrawIndexedIndirectCommand")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawIndexedIndirectCommand {
     pub index_count: u32,
@@ -15805,7 +15805,7 @@ impl<'a> std::ops::DerefMut for DrawIndexedIndirectCommandBuilder<'a> {
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDispatchIndirectCommand.html) · Structure"]
 #[doc(alias = "VkDispatchIndirectCommand")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DispatchIndirectCommand {
     pub x: u32,

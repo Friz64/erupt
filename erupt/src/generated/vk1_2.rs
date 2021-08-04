@@ -472,7 +472,7 @@ impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfo> for crate::
 impl<'a> crate::ExtendableFromConst<'a, ImageStencilUsageCreateInfoBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersion.html) · Structure"]
 #[doc(alias = "VkConformanceVersion")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ConformanceVersion {
     pub major: u8,

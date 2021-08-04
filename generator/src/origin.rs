@@ -138,8 +138,6 @@ impl Source {
                     &handle.origin
                 } else if let Some(basetype) = self.find_basetype(type_name) {
                     &basetype.origin
-                } else if let Some(alias) = self.find_type_alias(type_name) {
-                    &alias.origin
                 } else {
                     panic!("Unknown origin for type name {:?}", name)
                 }

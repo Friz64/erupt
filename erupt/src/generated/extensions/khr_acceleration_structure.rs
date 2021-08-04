@@ -1176,7 +1176,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureBuildGeometryInfoKHRBuilder
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureBuildRangeInfoKHR.html) · Structure"]
 #[doc(alias = "VkAccelerationStructureBuildRangeInfoKHR")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct AccelerationStructureBuildRangeInfoKHR {
     pub primitive_count: u32,

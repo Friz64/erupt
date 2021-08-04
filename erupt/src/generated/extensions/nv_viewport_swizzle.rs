@@ -63,7 +63,7 @@ impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNV
 impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportSwizzleNV.html) · Structure"]
 #[doc(alias = "VkViewportSwizzleNV")]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ViewportSwizzleNV {
     pub x: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,

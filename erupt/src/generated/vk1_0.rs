@@ -708,6 +708,7 @@ impl std::fmt::Debug for AttachmentLoadOp {
             &Self::LOAD => "LOAD",
             &Self::CLEAR => "CLEAR",
             &Self::DONT_CARE => "DONT_CARE",
+            &Self::NONE_EXT => "NONE_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -728,7 +729,7 @@ impl std::fmt::Debug for AttachmentStoreOp {
         f.write_str(match self {
             &Self::STORE => "STORE",
             &Self::DONT_CARE => "DONT_CARE",
-            &Self::NONE_QCOM => "NONE_QCOM",
+            &Self::NONE_EXT => "NONE_EXT",
             _ => "(unknown variant)",
         })
     }

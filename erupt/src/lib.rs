@@ -276,7 +276,7 @@ macro_rules! bits_copy {
     }};
 }
 
-const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded";
+const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded, is the respective `enabled_extension_names` array updated correctly?";
 
 /// Allows returning small amounts of data (specifically with a length <= 8)
 /// without needlessly allocating heap memory.

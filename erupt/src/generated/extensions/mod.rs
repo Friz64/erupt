@@ -126,6 +126,8 @@ pub mod ext_index_type_uint8;
 pub mod ext_inline_uniform_block;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_line_rasterization.html) · Vulkan extension"]
 pub mod ext_line_rasterization;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_load_store_op_none.html) · Vulkan extension"]
+pub mod ext_load_store_op_none;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_memory_budget.html) · Vulkan extension"]
 pub mod ext_memory_budget;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_memory_priority.html) · Vulkan extension"]

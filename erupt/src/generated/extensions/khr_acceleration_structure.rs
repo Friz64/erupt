@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION")]
-pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 11;
+pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 12;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME")]
 pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_acceleration_structure");
@@ -117,7 +117,7 @@ impl crate::extensions::khr_acceleration_structure::GeometryFlagBitsKHR {
     pub const OPAQUE_KHR: Self = Self(1);
     pub const NO_DUPLICATE_ANY_HIT_INVOCATION_KHR: Self = Self(2);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`]"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsKHR.html) · Bitmask of [`GeometryInstanceFlagBitsKHR`]"] # [doc (alias = "VkGeometryInstanceFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct GeometryInstanceFlagsKHR : u32 { const TRIANGLE_FACING_CULL_DISABLE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FACING_CULL_DISABLE_KHR . 0 ; const TRIANGLE_FLIP_FACING_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FLIP_FACING_KHR . 0 ; const FORCE_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_KHR . 0 ; const FORCE_NO_OPAQUE_KHR = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_KHR . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR . 0 ; const TRIANGLE_CULL_DISABLE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_CULL_DISABLE_NV . 0 ; const TRIANGLE_FRONT_COUNTERCLOCKWISE_NV = GeometryInstanceFlagBitsKHR :: TRIANGLE_FRONT_COUNTERCLOCKWISE_NV . 0 ; const FORCE_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_OPAQUE_NV . 0 ; const FORCE_NO_OPAQUE_NV = GeometryInstanceFlagBitsKHR :: FORCE_NO_OPAQUE_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsKHR.html) · Bits enum of [`GeometryInstanceFlagsKHR`]"]
 #[doc(alias = "VkGeometryInstanceFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -134,7 +134,7 @@ impl std::fmt::Debug for GeometryInstanceFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             &Self::TRIANGLE_FACING_CULL_DISABLE_KHR => "TRIANGLE_FACING_CULL_DISABLE_KHR",
-            &Self::TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR => "TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR",
+            &Self::TRIANGLE_FLIP_FACING_KHR => "TRIANGLE_FLIP_FACING_KHR",
             &Self::FORCE_OPAQUE_KHR => "FORCE_OPAQUE_KHR",
             &Self::FORCE_NO_OPAQUE_KHR => "FORCE_NO_OPAQUE_KHR",
             _ => "(unknown variant)",
@@ -144,9 +144,10 @@ impl std::fmt::Debug for GeometryInstanceFlagBitsKHR {
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR {
     pub const TRIANGLE_FACING_CULL_DISABLE_KHR: Self = Self(1);
-    pub const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR: Self = Self(2);
+    pub const TRIANGLE_FLIP_FACING_KHR: Self = Self(2);
     pub const FORCE_OPAQUE_KHR: Self = Self(4);
     pub const FORCE_NO_OPAQUE_KHR: Self = Self(8);
+    pub const TRIANGLE_FRONT_COUNTERCLOCKWISE_KHR: Self = Self::TRIANGLE_FLIP_FACING_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsKHR.html) · Bitmask of [`BuildAccelerationStructureFlagBitsKHR`]"] # [doc (alias = "VkBuildAccelerationStructureFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct BuildAccelerationStructureFlagsKHR : u32 { const ALLOW_UPDATE_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_KHR . 0 ; const ALLOW_COMPACTION_KHR = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_KHR . 0 ; const PREFER_FAST_TRACE_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_KHR . 0 ; const PREFER_FAST_BUILD_KHR = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_KHR . 0 ; const LOW_MEMORY_KHR = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_KHR . 0 ; const MOTION_NV = BuildAccelerationStructureFlagBitsKHR :: MOTION_NV . 0 ; const ALLOW_UPDATE_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_UPDATE_NV . 0 ; const ALLOW_COMPACTION_NV = BuildAccelerationStructureFlagBitsKHR :: ALLOW_COMPACTION_NV . 0 ; const PREFER_FAST_TRACE_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_TRACE_NV . 0 ; const PREFER_FAST_BUILD_NV = BuildAccelerationStructureFlagBitsKHR :: PREFER_FAST_BUILD_NV . 0 ; const LOW_MEMORY_NV = BuildAccelerationStructureFlagBitsKHR :: LOW_MEMORY_NV . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html) · Bits enum of [`BuildAccelerationStructureFlagsKHR`]"]

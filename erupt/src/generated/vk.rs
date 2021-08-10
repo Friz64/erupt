@@ -127,6 +127,8 @@ pub use crate::extensions::ext_inline_uniform_block::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_line_rasterization::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_load_store_op_none::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_memory_budget::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_memory_priority::*;

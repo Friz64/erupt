@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fix erroneous instance version calculation
 - Fix function definition of `vkVoidFunction`
 - Correct the error handling implementation
 

@@ -7,6 +7,8 @@
 
 Vulkan API bindings
 
+Take a look at the [`erupt` user guide](https://gitlab.com/Friz64/erupt/-/blob/main/USER_GUIDE.md).
+
 ## Features
 
 - Full Vulkan API coverage
@@ -31,9 +33,10 @@ use erupt::{vk, EntryLoader, InstanceLoader};
 
 let entry = EntryLoader::new()?;
 
-let app_info = vk::ApplicationInfoBuilder::new().api_version(vk::make_version(1, 0, 0));
-let instance_info = vk::InstanceCreateInfoBuilder::new().application_info(&app_info);
-
+let app_info = vk::ApplicationInfoBuilder::new()
+    .api_version(vk::API_VERSION_1_1);
+let instance_info = vk::InstanceCreateInfoBuilder::new()
+    .application_info(&app_info);
 let instance = InstanceLoader::new(&entry, &instance_info, None)?;
 
 // ...

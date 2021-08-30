@@ -8,7 +8,7 @@ use crate::{
         BitWidth, DeclarationInfo,
     },
     items::aliases::Alias,
-    name::{EnumVariantName, Name, TypeName},
+    name::{Name, TypeName},
     origin::Origin,
     source::{NotApplicable, Source},
     XmlNode,
@@ -215,12 +215,6 @@ impl Structure {
 
     pub fn qualifies_as_builder(&self) -> bool {
         self.kind == StructureKind::Struct
-    }
-
-    pub fn structure_type(&self) -> Option<EnumVariantName> {
-        self.fields
-            .get(0)
-            .and_then(|field| field.main_decl().metadata.structure_type())
     }
 
     pub fn structure_type_value(&self, source: &Source) -> Option<TokenStream> {

@@ -9,8 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add associated constants for structure types on structs
-- Add `StructureType::mem_layout`: returns the memory layout of the structure type variant
+- Added associated constants for structure types on structs
 
 ### Changed
 

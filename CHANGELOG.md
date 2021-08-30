@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.20.0+190] - 2021-08-30
+
 ### Added
 
 - Added associated constants for structure types on structs
@@ -319,7 +321,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Development_
 
-[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.19.0+182...main
+[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.20.0+190...main
+[0.20.0+190]: https://gitlab.com/Friz64/erupt/-/compare/v0.19.0+182...v0.20.0+190
 [0.19.0+182]: https://gitlab.com/Friz64/erupt/-/compare/v0.18.0+174...v0.19.0+182
 [0.18.0+174]: https://gitlab.com/Friz64/erupt/-/compare/v0.17.1+169...v0.18.0+174
 [0.17.1+169]: https://gitlab.com/Friz64/erupt/-/compare/v0.17.0+169...v0.17.1+169

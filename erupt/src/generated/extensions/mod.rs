@@ -146,6 +146,8 @@ pub mod ext_pipeline_creation_cache_control;
 pub mod ext_pipeline_creation_feedback;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_post_depth_coverage.html) · Vulkan extension"]
 pub mod ext_post_depth_coverage;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_primitive_topology_list_restart.html) · Vulkan extension"]
+pub mod ext_primitive_topology_list_restart;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_private_data.html) · Vulkan extension"]
 pub mod ext_private_data;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_provoking_vertex.html) · Vulkan extension"]
@@ -360,6 +362,8 @@ pub mod khr_shader_draw_parameters;
 pub mod khr_shader_float16_int8;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_float_controls.html) · Vulkan extension"]
 pub mod khr_shader_float_controls;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_integer_dot_product.html) · Vulkan extension"]
+pub mod khr_shader_integer_dot_product;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_non_semantic_info.html) · Vulkan extension"]
 pub mod khr_shader_non_semantic_info;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_shader_subgroup_extended_types.html) · Vulkan extension"]

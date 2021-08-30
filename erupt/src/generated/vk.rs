@@ -147,6 +147,8 @@ pub use crate::extensions::ext_pipeline_creation_feedback::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_post_depth_coverage::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_primitive_topology_list_restart::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_private_data::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_provoking_vertex::*;
@@ -360,6 +362,8 @@ pub use crate::extensions::khr_shader_draw_parameters::*;
 pub use crate::extensions::khr_shader_float16_int8::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_shader_float_controls::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_shader_integer_dot_product::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_shader_non_semantic_info::*;
 #[doc(no_inline)]

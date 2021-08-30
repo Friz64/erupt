@@ -657,6 +657,26 @@ impl std::fmt::Debug for SemaphoreCreateFlagBits {
         })
     }
 }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateFlags.html) · Bitmask of [`ShaderModuleCreateFlagBits`]"] # [doc (alias = "VkShaderModuleCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderModuleCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderModuleCreateFlags`]"]
+#[doc(alias = "VkShaderModuleCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct ShaderModuleCreateFlagBits(pub u32);
+impl ShaderModuleCreateFlagBits {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> ShaderModuleCreateFlags {
+        ShaderModuleCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for ShaderModuleCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            _ => "(unknown variant)",
+        })
+    }
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryMapFlags.html) · Bitmask of [`MemoryMapFlagBits`]"] # [doc (alias = "VkMemoryMapFlags")] # [derive (Default)] # [repr (transparent)] pub struct MemoryMapFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`MemoryMapFlags`]"]
 #[doc(alias = "VkMemoryMapFlagBits")]
@@ -3574,6 +3594,8 @@ impl std::fmt::Debug for StructureType {
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV",
             &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => "PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV",
             &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => "COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV",
+            &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES_KHR => "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES_KHR",
+            &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES_KHR => "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES_KHR",
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT => "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT",
             &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM",
@@ -3640,6 +3662,7 @@ impl std::fmt::Debug for StructureType {
             &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT",
             &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT",
             &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => "PHYSICAL_DEVICE_DRM_PROPERTIES_EXT",
+            &Self::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => "PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT",
             &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA",
             &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA",
             &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA",
@@ -4152,6 +4175,8 @@ impl StructureType {
             &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => Some(Layout::new::<crate::extensions::nv_device_generated_commands::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>()),
             &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => Some(Layout::new::<crate::extensions::nv_inherited_viewport_scissor::PhysicalDeviceInheritedViewportScissorFeaturesNV>()),
             &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => Some(Layout::new::<crate::extensions::nv_inherited_viewport_scissor::CommandBufferInheritanceViewportScissorInfoNV>()),
+            &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES_KHR => Some(Layout::new::<crate::extensions::khr_shader_integer_dot_product::PhysicalDeviceShaderIntegerDotProductFeaturesKHR>()),
+            &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES_KHR => Some(Layout::new::<crate::extensions::khr_shader_integer_dot_product::PhysicalDeviceShaderIntegerDotProductPropertiesKHR>()),
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => Some(Layout::new::<crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentFeaturesEXT>()),
             &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT => Some(Layout::new::<crate::extensions::ext_texel_buffer_alignment::PhysicalDeviceTexelBufferAlignmentPropertiesEXT>()),
             &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => Some(Layout::new::<crate::extensions::qcom_render_pass_transform::CommandBufferInheritanceRenderPassTransformInfoQCOM>()),
@@ -4218,6 +4243,7 @@ impl StructureType {
             &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => Some(Layout::new::<crate::extensions::ext_vertex_input_dynamic_state::VertexInputBindingDescription2EXT>()),
             &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => Some(Layout::new::<crate::extensions::ext_vertex_input_dynamic_state::VertexInputAttributeDescription2EXT>()),
             &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => Some(Layout::new::<crate::extensions::ext_physical_device_drm::PhysicalDeviceDrmPropertiesEXT>()),
+            &Self::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => Some(Layout::new::<crate::extensions::ext_primitive_topology_list_restart::PhysicalDevicePrimitiveTopologyListRestartFeaturesEXT>()),
             &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => Some(Layout::new::<crate::extensions::fuchsia_external_memory::ImportMemoryZirconHandleInfoFUCHSIA>()),
             &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => Some(Layout::new::<crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA>()),
             &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => Some(Layout::new::<crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA>()),
@@ -4756,26 +4782,6 @@ impl std::fmt::Debug for SubpassDescriptionFlagBits {
             &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
             &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
             &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
-            _ => "(unknown variant)",
-        })
-    }
-}
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderModuleCreateFlags.html) · Bitmask of [`ShaderModuleCreateFlagBits`]"] # [doc (alias = "VkShaderModuleCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct ShaderModuleCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ShaderModuleCreateFlags`]"]
-#[doc(alias = "VkShaderModuleCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct ShaderModuleCreateFlagBits(pub u32);
-impl ShaderModuleCreateFlagBits {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> ShaderModuleCreateFlags {
-        ShaderModuleCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for ShaderModuleCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
             _ => "(unknown variant)",
         })
     }
@@ -16036,10 +16042,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 189u32;
+pub const HEADER_VERSION: u32 = 190u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 189u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 190u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

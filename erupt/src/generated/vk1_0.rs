@@ -3682,6 +3682,7 @@ impl std::fmt::Debug for StructureType {
             &Self::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT => "QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT",
             &Self::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT => "PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT",
             &Self::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT => "PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT",
+            &Self::PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT => "PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -15461,10 +15462,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 190u32;
+pub const HEADER_VERSION: u32 = 191u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 190u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 191u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

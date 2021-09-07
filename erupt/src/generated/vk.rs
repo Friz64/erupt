@@ -137,6 +137,8 @@ pub use crate::extensions::ext_metal_surface::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_multi_draw::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_pageable_device_local_memory::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_pci_bus_info::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_physical_device_drm::*;

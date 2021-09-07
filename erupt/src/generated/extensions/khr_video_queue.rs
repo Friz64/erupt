@@ -254,7 +254,7 @@ impl crate::extensions::khr_video_queue::VideoSessionCreateFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const PROTECTED_CONTENT_KHR: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingQualityPresetFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingQualityPresetFlagsKHR : u32 { const DEFAULT_KHR = VideoCodingQualityPresetFlagBitsKHR :: DEFAULT_KHR . 0 ; const NORMAL_KHR = VideoCodingQualityPresetFlagBitsKHR :: NORMAL_KHR . 0 ; const POWER_KHR = VideoCodingQualityPresetFlagBitsKHR :: POWER_KHR . 0 ; const QUALITY_KHR = VideoCodingQualityPresetFlagBitsKHR :: QUALITY_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"] # [doc (alias = "VkVideoCodingQualityPresetFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodingQualityPresetFlagsKHR : u32 { const NORMAL_KHR = VideoCodingQualityPresetFlagBitsKHR :: NORMAL_KHR . 0 ; const POWER_KHR = VideoCodingQualityPresetFlagBitsKHR :: POWER_KHR . 0 ; const QUALITY_KHR = VideoCodingQualityPresetFlagBitsKHR :: QUALITY_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagBitsKHR.html) · Bits enum of [`VideoCodingQualityPresetFlagsKHR`]"]
 #[doc(alias = "VkVideoCodingQualityPresetFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -270,7 +270,6 @@ impl VideoCodingQualityPresetFlagBitsKHR {
 impl std::fmt::Debug for VideoCodingQualityPresetFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::DEFAULT_KHR => "DEFAULT_KHR",
             &Self::NORMAL_KHR => "NORMAL_KHR",
             &Self::POWER_KHR => "POWER_KHR",
             &Self::QUALITY_KHR => "QUALITY_KHR",
@@ -280,7 +279,6 @@ impl std::fmt::Debug for VideoCodingQualityPresetFlagBitsKHR {
 }
 #[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
 impl crate::extensions::khr_video_queue::VideoCodingQualityPresetFlagBitsKHR {
-    pub const DEFAULT_KHR: Self = Self(0);
     pub const NORMAL_KHR: Self = Self(1);
     pub const POWER_KHR: Self = Self(2);
     pub const QUALITY_KHR: Self = Self(4);

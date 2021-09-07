@@ -136,6 +136,8 @@ pub mod ext_memory_priority;
 pub mod ext_metal_surface;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_multi_draw.html) · Vulkan extension"]
 pub mod ext_multi_draw;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_pageable_device_local_memory.html) · Vulkan extension"]
+pub mod ext_pageable_device_local_memory;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_pci_bus_info.html) · Vulkan extension"]
 pub mod ext_pci_bus_info;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_physical_device_drm.html) · Vulkan extension"]

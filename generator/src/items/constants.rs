@@ -154,7 +154,7 @@ pub fn header_ext(buf: &mut String, registry: XmlNode) {
                 for require in extension.children() {
                     for element in require.children() {
                         if element.has_tag_name("enum")
-                            && element.has_attribute("value")
+                            && (element.has_attribute("value") || element.has_attribute("alias"))
                             && !element.has_attribute("extends")
                         {
                             if let Some(name) = element.attribute("name") {

@@ -303,6 +303,9 @@ impl std::fmt::Debug for DriverId {
             &Self::COREAVI_PROPRIETARY => "COREAVI_PROPRIETARY",
             &Self::JUICE_PROPRIETARY => "JUICE_PROPRIETARY",
             &Self::VERISILICON_PROPRIETARY => "VERISILICON_PROPRIETARY",
+            &Self::MESA_TURNIP => "MESA_TURNIP",
+            &Self::MESA_V3DV => "MESA_V3DV",
+            &Self::MESA_PANVK => "MESA_PANVK",
             _ => "(unknown variant)",
         })
     }
@@ -326,6 +329,9 @@ impl crate::vk1_2::DriverId {
     pub const COREAVI_PROPRIETARY: Self = Self(15);
     pub const JUICE_PROPRIETARY: Self = Self(16);
     pub const VERISILICON_PROPRIETARY: Self = Self(17);
+    pub const MESA_TURNIP: Self = Self(18);
+    pub const MESA_V3DV: Self = Self(19);
+    pub const MESA_PANVK: Self = Self(20);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPool.html) · Function"]
 #[allow(non_camel_case_types)]

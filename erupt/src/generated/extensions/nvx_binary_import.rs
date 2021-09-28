@@ -87,7 +87,7 @@ impl<'a> CuModuleCreateInfoNVXBuilder<'a> {
     }
     #[inline]
     pub fn data_size(mut self, data_size: usize) -> Self {
-        self.0.data_size = data_size as _;
+        self.0.data_size = data_size;
         self
     }
     #[inline]

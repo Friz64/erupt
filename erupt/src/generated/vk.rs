@@ -215,6 +215,8 @@ pub use crate::extensions::ext_ycbcr_2plane_444_formats::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_ycbcr_image_arrays::*;
 #[doc(no_inline)]
+pub use crate::extensions::fuchsia_buffer_collection::*;
+#[doc(no_inline)]
 pub use crate::extensions::fuchsia_external_memory::*;
 #[doc(no_inline)]
 pub use crate::extensions::fuchsia_external_semaphore::*;

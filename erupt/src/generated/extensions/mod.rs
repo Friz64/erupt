@@ -214,6 +214,8 @@ pub mod ext_video_encode_h264;
 pub mod ext_ycbcr_2plane_444_formats;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_image_arrays.html) · Vulkan extension"]
 pub mod ext_ycbcr_image_arrays;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_buffer_collection.html) · Vulkan extension"]
+pub mod fuchsia_buffer_collection;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_external_memory.html) · Vulkan extension"]
 pub mod fuchsia_external_memory;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_FUCHSIA_external_semaphore.html) · Vulkan extension"]

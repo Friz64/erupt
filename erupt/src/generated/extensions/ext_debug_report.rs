@@ -103,6 +103,7 @@ impl std::fmt::Debug for DebugReportObjectTypeEXT {
             &Self::CU_FUNCTION_NVX_EXT => "CU_FUNCTION_NVX_EXT",
             &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
             &Self::ACCELERATION_STRUCTURE_NV_EXT => "ACCELERATION_STRUCTURE_NV_EXT",
+            &Self::BUFFER_COLLECTION_FUCHSIA_EXT => "BUFFER_COLLECTION_FUCHSIA_EXT",
             _ => "(unknown variant)",
         })
     }

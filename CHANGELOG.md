@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 193
+- Update Vulkan Headers to version 194
 
 ## [0.20.0+190] - 2021-08-30
 

@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION")]
-pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 12;
+pub const KHR_ACCELERATION_STRUCTURE_SPEC_VERSION: u32 = 13;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME")]
 pub const KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_acceleration_structure");
@@ -37,6 +37,10 @@ pub const FN_GET_ACCELERATION_STRUCTURE_DEVICE_ADDRESS_KHR: *const std::os::raw:
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_ACCELERATION_STRUCTURE_BUILD_SIZES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetAccelerationStructureBuildSizesKHR");
 crate::non_dispatchable_handle!(AccelerationStructureKHR, ACCELERATION_STRUCTURE_KHR, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureKHR.html) · Non-dispatchable Handle", "VkAccelerationStructureKHR");
+#[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
+impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+    pub const ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR: Self = Self(536870912);
+}
 #[doc = "Provided by [`crate::extensions::khr_acceleration_structure`]"]
 impl crate::vk1_0::BufferUsageFlagBits {
     pub const ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR: Self = Self(524288);

@@ -1,9 +1,13 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION")]
-pub const EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 1;
+pub const EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME")]
 pub const EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_fragment_density_map");
+#[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
+impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+    pub const FRAGMENT_DENSITY_MAP_EXT: Self = Self(16777216);
+}
 #[doc = "Provided by [`crate::extensions::ext_fragment_density_map`]"]
 impl crate::vk1_0::SamplerCreateFlagBits {
     pub const SUBSAMPLED_EXT: Self = Self(1);

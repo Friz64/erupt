@@ -157,6 +157,8 @@ pub use crate::extensions::ext_provoking_vertex::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_queue_family_foreign::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_rgba10x6_formats::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_robustness2::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_sample_locations::*;
@@ -307,6 +309,8 @@ pub use crate::extensions::khr_external_semaphore_fd::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_external_semaphore_win32::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_format_feature_flags2::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_fragment_shading_rate::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_get_display_properties2::*;
@@ -328,6 +332,8 @@ pub use crate::extensions::khr_maintenance1::*;
 pub use crate::extensions::khr_maintenance2::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_maintenance3::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_maintenance4::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_multiview::*;
 #[doc(no_inline)]

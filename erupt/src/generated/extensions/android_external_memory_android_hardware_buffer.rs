@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION")]
-pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION: u32 = 3;
+pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION: u32 = 4;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME")]
 pub const ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_ANDROID_external_memory_android_hardware_buffer");
@@ -18,6 +18,7 @@ impl crate::vk1_0::StructureType {
     pub const IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID: Self = Self(1000129003);
     pub const MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID: Self = Self(1000129004);
     pub const EXTERNAL_FORMAT_ANDROID: Self = Self(1000129005);
+    pub const ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID: Self = Self(1000129006);
 }
 #[doc = "Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]"]
 impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
@@ -208,6 +209,8 @@ impl AndroidHardwareBufferPropertiesANDROID {
 }
 impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatProperties2ANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]
 #[repr(transparent)]
@@ -503,6 +506,118 @@ impl<'a> std::ops::Deref for ExternalFormatANDROIDBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for ExternalFormatANDROIDBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Structure"]
+#[doc(alias = "VkAndroidHardwareBufferFormatProperties2ANDROID")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct AndroidHardwareBufferFormatProperties2ANDROID {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *mut std::ffi::c_void,
+    pub format: crate::vk1_0::Format,
+    pub external_format: u64,
+    pub format_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR,
+    pub sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping,
+    pub suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion,
+    pub suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange,
+    pub suggested_x_chroma_offset: crate::vk1_1::ChromaLocation,
+    pub suggested_y_chroma_offset: crate::vk1_1::ChromaLocation,
+}
+impl AndroidHardwareBufferFormatProperties2ANDROID {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID;
+}
+impl Default for AndroidHardwareBufferFormatProperties2ANDROID {
+    fn default() -> Self {
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), format: Default::default(), external_format: Default::default(), format_features: Default::default(), sampler_ycbcr_conversion_components: Default::default(), suggested_ycbcr_model: Default::default(), suggested_ycbcr_range: Default::default(), suggested_x_chroma_offset: Default::default(), suggested_y_chroma_offset: Default::default() }
+    }
+}
+impl std::fmt::Debug for AndroidHardwareBufferFormatProperties2ANDROID {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("AndroidHardwareBufferFormatProperties2ANDROID").field("s_type", &self.s_type).field("p_next", &self.p_next).field("format", &self.format).field("external_format", &self.external_format).field("format_features", &self.format_features).field("sampler_ycbcr_conversion_components", &self.sampler_ycbcr_conversion_components).field("suggested_ycbcr_model", &self.suggested_ycbcr_model).field("suggested_ycbcr_range", &self.suggested_ycbcr_range).field("suggested_x_chroma_offset", &self.suggested_x_chroma_offset).field("suggested_y_chroma_offset", &self.suggested_y_chroma_offset).finish()
+    }
+}
+impl AndroidHardwareBufferFormatProperties2ANDROID {
+    #[inline]
+    pub fn into_builder<'a>(self) -> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+        AndroidHardwareBufferFormatProperties2ANDROIDBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Builder of [`AndroidHardwareBufferFormatProperties2ANDROID`]"]
+#[repr(transparent)]
+pub struct AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a>(AndroidHardwareBufferFormatProperties2ANDROID, std::marker::PhantomData<&'a ()>);
+impl<'a> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+    #[inline]
+    pub fn new() -> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+        AndroidHardwareBufferFormatProperties2ANDROIDBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
+        self.0.format = format as _;
+        self
+    }
+    #[inline]
+    pub fn external_format(mut self, external_format: u64) -> Self {
+        self.0.external_format = external_format as _;
+        self
+    }
+    #[inline]
+    pub fn format_features(mut self, format_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR) -> Self {
+        self.0.format_features = format_features as _;
+        self
+    }
+    #[inline]
+    pub fn sampler_ycbcr_conversion_components(mut self, sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping) -> Self {
+        self.0.sampler_ycbcr_conversion_components = sampler_ycbcr_conversion_components as _;
+        self
+    }
+    #[inline]
+    pub fn suggested_ycbcr_model(mut self, suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
+        self.0.suggested_ycbcr_model = suggested_ycbcr_model as _;
+        self
+    }
+    #[inline]
+    pub fn suggested_ycbcr_range(mut self, suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
+        self.0.suggested_ycbcr_range = suggested_ycbcr_range as _;
+        self
+    }
+    #[inline]
+    pub fn suggested_x_chroma_offset(mut self, suggested_x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
+        self.0.suggested_x_chroma_offset = suggested_x_chroma_offset as _;
+        self
+    }
+    #[inline]
+    pub fn suggested_y_chroma_offset(mut self, suggested_y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
+        self.0.suggested_y_chroma_offset = suggested_y_chroma_offset as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> AndroidHardwareBufferFormatProperties2ANDROID {
+        self.0
+    }
+}
+impl<'a> std::default::Default for AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+    fn default() -> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
+    type Target = AndroidHardwareBufferFormatProperties2ANDROID;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

@@ -6,7 +6,7 @@
 //! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 2;
+pub const KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_video_encode_queue");
@@ -20,6 +20,11 @@ impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
 impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
     pub const VIDEO_ENCODE_KHR: Self = Self(134217728);
+}
+#[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
+impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+    pub const VIDEO_ENCODE_INPUT_KHR: Self = Self(134217728);
+    pub const VIDEO_ENCODE_DPB_KHR: Self = Self(268435456);
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
 impl crate::vk1_0::BufferUsageFlagBits {

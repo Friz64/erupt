@@ -156,6 +156,8 @@ pub mod ext_private_data;
 pub mod ext_provoking_vertex;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_queue_family_foreign.html) · Vulkan extension"]
 pub mod ext_queue_family_foreign;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_rgba10x6_formats.html) · Vulkan extension"]
+pub mod ext_rgba10x6_formats;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_robustness2.html) · Vulkan extension"]
 pub mod ext_robustness2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_sample_locations.html) · Vulkan extension"]
@@ -306,6 +308,8 @@ pub mod khr_external_semaphore_capabilities;
 pub mod khr_external_semaphore_fd;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_external_semaphore_win32.html) · Vulkan extension"]
 pub mod khr_external_semaphore_win32;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_format_feature_flags2.html) · Vulkan extension"]
+pub mod khr_format_feature_flags2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_fragment_shading_rate.html) · Vulkan extension"]
 pub mod khr_fragment_shading_rate;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_get_display_properties2.html) · Vulkan extension"]
@@ -328,6 +332,8 @@ pub mod khr_maintenance1;
 pub mod khr_maintenance2;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_maintenance3.html) · Vulkan extension"]
 pub mod khr_maintenance3;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_maintenance4.html) · Vulkan extension"]
+pub mod khr_maintenance4;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_multiview.html) · Vulkan extension"]
 pub mod khr_multiview;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_performance_query.html) · Vulkan extension"]

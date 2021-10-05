@@ -1,6 +1,6 @@
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION")]
-pub const KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION: u32 = 1;
+pub const KHR_FRAGMENT_SHADING_RATE_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME")]
 pub const KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_fragment_shading_rate");
@@ -8,6 +8,10 @@ pub const KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_CMD_SET_FRAGMENT_SHADING_RATE_KHR: *const std::os::raw::c_char = crate::cstr!("vkCmdSetFragmentShadingRateKHR");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATES_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetPhysicalDeviceFragmentShadingRatesKHR");
+#[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
+impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+    pub const FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(1073741824);
+}
 #[doc = "Provided by [`crate::extensions::khr_fragment_shading_rate`]"]
 impl crate::vk1_0::DynamicState {
     pub const FRAGMENT_SHADING_RATE_KHR: Self = Self(1000226000);

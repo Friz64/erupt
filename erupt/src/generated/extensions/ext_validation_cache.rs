@@ -249,14 +249,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyValidationCacheEXT.html) · Function"]
     #[doc(alias = "vkDestroyValidationCacheEXT")]
-    pub unsafe fn destroy_validation_cache_ext(&self, validation_cache: Option<crate::extensions::ext_validation_cache::ValidationCacheEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_validation_cache_ext(&self, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_validation_cache_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match validation_cache {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            validation_cache as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

@@ -879,14 +879,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function"]
     #[doc(alias = "vkDestroySwapchainKHR")]
-    pub unsafe fn destroy_swapchain_khr(&self, swapchain: Option<crate::extensions::khr_swapchain::SwapchainKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_swapchain_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_swapchain_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match swapchain {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            swapchain as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -916,23 +913,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function"]
     #[doc(alias = "vkAcquireNextImageKHR")]
-    pub unsafe fn acquire_next_image_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: Option<crate::vk1_0::Semaphore>, fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<u32> {
+    pub unsafe fn acquire_next_image_khr(&self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, timeout: u64, semaphore: crate::vk1_0::Semaphore, fence: crate::vk1_0::Fence) -> crate::utils::VulkanResult<u32> {
         let _function = self.acquire_next_image_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut image_index = Default::default();
-        let _return = _function(
-            self.handle,
-            swapchain as _,
-            timeout as _,
-            match semaphore {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            match fence {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            &mut image_index,
-        );
+        let _return = _function(self.handle, swapchain as _, timeout as _, semaphore as _, fence as _, &mut image_index);
         crate::utils::VulkanResult::new(_return, image_index)
     }
     #[inline]

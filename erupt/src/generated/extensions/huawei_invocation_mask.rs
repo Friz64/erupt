@@ -105,16 +105,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html) · Function"]
     #[doc(alias = "vkCmdBindInvocationMaskHUAWEI")]
-    pub unsafe fn cmd_bind_invocation_mask_huawei(&self, command_buffer: crate::vk1_0::CommandBuffer, image_view: Option<crate::vk1_0::ImageView>, image_layout: crate::vk1_0::ImageLayout) -> () {
+    pub unsafe fn cmd_bind_invocation_mask_huawei(&self, command_buffer: crate::vk1_0::CommandBuffer, image_view: crate::vk1_0::ImageView, image_layout: crate::vk1_0::ImageLayout) -> () {
         let _function = self.cmd_bind_invocation_mask_huawei.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            match image_view {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            image_layout as _,
-        );
+        let _return = _function(command_buffer as _, image_view as _, image_layout as _);
         ()
     }
 }

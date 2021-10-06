@@ -760,15 +760,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html) · Function"]
     #[doc(alias = "vkReleasePerformanceConfigurationINTEL")]
-    pub unsafe fn release_performance_configuration_intel(&self, configuration: Option<crate::extensions::intel_performance_query::PerformanceConfigurationINTEL>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn release_performance_configuration_intel(&self, configuration: crate::extensions::intel_performance_query::PerformanceConfigurationINTEL) -> crate::utils::VulkanResult<()> {
         let _function = self.release_performance_configuration_intel.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            match configuration {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(self.handle, configuration as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]

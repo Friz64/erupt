@@ -734,14 +734,11 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html) · Function"]
     #[doc(alias = "vkDestroyDebugUtilsMessengerEXT")]
-    pub unsafe fn destroy_debug_utils_messenger_ext(&self, messenger: Option<crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_debug_utils_messenger_ext(&self, messenger: crate::extensions::ext_debug_utils::DebugUtilsMessengerEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_debug_utils_messenger_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match messenger {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            messenger as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

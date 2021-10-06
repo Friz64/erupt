@@ -194,14 +194,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Function"]
     #[doc(alias = "vkDestroySamplerYcbcrConversionKHR")]
-    pub unsafe fn destroy_sampler_ycbcr_conversion_khr(&self, ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_sampler_ycbcr_conversion_khr(&self, ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_sampler_ycbcr_conversion_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match ycbcr_conversion {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            ycbcr_conversion as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

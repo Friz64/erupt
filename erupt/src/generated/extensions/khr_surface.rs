@@ -365,14 +365,11 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function"]
     #[doc(alias = "vkDestroySurfaceKHR")]
-    pub unsafe fn destroy_surface_khr(&self, surface: Option<crate::extensions::khr_surface::SurfaceKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_surface_khr(&self, surface: crate::extensions::khr_surface::SurfaceKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_surface_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match surface {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            surface as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

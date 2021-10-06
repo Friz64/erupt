@@ -390,8 +390,10 @@ fn main() {
         .layout(pipeline_layout)
         .render_pass(render_pass)
         .subpass(0);
-    let pipeline =
-        unsafe { device.create_graphics_pipelines(None, &[pipeline_info], None) }.unwrap()[0];
+    let pipeline = unsafe {
+        device.create_graphics_pipelines(vk::PipelineCache::null(), &[pipeline_info], None)
+    }
+    .unwrap()[0];
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Drawing/Framebuffers
     let swapchain_framebuffers: Vec<_> = swapchain_image_views
@@ -502,8 +504,8 @@ fn main() {
                 device.acquire_next_image_khr(
                     swapchain,
                     u64::MAX,
-                    Some(image_available_semaphores[frame]),
-                    None,
+                    image_available_semaphores[frame],
+                    vk::Fence::null(),
                 )
             }
             .unwrap();
@@ -526,7 +528,7 @@ fn main() {
                 let in_flight_fence = in_flight_fences[frame];
                 device.reset_fences(&[in_flight_fence]).unwrap();
                 device
-                    .queue_submit(queue, &[submit_info], Some(in_flight_fence))
+                    .queue_submit(queue, &[submit_info], in_flight_fence)
                     .unwrap()
             }
 
@@ -548,40 +550,40 @@ fn main() {
                 .iter()
                 .chain(render_finished_semaphores.iter())
             {
-                device.destroy_semaphore(Some(semaphore), None);
+                device.destroy_semaphore(semaphore, None);
             }
 
             for &fence in &in_flight_fences {
-                device.destroy_fence(Some(fence), None);
+                device.destroy_fence(fence, None);
             }
 
-            device.destroy_command_pool(Some(command_pool), None);
+            device.destroy_command_pool(command_pool, None);
 
             for &framebuffer in &swapchain_framebuffers {
-                device.destroy_framebuffer(Some(framebuffer), None);
+                device.destroy_framebuffer(framebuffer, None);
             }
 
-            device.destroy_pipeline(Some(pipeline), None);
+            device.destroy_pipeline(pipeline, None);
 
-            device.destroy_render_pass(Some(render_pass), None);
+            device.destroy_render_pass(render_pass, None);
 
-            device.destroy_pipeline_layout(Some(pipeline_layout), None);
+            device.destroy_pipeline_layout(pipeline_layout, None);
 
-            device.destroy_shader_module(Some(shader_vert), None);
-            device.destroy_shader_module(Some(shader_frag), None);
+            device.destroy_shader_module(shader_vert, None);
+            device.destroy_shader_module(shader_frag, None);
 
             for &image_view in &swapchain_image_views {
-                device.destroy_image_view(Some(image_view), None);
+                device.destroy_image_view(image_view, None);
             }
 
-            device.destroy_swapchain_khr(Some(swapchain), None);
+            device.destroy_swapchain_khr(swapchain, None);
 
             device.destroy_device(None);
 
-            instance.destroy_surface_khr(Some(surface), None);
+            instance.destroy_surface_khr(surface, None);
 
             if !messenger.is_null() {
-                instance.destroy_debug_utils_messenger_ext(Some(messenger), None);
+                instance.destroy_debug_utils_messenger_ext(messenger, None);
             }
 
             instance.destroy_instance(None);

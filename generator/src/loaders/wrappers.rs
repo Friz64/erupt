@@ -131,6 +131,11 @@ impl ParameterKind {
                                 length: length.into(),
                             })
                         }
+                        (Optional::Always, Type::Named(Name::Type(name)), None)
+                            if source.find_handle(name).is_some() =>
+                        {
+                            *param_kind = Some(ParameterKind::Regular)
+                        }
                         (Optional::Always, _, None) => *param_kind = Some(ParameterKind::Optional),
                         (_, _, Some(_)) => *param_kind = Some(ParameterKind::Array),
                         (_, _, None) => *param_kind = Some(ParameterKind::Regular),

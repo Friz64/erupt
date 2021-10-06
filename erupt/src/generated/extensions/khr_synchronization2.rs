@@ -1249,18 +1249,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit2KHR.html) · Function"]
     #[doc(alias = "vkQueueSubmit2KHR")]
-    pub unsafe fn queue_submit2_khr(&self, queue: crate::vk1_0::Queue, submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn queue_submit2_khr(&self, queue: crate::vk1_0::Queue, submits: &[crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder], fence: crate::vk1_0::Fence) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_submit2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let submit_count = submits.len();
-        let _return = _function(
-            queue as _,
-            submit_count as _,
-            submits.as_ptr() as _,
-            match fence {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(queue as _, submit_count as _, submits.as_ptr() as _, fence as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]

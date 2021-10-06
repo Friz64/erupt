@@ -15819,18 +15819,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueSubmit.html) · Function"]
     #[doc(alias = "vkQueueSubmit")]
-    pub unsafe fn queue_submit(&self, queue: crate::vk1_0::Queue, submits: &[crate::vk1_0::SubmitInfoBuilder], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn queue_submit(&self, queue: crate::vk1_0::Queue, submits: &[crate::vk1_0::SubmitInfoBuilder], fence: crate::vk1_0::Fence) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_submit.expect(crate::NOT_LOADED_MESSAGE);
         let submit_count = submits.len();
-        let _return = _function(
-            queue as _,
-            submit_count as _,
-            submits.as_ptr() as _,
-            match fence {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(queue as _, submit_count as _, submits.as_ptr() as _, fence as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -15873,14 +15865,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkFreeMemory.html) · Function"]
     #[doc(alias = "vkFreeMemory")]
-    pub unsafe fn free_memory(&self, memory: Option<crate::vk1_0::DeviceMemory>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn free_memory(&self, memory: crate::vk1_0::DeviceMemory, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.free_memory.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match memory {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            memory as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16006,18 +15995,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueueBindSparse.html) · Function"]
     #[doc(alias = "vkQueueBindSparse")]
-    pub unsafe fn queue_bind_sparse(&self, queue: crate::vk1_0::Queue, bind_info: &[crate::vk1_0::BindSparseInfoBuilder], fence: Option<crate::vk1_0::Fence>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn queue_bind_sparse(&self, queue: crate::vk1_0::Queue, bind_info: &[crate::vk1_0::BindSparseInfoBuilder], fence: crate::vk1_0::Fence) -> crate::utils::VulkanResult<()> {
         let _function = self.queue_bind_sparse.expect(crate::NOT_LOADED_MESSAGE);
         let bind_info_count = bind_info.len();
-        let _return = _function(
-            queue as _,
-            bind_info_count as _,
-            bind_info.as_ptr() as _,
-            match fence {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(queue as _, bind_info_count as _, bind_info.as_ptr() as _, fence as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -16042,14 +16023,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFence.html) · Function"]
     #[doc(alias = "vkDestroyFence")]
-    pub unsafe fn destroy_fence(&self, fence: Option<crate::vk1_0::Fence>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_fence(&self, fence: crate::vk1_0::Fence, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_fence.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match fence {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            fence as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16108,14 +16086,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySemaphore.html) · Function"]
     #[doc(alias = "vkDestroySemaphore")]
-    pub unsafe fn destroy_semaphore(&self, semaphore: Option<crate::vk1_0::Semaphore>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_semaphore(&self, semaphore: crate::vk1_0::Semaphore, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_semaphore.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match semaphore {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            semaphore as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16145,14 +16120,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyEvent.html) · Function"]
     #[doc(alias = "vkDestroyEvent")]
-    pub unsafe fn destroy_event(&self, event: Option<crate::vk1_0::Event>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_event(&self, event: crate::vk1_0::Event, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_event.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match event {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            event as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16209,14 +16181,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyQueryPool.html) · Function"]
     #[doc(alias = "vkDestroyQueryPool")]
-    pub unsafe fn destroy_query_pool(&self, query_pool: Option<crate::vk1_0::QueryPool>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_query_pool(&self, query_pool: crate::vk1_0::QueryPool, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_query_pool.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match query_pool {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            query_pool as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16267,14 +16236,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBuffer.html) · Function"]
     #[doc(alias = "vkDestroyBuffer")]
-    pub unsafe fn destroy_buffer(&self, buffer: Option<crate::vk1_0::Buffer>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_buffer(&self, buffer: crate::vk1_0::Buffer, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_buffer.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match buffer {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            buffer as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16304,14 +16270,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBufferView.html) · Function"]
     #[doc(alias = "vkDestroyBufferView")]
-    pub unsafe fn destroy_buffer_view(&self, buffer_view: Option<crate::vk1_0::BufferView>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_buffer_view(&self, buffer_view: crate::vk1_0::BufferView, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_buffer_view.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match buffer_view {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            buffer_view as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16341,14 +16304,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImage.html) · Function"]
     #[doc(alias = "vkDestroyImage")]
-    pub unsafe fn destroy_image(&self, image: Option<crate::vk1_0::Image>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_image(&self, image: crate::vk1_0::Image, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_image.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match image {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            image as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16388,14 +16348,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyImageView.html) · Function"]
     #[doc(alias = "vkDestroyImageView")]
-    pub unsafe fn destroy_image_view(&self, image_view: Option<crate::vk1_0::ImageView>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_image_view(&self, image_view: crate::vk1_0::ImageView, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_image_view.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match image_view {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            image_view as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16425,14 +16382,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyShaderModule.html) · Function"]
     #[doc(alias = "vkDestroyShaderModule")]
-    pub unsafe fn destroy_shader_module(&self, shader_module: Option<crate::vk1_0::ShaderModule>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_shader_module(&self, shader_module: crate::vk1_0::ShaderModule, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_shader_module.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match shader_module {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            shader_module as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16462,14 +16416,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipelineCache.html) · Function"]
     #[doc(alias = "vkDestroyPipelineCache")]
-    pub unsafe fn destroy_pipeline_cache(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_pipeline_cache(&self, pipeline_cache: crate::vk1_0::PipelineCache, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_pipeline_cache.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match pipeline_cache {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline_cache as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16500,16 +16451,13 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateGraphicsPipelines.html) · Function"]
     #[doc(alias = "vkCreateGraphicsPipelines")]
-    pub unsafe fn create_graphics_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_graphics_pipelines(&self, pipeline_cache: crate::vk1_0::PipelineCache, create_infos: &[crate::vk1_0::GraphicsPipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_graphics_pipelines.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
         let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
-            match pipeline_cache {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline_cache as _,
             create_info_count as _,
             create_infos.as_ptr() as _,
             match allocator {
@@ -16524,16 +16472,13 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateComputePipelines.html) · Function"]
     #[doc(alias = "vkCreateComputePipelines")]
-    pub unsafe fn create_compute_pipelines(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_compute_pipelines(&self, pipeline_cache: crate::vk1_0::PipelineCache, create_infos: &[crate::vk1_0::ComputePipelineCreateInfoBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_compute_pipelines.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
         let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
-            match pipeline_cache {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline_cache as _,
             create_info_count as _,
             create_infos.as_ptr() as _,
             match allocator {
@@ -16548,14 +16493,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipeline.html) · Function"]
     #[doc(alias = "vkDestroyPipeline")]
-    pub unsafe fn destroy_pipeline(&self, pipeline: Option<crate::vk1_0::Pipeline>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_pipeline(&self, pipeline: crate::vk1_0::Pipeline, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_pipeline.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match pipeline {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16585,14 +16527,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPipelineLayout.html) · Function"]
     #[doc(alias = "vkDestroyPipelineLayout")]
-    pub unsafe fn destroy_pipeline_layout(&self, pipeline_layout: Option<crate::vk1_0::PipelineLayout>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_pipeline_layout(&self, pipeline_layout: crate::vk1_0::PipelineLayout, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_pipeline_layout.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match pipeline_layout {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline_layout as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16622,14 +16561,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySampler.html) · Function"]
     #[doc(alias = "vkDestroySampler")]
-    pub unsafe fn destroy_sampler(&self, sampler: Option<crate::vk1_0::Sampler>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_sampler(&self, sampler: crate::vk1_0::Sampler, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_sampler.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match sampler {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            sampler as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16659,14 +16595,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorSetLayout.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorSetLayout")]
-    pub unsafe fn destroy_descriptor_set_layout(&self, descriptor_set_layout: Option<crate::vk1_0::DescriptorSetLayout>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_descriptor_set_layout(&self, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_descriptor_set_layout.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match descriptor_set_layout {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            descriptor_set_layout as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16696,14 +16629,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorPool.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorPool")]
-    pub unsafe fn destroy_descriptor_pool(&self, descriptor_pool: Option<crate::vk1_0::DescriptorPool>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_descriptor_pool(&self, descriptor_pool: crate::vk1_0::DescriptorPool, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_descriptor_pool.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match descriptor_pool {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            descriptor_pool as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16780,14 +16710,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyFramebuffer.html) · Function"]
     #[doc(alias = "vkDestroyFramebuffer")]
-    pub unsafe fn destroy_framebuffer(&self, framebuffer: Option<crate::vk1_0::Framebuffer>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_framebuffer(&self, framebuffer: crate::vk1_0::Framebuffer, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_framebuffer.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match framebuffer {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            framebuffer as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16817,14 +16744,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyRenderPass.html) · Function"]
     #[doc(alias = "vkDestroyRenderPass")]
-    pub unsafe fn destroy_render_pass(&self, render_pass: Option<crate::vk1_0::RenderPass>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_render_pass(&self, render_pass: crate::vk1_0::RenderPass, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_render_pass.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match render_pass {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            render_pass as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -16864,14 +16788,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCommandPool.html) · Function"]
     #[doc(alias = "vkDestroyCommandPool")]
-    pub unsafe fn destroy_command_pool(&self, command_pool: Option<crate::vk1_0::CommandPool>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_command_pool(&self, command_pool: crate::vk1_0::CommandPool, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_command_pool.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match command_pool {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            command_pool as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

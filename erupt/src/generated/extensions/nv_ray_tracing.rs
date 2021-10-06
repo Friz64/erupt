@@ -1387,14 +1387,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkDestroyAccelerationStructureNV")]
-    pub unsafe fn destroy_acceleration_structure_nv(&self, acceleration_structure: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_acceleration_structure_nv(&self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match acceleration_structure {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            acceleration_structure as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -1445,59 +1442,18 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function"]
     #[doc(alias = "vkCmdBuildAccelerationStructureNV")]
-    pub unsafe fn cmd_build_acceleration_structure_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV, instance_data: Option<crate::vk1_0::Buffer>, instance_offset: crate::vk1_0::DeviceSize, update: bool, dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV, src: Option<crate::extensions::nv_ray_tracing::AccelerationStructureNV>, scratch: crate::vk1_0::Buffer, scratch_offset: crate::vk1_0::DeviceSize) -> () {
+    pub unsafe fn cmd_build_acceleration_structure_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, info: &crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV, instance_data: crate::vk1_0::Buffer, instance_offset: crate::vk1_0::DeviceSize, update: bool, dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV, src: crate::extensions::nv_ray_tracing::AccelerationStructureNV, scratch: crate::vk1_0::Buffer, scratch_offset: crate::vk1_0::DeviceSize) -> () {
         let _function = self.cmd_build_acceleration_structure_nv.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            info as _,
-            match instance_data {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            instance_offset as _,
-            update as _,
-            dst as _,
-            match src {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            scratch as _,
-            scratch_offset as _,
-        );
+        let _return = _function(command_buffer as _, info as _, instance_data as _, instance_offset as _, update as _, dst as _, src as _, scratch as _, scratch_offset as _);
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysNV.html) · Function"]
     #[doc(alias = "vkCmdTraceRaysNV")]
-    pub unsafe fn cmd_trace_rays_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table_buffer: crate::vk1_0::Buffer, raygen_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, miss_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_stride: crate::vk1_0::DeviceSize, hit_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, hit_shader_binding_offset: crate::vk1_0::DeviceSize, hit_shader_binding_stride: crate::vk1_0::DeviceSize, callable_shader_binding_table_buffer: Option<crate::vk1_0::Buffer>, callable_shader_binding_offset: crate::vk1_0::DeviceSize, callable_shader_binding_stride: crate::vk1_0::DeviceSize, width: u32, height: u32, depth: u32) -> () {
+    pub unsafe fn cmd_trace_rays_nv(&self, command_buffer: crate::vk1_0::CommandBuffer, raygen_shader_binding_table_buffer: crate::vk1_0::Buffer, raygen_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_table_buffer: crate::vk1_0::Buffer, miss_shader_binding_offset: crate::vk1_0::DeviceSize, miss_shader_binding_stride: crate::vk1_0::DeviceSize, hit_shader_binding_table_buffer: crate::vk1_0::Buffer, hit_shader_binding_offset: crate::vk1_0::DeviceSize, hit_shader_binding_stride: crate::vk1_0::DeviceSize, callable_shader_binding_table_buffer: crate::vk1_0::Buffer, callable_shader_binding_offset: crate::vk1_0::DeviceSize, callable_shader_binding_stride: crate::vk1_0::DeviceSize, width: u32, height: u32, depth: u32) -> () {
         let _function = self.cmd_trace_rays_nv.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            raygen_shader_binding_table_buffer as _,
-            raygen_shader_binding_offset as _,
-            match miss_shader_binding_table_buffer {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            miss_shader_binding_offset as _,
-            miss_shader_binding_stride as _,
-            match hit_shader_binding_table_buffer {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            hit_shader_binding_offset as _,
-            hit_shader_binding_stride as _,
-            match callable_shader_binding_table_buffer {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            callable_shader_binding_offset as _,
-            callable_shader_binding_stride as _,
-            width as _,
-            height as _,
-            depth as _,
-        );
+        let _return = _function(command_buffer as _, raygen_shader_binding_table_buffer as _, raygen_shader_binding_offset as _, miss_shader_binding_table_buffer as _, miss_shader_binding_offset as _, miss_shader_binding_stride as _, hit_shader_binding_table_buffer as _, hit_shader_binding_offset as _, hit_shader_binding_stride as _, callable_shader_binding_table_buffer as _, callable_shader_binding_offset as _, callable_shader_binding_stride as _, width as _, height as _, depth as _);
         ()
     }
     #[inline]
@@ -1513,16 +1469,13 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
     #[doc(alias = "vkCreateRayTracingPipelinesNV")]
-    pub unsafe fn create_ray_tracing_pipelines_nv(&self, pipeline_cache: Option<crate::vk1_0::PipelineCache>, create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
+    pub unsafe fn create_ray_tracing_pipelines_nv(&self, pipeline_cache: crate::vk1_0::PipelineCache, create_infos: &[crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder], allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_0::Pipeline>> {
         let _function = self.create_ray_tracing_pipelines_nv.expect(crate::NOT_LOADED_MESSAGE);
         let create_info_count = create_infos.len();
         let mut pipelines = crate::SmallVec::from_elem(Default::default(), create_info_count as _);
         let _return = _function(
             self.handle,
-            match pipeline_cache {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            pipeline_cache as _,
             create_info_count as _,
             create_infos.as_ptr() as _,
             match allocator {

@@ -295,14 +295,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyPrivateDataSlotEXT.html) · Function"]
     #[doc(alias = "vkDestroyPrivateDataSlotEXT")]
-    pub unsafe fn destroy_private_data_slot_ext(&self, private_data_slot: Option<crate::extensions::ext_private_data::PrivateDataSlotEXT>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_private_data_slot_ext(&self, private_data_slot: crate::extensions::ext_private_data::PrivateDataSlotEXT, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_private_data_slot_ext.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match private_data_slot {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            private_data_slot as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

@@ -2089,14 +2089,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkDestroyAccelerationStructureKHR")]
-    pub unsafe fn destroy_acceleration_structure_khr(&self, acceleration_structure: Option<crate::extensions::khr_acceleration_structure::AccelerationStructureKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_acceleration_structure_khr(&self, acceleration_structure: crate::extensions::khr_acceleration_structure::AccelerationStructureKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_acceleration_structure_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match acceleration_structure {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            acceleration_structure as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -2117,16 +2114,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkCopyAccelerationStructureKHR")]
-    pub unsafe fn copy_acceleration_structure_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn copy_acceleration_structure_khr(&self, deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureInfoKHR) -> crate::utils::VulkanResult<()> {
         let _function = self.copy_acceleration_structure_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            match deferred_operation {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            info as _,
-        );
+        let _return = _function(self.handle, deferred_operation as _, info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -2142,16 +2132,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyAccelerationStructureToMemoryKHR.html) · Function"]
     #[doc(alias = "vkCopyAccelerationStructureToMemoryKHR")]
-    pub unsafe fn copy_acceleration_structure_to_memory_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn copy_acceleration_structure_to_memory_khr(&self, deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, info: &crate::extensions::khr_acceleration_structure::CopyAccelerationStructureToMemoryInfoKHR) -> crate::utils::VulkanResult<()> {
         let _function = self.copy_acceleration_structure_to_memory_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            match deferred_operation {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            info as _,
-        );
+        let _return = _function(self.handle, deferred_operation as _, info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -2167,16 +2150,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCopyMemoryToAccelerationStructureKHR.html) · Function"]
     #[doc(alias = "vkCopyMemoryToAccelerationStructureKHR")]
-    pub unsafe fn copy_memory_to_acceleration_structure_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn copy_memory_to_acceleration_structure_khr(&self, deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, info: &crate::extensions::khr_acceleration_structure::CopyMemoryToAccelerationStructureInfoKHR) -> crate::utils::VulkanResult<()> {
         let _function = self.copy_memory_to_acceleration_structure_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            match deferred_operation {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            info as _,
-        );
+        let _return = _function(self.handle, deferred_operation as _, info as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -2251,19 +2227,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBuildAccelerationStructuresKHR.html) · Function"]
     #[doc(alias = "vkBuildAccelerationStructuresKHR")]
-    pub unsafe fn build_acceleration_structures_khr(&self, deferred_operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, infos: &[crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHRBuilder], build_range_infos: &[*const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR]) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn build_acceleration_structures_khr(&self, deferred_operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, infos: &[crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHRBuilder], build_range_infos: &[*const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildRangeInfoKHR]) -> crate::utils::VulkanResult<()> {
         let _function = self.build_acceleration_structures_khr.expect(crate::NOT_LOADED_MESSAGE);
         let info_count = infos.len().min(build_range_infos.len());
-        let _return = _function(
-            self.handle,
-            match deferred_operation {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            info_count as _,
-            infos.as_ptr() as _,
-            build_range_infos.as_ptr() as _,
-        );
+        let _return = _function(self.handle, deferred_operation as _, info_count as _, infos.as_ptr() as _, build_range_infos.as_ptr() as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]

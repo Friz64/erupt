@@ -1384,14 +1384,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function"]
     #[doc(alias = "vkDestroyIndirectCommandsLayoutNV")]
-    pub unsafe fn destroy_indirect_commands_layout_nv(&self, indirect_commands_layout: Option<crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_indirect_commands_layout_nv(&self, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_indirect_commands_layout_nv.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match indirect_commands_layout {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            indirect_commands_layout as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

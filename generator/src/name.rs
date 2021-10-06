@@ -183,7 +183,6 @@ impl TypeName {
     pub fn is_flags(&self) -> bool {
         self.no_tag.ends_with("Flags")
     }
-
     pub fn structure_type() -> TypeName {
         TypeName::new("VkStructureType")
     }

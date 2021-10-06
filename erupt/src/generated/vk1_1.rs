@@ -6387,14 +6387,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplate.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplate")]
-    pub unsafe fn destroy_descriptor_update_template(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_descriptor_update_template(&self, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_descriptor_update_template.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match descriptor_update_template {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            descriptor_update_template as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),
@@ -6477,14 +6474,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversion.html) · Function"]
     #[doc(alias = "vkDestroySamplerYcbcrConversion")]
-    pub unsafe fn destroy_sampler_ycbcr_conversion(&self, ycbcr_conversion: Option<crate::vk1_1::SamplerYcbcrConversion>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_sampler_ycbcr_conversion(&self, ycbcr_conversion: crate::vk1_1::SamplerYcbcrConversion, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_sampler_ycbcr_conversion.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match ycbcr_conversion {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            ycbcr_conversion as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

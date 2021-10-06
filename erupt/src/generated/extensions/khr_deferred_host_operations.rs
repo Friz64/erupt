@@ -64,14 +64,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDeferredOperationKHR.html) · Function"]
     #[doc(alias = "vkDestroyDeferredOperationKHR")]
-    pub unsafe fn destroy_deferred_operation_khr(&self, operation: Option<crate::extensions::khr_deferred_host_operations::DeferredOperationKHR>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_deferred_operation_khr(&self, operation: crate::extensions::khr_deferred_host_operations::DeferredOperationKHR, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_deferred_operation_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match operation {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            operation as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

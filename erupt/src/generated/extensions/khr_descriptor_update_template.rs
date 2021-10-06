@@ -87,14 +87,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Function"]
     #[doc(alias = "vkDestroyDescriptorUpdateTemplateKHR")]
-    pub unsafe fn destroy_descriptor_update_template_khr(&self, descriptor_update_template: Option<crate::vk1_1::DescriptorUpdateTemplate>, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
+    pub unsafe fn destroy_descriptor_update_template_khr(&self, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, allocator: Option<&crate::vk1_0::AllocationCallbacks>) -> () {
         let _function = self.destroy_descriptor_update_template_khr.expect(crate::NOT_LOADED_MESSAGE);
         let _return = _function(
             self.handle,
-            match descriptor_update_template {
-                Some(v) => v,
-                None => Default::default(),
-            },
+            descriptor_update_template as _,
             match allocator {
                 Some(v) => v,
                 None => std::ptr::null(),

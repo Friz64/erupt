@@ -8,10 +8,10 @@ pub const NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME: *const std::os::raw::c_
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV: Self = Self(1000203000);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV")]
 #[derive(Copy, Clone)]

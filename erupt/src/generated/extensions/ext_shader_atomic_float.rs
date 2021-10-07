@@ -8,10 +8,10 @@ pub const EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME: *const std::os::raw::c_char = 
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT: Self = Self(1000260000);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloatFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderAtomicFloatFeaturesEXT")]
 #[derive(Copy, Clone)]

@@ -19,10 +19,10 @@ impl crate::vk1_0::StructureType {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetVertexInputEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetVertexInputEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, vertex_binding_description_count: u32, p_vertex_binding_descriptions: *const crate::extensions::ext_vertex_input_dynamic_state::VertexInputBindingDescription2EXT, vertex_attribute_description_count: u32, p_vertex_attribute_descriptions: *const crate::extensions::ext_vertex_input_dynamic_state::VertexInputAttributeDescription2EXT) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]

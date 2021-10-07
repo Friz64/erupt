@@ -159,8 +159,8 @@ pub type PFN_vkDebugReportMessageEXT = unsafe extern "system" fn(instance: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugReportCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugReportCallbackEXT = unsafe extern "system" fn(flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT, object: u64, location: usize, message_code: i32, p_layer_prefix: *const std::os::raw::c_char, p_message: *const std::os::raw::c_char, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
-impl<'a> crate::ExtendableFromConst<'a, DebugReportCallbackCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DebugReportCallbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugReportCallbackCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugReportCallbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugReportCallbackCreateInfoEXT")]
 #[derive(Copy, Clone)]

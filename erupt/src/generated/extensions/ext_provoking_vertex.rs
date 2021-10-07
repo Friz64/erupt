@@ -29,14 +29,14 @@ impl crate::extensions::ext_provoking_vertex::ProvokingVertexModeEXT {
     pub const FIRST_VERTEX_EXT: Self = Self(0);
     pub const LAST_VERTEX_EXT: Self = Self(1);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceProvokingVertexFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationProvokingVertexStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProvokingVertexFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProvokingVertexPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationProvokingVertexStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceProvokingVertexFeaturesEXT")]
 #[derive(Copy, Clone)]

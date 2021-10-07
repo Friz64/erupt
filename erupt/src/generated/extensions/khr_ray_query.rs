@@ -8,10 +8,10 @@ pub const KHR_RAY_QUERY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cst
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR: Self = Self(1000348013);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayQueryFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayQueryFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayQueryFeaturesKHR")]
 #[derive(Copy, Clone)]

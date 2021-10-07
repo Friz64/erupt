@@ -22,10 +22,10 @@ impl crate::vk1_0::Result {
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT: Self = Self(1000297000);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT")]
 #[derive(Copy, Clone)]

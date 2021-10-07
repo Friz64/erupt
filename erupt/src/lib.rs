@@ -446,62 +446,139 @@ impl Debug for DeviceLoader {
     }
 }
 
-/// Provides type-safe `*const` pointer chain support.
-pub trait ExtendableFromConst<'a, T> {
-    /// Appends `other` (+ its pointer chain) to the end of this pointer chain.
+/// Provides type-safe pointer chain support.
+pub trait ExtendableFrom<'a, T> {
+    /// Inserts `addition` (+ its pointer chain) between the head and tail of
+    /// this pointer chain.
+    ///
+    /// - Head of `self`
+    ///   - Head of `addition`
+    ///   - _Tail of `addition`_
+    ///   - _Tail of `addition`_
+    ///   - _Tail of `addition`_
+    ///   - _..._
+    /// - _Tail of `self`_
+    /// - _Tail of `self`_
+    /// - _Tail of `self`_
+    /// - _..._
+    ///
+    /// The implementation is like this specifically, because this trait is only
+    /// ever implemented on the "main carrier" of the pointer chain, which means
+    /// that `addition` doesn't usually have a "tail" (unless, you've set the
+    /// pointers by yourself, which this consequently also supports). This saves
+    /// us from iterating the entire pointer chain each time an item is added.
     #[must_use]
-    fn extend_from(mut self, other: &'a T) -> Self
+    fn extend_from(mut self, addition: &'a mut T) -> Self
     where
         Self: Sized,
     {
         unsafe {
-            append_const_ptr_chain(&mut self as *mut Self as _, other as *const T as _);
+            insert_ptr_chain(&mut self as *mut Self as _, addition as *mut T as _);
         }
 
         self
     }
 }
 
+// safety: assumes all pointers in the pointer chain are valid
 #[inline]
-unsafe fn append_const_ptr_chain(mut host: *mut vk1_0::BaseInStructure, tail: *const vk1_0::BaseInStructure) {
-    loop {
-        let p_next = &mut (*host).p_next;
-
+unsafe fn insert_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, mut addition: *mut vk1_0::BaseOutStructure) {
+    let addition_head = addition;
+    let addition_end = loop {
+        let p_next = (*addition).p_next;
         if p_next.is_null() {
-            *p_next = tail;
-            break;
+            break addition;
         } else {
-            host = *p_next as *mut _;
+            addition = p_next;
         }
-    }
+    };
+
+    let prev_host_next = (*host).p_next;
+    (*host).p_next = addition_head;
+    (*addition_end).p_next = prev_host_next;
 }
 
-/// Provides type-safe `*mut` pointer chain support.
-pub trait ExtendableFromMut<'a, T> {
-    /// Appends `other` (+ its pointer chain) to the end of this pointer chain.
-    #[must_use]
-    fn extend_from(mut self, other: &'a mut T) -> Self
-    where
-        Self: Sized,
-    {
+#[cfg(test)]
+mod tests {
+    use super::vk;
+    use std::{iter, ptr};
+
+    // safety: assumes all pointers in the pointer chain are valid
+    unsafe fn iterate_ptr_chain(mut item: *mut vk::BaseOutStructure) -> impl Iterator<Item = *mut vk::BaseOutStructure> {
+        iter::from_fn(move || unsafe {
+            if item.is_null() {
+                None
+            } else {
+                let current_item = item;
+                item = (*item).p_next;
+                Some(current_item)
+            }
+        })
+    }
+
+    #[test]
+    fn ptr_chain_simple() {
+        // s1 -> s2 -> s3 -> (null)
+        let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
+        s1.p_next = &mut s2;
+        let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
+        s2.p_next = &mut s3;
+
+        // s4 -> (null)
+        let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
+
+        // s5 -> (null)
+        let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
+
+        // s6 -> (null)
+        let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
+
+        // s1 -> s6 -> s5 -> s4 -> s2 -> s3 -> (null)
         unsafe {
-            append_mut_ptr_chain(&mut self as *mut Self as _, other as *mut T as _);
+            super::insert_ptr_chain(&mut s1, &mut s4);
+            super::insert_ptr_chain(&mut s1, &mut s5);
+            super::insert_ptr_chain(&mut s1, &mut s6);
         }
 
-        self
+        let mut iter = unsafe { iterate_ptr_chain(&mut s1) }.map(|item| unsafe { *item }.s_type.0);
+        assert_eq!(iter.next(), Some(1));
+        assert_eq!(iter.next(), Some(6));
+        assert_eq!(iter.next(), Some(5));
+        assert_eq!(iter.next(), Some(4));
+        assert_eq!(iter.next(), Some(2));
+        assert_eq!(iter.next(), Some(3));
+        assert_eq!(iter.next(), None);
     }
-}
 
-#[inline]
-unsafe fn append_mut_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, tail: *mut vk1_0::BaseOutStructure) {
-    loop {
-        let p_next = &mut (*host).p_next;
+    #[test]
+    fn ptr_chain_addition_chain() {
+        // s1 -> s2 -> s3 -> (null)
+        let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
+        s1.p_next = &mut s2;
+        let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
+        s2.p_next = &mut s3;
 
-        if p_next.is_null() {
-            *p_next = tail;
-            break;
-        } else {
-            host = *p_next;
+        // s4 -> s5 -> s6 -> (null)
+        let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
+        let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
+        s4.p_next = &mut s5;
+        let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
+        s5.p_next = &mut s6;
+
+        // s1 -> s4 -> s5 -> s6 -> s2 -> s3 -> (null)
+        unsafe {
+            super::insert_ptr_chain(&mut s1, &mut s4);
         }
+
+        let mut iter = unsafe { iterate_ptr_chain(&mut s1) }.map(|item| unsafe { *item }.s_type.0);
+        assert_eq!(iter.next(), Some(1));
+        assert_eq!(iter.next(), Some(4));
+        assert_eq!(iter.next(), Some(5));
+        assert_eq!(iter.next(), Some(6));
+        assert_eq!(iter.next(), Some(2));
+        assert_eq!(iter.next(), Some(3));
+        assert_eq!(iter.next(), None);
     }
 }

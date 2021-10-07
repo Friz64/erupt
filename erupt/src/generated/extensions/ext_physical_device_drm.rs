@@ -8,8 +8,8 @@ pub const EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME: *const std::os::raw::c_char = 
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_DRM_PROPERTIES_EXT: Self = Self(1000353000);
 }
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDrmPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDrmPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDrmPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDrmPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDrmPropertiesEXT")]
 #[derive(Copy, Clone)]

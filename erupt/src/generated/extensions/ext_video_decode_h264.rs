@@ -74,14 +74,14 @@ impl crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureLayoutFlagB
     pub const INTERLACED_INTERLEAVED_LINES_EXT: Self = Self(1);
     pub const INTERLACED_SEPARATE_PLANES_EXT: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoDecodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXT> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264DpbSlotInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXT> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264PictureInfoEXTBuilder<'_>> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264DpbSlotInfoEXT> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264DpbSlotInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264PictureInfoEXT> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264PictureInfoEXTBuilder<'_>> for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264ProfileEXT.html) · Structure"]
 #[doc(alias = "VkVideoDecodeH264ProfileEXT")]
 #[derive(Copy, Clone)]
@@ -508,8 +508,8 @@ impl VideoDecodeH264PictureInfoEXT {
         VideoDecodeH264PictureInfoEXTBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXT> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264MvcEXTBuilder<'_>> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264MvcEXT> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264MvcEXTBuilder<'_>> for crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureInfoEXTBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeH264PictureInfoEXT.html) · Builder of [`VideoDecodeH264PictureInfoEXT`]"]
 #[repr(transparent)]
@@ -698,9 +698,9 @@ impl<'a> std::ops::DerefMut for VideoDecodeH264MvcEXTBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoDecodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}

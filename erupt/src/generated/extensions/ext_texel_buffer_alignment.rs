@@ -9,12 +9,12 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT: Self = Self(1000281000);
     pub const PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT: Self = Self(1000281001);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTexelBufferAlignmentPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT")]
 #[derive(Copy, Clone)]

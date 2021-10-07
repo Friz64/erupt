@@ -71,8 +71,8 @@ pub type PFN_vkGetValidationCacheDataEXT = unsafe extern "system" fn(device: cra
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMergeValidationCachesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkMergeValidationCachesEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, dst_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT, src_cache_count: u32, p_src_caches: *const crate::extensions::ext_validation_cache::ValidationCacheEXT) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ShaderModuleValidationCacheCreateInfoEXT> for crate::vk1_0::ShaderModuleCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ShaderModuleValidationCacheCreateInfoEXTBuilder<'_>> for crate::vk1_0::ShaderModuleCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ShaderModuleValidationCacheCreateInfoEXT> for crate::vk1_0::ShaderModuleCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ShaderModuleValidationCacheCreateInfoEXTBuilder<'_>> for crate::vk1_0::ShaderModuleCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkValidationCacheCreateInfoEXT")]
 #[derive(Copy, Clone)]

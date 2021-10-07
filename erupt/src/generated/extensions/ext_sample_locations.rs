@@ -30,14 +30,14 @@ pub type PFN_vkCmdSetSampleLocationsEXT = unsafe extern "system" fn(command_buff
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, samples: crate::vk1_0::SampleCountFlagBits, p_multisample_properties: *mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT) -> ();
-impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXT> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineSampleLocationsStateCreateInfoEXT> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineSampleLocationsStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassSampleLocationsBeginInfoEXT> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassSampleLocationsBeginInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSampleLocationsPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SampleLocationsInfoEXT> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::vk1_0::ImageMemoryBarrierBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineSampleLocationsStateCreateInfoEXT> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineSampleLocationsStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassSampleLocationsBeginInfoEXT> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassSampleLocationsBeginInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSampleLocationsPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSampleLocationEXT.html) · Structure"]
 #[doc(alias = "VkSampleLocationEXT")]
 #[derive(Copy, Clone)]
@@ -655,8 +655,8 @@ impl<'a> std::ops::DerefMut for MultisamplePropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXT> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SampleLocationsInfoEXT> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SampleLocationsInfoEXTBuilder<'_>> for crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder<'a> {}
 #[doc = "Provided by [`crate::extensions::ext_sample_locations`]"]
 impl crate::DeviceLoader {
     #[inline]

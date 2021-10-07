@@ -15,16 +15,16 @@ impl crate::vk1_0::StructureType {
     pub const WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT: Self = Self(1000138002);
     pub const DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT: Self = Self(1000138003);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetInlineUniformBlockEXT> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetInlineUniformBlockEXTBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DescriptorPoolInlineUniformBlockCreateInfoEXT> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetInlineUniformBlockEXT> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetInlineUniformBlockEXTBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DescriptorPoolInlineUniformBlockCreateInfoEXT> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockFeaturesEXT")]
 #[derive(Copy, Clone)]

@@ -35,8 +35,8 @@ impl crate::extensions::ext_global_priority::QueueGlobalPriorityEXT {
     pub const HIGH_EXT: Self = Self(512);
     pub const REALTIME_EXT: Self = Self(1024);
 }
-impl<'a> crate::ExtendableFromConst<'a, DeviceQueueGlobalPriorityCreateInfoEXT> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_>> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceQueueGlobalPriorityCreateInfoEXT> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'_>> for crate::vk1_0::DeviceQueueCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoEXT.html) · Structure"]
 #[doc(alias = "VkDeviceQueueGlobalPriorityCreateInfoEXT")]
 #[derive(Copy, Clone)]

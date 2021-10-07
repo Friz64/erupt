@@ -25,10 +25,10 @@ impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryRemoteAddressNV = unsafe extern "system" fn(device: crate::vk1_0::Device, p_memory_get_remote_address_info: *const crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV, p_address: *mut crate::extensions::nv_external_memory_rdma::RemoteAddressNV) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryRDMAFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExternalMemoryRDMAFeaturesNV")]
 #[derive(Copy, Clone)]

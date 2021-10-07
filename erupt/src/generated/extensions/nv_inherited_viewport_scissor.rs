@@ -9,12 +9,12 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV: Self = Self(1000278000);
     pub const COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV: Self = Self(1000278001);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInheritedViewportScissorFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceViewportScissorInfoNV> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceViewportScissorInfoNVBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInheritedViewportScissorFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInheritedViewportScissorFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceViewportScissorInfoNV> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceViewportScissorInfoNVBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInheritedViewportScissorFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceInheritedViewportScissorFeaturesNV")]
 #[derive(Copy, Clone)]

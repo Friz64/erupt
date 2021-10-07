@@ -9,12 +9,12 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV: Self = Self(1000166000);
     pub const PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV: Self = Self(1000166001);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRepresentativeFragmentTestStateCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRepresentativeFragmentTestStateCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV")]
 #[derive(Copy, Clone)]

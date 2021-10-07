@@ -83,10 +83,10 @@ pub type PFN_vkCmdSetStencilTestEnableEXT = unsafe extern "system" fn(command_bu
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetStencilOpEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetStencilOpEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, face_mask: crate::vk1_0::StencilFaceFlags, fail_op: crate::vk1_0::StencilOp, pass_op: crate::vk1_0::StencilOp, depth_fail_op: crate::vk1_0::StencilOp, compare_op: crate::vk1_0::CompareOp) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicStateFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceExtendedDynamicStateFeaturesEXT")]
 #[derive(Copy, Clone)]

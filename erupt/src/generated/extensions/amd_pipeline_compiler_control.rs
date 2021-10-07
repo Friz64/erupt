@@ -28,10 +28,10 @@ impl std::fmt::Debug for PipelineCompilerControlFlagBitsAMD {
         })
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMD> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Structure"]
 #[doc(alias = "VkPipelineCompilerControlCreateInfoAMD")]
 #[derive(Copy, Clone)]

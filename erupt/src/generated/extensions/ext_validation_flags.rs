@@ -27,8 +27,8 @@ impl crate::extensions::ext_validation_flags::ValidationCheckEXT {
     pub const ALL_EXT: Self = Self(0);
     pub const SHADERS_EXT: Self = Self(1);
 }
-impl<'a> crate::ExtendableFromConst<'a, ValidationFlagsEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ValidationFlagsEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ValidationFlagsEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ValidationFlagsEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Structure"]
 #[doc(alias = "VkValidationFlagsEXT")]
 #[derive(Copy, Clone)]

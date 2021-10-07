@@ -57,12 +57,12 @@ pub type PFN_vkCmdBeginConditionalRenderingEXT = unsafe extern "system" fn(comma
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndConditionalRenderingEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndConditionalRenderingEXT = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceConditionalRenderingInfoEXT> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceConditionalRenderingInfoEXT> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConditionalRenderingFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConditionalRenderingBeginInfoEXT.html) · Structure"]
 #[doc(alias = "VkConditionalRenderingBeginInfoEXT")]
 #[derive(Copy, Clone)]

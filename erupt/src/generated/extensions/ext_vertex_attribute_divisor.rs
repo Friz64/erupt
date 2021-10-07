@@ -10,14 +10,14 @@ impl crate::vk1_0::StructureType {
     pub const PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT: Self = Self(1000190001);
     pub const PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT: Self = Self(1000190002);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineVertexInputDivisorStateCreateInfoEXT> for crate::vk1_0::PipelineVertexInputStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineVertexInputStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineVertexInputDivisorStateCreateInfoEXT> for crate::vk1_0::PipelineVertexInputStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineVertexInputStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure"]
 #[doc(alias = "VkVertexInputBindingDivisorDescriptionEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]

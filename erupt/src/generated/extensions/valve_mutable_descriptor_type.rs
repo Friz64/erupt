@@ -21,14 +21,14 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::DescriptorPoolCreateFlagBits {
     pub const HOST_ONLY_VALVE: Self = Self(4);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorSetLayoutCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MutableDescriptorTypeCreateInfoVALVE> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MutableDescriptorTypeCreateInfoVALVEBuilder<'_>> for crate::vk1_0::DescriptorPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVE> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE")]
 #[derive(Copy, Clone)]

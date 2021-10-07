@@ -8,8 +8,8 @@ pub const EXT_PCI_BUS_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT: Self = Self(1000212000);
 }
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePCIBusInfoPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePCIBusInfoPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePCIBusInfoPropertiesEXT")]
 #[derive(Copy, Clone)]

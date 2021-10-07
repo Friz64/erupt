@@ -59,8 +59,8 @@ impl crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV {
     pub const POSITIVE_W_NV: Self = Self(6);
     pub const NEGATIVE_W_NV: Self = Self(7);
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineViewportSwizzleStateCreateInfoNV> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineViewportSwizzleStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViewportSwizzleNV.html) · Structure"]
 #[doc(alias = "VkViewportSwizzleNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]

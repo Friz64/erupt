@@ -8,8 +8,8 @@ pub const AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME: *const std::os::raw::c_cha
 impl crate::vk1_0::StructureType {
     pub const TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD: Self = Self(1000041000);
 }
-impl<'a> crate::ExtendableFromMut<'a, TextureLODGatherFormatPropertiesAMD> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, TextureLODGatherFormatPropertiesAMDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, TextureLODGatherFormatPropertiesAMD> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, TextureLODGatherFormatPropertiesAMDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure"]
 #[doc(alias = "VkTextureLODGatherFormatPropertiesAMD")]
 #[derive(Copy, Clone)]

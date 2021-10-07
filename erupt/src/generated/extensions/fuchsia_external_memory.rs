@@ -24,8 +24,8 @@ pub type PFN_vkGetMemoryZirconHandleFUCHSIA = unsafe extern "system" fn(device: 
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryZirconHandlePropertiesFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, zircon_handle: *mut std::ffi::c_void, p_memory_zircon_handle_properties: *mut crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryZirconHandleInfoFUCHSIA> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryZirconHandleInfoFUCHSIA> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryZirconHandleInfoFUCHSIABuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryZirconHandleInfoFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportMemoryZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone)]

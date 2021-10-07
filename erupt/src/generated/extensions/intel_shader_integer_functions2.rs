@@ -8,10 +8,10 @@ pub const INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME: *const std::os::raw::
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL: Self = Self(1000209000);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")]
 #[derive(Copy, Clone)]

@@ -50,10 +50,10 @@ impl crate::extensions::ext_conservative_rasterization::ConservativeRasterizatio
     pub const OVERESTIMATE_EXT: Self = Self(1);
     pub const UNDERESTIMATE_EXT: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationConservativeStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConservativeRasterizationPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationConservativeStateCreateInfoEXT> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConservativeRasterizationPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceConservativeRasterizationPropertiesEXT")]
 #[derive(Copy, Clone)]

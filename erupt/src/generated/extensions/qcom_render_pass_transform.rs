@@ -13,10 +13,10 @@ impl crate::vk1_0::StructureType {
     pub const COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM: Self = Self(1000282000);
     pub const RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM: Self = Self(1000282001);
 }
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceRenderPassTransformInfoQCOM> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassTransformBeginInfoQCOM> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassTransformBeginInfoQCOMBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceRenderPassTransformInfoQCOM> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'_>> for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassTransformBeginInfoQCOM> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassTransformBeginInfoQCOMBuilder<'_>> for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Structure"]
 #[doc(alias = "VkRenderPassTransformBeginInfoQCOM")]
 #[derive(Copy, Clone)]

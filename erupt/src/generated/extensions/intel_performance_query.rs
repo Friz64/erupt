@@ -173,8 +173,8 @@ pub type PFN_vkQueueSetPerformanceConfigurationINTEL = unsafe extern "system" fn
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPerformanceParameterINTEL.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPerformanceParameterINTEL = unsafe extern "system" fn(device: crate::vk1_0::Device, parameter: crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL, p_value: *mut crate::extensions::intel_performance_query::PerformanceValueINTEL) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceQueryCreateInfoINTEL> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueryPoolPerformanceQueryCreateInfoINTEL> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueryPoolPerformanceQueryCreateInfoINTELBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueDataINTEL.html) · Structure"]
 #[doc(alias = "VkPerformanceValueDataINTEL")]
 #[derive(Copy, Clone)]

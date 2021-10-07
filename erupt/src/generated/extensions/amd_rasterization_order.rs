@@ -27,8 +27,8 @@ impl crate::extensions::amd_rasterization_order::RasterizationOrderAMD {
     pub const STRICT_AMD: Self = Self(0);
     pub const RELAXED_AMD: Self = Self(1);
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateRasterizationOrderAMD> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineRasterizationStateRasterizationOrderAMDBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationStateRasterizationOrderAMD> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineRasterizationStateRasterizationOrderAMDBuilder<'_>> for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Structure"]
 #[doc(alias = "VkPipelineRasterizationStateRasterizationOrderAMD")]
 #[derive(Copy, Clone)]

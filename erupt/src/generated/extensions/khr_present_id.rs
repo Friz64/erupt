@@ -9,12 +9,12 @@ impl crate::vk1_0::StructureType {
     pub const PRESENT_ID_KHR: Self = Self(1000294000);
     pub const PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR: Self = Self(1000294001);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePresentIdFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PresentIdKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PresentIdKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePresentIdFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PresentIdKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PresentIdKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePresentIdFeaturesKHR")]
 #[derive(Copy, Clone)]

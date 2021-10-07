@@ -12,12 +12,12 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT: Self = Self(1000388000);
     pub const QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT: Self = Self(1000388001);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, QueueFamilyGlobalPriorityPropertiesEXT> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, QueueFamilyGlobalPriorityPropertiesEXTBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyGlobalPriorityPropertiesEXT> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyGlobalPriorityPropertiesEXTBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT")]
 #[derive(Copy, Clone)]

@@ -8,8 +8,8 @@ pub const AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME: *const std::os::raw::c_char
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD: Self = Self(1000185000);
 }
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderCorePropertiesAMD> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceShaderCorePropertiesAMDBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCorePropertiesAMD> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCorePropertiesAMDBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceShaderCorePropertiesAMD")]
 #[derive(Copy, Clone)]

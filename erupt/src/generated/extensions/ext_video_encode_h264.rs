@@ -156,20 +156,20 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CreateFlagBitsEXT 
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RESERVED_0_EXT: Self = Self(1);
 }
-impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionParametersCreateInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionParametersAddInfoEXT> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionParametersAddInfoEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264VclFrameInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264EmitPictureParametersEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesEXT.html) · Structure"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesEXT")]
 #[derive(Copy, Clone)]

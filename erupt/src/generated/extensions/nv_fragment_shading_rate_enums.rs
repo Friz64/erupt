@@ -73,14 +73,14 @@ impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateTypeN
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateEnumStateCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineFragmentShadingRateEnumStateCreateInfoNV> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
 #[derive(Copy, Clone)]

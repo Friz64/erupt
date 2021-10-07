@@ -175,8 +175,8 @@ pub type PFN_vkSubmitDebugUtilsMessageEXT = unsafe extern "system" fn(instance: 
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDebugUtilsMessengerCallbackEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugUtilsMessengerCallbackEXT = unsafe extern "system" fn(message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagBitsEXT, message_types: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT, p_callback_data: *const crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataEXT, p_user_data: *mut std::ffi::c_void) -> crate::vk1_0::Bool32;
-impl<'a> crate::ExtendableFromConst<'a, DebugUtilsMessengerCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DebugUtilsMessengerCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugUtilsMessengerCreateInfoEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugUtilsMessengerCreateInfoEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure"]
 #[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
 #[derive(Copy, Clone)]

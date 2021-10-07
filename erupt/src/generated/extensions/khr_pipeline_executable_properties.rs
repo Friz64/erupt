@@ -56,10 +56,10 @@ pub type PFN_vkGetPipelineExecutableStatisticsKHR = unsafe extern "system" fn(de
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPipelineExecutableInternalRepresentationsKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_executable_info: *const crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, p_internal_representation_count: *mut u32, p_internal_representations: *mut crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR")]
 #[derive(Copy, Clone)]

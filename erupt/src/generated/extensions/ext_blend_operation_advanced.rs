@@ -84,14 +84,14 @@ impl crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT {
     pub const DISJOINT_EXT: Self = Self(1);
     pub const CONJOINT_EXT: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineColorBlendAdvancedStateCreateInfoEXT> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineColorBlendAdvancedStateCreateInfoEXT> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineColorBlendStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT")]
 #[derive(Copy, Clone)]

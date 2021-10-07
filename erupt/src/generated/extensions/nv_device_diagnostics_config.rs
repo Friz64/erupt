@@ -38,12 +38,12 @@ impl crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigFla
     pub const ENABLE_RESOURCE_TRACKING_NV: Self = Self(2);
     pub const ENABLE_AUTOMATIC_CHECKPOINTS_NV: Self = Self(4);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceDiagnosticsConfigCreateInfoNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceDiagnosticsConfigCreateInfoNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceDiagnosticsConfigCreateInfoNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceDiagnosticsConfigCreateInfoNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceDiagnosticsConfigFeaturesNV")]
 #[derive(Copy, Clone)]

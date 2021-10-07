@@ -30,14 +30,14 @@ pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(device: crate::vk1_0::Device, p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID, p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImportAndroidHardwareBufferInfoANDROID> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROID> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferUsageANDROID> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferUsageANDROIDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROID> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportAndroidHardwareBufferInfoANDROID> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROID> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferUsageANDROID> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferUsageANDROIDBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROID> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROIDBuilder<'_>> for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure"]
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone)]
@@ -207,10 +207,10 @@ impl AndroidHardwareBufferPropertiesANDROID {
         AndroidHardwareBufferPropertiesANDROIDBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatProperties2ANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferFormatPropertiesANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferFormatProperties2ANDROID> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'_>> for crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]"]
 #[repr(transparent)]

@@ -20,8 +20,8 @@ pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(device: crate::vk1_0::
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits, fd: std::os::raw::c_int, p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryFdInfoKHR> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryFdInfoKHRBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryFdInfoKHR> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryFdInfoKHRBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportMemoryFdInfoKHR")]
 #[derive(Copy, Clone)]
